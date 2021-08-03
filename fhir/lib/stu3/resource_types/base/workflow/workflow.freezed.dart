@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'workflow.dart';
 
@@ -986,7 +986,7 @@ class _$_Appointment extends _Appointment {
       : super._();
 
   factory _$_Appointment.fromJson(Map<String, dynamic> json) =>
-      _$_$_AppointmentFromJson(json);
+      _$$_AppointmentFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Appointment)
@@ -1222,7 +1222,7 @@ class _$_Appointment extends _Appointment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AppointmentToJson(this);
+    return _$$_AppointmentToJson(this);
   }
 }
 
@@ -1620,7 +1620,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
       : super._();
 
   factory _$_AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
-      _$_$_AppointmentParticipantFromJson(json);
+      _$$_AppointmentParticipantFromJson(json);
 
   @override
   final List<CodeableConcept>? type;
@@ -1682,7 +1682,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AppointmentParticipantToJson(this);
+    return _$$_AppointmentParticipantToJson(this);
   }
 }
 
@@ -2362,7 +2362,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
       : super._();
 
   factory _$_AppointmentResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_AppointmentResponseFromJson(json);
+      _$$_AppointmentResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.AppointmentResponse)
@@ -2530,7 +2530,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AppointmentResponseToJson(this);
+    return _$$_AppointmentResponseToJson(this);
   }
 }
 
@@ -3521,7 +3521,7 @@ class _$_ProcessRequest extends _ProcessRequest {
       : super._();
 
   factory _$_ProcessRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProcessRequestFromJson(json);
+      _$$_ProcessRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessRequest)
@@ -3732,7 +3732,7 @@ class _$_ProcessRequest extends _ProcessRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProcessRequestToJson(this);
+    return _$$_ProcessRequestToJson(this);
   }
 }
 
@@ -4011,7 +4011,7 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
       : super._();
 
   factory _$_ProcessRequestItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProcessRequestItemFromJson(json);
+      _$$_ProcessRequestItemFromJson(json);
 
   @override
   final Id? sequenceLinkId;
@@ -4049,7 +4049,7 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProcessRequestItemToJson(this);
+    return _$$_ProcessRequestItemToJson(this);
   }
 }
 
@@ -4819,7 +4819,7 @@ class _$_ProcessResponse extends _ProcessResponse {
       : super._();
 
   factory _$_ProcessResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProcessResponseFromJson(json);
+      _$$_ProcessResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ProcessResponse)
@@ -5002,7 +5002,7 @@ class _$_ProcessResponse extends _ProcessResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProcessResponseToJson(this);
+    return _$$_ProcessResponseToJson(this);
   }
 }
 
@@ -5288,7 +5288,7 @@ class _$_ProcessResponseProcessNote extends _ProcessResponseProcessNote {
       : super._();
 
   factory _$_ProcessResponseProcessNote.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProcessResponseProcessNoteFromJson(json);
+      _$$_ProcessResponseProcessNoteFromJson(json);
 
   @override
   final CodeableConcept? type;
@@ -5331,7 +5331,7 @@ class _$_ProcessResponseProcessNote extends _ProcessResponseProcessNote {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProcessResponseProcessNoteToJson(this);
+    return _$$_ProcessResponseProcessNoteToJson(this);
   }
 }
 
@@ -6185,7 +6185,7 @@ class _$_RequestGroup extends _RequestGroup {
       : super._();
 
   factory _$_RequestGroup.fromJson(Map<String, dynamic> json) =>
-      _$_$_RequestGroupFromJson(json);
+      _$$_RequestGroupFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.RequestGroup)
@@ -6385,7 +6385,7 @@ class _$_RequestGroup extends _RequestGroup {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RequestGroupToJson(this);
+    return _$$_RequestGroupToJson(this);
   }
 }
 
@@ -7385,7 +7385,7 @@ class _$_RequestGroupAction extends _RequestGroupAction {
       : super._();
 
   factory _$_RequestGroupAction.fromJson(Map<String, dynamic> json) =>
-      _$_$_RequestGroupActionFromJson(json);
+      _$$_RequestGroupActionFromJson(json);
 
   @override
   final String? label;
@@ -7590,7 +7590,7 @@ class _$_RequestGroupAction extends _RequestGroupAction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RequestGroupActionToJson(this);
+    return _$$_RequestGroupActionToJson(this);
   }
 }
 
@@ -8008,7 +8008,7 @@ class _$_RequestGroupCondition extends _RequestGroupCondition {
       : super._();
 
   factory _$_RequestGroupCondition.fromJson(Map<String, dynamic> json) =>
-      _$_$_RequestGroupConditionFromJson(json);
+      _$$_RequestGroupConditionFromJson(json);
 
   @override
   final String? kind;
@@ -8085,7 +8085,7 @@ class _$_RequestGroupCondition extends _RequestGroupCondition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RequestGroupConditionToJson(this);
+    return _$$_RequestGroupConditionToJson(this);
   }
 }
 
@@ -8380,7 +8380,7 @@ class _$_RequestGroupRelatedAction extends _RequestGroupRelatedAction {
       : super._();
 
   factory _$_RequestGroupRelatedAction.fromJson(Map<String, dynamic> json) =>
-      _$_$_RequestGroupRelatedActionFromJson(json);
+      _$$_RequestGroupRelatedActionFromJson(json);
 
   @override
   final Id? actionId;
@@ -8445,7 +8445,7 @@ class _$_RequestGroupRelatedAction extends _RequestGroupRelatedAction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RequestGroupRelatedActionToJson(this);
+    return _$$_RequestGroupRelatedActionToJson(this);
   }
 }
 
@@ -9048,7 +9048,7 @@ class _$_Schedule extends _Schedule {
       : super._();
 
   factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
-      _$_$_ScheduleFromJson(json);
+      _$$_ScheduleFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Schedule)
@@ -9200,7 +9200,7 @@ class _$_Schedule extends _Schedule {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ScheduleToJson(this);
+    return _$$_ScheduleToJson(this);
   }
 }
 
@@ -10019,8 +10019,7 @@ class _$_Slot extends _Slot {
           this.commentElement})
       : super._();
 
-  factory _$_Slot.fromJson(Map<String, dynamic> json) =>
-      _$_$_SlotFromJson(json);
+  factory _$_Slot.fromJson(Map<String, dynamic> json) => _$$_SlotFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Slot)
@@ -10205,7 +10204,7 @@ class _$_Slot extends _Slot {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SlotToJson(this);
+    return _$$_SlotToJson(this);
   }
 }
 
@@ -11539,8 +11538,7 @@ class _$_Task extends _Task {
       this.output})
       : super._();
 
-  factory _$_Task.fromJson(Map<String, dynamic> json) =>
-      _$_$_TaskFromJson(json);
+  factory _$_Task.fromJson(Map<String, dynamic> json) => _$$_TaskFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Task)
@@ -11803,7 +11801,7 @@ class _$_Task extends _Task {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TaskToJson(this);
+    return _$$_TaskToJson(this);
   }
 }
 
@@ -12122,7 +12120,7 @@ class _$_TaskRequester extends _TaskRequester {
   _$_TaskRequester({required this.agent, this.onBehalfOf}) : super._();
 
   factory _$_TaskRequester.fromJson(Map<String, dynamic> json) =>
-      _$_$_TaskRequesterFromJson(json);
+      _$$_TaskRequesterFromJson(json);
 
   @override
   final Reference agent;
@@ -12158,7 +12156,7 @@ class _$_TaskRequester extends _TaskRequester {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TaskRequesterToJson(this);
+    return _$$_TaskRequesterToJson(this);
   }
 }
 
@@ -12366,7 +12364,7 @@ class _$_TaskRestriction extends _TaskRestriction {
       : super._();
 
   factory _$_TaskRestriction.fromJson(Map<String, dynamic> json) =>
-      _$_$_TaskRestrictionFromJson(json);
+      _$$_TaskRestrictionFromJson(json);
 
   @override
   final Decimal? repetitions;
@@ -12415,7 +12413,7 @@ class _$_TaskRestriction extends _TaskRestriction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TaskRestrictionToJson(this);
+    return _$$_TaskRestrictionToJson(this);
   }
 }
 
@@ -14452,7 +14450,7 @@ class _$_TaskInput extends _TaskInput {
       : super._();
 
   factory _$_TaskInput.fromJson(Map<String, dynamic> json) =>
-      _$_$_TaskInputFromJson(json);
+      _$$_TaskInputFromJson(json);
 
   @override
   final CodeableConcept type;
@@ -14815,7 +14813,7 @@ class _$_TaskInput extends _TaskInput {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TaskInputToJson(this);
+    return _$$_TaskInputToJson(this);
   }
 }
 
@@ -17078,7 +17076,7 @@ class _$_TaskOutput extends _TaskOutput {
       : super._();
 
   factory _$_TaskOutput.fromJson(Map<String, dynamic> json) =>
-      _$_$_TaskOutputFromJson(json);
+      _$$_TaskOutputFromJson(json);
 
   @override
   final CodeableConcept type;
@@ -17441,7 +17439,7 @@ class _$_TaskOutput extends _TaskOutput {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TaskOutputToJson(this);
+    return _$$_TaskOutputToJson(this);
   }
 }
 

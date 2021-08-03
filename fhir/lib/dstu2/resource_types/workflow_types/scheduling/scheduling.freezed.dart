@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'scheduling.dart';
 
@@ -827,7 +827,7 @@ class _$_Appointment extends _Appointment {
       : super._();
 
   factory _$_Appointment.fromJson(Map<String, dynamic> json) =>
-      _$_$_AppointmentFromJson(json);
+      _$$_AppointmentFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Appointment)
@@ -1027,7 +1027,7 @@ class _$_Appointment extends _Appointment {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AppointmentToJson(this);
+    return _$$_AppointmentToJson(this);
   }
 }
 
@@ -1466,7 +1466,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
       : super._();
 
   factory _$_AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
-      _$_$_AppointmentParticipantFromJson(json);
+      _$$_AppointmentParticipantFromJson(json);
 
   @override
   final Id? id;
@@ -1547,7 +1547,7 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AppointmentParticipantToJson(this);
+    return _$$_AppointmentParticipantToJson(this);
   }
 }
 
@@ -2250,7 +2250,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
       : super._();
 
   factory _$_AppointmentResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_AppointmentResponseFromJson(json);
+      _$$_AppointmentResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.AppointmentResponse)
@@ -2421,7 +2421,7 @@ class _$_AppointmentResponse extends _AppointmentResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AppointmentResponseToJson(this);
+    return _$$_AppointmentResponseToJson(this);
   }
 }
 
@@ -3009,7 +3009,7 @@ class _$_Schedule extends _Schedule {
       : super._();
 
   factory _$_Schedule.fromJson(Map<String, dynamic> json) =>
-      _$_$_ScheduleFromJson(json);
+      _$$_ScheduleFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Schedule)
@@ -3136,7 +3136,7 @@ class _$_Schedule extends _Schedule {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ScheduleToJson(this);
+    return _$$_ScheduleToJson(this);
   }
 }
 
@@ -3849,8 +3849,7 @@ class _$_Slot extends _Slot {
           this.commentElement})
       : super._();
 
-  factory _$_Slot.fromJson(Map<String, dynamic> json) =>
-      _$_$_SlotFromJson(json);
+  factory _$_Slot.fromJson(Map<String, dynamic> json) => _$$_SlotFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Slot)
@@ -4016,7 +4015,7 @@ class _$_Slot extends _Slot {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SlotToJson(this);
+    return _$$_SlotToJson(this);
   }
 }
 

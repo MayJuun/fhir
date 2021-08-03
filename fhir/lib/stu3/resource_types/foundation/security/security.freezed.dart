@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'security.dart';
 
@@ -676,7 +676,7 @@ class _$_AuditEvent extends _AuditEvent {
       : super._();
 
   factory _$_AuditEvent.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuditEventFromJson(json);
+      _$$_AuditEventFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.AuditEvent)
@@ -851,7 +851,7 @@ class _$_AuditEvent extends _AuditEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuditEventToJson(this);
+    return _$$_AuditEventToJson(this);
   }
 }
 
@@ -1410,7 +1410,7 @@ class _$_AuditEventAgent extends _AuditEventAgent {
       : super._();
 
   factory _$_AuditEventAgent.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuditEventAgentFromJson(json);
+      _$$_AuditEventAgentFromJson(json);
 
   @override
   final List<CodeableConcept>? role;
@@ -1523,7 +1523,7 @@ class _$_AuditEventAgent extends _AuditEventAgent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuditEventAgentToJson(this);
+    return _$$_AuditEventAgentToJson(this);
   }
 }
 
@@ -1776,7 +1776,7 @@ class _$_AuditEventNetwork extends _AuditEventNetwork {
       : super._();
 
   factory _$_AuditEventNetwork.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuditEventNetworkFromJson(json);
+      _$$_AuditEventNetworkFromJson(json);
 
   @override
   final String? address;
@@ -1826,7 +1826,7 @@ class _$_AuditEventNetwork extends _AuditEventNetwork {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuditEventNetworkToJson(this);
+    return _$$_AuditEventNetworkToJson(this);
   }
 }
 
@@ -2039,7 +2039,7 @@ class _$_AuditEventSource extends _AuditEventSource {
       : super._();
 
   factory _$_AuditEventSource.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuditEventSourceFromJson(json);
+      _$$_AuditEventSourceFromJson(json);
 
   @override
   final String? site;
@@ -2087,7 +2087,7 @@ class _$_AuditEventSource extends _AuditEventSource {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuditEventSourceToJson(this);
+    return _$$_AuditEventSourceToJson(this);
   }
 }
 
@@ -2533,7 +2533,7 @@ class _$_AuditEventEntity extends _AuditEventEntity {
       : super._();
 
   factory _$_AuditEventEntity.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuditEventEntityFromJson(json);
+      _$$_AuditEventEntityFromJson(json);
 
   @override
   final Identifier? identifier;
@@ -2634,7 +2634,7 @@ class _$_AuditEventEntity extends _AuditEventEntity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuditEventEntityToJson(this);
+    return _$$_AuditEventEntityToJson(this);
   }
 }
 
@@ -2880,7 +2880,7 @@ class _$_AuditEventDetail extends _AuditEventDetail {
       : super._();
 
   factory _$_AuditEventDetail.fromJson(Map<String, dynamic> json) =>
-      _$_$_AuditEventDetailFromJson(json);
+      _$$_AuditEventDetailFromJson(json);
 
   @override
   final String? type;
@@ -2929,7 +2929,7 @@ class _$_AuditEventDetail extends _AuditEventDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_AuditEventDetailToJson(this);
+    return _$$_AuditEventDetailToJson(this);
   }
 }
 
@@ -3818,7 +3818,7 @@ class _$_Consent extends _Consent {
       : super._();
 
   factory _$_Consent.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConsentFromJson(json);
+      _$$_ConsentFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Consent)
@@ -4029,7 +4029,7 @@ class _$_Consent extends _Consent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConsentToJson(this);
+    return _$$_ConsentToJson(this);
   }
 }
 
@@ -4297,7 +4297,7 @@ class _$_ConsentActor extends _ConsentActor {
   _$_ConsentActor({required this.role, required this.reference}) : super._();
 
   factory _$_ConsentActor.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConsentActorFromJson(json);
+      _$$_ConsentActorFromJson(json);
 
   @override
   final CodeableConcept role;
@@ -4333,7 +4333,7 @@ class _$_ConsentActor extends _ConsentActor {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConsentActorToJson(this);
+    return _$$_ConsentActorToJson(this);
   }
 }
 
@@ -4543,7 +4543,7 @@ class _$_ConsentPolicy extends _ConsentPolicy {
       : super._();
 
   factory _$_ConsentPolicy.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConsentPolicyFromJson(json);
+      _$$_ConsentPolicyFromJson(json);
 
   @override
   final String? authority;
@@ -4593,7 +4593,7 @@ class _$_ConsentPolicy extends _ConsentPolicy {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConsentPolicyToJson(this);
+    return _$$_ConsentPolicyToJson(this);
   }
 }
 
@@ -4788,7 +4788,7 @@ class _$_ConsentData extends _ConsentData {
       : super._();
 
   factory _$_ConsentData.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConsentDataFromJson(json);
+      _$$_ConsentDataFromJson(json);
 
   @override
   final ConsentDataMeaning? meaning;
@@ -4832,7 +4832,7 @@ class _$_ConsentData extends _ConsentData {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConsentDataToJson(this);
+    return _$$_ConsentDataToJson(this);
   }
 }
 
@@ -5172,7 +5172,7 @@ class _$_ConsentExcept extends _ConsentExcept {
       : super._();
 
   factory _$_ConsentExcept.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConsentExceptFromJson(json);
+      _$$_ConsentExceptFromJson(json);
 
   @override
   final ConsentExceptType? type;
@@ -5258,7 +5258,7 @@ class _$_ConsentExcept extends _ConsentExcept {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConsentExceptToJson(this);
+    return _$$_ConsentExceptToJson(this);
   }
 }
 
@@ -5447,7 +5447,7 @@ class _$_ConsentActor1 extends _ConsentActor1 {
   _$_ConsentActor1({required this.role, required this.reference}) : super._();
 
   factory _$_ConsentActor1.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConsentActor1FromJson(json);
+      _$$_ConsentActor1FromJson(json);
 
   @override
   final CodeableConcept role;
@@ -5483,7 +5483,7 @@ class _$_ConsentActor1 extends _ConsentActor1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConsentActor1ToJson(this);
+    return _$$_ConsentActor1ToJson(this);
   }
 }
 
@@ -5670,7 +5670,7 @@ class _$_ConsentData1 extends _ConsentData1 {
       : super._();
 
   factory _$_ConsentData1.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConsentData1FromJson(json);
+      _$$_ConsentData1FromJson(json);
 
   @override
   final ConsentData1Meaning? meaning;
@@ -5714,7 +5714,7 @@ class _$_ConsentData1 extends _ConsentData1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConsentData1ToJson(this);
+    return _$$_ConsentData1ToJson(this);
   }
 }
 
@@ -6342,7 +6342,7 @@ class _$_Provenance extends _Provenance {
       : super._();
 
   factory _$_Provenance.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProvenanceFromJson(json);
+      _$$_ProvenanceFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Provenance)
@@ -6502,7 +6502,7 @@ class _$_Provenance extends _Provenance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProvenanceToJson(this);
+    return _$$_ProvenanceToJson(this);
   }
 }
 
@@ -6894,7 +6894,7 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
       : super._();
 
   factory _$_ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProvenanceAgentFromJson(json);
+      _$$_ProvenanceAgentFromJson(json);
 
   @override
   final List<CodeableConcept>? role;
@@ -6967,7 +6967,7 @@ class _$_ProvenanceAgent extends _ProvenanceAgent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProvenanceAgentToJson(this);
+    return _$$_ProvenanceAgentToJson(this);
   }
 }
 
@@ -7273,7 +7273,7 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
       : super._();
 
   factory _$_ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProvenanceEntityFromJson(json);
+      _$$_ProvenanceEntityFromJson(json);
 
   @override
   final ProvenanceEntityRole? role;
@@ -7340,7 +7340,7 @@ class _$_ProvenanceEntity extends _ProvenanceEntity {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProvenanceEntityToJson(this);
+    return _$$_ProvenanceEntityToJson(this);
   }
 }
 

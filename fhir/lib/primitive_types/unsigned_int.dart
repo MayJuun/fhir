@@ -5,7 +5,8 @@ import 'fhir_number.dart';
 
 class UnsignedInt extends FhirNumber{
   const UnsignedInt._(
-      this.valueString, this.valueNumber, this.isValid, this.isString);
+      String valueString, int? valueNumber, bool isValid, bool isString)
+      : super(valueString, valueNumber, isValid, isString);
 
   factory UnsignedInt(dynamic inValue) {
     if (inValue is int) {
@@ -32,9 +33,5 @@ class UnsignedInt extends FhirNumber{
           : throw FormatException(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final String valueString;
-  final int? valueNumber;
-  final bool isValid;
-  final bool isString;
-
+  int? get value => valueNumber as int?;
 }

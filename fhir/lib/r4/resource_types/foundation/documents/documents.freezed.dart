@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'documents.dart';
 
@@ -752,7 +752,7 @@ class _$_CatalogEntry extends _CatalogEntry {
       : super._();
 
   factory _$_CatalogEntry.fromJson(Map<String, dynamic> json) =>
-      _$_$_CatalogEntryFromJson(json);
+      _$$_CatalogEntryFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
@@ -940,7 +940,7 @@ class _$_CatalogEntry extends _CatalogEntry {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CatalogEntryToJson(this);
+    return _$$_CatalogEntryToJson(this);
   }
 }
 
@@ -1297,7 +1297,7 @@ class _$_CatalogEntryRelatedEntry extends _CatalogEntryRelatedEntry {
       : super._();
 
   factory _$_CatalogEntryRelatedEntry.fromJson(Map<String, dynamic> json) =>
-      _$_$_CatalogEntryRelatedEntryFromJson(json);
+      _$$_CatalogEntryRelatedEntryFromJson(json);
 
   @override
   final String? id;
@@ -1360,7 +1360,7 @@ class _$_CatalogEntryRelatedEntry extends _CatalogEntryRelatedEntry {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CatalogEntryRelatedEntryToJson(this);
+    return _$$_CatalogEntryRelatedEntryToJson(this);
   }
 }
 
@@ -2199,7 +2199,7 @@ class _$_Composition extends _Composition {
       : super._();
 
   factory _$_Composition.fromJson(Map<String, dynamic> json) =>
-      _$_$_CompositionFromJson(json);
+      _$$_CompositionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Composition)
@@ -2395,7 +2395,7 @@ class _$_Composition extends _Composition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CompositionToJson(this);
+    return _$$_CompositionToJson(this);
   }
 }
 
@@ -2802,7 +2802,7 @@ class _$_CompositionAttester extends _CompositionAttester {
       : super._();
 
   factory _$_CompositionAttester.fromJson(Map<String, dynamic> json) =>
-      _$_$_CompositionAttesterFromJson(json);
+      _$$_CompositionAttesterFromJson(json);
 
   @override
   final String? id;
@@ -2876,7 +2876,7 @@ class _$_CompositionAttester extends _CompositionAttester {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CompositionAttesterToJson(this);
+    return _$$_CompositionAttesterToJson(this);
   }
 }
 
@@ -3176,7 +3176,7 @@ class _$_CompositionRelatesTo extends _CompositionRelatesTo {
       : super._();
 
   factory _$_CompositionRelatesTo.fromJson(Map<String, dynamic> json) =>
-      _$_$_CompositionRelatesToFromJson(json);
+      _$$_CompositionRelatesToFromJson(json);
 
   @override
   final String? id;
@@ -3244,7 +3244,7 @@ class _$_CompositionRelatesTo extends _CompositionRelatesTo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CompositionRelatesToToJson(this);
+    return _$$_CompositionRelatesToToJson(this);
   }
 }
 
@@ -3490,7 +3490,7 @@ class _$_CompositionEvent extends _CompositionEvent {
       : super._();
 
   factory _$_CompositionEvent.fromJson(Map<String, dynamic> json) =>
-      _$_$_CompositionEventFromJson(json);
+      _$$_CompositionEventFromJson(json);
 
   @override
   final String? id;
@@ -3548,7 +3548,7 @@ class _$_CompositionEvent extends _CompositionEvent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CompositionEventToJson(this);
+    return _$$_CompositionEventToJson(this);
   }
 }
 
@@ -4020,7 +4020,7 @@ class _$_CompositionSection extends _CompositionSection {
       : super._();
 
   factory _$_CompositionSection.fromJson(Map<String, dynamic> json) =>
-      _$_$_CompositionSectionFromJson(json);
+      _$$_CompositionSectionFromJson(json);
 
   @override
   final String? id;
@@ -4129,7 +4129,7 @@ class _$_CompositionSection extends _CompositionSection {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CompositionSectionToJson(this);
+    return _$$_CompositionSectionToJson(this);
   }
 }
 
@@ -4921,7 +4921,7 @@ class _$_DocumentManifest extends _DocumentManifest {
       : super._();
 
   factory _$_DocumentManifest.fromJson(Map<String, dynamic> json) =>
-      _$_$_DocumentManifestFromJson(json);
+      _$$_DocumentManifestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
@@ -5106,7 +5106,7 @@ class _$_DocumentManifest extends _DocumentManifest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DocumentManifestToJson(this);
+    return _$$_DocumentManifestToJson(this);
   }
 }
 
@@ -5429,7 +5429,7 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
       : super._();
 
   factory _$_DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
-      _$_$_DocumentManifestRelatedFromJson(json);
+      _$$_DocumentManifestRelatedFromJson(json);
 
   @override
   final String? id;
@@ -5484,7 +5484,7 @@ class _$_DocumentManifestRelated extends _DocumentManifestRelated {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DocumentManifestRelatedToJson(this);
+    return _$$_DocumentManifestRelatedToJson(this);
   }
 }
 
@@ -6352,7 +6352,7 @@ class _$_DocumentReference extends _DocumentReference {
       : super._();
 
   factory _$_DocumentReference.fromJson(Map<String, dynamic> json) =>
-      _$_$_DocumentReferenceFromJson(json);
+      _$$_DocumentReferenceFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
@@ -6553,7 +6553,7 @@ class _$_DocumentReference extends _DocumentReference {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DocumentReferenceToJson(this);
+    return _$$_DocumentReferenceToJson(this);
   }
 }
 
@@ -6918,7 +6918,7 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
       : super._();
 
   factory _$_DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
-      _$_$_DocumentReferenceRelatesToFromJson(json);
+      _$$_DocumentReferenceRelatesToFromJson(json);
 
   @override
   final String? id;
@@ -6980,7 +6980,7 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DocumentReferenceRelatesToToJson(this);
+    return _$$_DocumentReferenceRelatesToToJson(this);
   }
 }
 
@@ -7224,7 +7224,7 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
       : super._();
 
   factory _$_DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
-      _$_$_DocumentReferenceContentFromJson(json);
+      _$$_DocumentReferenceContentFromJson(json);
 
   @override
   final String? id;
@@ -7279,7 +7279,7 @@ class _$_DocumentReferenceContent extends _DocumentReferenceContent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DocumentReferenceContentToJson(this);
+    return _$$_DocumentReferenceContentToJson(this);
   }
 }
 
@@ -7626,7 +7626,7 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
       : super._();
 
   factory _$_DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
-      _$_$_DocumentReferenceContextFromJson(json);
+      _$$_DocumentReferenceContextFromJson(json);
 
   @override
   final String? id;
@@ -7709,7 +7709,7 @@ class _$_DocumentReferenceContext extends _DocumentReferenceContext {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DocumentReferenceContextToJson(this);
+    return _$$_DocumentReferenceContextToJson(this);
   }
 }
 

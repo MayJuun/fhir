@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'medications.dart';
 
@@ -1038,7 +1038,7 @@ class _$_Immunization extends _Immunization {
       : super._();
 
   factory _$_Immunization.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImmunizationFromJson(json);
+      _$$_ImmunizationFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Immunization)
@@ -1267,7 +1267,7 @@ class _$_Immunization extends _Immunization {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImmunizationToJson(this);
+    return _$$_ImmunizationToJson(this);
   }
 }
 
@@ -1567,7 +1567,7 @@ class _$_ImmunizationPractitioner extends _ImmunizationPractitioner {
   _$_ImmunizationPractitioner({this.role, required this.actor}) : super._();
 
   factory _$_ImmunizationPractitioner.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImmunizationPractitionerFromJson(json);
+      _$$_ImmunizationPractitionerFromJson(json);
 
   @override
   final CodeableConcept? role;
@@ -1603,7 +1603,7 @@ class _$_ImmunizationPractitioner extends _ImmunizationPractitioner {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImmunizationPractitionerToJson(this);
+    return _$$_ImmunizationPractitionerToJson(this);
   }
 }
 
@@ -1746,7 +1746,7 @@ class _$_ImmunizationExplanation extends _ImmunizationExplanation {
   _$_ImmunizationExplanation({this.reason, this.reasonNotGiven}) : super._();
 
   factory _$_ImmunizationExplanation.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImmunizationExplanationFromJson(json);
+      _$$_ImmunizationExplanationFromJson(json);
 
   @override
   final List<CodeableConcept>? reason;
@@ -1783,7 +1783,7 @@ class _$_ImmunizationExplanation extends _ImmunizationExplanation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImmunizationExplanationToJson(this);
+    return _$$_ImmunizationExplanationToJson(this);
   }
 }
 
@@ -2024,7 +2024,7 @@ class _$_ImmunizationReaction extends _ImmunizationReaction {
       : super._();
 
   factory _$_ImmunizationReaction.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImmunizationReactionFromJson(json);
+      _$$_ImmunizationReactionFromJson(json);
 
   @override
   final Date? date;
@@ -2080,7 +2080,7 @@ class _$_ImmunizationReaction extends _ImmunizationReaction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImmunizationReactionToJson(this);
+    return _$$_ImmunizationReactionToJson(this);
   }
 }
 
@@ -2506,7 +2506,7 @@ class _$_ImmunizationVaccinationProtocol
 
   factory _$_ImmunizationVaccinationProtocol.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_ImmunizationVaccinationProtocolFromJson(json);
+      _$$_ImmunizationVaccinationProtocolFromJson(json);
 
   @override
   final Decimal? doseSequence;
@@ -2607,7 +2607,7 @@ class _$_ImmunizationVaccinationProtocol
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImmunizationVaccinationProtocolToJson(this);
+    return _$$_ImmunizationVaccinationProtocolToJson(this);
   }
 }
 
@@ -3074,7 +3074,7 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
       : super._();
 
   factory _$_ImmunizationRecommendation.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImmunizationRecommendationFromJson(json);
+      _$$_ImmunizationRecommendationFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.ImmunizationRecommendation)
@@ -3185,7 +3185,7 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImmunizationRecommendationToJson(this);
+    return _$$_ImmunizationRecommendationToJson(this);
   }
 }
 
@@ -3623,7 +3623,7 @@ class _$_ImmunizationRecommendationRecommendation
 
   factory _$_ImmunizationRecommendationRecommendation.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_ImmunizationRecommendationRecommendationFromJson(json);
+      _$$_ImmunizationRecommendationRecommendationFromJson(json);
 
   @override
   final Date? date;
@@ -3719,7 +3719,7 @@ class _$_ImmunizationRecommendationRecommendation
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImmunizationRecommendationRecommendationToJson(this);
+    return _$$_ImmunizationRecommendationRecommendationToJson(this);
   }
 }
 
@@ -3957,7 +3957,7 @@ class _$_ImmunizationRecommendationDateCriterion
 
   factory _$_ImmunizationRecommendationDateCriterion.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_ImmunizationRecommendationDateCriterionFromJson(json);
+      _$$_ImmunizationRecommendationDateCriterionFromJson(json);
 
   @override
   final CodeableConcept code;
@@ -4001,7 +4001,7 @@ class _$_ImmunizationRecommendationDateCriterion
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImmunizationRecommendationDateCriterionToJson(this);
+    return _$$_ImmunizationRecommendationDateCriterionToJson(this);
   }
 }
 
@@ -4305,7 +4305,7 @@ class _$_ImmunizationRecommendationProtocol
 
   factory _$_ImmunizationRecommendationProtocol.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_ImmunizationRecommendationProtocolFromJson(json);
+      _$$_ImmunizationRecommendationProtocolFromJson(json);
 
   @override
   final Decimal? doseSequence;
@@ -4376,7 +4376,7 @@ class _$_ImmunizationRecommendationProtocol
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImmunizationRecommendationProtocolToJson(this);
+    return _$$_ImmunizationRecommendationProtocolToJson(this);
   }
 }
 
@@ -5070,7 +5070,7 @@ class _$_Medication extends _Medication {
       : super._();
 
   factory _$_Medication.fromJson(Map<String, dynamic> json) =>
-      _$_$_MedicationFromJson(json);
+      _$$_MedicationFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Medication)
@@ -5234,7 +5234,7 @@ class _$_Medication extends _Medication {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MedicationToJson(this);
+    return _$$_MedicationToJson(this);
   }
 }
 
@@ -5567,7 +5567,7 @@ class _$_MedicationIngredient extends _MedicationIngredient {
       : super._();
 
   factory _$_MedicationIngredient.fromJson(Map<String, dynamic> json) =>
-      _$_$_MedicationIngredientFromJson(json);
+      _$$_MedicationIngredientFromJson(json);
 
   @override
   final CodeableConcept? itemCodeableConcept;
@@ -5623,7 +5623,7 @@ class _$_MedicationIngredient extends _MedicationIngredient {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MedicationIngredientToJson(this);
+    return _$$_MedicationIngredientToJson(this);
   }
 }
 
@@ -5808,7 +5808,7 @@ class _$_MedicationPackage extends _MedicationPackage {
   _$_MedicationPackage({this.container, this.content, this.batch}) : super._();
 
   factory _$_MedicationPackage.fromJson(Map<String, dynamic> json) =>
-      _$_$_MedicationPackageFromJson(json);
+      _$$_MedicationPackageFromJson(json);
 
   @override
   final CodeableConcept? container;
@@ -5850,7 +5850,7 @@ class _$_MedicationPackage extends _MedicationPackage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MedicationPackageToJson(this);
+    return _$$_MedicationPackageToJson(this);
   }
 }
 
@@ -6058,7 +6058,7 @@ class _$_MedicationContent extends _MedicationContent {
       : super._();
 
   factory _$_MedicationContent.fromJson(Map<String, dynamic> json) =>
-      _$_$_MedicationContentFromJson(json);
+      _$$_MedicationContentFromJson(json);
 
   @override
   final CodeableConcept? itemCodeableConcept;
@@ -6100,7 +6100,7 @@ class _$_MedicationContent extends _MedicationContent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MedicationContentToJson(this);
+    return _$$_MedicationContentToJson(this);
   }
 }
 
@@ -6314,7 +6314,7 @@ class _$_MedicationBatch extends _MedicationBatch {
       : super._();
 
   factory _$_MedicationBatch.fromJson(Map<String, dynamic> json) =>
-      _$_$_MedicationBatchFromJson(json);
+      _$$_MedicationBatchFromJson(json);
 
   @override
   final String? lotNumber;
@@ -6365,7 +6365,7 @@ class _$_MedicationBatch extends _MedicationBatch {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MedicationBatchToJson(this);
+    return _$$_MedicationBatchToJson(this);
   }
 }
 
@@ -7319,7 +7319,7 @@ class _$_MedicationAdministration extends _MedicationAdministration {
       : super._();
 
   factory _$_MedicationAdministration.fromJson(Map<String, dynamic> json) =>
-      _$_$_MedicationAdministrationFromJson(json);
+      _$$_MedicationAdministrationFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationAdministration)
@@ -7537,7 +7537,7 @@ class _$_MedicationAdministration extends _MedicationAdministration {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MedicationAdministrationToJson(this);
+    return _$$_MedicationAdministrationToJson(this);
   }
 }
 
@@ -7833,7 +7833,7 @@ class _$_MedicationAdministrationPerformer
 
   factory _$_MedicationAdministrationPerformer.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_MedicationAdministrationPerformerFromJson(json);
+      _$$_MedicationAdministrationPerformerFromJson(json);
 
   @override
   final Reference actor;
@@ -7871,7 +7871,7 @@ class _$_MedicationAdministrationPerformer
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MedicationAdministrationPerformerToJson(this);
+    return _$$_MedicationAdministrationPerformerToJson(this);
   }
 }
 
@@ -8225,7 +8225,7 @@ class _$_MedicationAdministrationDosage
 
   factory _$_MedicationAdministrationDosage.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_MedicationAdministrationDosageFromJson(json);
+      _$$_MedicationAdministrationDosageFromJson(json);
 
   @override
   final String? text;
@@ -8295,7 +8295,7 @@ class _$_MedicationAdministrationDosage
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MedicationAdministrationDosageToJson(this);
+    return _$$_MedicationAdministrationDosageToJson(this);
   }
 }
 
@@ -9417,7 +9417,7 @@ class _$_MedicationDispense extends _MedicationDispense {
       : super._();
 
   factory _$_MedicationDispense.fromJson(Map<String, dynamic> json) =>
-      _$_$_MedicationDispenseFromJson(json);
+      _$$_MedicationDispenseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationDispense)
@@ -9655,7 +9655,7 @@ class _$_MedicationDispense extends _MedicationDispense {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MedicationDispenseToJson(this);
+    return _$$_MedicationDispenseToJson(this);
   }
 }
 
@@ -9965,7 +9965,7 @@ class _$_MedicationDispensePerformer extends _MedicationDispensePerformer {
       : super._();
 
   factory _$_MedicationDispensePerformer.fromJson(Map<String, dynamic> json) =>
-      _$_$_MedicationDispensePerformerFromJson(json);
+      _$$_MedicationDispensePerformerFromJson(json);
 
   @override
   final Reference actor;
@@ -10002,7 +10002,7 @@ class _$_MedicationDispensePerformer extends _MedicationDispensePerformer {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MedicationDispensePerformerToJson(this);
+    return _$$_MedicationDispensePerformerToJson(this);
   }
 }
 
@@ -10236,7 +10236,7 @@ class _$_MedicationDispenseSubstitution
 
   factory _$_MedicationDispenseSubstitution.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_MedicationDispenseSubstitutionFromJson(json);
+      _$$_MedicationDispenseSubstitutionFromJson(json);
 
   @override
   final Boolean? wasSubstituted;
@@ -10291,7 +10291,7 @@ class _$_MedicationDispenseSubstitution
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MedicationDispenseSubstitutionToJson(this);
+    return _$$_MedicationDispenseSubstitutionToJson(this);
   }
 }
 
@@ -11370,7 +11370,7 @@ class _$_MedicationRequest extends _MedicationRequest {
       : super._();
 
   factory _$_MedicationRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_MedicationRequestFromJson(json);
+      _$$_MedicationRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationRequest)
@@ -11605,7 +11605,7 @@ class _$_MedicationRequest extends _MedicationRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MedicationRequestToJson(this);
+    return _$$_MedicationRequestToJson(this);
   }
 }
 
@@ -11909,7 +11909,7 @@ class _$_MedicationRequestRequester extends _MedicationRequestRequester {
       : super._();
 
   factory _$_MedicationRequestRequester.fromJson(Map<String, dynamic> json) =>
-      _$_$_MedicationRequestRequesterFromJson(json);
+      _$$_MedicationRequestRequesterFromJson(json);
 
   @override
   final Reference agent;
@@ -11946,7 +11946,7 @@ class _$_MedicationRequestRequester extends _MedicationRequestRequester {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MedicationRequestRequesterToJson(this);
+    return _$$_MedicationRequestRequesterToJson(this);
   }
 }
 
@@ -12244,7 +12244,7 @@ class _$_MedicationRequestDispenseRequest
 
   factory _$_MedicationRequestDispenseRequest.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_MedicationRequestDispenseRequestFromJson(json);
+      _$$_MedicationRequestDispenseRequestFromJson(json);
 
   @override
   final Period? validityPeriod;
@@ -12309,7 +12309,7 @@ class _$_MedicationRequestDispenseRequest
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MedicationRequestDispenseRequestToJson(this);
+    return _$$_MedicationRequestDispenseRequestToJson(this);
   }
 }
 
@@ -12525,7 +12525,7 @@ class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
 
   factory _$_MedicationRequestSubstitution.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_MedicationRequestSubstitutionFromJson(json);
+      _$$_MedicationRequestSubstitutionFromJson(json);
 
   @override
   final Boolean? allowed;
@@ -12569,7 +12569,7 @@ class _$_MedicationRequestSubstitution extends _MedicationRequestSubstitution {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MedicationRequestSubstitutionToJson(this);
+    return _$$_MedicationRequestSubstitutionToJson(this);
   }
 }
 
@@ -13500,7 +13500,7 @@ class _$_MedicationStatement extends _MedicationStatement {
       : super._();
 
   factory _$_MedicationStatement.fromJson(Map<String, dynamic> json) =>
-      _$_$_MedicationStatementFromJson(json);
+      _$$_MedicationStatementFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.MedicationStatement)
@@ -13715,7 +13715,7 @@ class _$_MedicationStatement extends _MedicationStatement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MedicationStatementToJson(this);
+    return _$$_MedicationStatementToJson(this);
   }
 }
 

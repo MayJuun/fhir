@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'terminology.dart';
 
@@ -1137,7 +1137,7 @@ class _$_ValueSet extends _ValueSet {
       : super._();
 
   factory _$_ValueSet.fromJson(Map<String, dynamic> json) =>
-      _$_$_ValueSetFromJson(json);
+      _$$_ValueSetFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ValueSet)
@@ -1390,7 +1390,7 @@ class _$_ValueSet extends _ValueSet {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ValueSetToJson(this);
+    return _$$_ValueSetToJson(this);
   }
 }
 
@@ -1757,7 +1757,7 @@ class _$_ValueSetContact extends _ValueSetContact {
       : super._();
 
   factory _$_ValueSetContact.fromJson(Map<String, dynamic> json) =>
-      _$_$_ValueSetContactFromJson(json);
+      _$$_ValueSetContactFromJson(json);
 
   @override
   final Id? id;
@@ -1817,7 +1817,7 @@ class _$_ValueSetContact extends _ValueSetContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ValueSetContactToJson(this);
+    return _$$_ValueSetContactToJson(this);
   }
 }
 
@@ -2173,7 +2173,7 @@ class _$_ValueSetCodeSystem extends _ValueSetCodeSystem {
       : super._();
 
   factory _$_ValueSetCodeSystem.fromJson(Map<String, dynamic> json) =>
-      _$_$_ValueSetCodeSystemFromJson(json);
+      _$$_ValueSetCodeSystemFromJson(json);
 
   @override
   final Id? id;
@@ -2266,7 +2266,7 @@ class _$_ValueSetCodeSystem extends _ValueSetCodeSystem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ValueSetCodeSystemToJson(this);
+    return _$$_ValueSetCodeSystemToJson(this);
   }
 }
 
@@ -2647,7 +2647,7 @@ class _$_ValueSetCodeSystemConcept extends _ValueSetCodeSystemConcept {
       : super._();
 
   factory _$_ValueSetCodeSystemConcept.fromJson(Map<String, dynamic> json) =>
-      _$_$_ValueSetCodeSystemConceptFromJson(json);
+      _$$_ValueSetCodeSystemConceptFromJson(json);
 
   @override
   final Id? id;
@@ -2748,7 +2748,7 @@ class _$_ValueSetCodeSystemConcept extends _ValueSetCodeSystemConcept {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ValueSetCodeSystemConceptToJson(this);
+    return _$$_ValueSetCodeSystemConceptToJson(this);
   }
 }
 
@@ -3079,7 +3079,7 @@ class _$_ValueSetConceptDesignation extends _ValueSetConceptDesignation {
       : super._();
 
   factory _$_ValueSetConceptDesignation.fromJson(Map<String, dynamic> json) =>
-      _$_$_ValueSetConceptDesignationFromJson(json);
+      _$$_ValueSetConceptDesignationFromJson(json);
 
   @override
   final Id? id;
@@ -3153,7 +3153,7 @@ class _$_ValueSetConceptDesignation extends _ValueSetConceptDesignation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ValueSetConceptDesignationToJson(this);
+    return _$$_ValueSetConceptDesignationToJson(this);
   }
 }
 
@@ -3408,7 +3408,7 @@ class _$_ValueSetCompose extends _ValueSetCompose {
       : super._();
 
   factory _$_ValueSetCompose.fromJson(Map<String, dynamic> json) =>
-      _$_$_ValueSetComposeFromJson(json);
+      _$$_ValueSetComposeFromJson(json);
 
   @override
   final Id? id;
@@ -3476,7 +3476,7 @@ class _$_ValueSetCompose extends _ValueSetCompose {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ValueSetComposeToJson(this);
+    return _$$_ValueSetComposeToJson(this);
   }
 }
 
@@ -3808,7 +3808,7 @@ class _$_ValueSetComposeInclude extends _ValueSetComposeInclude {
       : super._();
 
   factory _$_ValueSetComposeInclude.fromJson(Map<String, dynamic> json) =>
-      _$_$_ValueSetComposeIncludeFromJson(json);
+      _$$_ValueSetComposeIncludeFromJson(json);
 
   @override
   final Id? id;
@@ -3895,7 +3895,7 @@ class _$_ValueSetComposeInclude extends _ValueSetComposeInclude {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ValueSetComposeIncludeToJson(this);
+    return _$$_ValueSetComposeIncludeToJson(this);
   }
 }
 
@@ -4220,7 +4220,7 @@ class _$_ValueSetIncludeConcept extends _ValueSetIncludeConcept {
       : super._();
 
   factory _$_ValueSetIncludeConcept.fromJson(Map<String, dynamic> json) =>
-      _$_$_ValueSetIncludeConceptFromJson(json);
+      _$$_ValueSetIncludeConceptFromJson(json);
 
   @override
   final Id? id;
@@ -4302,7 +4302,7 @@ class _$_ValueSetIncludeConcept extends _ValueSetIncludeConcept {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ValueSetIncludeConceptToJson(this);
+    return _$$_ValueSetIncludeConceptToJson(this);
   }
 }
 
@@ -4656,7 +4656,7 @@ class _$_ValueSetIncludeFilter extends _ValueSetIncludeFilter {
       : super._();
 
   factory _$_ValueSetIncludeFilter.fromJson(Map<String, dynamic> json) =>
-      _$_$_ValueSetIncludeFilterFromJson(json);
+      _$$_ValueSetIncludeFilterFromJson(json);
 
   @override
   final Id? id;
@@ -4745,7 +4745,7 @@ class _$_ValueSetIncludeFilter extends _ValueSetIncludeFilter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ValueSetIncludeFilterToJson(this);
+    return _$$_ValueSetIncludeFilterToJson(this);
   }
 }
 
@@ -5182,7 +5182,7 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
       : super._();
 
   factory _$_ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
-      _$_$_ValueSetExpansionFromJson(json);
+      _$$_ValueSetExpansionFromJson(json);
 
   @override
   final Id? id;
@@ -5294,7 +5294,7 @@ class _$_ValueSetExpansion extends _ValueSetExpansion {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ValueSetExpansionToJson(this);
+    return _$$_ValueSetExpansionToJson(this);
   }
 }
 
@@ -5854,7 +5854,7 @@ class _$_ValueSetExpansionParameter extends _ValueSetExpansionParameter {
       : super._();
 
   factory _$_ValueSetExpansionParameter.fromJson(Map<String, dynamic> json) =>
-      _$_$_ValueSetExpansionParameterFromJson(json);
+      _$$_ValueSetExpansionParameterFromJson(json);
 
   @override
   final Id? id;
@@ -5995,7 +5995,7 @@ class _$_ValueSetExpansionParameter extends _ValueSetExpansionParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ValueSetExpansionParameterToJson(this);
+    return _$$_ValueSetExpansionParameterToJson(this);
   }
 }
 
@@ -6492,7 +6492,7 @@ class _$_ValueSetExpansionContains extends _ValueSetExpansionContains {
       : super._();
 
   factory _$_ValueSetExpansionContains.fromJson(Map<String, dynamic> json) =>
-      _$_$_ValueSetExpansionContainsFromJson(json);
+      _$$_ValueSetExpansionContainsFromJson(json);
 
   @override
   final Id? id;
@@ -6614,7 +6614,7 @@ class _$_ValueSetExpansionContains extends _ValueSetExpansionContains {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ValueSetExpansionContainsToJson(this);
+    return _$$_ValueSetExpansionContainsToJson(this);
   }
 }
 
@@ -7750,7 +7750,7 @@ class _$_ConceptMap extends _ConceptMap {
       : super._();
 
   factory _$_ConceptMap.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConceptMapFromJson(json);
+      _$$_ConceptMapFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ConceptMap)
@@ -7994,7 +7994,7 @@ class _$_ConceptMap extends _ConceptMap {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConceptMapToJson(this);
+    return _$$_ConceptMapToJson(this);
   }
 }
 
@@ -8337,7 +8337,7 @@ class _$_ConceptMapContact extends _ConceptMapContact {
       : super._();
 
   factory _$_ConceptMapContact.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConceptMapContactFromJson(json);
+      _$$_ConceptMapContactFromJson(json);
 
   @override
   final Id? id;
@@ -8390,7 +8390,7 @@ class _$_ConceptMapContact extends _ConceptMapContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConceptMapContactToJson(this);
+    return _$$_ConceptMapContactToJson(this);
   }
 }
 
@@ -8647,7 +8647,7 @@ class _$_ConceptMapElement extends _ConceptMapElement {
       : super._();
 
   factory _$_ConceptMapElement.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConceptMapElementFromJson(json);
+      _$$_ConceptMapElementFromJson(json);
 
   @override
   final Id? id;
@@ -8713,7 +8713,7 @@ class _$_ConceptMapElement extends _ConceptMapElement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConceptMapElementToJson(this);
+    return _$$_ConceptMapElementToJson(this);
   }
 }
 
@@ -9112,7 +9112,7 @@ class _$_ConceptMapElementTarget extends _ConceptMapElementTarget {
       : super._();
 
   factory _$_ConceptMapElementTarget.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConceptMapElementTargetFromJson(json);
+      _$$_ConceptMapElementTargetFromJson(json);
 
   @override
   final Id? id;
@@ -9212,7 +9212,7 @@ class _$_ConceptMapElementTarget extends _ConceptMapElementTarget {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConceptMapElementTargetToJson(this);
+    return _$$_ConceptMapElementTargetToJson(this);
   }
 }
 
@@ -9469,7 +9469,7 @@ class _$_ConceptMapTargetDependsOn extends _ConceptMapTargetDependsOn {
       : super._();
 
   factory _$_ConceptMapTargetDependsOn.fromJson(Map<String, dynamic> json) =>
-      _$_$_ConceptMapTargetDependsOnFromJson(json);
+      _$$_ConceptMapTargetDependsOnFromJson(json);
 
   @override
   final Id? id;
@@ -9531,7 +9531,7 @@ class _$_ConceptMapTargetDependsOn extends _ConceptMapTargetDependsOn {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ConceptMapTargetDependsOnToJson(this);
+    return _$$_ConceptMapTargetDependsOnToJson(this);
   }
 }
 
@@ -10438,7 +10438,7 @@ class _$_NamingSystem extends _NamingSystem {
       : super._();
 
   factory _$_NamingSystem.fromJson(Map<String, dynamic> json) =>
-      _$_$_NamingSystemFromJson(json);
+      _$$_NamingSystemFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.NamingSystem)
@@ -10648,7 +10648,7 @@ class _$_NamingSystem extends _NamingSystem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_NamingSystemToJson(this);
+    return _$$_NamingSystemToJson(this);
   }
 }
 
@@ -10963,7 +10963,7 @@ class _$_NamingSystemContact extends _NamingSystemContact {
       : super._();
 
   factory _$_NamingSystemContact.fromJson(Map<String, dynamic> json) =>
-      _$_$_NamingSystemContactFromJson(json);
+      _$$_NamingSystemContactFromJson(json);
 
   @override
   final Id? id;
@@ -11017,7 +11017,7 @@ class _$_NamingSystemContact extends _NamingSystemContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_NamingSystemContactToJson(this);
+    return _$$_NamingSystemContactToJson(this);
   }
 }
 
@@ -11371,7 +11371,7 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
       : super._();
 
   factory _$_NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
-      _$_$_NamingSystemUniqueIdFromJson(json);
+      _$$_NamingSystemUniqueIdFromJson(json);
 
   @override
   final Id? id;
@@ -11458,7 +11458,7 @@ class _$_NamingSystemUniqueId extends _NamingSystemUniqueId {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_NamingSystemUniqueIdToJson(this);
+    return _$$_NamingSystemUniqueIdToJson(this);
   }
 }
 

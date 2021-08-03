@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'content.dart';
 
@@ -1269,7 +1269,7 @@ class _$_StructureDefinition extends _StructureDefinition {
       : super._();
 
   factory _$_StructureDefinition.fromJson(Map<String, dynamic> json) =>
-      _$_$_StructureDefinitionFromJson(json);
+      _$$_StructureDefinitionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.StructureDefinition)
@@ -1555,7 +1555,7 @@ class _$_StructureDefinition extends _StructureDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StructureDefinitionToJson(this);
+    return _$$_StructureDefinitionToJson(this);
   }
 }
 
@@ -1943,7 +1943,7 @@ class _$_StructureDefinitionContact extends _StructureDefinitionContact {
       : super._();
 
   factory _$_StructureDefinitionContact.fromJson(Map<String, dynamic> json) =>
-      _$_$_StructureDefinitionContactFromJson(json);
+      _$$_StructureDefinitionContactFromJson(json);
 
   @override
   final Id? id;
@@ -1997,7 +1997,7 @@ class _$_StructureDefinitionContact extends _StructureDefinitionContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StructureDefinitionContactToJson(this);
+    return _$$_StructureDefinitionContactToJson(this);
   }
 }
 
@@ -2382,7 +2382,7 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
       : super._();
 
   factory _$_StructureDefinitionMapping.fromJson(Map<String, dynamic> json) =>
-      _$_$_StructureDefinitionMappingFromJson(json);
+      _$$_StructureDefinitionMappingFromJson(json);
 
   @override
   final Id? id;
@@ -2483,7 +2483,7 @@ class _$_StructureDefinitionMapping extends _StructureDefinitionMapping {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StructureDefinitionMappingToJson(this);
+    return _$$_StructureDefinitionMappingToJson(this);
   }
 }
 
@@ -2706,7 +2706,7 @@ class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
       : super._();
 
   factory _$_StructureDefinitionSnapshot.fromJson(Map<String, dynamic> json) =>
-      _$_$_StructureDefinitionSnapshotFromJson(json);
+      _$$_StructureDefinitionSnapshotFromJson(json);
 
   @override
   final Id? id;
@@ -2755,7 +2755,7 @@ class _$_StructureDefinitionSnapshot extends _StructureDefinitionSnapshot {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StructureDefinitionSnapshotToJson(this);
+    return _$$_StructureDefinitionSnapshotToJson(this);
   }
 }
 
@@ -2953,7 +2953,7 @@ class _$_StructureDefinitionDifferential
 
   factory _$_StructureDefinitionDifferential.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_StructureDefinitionDifferentialFromJson(json);
+      _$$_StructureDefinitionDifferentialFromJson(json);
 
   @override
   final Id? id;
@@ -3002,7 +3002,7 @@ class _$_StructureDefinitionDifferential
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_StructureDefinitionDifferentialToJson(this);
+    return _$$_StructureDefinitionDifferentialToJson(this);
   }
 }
 
@@ -3543,7 +3543,7 @@ class _$_DataElement extends _DataElement {
       : super._();
 
   factory _$_DataElement.fromJson(Map<String, dynamic> json) =>
-      _$_$_DataElementFromJson(json);
+      _$$_DataElementFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DataElement)
@@ -3702,7 +3702,7 @@ class _$_DataElement extends _DataElement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DataElementToJson(this);
+    return _$$_DataElementToJson(this);
   }
 }
 
@@ -3970,7 +3970,7 @@ class _$_DataElementContact extends _DataElementContact {
       : super._();
 
   factory _$_DataElementContact.fromJson(Map<String, dynamic> json) =>
-      _$_$_DataElementContactFromJson(json);
+      _$$_DataElementContactFromJson(json);
 
   @override
   final Id? id;
@@ -4023,7 +4023,7 @@ class _$_DataElementContact extends _DataElementContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DataElementContactToJson(this);
+    return _$$_DataElementContactToJson(this);
   }
 }
 
@@ -4405,7 +4405,7 @@ class _$_DataElementMapping extends _DataElementMapping {
       : super._();
 
   factory _$_DataElementMapping.fromJson(Map<String, dynamic> json) =>
-      _$_$_DataElementMappingFromJson(json);
+      _$$_DataElementMappingFromJson(json);
 
   @override
   final Id? id;
@@ -4505,7 +4505,7 @@ class _$_DataElementMapping extends _DataElementMapping {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DataElementMappingToJson(this);
+    return _$$_DataElementMappingToJson(this);
   }
 }
 

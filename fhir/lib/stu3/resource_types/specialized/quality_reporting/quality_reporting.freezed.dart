@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'quality_reporting.dart';
 
@@ -1797,7 +1797,7 @@ class _$_Measure extends _Measure {
       : super._();
 
   factory _$_Measure.fromJson(Map<String, dynamic> json) =>
-      _$_$_MeasureFromJson(json);
+      _$$_MeasureFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
@@ -2179,7 +2179,7 @@ class _$_Measure extends _Measure {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MeasureToJson(this);
+    return _$$_MeasureToJson(this);
   }
 }
 
@@ -2714,7 +2714,7 @@ class _$_MeasureGroup extends _MeasureGroup {
       : super._();
 
   factory _$_MeasureGroup.fromJson(Map<String, dynamic> json) =>
-      _$_$_MeasureGroupFromJson(json);
+      _$$_MeasureGroupFromJson(json);
 
   @override
   final Identifier identifier;
@@ -2782,7 +2782,7 @@ class _$_MeasureGroup extends _MeasureGroup {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MeasureGroupToJson(this);
+    return _$$_MeasureGroupToJson(this);
   }
 }
 
@@ -3116,7 +3116,7 @@ class _$_MeasurePopulation extends _MeasurePopulation {
       : super._();
 
   factory _$_MeasurePopulation.fromJson(Map<String, dynamic> json) =>
-      _$_$_MeasurePopulationFromJson(json);
+      _$$_MeasurePopulationFromJson(json);
 
   @override
   final Identifier? identifier;
@@ -3190,7 +3190,7 @@ class _$_MeasurePopulation extends _MeasurePopulation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MeasurePopulationToJson(this);
+    return _$$_MeasurePopulationToJson(this);
   }
 }
 
@@ -3452,7 +3452,7 @@ class _$_MeasureStratifier extends _MeasureStratifier {
       : super._();
 
   factory _$_MeasureStratifier.fromJson(Map<String, dynamic> json) =>
-      _$_$_MeasureStratifierFromJson(json);
+      _$$_MeasureStratifierFromJson(json);
 
   @override
   final Identifier? identifier;
@@ -3508,7 +3508,7 @@ class _$_MeasureStratifier extends _MeasureStratifier {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MeasureStratifierToJson(this);
+    return _$$_MeasureStratifierToJson(this);
   }
 }
 
@@ -3777,7 +3777,7 @@ class _$_MeasureSupplementalData extends _MeasureSupplementalData {
       : super._();
 
   factory _$_MeasureSupplementalData.fromJson(Map<String, dynamic> json) =>
-      _$_$_MeasureSupplementalDataFromJson(json);
+      _$$_MeasureSupplementalDataFromJson(json);
 
   @override
   final Identifier? identifier;
@@ -3839,7 +3839,7 @@ class _$_MeasureSupplementalData extends _MeasureSupplementalData {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MeasureSupplementalDataToJson(this);
+    return _$$_MeasureSupplementalDataToJson(this);
   }
 }
 
@@ -4564,7 +4564,7 @@ class _$_MeasureReport extends _MeasureReport {
       : super._();
 
   factory _$_MeasureReport.fromJson(Map<String, dynamic> json) =>
-      _$_$_MeasureReportFromJson(json);
+      _$$_MeasureReportFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
@@ -4732,7 +4732,7 @@ class _$_MeasureReport extends _MeasureReport {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MeasureReportToJson(this);
+    return _$$_MeasureReportToJson(this);
   }
 }
 
@@ -5036,7 +5036,7 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
       : super._();
 
   factory _$_MeasureReportGroup.fromJson(Map<String, dynamic> json) =>
-      _$_$_MeasureReportGroupFromJson(json);
+      _$$_MeasureReportGroupFromJson(json);
 
   @override
   final Identifier identifier;
@@ -5092,7 +5092,7 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MeasureReportGroupToJson(this);
+    return _$$_MeasureReportGroupToJson(this);
   }
 }
 
@@ -5359,7 +5359,7 @@ class _$_MeasureReportPopulation extends _MeasureReportPopulation {
       : super._();
 
   factory _$_MeasureReportPopulation.fromJson(Map<String, dynamic> json) =>
-      _$_$_MeasureReportPopulationFromJson(json);
+      _$$_MeasureReportPopulationFromJson(json);
 
   @override
   final Identifier? identifier;
@@ -5414,7 +5414,7 @@ class _$_MeasureReportPopulation extends _MeasureReportPopulation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MeasureReportPopulationToJson(this);
+    return _$$_MeasureReportPopulationToJson(this);
   }
 }
 
@@ -5580,7 +5580,7 @@ class _$_MeasureReportStratifier extends _MeasureReportStratifier {
   _$_MeasureReportStratifier({this.identifier, this.stratum}) : super._();
 
   factory _$_MeasureReportStratifier.fromJson(Map<String, dynamic> json) =>
-      _$_$_MeasureReportStratifierFromJson(json);
+      _$$_MeasureReportStratifierFromJson(json);
 
   @override
   final Identifier? identifier;
@@ -5617,7 +5617,7 @@ class _$_MeasureReportStratifier extends _MeasureReportStratifier {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MeasureReportStratifierToJson(this);
+    return _$$_MeasureReportStratifierToJson(this);
   }
 }
 
@@ -5844,7 +5844,7 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
       : super._();
 
   factory _$_MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
-      _$_$_MeasureReportStratumFromJson(json);
+      _$$_MeasureReportStratumFromJson(json);
 
   @override
   final String? value;
@@ -5901,7 +5901,7 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MeasureReportStratumToJson(this);
+    return _$$_MeasureReportStratumToJson(this);
   }
 }
 
@@ -6169,7 +6169,7 @@ class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
       : super._();
 
   factory _$_MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =>
-      _$_$_MeasureReportPopulation1FromJson(json);
+      _$$_MeasureReportPopulation1FromJson(json);
 
   @override
   final Identifier? identifier;
@@ -6224,7 +6224,7 @@ class _$_MeasureReportPopulation1 extends _MeasureReportPopulation1 {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MeasureReportPopulation1ToJson(this);
+    return _$$_MeasureReportPopulation1ToJson(this);
   }
 }
 

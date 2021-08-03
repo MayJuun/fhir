@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'payment.dart';
 
@@ -661,7 +661,7 @@ class _$_PaymentNotice extends _PaymentNotice {
       : super._();
 
   factory _$_PaymentNotice.fromJson(Map<String, dynamic> json) =>
-      _$_$_PaymentNoticeFromJson(json);
+      _$$_PaymentNoticeFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentNotice)
@@ -819,7 +819,7 @@ class _$_PaymentNotice extends _PaymentNotice {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PaymentNoticeToJson(this);
+    return _$$_PaymentNoticeToJson(this);
   }
 }
 
@@ -1736,7 +1736,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
       : super._();
 
   factory _$_PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
-      _$_$_PaymentReconciliationFromJson(json);
+      _$$_PaymentReconciliationFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.PaymentReconciliation)
@@ -1929,7 +1929,7 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PaymentReconciliationToJson(this);
+    return _$$_PaymentReconciliationToJson(this);
   }
 }
 
@@ -2424,7 +2424,7 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
       : super._();
 
   factory _$_PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
-      _$_$_PaymentReconciliationDetailFromJson(json);
+      _$$_PaymentReconciliationDetailFromJson(json);
 
   @override
   final Id? id;
@@ -2513,7 +2513,7 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PaymentReconciliationDetailToJson(this);
+    return _$$_PaymentReconciliationDetailToJson(this);
   }
 }
 
@@ -2820,7 +2820,7 @@ class _$_PaymentReconciliationNote extends _PaymentReconciliationNote {
       : super._();
 
   factory _$_PaymentReconciliationNote.fromJson(Map<String, dynamic> json) =>
-      _$_$_PaymentReconciliationNoteFromJson(json);
+      _$$_PaymentReconciliationNoteFromJson(json);
 
   @override
   final Id? id;
@@ -2889,7 +2889,7 @@ class _$_PaymentReconciliationNote extends _PaymentReconciliationNote {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PaymentReconciliationNoteToJson(this);
+    return _$$_PaymentReconciliationNoteToJson(this);
   }
 }
 

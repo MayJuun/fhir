@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'workflow1.dart';
 
@@ -511,7 +511,7 @@ class _$_Order extends _Order {
       : super._();
 
   factory _$_Order.fromJson(Map<String, dynamic> json) =>
-      _$_$_OrderFromJson(json);
+      _$$_OrderFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Order)
@@ -638,7 +638,7 @@ class _$_Order extends _Order {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OrderToJson(this);
+    return _$$_OrderToJson(this);
   }
 }
 
@@ -928,7 +928,7 @@ class _$_OrderWhen extends _OrderWhen {
       : super._();
 
   factory _$_OrderWhen.fromJson(Map<String, dynamic> json) =>
-      _$_$_OrderWhenFromJson(json);
+      _$$_OrderWhenFromJson(json);
 
   @override
   final Id? id;
@@ -989,7 +989,7 @@ class _$_OrderWhen extends _OrderWhen {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OrderWhenToJson(this);
+    return _$$_OrderWhenToJson(this);
   }
 }
 
@@ -1480,7 +1480,7 @@ class _$_OrderResponse extends _OrderResponse {
       : super._();
 
   factory _$_OrderResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_OrderResponseFromJson(json);
+      _$$_OrderResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OrderResponse)
@@ -1606,7 +1606,7 @@ class _$_OrderResponse extends _OrderResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OrderResponseToJson(this);
+    return _$$_OrderResponseToJson(this);
   }
 }
 
@@ -2459,7 +2459,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
       : super._();
 
   factory _$_CommunicationRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_CommunicationRequestFromJson(json);
+      _$$_CommunicationRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.CommunicationRequest)
@@ -2647,7 +2647,7 @@ class _$_CommunicationRequest extends _CommunicationRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CommunicationRequestToJson(this);
+    return _$$_CommunicationRequestToJson(this);
   }
 }
 
@@ -3019,7 +3019,7 @@ class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
       : super._();
 
   factory _$_CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
-      _$_$_CommunicationRequestPayloadFromJson(json);
+      _$$_CommunicationRequestPayloadFromJson(json);
 
   @override
   final Id? id;
@@ -3088,7 +3088,7 @@ class _$_CommunicationRequestPayload extends _CommunicationRequestPayload {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CommunicationRequestPayloadToJson(this);
+    return _$$_CommunicationRequestPayloadToJson(this);
   }
 }
 
@@ -3904,7 +3904,7 @@ class _$_DeviceUseRequest extends _DeviceUseRequest {
       : super._();
 
   factory _$_DeviceUseRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceUseRequestFromJson(json);
+      _$$_DeviceUseRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseRequest)
@@ -4091,7 +4091,7 @@ class _$_DeviceUseRequest extends _DeviceUseRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceUseRequestToJson(this);
+    return _$$_DeviceUseRequestToJson(this);
   }
 }
 
@@ -4913,7 +4913,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
       : super._();
 
   factory _$_DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceUseStatementFromJson(json);
+      _$$_DeviceUseStatementFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.DeviceUseStatement)
@@ -5082,7 +5082,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceUseStatementToJson(this);
+    return _$$_DeviceUseStatementToJson(this);
   }
 }
 

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'evidence_based_medicine.dart';
 
@@ -1403,7 +1403,7 @@ class _$_Evidence extends _Evidence {
       : super._();
 
   factory _$_Evidence.fromJson(Map<String, dynamic> json) =>
-      _$_$_EvidenceFromJson(json);
+      _$$_EvidenceFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Evidence)
@@ -1715,7 +1715,7 @@ class _$_Evidence extends _Evidence {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EvidenceToJson(this);
+    return _$$_EvidenceToJson(this);
   }
 }
 
@@ -2267,7 +2267,7 @@ class _$_EvidenceVariableDefinition extends _EvidenceVariableDefinition {
       : super._();
 
   factory _$_EvidenceVariableDefinition.fromJson(Map<String, dynamic> json) =>
-      _$_$_EvidenceVariableDefinitionFromJson(json);
+      _$$_EvidenceVariableDefinitionFromJson(json);
 
   @override
   final String? id;
@@ -2353,7 +2353,7 @@ class _$_EvidenceVariableDefinition extends _EvidenceVariableDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EvidenceVariableDefinitionToJson(this);
+    return _$$_EvidenceVariableDefinitionToJson(this);
   }
 }
 
@@ -2657,7 +2657,7 @@ class _$_EvidenceCertainty extends _EvidenceCertainty {
       : super._();
 
   factory _$_EvidenceCertainty.fromJson(Map<String, dynamic> json) =>
-      _$_$_EvidenceCertaintyFromJson(json);
+      _$$_EvidenceCertaintyFromJson(json);
 
   @override
   final String? id;
@@ -2730,7 +2730,7 @@ class _$_EvidenceCertainty extends _EvidenceCertainty {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EvidenceCertaintyToJson(this);
+    return _$$_EvidenceCertaintyToJson(this);
   }
 }
 
@@ -3036,7 +3036,7 @@ class _$_EvidenceCertaintySubcomponent extends _EvidenceCertaintySubcomponent {
 
   factory _$_EvidenceCertaintySubcomponent.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_EvidenceCertaintySubcomponentFromJson(json);
+      _$$_EvidenceCertaintySubcomponentFromJson(json);
 
   @override
   final String? id;
@@ -3109,7 +3109,7 @@ class _$_EvidenceCertaintySubcomponent extends _EvidenceCertaintySubcomponent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EvidenceCertaintySubcomponentToJson(this);
+    return _$$_EvidenceCertaintySubcomponentToJson(this);
   }
 }
 
@@ -4676,7 +4676,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
       : super._();
 
   factory _$_EvidenceVariable.fromJson(Map<String, dynamic> json) =>
-      _$_$_EvidenceVariableFromJson(json);
+      _$$_EvidenceVariableFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.EvidenceVariable)
@@ -5009,7 +5009,7 @@ class _$_EvidenceVariable extends _EvidenceVariable {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EvidenceVariableToJson(this);
+    return _$$_EvidenceVariableToJson(this);
   }
 }
 
@@ -5820,7 +5820,7 @@ class _$_EvidenceVariableCharacteristic
 
   factory _$_EvidenceVariableCharacteristic.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_EvidenceVariableCharacteristicFromJson(json);
+      _$$_EvidenceVariableCharacteristicFromJson(json);
 
   @override
   final String? id;
@@ -5953,7 +5953,7 @@ class _$_EvidenceVariableCharacteristic
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EvidenceVariableCharacteristicToJson(this);
+    return _$$_EvidenceVariableCharacteristicToJson(this);
   }
 }
 
@@ -6310,7 +6310,7 @@ class _$_EvidenceVariableTimeFromStart extends _EvidenceVariableTimeFromStart {
 
   factory _$_EvidenceVariableTimeFromStart.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_EvidenceVariableTimeFromStartFromJson(json);
+      _$$_EvidenceVariableTimeFromStartFromJson(json);
 
   @override
   final String? id;
@@ -6383,7 +6383,7 @@ class _$_EvidenceVariableTimeFromStart extends _EvidenceVariableTimeFromStart {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EvidenceVariableTimeFromStartToJson(this);
+    return _$$_EvidenceVariableTimeFromStartToJson(this);
   }
 }
 
@@ -6712,7 +6712,7 @@ class _$_EvidenceVariableCategory extends _EvidenceVariableCategory {
       : super._();
 
   factory _$_EvidenceVariableCategory.fromJson(Map<String, dynamic> json) =>
-      _$_$_EvidenceVariableCategoryFromJson(json);
+      _$$_EvidenceVariableCategoryFromJson(json);
 
   @override
   final String? id;
@@ -6786,7 +6786,7 @@ class _$_EvidenceVariableCategory extends _EvidenceVariableCategory {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EvidenceVariableCategoryToJson(this);
+    return _$$_EvidenceVariableCategoryToJson(this);
   }
 }
 

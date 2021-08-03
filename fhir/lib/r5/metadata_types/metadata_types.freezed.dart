@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'metadata_types.dart';
 
@@ -201,7 +201,7 @@ class _$_ContactDetail extends _ContactDetail {
       : super._();
 
   factory _$_ContactDetail.fromJson(Map<String, dynamic> json) =>
-      _$_$_ContactDetailFromJson(json);
+      _$$_ContactDetailFromJson(json);
 
   @override
   final String? id;
@@ -255,7 +255,7 @@ class _$_ContactDetail extends _ContactDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ContactDetailToJson(this);
+    return _$$_ContactDetailToJson(this);
   }
 }
 
@@ -524,7 +524,7 @@ class _$_Contributor extends _Contributor {
       : super._();
 
   factory _$_Contributor.fromJson(Map<String, dynamic> json) =>
-      _$_$_ContributorFromJson(json);
+      _$$_ContributorFromJson(json);
 
   @override
   final String? id;
@@ -591,7 +591,7 @@ class _$_Contributor extends _Contributor {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ContributorToJson(this);
+    return _$$_ContributorToJson(this);
   }
 }
 
@@ -1014,7 +1014,7 @@ class _$_DataRequirement extends _DataRequirement {
       : super._();
 
   factory _$_DataRequirement.fromJson(Map<String, dynamic> json) =>
-      _$_$_DataRequirementFromJson(json);
+      _$$_DataRequirementFromJson(json);
 
   @override
   final String? id;
@@ -1123,7 +1123,7 @@ class _$_DataRequirement extends _DataRequirement {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DataRequirementToJson(this);
+    return _$$_DataRequirementToJson(this);
   }
 }
 
@@ -1460,7 +1460,7 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
       : super._();
 
   factory _$_DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =>
-      _$_$_DataRequirementCodeFilterFromJson(json);
+      _$$_DataRequirementCodeFilterFromJson(json);
 
   @override
   final String? id;
@@ -1541,7 +1541,7 @@ class _$_DataRequirementCodeFilter extends _DataRequirementCodeFilter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DataRequirementCodeFilterToJson(this);
+    return _$$_DataRequirementCodeFilterToJson(this);
   }
 }
 
@@ -1935,7 +1935,7 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
       : super._();
 
   factory _$_DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =>
-      _$_$_DataRequirementDateFilterFromJson(json);
+      _$$_DataRequirementDateFilterFromJson(json);
 
   @override
   final String? id;
@@ -2030,7 +2030,7 @@ class _$_DataRequirementDateFilter extends _DataRequirementDateFilter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DataRequirementDateFilterToJson(this);
+    return _$$_DataRequirementDateFilterToJson(this);
   }
 }
 
@@ -2340,7 +2340,7 @@ class _$_DataRequirementSort extends _DataRequirementSort {
       : super._();
 
   factory _$_DataRequirementSort.fromJson(Map<String, dynamic> json) =>
-      _$_$_DataRequirementSortFromJson(json);
+      _$$_DataRequirementSortFromJson(json);
 
   @override
   final String? id;
@@ -2410,7 +2410,7 @@ class _$_DataRequirementSort extends _DataRequirementSort {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DataRequirementSortToJson(this);
+    return _$$_DataRequirementSortToJson(this);
   }
 }
 
@@ -2882,7 +2882,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
       : super._();
 
   factory _$_ParameterDefinition.fromJson(Map<String, dynamic> json) =>
-      _$_$_ParameterDefinitionFromJson(json);
+      _$$_ParameterDefinitionFromJson(json);
 
   @override
   final String? id;
@@ -2998,7 +2998,7 @@ class _$_ParameterDefinition extends _ParameterDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ParameterDefinitionToJson(this);
+    return _$$_ParameterDefinitionToJson(this);
   }
 }
 
@@ -3496,7 +3496,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
       : super._();
 
   factory _$_RelatedArtifact.fromJson(Map<String, dynamic> json) =>
-      _$_$_RelatedArtifactFromJson(json);
+      _$$_RelatedArtifactFromJson(json);
 
   @override
   final String? id;
@@ -3608,7 +3608,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RelatedArtifactToJson(this);
+    return _$$_RelatedArtifactToJson(this);
   }
 }
 
@@ -4120,7 +4120,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
       : super._();
 
   factory _$_TriggerDefinition.fromJson(Map<String, dynamic> json) =>
-      _$_$_TriggerDefinitionFromJson(json);
+      _$$_TriggerDefinitionFromJson(json);
 
   @override
   final String? id;
@@ -4231,7 +4231,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TriggerDefinitionToJson(this);
+    return _$$_TriggerDefinitionToJson(this);
   }
 }
 
@@ -4574,7 +4574,7 @@ class _$_UsageContext extends _UsageContext {
       : super._();
 
   factory _$_UsageContext.fromJson(Map<String, dynamic> json) =>
-      _$_$_UsageContextFromJson(json);
+      _$$_UsageContextFromJson(json);
 
   @override
   final String? id;
@@ -4640,7 +4640,7 @@ class _$_UsageContext extends _UsageContext {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_UsageContextToJson(this);
+    return _$$_UsageContextToJson(this);
   }
 }
 
@@ -5038,7 +5038,7 @@ class _$_Expression extends _Expression {
       : super._();
 
   factory _$_Expression.fromJson(Map<String, dynamic> json) =>
-      _$_$_ExpressionFromJson(json);
+      _$$_ExpressionFromJson(json);
 
   @override
   final String? id;
@@ -5139,7 +5139,7 @@ class _$_Expression extends _Expression {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ExpressionToJson(this);
+    return _$$_ExpressionToJson(this);
   }
 }
 

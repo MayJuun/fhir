@@ -6,88 +6,90 @@ part of 'operations_control.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Conformance _$_$_ConformanceFromJson(Map<String, dynamic> json) {
-  return _$_Conformance(
-    resourceType: _$enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: Dstu2ResourceType.Conformance),
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    meta: json['meta'] == null
-        ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules']),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
-    text: json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
-    urlElement: json['_url'] == null
-        ? null
-        : Element.fromJson(json['_url'] as Map<String, dynamic>),
-    version: json['version'] as String?,
-    name: json['name'] as String?,
-    status: _$enumDecodeNullable(_$ConformanceStatusEnumMap, json['status'],
-        unknownValue: ConformanceStatus.unknown),
-    experimental: json['experimental'] == null
-        ? null
-        : Boolean.fromJson(json['experimental']),
-    publisher: json['publisher'] as String?,
-    contact: (json['contact'] as List<dynamic>?)
-        ?.map((e) => ConformanceContact.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    date: FhirDateTime.fromJson(json['date']),
-    description: json['description'] as String?,
-    requirements: json['requirements'] as String?,
-    copyright: json['copyright'] as String?,
-    kind: _$enumDecode(_$ConformanceKindEnumMap, json['kind'],
-        unknownValue: ConformanceKind.unknown),
-    software: json['software'] == null
-        ? null
-        : ConformanceSoftware.fromJson(
-            json['software'] as Map<String, dynamic>),
-    implementation: json['implementation'] == null
-        ? null
-        : ConformanceImplementation.fromJson(
-            json['implementation'] as Map<String, dynamic>),
-    fhirVersion: Id.fromJson(json['fhirVersion']),
-    fhirVersionElement: json['_fhirVersion'] == null
-        ? null
-        : Element.fromJson(json['_fhirVersion'] as Map<String, dynamic>),
-    acceptUnknown: _$enumDecode(
-        _$ConformanceAcceptUnknownEnumMap, json['acceptUnknown'],
-        unknownValue: ConformanceAcceptUnknown.unknown),
-    acceptUnknownElement: json['_acceptUnknown'] == null
-        ? null
-        : Element.fromJson(json['_acceptUnknown'] as Map<String, dynamic>),
-    format: (json['format'] as List<dynamic>)
-        .map((e) => _$enumDecode(_$ConformanceFormatEnumMap, e))
-        .toList(),
-    profile: (json['profile'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    rest: (json['rest'] as List<dynamic>?)
-        ?.map((e) => ConformanceRest.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    messaging: (json['messaging'] as List<dynamic>?)
-        ?.map((e) => ConformanceMessaging.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    document: (json['document'] as List<dynamic>?)
-        ?.map((e) => ConformanceDocument.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_Conformance _$$_ConformanceFromJson(Map<String, dynamic> json) =>
+    _$_Conformance(
+      resourceType: _$enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: Dstu2ResourceType.Conformance) ??
+          Dstu2ResourceType.Conformance,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
+      urlElement: json['_url'] == null
+          ? null
+          : Element.fromJson(json['_url'] as Map<String, dynamic>),
+      version: json['version'] as String?,
+      name: json['name'] as String?,
+      status: _$enumDecodeNullable(_$ConformanceStatusEnumMap, json['status'],
+          unknownValue: ConformanceStatus.unknown),
+      experimental: json['experimental'] == null
+          ? null
+          : Boolean.fromJson(json['experimental']),
+      publisher: json['publisher'] as String?,
+      contact: (json['contact'] as List<dynamic>?)
+          ?.map((e) => ConformanceContact.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      date: FhirDateTime.fromJson(json['date']),
+      description: json['description'] as String?,
+      requirements: json['requirements'] as String?,
+      copyright: json['copyright'] as String?,
+      kind: _$enumDecode(_$ConformanceKindEnumMap, json['kind'],
+          unknownValue: ConformanceKind.unknown),
+      software: json['software'] == null
+          ? null
+          : ConformanceSoftware.fromJson(
+              json['software'] as Map<String, dynamic>),
+      implementation: json['implementation'] == null
+          ? null
+          : ConformanceImplementation.fromJson(
+              json['implementation'] as Map<String, dynamic>),
+      fhirVersion: Id.fromJson(json['fhirVersion']),
+      fhirVersionElement: json['_fhirVersion'] == null
+          ? null
+          : Element.fromJson(json['_fhirVersion'] as Map<String, dynamic>),
+      acceptUnknown: _$enumDecode(
+          _$ConformanceAcceptUnknownEnumMap, json['acceptUnknown'],
+          unknownValue: ConformanceAcceptUnknown.unknown),
+      acceptUnknownElement: json['_acceptUnknown'] == null
+          ? null
+          : Element.fromJson(json['_acceptUnknown'] as Map<String, dynamic>),
+      format: (json['format'] as List<dynamic>)
+          .map((e) => _$enumDecode(_$ConformanceFormatEnumMap, e))
+          .toList(),
+      profile: (json['profile'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      rest: (json['rest'] as List<dynamic>?)
+          ?.map((e) => ConformanceRest.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      messaging: (json['messaging'] as List<dynamic>?)
+          ?.map((e) => ConformanceMessaging.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      document: (json['document'] as List<dynamic>?)
+          ?.map((e) => ConformanceDocument.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_ConformanceToJson(_$_Conformance instance) {
+Map<String, dynamic> _$$_ConformanceToJson(_$_Conformance instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
   };
@@ -163,6 +165,17 @@ K _$enumDecode<K, V>(
       return MapEntry(unknownValue, enumValues.values.first);
     },
   ).key;
+}
+
+K? _$enumDecodeNullable<K, V>(
+  Map<K, V> enumValues,
+  dynamic source, {
+  K? unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -263,17 +276,6 @@ const _$Dstu2ResourceTypeEnumMap = {
   Dstu2ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
-
 const _$ConformanceStatusEnumMap = {
   ConformanceStatus.draft: 'draft',
   ConformanceStatus.active: 'active',
@@ -307,89 +309,91 @@ const _$ConformanceFormatEnumMap = {
   ConformanceFormat.unknown: 'unknown',
 };
 
-_$_CapabilityStatement _$_$_CapabilityStatementFromJson(
-    Map<String, dynamic> json) {
-  return _$_CapabilityStatement(
-    resourceType: _$enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: Dstu2ResourceType.CapabilityStatement),
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    meta: json['meta'] == null
-        ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules']),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
-    text: json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
-    urlElement: json['_url'] == null
-        ? null
-        : Element.fromJson(json['_url'] as Map<String, dynamic>),
-    version: json['version'] as String?,
-    name: json['name'] as String?,
-    status: _$enumDecodeNullable(_$ConformanceStatusEnumMap, json['status'],
-        unknownValue: ConformanceStatus.unknown),
-    experimental: json['experimental'] == null
-        ? null
-        : Boolean.fromJson(json['experimental']),
-    publisher: json['publisher'] as String?,
-    contact: (json['contact'] as List<dynamic>?)
-        ?.map((e) => ConformanceContact.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    date: FhirDateTime.fromJson(json['date']),
-    description: json['description'] as String?,
-    requirements: json['requirements'] as String?,
-    copyright: json['copyright'] as String?,
-    kind: _$enumDecode(_$ConformanceKindEnumMap, json['kind'],
-        unknownValue: ConformanceKind.unknown),
-    software: json['software'] == null
-        ? null
-        : ConformanceSoftware.fromJson(
-            json['software'] as Map<String, dynamic>),
-    implementation: json['implementation'] == null
-        ? null
-        : ConformanceImplementation.fromJson(
-            json['implementation'] as Map<String, dynamic>),
-    fhirVersion: Id.fromJson(json['fhirVersion']),
-    fhirVersionElement: json['_fhirVersion'] == null
-        ? null
-        : Element.fromJson(json['_fhirVersion'] as Map<String, dynamic>),
-    acceptUnknown: _$enumDecode(
-        _$ConformanceAcceptUnknownEnumMap, json['acceptUnknown'],
-        unknownValue: ConformanceAcceptUnknown.unknown),
-    acceptUnknownElement: json['_acceptUnknown'] == null
-        ? null
-        : Element.fromJson(json['_acceptUnknown'] as Map<String, dynamic>),
-    format: (json['format'] as List<dynamic>)
-        .map((e) => _$enumDecode(_$ConformanceFormatEnumMap, e))
-        .toList(),
-    profile: (json['profile'] as List<dynamic>?)
-        ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    rest: (json['rest'] as List<dynamic>?)
-        ?.map((e) => ConformanceRest.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    messaging: (json['messaging'] as List<dynamic>?)
-        ?.map((e) => ConformanceMessaging.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    document: (json['document'] as List<dynamic>?)
-        ?.map((e) => ConformanceDocument.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_CapabilityStatement _$$_CapabilityStatementFromJson(
+        Map<String, dynamic> json) =>
+    _$_CapabilityStatement(
+      resourceType: _$enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: Dstu2ResourceType.CapabilityStatement) ??
+          Dstu2ResourceType.CapabilityStatement,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
+      urlElement: json['_url'] == null
+          ? null
+          : Element.fromJson(json['_url'] as Map<String, dynamic>),
+      version: json['version'] as String?,
+      name: json['name'] as String?,
+      status: _$enumDecodeNullable(_$ConformanceStatusEnumMap, json['status'],
+          unknownValue: ConformanceStatus.unknown),
+      experimental: json['experimental'] == null
+          ? null
+          : Boolean.fromJson(json['experimental']),
+      publisher: json['publisher'] as String?,
+      contact: (json['contact'] as List<dynamic>?)
+          ?.map((e) => ConformanceContact.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      date: FhirDateTime.fromJson(json['date']),
+      description: json['description'] as String?,
+      requirements: json['requirements'] as String?,
+      copyright: json['copyright'] as String?,
+      kind: _$enumDecode(_$ConformanceKindEnumMap, json['kind'],
+          unknownValue: ConformanceKind.unknown),
+      software: json['software'] == null
+          ? null
+          : ConformanceSoftware.fromJson(
+              json['software'] as Map<String, dynamic>),
+      implementation: json['implementation'] == null
+          ? null
+          : ConformanceImplementation.fromJson(
+              json['implementation'] as Map<String, dynamic>),
+      fhirVersion: Id.fromJson(json['fhirVersion']),
+      fhirVersionElement: json['_fhirVersion'] == null
+          ? null
+          : Element.fromJson(json['_fhirVersion'] as Map<String, dynamic>),
+      acceptUnknown: _$enumDecode(
+          _$ConformanceAcceptUnknownEnumMap, json['acceptUnknown'],
+          unknownValue: ConformanceAcceptUnknown.unknown),
+      acceptUnknownElement: json['_acceptUnknown'] == null
+          ? null
+          : Element.fromJson(json['_acceptUnknown'] as Map<String, dynamic>),
+      format: (json['format'] as List<dynamic>)
+          .map((e) => _$enumDecode(_$ConformanceFormatEnumMap, e))
+          .toList(),
+      profile: (json['profile'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      rest: (json['rest'] as List<dynamic>?)
+          ?.map((e) => ConformanceRest.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      messaging: (json['messaging'] as List<dynamic>?)
+          ?.map((e) => ConformanceMessaging.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      document: (json['document'] as List<dynamic>?)
+          ?.map((e) => ConformanceDocument.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_CapabilityStatementToJson(
+Map<String, dynamic> _$$_CapabilityStatementToJson(
     _$_CapabilityStatement instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
@@ -442,24 +446,23 @@ Map<String, dynamic> _$_$_CapabilityStatementToJson(
   return val;
 }
 
-_$_ConformanceContact _$_$_ConformanceContactFromJson(
-    Map<String, dynamic> json) {
-  return _$_ConformanceContact(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    name: json['name'] as String?,
-    telecom: (json['telecom'] as List<dynamic>?)
-        ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_ConformanceContact _$$_ConformanceContactFromJson(
+        Map<String, dynamic> json) =>
+    _$_ConformanceContact(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      name: json['name'] as String?,
+      telecom: (json['telecom'] as List<dynamic>?)
+          ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_ConformanceContactToJson(
+Map<String, dynamic> _$$_ConformanceContactToJson(
     _$_ConformanceContact instance) {
   final val = <String, dynamic>{};
 
@@ -479,25 +482,24 @@ Map<String, dynamic> _$_$_ConformanceContactToJson(
   return val;
 }
 
-_$_ConformanceSoftware _$_$_ConformanceSoftwareFromJson(
-    Map<String, dynamic> json) {
-  return _$_ConformanceSoftware(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    name: json['name'] as String,
-    version: json['version'] as String?,
-    releaseDate: json['releaseDate'] == null
-        ? null
-        : FhirDateTime.fromJson(json['releaseDate']),
-  );
-}
+_$_ConformanceSoftware _$$_ConformanceSoftwareFromJson(
+        Map<String, dynamic> json) =>
+    _$_ConformanceSoftware(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      name: json['name'] as String,
+      version: json['version'] as String?,
+      releaseDate: json['releaseDate'] == null
+          ? null
+          : FhirDateTime.fromJson(json['releaseDate']),
+    );
 
-Map<String, dynamic> _$_$_ConformanceSoftwareToJson(
+Map<String, dynamic> _$$_ConformanceSoftwareToJson(
     _$_ConformanceSoftware instance) {
   final val = <String, dynamic>{};
 
@@ -518,22 +520,21 @@ Map<String, dynamic> _$_$_ConformanceSoftwareToJson(
   return val;
 }
 
-_$_ConformanceImplementation _$_$_ConformanceImplementationFromJson(
-    Map<String, dynamic> json) {
-  return _$_ConformanceImplementation(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    description: json['description'] as String,
-    url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
-  );
-}
+_$_ConformanceImplementation _$$_ConformanceImplementationFromJson(
+        Map<String, dynamic> json) =>
+    _$_ConformanceImplementation(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      description: json['description'] as String,
+      url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
+    );
 
-Map<String, dynamic> _$_$_ConformanceImplementationToJson(
+Map<String, dynamic> _$$_ConformanceImplementationToJson(
     _$_ConformanceImplementation instance) {
   final val = <String, dynamic>{};
 
@@ -553,53 +554,53 @@ Map<String, dynamic> _$_$_ConformanceImplementationToJson(
   return val;
 }
 
-_$_ConformanceRest _$_$_ConformanceRestFromJson(Map<String, dynamic> json) {
-  return _$_ConformanceRest(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    fhirComments: (json['fhir_comments'] as List<dynamic>?)
-        ?.map((e) => e as String)
-        .toList(),
-    mode: _$enumDecode(_$RestModeEnumMap, json['mode'],
-        unknownValue: RestMode.unknown),
-    modeElement: json['_mode'] == null
-        ? null
-        : Element.fromJson(json['_mode'] as Map<String, dynamic>),
-    documentation: json['documentation'] as String?,
-    security: json['security'] == null
-        ? null
-        : ConformanceRestSecurity.fromJson(
-            json['security'] as Map<String, dynamic>),
-    resource: (json['resource'] as List<dynamic>)
-        .map((e) => ConformanceRestResource.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    interaction: (json['interaction'] as List<dynamic>?)
-        ?.map((e) =>
-            ConformanceRestInteraction.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    transactionMode: _$enumDecodeNullable(
-        _$RestTransactionModeEnumMap, json['transactionMode'],
-        unknownValue: RestTransactionMode.unknown),
-    searchParam: (json['searchParam'] as List<dynamic>?)
-        ?.map((e) =>
-            ConformanceResourceSearchParam.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    operation: (json['operation'] as List<dynamic>?)
-        ?.map(
-            (e) => ConformanceRestOperation.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    compartment: (json['compartment'] as List<dynamic>?)
-        ?.map((e) => FhirUri.fromJson(e))
-        .toList(),
-  );
-}
+_$_ConformanceRest _$$_ConformanceRestFromJson(Map<String, dynamic> json) =>
+    _$_ConformanceRest(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      fhirComments: (json['fhir_comments'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      mode: _$enumDecode(_$RestModeEnumMap, json['mode'],
+          unknownValue: RestMode.unknown),
+      modeElement: json['_mode'] == null
+          ? null
+          : Element.fromJson(json['_mode'] as Map<String, dynamic>),
+      documentation: json['documentation'] as String?,
+      security: json['security'] == null
+          ? null
+          : ConformanceRestSecurity.fromJson(
+              json['security'] as Map<String, dynamic>),
+      resource: (json['resource'] as List<dynamic>)
+          .map((e) =>
+              ConformanceRestResource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      interaction: (json['interaction'] as List<dynamic>?)
+          ?.map((e) =>
+              ConformanceRestInteraction.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      transactionMode: _$enumDecodeNullable(
+          _$RestTransactionModeEnumMap, json['transactionMode'],
+          unknownValue: RestTransactionMode.unknown),
+      searchParam: (json['searchParam'] as List<dynamic>?)
+          ?.map((e) => ConformanceResourceSearchParam.fromJson(
+              e as Map<String, dynamic>))
+          .toList(),
+      operation: (json['operation'] as List<dynamic>?)
+          ?.map((e) =>
+              ConformanceRestOperation.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      compartment: (json['compartment'] as List<dynamic>?)
+          ?.map((e) => FhirUri.fromJson(e))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_ConformanceRestToJson(_$_ConformanceRest instance) {
+Map<String, dynamic> _$$_ConformanceRestToJson(_$_ConformanceRest instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -646,35 +647,34 @@ const _$RestTransactionModeEnumMap = {
   RestTransactionMode.unknown: 'unknown',
 };
 
-_$_ConformanceMessaging _$_$_ConformanceMessagingFromJson(
-    Map<String, dynamic> json) {
-  return _$_ConformanceMessaging(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    fhirComments: (json['fhir_comments'] as List<dynamic>?)
-        ?.map((e) => e as String)
-        .toList(),
-    endpoint: (json['endpoint'] as List<dynamic>?)
-        ?.map((e) =>
-            ConformanceMessagingEndpoint.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    reliableCache: json['reliableCache'] == null
-        ? null
-        : UnsignedInt.fromJson(json['reliableCache']),
-    documentation: json['documentation'] as String?,
-    event: (json['event'] as List<dynamic>)
-        .map((e) =>
-            ConformanceMessagingEvent.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_ConformanceMessaging _$$_ConformanceMessagingFromJson(
+        Map<String, dynamic> json) =>
+    _$_ConformanceMessaging(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      fhirComments: (json['fhir_comments'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      endpoint: (json['endpoint'] as List<dynamic>?)
+          ?.map((e) =>
+              ConformanceMessagingEndpoint.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      reliableCache: json['reliableCache'] == null
+          ? null
+          : UnsignedInt.fromJson(json['reliableCache']),
+      documentation: json['documentation'] as String?,
+      event: (json['event'] as List<dynamic>)
+          .map((e) =>
+              ConformanceMessagingEvent.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_ConformanceMessagingToJson(
+Map<String, dynamic> _$$_ConformanceMessagingToJson(
     _$_ConformanceMessaging instance) {
   final val = <String, dynamic>{};
 
@@ -697,27 +697,26 @@ Map<String, dynamic> _$_$_ConformanceMessagingToJson(
   return val;
 }
 
-_$_ConformanceDocument _$_$_ConformanceDocumentFromJson(
-    Map<String, dynamic> json) {
-  return _$_ConformanceDocument(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    fhirComments: (json['fhir_comments'] as List<dynamic>?)
-        ?.map((e) => e as String)
-        .toList(),
-    mode: _$enumDecode(_$DocumentModeEnumMap, json['mode'],
-        unknownValue: DocumentMode.unknown),
-    documentation: json['documentation'] as String?,
-    profile: Reference.fromJson(json['profile'] as Map<String, dynamic>),
-  );
-}
+_$_ConformanceDocument _$$_ConformanceDocumentFromJson(
+        Map<String, dynamic> json) =>
+    _$_ConformanceDocument(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      fhirComments: (json['fhir_comments'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      mode: _$enumDecode(_$DocumentModeEnumMap, json['mode'],
+          unknownValue: DocumentMode.unknown),
+      documentation: json['documentation'] as String?,
+      profile: Reference.fromJson(json['profile'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_ConformanceDocumentToJson(
+Map<String, dynamic> _$$_ConformanceDocumentToJson(
     _$_ConformanceDocument instance) {
   final val = <String, dynamic>{};
 
@@ -745,32 +744,31 @@ const _$DocumentModeEnumMap = {
   DocumentMode.unknown: 'unknown',
 };
 
-_$_ConformanceRestSecurity _$_$_ConformanceRestSecurityFromJson(
-    Map<String, dynamic> json) {
-  return _$_ConformanceRestSecurity(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    cors: json['cors'] == null ? null : Boolean.fromJson(json['cors']),
-    corsElement: json['_cors'] == null
-        ? null
-        : Element.fromJson(json['_cors'] as Map<String, dynamic>),
-    service: (json['service'] as List<dynamic>?)
-        ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    description: json['description'] as String?,
-    certificate: (json['certificate'] as List<dynamic>?)
-        ?.map((e) =>
-            ConformanceSecurityCertificate.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_ConformanceRestSecurity _$$_ConformanceRestSecurityFromJson(
+        Map<String, dynamic> json) =>
+    _$_ConformanceRestSecurity(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      cors: json['cors'] == null ? null : Boolean.fromJson(json['cors']),
+      corsElement: json['_cors'] == null
+          ? null
+          : Element.fromJson(json['_cors'] as Map<String, dynamic>),
+      service: (json['service'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      description: json['description'] as String?,
+      certificate: (json['certificate'] as List<dynamic>?)
+          ?.map((e) => ConformanceSecurityCertificate.fromJson(
+              e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_ConformanceRestSecurityToJson(
+Map<String, dynamic> _$$_ConformanceRestSecurityToJson(
     _$_ConformanceRestSecurity instance) {
   final val = <String, dynamic>{};
 
@@ -794,9 +792,12 @@ Map<String, dynamic> _$_$_ConformanceRestSecurityToJson(
   return val;
 }
 
-_$_ConformanceRestResource _$_$_ConformanceRestResourceFromJson(
+_$_ConformanceRestResource _$$_ConformanceRestResourceFromJson(
     Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const ['interaction']);
+  $checkKeys(
+    json,
+    requiredKeys: const ['interaction'],
+  );
   return _$_ConformanceRestResource(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
@@ -859,7 +860,7 @@ _$_ConformanceRestResource _$_$_ConformanceRestResourceFromJson(
   );
 }
 
-Map<String, dynamic> _$_$_ConformanceRestResourceToJson(
+Map<String, dynamic> _$$_ConformanceRestResourceToJson(
     _$_ConformanceRestResource instance) {
   final val = <String, dynamic>{};
 
@@ -912,23 +913,22 @@ const _$ResourceConditionalDeleteEnumMap = {
   ResourceConditionalDelete.unknown: 'unknown',
 };
 
-_$_ConformanceResourceInteraction _$_$_ConformanceResourceInteractionFromJson(
-    Map<String, dynamic> json) {
-  return _$_ConformanceResourceInteraction(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    code: _$enumDecode(_$ResourceInteractionCodeEnumMap, json['code'],
-        unknownValue: ResourceInteractionCode.unknown),
-    documentation: json['documentation'] as String?,
-  );
-}
+_$_ConformanceResourceInteraction _$$_ConformanceResourceInteractionFromJson(
+        Map<String, dynamic> json) =>
+    _$_ConformanceResourceInteraction(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      code: _$enumDecode(_$ResourceInteractionCodeEnumMap, json['code'],
+          unknownValue: ResourceInteractionCode.unknown),
+      documentation: json['documentation'] as String?,
+    );
 
-Map<String, dynamic> _$_$_ConformanceResourceInteractionToJson(
+Map<String, dynamic> _$$_ConformanceResourceInteractionToJson(
     _$_ConformanceResourceInteraction instance) {
   final val = <String, dynamic>{};
 
@@ -961,25 +961,25 @@ const _$ResourceInteractionCodeEnumMap = {
   ResourceInteractionCode.unknown: 'unknown',
 };
 
-_$_ConformanceRestOperation _$_$_ConformanceRestOperationFromJson(
-    Map<String, dynamic> json) {
-  return _$_ConformanceRestOperation(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    fhirComments: (json['fhir_comments'] as List<dynamic>?)
-        ?.map((e) => e as String)
-        .toList(),
-    name: json['name'] as String,
-    definition: Reference.fromJson(json['definition'] as Map<String, dynamic>),
-  );
-}
+_$_ConformanceRestOperation _$$_ConformanceRestOperationFromJson(
+        Map<String, dynamic> json) =>
+    _$_ConformanceRestOperation(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      fhirComments: (json['fhir_comments'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      name: json['name'] as String,
+      definition:
+          Reference.fromJson(json['definition'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_ConformanceRestOperationToJson(
+Map<String, dynamic> _$$_ConformanceRestOperationToJson(
     _$_ConformanceRestOperation instance) {
   final val = <String, dynamic>{};
 
@@ -1000,25 +1000,24 @@ Map<String, dynamic> _$_$_ConformanceRestOperationToJson(
   return val;
 }
 
-_$_ConformanceMessagingEndpoint _$_$_ConformanceMessagingEndpointFromJson(
-    Map<String, dynamic> json) {
-  return _$_ConformanceMessagingEndpoint(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    protocol: Coding.fromJson(json['protocol'] as Map<String, dynamic>),
-    address: FhirUri.fromJson(json['address']),
-    addressElement: json['_address'] == null
-        ? null
-        : Element.fromJson(json['_address'] as Map<String, dynamic>),
-  );
-}
+_$_ConformanceMessagingEndpoint _$$_ConformanceMessagingEndpointFromJson(
+        Map<String, dynamic> json) =>
+    _$_ConformanceMessagingEndpoint(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      protocol: Coding.fromJson(json['protocol'] as Map<String, dynamic>),
+      address: FhirUri.fromJson(json['address']),
+      addressElement: json['_address'] == null
+          ? null
+          : Element.fromJson(json['_address'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_ConformanceMessagingEndpointToJson(
+Map<String, dynamic> _$$_ConformanceMessagingEndpointToJson(
     _$_ConformanceMessagingEndpoint instance) {
   final val = <String, dynamic>{};
 
@@ -1039,32 +1038,31 @@ Map<String, dynamic> _$_$_ConformanceMessagingEndpointToJson(
   return val;
 }
 
-_$_ConformanceMessagingEvent _$_$_ConformanceMessagingEventFromJson(
-    Map<String, dynamic> json) {
-  return _$_ConformanceMessagingEvent(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    code: Coding.fromJson(json['code'] as Map<String, dynamic>),
-    category: _$enumDecodeNullable(_$EventCategoryEnumMap, json['category'],
-        unknownValue: EventCategory.unknown),
-    mode: _$enumDecode(_$EventModeEnumMap, json['mode'],
-        unknownValue: EventMode.unknown),
-    modeElement: json['_mode'] == null
-        ? null
-        : Element.fromJson(json['_mode'] as Map<String, dynamic>),
-    focus: Code.fromJson(json['focus']),
-    request: Reference.fromJson(json['request'] as Map<String, dynamic>),
-    response: Reference.fromJson(json['response'] as Map<String, dynamic>),
-    documentation: json['documentation'] as String?,
-  );
-}
+_$_ConformanceMessagingEvent _$$_ConformanceMessagingEventFromJson(
+        Map<String, dynamic> json) =>
+    _$_ConformanceMessagingEvent(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      code: Coding.fromJson(json['code'] as Map<String, dynamic>),
+      category: _$enumDecodeNullable(_$EventCategoryEnumMap, json['category'],
+          unknownValue: EventCategory.unknown),
+      mode: _$enumDecode(_$EventModeEnumMap, json['mode'],
+          unknownValue: EventMode.unknown),
+      modeElement: json['_mode'] == null
+          ? null
+          : Element.fromJson(json['_mode'] as Map<String, dynamic>),
+      focus: Code.fromJson(json['focus']),
+      request: Reference.fromJson(json['request'] as Map<String, dynamic>),
+      response: Reference.fromJson(json['response'] as Map<String, dynamic>),
+      documentation: json['documentation'] as String?,
+    );
 
-Map<String, dynamic> _$_$_ConformanceMessagingEventToJson(
+Map<String, dynamic> _$$_ConformanceMessagingEventToJson(
     _$_ConformanceMessagingEvent instance) {
   final val = <String, dynamic>{};
 
@@ -1103,25 +1101,24 @@ const _$EventModeEnumMap = {
   EventMode.unknown: 'unknown',
 };
 
-_$_ConformanceSecurityCertificate _$_$_ConformanceSecurityCertificateFromJson(
-    Map<String, dynamic> json) {
-  return _$_ConformanceSecurityCertificate(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    type: json['type'] == null ? null : Code.fromJson(json['type']),
-    blob: json['blob'] == null ? null : Base64Binary.fromJson(json['blob']),
-    blobElement: json['_blob'] == null
-        ? null
-        : Element.fromJson(json['_blob'] as Map<String, dynamic>),
-  );
-}
+_$_ConformanceSecurityCertificate _$$_ConformanceSecurityCertificateFromJson(
+        Map<String, dynamic> json) =>
+    _$_ConformanceSecurityCertificate(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      blob: json['blob'] == null ? null : Base64Binary.fromJson(json['blob']),
+      blobElement: json['_blob'] == null
+          ? null
+          : Element.fromJson(json['_blob'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_ConformanceSecurityCertificateToJson(
+Map<String, dynamic> _$$_ConformanceSecurityCertificateToJson(
     _$_ConformanceSecurityCertificate instance) {
   final val = <String, dynamic>{};
 
@@ -1142,23 +1139,22 @@ Map<String, dynamic> _$_$_ConformanceSecurityCertificateToJson(
   return val;
 }
 
-_$_ConformanceRestInteraction _$_$_ConformanceRestInteractionFromJson(
-    Map<String, dynamic> json) {
-  return _$_ConformanceRestInteraction(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    code: _$enumDecode(_$RestInteractionCodeEnumMap, json['code'],
-        unknownValue: RestInteractionCode.unknown),
-    documentation: json['documentation'] as String?,
-  );
-}
+_$_ConformanceRestInteraction _$$_ConformanceRestInteractionFromJson(
+        Map<String, dynamic> json) =>
+    _$_ConformanceRestInteraction(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      code: _$enumDecode(_$RestInteractionCodeEnumMap, json['code'],
+          unknownValue: RestInteractionCode.unknown),
+      documentation: json['documentation'] as String?,
+    );
 
-Map<String, dynamic> _$_$_ConformanceRestInteractionToJson(
+Map<String, dynamic> _$$_ConformanceRestInteractionToJson(
     _$_ConformanceRestInteraction instance) {
   final val = <String, dynamic>{};
 
@@ -1185,37 +1181,37 @@ const _$RestInteractionCodeEnumMap = {
   RestInteractionCode.unknown: 'unknown',
 };
 
-_$_ConformanceResourceSearchParam _$_$_ConformanceResourceSearchParamFromJson(
-    Map<String, dynamic> json) {
-  return _$_ConformanceResourceSearchParam(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    fhirComments: (json['fhir_comments'] as List<dynamic>?)
-        ?.map((e) => e as String)
-        .toList(),
-    name: json['name'] as String,
-    definition: json['definition'] == null
-        ? null
-        : FhirUri.fromJson(json['definition']),
-    type: _$enumDecode(_$SearchParamTypeEnumMap, json['type'],
-        unknownValue: SearchParamType.unknown),
-    documentation: json['documentation'] as String?,
-    target: (json['target'] as List<dynamic>?)
-        ?.map((e) => Code.fromJson(e))
-        .toList(),
-    modifier: (json['modifier'] as List<dynamic>?)
-        ?.map((e) => _$enumDecode(_$SearchParamModifierEnumMap, e))
-        .toList(),
-    chain: (json['chain'] as List<dynamic>?)?.map((e) => e as String).toList(),
-  );
-}
+_$_ConformanceResourceSearchParam _$$_ConformanceResourceSearchParamFromJson(
+        Map<String, dynamic> json) =>
+    _$_ConformanceResourceSearchParam(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      fhirComments: (json['fhir_comments'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      name: json['name'] as String,
+      definition: json['definition'] == null
+          ? null
+          : FhirUri.fromJson(json['definition']),
+      type: _$enumDecode(_$SearchParamTypeEnumMap, json['type'],
+          unknownValue: SearchParamType.unknown),
+      documentation: json['documentation'] as String?,
+      target: (json['target'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
+      modifier: (json['modifier'] as List<dynamic>?)
+          ?.map((e) => _$enumDecode(_$SearchParamModifierEnumMap, e))
+          .toList(),
+      chain:
+          (json['chain'] as List<dynamic>?)?.map((e) => e as String).toList(),
+    );
 
-Map<String, dynamic> _$_$_ConformanceResourceSearchParamToJson(
+Map<String, dynamic> _$$_ConformanceResourceSearchParamToJson(
     _$_ConformanceResourceSearchParam instance) {
   final val = <String, dynamic>{};
 
@@ -1268,12 +1264,17 @@ const _$SearchParamModifierEnumMap = {
   SearchParamModifier.unknown: 'unknown',
 };
 
-_$_OperationDefinition _$_$_OperationDefinitionFromJson(
+_$_OperationDefinition _$$_OperationDefinitionFromJson(
     Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const ['status']);
+  $checkKeys(
+    json,
+    requiredKeys: const ['status'],
+  );
   return _$_OperationDefinition(
-    resourceType: _$enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: Dstu2ResourceType.OperationDefinition),
+    resourceType: _$enumDecodeNullable(
+            _$Dstu2ResourceTypeEnumMap, json['resourceType'],
+            unknownValue: Dstu2ResourceType.OperationDefinition) ??
+        Dstu2ResourceType.OperationDefinition,
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     meta: json['meta'] == null
         ? null
@@ -1331,7 +1332,7 @@ _$_OperationDefinition _$_$_OperationDefinitionFromJson(
   );
 }
 
-Map<String, dynamic> _$_$_OperationDefinitionToJson(
+Map<String, dynamic> _$$_OperationDefinitionToJson(
     _$_OperationDefinition instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
@@ -1390,24 +1391,23 @@ const _$OperationDefinitionKindEnumMap = {
   OperationDefinitionKind.unknown: 'unknown',
 };
 
-_$_OperationDefinitionContact _$_$_OperationDefinitionContactFromJson(
-    Map<String, dynamic> json) {
-  return _$_OperationDefinitionContact(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    name: json['name'] as String?,
-    telecom: (json['telecom'] as List<dynamic>?)
-        ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_OperationDefinitionContact _$$_OperationDefinitionContactFromJson(
+        Map<String, dynamic> json) =>
+    _$_OperationDefinitionContact(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      name: json['name'] as String?,
+      telecom: (json['telecom'] as List<dynamic>?)
+          ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_OperationDefinitionContactToJson(
+Map<String, dynamic> _$$_OperationDefinitionContactToJson(
     _$_OperationDefinitionContact instance) {
   final val = <String, dynamic>{};
 
@@ -1427,41 +1427,40 @@ Map<String, dynamic> _$_$_OperationDefinitionContactToJson(
   return val;
 }
 
-_$_OperationDefinitionParameter _$_$_OperationDefinitionParameterFromJson(
-    Map<String, dynamic> json) {
-  return _$_OperationDefinitionParameter(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    fhirComments: (json['fhir_comments'] as List<dynamic>?)
-        ?.map((e) => e as String)
-        .toList(),
-    name: Code.fromJson(json['name']),
-    use: _$enumDecode(_$ParameterUseEnumMap, json['use'],
-        unknownValue: ParameterUse.unknown),
-    min: Integer.fromJson(json['min']),
-    max: json['max'] as String,
-    documentation: json['documentation'] as String?,
-    type: json['type'] == null ? null : Code.fromJson(json['type']),
-    profile: json['profile'] == null
-        ? null
-        : Reference.fromJson(json['profile'] as Map<String, dynamic>),
-    binding: json['binding'] == null
-        ? null
-        : OperationDefinitionParameterBinding.fromJson(
-            json['binding'] as Map<String, dynamic>),
-    part_: (json['part'] as List<dynamic>?)
-        ?.map((e) =>
-            OperationDefinitionParameter.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_OperationDefinitionParameter _$$_OperationDefinitionParameterFromJson(
+        Map<String, dynamic> json) =>
+    _$_OperationDefinitionParameter(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      fhirComments: (json['fhir_comments'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      name: Code.fromJson(json['name']),
+      use: _$enumDecode(_$ParameterUseEnumMap, json['use'],
+          unknownValue: ParameterUse.unknown),
+      min: Integer.fromJson(json['min']),
+      max: json['max'] as String,
+      documentation: json['documentation'] as String?,
+      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      profile: json['profile'] == null
+          ? null
+          : Reference.fromJson(json['profile'] as Map<String, dynamic>),
+      binding: json['binding'] == null
+          ? null
+          : OperationDefinitionParameterBinding.fromJson(
+              json['binding'] as Map<String, dynamic>),
+      part_: (json['part'] as List<dynamic>?)
+          ?.map((e) =>
+              OperationDefinitionParameter.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_OperationDefinitionParameterToJson(
+Map<String, dynamic> _$$_OperationDefinitionParameterToJson(
     _$_OperationDefinitionParameter instance) {
   final val = <String, dynamic>{};
 
@@ -1496,9 +1495,11 @@ const _$ParameterUseEnumMap = {
 };
 
 _$_OperationDefinitionParameterBinding
-    _$_$_OperationDefinitionParameterBindingFromJson(
-        Map<String, dynamic> json) {
-  $checkKeys(json, requiredKeys: const ['strength']);
+    _$$_OperationDefinitionParameterBindingFromJson(Map<String, dynamic> json) {
+  $checkKeys(
+    json,
+    requiredKeys: const ['strength'],
+  );
   return _$_OperationDefinitionParameterBinding(
     id: json['id'] == null ? null : Id.fromJson(json['id']),
     extension_: (json['extension'] as List<dynamic>?)
@@ -1519,7 +1520,7 @@ _$_OperationDefinitionParameterBinding
   );
 }
 
-Map<String, dynamic> _$_$_OperationDefinitionParameterBindingToJson(
+Map<String, dynamic> _$$_OperationDefinitionParameterBindingToJson(
     _$_OperationDefinitionParameterBinding instance) {
   final val = <String, dynamic>{};
 
@@ -1549,62 +1550,66 @@ const _$OperationDefinitionBindingStrengthEnumMap = {
   OperationDefinitionBindingStrength.unknown: 'unknown',
 };
 
-_$_SearchParameter _$_$_SearchParameterFromJson(Map<String, dynamic> json) {
-  return _$_SearchParameter(
-    resourceType: _$enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: Dstu2ResourceType.SearchParameter),
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    meta: json['meta'] == null
-        ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules']),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
-    text: json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    url: FhirUri.fromJson(json['url']),
-    name: json['name'] as String,
-    status: _$enumDecodeNullable(_$SearchParameterStatusEnumMap, json['status'],
-        unknownValue: SearchParameterStatus.unknown),
-    experimental: json['experimental'] == null
-        ? null
-        : Boolean.fromJson(json['experimental']),
-    publisher: json['publisher'] as String?,
-    contact: (json['contact'] as List<dynamic>?)
-        ?.map((e) => SearchParameterContact.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
-    requirements: json['requirements'] as String?,
-    requirementsElement: json['_requirements'] == null
-        ? null
-        : Element.fromJson(json['_requirements'] as Map<String, dynamic>),
-    code: Code.fromJson(json['code']),
-    base: json['base'] == null ? null : Code.fromJson(json['base']),
-    type: _$enumDecode(_$SearchParameterTypeEnumMap, json['type'],
-        unknownValue: SearchParameterType.unknown),
-    description: json['description'] as String?,
-    xpath: json['xpath'] as String?,
-    xpathUsage: _$enumDecodeNullable(
-        _$SearchParameterXpathUsageEnumMap, json['xpathUsage'],
-        unknownValue: SearchParameterXpathUsage.unknown),
-    target: (json['target'] as List<dynamic>?)
-        ?.map((e) => Code.fromJson(e))
-        .toList(),
-  );
-}
+_$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
+    _$_SearchParameter(
+      resourceType: _$enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: Dstu2ResourceType.SearchParameter) ??
+          Dstu2ResourceType.SearchParameter,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      url: FhirUri.fromJson(json['url']),
+      name: json['name'] as String,
+      status: _$enumDecodeNullable(
+          _$SearchParameterStatusEnumMap, json['status'],
+          unknownValue: SearchParameterStatus.unknown),
+      experimental: json['experimental'] == null
+          ? null
+          : Boolean.fromJson(json['experimental']),
+      publisher: json['publisher'] as String?,
+      contact: (json['contact'] as List<dynamic>?)
+          ?.map(
+              (e) => SearchParameterContact.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      requirements: json['requirements'] as String?,
+      requirementsElement: json['_requirements'] == null
+          ? null
+          : Element.fromJson(json['_requirements'] as Map<String, dynamic>),
+      code: Code.fromJson(json['code']),
+      base: json['base'] == null ? null : Code.fromJson(json['base']),
+      type: _$enumDecode(_$SearchParameterTypeEnumMap, json['type'],
+          unknownValue: SearchParameterType.unknown),
+      description: json['description'] as String?,
+      xpath: json['xpath'] as String?,
+      xpathUsage: _$enumDecodeNullable(
+          _$SearchParameterXpathUsageEnumMap, json['xpathUsage'],
+          unknownValue: SearchParameterXpathUsage.unknown),
+      target: (json['target'] as List<dynamic>?)
+          ?.map((e) => Code.fromJson(e))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_SearchParameterToJson(_$_SearchParameter instance) {
+Map<String, dynamic> _$$_SearchParameterToJson(_$_SearchParameter instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
   };
@@ -1674,24 +1679,23 @@ const _$SearchParameterXpathUsageEnumMap = {
   SearchParameterXpathUsage.unknown: 'unknown',
 };
 
-_$_SearchParameterContact _$_$_SearchParameterContactFromJson(
-    Map<String, dynamic> json) {
-  return _$_SearchParameterContact(
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    name: json['name'] as String?,
-    telecom: (json['telecom'] as List<dynamic>?)
-        ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_SearchParameterContact _$$_SearchParameterContactFromJson(
+        Map<String, dynamic> json) =>
+    _$_SearchParameterContact(
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      name: json['name'] as String?,
+      telecom: (json['telecom'] as List<dynamic>?)
+          ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_SearchParameterContactToJson(
+Map<String, dynamic> _$$_SearchParameterContactToJson(
     _$_SearchParameterContact instance) {
   final val = <String, dynamic>{};
 

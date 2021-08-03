@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'exchange.dart';
 
@@ -639,7 +639,7 @@ class _$_MessageHeader extends _MessageHeader {
       : super._();
 
   factory _$_MessageHeader.fromJson(Map<String, dynamic> json) =>
-      _$_$_MessageHeaderFromJson(json);
+      _$$_MessageHeaderFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MessageHeader)
@@ -792,7 +792,7 @@ class _$_MessageHeader extends _MessageHeader {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MessageHeaderToJson(this);
+    return _$$_MessageHeaderToJson(this);
   }
 }
 
@@ -1158,7 +1158,7 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
       : super._();
 
   factory _$_MessageHeaderResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_MessageHeaderResponseFromJson(json);
+      _$$_MessageHeaderResponseFromJson(json);
 
   @override
   final Id? id;
@@ -1233,7 +1233,7 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MessageHeaderResponseToJson(this);
+    return _$$_MessageHeaderResponseToJson(this);
   }
 }
 
@@ -1644,7 +1644,7 @@ class _$_MessageHeaderSource extends _MessageHeaderSource {
       : super._();
 
   factory _$_MessageHeaderSource.fromJson(Map<String, dynamic> json) =>
-      _$_$_MessageHeaderSourceFromJson(json);
+      _$$_MessageHeaderSourceFromJson(json);
 
   @override
   final Id? id;
@@ -1745,7 +1745,7 @@ class _$_MessageHeaderSource extends _MessageHeaderSource {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MessageHeaderSourceToJson(this);
+    return _$$_MessageHeaderSourceToJson(this);
   }
 }
 
@@ -2074,7 +2074,7 @@ class _$_MessageHeaderDestination extends _MessageHeaderDestination {
       : super._();
 
   factory _$_MessageHeaderDestination.fromJson(Map<String, dynamic> json) =>
-      _$_$_MessageHeaderDestinationFromJson(json);
+      _$$_MessageHeaderDestinationFromJson(json);
 
   @override
   final Id? id;
@@ -2148,7 +2148,7 @@ class _$_MessageHeaderDestination extends _MessageHeaderDestination {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MessageHeaderDestinationToJson(this);
+    return _$$_MessageHeaderDestinationToJson(this);
   }
 }
 
@@ -2591,7 +2591,7 @@ class _$_OperationOutcome extends _OperationOutcome {
       : super._();
 
   factory _$_OperationOutcome.fromJson(Map<String, dynamic> json) =>
-      _$_$_OperationOutcomeFromJson(json);
+      _$$_OperationOutcomeFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationOutcome)
@@ -2695,7 +2695,7 @@ class _$_OperationOutcome extends _OperationOutcome {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OperationOutcomeToJson(this);
+    return _$$_OperationOutcomeToJson(this);
   }
 }
 
@@ -3003,7 +3003,7 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
       : super._();
 
   factory _$_OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
-      _$_$_OperationOutcomeIssueFromJson(json);
+      _$$_OperationOutcomeIssueFromJson(json);
 
   @override
   final Id? id;
@@ -3077,7 +3077,7 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OperationOutcomeIssueToJson(this);
+    return _$$_OperationOutcomeIssueToJson(this);
   }
 }
 
@@ -3399,7 +3399,7 @@ class _$_Parameters extends _Parameters {
       : super._();
 
   factory _$_Parameters.fromJson(Map<String, dynamic> json) =>
-      _$_$_ParametersFromJson(json);
+      _$$_ParametersFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Parameters)
@@ -3473,7 +3473,7 @@ class _$_Parameters extends _Parameters {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ParametersToJson(this);
+    return _$$_ParametersToJson(this);
   }
 }
 
@@ -4606,7 +4606,7 @@ class _$_ParametersParameter extends _ParametersParameter {
       : super._();
 
   factory _$_ParametersParameter.fromJson(Map<String, dynamic> json) =>
-      _$_$_ParametersParameterFromJson(json);
+      _$$_ParametersParameterFromJson(json);
 
   @override
   final Id? id;
@@ -4848,7 +4848,7 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ParametersParameterToJson(this);
+    return _$$_ParametersParameterToJson(this);
   }
 }
 
@@ -5675,7 +5675,7 @@ class _$_Subscription extends _Subscription {
       : super._();
 
   factory _$_Subscription.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubscriptionFromJson(json);
+      _$$_SubscriptionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Subscription)
@@ -5846,7 +5846,7 @@ class _$_Subscription extends _Subscription {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubscriptionToJson(this);
+    return _$$_SubscriptionToJson(this);
   }
 }
 
@@ -6274,7 +6274,7 @@ class _$_SubscriptionChannel extends _SubscriptionChannel {
       : super._();
 
   factory _$_SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubscriptionChannelFromJson(json);
+      _$$_SubscriptionChannelFromJson(json);
 
   @override
   final Id? id;
@@ -6369,7 +6369,7 @@ class _$_SubscriptionChannel extends _SubscriptionChannel {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubscriptionChannelToJson(this);
+    return _$$_SubscriptionChannelToJson(this);
   }
 }
 

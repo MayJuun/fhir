@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'management.dart';
 
@@ -893,7 +893,7 @@ class _$_Encounter extends _Encounter {
       : super._();
 
   factory _$_Encounter.fromJson(Map<String, dynamic> json) =>
-      _$_$_EncounterFromJson(json);
+      _$$_EncounterFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Encounter)
@@ -1108,7 +1108,7 @@ class _$_Encounter extends _Encounter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EncounterToJson(this);
+    return _$$_EncounterToJson(this);
   }
 }
 
@@ -1480,7 +1480,7 @@ class _$_EncounterStatusHistory extends _EncounterStatusHistory {
       : super._();
 
   factory _$_EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
-      _$_$_EncounterStatusHistoryFromJson(json);
+      _$$_EncounterStatusHistoryFromJson(json);
 
   @override
   final String? id;
@@ -1542,7 +1542,7 @@ class _$_EncounterStatusHistory extends _EncounterStatusHistory {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EncounterStatusHistoryToJson(this);
+    return _$$_EncounterStatusHistoryToJson(this);
   }
 }
 
@@ -1782,7 +1782,7 @@ class _$_EncounterClassHistory extends _EncounterClassHistory {
       : super._();
 
   factory _$_EncounterClassHistory.fromJson(Map<String, dynamic> json) =>
-      _$_$_EncounterClassHistoryFromJson(json);
+      _$$_EncounterClassHistoryFromJson(json);
 
   @override
   final String? id;
@@ -1837,7 +1837,7 @@ class _$_EncounterClassHistory extends _EncounterClassHistory {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EncounterClassHistoryToJson(this);
+    return _$$_EncounterClassHistoryToJson(this);
   }
 }
 
@@ -2091,7 +2091,7 @@ class _$_EncounterParticipant extends _EncounterParticipant {
       : super._();
 
   factory _$_EncounterParticipant.fromJson(Map<String, dynamic> json) =>
-      _$_$_EncounterParticipantFromJson(json);
+      _$$_EncounterParticipantFromJson(json);
 
   @override
   final String? id;
@@ -2151,7 +2151,7 @@ class _$_EncounterParticipant extends _EncounterParticipant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EncounterParticipantToJson(this);
+    return _$$_EncounterParticipantToJson(this);
   }
 }
 
@@ -2434,7 +2434,7 @@ class _$_EncounterDiagnosis extends _EncounterDiagnosis {
       : super._();
 
   factory _$_EncounterDiagnosis.fromJson(Map<String, dynamic> json) =>
-      _$_$_EncounterDiagnosisFromJson(json);
+      _$$_EncounterDiagnosisFromJson(json);
 
   @override
   final String? id;
@@ -2500,7 +2500,7 @@ class _$_EncounterDiagnosis extends _EncounterDiagnosis {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EncounterDiagnosisToJson(this);
+    return _$$_EncounterDiagnosisToJson(this);
   }
 }
 
@@ -2919,7 +2919,7 @@ class _$_EncounterHospitalization extends _EncounterHospitalization {
       : super._();
 
   factory _$_EncounterHospitalization.fromJson(Map<String, dynamic> json) =>
-      _$_$_EncounterHospitalizationFromJson(json);
+      _$$_EncounterHospitalizationFromJson(json);
 
   @override
   final String? id;
@@ -3016,7 +3016,7 @@ class _$_EncounterHospitalization extends _EncounterHospitalization {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EncounterHospitalizationToJson(this);
+    return _$$_EncounterHospitalizationToJson(this);
   }
 }
 
@@ -3361,7 +3361,7 @@ class _$_EncounterLocation extends _EncounterLocation {
       : super._();
 
   factory _$_EncounterLocation.fromJson(Map<String, dynamic> json) =>
-      _$_$_EncounterLocationFromJson(json);
+      _$$_EncounterLocationFromJson(json);
 
   @override
   final String? id;
@@ -3434,7 +3434,7 @@ class _$_EncounterLocation extends _EncounterLocation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EncounterLocationToJson(this);
+    return _$$_EncounterLocationToJson(this);
   }
 }
 
@@ -4114,7 +4114,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
       : super._();
 
   factory _$_EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
-      _$_$_EpisodeOfCareFromJson(json);
+      _$$_EpisodeOfCareFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.EpisodeOfCare)
@@ -4281,7 +4281,7 @@ class _$_EpisodeOfCare extends _EpisodeOfCare {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EpisodeOfCareToJson(this);
+    return _$$_EpisodeOfCareToJson(this);
   }
 }
 
@@ -4618,7 +4618,7 @@ class _$_EpisodeOfCareStatusHistory extends _EpisodeOfCareStatusHistory {
       : super._();
 
   factory _$_EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
-      _$_$_EpisodeOfCareStatusHistoryFromJson(json);
+      _$$_EpisodeOfCareStatusHistoryFromJson(json);
 
   @override
   final String? id;
@@ -4680,7 +4680,7 @@ class _$_EpisodeOfCareStatusHistory extends _EpisodeOfCareStatusHistory {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EpisodeOfCareStatusHistoryToJson(this);
+    return _$$_EpisodeOfCareStatusHistoryToJson(this);
   }
 }
 
@@ -4970,7 +4970,7 @@ class _$_EpisodeOfCareDiagnosis extends _EpisodeOfCareDiagnosis {
       : super._();
 
   factory _$_EpisodeOfCareDiagnosis.fromJson(Map<String, dynamic> json) =>
-      _$_$_EpisodeOfCareDiagnosisFromJson(json);
+      _$$_EpisodeOfCareDiagnosisFromJson(json);
 
   @override
   final String? id;
@@ -5037,7 +5037,7 @@ class _$_EpisodeOfCareDiagnosis extends _EpisodeOfCareDiagnosis {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EpisodeOfCareDiagnosisToJson(this);
+    return _$$_EpisodeOfCareDiagnosisToJson(this);
   }
 }
 
@@ -5647,8 +5647,7 @@ class _$_Flag extends _Flag {
       this.author})
       : super._();
 
-  factory _$_Flag.fromJson(Map<String, dynamic> json) =>
-      _$_$_FlagFromJson(json);
+  factory _$_Flag.fromJson(Map<String, dynamic> json) => _$$_FlagFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Flag)
@@ -5792,7 +5791,7 @@ class _$_Flag extends _Flag {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_FlagToJson(this);
+    return _$$_FlagToJson(this);
   }
 }
 
@@ -7318,7 +7317,7 @@ class _$_Library extends _Library {
       : super._();
 
   factory _$_Library.fromJson(Map<String, dynamic> json) =>
-      _$_$_LibraryFromJson(json);
+      _$$_LibraryFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Library)
@@ -7638,7 +7637,7 @@ class _$_Library extends _Library {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_LibraryToJson(this);
+    return _$$_LibraryToJson(this);
   }
 }
 
@@ -8654,7 +8653,7 @@ class _$_List_ extends _List_ {
       : super._();
 
   factory _$_List_.fromJson(Map<String, dynamic> json) =>
-      _$_$_List_FromJson(json);
+      _$$_List_FromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.List_)
@@ -8844,7 +8843,7 @@ class _$_List_ extends _List_ {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_List_ToJson(this);
+    return _$$_List_ToJson(this);
   }
 }
 
@@ -9252,7 +9251,7 @@ class _$_ListEntry extends _ListEntry {
       : super._();
 
   factory _$_ListEntry.fromJson(Map<String, dynamic> json) =>
-      _$_$_ListEntryFromJson(json);
+      _$$_ListEntryFromJson(json);
 
   @override
   final String? id;
@@ -9330,7 +9329,7 @@ class _$_ListEntry extends _ListEntry {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ListEntryToJson(this);
+    return _$$_ListEntryToJson(this);
   }
 }
 

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'structure.dart';
 
@@ -794,7 +794,7 @@ class _$_Media extends _Media {
       : super._();
 
   factory _$_Media.fromJson(Map<String, dynamic> json) =>
-      _$_$_MediaFromJson(json);
+      _$$_MediaFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Media)
@@ -985,7 +985,7 @@ class _$_Media extends _Media {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MediaToJson(this);
+    return _$$_MediaToJson(this);
   }
 }
 
@@ -1429,7 +1429,7 @@ class _$_Binary extends _Binary {
       : super._();
 
   factory _$_Binary.fromJson(Map<String, dynamic> json) =>
-      _$_$_BinaryFromJson(json);
+      _$$_BinaryFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Binary)
@@ -1515,7 +1515,7 @@ class _$_Binary extends _Binary {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BinaryToJson(this);
+    return _$$_BinaryToJson(this);
   }
 }
 
@@ -1992,7 +1992,7 @@ class _$_Bundle extends _Bundle {
       : super._();
 
   factory _$_Bundle.fromJson(Map<String, dynamic> json) =>
-      _$_$_BundleFromJson(json);
+      _$$_BundleFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Bundle)
@@ -2101,7 +2101,7 @@ class _$_Bundle extends _Bundle {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BundleToJson(this);
+    return _$$_BundleToJson(this);
   }
 }
 
@@ -2421,7 +2421,7 @@ class _$_BundleLink extends _BundleLink {
       : super._();
 
   factory _$_BundleLink.fromJson(Map<String, dynamic> json) =>
-      _$_$_BundleLinkFromJson(json);
+      _$$_BundleLinkFromJson(json);
 
   @override
   final Id? id;
@@ -2496,7 +2496,7 @@ class _$_BundleLink extends _BundleLink {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BundleLinkToJson(this);
+    return _$$_BundleLinkToJson(this);
   }
 }
 
@@ -2869,7 +2869,7 @@ class _$_BundleEntry extends _BundleEntry {
       : super._();
 
   factory _$_BundleEntry.fromJson(Map<String, dynamic> json) =>
-      _$_$_BundleEntryFromJson(json);
+      _$$_BundleEntryFromJson(json);
 
   @override
   final Id? id;
@@ -2960,7 +2960,7 @@ class _$_BundleEntry extends _BundleEntry {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BundleEntryToJson(this);
+    return _$$_BundleEntryToJson(this);
   }
 }
 
@@ -3269,7 +3269,7 @@ class _$_BundleEntrySearch extends _BundleEntrySearch {
       : super._();
 
   factory _$_BundleEntrySearch.fromJson(Map<String, dynamic> json) =>
-      _$_$_BundleEntrySearchFromJson(json);
+      _$$_BundleEntrySearchFromJson(json);
 
   @override
   final Id? id;
@@ -3344,7 +3344,7 @@ class _$_BundleEntrySearch extends _BundleEntrySearch {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BundleEntrySearchToJson(this);
+    return _$$_BundleEntrySearchToJson(this);
   }
 }
 
@@ -3843,7 +3843,7 @@ class _$_BundleEntryRequest extends _BundleEntryRequest {
       : super._();
 
   factory _$_BundleEntryRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_BundleEntryRequestFromJson(json);
+      _$$_BundleEntryRequestFromJson(json);
 
   @override
   final Id? id;
@@ -3970,7 +3970,7 @@ class _$_BundleEntryRequest extends _BundleEntryRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BundleEntryRequestToJson(this);
+    return _$$_BundleEntryRequestToJson(this);
   }
 }
 
@@ -4402,7 +4402,7 @@ class _$_BundleEntryResponse extends _BundleEntryResponse {
       : super._();
 
   factory _$_BundleEntryResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_BundleEntryResponseFromJson(json);
+      _$$_BundleEntryResponseFromJson(json);
 
   @override
   final Id? id;
@@ -4503,7 +4503,7 @@ class _$_BundleEntryResponse extends _BundleEntryResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BundleEntryResponseToJson(this);
+    return _$$_BundleEntryResponseToJson(this);
   }
 }
 
@@ -5056,7 +5056,7 @@ class _$_Basic extends _Basic {
       : super._();
 
   factory _$_Basic.fromJson(Map<String, dynamic> json) =>
-      _$_$_BasicFromJson(json);
+      _$$_BasicFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Basic)
@@ -5183,7 +5183,7 @@ class _$_Basic extends _Basic {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BasicToJson(this);
+    return _$$_BasicToJson(this);
   }
 }
 

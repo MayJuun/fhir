@@ -6,76 +6,80 @@ part of 'payment.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PaymentNotice _$_$_PaymentNoticeFromJson(Map<String, dynamic> json) {
-  return _$_PaymentNotice(
-    resourceType: _$enumDecode(_$R4ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: R4ResourceType.PaymentNotice),
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    meta: json['meta'] == null
-        ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules']),
-    implicitRulesElement: json['_implicitRules'] == null
-        ? null
-        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
-    languageElement: json['_language'] == null
-        ? null
-        : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    text: json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    status: json['status'] == null ? null : Code.fromJson(json['status']),
-    statusElement: json['_status'] == null
-        ? null
-        : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    request: json['request'] == null
-        ? null
-        : Reference.fromJson(json['request'] as Map<String, dynamic>),
-    response: json['response'] == null
-        ? null
-        : Reference.fromJson(json['response'] as Map<String, dynamic>),
-    created:
-        json['created'] == null ? null : FhirDateTime.fromJson(json['created']),
-    createdElement: json['_created'] == null
-        ? null
-        : Element.fromJson(json['_created'] as Map<String, dynamic>),
-    provider: json['provider'] == null
-        ? null
-        : Reference.fromJson(json['provider'] as Map<String, dynamic>),
-    payment: Reference.fromJson(json['payment'] as Map<String, dynamic>),
-    paymentDate:
-        json['paymentDate'] == null ? null : Date.fromJson(json['paymentDate']),
-    paymentDateElement: json['_paymentDate'] == null
-        ? null
-        : Element.fromJson(json['_paymentDate'] as Map<String, dynamic>),
-    payee: json['payee'] == null
-        ? null
-        : Reference.fromJson(json['payee'] as Map<String, dynamic>),
-    recipient: Reference.fromJson(json['recipient'] as Map<String, dynamic>),
-    amount: Money.fromJson(json['amount'] as Map<String, dynamic>),
-    paymentStatus: json['paymentStatus'] == null
-        ? null
-        : CodeableConcept.fromJson(
-            json['paymentStatus'] as Map<String, dynamic>),
-  );
-}
+_$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
+    _$_PaymentNotice(
+      resourceType: _$enumDecodeNullable(
+              _$R4ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R4ResourceType.PaymentNotice) ??
+          R4ResourceType.PaymentNotice,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      statusElement: json['_status'] == null
+          ? null
+          : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      request: json['request'] == null
+          ? null
+          : Reference.fromJson(json['request'] as Map<String, dynamic>),
+      response: json['response'] == null
+          ? null
+          : Reference.fromJson(json['response'] as Map<String, dynamic>),
+      created: json['created'] == null
+          ? null
+          : FhirDateTime.fromJson(json['created']),
+      createdElement: json['_created'] == null
+          ? null
+          : Element.fromJson(json['_created'] as Map<String, dynamic>),
+      provider: json['provider'] == null
+          ? null
+          : Reference.fromJson(json['provider'] as Map<String, dynamic>),
+      payment: Reference.fromJson(json['payment'] as Map<String, dynamic>),
+      paymentDate: json['paymentDate'] == null
+          ? null
+          : Date.fromJson(json['paymentDate']),
+      paymentDateElement: json['_paymentDate'] == null
+          ? null
+          : Element.fromJson(json['_paymentDate'] as Map<String, dynamic>),
+      payee: json['payee'] == null
+          ? null
+          : Reference.fromJson(json['payee'] as Map<String, dynamic>),
+      recipient: Reference.fromJson(json['recipient'] as Map<String, dynamic>),
+      amount: Money.fromJson(json['amount'] as Map<String, dynamic>),
+      paymentStatus: json['paymentStatus'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['paymentStatus'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_PaymentNoticeToJson(_$_PaymentNotice instance) {
+Map<String, dynamic> _$$_PaymentNoticeToJson(_$_PaymentNotice instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
   };
@@ -142,6 +146,17 @@ K _$enumDecode<K, V>(
       return MapEntry(unknownValue, enumValues.values.first);
     },
   ).key;
+}
+
+K? _$enumDecodeNullable<K, V>(
+  Map<K, V> enumValues,
+  dynamic source, {
+  K? unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R4ResourceTypeEnumMap = {
@@ -296,97 +311,101 @@ const _$R4ResourceTypeEnumMap = {
   R4ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-_$_PaymentReconciliation _$_$_PaymentReconciliationFromJson(
-    Map<String, dynamic> json) {
-  return _$_PaymentReconciliation(
-    resourceType: _$enumDecode(_$R4ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: R4ResourceType.PaymentReconciliation),
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    meta: json['meta'] == null
-        ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules']),
-    implicitRulesElement: json['_implicitRules'] == null
-        ? null
-        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
-    languageElement: json['_language'] == null
-        ? null
-        : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    text: json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    status: json['status'] == null ? null : Code.fromJson(json['status']),
-    statusElement: json['_status'] == null
-        ? null
-        : Element.fromJson(json['_status'] as Map<String, dynamic>),
-    period: json['period'] == null
-        ? null
-        : Period.fromJson(json['period'] as Map<String, dynamic>),
-    created:
-        json['created'] == null ? null : FhirDateTime.fromJson(json['created']),
-    createdElement: json['_created'] == null
-        ? null
-        : Element.fromJson(json['_created'] as Map<String, dynamic>),
-    paymentIssuer: json['paymentIssuer'] == null
-        ? null
-        : Reference.fromJson(json['paymentIssuer'] as Map<String, dynamic>),
-    request: json['request'] == null
-        ? null
-        : Reference.fromJson(json['request'] as Map<String, dynamic>),
-    requestor: json['requestor'] == null
-        ? null
-        : Reference.fromJson(json['requestor'] as Map<String, dynamic>),
-    outcome: _$enumDecodeNullable(
-        _$PaymentReconciliationOutcomeEnumMap, json['outcome'],
-        unknownValue: PaymentReconciliationOutcome.unknown),
-    outcomeElement: json['_outcome'] == null
-        ? null
-        : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
-    disposition: json['disposition'] as String?,
-    dispositionElement: json['_disposition'] == null
-        ? null
-        : Element.fromJson(json['_disposition'] as Map<String, dynamic>),
-    paymentDate:
-        json['paymentDate'] == null ? null : Date.fromJson(json['paymentDate']),
-    paymentDateElement: json['_paymentDate'] == null
-        ? null
-        : Element.fromJson(json['_paymentDate'] as Map<String, dynamic>),
-    paymentAmount:
-        Money.fromJson(json['paymentAmount'] as Map<String, dynamic>),
-    paymentIdentifier: json['paymentIdentifier'] == null
-        ? null
-        : Identifier.fromJson(
-            json['paymentIdentifier'] as Map<String, dynamic>),
-    detail: (json['detail'] as List<dynamic>?)
-        ?.map((e) =>
-            PaymentReconciliationDetail.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    formCode: json['formCode'] == null
-        ? null
-        : CodeableConcept.fromJson(json['formCode'] as Map<String, dynamic>),
-    processNote: (json['processNote'] as List<dynamic>?)
-        ?.map((e) => PaymentReconciliationProcessNote.fromJson(
-            e as Map<String, dynamic>))
-        .toList(),
-  );
-}
+_$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
+        Map<String, dynamic> json) =>
+    _$_PaymentReconciliation(
+      resourceType: _$enumDecodeNullable(
+              _$R4ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: R4ResourceType.PaymentReconciliation) ??
+          R4ResourceType.PaymentReconciliation,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      statusElement: json['_status'] == null
+          ? null
+          : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      period: json['period'] == null
+          ? null
+          : Period.fromJson(json['period'] as Map<String, dynamic>),
+      created: json['created'] == null
+          ? null
+          : FhirDateTime.fromJson(json['created']),
+      createdElement: json['_created'] == null
+          ? null
+          : Element.fromJson(json['_created'] as Map<String, dynamic>),
+      paymentIssuer: json['paymentIssuer'] == null
+          ? null
+          : Reference.fromJson(json['paymentIssuer'] as Map<String, dynamic>),
+      request: json['request'] == null
+          ? null
+          : Reference.fromJson(json['request'] as Map<String, dynamic>),
+      requestor: json['requestor'] == null
+          ? null
+          : Reference.fromJson(json['requestor'] as Map<String, dynamic>),
+      outcome: _$enumDecodeNullable(
+          _$PaymentReconciliationOutcomeEnumMap, json['outcome'],
+          unknownValue: PaymentReconciliationOutcome.unknown),
+      outcomeElement: json['_outcome'] == null
+          ? null
+          : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
+      disposition: json['disposition'] as String?,
+      dispositionElement: json['_disposition'] == null
+          ? null
+          : Element.fromJson(json['_disposition'] as Map<String, dynamic>),
+      paymentDate: json['paymentDate'] == null
+          ? null
+          : Date.fromJson(json['paymentDate']),
+      paymentDateElement: json['_paymentDate'] == null
+          ? null
+          : Element.fromJson(json['_paymentDate'] as Map<String, dynamic>),
+      paymentAmount:
+          Money.fromJson(json['paymentAmount'] as Map<String, dynamic>),
+      paymentIdentifier: json['paymentIdentifier'] == null
+          ? null
+          : Identifier.fromJson(
+              json['paymentIdentifier'] as Map<String, dynamic>),
+      detail: (json['detail'] as List<dynamic>?)
+          ?.map((e) =>
+              PaymentReconciliationDetail.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      formCode: json['formCode'] == null
+          ? null
+          : CodeableConcept.fromJson(json['formCode'] as Map<String, dynamic>),
+      processNote: (json['processNote'] as List<dynamic>?)
+          ?.map((e) => PaymentReconciliationProcessNote.fromJson(
+              e as Map<String, dynamic>))
+          .toList(),
+    );
 
-Map<String, dynamic> _$_$_PaymentReconciliationToJson(
+Map<String, dynamic> _$$_PaymentReconciliationToJson(
     _$_PaymentReconciliation instance) {
   final val = <String, dynamic>{
     'resourceType': _$R4ResourceTypeEnumMap[instance.resourceType],
@@ -437,17 +456,6 @@ Map<String, dynamic> _$_$_PaymentReconciliationToJson(
   return val;
 }
 
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
-
 const _$PaymentReconciliationOutcomeEnumMap = {
   PaymentReconciliationOutcome.queued: 'queued',
   PaymentReconciliationOutcome.complete: 'complete',
@@ -456,49 +464,48 @@ const _$PaymentReconciliationOutcomeEnumMap = {
   PaymentReconciliationOutcome.unknown: 'unknown',
 };
 
-_$_PaymentReconciliationDetail _$_$_PaymentReconciliationDetailFromJson(
-    Map<String, dynamic> json) {
-  return _$_PaymentReconciliationDetail(
-    id: json['id'] as String?,
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    identifier: json['identifier'] == null
-        ? null
-        : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-    predecessor: json['predecessor'] == null
-        ? null
-        : Identifier.fromJson(json['predecessor'] as Map<String, dynamic>),
-    type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-    request: json['request'] == null
-        ? null
-        : Reference.fromJson(json['request'] as Map<String, dynamic>),
-    submitter: json['submitter'] == null
-        ? null
-        : Reference.fromJson(json['submitter'] as Map<String, dynamic>),
-    response: json['response'] == null
-        ? null
-        : Reference.fromJson(json['response'] as Map<String, dynamic>),
-    date: json['date'] == null ? null : Date.fromJson(json['date']),
-    dateElement: json['_date'] == null
-        ? null
-        : Element.fromJson(json['_date'] as Map<String, dynamic>),
-    responsible: json['responsible'] == null
-        ? null
-        : Reference.fromJson(json['responsible'] as Map<String, dynamic>),
-    payee: json['payee'] == null
-        ? null
-        : Reference.fromJson(json['payee'] as Map<String, dynamic>),
-    amount: json['amount'] == null
-        ? null
-        : Money.fromJson(json['amount'] as Map<String, dynamic>),
-  );
-}
+_$_PaymentReconciliationDetail _$$_PaymentReconciliationDetailFromJson(
+        Map<String, dynamic> json) =>
+    _$_PaymentReconciliationDetail(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: json['identifier'] == null
+          ? null
+          : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
+      predecessor: json['predecessor'] == null
+          ? null
+          : Identifier.fromJson(json['predecessor'] as Map<String, dynamic>),
+      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      request: json['request'] == null
+          ? null
+          : Reference.fromJson(json['request'] as Map<String, dynamic>),
+      submitter: json['submitter'] == null
+          ? null
+          : Reference.fromJson(json['submitter'] as Map<String, dynamic>),
+      response: json['response'] == null
+          ? null
+          : Reference.fromJson(json['response'] as Map<String, dynamic>),
+      date: json['date'] == null ? null : Date.fromJson(json['date']),
+      dateElement: json['_date'] == null
+          ? null
+          : Element.fromJson(json['_date'] as Map<String, dynamic>),
+      responsible: json['responsible'] == null
+          ? null
+          : Reference.fromJson(json['responsible'] as Map<String, dynamic>),
+      payee: json['payee'] == null
+          ? null
+          : Reference.fromJson(json['payee'] as Map<String, dynamic>),
+      amount: json['amount'] == null
+          ? null
+          : Money.fromJson(json['amount'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_PaymentReconciliationDetailToJson(
+Map<String, dynamic> _$$_PaymentReconciliationDetailToJson(
     _$_PaymentReconciliationDetail instance) {
   final val = <String, dynamic>{};
 
@@ -528,29 +535,28 @@ Map<String, dynamic> _$_$_PaymentReconciliationDetailToJson(
 }
 
 _$_PaymentReconciliationProcessNote
-    _$_$_PaymentReconciliationProcessNoteFromJson(Map<String, dynamic> json) {
-  return _$_PaymentReconciliationProcessNote(
-    id: json['id'] as String?,
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    type: _$enumDecodeNullable(
-        _$PaymentReconciliationProcessNoteTypeEnumMap, json['type'],
-        unknownValue: PaymentReconciliationProcessNoteType.unknown),
-    typeElement: json['_type'] == null
-        ? null
-        : Element.fromJson(json['_type'] as Map<String, dynamic>),
-    text: json['text'] as String?,
-    textElement: json['_text'] == null
-        ? null
-        : Element.fromJson(json['_text'] as Map<String, dynamic>),
-  );
-}
+    _$$_PaymentReconciliationProcessNoteFromJson(Map<String, dynamic> json) =>
+        _$_PaymentReconciliationProcessNote(
+          id: json['id'] as String?,
+          extension_: (json['extension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+              ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          type: _$enumDecodeNullable(
+              _$PaymentReconciliationProcessNoteTypeEnumMap, json['type'],
+              unknownValue: PaymentReconciliationProcessNoteType.unknown),
+          typeElement: json['_type'] == null
+              ? null
+              : Element.fromJson(json['_type'] as Map<String, dynamic>),
+          text: json['text'] as String?,
+          textElement: json['_text'] == null
+              ? null
+              : Element.fromJson(json['_text'] as Map<String, dynamic>),
+        );
 
-Map<String, dynamic> _$_$_PaymentReconciliationProcessNoteToJson(
+Map<String, dynamic> _$$_PaymentReconciliationProcessNoteToJson(
     _$_PaymentReconciliationProcessNote instance) {
   final val = <String, dynamic>{};
 

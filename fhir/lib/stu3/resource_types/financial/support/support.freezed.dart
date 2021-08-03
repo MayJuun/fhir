@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'support.dart';
 
@@ -916,7 +916,7 @@ class _$_Coverage extends _Coverage {
       : super._();
 
   factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageFromJson(json);
+      _$$_CoverageFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.Coverage)
@@ -1126,7 +1126,7 @@ class _$_Coverage extends _Coverage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageToJson(this);
+    return _$$_CoverageToJson(this);
   }
 }
 
@@ -1920,7 +1920,7 @@ class _$_CoverageGrouping extends _CoverageGrouping {
       : super._();
 
   factory _$_CoverageGrouping.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageGroupingFromJson(json);
+      _$$_CoverageGroupingFromJson(json);
 
   @override
   final String? group;
@@ -2096,7 +2096,7 @@ class _$_CoverageGrouping extends _CoverageGrouping {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageGroupingToJson(this);
+    return _$$_CoverageGroupingToJson(this);
   }
 }
 
@@ -3095,7 +3095,7 @@ class _$_EligibilityRequest extends _EligibilityRequest {
       : super._();
 
   factory _$_EligibilityRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_EligibilityRequestFromJson(json);
+      _$$_EligibilityRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityRequest)
@@ -3295,7 +3295,7 @@ class _$_EligibilityRequest extends _EligibilityRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EligibilityRequestToJson(this);
+    return _$$_EligibilityRequestToJson(this);
   }
 }
 
@@ -4202,7 +4202,7 @@ class _$_EligibilityResponse extends _EligibilityResponse {
       : super._();
 
   factory _$_EligibilityResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_EligibilityResponseFromJson(json);
+      _$$_EligibilityResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EligibilityResponse)
@@ -4391,7 +4391,7 @@ class _$_EligibilityResponse extends _EligibilityResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EligibilityResponseToJson(this);
+    return _$$_EligibilityResponseToJson(this);
   }
 }
 
@@ -4684,7 +4684,7 @@ class _$_EligibilityResponseInsurance extends _EligibilityResponseInsurance {
       : super._();
 
   factory _$_EligibilityResponseInsurance.fromJson(Map<String, dynamic> json) =>
-      _$_$_EligibilityResponseInsuranceFromJson(json);
+      _$$_EligibilityResponseInsuranceFromJson(json);
 
   @override
   final Reference? coverage;
@@ -4728,7 +4728,7 @@ class _$_EligibilityResponseInsurance extends _EligibilityResponseInsurance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EligibilityResponseInsuranceToJson(this);
+    return _$$_EligibilityResponseInsuranceToJson(this);
   }
 }
 
@@ -5162,7 +5162,7 @@ class _$_EligibilityResponseBenefitBalance
 
   factory _$_EligibilityResponseBenefitBalance.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_EligibilityResponseBenefitBalanceFromJson(json);
+      _$$_EligibilityResponseBenefitBalanceFromJson(json);
 
   @override
   final CodeableConcept category;
@@ -5261,7 +5261,7 @@ class _$_EligibilityResponseBenefitBalance
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EligibilityResponseBenefitBalanceToJson(this);
+    return _$$_EligibilityResponseBenefitBalanceToJson(this);
   }
 }
 
@@ -5647,7 +5647,7 @@ class _$_EligibilityResponseFinancial extends _EligibilityResponseFinancial {
       : super._();
 
   factory _$_EligibilityResponseFinancial.fromJson(Map<String, dynamic> json) =>
-      _$_$_EligibilityResponseFinancialFromJson(json);
+      _$$_EligibilityResponseFinancialFromJson(json);
 
   @override
   final CodeableConcept type;
@@ -5731,7 +5731,7 @@ class _$_EligibilityResponseFinancial extends _EligibilityResponseFinancial {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EligibilityResponseFinancialToJson(this);
+    return _$$_EligibilityResponseFinancialToJson(this);
   }
 }
 
@@ -5895,7 +5895,7 @@ class _$_EligibilityResponseError extends _EligibilityResponseError {
   _$_EligibilityResponseError({required this.code}) : super._();
 
   factory _$_EligibilityResponseError.fromJson(Map<String, dynamic> json) =>
-      _$_$_EligibilityResponseErrorFromJson(json);
+      _$$_EligibilityResponseErrorFromJson(json);
 
   @override
   final CodeableConcept code;
@@ -5925,7 +5925,7 @@ class _$_EligibilityResponseError extends _EligibilityResponseError {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EligibilityResponseErrorToJson(this);
+    return _$$_EligibilityResponseErrorToJson(this);
   }
 }
 
@@ -6559,7 +6559,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
       : super._();
 
   factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_EnrollmentRequestFromJson(json);
+      _$$_EnrollmentRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentRequest)
@@ -6712,7 +6712,7 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EnrollmentRequestToJson(this);
+    return _$$_EnrollmentRequestToJson(this);
   }
 }
 
@@ -7470,7 +7470,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
       : super._();
 
   factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_EnrollmentResponseFromJson(json);
+      _$$_EnrollmentResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Stu3ResourceType.EnrollmentResponse)
@@ -7636,7 +7636,7 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EnrollmentResponseToJson(this);
+    return _$$_EnrollmentResponseToJson(this);
   }
 }
 

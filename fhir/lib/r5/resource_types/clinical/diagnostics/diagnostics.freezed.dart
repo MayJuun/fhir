@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'diagnostics.dart';
 
@@ -595,7 +595,7 @@ class _$_BodyStructure extends _BodyStructure {
       : super._();
 
   factory _$_BodyStructure.fromJson(Map<String, dynamic> json) =>
-      _$_$_BodyStructureFromJson(json);
+      _$$_BodyStructureFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.BodyStructure)
@@ -746,7 +746,7 @@ class _$_BodyStructure extends _BodyStructure {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BodyStructureToJson(this);
+    return _$$_BodyStructureToJson(this);
   }
 }
 
@@ -1688,7 +1688,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
       : super._();
 
   factory _$_DiagnosticReport.fromJson(Map<String, dynamic> json) =>
-      _$_$_DiagnosticReportFromJson(json);
+      _$$_DiagnosticReportFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.DiagnosticReport)
@@ -1900,7 +1900,7 @@ class _$_DiagnosticReport extends _DiagnosticReport {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DiagnosticReportToJson(this);
+    return _$$_DiagnosticReportToJson(this);
   }
 }
 
@@ -2256,7 +2256,7 @@ class _$_DiagnosticReportMedia extends _DiagnosticReportMedia {
       : super._();
 
   factory _$_DiagnosticReportMedia.fromJson(Map<String, dynamic> json) =>
-      _$_$_DiagnosticReportMediaFromJson(json);
+      _$$_DiagnosticReportMediaFromJson(json);
 
   @override
   final String? id;
@@ -2318,7 +2318,7 @@ class _$_DiagnosticReportMedia extends _DiagnosticReportMedia {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DiagnosticReportMediaToJson(this);
+    return _$$_DiagnosticReportMediaToJson(this);
   }
 }
 
@@ -3221,7 +3221,7 @@ class _$_ImagingStudy extends _ImagingStudy {
       : super._();
 
   factory _$_ImagingStudy.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImagingStudyFromJson(json);
+      _$$_ImagingStudyFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.ImagingStudy)
@@ -3435,7 +3435,7 @@ class _$_ImagingStudy extends _ImagingStudy {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImagingStudyToJson(this);
+    return _$$_ImagingStudyToJson(this);
   }
 }
 
@@ -3782,7 +3782,7 @@ class _$_ImagingStudyProcedure extends _ImagingStudyProcedure {
       : super._();
 
   factory _$_ImagingStudyProcedure.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImagingStudyProcedureFromJson(json);
+      _$$_ImagingStudyProcedureFromJson(json);
 
   @override
   final String? id;
@@ -3838,7 +3838,7 @@ class _$_ImagingStudyProcedure extends _ImagingStudyProcedure {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImagingStudyProcedureToJson(this);
+    return _$$_ImagingStudyProcedureToJson(this);
   }
 }
 
@@ -4403,7 +4403,7 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
       : super._();
 
   factory _$_ImagingStudySeries.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImagingStudySeriesFromJson(json);
+      _$$_ImagingStudySeriesFromJson(json);
 
   @override
   final String? id;
@@ -4552,7 +4552,7 @@ class _$_ImagingStudySeries extends _ImagingStudySeries {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImagingStudySeriesToJson(this);
+    return _$$_ImagingStudySeriesToJson(this);
   }
 }
 
@@ -4838,7 +4838,7 @@ class _$_ImagingStudyPerformer extends _ImagingStudyPerformer {
       : super._();
 
   factory _$_ImagingStudyPerformer.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImagingStudyPerformerFromJson(json);
+      _$$_ImagingStudyPerformerFromJson(json);
 
   @override
   final String? id;
@@ -4893,7 +4893,7 @@ class _$_ImagingStudyPerformer extends _ImagingStudyPerformer {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImagingStudyPerformerToJson(this);
+    return _$$_ImagingStudyPerformerToJson(this);
   }
 }
 
@@ -5237,7 +5237,7 @@ class _$_ImagingStudyInstance extends _ImagingStudyInstance {
       : super._();
 
   factory _$_ImagingStudyInstance.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImagingStudyInstanceFromJson(json);
+      _$$_ImagingStudyInstanceFromJson(json);
 
   @override
   final String? id;
@@ -5323,7 +5323,7 @@ class _$_ImagingStudyInstance extends _ImagingStudyInstance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImagingStudyInstanceToJson(this);
+    return _$$_ImagingStudyInstanceToJson(this);
   }
 }
 
@@ -6213,7 +6213,7 @@ class _$_MolecularSequence extends _MolecularSequence {
       : super._();
 
   factory _$_MolecularSequence.fromJson(Map<String, dynamic> json) =>
-      _$_$_MolecularSequenceFromJson(json);
+      _$$_MolecularSequenceFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.MolecularSequence)
@@ -6411,7 +6411,7 @@ class _$_MolecularSequence extends _MolecularSequence {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MolecularSequenceToJson(this);
+    return _$$_MolecularSequenceToJson(this);
   }
 }
 
@@ -7116,7 +7116,7 @@ class _$_MolecularSequenceReferenceSeq extends _MolecularSequenceReferenceSeq {
 
   factory _$_MolecularSequenceReferenceSeq.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_MolecularSequenceReferenceSeqFromJson(json);
+      _$$_MolecularSequenceReferenceSeqFromJson(json);
 
   @override
   final String? id;
@@ -7259,7 +7259,7 @@ class _$_MolecularSequenceReferenceSeq extends _MolecularSequenceReferenceSeq {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MolecularSequenceReferenceSeqToJson(this);
+    return _$$_MolecularSequenceReferenceSeqToJson(this);
   }
 }
 
@@ -7762,7 +7762,7 @@ class _$_MolecularSequenceVariant extends _MolecularSequenceVariant {
       : super._();
 
   factory _$_MolecularSequenceVariant.fromJson(Map<String, dynamic> json) =>
-      _$_$_MolecularSequenceVariantFromJson(json);
+      _$$_MolecularSequenceVariantFromJson(json);
 
   @override
   final String? id;
@@ -7874,7 +7874,7 @@ class _$_MolecularSequenceVariant extends _MolecularSequenceVariant {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MolecularSequenceVariantToJson(this);
+    return _$$_MolecularSequenceVariantToJson(this);
   }
 }
 
@@ -8775,7 +8775,7 @@ class _$_MolecularSequenceQuality extends _MolecularSequenceQuality {
       : super._();
 
   factory _$_MolecularSequenceQuality.fromJson(Map<String, dynamic> json) =>
-      _$_$_MolecularSequenceQualityFromJson(json);
+      _$$_MolecularSequenceQualityFromJson(json);
 
   @override
   final String? id;
@@ -8973,7 +8973,7 @@ class _$_MolecularSequenceQuality extends _MolecularSequenceQuality {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MolecularSequenceQualityToJson(this);
+    return _$$_MolecularSequenceQualityToJson(this);
   }
 }
 
@@ -9476,7 +9476,7 @@ class _$_MolecularSequenceRoc extends _MolecularSequenceRoc {
       : super._();
 
   factory _$_MolecularSequenceRoc.fromJson(Map<String, dynamic> json) =>
-      _$_$_MolecularSequenceRocFromJson(json);
+      _$$_MolecularSequenceRocFromJson(json);
 
   @override
   final String? id;
@@ -9607,7 +9607,7 @@ class _$_MolecularSequenceRoc extends _MolecularSequenceRoc {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MolecularSequenceRocToJson(this);
+    return _$$_MolecularSequenceRocToJson(this);
   }
 }
 
@@ -10149,7 +10149,7 @@ class _$_MolecularSequenceRepository extends _MolecularSequenceRepository {
       : super._();
 
   factory _$_MolecularSequenceRepository.fromJson(Map<String, dynamic> json) =>
-      _$_$_MolecularSequenceRepositoryFromJson(json);
+      _$$_MolecularSequenceRepositoryFromJson(json);
 
   @override
   final String? id;
@@ -10269,7 +10269,7 @@ class _$_MolecularSequenceRepository extends _MolecularSequenceRepository {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MolecularSequenceRepositoryToJson(this);
+    return _$$_MolecularSequenceRepositoryToJson(this);
   }
 }
 
@@ -10685,7 +10685,7 @@ class _$_MolecularSequenceStructureVariant
 
   factory _$_MolecularSequenceStructureVariant.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_MolecularSequenceStructureVariantFromJson(json);
+      _$$_MolecularSequenceStructureVariantFromJson(json);
 
   @override
   final String? id;
@@ -10770,7 +10770,7 @@ class _$_MolecularSequenceStructureVariant
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MolecularSequenceStructureVariantToJson(this);
+    return _$$_MolecularSequenceStructureVariantToJson(this);
   }
 }
 
@@ -11062,7 +11062,7 @@ class _$_MolecularSequenceOuter extends _MolecularSequenceOuter {
       : super._();
 
   factory _$_MolecularSequenceOuter.fromJson(Map<String, dynamic> json) =>
-      _$_$_MolecularSequenceOuterFromJson(json);
+      _$$_MolecularSequenceOuterFromJson(json);
 
   @override
   final String? id;
@@ -11130,7 +11130,7 @@ class _$_MolecularSequenceOuter extends _MolecularSequenceOuter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MolecularSequenceOuterToJson(this);
+    return _$$_MolecularSequenceOuterToJson(this);
   }
 }
 
@@ -11410,7 +11410,7 @@ class _$_MolecularSequenceInner extends _MolecularSequenceInner {
       : super._();
 
   factory _$_MolecularSequenceInner.fromJson(Map<String, dynamic> json) =>
-      _$_$_MolecularSequenceInnerFromJson(json);
+      _$$_MolecularSequenceInnerFromJson(json);
 
   @override
   final String? id;
@@ -11478,7 +11478,7 @@ class _$_MolecularSequenceInner extends _MolecularSequenceInner {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MolecularSequenceInnerToJson(this);
+    return _$$_MolecularSequenceInnerToJson(this);
   }
 }
 
@@ -13031,7 +13031,7 @@ class _$_Observation extends _Observation {
       : super._();
 
   factory _$_Observation.fromJson(Map<String, dynamic> json) =>
-      _$_$_ObservationFromJson(json);
+      _$$_ObservationFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Observation)
@@ -13344,7 +13344,7 @@ class _$_Observation extends _Observation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ObservationToJson(this);
+    return _$$_ObservationToJson(this);
   }
 }
 
@@ -13896,7 +13896,7 @@ class _$_ObservationReferenceRange extends _ObservationReferenceRange {
       : super._();
 
   factory _$_ObservationReferenceRange.fromJson(Map<String, dynamic> json) =>
-      _$_$_ObservationReferenceRangeFromJson(json);
+      _$$_ObservationReferenceRangeFromJson(json);
 
   @override
   final String? id;
@@ -13979,7 +13979,7 @@ class _$_ObservationReferenceRange extends _ObservationReferenceRange {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ObservationReferenceRangeToJson(this);
+    return _$$_ObservationReferenceRangeToJson(this);
   }
 }
 
@@ -14710,7 +14710,7 @@ class _$_ObservationComponent extends _ObservationComponent {
       : super._();
 
   factory _$_ObservationComponent.fromJson(Map<String, dynamic> json) =>
-      _$_$_ObservationComponentFromJson(json);
+      _$$_ObservationComponentFromJson(json);
 
   @override
   final String? id;
@@ -14880,7 +14880,7 @@ class _$_ObservationComponent extends _ObservationComponent {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ObservationComponentToJson(this);
+    return _$$_ObservationComponentToJson(this);
   }
 }
 
@@ -15649,7 +15649,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
       : super._();
 
   factory _$_QuestionnaireResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_QuestionnaireResponseFromJson(json);
+      _$$_QuestionnaireResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.QuestionnaireResponse)
@@ -15818,7 +15818,7 @@ class _$_QuestionnaireResponse extends _QuestionnaireResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_QuestionnaireResponseToJson(this);
+    return _$$_QuestionnaireResponseToJson(this);
   }
 }
 
@@ -16243,7 +16243,7 @@ class _$_QuestionnaireResponseItem extends _QuestionnaireResponseItem {
       : super._();
 
   factory _$_QuestionnaireResponseItem.fromJson(Map<String, dynamic> json) =>
-      _$_$_QuestionnaireResponseItemFromJson(json);
+      _$$_QuestionnaireResponseItemFromJson(json);
 
   @override
   final String? id;
@@ -16335,7 +16335,7 @@ class _$_QuestionnaireResponseItem extends _QuestionnaireResponseItem {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_QuestionnaireResponseItemToJson(this);
+    return _$$_QuestionnaireResponseItemToJson(this);
   }
 }
 
@@ -17053,7 +17053,7 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
       : super._();
 
   factory _$_QuestionnaireResponseAnswer.fromJson(Map<String, dynamic> json) =>
-      _$_$_QuestionnaireResponseAnswerFromJson(json);
+      _$$_QuestionnaireResponseAnswerFromJson(json);
 
   @override
   final String? id;
@@ -17227,7 +17227,7 @@ class _$_QuestionnaireResponseAnswer extends _QuestionnaireResponseAnswer {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_QuestionnaireResponseAnswerToJson(this);
+    return _$$_QuestionnaireResponseAnswerToJson(this);
   }
 }
 
@@ -18008,7 +18008,7 @@ class _$_Specimen extends _Specimen {
       : super._();
 
   factory _$_Specimen.fromJson(Map<String, dynamic> json) =>
-      _$_$_SpecimenFromJson(json);
+      _$$_SpecimenFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Specimen)
@@ -18187,7 +18187,7 @@ class _$_Specimen extends _Specimen {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SpecimenToJson(this);
+    return _$$_SpecimenToJson(this);
   }
 }
 
@@ -18729,7 +18729,7 @@ class _$_SpecimenCollection extends _SpecimenCollection {
       : super._();
 
   factory _$_SpecimenCollection.fromJson(Map<String, dynamic> json) =>
-      _$_$_SpecimenCollectionFromJson(json);
+      _$$_SpecimenCollectionFromJson(json);
 
   @override
   final String? id;
@@ -18836,7 +18836,7 @@ class _$_SpecimenCollection extends _SpecimenCollection {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SpecimenCollectionToJson(this);
+    return _$$_SpecimenCollectionToJson(this);
   }
 }
 
@@ -19209,7 +19209,7 @@ class _$_SpecimenProcessing extends _SpecimenProcessing {
       : super._();
 
   factory _$_SpecimenProcessing.fromJson(Map<String, dynamic> json) =>
-      _$_$_SpecimenProcessingFromJson(json);
+      _$$_SpecimenProcessingFromJson(json);
 
   @override
   final String? id;
@@ -19296,7 +19296,7 @@ class _$_SpecimenProcessing extends _SpecimenProcessing {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SpecimenProcessingToJson(this);
+    return _$$_SpecimenProcessingToJson(this);
   }
 }
 
@@ -19705,7 +19705,7 @@ class _$_SpecimenContainer extends _SpecimenContainer {
       : super._();
 
   factory _$_SpecimenContainer.fromJson(Map<String, dynamic> json) =>
-      _$_$_SpecimenContainerFromJson(json);
+      _$$_SpecimenContainerFromJson(json);
 
   @override
   final String? id;
@@ -19797,7 +19797,7 @@ class _$_SpecimenContainer extends _SpecimenContainer {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SpecimenContainerToJson(this);
+    return _$$_SpecimenContainerToJson(this);
   }
 }
 

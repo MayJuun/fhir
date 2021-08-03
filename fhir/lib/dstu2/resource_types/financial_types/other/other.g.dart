@@ -6,78 +6,81 @@ part of 'other.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_ExplanationOfBenefit _$_$_ExplanationOfBenefitFromJson(
-    Map<String, dynamic> json) {
-  return _$_ExplanationOfBenefit(
-    resourceType: _$enumDecode(_$Dstu2ResourceTypeEnumMap, json['resourceType'],
-        unknownValue: Dstu2ResourceType.ExplanationOfBenefit),
-    id: json['id'] == null ? null : Id.fromJson(json['id']),
-    meta: json['meta'] == null
-        ? null
-        : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-    implicitRules: json['implicitRules'] == null
-        ? null
-        : FhirUri.fromJson(json['implicitRules']),
-    implicitRulesElement: json['_implicitRules'] == null
-        ? null
-        : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-    language: json['language'] == null ? null : Code.fromJson(json['language']),
-    languageElement: json['_language'] == null
-        ? null
-        : Element.fromJson(json['_language'] as Map<String, dynamic>),
-    text: json['text'] == null
-        ? null
-        : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-    contained: (json['contained'] as List<dynamic>?)
-        ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    extension_: (json['extension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    identifier: (json['identifier'] as List<dynamic>?)
-        ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-        .toList(),
-    request: json['request'] == null
-        ? null
-        : Reference.fromJson(json['request'] as Map<String, dynamic>),
-    outcome: _$enumDecodeNullable(
-        _$ExplanationOfBenefitOutcomeEnumMap, json['outcome'],
-        unknownValue: ExplanationOfBenefitOutcome.unknown),
-    outcomeElement: json['_outcome'] == null
-        ? null
-        : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
-    disposition: json['disposition'] as String?,
-    dispositionElement: json['_disposition'] == null
-        ? null
-        : Element.fromJson(json['_disposition'] as Map<String, dynamic>),
-    ruleset: json['ruleset'] == null
-        ? null
-        : Coding.fromJson(json['ruleset'] as Map<String, dynamic>),
-    originalRuleset: json['originalRuleset'] == null
-        ? null
-        : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
-    created:
-        json['created'] == null ? null : FhirDateTime.fromJson(json['created']),
-    createdElement: json['_created'] == null
-        ? null
-        : Element.fromJson(json['_created'] as Map<String, dynamic>),
-    organization: json['organization'] == null
-        ? null
-        : Reference.fromJson(json['organization'] as Map<String, dynamic>),
-    requestProvider: json['requestProvider'] == null
-        ? null
-        : Reference.fromJson(json['requestProvider'] as Map<String, dynamic>),
-    requestOrganization: json['requestOrganization'] == null
-        ? null
-        : Reference.fromJson(
-            json['requestOrganization'] as Map<String, dynamic>),
-  );
-}
+_$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
+        Map<String, dynamic> json) =>
+    _$_ExplanationOfBenefit(
+      resourceType: _$enumDecodeNullable(
+              _$Dstu2ResourceTypeEnumMap, json['resourceType'],
+              unknownValue: Dstu2ResourceType.ExplanationOfBenefit) ??
+          Dstu2ResourceType.ExplanationOfBenefit,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      request: json['request'] == null
+          ? null
+          : Reference.fromJson(json['request'] as Map<String, dynamic>),
+      outcome: _$enumDecodeNullable(
+          _$ExplanationOfBenefitOutcomeEnumMap, json['outcome'],
+          unknownValue: ExplanationOfBenefitOutcome.unknown),
+      outcomeElement: json['_outcome'] == null
+          ? null
+          : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
+      disposition: json['disposition'] as String?,
+      dispositionElement: json['_disposition'] == null
+          ? null
+          : Element.fromJson(json['_disposition'] as Map<String, dynamic>),
+      ruleset: json['ruleset'] == null
+          ? null
+          : Coding.fromJson(json['ruleset'] as Map<String, dynamic>),
+      originalRuleset: json['originalRuleset'] == null
+          ? null
+          : Coding.fromJson(json['originalRuleset'] as Map<String, dynamic>),
+      created: json['created'] == null
+          ? null
+          : FhirDateTime.fromJson(json['created']),
+      createdElement: json['_created'] == null
+          ? null
+          : Element.fromJson(json['_created'] as Map<String, dynamic>),
+      organization: json['organization'] == null
+          ? null
+          : Reference.fromJson(json['organization'] as Map<String, dynamic>),
+      requestProvider: json['requestProvider'] == null
+          ? null
+          : Reference.fromJson(json['requestProvider'] as Map<String, dynamic>),
+      requestOrganization: json['requestOrganization'] == null
+          ? null
+          : Reference.fromJson(
+              json['requestOrganization'] as Map<String, dynamic>),
+    );
 
-Map<String, dynamic> _$_$_ExplanationOfBenefitToJson(
+Map<String, dynamic> _$$_ExplanationOfBenefitToJson(
     _$_ExplanationOfBenefit instance) {
   final val = <String, dynamic>{
     'resourceType': _$Dstu2ResourceTypeEnumMap[instance.resourceType],
@@ -144,6 +147,17 @@ K _$enumDecode<K, V>(
       return MapEntry(unknownValue, enumValues.values.first);
     },
   ).key;
+}
+
+K? _$enumDecodeNullable<K, V>(
+  Map<K, V> enumValues,
+  dynamic source, {
+  K? unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -243,17 +257,6 @@ const _$Dstu2ResourceTypeEnumMap = {
   Dstu2ResourceType.ValueSet: 'ValueSet',
   Dstu2ResourceType.VisionPrescription: 'VisionPrescription',
 };
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
 
 const _$ExplanationOfBenefitOutcomeEnumMap = {
   ExplanationOfBenefitOutcome.complete: 'complete',

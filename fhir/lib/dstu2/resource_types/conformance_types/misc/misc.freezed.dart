@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'misc.dart';
 
@@ -986,7 +986,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
       : super._();
 
   factory _$_ImplementationGuide.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImplementationGuideFromJson(json);
+      _$$_ImplementationGuideFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ImplementationGuide)
@@ -1222,7 +1222,7 @@ class _$_ImplementationGuide extends _ImplementationGuide {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImplementationGuideToJson(this);
+    return _$$_ImplementationGuideToJson(this);
   }
 }
 
@@ -1564,7 +1564,7 @@ class _$_ImplementationGuideContact extends _ImplementationGuideContact {
       : super._();
 
   factory _$_ImplementationGuideContact.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImplementationGuideContactFromJson(json);
+      _$$_ImplementationGuideContactFromJson(json);
 
   @override
   final Id? id;
@@ -1618,7 +1618,7 @@ class _$_ImplementationGuideContact extends _ImplementationGuideContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImplementationGuideContactToJson(this);
+    return _$$_ImplementationGuideContactToJson(this);
   }
 }
 
@@ -1868,7 +1868,7 @@ class _$_ImplementationGuideDependency extends _ImplementationGuideDependency {
 
   factory _$_ImplementationGuideDependency.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_ImplementationGuideDependencyFromJson(json);
+      _$$_ImplementationGuideDependencyFromJson(json);
 
   @override
   final Id? id;
@@ -1930,7 +1930,7 @@ class _$_ImplementationGuideDependency extends _ImplementationGuideDependency {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImplementationGuideDependencyToJson(this);
+    return _$$_ImplementationGuideDependencyToJson(this);
   }
 }
 
@@ -2173,7 +2173,7 @@ class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
       : super._();
 
   factory _$_ImplementationGuidePackage.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImplementationGuidePackageFromJson(json);
+      _$$_ImplementationGuidePackageFromJson(json);
 
   @override
   final Id? id;
@@ -2235,7 +2235,7 @@ class _$_ImplementationGuidePackage extends _ImplementationGuidePackage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImplementationGuidePackageToJson(this);
+    return _$$_ImplementationGuidePackageToJson(this);
   }
 }
 
@@ -2495,7 +2495,7 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
       : super._();
 
   factory _$_ImplementationGuideGlobal.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImplementationGuideGlobalFromJson(json);
+      _$$_ImplementationGuideGlobalFromJson(json);
 
   @override
   final Id? id;
@@ -2557,7 +2557,7 @@ class _$_ImplementationGuideGlobal extends _ImplementationGuideGlobal {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImplementationGuideGlobalToJson(this);
+    return _$$_ImplementationGuideGlobalToJson(this);
   }
 }
 
@@ -2851,7 +2851,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
       : super._();
 
   factory _$_ImplementationGuidePage.fromJson(Map<String, dynamic> json) =>
-      _$_$_ImplementationGuidePageFromJson(json);
+      _$$_ImplementationGuidePageFromJson(json);
 
   @override
   final Id? id;
@@ -2932,7 +2932,7 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImplementationGuidePageToJson(this);
+    return _$$_ImplementationGuidePageToJson(this);
   }
 }
 
@@ -3315,7 +3315,7 @@ class _$_ImplementationGuidePackageResource
 
   factory _$_ImplementationGuidePackageResource.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_ImplementationGuidePackageResourceFromJson(json);
+      _$$_ImplementationGuidePackageResourceFromJson(json);
 
   @override
   final Id? id;
@@ -3409,7 +3409,7 @@ class _$_ImplementationGuidePackageResource
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ImplementationGuidePackageResourceToJson(this);
+    return _$$_ImplementationGuidePackageResourceToJson(this);
   }
 }
 
@@ -4489,7 +4489,7 @@ class _$_TestScript extends _TestScript {
       : super._();
 
   factory _$_TestScript.fromJson(Map<String, dynamic> json) =>
-      _$_$_TestScriptFromJson(json);
+      _$$_TestScriptFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.TestScript)
@@ -4730,7 +4730,7 @@ class _$_TestScript extends _TestScript {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TestScriptToJson(this);
+    return _$$_TestScriptToJson(this);
   }
 }
 
@@ -5067,7 +5067,7 @@ class _$_TestScriptContact extends _TestScriptContact {
       : super._();
 
   factory _$_TestScriptContact.fromJson(Map<String, dynamic> json) =>
-      _$_$_TestScriptContactFromJson(json);
+      _$$_TestScriptContactFromJson(json);
 
   @override
   final Id? id;
@@ -5120,7 +5120,7 @@ class _$_TestScriptContact extends _TestScriptContact {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TestScriptContactToJson(this);
+    return _$$_TestScriptContactToJson(this);
   }
 }
 
@@ -5331,7 +5331,7 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
       : super._();
 
   factory _$_TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
-      _$_$_TestScriptMetadataFromJson(json);
+      _$$_TestScriptMetadataFromJson(json);
 
   @override
   final Id? id;
@@ -5386,7 +5386,7 @@ class _$_TestScriptMetadata extends _TestScriptMetadata {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TestScriptMetadataToJson(this);
+    return _$$_TestScriptMetadataToJson(this);
   }
 }
 
@@ -5663,7 +5663,7 @@ class _$_TestScriptMetadataLink extends _TestScriptMetadataLink {
       : super._();
 
   factory _$_TestScriptMetadataLink.fromJson(Map<String, dynamic> json) =>
-      _$_$_TestScriptMetadataLinkFromJson(json);
+      _$$_TestScriptMetadataLinkFromJson(json);
 
   @override
   final Id? id;
@@ -5732,7 +5732,7 @@ class _$_TestScriptMetadataLink extends _TestScriptMetadataLink {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TestScriptMetadataLinkToJson(this);
+    return _$$_TestScriptMetadataLinkToJson(this);
   }
 }
 
@@ -6171,7 +6171,7 @@ class _$_TestScriptMetadataCapability extends _TestScriptMetadataCapability {
       : super._();
 
   factory _$_TestScriptMetadataCapability.fromJson(Map<String, dynamic> json) =>
-      _$_$_TestScriptMetadataCapabilityFromJson(json);
+      _$$_TestScriptMetadataCapabilityFromJson(json);
 
   @override
   final Id? id;
@@ -6286,7 +6286,7 @@ class _$_TestScriptMetadataCapability extends _TestScriptMetadataCapability {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TestScriptMetadataCapabilityToJson(this);
+    return _$$_TestScriptMetadataCapabilityToJson(this);
   }
 }
 
@@ -6621,7 +6621,7 @@ class _$_TestScriptFixture extends _TestScriptFixture {
       : super._();
 
   factory _$_TestScriptFixture.fromJson(Map<String, dynamic> json) =>
-      _$_$_TestScriptFixtureFromJson(json);
+      _$$_TestScriptFixtureFromJson(json);
 
   @override
   final Id? id;
@@ -6696,7 +6696,7 @@ class _$_TestScriptFixture extends _TestScriptFixture {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TestScriptFixtureToJson(this);
+    return _$$_TestScriptFixtureToJson(this);
   }
 }
 
@@ -7072,7 +7072,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
       : super._();
 
   factory _$_TestScriptVariable.fromJson(Map<String, dynamic> json) =>
-      _$_$_TestScriptVariableFromJson(json);
+      _$$_TestScriptVariableFromJson(json);
 
   @override
   final Id? id;
@@ -7165,7 +7165,7 @@ class _$_TestScriptVariable extends _TestScriptVariable {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TestScriptVariableToJson(this);
+    return _$$_TestScriptVariableToJson(this);
   }
 }
 
@@ -7411,7 +7411,7 @@ class _$_TestScriptSetup extends _TestScriptSetup {
       : super._();
 
   factory _$_TestScriptSetup.fromJson(Map<String, dynamic> json) =>
-      _$_$_TestScriptSetupFromJson(json);
+      _$$_TestScriptSetupFromJson(json);
 
   @override
   final Id? id;
@@ -7465,7 +7465,7 @@ class _$_TestScriptSetup extends _TestScriptSetup {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TestScriptSetupToJson(this);
+    return _$$_TestScriptSetupToJson(this);
   }
 }
 
@@ -7722,7 +7722,7 @@ class _$_TestScriptSetupAction extends _TestScriptSetupAction {
       : super._();
 
   factory _$_TestScriptSetupAction.fromJson(Map<String, dynamic> json) =>
-      _$_$_TestScriptSetupActionFromJson(json);
+      _$$_TestScriptSetupActionFromJson(json);
 
   @override
   final Id? id;
@@ -7785,7 +7785,7 @@ class _$_TestScriptSetupAction extends _TestScriptSetupAction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TestScriptSetupActionToJson(this);
+    return _$$_TestScriptSetupActionToJson(this);
   }
 }
 
@@ -8649,7 +8649,7 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
       : super._();
 
   factory _$_TestScriptActionOperation.fromJson(Map<String, dynamic> json) =>
-      _$_$_TestScriptActionOperationFromJson(json);
+      _$$_TestScriptActionOperationFromJson(json);
 
   @override
   final Id? id;
@@ -8854,7 +8854,7 @@ class _$_TestScriptActionOperation extends _TestScriptActionOperation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TestScriptActionOperationToJson(this);
+    return _$$_TestScriptActionOperationToJson(this);
   }
 }
 
@@ -9253,7 +9253,7 @@ class _$_TestScriptOperationRequestHeader
 
   factory _$_TestScriptOperationRequestHeader.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_TestScriptOperationRequestHeaderFromJson(json);
+      _$$_TestScriptOperationRequestHeaderFromJson(json);
 
   @override
   final Id? id;
@@ -9321,7 +9321,7 @@ class _$_TestScriptOperationRequestHeader
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TestScriptOperationRequestHeaderToJson(this);
+    return _$$_TestScriptOperationRequestHeaderToJson(this);
   }
 }
 
@@ -10415,7 +10415,7 @@ class _$_TestScriptActionAssert extends _TestScriptActionAssert {
       : super._();
 
   factory _$_TestScriptActionAssert.fromJson(Map<String, dynamic> json) =>
-      _$_$_TestScriptActionAssertFromJson(json);
+      _$$_TestScriptActionAssertFromJson(json);
 
   @override
   final Id? id;
@@ -10651,7 +10651,7 @@ class _$_TestScriptActionAssert extends _TestScriptActionAssert {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TestScriptActionAssertToJson(this);
+    return _$$_TestScriptActionAssertToJson(this);
   }
 }
 
@@ -11110,7 +11110,7 @@ class _$_TestScriptTest extends _TestScriptTest {
       : super._();
 
   factory _$_TestScriptTest.fromJson(Map<String, dynamic> json) =>
-      _$_$_TestScriptTestFromJson(json);
+      _$$_TestScriptTestFromJson(json);
 
   @override
   final Id? id;
@@ -11189,7 +11189,7 @@ class _$_TestScriptTest extends _TestScriptTest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TestScriptTestToJson(this);
+    return _$$_TestScriptTestToJson(this);
   }
 }
 
@@ -11395,7 +11395,7 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
       : super._();
 
   factory _$_TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
-      _$_$_TestScriptTeardownFromJson(json);
+      _$$_TestScriptTeardownFromJson(json);
 
   @override
   final Id? id;
@@ -11443,7 +11443,7 @@ class _$_TestScriptTeardown extends _TestScriptTeardown {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TestScriptTeardownToJson(this);
+    return _$$_TestScriptTeardownToJson(this);
   }
 }
 
@@ -11668,7 +11668,7 @@ class _$_TestScriptTeardownAction extends _TestScriptTeardownAction {
       : super._();
 
   factory _$_TestScriptTeardownAction.fromJson(Map<String, dynamic> json) =>
-      _$_$_TestScriptTeardownActionFromJson(json);
+      _$$_TestScriptTeardownActionFromJson(json);
 
   @override
   final Id? id;
@@ -11725,7 +11725,7 @@ class _$_TestScriptTeardownAction extends _TestScriptTeardownAction {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_TestScriptTeardownActionToJson(this);
+    return _$$_TestScriptTeardownActionToJson(this);
   }
 }
 

@@ -1,3 +1,11 @@
+## [0.4.3]
+* Thanks to [Luca](https://github.com/lucaspal) for these updates!
+* Can now close the DB, delete the DB file, and sets completer to null (since the database method relies on this to be null to open a new database)
+* Using fhir_db as local cache (updating resources but not increasing version #)
+* Pass the mode to the ResourceDAO, so new cache related features can be introduced in the future, without changing the API of the existing methods (or without having to introduce a twin method for each operation).
+
+I intentionally made the field optional to avoid breaking changes and bother existing users.
+
 ## [0.4.2]
 * Updating dependencies
 

@@ -1,6 +1,6 @@
 name: fhir_db
 description: A wrapper for Sembast and SQFlite to enable easy, local and secure storage of fhir resources
-version: 0.4.2
+version: 0.4.3
 homepage: https://www.fhirfli.dev/
 repository: https://github.com/MayJuun/fhir/tree/main/fhir_db
 

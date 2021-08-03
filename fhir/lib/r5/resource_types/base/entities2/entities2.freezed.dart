@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'entities2.dart';
 
@@ -712,7 +712,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
       : super._();
 
   factory _$_BiologicallyDerivedProduct.fromJson(Map<String, dynamic> json) =>
-      _$_$_BiologicallyDerivedProductFromJson(json);
+      _$$_BiologicallyDerivedProductFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.BiologicallyDerivedProduct)
@@ -889,7 +889,7 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BiologicallyDerivedProductToJson(this);
+    return _$$_BiologicallyDerivedProductToJson(this);
   }
 }
 
@@ -1295,7 +1295,7 @@ class _$_BiologicallyDerivedProductCollection
 
   factory _$_BiologicallyDerivedProductCollection.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_BiologicallyDerivedProductCollectionFromJson(json);
+      _$$_BiologicallyDerivedProductCollectionFromJson(json);
 
   @override
   final String? id;
@@ -1372,7 +1372,7 @@ class _$_BiologicallyDerivedProductCollection
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BiologicallyDerivedProductCollectionToJson(this);
+    return _$$_BiologicallyDerivedProductCollectionToJson(this);
   }
 }
 
@@ -1755,7 +1755,7 @@ class _$_BiologicallyDerivedProductProcessing
 
   factory _$_BiologicallyDerivedProductProcessing.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_BiologicallyDerivedProductProcessingFromJson(json);
+      _$$_BiologicallyDerivedProductProcessingFromJson(json);
 
   @override
   final String? id;
@@ -1844,7 +1844,7 @@ class _$_BiologicallyDerivedProductProcessing
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BiologicallyDerivedProductProcessingToJson(this);
+    return _$$_BiologicallyDerivedProductProcessingToJson(this);
   }
 }
 
@@ -2176,7 +2176,7 @@ class _$_BiologicallyDerivedProductManipulation
 
   factory _$_BiologicallyDerivedProductManipulation.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_BiologicallyDerivedProductManipulationFromJson(json);
+      _$$_BiologicallyDerivedProductManipulationFromJson(json);
 
   @override
   final String? id;
@@ -2253,7 +2253,7 @@ class _$_BiologicallyDerivedProductManipulation
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BiologicallyDerivedProductManipulationToJson(this);
+    return _$$_BiologicallyDerivedProductManipulationToJson(this);
   }
 }
 
@@ -2645,7 +2645,7 @@ class _$_BiologicallyDerivedProductStorage
 
   factory _$_BiologicallyDerivedProductStorage.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_BiologicallyDerivedProductStorageFromJson(json);
+      _$$_BiologicallyDerivedProductStorageFromJson(json);
 
   @override
   final String? id;
@@ -2735,7 +2735,7 @@ class _$_BiologicallyDerivedProductStorage
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BiologicallyDerivedProductStorageToJson(this);
+    return _$$_BiologicallyDerivedProductStorageToJson(this);
   }
 }
 
@@ -4093,7 +4093,7 @@ class _$_Device extends _Device {
       : super._();
 
   factory _$_Device.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceFromJson(json);
+      _$$_DeviceFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Device)
@@ -4380,7 +4380,7 @@ class _$_Device extends _Device {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceToJson(this);
+    return _$$_DeviceToJson(this);
   }
 }
 
@@ -5043,7 +5043,7 @@ class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
       : super._();
 
   factory _$_DeviceUdiCarrier.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceUdiCarrierFromJson(json);
+      _$$_DeviceUdiCarrierFromJson(json);
 
   @override
   final String? id;
@@ -5165,7 +5165,7 @@ class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceUdiCarrierToJson(this);
+    return _$$_DeviceUdiCarrierToJson(this);
   }
 }
 
@@ -5495,7 +5495,7 @@ class _$_DeviceDeviceName extends _DeviceDeviceName {
       : super._();
 
   factory _$_DeviceDeviceName.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceDeviceNameFromJson(json);
+      _$$_DeviceDeviceNameFromJson(json);
 
   @override
   final String? id;
@@ -5563,7 +5563,7 @@ class _$_DeviceDeviceName extends _DeviceDeviceName {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceDeviceNameToJson(this);
+    return _$$_DeviceDeviceNameToJson(this);
   }
 }
 
@@ -5826,7 +5826,7 @@ class _$_DeviceSpecialization extends _DeviceSpecialization {
       : super._();
 
   factory _$_DeviceSpecialization.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceSpecializationFromJson(json);
+      _$$_DeviceSpecializationFromJson(json);
 
   @override
   final String? id;
@@ -5889,7 +5889,7 @@ class _$_DeviceSpecialization extends _DeviceSpecialization {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceSpecializationToJson(this);
+    return _$$_DeviceSpecializationToJson(this);
   }
 }
 
@@ -6178,7 +6178,7 @@ class _$_DeviceVersion extends _DeviceVersion {
       : super._();
 
   factory _$_DeviceVersion.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceVersionFromJson(json);
+      _$$_DeviceVersionFromJson(json);
 
   @override
   final String? id;
@@ -6244,7 +6244,7 @@ class _$_DeviceVersion extends _DeviceVersion {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceVersionToJson(this);
+    return _$$_DeviceVersionToJson(this);
   }
 }
 
@@ -6486,7 +6486,7 @@ class _$_DeviceProperty extends _DeviceProperty {
       : super._();
 
   factory _$_DeviceProperty.fromJson(Map<String, dynamic> json) =>
-      _$_$_DevicePropertyFromJson(json);
+      _$$_DevicePropertyFromJson(json);
 
   @override
   final String? id;
@@ -6546,7 +6546,7 @@ class _$_DeviceProperty extends _DeviceProperty {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DevicePropertyToJson(this);
+    return _$$_DevicePropertyToJson(this);
   }
 }
 
@@ -6774,7 +6774,7 @@ class _$_DeviceOperationalStatus extends _DeviceOperationalStatus {
       : super._();
 
   factory _$_DeviceOperationalStatus.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceOperationalStatusFromJson(json);
+      _$$_DeviceOperationalStatusFromJson(json);
 
   @override
   final String? id;
@@ -6828,7 +6828,7 @@ class _$_DeviceOperationalStatus extends _DeviceOperationalStatus {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceOperationalStatusToJson(this);
+    return _$$_DeviceOperationalStatusToJson(this);
   }
 }
 
@@ -7053,7 +7053,7 @@ class _$_DeviceAssociationStatus extends _DeviceAssociationStatus {
       : super._();
 
   factory _$_DeviceAssociationStatus.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceAssociationStatusFromJson(json);
+      _$$_DeviceAssociationStatusFromJson(json);
 
   @override
   final String? id;
@@ -7107,7 +7107,7 @@ class _$_DeviceAssociationStatus extends _DeviceAssociationStatus {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceAssociationStatusToJson(this);
+    return _$$_DeviceAssociationStatusToJson(this);
   }
 }
 
@@ -7833,7 +7833,7 @@ class _$_DeviceMetric extends _DeviceMetric {
       : super._();
 
   factory _$_DeviceMetric.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceMetricFromJson(json);
+      _$$_DeviceMetricFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.DeviceMetric)
@@ -8005,7 +8005,7 @@ class _$_DeviceMetric extends _DeviceMetric {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceMetricToJson(this);
+    return _$$_DeviceMetricToJson(this);
   }
 }
 
@@ -8429,7 +8429,7 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
       : super._();
 
   factory _$_DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
-      _$_$_DeviceMetricCalibrationFromJson(json);
+      _$$_DeviceMetricCalibrationFromJson(json);
 
   @override
   final String? id;
@@ -8511,7 +8511,7 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DeviceMetricCalibrationToJson(this);
+    return _$$_DeviceMetricCalibrationToJson(this);
   }
 }
 
@@ -9146,7 +9146,7 @@ class _$_NutritionProduct extends _NutritionProduct {
       : super._();
 
   factory _$_NutritionProduct.fromJson(Map<String, dynamic> json) =>
-      _$_$_NutritionProductFromJson(json);
+      _$$_NutritionProductFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.NutritionProduct)
@@ -9303,7 +9303,7 @@ class _$_NutritionProduct extends _NutritionProduct {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_NutritionProductToJson(this);
+    return _$$_NutritionProductToJson(this);
   }
 }
 
@@ -9625,7 +9625,7 @@ class _$_NutritionProductNutrient extends _NutritionProductNutrient {
       : super._();
 
   factory _$_NutritionProductNutrient.fromJson(Map<String, dynamic> json) =>
-      _$_$_NutritionProductNutrientFromJson(json);
+      _$$_NutritionProductNutrientFromJson(json);
 
   @override
   final String? id;
@@ -9686,7 +9686,7 @@ class _$_NutritionProductNutrient extends _NutritionProductNutrient {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_NutritionProductNutrientToJson(this);
+    return _$$_NutritionProductNutrientToJson(this);
   }
 }
 
@@ -9947,7 +9947,7 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
       : super._();
 
   factory _$_NutritionProductIngredient.fromJson(Map<String, dynamic> json) =>
-      _$_$_NutritionProductIngredientFromJson(json);
+      _$$_NutritionProductIngredientFromJson(json);
 
   @override
   final String? id;
@@ -10008,7 +10008,7 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_NutritionProductIngredientToJson(this);
+    return _$$_NutritionProductIngredientToJson(this);
   }
 }
 
@@ -10458,7 +10458,7 @@ class _$_NutritionProductProductCharacteristic
 
   factory _$_NutritionProductProductCharacteristic.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_NutritionProductProductCharacteristicFromJson(json);
+      _$$_NutritionProductProductCharacteristicFromJson(json);
 
   @override
   final String? id;
@@ -10567,7 +10567,7 @@ class _$_NutritionProductProductCharacteristic
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_NutritionProductProductCharacteristicToJson(this);
+    return _$$_NutritionProductProductCharacteristicToJson(this);
   }
 }
 
@@ -10969,7 +10969,7 @@ class _$_NutritionProductInstance extends _NutritionProductInstance {
       : super._();
 
   factory _$_NutritionProductInstance.fromJson(Map<String, dynamic> json) =>
-      _$_$_NutritionProductInstanceFromJson(json);
+      _$$_NutritionProductInstanceFromJson(json);
 
   @override
   final String? id;
@@ -11062,7 +11062,7 @@ class _$_NutritionProductInstance extends _NutritionProductInstance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_NutritionProductInstanceToJson(this);
+    return _$$_NutritionProductInstanceToJson(this);
   }
 }
 
@@ -11657,7 +11657,7 @@ class _$_Substance extends _Substance {
       : super._();
 
   factory _$_Substance.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubstanceFromJson(json);
+      _$$_SubstanceFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R5ResourceType.Substance)
@@ -11804,7 +11804,7 @@ class _$_Substance extends _Substance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubstanceToJson(this);
+    return _$$_SubstanceToJson(this);
   }
 }
 
@@ -12147,7 +12147,7 @@ class _$_SubstanceInstance extends _SubstanceInstance {
       : super._();
 
   factory _$_SubstanceInstance.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubstanceInstanceFromJson(json);
+      _$$_SubstanceInstanceFromJson(json);
 
   @override
   final String? id;
@@ -12214,7 +12214,7 @@ class _$_SubstanceInstance extends _SubstanceInstance {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubstanceInstanceToJson(this);
+    return _$$_SubstanceInstanceToJson(this);
   }
 }
 
@@ -12490,7 +12490,7 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
       : super._();
 
   factory _$_SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubstanceIngredientFromJson(json);
+      _$$_SubstanceIngredientFromJson(json);
 
   @override
   final String? id;
@@ -12554,7 +12554,7 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubstanceIngredientToJson(this);
+    return _$$_SubstanceIngredientToJson(this);
   }
 }
 

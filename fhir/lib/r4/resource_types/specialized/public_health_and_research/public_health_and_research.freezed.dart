@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'public_health_and_research.dart';
 
@@ -938,7 +938,7 @@ class _$_ResearchStudy extends _ResearchStudy {
       : super._();
 
   factory _$_ResearchStudy.fromJson(Map<String, dynamic> json) =>
-      _$_$_ResearchStudyFromJson(json);
+      _$$_ResearchStudyFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
@@ -1166,7 +1166,7 @@ class _$_ResearchStudy extends _ResearchStudy {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ResearchStudyToJson(this);
+    return _$$_ResearchStudyToJson(this);
   }
 }
 
@@ -1583,7 +1583,7 @@ class _$_ResearchStudyArm extends _ResearchStudyArm {
       : super._();
 
   factory _$_ResearchStudyArm.fromJson(Map<String, dynamic> json) =>
-      _$_$_ResearchStudyArmFromJson(json);
+      _$$_ResearchStudyArmFromJson(json);
 
   @override
   final String? id;
@@ -1656,7 +1656,7 @@ class _$_ResearchStudyArm extends _ResearchStudyArm {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ResearchStudyArmToJson(this);
+    return _$$_ResearchStudyArmToJson(this);
   }
 }
 
@@ -1923,7 +1923,7 @@ class _$_ResearchStudyObjective extends _ResearchStudyObjective {
       : super._();
 
   factory _$_ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
-      _$_$_ResearchStudyObjectiveFromJson(json);
+      _$$_ResearchStudyObjectiveFromJson(json);
 
   @override
   final String? id;
@@ -1984,7 +1984,7 @@ class _$_ResearchStudyObjective extends _ResearchStudyObjective {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ResearchStudyObjectiveToJson(this);
+    return _$$_ResearchStudyObjectiveToJson(this);
   }
 }
 
@@ -2654,7 +2654,7 @@ class _$_ResearchSubject extends _ResearchSubject {
       : super._();
 
   factory _$_ResearchSubject.fromJson(Map<String, dynamic> json) =>
-      _$_$_ResearchSubjectFromJson(json);
+      _$$_ResearchSubjectFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
@@ -2812,7 +2812,7 @@ class _$_ResearchSubject extends _ResearchSubject {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ResearchSubjectToJson(this);
+    return _$$_ResearchSubjectToJson(this);
   }
 }
 
