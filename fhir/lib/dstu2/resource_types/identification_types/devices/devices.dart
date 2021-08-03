@@ -53,6 +53,7 @@ class Device with Resource, _$Device {
   }) = _Device;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -100,6 +101,7 @@ class DeviceComponent with Resource, _$DeviceComponent {
   }) = _DeviceComponent;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -187,6 +189,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
   }) = _DeviceMetric;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument

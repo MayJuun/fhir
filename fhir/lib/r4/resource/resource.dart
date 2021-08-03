@@ -1,3 +1,5 @@
+//ignore_for_file: always_specify_types
+
 import 'dart:convert';
 
 import 'package:fhir_yaml/fhir_yaml.dart';

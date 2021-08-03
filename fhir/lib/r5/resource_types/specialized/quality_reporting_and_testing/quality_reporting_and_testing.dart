@@ -99,6 +99,7 @@ class Measure with Resource, _$Measure {
   }) = _Measure;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -327,6 +328,7 @@ class MeasureReport with Resource, _$MeasureReport {
   }) = _MeasureReport;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -595,6 +597,7 @@ class TestReport with Resource, _$TestReport {
   }) = _TestReport;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -951,6 +954,7 @@ class TestScript with Resource, _$TestScript {
   }) = _TestScript;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

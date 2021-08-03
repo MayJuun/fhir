@@ -53,6 +53,7 @@ class Coverage with Resource, _$Coverage {
   }) = _Coverage;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -205,6 +206,7 @@ class CoverageEligibilityRequest with Resource, _$CoverageEligibilityRequest {
   }) = _CoverageEligibilityRequest;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -412,6 +414,7 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
   }) = _CoverageEligibilityResponse;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -617,6 +620,7 @@ class EnrollmentRequest with Resource, _$EnrollmentRequest {
   }) = _EnrollmentRequest;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -667,6 +671,7 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
   }) = _EnrollmentResponse;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

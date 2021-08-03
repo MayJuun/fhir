@@ -56,6 +56,7 @@ class Conformance with Resource, _$Conformance {
   }) = _Conformance;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -119,6 +120,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
   }) = _CapabilityStatement;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -684,6 +686,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
   }) = _OperationDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -844,6 +847,7 @@ class SearchParameter with Resource, _$SearchParameter {
   }) = _SearchParameter;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument

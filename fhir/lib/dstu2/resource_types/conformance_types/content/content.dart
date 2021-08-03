@@ -72,6 +72,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
   }) = _StructureDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -250,6 +251,7 @@ class DataElement with Resource, _$DataElement {
   }) = _DataElement;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument

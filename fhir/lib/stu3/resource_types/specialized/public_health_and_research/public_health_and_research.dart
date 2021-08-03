@@ -54,6 +54,7 @@ class ResearchStudy with Resource, _$ResearchStudy {
   }) = _ResearchStudy;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -133,6 +134,7 @@ class ResearchSubject with Resource, _$ResearchSubject {
   }) = _ResearchSubject;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument

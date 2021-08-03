@@ -142,6 +142,7 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   }) = _BiologicallyDerivedProduct;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -672,6 +673,7 @@ class Device with Resource, _$Device {
   }) = _Device;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1218,6 +1220,7 @@ class DeviceMetric with Resource, _$DeviceMetric {
   }) = _DeviceMetric;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1416,6 +1419,7 @@ class Substance with Resource, _$Substance {
   }) = _Substance;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

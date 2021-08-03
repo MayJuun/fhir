@@ -1,3 +1,5 @@
+//ignore_for_file: always_specify_types
+
 import 'dart:convert';
 
 import 'package:fhir_yaml/fhir_yaml.dart';
@@ -55,7 +57,7 @@ class Resource {
 
   /// Returns a [Map<String, dynamic>] of the [Resource]
   Map<String, dynamic> toJson() {
-    final val = <String, dynamic>{};
+    final Map<String, dynamic> val = <String, dynamic>{};
 
     void writeNotNull(String key, dynamic value) {
       if (value != null) {

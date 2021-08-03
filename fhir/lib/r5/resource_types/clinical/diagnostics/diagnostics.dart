@@ -41,6 +41,7 @@ class BodyStructure with Resource, _$BodyStructure {
   }) = _BodyStructure;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -103,6 +104,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
   }) = _DiagnosticReport;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -195,6 +197,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
   }) = _ImagingStudy;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -393,6 +396,7 @@ class MolecularSequence with Resource, _$MolecularSequence {
   }) = _MolecularSequence;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -802,6 +806,7 @@ class Observation with Resource, _$Observation {
   }) = _Observation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -937,6 +942,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   }) = _QuestionnaireResponse;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1075,6 +1081,7 @@ class Specimen with Resource, _$Specimen {
   }) = _Specimen;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

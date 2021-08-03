@@ -45,6 +45,7 @@ class AuditEvent with Resource, _$AuditEvent {
   }) = _AuditEvent;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -271,6 +272,7 @@ class Consent with Resource, _$Consent {
   }) = _Consent;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -496,6 +498,7 @@ class Provenance with Resource, _$Provenance {
   }) = _Provenance;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument

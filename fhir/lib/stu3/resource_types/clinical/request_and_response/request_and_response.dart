@@ -55,6 +55,7 @@ class Communication with Resource, _$Communication {
   }) = _Communication;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -147,6 +148,7 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
   }) = _CommunicationRequest;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -269,6 +271,7 @@ class DeviceRequest with Resource, _$DeviceRequest {
   }) = _DeviceRequest;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -350,6 +353,7 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
   }) = _DeviceUseStatement;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -403,6 +407,7 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
   }) = _SupplyDelivery;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -488,6 +493,7 @@ class SupplyRequest with Resource, _$SupplyRequest {
   }) = _SupplyRequest;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument

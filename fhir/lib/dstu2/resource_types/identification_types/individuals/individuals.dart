@@ -60,6 +60,7 @@ class Patient with Resource, _$Patient {
   }) = _Patient;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -242,6 +243,7 @@ class Practitioner with Resource, _$Practitioner {
   }) = _Practitioner;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -362,6 +364,7 @@ class RelatedPerson with Resource, _$RelatedPerson {
   }) = _RelatedPerson;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument

@@ -268,6 +268,7 @@ class CodeSystem with Resource, _$CodeSystem {
   }) = _CodeSystem;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -944,6 +945,7 @@ class ConceptMap with Resource, _$ConceptMap {
   }) = _ConceptMap;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1559,6 +1561,7 @@ class NamingSystem with Resource, _$NamingSystem {
   }) = _NamingSystem;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1904,6 +1907,7 @@ class TerminologyCapabilities with Resource, _$TerminologyCapabilities {
   }) = _TerminologyCapabilities;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2860,6 +2864,7 @@ class ValueSet with Resource, _$ValueSet {
   }) = _ValueSet;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

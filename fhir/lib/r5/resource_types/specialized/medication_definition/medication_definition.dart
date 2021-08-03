@@ -42,6 +42,7 @@ class AdministrableProductDefinition
   }) = _AdministrableProductDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -243,6 +244,7 @@ class ClinicalUseIssue with Resource, _$ClinicalUseIssue {
   }) = _ClinicalUseIssue;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -497,6 +499,7 @@ class Ingredient with Resource, _$Ingredient {
   }) = _Ingredient;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -689,6 +692,7 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
   }) = _ManufacturedItemDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -797,6 +801,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
   }) = _MedicinalProductDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1131,6 +1136,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
   }) = _PackagedProductDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1304,6 +1310,7 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
   }) = _RegulatedAuthorization;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1438,6 +1445,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
   }) = _SubstanceDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1890,6 +1898,7 @@ class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
   }) = _SubstanceNucleicAcid;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2043,6 +2052,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
   }) = _SubstancePolymer;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2294,6 +2304,7 @@ class SubstanceProtein with Resource, _$SubstanceProtein {
   }) = _SubstanceProtein;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2381,6 +2392,7 @@ class SubstanceReferenceInformation
   }) = _SubstanceReferenceInformation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2547,6 +2559,7 @@ class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
   }) = _SubstanceSourceMaterial;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

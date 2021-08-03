@@ -69,6 +69,7 @@ class Observation with Resource, _$Observation {
   }) = _Observation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -241,6 +242,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
   }) = _DiagnosticReport;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -322,6 +324,7 @@ class DiagnosticOrder with Resource, _$DiagnosticOrder {
   }) = _DiagnosticOrder;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -437,6 +440,7 @@ class Specimen with Resource, _$Specimen {
   }) = _Specimen;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -583,6 +587,7 @@ class BodySite with Resource, _$BodySite {
   }) = _BodySite;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -642,6 +647,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
   }) = _ImagingStudy;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -767,6 +773,7 @@ class ImagingObjectSelection with Resource, _$ImagingObjectSelection {
   }) = _ImagingObjectSelection;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument

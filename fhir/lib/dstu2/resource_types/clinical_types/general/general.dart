@@ -55,6 +55,7 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
   }) = _AllergyIntolerance;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -168,6 +169,7 @@ class Condition with Resource, _$Condition {
   }) = _Condition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -294,6 +296,7 @@ class Procedure with Resource, _$Procedure {
   }) = _Procedure;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -417,6 +420,7 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
   }) = _ClinicalImpression;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -577,6 +581,7 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   }) = _FamilyMemberHistory;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -662,6 +667,7 @@ class RiskAssessment with Resource, _$RiskAssessment {
   }) = _RiskAssessment;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -753,6 +759,7 @@ class DetectedIssue with Resource, _$DetectedIssue {
   }) = _DetectedIssue;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument

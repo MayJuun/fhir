@@ -46,6 +46,7 @@ class PaymentNotice with Resource, _$PaymentNotice {
   }) = _PaymentNotice;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -104,6 +105,7 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   }) = _PaymentReconciliation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

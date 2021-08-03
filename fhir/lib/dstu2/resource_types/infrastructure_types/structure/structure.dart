@@ -48,6 +48,7 @@ class Media with Resource, _$Media {
   }) = _Media;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -83,6 +84,7 @@ class Binary with Resource, _$Binary {
   }) = _Binary;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -123,6 +125,7 @@ class Bundle with Resource, _$Bundle {
   }) = _Bundle;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -347,6 +350,7 @@ class Basic with Resource, _$Basic {
   }) = _Basic;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument

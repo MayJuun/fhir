@@ -7,7 +7,7 @@ Id _getId(int resourcehashCode, Id? id) =>
 /// Returns a [Meta] object, creates a new one if none is passed, otherwise
 /// updates the [lastUpdated] and increases the [version] by 1
 Meta _updateMetaVersion(Meta? oldMeta) {
-  final version = oldMeta == null
+  final int version = oldMeta == null
       ? 1
       : oldMeta.versionId == null
           ? 1

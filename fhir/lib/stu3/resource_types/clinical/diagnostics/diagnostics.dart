@@ -40,6 +40,7 @@ class BodySite with Resource, _$BodySite {
   }) = _BodySite;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -100,6 +101,7 @@ class DiagnosticReport with Resource, _$DiagnosticReport {
   }) = _DiagnosticReport;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -201,6 +203,7 @@ class ImagingManifest with Resource, _$ImagingManifest {
   }) = _ImagingManifest;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -352,6 +355,7 @@ class ImagingStudy with Resource, _$ImagingStudy {
   }) = _ImagingStudy;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -506,6 +510,7 @@ class Observation with Resource, _$Observation {
   }) = _Observation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -659,6 +664,7 @@ class QuestionnaireResponse with Resource, _$QuestionnaireResponse {
   }) = _QuestionnaireResponse;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -796,6 +802,7 @@ class Sequence with Resource, _$Sequence {
   }) = _Sequence;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -1009,6 +1016,7 @@ class Specimen with Resource, _$Specimen {
   }) = _Specimen;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument

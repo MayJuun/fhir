@@ -273,6 +273,7 @@ class EffectEvidenceSynthesis with Resource, _$EffectEvidenceSynthesis {
   }) = _EffectEvidenceSynthesis;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1009,6 +1010,7 @@ class Evidence with Resource, _$Evidence {
   }) = _Evidence;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1283,6 +1285,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   }) = _EvidenceVariable;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1747,6 +1750,7 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   }) = _ResearchDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2075,6 +2079,7 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   }) = _ResearchElementDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2536,6 +2541,7 @@ class RiskEvidenceSynthesis with Resource, _$RiskEvidenceSynthesis {
   }) = _RiskEvidenceSynthesis;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

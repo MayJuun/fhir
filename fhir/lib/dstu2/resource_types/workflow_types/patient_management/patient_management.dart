@@ -54,6 +54,7 @@ class Encounter with Resource, _$Encounter {
   }) = _Encounter;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -241,6 +242,7 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
   }) = _EpisodeOfCare;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -359,6 +361,7 @@ class Communication with Resource, _$Communication {
   }) = _Communication;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -438,6 +441,7 @@ class Flag with Resource, _$Flag {
   }) = _Flag;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument

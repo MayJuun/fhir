@@ -73,6 +73,7 @@ class CapabilityStatement with Resource, _$CapabilityStatement {
   }) = _CapabilityStatement;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -616,6 +617,7 @@ class CapabilityStatement2 with Resource, _$CapabilityStatement2 {
   }) = _CapabilityStatement2;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1003,6 +1005,7 @@ class CompartmentDefinition with Resource, _$CompartmentDefinition {
   }) = _CompartmentDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1105,6 +1108,7 @@ class ExampleScenario with Resource, _$ExampleScenario {
   }) = _ExampleScenario;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1462,6 +1466,7 @@ class GraphDefinition with Resource, _$GraphDefinition {
   }) = _GraphDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1648,6 +1653,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
   }) = _ImplementationGuide;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2102,6 +2108,7 @@ class MessageDefinition with Resource, _$MessageDefinition {
   }) = _MessageDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2255,6 +2262,7 @@ class OperationDefinition with Resource, _$OperationDefinition {
   }) = _OperationDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2489,6 +2497,7 @@ class SearchParameter with Resource, _$SearchParameter {
   }) = _SearchParameter;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2602,6 +2611,7 @@ class StructureDefinition with Resource, _$StructureDefinition {
   }) = _StructureDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2796,6 +2806,7 @@ class StructureMap with Resource, _$StructureMap {
   }) = _StructureMap;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

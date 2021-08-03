@@ -60,6 +60,7 @@ class Appointment with Resource, _$Appointment {
   }) = _Appointment;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -145,6 +146,7 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
   }) = _AppointmentResponse;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -193,6 +195,7 @@ class Schedule with Resource, _$Schedule {
   }) = _Schedule;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -247,6 +250,7 @@ class Slot with Resource, _$Slot {
   }) = _Slot;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -321,6 +325,7 @@ class Task with Resource, _$Task {
   }) = _Task;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -608,6 +613,7 @@ class VerificationResult with Resource, _$VerificationResult {
   }) = _VerificationResult;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

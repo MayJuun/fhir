@@ -85,6 +85,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
   }) = _ActivityDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -225,6 +226,7 @@ class PlanDefinition with Resource, _$PlanDefinition {
   }) = _PlanDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -550,6 +552,7 @@ class Questionnaire with Resource, _$Questionnaire {
   }) = _Questionnaire;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -779,6 +782,7 @@ class ServiceDefinition with Resource, _$ServiceDefinition {
   }) = _ServiceDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument

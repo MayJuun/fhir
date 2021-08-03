@@ -59,6 +59,7 @@ class ImplementationGuide with Resource, _$ImplementationGuide {
   }) = _ImplementationGuide;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -326,6 +327,7 @@ class TestScript with Resource, _$TestScript {
   }) = _TestScript;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument

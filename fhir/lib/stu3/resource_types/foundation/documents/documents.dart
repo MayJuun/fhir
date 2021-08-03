@@ -50,6 +50,7 @@ class Composition with Resource, _$Composition {
   }) = _Composition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -226,6 +227,7 @@ class DocumentManifest with Resource, _$DocumentManifest {
   }) = _DocumentManifest;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -340,6 +342,7 @@ class DocumentReference with Resource, _$DocumentReference {
   }) = _DocumentReference;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument

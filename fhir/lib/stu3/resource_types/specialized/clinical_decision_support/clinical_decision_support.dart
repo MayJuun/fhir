@@ -49,6 +49,7 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
   }) = _GuidanceResponse;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument

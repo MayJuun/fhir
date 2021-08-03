@@ -42,6 +42,7 @@ class MessageHeader with Resource, _$MessageHeader {
   }) = _MessageHeader;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -185,6 +186,7 @@ class OperationOutcome with Resource, _$OperationOutcome {
   }) = _OperationOutcome;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -254,6 +256,7 @@ class Parameters with Resource, _$Parameters {
   }) = _Parameters;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
@@ -371,6 +374,7 @@ class Subscription with Resource, _$Subscription {
   }) = _Subscription;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
