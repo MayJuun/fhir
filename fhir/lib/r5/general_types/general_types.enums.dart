@@ -24,6 +24,7 @@ enum QuantityComparator {
   ge,
   @JsonValue('>')
   gt,
+
   @JsonValue('unknown')
   unknown,
 }
@@ -37,6 +38,7 @@ enum DurationComparator {
   ge,
   @JsonValue('>')
   gt,
+
   @JsonValue('unknown')
   unknown,
 }
@@ -50,6 +52,7 @@ enum DistanceComparator {
   ge,
   @JsonValue('>')
   gt,
+
   @JsonValue('unknown')
   unknown,
 }
@@ -63,6 +66,7 @@ enum CountComparator {
   ge,
   @JsonValue('>')
   gt,
+
   @JsonValue('unknown')
   unknown,
 }
@@ -76,6 +80,7 @@ enum AgeComparator {
   ge,
   @JsonValue('>')
   gt,
+
   @JsonValue('unknown')
   unknown,
 }
@@ -222,6 +227,8 @@ enum TimingRepeatWhen {
   night,
   @JsonValue('PHS')
   phs,
+  @JsonValue('IMD')
+  imd,
   @JsonValue('HS')
   hs,
   @JsonValue('WAKE')

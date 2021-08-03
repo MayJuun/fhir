@@ -5,6 +5,7 @@
 * Created FhirDateTimeBase class
 * Created extra operators for Dates, DateTimes, Times, Decimal, Integers
 * These operators follow general rules on comparisons, but some may be specific to FHIRPath. If these cause issues for anyone, please let me know.
+* Updated R5
 
 ## [0.4.7]
 * Updated dependencies
