@@ -7,8 +7,10 @@ abstract class FhirNumber {
   final bool isValid;
   final bool isString;
 
+  @override
   int get hashCode => valueString.hashCode;
 
+  @override
   String toString() => valueString;
 
   dynamic toJson() => isValid && !isString ? valueNumber : valueString;

@@ -4,9 +4,10 @@ import 'package:yaml/yaml.dart';
 
 import 'fhir_number.dart';
 
-class Integer extends FhirNumber{
-  const Integer._(String valueString, int? valueNumber, bool isValid,
-      bool isString) : super(valueString, valueNumber, isValid, isString);
+class Integer extends FhirNumber {
+  const Integer._(
+      String valueString, int? valueNumber, bool isValid, bool isString)
+      : super(valueString, valueNumber, isValid, isString);
 
   factory Integer(dynamic inValue) {
     if (inValue is int) {

@@ -35,6 +35,7 @@ class Canonical {
   int get hashCode => _valueString.hashCode;
   Uri? get value => _valueCanonical;
 
+  @override
   String toString() => _valueString;
   String toJson() => _valueString;
   String toYaml() => _valueString;

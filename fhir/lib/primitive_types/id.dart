@@ -4,10 +4,10 @@ import 'package:yaml/yaml.dart';
 class Id {
   const Id._(this._valueString, this._valueId, this._isValid);
 
-  factory Id(String inValue) =>
-      RegExp(r'^[A-Za-z0-9\-\.]{1,64}$').hasMatch(inValue)
+  factory Id(dynamic inValue) =>
+      inValue is String && RegExp(r'^[A-Za-z0-9\-\.]{1,64}$').hasMatch(inValue)
           ? Id._(inValue, inValue, true)
-          : Id._(inValue, null, false);
+          : Id._(inValue.toString(), null, false);
 
   factory Id.fromJson(dynamic json) => Id(json);
 

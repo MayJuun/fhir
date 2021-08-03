@@ -14,8 +14,9 @@ enum DateTimePrecision {
 }
 
 class FhirDateTime extends FhirDateTimeBase {
-  const FhirDateTime._(String valueString, DateTime? valueDateTime, bool isValid,
-      this._precision, Exception? parseError) : super(valueString, valueDateTime, isValid, parseError);
+  const FhirDateTime._(String valueString, DateTime? valueDateTime,
+      bool isValid, this._precision, Exception? parseError)
+      : super(valueString, valueDateTime, isValid, parseError);
 
   factory FhirDateTime(dynamic inValue) {
     if (inValue is DateTime) {

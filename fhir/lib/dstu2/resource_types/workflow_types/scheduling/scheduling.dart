@@ -55,9 +55,11 @@ class Appointment with Resource, _$Appointment {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Appointment.fromYaml(dynamic yaml) => yaml is String
-      ? Appointment.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Appointment.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Appointment.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Appointment.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Appointment cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -89,9 +91,11 @@ class AppointmentParticipant with _$AppointmentParticipant {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory AppointmentParticipant.fromYaml(dynamic yaml) => yaml is String
-      ? AppointmentParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? AppointmentParticipant.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? AppointmentParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? AppointmentParticipant.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'AppointmentParticipant cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -138,9 +142,11 @@ class AppointmentResponse with Resource, _$AppointmentResponse {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory AppointmentResponse.fromYaml(dynamic yaml) => yaml is String
-      ? AppointmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? AppointmentResponse.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? AppointmentResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? AppointmentResponse.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'AppointmentResponse cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -180,9 +186,11 @@ class Schedule with Resource, _$Schedule {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Schedule.fromYaml(dynamic yaml) => yaml is String
-      ? Schedule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Schedule.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Schedule.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Schedule.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Schedule cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -229,9 +237,10 @@ class Slot with Resource, _$Slot {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Slot.fromYaml(dynamic yaml) => yaml is String
-      ? Slot.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Slot.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Slot.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Slot.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Slot cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');

@@ -5,9 +5,10 @@ import 'package:yaml/yaml.dart';
 class Markdown {
   const Markdown._(this._valueString, this._valueMarkdown, this._isValid);
 
-  factory Markdown(String inValue) => RegExp(r'[ \r\n\t\S]+').hasMatch(inValue)
-      ? Markdown._(inValue, inValue, true)
-      : Markdown._(inValue, null, false);
+  factory Markdown(dynamic inValue) =>
+      inValue is String && RegExp(r'[ \r\n\t\S]+').hasMatch(inValue)
+          ? Markdown._(inValue, inValue, true)
+          : Markdown._(inValue.toString(), null, false);
 
   factory Markdown.fromJson(dynamic json) => Markdown(json);
 
@@ -26,6 +27,7 @@ class Markdown {
   int get hashMarkdown => _valueString.hashCode;
   String? get value => _valueMarkdown;
 
+  @override
   String toString() => _valueString;
   String toJson() => _valueString;
   String toYaml() => _valueString;

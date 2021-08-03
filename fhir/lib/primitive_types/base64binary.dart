@@ -16,10 +16,10 @@ class Base64Binary {
       _base64RegExp.hasMatch(inValue)
           ? Base64Binary._(inValue, inValue, true)
           : Base64Binary._(inValue, null, false); */
-  factory Base64Binary(String inValue) =>
-      inValue.length % 4 == 0
+  factory Base64Binary(dynamic inValue) =>
+      inValue is String && inValue.length % 4 == 0
           ? Base64Binary._(inValue, inValue, true)
-          : Base64Binary._(inValue, null, false);
+          : Base64Binary._(inValue.toString(), null, false);
 
   factory Base64Binary.fromJson(dynamic json) => Base64Binary(json);
 
@@ -38,6 +38,7 @@ class Base64Binary {
   int get hashCode => _valueString.hashCode;
   String? get value => _valueBase64Binary;
 
+  @override
   String toString() => _valueString;
   String toJson() => _valueString;
   String toYaml() => _valueString;

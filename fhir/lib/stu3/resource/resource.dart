@@ -44,9 +44,9 @@ class Resource {
 
   /// Returns a Resource, accepts a [String] in YAML format as an argument
   static Resource fromYaml(dynamic yaml) => yaml is String
-      ? fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? fromJson(jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? fromJson(jsonDecode(jsonEncode(yaml)))
+          ? fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Resource cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');

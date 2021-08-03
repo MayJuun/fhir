@@ -47,9 +47,11 @@ class Organization with Resource, _$Organization {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Organization.fromYaml(dynamic yaml) => yaml is String
-      ? Organization.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Organization.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Organization.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Organization.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Organization cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -78,9 +80,11 @@ class OrganizationContact with _$OrganizationContact {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory OrganizationContact.fromYaml(dynamic yaml) => yaml is String
-      ? OrganizationContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? OrganizationContact.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? OrganizationContact.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? OrganizationContact.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'OrganizationContact cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -141,9 +145,11 @@ class HealthcareService with Resource, _$HealthcareService {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory HealthcareService.fromYaml(dynamic yaml) => yaml is String
-      ? HealthcareService.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? HealthcareService.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? HealthcareService.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? HealthcareService.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'HealthcareService cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -170,9 +176,10 @@ class HealthcareServiceServiceType with _$HealthcareServiceServiceType {
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory HealthcareServiceServiceType.fromYaml(dynamic yaml) => yaml is String
       ? HealthcareServiceServiceType.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? HealthcareServiceServiceType.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? HealthcareServiceServiceType.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'HealthcareServiceServiceType cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -206,10 +213,10 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   factory HealthcareServiceAvailableTime.fromYaml(dynamic yaml) => yaml
           is String
       ? HealthcareServiceAvailableTime.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
           ? HealthcareServiceAvailableTime.fromJson(
-              jsonDecode(jsonEncode(yaml)))
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'HealthcareServiceAvailableTime cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -237,9 +244,10 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory HealthcareServiceNotAvailable.fromYaml(dynamic yaml) => yaml is String
       ? HealthcareServiceNotAvailable.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? HealthcareServiceNotAvailable.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? HealthcareServiceNotAvailable.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'HealthcareServiceNotAvailable cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -285,9 +293,10 @@ class Group with Resource, _$Group {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Group.fromYaml(dynamic yaml) => yaml is String
-      ? Group.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Group.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Group.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Group.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Group cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -318,9 +327,11 @@ class GroupCharacteristic with _$GroupCharacteristic {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory GroupCharacteristic.fromYaml(dynamic yaml) => yaml is String
-      ? GroupCharacteristic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? GroupCharacteristic.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? GroupCharacteristic.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? GroupCharacteristic.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'GroupCharacteristic cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -348,9 +359,11 @@ class GroupMember with _$GroupMember {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory GroupMember.fromYaml(dynamic yaml) => yaml is String
-      ? GroupMember.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? GroupMember.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? GroupMember.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? GroupMember.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'GroupMember cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');

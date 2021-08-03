@@ -11,10 +11,10 @@ class Code {
         this._valueCode = code,
         this._isValid = true;
 
-  factory Code(String inValue) =>
-      RegExp(r'^[^\s]+(\s[^\s]+)*$').hasMatch(inValue)
+  factory Code(dynamic inValue) =>
+      inValue is String && RegExp(r'^[^\s]+(\s[^\s]+)*$').hasMatch(inValue)
           ? Code._(inValue, inValue, true)
-          : Code._(inValue, null, false);
+          : Code._(inValue.toString(), null, false);
 
   factory Code.fromJson(dynamic json) => Code(json);
 
@@ -33,6 +33,7 @@ class Code {
   int get hashCode => _valueString.hashCode;
   String? get value => _valueCode;
 
+  @override
   String toString() => _valueString;
   String toJson() => _valueString;
   String toYaml() => _valueString;

@@ -14,6 +14,7 @@ abstract class FhirDateTimeBase {
 
   String? get iso8601String => valueDateTime?.toIso8601String();
 
+  @override
   String toString() => valueString;
   String toJson() => valueString;
   String toYaml() => valueString;

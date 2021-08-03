@@ -151,9 +151,11 @@ class CatalogEntry with Resource, _$CatalogEntry {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CatalogEntry.fromYaml(dynamic yaml) => yaml is String
-      ? CatalogEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? CatalogEntry.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CatalogEntry.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? CatalogEntry.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'CatalogEntry cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -216,9 +218,10 @@ class CatalogEntryRelatedEntry with _$CatalogEntryRelatedEntry {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CatalogEntryRelatedEntry.fromYaml(dynamic yaml) => yaml is String
       ? CatalogEntryRelatedEntry.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CatalogEntryRelatedEntry.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? CatalogEntryRelatedEntry.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'CatalogEntryRelatedEntry cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -392,9 +395,11 @@ class Composition with Resource, _$Composition {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Composition.fromYaml(dynamic yaml) => yaml is String
-      ? Composition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Composition.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Composition.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Composition.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Composition cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -469,9 +474,11 @@ class CompositionAttester with _$CompositionAttester {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CompositionAttester.fromYaml(dynamic yaml) => yaml is String
-      ? CompositionAttester.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? CompositionAttester.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CompositionAttester.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? CompositionAttester.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'CompositionAttester cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -543,9 +550,11 @@ class CompositionRelatesTo with _$CompositionRelatesTo {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CompositionRelatesTo.fromYaml(dynamic yaml) => yaml is String
-      ? CompositionRelatesTo.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? CompositionRelatesTo.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CompositionRelatesTo.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? CompositionRelatesTo.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'CompositionRelatesTo cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -621,9 +630,11 @@ class CompositionEvent with _$CompositionEvent {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CompositionEvent.fromYaml(dynamic yaml) => yaml is String
-      ? CompositionEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? CompositionEvent.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CompositionEvent.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? CompositionEvent.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'CompositionEvent cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -740,9 +751,11 @@ class CompositionSection with _$CompositionSection {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CompositionSection.fromYaml(dynamic yaml) => yaml is String
-      ? CompositionSection.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? CompositionSection.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CompositionSection.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? CompositionSection.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'CompositionSection cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -897,9 +910,11 @@ class DocumentManifest with Resource, _$DocumentManifest {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DocumentManifest.fromYaml(dynamic yaml) => yaml is String
-      ? DocumentManifest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? DocumentManifest.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DocumentManifest.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? DocumentManifest.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'DocumentManifest cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -958,9 +973,11 @@ class DocumentManifestRelated with _$DocumentManifestRelated {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DocumentManifestRelated.fromYaml(dynamic yaml) => yaml is String
-      ? DocumentManifestRelated.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? DocumentManifestRelated.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DocumentManifestRelated.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? DocumentManifestRelated.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'DocumentManifestRelated cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1136,9 +1153,11 @@ class DocumentReference with Resource, _$DocumentReference {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DocumentReference.fromYaml(dynamic yaml) => yaml is String
-      ? DocumentReference.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? DocumentReference.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DocumentReference.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? DocumentReference.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'DocumentReference cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1205,9 +1224,10 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DocumentReferenceRelatesTo.fromYaml(dynamic yaml) => yaml is String
       ? DocumentReferenceRelatesTo.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DocumentReferenceRelatesTo.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? DocumentReferenceRelatesTo.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'DocumentReferenceRelatesTo cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1272,9 +1292,10 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DocumentReferenceContent.fromYaml(dynamic yaml) => yaml is String
       ? DocumentReferenceContent.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DocumentReferenceContent.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? DocumentReferenceContent.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'DocumentReferenceContent cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1361,9 +1382,10 @@ class DocumentReferenceContext with _$DocumentReferenceContext {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DocumentReferenceContext.fromYaml(dynamic yaml) => yaml is String
       ? DocumentReferenceContext.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DocumentReferenceContext.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? DocumentReferenceContext.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'DocumentReferenceContext cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');

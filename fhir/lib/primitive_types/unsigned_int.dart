@@ -3,7 +3,7 @@ import 'package:yaml/yaml.dart';
 
 import 'fhir_number.dart';
 
-class UnsignedInt extends FhirNumber{
+class UnsignedInt extends FhirNumber {
   const UnsignedInt._(
       String valueString, int? valueNumber, bool isValid, bool isString)
       : super(valueString, valueNumber, isValid, isString);
@@ -27,9 +27,11 @@ class UnsignedInt extends FhirNumber{
   factory UnsignedInt.fromJson(dynamic json) => UnsignedInt(json);
 
   factory UnsignedInt.fromYaml(dynamic yaml) => yaml is String
-      ? UnsignedInt.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? UnsignedInt.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? UnsignedInt.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? UnsignedInt.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw FormatException(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 

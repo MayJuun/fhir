@@ -202,9 +202,11 @@ class Communication with Resource, _$Communication {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Communication.fromYaml(dynamic yaml) => yaml is String
-      ? Communication.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Communication.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Communication.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Communication.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Communication cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -271,9 +273,11 @@ class CommunicationPayload with _$CommunicationPayload {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CommunicationPayload.fromYaml(dynamic yaml) => yaml is String
-      ? CommunicationPayload.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? CommunicationPayload.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CommunicationPayload.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? CommunicationPayload.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'CommunicationPayload cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -472,9 +476,11 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CommunicationRequest.fromYaml(dynamic yaml) => yaml is String
-      ? CommunicationRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? CommunicationRequest.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CommunicationRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? CommunicationRequest.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'CommunicationRequest cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -543,9 +549,10 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CommunicationRequestPayload.fromYaml(dynamic yaml) => yaml is String
       ? CommunicationRequestPayload.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CommunicationRequestPayload.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? CommunicationRequestPayload.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'CommunicationRequestPayload cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -763,9 +770,11 @@ class DeviceRequest with Resource, _$DeviceRequest {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceRequest.fromYaml(dynamic yaml) => yaml is String
-      ? DeviceRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? DeviceRequest.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DeviceRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? DeviceRequest.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'DeviceRequest cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -835,9 +844,11 @@ class DeviceRequestParameter with _$DeviceRequestParameter {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceRequestParameter.fromYaml(dynamic yaml) => yaml is String
-      ? DeviceRequestParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? DeviceRequestParameter.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DeviceRequestParameter.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? DeviceRequestParameter.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'DeviceRequestParameter cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -993,9 +1004,11 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceUseStatement.fromYaml(dynamic yaml) => yaml is String
-      ? DeviceUseStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? DeviceUseStatement.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DeviceUseStatement.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? DeviceUseStatement.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'DeviceUseStatement cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1185,9 +1198,11 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory GuidanceResponse.fromYaml(dynamic yaml) => yaml is String
-      ? GuidanceResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? GuidanceResponse.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? GuidanceResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? GuidanceResponse.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'GuidanceResponse cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1330,9 +1345,11 @@ class SupplyDelivery with Resource, _$SupplyDelivery {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SupplyDelivery.fromYaml(dynamic yaml) => yaml is String
-      ? SupplyDelivery.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? SupplyDelivery.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? SupplyDelivery.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? SupplyDelivery.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'SupplyDelivery cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1397,9 +1414,10 @@ class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SupplyDeliverySuppliedItem.fromYaml(dynamic yaml) => yaml is String
       ? SupplyDeliverySuppliedItem.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? SupplyDeliverySuppliedItem.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? SupplyDeliverySuppliedItem.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'SupplyDeliverySuppliedItem cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1565,9 +1583,11 @@ class SupplyRequest with Resource, _$SupplyRequest {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SupplyRequest.fromYaml(dynamic yaml) => yaml is String
-      ? SupplyRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? SupplyRequest.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? SupplyRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? SupplyRequest.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'SupplyRequest cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1636,9 +1656,11 @@ class SupplyRequestParameter with _$SupplyRequestParameter {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SupplyRequestParameter.fromYaml(dynamic yaml) => yaml is String
-      ? SupplyRequestParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? SupplyRequestParameter.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? SupplyRequestParameter.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? SupplyRequestParameter.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'SupplyRequestParameter cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');

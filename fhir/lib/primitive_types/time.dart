@@ -4,11 +4,11 @@ import 'package:yaml/yaml.dart';
 class Time {
   const Time._(this._valueString, this._valueTime, this._isValid);
 
-  factory Time(String inValue) =>
-      RegExp(r'^([01][0-9]|2[0-3])(:([0-5][0-9])(:([0-5][0-9]|60)(\.[0-9]+)?)?)?$')
+  factory Time(dynamic inValue) => inValue is String &&
+          RegExp(r'^([01][0-9]|2[0-3])(:([0-5][0-9])(:([0-5][0-9]|60)(\.[0-9]+)?)?)?$')
               .hasMatch(inValue)
-          ? Time._(inValue, inValue, true)
-          : Time._(inValue, null, false);
+      ? Time._(inValue, inValue, true)
+      : Time._(inValue.toString(), null, false);
 
   factory Time.fromJson(dynamic json) => Time(json);
 
@@ -27,6 +27,7 @@ class Time {
   int get hashTime => _valueString.hashCode;
   String? get value => _valueTime;
 
+  @override
   String toString() => _valueString;
   String toJson() => _valueString;
   String toYaml() => _valueString;

@@ -3,7 +3,7 @@ part of 'resource.dart';
 /// Acts like a constructor, returns a [Resource], accepts a
 /// [Map<String, Dyamic] as an argument
 Resource _resourceFromJson(Map<String, dynamic> json) {
-  final String resourceType = json['resourceType'];
+  final dynamic resourceType = json['resourceType'];
   switch (resourceType) {
     case 'Account':
       return Account.fromJson(json);
