@@ -199,7 +199,7 @@
           "text": "Eve eats one meal a day with her parents"
         }
       ],
-      "detail": {
+      "plannedActivityDetail": {
         "extension": [
           {
             "url": "http://example.org/fhir/StructureDefinition/RevisionDate",
@@ -226,7 +226,7 @@
           "text": "Eve will sleep in her bed more often than the couch"
         }
       ],
-      "detail": {
+      "plannedActivityDetail": {
         "extension": [
           {
             "url": "http://example.org/fhir/StructureDefinition/RevisionDate",
@@ -248,7 +248,7 @@
       }
     },
     {
-      "detail": {
+      "plannedActivityDetail": {
         "extension": [
           {
             "url": "http://example.org/fhir/StructureDefinition/RevisionDate",
@@ -279,7 +279,7 @@
           "text": "Eve is still walking the dogs."
         }
       ],
-      "detail": {
+      "plannedActivityDetail": {
         "extension": [
           {
             "url": "http://example.org/fhir/StructureDefinition/RevisionDate",
@@ -310,7 +310,7 @@
           "text": "Eve did not walk to her parents the last week, but has plans to start again"
         }
       ],
-      "detail": {
+      "plannedActivityDetail": {
         "extension": [
           {
             "url": "http://example.org/fhir/StructureDefinition/RevisionDate",
@@ -331,7 +331,7 @@
       }
     },
     {
-      "detail": {
+      "plannedActivityDetail": {
         "extension": [
           {
             "url": "http://example.org/fhir/StructureDefinition/RevisionDate",
@@ -362,7 +362,7 @@
           "text": "Since her skin is improved Eve has not been using the light treatment as often, maybe once a week.  She would like to increase to 3 times a week again"
         }
       ],
-      "detail": {
+      "plannedActivityDetail": {
         "extension": [
           {
             "url": "http://example.org/fhir/StructureDefinition/RevisionDate",
@@ -389,7 +389,7 @@
           "text": "Eve created a chart as a reminer to take the medications that do not fit in her pill box"
         }
       ],
-      "detail": {
+      "plannedActivityDetail": {
         "extension": [
           {
             "url": "http://example.org/fhir/StructureDefinition/RevisionDate",
@@ -420,7 +420,7 @@
           "text": "Eve prefers to focus on walking at this time"
         }
       ],
-      "detail": {
+      "plannedActivityDetail": {
         "extension": [
           {
             "url": "http://example.org/fhir/StructureDefinition/RevisionDate",
@@ -441,7 +441,7 @@
       }
     },
     {
-      "detail": {
+      "plannedActivityDetail": {
         "extension": [
           {
             "url": "http://example.org/fhir/StructureDefinition/RevisionDate",
@@ -468,7 +468,7 @@
           "text": "Eve now has some of her medications set up in pill packs by her pharmacist"
         }
       ],
-      "detail": {
+      "plannedActivityDetail": {
         "extension": [
           {
             "url": "http://example.org/fhir/StructureDefinition/RevisionDate",
@@ -499,7 +499,7 @@
           "text": "hold until \"less busy\""
         }
       ],
-      "detail": {
+      "plannedActivityDetail": {
         "extension": [
           {
             "url": "http://example.org/fhir/StructureDefinition/RevisionDate",

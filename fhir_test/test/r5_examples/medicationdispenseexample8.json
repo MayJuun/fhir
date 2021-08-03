@@ -3,7 +3,7 @@
   "id": "meddisp008",
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: meddisp008\u003c/p\u003e\u003cp\u003e\u003cb\u003econtained\u003c/b\u003e: \u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: completed\u003c/p\u003e\u003cp\u003e\u003cb\u003emedication\u003c/b\u003e: id: medexample015; Capecitabine 500mg oral tablet (Xeloda) \u003cspan\u003e(Details : {RxNorm code \u0027213293\u0027 \u003d \u0027Xeloda 500 MG Oral Tablet\u0027, given as \u0027Capecitabine 500mg oral tablet (Xeloda)\u0027})\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca\u003eDonald Duck\u003c/a\u003e\u003c/p\u003e\u003ch3\u003ePerformers\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eActor\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003e\u003ca\u003ePractitioner/f006\u003c/a\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cp\u003e\u003cb\u003eauthorizingPrescription\u003c/b\u003e: \u003ca\u003eMedicationRequest/medrx0309\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003edosageInstruction\u003c/b\u003e: \u003c/p\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: completed\u003c/p\u003e\u003ch3\u003eMedications\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca\u003eDonald Duck. Generated Summary: Medical record number: 654321 (USUAL); active; Duck Donald (OFFICIAL); gender: male\u003c/a\u003e\u003c/p\u003e\u003ch3\u003ePerformers\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eActor\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003e\u003ca\u003eGenerated Summary: id: 937223645 (OFFICIAL), id: 134IDY41W988 (USUAL); Rob van den Berk (OFFICIAL); Phone: 0205569288, R.A.vandenberk@bmc.nl, Fax: 0205664987; gender: male; birthDate: 1975-12-07\u003c/a\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cp\u003e\u003cb\u003eauthorizingPrescription\u003c/b\u003e: \u003ca\u003eGenerated Summary: id: 12345689 (OFFICIAL); status: active; intent: order; authoredOn: 2015-01-15\u003c/a\u003e\u003c/p\u003e\u003ch3\u003eDosageInstructions\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
   },
   "contained": [
     {
@@ -21,8 +21,10 @@
     }
   ],
   "status": "completed",
-  "medicationReference": {
-    "reference": "#medexample015"
+  "medication": {
+    "reference": {
+      "reference": "#medexample015"
+    }
   },
   "subject": {
     "reference": "Patient/pat1",

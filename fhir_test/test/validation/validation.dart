@@ -17,7 +17,7 @@ Future<List<String>> jsonValidation() async {
   tested.addAll(await dstu2Validation());
   tested.addAll(await stu3Validation());
   tested.addAll(await r4Validation());
-  // tested.addAll(await r5Validation());
+  tested.addAll(await r5Validation());
   return tested;
 }
 
@@ -26,6 +26,6 @@ Future<List<String>> yamlValidation() async {
   tested.addAll(await dstu2ValidationYaml());
   tested.addAll(await stu3ValidationYaml());
   tested.addAll(await r4ValidationYaml());
-  // tested.addAll(await r5ValidationYaml());
+  tested.addAll(await r5ValidationYaml());
   return tested;
 }

@@ -1,14 +1,39 @@
 {
   "resourceType": "Questionnaire",
   "id": "qs1",
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "vs2",
+      "name": "Type options for Evidence.citeAs[x]",
+      "status": "active",
+      "description": "Type options for Evidence.citeAs[x]",
+      "expansion": {
+        "identifier": "urn:uuid:1d352e3c-c1eb-45a7-b2a3-1fc39503d879",
+        "timestamp": "2021-04-15T12:28:43+10:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Citation",
+            "display": "Citation"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "markdown",
+            "display": "markdown"
+          }
+        ]
+      }
+    }
+  ],
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Clinical Decision Support)",
   "item": [
     {
@@ -33,7 +58,7 @@
               }
             }
           ],
-          "text": "This represents statistics, certainty, both the intended and actual population, and evidence variables.",
+          "text": "The Evidence Resource provides a machine-interpretable expression of an evidence concept including the evidence variables (eg population, exposures/interventions, comparators, outcomes, measured variables, confounding variables), the statistics, and the certainty of this evidence.",
           "type": "display"
         },
         {
@@ -67,7 +92,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -226,7 +251,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -253,7 +278,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -498,6 +523,95 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            }
+          ],
+          "linkId": "Evidence.citeAs[x]",
+          "text": "Citation for this evidence",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "Citation Resource or display of suggested citation for this evidence.",
+              "type": "display"
+            },
+            {
+              "linkId": "Evidence.citeAs[x]._type",
+              "text": "type",
+              "type": "choice",
+              "required": false,
+              "repeats": false,
+              "answerValueSet": "#vs2",
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "Reference"
+                    }
+                  ],
+                  "linkId": "Evidence.citeAs[x]._null",
+                  "type": "group",
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                          "valueCode": "Citation"
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                          "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                        }
+                      ],
+                      "linkId": "Evidence.citeAs[x]._null.value",
+                      "type": "reference",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "string"
+                    }
+                  ],
+                  "linkId": "Evidence.citeAs[x]._null",
+                  "type": "group",
+                  "item": [
+                    {
+                      "linkId": "Evidence.citeAs[x]._null.value",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
               "valueInteger": 1
             },
@@ -587,7 +701,7 @@
         },
         {
           "linkId": "Evidence.useContext",
-          "text": "Use context",
+          "text": "The context that the content is intended to support",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -703,8 +817,17 @@
           ]
         },
         {
-          "linkId": "Evidence.contributor",
-          "text": "Contact detail and role for contributor to summary",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "string"
+            }
+          ],
+          "linkId": "Evidence.publisher",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -724,7 +847,169 @@
                   }
                 }
               ],
-              "text": "Contact detail and role for contributor to summary.",
+              "text": "The name of the organization or individual that published the evidence. Usually an organization but may be an individual. The publisher (or steward) of the evidence is the organization or individual primarily responsible for the maintenance and upkeep of the evidence. This is not necessarily the same individual or organization that developed and initially authored the content. The publisher is the primary point of contact for questions or issues with the evidence. This item SHOULD be populated unless the information is available from context.",
+              "type": "display"
+            },
+            {
+              "linkId": "Evidence.publisher.value",
+              "text": "Name of the publisher (organization or individual)",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "linkId": "Evidence.contact",
+          "text": "Contact details for the publisher",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "text": "Extensions to ContactDetail include: contactReference, contactAddress, and contributionTime (Details at: http://build.fhir.org/clinicalreasoning-module.html).",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "Contact details to assist a user in finding and communicating with the publisher.",
+              "type": "display"
+            }
+          ]
+        },
+        {
+          "linkId": "Evidence.author",
+          "text": "Who authored the content",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "text": "Extensions to ContactDetail include: contactReference, contactAddress, and contributionTime (Details at: http://build.fhir.org/clinicalreasoning-module.html).",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "An individiual, organization, or device primarily involved in the creation and maintenance of the content.",
+              "type": "display"
+            }
+          ]
+        },
+        {
+          "linkId": "Evidence.editor",
+          "text": "Who edited the content",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "text": "Extensions to ContactDetail include: contactReference, contactAddress, and contributionTime (Details at: http://build.fhir.org/clinicalreasoning-module.html).",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "An individiual, organization, or device primarily responsible for internal coherence of the content.",
+              "type": "display"
+            }
+          ]
+        },
+        {
+          "linkId": "Evidence.reviewer",
+          "text": "Who reviewed the content",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "text": "Extensions to ContactDetail include: contactReference, contactAddress, and contributionTime (Details at: http://build.fhir.org/clinicalreasoning-module.html).",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "An individiual, organization, or device primarily responsible for review of some aspect of the content.",
+              "type": "display"
+            }
+          ]
+        },
+        {
+          "linkId": "Evidence.endorser",
+          "text": "Who endorsed the content",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "text": "Extensions to ContactDetail include: contactReference, contactAddress, and contributionTime (Details at: http://build.fhir.org/clinicalreasoning-module.html).",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "An individiual, organization, or device responsible for officially endorsing the content for use in some setting.",
               "type": "display"
             }
           ]
@@ -880,373 +1165,12 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
               "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
             }
           ],
-          "linkId": "Evidence.referentGroup",
-          "text": "Group being referenced",
+          "linkId": "Evidence.variableDefinition",
+          "text": "Evidence variable such as population, exposure, or outcome",
           "type": "group",
           "required": true,
-          "repeats": false,
-          "item": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "text": "Group being referenced.",
-              "type": "display"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "string"
-                }
-              ],
-              "linkId": "Evidence.referentGroup.id",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "Evidence.referentGroup.id.value",
-                  "text": "Unique id for inter-element referencing",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "linkId": "Evidence.referentGroup.extension",
-              "text": "Additional content defined by implementations",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-                  "type": "display"
-                }
-              ]
-            },
-            {
-              "linkId": "Evidence.referentGroup.modifierExtension",
-              "text": "Extensions that cannot be ignored even if unrecognized",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-                  "type": "display"
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "string"
-                }
-              ],
-              "linkId": "Evidence.referentGroup.description",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "Textual description of referent group.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "Evidence.referentGroup.description.value",
-                  "text": "Textual description of referent group",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "Annotation"
-                }
-              ],
-              "linkId": "Evidence.referentGroup.note",
-              "text": "Footnotes and/or explanatory notes",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "Footnotes and/or explanatory notes.",
-                  "type": "display"
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "Reference"
-                }
-              ],
-              "linkId": "Evidence.referentGroup.evidenceSource",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "Various information categories of group.",
-                  "type": "display"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Group"
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                      "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                    }
-                  ],
-                  "linkId": "Evidence.referentGroup.evidenceSource.value",
-                  "text": "Various information categories of group",
-                  "type": "reference",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "Reference"
-                }
-              ],
-              "linkId": "Evidence.referentGroup.intendedGroup",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "Non-actual group that is a set of characteristics.",
-                  "type": "display"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "Group"
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                      "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                    }
-                  ],
-                  "linkId": "Evidence.referentGroup.intendedGroup.value",
-                  "text": "Non-actual group that is a set of characteristics",
-                  "type": "reference",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "CodeableConcept"
-                }
-              ],
-              "linkId": "Evidence.referentGroup.directnessMatch",
-              "text": "low | moderate | high | exact",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "Indication of quality of match between intended group to actual group.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "Evidence.referentGroup.directnessMatch.coding",
-                  "text": "code:",
-                  "type": "open-choice",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "Evidence.referentGroup.directnessMatch.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "linkId": "Evidence.variableDefinition",
-          "text": "Evidence variable",
-          "type": "group",
-          "required": false,
           "repeats": true,
           "item": [
             {
@@ -1264,7 +1188,7 @@
                   }
                 }
               ],
-              "text": "Evidence variable.",
+              "text": "Evidence variable such as population, exposure, or outcome.",
               "type": "display"
             },
             {
@@ -1395,12 +1319,12 @@
                       }
                     }
                   ],
-                  "text": "Description of the variable.",
+                  "text": "A text description or summary of the variable.",
                   "type": "display"
                 },
                 {
                   "linkId": "Evidence.variableDefinition.description.value",
-                  "text": "Description of the variable",
+                  "text": "A text description or summary of the variable",
                   "type": "string",
                   "required": false,
                   "repeats": false
@@ -1443,6 +1367,10 @@
             {
               "extension": [
                 {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
+                  "valueInteger": 1
+                },
+                {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
                 },
@@ -1452,9 +1380,9 @@
                 }
               ],
               "linkId": "Evidence.variableDefinition.variableRole",
-              "text": "exposure | referenceExposure | measuredVariable | confounder",
+              "text": "population | subpopulation | exposure | referenceExposure | measuredVariable | confounder",
               "type": "group",
-              "required": false,
+              "required": true,
               "repeats": true,
               "item": [
                 {
@@ -1472,7 +1400,7 @@
                       }
                     }
                   ],
-                  "text": "exposure | referenceExposure | measuredVariable | confounder.",
+                  "text": "population | subpopulation | exposure | referenceExposure | measuredVariable | confounder.",
                   "type": "display"
                 },
                 {
@@ -1502,7 +1430,7 @@
                   "valueString": "Reference"
                 }
               ],
-              "linkId": "Evidence.variableDefinition.actualDefinition",
+              "linkId": "Evidence.variableDefinition.observed",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1529,14 +1457,14 @@
                   "extension": [
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "EvidenceVariable"
+                      "valueCode": "Group, EvidenceVariable"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
                       "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                     }
                   ],
-                  "linkId": "Evidence.variableDefinition.actualDefinition.value",
+                  "linkId": "Evidence.variableDefinition.observed.value",
                   "text": "Definition of the actual variable related to the statistic(s)",
                   "type": "reference",
                   "required": false,
@@ -1555,7 +1483,7 @@
                   "valueString": "Reference"
                 }
               ],
-              "linkId": "Evidence.variableDefinition.intendedDefinition",
+              "linkId": "Evidence.variableDefinition.intended",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1582,14 +1510,14 @@
                   "extension": [
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                      "valueCode": "EvidenceVariable"
+                      "valueCode": "Group, EvidenceVariable"
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
                       "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                     }
                   ],
-                  "linkId": "Evidence.variableDefinition.intendedDefinition.value",
+                  "linkId": "Evidence.variableDefinition.intended.value",
                   "text": "Definition of the intended variable related to the Evidence",
                   "type": "reference",
                   "required": false,
@@ -1662,7 +1590,7 @@
             }
           ],
           "linkId": "Evidence.synthesisType",
-          "text": "The particular type of synthesis if this is a synthesis summary",
+          "text": "The method to combine studies",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -1682,7 +1610,7 @@
                   }
                 }
               ],
-              "text": "The particular type of synthesis if this is a synthesis summary.",
+              "text": "The method to combine studies.",
               "type": "display"
             },
             {
@@ -1713,7 +1641,7 @@
             }
           ],
           "linkId": "Evidence.studyType",
-          "text": "The type of study that produced this summary",
+          "text": "The type of study that produced this evidence",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -1733,7 +1661,7 @@
                   }
                 }
               ],
-              "text": "The type of study that produced this summary.",
+              "text": "The type of study that produced this evidence.",
               "type": "display"
             },
             {
@@ -1774,7 +1702,7 @@
                   }
                 }
               ],
-              "text": "The statistic value(s).",
+              "text": "Values and parameters for a single statistic.",
               "type": "display"
             }
           ]
@@ -1801,14 +1729,14 @@
                   }
                 }
               ],
-              "text": "Ordered distribution.",
+              "text": "An ordered group of statistics.",
               "type": "display"
             }
           ]
         },
         {
           "linkId": "Evidence.certainty",
-          "text": "Level of certainty",
+          "text": "Certainty or quality of the evidence",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -1828,7 +1756,7 @@
                   }
                 }
               ],
-              "text": "Level of certainty.",
+              "text": "Assessment of certainty, confidence in the estimates, or quality of the evidence.",
               "type": "display"
             },
             {
@@ -1974,10 +1902,6 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
                   "valueString": "Annotation"
                 }
@@ -2011,12 +1935,16 @@
             {
               "extension": [
                 {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
                   "valueString": "CodeableConcept"
                 }
               ],
-              "linkId": "Evidence.certainty.rating",
-              "text": "Rating of certainty",
+              "linkId": "Evidence.certainty.type",
+              "text": "Aspect of certainty being rated",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2036,7 +1964,58 @@
                       }
                     }
                   ],
-                  "text": "Rating of certainty.",
+                  "text": "Aspect of certainty being rated.",
+                  "type": "display"
+                },
+                {
+                  "linkId": "Evidence.certainty.type.coding",
+                  "text": "code:",
+                  "type": "open-choice",
+                  "required": false,
+                  "repeats": false
+                },
+                {
+                  "linkId": "Evidence.certainty.type.text",
+                  "text": "text:",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "CodeableConcept"
+                }
+              ],
+              "linkId": "Evidence.certainty.rating",
+              "text": "Assessment or judgement of the aspect",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "text": "Assessment or judgement of the aspect.",
                   "type": "display"
                 },
                 {
@@ -2056,8 +2035,17 @@
               ]
             },
             {
-              "linkId": "Evidence.certainty.certaintySubcomponent",
-              "text": "Subcomponent of certainty",
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "string"
+                }
+              ],
+              "linkId": "Evidence.certainty.rater",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2077,279 +2065,42 @@
                       }
                     }
                   ],
-                  "text": "Subcomponent of certainty.",
+                  "text": "Individual or group who did the rating.",
                   "type": "display"
                 },
                 {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                      "valueInteger": 1
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "string"
-                    }
-                  ],
-                  "linkId": "Evidence.certainty.certaintySubcomponent.id",
-                  "type": "group",
+                  "linkId": "Evidence.certainty.rater.value",
+                  "text": "Individual or group who did the rating",
+                  "type": "string",
                   "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-                      "type": "display"
-                    },
-                    {
-                      "linkId": "Evidence.certainty.certaintySubcomponent.id.value",
-                      "text": "Unique id for inter-element referencing",
-                      "type": "string",
-                      "required": false,
-                      "repeats": false
-                    }
-                  ]
-                },
-                {
-                  "linkId": "Evidence.certainty.certaintySubcomponent.extension",
-                  "text": "Additional content defined by implementations",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-                      "type": "display"
-                    }
-                  ]
-                },
-                {
-                  "linkId": "Evidence.certainty.certaintySubcomponent.modifierExtension",
-                  "text": "Extensions that cannot be ignored even if unrecognized",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-                      "type": "display"
-                    }
-                  ]
-                },
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "linkId": "Evidence.certainty.subcomponent",
+              "text": "A domain or subdomain of certainty",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                      "valueInteger": 1
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "string"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
                     }
                   ],
-                  "linkId": "Evidence.certainty.certaintySubcomponent.description",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "text": "Textual description of certainty subcomponent.",
-                      "type": "display"
-                    },
-                    {
-                      "linkId": "Evidence.certainty.certaintySubcomponent.description.value",
-                      "text": "Textual description of certainty subcomponent",
-                      "type": "string",
-                      "required": false,
-                      "repeats": false
-                    }
-                  ]
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                      "valueInteger": 1
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "Annotation"
-                    }
-                  ],
-                  "linkId": "Evidence.certainty.certaintySubcomponent.note",
-                  "text": "Textual note of certainty subcomponent",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "text": "Textual note of certainty subcomponent.",
-                      "type": "display"
-                    }
-                  ]
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "CodeableConcept"
-                    }
-                  ],
-                  "linkId": "Evidence.certainty.certaintySubcomponent.type",
-                  "text": "Footnotes and/or explanatory notes",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "text": "Footnotes and/or explanatory notes.",
-                      "type": "display"
-                    },
-                    {
-                      "linkId": "Evidence.certainty.certaintySubcomponent.type.coding",
-                      "text": "code:",
-                      "type": "open-choice",
-                      "required": false,
-                      "repeats": false
-                    },
-                    {
-                      "linkId": "Evidence.certainty.certaintySubcomponent.type.text",
-                      "text": "text:",
-                      "type": "string",
-                      "required": false,
-                      "repeats": false
-                    }
-                  ]
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "CodeableConcept"
-                    }
-                  ],
-                  "linkId": "Evidence.certainty.certaintySubcomponent.rating",
-                  "text": "Rating of certainty subcomponent",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "text": "Rating of certainty subcomponent.",
-                      "type": "display"
-                    },
-                    {
-                      "linkId": "Evidence.certainty.certaintySubcomponent.rating.coding",
-                      "text": "code:",
-                      "type": "open-choice",
-                      "required": false,
-                      "repeats": false
-                    },
-                    {
-                      "linkId": "Evidence.certainty.certaintySubcomponent.rating.text",
-                      "text": "text:",
-                      "type": "string",
-                      "required": false,
-                      "repeats": false
-                    }
-                  ]
+                  "text": "A domain or subdomain of certainty.",
+                  "type": "display"
                 }
               ]
             }

@@ -41,7 +41,7 @@
             {
               "linkId": "sex",
               "text": "Sex",
-              "type": "choice",
+              "type": "coding",
               "answerOption": [
                 {
                   "valueCoding": {
@@ -75,7 +75,7 @@
             {
               "linkId": "vitaminKgiven",
               "text": "Vitamin K given",
-              "type": "choice",
+              "type": "coding",
               "answerOption": [
                 {
                   "valueCoding": {

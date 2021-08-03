@@ -12,11 +12,11 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/ParticipantLiving",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "ParticipantLiving",
   "title": "participantliving",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International fhir",
   "contact": [
     {
@@ -29,7 +29,7 @@
     }
   ],
   "description": "Logical Model: A pattern followed by resources that represent the participant in some activity, process, or responsible for providing information about a resource.",
-  "fhirVersion": "4.2.0",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "rim",
@@ -61,7 +61,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -97,7 +97,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -128,13 +128,17 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
         "isSummary": false,
         "binding": {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "valueString": "The gender of a person used for administrative purposes."
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
               "valueString": "AdministrativeGender"
@@ -145,8 +149,7 @@
             }
           ],
           "strength": "required",
-          "description": "The gender of a person used for administrative purposes.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/administrative-gender|4.2.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/administrative-gender|4.6.0"
         }
       },
       {
@@ -174,7 +177,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -205,13 +208,17 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
         "isSummary": false,
         "binding": {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "valueString": "A human language."
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
               "valueCanonical": "http://hl7.org/fhir/ValueSet/all-languages"
@@ -226,7 +233,7 @@
             }
           ],
           "strength": "preferred",
-          "description": "A human language.",
+          "description": "IETF language tag",
           "valueSet": "http://hl7.org/fhir/ValueSet/languages"
         }
       }

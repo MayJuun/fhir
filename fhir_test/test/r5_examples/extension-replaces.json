@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/replaces",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "replaces",
   "status": "draft",
   "date": "2013-12-05",
@@ -28,7 +28,7 @@
     }
   ],
   "description": "Indicates a resource that this resource is replacing.",
-  "fhirVersion": "4.2.0",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "rim",
@@ -57,6 +57,10 @@
     },
     {
       "type": "element",
+      "expression": "Citation"
+    },
+    {
+      "type": "element",
       "expression": "CodeSystem"
     },
     {
@@ -78,6 +82,10 @@
     {
       "type": "element",
       "expression": "Evidence"
+    },
+    {
+      "type": "element",
+      "expression": "EvidenceReport"
     },
     {
       "type": "element",
@@ -110,6 +118,10 @@
     {
       "type": "element",
       "expression": "NamingSystem"
+    },
+    {
+      "type": "element",
+      "expression": "ObservationDefinition"
     },
     {
       "type": "element",
@@ -173,7 +185,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -255,7 +267,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -263,7 +275,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -333,7 +345,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,

@@ -3,7 +3,7 @@
   "id": "medrx0323",
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: medrx0323\u003c/p\u003e\u003cp\u003e\u003cb\u003econtained\u003c/b\u003e: \u003c/p\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: 12345689 (OFFICIAL)\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: completed\u003c/p\u003e\u003cp\u003e\u003cb\u003eintent\u003c/b\u003e: order\u003c/p\u003e\u003cp\u003e\u003cb\u003emedication\u003c/b\u003e: id: med0318; Injection emulsion \u003cspan\u003e(Details : {SNOMED CT code \u0027385221006\u0027 \u003d \u0027Injection emulsion\u0027, given as \u0027Injection emulsion\u0027})\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca\u003eDonald Duck\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eencounter\u003c/b\u003e: \u003ca\u003eencounter who leads to this prescription\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthoredOn\u003c/b\u003e: 2015-01-15\u003c/p\u003e\u003cp\u003e\u003cb\u003erequester\u003c/b\u003e: \u003ca\u003ePatrick Pump\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003edosageInstruction\u003c/b\u003e: \u003c/p\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: id: 12345689 (OFFICIAL)\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: completed\u003c/p\u003e\u003cp\u003e\u003cb\u003eintent\u003c/b\u003e: order\u003c/p\u003e\u003ch3\u003eMedications\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca\u003eDonald Duck. Generated Summary: Medical record number: 654321 (USUAL); active; Duck Donald (OFFICIAL); gender: male\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eencounter\u003c/b\u003e: \u003ca\u003eencounter who leads to this prescription. Generated Summary: id: v1451 (OFFICIAL); status: completed; \u003cspan\u003eambulatory\u003c/span\u003e; \u003cspan\u003ePatient-initiated encounter\u003c/span\u003e; \u003cspan\u003eNon-urgent cardiological admission\u003c/span\u003e\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthoredOn\u003c/b\u003e: 2015-01-15\u003c/p\u003e\u003cp\u003e\u003cb\u003erequester\u003c/b\u003e: \u003ca\u003ePatrick Pump. Generated Summary: id: 874635264 (OFFICIAL), id: 567IUI51C154 (USUAL); Simone Heps (OFFICIAL); Phone: 020556936, S.M.Heps@bmc.nl, Fax: 0205669283; gender: female; birthDate: 1971-11-07\u003c/a\u003e\u003c/p\u003e\u003ch3\u003eDosageInstructions\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
   },
   "contained": [
     {
@@ -20,36 +20,42 @@
       },
       "ingredient": [
         {
-          "itemCodeableConcept": {
-            "coding": [
-              {
-                "system": "http://hl7.org/fhir/sid/ndc",
-                "code": "0338-1134-03",
-                "display": "Clinimix 4.25/10 sulfite-free (4.25% Amino Acid in 10% Dextrose) Injection, 1000ml"
-              }
-            ]
+          "item": {
+            "concept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/ndc",
+                  "code": "0338-1134-03",
+                  "display": "Clinimix 4.25/10 sulfite-free (4.25% Amino Acid in 10% Dextrose) Injection, 1000ml"
+                }
+              ]
+            }
           }
         },
         {
-          "itemCodeableConcept": {
-            "coding": [
-              {
-                "system": "http://hl7.org/fhir/sid/ndc",
-                "code": "0409-5779-01",
-                "display": "TPN Electrolytes SODIUM CHLORIDE, CALCIUM CHLORIDE, POTASSIUM CHLORIDE, MAGNESIUM CHLORIDE, and SODIUM ACETATE ANHYDROUS | INJECTION, SOLUTION, CONCENTRATE | 321 mg/20mL, 331 mg/20mL, 1491 mg/20mL, 508 mg/20mL, 2420 mg/20mL"
-              }
-            ]
+          "item": {
+            "concept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/ndc",
+                  "code": "0409-5779-01",
+                  "display": "TPN Electrolytes SODIUM CHLORIDE, CALCIUM CHLORIDE, POTASSIUM CHLORIDE, MAGNESIUM CHLORIDE, and SODIUM ACETATE ANHYDROUS | INJECTION, SOLUTION, CONCENTRATE | 321 mg/20mL, 331 mg/20mL, 1491 mg/20mL, 508 mg/20mL, 2420 mg/20mL"
+                }
+              ]
+            }
           }
         },
         {
-          "itemCodeableConcept": {
-            "coding": [
-              {
-                "system": "http://hl7.org/fhir/sid/ndc",
-                "code": "0338-0519-02",
-                "display": "Intralipid 20% IV Fat Emulsion"
-              }
-            ]
+          "item": {
+            "concept": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/sid/ndc",
+                  "code": "0338-0519-02",
+                  "display": "Intralipid 20% IV Fat Emulsion"
+                }
+              ]
+            }
           }
         }
       ],
@@ -68,8 +74,10 @@
   ],
   "status": "completed",
   "intent": "order",
-  "medicationReference": {
-    "reference": "#med0318"
+  "medication": {
+    "reference": {
+      "reference": "#med0318"
+    }
   },
   "subject": {
     "reference": "Patient/pat1",

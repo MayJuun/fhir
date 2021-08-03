@@ -5,40 +5,12 @@
     {
       "resourceType": "ValueSet",
       "id": "vs2",
-      "name": "Type options for Medication.ingredient.item[x]",
-      "status": "active",
-      "description": "Type options for Medication.ingredient.item[x]",
-      "expansion": {
-        "identifier": "urn:uuid:80212adc-abed-4147-8dfe-9654d2b923e4",
-        "timestamp": "2019-12-31T21:14:29+11:00",
-        "contains": [
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "CodeableConcept",
-            "display": "CodeableConcept"
-          },
-          {
-            "system": "http://hl7.org/fhir/resource-types",
-            "code": "Substance",
-            "display": "Substance"
-          },
-          {
-            "system": "http://hl7.org/fhir/resource-types",
-            "code": "Medication",
-            "display": "Medication"
-          }
-        ]
-      }
-    },
-    {
-      "resourceType": "ValueSet",
-      "id": "vs3",
       "name": "Type options for Medication.ingredient.strength[x]",
       "status": "active",
       "description": "Type options for Medication.ingredient.strength[x]",
       "expansion": {
-        "identifier": "urn:uuid:3898ae1e-f08e-45ea-8efd-5b4e7fac62a1",
-        "timestamp": "2019-12-31T21:14:29+11:00",
+        "identifier": "urn:uuid:181fa538-dbb1-419d-887c-07cdd93947d1",
+        "timestamp": "2021-04-15T12:29:07+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -64,9 +36,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Pharmacy)",
   "item": [
     {
@@ -91,7 +63,7 @@
               }
             }
           ],
-          "text": "This resource is primarily used for the identification and definition of a medication for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.",
+          "text": "This resource is primarily used for the identification and definition of a medication, including ingredients, for the purposes of prescribing, dispensing, and administering a medication as well as for making statements about medication use.",
           "type": "display"
         },
         {
@@ -125,7 +97,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -284,7 +256,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -311,7 +283,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -529,7 +501,7 @@
               "valueString": "Reference"
             }
           ],
-          "linkId": "Medication.manufacturer",
+          "linkId": "Medication.sponsor",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -549,7 +521,7 @@
                   }
                 }
               ],
-              "text": "Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product.",
+              "text": "Describes the details of the manufacturer of the medication product. This is not intended to represent the distributor of a medication product.  Describes the organization that is responsible for the manufacturing of the item and holds the registration to market the product in a jurisdiction.. This might not be the company that physically manufactures the product.  May be known as Market Authorization Holder.",
               "type": "display"
             },
             {
@@ -563,8 +535,8 @@
                   "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                 }
               ],
-              "linkId": "Medication.manufacturer.value",
-              "text": "Manufacturer of the item",
+              "linkId": "Medication.sponsor.value",
+              "text": "Organization responsible for manufacturing the item",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -817,11 +789,11 @@
                   "valueInteger": 1
                 }
               ],
-              "linkId": "Medication.ingredient.item[x]",
+              "linkId": "Medication.ingredient.item",
               "text": "The ingredient (substance or medication) that the ingredient.strength relates to",
               "type": "group",
               "required": true,
-              "repeats": true,
+              "repeats": false,
               "item": [
                 {
                   "extension": [
@@ -840,70 +812,6 @@
                   ],
                   "text": "The ingredient (substance or medication) that the ingredient.strength relates to.  This is represented as a concept from a code system or described in another resource (Substance or Medication).",
                   "type": "display"
-                },
-                {
-                  "linkId": "Medication.ingredient.item[x]._type",
-                  "text": "type",
-                  "type": "choice",
-                  "required": false,
-                  "repeats": false,
-                  "answerValueSet": "#vs2",
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "CodeableConcept"
-                        }
-                      ],
-                      "linkId": "Medication.ingredient.item[x]._null",
-                      "type": "group",
-                      "item": [
-                        {
-                          "linkId": "Medication.ingredient.item[x]._null.coding",
-                          "text": "code:",
-                          "type": "open-choice",
-                          "required": false,
-                          "repeats": false
-                        },
-                        {
-                          "linkId": "Medication.ingredient.item[x]._null.text",
-                          "text": "text:",
-                          "type": "string",
-                          "required": false,
-                          "repeats": false
-                        }
-                      ]
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "Reference"
-                        }
-                      ],
-                      "linkId": "Medication.ingredient.item[x]._null",
-                      "type": "group",
-                      "item": [
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                              "valueCode": "Substance, Medication"
-                            },
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                              "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                            }
-                          ],
-                          "linkId": "Medication.ingredient.item[x]._null.value",
-                          "type": "reference",
-                          "required": false,
-                          "repeats": false
-                        }
-                      ]
-                    }
-                  ]
                 }
               ]
             },
@@ -987,7 +895,7 @@
                   "type": "choice",
                   "required": false,
                   "repeats": false,
-                  "answerValueSet": "#vs3",
+                  "answerValueSet": "#vs2",
                   "item": [
                     {
                       "extension": [

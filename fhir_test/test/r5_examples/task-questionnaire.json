@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for Task.input.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:27bd2fe1-ac61-4ad7-8166-b506c36c99d8",
-        "timestamp": "2019-12-31T21:18:05+11:00",
+        "identifier": "urn:uuid:e73f2fae-3924-4e8c-a165-fd717bced3e8",
+        "timestamp": "2021-04-15T12:30:11+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -267,8 +267,8 @@
       "status": "active",
       "description": "Type options for DataRequirement.subject[x]",
       "expansion": {
-        "identifier": "urn:uuid:e9754914-2f42-4c1f-8bde-b2f32c91c006",
-        "timestamp": "2019-12-31T21:18:05+11:00",
+        "identifier": "urn:uuid:94f0d939-51b6-4c8b-b403-a01d7d895970",
+        "timestamp": "2021-04-15T12:30:11+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -290,8 +290,8 @@
       "status": "active",
       "description": "Type options for DataRequirement.dateFilter.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:37d8ab92-5d29-46ec-bb37-21ec79496584",
-        "timestamp": "2019-12-31T21:18:05+11:00",
+        "identifier": "urn:uuid:56f95a01-3f7a-4e6a-a1ec-62a5a4d2003d",
+        "timestamp": "2021-04-15T12:30:11+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -318,8 +318,8 @@
       "status": "active",
       "description": "Type options for TriggerDefinition.timing[x]",
       "expansion": {
-        "identifier": "urn:uuid:ad5da44a-a61f-456a-b37d-ac4a3dd09c26",
-        "timestamp": "2019-12-31T21:18:05+11:00",
+        "identifier": "urn:uuid:a621e872-bb46-490e-bffa-aaa3e7d81c65",
+        "timestamp": "2021-04-15T12:30:11+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -351,8 +351,8 @@
       "status": "active",
       "description": "Type options for UsageContext.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:33e2e6e7-f7e0-4c8b-b083-846da3da1598",
-        "timestamp": "2019-12-31T21:18:05+11:00",
+        "identifier": "urn:uuid:4a515c8e-e953-4ec4-85b6-2e023b1fc29a",
+        "timestamp": "2021-04-15T12:30:11+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -414,8 +414,8 @@
       "status": "active",
       "description": "Type options for Dosage.asNeeded[x]",
       "expansion": {
-        "identifier": "urn:uuid:062fc4fe-7877-4d5b-80b0-9985f8b65d31",
-        "timestamp": "2019-12-31T21:18:05+11:00",
+        "identifier": "urn:uuid:b31a79ff-889c-48bf-9920-c1ddb5bfae74",
+        "timestamp": "2021-04-15T12:30:11+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -437,8 +437,8 @@
       "status": "active",
       "description": "Type options for Dosage.doseAndRate.dose[x]",
       "expansion": {
-        "identifier": "urn:uuid:6c555c98-5197-4069-b76e-f39264d2a74d",
-        "timestamp": "2019-12-31T21:18:05+11:00",
+        "identifier": "urn:uuid:b265fa55-3897-4779-b7e0-927f5fc4d82b",
+        "timestamp": "2021-04-15T12:30:11+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -460,8 +460,8 @@
       "status": "active",
       "description": "Type options for Dosage.doseAndRate.rate[x]",
       "expansion": {
-        "identifier": "urn:uuid:57dd2d68-b80f-43a4-8411-284fe329ed29",
-        "timestamp": "2019-12-31T21:18:05+11:00",
+        "identifier": "urn:uuid:44f99dbd-9abc-4c9b-bd8e-0bf38188015c",
+        "timestamp": "2021-04-15T12:30:11+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -488,8 +488,8 @@
       "status": "active",
       "description": "Type options for Task.output.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:e22296c6-5066-4003-b81c-d09eb7ab0d40",
-        "timestamp": "2019-12-31T21:18:05+11:00",
+        "identifier": "urn:uuid:fe3439bc-9851-4f64-b785-7b4c95566208",
+        "timestamp": "2021-04-15T12:30:11+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -746,8 +746,8 @@
       "status": "active",
       "description": "Type options for DataRequirement.subject[x]",
       "expansion": {
-        "identifier": "urn:uuid:938406db-3a54-4401-9901-9508bda4de72",
-        "timestamp": "2019-12-31T21:18:05+11:00",
+        "identifier": "urn:uuid:6e5ef081-b5d4-4e3e-9778-b095a1ca1047",
+        "timestamp": "2021-04-15T12:30:11+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -769,8 +769,8 @@
       "status": "active",
       "description": "Type options for DataRequirement.dateFilter.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:f44463ac-6065-4a0e-8fc6-573a65652b7c",
-        "timestamp": "2019-12-31T21:18:05+11:00",
+        "identifier": "urn:uuid:b2b4a00b-149d-4af4-8fce-5f5954d6d560",
+        "timestamp": "2021-04-15T12:30:11+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -797,8 +797,8 @@
       "status": "active",
       "description": "Type options for TriggerDefinition.timing[x]",
       "expansion": {
-        "identifier": "urn:uuid:ef14561a-a06e-48b0-b033-7ad6f4151da4",
-        "timestamp": "2019-12-31T21:18:05+11:00",
+        "identifier": "urn:uuid:89cc6320-35db-430b-8e50-ef1cacf8d090",
+        "timestamp": "2021-04-15T12:30:11+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -830,8 +830,8 @@
       "status": "active",
       "description": "Type options for UsageContext.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:7ecde6c9-b985-4806-97ea-4039a9bc5693",
-        "timestamp": "2019-12-31T21:18:05+11:00",
+        "identifier": "urn:uuid:f4fd0811-51f6-4e6a-9d9c-02624f605220",
+        "timestamp": "2021-04-15T12:30:11+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -893,8 +893,8 @@
       "status": "active",
       "description": "Type options for Dosage.asNeeded[x]",
       "expansion": {
-        "identifier": "urn:uuid:a48de335-c4f7-4818-ac62-3f9c4a1a1a88",
-        "timestamp": "2019-12-31T21:18:05+11:00",
+        "identifier": "urn:uuid:dafefe22-b99a-4f1d-9c3c-0ea551665362",
+        "timestamp": "2021-04-15T12:30:11+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -916,8 +916,8 @@
       "status": "active",
       "description": "Type options for Dosage.doseAndRate.dose[x]",
       "expansion": {
-        "identifier": "urn:uuid:dd63d400-a343-4e72-a590-6da2a209249a",
-        "timestamp": "2019-12-31T21:18:05+11:00",
+        "identifier": "urn:uuid:ffd70d13-3a5e-4a8d-80f0-6ac66afd65c6",
+        "timestamp": "2021-04-15T12:30:11+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -939,8 +939,8 @@
       "status": "active",
       "description": "Type options for Dosage.doseAndRate.rate[x]",
       "expansion": {
-        "identifier": "urn:uuid:9e55451f-43f7-4eb2-a604-6f27669dc149",
-        "timestamp": "2019-12-31T21:18:05+11:00",
+        "identifier": "urn:uuid:c75cefbf-4dc5-467c-9fb2-8c1a4e55231e",
+        "timestamp": "2021-04-15T12:30:11+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -966,9 +966,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Orders and Observations)",
   "item": [
     {
@@ -1027,7 +1027,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -1186,7 +1186,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -1213,7 +1213,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -2887,7 +2887,7 @@
                       }
                     }
                   ],
-                  "text": "For requests that are targeted to more than on potential recipient/target, for whom is fulfillment sought?",
+                  "text": "For requests that are targeted to more than one potential recipient/target, to identify who is fulfillment is sought for.",
                   "type": "display"
                 },
                 {

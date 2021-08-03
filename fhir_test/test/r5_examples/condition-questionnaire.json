@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for Condition.onset[x]",
       "expansion": {
-        "identifier": "urn:uuid:e634b9fb-6b75-48ac-bc21-24f29a342dea",
-        "timestamp": "2019-12-31T21:10:14+11:00",
+        "identifier": "urn:uuid:d412bc64-2513-4aaa-a4b3-cadd82456014",
+        "timestamp": "2021-04-15T12:28:22+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -47,8 +47,8 @@
       "status": "active",
       "description": "Type options for Condition.abatement[x]",
       "expansion": {
-        "identifier": "urn:uuid:f993e02f-37c5-4f4c-8c8a-8c2afed68fb8",
-        "timestamp": "2019-12-31T21:10:14+11:00",
+        "identifier": "urn:uuid:523fef0c-967c-410b-9c6a-493c1639d24d",
+        "timestamp": "2021-04-15T12:28:22+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -84,9 +84,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Patient Care)",
   "item": [
     {
@@ -145,7 +145,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -304,7 +304,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -331,7 +331,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -447,6 +447,10 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
+              "valueInteger": 1
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
               "valueInteger": 1
             },
@@ -458,7 +462,7 @@
           "linkId": "Condition.clinicalStatus",
           "text": "active | recurrence | relapse | inactive | remission | resolved",
           "type": "group",
-          "required": false,
+          "required": true,
           "repeats": true,
           "item": [
             {
@@ -476,7 +480,7 @@
                   }
                 }
               ],
-              "text": "The clinical status of the condition. The data type is CodeableConcept because clinicalStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.",
+              "text": "The clinical status of the condition. The data type is CodeableConcept because clinicalStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.  clinicalStatus is required since it is a modifier element.  For conditions that are problems list items, the clinicalStatus should not be unknown.  For conditions that are not problem list items, the clinicalStatus may be unknown.  For example, conditions derived from a claim are point in time, so those conditions may have a clinicalStatus of unknown",
               "type": "display"
             },
             {
@@ -527,7 +531,7 @@
                   }
                 }
               ],
-              "text": "The verification status to support the clinical status of the condition. verificationStatus is not required.  For example, when a patient has abdominal pain in the ED, there is not likely going to be a verification status.\nThe data type is CodeableConcept because verificationStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.",
+              "text": "The verification status to support the clinical status of the condition.  The verification status pertains to the condition, itself, not to any specific condition attribute. verificationStatus is not required.  For example, when a patient has abdominal pain in the ED, there is not likely going to be a verification status.\nThe data type is CodeableConcept because verificationStatus has some clinical judgment involved, such that there might need to be more specificity than the required FHIR value set allows. For example, a SNOMED coding might allow for additional specificity.",
               "type": "display"
             },
             {
@@ -880,7 +884,7 @@
                   }
                 }
               ],
-              "text": "Estimated or actual date or date-time  the condition began, in the opinion of the clinician. Age is generally used when the patient reports an age at which the Condition began to occur.",
+              "text": "Estimated or actual date or date-time  the condition began, in the opinion of the clinician. Age is generally used when the patient reports an age at which the Condition began to occur.  Period is generally used to convey an imprecise onset that occurred within the time period.  For example, Period is not intended to convey the transition period before the chronic bronchitis or COPD condition was diagnosed, but Period can be used to convey an imprecise diagnosis date.",
               "type": "display"
             },
             {
@@ -1253,7 +1257,7 @@
                   }
                 }
               ],
-              "text": "The recordedDate represents when this particular Condition record was created in the system, which is often a system-generated date.",
+              "text": "The recordedDate represents when this particular Condition record was created in the system, which is often a system-generated date. If the recordedDate is known via a sending system, it is preferred that the receiving system preserve the date.  If the recorded date is not provided by the sending system, it is acceptable for the receiving system to assert their system-generated date.",
               "type": "display"
             },
             {
@@ -1393,7 +1397,7 @@
                   }
                 }
               ],
-              "text": "Clinical stage or grade of a condition. May include formal severity assessments.",
+              "text": "A simple summary of the stage such as \"Stage 3\" or \"Early Onset\". The determination of the stage is disease-specific, such as cancer, retinopathy of prematurity, kidney diseases, Alzheimer\u0027s, or Parkinson disease.",
               "type": "display"
             },
             {
@@ -1525,7 +1529,7 @@
                       }
                     }
                   ],
-                  "text": "A simple summary of the stage such as \"Stage 3\". The determination of the stage is disease-specific.",
+                  "text": "A simple summary of the stage such as \"Stage 3\" or \"Early Onset\". The determination of the stage is disease-specific, such as cancer, retinopathy of prematurity, kidney diseases, Alzheimer\u0027s, or Parkinson disease.",
                   "type": "display"
                 },
                 {
@@ -1648,13 +1652,13 @@
         },
         {
           "linkId": "Condition.evidence",
-          "text": "Supporting evidence",
+          "text": "Supporting evidence for the verification status",
           "type": "group",
           "required": false,
           "repeats": true,
           "item": [
             {
-              "text": "The evidence may be a simple list of coded symptoms/manifestations, or references to observations or formal assessments, or both.",
+              "text": "If the condition was confirmed, but subsequently refuted, then the evidence can be cumulative including all evidence over time.  The evidence may be a simple list of coded symptoms/manifestations, or references to observations or formal assessments, or both.",
               "type": "display"
             },
             {

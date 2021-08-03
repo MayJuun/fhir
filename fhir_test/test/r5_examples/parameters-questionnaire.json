@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for Parameters.parameter.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:d6c40432-402e-4d0e-9af5-4869de251f12",
-        "timestamp": "2019-12-31T21:07:21+11:00",
+        "identifier": "urn:uuid:4e967212-0325-4661-8fde-25b668fdcea7",
+        "timestamp": "2021-04-15T12:27:54+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -267,8 +267,8 @@
       "status": "active",
       "description": "Type options for DataRequirement.subject[x]",
       "expansion": {
-        "identifier": "urn:uuid:e49b0dd9-f5c9-489c-9223-b475579bbdc5",
-        "timestamp": "2019-12-31T21:07:21+11:00",
+        "identifier": "urn:uuid:0f1a6da1-25b1-4e26-8416-c9c858ab2ec4",
+        "timestamp": "2021-04-15T12:27:54+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -290,8 +290,8 @@
       "status": "active",
       "description": "Type options for DataRequirement.dateFilter.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:057f2dbe-3e52-4a5d-ae22-b8f6fa76f862",
-        "timestamp": "2019-12-31T21:07:21+11:00",
+        "identifier": "urn:uuid:c5db7528-f15b-4283-915b-81866060d10b",
+        "timestamp": "2021-04-15T12:27:54+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -318,8 +318,8 @@
       "status": "active",
       "description": "Type options for TriggerDefinition.timing[x]",
       "expansion": {
-        "identifier": "urn:uuid:c5814ac0-09ab-42df-a674-f156f1e2dc3a",
-        "timestamp": "2019-12-31T21:07:21+11:00",
+        "identifier": "urn:uuid:3adb7965-b1c3-4a40-a543-a685d2ff0e67",
+        "timestamp": "2021-04-15T12:27:54+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -351,8 +351,8 @@
       "status": "active",
       "description": "Type options for UsageContext.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:30e8c473-be4b-4e47-a0cd-69d34f32ceef",
-        "timestamp": "2019-12-31T21:07:21+11:00",
+        "identifier": "urn:uuid:d6825a40-9282-4c72-8d72-2a7a2bdb9a91",
+        "timestamp": "2021-04-15T12:27:54+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -414,8 +414,8 @@
       "status": "active",
       "description": "Type options for Dosage.asNeeded[x]",
       "expansion": {
-        "identifier": "urn:uuid:e03d30ab-a4ae-41fa-92a7-f41582af4e3c",
-        "timestamp": "2019-12-31T21:07:21+11:00",
+        "identifier": "urn:uuid:02b8d421-054c-4d2e-8099-f6bee73cfb7b",
+        "timestamp": "2021-04-15T12:27:54+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -437,8 +437,8 @@
       "status": "active",
       "description": "Type options for Dosage.doseAndRate.dose[x]",
       "expansion": {
-        "identifier": "urn:uuid:3b5ac40f-a6bb-420d-a6e5-8e324f8f05b1",
-        "timestamp": "2019-12-31T21:07:21+11:00",
+        "identifier": "urn:uuid:711dfeed-66c9-4821-8e4b-ec8715598a18",
+        "timestamp": "2021-04-15T12:27:54+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -460,8 +460,8 @@
       "status": "active",
       "description": "Type options for Dosage.doseAndRate.rate[x]",
       "expansion": {
-        "identifier": "urn:uuid:7c8c01f3-f7c6-48ba-804b-a5b3c22fe7b7",
-        "timestamp": "2019-12-31T21:07:21+11:00",
+        "identifier": "urn:uuid:a61d0779-ed86-4bfe-bed6-6631ca91fd95",
+        "timestamp": "2021-04-15T12:27:54+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -487,9 +487,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "active",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (FHIR Infrastructure)",
   "item": [
     {
@@ -552,7 +552,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -880,7 +880,7 @@
                       }
                     }
                   ],
-                  "text": "If the parameter is a data type.",
+                  "text": "Conveys the content if the parameter is a data type.",
                   "type": "display"
                 },
                 {
@@ -6731,7 +6731,7 @@
                       }
                     }
                   ],
-                  "text": "If the parameter is a whole resource. When resolving references in resources, the operation definition may specify how references may be resolved between parameters. If a reference cannot be resolved between the parameters, the application should fall back to it\u0027s general resource resolution methods.",
+                  "text": "Conveys the content if the parameter is a whole resource. When resolving references in resources, the operation definition may specify how references may be resolved between parameters. If a reference cannot be resolved between the parameters, the application should fall back to it\u0027s general resource resolution methods.",
                   "type": "display"
                 }
               ]

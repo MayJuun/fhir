@@ -3,13 +3,13 @@
   "id": "hiv-indicators",
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: hiv-indicators\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: complete\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: summary\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasure\u003c/b\u003e: \u003ca\u003ehttp://ohie.org/Measure/hiv-indicators\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ereporter\u003c/b\u003e: \u003ca\u003eOrganization/ZW01\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eperiod\u003c/b\u003e: 2018-01-01 --\u0026gt; 2018-01-31\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003egroup\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: QRPH_ADX_ART1_N \u003cspan\u003e(Details : {[not stated] code \u0027QRPH_ADX_ART1_N\u0027 \u003d \u0027QRPH_ADX_ART1_N)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratifier\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: AGE_GROUP:SEX \u003cspan\u003e(Details : {[not stated] code \u0027AGE_GROUP:SEX\u0027 \u003d \u0027AGE_GROUP:SEX)\u003c/span\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: P0Y--P1Y:F \u003cspan\u003e(Details : {[not stated] code \u0027P0Y--P1Y:F\u0027 \u003d \u0027P0Y--P1Y:F)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: P0Y--P1Y:M \u003cspan\u003e(Details : {[not stated] code \u0027P0Y--P1Y:M\u0027 \u003d \u0027P0Y--P1Y:M)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: P1Y--P5Y:F \u003cspan\u003e(Details : {[not stated] code \u0027P1Y--P5Y:F\u0027 \u003d \u0027P1Y--P5Y:F)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: P1Y--P5Y:M \u003cspan\u003e(Details : {[not stated] code \u0027P1Y--P5Y:M\u0027 \u003d \u0027P1Y--P5Y:M)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: P10Y--P15Y:F \u003cspan\u003e(Details : {[not stated] code \u0027P10Y--P15Y:F\u0027 \u003d \u0027P10Y--P15Y:F)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: P10Y--P15Y:M \u003cspan\u003e(Details : {[not stated] code \u0027P10Y--P15Y:M\u0027 \u003d \u0027P10Y--P15Y:M)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003egroup\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: QRPH_ADX_ART1_N \u003cspan\u003e(Details : {[not stated] code \u0027QRPH_ADX_ART1_N\u0027 \u003d \u0027QRPH_ADX_ART1_N)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratifier\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: AGE_GROUP:SEX \u003cspan\u003e(Details : {[not stated] code \u0027AGE_GROUP:SEX\u0027 \u003d \u0027AGE_GROUP:SEX)\u003c/span\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: P0Y--P1Y:F \u003cspan\u003e(Details : {[not stated] code \u0027P0Y--P1Y:F\u0027 \u003d \u0027P0Y--P1Y:F)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: P0Y--P1Y:M \u003cspan\u003e(Details : {[not stated] code \u0027P0Y--P1Y:M\u0027 \u003d \u0027P0Y--P1Y:M)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: P1Y--P5Y:F \u003cspan\u003e(Details : {[not stated] code \u0027P1Y--P5Y:F\u0027 \u003d \u0027P1Y--P5Y:F)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: P1Y--P5Y:M \u003cspan\u003e(Details : {[not stated] code \u0027P1Y--P5Y:M\u0027 \u003d \u0027P1Y--P5Y:M)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: P10Y--P15Y:F \u003cspan\u003e(Details : {[not stated] code \u0027P10Y--P15Y:F\u0027 \u003d \u0027P10Y--P15Y:F)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: P10Y--P15Y:M \u003cspan\u003e(Details : {[not stated] code \u0027P10Y--P15Y:M\u0027 \u003d \u0027P10Y--P15Y:M)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003egroup\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: QRPH_ADX_ART1_N \u003cspan\u003e(Details : {[not stated] code \u0027QRPH_ADX_ART1_N\u0027 \u003d \u0027QRPH_ADX_ART1_N)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratifier\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: AGE_GROUP \u003cspan\u003e(Details : {[not stated] code \u0027AGE_GROUP\u0027 \u003d \u0027AGE_GROUP)\u003c/span\u003e, SEX \u003cspan\u003e(Details : {[not stated] code \u0027SEX\u0027 \u003d \u0027SEX)\u003c/span\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: AGE_GROUP \u003cspan\u003e(Details : {[not stated] code \u0027AGE_GROUP\u0027 \u003d \u0027AGE_GROUP)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: P0Y--P1Y \u003cspan\u003e(Details : {[not stated] code \u0027P0Y--P1Y\u0027 \u003d \u0027P0Y--P1Y)\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: SEX \u003cspan\u003e(Details : {[not stated] code \u0027SEX\u0027 \u003d \u0027SEX)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: F \u003cspan\u003e(Details : {[not stated] code \u0027F\u0027 \u003d \u0027F)\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: AGE_GROUP \u003cspan\u003e(Details : {[not stated] code \u0027AGE_GROUP\u0027 \u003d \u0027AGE_GROUP)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: P0Y--P1Y \u003cspan\u003e(Details : {[not stated] code \u0027P0Y--P1Y\u0027 \u003d \u0027P0Y--P1Y)\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: SEX \u003cspan\u003e(Details : {[not stated] code \u0027SEX\u0027 \u003d \u0027SEX)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: M \u003cspan\u003e(Details : {[not stated] code \u0027M\u0027 \u003d \u0027M)\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: AGE_GROUP \u003cspan\u003e(Details : {[not stated] code \u0027AGE_GROUP\u0027 \u003d \u0027AGE_GROUP)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: P1Y--P5Y \u003cspan\u003e(Details : {[not stated] code \u0027P1Y--P5Y\u0027 \u003d \u0027P1Y--P5Y)\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: SEX \u003cspan\u003e(Details : {[not stated] code \u0027SEX\u0027 \u003d \u0027SEX)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: F \u003cspan\u003e(Details : {[not stated] code \u0027F\u0027 \u003d \u0027F)\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: AGE_GROUP \u003cspan\u003e(Details : {[not stated] code \u0027AGE_GROUP\u0027 \u003d \u0027AGE_GROUP)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: P1Y--P5Y \u003cspan\u003e(Details : {[not stated] code \u0027P1Y--P5Y\u0027 \u003d \u0027P1Y--P5Y)\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: SEX \u003cspan\u003e(Details : {[not stated] code \u0027SEX\u0027 \u003d \u0027SEX)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: F \u003cspan\u003e(Details : {[not stated] code \u0027F\u0027 \u003d \u0027F)\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: complete\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: summary\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasure\u003c/b\u003e: \u003ca\u003ehttp://ohie.org/Measure/hiv-indicators\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ereporter\u003c/b\u003e: \u003ca\u003eGenerated Summary: name: Health Level Seven International; alias: HL7 International; Phone: (+1) 734-677-7777, Fax: (+1) 734-677-6622, hq@HL7.org\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eperiod\u003c/b\u003e: 2018-01-01 --\u0026gt; 2018-01-31\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003egroup\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: \u003cspan\u003eQRPH_ADX_ART1_N\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratifier\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: \u003cspan\u003eAGE_GROUP:SEX\u003c/span\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eP0Y--P1Y:F\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eP0Y--P1Y:M\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eP1Y--P5Y:F\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eP1Y--P5Y:M\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eP10Y--P15Y:F\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eP10Y--P15Y:M\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003egroup\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: \u003cspan\u003eQRPH_ADX_ART1_N\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratifier\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: \u003cspan\u003eAGE_GROUP:SEX\u003c/span\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eP0Y--P1Y:F\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eP0Y--P1Y:M\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eP1Y--P5Y:F\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eP1Y--P5Y:M\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eP10Y--P15Y:F\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eP10Y--P15Y:M\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003egroup\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: \u003cspan\u003eQRPH_ADX_ART1_N\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratifier\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: \u003cspan\u003eAGE_GROUP\u003c/span\u003e, \u003cspan\u003eSEX\u003c/span\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: \u003cspan\u003eAGE_GROUP\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eP0Y--P1Y\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: \u003cspan\u003eSEX\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eF\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: \u003cspan\u003eAGE_GROUP\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eP0Y--P1Y\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: \u003cspan\u003eSEX\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eM\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: \u003cspan\u003eAGE_GROUP\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eP1Y--P5Y\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: \u003cspan\u003eSEX\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eF\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003estratum\u003c/b\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: \u003cspan\u003eAGE_GROUP\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eP1Y--P5Y\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ecomponent\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: \u003cspan\u003eSEX\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalue\u003c/b\u003e: \u003cspan\u003eF\u003c/span\u003e\u003c/p\u003e\u003c/blockquote\u003e\u003cp\u003e\u003cb\u003emeasureScore\u003c/b\u003e: 0\u003c/p\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003c/div\u003e"
   },
   "status": "complete",
   "type": "summary",
   "measure": "http://ohie.org/Measure/hiv-indicators",
   "reporter": {
-    "reference": "Organization/ZW01"
+    "reference": "Organization/hl7"
   },
   "period": {
     "start": "2018-01-01",
@@ -24,7 +24,7 @@
           }
         ]
       },
-      "measureScore": {
+      "measureScoreQuantity": {
         "value": 0
       },
       "stratifier": [
@@ -40,74 +40,74 @@
           ],
           "stratum": [
             {
-              "value": {
+              "valueCodeableConcept": {
                 "coding": [
                   {
                     "code": "P0Y--P1Y:F"
                   }
                 ]
               },
-              "measureScore": {
+              "measureScoreQuantity": {
                 "value": 0
               }
             },
             {
-              "value": {
+              "valueCodeableConcept": {
                 "coding": [
                   {
                     "code": "P0Y--P1Y:M"
                   }
                 ]
               },
-              "measureScore": {
+              "measureScoreQuantity": {
                 "value": 0
               }
             },
             {
-              "value": {
+              "valueCodeableConcept": {
                 "coding": [
                   {
                     "code": "P1Y--P5Y:F"
                   }
                 ]
               },
-              "measureScore": {
+              "measureScoreQuantity": {
                 "value": 0
               }
             },
             {
-              "value": {
+              "valueCodeableConcept": {
                 "coding": [
                   {
                     "code": "P1Y--P5Y:M"
                   }
                 ]
               },
-              "measureScore": {
+              "measureScoreQuantity": {
                 "value": 0
               }
             },
             {
-              "value": {
+              "valueCodeableConcept": {
                 "coding": [
                   {
                     "code": "P10Y--P15Y:F"
                   }
                 ]
               },
-              "measureScore": {
+              "measureScoreQuantity": {
                 "value": 0
               }
             },
             {
-              "value": {
+              "valueCodeableConcept": {
                 "coding": [
                   {
                     "code": "P10Y--P15Y:M"
                   }
                 ]
               },
-              "measureScore": {
+              "measureScoreQuantity": {
                 "value": 0
               }
             }
@@ -123,7 +123,7 @@
           }
         ]
       },
-      "measureScore": {
+      "measureScoreQuantity": {
         "value": 0
       },
       "stratifier": [
@@ -139,74 +139,74 @@
           ],
           "stratum": [
             {
-              "value": {
+              "valueCodeableConcept": {
                 "coding": [
                   {
                     "code": "P0Y--P1Y:F"
                   }
                 ]
               },
-              "measureScore": {
+              "measureScoreQuantity": {
                 "value": 0
               }
             },
             {
-              "value": {
+              "valueCodeableConcept": {
                 "coding": [
                   {
                     "code": "P0Y--P1Y:M"
                   }
                 ]
               },
-              "measureScore": {
+              "measureScoreQuantity": {
                 "value": 0
               }
             },
             {
-              "value": {
+              "valueCodeableConcept": {
                 "coding": [
                   {
                     "code": "P1Y--P5Y:F"
                   }
                 ]
               },
-              "measureScore": {
+              "measureScoreQuantity": {
                 "value": 0
               }
             },
             {
-              "value": {
+              "valueCodeableConcept": {
                 "coding": [
                   {
                     "code": "P1Y--P5Y:M"
                   }
                 ]
               },
-              "measureScore": {
+              "measureScoreQuantity": {
                 "value": 0
               }
             },
             {
-              "value": {
+              "valueCodeableConcept": {
                 "coding": [
                   {
                     "code": "P10Y--P15Y:F"
                   }
                 ]
               },
-              "measureScore": {
+              "measureScoreQuantity": {
                 "value": 0
               }
             },
             {
-              "value": {
+              "valueCodeableConcept": {
                 "coding": [
                   {
                     "code": "P10Y--P15Y:M"
                   }
                 ]
               },
-              "measureScore": {
+              "measureScoreQuantity": {
                 "value": 0
               }
             }
@@ -222,7 +222,7 @@
           }
         ]
       },
-      "measureScore": {
+      "measureScoreQuantity": {
         "value": 0
       },
       "stratifier": [
@@ -254,7 +254,7 @@
                       }
                     ]
                   },
-                  "value": {
+                  "valueCodeableConcept": {
                     "coding": [
                       {
                         "code": "P0Y--P1Y"
@@ -270,7 +270,7 @@
                       }
                     ]
                   },
-                  "value": {
+                  "valueCodeableConcept": {
                     "coding": [
                       {
                         "code": "F"
@@ -279,7 +279,7 @@
                   }
                 }
               ],
-              "measureScore": {
+              "measureScoreQuantity": {
                 "value": 0
               }
             },
@@ -293,7 +293,7 @@
                       }
                     ]
                   },
-                  "value": {
+                  "valueCodeableConcept": {
                     "coding": [
                       {
                         "code": "P0Y--P1Y"
@@ -309,7 +309,7 @@
                       }
                     ]
                   },
-                  "value": {
+                  "valueCodeableConcept": {
                     "coding": [
                       {
                         "code": "M"
@@ -318,7 +318,7 @@
                   }
                 }
               ],
-              "measureScore": {
+              "measureScoreQuantity": {
                 "value": 0
               }
             },
@@ -332,7 +332,7 @@
                       }
                     ]
                   },
-                  "value": {
+                  "valueCodeableConcept": {
                     "coding": [
                       {
                         "code": "P1Y--P5Y"
@@ -348,7 +348,7 @@
                       }
                     ]
                   },
-                  "value": {
+                  "valueCodeableConcept": {
                     "coding": [
                       {
                         "code": "F"
@@ -357,7 +357,7 @@
                   }
                 }
               ],
-              "measureScore": {
+              "measureScoreQuantity": {
                 "value": 0
               }
             },
@@ -371,7 +371,7 @@
                       }
                     ]
                   },
-                  "value": {
+                  "valueCodeableConcept": {
                     "coding": [
                       {
                         "code": "P1Y--P5Y"
@@ -387,7 +387,7 @@
                       }
                     ]
                   },
-                  "value": {
+                  "valueCodeableConcept": {
                     "coding": [
                       {
                         "code": "F"
@@ -396,7 +396,7 @@
                   }
                 }
               ],
-              "measureScore": {
+              "measureScoreQuantity": {
                 "value": 0
               }
             }

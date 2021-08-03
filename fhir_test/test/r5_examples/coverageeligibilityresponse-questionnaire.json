@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for CoverageEligibilityResponse.serviced[x]",
       "expansion": {
-        "identifier": "urn:uuid:b639328c-92d4-44b6-acef-4f33f305401b",
-        "timestamp": "2019-12-31T21:11:08+11:00",
+        "identifier": "urn:uuid:b33562b1-1a8f-44ff-80c9-bf32fef5debf",
+        "timestamp": "2021-04-15T12:28:29+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -32,8 +32,8 @@
       "status": "active",
       "description": "Type options for CoverageEligibilityResponse.insurance.item.benefit.allowed[x]",
       "expansion": {
-        "identifier": "urn:uuid:07c87dbf-205b-4f04-a335-28a4d9b39ef3",
-        "timestamp": "2019-12-31T21:11:08+11:00",
+        "identifier": "urn:uuid:86169a27-fd69-428d-82f9-156f15a7c7f7",
+        "timestamp": "2021-04-15T12:28:29+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -60,8 +60,8 @@
       "status": "active",
       "description": "Type options for CoverageEligibilityResponse.insurance.item.benefit.used[x]",
       "expansion": {
-        "identifier": "urn:uuid:043a0bed-b776-46bf-9bf0-ecd62ddb0e19",
-        "timestamp": "2019-12-31T21:11:08+11:00",
+        "identifier": "urn:uuid:16ad35a7-1073-45e9-b7e6-bafa0d044761",
+        "timestamp": "2021-04-15T12:28:29+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -87,9 +87,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Financial Management)",
   "item": [
     {
@@ -148,7 +148,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -307,7 +307,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -334,7 +334,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]

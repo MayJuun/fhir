@@ -1,62 +1,14 @@
 {
   "resourceType": "Questionnaire",
   "id": "qs1",
-  "contained": [
-    {
-      "resourceType": "ValueSet",
-      "id": "vs2",
-      "name": "Type options for ImmunizationEvaluation.doseNumber[x]",
-      "status": "active",
-      "description": "Type options for ImmunizationEvaluation.doseNumber[x]",
-      "expansion": {
-        "identifier": "urn:uuid:2afd0dc4-a1be-4b14-962d-1a6cf5a47587",
-        "timestamp": "2019-12-31T21:13:44+11:00",
-        "contains": [
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "positiveInt",
-            "display": "positiveInt"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "string",
-            "display": "string"
-          }
-        ]
-      }
-    },
-    {
-      "resourceType": "ValueSet",
-      "id": "vs3",
-      "name": "Type options for ImmunizationEvaluation.seriesDoses[x]",
-      "status": "active",
-      "description": "Type options for ImmunizationEvaluation.seriesDoses[x]",
-      "expansion": {
-        "identifier": "urn:uuid:b5497f5c-f202-46e1-9c33-3054f7aae19b",
-        "timestamp": "2019-12-31T21:13:44+11:00",
-        "contains": [
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "positiveInt",
-            "display": "positiveInt"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "string",
-            "display": "string"
-          }
-        ]
-      }
-    }
-  ],
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Public Health and Emergency Response)",
   "item": [
     {
@@ -115,7 +67,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -274,7 +226,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -301,7 +253,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -919,10 +871,13 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
               "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "string"
             }
           ],
-          "linkId": "ImmunizationEvaluation.doseNumber[x]",
-          "text": "Dose number within series",
+          "linkId": "ImmunizationEvaluation.doseNumber",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -942,54 +897,15 @@
                   }
                 }
               ],
-              "text": "Nominal position in a series. The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).",
+              "text": "Nominal position in a series as determined by the outcome of the evaluation process. The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).",
               "type": "display"
             },
             {
-              "linkId": "ImmunizationEvaluation.doseNumber[x]._type",
-              "text": "type",
-              "type": "choice",
+              "linkId": "ImmunizationEvaluation.doseNumber.value",
+              "text": "Dose number within series",
+              "type": "string",
               "required": false,
-              "repeats": false,
-              "answerValueSet": "#vs2",
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "integer"
-                    }
-                  ],
-                  "linkId": "ImmunizationEvaluation.doseNumber[x]._null",
-                  "type": "group",
-                  "item": [
-                    {
-                      "linkId": "ImmunizationEvaluation.doseNumber[x]._null.value",
-                      "type": "integer",
-                      "required": false,
-                      "repeats": false
-                    }
-                  ]
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "string"
-                    }
-                  ],
-                  "linkId": "ImmunizationEvaluation.doseNumber[x]._null",
-                  "type": "group",
-                  "item": [
-                    {
-                      "linkId": "ImmunizationEvaluation.doseNumber[x]._null.value",
-                      "type": "string",
-                      "required": false,
-                      "repeats": false
-                    }
-                  ]
-                }
-              ]
+              "repeats": false
             }
           ]
         },
@@ -998,10 +914,13 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
               "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "string"
             }
           ],
-          "linkId": "ImmunizationEvaluation.seriesDoses[x]",
-          "text": "Recommended number of doses for immunity",
+          "linkId": "ImmunizationEvaluation.seriesDoses",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -1021,54 +940,15 @@
                   }
                 }
               ],
-              "text": "The recommended number of doses to achieve immunity. The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).",
+              "text": "The recommended number of doses to achieve immunity as determined by the outcome of the evaluation process. The use of an integer is preferred if known.",
               "type": "display"
             },
             {
-              "linkId": "ImmunizationEvaluation.seriesDoses[x]._type",
-              "text": "type",
-              "type": "choice",
+              "linkId": "ImmunizationEvaluation.seriesDoses.value",
+              "text": "Recommended number of doses for immunity",
+              "type": "string",
               "required": false,
-              "repeats": false,
-              "answerValueSet": "#vs3",
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "integer"
-                    }
-                  ],
-                  "linkId": "ImmunizationEvaluation.seriesDoses[x]._null",
-                  "type": "group",
-                  "item": [
-                    {
-                      "linkId": "ImmunizationEvaluation.seriesDoses[x]._null.value",
-                      "type": "integer",
-                      "required": false,
-                      "repeats": false
-                    }
-                  ]
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "string"
-                    }
-                  ],
-                  "linkId": "ImmunizationEvaluation.seriesDoses[x]._null",
-                  "type": "group",
-                  "item": [
-                    {
-                      "linkId": "ImmunizationEvaluation.seriesDoses[x]._null.value",
-                      "type": "string",
-                      "required": false,
-                      "repeats": false
-                    }
-                  ]
-                }
-              ]
+              "repeats": false
             }
           ]
         }

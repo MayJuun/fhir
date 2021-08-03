@@ -3,7 +3,7 @@
   "id": "medrx0322",
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: medrx0322\u003c/p\u003e\u003cp\u003e\u003cb\u003econtained\u003c/b\u003e: \u003c/p\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: 12345689 (OFFICIAL)\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: completed\u003c/p\u003e\u003cp\u003e\u003cb\u003eintent\u003c/b\u003e: order\u003c/p\u003e\u003cp\u003e\u003cb\u003emedication\u003c/b\u003e: Potassium Chloride 20mEq in 1L Normal Saline. Generated Summary: id: med0317; Injection Solution (qualifier value) \u003cspan\u003e(Details : {SNOMED CT code \u0027385219001\u0027 \u003d \u0027Injection solution\u0027, given as \u0027Injection Solution (qualifier value)\u0027})\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca\u003eDonald Duck\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthoredOn\u003c/b\u003e: 2015-01-15\u003c/p\u003e\u003cp\u003e\u003cb\u003erequester\u003c/b\u003e: \u003ca\u003ePatrick Pump\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ereason\u003c/b\u003e: \u003c/p\u003e\u003cp\u003e\u003cb\u003edosageInstruction\u003c/b\u003e: \u003c/p\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: id: 12345689 (OFFICIAL)\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: completed\u003c/p\u003e\u003cp\u003e\u003cb\u003eintent\u003c/b\u003e: order\u003c/p\u003e\u003ch3\u003eMedications\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca\u003eDonald Duck. Generated Summary: Medical record number: 654321 (USUAL); active; Duck Donald (OFFICIAL); gender: male\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthoredOn\u003c/b\u003e: 2015-01-15\u003c/p\u003e\u003cp\u003e\u003cb\u003erequester\u003c/b\u003e: \u003ca\u003ePatrick Pump. Generated Summary: id: 874635264 (OFFICIAL), id: 567IUI51C154 (USUAL); Simone Heps (OFFICIAL); Phone: 020556936, S.M.Heps@bmc.nl, Fax: 0205669283; gender: female; birthDate: 1971-11-07\u003c/a\u003e\u003c/p\u003e\u003ch3\u003eReasons\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003ch3\u003eDosageInstructions\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
   },
   "contained": [
     {
@@ -21,20 +21,22 @@
       },
       "ingredient": [
         {
-          "itemCodeableConcept": {
-            "coding": [
-              {
-                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                "code": "204520",
-                "display": "Potassium Chloride"
-              }
-            ]
+          "item": {
+            "concept": {
+              "coding": [
+                {
+                  "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                  "code": "204520",
+                  "display": "Potassium Chloride"
+                }
+              ]
+            }
           },
           "strengthRatio": {
             "numerator": {
               "value": 2,
               "system": "http://unitsofmeasure.org",
-              "code": "mEq"
+              "code": "meq"
             },
             "denominator": {
               "value": 1,
@@ -44,14 +46,16 @@
           }
         },
         {
-          "itemCodeableConcept": {
-            "coding": [
-              {
-                "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-                "code": "313002",
-                "display": "Sodium Chloride 0.9% injectable solution"
-              }
-            ]
+          "item": {
+            "concept": {
+              "coding": [
+                {
+                  "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+                  "code": "313002",
+                  "display": "Sodium Chloride 0.9% injectable solution"
+                }
+              ]
+            }
           },
           "strengthRatio": {
             "numerator": {
@@ -78,9 +82,11 @@
   ],
   "status": "completed",
   "intent": "order",
-  "medicationReference": {
-    "reference": "#med0317",
-    "display": "Potassium Chloride 20mEq in 1L Normal Saline"
+  "medication": {
+    "reference": {
+      "reference": "#med0317",
+      "display": "Potassium Chloride 20mEq in 1L Normal Saline"
+    }
   },
   "subject": {
     "reference": "Patient/pat1",
@@ -137,9 +143,9 @@
           },
           "doseQuantity": {
             "value": 20,
-            "unit": "mEq",
+            "unit": "meq",
             "system": "http://unitsofmeasure.org",
-            "code": "mEq"
+            "code": "meq"
           },
           "rateRatio": {
             "numerator": {

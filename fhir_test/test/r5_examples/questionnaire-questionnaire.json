@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for Questionnaire.item.enableWhen.answer[x]",
       "expansion": {
-        "identifier": "urn:uuid:04e61afe-cf7a-4e0c-96f3-c04171ac7ef2",
-        "timestamp": "2019-12-31T21:16:36+11:00",
+        "identifier": "urn:uuid:8c8af3de-ad3f-4b06-a815-39d03c234805",
+        "timestamp": "2021-04-15T12:29:51+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -72,8 +72,8 @@
       "status": "active",
       "description": "Type options for Questionnaire.item.answerOption.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:8984e951-757f-40b7-a6ac-864e7f3f1baa",
-        "timestamp": "2019-12-31T21:16:36+11:00",
+        "identifier": "urn:uuid:de6796fe-4c1e-4a21-b67e-54d9a547a157",
+        "timestamp": "2021-04-15T12:29:51+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -115,8 +115,8 @@
       "status": "active",
       "description": "Type options for Questionnaire.item.initial.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:53909c79-a470-4eb7-952f-138862a2d210",
-        "timestamp": "2019-12-31T21:16:36+11:00",
+        "identifier": "urn:uuid:0e855f41-038b-4ee6-bf8e-850f745504b4",
+        "timestamp": "2021-04-15T12:29:51+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -187,9 +187,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (FHIR Infrastructure)",
   "item": [
     {
@@ -248,7 +248,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -407,7 +407,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -434,7 +434,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -524,7 +524,7 @@
                   }
                 }
               ],
-              "text": "An absolute URI that is used to identify this questionnaire when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this questionnaire is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the questionnaire is stored on different servers. The name of the referenced questionnaire can be conveyed using the http://hl7.org/fhir/StructureDefinition/display extension.",
+              "text": "An absolute URI that is used to identify this questionnaire when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this questionnaire is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the questionnaire is stored on different servers. The name of the referenced questionnaire can be conveyed using the http://hl7.org/fhir/StructureDefinition/display extension.",
               "type": "display"
             },
             {
@@ -923,7 +923,7 @@
             },
             {
               "linkId": "Questionnaire.date.value",
-              "text": "Date last changed",
+              "text": "Date last formally published",
               "type": "dateTime",
               "required": false,
               "repeats": false
@@ -1591,7 +1591,7 @@
                       }
                     }
                   ],
-                  "text": "This element is a URI that refers to an [ElementDefinition](elementdefinition.html) that provides information about this item, including information that might otherwise be included in the instance of the Questionnaire resource. A detailed description of the construction of the URI is shown in Comments, below. If this element is present then the following element values MAY be derived from the Element Definition if the corresponding elements of this Questionnaire resource instance have no value:\n\n* code (ElementDefinition.code) \n* type (ElementDefinition.type) \n* required (ElementDefinition.min) \n* repeats (ElementDefinition.max) \n* maxLength (ElementDefinition.maxLength) \n* answerValueSet (ElementDefinition.binding)\n* options (ElementDefinition.binding). The uri refers to an ElementDefinition in a [StructureDefinition](structuredefinition.html#) and always starts with the [canonical URL](references.html#canonical) for the target resource. When referring to a StructureDefinition, a fragment identifier is used to specify the element definition by its id [Element.id](types-definitions.html#Element.id). E.g. http://hl7.org/fhir/StructureDefinition/Observation#Observation.value[x]. In the absence of a fragment identifier, the first/root element definition in the target is the matching element definition.",
+                  "text": "This element is a URI that refers to an [ElementDefinition](elementdefinition.html) that provides information about this item, including information that might otherwise be included in the instance of the Questionnaire resource. A detailed description of the construction of the URI is shown in [Comments](questionnaire.html#definition), below. The uri refers to an ElementDefinition in a [StructureDefinition](structuredefinition.html#) and always starts with the [canonical URL](references.html#canonical) for the target resource. When referring to a StructureDefinition, a fragment identifier is used to specify the element definition by its id [Element.id](types-definitions.html#Element.id). E.g. http://hl7.org/fhir/StructureDefinition/Observation#Observation.value[x]. In the absence of a fragment identifier, the first/root element definition in the target is the matching element definition.",
                   "type": "display"
                 },
                 {
@@ -1763,7 +1763,7 @@
                       }
                     }
                   ],
-                  "text": "The type of questionnaire item this is - whether text for display, a grouping of other items or a particular type of data to be captured (string, integer, coded choice, etc.). Additional constraints on the type of answer can be conveyed by extensions. The value may come from the ElementDefinition referred to by .definition.",
+                  "text": "The type of questionnaire item this is - whether text for display, a grouping of other items or a particular type of data to be captured (string, integer, Coding, etc.). Additional constraints on the type of answer can be conveyed by extensions. The value may come from the ElementDefinition referred to by .definition.",
                   "type": "display"
                 },
                 {
@@ -1783,7 +1783,7 @@
               "repeats": true,
               "item": [
                 {
-                  "text": "If multiple repetitions of this extension are present, the item should be enabled when the condition for *any* of the repetitions is true.  I.e. treat \"enableWhen\"s as being joined by an \"or\" clause.  This element is a modifier because if enableWhen is present for an item, \"required\" is ignored unless one of the enableWhen conditions is met. When an item is disabled, all of its descendants are disabled, regardless of what their own enableWhen logic might evaluate to.",
+                  "text": "If multiple repetitions of this extension are present, the interpretation is driven by enableBehavior (either all repetitions must evaluate to true for this item to be enabled, or only one must evaluate to true for the item to be  enabled).  If the enableWhen.question has multiple answers, the condition evaluates to true if *any* of the answers for the referenced item match the enableWhen condition.  This element is a modifier because if enableWhen is present for an item, \"required\" is ignored unless one of the enableWhen conditions is met. When an item is disabled, all of its descendants are disabled, regardless of what their own enableWhen logic might evaluate to.  If enableWhen logic depends on an item that is disabled, the logic should proceed as though the item is not valued - even if a default value or other value might be retained in memory in the event of the item being re-enabled.",
                   "type": "display"
                 },
                 {
@@ -1936,7 +1936,7 @@
                           }
                         }
                       ],
-                      "text": "The linkId for the question whose answer (or lack of answer) governs whether this item is enabled. If multiple question occurrences are present for the same question (same linkId), then this refers to the nearest question occurrence reachable by tracing first the \"ancestor\" axis and then the \"preceding\" axis and then the \"following\" axis.",
+                      "text": "The linkId for the question whose answer (or lack of answer) governs whether this item is enabled. If multiple question occurrences are present for the same question (same linkId), then this refers to the nearest question occurrence reachable by tracing first the \"ancestor\" axis and then the \"preceding\" axis and then the \"following\" axis.  If there are multiple items with the same linkId and all are equadistant (e.g. a question references a question that appears in a separate repeating group), that is an error.  (Consider using the enableWhenExpression extension to define logic to handle such a situation.)",
                       "type": "display"
                     },
                     {
@@ -2027,7 +2027,7 @@
                           }
                         }
                       ],
-                      "text": "A value that the referenced question is tested using the specified operator in order for the item to be enabled.",
+                      "text": "A value that the referenced question is tested using the specified operator in order for the item to be enabled.  If there are multiple answers, a match on any of the answers suffices.  If different behavior is desired (all must match, at least 2 must match, etc.), consider using the enableWhenExpression extension.",
                       "type": "display"
                     },
                     {
@@ -2314,6 +2314,49 @@
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "code"
+                }
+              ],
+              "linkId": "Questionnaire.item.disabledDisplay",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "text": "Indicates if and how items that are disabled (because enableWhen evaluates to \u0027false\u0027) should be displayed. If not specified, rendering behavior is up to the client.  This element is only meaningful if enableWhen or an equivalent extension is present",
+                  "type": "display"
+                },
+                {
+                  "linkId": "Questionnaire.item.disabledDisplay.value",
+                  "text": "disabled display",
+                  "type": "choice",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
                   "valueString": "boolean"
                 }
               ],
@@ -2337,7 +2380,7 @@
                       }
                     }
                   ],
-                  "text": "An indication, if true, that the item must be present in a \"completed\" QuestionnaireResponse.  If false, the item may be skipped when answering the questionnaire. Questionnaire.item.required only has meaning for elements that are conditionally enabled with enableWhen if the condition evaluates to true.  If an item that contains other items is marked as required, that does not automatically make the contained elements required (though required groups must contain at least one child element). The value may come from the ElementDefinition referred to by .definition.",
+                  "text": "An indication, if true, that the item must be present in a \"completed\" QuestionnaireResponse.  If false, the item may be skipped when answering the questionnaire. Questionnaire.item.required only has meaning for elements that are conditionally enabled with enableWhen if the condition evaluates to true.  It also only has meaning if the parent element is present.  If a non-required \u0027group\u0027 item contains a \u0027required\u0027 question item, it\u0027s completely fine to omit the group (because it\u0027s not required) despite it having a required child.  Similarly, if an item that contains other items is marked as required, that does not automatically make the contained elements required (though required groups must contain at least one descendant item with a populated answer). The value for \u0027required\u0027 may come from the ElementDefinition referred to by .definition.",
                   "type": "display"
                 },
                 {
@@ -2423,7 +2466,7 @@
                       }
                     }
                   ],
-                  "text": "An indication, when true, that the value cannot be changed by a human respondent to the Questionnaire. The value of readOnly elements can be established by asserting  extensions for defaultValues, linkages that support pre-population and/or extensions that support calculation based on other answers.",
+                  "text": "An indication, when true, that the value cannot be changed by a human respondent to the Questionnaire. If specified on a \u0027group\u0027, then all items beneath the specified group are read only.  For questions, this only marks the answer associated with the specific item read only.  Descendant questions are not impacted.  The value of readOnly elements can be established by asserting extensions for defaultValues, linkages that support pre-population and/or extensions that support calculation based on other answers.",
                   "type": "display"
                 },
                 {
@@ -2486,6 +2529,49 @@
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "code"
+                }
+              ],
+              "linkId": "Questionnaire.item.answerConstraint",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "text": "For items that have a defined set of allowed answers (via answerOption or answerValueset), indicates whether values *other* than those specified can be selected.",
+                  "type": "display"
+                },
+                {
+                  "linkId": "Questionnaire.item.answerConstraint.value",
+                  "text": "answer constraint",
+                  "type": "choice",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
                   "valueString": "uri"
                 }
               ],
@@ -2509,7 +2595,7 @@
                       }
                     }
                   ],
-                  "text": "A reference to a value set containing a list of codes representing permitted answers for a \"choice\" or \"open-choice\" question. LOINC defines many useful value sets for questionnaire responses. See [LOINC Answer Lists](loinc.html#alist). The value may come from the ElementDefinition referred to by .definition.",
+                  "text": "A reference to a value set containing a list of values representing permitted answers for a question. LOINC defines many useful value sets for questionnaire responses. See [LOINC Answer Lists](loinc.html#alist). The value may come from the ElementDefinition referred to by .definition.",
                   "type": "display"
                 },
                 {
@@ -2547,7 +2633,7 @@
                       }
                     }
                   ],
-                  "text": "One of the permitted answers for a \"choice\" or \"open-choice\" question.",
+                  "text": "One of the permitted answers for the question.",
                   "type": "display"
                 },
                 {
@@ -2843,7 +2929,7 @@
                           }
                         }
                       ],
-                      "text": "Indicates whether the answer value is selected when the list of possible answers is initially shown. Use this instead of initial[v] if answerValueSet is present.",
+                      "text": "Indicates whether the answer value is selected when the list of possible answers is initially shown.",
                       "type": "display"
                     },
                     {
@@ -2865,7 +2951,7 @@
               "repeats": true,
               "item": [
                 {
-                  "text": "The user is allowed to change the value and override the default (unless marked as read-only). If the user doesn\u0027t change the value, then this initial value will be persisted when the QuestionnaireResponse is initially created.  Note that initial values can influence results.  The data type of initial[x] must agree with the item.type, and only repeating items can have more then one initial value.",
+                  "text": "The user is allowed to change the value and override the default (unless marked as read-only). If the user doesn\u0027t change the value, then this initial value will be persisted when the QuestionnaireResponse is initially created.  Note that initial values can influence results.  The data type of initial.answer[x] must agree with the item.type, and only repeating items can have more then one initial value.",
                   "type": "display"
                 },
                 {

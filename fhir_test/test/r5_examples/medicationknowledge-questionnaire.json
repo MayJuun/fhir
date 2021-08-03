@@ -5,35 +5,12 @@
     {
       "resourceType": "ValueSet",
       "id": "vs2",
-      "name": "Type options for MedicationKnowledge.ingredient.item[x]",
-      "status": "active",
-      "description": "Type options for MedicationKnowledge.ingredient.item[x]",
-      "expansion": {
-        "identifier": "urn:uuid:2be8c95b-814b-444b-bf81-4a0c6e5e183a",
-        "timestamp": "2019-12-31T21:14:43+11:00",
-        "contains": [
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "CodeableConcept",
-            "display": "CodeableConcept"
-          },
-          {
-            "system": "http://hl7.org/fhir/resource-types",
-            "code": "Ingredient",
-            "display": "Ingredient"
-          }
-        ]
-      }
-    },
-    {
-      "resourceType": "ValueSet",
-      "id": "vs3",
       "name": "Type options for MedicationKnowledge.ingredient.strength[x]",
       "status": "active",
       "description": "Type options for MedicationKnowledge.ingredient.strength[x]",
       "expansion": {
-        "identifier": "urn:uuid:1ed8fce6-1ef7-40a9-a0ce-933b993f41d5",
-        "timestamp": "2019-12-31T21:14:43+11:00",
+        "identifier": "urn:uuid:76f8ede3-3c81-4569-8c67-1e82d9149901",
+        "timestamp": "2021-04-15T12:29:12+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -55,13 +32,36 @@
     },
     {
       "resourceType": "ValueSet",
-      "id": "vs4",
-      "name": "Type options for MedicationKnowledge.administrationGuideline.indication[x]",
+      "id": "vs3",
+      "name": "Type options for MedicationKnowledge.cost.cost[x]",
       "status": "active",
-      "description": "Type options for MedicationKnowledge.administrationGuideline.indication[x]",
+      "description": "Type options for MedicationKnowledge.cost.cost[x]",
       "expansion": {
-        "identifier": "urn:uuid:d37e5d51-2392-4f9c-b97f-3d6cf45605af",
-        "timestamp": "2019-12-31T21:14:43+11:00",
+        "identifier": "urn:uuid:9cd2ac31-237f-447c-8aad-d702a6ece8ca",
+        "timestamp": "2021-04-15T12:29:12+10:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Money",
+            "display": "Money"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "CodeableConcept",
+            "display": "CodeableConcept"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs4",
+      "name": "Type options for MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.value[x]",
+      "status": "active",
+      "description": "Type options for MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.value[x]",
+      "expansion": {
+        "identifier": "urn:uuid:7c429380-59ee-489e-96c9-82064e1aee16",
+        "timestamp": "2021-04-15T12:29:12+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -69,9 +69,14 @@
             "display": "CodeableConcept"
           },
           {
-            "system": "http://hl7.org/fhir/resource-types",
-            "code": "ClinicalUseIssue",
-            "display": "ClinicalUseIssue"
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Quantity",
+            "display": "Quantity"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Range",
+            "display": "Range"
           }
         ]
       }
@@ -79,35 +84,12 @@
     {
       "resourceType": "ValueSet",
       "id": "vs5",
-      "name": "Type options for MedicationKnowledge.administrationGuideline.patientCharacteristic.characteristic[x]",
-      "status": "active",
-      "description": "Type options for MedicationKnowledge.administrationGuideline.patientCharacteristic.characteristic[x]",
-      "expansion": {
-        "identifier": "urn:uuid:1398b94c-22a0-4245-9361-467da5933c5e",
-        "timestamp": "2019-12-31T21:14:43+11:00",
-        "contains": [
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "CodeableConcept",
-            "display": "CodeableConcept"
-          },
-          {
-            "system": "http://hl7.org/fhir/resource-types",
-            "code": "http://hl7.org/fhir/StructureDefinition/SimpleQuantity",
-            "display": "Quantity"
-          }
-        ]
-      }
-    },
-    {
-      "resourceType": "ValueSet",
-      "id": "vs6",
       "name": "Type options for MedicationKnowledge.drugCharacteristic.value[x]",
       "status": "active",
       "description": "Type options for MedicationKnowledge.drugCharacteristic.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:ea0ef2b9-8c7b-4c61-b247-97feb76cb4e4",
-        "timestamp": "2019-12-31T21:14:43+11:00",
+        "identifier": "urn:uuid:e4dd273e-7458-442f-ae47-4162f67f7d2b",
+        "timestamp": "2021-04-15T12:29:12+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -139,13 +121,13 @@
     },
     {
       "resourceType": "ValueSet",
-      "id": "vs7",
+      "id": "vs6",
       "name": "Type options for MedicationKnowledge.kineticCharacteristic.value[x]",
       "status": "active",
       "description": "Type options for MedicationKnowledge.kineticCharacteristic.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:de6be1bf-9501-4d8b-96f1-40b64f8c2311",
-        "timestamp": "2019-12-31T21:14:43+11:00",
+        "identifier": "urn:uuid:8c6414ee-0a87-40b9-b0d9-ff573d96a00f",
+        "timestamp": "2021-04-15T12:29:12+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/resource-types",
@@ -166,9 +148,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Pharmacy)",
   "item": [
     {
@@ -227,7 +209,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -386,7 +368,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -413,7 +395,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -631,7 +613,7 @@
               "valueString": "Reference"
             }
           ],
-          "linkId": "MedicationKnowledge.manufacturer",
+          "linkId": "MedicationKnowledge.author",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -651,7 +633,7 @@
                   }
                 }
               ],
-              "text": "Describes the details of the manufacturer of the medication product.  This is not intended to represent the distributor of a medication product.",
+              "text": "The creator or owner of the knowledge or information about the medication.",
               "type": "display"
             },
             {
@@ -665,8 +647,61 @@
                   "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                 }
               ],
-              "linkId": "MedicationKnowledge.manufacturer.value",
-              "text": "Manufacturer of the item",
+              "linkId": "MedicationKnowledge.author.value",
+              "text": "Creator or owner of the knowledge or information about the medication",
+              "type": "reference",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Reference"
+            }
+          ],
+          "linkId": "MedicationKnowledge.sponsor",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "Describes the details of the manufacturer of the medication product. This is not intended to represent the distributor of a medication product.  Describes the organization that is responsible for the manufacturing of the item and holds the registration to market the product in a jurisdiction. This might not be the company that physically manufactures the product.  May be known as Market Authorization Holder.",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                  "valueCode": "Organization"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                }
+              ],
+              "linkId": "MedicationKnowledge.sponsor.value",
+              "text": "Organization responsible for manufacturing of the item",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -857,7 +892,7 @@
                   }
                 }
               ],
-              "text": "Associated or related knowledge about a medication.",
+              "text": "Associated or related medications. For example, if the medication is a branded product (e.g. Crestor), this is the Therapeutic Moeity (e.g. Rosuvastatin) or if this is a generic medication (e.g. Rosuvastatin), this would link to a branded product (e.g. Crestor.",
               "type": "display"
             },
             {
@@ -1094,7 +1129,7 @@
                   }
                 }
               ],
-              "text": "Associated or related medications.  For example, if the medication is a branded product (e.g. Crestor), this is the Therapeutic Moeity (e.g. Rosuvastatin) or if this is a generic medication (e.g. Rosuvastatin), this would link to a branded product (e.g. Crestor).",
+              "text": "Links to associated medications that could be prescribed, dispensed or administered.",
               "type": "display"
             },
             {
@@ -1110,6 +1145,59 @@
               ],
               "linkId": "MedicationKnowledge.associatedMedication.value",
               "text": "A medication resource that is associated with this medication",
+              "type": "reference",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Reference"
+            }
+          ],
+          "linkId": "MedicationKnowledge.associatedDefinition",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "Associated definitions for this medication.",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                  "valueCode": "MedicinalProductDefinition"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                }
+              ],
+              "linkId": "MedicationKnowledge.associatedDefinition.value",
+              "text": "A definition resource that is associated with this medication",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -1524,11 +1612,11 @@
                   "valueInteger": 1
                 }
               ],
-              "linkId": "MedicationKnowledge.ingredient.item[x]",
+              "linkId": "MedicationKnowledge.ingredient.item",
               "text": "Medication(s) or MedicinalProductIngredient(s) contained in the medication",
               "type": "group",
               "required": true,
-              "repeats": true,
+              "repeats": false,
               "item": [
                 {
                   "extension": [
@@ -1547,70 +1635,6 @@
                   ],
                   "text": "The actual ingredient - either a substance (simple ingredient) or another medication.",
                   "type": "display"
-                },
-                {
-                  "linkId": "MedicationKnowledge.ingredient.item[x]._type",
-                  "text": "type",
-                  "type": "choice",
-                  "required": false,
-                  "repeats": false,
-                  "answerValueSet": "#vs2",
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "CodeableConcept"
-                        }
-                      ],
-                      "linkId": "MedicationKnowledge.ingredient.item[x]._null",
-                      "type": "group",
-                      "item": [
-                        {
-                          "linkId": "MedicationKnowledge.ingredient.item[x]._null.coding",
-                          "text": "code:",
-                          "type": "open-choice",
-                          "required": false,
-                          "repeats": false
-                        },
-                        {
-                          "linkId": "MedicationKnowledge.ingredient.item[x]._null.text",
-                          "text": "text:",
-                          "type": "string",
-                          "required": false,
-                          "repeats": false
-                        }
-                      ]
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "Reference"
-                        }
-                      ],
-                      "linkId": "MedicationKnowledge.ingredient.item[x]._null",
-                      "type": "group",
-                      "item": [
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                              "valueCode": "Ingredient"
-                            },
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                              "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                            }
-                          ],
-                          "linkId": "MedicationKnowledge.ingredient.item[x]._null.value",
-                          "type": "reference",
-                          "required": false,
-                          "repeats": false
-                        }
-                      ]
-                    }
-                  ]
                 }
               ]
             },
@@ -1622,10 +1646,11 @@
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "boolean"
+                  "valueString": "CodeableConcept"
                 }
               ],
               "linkId": "MedicationKnowledge.ingredient.isActive",
+              "text": "Active ingredient indicator",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1649,9 +1674,16 @@
                   "type": "display"
                 },
                 {
-                  "linkId": "MedicationKnowledge.ingredient.isActive.value",
-                  "text": "Active ingredient indicator",
-                  "type": "boolean",
+                  "linkId": "MedicationKnowledge.ingredient.isActive.coding",
+                  "text": "code:",
+                  "type": "open-choice",
+                  "required": false,
+                  "repeats": false
+                },
+                {
+                  "linkId": "MedicationKnowledge.ingredient.isActive.text",
+                  "text": "text:",
+                  "type": "string",
                   "required": false,
                   "repeats": false
                 }
@@ -1694,7 +1726,7 @@
                   "type": "choice",
                   "required": false,
                   "repeats": false,
-                  "answerValueSet": "#vs3",
+                  "answerValueSet": "#vs2",
                   "item": [
                     {
                       "extension": [
@@ -2072,6 +2104,53 @@
             {
               "extension": [
                 {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "Period"
+                }
+              ],
+              "linkId": "MedicationKnowledge.cost.effectiveDate",
+              "text": "The date range for which the cost is effective",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "text": "The date range for which the cost information of the medication is effective.",
+                  "type": "display"
+                },
+                {
+                  "linkId": "MedicationKnowledge.cost.effectiveDate.low",
+                  "text": "start:",
+                  "type": "dateTime",
+                  "required": false,
+                  "repeats": false
+                },
+                {
+                  "linkId": "MedicationKnowledge.cost.effectiveDate.end",
+                  "text": "end:",
+                  "type": "dateTime",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
                   "valueInteger": 1
                 },
@@ -2176,14 +2255,10 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "Quantity"
                 }
               ],
-              "linkId": "MedicationKnowledge.cost.cost",
-              "text": "The price of the medication",
+              "linkId": "MedicationKnowledge.cost.cost[x]",
+              "text": "The price or category of the cost of the medication",
               "type": "group",
               "required": true,
               "repeats": true,
@@ -2203,43 +2278,91 @@
                       }
                     }
                   ],
-                  "text": "The price of the medication.",
+                  "text": "The price or representation of the cost (for example, Band A, Band B or $, $$) of the medication.",
                   "type": "display"
                 },
                 {
-                  "linkId": "MedicationKnowledge.cost.cost.comparator",
-                  "text": "comp:",
+                  "linkId": "MedicationKnowledge.cost.cost[x]._type",
+                  "text": "type",
                   "type": "choice",
                   "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "MedicationKnowledge.cost.cost.value",
-                  "text": "value:",
-                  "type": "decimal",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "MedicationKnowledge.cost.cost.units",
-                  "text": "units:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "MedicationKnowledge.cost.cost.code",
-                  "text": "coded units:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "MedicationKnowledge.cost.cost.system",
-                  "text": "units system:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
+                  "repeats": false,
+                  "answerValueSet": "#vs3",
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "Quantity"
+                        }
+                      ],
+                      "linkId": "MedicationKnowledge.cost.cost[x]._null",
+                      "type": "group",
+                      "item": [
+                        {
+                          "linkId": "MedicationKnowledge.cost.cost[x]._null.comparator",
+                          "text": "comp:",
+                          "type": "choice",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "MedicationKnowledge.cost.cost[x]._null.value",
+                          "text": "value:",
+                          "type": "decimal",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "MedicationKnowledge.cost.cost[x]._null.units",
+                          "text": "units:",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "MedicationKnowledge.cost.cost[x]._null.code",
+                          "text": "coded units:",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "MedicationKnowledge.cost.cost[x]._null.system",
+                          "text": "units system:",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "CodeableConcept"
+                        }
+                      ],
+                      "linkId": "MedicationKnowledge.cost.cost[x]._null",
+                      "type": "group",
+                      "item": [
+                        {
+                          "linkId": "MedicationKnowledge.cost.cost[x]._null.coding",
+                          "text": "code:",
+                          "type": "open-choice",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "MedicationKnowledge.cost.cost[x]._null.text",
+                          "text": "text:",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -2464,8 +2587,8 @@
           ]
         },
         {
-          "linkId": "MedicationKnowledge.administrationGuideline",
-          "text": "Guidelines or protocols for administration of the medication",
+          "linkId": "MedicationKnowledge.indicationGuideline",
+          "text": "Guidelines or protocols for administration of the medication for an indication",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -2485,7 +2608,7 @@
                   }
                 }
               ],
-              "text": "Guidelines or protocols that are applicable for the administration of the medication.",
+              "text": "Guidelines or protocols that are applicable for the administration of the medication based on indication.",
               "type": "display"
             },
             {
@@ -2499,7 +2622,7 @@
                   "valueString": "string"
                 }
               ],
-              "linkId": "MedicationKnowledge.administrationGuideline.id",
+              "linkId": "MedicationKnowledge.indicationGuideline.id",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2523,7 +2646,7 @@
                   "type": "display"
                 },
                 {
-                  "linkId": "MedicationKnowledge.administrationGuideline.id.value",
+                  "linkId": "MedicationKnowledge.indicationGuideline.id.value",
                   "text": "Unique id for inter-element referencing",
                   "type": "string",
                   "required": false,
@@ -2532,7 +2655,7 @@
               ]
             },
             {
-              "linkId": "MedicationKnowledge.administrationGuideline.extension",
+              "linkId": "MedicationKnowledge.indicationGuideline.extension",
               "text": "Additional content defined by implementations",
               "type": "group",
               "required": false,
@@ -2559,7 +2682,7 @@
               ]
             },
             {
-              "linkId": "MedicationKnowledge.administrationGuideline.modifierExtension",
+              "linkId": "MedicationKnowledge.indicationGuideline.modifierExtension",
               "text": "Extensions that cannot be ignored even if unrecognized",
               "type": "group",
               "required": false,
@@ -2586,8 +2709,8 @@
               ]
             },
             {
-              "linkId": "MedicationKnowledge.administrationGuideline.dosage",
-              "text": "Dosage for the medication for the specific guidelines",
+              "linkId": "MedicationKnowledge.indicationGuideline.indication",
+              "text": "Indication for use that applies to the specific administration guideline",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2607,7 +2730,34 @@
                       }
                     }
                   ],
-                  "text": "Dosage for the medication for the specific guidelines.",
+                  "text": "Indication or reason for use of the medication that applies to the specific administration guideline.",
+                  "type": "display"
+                }
+              ]
+            },
+            {
+              "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline",
+              "text": "Guidelines for dosage of the medication",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "text": "The guidelines for the dosage of the medication for the indication.",
                   "type": "display"
                 },
                 {
@@ -2621,7 +2771,7 @@
                       "valueString": "string"
                     }
                   ],
-                  "linkId": "MedicationKnowledge.administrationGuideline.dosage.id",
+                  "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.id",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -2645,7 +2795,7 @@
                       "type": "display"
                     },
                     {
-                      "linkId": "MedicationKnowledge.administrationGuideline.dosage.id.value",
+                      "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.id.value",
                       "text": "Unique id for inter-element referencing",
                       "type": "string",
                       "required": false,
@@ -2654,7 +2804,7 @@
                   ]
                 },
                 {
-                  "linkId": "MedicationKnowledge.administrationGuideline.dosage.extension",
+                  "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.extension",
                   "text": "Additional content defined by implementations",
                   "type": "group",
                   "required": false,
@@ -2681,7 +2831,7 @@
                   ]
                 },
                 {
-                  "linkId": "MedicationKnowledge.administrationGuideline.dosage.modifierExtension",
+                  "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.modifierExtension",
                   "text": "Extensions that cannot be ignored even if unrecognized",
                   "type": "group",
                   "required": false,
@@ -2710,10 +2860,6 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
-                      "valueInteger": 1
-                    },
-                    {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                       "valueInteger": 1
                     },
@@ -2722,10 +2868,10 @@
                       "valueString": "CodeableConcept"
                     }
                   ],
-                  "linkId": "MedicationKnowledge.administrationGuideline.dosage.type",
-                  "text": "Category of dosage for a medication",
+                  "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.treatmentIntent",
+                  "text": "Intention of the treatment",
                   "type": "group",
-                  "required": true,
+                  "required": false,
                   "repeats": true,
                   "item": [
                     {
@@ -2743,18 +2889,18 @@
                           }
                         }
                       ],
-                      "text": "The type or category of dosage for a given medication (for example, prophylaxis, maintenance, therapeutic, etc.).",
+                      "text": "The overall intention of the treatment, for example, prophylactic, supporative, curative, etc.",
                       "type": "display"
                     },
                     {
-                      "linkId": "MedicationKnowledge.administrationGuideline.dosage.type.coding",
+                      "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.treatmentIntent.coding",
                       "text": "code:",
                       "type": "open-choice",
                       "required": false,
                       "repeats": false
                     },
                     {
-                      "linkId": "MedicationKnowledge.administrationGuideline.dosage.type.text",
+                      "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.treatmentIntent.text",
                       "text": "text:",
                       "type": "string",
                       "required": false,
@@ -2763,16 +2909,10 @@
                   ]
                 },
                 {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
-                      "valueInteger": 1
-                    }
-                  ],
-                  "linkId": "MedicationKnowledge.administrationGuideline.dosage.dosage",
+                  "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.dosage",
                   "text": "Dosage for the medication for the specific guidelines",
                   "type": "group",
-                  "required": true,
+                  "required": false,
                   "repeats": true,
                   "item": [
                     {
@@ -2792,69 +2932,152 @@
                       ],
                       "text": "Dosage for the medication for the specific guidelines.",
                       "type": "display"
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                }
-              ],
-              "linkId": "MedicationKnowledge.administrationGuideline.indication[x]",
-              "text": "Indication for use that apply to the specific administration guidelines",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "Indication or reason for use of the medication that applies to the specific administration guidelines.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "MedicationKnowledge.administrationGuideline.indication[x]._type",
-                  "text": "type",
-                  "type": "choice",
-                  "required": false,
-                  "repeats": false,
-                  "answerValueSet": "#vs4",
-                  "item": [
+                    },
                     {
                       "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                          "valueInteger": 1
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "string"
+                        }
+                      ],
+                      "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.dosage.id",
+                      "type": "group",
+                      "required": false,
+                      "repeats": true,
+                      "item": [
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+                          "type": "display"
+                        },
+                        {
+                          "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.dosage.id.value",
+                          "text": "Unique id for inter-element referencing",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
+                    },
+                    {
+                      "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.dosage.extension",
+                      "text": "Additional content defined by implementations",
+                      "type": "group",
+                      "required": false,
+                      "repeats": true,
+                      "item": [
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+                          "type": "display"
+                        }
+                      ]
+                    },
+                    {
+                      "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.dosage.modifierExtension",
+                      "text": "Extensions that cannot be ignored even if unrecognized",
+                      "type": "group",
+                      "required": false,
+                      "repeats": true,
+                      "item": [
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+                          "type": "display"
+                        }
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
+                          "valueInteger": 1
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                          "valueInteger": 1
+                        },
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
                           "valueString": "CodeableConcept"
                         }
                       ],
-                      "linkId": "MedicationKnowledge.administrationGuideline.indication[x]._null",
+                      "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.dosage.type",
+                      "text": "Category of dosage for a medication",
                       "type": "group",
+                      "required": true,
+                      "repeats": true,
                       "item": [
                         {
-                          "linkId": "MedicationKnowledge.administrationGuideline.indication[x]._null.coding",
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "text": "The type or category of dosage for a given medication (for example, prophylaxis, maintenance, therapeutic, etc.).",
+                          "type": "display"
+                        },
+                        {
+                          "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.dosage.type.coding",
                           "text": "code:",
                           "type": "open-choice",
                           "required": false,
                           "repeats": false
                         },
                         {
-                          "linkId": "MedicationKnowledge.administrationGuideline.indication[x]._null.text",
+                          "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.dosage.type.text",
                           "text": "text:",
                           "type": "string",
                           "required": false,
@@ -2865,313 +3088,414 @@
                     {
                       "extension": [
                         {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "Reference"
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
+                          "valueInteger": 1
                         }
                       ],
-                      "linkId": "MedicationKnowledge.administrationGuideline.indication[x]._null",
+                      "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.dosage.dosage",
+                      "text": "Dosage for the medication for the specific guidelines",
                       "type": "group",
+                      "required": true,
+                      "repeats": true,
                       "item": [
                         {
                           "extension": [
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                              "valueCode": "ClinicalUseIssue"
-                            },
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                              "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
                             }
                           ],
-                          "linkId": "MedicationKnowledge.administrationGuideline.indication[x]._null.value",
-                          "type": "reference",
+                          "text": "Dosage for the medication for the specific guidelines.",
+                          "type": "display"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "CodeableConcept"
+                    }
+                  ],
+                  "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.administrationTreatment",
+                  "text": "Type of treatment the guideline applies to",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "text": "The type of the treatment that the guideline applies to, for example, long term therapy, first line treatment, etc.",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.administrationTreatment.coding",
+                      "text": "code:",
+                      "type": "open-choice",
+                      "required": false,
+                      "repeats": false
+                    },
+                    {
+                      "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.administrationTreatment.text",
+                      "text": "text:",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic",
+                  "text": "Characteristics of the patient that are relevant to the administration guidelines",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "text": "Characteristics of the patient that are relevant to the administration guidelines (for example, height, weight, gender, etc.).",
+                      "type": "display"
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                          "valueInteger": 1
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "string"
+                        }
+                      ],
+                      "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.id",
+                      "type": "group",
+                      "required": false,
+                      "repeats": true,
+                      "item": [
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+                          "type": "display"
+                        },
+                        {
+                          "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.id.value",
+                          "text": "Unique id for inter-element referencing",
+                          "type": "string",
                           "required": false,
                           "repeats": false
                         }
                       ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "linkId": "MedicationKnowledge.administrationGuideline.patientCharacteristic",
-              "text": "Characteristics of the patient that are relevant to the administration guidelines",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "Characteristics of the patient that are relevant to the administration guidelines (for example, height, weight, gender, etc.).",
-                  "type": "display"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                      "valueInteger": 1
                     },
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "string"
-                    }
-                  ],
-                  "linkId": "MedicationKnowledge.administrationGuideline.patientCharacteristic.id",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-                      "type": "display"
-                    },
-                    {
-                      "linkId": "MedicationKnowledge.administrationGuideline.patientCharacteristic.id.value",
-                      "text": "Unique id for inter-element referencing",
-                      "type": "string",
+                      "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.extension",
+                      "text": "Additional content defined by implementations",
+                      "type": "group",
                       "required": false,
-                      "repeats": false
-                    }
-                  ]
-                },
-                {
-                  "linkId": "MedicationKnowledge.administrationGuideline.patientCharacteristic.extension",
-                  "text": "Additional content defined by implementations",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-                      "type": "display"
-                    }
-                  ]
-                },
-                {
-                  "linkId": "MedicationKnowledge.administrationGuideline.patientCharacteristic.modifierExtension",
-                  "text": "Extensions that cannot be ignored even if unrecognized",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-                      "type": "display"
-                    }
-                  ]
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
-                      "valueInteger": 1
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                      "valueInteger": 1
-                    }
-                  ],
-                  "linkId": "MedicationKnowledge.administrationGuideline.patientCharacteristic.characteristic[x]",
-                  "text": "Specific characteristic that is relevant to the administration guideline",
-                  "type": "group",
-                  "required": true,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "text": "Specific characteristic that is relevant to the administration guideline (e.g. height, weight, gender).",
-                      "type": "display"
-                    },
-                    {
-                      "linkId": "MedicationKnowledge.administrationGuideline.patientCharacteristic.characteristic[x]._type",
-                      "text": "type",
-                      "type": "choice",
-                      "required": false,
-                      "repeats": false,
-                      "answerValueSet": "#vs5",
+                      "repeats": true,
                       "item": [
                         {
                           "extension": [
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                              "valueString": "CodeableConcept"
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
                             }
                           ],
-                          "linkId": "MedicationKnowledge.administrationGuideline.patientCharacteristic.characteristic[x]._null",
-                          "type": "group",
-                          "item": [
-                            {
-                              "linkId": "MedicationKnowledge.administrationGuideline.patientCharacteristic.characteristic[x]._null.coding",
-                              "text": "code:",
-                              "type": "open-choice",
-                              "required": false,
-                              "repeats": false
-                            },
-                            {
-                              "linkId": "MedicationKnowledge.administrationGuideline.patientCharacteristic.characteristic[x]._null.text",
-                              "text": "text:",
-                              "type": "string",
-                              "required": false,
-                              "repeats": false
-                            }
-                          ]
-                        },
+                          "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+                          "type": "display"
+                        }
+                      ]
+                    },
+                    {
+                      "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.modifierExtension",
+                      "text": "Extensions that cannot be ignored even if unrecognized",
+                      "type": "group",
+                      "required": false,
+                      "repeats": true,
+                      "item": [
                         {
                           "extension": [
                             {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                              "valueString": "Quantity"
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
                             }
                           ],
-                          "linkId": "MedicationKnowledge.administrationGuideline.patientCharacteristic.characteristic[x]._null",
-                          "type": "group",
+                          "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+                          "type": "display"
+                        }
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
+                          "valueInteger": 1
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                          "valueInteger": 1
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "CodeableConcept"
+                        }
+                      ],
+                      "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.type",
+                      "text": "Categorization of specific characteristic that is relevant to the administration guideline",
+                      "type": "group",
+                      "required": true,
+                      "repeats": true,
+                      "item": [
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "text": "The categorization of the specific characteristic that is relevant to the administration guideline (e.g. height, weight, gender).",
+                          "type": "display"
+                        },
+                        {
+                          "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.type.coding",
+                          "text": "code:",
+                          "type": "open-choice",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.type.text",
+                          "text": "text:",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                          "valueInteger": 1
+                        }
+                      ],
+                      "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.value[x]",
+                      "text": "The specific characteristic",
+                      "type": "group",
+                      "required": false,
+                      "repeats": true,
+                      "item": [
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "text": "The specific characteristic (e.g. height, weight, gender, etc.).",
+                          "type": "display"
+                        },
+                        {
+                          "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.value[x]._type",
+                          "text": "type",
+                          "type": "choice",
+                          "required": false,
+                          "repeats": false,
+                          "answerValueSet": "#vs4",
                           "item": [
                             {
-                              "linkId": "MedicationKnowledge.administrationGuideline.patientCharacteristic.characteristic[x]._null.comparator",
-                              "text": "comp:",
-                              "type": "choice",
-                              "required": false,
-                              "repeats": false
+                              "extension": [
+                                {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                                  "valueString": "CodeableConcept"
+                                }
+                              ],
+                              "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.value[x]._null",
+                              "type": "group",
+                              "item": [
+                                {
+                                  "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.value[x]._null.coding",
+                                  "text": "code:",
+                                  "type": "open-choice",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.value[x]._null.text",
+                                  "text": "text:",
+                                  "type": "string",
+                                  "required": false,
+                                  "repeats": false
+                                }
+                              ]
                             },
                             {
-                              "linkId": "MedicationKnowledge.administrationGuideline.patientCharacteristic.characteristic[x]._null.value",
-                              "text": "value:",
-                              "type": "decimal",
-                              "required": false,
-                              "repeats": false
+                              "extension": [
+                                {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                                  "valueString": "Quantity"
+                                }
+                              ],
+                              "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.value[x]._null",
+                              "type": "group",
+                              "item": [
+                                {
+                                  "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.value[x]._null.comparator",
+                                  "text": "comp:",
+                                  "type": "choice",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.value[x]._null.value",
+                                  "text": "value:",
+                                  "type": "decimal",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.value[x]._null.units",
+                                  "text": "units:",
+                                  "type": "string",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.value[x]._null.code",
+                                  "text": "coded units:",
+                                  "type": "string",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.value[x]._null.system",
+                                  "text": "units system:",
+                                  "type": "string",
+                                  "required": false,
+                                  "repeats": false
+                                }
+                              ]
                             },
                             {
-                              "linkId": "MedicationKnowledge.administrationGuideline.patientCharacteristic.characteristic[x]._null.units",
-                              "text": "units:",
-                              "type": "string",
-                              "required": false,
-                              "repeats": false
-                            },
-                            {
-                              "linkId": "MedicationKnowledge.administrationGuideline.patientCharacteristic.characteristic[x]._null.code",
-                              "text": "coded units:",
-                              "type": "string",
-                              "required": false,
-                              "repeats": false
-                            },
-                            {
-                              "linkId": "MedicationKnowledge.administrationGuideline.patientCharacteristic.characteristic[x]._null.system",
-                              "text": "units system:",
-                              "type": "string",
-                              "required": false,
-                              "repeats": false
+                              "extension": [
+                                {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                                  "valueString": "Range"
+                                }
+                              ],
+                              "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.value[x]._null",
+                              "type": "group",
+                              "item": [
+                                {
+                                  "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.value[x]._null.low",
+                                  "text": "low:",
+                                  "type": "decimal",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.value[x]._null.high",
+                                  "text": "high:",
+                                  "type": "decimal",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MedicationKnowledge.indicationGuideline.dosingGuideline.patientCharacteristic.value[x]._null.units",
+                                  "text": "units:",
+                                  "type": "string",
+                                  "required": false,
+                                  "repeats": false
+                                }
+                              ]
                             }
                           ]
                         }
                       ]
-                    }
-                  ]
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "string"
-                    }
-                  ],
-                  "linkId": "MedicationKnowledge.administrationGuideline.patientCharacteristic.value",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "text": "The specific characteristic (e.g. height, weight, gender, etc.).",
-                      "type": "display"
-                    },
-                    {
-                      "linkId": "MedicationKnowledge.administrationGuideline.patientCharacteristic.value.value",
-                      "text": "The specific characteristic",
-                      "type": "string",
-                      "required": false,
-                      "repeats": false
                     }
                   ]
                 }
@@ -3406,17 +3730,11 @@
           ]
         },
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            }
-          ],
           "linkId": "MedicationKnowledge.packaging",
           "text": "Details about packaged medications",
           "type": "group",
           "required": false,
-          "repeats": false,
+          "repeats": true,
           "item": [
             {
               "extension": [
@@ -3529,6 +3847,97 @@
                     }
                   ],
                   "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+                  "type": "display"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "Identifier"
+                }
+              ],
+              "linkId": "MedicationKnowledge.packaging.identifier",
+              "text": "Business identifier of the packaged medication",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "text": "The business identifier of the packaged medication.",
+                  "type": "display"
+                },
+                {
+                  "linkId": "MedicationKnowledge.packaging.identifier.label",
+                  "text": "label:",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false
+                },
+                {
+                  "linkId": "MedicationKnowledge.packaging.identifier.system",
+                  "text": "system:",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false
+                },
+                {
+                  "linkId": "MedicationKnowledge.packaging.identifier.value",
+                  "text": "value:",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                }
+              ],
+              "linkId": "MedicationKnowledge.packaging.cost",
+              "text": "Cost of the packaged medication",
+              "type": "group",
+              "required": false,
+              "repeats": false,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "text": "The cost of the packaged medication.",
                   "type": "display"
                 }
               ]
@@ -3999,7 +4408,7 @@
                   "type": "choice",
                   "required": false,
                   "repeats": false,
-                  "answerValueSet": "#vs6",
+                  "answerValueSet": "#vs5",
                   "item": [
                     {
                       "extension": [
@@ -5109,7 +5518,7 @@
                   "type": "choice",
                   "required": false,
                   "repeats": false,
-                  "answerValueSet": "#vs7",
+                  "answerValueSet": "#vs6",
                   "item": [
                     {
                       "extension": [

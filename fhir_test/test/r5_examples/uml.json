@@ -175,7 +175,7 @@
               "name": "author[x]",
               "min": "0",
               "max": "1",
-              "type": "Reference(Practitioner|Patient|RelatedPerson|Organization)|string"
+              "type": "Reference(Practitioner|PractitionerRole|Patient|RelatedPerson|Organization)|string"
             },
             {
               "name": "time",
@@ -195,7 +195,7 @@
               "name": "author[x]",
               "min": "0",
               "max": "1",
-              "type": "Reference(Practitioner|Patient|RelatedPerson|Organization)|string"
+              "type": "Reference(Practitioner|PractitionerRole|Patient|RelatedPerson|Organization)|string"
             },
             {
               "name": "time",
@@ -1822,7 +1822,7 @@
           "attributes": [
             {
               "name": "country",
-              "min": "1",
+              "min": "0",
               "max": "1",
               "type": "CodeableConcept"
             },
@@ -1840,7 +1840,7 @@
             },
             {
               "name": "dateRange",
-              "min": "1",
+              "min": "0",
               "max": "1",
               "type": "Period"
             },
@@ -1854,7 +1854,7 @@
           "associations": [
             {
               "name": "country",
-              "min": "1",
+              "min": "0",
               "max": "1",
               "type": "CodeableConcept"
             },
@@ -1872,7 +1872,7 @@
             },
             {
               "name": "dateRange",
-              "min": "1",
+              "min": "0",
               "max": "1",
               "type": "Period"
             },
@@ -1890,7 +1890,7 @@
           "class": "Class",
           "type": "Class",
           "abstract": false,
-          "specializes": "Element",
+          "specializes": "DataType",
           "attributes": [
             {
               "name": "versionId",
@@ -2479,22 +2479,16 @@
           "specializes": "BackboneType",
           "attributes": [
             {
-              "name": "identifier",
-              "min": "0",
-              "max": "1",
-              "type": "Identifier"
-            },
-            {
               "name": "type",
-              "min": "1",
+              "min": "0",
               "max": "1",
               "type": "CodeableConcept"
             },
             {
-              "name": "period",
-              "min": "1",
+              "name": "period[x]",
+              "min": "0",
               "max": "1",
-              "type": "Quantity"
+              "type": "Quantity|string"
             },
             {
               "name": "specialPrecautionsForStorage",
@@ -2505,22 +2499,16 @@
           ],
           "associations": [
             {
-              "name": "identifier",
-              "min": "0",
-              "max": "1",
-              "type": "Identifier"
-            },
-            {
               "name": "type",
-              "min": "1",
+              "min": "0",
               "max": "1",
               "type": "CodeableConcept"
             },
             {
-              "name": "period",
-              "min": "1",
+              "name": "period[x]",
+              "min": "0",
               "max": "1",
-              "type": "Quantity"
+              "type": "Quantity|string"
             },
             {
               "name": "specialPrecautionsForStorage",
@@ -2603,7 +2591,7 @@
           ]
         },
         {
-          "name": "Quantity|Range|string",
+          "name": "Quantity|string",
           "class": "Class",
           "type": "Class",
           "abstract": false,
@@ -2672,7 +2660,7 @@
               "name": "denominator",
               "min": "0",
               "max": "1",
-              "type": "Quantity"
+              "type": "SimpleQuantity"
             }
           ],
           "associations": [
@@ -2686,7 +2674,55 @@
               "name": "denominator",
               "min": "0",
               "max": "1",
-              "type": "Quantity"
+              "type": "SimpleQuantity"
+            }
+          ]
+        },
+        {
+          "name": "RatioRange",
+          "documentation": "A range of ratios expressed as a low and high numerator and a denominator.",
+          "class": "Class",
+          "type": "Class",
+          "abstract": false,
+          "specializes": "DataType",
+          "attributes": [
+            {
+              "name": "lowNumerator",
+              "min": "0",
+              "max": "1",
+              "type": "SimpleQuantity"
+            },
+            {
+              "name": "highNumerator",
+              "min": "0",
+              "max": "1",
+              "type": "SimpleQuantity"
+            },
+            {
+              "name": "denominator",
+              "min": "0",
+              "max": "1",
+              "type": "SimpleQuantity"
+            }
+          ],
+          "associations": [
+            {
+              "name": "lowNumerator",
+              "min": "0",
+              "max": "1",
+              "type": "SimpleQuantity"
+            },
+            {
+              "name": "highNumerator",
+              "min": "0",
+              "max": "1",
+              "type": "SimpleQuantity"
+            },
+            {
+              "name": "denominator",
+              "min": "0",
+              "max": "1",
+              "type": "SimpleQuantity"
             }
           ]
         },
@@ -2759,7 +2795,7 @@
           "associations": []
         },
         {
-          "name": "Reference(Practitioner|Patient|RelatedPerson|Organization)|string",
+          "name": "Reference(Practitioner|PractitionerRole|Patient|RelatedPerson|Organization)|string",
           "class": "Class",
           "type": "Class",
           "abstract": false,
@@ -3097,10 +3133,28 @@
               "type": "CodeableConcept"
             },
             {
+              "name": "category",
+              "min": "0",
+              "max": "1",
+              "type": "CodeableConcept"
+            },
+            {
               "name": "quantity",
               "min": "0",
               "max": "1",
               "type": "Quantity"
+            },
+            {
+              "name": "numberOfEvents",
+              "min": "0",
+              "max": "1",
+              "type": "unsignedInt"
+            },
+            {
+              "name": "numberAffected",
+              "min": "0",
+              "max": "1",
+              "type": "unsignedInt"
             },
             {
               "name": "sampleSize",
@@ -3110,6 +3164,12 @@
             },
             {
               "name": "attributeEstimate",
+              "min": "0",
+              "max": "2147483647",
+              "type": ""
+            },
+            {
+              "name": "modelCharacteristic",
               "min": "0",
               "max": "2147483647",
               "type": ""
@@ -3135,10 +3195,28 @@
               "type": "CodeableConcept"
             },
             {
+              "name": "category",
+              "min": "0",
+              "max": "1",
+              "type": "CodeableConcept"
+            },
+            {
               "name": "quantity",
               "min": "0",
               "max": "1",
               "type": "Quantity"
+            },
+            {
+              "name": "numberOfEvents",
+              "min": "0",
+              "max": "1",
+              "type": "unsignedInt"
+            },
+            {
+              "name": "numberAffected",
+              "min": "0",
+              "max": "1",
+              "type": "unsignedInt"
             },
             {
               "name": "sampleSize",
@@ -3151,65 +3229,11 @@
               "min": "0",
               "max": "2147483647",
               "type": ""
-            }
-          ]
-        },
-        {
-          "name": "SubstanceAmount",
-          "documentation": "Chemical substances are a single substance type whose primary defining element is the molecular structure. Chemical substances shall be defined on the basis of their complete covalent molecular structure; the presence of a salt (counter-ion) and/or solvates (water, alcohols) is also captured. Purity, grade, physical form or particle size are not taken into account in the definition of a chemical substance or in the assignment of a Substance ID.",
-          "class": "Class",
-          "type": "Class",
-          "abstract": false,
-          "specializes": "BackboneType",
-          "attributes": [
-            {
-              "name": "amount[x]",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity|Range|string"
             },
             {
-              "name": "amountType",
+              "name": "modelCharacteristic",
               "min": "0",
-              "max": "1",
-              "type": "CodeableConcept"
-            },
-            {
-              "name": "amountText",
-              "min": "0",
-              "max": "1",
-              "type": "string"
-            },
-            {
-              "name": "referenceRange",
-              "min": "0",
-              "max": "1",
-              "type": ""
-            }
-          ],
-          "associations": [
-            {
-              "name": "amount[x]",
-              "min": "0",
-              "max": "1",
-              "type": "Quantity|Range|string"
-            },
-            {
-              "name": "amountType",
-              "min": "0",
-              "max": "1",
-              "type": "CodeableConcept"
-            },
-            {
-              "name": "amountText",
-              "min": "0",
-              "max": "1",
-              "type": "string"
-            },
-            {
-              "name": "referenceRange",
-              "min": "0",
-              "max": "1",
+              "max": "2147483647",
               "type": ""
             }
           ]
@@ -3472,7 +3496,7 @@
         },
         {
           "name": "date",
-          "documentation": "A date or partial date (e.g. just year or year + month). There is no time zone. The format is a union of the schema types gYear, gYearMonth and date.  Dates SHALL be valid dates.",
+          "documentation": "A date or partial date (e.g. just year or year + month). There is no UTC offset. The format is a union of the schema types gYear, gYearMonth and date.  Dates SHALL be valid dates.",
           "class": "Class",
           "type": "Class",
           "abstract": false,
@@ -3496,7 +3520,7 @@
         },
         {
           "name": "dateTime",
-          "documentation": "A date, date-time or partial date (e.g. just year or year + month).  If hours and minutes are specified, a time zone SHALL be populated. The format is a union of the schema types gYear, gYearMonth, date and dateTime. Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored.                 Dates SHALL be valid dates.",
+          "documentation": "A date, date-time or partial date (e.g. just year or year + month).  If hours and minutes are specified, a UTC offset SHALL be populated. The format is a union of the schema types gYear, gYearMonth, date and dateTime. Seconds must be provided due to schema type constraints but may be zero-filled and may be ignored.                 Dates SHALL be valid dates.",
           "class": "Class",
           "type": "Class",
           "abstract": false,

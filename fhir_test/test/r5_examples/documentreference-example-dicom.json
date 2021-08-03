@@ -13,14 +13,6 @@
   ],
   "identifier": [
     {
-      "use": "official",
-      "type": {
-        "text": "InstanceUID"
-      },
-      "system": "urn:dicom:uid",
-      "value": "urn:oid:1.2.840.11361907579238403408700.3.1.04.19970327150033"
-    },
-    {
       "type": {
         "text": "accessionNo"
       },
@@ -46,6 +38,25 @@
   "subject": {
     "reference": "Patient/example"
   },
+  "event": [
+    {
+      "coding": [
+        {
+          "system": "http://dicom.nema.org/resources/ontology/DCM",
+          "code": "US"
+        }
+      ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "399067008",
+          "display": "Lateral projection"
+        }
+      ]
+    }
+  ],
   "author": [
     {
       "display": "G.E. Medical Systems"
@@ -58,30 +69,17 @@
         "url": "http://imaging.acme.com/wado/server?requestType\u003dWADO\u0026contentType\u003dapplication%2Fdicom\u0026studyUid\u003d1.2.840.113619.2.21.848.34082.0.538976288.3\u0026seriesUid\u003d1.2.840.113619.2.21.3408.700.0.757923840.3.0\u0026objectUid\u003d1.2.840.11361907579238403408700.3.1.04.19970327150033",
         "height": 480,
         "width": 640
+      },
+      "identifier": {
+        "use": "official",
+        "type": {
+          "text": "InstanceUID"
+        },
+        "system": "urn:dicom:uid",
+        "value": "urn:oid:1.2.840.11361907579238403408700.3.1.04.19970327150033"
       }
     }
   ],
-  "context": {
-    "event": [
-      {
-        "coding": [
-          {
-            "system": "http://dicom.nema.org/resources/ontology/DCM",
-            "code": "US"
-          }
-        ]
-      },
-      {
-        "coding": [
-          {
-            "system": "http://snomed.info/sct",
-            "code": "399067008",
-            "display": "Lateral projection"
-          }
-        ]
-      }
-    ]
-  },
   "meta": {
     "tag": [
       {

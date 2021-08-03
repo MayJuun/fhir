@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-unit",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "unit",
   "status": "draft",
   "date": "2013-07-04",
@@ -27,8 +27,8 @@
       ]
     }
   ],
-  "description": "Provides a computable unit of measure associated with numeric questions to support subsequent computation on responses. This is for use on items of type integer and decimal, and it\u0027s purpose is to support converting the integer or decimal answer into a Quantity when extracting the data into a resource.",
-  "fhirVersion": "4.2.0",
+  "description": "Provides a computable unit of measure associated with numeric questions to support subsequent computation on responses. This is for use on items of type integer and decimal, and its purpose is to support converting the integer or decimal answer into a Quantity when extracting the data into a resource.      If a \u0027display\u0027 value is provided for valueCoding of this extension and the associated question item does not have a child \u0027display\u0027 item with an itemControl extension of \u0027unit\u0027, then form fillers SHOULD take the display value of this extension and use it as as the unit display.",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "rim",
@@ -42,10 +42,6 @@
     {
       "type": "element",
       "expression": "Questionnaire.item"
-    },
-    {
-      "type": "element",
-      "expression": "Questionnaire.item.item"
     }
   ],
   "contextInvariant": [
@@ -76,7 +72,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -164,7 +160,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -172,7 +168,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -239,7 +235,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,

@@ -5,12 +5,12 @@
     {
       "resourceType": "ValueSet",
       "id": "vs2",
-      "name": "Type options for NutritionIntake.effective[x]",
+      "name": "Type options for NutritionIntake.occurrence[x]",
       "status": "active",
-      "description": "Type options for NutritionIntake.effective[x]",
+      "description": "Type options for NutritionIntake.occurrence[x]",
       "expansion": {
-        "identifier": "urn:uuid:9d0359cb-c73f-4cdd-b2cc-2290c4f75a22",
-        "timestamp": "2019-12-31T21:15:21+11:00",
+        "identifier": "urn:uuid:e43c092a-0271-45c9-93a2-eb4f1fcdcd8f",
+        "timestamp": "2021-04-15T12:29:23+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -24,6 +24,49 @@
           }
         ]
       }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs3",
+      "name": "Type options for NutritionIntake.reported[x]",
+      "status": "active",
+      "description": "Type options for NutritionIntake.reported[x]",
+      "expansion": {
+        "identifier": "urn:uuid:1343cc2c-b962-4a96-bc0f-0803d46482ad",
+        "timestamp": "2021-04-15T12:29:23+10:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "boolean",
+            "display": "boolean"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Patient",
+            "display": "Patient"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "RelatedPerson",
+            "display": "RelatedPerson"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Practitioner",
+            "display": "Practitioner"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "PractitionerRole",
+            "display": "PractitionerRole"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Organization",
+            "display": "Organization"
+          }
+        ]
+      }
     }
   ],
   "identifier": [
@@ -31,9 +74,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Orders and Observations)",
   "item": [
     {
@@ -92,7 +135,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -251,7 +294,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -278,7 +321,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -385,6 +428,84 @@
             {
               "linkId": "NutritionIntake.identifier.value",
               "text": "value:",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "uri"
+            }
+          ],
+          "linkId": "NutritionIntake.instantiatesCanonical",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "Instantiates FHIR protocol or definition.",
+              "type": "display"
+            },
+            {
+              "linkId": "NutritionIntake.instantiatesCanonical.value",
+              "text": "Instantiates FHIR protocol or definition",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "uri"
+            }
+          ],
+          "linkId": "NutritionIntake.instantiatesUri",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "Instantiates external protocol or definition.",
+              "type": "display"
+            },
+            {
+              "linkId": "NutritionIntake.instantiatesUri.value",
+              "text": "Instantiates external protocol or definition",
               "type": "string",
               "required": false,
               "repeats": false
@@ -586,11 +707,15 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
               "valueString": "CodeableConcept"
             }
           ],
-          "linkId": "NutritionIntake.category",
+          "linkId": "NutritionIntake.code",
           "text": "Type of nutrition intake setting/reporting",
           "type": "group",
           "required": false,
@@ -611,22 +736,351 @@
                   }
                 }
               ],
-              "text": "Indicates where the food or fluid was  consumed or prescribed.",
+              "text": "Type of nutrition intake setting/reporting.",
               "type": "display"
             },
             {
-              "linkId": "NutritionIntake.category.coding",
+              "linkId": "NutritionIntake.code.coding",
               "text": "code:",
               "type": "open-choice",
               "required": false,
               "repeats": false
             },
             {
-              "linkId": "NutritionIntake.category.text",
+              "linkId": "NutritionIntake.code.text",
               "text": "text:",
               "type": "string",
               "required": false,
               "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Reference"
+            }
+          ],
+          "linkId": "NutritionIntake.subject",
+          "type": "group",
+          "required": true,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "The person, animal or group who is/was consuming the food or fluid.",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                  "valueCode": "Patient, Group"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                }
+              ],
+              "linkId": "NutritionIntake.subject.value",
+              "text": "Who is/was consuming the food or fluid",
+              "type": "reference",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Reference"
+            }
+          ],
+          "linkId": "NutritionIntake.encounter",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "The encounter that establishes the context for this NutritionIntake.",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                  "valueCode": "Encounter"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                }
+              ],
+              "linkId": "NutritionIntake.encounter.value",
+              "text": "Encounter associated with NutritionIntake",
+              "type": "reference",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            }
+          ],
+          "linkId": "NutritionIntake.occurrence[x]",
+          "text": "The date/time or interval when the food or fluid is/was consumed",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "The interval of time during which it is being asserted that the patient is/was consuming the food or fluid. This attribute reflects the period over which the patient consumed the food fluid and is expected to be populated on the majority of NutritionIntake. If the food or fluid is still being taken and is expected to continue indefinitely at the time the usage is recorded, the \"end\" date will be omitted.  If the end date is known, then it is included as the \"end date\".  The date/time attribute supports a variety of dates - year, year/month and exact date.  If something more than this is required, this should be conveyed as text.",
+              "type": "display"
+            },
+            {
+              "linkId": "NutritionIntake.occurrence[x]._type",
+              "text": "type",
+              "type": "choice",
+              "required": false,
+              "repeats": false,
+              "answerValueSet": "#vs2",
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "datetime"
+                    }
+                  ],
+                  "linkId": "NutritionIntake.occurrence[x]._null",
+                  "type": "group",
+                  "item": [
+                    {
+                      "linkId": "NutritionIntake.occurrence[x]._null.value",
+                      "type": "dateTime",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "Period"
+                    }
+                  ],
+                  "linkId": "NutritionIntake.occurrence[x]._null",
+                  "type": "group",
+                  "item": [
+                    {
+                      "linkId": "NutritionIntake.occurrence[x]._null.low",
+                      "text": "start:",
+                      "type": "dateTime",
+                      "required": false,
+                      "repeats": false
+                    },
+                    {
+                      "linkId": "NutritionIntake.occurrence[x]._null.end",
+                      "text": "end:",
+                      "type": "dateTime",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "datetime"
+            }
+          ],
+          "linkId": "NutritionIntake.recorded",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "The date when the Nutrition Intake was asserted by the information source.",
+              "type": "display"
+            },
+            {
+              "linkId": "NutritionIntake.recorded.value",
+              "text": "When the intake was recorded",
+              "type": "dateTime",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            }
+          ],
+          "linkId": "NutritionIntake.reported[x]",
+          "text": "Person or organization that provided the information about the consumption of this food or fluid",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "The person or organization that provided the information about the consumption of this food or fluid. Note: Use derivedFrom when a NutritionIntake is derived from other resources.",
+              "type": "display"
+            },
+            {
+              "linkId": "NutritionIntake.reported[x]._type",
+              "text": "type",
+              "type": "choice",
+              "required": false,
+              "repeats": false,
+              "answerValueSet": "#vs3",
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "boolean"
+                    }
+                  ],
+                  "linkId": "NutritionIntake.reported[x]._null",
+                  "type": "group",
+                  "item": [
+                    {
+                      "linkId": "NutritionIntake.reported[x]._null.value",
+                      "type": "boolean",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "Reference"
+                    }
+                  ],
+                  "linkId": "NutritionIntake.reported[x]._null",
+                  "type": "group",
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                          "valueCode": "Patient, RelatedPerson, Practitioner, PractitionerRole, Organization"
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                          "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                        }
+                      ],
+                      "linkId": "NutritionIntake.reported[x]._null.value",
+                      "type": "reference",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -822,18 +1276,18 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "CodeableConcept"
                 }
               ],
               "linkId": "NutritionIntake.consumedItem.nutritionProduct",
               "text": "Code that identifies the food or fluid product that was consumed",
               "type": "group",
               "required": true,
-              "repeats": true,
+              "repeats": false,
               "item": [
+                {
+                  "text": "If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of a new nutritionProduct resource is recommended.",
+                  "type": "display"
+                },
                 {
                   "extension": [
                     {
@@ -849,22 +1303,8 @@
                       }
                     }
                   ],
-                  "text": "Identifies the food or fluid product that was consumed. This is potentially a link to a resource representing the details of the food product (TBD) or a simple attribute carrying a code that identifies the food from a known list of foods. If only a code is specified, then it needs to be a code for a specific product. If more information is required, then the use of a new nutritionProduct resource is recommended.",
+                  "text": "Identifies the food or fluid product that was consumed. This is potentially a link to a resource representing the details of the food product (TBD) or a simple attribute carrying a code that identifies the food from a known list of foods.",
                   "type": "display"
-                },
-                {
-                  "linkId": "NutritionIntake.consumedItem.nutritionProduct.coding",
-                  "text": "code:",
-                  "type": "open-choice",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "NutritionIntake.consumedItem.nutritionProduct.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
                 }
               ]
             },
@@ -1315,17 +1755,13 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "CodeableConcept"
                 }
               ],
               "linkId": "NutritionIntake.ingredientLabel.nutrient",
               "text": "Total nutrient consumed",
               "type": "group",
               "required": true,
-              "repeats": true,
+              "repeats": false,
               "item": [
                 {
                   "extension": [
@@ -1344,20 +1780,6 @@
                   ],
                   "text": "Total nutrient consumed. This could be a macronutrient (protein, fat, carbohydrate), or a vitamin and mineral.",
                   "type": "display"
-                },
-                {
-                  "linkId": "NutritionIntake.ingredientLabel.nutrient.coding",
-                  "text": "code:",
-                  "type": "open-choice",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "NutritionIntake.ingredientLabel.nutrient.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
                 }
               ]
             },
@@ -1440,74 +1862,8 @@
           ]
         },
         {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
-              "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "Reference"
-            }
-          ],
-          "linkId": "NutritionIntake.subject",
-          "type": "group",
-          "required": true,
-          "repeats": true,
-          "item": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "text": "The person, animal or group who is/was consuming the food or fluid.",
-              "type": "display"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient, Group"
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                }
-              ],
-              "linkId": "NutritionIntake.subject.value",
-              "text": "Who is/was consuming the food or fluid",
-              "type": "reference",
-              "required": false,
-              "repeats": false
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "Reference"
-            }
-          ],
-          "linkId": "NutritionIntake.encounter",
+          "linkId": "NutritionIntake.performer",
+          "text": "Who was performed in the intake",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -1527,110 +1883,211 @@
                   }
                 }
               ],
-              "text": "The encounter that establishes the context for this NutritionIntake.",
+              "text": "Who performed the intake and how they were involved.",
               "type": "display"
             },
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Encounter"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
                 },
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "string"
                 }
               ],
-              "linkId": "NutritionIntake.encounter.value",
-              "text": "Encounter associated with NutritionIntake",
-              "type": "reference",
+              "linkId": "NutritionIntake.performer.id",
+              "type": "group",
               "required": false,
-              "repeats": false
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            }
-          ],
-          "linkId": "NutritionIntake.effective[x]",
-          "text": "The date/time or interval when the food or fluid is/was consumed",
-          "type": "group",
-          "required": false,
-          "repeats": true,
-          "item": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "text": "The interval of time during which it is being asserted that the patient is/was consuming the food or fluid. This attribute reflects the period over which the patient consumed the food fluid and is expected to be populated on the majority of NutritionIntake. If the food or fluid is still being taken and is expected to continue indefinitely at the time the usage is recorded, the \"end\" date will be omitted.  If the end date is known, then it is included as the \"end date\".  The date/time attribute supports a variety of dates - year, year/month and exact date.  If something more than this is required, this should be conveyed as text.",
-              "type": "display"
-            },
-            {
-              "linkId": "NutritionIntake.effective[x]._type",
-              "text": "type",
-              "type": "choice",
-              "required": false,
-              "repeats": false,
-              "answerValueSet": "#vs2",
+              "repeats": true,
               "item": [
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "datetime"
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
                     }
                   ],
-                  "linkId": "NutritionIntake.effective[x]._null",
-                  "type": "group",
-                  "item": [
+                  "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+                  "type": "display"
+                },
+                {
+                  "linkId": "NutritionIntake.performer.id.value",
+                  "text": "Unique id for inter-element referencing",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "linkId": "NutritionIntake.performer.extension",
+              "text": "Additional content defined by implementations",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
                     {
-                      "linkId": "NutritionIntake.effective[x]._null.value",
-                      "type": "dateTime",
-                      "required": false,
-                      "repeats": false
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
                     }
-                  ]
+                  ],
+                  "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+                  "type": "display"
+                }
+              ]
+            },
+            {
+              "linkId": "NutritionIntake.performer.modifierExtension",
+              "text": "Extensions that cannot be ignored even if unrecognized",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+                  "type": "display"
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "CodeableConcept"
+                }
+              ],
+              "linkId": "NutritionIntake.performer.function",
+              "text": "Type of performer",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "text": "Type of performer.",
+                  "type": "display"
+                },
+                {
+                  "linkId": "NutritionIntake.performer.function.coding",
+                  "text": "code:",
+                  "type": "open-choice",
+                  "required": false,
+                  "repeats": false
+                },
+                {
+                  "linkId": "NutritionIntake.performer.function.text",
+                  "text": "text:",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "Reference"
+                }
+              ],
+              "linkId": "NutritionIntake.performer.actor",
+              "type": "group",
+              "required": true,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "text": "Who performed the intake.",
+                  "type": "display"
                 },
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "Period"
-                    }
-                  ],
-                  "linkId": "NutritionIntake.effective[x]._null",
-                  "type": "group",
-                  "item": [
-                    {
-                      "linkId": "NutritionIntake.effective[x]._null.low",
-                      "text": "start:",
-                      "type": "dateTime",
-                      "required": false,
-                      "repeats": false
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                      "valueCode": "Practitioner, PractitionerRole, Organization, CareTeam, Patient, Device, RelatedPerson"
                     },
                     {
-                      "linkId": "NutritionIntake.effective[x]._null.end",
-                      "text": "end:",
-                      "type": "dateTime",
-                      "required": false,
-                      "repeats": false
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                      "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                     }
-                  ]
+                  ],
+                  "linkId": "NutritionIntake.performer.actor.value",
+                  "text": "Who performed the intake",
+                  "type": "reference",
+                  "required": false,
+                  "repeats": false
                 }
               ]
             }
@@ -1644,53 +2101,10 @@
             },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "datetime"
-            }
-          ],
-          "linkId": "NutritionIntake.dateAsserted",
-          "type": "group",
-          "required": false,
-          "repeats": true,
-          "item": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "text": "The date when the Nutrition Intake was asserted by the information source.",
-              "type": "display"
-            },
-            {
-              "linkId": "NutritionIntake.dateAsserted.value",
-              "text": "When the consumption was asserted?",
-              "type": "dateTime",
-              "required": false,
-              "repeats": false
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
               "valueString": "Reference"
             }
           ],
-          "linkId": "NutritionIntake.informationSource",
+          "linkId": "NutritionIntake.location",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -1710,22 +2124,22 @@
                   }
                 }
               ],
-              "text": "The person or organization that provided the information about the consumption of this food or fluid. Note: Use derivedFrom when a NutritionIntake is derived from other resources.",
+              "text": "Where the intake occurred.",
               "type": "display"
             },
             {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient, Practitioner, PractitionerRole, RelatedPerson, Organization"
+                  "valueCode": "Location"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
                   "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                 }
               ],
-              "linkId": "NutritionIntake.informationSource.value",
-              "text": "Person or organization that provided the information about the consumption of this food or fluid",
+              "linkId": "NutritionIntake.location.value",
+              "text": "Where the intake occurred",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -1782,7 +2196,7 @@
           ]
         },
         {
-          "linkId": "NutritionIntake.reasonCode",
+          "linkId": "NutritionIntake.reason",
           "text": "Reason for why the food or fluid is /was consumed",
           "type": "group",
           "required": false,

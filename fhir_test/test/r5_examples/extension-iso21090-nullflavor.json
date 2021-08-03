@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/iso21090-nullFlavor",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "nullFlavor",
   "status": "draft",
   "date": "2012-06-24",
@@ -28,7 +28,7 @@
     }
   ],
   "description": "If the value is not a proper value, indicates the reason.",
-  "fhirVersion": "4.2.0",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "v2",
@@ -74,7 +74,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -166,7 +166,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -174,7 +174,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -241,7 +241,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -249,13 +249,16 @@
         "binding": {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "valueString": "A collection of codes specifying why a valid value is not present."
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
               "valueString": "NullFlavor"
             }
           ],
           "strength": "required",
-          "description": "A collection of codes specifying why a valid value is not present.",
-          "valueSet": "http://terminology.hl7.org/ValueSet/v3-NullFlavor|4.2.0"
+          "valueSet": "http://terminology.hl7.org/ValueSet/v3-NullFlavor|4.6.0"
         },
         "mapping": [
           {
@@ -309,13 +312,16 @@
         "binding": {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "valueString": "A collection of codes specifying why a valid value is not present."
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
               "valueString": "NullFlavor"
             }
           ],
           "strength": "required",
-          "description": "A collection of codes specifying why a valid value is not present.",
-          "valueSet": "http://terminology.hl7.org/ValueSet/v3-NullFlavor|4.2.0"
+          "valueSet": "http://terminology.hl7.org/ValueSet/v3-NullFlavor|4.6.0"
         }
       }
     ]

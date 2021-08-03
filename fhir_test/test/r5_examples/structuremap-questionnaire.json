@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for StructureMap.group.rule.source.defaultValue[x]",
       "expansion": {
-        "identifier": "urn:uuid:4e32f32f-ebf9-4daa-80c4-82550b9f963a",
-        "timestamp": "2019-12-31T21:17:24+11:00",
+        "identifier": "urn:uuid:55ae2b91-b2a9-46fe-88ae-6dbdcb54b7b3",
+        "timestamp": "2021-04-15T12:30:03+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -267,8 +267,8 @@
       "status": "active",
       "description": "Type options for DataRequirement.subject[x]",
       "expansion": {
-        "identifier": "urn:uuid:ca191a82-facf-4700-9c7c-a50fc5969926",
-        "timestamp": "2019-12-31T21:17:24+11:00",
+        "identifier": "urn:uuid:a9ef4d7a-9295-4672-8c3c-35894d154a31",
+        "timestamp": "2021-04-15T12:30:03+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -290,8 +290,8 @@
       "status": "active",
       "description": "Type options for DataRequirement.dateFilter.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:091e2ab1-25ce-42dc-857e-29bb102f11e4",
-        "timestamp": "2019-12-31T21:17:24+11:00",
+        "identifier": "urn:uuid:a6db6e5c-3351-47a8-85e8-26132452b6bf",
+        "timestamp": "2021-04-15T12:30:03+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -318,8 +318,8 @@
       "status": "active",
       "description": "Type options for TriggerDefinition.timing[x]",
       "expansion": {
-        "identifier": "urn:uuid:00bf1b94-b690-46af-b973-a4162747816e",
-        "timestamp": "2019-12-31T21:17:24+11:00",
+        "identifier": "urn:uuid:e52a7ddc-1810-415d-b2e8-bd561120b823",
+        "timestamp": "2021-04-15T12:30:03+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -351,8 +351,8 @@
       "status": "active",
       "description": "Type options for UsageContext.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:11f0e25a-f311-4948-abdf-052afbd59763",
-        "timestamp": "2019-12-31T21:17:24+11:00",
+        "identifier": "urn:uuid:618eb543-fb85-41e0-bbb1-aa02c3852cb9",
+        "timestamp": "2021-04-15T12:30:03+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -414,8 +414,8 @@
       "status": "active",
       "description": "Type options for Dosage.asNeeded[x]",
       "expansion": {
-        "identifier": "urn:uuid:99d43574-3afb-440e-9b15-331e59612b37",
-        "timestamp": "2019-12-31T21:17:24+11:00",
+        "identifier": "urn:uuid:a0e3cd6f-ddd7-49c5-9649-0cc4844cd6f5",
+        "timestamp": "2021-04-15T12:30:03+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -437,8 +437,8 @@
       "status": "active",
       "description": "Type options for Dosage.doseAndRate.dose[x]",
       "expansion": {
-        "identifier": "urn:uuid:2e4c3a7d-1896-49c5-bc97-b5d44202ffac",
-        "timestamp": "2019-12-31T21:17:24+11:00",
+        "identifier": "urn:uuid:518b89ec-ceb2-497f-a3a5-57d3d1d8bc9c",
+        "timestamp": "2021-04-15T12:30:03+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -460,8 +460,8 @@
       "status": "active",
       "description": "Type options for Dosage.doseAndRate.rate[x]",
       "expansion": {
-        "identifier": "urn:uuid:15ed5f9f-73c7-4ad2-8aa1-c43f2dc33cd3",
-        "timestamp": "2019-12-31T21:17:24+11:00",
+        "identifier": "urn:uuid:0d5bae62-dc89-4140-9a65-fadb79af11f1",
+        "timestamp": "2021-04-15T12:30:03+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -488,8 +488,8 @@
       "status": "active",
       "description": "Type options for StructureMap.group.rule.target.parameter.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:2dbdaf13-93cb-4e66-8bde-ada692dcaa4b",
-        "timestamp": "2019-12-31T21:17:24+11:00",
+        "identifier": "urn:uuid:ae05e86d-e89f-4e0d-8bd8-8a2131a2355d",
+        "timestamp": "2021-04-15T12:30:03+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -525,9 +525,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (FHIR Infrastructure)",
   "item": [
     {
@@ -586,7 +586,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -745,7 +745,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -772,7 +772,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -2047,10 +2047,6 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
-                  "valueInteger": 1
-                },
-                {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
                 },
@@ -2061,7 +2057,7 @@
               ],
               "linkId": "StructureMap.group.typeMode",
               "type": "group",
-              "required": true,
+              "required": false,
               "repeats": true,
               "item": [
                 {
@@ -2449,16 +2445,10 @@
               ]
             },
             {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
-                  "valueInteger": 1
-                }
-              ],
               "linkId": "StructureMap.group.rule",
               "text": "Transform Rule from source to target",
               "type": "group",
-              "required": true,
+              "required": false,
               "repeats": true,
               "item": [
                 {
@@ -2579,10 +2569,6 @@
                 {
                   "extension": [
                     {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
-                      "valueInteger": 1
-                    },
-                    {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                       "valueInteger": 1
                     },
@@ -2593,7 +2579,7 @@
                   ],
                   "linkId": "StructureMap.group.rule.name",
                   "type": "group",
-                  "required": true,
+                  "required": false,
                   "repeats": true,
                   "item": [
                     {
@@ -9191,56 +9177,13 @@
                               }
                             }
                           ],
-                          "text": "Type or variable this rule applies to.",
+                          "text": "Variable this rule applies to.",
                           "type": "display"
                         },
                         {
                           "linkId": "StructureMap.group.rule.target.context.value",
-                          "text": "Type or variable this rule applies to",
+                          "text": "Variable this rule applies to",
                           "type": "string",
-                          "required": false,
-                          "repeats": false
-                        }
-                      ]
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                          "valueInteger": 1
-                        },
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "code"
-                        }
-                      ],
-                      "linkId": "StructureMap.group.rule.target.contextType",
-                      "type": "group",
-                      "required": false,
-                      "repeats": true,
-                      "item": [
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                              "valueCodeableConcept": {
-                                "coding": [
-                                  {
-                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                    "code": "flyover",
-                                    "display": "Fly-over"
-                                  }
-                                ]
-                              }
-                            }
-                          ],
-                          "text": "How to interpret the context.",
-                          "type": "display"
-                        },
-                        {
-                          "linkId": "StructureMap.group.rule.target.contextType.value",
-                          "text": "context type",
-                          "type": "choice",
                           "required": false,
                           "repeats": false
                         }

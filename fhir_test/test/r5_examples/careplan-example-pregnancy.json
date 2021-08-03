@@ -142,7 +142,7 @@
   ],
   "activity": [
     {
-      "reference": {
+      "plannedActivityReference": {
         "display": "Prenatal vitamin MedicationRequest"
       }
     },
@@ -153,7 +153,7 @@
           "valueUri": "http://orionhealth.com/fhir/careplan/1andetails"
         }
       ],
-      "detail": {
+      "plannedActivityDetail": {
         "kind": "Appointment",
         "code": {
           "coding": [
@@ -184,7 +184,7 @@
       }
     },
     {
-      "detail": {
+      "plannedActivityDetail": {
         "kind": "Appointment",
         "code": {
           "coding": [
@@ -215,7 +215,7 @@
       }
     },
     {
-      "detail": {
+      "plannedActivityDetail": {
         "kind": "Appointment",
         "code": {
           "coding": [

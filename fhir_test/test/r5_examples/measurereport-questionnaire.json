@@ -1,14 +1,168 @@
 {
   "resourceType": "Questionnaire",
   "id": "qs1",
+  "contained": [
+    {
+      "resourceType": "ValueSet",
+      "id": "vs2",
+      "name": "Type options for MeasureReport.group.measureScore[x]",
+      "status": "active",
+      "description": "Type options for MeasureReport.group.measureScore[x]",
+      "expansion": {
+        "identifier": "urn:uuid:ce0f68f7-c8c6-4056-b58f-d6cfa633e4c7",
+        "timestamp": "2021-04-15T12:29:07+10:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Quantity",
+            "display": "Quantity"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "dateTime",
+            "display": "dateTime"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "CodeableConcept",
+            "display": "CodeableConcept"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Period",
+            "display": "Period"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Range",
+            "display": "Range"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Duration",
+            "display": "Duration"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs3",
+      "name": "Type options for MeasureReport.group.stratifier.stratum.value[x]",
+      "status": "active",
+      "description": "Type options for MeasureReport.group.stratifier.stratum.value[x]",
+      "expansion": {
+        "identifier": "urn:uuid:c9661f13-8522-4fb0-90a0-07fdf61b1034",
+        "timestamp": "2021-04-15T12:29:07+10:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "CodeableConcept",
+            "display": "CodeableConcept"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "boolean",
+            "display": "boolean"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Quantity",
+            "display": "Quantity"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Range",
+            "display": "Range"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs4",
+      "name": "Type options for MeasureReport.group.stratifier.stratum.component.value[x]",
+      "status": "active",
+      "description": "Type options for MeasureReport.group.stratifier.stratum.component.value[x]",
+      "expansion": {
+        "identifier": "urn:uuid:b7b35421-6d20-4ed2-834d-03975a2eefce",
+        "timestamp": "2021-04-15T12:29:07+10:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "CodeableConcept",
+            "display": "CodeableConcept"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "boolean",
+            "display": "boolean"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Quantity",
+            "display": "Quantity"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Range",
+            "display": "Range"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs5",
+      "name": "Type options for MeasureReport.group.stratifier.stratum.measureScore[x]",
+      "status": "active",
+      "description": "Type options for MeasureReport.group.stratifier.stratum.measureScore[x]",
+      "expansion": {
+        "identifier": "urn:uuid:80395450-64ed-4443-86a0-b900e4316761",
+        "timestamp": "2021-04-15T12:29:07+10:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Quantity",
+            "display": "Quantity"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "dateTime",
+            "display": "dateTime"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "CodeableConcept",
+            "display": "CodeableConcept"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Period",
+            "display": "Period"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Range",
+            "display": "Range"
+          },
+          {
+            "system": "http://hl7.org/fhir/data-types",
+            "code": "Duration",
+            "display": "Duration"
+          }
+        ]
+      }
+    }
+  ],
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Clinical Quality Information)",
   "item": [
     {
@@ -67,7 +221,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -226,7 +380,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -253,7 +407,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -463,6 +617,49 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "code"
+            }
+          ],
+          "linkId": "MeasureReport.dataUpdateType",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "Indicates whether the data submitted in an data-exchange report represents a snapshot or incremental update. A snapshot update replaces all previously submitted data for the receiver, whereas an incremental update represents only updated and/or changed data and should be applied as a differential update to the existing submitted data for the receiver. This element only applies to Data-collection reports used to communicate the data-of-interest for a measure",
+              "type": "display"
+            },
+            {
+              "linkId": "MeasureReport.dataUpdateType.value",
+              "text": "data update type",
+              "type": "choice",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
               "valueInteger": 1
             },
@@ -641,7 +838,7 @@
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Practitioner, PractitionerRole, Location, Organization"
+                  "valueCode": "Practitioner, PractitionerRole, Location, Organization, Group"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -650,6 +847,59 @@
               ],
               "linkId": "MeasureReport.reporter.value",
               "text": "Who is reporting the data",
+              "type": "reference",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Reference"
+            }
+          ],
+          "linkId": "MeasureReport.reportingVendor",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "A reference to the vendor who queried the data, calculated results and/or generated the report. The ‘reporting vendor’ is intended to represent the submitting entity when it is not the same as the reporting entity. This extension is used when the Receiver is interested in getting vendor information in the report.",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                  "valueCode": "Organization"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                }
+              ],
+              "linkId": "MeasureReport.reportingVendor.value",
+              "text": "What vendor prepared the data",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -706,6 +956,57 @@
               "linkId": "MeasureReport.period.end",
               "text": "end:",
               "type": "dateTime",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "CodeableConcept"
+            }
+          ],
+          "linkId": "MeasureReport.scoring",
+          "text": "What scoring method (e.g. proportion, ratio, continuous-variable)",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "Indicates how the calculation is performed for the measure, including proportion, ratio, continuous-variable, and cohort. The value set is extensible, allowing additional measure scoring types to be represented. It is expected to be the same as the scoring element on the referenced Measure.",
+              "type": "display"
+            },
+            {
+              "linkId": "MeasureReport.scoring.coding",
+              "text": "code:",
+              "type": "open-choice",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "MeasureReport.scoring.text",
+              "text": "text:",
+              "type": "string",
               "required": false,
               "repeats": false
             }
@@ -1211,13 +1512,9 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "Quantity"
                 }
               ],
-              "linkId": "MeasureReport.group.measureScore",
+              "linkId": "MeasureReport.group.measureScore[x]",
               "text": "What score this group achieved",
               "type": "group",
               "required": false,
@@ -1242,39 +1539,211 @@
                   "type": "display"
                 },
                 {
-                  "linkId": "MeasureReport.group.measureScore.comparator",
-                  "text": "comp:",
+                  "linkId": "MeasureReport.group.measureScore[x]._type",
+                  "text": "type",
                   "type": "choice",
                   "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "MeasureReport.group.measureScore.value",
-                  "text": "value:",
-                  "type": "decimal",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "MeasureReport.group.measureScore.units",
-                  "text": "units:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "MeasureReport.group.measureScore.code",
-                  "text": "coded units:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "MeasureReport.group.measureScore.system",
-                  "text": "units system:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
+                  "repeats": false,
+                  "answerValueSet": "#vs2",
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "Quantity"
+                        }
+                      ],
+                      "linkId": "MeasureReport.group.measureScore[x]._null",
+                      "type": "group",
+                      "item": [
+                        {
+                          "linkId": "MeasureReport.group.measureScore[x]._null.comparator",
+                          "text": "comp:",
+                          "type": "choice",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "MeasureReport.group.measureScore[x]._null.value",
+                          "text": "value:",
+                          "type": "decimal",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "MeasureReport.group.measureScore[x]._null.units",
+                          "text": "units:",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "MeasureReport.group.measureScore[x]._null.code",
+                          "text": "coded units:",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "MeasureReport.group.measureScore[x]._null.system",
+                          "text": "units system:",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "datetime"
+                        }
+                      ],
+                      "linkId": "MeasureReport.group.measureScore[x]._null",
+                      "type": "group",
+                      "item": [
+                        {
+                          "linkId": "MeasureReport.group.measureScore[x]._null.value",
+                          "type": "dateTime",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "CodeableConcept"
+                        }
+                      ],
+                      "linkId": "MeasureReport.group.measureScore[x]._null",
+                      "type": "group",
+                      "item": [
+                        {
+                          "linkId": "MeasureReport.group.measureScore[x]._null.coding",
+                          "text": "code:",
+                          "type": "open-choice",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "MeasureReport.group.measureScore[x]._null.text",
+                          "text": "text:",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "Period"
+                        }
+                      ],
+                      "linkId": "MeasureReport.group.measureScore[x]._null",
+                      "type": "group",
+                      "item": [
+                        {
+                          "linkId": "MeasureReport.group.measureScore[x]._null.low",
+                          "text": "start:",
+                          "type": "dateTime",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "MeasureReport.group.measureScore[x]._null.end",
+                          "text": "end:",
+                          "type": "dateTime",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "Range"
+                        }
+                      ],
+                      "linkId": "MeasureReport.group.measureScore[x]._null",
+                      "type": "group",
+                      "item": [
+                        {
+                          "linkId": "MeasureReport.group.measureScore[x]._null.low",
+                          "text": "low:",
+                          "type": "decimal",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "MeasureReport.group.measureScore[x]._null.high",
+                          "text": "high:",
+                          "type": "decimal",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "MeasureReport.group.measureScore[x]._null.units",
+                          "text": "units:",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "Quantity"
+                        }
+                      ],
+                      "linkId": "MeasureReport.group.measureScore[x]._null",
+                      "type": "group",
+                      "item": [
+                        {
+                          "linkId": "MeasureReport.group.measureScore[x]._null.comparator",
+                          "text": "comp:",
+                          "type": "choice",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "MeasureReport.group.measureScore[x]._null.value",
+                          "text": "value:",
+                          "type": "decimal",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "MeasureReport.group.measureScore[x]._null.units",
+                          "text": "units:",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "MeasureReport.group.measureScore[x]._null.code",
+                          "text": "coded units:",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "MeasureReport.group.measureScore[x]._null.system",
+                          "text": "units system:",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             },
@@ -1574,13 +2043,9 @@
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                           "valueInteger": 1
-                        },
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "CodeableConcept"
                         }
                       ],
-                      "linkId": "MeasureReport.group.stratifier.stratum.value",
+                      "linkId": "MeasureReport.group.stratifier.stratum.value[x]",
                       "text": "The stratum value, e.g. male",
                       "type": "group",
                       "required": false,
@@ -1605,18 +2070,162 @@
                           "type": "display"
                         },
                         {
-                          "linkId": "MeasureReport.group.stratifier.stratum.value.coding",
-                          "text": "code:",
-                          "type": "open-choice",
+                          "linkId": "MeasureReport.group.stratifier.stratum.value[x]._type",
+                          "text": "type",
+                          "type": "choice",
                           "required": false,
-                          "repeats": false
-                        },
-                        {
-                          "linkId": "MeasureReport.group.stratifier.stratum.value.text",
-                          "text": "text:",
-                          "type": "string",
-                          "required": false,
-                          "repeats": false
+                          "repeats": false,
+                          "answerValueSet": "#vs3",
+                          "item": [
+                            {
+                              "extension": [
+                                {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                                  "valueString": "CodeableConcept"
+                                }
+                              ],
+                              "linkId": "MeasureReport.group.stratifier.stratum.value[x]._null",
+                              "type": "group",
+                              "item": [
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.value[x]._null.coding",
+                                  "text": "code:",
+                                  "type": "open-choice",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.value[x]._null.text",
+                                  "text": "text:",
+                                  "type": "string",
+                                  "required": false,
+                                  "repeats": false
+                                }
+                              ]
+                            },
+                            {
+                              "extension": [
+                                {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                                  "valueString": "boolean"
+                                }
+                              ],
+                              "linkId": "MeasureReport.group.stratifier.stratum.value[x]._null",
+                              "type": "group",
+                              "item": [
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.value[x]._null.value",
+                                  "type": "boolean",
+                                  "required": false,
+                                  "repeats": false
+                                }
+                              ]
+                            },
+                            {
+                              "extension": [
+                                {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                                  "valueString": "Quantity"
+                                }
+                              ],
+                              "linkId": "MeasureReport.group.stratifier.stratum.value[x]._null",
+                              "type": "group",
+                              "item": [
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.value[x]._null.comparator",
+                                  "text": "comp:",
+                                  "type": "choice",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.value[x]._null.value",
+                                  "text": "value:",
+                                  "type": "decimal",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.value[x]._null.units",
+                                  "text": "units:",
+                                  "type": "string",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.value[x]._null.code",
+                                  "text": "coded units:",
+                                  "type": "string",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.value[x]._null.system",
+                                  "text": "units system:",
+                                  "type": "string",
+                                  "required": false,
+                                  "repeats": false
+                                }
+                              ]
+                            },
+                            {
+                              "extension": [
+                                {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                                  "valueString": "Range"
+                                }
+                              ],
+                              "linkId": "MeasureReport.group.stratifier.stratum.value[x]._null",
+                              "type": "group",
+                              "item": [
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.value[x]._null.low",
+                                  "text": "low:",
+                                  "type": "decimal",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.value[x]._null.high",
+                                  "text": "high:",
+                                  "type": "decimal",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.value[x]._null.units",
+                                  "text": "units:",
+                                  "type": "string",
+                                  "required": false,
+                                  "repeats": false
+                                }
+                              ]
+                            },
+                            {
+                              "extension": [
+                                {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                                  "valueString": "Reference"
+                                }
+                              ],
+                              "linkId": "MeasureReport.group.stratifier.stratum.value[x]._null",
+                              "type": "group",
+                              "item": [
+                                {
+                                  "extension": [
+                                    {
+                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                                      "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                                    }
+                                  ],
+                                  "linkId": "MeasureReport.group.stratifier.stratum.value[x]._null.value",
+                                  "type": "reference",
+                                  "required": false,
+                                  "repeats": false
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     },
@@ -1806,13 +2415,9 @@
                             {
                               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                               "valueInteger": 1
-                            },
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                              "valueString": "CodeableConcept"
                             }
                           ],
-                          "linkId": "MeasureReport.group.stratifier.stratum.component.value",
+                          "linkId": "MeasureReport.group.stratifier.stratum.component.value[x]",
                           "text": "The stratum component value, e.g. male",
                           "type": "group",
                           "required": true,
@@ -1837,18 +2442,162 @@
                               "type": "display"
                             },
                             {
-                              "linkId": "MeasureReport.group.stratifier.stratum.component.value.coding",
-                              "text": "code:",
-                              "type": "open-choice",
+                              "linkId": "MeasureReport.group.stratifier.stratum.component.value[x]._type",
+                              "text": "type",
+                              "type": "choice",
                               "required": false,
-                              "repeats": false
-                            },
-                            {
-                              "linkId": "MeasureReport.group.stratifier.stratum.component.value.text",
-                              "text": "text:",
-                              "type": "string",
-                              "required": false,
-                              "repeats": false
+                              "repeats": false,
+                              "answerValueSet": "#vs4",
+                              "item": [
+                                {
+                                  "extension": [
+                                    {
+                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                                      "valueString": "CodeableConcept"
+                                    }
+                                  ],
+                                  "linkId": "MeasureReport.group.stratifier.stratum.component.value[x]._null",
+                                  "type": "group",
+                                  "item": [
+                                    {
+                                      "linkId": "MeasureReport.group.stratifier.stratum.component.value[x]._null.coding",
+                                      "text": "code:",
+                                      "type": "open-choice",
+                                      "required": false,
+                                      "repeats": false
+                                    },
+                                    {
+                                      "linkId": "MeasureReport.group.stratifier.stratum.component.value[x]._null.text",
+                                      "text": "text:",
+                                      "type": "string",
+                                      "required": false,
+                                      "repeats": false
+                                    }
+                                  ]
+                                },
+                                {
+                                  "extension": [
+                                    {
+                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                                      "valueString": "boolean"
+                                    }
+                                  ],
+                                  "linkId": "MeasureReport.group.stratifier.stratum.component.value[x]._null",
+                                  "type": "group",
+                                  "item": [
+                                    {
+                                      "linkId": "MeasureReport.group.stratifier.stratum.component.value[x]._null.value",
+                                      "type": "boolean",
+                                      "required": false,
+                                      "repeats": false
+                                    }
+                                  ]
+                                },
+                                {
+                                  "extension": [
+                                    {
+                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                                      "valueString": "Quantity"
+                                    }
+                                  ],
+                                  "linkId": "MeasureReport.group.stratifier.stratum.component.value[x]._null",
+                                  "type": "group",
+                                  "item": [
+                                    {
+                                      "linkId": "MeasureReport.group.stratifier.stratum.component.value[x]._null.comparator",
+                                      "text": "comp:",
+                                      "type": "choice",
+                                      "required": false,
+                                      "repeats": false
+                                    },
+                                    {
+                                      "linkId": "MeasureReport.group.stratifier.stratum.component.value[x]._null.value",
+                                      "text": "value:",
+                                      "type": "decimal",
+                                      "required": false,
+                                      "repeats": false
+                                    },
+                                    {
+                                      "linkId": "MeasureReport.group.stratifier.stratum.component.value[x]._null.units",
+                                      "text": "units:",
+                                      "type": "string",
+                                      "required": false,
+                                      "repeats": false
+                                    },
+                                    {
+                                      "linkId": "MeasureReport.group.stratifier.stratum.component.value[x]._null.code",
+                                      "text": "coded units:",
+                                      "type": "string",
+                                      "required": false,
+                                      "repeats": false
+                                    },
+                                    {
+                                      "linkId": "MeasureReport.group.stratifier.stratum.component.value[x]._null.system",
+                                      "text": "units system:",
+                                      "type": "string",
+                                      "required": false,
+                                      "repeats": false
+                                    }
+                                  ]
+                                },
+                                {
+                                  "extension": [
+                                    {
+                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                                      "valueString": "Range"
+                                    }
+                                  ],
+                                  "linkId": "MeasureReport.group.stratifier.stratum.component.value[x]._null",
+                                  "type": "group",
+                                  "item": [
+                                    {
+                                      "linkId": "MeasureReport.group.stratifier.stratum.component.value[x]._null.low",
+                                      "text": "low:",
+                                      "type": "decimal",
+                                      "required": false,
+                                      "repeats": false
+                                    },
+                                    {
+                                      "linkId": "MeasureReport.group.stratifier.stratum.component.value[x]._null.high",
+                                      "text": "high:",
+                                      "type": "decimal",
+                                      "required": false,
+                                      "repeats": false
+                                    },
+                                    {
+                                      "linkId": "MeasureReport.group.stratifier.stratum.component.value[x]._null.units",
+                                      "text": "units:",
+                                      "type": "string",
+                                      "required": false,
+                                      "repeats": false
+                                    }
+                                  ]
+                                },
+                                {
+                                  "extension": [
+                                    {
+                                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                                      "valueString": "Reference"
+                                    }
+                                  ],
+                                  "linkId": "MeasureReport.group.stratifier.stratum.component.value[x]._null",
+                                  "type": "group",
+                                  "item": [
+                                    {
+                                      "extension": [
+                                        {
+                                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                                          "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                                        }
+                                      ],
+                                      "linkId": "MeasureReport.group.stratifier.stratum.component.value[x]._null.value",
+                                      "type": "reference",
+                                      "required": false,
+                                      "repeats": false
+                                    }
+                                  ]
+                                }
+                              ]
                             }
                           ]
                         }
@@ -2130,13 +2879,9 @@
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                           "valueInteger": 1
-                        },
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "Quantity"
                         }
                       ],
-                      "linkId": "MeasureReport.group.stratifier.stratum.measureScore",
+                      "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]",
                       "text": "What score this stratum achieved",
                       "type": "group",
                       "required": false,
@@ -2161,39 +2906,211 @@
                           "type": "display"
                         },
                         {
-                          "linkId": "MeasureReport.group.stratifier.stratum.measureScore.comparator",
-                          "text": "comp:",
+                          "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._type",
+                          "text": "type",
                           "type": "choice",
                           "required": false,
-                          "repeats": false
-                        },
-                        {
-                          "linkId": "MeasureReport.group.stratifier.stratum.measureScore.value",
-                          "text": "value:",
-                          "type": "decimal",
-                          "required": false,
-                          "repeats": false
-                        },
-                        {
-                          "linkId": "MeasureReport.group.stratifier.stratum.measureScore.units",
-                          "text": "units:",
-                          "type": "string",
-                          "required": false,
-                          "repeats": false
-                        },
-                        {
-                          "linkId": "MeasureReport.group.stratifier.stratum.measureScore.code",
-                          "text": "coded units:",
-                          "type": "string",
-                          "required": false,
-                          "repeats": false
-                        },
-                        {
-                          "linkId": "MeasureReport.group.stratifier.stratum.measureScore.system",
-                          "text": "units system:",
-                          "type": "string",
-                          "required": false,
-                          "repeats": false
+                          "repeats": false,
+                          "answerValueSet": "#vs5",
+                          "item": [
+                            {
+                              "extension": [
+                                {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                                  "valueString": "Quantity"
+                                }
+                              ],
+                              "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null",
+                              "type": "group",
+                              "item": [
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null.comparator",
+                                  "text": "comp:",
+                                  "type": "choice",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null.value",
+                                  "text": "value:",
+                                  "type": "decimal",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null.units",
+                                  "text": "units:",
+                                  "type": "string",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null.code",
+                                  "text": "coded units:",
+                                  "type": "string",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null.system",
+                                  "text": "units system:",
+                                  "type": "string",
+                                  "required": false,
+                                  "repeats": false
+                                }
+                              ]
+                            },
+                            {
+                              "extension": [
+                                {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                                  "valueString": "datetime"
+                                }
+                              ],
+                              "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null",
+                              "type": "group",
+                              "item": [
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null.value",
+                                  "type": "dateTime",
+                                  "required": false,
+                                  "repeats": false
+                                }
+                              ]
+                            },
+                            {
+                              "extension": [
+                                {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                                  "valueString": "CodeableConcept"
+                                }
+                              ],
+                              "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null",
+                              "type": "group",
+                              "item": [
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null.coding",
+                                  "text": "code:",
+                                  "type": "open-choice",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null.text",
+                                  "text": "text:",
+                                  "type": "string",
+                                  "required": false,
+                                  "repeats": false
+                                }
+                              ]
+                            },
+                            {
+                              "extension": [
+                                {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                                  "valueString": "Period"
+                                }
+                              ],
+                              "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null",
+                              "type": "group",
+                              "item": [
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null.low",
+                                  "text": "start:",
+                                  "type": "dateTime",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null.end",
+                                  "text": "end:",
+                                  "type": "dateTime",
+                                  "required": false,
+                                  "repeats": false
+                                }
+                              ]
+                            },
+                            {
+                              "extension": [
+                                {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                                  "valueString": "Range"
+                                }
+                              ],
+                              "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null",
+                              "type": "group",
+                              "item": [
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null.low",
+                                  "text": "low:",
+                                  "type": "decimal",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null.high",
+                                  "text": "high:",
+                                  "type": "decimal",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null.units",
+                                  "text": "units:",
+                                  "type": "string",
+                                  "required": false,
+                                  "repeats": false
+                                }
+                              ]
+                            },
+                            {
+                              "extension": [
+                                {
+                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                                  "valueString": "Quantity"
+                                }
+                              ],
+                              "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null",
+                              "type": "group",
+                              "item": [
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null.comparator",
+                                  "text": "comp:",
+                                  "type": "choice",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null.value",
+                                  "text": "value:",
+                                  "type": "decimal",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null.units",
+                                  "text": "units:",
+                                  "type": "string",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null.code",
+                                  "text": "coded units:",
+                                  "type": "string",
+                                  "required": false,
+                                  "repeats": false
+                                },
+                                {
+                                  "linkId": "MeasureReport.group.stratifier.stratum.measureScore[x]._null.system",
+                                  "text": "units system:",
+                                  "type": "string",
+                                  "required": false,
+                                  "repeats": false
+                                }
+                              ]
+                            }
+                          ]
                         }
                       ]
                     }

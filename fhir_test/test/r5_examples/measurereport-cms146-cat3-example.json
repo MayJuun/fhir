@@ -19,7 +19,7 @@
   ],
   "status": "complete",
   "type": "summary",
-  "measure": "Measure/CMS146",
+  "measure": "http://example.org/fhir/Measure/CMS146",
   "date": "2014-04-01",
   "reporter": {
     "reference": "#reporter"
@@ -82,9 +82,7 @@
           ],
           "stratum": [
             {
-              "value": {
-                "text": "true"
-              },
+              "valueBoolean": true,
               "population": [
                 {
                   "code": {
@@ -129,9 +127,7 @@
               ]
             },
             {
-              "value": {
-                "text": "false"
-              },
+              "valueBoolean": false,
               "population": [
                 {
                   "code": {
@@ -185,9 +181,7 @@
           ],
           "stratum": [
             {
-              "value": {
-                "text": "true"
-              },
+              "valueBoolean": true,
               "population": [
                 {
                   "code": {
@@ -232,9 +226,7 @@
               ]
             },
             {
-              "value": {
-                "text": "false"
-              },
+              "valueBoolean": false,
               "population": [
                 {
                   "code": {
@@ -288,7 +280,7 @@
           ],
           "stratum": [
             {
-              "value": {
+              "valueCodeableConcept": {
                 "text": "male"
               },
               "population": [
@@ -335,7 +327,7 @@
               ]
             },
             {
-              "value": {
+              "valueCodeableConcept": {
                 "text": "female"
               },
               "population": [
@@ -382,7 +374,7 @@
               ]
             },
             {
-              "value": {
+              "valueCodeableConcept": {
                 "text": "other"
               },
               "population": [
@@ -429,7 +421,7 @@
               ]
             },
             {
-              "value": {
+              "valueCodeableConcept": {
                 "text": "unknown"
               },
               "population": [

@@ -73,8 +73,8 @@
       ],
       "description": "First sequence in protocol",
       "series": "Vaccination Series 1",
-      "doseNumberPositiveInt": 1,
-      "seriesDosesPositiveInt": 3,
+      "doseNumber": "1",
+      "seriesDoses": "3",
       "supportingImmunization": [
         {
           "reference": "Immunization/example"

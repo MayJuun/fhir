@@ -5,27 +5,22 @@
     {
       "resourceType": "ValueSet",
       "id": "vs2",
-      "name": "Type options for PackagedProductDefinition.package.characteristic.value[x]",
+      "name": "Type options for PackagedProductDefinition.package.property.value[x]",
       "status": "active",
-      "description": "Type options for PackagedProductDefinition.package.characteristic.value[x]",
+      "description": "Type options for PackagedProductDefinition.package.property.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:0932376c-16c6-45eb-9507-4cd4d9d5689b",
-        "timestamp": "2019-12-31T21:15:58+11:00",
+        "identifier": "urn:uuid:d3042cab-59c6-49bb-a3b6-d5f91ad84e72",
+        "timestamp": "2021-04-15T12:29:37+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
-            "code": "Coding",
-            "display": "Coding"
+            "code": "CodeableConcept",
+            "display": "CodeableConcept"
           },
           {
             "system": "http://hl7.org/fhir/data-types",
             "code": "Quantity",
             "display": "Quantity"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "string",
-            "display": "string"
           },
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -52,8 +47,8 @@
       "status": "active",
       "description": "Type options for PackagedProductDefinition.package.containedItem.amount[x]",
       "expansion": {
-        "identifier": "urn:uuid:c4435ec6-705e-4a56-8649-5a4ef9e11f24",
-        "timestamp": "2019-12-31T21:15:58+11:00",
+        "identifier": "urn:uuid:9ad03703-aea6-4173-b2c9-ca2a538d98e1",
+        "timestamp": "2021-04-15T12:29:37+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -74,14 +69,14 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Biomedical Research and Regulation)",
   "item": [
     {
       "linkId": "PackagedProductDefinition",
-      "text": "A medicinal product in a container or package",
+      "text": "A medically related item or items, in a container or package",
       "type": "group",
       "required": false,
       "repeats": true,
@@ -101,7 +96,7 @@
               }
             }
           ],
-          "text": "A medicinal product in a container or package.",
+          "text": "A medically related item or items, in a container or package.",
           "type": "display"
         },
         {
@@ -135,7 +130,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -294,7 +289,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -321,7 +316,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -437,6 +432,100 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "string"
+            }
+          ],
+          "linkId": "PackagedProductDefinition.name",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "A name for this package. Typically what it would be listed as in a drug formulary or catalogue, inventory etc.",
+              "type": "display"
+            },
+            {
+              "linkId": "PackagedProductDefinition.name.value",
+              "text": "A name for this package. Typically what it would be listed as in a drug formulary or catalogue, inventory etc",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "CodeableConcept"
+            }
+          ],
+          "linkId": "PackagedProductDefinition.type",
+          "text": "A high level category e.g. medicinal product, raw material, shipping/transport container, etc",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "A high level category e.g. medicinal product, raw material, shipping/transport container, etc.",
+              "type": "display"
+            },
+            {
+              "linkId": "PackagedProductDefinition.type.coding",
+              "text": "code:",
+              "type": "open-choice",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "PackagedProductDefinition.type.text",
+              "text": "text:",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
               "valueString": "Reference"
             }
@@ -491,6 +580,168 @@
             },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "CodeableConcept"
+            }
+          ],
+          "linkId": "PackagedProductDefinition.status",
+          "text": "The status within the lifecycle of this item. A high level status, this is not intended to duplicate details carried elsewhere such as legal status, or authorization or marketing status",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "The status within the lifecycle of this item. A high level status, this is not intended to duplicate details carried elsewhere such as legal status, or authorization or marketing status.",
+              "type": "display"
+            },
+            {
+              "linkId": "PackagedProductDefinition.status.coding",
+              "text": "code:",
+              "type": "open-choice",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "PackagedProductDefinition.status.text",
+              "text": "text:",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "datetime"
+            }
+          ],
+          "linkId": "PackagedProductDefinition.statusDate",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "The date at which the given status became applicable.",
+              "type": "display"
+            },
+            {
+              "linkId": "PackagedProductDefinition.statusDate.value",
+              "text": "The date at which the given status became applicable",
+              "type": "dateTime",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Quantity"
+            }
+          ],
+          "linkId": "PackagedProductDefinition.containedItemQuantity",
+          "text": "A total of the amount of items in the package, per item type. This can be considered as the pack size. This attribite is repeatable so that the different item types in one pack type can be counted (e.g. a count of vials and count of syringes). Repeats are not to be used to represent differerent pack sizes (e.g. 20 pack vs 50 pack) - which would be different resource instances. This attribute differs from  containedItem.amount in that it can give a single count of all tablet types in a pack, even when these are different manufactured items",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "A total of the amount of items in the package, per item type. This can be considered as the pack size. This attribite is repeatable so that the different item types in one pack type can be counted (e.g. a count of vials and count of syringes). Repeats are not to be used to represent differerent pack sizes (e.g. 20 pack vs 50 pack) - which would be different resource instances. This attribute differs from  containedItem.amount in that it can give a single count of all tablet types in a pack, even when these are different manufactured items.",
+              "type": "display"
+            },
+            {
+              "linkId": "PackagedProductDefinition.containedItemQuantity.comparator",
+              "text": "comp:",
+              "type": "choice",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "PackagedProductDefinition.containedItemQuantity.value",
+              "text": "value:",
+              "type": "decimal",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "PackagedProductDefinition.containedItemQuantity.units",
+              "text": "units:",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "PackagedProductDefinition.containedItemQuantity.code",
+              "text": "coded units:",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "PackagedProductDefinition.containedItemQuantity.system",
+              "text": "units system:",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
               "valueString": "string"
             }
           ],
@@ -514,12 +765,12 @@
                   }
                 }
               ],
-              "text": "Textual description.",
+              "text": "Textual description. Note that this is not the name of the package or product.",
               "type": "display"
             },
             {
               "linkId": "PackagedProductDefinition.description.value",
-              "text": "Textual description",
+              "text": "Textual description. Note that this is not the name of the package or product",
               "type": "string",
               "required": false,
               "repeats": false
@@ -538,7 +789,7 @@
             }
           ],
           "linkId": "PackagedProductDefinition.legalStatusOfSupply",
-          "text": "The legal status of supply of the medicinal product as classified by the regulator",
+          "text": "The legal status of supply of the packaged item as classified by the regulator",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -558,7 +809,7 @@
                   }
                 }
               ],
-              "text": "The legal status of supply of the medicinal product as classified by the regulator.",
+              "text": "The legal status of supply of the packaged item as classified by the regulator.",
               "type": "display"
             },
             {
@@ -601,6 +852,53 @@
               ],
               "text": "Marketing information.",
               "type": "display"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "CodeableConcept"
+            }
+          ],
+          "linkId": "PackagedProductDefinition.characteristic",
+          "text": "Allows the key features to be recorded, such as \"hospital pack\", \"nurse prescribable\", \"calendar pack\"",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "Allows the key features to be recorded, such as \"hospital pack\", \"nurse prescribable\", \"calendar pack\".",
+              "type": "display"
+            },
+            {
+              "linkId": "PackagedProductDefinition.characteristic.coding",
+              "text": "code:",
+              "type": "open-choice",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "PackagedProductDefinition.characteristic.text",
+              "text": "text:",
+              "type": "string",
+              "required": false,
+              "repeats": false
             }
           ]
         },
@@ -678,7 +976,7 @@
                   }
                 }
               ],
-              "text": "Manufacturer of this Package Item.",
+              "text": "An authorization for this package type.",
               "type": "display"
             },
             {
@@ -693,7 +991,7 @@
                 }
               ],
               "linkId": "PackagedProductDefinition.marketingAuthorization.value",
-              "text": "Manufacturer of this Package Item",
+              "text": "An authorization for this package type",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -727,7 +1025,7 @@
                   }
                 }
               ],
-              "text": "Manufacturer of this Package Item.",
+              "text": "Manufacturer of this package type. When there are multiple it means these are all possible manufacturers.",
               "type": "display"
             },
             {
@@ -742,7 +1040,7 @@
                 }
               ],
               "linkId": "PackagedProductDefinition.manufacturer.value",
-              "text": "Manufacturer of this Package Item",
+              "text": "Manufacturer of this package type. When there are multiple it means these are all possible manufacturers",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -750,8 +1048,13 @@
           ]
         },
         {
-          "linkId": "PackagedProductDefinition.batchIdentifier",
-          "text": "Batch numbering",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Reference"
+            }
+          ],
+          "linkId": "PackagedProductDefinition.attachedDocument",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -771,234 +1074,40 @@
                   }
                 }
               ],
-              "text": "Batch numbering.",
+              "text": "Additional information or supporting documentation about the packaged product.",
               "type": "display"
             },
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                  "valueCode": "DocumentReference"
                 },
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "string"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                 }
               ],
-              "linkId": "PackagedProductDefinition.batchIdentifier.id",
-              "type": "group",
+              "linkId": "PackagedProductDefinition.attachedDocument.value",
+              "text": "Additional information or supporting documentation about the packaged product",
+              "type": "reference",
               "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "PackagedProductDefinition.batchIdentifier.id.value",
-                  "text": "Unique id for inter-element referencing",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "linkId": "PackagedProductDefinition.batchIdentifier.extension",
-              "text": "Additional content defined by implementations",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-                  "type": "display"
-                }
-              ]
-            },
-            {
-              "linkId": "PackagedProductDefinition.batchIdentifier.modifierExtension",
-              "text": "Extensions that cannot be ignored even if unrecognized",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-                  "type": "display"
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "Identifier"
-                }
-              ],
-              "linkId": "PackagedProductDefinition.batchIdentifier.outerPackaging",
-              "text": "A number appearing on the outer packaging of a specific batch",
-              "type": "group",
-              "required": true,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "A number appearing on the outer packaging of a specific batch.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "PackagedProductDefinition.batchIdentifier.outerPackaging.label",
-                  "text": "label:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "PackagedProductDefinition.batchIdentifier.outerPackaging.system",
-                  "text": "system:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "PackagedProductDefinition.batchIdentifier.outerPackaging.value",
-                  "text": "value:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "Identifier"
-                }
-              ],
-              "linkId": "PackagedProductDefinition.batchIdentifier.immediatePackaging",
-              "text": "A number appearing on the immediate packaging (and not the outer packaging)",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "A number appearing on the immediate packaging (and not the outer packaging).",
-                  "type": "display"
-                },
-                {
-                  "linkId": "PackagedProductDefinition.batchIdentifier.immediatePackaging.label",
-                  "text": "label:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "PackagedProductDefinition.batchIdentifier.immediatePackaging.system",
-                  "text": "system:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "PackagedProductDefinition.batchIdentifier.immediatePackaging.value",
-                  "text": "value:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
+              "repeats": false
             }
           ]
         },
         {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            }
+          ],
           "linkId": "PackagedProductDefinition.package",
-          "text": "A packaging item, as a contained for medicine, possibly with other packaging items within",
+          "text": "A packaging item, as a container for medically related items, possibly with other packaging items within, or a packaging component, such as bottle cap (which is not a device or a medication manufactured item)",
           "type": "group",
           "required": false,
-          "repeats": true,
+          "repeats": false,
           "item": [
             {
               "extension": [
@@ -1015,7 +1124,7 @@
                   }
                 }
               ],
-              "text": "A packaging item, as a contained for medicine, possibly with other packaging items within.",
+              "text": "A packaging item, as a container for medically related items, possibly with other packaging items within, or a packaging component, such as bottle cap (which is not a device or a medication manufactured item).",
               "type": "display"
             },
             {
@@ -1181,7 +1290,7 @@
                 }
               ],
               "linkId": "PackagedProductDefinition.package.type",
-              "text": "The physical type of the container of the medicine",
+              "text": "The physical type of the container of the items",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1201,7 +1310,7 @@
                       }
                     }
                   ],
-                  "text": "The physical type of the container of the medicine.",
+                  "text": "The physical type of the container of the items.",
                   "type": "display"
                 },
                 {
@@ -1228,11 +1337,10 @@
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "Quantity"
+                  "valueString": "integer"
                 }
               ],
               "linkId": "PackagedProductDefinition.package.quantity",
-              "text": "The quantity of this package in the medicinal product, at the current level of packaging. If specified, the outermost level is always 1",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1252,41 +1360,13 @@
                       }
                     }
                   ],
-                  "text": "The quantity of this package in the medicinal product, at the current level of packaging. If specified, the outermost level is always 1.",
+                  "text": "The quantity of this level of packaging in the package that contains it. If specified, the outermost level is always 1.",
                   "type": "display"
                 },
                 {
-                  "linkId": "PackagedProductDefinition.package.quantity.comparator",
-                  "text": "comp:",
-                  "type": "choice",
-                  "required": false,
-                  "repeats": false
-                },
-                {
                   "linkId": "PackagedProductDefinition.package.quantity.value",
-                  "text": "value:",
-                  "type": "decimal",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "PackagedProductDefinition.package.quantity.units",
-                  "text": "units:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "PackagedProductDefinition.package.quantity.code",
-                  "text": "coded units:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "PackagedProductDefinition.package.quantity.system",
-                  "text": "units system:",
-                  "type": "string",
+                  "text": "The quantity of this level of packaging in the package that contains it. If specified, the outermost level is always 1",
+                  "type": "integer",
                   "required": false,
                   "repeats": false
                 }
@@ -1440,7 +1520,7 @@
                       }
                     }
                   ],
-                  "text": "Manufacturer of this Package Item.",
+                  "text": "Manufacturer of this package Item. When there are multiple it means these are all possible manufacturers.",
                   "type": "display"
                 },
                 {
@@ -1455,7 +1535,7 @@
                     }
                   ],
                   "linkId": "PackagedProductDefinition.package.manufacturer.value",
-                  "text": "Manufacturer of this Package Item",
+                  "text": "Manufacturer of this package Item. When there are multiple it means these are all possible manufacturers",
                   "type": "reference",
                   "required": false,
                   "repeats": false
@@ -1463,7 +1543,7 @@
               ]
             },
             {
-              "linkId": "PackagedProductDefinition.package.characteristic",
+              "linkId": "PackagedProductDefinition.package.property",
               "text": "General characteristics of this item",
               "type": "group",
               "required": false,
@@ -1498,7 +1578,7 @@
                       "valueString": "string"
                     }
                   ],
-                  "linkId": "PackagedProductDefinition.package.characteristic.id",
+                  "linkId": "PackagedProductDefinition.package.property.id",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -1522,7 +1602,7 @@
                       "type": "display"
                     },
                     {
-                      "linkId": "PackagedProductDefinition.package.characteristic.id.value",
+                      "linkId": "PackagedProductDefinition.package.property.id.value",
                       "text": "Unique id for inter-element referencing",
                       "type": "string",
                       "required": false,
@@ -1531,7 +1611,7 @@
                   ]
                 },
                 {
-                  "linkId": "PackagedProductDefinition.package.characteristic.extension",
+                  "linkId": "PackagedProductDefinition.package.property.extension",
                   "text": "Additional content defined by implementations",
                   "type": "group",
                   "required": false,
@@ -1558,7 +1638,7 @@
                   ]
                 },
                 {
-                  "linkId": "PackagedProductDefinition.package.characteristic.modifierExtension",
+                  "linkId": "PackagedProductDefinition.package.property.modifierExtension",
                   "text": "Extensions that cannot be ignored even if unrecognized",
                   "type": "group",
                   "required": false,
@@ -1599,7 +1679,7 @@
                       "valueString": "CodeableConcept"
                     }
                   ],
-                  "linkId": "PackagedProductDefinition.package.characteristic.code",
+                  "linkId": "PackagedProductDefinition.package.property.type",
                   "text": "A code expressing the type of characteristic",
                   "type": "group",
                   "required": true,
@@ -1624,14 +1704,14 @@
                       "type": "display"
                     },
                     {
-                      "linkId": "PackagedProductDefinition.package.characteristic.code.coding",
+                      "linkId": "PackagedProductDefinition.package.property.type.coding",
                       "text": "code:",
                       "type": "open-choice",
                       "required": false,
                       "repeats": false
                     },
                     {
-                      "linkId": "PackagedProductDefinition.package.characteristic.code.text",
+                      "linkId": "PackagedProductDefinition.package.property.type.text",
                       "text": "text:",
                       "type": "string",
                       "required": false,
@@ -1646,7 +1726,7 @@
                       "valueInteger": 1
                     }
                   ],
-                  "linkId": "PackagedProductDefinition.package.characteristic.value[x]",
+                  "linkId": "PackagedProductDefinition.package.property.value[x]",
                   "text": "A value for the characteristic",
                   "type": "group",
                   "required": false,
@@ -1671,7 +1751,7 @@
                       "type": "display"
                     },
                     {
-                      "linkId": "PackagedProductDefinition.package.characteristic.value[x]._type",
+                      "linkId": "PackagedProductDefinition.package.property.value[x]._type",
                       "text": "type",
                       "type": "choice",
                       "required": false,
@@ -1682,15 +1762,23 @@
                           "extension": [
                             {
                               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                              "valueString": "Coding"
+                              "valueString": "CodeableConcept"
                             }
                           ],
-                          "linkId": "PackagedProductDefinition.package.characteristic.value[x]._null",
+                          "linkId": "PackagedProductDefinition.package.property.value[x]._null",
                           "type": "group",
                           "item": [
                             {
-                              "linkId": "PackagedProductDefinition.package.characteristic.value[x]._null.value",
+                              "linkId": "PackagedProductDefinition.package.property.value[x]._null.coding",
+                              "text": "code:",
                               "type": "open-choice",
+                              "required": false,
+                              "repeats": false
+                            },
+                            {
+                              "linkId": "PackagedProductDefinition.package.property.value[x]._null.text",
+                              "text": "text:",
+                              "type": "string",
                               "required": false,
                               "repeats": false
                             }
@@ -1703,58 +1791,40 @@
                               "valueString": "Quantity"
                             }
                           ],
-                          "linkId": "PackagedProductDefinition.package.characteristic.value[x]._null",
+                          "linkId": "PackagedProductDefinition.package.property.value[x]._null",
                           "type": "group",
                           "item": [
                             {
-                              "linkId": "PackagedProductDefinition.package.characteristic.value[x]._null.comparator",
+                              "linkId": "PackagedProductDefinition.package.property.value[x]._null.comparator",
                               "text": "comp:",
                               "type": "choice",
                               "required": false,
                               "repeats": false
                             },
                             {
-                              "linkId": "PackagedProductDefinition.package.characteristic.value[x]._null.value",
+                              "linkId": "PackagedProductDefinition.package.property.value[x]._null.value",
                               "text": "value:",
                               "type": "decimal",
                               "required": false,
                               "repeats": false
                             },
                             {
-                              "linkId": "PackagedProductDefinition.package.characteristic.value[x]._null.units",
+                              "linkId": "PackagedProductDefinition.package.property.value[x]._null.units",
                               "text": "units:",
                               "type": "string",
                               "required": false,
                               "repeats": false
                             },
                             {
-                              "linkId": "PackagedProductDefinition.package.characteristic.value[x]._null.code",
+                              "linkId": "PackagedProductDefinition.package.property.value[x]._null.code",
                               "text": "coded units:",
                               "type": "string",
                               "required": false,
                               "repeats": false
                             },
                             {
-                              "linkId": "PackagedProductDefinition.package.characteristic.value[x]._null.system",
+                              "linkId": "PackagedProductDefinition.package.property.value[x]._null.system",
                               "text": "units system:",
-                              "type": "string",
-                              "required": false,
-                              "repeats": false
-                            }
-                          ]
-                        },
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                              "valueString": "string"
-                            }
-                          ],
-                          "linkId": "PackagedProductDefinition.package.characteristic.value[x]._null",
-                          "type": "group",
-                          "item": [
-                            {
-                              "linkId": "PackagedProductDefinition.package.characteristic.value[x]._null.value",
                               "type": "string",
                               "required": false,
                               "repeats": false
@@ -1768,11 +1838,11 @@
                               "valueString": "datetime"
                             }
                           ],
-                          "linkId": "PackagedProductDefinition.package.characteristic.value[x]._null",
+                          "linkId": "PackagedProductDefinition.package.property.value[x]._null",
                           "type": "group",
                           "item": [
                             {
-                              "linkId": "PackagedProductDefinition.package.characteristic.value[x]._null.value",
+                              "linkId": "PackagedProductDefinition.package.property.value[x]._null.value",
                               "type": "dateTime",
                               "required": false,
                               "repeats": false
@@ -1786,11 +1856,11 @@
                               "valueString": "boolean"
                             }
                           ],
-                          "linkId": "PackagedProductDefinition.package.characteristic.value[x]._null",
+                          "linkId": "PackagedProductDefinition.package.property.value[x]._null",
                           "type": "group",
                           "item": [
                             {
-                              "linkId": "PackagedProductDefinition.package.characteristic.value[x]._null.value",
+                              "linkId": "PackagedProductDefinition.package.property.value[x]._null.value",
                               "type": "boolean",
                               "required": false,
                               "repeats": false
@@ -1804,7 +1874,7 @@
                               "valueString": "Attachment"
                             }
                           ],
-                          "linkId": "PackagedProductDefinition.package.characteristic.value[x]._null",
+                          "linkId": "PackagedProductDefinition.package.property.value[x]._null",
                           "type": "group"
                         }
                       ]
@@ -1936,13 +2006,8 @@
                   ]
                 },
                 {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "Reference"
-                    }
-                  ],
                   "linkId": "PackagedProductDefinition.package.containedItem.item",
+                  "text": "The actual item(s) of medication, as manufactured, or a device (typically, but not necessarily, a co-packaged one), or other medically related item (such as food, biologicals, raw materials, medical fluids, gases etc.), as contained in the package. This also allows another packaged product to be included, which is solely for the case where a package of other entire packages is wanted - such as a wholesale or distribution pack",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -1962,25 +2027,8 @@
                           }
                         }
                       ],
-                      "text": "The manufactured item or device as contained in the packaged medicinal product.",
+                      "text": "The actual item(s) of medication, as manufactured, or a device (typically, but not necessarily, a co-packaged one), or other medically related item (such as food, biologicals, raw materials, medical fluids, gases etc.), as contained in the package. This also allows another packaged product to be included, which is solely for the case where a package of other entire packages is wanted - such as a wholesale or distribution pack.",
                       "type": "display"
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                          "valueCode": "ManufacturedItemDefinition, DeviceDefinition"
-                        },
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                          "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                        }
-                      ],
-                      "linkId": "PackagedProductDefinition.package.containedItem.item.value",
-                      "text": "The manufactured item or device as contained in the packaged medicinal product",
-                      "type": "reference",
-                      "required": false,
-                      "repeats": false
                     }
                   ]
                 },

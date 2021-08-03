@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-choiceOrientation",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "choiceOrientation",
   "status": "draft",
   "date": "2013-07-04",
@@ -28,7 +28,7 @@
     }
   ],
   "description": "Identifies the desired orientation when rendering a list of choices (typically radio-box or check-box lists).",
-  "fhirVersion": "4.2.0",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "rim",
@@ -42,10 +42,6 @@
     {
       "type": "element",
       "expression": "Questionnaire.item"
-    },
-    {
-      "type": "element",
-      "expression": "Questionnaire.item.item"
     }
   ],
   "contextInvariant": [
@@ -61,7 +57,7 @@
         "path": "Extension",
         "short": "horizontal | vertical",
         "definition": "Identifies the desired orientation when rendering a list of choices (typically radio-box or check-box lists).",
-        "comment": "Systems may choose to wrap answers rather than attempting to display them all in one row or column.  Language conventions may determine the order in which the choices are listed (left-to-right or right-to-left, etc.).",
+        "comment": "Systems may choose to wrap answers rather than attempting to display them all in one row or column.  Language conventions may determine the order in which the choices are listed (left-to-right or right-to-left, etc.).  See additional guidance and examples in the [SDC implementation guide](http://build.fhir.org/ig/HL7/sdc/rendering.html#choiceOrientation).",
         "min": 0,
         "max": "1",
         "base": {
@@ -76,7 +72,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -158,7 +154,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -166,7 +162,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -233,7 +229,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -247,7 +243,7 @@
           ],
           "strength": "required",
           "description": "Direction in which lists of possible answers should be displayed.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/choice-list-orientation|4.2.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/choice-list-orientation"
         },
         "mapping": [
           {
@@ -265,7 +261,7 @@
         "path": "Extension",
         "short": "horizontal | vertical",
         "definition": "Identifies the desired orientation when rendering a list of choices (typically radio-box or check-box lists).",
-        "comment": "Systems may choose to wrap answers rather than attempting to display them all in one row or column.  Language conventions may determine the order in which the choices are listed (left-to-right or right-to-left, etc.).",
+        "comment": "Systems may choose to wrap answers rather than attempting to display them all in one row or column.  Language conventions may determine the order in which the choices are listed (left-to-right or right-to-left, etc.).  See additional guidance and examples in the [SDC implementation guide](http://build.fhir.org/ig/HL7/sdc/rendering.html#choiceOrientation).",
         "min": 0,
         "max": "1"
       },
@@ -297,7 +293,7 @@
           ],
           "strength": "required",
           "description": "Direction in which lists of possible answers should be displayed.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/choice-list-orientation|4.2.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/choice-list-orientation"
         }
       }
     ]

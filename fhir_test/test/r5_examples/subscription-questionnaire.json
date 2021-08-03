@@ -6,14 +6,14 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (FHIR Infrastructure)",
   "item": [
     {
       "linkId": "Subscription",
-      "text": "Notification about a Topic",
+      "text": "Notification about a SubscriptionTopic",
       "type": "group",
       "required": false,
       "repeats": true,
@@ -33,7 +33,7 @@
               }
             }
           ],
-          "text": "The subscription resource describes a particular client\u0027s request to be notified about a Topic.",
+          "text": "The subscription resource describes a particular client\u0027s request to be notified about a SubscriptionTopic.",
           "type": "display"
         },
         {
@@ -67,7 +67,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -226,7 +226,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -253,7 +253,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -468,7 +468,7 @@
             },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "Reference"
+              "valueString": "uri"
             }
           ],
           "linkId": "Subscription.topic",
@@ -491,23 +491,13 @@
                   }
                 }
               ],
-              "text": "The reference to the topic to be notified about.",
+              "text": "The reference to the subscription topic to be notified about.",
               "type": "display"
             },
             {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Topic"
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                }
-              ],
               "linkId": "Subscription.topic.value",
-              "text": "Reference to the topic being subscribed to",
-              "type": "reference",
+              "text": "Reference to the subscription topic being subscribed to",
+              "type": "string",
               "required": false,
               "repeats": false
             }
@@ -655,7 +645,7 @@
         },
         {
           "linkId": "Subscription.filterBy",
-          "text": "Criteria for narrowing the topic stream",
+          "text": "Criteria for narrowing the subscription topic stream",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -675,7 +665,7 @@
                   }
                 }
               ],
-              "text": "The filter properties to be applied to narrow the topic stream.  When multiple filters are applied, evaluates to true if all the conditions are met; otherwise it returns false.   (i.e., logical AND).",
+              "text": "The filter properties to be applied to narrow the subscription topic stream.  When multiple filters are applied, evaluates to true if all the conditions are met; otherwise it returns false.   (i.e., logical AND).",
               "type": "display"
             },
             {
@@ -778,6 +768,49 @@
             {
               "extension": [
                 {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "uri"
+                }
+              ],
+              "linkId": "Subscription.filterBy.resourceType",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "text": "If the element is a reference to another resource, this element contains \"Reference\", and the targetProfile element defines what resources can be referenced. The targetProfile may be a reference to the general definition of a resource (e.g. http://hl7.org/fhir/StructureDefinition/Patient).",
+                  "type": "display"
+                },
+                {
+                  "linkId": "Subscription.filterBy.resourceType.value",
+                  "text": "Allowed Data type or Resource (reference to definition) for this Subscription",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
                   "valueInteger": 1
                 },
@@ -790,7 +823,7 @@
                   "valueString": "string"
                 }
               ],
-              "linkId": "Subscription.filterBy.name",
+              "linkId": "Subscription.filterBy.searchParamName",
               "type": "group",
               "required": true,
               "repeats": true,
@@ -810,12 +843,12 @@
                       }
                     }
                   ],
-                  "text": "The filter label (\u003dkey) as defined in the `Topic.canFilterBy.name`  element.",
+                  "text": "The filter label (\u003dkey) as defined in the `SubscriptionTopic.canfilterBy.searchParamName`  element.",
                   "type": "display"
                 },
                 {
-                  "linkId": "Subscription.filterBy.name.value",
-                  "text": "Filter label defined in Topic",
+                  "linkId": "Subscription.filterBy.searchParamName.value",
+                  "text": "Filter label defined in SubscriptionTopic",
                   "type": "string",
                   "required": false,
                   "repeats": false
@@ -833,7 +866,7 @@
                   "valueString": "code"
                 }
               ],
-              "linkId": "Subscription.filterBy.matchType",
+              "linkId": "Subscription.filterBy.searchModifier",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -857,8 +890,8 @@
                   "type": "display"
                 },
                 {
-                  "linkId": "Subscription.filterBy.matchType.value",
-                  "text": "match type",
+                  "linkId": "Subscription.filterBy.searchModifier.value",
+                  "text": "search modifier",
                   "type": "choice",
                   "required": false,
                   "repeats": false
@@ -917,12 +950,62 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "CodeableConcept"
+              "valueString": "Coding"
             }
           ],
-          "linkId": "Subscription.error",
-          "text": "Latest error code or note",
+          "linkId": "Subscription.channelType",
+          "type": "group",
+          "required": true,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "The type of channel to send notifications on.",
+              "type": "display"
+            },
+            {
+              "linkId": "Subscription.channelType.value",
+              "text": "Channel type for notifications",
+              "type": "open-choice",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "uri"
+            }
+          ],
+          "linkId": "Subscription.endpoint",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -942,19 +1025,51 @@
                   }
                 }
               ],
-              "text": "A record of the last error that occurred when the server processed a notification. Recommended practice: If available, convey the HTTP error in an adjacent Coding or in text.",
+              "text": "The url that describes the actual end-point to send messages to. For rest-hook the end-point must be an http: or https: URL; for websocket ws: or wss:; for email, a mailto: url; and for message the endpoint can be in any form of url the server understands (usually, http/s: or mllp:). The URI is allowed to be relative; in which case, it is relative to the server end-point (since there may be more than one, clients should avoid using relative URIs).",
               "type": "display"
             },
             {
-              "linkId": "Subscription.error.coding",
-              "text": "code:",
-              "type": "open-choice",
+              "linkId": "Subscription.endpoint.value",
+              "text": "Where the channel points to",
+              "type": "string",
               "required": false,
               "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "string"
+            }
+          ],
+          "linkId": "Subscription.header",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "Additional headers / information to send as part of the notification. Exactly what these mean depend on the channel type. They can convey additional information to the recipient and/or meet security requirements; for example, support of multiple headers in the outgoing notifications for rest-hook type subscriptions.",
+              "type": "display"
             },
             {
-              "linkId": "Subscription.error.text",
-              "text": "text:",
+              "linkId": "Subscription.header.value",
+              "text": "Usage depends on the channel type",
               "type": "string",
               "required": false,
               "repeats": false
@@ -972,7 +1087,7 @@
               "valueString": "integer"
             }
           ],
-          "linkId": "Subscription.eventCount",
+          "linkId": "Subscription.heartbeatPeriod",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -992,12 +1107,12 @@
                   }
                 }
               ],
-              "text": "A record of  the number of events for which the server has attempted delivery on this subscription (i.e., the number of events that occurred while the subscription is in an \"active\" or \"error\" state -- not \"requested\" or \"off\").   Server Initializes to 0 for a new subscription.  Repeated attempts at delivery of the *same* event notification do not increment this counter.  Valid values are unsigned integers (0+).  The decmial type is used to ensure that counts can grow larger than 32-bit values.",
+              "text": "If present,  a \u0027hearbeat\" notification (keepalive) is sent via this channel with an the interval period equal to this elements integer value in seconds.    If not present, a heartbeat notification is not sent.",
               "type": "display"
             },
             {
-              "linkId": "Subscription.eventCount.value",
-              "text": "Notification event counter",
+              "linkId": "Subscription.heartbeatPeriod.value",
+              "text": "Interval in seconds to send \u0027heartbeat\u0027 notification",
               "type": "integer",
               "required": false,
               "repeats": false
@@ -1007,19 +1122,18 @@
         {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
               "valueInteger": 1
             },
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "integer"
             }
           ],
-          "linkId": "Subscription.channel",
-          "text": "The channel on which to report matches to the criteria",
+          "linkId": "Subscription.timeout",
           "type": "group",
-          "required": true,
-          "repeats": false,
+          "required": false,
+          "repeats": true,
           "item": [
             {
               "extension": [
@@ -1036,501 +1150,187 @@
                   }
                 }
               ],
-              "text": "Details where to send notifications when resources are received that meet the criteria.",
+              "text": "If present, the maximum amount of time a server will allow before failing a notification attempt.",
               "type": "display"
             },
             {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "string"
-                }
-              ],
-              "linkId": "Subscription.channel.id",
-              "type": "group",
+              "linkId": "Subscription.timeout.value",
+              "text": "Timeout in seconds to attempt notification delivery",
+              "type": "integer",
               "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "Subscription.channel.id.value",
-                  "text": "Unique id for inter-element referencing",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
             },
             {
-              "linkId": "Subscription.channel.extension",
-              "text": "Additional content defined by implementations",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-                  "type": "display"
-                }
-              ]
-            },
-            {
-              "linkId": "Subscription.channel.modifierExtension",
-              "text": "Extensions that cannot be ignored even if unrecognized",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-                  "type": "display"
-                }
-              ]
-            },
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "code"
+            }
+          ],
+          "linkId": "Subscription.contentType",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "CodeableConcept"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
                 }
               ],
-              "linkId": "Subscription.channel.type",
-              "text": "rest-hook | websocket | email | message",
-              "type": "group",
-              "required": true,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "The type of channel to send notifications on.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "Subscription.channel.type.coding",
-                  "text": "code:",
-                  "type": "open-choice",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "Subscription.channel.type.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
+              "text": "The mime type to send the payload in - either application/fhir+xml, or application/fhir+json. The MIME types \"text/plain\" and \"text/html\" may also be used for Email subscriptions.",
+              "type": "display"
             },
+            {
+              "linkId": "Subscription.contentType.value",
+              "text": "content type",
+              "type": "choice",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "code"
+            }
+          ],
+          "linkId": "Subscription.content",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "uri"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
                 }
               ],
-              "linkId": "Subscription.channel.endpoint",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "The url that describes the actual end-point to send messages to. For rest-hook the end-point must be an http: or https: URL; for websocket ws: or wss:; for email, a mailto: url; and for message the endpoint can be in any form of url the server understands (usually, http/s: or mllp:). The URI is allowed to be relative; in which case, it is relative to the server end-point (since there may be more than one, clients should avoid using relative URIs).",
-                  "type": "display"
-                },
-                {
-                  "linkId": "Subscription.channel.endpoint.value",
-                  "text": "Where the channel points to",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
+              "text": "How much of the resource content to deliver in the notification payload. The choices are an empty payload, only the resource id, or the full resource content. Sending the payload has obvious security implications. The server is responsible for ensuring that the content is appropriately secured.",
+              "type": "display"
             },
+            {
+              "linkId": "Subscription.content.value",
+              "text": "content",
+              "type": "choice",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "code"
+            }
+          ],
+          "linkId": "Subscription.notificationUrlLocation",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "string"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
                 }
               ],
-              "linkId": "Subscription.channel.header",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "Additional headers / information to send as part of the notification. Exactly what these mean depend on the channel type. They can convey additional information to the recipient and/or meet security requirements; for example, support of multiple headers in the outgoing notifications for rest-hook type subscriptions.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "Subscription.channel.header.value",
-                  "text": "Usage depends on the channel type",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
+              "text": "If present, where to place URLs of resources in notifications.",
+              "type": "display"
             },
+            {
+              "linkId": "Subscription.notificationUrlLocation.value",
+              "text": "notification url location",
+              "type": "choice",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "integer"
+            }
+          ],
+          "linkId": "Subscription.maxCount",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "integer"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
                 }
               ],
-              "linkId": "Subscription.channel.heartbeatPeriod",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "If present,  a \u0027hearbeat\" notification (keepalive) is sent via this channel with an the interval period equal to this elements integer value in seconds.    If not present, a heartbeat notification is not sent.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "Subscription.channel.heartbeatPeriod.value",
-                  "text": "Interval in seconds to send \u0027heartbeat\u0027 notification",
-                  "type": "integer",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
+              "text": "If present, the maximum number of triggering resources that will be included in a notification bundle (e.g., a server will not include more than this number of trigger resources in a single notification).  Note that this is not a strict limit on the number of entries in a bundle, as dependent resources can be included.",
+              "type": "display"
             },
             {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                }
-              ],
-              "linkId": "Subscription.channel.payload",
-              "text": "Payload definition",
-              "type": "group",
+              "linkId": "Subscription.maxCount.value",
+              "text": "Maximum number of triggering resources included in notification bundles",
+              "type": "integer",
               "required": false,
-              "repeats": false,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "The payload mimetype and content.  If the payload is not present, then there is no payload in the notification, just a notification.",
-                  "type": "display"
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                      "valueInteger": 1
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "string"
-                    }
-                  ],
-                  "linkId": "Subscription.channel.payload.id",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-                      "type": "display"
-                    },
-                    {
-                      "linkId": "Subscription.channel.payload.id.value",
-                      "text": "Unique id for inter-element referencing",
-                      "type": "string",
-                      "required": false,
-                      "repeats": false
-                    }
-                  ]
-                },
-                {
-                  "linkId": "Subscription.channel.payload.extension",
-                  "text": "Additional content defined by implementations",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-                      "type": "display"
-                    }
-                  ]
-                },
-                {
-                  "linkId": "Subscription.channel.payload.modifierExtension",
-                  "text": "Extensions that cannot be ignored even if unrecognized",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-                      "type": "display"
-                    }
-                  ]
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                      "valueInteger": 1
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "code"
-                    }
-                  ],
-                  "linkId": "Subscription.channel.payload.contentType",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "text": "The mime type to send the payload in - either application/fhir+xml, or application/fhir+json. The MIME types \"text/plain\" and \"text/html\" may also be used for Email subscriptions.",
-                      "type": "display"
-                    },
-                    {
-                      "linkId": "Subscription.channel.payload.contentType.value",
-                      "text": "content type",
-                      "type": "choice",
-                      "required": false,
-                      "repeats": false
-                    }
-                  ]
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                      "valueInteger": 1
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "code"
-                    }
-                  ],
-                  "linkId": "Subscription.channel.payload.content",
-                  "type": "group",
-                  "required": false,
-                  "repeats": true,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "text": "How much of the resource content to deliver in the notification payload. The choices are an empty payload, only the resource id, or the full resource content. Sending the payload has obvious security implications. The server is responsible for ensuring that the content is appropriately secured.",
-                      "type": "display"
-                    },
-                    {
-                      "linkId": "Subscription.channel.payload.content.value",
-                      "text": "content",
-                      "type": "choice",
-                      "required": false,
-                      "repeats": false
-                    }
-                  ]
-                }
-              ]
+              "repeats": false
             }
           ]
         }

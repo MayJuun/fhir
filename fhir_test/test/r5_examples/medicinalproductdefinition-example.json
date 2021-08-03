@@ -3,7 +3,7 @@
   "id": "example",
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: example\u003c/p\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: {mpid}\u003c/p\u003e\u003cp\u003e\u003cb\u003eproductClassification\u003c/b\u003e: WHOAnatomicalTherapeuticChemicalATCClassificationSystem|B01AF02 \u003cspan\u003e(Details : {http://ema.europa.eu/example/WHOAnatomicalTherapeuticChemicalATCClassificationSystem code \u0027WHOAnatomicalTherapeuticChemicalATCClassificationSystem|B01AF02\u0027 \u003d \u0027WHOAnatomicalTherapeuticChemicalATCClassificationSystem|B01AF02)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eattachedDocument\u003c/b\u003e: \u003ca\u003eDocumentReference/example\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003emasterFile\u003c/b\u003e: \u003ca\u003eDocumentReference/example\u003c/a\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003ename\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eproductName\u003c/b\u003e: Equilidem 2.5 mg film-coated tablets\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003enamePart\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003epart\u003c/b\u003e: Equilidem\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: INV (Details: [not stated] code INV \u003d \u0027INV\u0027, stated as \u0027null\u0027)\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003enamePart\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003epart\u003c/b\u003e: 2.5 mg\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: STR (Details: [not stated] code STR \u003d \u0027STR\u0027, stated as \u0027null\u0027)\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003enamePart\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003epart\u003c/b\u003e: film-coated tablets\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: FRM (Details: [not stated] code FRM \u003d \u0027FRM\u0027, stated as \u0027null\u0027)\u003c/p\u003e\u003c/blockquote\u003e\u003ch3\u003eCountryLanguages\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eCountry\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eJurisdiction\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eLanguage\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003eEU \u003cspan\u003e(Details : {http://ema.europa.eu/example/countryCode code \u0027EU\u0027 \u003d \u0027EU)\u003c/span\u003e\u003c/td\u003e\u003ctd\u003eEU \u003cspan\u003e(Details : {http://ema.europa.eu/example/jurisdictionCode code \u0027EU\u0027 \u003d \u0027EU)\u003c/span\u003e\u003c/td\u003e\u003ctd\u003eEN \u003cspan\u003e(Details : {http://ema.europa.eu/example/languageCode code \u0027EN\u0027 \u003d \u0027EN)\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/blockquote\u003e\u003ch3\u003eManufacturingBusinessOperations\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eType[x]\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eEffectiveDate\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eAuthorization\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003eBatchrelease (Details: http://ema.europa.eu/example/manufacturingOperationType code Batchrelease \u003d \u0027Batchrelease\u0027, stated as \u0027null\u0027)\u003c/td\u003e\u003ctd\u003e2013-03-15 --\u0026gt; (ongoing)\u003c/td\u003e\u003ctd/\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n\t\t\t\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\n\t\t\t\u003cp\u003e\u003cb\u003eId\u003c/b\u003e: example\u003c/p\u003e\n\t\t\t\u003cp\u003e\u003cb\u003eIdentifier\u003c/b\u003e: {mpid}\u003c/p\u003e\n\t\t\t\u003cp\u003e\u003cb\u003eClassification\u003c/b\u003e: \u003cspan title\u003d\"Codes: {http://ema.europa.eu/example/WHOAnatomicalTherapeuticChemicalATCClassificationSystem B01AF02}\"\u003eATC: B01AF02\u003c/span\u003e\u003c/p\u003e\n\t\t\t\u003cp\u003e\u003cb\u003eAttached Document\u003c/b\u003e: (SmPC)\u003c/p\u003e\n\t\t\t\u003cp\u003e\u003cb\u003eMaster File\u003c/b\u003e: (Pharmacovigilence Master File)\u003c/p\u003e\n\t\t\t\u003cp\u003e\u003cb\u003eProduct Name\u003c/b\u003e: Equilidem 2.5 mg film-coated tablets\u003c/p\u003e\n\t\t\t\u003cblockquote\u003e\n\t\t\t\t\u003cp\u003e\u003cb\u003eName Part\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003epart\u003c/b\u003e:Equilidem\u003c/p\u003e\n\t\t\t\t\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: \u003cspan title\u003d\"Codes: \"\u003eInvented\u003c/span\u003e\u003c/p\u003e\n\t\t\t\u003c/blockquote\u003e\n\t\t\t\u003cblockquote\u003e\n\t\t\t\t\u003cp\u003e\u003cb\u003eName Part\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003epart\u003c/b\u003e:2.5 mg\u003c/p\u003e\n\t\t\t\t\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: \u003cspan title\u003d\"Codes: \"\u003eStrength\u003c/span\u003e\u003c/p\u003e\n\t\t\t\u003c/blockquote\u003e\n\t\t\t\u003cblockquote\u003e\n\t\t\t\t\u003cp\u003e\u003cb\u003eName Part\u003c/b\u003e\u003c/p\u003e\n\t\t\t\t\u003cp\u003e\u003cb\u003epart\u003c/b\u003e:film-coated tablets\u003c/p\u003e\n\t\t\t\t\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: \u003cspan title\u003d\"Codes: \"\u003eForm\u003c/span\u003e\u003c/p\u003e\n\t\t\t\t\u003cp\u003e\u003cb\u003eCountry \u0026amp; Languages\u003c/b\u003e\u003c/p\u003e\n\t\t\t\t\u003ctable class\u003d\"grid\"\u003e\n\t\t\t\t\t\u003ctr\u003e\n\t\t\t\t\t\t\u003ctd\u003e-\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd\u003e\u003cb\u003eCountry\u003c/b\u003e\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd\u003e\u003cb\u003eJurisdiction\u003c/b\u003e\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd\u003e\u003cb\u003eLanguage\u003c/b\u003e\u003c/td\u003e\n\t\t\t\t\t\u003c/tr\u003e\n\t\t\t\t\t\u003ctr\u003e\n\t\t\t\t\t\t\u003ctd\u003e*\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd\u003e\u003cspan title\u003d\"Codes: {http://ema.europa.eu/example/countryCode EU}\"\u003eEU\u003c/span\u003e\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd\u003e\u003cspan title\u003d\"Codes: {http://ema.europa.eu/example/jurisdictionCode EU}\"\u003eEU\u003c/span\u003e\u003c/td\u003e\n\t\t\t\t\t\t\u003ctd\u003e\u003cspan title\u003d\"Codes: {http://ema.europa.eu/example/languageCode EN}\"\u003eEN\u003c/span\u003e\u003c/td\u003e\n\t\t\t\t\t\u003c/tr\u003e\n\t\t\t\t\u003c/table\u003e\n\t\t\t\u003c/blockquote\u003e\n\t\t\t\u003cp\u003e\u003cb\u003eManufacturing \u0026amp; Business Operations\u003c/b\u003e\u003c/p\u003e\n\t\t\t\u003ctable class\u003d\"grid\"\u003e\n\t\t\t\t\u003ctr\u003e\n\t\t\t\t\t\u003ctd\u003e-\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003e\u003cb\u003eType\u003c/b\u003e\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003e\u003cb\u003eEffectiveDate\u003c/b\u003e\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003e\u003cb\u003eAuthorization\u003c/b\u003e\u003c/td\u003e\n\t\t\t\t\u003c/tr\u003e\n\t\t\t\t\u003ctr\u003e\n\t\t\t\t\t\u003ctd\u003e*\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003eBatch Release\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003e2013-03-15 --\u0026gt; (ongoing)\u003c/td\u003e\n\t\t\t\t\t\u003ctd\u003e\u003cspan\u003e1324TZ\u003c/span\u003e\u003c/td\u003e\n\t\t\t\t\u003c/tr\u003e\n\t\t\t\u003c/table\u003e\n\t\t\u003c/div\u003e"
   },
   "identifier": [
     {
@@ -11,12 +11,12 @@
       "value": "{mpid}"
     }
   ],
-  "productClassification": [
+  "classification": [
     {
       "coding": [
         {
           "system": "http://ema.europa.eu/example/WHOAnatomicalTherapeuticChemicalATCClassificationSystem",
-          "code": "WHOAnatomicalTherapeuticChemicalATCClassificationSystem|B01AF02"
+          "code": "B01AF02"
         }
       ]
     }
@@ -38,19 +38,31 @@
         {
           "part": "Equilidem",
           "type": {
-            "code": "INV"
+            "coding": [
+              {
+                "code": "INV"
+              }
+            ]
           }
         },
         {
           "part": "2.5 mg",
           "type": {
-            "code": "STR"
+            "coding": [
+              {
+                "code": "STR"
+              }
+            ]
           }
         },
         {
           "part": "film-coated tablets",
           "type": {
-            "code": "FRM"
+            "coding": [
+              {
+                "code": "FRM"
+              }
+            ]
           }
         }
       ],
@@ -84,11 +96,17 @@
       ]
     }
   ],
-  "manufacturingBusinessOperation": [
+  "operation": [
     {
-      "typeCoding": {
-        "system": "http://ema.europa.eu/example/manufacturingOperationType",
-        "code": "Batchrelease"
+      "type": {
+        "concept": {
+          "coding": [
+            {
+              "system": "http://ema.europa.eu/example/manufacturingOperationType",
+              "code": "Batchrelease"
+            }
+          ]
+        }
       },
       "effectiveDate": {
         "start": "2013-03-15"

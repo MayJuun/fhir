@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for FamilyMemberHistory.born[x]",
       "expansion": {
-        "identifier": "urn:uuid:7e386b14-16b1-431a-992e-81d394f30cd5",
-        "timestamp": "2019-12-31T21:13:16+11:00",
+        "identifier": "urn:uuid:bc90e7f8-044f-43a9-8c0c-d35c032e0ae1",
+        "timestamp": "2021-04-15T12:28:48+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -37,8 +37,8 @@
       "status": "active",
       "description": "Type options for FamilyMemberHistory.age[x]",
       "expansion": {
-        "identifier": "urn:uuid:4f0689c4-1359-4735-9b22-6bac4668ad8c",
-        "timestamp": "2019-12-31T21:13:16+11:00",
+        "identifier": "urn:uuid:e46ef3ef-33a4-4ec9-a5f4-b97252367f53",
+        "timestamp": "2021-04-15T12:28:48+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -65,8 +65,8 @@
       "status": "active",
       "description": "Type options for FamilyMemberHistory.deceased[x]",
       "expansion": {
-        "identifier": "urn:uuid:2dd60dc2-20d7-480b-81b4-138bdaade40e",
-        "timestamp": "2019-12-31T21:13:16+11:00",
+        "identifier": "urn:uuid:ceb3ae7f-17ae-46df-b842-fc4ed4a9ae25",
+        "timestamp": "2021-04-15T12:28:48+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -103,8 +103,8 @@
       "status": "active",
       "description": "Type options for FamilyMemberHistory.condition.onset[x]",
       "expansion": {
-        "identifier": "urn:uuid:e2bc645e-a016-407e-8573-ae41b9e6f1aa",
-        "timestamp": "2019-12-31T21:13:16+11:00",
+        "identifier": "urn:uuid:79c6686b-0f47-4b92-a513-a6ea1318b416",
+        "timestamp": "2021-04-15T12:28:48+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -136,8 +136,8 @@
       "status": "active",
       "description": "Type options for FamilyMemberHistory.procedure.performed[x]",
       "expansion": {
-        "identifier": "urn:uuid:02a95e23-5fd6-47aa-aafe-944f11f39caf",
-        "timestamp": "2019-12-31T21:13:16+11:00",
+        "identifier": "urn:uuid:8133282c-eab3-4d35-a065-3c12debd3fc8",
+        "timestamp": "2021-04-15T12:28:48+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -173,9 +173,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Patient Care)",
   "item": [
     {
@@ -234,7 +234,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -393,7 +393,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -420,7 +420,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]

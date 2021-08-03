@@ -1,0 +1,1 @@
+{"resourceType":"NamingSystem","id":"implantStatus","name":"Implant Status","status":"draft","kind":"codesystem","date":"2021-04-15T12:25:09+10:00","uniqueId":[{"type":"uri","value":"http://hl7.org/fhir/implantStatus","preferred":true},{"type":"oid","value":"2.16.840.1.113883.4.642.1.0","preferred":false}]}

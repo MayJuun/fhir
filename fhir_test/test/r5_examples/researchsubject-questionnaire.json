@@ -6,9 +6,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Biomedical Research and Regulation)",
   "item": [
     {
@@ -71,7 +71,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -230,7 +230,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -257,7 +257,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -405,7 +405,7 @@
                   }
                 }
               ],
-              "text": "The current state of the subject.",
+              "text": "The publication state of the resource (not of the subject).",
               "type": "display"
             },
             {
@@ -555,7 +555,7 @@
                 }
               ],
               "linkId": "ResearchSubject.progress.type",
-              "text": "Kind of state that is being described",
+              "text": "state | milestone",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -605,7 +605,7 @@
                   "valueString": "CodeableConcept"
                 }
               ],
-              "linkId": "ResearchSubject.progress.state",
+              "linkId": "ResearchSubject.progress.subjectState",
               "text": "candidate | eligible | follow-up | ineligible | not-registered | off-study | on-study | on-study-intervention | on-study-observation | pending-on-study | potential-candidate | screening | withdrawn",
               "type": "group",
               "required": false,
@@ -630,14 +630,14 @@
                   "type": "display"
                 },
                 {
-                  "linkId": "ResearchSubject.progress.state.coding",
+                  "linkId": "ResearchSubject.progress.subjectState.coding",
                   "text": "code:",
-                  "type": "open-choice",
+                  "type": "choice",
                   "required": false,
                   "repeats": false
                 },
                 {
-                  "linkId": "ResearchSubject.progress.state.text",
+                  "linkId": "ResearchSubject.progress.subjectState.text",
                   "text": "text:",
                   "type": "string",
                   "required": false,
@@ -750,10 +750,6 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
-                  "valueInteger": 1
-                },
-                {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
                 },
@@ -764,7 +760,7 @@
               ],
               "linkId": "ResearchSubject.progress.startDate",
               "type": "group",
-              "required": true,
+              "required": false,
               "repeats": true,
               "item": [
                 {
@@ -782,11 +778,54 @@
                       }
                     }
                   ],
-                  "text": "The date when the change in status occurred. This is NOT the date the change in state was recorded.",
+                  "text": "The date when the new status started. This is NOT the date the change in state was recorded.",
                   "type": "display"
                 },
                 {
                   "linkId": "ResearchSubject.progress.startDate.value",
+                  "text": "State change date",
+                  "type": "dateTime",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "datetime"
+                }
+              ],
+              "linkId": "ResearchSubject.progress.endDate",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "text": "The date when the state ended.",
+                  "type": "display"
+                },
+                {
+                  "linkId": "ResearchSubject.progress.endDate.value",
                   "text": "State change date",
                   "type": "dateTime",
                   "required": false,
@@ -919,7 +958,7 @@
               "valueString": "Reference"
             }
           ],
-          "linkId": "ResearchSubject.individual",
+          "linkId": "ResearchSubject.subject",
           "type": "group",
           "required": true,
           "repeats": true,
@@ -939,22 +978,22 @@
                   }
                 }
               ],
-              "text": "The record of the person or animal who is involved in the study.",
+              "text": "The record of the person, animal or other entity involved in the study.",
               "type": "display"
             },
             {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient"
+                  "valueCode": "Patient, Group, Specimen, Device, Medication, Substance, BiologicallyDerivedProduct"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
                   "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                 }
               ],
-              "linkId": "ResearchSubject.individual.value",
-              "text": "Who is part of study",
+              "linkId": "ResearchSubject.subject.value",
+              "text": "Who or what is part of study",
               "type": "reference",
               "required": false,
               "repeats": false

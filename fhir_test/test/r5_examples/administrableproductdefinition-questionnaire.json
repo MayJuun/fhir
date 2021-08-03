@@ -5,27 +5,22 @@
     {
       "resourceType": "ValueSet",
       "id": "vs2",
-      "name": "Type options for AdministrableProductDefinition.characteristic.value[x]",
+      "name": "Type options for AdministrableProductDefinition.property.value[x]",
       "status": "active",
-      "description": "Type options for AdministrableProductDefinition.characteristic.value[x]",
+      "description": "Type options for AdministrableProductDefinition.property.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:8a8f796c-f2ba-4436-8513-1d37d2ba42a1",
-        "timestamp": "2019-12-31T21:07:33+11:00",
+        "identifier": "urn:uuid:8254c8f5-f30d-423c-a8f2-9f11b0bd1277",
+        "timestamp": "2021-04-15T12:27:57+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
-            "code": "Coding",
-            "display": "Coding"
+            "code": "CodeableConcept",
+            "display": "CodeableConcept"
           },
           {
             "system": "http://hl7.org/fhir/data-types",
             "code": "Quantity",
             "display": "Quantity"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "string",
-            "display": "string"
           },
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -51,14 +46,14 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Biomedical Research and Regulation)",
   "item": [
     {
       "linkId": "AdministrableProductDefinition",
-      "text": "A pharmaceutical product described in terms of its composition and dose form",
+      "text": "A medicinal product in the final form which is suitable for administering to a patient (after any mixing of multiple components, dissolution etc. has been performed)",
       "type": "group",
       "required": false,
       "repeats": true,
@@ -78,7 +73,7 @@
               }
             }
           ],
-          "text": "A pharmaceutical product described in terms of its composition and dose form.",
+          "text": "A medicinal product in the final form which is suitable for administering to a patient (after any mixing of multiple components, dissolution etc. has been performed).",
           "type": "display"
         },
         {
@@ -112,7 +107,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -271,7 +266,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -298,7 +293,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -365,7 +360,7 @@
             }
           ],
           "linkId": "AdministrableProductDefinition.identifier",
-          "text": "An identifier for the pharmaceutical medicinal product",
+          "text": "An identifier for the administrable product",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -385,7 +380,7 @@
                   }
                 }
               ],
-              "text": "An identifier for the pharmaceutical medicinal product.",
+              "text": "An identifier for the administrable product.",
               "type": "display"
             },
             {
@@ -438,7 +433,7 @@
                   }
                 }
               ],
-              "text": "The product that this is a pharmaceutical product of.",
+              "text": "The medicinal product that this is an administrable form of. This is not a reference to the item(s) that make up this administrable form - it is the whole product.",
               "type": "display"
             },
             {
@@ -453,7 +448,7 @@
                 }
               ],
               "linkId": "AdministrableProductDefinition.subject.value",
-              "text": "The product that this is a pharmaceutical product of",
+              "text": "The medicinal product that this is an administrable form of. This is not a reference to the item(s) that make up this administrable form - it is the whole product",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -462,10 +457,6 @@
         },
         {
           "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
-              "valueInteger": 1
-            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
               "valueInteger": 1
@@ -476,9 +467,9 @@
             }
           ],
           "linkId": "AdministrableProductDefinition.administrableDoseForm",
-          "text": "The administrable dose form, after necessary reconstitution",
+          "text": "The administrable dose form, i.e. the dose form of the final product after necessary reconstitution or processing",
           "type": "group",
-          "required": true,
+          "required": false,
           "repeats": true,
           "item": [
             {
@@ -496,7 +487,7 @@
                   }
                 }
               ],
-              "text": "The administrable dose form, after necessary reconstitution.",
+              "text": "The administrable dose form, i.e. the dose form of the final product after necessary reconstitution or processing.",
               "type": "display"
             },
             {
@@ -527,7 +518,7 @@
             }
           ],
           "linkId": "AdministrableProductDefinition.unitOfPresentation",
-          "text": "Todo",
+          "text": "The units of presentation for the administrable product, for example \u0027tablet\u0027",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -547,7 +538,7 @@
                   }
                 }
               ],
-              "text": "Todo.",
+              "text": "The units of presentation for the administrable product, for example \u0027tablet\u0027.",
               "type": "display"
             },
             {
@@ -642,7 +633,7 @@
                   }
                 }
               ],
-              "text": "The ingredients of this administrable pharmaceutical product.",
+              "text": "The ingredients of this administrable medicinal product. Sometimes it may be appropriate to specify these via the associated manufactured item(s).",
               "type": "display"
             },
             {
@@ -657,7 +648,7 @@
                 }
               ],
               "linkId": "AdministrableProductDefinition.ingredient.value",
-              "text": "The ingredients of this administrable pharmaceutical product",
+              "text": "The ingredients of this administrable medicinal product. Sometimes it may be appropriate to specify these via the associated manufactured item(s)",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -691,7 +682,7 @@
                   }
                 }
               ],
-              "text": "Accompanying device.",
+              "text": "A device that is integral to the medicinal product, in effect being considered as an \"ingredient\" of the medicinal product. This is not intended for devices that are just co-packaged.",
               "type": "display"
             },
             {
@@ -706,7 +697,7 @@
                 }
               ],
               "linkId": "AdministrableProductDefinition.device.value",
-              "text": "Accompanying device",
+              "text": "A device that is integral to the medicinal product, in effect being considered as an \"ingredient\" of the medicinal product. This is not intended for devices that are just co-packaged",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -714,7 +705,7 @@
           ]
         },
         {
-          "linkId": "AdministrableProductDefinition.characteristic",
+          "linkId": "AdministrableProductDefinition.property",
           "text": "Characteristics e.g. a products onset of action",
           "type": "group",
           "required": false,
@@ -749,7 +740,7 @@
                   "valueString": "string"
                 }
               ],
-              "linkId": "AdministrableProductDefinition.characteristic.id",
+              "linkId": "AdministrableProductDefinition.property.id",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -773,7 +764,7 @@
                   "type": "display"
                 },
                 {
-                  "linkId": "AdministrableProductDefinition.characteristic.id.value",
+                  "linkId": "AdministrableProductDefinition.property.id.value",
                   "text": "Unique id for inter-element referencing",
                   "type": "string",
                   "required": false,
@@ -782,7 +773,7 @@
               ]
             },
             {
-              "linkId": "AdministrableProductDefinition.characteristic.extension",
+              "linkId": "AdministrableProductDefinition.property.extension",
               "text": "Additional content defined by implementations",
               "type": "group",
               "required": false,
@@ -809,7 +800,7 @@
               ]
             },
             {
-              "linkId": "AdministrableProductDefinition.characteristic.modifierExtension",
+              "linkId": "AdministrableProductDefinition.property.modifierExtension",
               "text": "Extensions that cannot be ignored even if unrecognized",
               "type": "group",
               "required": false,
@@ -850,7 +841,7 @@
                   "valueString": "CodeableConcept"
                 }
               ],
-              "linkId": "AdministrableProductDefinition.characteristic.code",
+              "linkId": "AdministrableProductDefinition.property.type",
               "text": "A code expressing the type of characteristic",
               "type": "group",
               "required": true,
@@ -875,14 +866,14 @@
                   "type": "display"
                 },
                 {
-                  "linkId": "AdministrableProductDefinition.characteristic.code.coding",
+                  "linkId": "AdministrableProductDefinition.property.type.coding",
                   "text": "code:",
                   "type": "open-choice",
                   "required": false,
                   "repeats": false
                 },
                 {
-                  "linkId": "AdministrableProductDefinition.characteristic.code.text",
+                  "linkId": "AdministrableProductDefinition.property.type.text",
                   "text": "text:",
                   "type": "string",
                   "required": false,
@@ -897,7 +888,7 @@
                   "valueInteger": 1
                 }
               ],
-              "linkId": "AdministrableProductDefinition.characteristic.value[x]",
+              "linkId": "AdministrableProductDefinition.property.value[x]",
               "text": "A value for the characteristic",
               "type": "group",
               "required": false,
@@ -922,7 +913,7 @@
                   "type": "display"
                 },
                 {
-                  "linkId": "AdministrableProductDefinition.characteristic.value[x]._type",
+                  "linkId": "AdministrableProductDefinition.property.value[x]._type",
                   "text": "type",
                   "type": "choice",
                   "required": false,
@@ -933,15 +924,23 @@
                       "extension": [
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "Coding"
+                          "valueString": "CodeableConcept"
                         }
                       ],
-                      "linkId": "AdministrableProductDefinition.characteristic.value[x]._null",
+                      "linkId": "AdministrableProductDefinition.property.value[x]._null",
                       "type": "group",
                       "item": [
                         {
-                          "linkId": "AdministrableProductDefinition.characteristic.value[x]._null.value",
+                          "linkId": "AdministrableProductDefinition.property.value[x]._null.coding",
+                          "text": "code:",
                           "type": "open-choice",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "AdministrableProductDefinition.property.value[x]._null.text",
+                          "text": "text:",
+                          "type": "string",
                           "required": false,
                           "repeats": false
                         }
@@ -954,58 +953,40 @@
                           "valueString": "Quantity"
                         }
                       ],
-                      "linkId": "AdministrableProductDefinition.characteristic.value[x]._null",
+                      "linkId": "AdministrableProductDefinition.property.value[x]._null",
                       "type": "group",
                       "item": [
                         {
-                          "linkId": "AdministrableProductDefinition.characteristic.value[x]._null.comparator",
+                          "linkId": "AdministrableProductDefinition.property.value[x]._null.comparator",
                           "text": "comp:",
                           "type": "choice",
                           "required": false,
                           "repeats": false
                         },
                         {
-                          "linkId": "AdministrableProductDefinition.characteristic.value[x]._null.value",
+                          "linkId": "AdministrableProductDefinition.property.value[x]._null.value",
                           "text": "value:",
                           "type": "decimal",
                           "required": false,
                           "repeats": false
                         },
                         {
-                          "linkId": "AdministrableProductDefinition.characteristic.value[x]._null.units",
+                          "linkId": "AdministrableProductDefinition.property.value[x]._null.units",
                           "text": "units:",
                           "type": "string",
                           "required": false,
                           "repeats": false
                         },
                         {
-                          "linkId": "AdministrableProductDefinition.characteristic.value[x]._null.code",
+                          "linkId": "AdministrableProductDefinition.property.value[x]._null.code",
                           "text": "coded units:",
                           "type": "string",
                           "required": false,
                           "repeats": false
                         },
                         {
-                          "linkId": "AdministrableProductDefinition.characteristic.value[x]._null.system",
+                          "linkId": "AdministrableProductDefinition.property.value[x]._null.system",
                           "text": "units system:",
-                          "type": "string",
-                          "required": false,
-                          "repeats": false
-                        }
-                      ]
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "string"
-                        }
-                      ],
-                      "linkId": "AdministrableProductDefinition.characteristic.value[x]._null",
-                      "type": "group",
-                      "item": [
-                        {
-                          "linkId": "AdministrableProductDefinition.characteristic.value[x]._null.value",
                           "type": "string",
                           "required": false,
                           "repeats": false
@@ -1019,11 +1000,11 @@
                           "valueString": "datetime"
                         }
                       ],
-                      "linkId": "AdministrableProductDefinition.characteristic.value[x]._null",
+                      "linkId": "AdministrableProductDefinition.property.value[x]._null",
                       "type": "group",
                       "item": [
                         {
-                          "linkId": "AdministrableProductDefinition.characteristic.value[x]._null.value",
+                          "linkId": "AdministrableProductDefinition.property.value[x]._null.value",
                           "type": "dateTime",
                           "required": false,
                           "repeats": false
@@ -1037,11 +1018,11 @@
                           "valueString": "boolean"
                         }
                       ],
-                      "linkId": "AdministrableProductDefinition.characteristic.value[x]._null",
+                      "linkId": "AdministrableProductDefinition.property.value[x]._null",
                       "type": "group",
                       "item": [
                         {
-                          "linkId": "AdministrableProductDefinition.characteristic.value[x]._null.value",
+                          "linkId": "AdministrableProductDefinition.property.value[x]._null.value",
                           "type": "boolean",
                           "required": false,
                           "repeats": false
@@ -1055,7 +1036,7 @@
                           "valueString": "Attachment"
                         }
                       ],
-                      "linkId": "AdministrableProductDefinition.characteristic.value[x]._null",
+                      "linkId": "AdministrableProductDefinition.property.value[x]._null",
                       "type": "group"
                     }
                   ]
@@ -1073,7 +1054,7 @@
                   "valueString": "CodeableConcept"
                 }
               ],
-              "linkId": "AdministrableProductDefinition.characteristic.status",
+              "linkId": "AdministrableProductDefinition.property.status",
               "text": "The status of characteristic e.g. assigned or pending",
               "type": "group",
               "required": false,
@@ -1098,14 +1079,14 @@
                   "type": "display"
                 },
                 {
-                  "linkId": "AdministrableProductDefinition.characteristic.status.coding",
+                  "linkId": "AdministrableProductDefinition.property.status.coding",
                   "text": "code:",
                   "type": "open-choice",
                   "required": false,
                   "repeats": false
                 },
                 {
-                  "linkId": "AdministrableProductDefinition.characteristic.status.text",
+                  "linkId": "AdministrableProductDefinition.property.status.text",
                   "text": "text:",
                   "type": "string",
                   "required": false,
@@ -1123,7 +1104,7 @@
             }
           ],
           "linkId": "AdministrableProductDefinition.routeOfAdministration",
-          "text": "The path by which the pharmaceutical product is taken into or makes contact with the body",
+          "text": "The path by which the product is taken into or makes contact with the body. In some regions this is referred to as the licenced or approved route",
           "type": "group",
           "required": true,
           "repeats": true,
@@ -1143,7 +1124,7 @@
                   }
                 }
               ],
-              "text": "The path by which the pharmaceutical product is taken into or makes contact with the body.",
+              "text": "The path by which the product is taken into or makes contact with the body. In some regions this is referred to as the licenced or approved route.",
               "type": "display"
             },
             {
@@ -1310,7 +1291,7 @@
                 }
               ],
               "linkId": "AdministrableProductDefinition.routeOfAdministration.firstDose",
-              "text": "The first dose (dose quantity) administered in humans can be specified, for a product under investigation, using a numerical value and its unit of measurement",
+              "text": "The first dose (dose quantity) administered can be specified for the product, using a numerical value and its unit of measurement",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1330,7 +1311,7 @@
                       }
                     }
                   ],
-                  "text": "The first dose (dose quantity) administered in humans can be specified, for a product under investigation, using a numerical value and its unit of measurement.",
+                  "text": "The first dose (dose quantity) administered can be specified for the product, using a numerical value and its unit of measurement.",
                   "type": "display"
                 },
                 {
@@ -1382,7 +1363,7 @@
                 }
               ],
               "linkId": "AdministrableProductDefinition.routeOfAdministration.maxSingleDose",
-              "text": "The maximum single dose that can be administered as per the protocol of a clinical trial can be specified using a numerical value and its unit of measurement",
+              "text": "The maximum single dose that can be administered, can be specified using a numerical value and its unit of measurement",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1402,7 +1383,7 @@
                       }
                     }
                   ],
-                  "text": "The maximum single dose that can be administered as per the protocol of a clinical trial can be specified using a numerical value and its unit of measurement.",
+                  "text": "The maximum single dose that can be administered, can be specified using a numerical value and its unit of measurement.",
                   "type": "display"
                 },
                 {
@@ -1454,7 +1435,7 @@
                 }
               ],
               "linkId": "AdministrableProductDefinition.routeOfAdministration.maxDosePerDay",
-              "text": "The maximum dose per day (maximum dose quantity to be administered in any one 24-h period) that can be administered as per the protocol referenced in the clinical trial authorisation",
+              "text": "The maximum dose per day (maximum dose quantity to be administered in any one 24-h period) that can be administered",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1474,7 +1455,7 @@
                       }
                     }
                   ],
-                  "text": "The maximum dose per day (maximum dose quantity to be administered in any one 24-h period) that can be administered as per the protocol referenced in the clinical trial authorisation.",
+                  "text": "The maximum dose per day (maximum dose quantity to be administered in any one 24-h period) that can be administered.",
                   "type": "display"
                 },
                 {
@@ -1526,7 +1507,7 @@
                 }
               ],
               "linkId": "AdministrableProductDefinition.routeOfAdministration.maxDosePerTreatmentPeriod",
-              "text": "The maximum dose per treatment period that can be administered as per the protocol referenced in the clinical trial authorisation",
+              "text": "The maximum dose per treatment period that can be administered",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1546,7 +1527,7 @@
                       }
                     }
                   ],
-                  "text": "The maximum dose per treatment period that can be administered as per the protocol referenced in the clinical trial authorisation.",
+                  "text": "The maximum dose per treatment period that can be administered.",
                   "type": "display"
                 },
                 {
@@ -1584,7 +1565,7 @@
                 }
               ],
               "linkId": "AdministrableProductDefinition.routeOfAdministration.maxTreatmentPeriod",
-              "text": "The maximum treatment period during which an Investigational Medicinal Product can be administered as per the protocol referenced in the clinical trial authorisation",
+              "text": "The maximum treatment period during which an Investigational Medicinal Product can be administered",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1604,7 +1585,7 @@
                       }
                     }
                   ],
-                  "text": "The maximum treatment period during which an Investigational Medicinal Product can be administered as per the protocol referenced in the clinical trial authorisation.",
+                  "text": "The maximum treatment period during which an Investigational Medicinal Product can be administered.",
                   "type": "display"
                 },
                 {

@@ -12,13 +12,13 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/valueset-otherName",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "otherName",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2020-12-28T16:55:11+11:00",
   "publisher": "HL7",
-  "description": "Human readable names for the valueset.",
-  "fhirVersion": "4.2.0",
+  "description": "Natural language names identifying the value set. These names should be usable as an identifier for the module by machine processing applications such as code generation.",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "rim",
@@ -43,7 +43,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Alternative names",
-        "definition": "Human readable names for the valueset.",
+        "definition": "Machine readable names for the valueset.",
         "min": 0,
         "max": "*",
         "base": {
@@ -58,7 +58,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -145,7 +145,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -153,7 +153,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -169,9 +169,9 @@
         "id": "Extension.extension:name",
         "path": "Extension.extension",
         "sliceName": "name",
-        "short": "Human readable, short and specific",
-        "definition": "This name is intended to be human readable, short and as specific as possible and to convey the purpose of the value set.  It is considered to be the name of the value set.",
-        "comment": "This need not be unique. However some use cases require uniqueness within a namespace and therefore best practice would be to make the name unique.",
+        "short": "Support human navigation and code generation.",
+        "definition": "A natural language name identifying the value set. This name should be usable as an identifier for the module by machine processing applications such as code generation.",
+        "comment": "The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly. A name should be provided unless the value set is a contained resource (e.g. an anonymous value set in a profile). Most registries will require a name.",
         "min": 1,
         "max": "1",
         "base": {
@@ -191,7 +191,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -199,7 +199,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -274,7 +274,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -282,7 +282,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -343,7 +343,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -360,8 +360,8 @@
         "path": "Extension.extension",
         "sliceName": "preferred",
         "short": "Which name is preferred for this language",
-        "definition": "Flag that this Name in this Name Language is the preferred human-readable signifier in this language.",
-        "comment": "There may be multiple human readable names in a given language, and this flag indicates which of them is preferred for the given language.",
+        "definition": "Flag that this Name in this Name Language is the preferred machine-processing friendly signifier in this language.",
+        "comment": "There may be multiple machine-processing friendly names in a given language, and this flag indicates which of them is preferred for the given language.",
         "min": 0,
         "max": "1",
         "base": {
@@ -381,7 +381,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -389,7 +389,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -464,7 +464,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -472,7 +472,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -533,7 +533,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -756,7 +756,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -776,7 +776,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "Alternative names",
-        "definition": "Human readable names for the valueset.",
+        "definition": "Machine readable names for the valueset.",
         "min": 0,
         "max": "*",
         "isModifier": false
@@ -785,9 +785,9 @@
         "id": "Extension.extension:name",
         "path": "Extension.extension",
         "sliceName": "name",
-        "short": "Human readable, short and specific",
-        "definition": "This name is intended to be human readable, short and as specific as possible and to convey the purpose of the value set.  It is considered to be the name of the value set.",
-        "comment": "This need not be unique. However some use cases require uniqueness within a namespace and therefore best practice would be to make the name unique.",
+        "short": "Support human navigation and code generation.",
+        "definition": "A natural language name identifying the value set. This name should be usable as an identifier for the module by machine processing applications such as code generation.",
+        "comment": "The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly. A name should be provided unless the value set is a contained resource (e.g. an anonymous value set in a profile). Most registries will require a name.",
         "min": 1,
         "max": "1",
         "type": [
@@ -827,8 +827,8 @@
         "path": "Extension.extension",
         "sliceName": "preferred",
         "short": "Which name is preferred for this language",
-        "definition": "Flag that this Name in this Name Language is the preferred human-readable signifier in this language.",
-        "comment": "There may be multiple human readable names in a given language, and this flag indicates which of them is preferred for the given language.",
+        "definition": "Flag that this Name in this Name Language is the preferred machine-processing friendly signifier in this language.",
+        "comment": "There may be multiple machine-processing friendly names in a given language, and this flag indicates which of them is preferred for the given language.",
         "min": 0,
         "max": "1",
         "type": [

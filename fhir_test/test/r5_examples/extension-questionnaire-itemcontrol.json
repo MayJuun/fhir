@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "itemControl",
   "status": "draft",
   "date": "2013-07-04",
@@ -28,7 +28,7 @@
     }
   ],
   "description": "The type of data entry control or structure that should be used to render the item.",
-  "fhirVersion": "4.2.0",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "rim",
@@ -42,10 +42,6 @@
     {
       "type": "element",
       "expression": "Questionnaire.item"
-    },
-    {
-      "type": "element",
-      "expression": "Questionnaire.item.item"
     }
   ],
   "type": "Extension",
@@ -58,7 +54,7 @@
         "path": "Extension",
         "short": "E.g. Fly-over, Table, Checkbox, Combo-box, Lookup, etc.",
         "definition": "The type of data entry control or structure that should be used to render the item.",
-        "comment": "Different controls may be appropriate for different item types.  It is up to the system rendering a questionnaire as to what controls it will support and for which data types.",
+        "comment": "Different controls may be appropriate for different item types.  It is up to the system rendering a questionnaire as to what controls it will support and for which data types.  See additional guidance and examples in the [SDC implementation guide](http://build.fhir.org/ig/HL7/sdc/rendering.html#itemControl).",
         "min": 0,
         "max": "1",
         "base": {
@@ -73,7 +69,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -155,7 +151,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -163,7 +159,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -211,6 +207,7 @@
         "path": "Extension.value[x]",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
+        "requirements": "The data type is CodeableConcept to allow for additional codings that might provide finer-grained control information or specification of specific controls in different rendering environments.  CodeableConcept.text is generally unnecessary for this element and should not be sent alone as the use-case for this element is for computable interpretation by rendering engines.",
         "min": 1,
         "max": "1",
         "base": {
@@ -230,7 +227,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -262,7 +259,7 @@
         "path": "Extension",
         "short": "E.g. Fly-over, Table, Checkbox, Combo-box, Lookup, etc.",
         "definition": "The type of data entry control or structure that should be used to render the item.",
-        "comment": "Different controls may be appropriate for different item types.  It is up to the system rendering a questionnaire as to what controls it will support and for which data types.",
+        "comment": "Different controls may be appropriate for different item types.  It is up to the system rendering a questionnaire as to what controls it will support and for which data types.  See additional guidance and examples in the [SDC implementation guide](http://build.fhir.org/ig/HL7/sdc/rendering.html#itemControl).",
         "min": 0,
         "max": "1"
       },
@@ -279,6 +276,7 @@
       {
         "id": "Extension.value[x]",
         "path": "Extension.value[x]",
+        "requirements": "The data type is CodeableConcept to allow for additional codings that might provide finer-grained control information or specification of specific controls in different rendering environments.  CodeableConcept.text is generally unnecessary for this element and should not be sent alone as the use-case for this element is for computable interpretation by rendering engines.",
         "min": 1,
         "type": [
           {

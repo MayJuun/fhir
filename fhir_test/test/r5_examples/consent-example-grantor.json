@@ -24,12 +24,12 @@
       ]
     }
   ],
-  "patient": {
+  "subject": {
     "reference": "Patient/f002",
     "display": "Donald D DUCK"
   },
   "dateTime": "2018-12-24",
-  "organization": [
+  "controller": [
     {
       "reference": "Organization/f203"
     }

@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for Substance.ingredient.substance[x]",
       "expansion": {
-        "identifier": "urn:uuid:4e7041e9-6ef9-4caa-b31d-78a0a07eff0a",
-        "timestamp": "2019-12-31T21:17:33+11:00",
+        "identifier": "urn:uuid:ef0fdd91-74ce-465d-94dd-0c93b25a2133",
+        "timestamp": "2021-04-15T12:30:06+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -31,10 +31,10 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
-  "publisher": "Health Level Seven International (Orders and Observations)",
+  "date": "2021-04-15T12:25:09+10:00",
+  "publisher": "Health Level Seven International (Biomedical Research and Regulation)",
   "item": [
     {
       "linkId": "Substance",
@@ -92,7 +92,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -251,7 +251,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -278,7 +278,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -365,7 +365,7 @@
                   }
                 }
               ],
-              "text": "Unique identifier for the substance. This identifier is associated with the kind of substance in contrast to the  Substance.instance.identifier which is associated with the package/container.",
+              "text": "Unique identifier for the substance. For an instance, an identifier associated with the package/container (usually a label affixed directly). This identifier is associated with the kind of substance in contrast to the  Substance.instance.identifier which is associated with the package/container.",
               "type": "display"
             },
             {
@@ -386,6 +386,53 @@
               "linkId": "Substance.identifier.value",
               "text": "value:",
               "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "boolean"
+            }
+          ],
+          "linkId": "Substance.instance",
+          "type": "group",
+          "required": true,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "A boolean to indicate if this an instance of a substance or a kind of one (a definition).",
+              "type": "display"
+            },
+            {
+              "linkId": "Substance.instance.value",
+              "text": "Is this an instance of a substance or a kind of one",
+              "type": "boolean",
               "required": false,
               "repeats": false
             }
@@ -490,18 +537,18 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
               "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "CodeableConcept"
             }
           ],
           "linkId": "Substance.code",
           "text": "What substance this is",
           "type": "group",
           "required": true,
-          "repeats": true,
+          "repeats": false,
           "item": [
+            {
+              "text": "This could be a reference to an externally defined code.  It could also be a locally assigned code (e.g. a formulary),  optionally with translations to the standard drug codes.",
+              "type": "display"
+            },
             {
               "extension": [
                 {
@@ -517,22 +564,8 @@
                   }
                 }
               ],
-              "text": "A code (or set of codes) that identify this substance. This could be a reference to an externally defined code.  It could also be a locally assigned code (e.g. a formulary),  optionally with translations to the standard drug codes.",
+              "text": "A code (or set of codes) that identify this substance.",
               "type": "display"
-            },
-            {
-              "linkId": "Substance.code.coding",
-              "text": "code:",
-              "type": "open-choice",
-              "required": false,
-              "repeats": false
-            },
-            {
-              "linkId": "Substance.code.text",
-              "text": "text:",
-              "type": "string",
-              "required": false,
-              "repeats": false
             }
           ]
         },
@@ -580,8 +613,17 @@
           ]
         },
         {
-          "linkId": "Substance.instance",
-          "text": "If this describes a specific package/container of the substance",
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "datetime"
+            }
+          ],
+          "linkId": "Substance.expiry",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -601,278 +643,87 @@
                   }
                 }
               ],
-              "text": "Substance may be used to describe a kind of substance, or a specific package/container of the substance: an instance.",
+              "text": "When the substance is no longer valid to use. For some substances, a single arbitrary date is used for expiry.",
               "type": "display"
             },
             {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "string"
-                }
-              ],
-              "linkId": "Substance.instance.id",
-              "type": "group",
+              "linkId": "Substance.expiry.value",
+              "text": "When no longer valid to use",
+              "type": "dateTime",
               "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "Substance.instance.id.value",
-                  "text": "Unique id for inter-element referencing",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
             },
             {
-              "linkId": "Substance.instance.extension",
-              "text": "Additional content defined by implementations",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-                  "type": "display"
-                }
-              ]
-            },
-            {
-              "linkId": "Substance.instance.modifierExtension",
-              "text": "Extensions that cannot be ignored even if unrecognized",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself). There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
-                  "type": "display"
-                }
-              ]
-            },
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Quantity"
+            }
+          ],
+          "linkId": "Substance.quantity",
+          "text": "Amount of substance in the package",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "Identifier"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
                 }
               ],
-              "linkId": "Substance.instance.identifier",
-              "text": "Identifier of the package/container",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "Identifier associated with the package/container (usually a label affixed directly).",
-                  "type": "display"
-                },
-                {
-                  "linkId": "Substance.instance.identifier.label",
-                  "text": "label:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "Substance.instance.identifier.system",
-                  "text": "system:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "Substance.instance.identifier.value",
-                  "text": "value:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
+              "text": "The amount of the substance.",
+              "type": "display"
             },
             {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "datetime"
-                }
-              ],
-              "linkId": "Substance.instance.expiry",
-              "type": "group",
+              "linkId": "Substance.quantity.comparator",
+              "text": "comp:",
+              "type": "choice",
               "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "When the substance is no longer valid to use. For some substances, a single arbitrary date is used for expiry.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "Substance.instance.expiry.value",
-                  "text": "When no longer valid to use",
-                  "type": "dateTime",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
+              "repeats": false
             },
             {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "Quantity"
-                }
-              ],
-              "linkId": "Substance.instance.quantity",
-              "text": "Amount of substance in the package",
-              "type": "group",
+              "linkId": "Substance.quantity.value",
+              "text": "value:",
+              "type": "decimal",
               "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "The amount of the substance.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "Substance.instance.quantity.comparator",
-                  "text": "comp:",
-                  "type": "choice",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "Substance.instance.quantity.value",
-                  "text": "value:",
-                  "type": "decimal",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "Substance.instance.quantity.units",
-                  "text": "units:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "Substance.instance.quantity.code",
-                  "text": "coded units:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "Substance.instance.quantity.system",
-                  "text": "units system:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
+              "repeats": false
+            },
+            {
+              "linkId": "Substance.quantity.units",
+              "text": "units:",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "Substance.quantity.code",
+              "text": "coded units:",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "Substance.quantity.system",
+              "text": "units system:",
+              "type": "string",
+              "required": false,
+              "repeats": false
             }
           ]
         },

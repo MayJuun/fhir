@@ -16,10 +16,10 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/code",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "code",
   "status": "active",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "HL7 FHIR Standard",
   "contact": [
     {
@@ -32,7 +32,7 @@
     }
   ],
   "description": "Base StructureDefinition for code type: A string which has at least one character and no leading or trailing whitespace and where there is no whitespace other than single spaces in the contents",
-  "fhirVersion": "4.2.0",
+  "fhirVersion": "4.6.0",
   "kind": "primitive-type",
   "abstract": false,
   "type": "code",
@@ -59,7 +59,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -123,7 +123,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -131,7 +131,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \u0027value\u0027)])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -161,7 +161,7 @@
               },
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/regex",
-                "valueString": "[^\\s]+(\\s[^\\s]+)*"
+                "valueString": "[^\\s]+( [^\\s]+)*"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -201,7 +201,7 @@
               },
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/regex",
-                "valueString": "[^\\s]+(\\s[^\\s]+)*"
+                "valueString": "[^\\s]+( [^\\s]+)*"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
