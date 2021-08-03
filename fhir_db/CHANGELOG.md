@@ -1,3 +1,6 @@
+## [0.4.4]
+* Failed to properly commit changes in 0.4.3
+
 ## [0.4.3]
 * Thanks to [Luca](https://github.com/lucaspal) for these updates!
 * Can now close the DB, delete the DB file, and sets completer to null (since the database method relies on this to be null to open a new database)

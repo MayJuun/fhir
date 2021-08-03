@@ -1,10 +1,16 @@
 import 'package:fhir/r4.dart';
+import 'package:fhir_db/r5/database_mode.dart' as mode;
 import 'package:sembast/sembast.dart';
 
 import 'fhir_db.dart';
 
 class ResourceDao {
-  ResourceDao();
+  ResourceDao({
+    this.databaseMode = mode.DatabaseMode.PERSISTENCE_DB,
+  });
+
+  mode.DatabaseMode databaseMode;
+
   late StoreRef<String, Map<String, dynamic>> _resourceStore;
   final _typesStore = StoreRef<String, List>.main();
   final _history = StoreRef<String, Map<String, dynamic>>.main();
@@ -99,9 +105,21 @@ class ResourceDao {
           .record(historyId)
           .put(await _db(password), oldResource.toJson());
 
-      final _newResource = oldResource.meta == null
-          ? resource.newVersion()
-          : resource.newVersion(oldMeta: oldResource.meta);
+      Resource _newResource;
+
+      switch (databaseMode) {
+        case mode.DatabaseMode.PERSISTENCE_DB:
+          _newResource = oldResource.meta == null
+              ? resource.newVersion()
+              : oldResource.meta == null
+                  ? resource.newVersion()
+                  : resource.newVersion(oldMeta: oldResource.meta);
+          break;
+        case mode.DatabaseMode.CACHE_DB:
+          _newResource = resource;
+          break;
+      }
+
       await _resourceStore
           .record(id)
           .put(await _db(password), _newResource.toJson(), merge: true);
