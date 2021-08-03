@@ -5,8 +5,8 @@ import 'package:yaml/yaml.dart';
 import 'fhir_date_time_base.dart';
 
 class Instant extends FhirDateTimeBase {
-  const Instant._(
-      this.valueString, this.valueDateTime, this.isValid, this.parseError);
+  const Instant._(String valueString, DateTime? valueDateTime, bool isValid,
+      Exception? parseError) : super(valueString, valueDateTime, isValid, parseError);
 
   factory Instant(inValue) {
     if (inValue is DateTime) {
@@ -35,12 +35,6 @@ class Instant extends FhirDateTimeBase {
           ? Instant.fromJson(jsonDecode(jsonEncode(yaml)))
           : throw FormatException(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
-
-  final String valueString;
-  final DateTime? valueDateTime;
-  final bool isValid;
-  /// ToDo: made exceptions nullable
-  final Exception? parseError;
 
   static final _instantExp = RegExp(
       r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])-(0[1-9]|[1-2][0-9]|3[0-1])T([01][0-9]|2[0-3]):[0-5][0-9]:([0-5][0-9]|60)(\.[0-9]+)?(Z|(\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00))');

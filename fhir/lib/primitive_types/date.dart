@@ -13,8 +13,8 @@ enum DatePrecision {
 
 /// ToDo: Does not accept 'YYYY-MM'
 class Date extends FhirDateTimeBase{
-  const Date._(this.valueString, this.valueDateTime, this.isValid,
-      this._precision, this.parseError);
+  const Date._(String valueString, DateTime? valueDateTime, bool isValid,
+      this._precision, Exception? parseError) : super(valueString, valueDateTime, isValid, parseError);
 
   factory Date(inValue) {
     if (inValue is DateTime) {
@@ -50,12 +50,7 @@ class Date extends FhirDateTimeBase{
           : throw FormatException(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final String valueString;
-  final DateTime? valueDateTime;
-  final bool isValid;
   final DatePrecision _precision;
-  final Exception? parseError;
-
 
   DatePrecision get precision => _precision;
 

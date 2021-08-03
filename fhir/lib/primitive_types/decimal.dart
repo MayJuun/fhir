@@ -1,11 +1,13 @@
 import 'dart:convert';
+
 import 'package:yaml/yaml.dart';
 
 import 'fhir_number.dart';
 
 class Decimal extends FhirNumber {
-  const Decimal._(this.valueString, this.valueNumber, this.isValid,
-      this.isInt, this.isString);
+  const Decimal._(String valueString, double? valueNumber, bool isValid,
+      this.isInt, bool isString)
+      : super(valueString, valueNumber, isValid, isString);
 
   factory Decimal(dynamic inValue) {
     if (inValue is num) {
@@ -33,11 +35,8 @@ class Decimal extends FhirNumber {
           : throw FormatException(
               'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final String valueString;
-  final double? valueNumber;
-  final bool isValid;
   final bool isInt;
-  final bool isString;
+  double? get value => valueNumber as double?;
 
   dynamic toJson() => isInt
       ? valueNumber?.toInt()
@@ -49,5 +48,4 @@ class Decimal extends FhirNumber {
       : isValid && !isString
           ? valueNumber
           : valueString;
-
 }

@@ -1,13 +1,13 @@
 abstract class FhirNumber {
-  const FhirNumber();
+  const FhirNumber(
+      this.valueString, this.valueNumber, this.isValid, this.isString);
 
-  final String valueString = '';
-  final num? valueNumber = null;
-  final bool isValid = true;
-  final bool isString = true;
+  final String valueString;
+  final num? valueNumber;
+  final bool isValid;
+  final bool isString;
 
   int get hashCode => valueString.hashCode;
-  num? get value => valueNumber;
 
   String toString() => valueString;
 
@@ -17,32 +17,32 @@ abstract class FhirNumber {
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is FhirNumber
-          ? o.value == value
+          ? o.valueNumber == valueNumber
           : o is num
               ? o == valueNumber
               : o is String
                   ? o == valueString
                   : false;
 
-  bool operator >(Object o) => value == null ||
+  bool operator >(Object o) => valueNumber == null ||
           (o is! FhirNumber && o is! num) ||
-          (o is FhirNumber && o.value == null)
-      ? throw Exception('One of the values is not valid or null\n'
+          (o is FhirNumber && o.valueNumber == null)
+      ? throw ArgumentError('One of the values is not valid or null\n'
           'This number is: ${toString()}, compared number is ${o.toString()}')
       : o is FhirNumber
-          ? value! > o.value!
-          : value! > (o as num);
+          ? valueNumber! > o.valueNumber!
+          : valueNumber! > (o as num);
 
   bool operator >=(Object o) => this == o || this > o;
 
-  bool operator <(Object o) => value == null ||
+  bool operator <(Object o) => valueNumber == null ||
           (o is! FhirNumber && o is! num) ||
-          (o is FhirNumber && o.value == null)
-      ? throw Exception('One of the values is not valid or null\n'
+          (o is FhirNumber && o.valueNumber == null)
+      ? throw ArgumentError('One of the values is not valid or null\n'
           'This number is: ${toString()}, compared number is ${o.toString()}')
       : o is FhirNumber
-          ? value! < o.value!
-          : value! < (o as num);
+          ? valueNumber! < o.valueNumber!
+          : valueNumber! < (o as num);
 
   bool operator <=(Object o) => this == o || this < o;
 }
