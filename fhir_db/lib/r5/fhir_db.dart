@@ -9,7 +9,6 @@ import 'package:sembast_sqflite/sembast_sqflite.dart';
 import 'package:sqflite/sqflite.dart' as sqflite;
 
 import '../encrypt/aes.dart';
-// import '../salsa.dart';
 
 class FhirDb {
   /// Private Constructor
@@ -46,6 +45,18 @@ class FhirDb {
     return _dbOpenCompleter!.future;
   }
 
+  Future<void> deleteDatabase(String password) async {
+    var db = await _getDb('fhir.db', password);
+    await db.close();
+
+    final _appDocDir = await getApplicationDocumentsDirectory();
+    await File(join(_appDocDir.path, 'fhir.db')).delete();
+
+    // Setting the completer to null will lead to
+    // creating a new database the next time we try to access it.
+    _dbOpenCompleter = null;
+  }
+
   Future _openDatabase(String? pw) async {
     /// Get the actual db
     final database = await _getDb('fhir.db', pw);
@@ -73,7 +84,6 @@ class FhirDb {
   /// This is just for getting the codec
   SembastCodec? _codec(String? pw) =>
       pw == null || pw == '' ? null : getEncryptSembastCodecAES(password: pw);
-  // getEncryptSembastCodecSalsa20(password: pw);
 
   Future _updatePw(String? oldPw, String? newPw) async {
     /// Platform-specific directory
