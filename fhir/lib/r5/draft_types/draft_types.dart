@@ -179,7 +179,7 @@ class Citation with _$Citation {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    Code? status,
+    @JsonKey(unknownEnumValue: CitationStatus.unknown) CitationStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1025,7 +1025,8 @@ class EvidenceReport with _$EvidenceReport {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    Code? status,
+    @JsonKey(unknownEnumValue: EvidenceReportStatus.unknown)
+        EvidenceReportStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1158,7 +1159,8 @@ class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? code,
+    @JsonKey(unknownEnumValue: EvidenceReportRelatesToCode.unknown)
+        EvidenceReportRelatesToCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     Identifier? targetIdentifier,
     Reference? targetReference,

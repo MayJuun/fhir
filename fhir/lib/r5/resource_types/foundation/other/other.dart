@@ -107,7 +107,7 @@ class Bundle with Resource, _$Bundle {
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
     Identifier? identifier,
-    Code? type,
+    @JsonKey(unknownEnumValue: BundleType.unknown) BundleType? type,
     @JsonKey(name: '_type') Element? typeElement,
     Instant? timestamp,
     @JsonKey(name: '_timestamp') Element? timestampElement,
@@ -211,7 +211,7 @@ class BundleSearch with _$BundleSearch {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? mode,
+    @JsonKey(unknownEnumValue: BundleSearchMode.unknown) BundleSearchMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Decimal? score,
     @JsonKey(name: '_score') Element? scoreElement,
@@ -243,7 +243,8 @@ class BundleRequest with _$BundleRequest {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? method,
+    @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
+        BundleRequestMethod? method,
     @JsonKey(name: '_method') Element? methodElement,
     FhirUri? url,
     @JsonKey(name: '_url') Element? urlElement,
@@ -363,7 +364,7 @@ class LinkageItem with _$LinkageItem {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? type,
+    @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType? type,
     @JsonKey(name: '_type') Element? typeElement,
     required Reference resource,
   }) = _LinkageItem;
@@ -519,7 +520,8 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
     List<FhirExtension>? modifierExtension,
     Id? identifier,
     @JsonKey(name: '_identifier') Element? identifierElement,
-    Code? code,
+    @JsonKey(unknownEnumValue: MessageHeaderResponseCode.unknown)
+        MessageHeaderResponseCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     Reference? details,
   }) = _MessageHeaderResponse;
@@ -590,9 +592,11 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? severity,
+    @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
+        OperationOutcomeIssueSeverity severity,
     @JsonKey(name: '_severity') Element? severityElement,
-    Code? code,
+    @JsonKey(unknownEnumValue: OperationOutcomeIssueCode.unknown)
+        OperationOutcomeIssueCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     CodeableConcept? details,
     String? diagnostics,
@@ -801,7 +805,8 @@ class Subscription with Resource, _$Subscription {
     @JsonKey(name: '_timeout') Element? timeoutElement,
     Code? contentType,
     @JsonKey(name: '_contentType') Element? contentTypeElement,
-    Code? content,
+    @JsonKey(unknownEnumValue: SubscriptionContent.unknown)
+        SubscriptionContent? content,
     @JsonKey(name: '_content') Element? contentElement,
     Code? notificationUrlLocation,
     @JsonKey(name: '_notificationUrlLocation')
@@ -885,7 +890,8 @@ class SubscriptionStatus with Resource, _$SubscriptionStatus {
     List<FhirExtension>? modifierExtension,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
-    Code? type,
+    @JsonKey(unknownEnumValue: SubscriptionStatusType.unknown)
+        SubscriptionStatusType? type,
     @JsonKey(name: '_type') Element? typeElement,
     Integer64? eventsSinceSubscriptionStart,
     @JsonKey(name: '_eventsSinceSubscriptionStart')
@@ -943,7 +949,8 @@ class SubscriptionTopic with Resource, _$SubscriptionTopic {
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
     List<Canonical>? derivedFrom,
-    Code? status,
+    @JsonKey(unknownEnumValue: SubscriptionTopicStatus.unknown)
+        SubscriptionTopicStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
