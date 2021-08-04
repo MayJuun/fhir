@@ -73,6 +73,12 @@ _$_FhirExtension _$$_FhirExtensionFromJson(Map<String, dynamic> json) =>
       valueIntegerElement: json['_valueInteger'] == null
           ? null
           : Element.fromJson(json['_valueInteger'] as Map<String, dynamic>),
+      valueInteger64: json['valueInteger64'] == null
+          ? null
+          : Integer64.fromJson(json['valueInteger64']),
+      valueInteger64Element: json['_valueInteger64'] == null
+          ? null
+          : Element.fromJson(json['_valueInteger64'] as Map<String, dynamic>),
       valueMarkdown: json['valueMarkdown'] == null
           ? null
           : Markdown.fromJson(json['valueMarkdown']),
@@ -265,6 +271,8 @@ Map<String, dynamic> _$$_FhirExtensionToJson(_$_FhirExtension instance) {
   writeNotNull('_valueInstant', instance.valueInstantElement?.toJson());
   writeNotNull('valueInteger', instance.valueInteger?.toJson());
   writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());
+  writeNotNull('valueInteger64', instance.valueInteger64?.toJson());
+  writeNotNull('_valueInteger64', instance.valueInteger64Element?.toJson());
   writeNotNull('valueMarkdown', instance.valueMarkdown?.toJson());
   writeNotNull('_valueMarkdown', instance.valueMarkdownElement?.toJson());
   writeNotNull('valueOid', instance.valueOid?.toJson());

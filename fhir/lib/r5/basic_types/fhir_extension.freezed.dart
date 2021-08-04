@@ -45,6 +45,8 @@ class _$FhirExtensionTearOff {
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Integer64? valueInteger64,
+      @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
       Oid? valueOid,
@@ -119,6 +121,8 @@ class _$FhirExtensionTearOff {
       valueInstantElement: valueInstantElement,
       valueInteger: valueInteger,
       valueIntegerElement: valueIntegerElement,
+      valueInteger64: valueInteger64,
+      valueInteger64Element: valueInteger64Element,
       valueMarkdown: valueMarkdown,
       valueMarkdownElement: valueMarkdownElement,
       valueOid: valueOid,
@@ -217,6 +221,9 @@ mixin _$FhirExtension {
   Integer? get valueInteger => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
+  Integer64? get valueInteger64 => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueInteger64')
+  Element? get valueInteger64Element => throw _privateConstructorUsedError;
   Markdown? get valueMarkdown => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueMarkdown')
   Element? get valueMarkdownElement => throw _privateConstructorUsedError;
@@ -317,6 +324,8 @@ abstract class $FhirExtensionCopyWith<$Res> {
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Integer64? valueInteger64,
+      @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
       Oid? valueOid,
@@ -378,6 +387,7 @@ abstract class $FhirExtensionCopyWith<$Res> {
   $ElementCopyWith<$Res>? get valueIdElement;
   $ElementCopyWith<$Res>? get valueInstantElement;
   $ElementCopyWith<$Res>? get valueIntegerElement;
+  $ElementCopyWith<$Res>? get valueInteger64Element;
   $ElementCopyWith<$Res>? get valueMarkdownElement;
   $ElementCopyWith<$Res>? get valueOidElement;
   $ElementCopyWith<$Res>? get valuePositiveIntElement;
@@ -455,6 +465,8 @@ class _$FhirExtensionCopyWithImpl<$Res>
     Object? valueInstantElement = freezed,
     Object? valueInteger = freezed,
     Object? valueIntegerElement = freezed,
+    Object? valueInteger64 = freezed,
+    Object? valueInteger64Element = freezed,
     Object? valueMarkdown = freezed,
     Object? valueMarkdownElement = freezed,
     Object? valueOid = freezed,
@@ -601,6 +613,14 @@ class _$FhirExtensionCopyWithImpl<$Res>
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueInteger64: valueInteger64 == freezed
+          ? _value.valueInteger64
+          : valueInteger64 // ignore: cast_nullable_to_non_nullable
+              as Integer64?,
+      valueInteger64Element: valueInteger64Element == freezed
+          ? _value.valueInteger64Element
+          : valueInteger64Element // ignore: cast_nullable_to_non_nullable
               as Element?,
       valueMarkdown: valueMarkdown == freezed
           ? _value.valueMarkdown
@@ -919,6 +939,17 @@ class _$FhirExtensionCopyWithImpl<$Res>
 
     return $ElementCopyWith<$Res>(_value.valueIntegerElement!, (value) {
       return _then(_value.copyWith(valueIntegerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueInteger64Element {
+    if (_value.valueInteger64Element == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueInteger64Element!, (value) {
+      return _then(_value.copyWith(valueInteger64Element: value));
     });
   }
 
@@ -1400,6 +1431,8 @@ abstract class _$FhirExtensionCopyWith<$Res>
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Integer64? valueInteger64,
+      @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
       Oid? valueOid,
@@ -1472,6 +1505,8 @@ abstract class _$FhirExtensionCopyWith<$Res>
   $ElementCopyWith<$Res>? get valueInstantElement;
   @override
   $ElementCopyWith<$Res>? get valueIntegerElement;
+  @override
+  $ElementCopyWith<$Res>? get valueInteger64Element;
   @override
   $ElementCopyWith<$Res>? get valueMarkdownElement;
   @override
@@ -1591,6 +1626,8 @@ class __$FhirExtensionCopyWithImpl<$Res>
     Object? valueInstantElement = freezed,
     Object? valueInteger = freezed,
     Object? valueIntegerElement = freezed,
+    Object? valueInteger64 = freezed,
+    Object? valueInteger64Element = freezed,
     Object? valueMarkdown = freezed,
     Object? valueMarkdownElement = freezed,
     Object? valueOid = freezed,
@@ -1737,6 +1774,14 @@ class __$FhirExtensionCopyWithImpl<$Res>
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
           : valueIntegerElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueInteger64: valueInteger64 == freezed
+          ? _value.valueInteger64
+          : valueInteger64 // ignore: cast_nullable_to_non_nullable
+              as Integer64?,
+      valueInteger64Element: valueInteger64Element == freezed
+          ? _value.valueInteger64Element
+          : valueInteger64Element // ignore: cast_nullable_to_non_nullable
               as Element?,
       valueMarkdown: valueMarkdown == freezed
           ? _value.valueMarkdown
@@ -1966,6 +2011,8 @@ class _$_FhirExtension extends _FhirExtension {
       @JsonKey(name: '_valueInstant') this.valueInstantElement,
       this.valueInteger,
       @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      this.valueInteger64,
+      @JsonKey(name: '_valueInteger64') this.valueInteger64Element,
       this.valueMarkdown,
       @JsonKey(name: '_valueMarkdown') this.valueMarkdownElement,
       this.valueOid,
@@ -2081,6 +2128,11 @@ class _$_FhirExtension extends _FhirExtension {
   @JsonKey(name: '_valueInteger')
   final Element? valueIntegerElement;
   @override
+  final Integer64? valueInteger64;
+  @override
+  @JsonKey(name: '_valueInteger64')
+  final Element? valueInteger64Element;
+  @override
   final Markdown? valueMarkdown;
   @override
   @JsonKey(name: '_valueMarkdown')
@@ -2190,7 +2242,7 @@ class _$_FhirExtension extends _FhirExtension {
 
   @override
   String toString() {
-    return 'FhirExtension(id: $id, extension_: $extension_, url: $url, urlElement: $urlElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
+    return 'FhirExtension(id: $id, extension_: $extension_, url: $url, urlElement: $urlElement, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueInteger64: $valueInteger64, valueInteger64Element: $valueInteger64Element, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
   }
 
   @override
@@ -2254,6 +2306,8 @@ class _$_FhirExtension extends _FhirExtension {
             (identical(other.valueInstantElement, valueInstantElement) || const DeepCollectionEquality().equals(other.valueInstantElement, valueInstantElement)) &&
             (identical(other.valueInteger, valueInteger) || const DeepCollectionEquality().equals(other.valueInteger, valueInteger)) &&
             (identical(other.valueIntegerElement, valueIntegerElement) || const DeepCollectionEquality().equals(other.valueIntegerElement, valueIntegerElement)) &&
+            (identical(other.valueInteger64, valueInteger64) || const DeepCollectionEquality().equals(other.valueInteger64, valueInteger64)) &&
+            (identical(other.valueInteger64Element, valueInteger64Element) || const DeepCollectionEquality().equals(other.valueInteger64Element, valueInteger64Element)) &&
             (identical(other.valueMarkdown, valueMarkdown) || const DeepCollectionEquality().equals(other.valueMarkdown, valueMarkdown)) &&
             (identical(other.valueMarkdownElement, valueMarkdownElement) || const DeepCollectionEquality().equals(other.valueMarkdownElement, valueMarkdownElement)) &&
             (identical(other.valueOid, valueOid) || const DeepCollectionEquality().equals(other.valueOid, valueOid)) &&
@@ -2332,6 +2386,8 @@ class _$_FhirExtension extends _FhirExtension {
       const DeepCollectionEquality().hash(valueInstantElement) ^
       const DeepCollectionEquality().hash(valueInteger) ^
       const DeepCollectionEquality().hash(valueIntegerElement) ^
+      const DeepCollectionEquality().hash(valueInteger64) ^
+      const DeepCollectionEquality().hash(valueInteger64Element) ^
       const DeepCollectionEquality().hash(valueMarkdown) ^
       const DeepCollectionEquality().hash(valueMarkdownElement) ^
       const DeepCollectionEquality().hash(valueOid) ^
@@ -2419,6 +2475,8 @@ abstract class _FhirExtension extends FhirExtension {
       @JsonKey(name: '_valueInstant') Element? valueInstantElement,
       Integer? valueInteger,
       @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Integer64? valueInteger64,
+      @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
       Markdown? valueMarkdown,
       @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
       Oid? valueOid,
@@ -2533,6 +2591,11 @@ abstract class _FhirExtension extends FhirExtension {
   @override
   @JsonKey(name: '_valueInteger')
   Element? get valueIntegerElement => throw _privateConstructorUsedError;
+  @override
+  Integer64? get valueInteger64 => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueInteger64')
+  Element? get valueInteger64Element => throw _privateConstructorUsedError;
   @override
   Markdown? get valueMarkdown => throw _privateConstructorUsedError;
   @override
