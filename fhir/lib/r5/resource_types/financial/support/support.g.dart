@@ -891,7 +891,9 @@ _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
           ? null
           : Reference.fromJson(json['requestor'] as Map<String, dynamic>),
       request: Reference.fromJson(json['request'] as Map<String, dynamic>),
-      outcome: json['outcome'] == null ? null : Code.fromJson(json['outcome']),
+      outcome: _$enumDecodeNullable(
+          _$CoverageEligibilityResponseOutcomeEnumMap, json['outcome'],
+          unknownValue: CoverageEligibilityResponseOutcome.unknown),
       outcomeElement: json['_outcome'] == null
           ? null
           : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
@@ -957,7 +959,8 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseToJson(
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('requestor', instance.requestor?.toJson());
   val['request'] = instance.request.toJson();
-  writeNotNull('outcome', instance.outcome?.toJson());
+  writeNotNull(
+      'outcome', _$CoverageEligibilityResponseOutcomeEnumMap[instance.outcome]);
   writeNotNull('_outcome', instance.outcomeElement?.toJson());
   writeNotNull('disposition', instance.disposition);
   writeNotNull('_disposition', instance.dispositionElement?.toJson());
@@ -970,6 +973,14 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseToJson(
   writeNotNull('error', instance.error?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$CoverageEligibilityResponseOutcomeEnumMap = {
+  CoverageEligibilityResponseOutcome.queued: 'queued',
+  CoverageEligibilityResponseOutcome.complete: 'complete',
+  CoverageEligibilityResponseOutcome.error: 'error',
+  CoverageEligibilityResponseOutcome.partial: 'partial',
+  CoverageEligibilityResponseOutcome.unknown: 'unknown',
+};
 
 _$_CoverageEligibilityResponseInsurance
     _$$_CoverageEligibilityResponseInsuranceFromJson(
@@ -1376,7 +1387,9 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
       request: json['request'] == null
           ? null
           : Reference.fromJson(json['request'] as Map<String, dynamic>),
-      outcome: json['outcome'] == null ? null : Code.fromJson(json['outcome']),
+      outcome: _$enumDecodeNullable(
+          _$EnrollmentResponseOutcomeEnumMap, json['outcome'],
+          unknownValue: EnrollmentResponseOutcome.unknown),
       outcomeElement: json['_outcome'] == null
           ? null
           : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
@@ -1428,7 +1441,7 @@ Map<String, dynamic> _$$_EnrollmentResponseToJson(
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('request', instance.request?.toJson());
-  writeNotNull('outcome', instance.outcome?.toJson());
+  writeNotNull('outcome', _$EnrollmentResponseOutcomeEnumMap[instance.outcome]);
   writeNotNull('_outcome', instance.outcomeElement?.toJson());
   writeNotNull('disposition', instance.disposition);
   writeNotNull('_disposition', instance.dispositionElement?.toJson());
@@ -1438,3 +1451,11 @@ Map<String, dynamic> _$$_EnrollmentResponseToJson(
   writeNotNull('requestProvider', instance.requestProvider?.toJson());
   return val;
 }
+
+const _$EnrollmentResponseOutcomeEnumMap = {
+  EnrollmentResponseOutcome.queued: 'queued',
+  EnrollmentResponseOutcome.complete: 'complete',
+  EnrollmentResponseOutcome.error: 'error',
+  EnrollmentResponseOutcome.partial: 'partial',
+  EnrollmentResponseOutcome.unknown: 'unknown',
+};

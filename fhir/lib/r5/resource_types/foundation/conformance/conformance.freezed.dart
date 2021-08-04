@@ -49,7 +49,8 @@ class _$CapabilityStatementTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
+          CapabilityStatementStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -73,14 +74,16 @@ class _$CapabilityStatementTearOff {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Code? kind,
+      @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
+          CapabilityStatementKind? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       List<Canonical>? instantiates,
       List<Canonical>? imports,
       CapabilityStatementSoftware? software,
       CapabilityStatementImplementation? implementation,
-      Code? fhirVersion,
+      @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
+          CapabilityStatementFhirVersion? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           Element? fhirVersionElement,
       List<Code>? format,
@@ -189,7 +192,8 @@ mixin _$CapabilityStatement {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
+  CapabilityStatementStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -213,7 +217,8 @@ mixin _$CapabilityStatement {
   Markdown? get copyright => throw _privateConstructorUsedError;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
-  Code? get kind => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
+  CapabilityStatementKind? get kind => throw _privateConstructorUsedError;
   @JsonKey(name: '_kind')
   Element? get kindElement => throw _privateConstructorUsedError;
   List<Canonical>? get instantiates => throw _privateConstructorUsedError;
@@ -222,7 +227,9 @@ mixin _$CapabilityStatement {
       throw _privateConstructorUsedError;
   CapabilityStatementImplementation? get implementation =>
       throw _privateConstructorUsedError;
-  Code? get fhirVersion => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
+  CapabilityStatementFhirVersion? get fhirVersion =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_fhirVersion')
   Element? get fhirVersionElement => throw _privateConstructorUsedError;
   List<Code>? get format => throw _privateConstructorUsedError;
@@ -279,7 +286,8 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
+          CapabilityStatementStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -303,14 +311,16 @@ abstract class $CapabilityStatementCopyWith<$Res> {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Code? kind,
+      @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
+          CapabilityStatementKind? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       List<Canonical>? instantiates,
       List<Canonical>? imports,
       CapabilityStatementSoftware? software,
       CapabilityStatementImplementation? implementation,
-      Code? fhirVersion,
+      @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
+          CapabilityStatementFhirVersion? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           Element? fhirVersionElement,
       List<Code>? format,
@@ -494,7 +504,7 @@ class _$CapabilityStatementCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -562,7 +572,7 @@ class _$CapabilityStatementCopyWithImpl<$Res>
       kind: kind == freezed
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementKind?,
       kindElement: kindElement == freezed
           ? _value.kindElement
           : kindElement // ignore: cast_nullable_to_non_nullable
@@ -586,7 +596,7 @@ class _$CapabilityStatementCopyWithImpl<$Res>
       fhirVersion: fhirVersion == freezed
           ? _value.fhirVersion
           : fhirVersion // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementFhirVersion?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
           : fhirVersionElement // ignore: cast_nullable_to_non_nullable
@@ -874,7 +884,8 @@ abstract class _$CapabilityStatementCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
+          CapabilityStatementStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -898,14 +909,16 @@ abstract class _$CapabilityStatementCopyWith<$Res>
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Code? kind,
+      @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
+          CapabilityStatementKind? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       List<Canonical>? instantiates,
       List<Canonical>? imports,
       CapabilityStatementSoftware? software,
       CapabilityStatementImplementation? implementation,
-      Code? fhirVersion,
+      @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
+          CapabilityStatementFhirVersion? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           Element? fhirVersionElement,
       List<Code>? format,
@@ -1110,7 +1123,7 @@ class __$CapabilityStatementCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1178,7 +1191,7 @@ class __$CapabilityStatementCopyWithImpl<$Res>
       kind: kind == freezed
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementKind?,
       kindElement: kindElement == freezed
           ? _value.kindElement
           : kindElement // ignore: cast_nullable_to_non_nullable
@@ -1202,7 +1215,7 @@ class __$CapabilityStatementCopyWithImpl<$Res>
       fhirVersion: fhirVersion == freezed
           ? _value.fhirVersion
           : fhirVersion // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementFhirVersion?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
           : fhirVersionElement // ignore: cast_nullable_to_non_nullable
@@ -1275,7 +1288,8 @@ class _$_CapabilityStatement extends _CapabilityStatement {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      this.status,
+      @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -1299,14 +1313,16 @@ class _$_CapabilityStatement extends _CapabilityStatement {
       this.copyright,
       @JsonKey(name: '_copyright')
           this.copyrightElement,
-      this.kind,
+      @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
+          this.kind,
       @JsonKey(name: '_kind')
           this.kindElement,
       this.instantiates,
       this.imports,
       this.software,
       this.implementation,
-      this.fhirVersion,
+      @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
+          this.fhirVersion,
       @JsonKey(name: '_fhirVersion')
           this.fhirVersionElement,
       this.format,
@@ -1373,7 +1389,8 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
+  final CapabilityStatementStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -1414,7 +1431,8 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
-  final Code? kind;
+  @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
+  final CapabilityStatementKind? kind;
   @override
   @JsonKey(name: '_kind')
   final Element? kindElement;
@@ -1427,7 +1445,8 @@ class _$_CapabilityStatement extends _CapabilityStatement {
   @override
   final CapabilityStatementImplementation? implementation;
   @override
-  final Code? fhirVersion;
+  @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
+  final CapabilityStatementFhirVersion? fhirVersion;
   @override
   @JsonKey(name: '_fhirVersion')
   final Element? fhirVersionElement;
@@ -1656,7 +1675,8 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
+          CapabilityStatementStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -1680,14 +1700,16 @@ abstract class _CapabilityStatement extends CapabilityStatement {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Code? kind,
+      @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
+          CapabilityStatementKind? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       List<Canonical>? instantiates,
       List<Canonical>? imports,
       CapabilityStatementSoftware? software,
       CapabilityStatementImplementation? implementation,
-      Code? fhirVersion,
+      @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
+          CapabilityStatementFhirVersion? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           Element? fhirVersionElement,
       List<Code>? format,
@@ -1755,7 +1777,8 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementStatus.unknown)
+  CapabilityStatementStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -1796,7 +1819,8 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
   @override
-  Code? get kind => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementKind.unknown)
+  CapabilityStatementKind? get kind => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_kind')
   Element? get kindElement => throw _privateConstructorUsedError;
@@ -1811,7 +1835,9 @@ abstract class _CapabilityStatement extends CapabilityStatement {
   CapabilityStatementImplementation? get implementation =>
       throw _privateConstructorUsedError;
   @override
-  Code? get fhirVersion => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementFhirVersion.unknown)
+  CapabilityStatementFhirVersion? get fhirVersion =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fhirVersion')
   Element? get fhirVersionElement => throw _privateConstructorUsedError;
@@ -2674,12 +2700,16 @@ class _$CapabilityStatementRestTearOff {
 
   _CapabilityStatementRest call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementRestMode.unknown)
+          CapabilityStatementRestMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
       CapabilityStatementSecurity? security,
       List<CapabilityStatementResource>? resource,
       List<CapabilityStatementInteraction1>? interaction,
@@ -2718,7 +2748,8 @@ mixin _$CapabilityStatementRest {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get mode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementRestMode.unknown)
+  CapabilityStatementRestMode? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
   Markdown? get documentation => throw _privateConstructorUsedError;
@@ -2749,12 +2780,16 @@ abstract class $CapabilityStatementRestCopyWith<$Res> {
       _$CapabilityStatementRestCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementRestMode.unknown)
+          CapabilityStatementRestMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
       CapabilityStatementSecurity? security,
       List<CapabilityStatementResource>? resource,
       List<CapabilityStatementInteraction1>? interaction,
@@ -2808,7 +2843,7 @@ class _$CapabilityStatementRestCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementRestMode?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -2892,12 +2927,16 @@ abstract class _$CapabilityStatementRestCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementRestMode.unknown)
+          CapabilityStatementRestMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
       CapabilityStatementSecurity? security,
       List<CapabilityStatementResource>? resource,
       List<CapabilityStatementInteraction1>? interaction,
@@ -2957,7 +2996,7 @@ class __$CapabilityStatementRestCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementRestMode?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -3005,7 +3044,7 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.mode,
+      @JsonKey(unknownEnumValue: CapabilityStatementRestMode.unknown) this.mode,
       @JsonKey(name: '_mode') this.modeElement,
       this.documentation,
       @JsonKey(name: '_documentation') this.documentationElement,
@@ -3028,7 +3067,8 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? mode;
+  @JsonKey(unknownEnumValue: CapabilityStatementRestMode.unknown)
+  final CapabilityStatementRestMode? mode;
   @override
   @JsonKey(name: '_mode')
   final Element? modeElement;
@@ -3130,12 +3170,16 @@ class _$_CapabilityStatementRest extends _CapabilityStatementRest {
 abstract class _CapabilityStatementRest extends CapabilityStatementRest {
   factory _CapabilityStatementRest(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementRestMode.unknown)
+          CapabilityStatementRestMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
       CapabilityStatementSecurity? security,
       List<CapabilityStatementResource>? resource,
       List<CapabilityStatementInteraction1>? interaction,
@@ -3156,7 +3200,8 @@ abstract class _CapabilityStatementRest extends CapabilityStatementRest {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get mode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementRestMode.unknown)
+  CapabilityStatementRestMode? get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
@@ -3591,7 +3636,8 @@ class _$CapabilityStatementResourceTearOff {
       @JsonKey(name: '_documentation')
           Element? documentationElement,
       List<CapabilityStatementInteraction>? interaction,
-      Code? versioning,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
+          CapabilityStatementResourceVersioning? versioning,
       @JsonKey(name: '_versioning')
           Element? versioningElement,
       Boolean? readHistory,
@@ -3603,13 +3649,15 @@ class _$CapabilityStatementResourceTearOff {
       Boolean? conditionalCreate,
       @JsonKey(name: '_conditionalCreate')
           Element? conditionalCreateElement,
-      Code? conditionalRead,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
+          CapabilityStatementResourceConditionalRead? conditionalRead,
       @JsonKey(name: '_conditionalRead')
           Element? conditionalReadElement,
       Boolean? conditionalUpdate,
       @JsonKey(name: '_conditionalUpdate')
           Element? conditionalUpdateElement,
-      Code? conditionalDelete,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
+          CapabilityStatementResourceConditionalDelete? conditionalDelete,
       @JsonKey(name: '_conditionalDelete')
           Element? conditionalDeleteElement,
       List<Code>? referencePolicy,
@@ -3684,7 +3732,9 @@ mixin _$CapabilityStatementResource {
   Element? get documentationElement => throw _privateConstructorUsedError;
   List<CapabilityStatementInteraction>? get interaction =>
       throw _privateConstructorUsedError;
-  Code? get versioning => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
+  CapabilityStatementResourceVersioning? get versioning =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_versioning')
   Element? get versioningElement => throw _privateConstructorUsedError;
   Boolean? get readHistory => throw _privateConstructorUsedError;
@@ -3696,13 +3746,18 @@ mixin _$CapabilityStatementResource {
   Boolean? get conditionalCreate => throw _privateConstructorUsedError;
   @JsonKey(name: '_conditionalCreate')
   Element? get conditionalCreateElement => throw _privateConstructorUsedError;
-  Code? get conditionalRead => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
+  CapabilityStatementResourceConditionalRead? get conditionalRead =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_conditionalRead')
   Element? get conditionalReadElement => throw _privateConstructorUsedError;
   Boolean? get conditionalUpdate => throw _privateConstructorUsedError;
   @JsonKey(name: '_conditionalUpdate')
   Element? get conditionalUpdateElement => throw _privateConstructorUsedError;
-  Code? get conditionalDelete => throw _privateConstructorUsedError;
+  @JsonKey(
+      unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
+  CapabilityStatementResourceConditionalDelete? get conditionalDelete =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_conditionalDelete')
   Element? get conditionalDeleteElement => throw _privateConstructorUsedError;
   List<Code>? get referencePolicy => throw _privateConstructorUsedError;
@@ -3747,7 +3802,8 @@ abstract class $CapabilityStatementResourceCopyWith<$Res> {
       @JsonKey(name: '_documentation')
           Element? documentationElement,
       List<CapabilityStatementInteraction>? interaction,
-      Code? versioning,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
+          CapabilityStatementResourceVersioning? versioning,
       @JsonKey(name: '_versioning')
           Element? versioningElement,
       Boolean? readHistory,
@@ -3759,13 +3815,15 @@ abstract class $CapabilityStatementResourceCopyWith<$Res> {
       Boolean? conditionalCreate,
       @JsonKey(name: '_conditionalCreate')
           Element? conditionalCreateElement,
-      Code? conditionalRead,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
+          CapabilityStatementResourceConditionalRead? conditionalRead,
       @JsonKey(name: '_conditionalRead')
           Element? conditionalReadElement,
       Boolean? conditionalUpdate,
       @JsonKey(name: '_conditionalUpdate')
           Element? conditionalUpdateElement,
-      Code? conditionalDelete,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
+          CapabilityStatementResourceConditionalDelete? conditionalDelete,
       @JsonKey(name: '_conditionalDelete')
           Element? conditionalDeleteElement,
       List<Code>? referencePolicy,
@@ -3879,7 +3937,7 @@ class _$CapabilityStatementResourceCopyWithImpl<$Res>
       versioning: versioning == freezed
           ? _value.versioning
           : versioning // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementResourceVersioning?,
       versioningElement: versioningElement == freezed
           ? _value.versioningElement
           : versioningElement // ignore: cast_nullable_to_non_nullable
@@ -3911,7 +3969,7 @@ class _$CapabilityStatementResourceCopyWithImpl<$Res>
       conditionalRead: conditionalRead == freezed
           ? _value.conditionalRead
           : conditionalRead // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementResourceConditionalRead?,
       conditionalReadElement: conditionalReadElement == freezed
           ? _value.conditionalReadElement
           : conditionalReadElement // ignore: cast_nullable_to_non_nullable
@@ -3927,7 +3985,7 @@ class _$CapabilityStatementResourceCopyWithImpl<$Res>
       conditionalDelete: conditionalDelete == freezed
           ? _value.conditionalDelete
           : conditionalDelete // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementResourceConditionalDelete?,
       conditionalDeleteElement: conditionalDeleteElement == freezed
           ? _value.conditionalDeleteElement
           : conditionalDeleteElement // ignore: cast_nullable_to_non_nullable
@@ -4089,7 +4147,8 @@ abstract class _$CapabilityStatementResourceCopyWith<$Res>
       @JsonKey(name: '_documentation')
           Element? documentationElement,
       List<CapabilityStatementInteraction>? interaction,
-      Code? versioning,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
+          CapabilityStatementResourceVersioning? versioning,
       @JsonKey(name: '_versioning')
           Element? versioningElement,
       Boolean? readHistory,
@@ -4101,13 +4160,15 @@ abstract class _$CapabilityStatementResourceCopyWith<$Res>
       Boolean? conditionalCreate,
       @JsonKey(name: '_conditionalCreate')
           Element? conditionalCreateElement,
-      Code? conditionalRead,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
+          CapabilityStatementResourceConditionalRead? conditionalRead,
       @JsonKey(name: '_conditionalRead')
           Element? conditionalReadElement,
       Boolean? conditionalUpdate,
       @JsonKey(name: '_conditionalUpdate')
           Element? conditionalUpdateElement,
-      Code? conditionalDelete,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
+          CapabilityStatementResourceConditionalDelete? conditionalDelete,
       @JsonKey(name: '_conditionalDelete')
           Element? conditionalDeleteElement,
       List<Code>? referencePolicy,
@@ -4234,7 +4295,7 @@ class __$CapabilityStatementResourceCopyWithImpl<$Res>
       versioning: versioning == freezed
           ? _value.versioning
           : versioning // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementResourceVersioning?,
       versioningElement: versioningElement == freezed
           ? _value.versioningElement
           : versioningElement // ignore: cast_nullable_to_non_nullable
@@ -4266,7 +4327,7 @@ class __$CapabilityStatementResourceCopyWithImpl<$Res>
       conditionalRead: conditionalRead == freezed
           ? _value.conditionalRead
           : conditionalRead // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementResourceConditionalRead?,
       conditionalReadElement: conditionalReadElement == freezed
           ? _value.conditionalReadElement
           : conditionalReadElement // ignore: cast_nullable_to_non_nullable
@@ -4282,7 +4343,7 @@ class __$CapabilityStatementResourceCopyWithImpl<$Res>
       conditionalDelete: conditionalDelete == freezed
           ? _value.conditionalDelete
           : conditionalDelete // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementResourceConditionalDelete?,
       conditionalDeleteElement: conditionalDeleteElement == freezed
           ? _value.conditionalDeleteElement
           : conditionalDeleteElement // ignore: cast_nullable_to_non_nullable
@@ -4328,35 +4389,51 @@ class __$CapabilityStatementResourceCopyWithImpl<$Res>
 class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   _$_CapabilityStatementResource(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.type,
-      @JsonKey(name: '_type') this.typeElement,
+      @JsonKey(name: '_type')
+          this.typeElement,
       this.profile,
       this.supportedProfile,
       this.documentation,
-      @JsonKey(name: '_documentation') this.documentationElement,
+      @JsonKey(name: '_documentation')
+          this.documentationElement,
       this.interaction,
-      this.versioning,
-      @JsonKey(name: '_versioning') this.versioningElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
+          this.versioning,
+      @JsonKey(name: '_versioning')
+          this.versioningElement,
       this.readHistory,
-      @JsonKey(name: '_readHistory') this.readHistoryElement,
+      @JsonKey(name: '_readHistory')
+          this.readHistoryElement,
       this.updateCreate,
-      @JsonKey(name: '_updateCreate') this.updateCreateElement,
+      @JsonKey(name: '_updateCreate')
+          this.updateCreateElement,
       this.conditionalCreate,
-      @JsonKey(name: '_conditionalCreate') this.conditionalCreateElement,
-      this.conditionalRead,
-      @JsonKey(name: '_conditionalRead') this.conditionalReadElement,
+      @JsonKey(name: '_conditionalCreate')
+          this.conditionalCreateElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
+          this.conditionalRead,
+      @JsonKey(name: '_conditionalRead')
+          this.conditionalReadElement,
       this.conditionalUpdate,
-      @JsonKey(name: '_conditionalUpdate') this.conditionalUpdateElement,
-      this.conditionalDelete,
-      @JsonKey(name: '_conditionalDelete') this.conditionalDeleteElement,
+      @JsonKey(name: '_conditionalUpdate')
+          this.conditionalUpdateElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
+          this.conditionalDelete,
+      @JsonKey(name: '_conditionalDelete')
+          this.conditionalDeleteElement,
       this.referencePolicy,
-      @JsonKey(name: '_referencePolicy') this.referencePolicyElement,
+      @JsonKey(name: '_referencePolicy')
+          this.referencePolicyElement,
       this.searchInclude,
-      @JsonKey(name: '_searchInclude') this.searchIncludeElement,
+      @JsonKey(name: '_searchInclude')
+          this.searchIncludeElement,
       this.searchRevInclude,
-      @JsonKey(name: '_searchRevInclude') this.searchRevIncludeElement,
+      @JsonKey(name: '_searchRevInclude')
+          this.searchRevIncludeElement,
       this.searchParam,
       this.operation})
       : super._();
@@ -4388,7 +4465,8 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   @override
   final List<CapabilityStatementInteraction>? interaction;
   @override
-  final Code? versioning;
+  @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
+  final CapabilityStatementResourceVersioning? versioning;
   @override
   @JsonKey(name: '_versioning')
   final Element? versioningElement;
@@ -4408,7 +4486,8 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   @JsonKey(name: '_conditionalCreate')
   final Element? conditionalCreateElement;
   @override
-  final Code? conditionalRead;
+  @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
+  final CapabilityStatementResourceConditionalRead? conditionalRead;
   @override
   @JsonKey(name: '_conditionalRead')
   final Element? conditionalReadElement;
@@ -4418,7 +4497,9 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
   @JsonKey(name: '_conditionalUpdate')
   final Element? conditionalUpdateElement;
   @override
-  final Code? conditionalDelete;
+  @JsonKey(
+      unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
+  final CapabilityStatementResourceConditionalDelete? conditionalDelete;
   @override
   @JsonKey(name: '_conditionalDelete')
   final Element? conditionalDeleteElement;
@@ -4577,52 +4658,54 @@ class _$_CapabilityStatementResource extends _CapabilityStatementResource {
 abstract class _CapabilityStatementResource
     extends CapabilityStatementResource {
   factory _CapabilityStatementResource(
-          {String? id,
-          @JsonKey(name: 'extension')
-              List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Code? type,
-          @JsonKey(name: '_type')
-              Element? typeElement,
-          Canonical? profile,
-          List<Canonical>? supportedProfile,
-          Markdown? documentation,
-          @JsonKey(name: '_documentation')
-              Element? documentationElement,
-          List<CapabilityStatementInteraction>? interaction,
-          Code? versioning,
-          @JsonKey(name: '_versioning')
-              Element? versioningElement,
-          Boolean? readHistory,
-          @JsonKey(name: '_readHistory')
-              Element? readHistoryElement,
-          Boolean? updateCreate,
-          @JsonKey(name: '_updateCreate')
-              Element? updateCreateElement,
-          Boolean? conditionalCreate,
-          @JsonKey(name: '_conditionalCreate')
-              Element? conditionalCreateElement,
-          Code? conditionalRead,
-          @JsonKey(name: '_conditionalRead')
-              Element? conditionalReadElement,
-          Boolean? conditionalUpdate,
-          @JsonKey(name: '_conditionalUpdate')
-              Element? conditionalUpdateElement,
-          Code? conditionalDelete,
-          @JsonKey(name: '_conditionalDelete')
-              Element? conditionalDeleteElement,
-          List<Code>? referencePolicy,
-          @JsonKey(name: '_referencePolicy')
-              List<Element>? referencePolicyElement,
-          List<String>? searchInclude,
-          @JsonKey(name: '_searchInclude')
-              List<Element>? searchIncludeElement,
-          List<String>? searchRevInclude,
-          @JsonKey(name: '_searchRevInclude')
-              List<Element>? searchRevIncludeElement,
-          List<CapabilityStatementSearchParam>? searchParam,
-          List<CapabilityStatementOperation>? operation}) =
-      _$_CapabilityStatementResource;
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Code? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
+      Canonical? profile,
+      List<Canonical>? supportedProfile,
+      Markdown? documentation,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
+      List<CapabilityStatementInteraction>? interaction,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
+          CapabilityStatementResourceVersioning? versioning,
+      @JsonKey(name: '_versioning')
+          Element? versioningElement,
+      Boolean? readHistory,
+      @JsonKey(name: '_readHistory')
+          Element? readHistoryElement,
+      Boolean? updateCreate,
+      @JsonKey(name: '_updateCreate')
+          Element? updateCreateElement,
+      Boolean? conditionalCreate,
+      @JsonKey(name: '_conditionalCreate')
+          Element? conditionalCreateElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
+          CapabilityStatementResourceConditionalRead? conditionalRead,
+      @JsonKey(name: '_conditionalRead')
+          Element? conditionalReadElement,
+      Boolean? conditionalUpdate,
+      @JsonKey(name: '_conditionalUpdate')
+          Element? conditionalUpdateElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
+          CapabilityStatementResourceConditionalDelete? conditionalDelete,
+      @JsonKey(name: '_conditionalDelete')
+          Element? conditionalDeleteElement,
+      List<Code>? referencePolicy,
+      @JsonKey(name: '_referencePolicy')
+          List<Element>? referencePolicyElement,
+      List<String>? searchInclude,
+      @JsonKey(name: '_searchInclude')
+          List<Element>? searchIncludeElement,
+      List<String>? searchRevInclude,
+      @JsonKey(name: '_searchRevInclude')
+          List<Element>? searchRevIncludeElement,
+      List<CapabilityStatementSearchParam>? searchParam,
+      List<CapabilityStatementOperation>? operation}) = _$_CapabilityStatementResource;
   _CapabilityStatementResource._() : super._();
 
   factory _CapabilityStatementResource.fromJson(Map<String, dynamic> json) =
@@ -4654,7 +4737,9 @@ abstract class _CapabilityStatementResource
   List<CapabilityStatementInteraction>? get interaction =>
       throw _privateConstructorUsedError;
   @override
-  Code? get versioning => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementResourceVersioning.unknown)
+  CapabilityStatementResourceVersioning? get versioning =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_versioning')
   Element? get versioningElement => throw _privateConstructorUsedError;
@@ -4674,7 +4759,9 @@ abstract class _CapabilityStatementResource
   @JsonKey(name: '_conditionalCreate')
   Element? get conditionalCreateElement => throw _privateConstructorUsedError;
   @override
-  Code? get conditionalRead => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementResourceConditionalRead.unknown)
+  CapabilityStatementResourceConditionalRead? get conditionalRead =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_conditionalRead')
   Element? get conditionalReadElement => throw _privateConstructorUsedError;
@@ -4684,7 +4771,10 @@ abstract class _CapabilityStatementResource
   @JsonKey(name: '_conditionalUpdate')
   Element? get conditionalUpdateElement => throw _privateConstructorUsedError;
   @override
-  Code? get conditionalDelete => throw _privateConstructorUsedError;
+  @JsonKey(
+      unknownEnumValue: CapabilityStatementResourceConditionalDelete.unknown)
+  CapabilityStatementResourceConditionalDelete? get conditionalDelete =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_conditionalDelete')
   Element? get conditionalDeleteElement => throw _privateConstructorUsedError;
@@ -4728,12 +4818,16 @@ class _$CapabilityStatementInteractionTearOff {
 
   _CapabilityStatementInteraction call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementInteractionCode.unknown)
+          CapabilityStatementInteractionCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement}) {
+      @JsonKey(name: '_documentation')
+          Element? documentationElement}) {
     return _CapabilityStatementInteraction(
       id: id,
       extension_: extension_,
@@ -4761,7 +4855,9 @@ mixin _$CapabilityStatementInteraction {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementInteractionCode.unknown)
+  CapabilityStatementInteractionCode? get code =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   Markdown? get documentation => throw _privateConstructorUsedError;
@@ -4782,12 +4878,16 @@ abstract class $CapabilityStatementInteractionCopyWith<$Res> {
       _$CapabilityStatementInteractionCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementInteractionCode.unknown)
+          CapabilityStatementInteractionCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement});
+      @JsonKey(name: '_documentation')
+          Element? documentationElement});
 
   $ElementCopyWith<$Res>? get codeElement;
   $ElementCopyWith<$Res>? get documentationElement;
@@ -4828,7 +4928,7 @@ class _$CapabilityStatementInteractionCopyWithImpl<$Res>
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementInteractionCode?,
       codeElement: codeElement == freezed
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -4877,12 +4977,16 @@ abstract class _$CapabilityStatementInteractionCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementInteractionCode.unknown)
+          CapabilityStatementInteractionCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement});
+      @JsonKey(name: '_documentation')
+          Element? documentationElement});
 
   @override
   $ElementCopyWith<$Res>? get codeElement;
@@ -4929,7 +5033,7 @@ class __$CapabilityStatementInteractionCopyWithImpl<$Res>
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementInteractionCode?,
       codeElement: codeElement == freezed
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -4952,12 +5056,16 @@ class _$_CapabilityStatementInteraction
     extends _CapabilityStatementInteraction {
   _$_CapabilityStatementInteraction(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
-      this.code,
-      @JsonKey(name: '_code') this.codeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementInteractionCode.unknown)
+          this.code,
+      @JsonKey(name: '_code')
+          this.codeElement,
       this.documentation,
-      @JsonKey(name: '_documentation') this.documentationElement})
+      @JsonKey(name: '_documentation')
+          this.documentationElement})
       : super._();
 
   factory _$_CapabilityStatementInteraction.fromJson(
@@ -4972,7 +5080,8 @@ class _$_CapabilityStatementInteraction
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? code;
+  @JsonKey(unknownEnumValue: CapabilityStatementInteractionCode.unknown)
+  final CapabilityStatementInteractionCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -5038,14 +5147,17 @@ class _$_CapabilityStatementInteraction
 abstract class _CapabilityStatementInteraction
     extends CapabilityStatementInteraction {
   factory _CapabilityStatementInteraction(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Code? code,
-          @JsonKey(name: '_code') Element? codeElement,
-          Markdown? documentation,
-          @JsonKey(name: '_documentation') Element? documentationElement}) =
-      _$_CapabilityStatementInteraction;
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(unknownEnumValue: CapabilityStatementInteractionCode.unknown)
+          CapabilityStatementInteractionCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
+      Markdown? documentation,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement}) = _$_CapabilityStatementInteraction;
   _CapabilityStatementInteraction._() : super._();
 
   factory _CapabilityStatementInteraction.fromJson(Map<String, dynamic> json) =
@@ -5060,7 +5172,9 @@ abstract class _CapabilityStatementInteraction
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get code => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementInteractionCode.unknown)
+  CapabilityStatementInteractionCode? get code =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
@@ -5086,15 +5200,20 @@ class _$CapabilityStatementSearchParamTearOff {
 
   _CapabilityStatementSearchParam call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       Canonical? definition,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
+          CapabilityStatementSearchParamType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement}) {
+      @JsonKey(name: '_documentation')
+          Element? documentationElement}) {
     return _CapabilityStatementSearchParam(
       id: id,
       extension_: extension_,
@@ -5129,7 +5248,9 @@ mixin _$CapabilityStatementSearchParam {
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
   Canonical? get definition => throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
+  CapabilityStatementSearchParamType? get type =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   Markdown? get documentation => throw _privateConstructorUsedError;
@@ -5150,15 +5271,20 @@ abstract class $CapabilityStatementSearchParamCopyWith<$Res> {
       _$CapabilityStatementSearchParamCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       Canonical? definition,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
+          CapabilityStatementSearchParamType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement});
+      @JsonKey(name: '_documentation')
+          Element? documentationElement});
 
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get typeElement;
@@ -5215,7 +5341,7 @@ class _$CapabilityStatementSearchParamCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementSearchParamType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -5275,15 +5401,20 @@ abstract class _$CapabilityStatementSearchParamCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       Canonical? definition,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
+          CapabilityStatementSearchParamType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement});
+      @JsonKey(name: '_documentation')
+          Element? documentationElement});
 
   @override
   $ElementCopyWith<$Res>? get nameElement;
@@ -5347,7 +5478,7 @@ class __$CapabilityStatementSearchParamCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementSearchParamType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -5370,15 +5501,20 @@ class _$_CapabilityStatementSearchParam
     extends _CapabilityStatementSearchParam {
   _$_CapabilityStatementSearchParam(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.definition,
-      this.type,
-      @JsonKey(name: '_type') this.typeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
+          this.type,
+      @JsonKey(name: '_type')
+          this.typeElement,
       this.documentation,
-      @JsonKey(name: '_documentation') this.documentationElement})
+      @JsonKey(name: '_documentation')
+          this.documentationElement})
       : super._();
 
   factory _$_CapabilityStatementSearchParam.fromJson(
@@ -5400,7 +5536,8 @@ class _$_CapabilityStatementSearchParam
   @override
   final Canonical? definition;
   @override
-  final Code? type;
+  @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
+  final CapabilityStatementSearchParamType? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -5477,17 +5614,21 @@ class _$_CapabilityStatementSearchParam
 abstract class _CapabilityStatementSearchParam
     extends CapabilityStatementSearchParam {
   factory _CapabilityStatementSearchParam(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          String? name,
-          @JsonKey(name: '_name') Element? nameElement,
-          Canonical? definition,
-          Code? type,
-          @JsonKey(name: '_type') Element? typeElement,
-          Markdown? documentation,
-          @JsonKey(name: '_documentation') Element? documentationElement}) =
-      _$_CapabilityStatementSearchParam;
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? name,
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      Canonical? definition,
+      @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
+          CapabilityStatementSearchParamType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
+      Markdown? documentation,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement}) = _$_CapabilityStatementSearchParam;
   _CapabilityStatementSearchParam._() : super._();
 
   factory _CapabilityStatementSearchParam.fromJson(Map<String, dynamic> json) =
@@ -5509,7 +5650,9 @@ abstract class _CapabilityStatementSearchParam
   @override
   Canonical? get definition => throw _privateConstructorUsedError;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementSearchParamType.unknown)
+  CapabilityStatementSearchParamType? get type =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -5915,12 +6058,16 @@ class _$CapabilityStatementInteraction1TearOff {
 
   _CapabilityStatementInteraction1 call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementInteraction1Code.unknown)
+          CapabilityStatementInteraction1Code? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement}) {
+      @JsonKey(name: '_documentation')
+          Element? documentationElement}) {
     return _CapabilityStatementInteraction1(
       id: id,
       extension_: extension_,
@@ -5948,7 +6095,9 @@ mixin _$CapabilityStatementInteraction1 {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementInteraction1Code.unknown)
+  CapabilityStatementInteraction1Code? get code =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   Markdown? get documentation => throw _privateConstructorUsedError;
@@ -5969,12 +6118,16 @@ abstract class $CapabilityStatementInteraction1CopyWith<$Res> {
       _$CapabilityStatementInteraction1CopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementInteraction1Code.unknown)
+          CapabilityStatementInteraction1Code? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement});
+      @JsonKey(name: '_documentation')
+          Element? documentationElement});
 
   $ElementCopyWith<$Res>? get codeElement;
   $ElementCopyWith<$Res>? get documentationElement;
@@ -6015,7 +6168,7 @@ class _$CapabilityStatementInteraction1CopyWithImpl<$Res>
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementInteraction1Code?,
       codeElement: codeElement == freezed
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -6064,12 +6217,16 @@ abstract class _$CapabilityStatementInteraction1CopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementInteraction1Code.unknown)
+          CapabilityStatementInteraction1Code? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement});
+      @JsonKey(name: '_documentation')
+          Element? documentationElement});
 
   @override
   $ElementCopyWith<$Res>? get codeElement;
@@ -6116,7 +6273,7 @@ class __$CapabilityStatementInteraction1CopyWithImpl<$Res>
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementInteraction1Code?,
       codeElement: codeElement == freezed
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -6139,12 +6296,16 @@ class _$_CapabilityStatementInteraction1
     extends _CapabilityStatementInteraction1 {
   _$_CapabilityStatementInteraction1(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
-      this.code,
-      @JsonKey(name: '_code') this.codeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementInteraction1Code.unknown)
+          this.code,
+      @JsonKey(name: '_code')
+          this.codeElement,
       this.documentation,
-      @JsonKey(name: '_documentation') this.documentationElement})
+      @JsonKey(name: '_documentation')
+          this.documentationElement})
       : super._();
 
   factory _$_CapabilityStatementInteraction1.fromJson(
@@ -6159,7 +6320,8 @@ class _$_CapabilityStatementInteraction1
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? code;
+  @JsonKey(unknownEnumValue: CapabilityStatementInteraction1Code.unknown)
+  final CapabilityStatementInteraction1Code? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -6225,14 +6387,17 @@ class _$_CapabilityStatementInteraction1
 abstract class _CapabilityStatementInteraction1
     extends CapabilityStatementInteraction1 {
   factory _CapabilityStatementInteraction1(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Code? code,
-          @JsonKey(name: '_code') Element? codeElement,
-          Markdown? documentation,
-          @JsonKey(name: '_documentation') Element? documentationElement}) =
-      _$_CapabilityStatementInteraction1;
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(unknownEnumValue: CapabilityStatementInteraction1Code.unknown)
+          CapabilityStatementInteraction1Code? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
+      Markdown? documentation,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement}) = _$_CapabilityStatementInteraction1;
   _CapabilityStatementInteraction1._() : super._();
 
   factory _CapabilityStatementInteraction1.fromJson(Map<String, dynamic> json) =
@@ -6247,7 +6412,9 @@ abstract class _CapabilityStatementInteraction1
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get code => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementInteraction1Code.unknown)
+  CapabilityStatementInteraction1Code? get code =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
@@ -7007,10 +7174,13 @@ class _$CapabilityStatementSupportedMessageTearOff {
 
   _CapabilityStatementSupportedMessage call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
+          CapabilityStatementSupportedMessageMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       required Canonical definition}) {
     return _CapabilityStatementSupportedMessage(
       id: id,
@@ -7038,7 +7208,9 @@ mixin _$CapabilityStatementSupportedMessage {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get mode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
+  CapabilityStatementSupportedMessageMode? get mode =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
   Canonical get definition => throw _privateConstructorUsedError;
@@ -7058,10 +7230,13 @@ abstract class $CapabilityStatementSupportedMessageCopyWith<$Res> {
       _$CapabilityStatementSupportedMessageCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
+          CapabilityStatementSupportedMessageMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       Canonical definition});
 
   $ElementCopyWith<$Res>? get modeElement;
@@ -7101,7 +7276,7 @@ class _$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementSupportedMessageMode?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -7135,10 +7310,13 @@ abstract class _$CapabilityStatementSupportedMessageCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
+          CapabilityStatementSupportedMessageMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       Canonical definition});
 
   @override
@@ -7183,7 +7361,7 @@ class __$CapabilityStatementSupportedMessageCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementSupportedMessageMode?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -7202,10 +7380,13 @@ class _$_CapabilityStatementSupportedMessage
     extends _CapabilityStatementSupportedMessage {
   _$_CapabilityStatementSupportedMessage(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
-      this.mode,
-      @JsonKey(name: '_mode') this.modeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
+          this.mode,
+      @JsonKey(name: '_mode')
+          this.modeElement,
       required this.definition})
       : super._();
 
@@ -7221,7 +7402,8 @@ class _$_CapabilityStatementSupportedMessage
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? mode;
+  @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
+  final CapabilityStatementSupportedMessageMode? mode;
   @override
   @JsonKey(name: '_mode')
   final Element? modeElement;
@@ -7282,10 +7464,13 @@ abstract class _CapabilityStatementSupportedMessage
     extends CapabilityStatementSupportedMessage {
   factory _CapabilityStatementSupportedMessage(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
+          CapabilityStatementSupportedMessageMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       required Canonical definition}) = _$_CapabilityStatementSupportedMessage;
   _CapabilityStatementSupportedMessage._() : super._();
 
@@ -7302,7 +7487,9 @@ abstract class _CapabilityStatementSupportedMessage
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get mode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementSupportedMessageMode.unknown)
+  CapabilityStatementSupportedMessageMode? get mode =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
@@ -7326,12 +7513,16 @@ class _$CapabilityStatementDocumentTearOff {
 
   _CapabilityStatementDocument call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementDocumentMode.unknown)
+          CapabilityStatementDocumentMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
       required Canonical profile}) {
     return _CapabilityStatementDocument(
       id: id,
@@ -7360,7 +7551,9 @@ mixin _$CapabilityStatementDocument {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get mode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementDocumentMode.unknown)
+  CapabilityStatementDocumentMode? get mode =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
   Markdown? get documentation => throw _privateConstructorUsedError;
@@ -7382,12 +7575,16 @@ abstract class $CapabilityStatementDocumentCopyWith<$Res> {
       _$CapabilityStatementDocumentCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementDocumentMode.unknown)
+          CapabilityStatementDocumentMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
       Canonical profile});
 
   $ElementCopyWith<$Res>? get modeElement;
@@ -7430,7 +7627,7 @@ class _$CapabilityStatementDocumentCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementDocumentMode?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -7483,12 +7680,16 @@ abstract class _$CapabilityStatementDocumentCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementDocumentMode.unknown)
+          CapabilityStatementDocumentMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
       Canonical profile});
 
   @override
@@ -7537,7 +7738,7 @@ class __$CapabilityStatementDocumentCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatementDocumentMode?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -7563,12 +7764,16 @@ class __$CapabilityStatementDocumentCopyWithImpl<$Res>
 class _$_CapabilityStatementDocument extends _CapabilityStatementDocument {
   _$_CapabilityStatementDocument(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
-      this.mode,
-      @JsonKey(name: '_mode') this.modeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementDocumentMode.unknown)
+          this.mode,
+      @JsonKey(name: '_mode')
+          this.modeElement,
       this.documentation,
-      @JsonKey(name: '_documentation') this.documentationElement,
+      @JsonKey(name: '_documentation')
+          this.documentationElement,
       required this.profile})
       : super._();
 
@@ -7583,7 +7788,8 @@ class _$_CapabilityStatementDocument extends _CapabilityStatementDocument {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? mode;
+  @JsonKey(unknownEnumValue: CapabilityStatementDocumentMode.unknown)
+  final CapabilityStatementDocumentMode? mode;
   @override
   @JsonKey(name: '_mode')
   final Element? modeElement;
@@ -7655,12 +7861,16 @@ abstract class _CapabilityStatementDocument
     extends CapabilityStatementDocument {
   factory _CapabilityStatementDocument(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatementDocumentMode.unknown)
+          CapabilityStatementDocumentMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
       required Canonical profile}) = _$_CapabilityStatementDocument;
   _CapabilityStatementDocument._() : super._();
 
@@ -7676,7 +7886,9 @@ abstract class _CapabilityStatementDocument
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get mode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatementDocumentMode.unknown)
+  CapabilityStatementDocumentMode? get mode =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
@@ -7730,7 +7942,8 @@ class _$CapabilityStatement2TearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: CapabilityStatement2Status.unknown)
+          CapabilityStatement2Status? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -7761,7 +7974,8 @@ class _$CapabilityStatement2TearOff {
       List<Canonical>? imports,
       CapabilityStatement2Software? software,
       CapabilityStatement2Implementation? implementation,
-      Code? fhirVersion,
+      @JsonKey(unknownEnumValue: CapabilityStatement2FhirVersion.unknown)
+          CapabilityStatement2FhirVersion? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           Element? fhirVersionElement,
       List<Code>? format,
@@ -7866,7 +8080,8 @@ mixin _$CapabilityStatement2 {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatement2Status.unknown)
+  CapabilityStatement2Status? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -7899,7 +8114,9 @@ mixin _$CapabilityStatement2 {
       throw _privateConstructorUsedError;
   CapabilityStatement2Implementation? get implementation =>
       throw _privateConstructorUsedError;
-  Code? get fhirVersion => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatement2FhirVersion.unknown)
+  CapabilityStatement2FhirVersion? get fhirVersion =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_fhirVersion')
   Element? get fhirVersionElement => throw _privateConstructorUsedError;
   List<Code>? get format => throw _privateConstructorUsedError;
@@ -7953,7 +8170,8 @@ abstract class $CapabilityStatement2CopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: CapabilityStatement2Status.unknown)
+          CapabilityStatement2Status? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -7984,7 +8202,8 @@ abstract class $CapabilityStatement2CopyWith<$Res> {
       List<Canonical>? imports,
       CapabilityStatement2Software? software,
       CapabilityStatement2Implementation? implementation,
-      Code? fhirVersion,
+      @JsonKey(unknownEnumValue: CapabilityStatement2FhirVersion.unknown)
+          CapabilityStatement2FhirVersion? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           Element? fhirVersionElement,
       List<Code>? format,
@@ -8164,7 +8383,7 @@ class _$CapabilityStatement2CopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatement2Status?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -8256,7 +8475,7 @@ class _$CapabilityStatement2CopyWithImpl<$Res>
       fhirVersion: fhirVersion == freezed
           ? _value.fhirVersion
           : fhirVersion // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatement2FhirVersion?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
           : fhirVersionElement // ignore: cast_nullable_to_non_nullable
@@ -8536,7 +8755,8 @@ abstract class _$CapabilityStatement2CopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: CapabilityStatement2Status.unknown)
+          CapabilityStatement2Status? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -8567,7 +8787,8 @@ abstract class _$CapabilityStatement2CopyWith<$Res>
       List<Canonical>? imports,
       CapabilityStatement2Software? software,
       CapabilityStatement2Implementation? implementation,
-      Code? fhirVersion,
+      @JsonKey(unknownEnumValue: CapabilityStatement2FhirVersion.unknown)
+          CapabilityStatement2FhirVersion? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           Element? fhirVersionElement,
       List<Code>? format,
@@ -8768,7 +8989,7 @@ class __$CapabilityStatement2CopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatement2Status?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -8860,7 +9081,7 @@ class __$CapabilityStatement2CopyWithImpl<$Res>
       fhirVersion: fhirVersion == freezed
           ? _value.fhirVersion
           : fhirVersion // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatement2FhirVersion?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
           : fhirVersionElement // ignore: cast_nullable_to_non_nullable
@@ -8925,7 +9146,8 @@ class _$_CapabilityStatement2 extends _CapabilityStatement2 {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      this.status,
+      @JsonKey(unknownEnumValue: CapabilityStatement2Status.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -8956,7 +9178,8 @@ class _$_CapabilityStatement2 extends _CapabilityStatement2 {
       this.imports,
       this.software,
       this.implementation,
-      this.fhirVersion,
+      @JsonKey(unknownEnumValue: CapabilityStatement2FhirVersion.unknown)
+          this.fhirVersion,
       @JsonKey(name: '_fhirVersion')
           this.fhirVersionElement,
       this.format,
@@ -9021,7 +9244,8 @@ class _$_CapabilityStatement2 extends _CapabilityStatement2 {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: CapabilityStatement2Status.unknown)
+  final CapabilityStatement2Status? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -9075,7 +9299,8 @@ class _$_CapabilityStatement2 extends _CapabilityStatement2 {
   @override
   final CapabilityStatement2Implementation? implementation;
   @override
-  final Code? fhirVersion;
+  @JsonKey(unknownEnumValue: CapabilityStatement2FhirVersion.unknown)
+  final CapabilityStatement2FhirVersion? fhirVersion;
   @override
   @JsonKey(name: '_fhirVersion')
   final Element? fhirVersionElement;
@@ -9296,7 +9521,8 @@ abstract class _CapabilityStatement2 extends CapabilityStatement2 {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: CapabilityStatement2Status.unknown)
+          CapabilityStatement2Status? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -9327,7 +9553,8 @@ abstract class _CapabilityStatement2 extends CapabilityStatement2 {
       List<Canonical>? imports,
       CapabilityStatement2Software? software,
       CapabilityStatement2Implementation? implementation,
-      Code? fhirVersion,
+      @JsonKey(unknownEnumValue: CapabilityStatement2FhirVersion.unknown)
+          CapabilityStatement2FhirVersion? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           Element? fhirVersionElement,
       List<Code>? format,
@@ -9393,7 +9620,8 @@ abstract class _CapabilityStatement2 extends CapabilityStatement2 {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatement2Status.unknown)
+  CapabilityStatement2Status? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -9449,7 +9677,9 @@ abstract class _CapabilityStatement2 extends CapabilityStatement2 {
   CapabilityStatement2Implementation? get implementation =>
       throw _privateConstructorUsedError;
   @override
-  Code? get fhirVersion => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatement2FhirVersion.unknown)
+  CapabilityStatement2FhirVersion? get fhirVersion =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fhirVersion')
   Element? get fhirVersionElement => throw _privateConstructorUsedError;
@@ -12069,15 +12299,20 @@ class _$CapabilityStatement2SearchParamTearOff {
 
   _CapabilityStatement2SearchParam call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       Canonical? definition,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatement2SearchParamType.unknown)
+          CapabilityStatement2SearchParamType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
       List<CapabilityStatement2Feature>? feature}) {
     return _CapabilityStatement2SearchParam(
       id: id,
@@ -12114,7 +12349,9 @@ mixin _$CapabilityStatement2SearchParam {
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
   Canonical? get definition => throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatement2SearchParamType.unknown)
+  CapabilityStatement2SearchParamType? get type =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   Markdown? get documentation => throw _privateConstructorUsedError;
@@ -12137,15 +12374,20 @@ abstract class $CapabilityStatement2SearchParamCopyWith<$Res> {
       _$CapabilityStatement2SearchParamCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       Canonical? definition,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatement2SearchParamType.unknown)
+          CapabilityStatement2SearchParamType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
       List<CapabilityStatement2Feature>? feature});
 
   $ElementCopyWith<$Res>? get nameElement;
@@ -12204,7 +12446,7 @@ class _$CapabilityStatement2SearchParamCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatement2SearchParamType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -12268,15 +12510,20 @@ abstract class _$CapabilityStatement2SearchParamCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       Canonical? definition,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatement2SearchParamType.unknown)
+          CapabilityStatement2SearchParamType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       Markdown? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
       List<CapabilityStatement2Feature>? feature});
 
   @override
@@ -12342,7 +12589,7 @@ class __$CapabilityStatement2SearchParamCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CapabilityStatement2SearchParamType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -12369,15 +12616,20 @@ class _$_CapabilityStatement2SearchParam
     extends _CapabilityStatement2SearchParam {
   _$_CapabilityStatement2SearchParam(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
       this.definition,
-      this.type,
-      @JsonKey(name: '_type') this.typeElement,
+      @JsonKey(unknownEnumValue: CapabilityStatement2SearchParamType.unknown)
+          this.type,
+      @JsonKey(name: '_type')
+          this.typeElement,
       this.documentation,
-      @JsonKey(name: '_documentation') this.documentationElement,
+      @JsonKey(name: '_documentation')
+          this.documentationElement,
       this.feature})
       : super._();
 
@@ -12400,7 +12652,8 @@ class _$_CapabilityStatement2SearchParam
   @override
   final Canonical? definition;
   @override
-  final Code? type;
+  @JsonKey(unknownEnumValue: CapabilityStatement2SearchParamType.unknown)
+  final CapabilityStatement2SearchParamType? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -12482,18 +12735,23 @@ class _$_CapabilityStatement2SearchParam
 abstract class _CapabilityStatement2SearchParam
     extends CapabilityStatement2SearchParam {
   factory _CapabilityStatement2SearchParam(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          String? name,
-          @JsonKey(name: '_name') Element? nameElement,
-          Canonical? definition,
-          Code? type,
-          @JsonKey(name: '_type') Element? typeElement,
-          Markdown? documentation,
-          @JsonKey(name: '_documentation') Element? documentationElement,
-          List<CapabilityStatement2Feature>? feature}) =
-      _$_CapabilityStatement2SearchParam;
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? name,
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      Canonical? definition,
+      @JsonKey(unknownEnumValue: CapabilityStatement2SearchParamType.unknown)
+          CapabilityStatement2SearchParamType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
+      Markdown? documentation,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
+      List<CapabilityStatement2Feature>?
+          feature}) = _$_CapabilityStatement2SearchParam;
   _CapabilityStatement2SearchParam._() : super._();
 
   factory _CapabilityStatement2SearchParam.fromJson(Map<String, dynamic> json) =
@@ -12515,7 +12773,9 @@ abstract class _CapabilityStatement2SearchParam
   @override
   Canonical? get definition => throw _privateConstructorUsedError;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CapabilityStatement2SearchParamType.unknown)
+  CapabilityStatement2SearchParamType? get type =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -13362,7 +13622,8 @@ class _$CompartmentDefinitionTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
+          CompartmentDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -13386,7 +13647,8 @@ class _$CompartmentDefinitionTearOff {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Code? code,
+      @JsonKey(unknownEnumValue: CompartmentDefinitionCode.unknown)
+          CompartmentDefinitionCode? code,
       @JsonKey(name: '_code')
           Element? codeElement,
       Boolean? search,
@@ -13478,7 +13740,8 @@ mixin _$CompartmentDefinition {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
+  CompartmentDefinitionStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -13502,7 +13765,8 @@ mixin _$CompartmentDefinition {
   Markdown? get copyright => throw _privateConstructorUsedError;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CompartmentDefinitionCode.unknown)
+  CompartmentDefinitionCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   Boolean? get search => throw _privateConstructorUsedError;
@@ -13551,7 +13815,8 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
+          CompartmentDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -13575,7 +13840,8 @@ abstract class $CompartmentDefinitionCopyWith<$Res> {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Code? code,
+      @JsonKey(unknownEnumValue: CompartmentDefinitionCode.unknown)
+          CompartmentDefinitionCode? code,
       @JsonKey(name: '_code')
           Element? codeElement,
       Boolean? search,
@@ -13740,7 +14006,7 @@ class _$CompartmentDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CompartmentDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -13808,7 +14074,7 @@ class _$CompartmentDefinitionCopyWithImpl<$Res>
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CompartmentDefinitionCode?,
       codeElement: codeElement == freezed
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -14052,7 +14318,8 @@ abstract class _$CompartmentDefinitionCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
+          CompartmentDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -14076,7 +14343,8 @@ abstract class _$CompartmentDefinitionCopyWith<$Res>
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Code? code,
+      @JsonKey(unknownEnumValue: CompartmentDefinitionCode.unknown)
+          CompartmentDefinitionCode? code,
       @JsonKey(name: '_code')
           Element? codeElement,
       Boolean? search,
@@ -14260,7 +14528,7 @@ class __$CompartmentDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CompartmentDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -14328,7 +14596,7 @@ class __$CompartmentDefinitionCopyWithImpl<$Res>
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CompartmentDefinitionCode?,
       codeElement: codeElement == freezed
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -14381,7 +14649,8 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      this.status,
+      @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -14405,7 +14674,8 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
       this.copyright,
       @JsonKey(name: '_copyright')
           this.copyrightElement,
-      this.code,
+      @JsonKey(unknownEnumValue: CompartmentDefinitionCode.unknown)
+          this.code,
       @JsonKey(name: '_code')
           this.codeElement,
       this.search,
@@ -14466,7 +14736,8 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
+  final CompartmentDefinitionStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -14507,7 +14778,8 @@ class _$_CompartmentDefinition extends _CompartmentDefinition {
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
-  final Code? code;
+  @JsonKey(unknownEnumValue: CompartmentDefinitionCode.unknown)
+  final CompartmentDefinitionCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -14703,7 +14975,8 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
           String? title,
           @JsonKey(name: '_title')
               Element? titleElement,
-          Code? status,
+          @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
+              CompartmentDefinitionStatus? status,
           @JsonKey(name: '_status')
               Element? statusElement,
           Boolean? experimental,
@@ -14727,7 +15000,8 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
           Markdown? copyright,
           @JsonKey(name: '_copyright')
               Element? copyrightElement,
-          Code? code,
+          @JsonKey(unknownEnumValue: CompartmentDefinitionCode.unknown)
+              CompartmentDefinitionCode? code,
           @JsonKey(name: '_code')
               Element? codeElement,
           Boolean? search,
@@ -14790,7 +15064,8 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CompartmentDefinitionStatus.unknown)
+  CompartmentDefinitionStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -14831,7 +15106,8 @@ abstract class _CompartmentDefinition extends CompartmentDefinition {
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
   @override
-  Code? get code => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CompartmentDefinitionCode.unknown)
+  CompartmentDefinitionCode? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
@@ -15294,7 +15570,8 @@ class _$ExampleScenarioTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: ExampleScenarioStatus.unknown)
+          ExampleScenarioStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -15406,7 +15683,8 @@ mixin _$ExampleScenario {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ExampleScenarioStatus.unknown)
+  ExampleScenarioStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -15477,7 +15755,8 @@ abstract class $ExampleScenarioCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: ExampleScenarioStatus.unknown)
+          ExampleScenarioStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -15660,7 +15939,7 @@ class _$ExampleScenarioCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ExampleScenarioStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -15946,7 +16225,8 @@ abstract class _$ExampleScenarioCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: ExampleScenarioStatus.unknown)
+          ExampleScenarioStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -16146,7 +16426,7 @@ class __$ExampleScenarioCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ExampleScenarioStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -16263,7 +16543,8 @@ class _$_ExampleScenario extends _ExampleScenario {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      this.status,
+      @JsonKey(unknownEnumValue: ExampleScenarioStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -16345,7 +16626,8 @@ class _$_ExampleScenario extends _ExampleScenario {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: ExampleScenarioStatus.unknown)
+  final ExampleScenarioStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -16575,7 +16857,8 @@ abstract class _ExampleScenario extends ExampleScenario {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: ExampleScenarioStatus.unknown)
+          ExampleScenarioStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -16658,7 +16941,8 @@ abstract class _ExampleScenario extends ExampleScenario {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ExampleScenarioStatus.unknown)
+  ExampleScenarioStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -16724,16 +17008,22 @@ class _$ExampleScenarioActorTearOff {
 
   _ExampleScenarioActor call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? actorId,
-      @JsonKey(name: '_actorId') Element? actorIdElement,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(name: '_actorId')
+          Element? actorIdElement,
+      @JsonKey(unknownEnumValue: ExampleScenarioActorType.unknown)
+          ExampleScenarioActorType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement}) {
+      @JsonKey(name: '_description')
+          Element? descriptionElement}) {
     return _ExampleScenarioActor(
       id: id,
       extension_: extension_,
@@ -16767,7 +17057,8 @@ mixin _$ExampleScenarioActor {
   String? get actorId => throw _privateConstructorUsedError;
   @JsonKey(name: '_actorId')
   Element? get actorIdElement => throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ExampleScenarioActorType.unknown)
+  ExampleScenarioActorType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
@@ -16790,16 +17081,22 @@ abstract class $ExampleScenarioActorCopyWith<$Res> {
       _$ExampleScenarioActorCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? actorId,
-      @JsonKey(name: '_actorId') Element? actorIdElement,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(name: '_actorId')
+          Element? actorIdElement,
+      @JsonKey(unknownEnumValue: ExampleScenarioActorType.unknown)
+          ExampleScenarioActorType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement});
+      @JsonKey(name: '_description')
+          Element? descriptionElement});
 
   $ElementCopyWith<$Res>? get actorIdElement;
   $ElementCopyWith<$Res>? get typeElement;
@@ -16854,7 +17151,7 @@ class _$ExampleScenarioActorCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ExampleScenarioActorType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -16932,16 +17229,22 @@ abstract class _$ExampleScenarioActorCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? actorId,
-      @JsonKey(name: '_actorId') Element? actorIdElement,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(name: '_actorId')
+          Element? actorIdElement,
+      @JsonKey(unknownEnumValue: ExampleScenarioActorType.unknown)
+          ExampleScenarioActorType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       String? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       Markdown? description,
-      @JsonKey(name: '_description') Element? descriptionElement});
+      @JsonKey(name: '_description')
+          Element? descriptionElement});
 
   @override
   $ElementCopyWith<$Res>? get actorIdElement;
@@ -17002,7 +17305,7 @@ class __$ExampleScenarioActorCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ExampleScenarioActorType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -17036,7 +17339,7 @@ class _$_ExampleScenarioActor extends _ExampleScenarioActor {
       this.modifierExtension,
       this.actorId,
       @JsonKey(name: '_actorId') this.actorIdElement,
-      this.type,
+      @JsonKey(unknownEnumValue: ExampleScenarioActorType.unknown) this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
@@ -17060,7 +17363,8 @@ class _$_ExampleScenarioActor extends _ExampleScenarioActor {
   @JsonKey(name: '_actorId')
   final Element? actorIdElement;
   @override
-  final Code? type;
+  @JsonKey(unknownEnumValue: ExampleScenarioActorType.unknown)
+  final ExampleScenarioActorType? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -17145,18 +17449,23 @@ class _$_ExampleScenarioActor extends _ExampleScenarioActor {
 
 abstract class _ExampleScenarioActor extends ExampleScenarioActor {
   factory _ExampleScenarioActor(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          String? actorId,
-          @JsonKey(name: '_actorId') Element? actorIdElement,
-          Code? type,
-          @JsonKey(name: '_type') Element? typeElement,
-          String? name,
-          @JsonKey(name: '_name') Element? nameElement,
-          Markdown? description,
-          @JsonKey(name: '_description') Element? descriptionElement}) =
-      _$_ExampleScenarioActor;
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? actorId,
+      @JsonKey(name: '_actorId')
+          Element? actorIdElement,
+      @JsonKey(unknownEnumValue: ExampleScenarioActorType.unknown)
+          ExampleScenarioActorType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
+      String? name,
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      Markdown? description,
+      @JsonKey(name: '_description')
+          Element? descriptionElement}) = _$_ExampleScenarioActor;
   _ExampleScenarioActor._() : super._();
 
   factory _ExampleScenarioActor.fromJson(Map<String, dynamic> json) =
@@ -17176,7 +17485,8 @@ abstract class _ExampleScenarioActor extends ExampleScenarioActor {
   @JsonKey(name: '_actorId')
   Element? get actorIdElement => throw _privateConstructorUsedError;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ExampleScenarioActorType.unknown)
+  ExampleScenarioActorType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -20573,7 +20883,8 @@ class _$GraphDefinitionTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
+          GraphDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -20686,7 +20997,8 @@ mixin _$GraphDefinition {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
+  GraphDefinitionStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -20756,7 +21068,8 @@ abstract class $GraphDefinitionCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
+          GraphDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -20941,7 +21254,7 @@ class _$GraphDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as GraphDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -21238,7 +21551,8 @@ abstract class _$GraphDefinitionCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
+          GraphDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -21441,7 +21755,7 @@ class __$GraphDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as GraphDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -21558,7 +21872,8 @@ class _$_GraphDefinition extends _GraphDefinition {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      this.status,
+      @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -21641,7 +21956,8 @@ class _$_GraphDefinition extends _GraphDefinition {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
+  final GraphDefinitionStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -21872,7 +22188,8 @@ abstract class _GraphDefinition extends GraphDefinition {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
+          GraphDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -21956,7 +22273,8 @@ abstract class _GraphDefinition extends GraphDefinition {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: GraphDefinitionStatus.unknown)
+  GraphDefinitionStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -23017,18 +23335,26 @@ class _$GraphDefinitionCompartmentTearOff {
 
   _GraphDefinitionCompartment call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? use,
-      @JsonKey(name: '_use') Element? useElement,
+      @JsonKey(unknownEnumValue: GraphDefinitionCompartmentUse.unknown)
+          GraphDefinitionCompartmentUse? use,
+      @JsonKey(name: '_use')
+          Element? useElement,
       Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
-      Code? rule,
-      @JsonKey(name: '_rule') Element? ruleElement,
+      @JsonKey(name: '_code')
+          Element? codeElement,
+      @JsonKey(unknownEnumValue: GraphDefinitionCompartmentRule.unknown)
+          GraphDefinitionCompartmentRule? rule,
+      @JsonKey(name: '_rule')
+          Element? ruleElement,
       String? expression,
-      @JsonKey(name: '_expression') Element? expressionElement,
+      @JsonKey(name: '_expression')
+          Element? expressionElement,
       String? description,
-      @JsonKey(name: '_description') Element? descriptionElement}) {
+      @JsonKey(name: '_description')
+          Element? descriptionElement}) {
     return _GraphDefinitionCompartment(
       id: id,
       extension_: extension_,
@@ -23061,13 +23387,16 @@ mixin _$GraphDefinitionCompartment {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get use => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: GraphDefinitionCompartmentUse.unknown)
+  GraphDefinitionCompartmentUse? get use => throw _privateConstructorUsedError;
   @JsonKey(name: '_use')
   Element? get useElement => throw _privateConstructorUsedError;
   Code? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
-  Code? get rule => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: GraphDefinitionCompartmentRule.unknown)
+  GraphDefinitionCompartmentRule? get rule =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_rule')
   Element? get ruleElement => throw _privateConstructorUsedError;
   String? get expression => throw _privateConstructorUsedError;
@@ -23090,18 +23419,26 @@ abstract class $GraphDefinitionCompartmentCopyWith<$Res> {
       _$GraphDefinitionCompartmentCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? use,
-      @JsonKey(name: '_use') Element? useElement,
+      @JsonKey(unknownEnumValue: GraphDefinitionCompartmentUse.unknown)
+          GraphDefinitionCompartmentUse? use,
+      @JsonKey(name: '_use')
+          Element? useElement,
       Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
-      Code? rule,
-      @JsonKey(name: '_rule') Element? ruleElement,
+      @JsonKey(name: '_code')
+          Element? codeElement,
+      @JsonKey(unknownEnumValue: GraphDefinitionCompartmentRule.unknown)
+          GraphDefinitionCompartmentRule? rule,
+      @JsonKey(name: '_rule')
+          Element? ruleElement,
       String? expression,
-      @JsonKey(name: '_expression') Element? expressionElement,
+      @JsonKey(name: '_expression')
+          Element? expressionElement,
       String? description,
-      @JsonKey(name: '_description') Element? descriptionElement});
+      @JsonKey(name: '_description')
+          Element? descriptionElement});
 
   $ElementCopyWith<$Res>? get useElement;
   $ElementCopyWith<$Res>? get codeElement;
@@ -23151,7 +23488,7 @@ class _$GraphDefinitionCompartmentCopyWithImpl<$Res>
       use: use == freezed
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as GraphDefinitionCompartmentUse?,
       useElement: useElement == freezed
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
@@ -23167,7 +23504,7 @@ class _$GraphDefinitionCompartmentCopyWithImpl<$Res>
       rule: rule == freezed
           ? _value.rule
           : rule // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as GraphDefinitionCompartmentRule?,
       ruleElement: ruleElement == freezed
           ? _value.ruleElement
           : ruleElement // ignore: cast_nullable_to_non_nullable
@@ -23257,18 +23594,26 @@ abstract class _$GraphDefinitionCompartmentCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? use,
-      @JsonKey(name: '_use') Element? useElement,
+      @JsonKey(unknownEnumValue: GraphDefinitionCompartmentUse.unknown)
+          GraphDefinitionCompartmentUse? use,
+      @JsonKey(name: '_use')
+          Element? useElement,
       Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
-      Code? rule,
-      @JsonKey(name: '_rule') Element? ruleElement,
+      @JsonKey(name: '_code')
+          Element? codeElement,
+      @JsonKey(unknownEnumValue: GraphDefinitionCompartmentRule.unknown)
+          GraphDefinitionCompartmentRule? rule,
+      @JsonKey(name: '_rule')
+          Element? ruleElement,
       String? expression,
-      @JsonKey(name: '_expression') Element? expressionElement,
+      @JsonKey(name: '_expression')
+          Element? expressionElement,
       String? description,
-      @JsonKey(name: '_description') Element? descriptionElement});
+      @JsonKey(name: '_description')
+          Element? descriptionElement});
 
   @override
   $ElementCopyWith<$Res>? get useElement;
@@ -23326,7 +23671,7 @@ class __$GraphDefinitionCompartmentCopyWithImpl<$Res>
       use: use == freezed
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as GraphDefinitionCompartmentUse?,
       useElement: useElement == freezed
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
@@ -23342,7 +23687,7 @@ class __$GraphDefinitionCompartmentCopyWithImpl<$Res>
       rule: rule == freezed
           ? _value.rule
           : rule // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as GraphDefinitionCompartmentRule?,
       ruleElement: ruleElement == freezed
           ? _value.ruleElement
           : ruleElement // ignore: cast_nullable_to_non_nullable
@@ -23372,18 +23717,26 @@ class __$GraphDefinitionCompartmentCopyWithImpl<$Res>
 class _$_GraphDefinitionCompartment extends _GraphDefinitionCompartment {
   _$_GraphDefinitionCompartment(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
-      this.use,
-      @JsonKey(name: '_use') this.useElement,
+      @JsonKey(unknownEnumValue: GraphDefinitionCompartmentUse.unknown)
+          this.use,
+      @JsonKey(name: '_use')
+          this.useElement,
       this.code,
-      @JsonKey(name: '_code') this.codeElement,
-      this.rule,
-      @JsonKey(name: '_rule') this.ruleElement,
+      @JsonKey(name: '_code')
+          this.codeElement,
+      @JsonKey(unknownEnumValue: GraphDefinitionCompartmentRule.unknown)
+          this.rule,
+      @JsonKey(name: '_rule')
+          this.ruleElement,
       this.expression,
-      @JsonKey(name: '_expression') this.expressionElement,
+      @JsonKey(name: '_expression')
+          this.expressionElement,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement})
+      @JsonKey(name: '_description')
+          this.descriptionElement})
       : super._();
 
   factory _$_GraphDefinitionCompartment.fromJson(Map<String, dynamic> json) =>
@@ -23397,7 +23750,8 @@ class _$_GraphDefinitionCompartment extends _GraphDefinitionCompartment {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? use;
+  @JsonKey(unknownEnumValue: GraphDefinitionCompartmentUse.unknown)
+  final GraphDefinitionCompartmentUse? use;
   @override
   @JsonKey(name: '_use')
   final Element? useElement;
@@ -23407,7 +23761,8 @@ class _$_GraphDefinitionCompartment extends _GraphDefinitionCompartment {
   @JsonKey(name: '_code')
   final Element? codeElement;
   @override
-  final Code? rule;
+  @JsonKey(unknownEnumValue: GraphDefinitionCompartmentRule.unknown)
+  final GraphDefinitionCompartmentRule? rule;
   @override
   @JsonKey(name: '_rule')
   final Element? ruleElement;
@@ -23499,20 +23854,27 @@ class _$_GraphDefinitionCompartment extends _GraphDefinitionCompartment {
 
 abstract class _GraphDefinitionCompartment extends GraphDefinitionCompartment {
   factory _GraphDefinitionCompartment(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Code? use,
-          @JsonKey(name: '_use') Element? useElement,
-          Code? code,
-          @JsonKey(name: '_code') Element? codeElement,
-          Code? rule,
-          @JsonKey(name: '_rule') Element? ruleElement,
-          String? expression,
-          @JsonKey(name: '_expression') Element? expressionElement,
-          String? description,
-          @JsonKey(name: '_description') Element? descriptionElement}) =
-      _$_GraphDefinitionCompartment;
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(unknownEnumValue: GraphDefinitionCompartmentUse.unknown)
+          GraphDefinitionCompartmentUse? use,
+      @JsonKey(name: '_use')
+          Element? useElement,
+      Code? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
+      @JsonKey(unknownEnumValue: GraphDefinitionCompartmentRule.unknown)
+          GraphDefinitionCompartmentRule? rule,
+      @JsonKey(name: '_rule')
+          Element? ruleElement,
+      String? expression,
+      @JsonKey(name: '_expression')
+          Element? expressionElement,
+      String? description,
+      @JsonKey(name: '_description')
+          Element? descriptionElement}) = _$_GraphDefinitionCompartment;
   _GraphDefinitionCompartment._() : super._();
 
   factory _GraphDefinitionCompartment.fromJson(Map<String, dynamic> json) =
@@ -23527,7 +23889,8 @@ abstract class _GraphDefinitionCompartment extends GraphDefinitionCompartment {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get use => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: GraphDefinitionCompartmentUse.unknown)
+  GraphDefinitionCompartmentUse? get use => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_use')
   Element? get useElement => throw _privateConstructorUsedError;
@@ -23537,7 +23900,9 @@ abstract class _GraphDefinitionCompartment extends GraphDefinitionCompartment {
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   @override
-  Code? get rule => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: GraphDefinitionCompartmentRule.unknown)
+  GraphDefinitionCompartmentRule? get rule =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_rule')
   Element? get ruleElement => throw _privateConstructorUsedError;
@@ -23594,7 +23959,8 @@ class _$ImplementationGuideTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
+          ImplementationGuideStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -23621,7 +23987,8 @@ class _$ImplementationGuideTearOff {
       Id? packageId,
       @JsonKey(name: '_packageId')
           Element? packageIdElement,
-      Code? license,
+      @JsonKey(unknownEnumValue: ImplementationGuideLicense.unknown)
+          ImplementationGuideLicense? license,
       @JsonKey(name: '_license')
           Element? licenseElement,
       List<Code>? fhirVersion,
@@ -23721,7 +24088,8 @@ mixin _$ImplementationGuide {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
+  ImplementationGuideStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -23748,7 +24116,8 @@ mixin _$ImplementationGuide {
   Id? get packageId => throw _privateConstructorUsedError;
   @JsonKey(name: '_packageId')
   Element? get packageIdElement => throw _privateConstructorUsedError;
-  Code? get license => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ImplementationGuideLicense.unknown)
+  ImplementationGuideLicense? get license => throw _privateConstructorUsedError;
   @JsonKey(name: '_license')
   Element? get licenseElement => throw _privateConstructorUsedError;
   List<Code>? get fhirVersion => throw _privateConstructorUsedError;
@@ -23803,7 +24172,8 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
+          ImplementationGuideStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -23830,7 +24200,8 @@ abstract class $ImplementationGuideCopyWith<$Res> {
       Id? packageId,
       @JsonKey(name: '_packageId')
           Element? packageIdElement,
-      Code? license,
+      @JsonKey(unknownEnumValue: ImplementationGuideLicense.unknown)
+          ImplementationGuideLicense? license,
       @JsonKey(name: '_license')
           Element? licenseElement,
       List<Code>? fhirVersion,
@@ -24005,7 +24376,7 @@ class _$ImplementationGuideCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ImplementationGuideStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -24081,7 +24452,7 @@ class _$ImplementationGuideCopyWithImpl<$Res>
       license: license == freezed
           ? _value.license
           : license // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ImplementationGuideLicense?,
       licenseElement: licenseElement == freezed
           ? _value.licenseElement
           : licenseElement // ignore: cast_nullable_to_non_nullable
@@ -24361,7 +24732,8 @@ abstract class _$ImplementationGuideCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
+          ImplementationGuideStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -24388,7 +24760,8 @@ abstract class _$ImplementationGuideCopyWith<$Res>
       Id? packageId,
       @JsonKey(name: '_packageId')
           Element? packageIdElement,
-      Code? license,
+      @JsonKey(unknownEnumValue: ImplementationGuideLicense.unknown)
+          ImplementationGuideLicense? license,
       @JsonKey(name: '_license')
           Element? licenseElement,
       List<Code>? fhirVersion,
@@ -24584,7 +24957,7 @@ class __$ImplementationGuideCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ImplementationGuideStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -24660,7 +25033,7 @@ class __$ImplementationGuideCopyWithImpl<$Res>
       license: license == freezed
           ? _value.license
           : license // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ImplementationGuideLicense?,
       licenseElement: licenseElement == freezed
           ? _value.licenseElement
           : licenseElement // ignore: cast_nullable_to_non_nullable
@@ -24725,7 +25098,8 @@ class _$_ImplementationGuide extends _ImplementationGuide {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      this.status,
+      @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -24752,7 +25126,8 @@ class _$_ImplementationGuide extends _ImplementationGuide {
       this.packageId,
       @JsonKey(name: '_packageId')
           this.packageIdElement,
-      this.license,
+      @JsonKey(unknownEnumValue: ImplementationGuideLicense.unknown)
+          this.license,
       @JsonKey(name: '_license')
           this.licenseElement,
       this.fhirVersion,
@@ -24816,7 +25191,8 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
+  final ImplementationGuideStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -24862,7 +25238,8 @@ class _$_ImplementationGuide extends _ImplementationGuide {
   @JsonKey(name: '_packageId')
   final Element? packageIdElement;
   @override
-  final Code? license;
+  @JsonKey(unknownEnumValue: ImplementationGuideLicense.unknown)
+  final ImplementationGuideLicense? license;
   @override
   @JsonKey(name: '_license')
   final Element? licenseElement;
@@ -25074,7 +25451,8 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
+          ImplementationGuideStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -25101,7 +25479,8 @@ abstract class _ImplementationGuide extends ImplementationGuide {
       Id? packageId,
       @JsonKey(name: '_packageId')
           Element? packageIdElement,
-      Code? license,
+      @JsonKey(unknownEnumValue: ImplementationGuideLicense.unknown)
+          ImplementationGuideLicense? license,
       @JsonKey(name: '_license')
           Element? licenseElement,
       List<Code>? fhirVersion,
@@ -25166,7 +25545,8 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ImplementationGuideStatus.unknown)
+  ImplementationGuideStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -25212,7 +25592,8 @@ abstract class _ImplementationGuide extends ImplementationGuide {
   @JsonKey(name: '_packageId')
   Element? get packageIdElement => throw _privateConstructorUsedError;
   @override
-  Code? get license => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ImplementationGuideLicense.unknown)
+  ImplementationGuideLicense? get license => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_license')
   Element? get licenseElement => throw _privateConstructorUsedError;
@@ -27307,15 +27688,20 @@ class _$ImplementationGuidePageTearOff {
 
   _ImplementationGuidePage call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUrl? nameUrl,
-      @JsonKey(name: '_nameUrl') Element? nameUrlElement,
+      @JsonKey(name: '_nameUrl')
+          Element? nameUrlElement,
       Reference? nameReference,
       String? title,
-      @JsonKey(name: '_title') Element? titleElement,
-      Code? generation,
-      @JsonKey(name: '_generation') Element? generationElement,
+      @JsonKey(name: '_title')
+          Element? titleElement,
+      @JsonKey(unknownEnumValue: ImplementationGuidePageGeneration.unknown)
+          ImplementationGuidePageGeneration? generation,
+      @JsonKey(name: '_generation')
+          Element? generationElement,
       List<ImplementationGuidePage>? page}) {
     return _ImplementationGuidePage(
       id: id,
@@ -27354,7 +27740,9 @@ mixin _$ImplementationGuidePage {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  Code? get generation => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ImplementationGuidePageGeneration.unknown)
+  ImplementationGuidePageGeneration? get generation =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_generation')
   Element? get generationElement => throw _privateConstructorUsedError;
   List<ImplementationGuidePage>? get page => throw _privateConstructorUsedError;
@@ -27372,15 +27760,20 @@ abstract class $ImplementationGuidePageCopyWith<$Res> {
       _$ImplementationGuidePageCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUrl? nameUrl,
-      @JsonKey(name: '_nameUrl') Element? nameUrlElement,
+      @JsonKey(name: '_nameUrl')
+          Element? nameUrlElement,
       Reference? nameReference,
       String? title,
-      @JsonKey(name: '_title') Element? titleElement,
-      Code? generation,
-      @JsonKey(name: '_generation') Element? generationElement,
+      @JsonKey(name: '_title')
+          Element? titleElement,
+      @JsonKey(unknownEnumValue: ImplementationGuidePageGeneration.unknown)
+          ImplementationGuidePageGeneration? generation,
+      @JsonKey(name: '_generation')
+          Element? generationElement,
       List<ImplementationGuidePage>? page});
 
   $ElementCopyWith<$Res>? get nameUrlElement;
@@ -27448,7 +27841,7 @@ class _$ImplementationGuidePageCopyWithImpl<$Res>
       generation: generation == freezed
           ? _value.generation
           : generation // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ImplementationGuidePageGeneration?,
       generationElement: generationElement == freezed
           ? _value.generationElement
           : generationElement // ignore: cast_nullable_to_non_nullable
@@ -27514,15 +27907,20 @@ abstract class _$ImplementationGuidePageCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUrl? nameUrl,
-      @JsonKey(name: '_nameUrl') Element? nameUrlElement,
+      @JsonKey(name: '_nameUrl')
+          Element? nameUrlElement,
       Reference? nameReference,
       String? title,
-      @JsonKey(name: '_title') Element? titleElement,
-      Code? generation,
-      @JsonKey(name: '_generation') Element? generationElement,
+      @JsonKey(name: '_title')
+          Element? titleElement,
+      @JsonKey(unknownEnumValue: ImplementationGuidePageGeneration.unknown)
+          ImplementationGuidePageGeneration? generation,
+      @JsonKey(name: '_generation')
+          Element? generationElement,
       List<ImplementationGuidePage>? page});
 
   @override
@@ -27597,7 +27995,7 @@ class __$ImplementationGuidePageCopyWithImpl<$Res>
       generation: generation == freezed
           ? _value.generation
           : generation // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ImplementationGuidePageGeneration?,
       generationElement: generationElement == freezed
           ? _value.generationElement
           : generationElement // ignore: cast_nullable_to_non_nullable
@@ -27615,15 +28013,20 @@ class __$ImplementationGuidePageCopyWithImpl<$Res>
 class _$_ImplementationGuidePage extends _ImplementationGuidePage {
   _$_ImplementationGuidePage(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.nameUrl,
-      @JsonKey(name: '_nameUrl') this.nameUrlElement,
+      @JsonKey(name: '_nameUrl')
+          this.nameUrlElement,
       this.nameReference,
       this.title,
-      @JsonKey(name: '_title') this.titleElement,
-      this.generation,
-      @JsonKey(name: '_generation') this.generationElement,
+      @JsonKey(name: '_title')
+          this.titleElement,
+      @JsonKey(unknownEnumValue: ImplementationGuidePageGeneration.unknown)
+          this.generation,
+      @JsonKey(name: '_generation')
+          this.generationElement,
       this.page})
       : super._();
 
@@ -27650,7 +28053,8 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final Code? generation;
+  @JsonKey(unknownEnumValue: ImplementationGuidePageGeneration.unknown)
+  final ImplementationGuidePageGeneration? generation;
   @override
   @JsonKey(name: '_generation')
   final Element? generationElement;
@@ -27728,15 +28132,20 @@ class _$_ImplementationGuidePage extends _ImplementationGuidePage {
 abstract class _ImplementationGuidePage extends ImplementationGuidePage {
   factory _ImplementationGuidePage(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUrl? nameUrl,
-      @JsonKey(name: '_nameUrl') Element? nameUrlElement,
+      @JsonKey(name: '_nameUrl')
+          Element? nameUrlElement,
       Reference? nameReference,
       String? title,
-      @JsonKey(name: '_title') Element? titleElement,
-      Code? generation,
-      @JsonKey(name: '_generation') Element? generationElement,
+      @JsonKey(name: '_title')
+          Element? titleElement,
+      @JsonKey(unknownEnumValue: ImplementationGuidePageGeneration.unknown)
+          ImplementationGuidePageGeneration? generation,
+      @JsonKey(name: '_generation')
+          Element? generationElement,
       List<ImplementationGuidePage>? page}) = _$_ImplementationGuidePage;
   _ImplementationGuidePage._() : super._();
 
@@ -27764,7 +28173,9 @@ abstract class _ImplementationGuidePage extends ImplementationGuidePage {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Code? get generation => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ImplementationGuidePageGeneration.unknown)
+  ImplementationGuidePageGeneration? get generation =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_generation')
   Element? get generationElement => throw _privateConstructorUsedError;
@@ -29895,7 +30306,8 @@ class _$MessageDefinitionTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
+          MessageDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -29926,11 +30338,13 @@ class _$MessageDefinitionTearOff {
       FhirUri? eventUri,
       @JsonKey(name: '_eventUri')
           Element? eventUriElement,
-      Code? category,
+      @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
+          MessageDefinitionCategory? category,
       @JsonKey(name: '_category')
           Element? categoryElement,
       List<MessageDefinitionFocus>? focus,
-      Code? responseRequired,
+      @JsonKey(unknownEnumValue: MessageDefinitionResponseRequired.unknown)
+          MessageDefinitionResponseRequired? responseRequired,
       @JsonKey(name: '_responseRequired')
           Element? responseRequiredElement,
       List<MessageDefinitionAllowedResponse>? allowedResponse,
@@ -30028,7 +30442,8 @@ mixin _$MessageDefinition {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
+  MessageDefinitionStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -30059,11 +30474,14 @@ mixin _$MessageDefinition {
   FhirUri? get eventUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_eventUri')
   Element? get eventUriElement => throw _privateConstructorUsedError;
-  Code? get category => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
+  MessageDefinitionCategory? get category => throw _privateConstructorUsedError;
   @JsonKey(name: '_category')
   Element? get categoryElement => throw _privateConstructorUsedError;
   List<MessageDefinitionFocus>? get focus => throw _privateConstructorUsedError;
-  Code? get responseRequired => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: MessageDefinitionResponseRequired.unknown)
+  MessageDefinitionResponseRequired? get responseRequired =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_responseRequired')
   Element? get responseRequiredElement => throw _privateConstructorUsedError;
   List<MessageDefinitionAllowedResponse>? get allowedResponse =>
@@ -30110,7 +30528,8 @@ abstract class $MessageDefinitionCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
+          MessageDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -30141,11 +30560,13 @@ abstract class $MessageDefinitionCopyWith<$Res> {
       FhirUri? eventUri,
       @JsonKey(name: '_eventUri')
           Element? eventUriElement,
-      Code? category,
+      @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
+          MessageDefinitionCategory? category,
       @JsonKey(name: '_category')
           Element? categoryElement,
       List<MessageDefinitionFocus>? focus,
-      Code? responseRequired,
+      @JsonKey(unknownEnumValue: MessageDefinitionResponseRequired.unknown)
+          MessageDefinitionResponseRequired? responseRequired,
       @JsonKey(name: '_responseRequired')
           Element? responseRequiredElement,
       List<MessageDefinitionAllowedResponse>? allowedResponse,
@@ -30318,7 +30739,7 @@ class _$MessageDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as MessageDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -30410,7 +30831,7 @@ class _$MessageDefinitionCopyWithImpl<$Res>
       category: category == freezed
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as MessageDefinitionCategory?,
       categoryElement: categoryElement == freezed
           ? _value.categoryElement
           : categoryElement // ignore: cast_nullable_to_non_nullable
@@ -30422,7 +30843,7 @@ class _$MessageDefinitionCopyWithImpl<$Res>
       responseRequired: responseRequired == freezed
           ? _value.responseRequired
           : responseRequired // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as MessageDefinitionResponseRequired?,
       responseRequiredElement: responseRequiredElement == freezed
           ? _value.responseRequiredElement
           : responseRequiredElement // ignore: cast_nullable_to_non_nullable
@@ -30684,7 +31105,8 @@ abstract class _$MessageDefinitionCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
+          MessageDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -30715,11 +31137,13 @@ abstract class _$MessageDefinitionCopyWith<$Res>
       FhirUri? eventUri,
       @JsonKey(name: '_eventUri')
           Element? eventUriElement,
-      Code? category,
+      @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
+          MessageDefinitionCategory? category,
       @JsonKey(name: '_category')
           Element? categoryElement,
       List<MessageDefinitionFocus>? focus,
-      Code? responseRequired,
+      @JsonKey(unknownEnumValue: MessageDefinitionResponseRequired.unknown)
+          MessageDefinitionResponseRequired? responseRequired,
       @JsonKey(name: '_responseRequired')
           Element? responseRequiredElement,
       List<MessageDefinitionAllowedResponse>? allowedResponse,
@@ -30913,7 +31337,7 @@ class __$MessageDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as MessageDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -31005,7 +31429,7 @@ class __$MessageDefinitionCopyWithImpl<$Res>
       category: category == freezed
           ? _value.category
           : category // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as MessageDefinitionCategory?,
       categoryElement: categoryElement == freezed
           ? _value.categoryElement
           : categoryElement // ignore: cast_nullable_to_non_nullable
@@ -31017,7 +31441,7 @@ class __$MessageDefinitionCopyWithImpl<$Res>
       responseRequired: responseRequired == freezed
           ? _value.responseRequired
           : responseRequired // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as MessageDefinitionResponseRequired?,
       responseRequiredElement: responseRequiredElement == freezed
           ? _value.responseRequiredElement
           : responseRequiredElement // ignore: cast_nullable_to_non_nullable
@@ -31066,7 +31490,8 @@ class _$_MessageDefinition extends _MessageDefinition {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      this.status,
+      @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -31097,11 +31522,13 @@ class _$_MessageDefinition extends _MessageDefinition {
       this.eventUri,
       @JsonKey(name: '_eventUri')
           this.eventUriElement,
-      this.category,
+      @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
+          this.category,
       @JsonKey(name: '_category')
           this.categoryElement,
       this.focus,
-      this.responseRequired,
+      @JsonKey(unknownEnumValue: MessageDefinitionResponseRequired.unknown)
+          this.responseRequired,
       @JsonKey(name: '_responseRequired')
           this.responseRequiredElement,
       this.allowedResponse,
@@ -31160,7 +31587,8 @@ class _$_MessageDefinition extends _MessageDefinition {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
+  final MessageDefinitionStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -31214,14 +31642,16 @@ class _$_MessageDefinition extends _MessageDefinition {
   @JsonKey(name: '_eventUri')
   final Element? eventUriElement;
   @override
-  final Code? category;
+  @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
+  final MessageDefinitionCategory? category;
   @override
   @JsonKey(name: '_category')
   final Element? categoryElement;
   @override
   final List<MessageDefinitionFocus>? focus;
   @override
-  final Code? responseRequired;
+  @JsonKey(unknownEnumValue: MessageDefinitionResponseRequired.unknown)
+  final MessageDefinitionResponseRequired? responseRequired;
   @override
   @JsonKey(name: '_responseRequired')
   final Element? responseRequiredElement;
@@ -31429,7 +31859,8 @@ abstract class _MessageDefinition extends MessageDefinition {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
+          MessageDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -31460,11 +31891,13 @@ abstract class _MessageDefinition extends MessageDefinition {
       FhirUri? eventUri,
       @JsonKey(name: '_eventUri')
           Element? eventUriElement,
-      Code? category,
+      @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
+          MessageDefinitionCategory? category,
       @JsonKey(name: '_category')
           Element? categoryElement,
       List<MessageDefinitionFocus>? focus,
-      Code? responseRequired,
+      @JsonKey(unknownEnumValue: MessageDefinitionResponseRequired.unknown)
+          MessageDefinitionResponseRequired? responseRequired,
       @JsonKey(name: '_responseRequired')
           Element? responseRequiredElement,
       List<MessageDefinitionAllowedResponse>? allowedResponse,
@@ -31524,7 +31957,8 @@ abstract class _MessageDefinition extends MessageDefinition {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: MessageDefinitionStatus.unknown)
+  MessageDefinitionStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -31578,14 +32012,17 @@ abstract class _MessageDefinition extends MessageDefinition {
   @JsonKey(name: '_eventUri')
   Element? get eventUriElement => throw _privateConstructorUsedError;
   @override
-  Code? get category => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: MessageDefinitionCategory.unknown)
+  MessageDefinitionCategory? get category => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_category')
   Element? get categoryElement => throw _privateConstructorUsedError;
   @override
   List<MessageDefinitionFocus>? get focus => throw _privateConstructorUsedError;
   @override
-  Code? get responseRequired => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: MessageDefinitionResponseRequired.unknown)
+  MessageDefinitionResponseRequired? get responseRequired =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_responseRequired')
   Element? get responseRequiredElement => throw _privateConstructorUsedError;
@@ -32393,7 +32830,8 @@ class _$OperationDefinitionTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
+          OperationDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -32417,7 +32855,8 @@ class _$OperationDefinitionTearOff {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Code? kind,
+      @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
+          OperationDefinitionKind? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       Boolean? affectsState,
@@ -32547,7 +32986,8 @@ mixin _$OperationDefinition {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
+  OperationDefinitionStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -32571,7 +33011,8 @@ mixin _$OperationDefinition {
   Markdown? get copyright => throw _privateConstructorUsedError;
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
-  Code? get kind => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
+  OperationDefinitionKind? get kind => throw _privateConstructorUsedError;
   @JsonKey(name: '_kind')
   Element? get kindElement => throw _privateConstructorUsedError;
   Boolean? get affectsState => throw _privateConstructorUsedError;
@@ -32643,7 +33084,8 @@ abstract class $OperationDefinitionCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
+          OperationDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -32667,7 +33109,8 @@ abstract class $OperationDefinitionCopyWith<$Res> {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Code? kind,
+      @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
+          OperationDefinitionKind? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       Boolean? affectsState,
@@ -32875,7 +33318,7 @@ class _$OperationDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as OperationDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -32943,7 +33386,7 @@ class _$OperationDefinitionCopyWithImpl<$Res>
       kind: kind == freezed
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as OperationDefinitionKind?,
       kindElement: kindElement == freezed
           ? _value.kindElement
           : kindElement // ignore: cast_nullable_to_non_nullable
@@ -33306,7 +33749,8 @@ abstract class _$OperationDefinitionCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
+          OperationDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -33330,7 +33774,8 @@ abstract class _$OperationDefinitionCopyWith<$Res>
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Code? kind,
+      @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
+          OperationDefinitionKind? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       Boolean? affectsState,
@@ -33562,7 +34007,7 @@ class __$OperationDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as OperationDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -33630,7 +34075,7 @@ class __$OperationDefinitionCopyWithImpl<$Res>
       kind: kind == freezed
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as OperationDefinitionKind?,
       kindElement: kindElement == freezed
           ? _value.kindElement
           : kindElement // ignore: cast_nullable_to_non_nullable
@@ -33747,7 +34192,8 @@ class _$_OperationDefinition extends _OperationDefinition {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      this.status,
+      @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -33771,7 +34217,8 @@ class _$_OperationDefinition extends _OperationDefinition {
       this.copyright,
       @JsonKey(name: '_copyright')
           this.copyrightElement,
-      this.kind,
+      @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
+          this.kind,
       @JsonKey(name: '_kind')
           this.kindElement,
       this.affectsState,
@@ -33854,7 +34301,8 @@ class _$_OperationDefinition extends _OperationDefinition {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
+  final OperationDefinitionStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -33895,7 +34343,8 @@ class _$_OperationDefinition extends _OperationDefinition {
   @JsonKey(name: '_copyright')
   final Element? copyrightElement;
   @override
-  final Code? kind;
+  @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
+  final OperationDefinitionKind? kind;
   @override
   @JsonKey(name: '_kind')
   final Element? kindElement;
@@ -34161,7 +34610,8 @@ abstract class _OperationDefinition extends OperationDefinition {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
+          OperationDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -34185,7 +34635,8 @@ abstract class _OperationDefinition extends OperationDefinition {
       Markdown? copyright,
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
-      Code? kind,
+      @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
+          OperationDefinitionKind? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       Boolean? affectsState,
@@ -34269,7 +34720,8 @@ abstract class _OperationDefinition extends OperationDefinition {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: OperationDefinitionStatus.unknown)
+  OperationDefinitionStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -34310,7 +34762,8 @@ abstract class _OperationDefinition extends OperationDefinition {
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
   @override
-  Code? get kind => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
+  OperationDefinitionKind? get kind => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_kind')
   Element? get kindElement => throw _privateConstructorUsedError;
@@ -34378,23 +34831,33 @@ class _$OperationDefinitionParameterTearOff {
 
   _OperationDefinitionParameter call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Code? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      Code? use,
-      @JsonKey(name: '_use') Element? useElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      @JsonKey(unknownEnumValue: OperationDefinitionParameterUse.unknown)
+          OperationDefinitionParameterUse? use,
+      @JsonKey(name: '_use')
+          Element? useElement,
       Integer? min,
-      @JsonKey(name: '_min') Element? minElement,
+      @JsonKey(name: '_min')
+          Element? minElement,
       String? max,
-      @JsonKey(name: '_max') Element? maxElement,
+      @JsonKey(name: '_max')
+          Element? maxElement,
       String? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
       Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       List<Canonical>? targetProfile,
-      Code? searchType,
-      @JsonKey(name: '_searchType') Element? searchTypeElement,
+      @JsonKey(unknownEnumValue: OperationDefinitionParameterSearchType.unknown)
+          OperationDefinitionParameterSearchType? searchType,
+      @JsonKey(name: '_searchType')
+          Element? searchTypeElement,
       OperationDefinitionBinding? binding,
       List<OperationDefinitionReferencedFrom>? referencedFrom,
       List<OperationDefinitionParameter>? part}) {
@@ -34441,7 +34904,9 @@ mixin _$OperationDefinitionParameter {
   Code? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
-  Code? get use => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: OperationDefinitionParameterUse.unknown)
+  OperationDefinitionParameterUse? get use =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_use')
   Element? get useElement => throw _privateConstructorUsedError;
   Integer? get min => throw _privateConstructorUsedError;
@@ -34457,7 +34922,9 @@ mixin _$OperationDefinitionParameter {
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   List<Canonical>? get targetProfile => throw _privateConstructorUsedError;
-  Code? get searchType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: OperationDefinitionParameterSearchType.unknown)
+  OperationDefinitionParameterSearchType? get searchType =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_searchType')
   Element? get searchTypeElement => throw _privateConstructorUsedError;
   OperationDefinitionBinding? get binding => throw _privateConstructorUsedError;
@@ -34480,23 +34947,33 @@ abstract class $OperationDefinitionParameterCopyWith<$Res> {
       _$OperationDefinitionParameterCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Code? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      Code? use,
-      @JsonKey(name: '_use') Element? useElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      @JsonKey(unknownEnumValue: OperationDefinitionParameterUse.unknown)
+          OperationDefinitionParameterUse? use,
+      @JsonKey(name: '_use')
+          Element? useElement,
       Integer? min,
-      @JsonKey(name: '_min') Element? minElement,
+      @JsonKey(name: '_min')
+          Element? minElement,
       String? max,
-      @JsonKey(name: '_max') Element? maxElement,
+      @JsonKey(name: '_max')
+          Element? maxElement,
       String? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
       Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       List<Canonical>? targetProfile,
-      Code? searchType,
-      @JsonKey(name: '_searchType') Element? searchTypeElement,
+      @JsonKey(unknownEnumValue: OperationDefinitionParameterSearchType.unknown)
+          OperationDefinitionParameterSearchType? searchType,
+      @JsonKey(name: '_searchType')
+          Element? searchTypeElement,
       OperationDefinitionBinding? binding,
       List<OperationDefinitionReferencedFrom>? referencedFrom,
       List<OperationDefinitionParameter>? part});
@@ -34568,7 +35045,7 @@ class _$OperationDefinitionParameterCopyWithImpl<$Res>
       use: use == freezed
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as OperationDefinitionParameterUse?,
       useElement: useElement == freezed
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
@@ -34612,7 +35089,7 @@ class _$OperationDefinitionParameterCopyWithImpl<$Res>
       searchType: searchType == freezed
           ? _value.searchType
           : searchType // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as OperationDefinitionParameterSearchType?,
       searchTypeElement: searchTypeElement == freezed
           ? _value.searchTypeElement
           : searchTypeElement // ignore: cast_nullable_to_non_nullable
@@ -34731,23 +35208,33 @@ abstract class _$OperationDefinitionParameterCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Code? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      Code? use,
-      @JsonKey(name: '_use') Element? useElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      @JsonKey(unknownEnumValue: OperationDefinitionParameterUse.unknown)
+          OperationDefinitionParameterUse? use,
+      @JsonKey(name: '_use')
+          Element? useElement,
       Integer? min,
-      @JsonKey(name: '_min') Element? minElement,
+      @JsonKey(name: '_min')
+          Element? minElement,
       String? max,
-      @JsonKey(name: '_max') Element? maxElement,
+      @JsonKey(name: '_max')
+          Element? maxElement,
       String? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
       Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       List<Canonical>? targetProfile,
-      Code? searchType,
-      @JsonKey(name: '_searchType') Element? searchTypeElement,
+      @JsonKey(unknownEnumValue: OperationDefinitionParameterSearchType.unknown)
+          OperationDefinitionParameterSearchType? searchType,
+      @JsonKey(name: '_searchType')
+          Element? searchTypeElement,
       OperationDefinitionBinding? binding,
       List<OperationDefinitionReferencedFrom>? referencedFrom,
       List<OperationDefinitionParameter>? part});
@@ -34831,7 +35318,7 @@ class __$OperationDefinitionParameterCopyWithImpl<$Res>
       use: use == freezed
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as OperationDefinitionParameterUse?,
       useElement: useElement == freezed
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
@@ -34875,7 +35362,7 @@ class __$OperationDefinitionParameterCopyWithImpl<$Res>
       searchType: searchType == freezed
           ? _value.searchType
           : searchType // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as OperationDefinitionParameterSearchType?,
       searchTypeElement: searchTypeElement == freezed
           ? _value.searchTypeElement
           : searchTypeElement // ignore: cast_nullable_to_non_nullable
@@ -34901,23 +35388,33 @@ class __$OperationDefinitionParameterCopyWithImpl<$Res>
 class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
   _$_OperationDefinitionParameter(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
-      this.use,
-      @JsonKey(name: '_use') this.useElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(unknownEnumValue: OperationDefinitionParameterUse.unknown)
+          this.use,
+      @JsonKey(name: '_use')
+          this.useElement,
       this.min,
-      @JsonKey(name: '_min') this.minElement,
+      @JsonKey(name: '_min')
+          this.minElement,
       this.max,
-      @JsonKey(name: '_max') this.maxElement,
+      @JsonKey(name: '_max')
+          this.maxElement,
       this.documentation,
-      @JsonKey(name: '_documentation') this.documentationElement,
+      @JsonKey(name: '_documentation')
+          this.documentationElement,
       this.type,
-      @JsonKey(name: '_type') this.typeElement,
+      @JsonKey(name: '_type')
+          this.typeElement,
       this.targetProfile,
-      this.searchType,
-      @JsonKey(name: '_searchType') this.searchTypeElement,
+      @JsonKey(unknownEnumValue: OperationDefinitionParameterSearchType.unknown)
+          this.searchType,
+      @JsonKey(name: '_searchType')
+          this.searchTypeElement,
       this.binding,
       this.referencedFrom,
       this.part})
@@ -34939,7 +35436,8 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
   @JsonKey(name: '_name')
   final Element? nameElement;
   @override
-  final Code? use;
+  @JsonKey(unknownEnumValue: OperationDefinitionParameterUse.unknown)
+  final OperationDefinitionParameterUse? use;
   @override
   @JsonKey(name: '_use')
   final Element? useElement;
@@ -34966,7 +35464,8 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
   @override
   final List<Canonical>? targetProfile;
   @override
-  final Code? searchType;
+  @JsonKey(unknownEnumValue: OperationDefinitionParameterSearchType.unknown)
+  final OperationDefinitionParameterSearchType? searchType;
   @override
   @JsonKey(name: '_searchType')
   final Element? searchTypeElement;
@@ -35084,28 +35583,38 @@ class _$_OperationDefinitionParameter extends _OperationDefinitionParameter {
 abstract class _OperationDefinitionParameter
     extends OperationDefinitionParameter {
   factory _OperationDefinitionParameter(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Code? name,
-          @JsonKey(name: '_name') Element? nameElement,
-          Code? use,
-          @JsonKey(name: '_use') Element? useElement,
-          Integer? min,
-          @JsonKey(name: '_min') Element? minElement,
-          String? max,
-          @JsonKey(name: '_max') Element? maxElement,
-          String? documentation,
-          @JsonKey(name: '_documentation') Element? documentationElement,
-          Code? type,
-          @JsonKey(name: '_type') Element? typeElement,
-          List<Canonical>? targetProfile,
-          Code? searchType,
-          @JsonKey(name: '_searchType') Element? searchTypeElement,
-          OperationDefinitionBinding? binding,
-          List<OperationDefinitionReferencedFrom>? referencedFrom,
-          List<OperationDefinitionParameter>? part}) =
-      _$_OperationDefinitionParameter;
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Code? name,
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      @JsonKey(unknownEnumValue: OperationDefinitionParameterUse.unknown)
+          OperationDefinitionParameterUse? use,
+      @JsonKey(name: '_use')
+          Element? useElement,
+      Integer? min,
+      @JsonKey(name: '_min')
+          Element? minElement,
+      String? max,
+      @JsonKey(name: '_max')
+          Element? maxElement,
+      String? documentation,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
+      Code? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
+      List<Canonical>? targetProfile,
+      @JsonKey(unknownEnumValue: OperationDefinitionParameterSearchType.unknown)
+          OperationDefinitionParameterSearchType? searchType,
+      @JsonKey(name: '_searchType')
+          Element? searchTypeElement,
+      OperationDefinitionBinding? binding,
+      List<OperationDefinitionReferencedFrom>? referencedFrom,
+      List<OperationDefinitionParameter>?
+          part}) = _$_OperationDefinitionParameter;
   _OperationDefinitionParameter._() : super._();
 
   factory _OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =
@@ -35125,7 +35634,9 @@ abstract class _OperationDefinitionParameter
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  Code? get use => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: OperationDefinitionParameterUse.unknown)
+  OperationDefinitionParameterUse? get use =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_use')
   Element? get useElement => throw _privateConstructorUsedError;
@@ -35152,7 +35663,9 @@ abstract class _OperationDefinitionParameter
   @override
   List<Canonical>? get targetProfile => throw _privateConstructorUsedError;
   @override
-  Code? get searchType => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: OperationDefinitionParameterSearchType.unknown)
+  OperationDefinitionParameterSearchType? get searchType =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_searchType')
   Element? get searchTypeElement => throw _privateConstructorUsedError;
@@ -35181,10 +35694,13 @@ class _$OperationDefinitionBindingTearOff {
 
   _OperationDefinitionBinding call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? strength,
-      @JsonKey(name: '_strength') Element? strengthElement,
+      @JsonKey(unknownEnumValue: OperationDefinitionBindingStrength.unknown)
+          OperationDefinitionBindingStrength? strength,
+      @JsonKey(name: '_strength')
+          Element? strengthElement,
       required Canonical valueSet}) {
     return _OperationDefinitionBinding(
       id: id,
@@ -35211,7 +35727,9 @@ mixin _$OperationDefinitionBinding {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get strength => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: OperationDefinitionBindingStrength.unknown)
+  OperationDefinitionBindingStrength? get strength =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_strength')
   Element? get strengthElement => throw _privateConstructorUsedError;
   Canonical get valueSet => throw _privateConstructorUsedError;
@@ -35229,10 +35747,13 @@ abstract class $OperationDefinitionBindingCopyWith<$Res> {
       _$OperationDefinitionBindingCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? strength,
-      @JsonKey(name: '_strength') Element? strengthElement,
+      @JsonKey(unknownEnumValue: OperationDefinitionBindingStrength.unknown)
+          OperationDefinitionBindingStrength? strength,
+      @JsonKey(name: '_strength')
+          Element? strengthElement,
       Canonical valueSet});
 
   $ElementCopyWith<$Res>? get strengthElement;
@@ -35272,7 +35793,7 @@ class _$OperationDefinitionBindingCopyWithImpl<$Res>
       strength: strength == freezed
           ? _value.strength
           : strength // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as OperationDefinitionBindingStrength?,
       strengthElement: strengthElement == freezed
           ? _value.strengthElement
           : strengthElement // ignore: cast_nullable_to_non_nullable
@@ -35306,10 +35827,13 @@ abstract class _$OperationDefinitionBindingCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? strength,
-      @JsonKey(name: '_strength') Element? strengthElement,
+      @JsonKey(unknownEnumValue: OperationDefinitionBindingStrength.unknown)
+          OperationDefinitionBindingStrength? strength,
+      @JsonKey(name: '_strength')
+          Element? strengthElement,
       Canonical valueSet});
 
   @override
@@ -35353,7 +35877,7 @@ class __$OperationDefinitionBindingCopyWithImpl<$Res>
       strength: strength == freezed
           ? _value.strength
           : strength // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as OperationDefinitionBindingStrength?,
       strengthElement: strengthElement == freezed
           ? _value.strengthElement
           : strengthElement // ignore: cast_nullable_to_non_nullable
@@ -35371,10 +35895,13 @@ class __$OperationDefinitionBindingCopyWithImpl<$Res>
 class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
   _$_OperationDefinitionBinding(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
-      this.strength,
-      @JsonKey(name: '_strength') this.strengthElement,
+      @JsonKey(unknownEnumValue: OperationDefinitionBindingStrength.unknown)
+          this.strength,
+      @JsonKey(name: '_strength')
+          this.strengthElement,
       required this.valueSet})
       : super._();
 
@@ -35389,7 +35916,8 @@ class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? strength;
+  @JsonKey(unknownEnumValue: OperationDefinitionBindingStrength.unknown)
+  final OperationDefinitionBindingStrength? strength;
   @override
   @JsonKey(name: '_strength')
   final Element? strengthElement;
@@ -35449,10 +35977,13 @@ class _$_OperationDefinitionBinding extends _OperationDefinitionBinding {
 abstract class _OperationDefinitionBinding extends OperationDefinitionBinding {
   factory _OperationDefinitionBinding(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? strength,
-      @JsonKey(name: '_strength') Element? strengthElement,
+      @JsonKey(unknownEnumValue: OperationDefinitionBindingStrength.unknown)
+          OperationDefinitionBindingStrength? strength,
+      @JsonKey(name: '_strength')
+          Element? strengthElement,
       required Canonical valueSet}) = _$_OperationDefinitionBinding;
   _OperationDefinitionBinding._() : super._();
 
@@ -35468,7 +35999,9 @@ abstract class _OperationDefinitionBinding extends OperationDefinitionBinding {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get strength => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: OperationDefinitionBindingStrength.unknown)
+  OperationDefinitionBindingStrength? get strength =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_strength')
   Element? get strengthElement => throw _privateConstructorUsedError;
@@ -36220,7 +36753,8 @@ class _$SearchParameterTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
+          SearchParameterStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -36251,7 +36785,8 @@ class _$SearchParameterTearOff {
       List<Code>? base,
       @JsonKey(name: '_base')
           List<Element>? baseElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: SearchParameterType.unknown)
+          SearchParameterType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       String? expression,
@@ -36260,7 +36795,8 @@ class _$SearchParameterTearOff {
       String? xpath,
       @JsonKey(name: '_xpath')
           Element? xpathElement,
-      Code? xpathUsage,
+      @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
+          SearchParameterXpathUsage? xpathUsage,
       @JsonKey(name: '_xpathUsage')
           Element? xpathUsageElement,
       List<Code>? target,
@@ -36388,7 +36924,8 @@ mixin _$SearchParameter {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
+  SearchParameterStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -36419,7 +36956,8 @@ mixin _$SearchParameter {
   List<Code>? get base => throw _privateConstructorUsedError;
   @JsonKey(name: '_base')
   List<Element>? get baseElement => throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: SearchParameterType.unknown)
+  SearchParameterType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   String? get expression => throw _privateConstructorUsedError;
@@ -36428,7 +36966,9 @@ mixin _$SearchParameter {
   String? get xpath => throw _privateConstructorUsedError;
   @JsonKey(name: '_xpath')
   Element? get xpathElement => throw _privateConstructorUsedError;
-  Code? get xpathUsage => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
+  SearchParameterXpathUsage? get xpathUsage =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_xpathUsage')
   Element? get xpathUsageElement => throw _privateConstructorUsedError;
   List<Code>? get target => throw _privateConstructorUsedError;
@@ -36492,7 +37032,8 @@ abstract class $SearchParameterCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
+          SearchParameterStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -36523,7 +37064,8 @@ abstract class $SearchParameterCopyWith<$Res> {
       List<Code>? base,
       @JsonKey(name: '_base')
           List<Element>? baseElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: SearchParameterType.unknown)
+          SearchParameterType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       String? expression,
@@ -36532,7 +37074,8 @@ abstract class $SearchParameterCopyWith<$Res> {
       String? xpath,
       @JsonKey(name: '_xpath')
           Element? xpathElement,
-      Code? xpathUsage,
+      @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
+          SearchParameterXpathUsage? xpathUsage,
       @JsonKey(name: '_xpathUsage')
           Element? xpathUsageElement,
       List<Code>? target,
@@ -36738,7 +37281,7 @@ class _$SearchParameterCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as SearchParameterStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -36826,7 +37369,7 @@ class _$SearchParameterCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as SearchParameterType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -36850,7 +37393,7 @@ class _$SearchParameterCopyWithImpl<$Res>
       xpathUsage: xpathUsage == freezed
           ? _value.xpathUsage
           : xpathUsage // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as SearchParameterXpathUsage?,
       xpathUsageElement: xpathUsageElement == freezed
           ? _value.xpathUsageElement
           : xpathUsageElement // ignore: cast_nullable_to_non_nullable
@@ -37189,7 +37732,8 @@ abstract class _$SearchParameterCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
+          SearchParameterStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -37220,7 +37764,8 @@ abstract class _$SearchParameterCopyWith<$Res>
       List<Code>? base,
       @JsonKey(name: '_base')
           List<Element>? baseElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: SearchParameterType.unknown)
+          SearchParameterType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       String? expression,
@@ -37229,7 +37774,8 @@ abstract class _$SearchParameterCopyWith<$Res>
       String? xpath,
       @JsonKey(name: '_xpath')
           Element? xpathElement,
-      Code? xpathUsage,
+      @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
+          SearchParameterXpathUsage? xpathUsage,
       @JsonKey(name: '_xpathUsage')
           Element? xpathUsageElement,
       List<Code>? target,
@@ -37459,7 +38005,7 @@ class __$SearchParameterCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as SearchParameterStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -37547,7 +38093,7 @@ class __$SearchParameterCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as SearchParameterType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -37571,7 +38117,7 @@ class __$SearchParameterCopyWithImpl<$Res>
       xpathUsage: xpathUsage == freezed
           ? _value.xpathUsage
           : xpathUsage // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as SearchParameterXpathUsage?,
       xpathUsageElement: xpathUsageElement == freezed
           ? _value.xpathUsageElement
           : xpathUsageElement // ignore: cast_nullable_to_non_nullable
@@ -37664,7 +38210,8 @@ class _$_SearchParameter extends _SearchParameter {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      this.status,
+      @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -37695,7 +38242,8 @@ class _$_SearchParameter extends _SearchParameter {
       this.base,
       @JsonKey(name: '_base')
           this.baseElement,
-      this.type,
+      @JsonKey(unknownEnumValue: SearchParameterType.unknown)
+          this.type,
       @JsonKey(name: '_type')
           this.typeElement,
       this.expression,
@@ -37704,7 +38252,8 @@ class _$_SearchParameter extends _SearchParameter {
       this.xpath,
       @JsonKey(name: '_xpath')
           this.xpathElement,
-      this.xpathUsage,
+      @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
+          this.xpathUsage,
       @JsonKey(name: '_xpathUsage')
           this.xpathUsageElement,
       this.target,
@@ -37780,7 +38329,8 @@ class _$_SearchParameter extends _SearchParameter {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
+  final SearchParameterStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -37833,7 +38383,8 @@ class _$_SearchParameter extends _SearchParameter {
   @JsonKey(name: '_base')
   final List<Element>? baseElement;
   @override
-  final Code? type;
+  @JsonKey(unknownEnumValue: SearchParameterType.unknown)
+  final SearchParameterType? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -37848,7 +38399,8 @@ class _$_SearchParameter extends _SearchParameter {
   @JsonKey(name: '_xpath')
   final Element? xpathElement;
   @override
-  final Code? xpathUsage;
+  @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
+  final SearchParameterXpathUsage? xpathUsage;
   @override
   @JsonKey(name: '_xpathUsage')
   final Element? xpathUsageElement;
@@ -38110,7 +38662,8 @@ abstract class _SearchParameter extends SearchParameter {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
+          SearchParameterStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -38141,7 +38694,8 @@ abstract class _SearchParameter extends SearchParameter {
       List<Code>? base,
       @JsonKey(name: '_base')
           List<Element>? baseElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: SearchParameterType.unknown)
+          SearchParameterType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       String? expression,
@@ -38150,7 +38704,8 @@ abstract class _SearchParameter extends SearchParameter {
       String? xpath,
       @JsonKey(name: '_xpath')
           Element? xpathElement,
-      Code? xpathUsage,
+      @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
+          SearchParameterXpathUsage? xpathUsage,
       @JsonKey(name: '_xpathUsage')
           Element? xpathUsageElement,
       List<Code>? target,
@@ -38227,7 +38782,8 @@ abstract class _SearchParameter extends SearchParameter {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
+  SearchParameterStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -38280,7 +38836,8 @@ abstract class _SearchParameter extends SearchParameter {
   @JsonKey(name: '_base')
   List<Element>? get baseElement => throw _privateConstructorUsedError;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: SearchParameterType.unknown)
+  SearchParameterType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -38295,7 +38852,9 @@ abstract class _SearchParameter extends SearchParameter {
   @JsonKey(name: '_xpath')
   Element? get xpathElement => throw _privateConstructorUsedError;
   @override
-  Code? get xpathUsage => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
+  SearchParameterXpathUsage? get xpathUsage =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_xpathUsage')
   Element? get xpathUsageElement => throw _privateConstructorUsedError;
@@ -38685,7 +39244,8 @@ class _$StructureDefinitionTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
+          StructureDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -38710,11 +39270,13 @@ class _$StructureDefinitionTearOff {
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       List<Coding>? keyword,
-      Code? fhirVersion,
+      @JsonKey(unknownEnumValue: StructureDefinitionFhirVersion.unknown)
+          StructureDefinitionFhirVersion? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           Element? fhirVersionElement,
       List<StructureDefinitionMapping>? mapping,
-      Code? kind,
+      @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
+          StructureDefinitionKind? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       @JsonKey(name: 'abstract')
@@ -38729,7 +39291,8 @@ class _$StructureDefinitionTearOff {
       @JsonKey(name: '_type')
           Element? typeElement,
       Canonical? baseDefinition,
-      Code? derivation,
+      @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
+          StructureDefinitionDerivation? derivation,
       @JsonKey(name: '_derivation')
           Element? derivationElement,
       StructureDefinitionSnapshot? snapshot,
@@ -38832,7 +39395,8 @@ mixin _$StructureDefinition {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
+  StructureDefinitionStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -38857,12 +39421,15 @@ mixin _$StructureDefinition {
   @JsonKey(name: '_copyright')
   Element? get copyrightElement => throw _privateConstructorUsedError;
   List<Coding>? get keyword => throw _privateConstructorUsedError;
-  Code? get fhirVersion => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureDefinitionFhirVersion.unknown)
+  StructureDefinitionFhirVersion? get fhirVersion =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_fhirVersion')
   Element? get fhirVersionElement => throw _privateConstructorUsedError;
   List<StructureDefinitionMapping>? get mapping =>
       throw _privateConstructorUsedError;
-  Code? get kind => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
+  StructureDefinitionKind? get kind => throw _privateConstructorUsedError;
   @JsonKey(name: '_kind')
   Element? get kindElement => throw _privateConstructorUsedError;
   @JsonKey(name: 'abstract')
@@ -38879,7 +39446,9 @@ mixin _$StructureDefinition {
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   Canonical? get baseDefinition => throw _privateConstructorUsedError;
-  Code? get derivation => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
+  StructureDefinitionDerivation? get derivation =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_derivation')
   Element? get derivationElement => throw _privateConstructorUsedError;
   StructureDefinitionSnapshot? get snapshot =>
@@ -38927,7 +39496,8 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
+          StructureDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -38952,11 +39522,13 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       List<Coding>? keyword,
-      Code? fhirVersion,
+      @JsonKey(unknownEnumValue: StructureDefinitionFhirVersion.unknown)
+          StructureDefinitionFhirVersion? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           Element? fhirVersionElement,
       List<StructureDefinitionMapping>? mapping,
-      Code? kind,
+      @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
+          StructureDefinitionKind? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       @JsonKey(name: 'abstract')
@@ -38971,7 +39543,8 @@ abstract class $StructureDefinitionCopyWith<$Res> {
       @JsonKey(name: '_type')
           Element? typeElement,
       Canonical? baseDefinition,
-      Code? derivation,
+      @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
+          StructureDefinitionDerivation? derivation,
       @JsonKey(name: '_derivation')
           Element? derivationElement,
       StructureDefinitionSnapshot? snapshot,
@@ -39152,7 +39725,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -39224,7 +39797,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
       fhirVersion: fhirVersion == freezed
           ? _value.fhirVersion
           : fhirVersion // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureDefinitionFhirVersion?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
           : fhirVersionElement // ignore: cast_nullable_to_non_nullable
@@ -39236,7 +39809,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
       kind: kind == freezed
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureDefinitionKind?,
       kindElement: kindElement == freezed
           ? _value.kindElement
           : kindElement // ignore: cast_nullable_to_non_nullable
@@ -39276,7 +39849,7 @@ class _$StructureDefinitionCopyWithImpl<$Res>
       derivation: derivation == freezed
           ? _value.derivation
           : derivation // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureDefinitionDerivation?,
       derivationElement: derivationElement == freezed
           ? _value.derivationElement
           : derivationElement // ignore: cast_nullable_to_non_nullable
@@ -39573,7 +40146,8 @@ abstract class _$StructureDefinitionCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
+          StructureDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -39598,11 +40172,13 @@ abstract class _$StructureDefinitionCopyWith<$Res>
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       List<Coding>? keyword,
-      Code? fhirVersion,
+      @JsonKey(unknownEnumValue: StructureDefinitionFhirVersion.unknown)
+          StructureDefinitionFhirVersion? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           Element? fhirVersionElement,
       List<StructureDefinitionMapping>? mapping,
-      Code? kind,
+      @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
+          StructureDefinitionKind? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       @JsonKey(name: 'abstract')
@@ -39617,7 +40193,8 @@ abstract class _$StructureDefinitionCopyWith<$Res>
       @JsonKey(name: '_type')
           Element? typeElement,
       Canonical? baseDefinition,
-      Code? derivation,
+      @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
+          StructureDefinitionDerivation? derivation,
       @JsonKey(name: '_derivation')
           Element? derivationElement,
       StructureDefinitionSnapshot? snapshot,
@@ -39822,7 +40399,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -39894,7 +40471,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
       fhirVersion: fhirVersion == freezed
           ? _value.fhirVersion
           : fhirVersion // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureDefinitionFhirVersion?,
       fhirVersionElement: fhirVersionElement == freezed
           ? _value.fhirVersionElement
           : fhirVersionElement // ignore: cast_nullable_to_non_nullable
@@ -39906,7 +40483,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
       kind: kind == freezed
           ? _value.kind
           : kind // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureDefinitionKind?,
       kindElement: kindElement == freezed
           ? _value.kindElement
           : kindElement // ignore: cast_nullable_to_non_nullable
@@ -39946,7 +40523,7 @@ class __$StructureDefinitionCopyWithImpl<$Res>
       derivation: derivation == freezed
           ? _value.derivation
           : derivation // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureDefinitionDerivation?,
       derivationElement: derivationElement == freezed
           ? _value.derivationElement
           : derivationElement // ignore: cast_nullable_to_non_nullable
@@ -39995,7 +40572,8 @@ class _$_StructureDefinition extends _StructureDefinition {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      this.status,
+      @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -40020,11 +40598,13 @@ class _$_StructureDefinition extends _StructureDefinition {
       @JsonKey(name: '_copyright')
           this.copyrightElement,
       this.keyword,
-      this.fhirVersion,
+      @JsonKey(unknownEnumValue: StructureDefinitionFhirVersion.unknown)
+          this.fhirVersion,
       @JsonKey(name: '_fhirVersion')
           this.fhirVersionElement,
       this.mapping,
-      this.kind,
+      @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
+          this.kind,
       @JsonKey(name: '_kind')
           this.kindElement,
       @JsonKey(name: 'abstract')
@@ -40039,7 +40619,8 @@ class _$_StructureDefinition extends _StructureDefinition {
       @JsonKey(name: '_type')
           this.typeElement,
       this.baseDefinition,
-      this.derivation,
+      @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
+          this.derivation,
       @JsonKey(name: '_derivation')
           this.derivationElement,
       this.snapshot,
@@ -40098,7 +40679,8 @@ class _$_StructureDefinition extends _StructureDefinition {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
+  final StructureDefinitionStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -40141,14 +40723,16 @@ class _$_StructureDefinition extends _StructureDefinition {
   @override
   final List<Coding>? keyword;
   @override
-  final Code? fhirVersion;
+  @JsonKey(unknownEnumValue: StructureDefinitionFhirVersion.unknown)
+  final StructureDefinitionFhirVersion? fhirVersion;
   @override
   @JsonKey(name: '_fhirVersion')
   final Element? fhirVersionElement;
   @override
   final List<StructureDefinitionMapping>? mapping;
   @override
-  final Code? kind;
+  @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
+  final StructureDefinitionKind? kind;
   @override
   @JsonKey(name: '_kind')
   final Element? kindElement;
@@ -40173,7 +40757,8 @@ class _$_StructureDefinition extends _StructureDefinition {
   @override
   final Canonical? baseDefinition;
   @override
-  final Code? derivation;
+  @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
+  final StructureDefinitionDerivation? derivation;
   @override
   @JsonKey(name: '_derivation')
   final Element? derivationElement;
@@ -40392,7 +40977,8 @@ abstract class _StructureDefinition extends StructureDefinition {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
+          StructureDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -40417,11 +41003,13 @@ abstract class _StructureDefinition extends StructureDefinition {
       @JsonKey(name: '_copyright')
           Element? copyrightElement,
       List<Coding>? keyword,
-      Code? fhirVersion,
+      @JsonKey(unknownEnumValue: StructureDefinitionFhirVersion.unknown)
+          StructureDefinitionFhirVersion? fhirVersion,
       @JsonKey(name: '_fhirVersion')
           Element? fhirVersionElement,
       List<StructureDefinitionMapping>? mapping,
-      Code? kind,
+      @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
+          StructureDefinitionKind? kind,
       @JsonKey(name: '_kind')
           Element? kindElement,
       @JsonKey(name: 'abstract')
@@ -40436,7 +41024,8 @@ abstract class _StructureDefinition extends StructureDefinition {
       @JsonKey(name: '_type')
           Element? typeElement,
       Canonical? baseDefinition,
-      Code? derivation,
+      @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
+          StructureDefinitionDerivation? derivation,
       @JsonKey(name: '_derivation')
           Element? derivationElement,
       StructureDefinitionSnapshot? snapshot,
@@ -40496,7 +41085,8 @@ abstract class _StructureDefinition extends StructureDefinition {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureDefinitionStatus.unknown)
+  StructureDefinitionStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -40539,7 +41129,9 @@ abstract class _StructureDefinition extends StructureDefinition {
   @override
   List<Coding>? get keyword => throw _privateConstructorUsedError;
   @override
-  Code? get fhirVersion => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureDefinitionFhirVersion.unknown)
+  StructureDefinitionFhirVersion? get fhirVersion =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_fhirVersion')
   Element? get fhirVersionElement => throw _privateConstructorUsedError;
@@ -40547,7 +41139,8 @@ abstract class _StructureDefinition extends StructureDefinition {
   List<StructureDefinitionMapping>? get mapping =>
       throw _privateConstructorUsedError;
   @override
-  Code? get kind => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureDefinitionKind.unknown)
+  StructureDefinitionKind? get kind => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_kind')
   Element? get kindElement => throw _privateConstructorUsedError;
@@ -40574,7 +41167,9 @@ abstract class _StructureDefinition extends StructureDefinition {
   @override
   Canonical? get baseDefinition => throw _privateConstructorUsedError;
   @override
-  Code? get derivation => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureDefinitionDerivation.unknown)
+  StructureDefinitionDerivation? get derivation =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_derivation')
   Element? get derivationElement => throw _privateConstructorUsedError;
@@ -41086,12 +41681,16 @@ class _$StructureDefinitionContextTearOff {
 
   _StructureDefinitionContext call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
+          StructureDefinitionContextType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       String? expression,
-      @JsonKey(name: '_expression') Element? expressionElement}) {
+      @JsonKey(name: '_expression')
+          Element? expressionElement}) {
     return _StructureDefinitionContext(
       id: id,
       extension_: extension_,
@@ -41118,7 +41717,9 @@ mixin _$StructureDefinitionContext {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
+  StructureDefinitionContextType? get type =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   String? get expression => throw _privateConstructorUsedError;
@@ -41138,12 +41739,16 @@ abstract class $StructureDefinitionContextCopyWith<$Res> {
       _$StructureDefinitionContextCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
+          StructureDefinitionContextType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       String? expression,
-      @JsonKey(name: '_expression') Element? expressionElement});
+      @JsonKey(name: '_expression')
+          Element? expressionElement});
 
   $ElementCopyWith<$Res>? get typeElement;
   $ElementCopyWith<$Res>? get expressionElement;
@@ -41184,7 +41789,7 @@ class _$StructureDefinitionContextCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureDefinitionContextType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -41233,12 +41838,16 @@ abstract class _$StructureDefinitionContextCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
+          StructureDefinitionContextType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       String? expression,
-      @JsonKey(name: '_expression') Element? expressionElement});
+      @JsonKey(name: '_expression')
+          Element? expressionElement});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -41284,7 +41893,7 @@ class __$StructureDefinitionContextCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureDefinitionContextType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -41306,12 +41915,16 @@ class __$StructureDefinitionContextCopyWithImpl<$Res>
 class _$_StructureDefinitionContext extends _StructureDefinitionContext {
   _$_StructureDefinitionContext(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
-      this.type,
-      @JsonKey(name: '_type') this.typeElement,
+      @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
+          this.type,
+      @JsonKey(name: '_type')
+          this.typeElement,
       this.expression,
-      @JsonKey(name: '_expression') this.expressionElement})
+      @JsonKey(name: '_expression')
+          this.expressionElement})
       : super._();
 
   factory _$_StructureDefinitionContext.fromJson(Map<String, dynamic> json) =>
@@ -41325,7 +41938,8 @@ class _$_StructureDefinitionContext extends _StructureDefinitionContext {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? type;
+  @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
+  final StructureDefinitionContextType? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -41390,14 +42004,17 @@ class _$_StructureDefinitionContext extends _StructureDefinitionContext {
 
 abstract class _StructureDefinitionContext extends StructureDefinitionContext {
   factory _StructureDefinitionContext(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Code? type,
-          @JsonKey(name: '_type') Element? typeElement,
-          String? expression,
-          @JsonKey(name: '_expression') Element? expressionElement}) =
-      _$_StructureDefinitionContext;
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
+          StructureDefinitionContextType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
+      String? expression,
+      @JsonKey(name: '_expression')
+          Element? expressionElement}) = _$_StructureDefinitionContext;
   _StructureDefinitionContext._() : super._();
 
   factory _StructureDefinitionContext.fromJson(Map<String, dynamic> json) =
@@ -41412,7 +42029,9 @@ abstract class _StructureDefinitionContext extends StructureDefinitionContext {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureDefinitionContextType.unknown)
+  StructureDefinitionContextType? get type =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -41955,7 +42574,8 @@ class _$StructureMapTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
+          StructureMapStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -42065,7 +42685,8 @@ mixin _$StructureMap {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
+  StructureMapStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -42134,7 +42755,8 @@ abstract class $StructureMapCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
+          StructureMapStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -42314,7 +42936,7 @@ class _$StructureMapCopyWithImpl<$Res> implements $StructureMapCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureMapStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -42596,7 +43218,8 @@ abstract class _$StructureMapCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
+          StructureMapStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -42793,7 +43416,7 @@ class __$StructureMapCopyWithImpl<$Res> extends _$StructureMapCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureMapStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -42906,7 +43529,8 @@ class _$_StructureMap extends _StructureMap {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      this.status,
+      @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -42987,7 +43611,8 @@ class _$_StructureMap extends _StructureMap {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
+  final StructureMapStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -43213,7 +43838,8 @@ abstract class _StructureMap extends StructureMap {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
+          StructureMapStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -43295,7 +43921,8 @@ abstract class _StructureMap extends StructureMap {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureMapStatus.unknown)
+  StructureMapStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -43359,15 +43986,20 @@ class _$StructureMapStructureTearOff {
 
   _StructureMapStructure call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       required Canonical url,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: StructureMapStructureMode.unknown)
+          StructureMapStructureMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       String? alias,
-      @JsonKey(name: '_alias') Element? aliasElement,
+      @JsonKey(name: '_alias')
+          Element? aliasElement,
       String? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement}) {
+      @JsonKey(name: '_documentation')
+          Element? documentationElement}) {
     return _StructureMapStructure(
       id: id,
       extension_: extension_,
@@ -43398,7 +44030,8 @@ mixin _$StructureMapStructure {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   Canonical get url => throw _privateConstructorUsedError;
-  Code? get mode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureMapStructureMode.unknown)
+  StructureMapStructureMode? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
   String? get alias => throw _privateConstructorUsedError;
@@ -43421,15 +44054,20 @@ abstract class $StructureMapStructureCopyWith<$Res> {
       _$StructureMapStructureCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Canonical url,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: StructureMapStructureMode.unknown)
+          StructureMapStructureMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       String? alias,
-      @JsonKey(name: '_alias') Element? aliasElement,
+      @JsonKey(name: '_alias')
+          Element? aliasElement,
       String? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement});
+      @JsonKey(name: '_documentation')
+          Element? documentationElement});
 
   $ElementCopyWith<$Res>? get modeElement;
   $ElementCopyWith<$Res>? get aliasElement;
@@ -43478,7 +44116,7 @@ class _$StructureMapStructureCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureMapStructureMode?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -43545,15 +44183,20 @@ abstract class _$StructureMapStructureCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Canonical url,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: StructureMapStructureMode.unknown)
+          StructureMapStructureMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       String? alias,
-      @JsonKey(name: '_alias') Element? aliasElement,
+      @JsonKey(name: '_alias')
+          Element? aliasElement,
       String? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement});
+      @JsonKey(name: '_documentation')
+          Element? documentationElement});
 
   @override
   $ElementCopyWith<$Res>? get modeElement;
@@ -43607,7 +44250,7 @@ class __$StructureMapStructureCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureMapStructureMode?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -43640,7 +44283,7 @@ class _$_StructureMapStructure extends _StructureMapStructure {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       required this.url,
-      this.mode,
+      @JsonKey(unknownEnumValue: StructureMapStructureMode.unknown) this.mode,
       @JsonKey(name: '_mode') this.modeElement,
       this.alias,
       @JsonKey(name: '_alias') this.aliasElement,
@@ -43661,7 +44304,8 @@ class _$_StructureMapStructure extends _StructureMapStructure {
   @override
   final Canonical url;
   @override
-  final Code? mode;
+  @JsonKey(unknownEnumValue: StructureMapStructureMode.unknown)
+  final StructureMapStructureMode? mode;
   @override
   @JsonKey(name: '_mode')
   final Element? modeElement;
@@ -43741,17 +44385,21 @@ class _$_StructureMapStructure extends _StructureMapStructure {
 
 abstract class _StructureMapStructure extends StructureMapStructure {
   factory _StructureMapStructure(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          required Canonical url,
-          Code? mode,
-          @JsonKey(name: '_mode') Element? modeElement,
-          String? alias,
-          @JsonKey(name: '_alias') Element? aliasElement,
-          String? documentation,
-          @JsonKey(name: '_documentation') Element? documentationElement}) =
-      _$_StructureMapStructure;
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required Canonical url,
+      @JsonKey(unknownEnumValue: StructureMapStructureMode.unknown)
+          StructureMapStructureMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
+      String? alias,
+      @JsonKey(name: '_alias')
+          Element? aliasElement,
+      String? documentation,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement}) = _$_StructureMapStructure;
   _StructureMapStructure._() : super._();
 
   factory _StructureMapStructure.fromJson(Map<String, dynamic> json) =
@@ -43768,7 +44416,8 @@ abstract class _StructureMapStructure extends StructureMapStructure {
   @override
   Canonical get url => throw _privateConstructorUsedError;
   @override
-  Code? get mode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureMapStructureMode.unknown)
+  StructureMapStructureMode? get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
@@ -43798,16 +44447,23 @@ class _$StructureMapGroupTearOff {
 
   _StructureMapGroup call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      @JsonKey(name: 'extends') Id? extends_,
-      @JsonKey(name: '_extends') Element? extendsElement,
-      Code? typeMode,
-      @JsonKey(name: '_typeMode') Element? typeModeElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      @JsonKey(name: 'extends')
+          Id? extends_,
+      @JsonKey(name: '_extends')
+          Element? extendsElement,
+      @JsonKey(unknownEnumValue: StructureMapGroupTypeMode.unknown)
+          StructureMapGroupTypeMode? typeMode,
+      @JsonKey(name: '_typeMode')
+          Element? typeModeElement,
       String? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
       required List<StructureMapInput> input,
       List<StructureMapRule>? rule}) {
     return _StructureMapGroup(
@@ -43849,7 +44505,8 @@ mixin _$StructureMapGroup {
   Id? get extends_ => throw _privateConstructorUsedError;
   @JsonKey(name: '_extends')
   Element? get extendsElement => throw _privateConstructorUsedError;
-  Code? get typeMode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureMapGroupTypeMode.unknown)
+  StructureMapGroupTypeMode? get typeMode => throw _privateConstructorUsedError;
   @JsonKey(name: '_typeMode')
   Element? get typeModeElement => throw _privateConstructorUsedError;
   String? get documentation => throw _privateConstructorUsedError;
@@ -43871,16 +44528,23 @@ abstract class $StructureMapGroupCopyWith<$Res> {
       _$StructureMapGroupCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      @JsonKey(name: 'extends') Id? extends_,
-      @JsonKey(name: '_extends') Element? extendsElement,
-      Code? typeMode,
-      @JsonKey(name: '_typeMode') Element? typeModeElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      @JsonKey(name: 'extends')
+          Id? extends_,
+      @JsonKey(name: '_extends')
+          Element? extendsElement,
+      @JsonKey(unknownEnumValue: StructureMapGroupTypeMode.unknown)
+          StructureMapGroupTypeMode? typeMode,
+      @JsonKey(name: '_typeMode')
+          Element? typeModeElement,
       String? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
       List<StructureMapInput> input,
       List<StructureMapRule>? rule});
 
@@ -43947,7 +44611,7 @@ class _$StructureMapGroupCopyWithImpl<$Res>
       typeMode: typeMode == freezed
           ? _value.typeMode
           : typeMode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureMapGroupTypeMode?,
       typeModeElement: typeModeElement == freezed
           ? _value.typeModeElement
           : typeModeElement // ignore: cast_nullable_to_non_nullable
@@ -44025,16 +44689,23 @@ abstract class _$StructureMapGroupCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      @JsonKey(name: 'extends') Id? extends_,
-      @JsonKey(name: '_extends') Element? extendsElement,
-      Code? typeMode,
-      @JsonKey(name: '_typeMode') Element? typeModeElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      @JsonKey(name: 'extends')
+          Id? extends_,
+      @JsonKey(name: '_extends')
+          Element? extendsElement,
+      @JsonKey(unknownEnumValue: StructureMapGroupTypeMode.unknown)
+          StructureMapGroupTypeMode? typeMode,
+      @JsonKey(name: '_typeMode')
+          Element? typeModeElement,
       String? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
       List<StructureMapInput> input,
       List<StructureMapRule>? rule});
 
@@ -44107,7 +44778,7 @@ class __$StructureMapGroupCopyWithImpl<$Res>
       typeMode: typeMode == freezed
           ? _value.typeMode
           : typeMode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureMapGroupTypeMode?,
       typeModeElement: typeModeElement == freezed
           ? _value.typeModeElement
           : typeModeElement // ignore: cast_nullable_to_non_nullable
@@ -44137,16 +44808,23 @@ class __$StructureMapGroupCopyWithImpl<$Res>
 class _$_StructureMapGroup extends _StructureMapGroup {
   _$_StructureMapGroup(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.name,
-      @JsonKey(name: '_name') this.nameElement,
-      @JsonKey(name: 'extends') this.extends_,
-      @JsonKey(name: '_extends') this.extendsElement,
-      this.typeMode,
-      @JsonKey(name: '_typeMode') this.typeModeElement,
+      @JsonKey(name: '_name')
+          this.nameElement,
+      @JsonKey(name: 'extends')
+          this.extends_,
+      @JsonKey(name: '_extends')
+          this.extendsElement,
+      @JsonKey(unknownEnumValue: StructureMapGroupTypeMode.unknown)
+          this.typeMode,
+      @JsonKey(name: '_typeMode')
+          this.typeModeElement,
       this.documentation,
-      @JsonKey(name: '_documentation') this.documentationElement,
+      @JsonKey(name: '_documentation')
+          this.documentationElement,
       required this.input,
       this.rule})
       : super._();
@@ -44173,7 +44851,8 @@ class _$_StructureMapGroup extends _StructureMapGroup {
   @JsonKey(name: '_extends')
   final Element? extendsElement;
   @override
-  final Code? typeMode;
+  @JsonKey(unknownEnumValue: StructureMapGroupTypeMode.unknown)
+  final StructureMapGroupTypeMode? typeMode;
   @override
   @JsonKey(name: '_typeMode')
   final Element? typeModeElement;
@@ -44264,16 +44943,23 @@ class _$_StructureMapGroup extends _StructureMapGroup {
 abstract class _StructureMapGroup extends StructureMapGroup {
   factory _StructureMapGroup(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? name,
-      @JsonKey(name: '_name') Element? nameElement,
-      @JsonKey(name: 'extends') Id? extends_,
-      @JsonKey(name: '_extends') Element? extendsElement,
-      Code? typeMode,
-      @JsonKey(name: '_typeMode') Element? typeModeElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      @JsonKey(name: 'extends')
+          Id? extends_,
+      @JsonKey(name: '_extends')
+          Element? extendsElement,
+      @JsonKey(unknownEnumValue: StructureMapGroupTypeMode.unknown)
+          StructureMapGroupTypeMode? typeMode,
+      @JsonKey(name: '_typeMode')
+          Element? typeModeElement,
       String? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement,
       required List<StructureMapInput> input,
       List<StructureMapRule>? rule}) = _$_StructureMapGroup;
   _StructureMapGroup._() : super._();
@@ -44301,7 +44987,8 @@ abstract class _StructureMapGroup extends StructureMapGroup {
   @JsonKey(name: '_extends')
   Element? get extendsElement => throw _privateConstructorUsedError;
   @override
-  Code? get typeMode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureMapGroupTypeMode.unknown)
+  StructureMapGroupTypeMode? get typeMode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_typeMode')
   Element? get typeModeElement => throw _privateConstructorUsedError;
@@ -44330,16 +45017,22 @@ class _$StructureMapInputTearOff {
 
   _StructureMapInput call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       String? type,
-      @JsonKey(name: '_type') Element? typeElement,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(name: '_type')
+          Element? typeElement,
+      @JsonKey(unknownEnumValue: StructureMapInputMode.unknown)
+          StructureMapInputMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       String? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement}) {
+      @JsonKey(name: '_documentation')
+          Element? documentationElement}) {
     return _StructureMapInput(
       id: id,
       extension_: extension_,
@@ -44376,7 +45069,8 @@ mixin _$StructureMapInput {
   String? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
-  Code? get mode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureMapInputMode.unknown)
+  StructureMapInputMode? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
   String? get documentation => throw _privateConstructorUsedError;
@@ -44396,16 +45090,22 @@ abstract class $StructureMapInputCopyWith<$Res> {
       _$StructureMapInputCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       String? type,
-      @JsonKey(name: '_type') Element? typeElement,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(name: '_type')
+          Element? typeElement,
+      @JsonKey(unknownEnumValue: StructureMapInputMode.unknown)
+          StructureMapInputMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       String? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement});
+      @JsonKey(name: '_documentation')
+          Element? documentationElement});
 
   $ElementCopyWith<$Res>? get nameElement;
   $ElementCopyWith<$Res>? get typeElement;
@@ -44468,7 +45168,7 @@ class _$StructureMapInputCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureMapInputMode?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -44538,16 +45238,22 @@ abstract class _$StructureMapInputCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? name,
-      @JsonKey(name: '_name') Element? nameElement,
+      @JsonKey(name: '_name')
+          Element? nameElement,
       String? type,
-      @JsonKey(name: '_type') Element? typeElement,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(name: '_type')
+          Element? typeElement,
+      @JsonKey(unknownEnumValue: StructureMapInputMode.unknown)
+          StructureMapInputMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       String? documentation,
-      @JsonKey(name: '_documentation') Element? documentationElement});
+      @JsonKey(name: '_documentation')
+          Element? documentationElement});
 
   @override
   $ElementCopyWith<$Res>? get nameElement;
@@ -44616,7 +45322,7 @@ class __$StructureMapInputCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureMapInputMode?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -44644,7 +45350,7 @@ class _$_StructureMapInput extends _StructureMapInput {
       @JsonKey(name: '_name') this.nameElement,
       this.type,
       @JsonKey(name: '_type') this.typeElement,
-      this.mode,
+      @JsonKey(unknownEnumValue: StructureMapInputMode.unknown) this.mode,
       @JsonKey(name: '_mode') this.modeElement,
       this.documentation,
       @JsonKey(name: '_documentation') this.documentationElement})
@@ -44671,7 +45377,8 @@ class _$_StructureMapInput extends _StructureMapInput {
   @JsonKey(name: '_type')
   final Element? typeElement;
   @override
-  final Code? mode;
+  @JsonKey(unknownEnumValue: StructureMapInputMode.unknown)
+  final StructureMapInputMode? mode;
   @override
   @JsonKey(name: '_mode')
   final Element? modeElement;
@@ -44749,18 +45456,23 @@ class _$_StructureMapInput extends _StructureMapInput {
 
 abstract class _StructureMapInput extends StructureMapInput {
   factory _StructureMapInput(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Id? name,
-          @JsonKey(name: '_name') Element? nameElement,
-          String? type,
-          @JsonKey(name: '_type') Element? typeElement,
-          Code? mode,
-          @JsonKey(name: '_mode') Element? modeElement,
-          String? documentation,
-          @JsonKey(name: '_documentation') Element? documentationElement}) =
-      _$_StructureMapInput;
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Id? name,
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      String? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
+      @JsonKey(unknownEnumValue: StructureMapInputMode.unknown)
+          StructureMapInputMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
+      String? documentation,
+      @JsonKey(name: '_documentation')
+          Element? documentationElement}) = _$_StructureMapInput;
   _StructureMapInput._() : super._();
 
   factory _StructureMapInput.fromJson(Map<String, dynamic> json) =
@@ -44785,7 +45497,8 @@ abstract class _StructureMapInput extends StructureMapInput {
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  Code? get mode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureMapInputMode.unknown)
+  StructureMapInputMode? get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
@@ -45366,7 +46079,8 @@ class _$StructureMapSourceTearOff {
       String? element,
       @JsonKey(name: '_element')
           Element? elementElement,
-      Code? listMode,
+      @JsonKey(unknownEnumValue: StructureMapSourceListMode.unknown)
+          StructureMapSourceListMode? listMode,
       @JsonKey(name: '_listMode')
           Element? listModeElement,
       Id? variable,
@@ -45620,7 +46334,9 @@ mixin _$StructureMapSource {
   String? get element => throw _privateConstructorUsedError;
   @JsonKey(name: '_element')
   Element? get elementElement => throw _privateConstructorUsedError;
-  Code? get listMode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureMapSourceListMode.unknown)
+  StructureMapSourceListMode? get listMode =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_listMode')
   Element? get listModeElement => throw _privateConstructorUsedError;
   Id? get variable => throw _privateConstructorUsedError;
@@ -45758,7 +46474,8 @@ abstract class $StructureMapSourceCopyWith<$Res> {
       String? element,
       @JsonKey(name: '_element')
           Element? elementElement,
-      Code? listMode,
+      @JsonKey(unknownEnumValue: StructureMapSourceListMode.unknown)
+          StructureMapSourceListMode? listMode,
       @JsonKey(name: '_listMode')
           Element? listModeElement,
       Id? variable,
@@ -46285,7 +47002,7 @@ class _$StructureMapSourceCopyWithImpl<$Res>
       listMode: listMode == freezed
           ? _value.listMode
           : listMode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureMapSourceListMode?,
       listModeElement: listModeElement == freezed
           ? _value.listModeElement
           : listModeElement // ignore: cast_nullable_to_non_nullable
@@ -47128,7 +47845,8 @@ abstract class _$StructureMapSourceCopyWith<$Res>
       String? element,
       @JsonKey(name: '_element')
           Element? elementElement,
-      Code? listMode,
+      @JsonKey(unknownEnumValue: StructureMapSourceListMode.unknown)
+          StructureMapSourceListMode? listMode,
       @JsonKey(name: '_listMode')
           Element? listModeElement,
       Id? variable,
@@ -47718,7 +48436,7 @@ class __$StructureMapSourceCopyWithImpl<$Res>
       listMode: listMode == freezed
           ? _value.listMode
           : listMode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureMapSourceListMode?,
       listModeElement: listModeElement == freezed
           ? _value.listModeElement
           : listModeElement // ignore: cast_nullable_to_non_nullable
@@ -47873,7 +48591,8 @@ class _$_StructureMapSource extends _StructureMapSource {
       this.element,
       @JsonKey(name: '_element')
           this.elementElement,
-      this.listMode,
+      @JsonKey(unknownEnumValue: StructureMapSourceListMode.unknown)
+          this.listMode,
       @JsonKey(name: '_listMode')
           this.listModeElement,
       this.variable,
@@ -48088,7 +48807,8 @@ class _$_StructureMapSource extends _StructureMapSource {
   @JsonKey(name: '_element')
   final Element? elementElement;
   @override
-  final Code? listMode;
+  @JsonKey(unknownEnumValue: StructureMapSourceListMode.unknown)
+  final StructureMapSourceListMode? listMode;
   @override
   @JsonKey(name: '_listMode')
   final Element? listModeElement;
@@ -48474,7 +49194,8 @@ abstract class _StructureMapSource extends StructureMapSource {
       String? element,
       @JsonKey(name: '_element')
           Element? elementElement,
-      Code? listMode,
+      @JsonKey(unknownEnumValue: StructureMapSourceListMode.unknown)
+          StructureMapSourceListMode? listMode,
       @JsonKey(name: '_listMode')
           Element? listModeElement,
       Id? variable,
@@ -48710,7 +49431,9 @@ abstract class _StructureMapSource extends StructureMapSource {
   @JsonKey(name: '_element')
   Element? get elementElement => throw _privateConstructorUsedError;
   @override
-  Code? get listMode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureMapSourceListMode.unknown)
+  StructureMapSourceListMode? get listMode =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_listMode')
   Element? get listModeElement => throw _privateConstructorUsedError;
@@ -48750,20 +49473,28 @@ class _$StructureMapTargetTearOff {
 
   _StructureMapTarget call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? context,
-      @JsonKey(name: '_context') Element? contextElement,
+      @JsonKey(name: '_context')
+          Element? contextElement,
       String? element,
-      @JsonKey(name: '_element') Element? elementElement,
+      @JsonKey(name: '_element')
+          Element? elementElement,
       Id? variable,
-      @JsonKey(name: '_variable') Element? variableElement,
-      List<Code>? listMode,
-      @JsonKey(name: '_listMode') List<Element>? listModeElement,
+      @JsonKey(name: '_variable')
+          Element? variableElement,
+      List<StructureMapTargetListMode>? listMode,
+      @JsonKey(name: '_listMode')
+          List<Element>? listModeElement,
       Id? listRuleId,
-      @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
-      Code? transform,
-      @JsonKey(name: '_transform') Element? transformElement,
+      @JsonKey(name: '_listRuleId')
+          Element? listRuleIdElement,
+      @JsonKey(unknownEnumValue: StructureMapTargetTransform.unknown)
+          StructureMapTargetTransform? transform,
+      @JsonKey(name: '_transform')
+          Element? transformElement,
       List<StructureMapParameter>? parameter}) {
     return _StructureMapTarget(
       id: id,
@@ -48809,13 +49540,16 @@ mixin _$StructureMapTarget {
   Id? get variable => throw _privateConstructorUsedError;
   @JsonKey(name: '_variable')
   Element? get variableElement => throw _privateConstructorUsedError;
-  List<Code>? get listMode => throw _privateConstructorUsedError;
+  List<StructureMapTargetListMode>? get listMode =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_listMode')
   List<Element>? get listModeElement => throw _privateConstructorUsedError;
   Id? get listRuleId => throw _privateConstructorUsedError;
   @JsonKey(name: '_listRuleId')
   Element? get listRuleIdElement => throw _privateConstructorUsedError;
-  Code? get transform => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureMapTargetTransform.unknown)
+  StructureMapTargetTransform? get transform =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_transform')
   Element? get transformElement => throw _privateConstructorUsedError;
   List<StructureMapParameter>? get parameter =>
@@ -48834,20 +49568,28 @@ abstract class $StructureMapTargetCopyWith<$Res> {
       _$StructureMapTargetCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? context,
-      @JsonKey(name: '_context') Element? contextElement,
+      @JsonKey(name: '_context')
+          Element? contextElement,
       String? element,
-      @JsonKey(name: '_element') Element? elementElement,
+      @JsonKey(name: '_element')
+          Element? elementElement,
       Id? variable,
-      @JsonKey(name: '_variable') Element? variableElement,
-      List<Code>? listMode,
-      @JsonKey(name: '_listMode') List<Element>? listModeElement,
+      @JsonKey(name: '_variable')
+          Element? variableElement,
+      List<StructureMapTargetListMode>? listMode,
+      @JsonKey(name: '_listMode')
+          List<Element>? listModeElement,
       Id? listRuleId,
-      @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
-      Code? transform,
-      @JsonKey(name: '_transform') Element? transformElement,
+      @JsonKey(name: '_listRuleId')
+          Element? listRuleIdElement,
+      @JsonKey(unknownEnumValue: StructureMapTargetTransform.unknown)
+          StructureMapTargetTransform? transform,
+      @JsonKey(name: '_transform')
+          Element? transformElement,
       List<StructureMapParameter>? parameter});
 
   $ElementCopyWith<$Res>? get contextElement;
@@ -48925,7 +49667,7 @@ class _$StructureMapTargetCopyWithImpl<$Res>
       listMode: listMode == freezed
           ? _value.listMode
           : listMode // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<StructureMapTargetListMode>?,
       listModeElement: listModeElement == freezed
           ? _value.listModeElement
           : listModeElement // ignore: cast_nullable_to_non_nullable
@@ -48941,7 +49683,7 @@ class _$StructureMapTargetCopyWithImpl<$Res>
       transform: transform == freezed
           ? _value.transform
           : transform // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureMapTargetTransform?,
       transformElement: transformElement == freezed
           ? _value.transformElement
           : transformElement // ignore: cast_nullable_to_non_nullable
@@ -49018,20 +49760,28 @@ abstract class _$StructureMapTargetCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? context,
-      @JsonKey(name: '_context') Element? contextElement,
+      @JsonKey(name: '_context')
+          Element? contextElement,
       String? element,
-      @JsonKey(name: '_element') Element? elementElement,
+      @JsonKey(name: '_element')
+          Element? elementElement,
       Id? variable,
-      @JsonKey(name: '_variable') Element? variableElement,
-      List<Code>? listMode,
-      @JsonKey(name: '_listMode') List<Element>? listModeElement,
+      @JsonKey(name: '_variable')
+          Element? variableElement,
+      List<StructureMapTargetListMode>? listMode,
+      @JsonKey(name: '_listMode')
+          List<Element>? listModeElement,
       Id? listRuleId,
-      @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
-      Code? transform,
-      @JsonKey(name: '_transform') Element? transformElement,
+      @JsonKey(name: '_listRuleId')
+          Element? listRuleIdElement,
+      @JsonKey(unknownEnumValue: StructureMapTargetTransform.unknown)
+          StructureMapTargetTransform? transform,
+      @JsonKey(name: '_transform')
+          Element? transformElement,
       List<StructureMapParameter>? parameter});
 
   @override
@@ -49116,7 +49866,7 @@ class __$StructureMapTargetCopyWithImpl<$Res>
       listMode: listMode == freezed
           ? _value.listMode
           : listMode // ignore: cast_nullable_to_non_nullable
-              as List<Code>?,
+              as List<StructureMapTargetListMode>?,
       listModeElement: listModeElement == freezed
           ? _value.listModeElement
           : listModeElement // ignore: cast_nullable_to_non_nullable
@@ -49132,7 +49882,7 @@ class __$StructureMapTargetCopyWithImpl<$Res>
       transform: transform == freezed
           ? _value.transform
           : transform // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as StructureMapTargetTransform?,
       transformElement: transformElement == freezed
           ? _value.transformElement
           : transformElement // ignore: cast_nullable_to_non_nullable
@@ -49150,20 +49900,28 @@ class __$StructureMapTargetCopyWithImpl<$Res>
 class _$_StructureMapTarget extends _StructureMapTarget {
   _$_StructureMapTarget(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.context,
-      @JsonKey(name: '_context') this.contextElement,
+      @JsonKey(name: '_context')
+          this.contextElement,
       this.element,
-      @JsonKey(name: '_element') this.elementElement,
+      @JsonKey(name: '_element')
+          this.elementElement,
       this.variable,
-      @JsonKey(name: '_variable') this.variableElement,
+      @JsonKey(name: '_variable')
+          this.variableElement,
       this.listMode,
-      @JsonKey(name: '_listMode') this.listModeElement,
+      @JsonKey(name: '_listMode')
+          this.listModeElement,
       this.listRuleId,
-      @JsonKey(name: '_listRuleId') this.listRuleIdElement,
-      this.transform,
-      @JsonKey(name: '_transform') this.transformElement,
+      @JsonKey(name: '_listRuleId')
+          this.listRuleIdElement,
+      @JsonKey(unknownEnumValue: StructureMapTargetTransform.unknown)
+          this.transform,
+      @JsonKey(name: '_transform')
+          this.transformElement,
       this.parameter})
       : super._();
 
@@ -49193,7 +49951,7 @@ class _$_StructureMapTarget extends _StructureMapTarget {
   @JsonKey(name: '_variable')
   final Element? variableElement;
   @override
-  final List<Code>? listMode;
+  final List<StructureMapTargetListMode>? listMode;
   @override
   @JsonKey(name: '_listMode')
   final List<Element>? listModeElement;
@@ -49203,7 +49961,8 @@ class _$_StructureMapTarget extends _StructureMapTarget {
   @JsonKey(name: '_listRuleId')
   final Element? listRuleIdElement;
   @override
-  final Code? transform;
+  @JsonKey(unknownEnumValue: StructureMapTargetTransform.unknown)
+  final StructureMapTargetTransform? transform;
   @override
   @JsonKey(name: '_transform')
   final Element? transformElement;
@@ -49302,20 +50061,28 @@ class _$_StructureMapTarget extends _StructureMapTarget {
 abstract class _StructureMapTarget extends StructureMapTarget {
   factory _StructureMapTarget(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? context,
-      @JsonKey(name: '_context') Element? contextElement,
+      @JsonKey(name: '_context')
+          Element? contextElement,
       String? element,
-      @JsonKey(name: '_element') Element? elementElement,
+      @JsonKey(name: '_element')
+          Element? elementElement,
       Id? variable,
-      @JsonKey(name: '_variable') Element? variableElement,
-      List<Code>? listMode,
-      @JsonKey(name: '_listMode') List<Element>? listModeElement,
+      @JsonKey(name: '_variable')
+          Element? variableElement,
+      List<StructureMapTargetListMode>? listMode,
+      @JsonKey(name: '_listMode')
+          List<Element>? listModeElement,
       Id? listRuleId,
-      @JsonKey(name: '_listRuleId') Element? listRuleIdElement,
-      Code? transform,
-      @JsonKey(name: '_transform') Element? transformElement,
+      @JsonKey(name: '_listRuleId')
+          Element? listRuleIdElement,
+      @JsonKey(unknownEnumValue: StructureMapTargetTransform.unknown)
+          StructureMapTargetTransform? transform,
+      @JsonKey(name: '_transform')
+          Element? transformElement,
       List<StructureMapParameter>? parameter}) = _$_StructureMapTarget;
   _StructureMapTarget._() : super._();
 
@@ -49346,7 +50113,8 @@ abstract class _StructureMapTarget extends StructureMapTarget {
   @JsonKey(name: '_variable')
   Element? get variableElement => throw _privateConstructorUsedError;
   @override
-  List<Code>? get listMode => throw _privateConstructorUsedError;
+  List<StructureMapTargetListMode>? get listMode =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_listMode')
   List<Element>? get listModeElement => throw _privateConstructorUsedError;
@@ -49356,7 +50124,9 @@ abstract class _StructureMapTarget extends StructureMapTarget {
   @JsonKey(name: '_listRuleId')
   Element? get listRuleIdElement => throw _privateConstructorUsedError;
   @override
-  Code? get transform => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: StructureMapTargetTransform.unknown)
+  StructureMapTargetTransform? get transform =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_transform')
   Element? get transformElement => throw _privateConstructorUsedError;

@@ -37,7 +37,8 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    Code? status,
+    @JsonKey(unknownEnumValue: ActivityDefinitionStatus.unknown)
+        ActivityDefinitionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -214,7 +215,8 @@ class ConditionDefinition with Resource, _$ConditionDefinition {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    Code? status,
+    @JsonKey(unknownEnumValue: ConditionDefinitionStatus.unknown)
+        ConditionDefinitionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -352,7 +354,8 @@ class ConditionDefinitionPrecondition with _$ConditionDefinitionPrecondition {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? type,
+    @JsonKey(unknownEnumValue: ConditionDefinitionPreconditionType.unknown)
+        ConditionDefinitionPreconditionType? type,
     @JsonKey(name: '_type') Element? typeElement,
     required CodeableConcept code,
     CodeableConcept? valueCodeableConcept,
@@ -386,7 +389,8 @@ class ConditionDefinitionQuestionnaire with _$ConditionDefinitionQuestionnaire {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? purpose,
+    @JsonKey(unknownEnumValue: ConditionDefinitionQuestionnairePurpose.unknown)
+        ConditionDefinitionQuestionnairePurpose? purpose,
     @JsonKey(name: '_purpose') Element? purposeElement,
     required Reference reference,
   }) = _ConditionDefinitionQuestionnaire;
@@ -553,7 +557,8 @@ class DeviceDefinitionDeviceName with _$DeviceDefinitionDeviceName {
     List<FhirExtension>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    Code? type,
+    @JsonKey(unknownEnumValue: DeviceDefinitionDeviceNameType.unknown)
+        DeviceDefinitionDeviceNameType? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _DeviceDefinitionDeviceName;
 
@@ -895,7 +900,8 @@ class EventDefinition with Resource, _$EventDefinition {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    Code? status,
+    @JsonKey(unknownEnumValue: EventDefinitionStatus.unknown)
+        EventDefinitionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1006,7 +1012,7 @@ class ObservationDefinition with Resource, _$ObservationDefinition {
     CodeableConcept? performerType,
     List<CodeableConcept>? category,
     required CodeableConcept code,
-    List<Code>? permittedDataType,
+    List<ObservationDefinitionPermittedDataType>? permittedDataType,
     @JsonKey(name: '_permittedDataType')
         List<Element>? permittedDataTypeElement,
     Boolean? multipleResultsAllowed,
@@ -1091,7 +1097,8 @@ class ObservationDefinitionQualifiedValue
     List<FhirExtension>? modifierExtension,
     CodeableConcept? context,
     List<CodeableConcept>? appliesTo,
-    Code? gender,
+    @JsonKey(unknownEnumValue: ObservationDefinitionQualifiedValueGender.unknown)
+        ObservationDefinitionQualifiedValueGender? gender,
     @JsonKey(name: '_gender') Element? genderElement,
     Range? age,
     Range? gestationalAge,
@@ -1135,7 +1142,7 @@ class ObservationDefinitionComponent with _$ObservationDefinitionComponent {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept code,
-    List<Code>? permittedDataType,
+    List<ObservationDefinitionComponentPermittedDataType>? permittedDataType,
     @JsonKey(name: '_permittedDataType')
         List<Element>? permittedDataTypeElement,
     ObservationDefinitionQuantitativeDetails? quantitativeDetails,
@@ -1188,7 +1195,8 @@ class PlanDefinition with Resource, _$PlanDefinition {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    Code? status,
+    @JsonKey(unknownEnumValue: PlanDefinitionStatus.unknown)
+        PlanDefinitionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1423,15 +1431,20 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
     Reference? locationReference,
     List<PlanDefinitionParticipant>? participant,
     CodeableConcept? type,
-    Code? groupingBehavior,
+    @JsonKey(unknownEnumValue: PlanDefinitionActionGroupingBehavior.unknown)
+        PlanDefinitionActionGroupingBehavior? groupingBehavior,
     @JsonKey(name: '_groupingBehavior') Element? groupingBehaviorElement,
-    Code? selectionBehavior,
+    @JsonKey(unknownEnumValue: PlanDefinitionActionSelectionBehavior.unknown)
+        PlanDefinitionActionSelectionBehavior? selectionBehavior,
     @JsonKey(name: '_selectionBehavior') Element? selectionBehaviorElement,
-    Code? requiredBehavior,
+    @JsonKey(unknownEnumValue: PlanDefinitionActionRequiredBehavior.unknown)
+        PlanDefinitionActionRequiredBehavior? requiredBehavior,
     @JsonKey(name: '_requiredBehavior') Element? requiredBehaviorElement,
-    Code? precheckBehavior,
+    @JsonKey(unknownEnumValue: PlanDefinitionActionPrecheckBehavior.unknown)
+        PlanDefinitionActionPrecheckBehavior? precheckBehavior,
     @JsonKey(name: '_precheckBehavior') Element? precheckBehaviorElement,
-    Code? cardinalityBehavior,
+    @JsonKey(unknownEnumValue: PlanDefinitionActionCardinalityBehavior.unknown)
+        PlanDefinitionActionCardinalityBehavior? cardinalityBehavior,
     @JsonKey(name: '_cardinalityBehavior') Element? cardinalityBehaviorElement,
     Canonical? definitionCanonical,
     @JsonKey(name: '_definitionCanonical') Element? definitionCanonicalElement,
@@ -1468,7 +1481,8 @@ class PlanDefinitionCondition with _$PlanDefinitionCondition {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? kind,
+    @JsonKey(unknownEnumValue: PlanDefinitionConditionKind.unknown)
+        PlanDefinitionConditionKind? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     Expression? expression,
   }) = _PlanDefinitionCondition;
@@ -1567,7 +1581,8 @@ class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
     List<FhirExtension>? modifierExtension,
     Id? targetId,
     @JsonKey(name: '_targetId') Element? targetIdElement,
-    Code? relationship,
+    @JsonKey(unknownEnumValue: PlanDefinitionRelatedActionRelationship.unknown)
+        PlanDefinitionRelatedActionRelationship? relationship,
     @JsonKey(name: '_relationship') Element? relationshipElement,
     FhirDuration? offsetDuration,
     Range? offsetRange,
@@ -1601,7 +1616,8 @@ class PlanDefinitionParticipant with _$PlanDefinitionParticipant {
     List<FhirExtension>? modifierExtension,
     String? actorId,
     @JsonKey(name: '_actorId') Element? actorIdElement,
-    Code? type,
+    @JsonKey(unknownEnumValue: PlanDefinitionParticipantType.unknown)
+        PlanDefinitionParticipantType? type,
     @JsonKey(name: '_type') Element? typeElement,
     Reference? typeReference,
     CodeableConcept? role,
@@ -1684,7 +1700,8 @@ class Questionnaire with Resource, _$Questionnaire {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    Code? status,
+    @JsonKey(unknownEnumValue: QuestionnaireStatus.unknown)
+        QuestionnaireStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1755,10 +1772,12 @@ class QuestionnaireItem with _$QuestionnaireItem {
     @JsonKey(name: '_prefix') Element? prefixElement,
     Markdown? text,
     @JsonKey(name: '_text') Element? textElement,
-    Code? type,
+    @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
+        QuestionnaireItemType? type,
     @JsonKey(name: '_type') Element? typeElement,
     List<QuestionnaireEnableWhen>? enableWhen,
-    Code? enableBehavior,
+    @JsonKey(unknownEnumValue: QuestionnaireItemEnableBehavior.unknown)
+        QuestionnaireItemEnableBehavior? enableBehavior,
     @JsonKey(name: '_enableBehavior') Element? enableBehaviorElement,
     Code? disabledDisplay,
     @JsonKey(name: '_disabledDisplay') Element? disabledDisplayElement,
@@ -1806,7 +1825,8 @@ class QuestionnaireEnableWhen with _$QuestionnaireEnableWhen {
     List<FhirExtension>? modifierExtension,
     String? question,
     @JsonKey(name: '_question') Element? questionElement,
-    Code? operator,
+    @JsonKey(name: 'operator', unknownEnumValue: QuestionnaireEnableWhenOperator.unknown)
+        QuestionnaireEnableWhenOperator? operator_,
     @JsonKey(name: '_operator') Element? operatorElement,
     Boolean? answerBoolean,
     @JsonKey(name: '_answerBoolean') Element? answerBooleanElement,
@@ -2022,7 +2042,8 @@ class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
     Boolean? isDerived,
     @JsonKey(name: '_isDerived') Element? isDerivedElement,
     CodeableConcept? type,
-    Code? preference,
+    @JsonKey(unknownEnumValue: SpecimenDefinitionTypeTestedPreference.unknown)
+        SpecimenDefinitionTypeTestedPreference? preference,
     @JsonKey(name: '_preference') Element? preferenceElement,
     SpecimenDefinitionContainer? container,
     String? requirement,

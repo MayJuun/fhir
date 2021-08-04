@@ -30,9 +30,11 @@ class AuditEvent with Resource, _$AuditEvent {
     List<FhirExtension>? modifierExtension,
     required Coding type,
     List<Coding>? subtype,
-    Code? action,
+    @JsonKey(unknownEnumValue: AuditEventAction.unknown)
+        AuditEventAction? action,
     @JsonKey(name: '_action') Element? actionElement,
-    Code? severity,
+    @JsonKey(unknownEnumValue: AuditEventSeverity.unknown)
+        AuditEventSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     Period? period,
     Instant? recorded,
@@ -118,7 +120,8 @@ class AuditEventNetwork with _$AuditEventNetwork {
     List<FhirExtension>? modifierExtension,
     String? address,
     @JsonKey(name: '_address') Element? addressElement,
-    Code? type,
+    @JsonKey(unknownEnumValue: AuditEventNetworkType.unknown)
+        AuditEventNetworkType? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _AuditEventNetwork;
 
@@ -263,7 +266,7 @@ class Consent with Resource, _$Consent {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    Code? status,
+    @JsonKey(unknownEnumValue: ConsentStatus.unknown) ConsentStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required CodeableConcept scope,
     required List<CodeableConcept> category,
@@ -375,7 +378,8 @@ class ConsentProvision with _$ConsentProvision {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? type,
+    @JsonKey(unknownEnumValue: ConsentProvisionType.unknown)
+        ConsentProvisionType? type,
     @JsonKey(name: '_type') Element? typeElement,
     Period? period,
     List<ConsentActor>? actor,
@@ -445,7 +449,8 @@ class ConsentData with _$ConsentData {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? meaning,
+    @JsonKey(unknownEnumValue: ConsentDataMeaning.unknown)
+        ConsentDataMeaning? meaning,
     @JsonKey(name: '_meaning') Element? meaningElement,
     required Reference reference,
   }) = _ConsentData;
@@ -486,7 +491,8 @@ class Permission with Resource, _$Permission {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? status,
+    @JsonKey(unknownEnumValue: PermissionStatus.unknown)
+        PermissionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? intent,
     Reference? asserter,
@@ -675,7 +681,8 @@ class ProvenanceEntity with _$ProvenanceEntity {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? role,
+    @JsonKey(unknownEnumValue: ProvenanceEntityRole.unknown)
+        ProvenanceEntityRole? role,
     @JsonKey(name: '_role') Element? roleElement,
     required Reference what,
     List<ProvenanceAgent>? agent,

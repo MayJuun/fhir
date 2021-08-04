@@ -56,7 +56,8 @@ class _$ResearchStudyTearOff {
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
+          ResearchStudyStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? primaryPurposeType,
@@ -196,7 +197,8 @@ mixin _$ResearchStudy {
   FhirDateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
+  ResearchStudyStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get primaryPurposeType => throw _privateConstructorUsedError;
@@ -285,7 +287,8 @@ abstract class $ResearchStudyCopyWith<$Res> {
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
+          ResearchStudyStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? primaryPurposeType,
@@ -516,7 +519,7 @@ class _$ResearchStudyCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ResearchStudyStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -890,7 +893,8 @@ abstract class _$ResearchStudyCopyWith<$Res>
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
+          ResearchStudyStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? primaryPurposeType,
@@ -1142,7 +1146,7 @@ class __$ResearchStudyCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ResearchStudyStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1302,7 +1306,8 @@ class _$_ResearchStudy extends _ResearchStudy {
       this.date,
       @JsonKey(name: '_date')
           this.dateElement,
-      this.status,
+      @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.primaryPurposeType,
@@ -1402,7 +1407,8 @@ class _$_ResearchStudy extends _ResearchStudy {
   @JsonKey(name: '_date')
   final Element? dateElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
+  final ResearchStudyStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -1683,7 +1689,8 @@ abstract class _ResearchStudy extends ResearchStudy {
       FhirDateTime? date,
       @JsonKey(name: '_date')
           Element? dateElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
+          ResearchStudyStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? primaryPurposeType,
@@ -1785,7 +1792,8 @@ abstract class _ResearchStudy extends ResearchStudy {
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
+  ResearchStudyStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -5687,7 +5695,8 @@ class _$ResearchSubjectTearOff {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
+          ResearchSubjectStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<ResearchSubjectProgress>? progress,
@@ -5755,7 +5764,8 @@ mixin _$ResearchSubject {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
+  ResearchSubjectStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   List<ResearchSubjectProgress>? get progress =>
@@ -5799,7 +5809,8 @@ abstract class $ResearchSubjectCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
+          ResearchSubjectStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<ResearchSubjectProgress>? progress,
@@ -5914,7 +5925,7 @@ class _$ResearchSubjectCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ResearchSubjectStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6096,7 +6107,8 @@ abstract class _$ResearchSubjectCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
+          ResearchSubjectStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<ResearchSubjectProgress>? progress,
@@ -6224,7 +6236,7 @@ class __$ResearchSubjectCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ResearchSubjectStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6289,7 +6301,8 @@ class _$_ResearchSubject extends _ResearchSubject {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.progress,
@@ -6337,7 +6350,8 @@ class _$_ResearchSubject extends _ResearchSubject {
   @override
   final List<Identifier>? identifier;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
+  final ResearchSubjectStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -6491,7 +6505,8 @@ abstract class _ResearchSubject extends ResearchSubject {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
+          ResearchSubjectStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<ResearchSubjectProgress>? progress,
@@ -6540,7 +6555,8 @@ abstract class _ResearchSubject extends ResearchSubject {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
+  ResearchSubjectStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;

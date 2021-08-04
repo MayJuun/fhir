@@ -37,7 +37,7 @@ class Evidence with Resource, _$Evidence {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    Code? status,
+    @JsonKey(unknownEnumValue: EvidenceStatus.unknown) EvidenceStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -196,7 +196,8 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    Code? status,
+    @JsonKey(unknownEnumValue: EvidenceVariableStatus.unknown)
+        EvidenceVariableStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -231,11 +232,13 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     List<Annotation>? note,
     Boolean? actual,
     @JsonKey(name: '_actual') Element? actualElement,
-    Code? characteristicCombination,
+    @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicCombination.unknown)
+        EvidenceVariableCharacteristicCombination? characteristicCombination,
     @JsonKey(name: '_characteristicCombination')
         Element? characteristicCombinationElement,
     List<EvidenceVariableCharacteristic>? characteristic,
-    Code? handling,
+    @JsonKey(unknownEnumValue: EvidenceVariableHandling.unknown)
+        EvidenceVariableHandling? handling,
     @JsonKey(name: '_handling') Element? handlingElement,
     List<EvidenceVariableCategory>? category,
   }) = _EvidenceVariable;
@@ -279,7 +282,8 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
     Boolean? exclude,
     @JsonKey(name: '_exclude') Element? excludeElement,
     EvidenceVariableTimeFromStart? timeFromStart,
-    Code? groupMeasure,
+    @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicGroupMeasure.unknown)
+        EvidenceVariableCharacteristicGroupMeasure? groupMeasure,
     @JsonKey(name: '_groupMeasure') Element? groupMeasureElement,
   }) = _EvidenceVariableCharacteristic;
 

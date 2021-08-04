@@ -49,7 +49,8 @@ _$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
       subType: json['subType'] == null
           ? null
           : CodeableConcept.fromJson(json['subType'] as Map<String, dynamic>),
-      use: json['use'] == null ? null : Code.fromJson(json['use']),
+      use: _$enumDecodeNullable(_$ClaimUseEnumMap, json['use'],
+          unknownValue: ClaimUse.unknown),
       useElement: json['_use'] == null
           ? null
           : Element.fromJson(json['_use'] as Map<String, dynamic>),
@@ -151,7 +152,7 @@ Map<String, dynamic> _$$_ClaimToJson(_$_Claim instance) {
   writeNotNull('_status', instance.statusElement?.toJson());
   val['type'] = instance.type.toJson();
   writeNotNull('subType', instance.subType?.toJson());
-  writeNotNull('use', instance.use?.toJson());
+  writeNotNull('use', _$ClaimUseEnumMap[instance.use]);
   writeNotNull('_use', instance.useElement?.toJson());
   val['patient'] = instance.patient.toJson();
   writeNotNull('billablePeriod', instance.billablePeriod?.toJson());
@@ -369,6 +370,13 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ValueSet: 'ValueSet',
   R5ResourceType.VerificationResult: 'VerificationResult',
   R5ResourceType.VisionPrescription: 'VisionPrescription',
+};
+
+const _$ClaimUseEnumMap = {
+  ClaimUse.claim: 'claim',
+  ClaimUse.preauthorization: 'preauthorization',
+  ClaimUse.predetermination: 'predetermination',
+  ClaimUse.unknown: 'unknown',
 };
 
 _$_ClaimRelated _$$_ClaimRelatedFromJson(Map<String, dynamic> json) =>
@@ -1952,7 +1960,9 @@ _$_ClaimResponseProcessNote _$$_ClaimResponseProcessNoteFromJson(
       numberElement: json['_number'] == null
           ? null
           : Element.fromJson(json['_number'] as Map<String, dynamic>),
-      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      type: _$enumDecodeNullable(
+          _$ClaimResponseProcessNoteTypeEnumMap, json['type'],
+          unknownValue: ClaimResponseProcessNoteType.unknown),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -1982,13 +1992,20 @@ Map<String, dynamic> _$$_ClaimResponseProcessNoteToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('number', instance.number?.toJson());
   writeNotNull('_number', instance.numberElement?.toJson());
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('type', _$ClaimResponseProcessNoteTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('text', instance.text);
   writeNotNull('_text', instance.textElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
   return val;
 }
+
+const _$ClaimResponseProcessNoteTypeEnumMap = {
+  ClaimResponseProcessNoteType.display: 'display',
+  ClaimResponseProcessNoteType.print: 'print',
+  ClaimResponseProcessNoteType.printoper: 'printoper',
+  ClaimResponseProcessNoteType.unknown: 'unknown',
+};
 
 _$_ClaimResponseInsurance _$$_ClaimResponseInsuranceFromJson(
         Map<String, dynamic> json) =>
@@ -2141,7 +2158,8 @@ _$_Invoice _$$_InvoiceFromJson(Map<String, dynamic> json) => _$_Invoice(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(_$InvoiceStatusEnumMap, json['status'],
+          unknownValue: InvoiceStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -2221,7 +2239,7 @@ Map<String, dynamic> _$$_InvoiceToJson(_$_Invoice instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$InvoiceStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('cancelledReason', instance.cancelledReason);
   writeNotNull('_cancelledReason', instance.cancelledReasonElement?.toJson());
@@ -2244,6 +2262,15 @@ Map<String, dynamic> _$$_InvoiceToJson(_$_Invoice instance) {
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$InvoiceStatusEnumMap = {
+  InvoiceStatus.draft: 'draft',
+  InvoiceStatus.issued: 'issued',
+  InvoiceStatus.balanced: 'balanced',
+  InvoiceStatus.cancelled: 'cancelled',
+  InvoiceStatus.entered_in_error: 'entered-in-error',
+  InvoiceStatus.unknown: 'unknown',
+};
 
 _$_InvoiceParticipant _$$_InvoiceParticipantFromJson(
         Map<String, dynamic> json) =>
@@ -2344,7 +2371,9 @@ _$_InvoicePriceComponent _$$_InvoicePriceComponentFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      type: _$enumDecodeNullable(
+          _$InvoicePriceComponentTypeEnumMap, json['type'],
+          unknownValue: InvoicePriceComponentType.unknown),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -2375,7 +2404,7 @@ Map<String, dynamic> _$$_InvoicePriceComponentToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('type', _$InvoicePriceComponentTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('factor', instance.factor?.toJson());
@@ -2383,3 +2412,13 @@ Map<String, dynamic> _$$_InvoicePriceComponentToJson(
   writeNotNull('amount', instance.amount?.toJson());
   return val;
 }
+
+const _$InvoicePriceComponentTypeEnumMap = {
+  InvoicePriceComponentType.base: 'base',
+  InvoicePriceComponentType.surcharge: 'surcharge',
+  InvoicePriceComponentType.deduction: 'deduction',
+  InvoicePriceComponentType.discount: 'discount',
+  InvoicePriceComponentType.tax: 'tax',
+  InvoicePriceComponentType.informational: 'informational',
+  InvoicePriceComponentType.unknown: 'unknown',
+};

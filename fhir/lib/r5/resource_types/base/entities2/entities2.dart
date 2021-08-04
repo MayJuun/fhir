@@ -29,10 +29,12 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    Code? productCategory,
+    @JsonKey(unknownEnumValue: BiologicallyDerivedProductProductCategory.unknown)
+        BiologicallyDerivedProductProductCategory? productCategory,
     @JsonKey(name: '_productCategory') Element? productCategoryElement,
     CodeableConcept? productCode,
-    Code? status,
+    @JsonKey(unknownEnumValue: BiologicallyDerivedProductStatus.unknown)
+        BiologicallyDerivedProductStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<Reference>? request,
     Integer? quantity,
@@ -186,7 +188,8 @@ class BiologicallyDerivedProductStorage
     @JsonKey(name: '_description') Element? descriptionElement,
     Decimal? temperature,
     @JsonKey(name: '_temperature') Element? temperatureElement,
-    Code? scale,
+    @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
+        BiologicallyDerivedProductStorageScale? scale,
     @JsonKey(name: '_scale') Element? scaleElement,
     Period? duration,
   }) = _BiologicallyDerivedProductStorage;
@@ -234,7 +237,7 @@ class Device with Resource, _$Device {
     @JsonKey(name: '_displayName') Element? displayNameElement,
     Reference? definition,
     List<DeviceUdiCarrier>? udiCarrier,
-    Code? status,
+    @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? statusReason,
     String? distinctIdentifier,
@@ -307,7 +310,8 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
     @JsonKey(name: '_carrierAIDC') Element? carrierAIDCElement,
     String? carrierHRF,
     @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
-    Code? entryType,
+    @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
+        DeviceUdiCarrierEntryType? entryType,
     @JsonKey(name: '_entryType') Element? entryTypeElement,
   }) = _DeviceUdiCarrier;
 
@@ -339,7 +343,8 @@ class DeviceDeviceName with _$DeviceDeviceName {
     List<FhirExtension>? modifierExtension,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    Code? type,
+    @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
+        DeviceDeviceNameType? type,
     @JsonKey(name: '_type') Element? typeElement,
   }) = _DeviceDeviceName;
 
@@ -538,11 +543,14 @@ class DeviceMetric with Resource, _$DeviceMetric {
     CodeableConcept? unit,
     Reference? source,
     Reference? parent,
-    Code? operationalStatus,
+    @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
+        DeviceMetricOperationalStatus? operationalStatus,
     @JsonKey(name: '_operationalStatus') Element? operationalStatusElement,
-    Code? color,
+    @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
+        DeviceMetricColor? color,
     @JsonKey(name: '_color') Element? colorElement,
-    Code? category,
+    @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
+        DeviceMetricCategory? category,
     @JsonKey(name: '_category') Element? categoryElement,
     Timing? measurementPeriod,
     List<DeviceMetricCalibration>? calibration,
@@ -575,9 +583,11 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? type,
+    @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
+        DeviceMetricCalibrationType? type,
     @JsonKey(name: '_type') Element? typeElement,
-    Code? state,
+    @JsonKey(unknownEnumValue: DeviceMetricCalibrationState.unknown)
+        DeviceMetricCalibrationState? state,
     @JsonKey(name: '_state') Element? stateElement,
     Instant? time,
     @JsonKey(name: '_time') Element? timeElement,
@@ -619,7 +629,8 @@ class NutritionProduct with Resource, _$NutritionProduct {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? status,
+    @JsonKey(unknownEnumValue: NutritionProductStatus.unknown)
+        NutritionProductStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
     CodeableConcept? code,
@@ -811,7 +822,7 @@ class Substance with Resource, _$Substance {
     List<Identifier>? identifier,
     Boolean? instance,
     @JsonKey(name: '_instance') Element? instanceElement,
-    Code? status,
+    @JsonKey(unknownEnumValue: SubstanceStatus.unknown) SubstanceStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
     CodeableConcept? codeCodeableConcept,

@@ -31,7 +31,7 @@ class Encounter with Resource, _$Encounter {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    Code? status,
+    @JsonKey(unknownEnumValue: EncounterStatus.unknown) EncounterStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<EncounterStatusHistory>? statusHistory,
     @JsonKey(name: 'class') required Coding class_,
@@ -83,7 +83,8 @@ class EncounterStatusHistory with _$EncounterStatusHistory {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? status,
+    @JsonKey(unknownEnumValue: EncounterStatusHistoryStatus.unknown)
+        EncounterStatusHistoryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Period period,
   }) = _EncounterStatusHistory;
@@ -245,7 +246,8 @@ class EncounterLocation with _$EncounterLocation {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Reference location,
-    Code? status,
+    @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
+        EncounterLocationStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? physicalType,
     Period? period,
@@ -288,7 +290,8 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    Code? status,
+    @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
+        EpisodeOfCareStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<EpisodeOfCareStatusHistory>? statusHistory,
     List<CodeableConcept>? type,
@@ -329,7 +332,8 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? status,
+    @JsonKey(unknownEnumValue: EpisodeOfCareStatusHistoryStatus.unknown)
+        EpisodeOfCareStatusHistoryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required Period period,
   }) = _EpisodeOfCareStatusHistory;
@@ -403,7 +407,7 @@ class Flag with Resource, _$Flag {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    Code? status,
+    @JsonKey(unknownEnumValue: FlagStatus.unknown) FlagStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
     required CodeableConcept code,
@@ -457,7 +461,7 @@ class Library with Resource, _$Library {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    Code? status,
+    @JsonKey(unknownEnumValue: LibraryStatus.unknown) LibraryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,

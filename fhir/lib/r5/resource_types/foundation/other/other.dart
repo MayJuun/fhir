@@ -593,7 +593,7 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
-        OperationOutcomeIssueSeverity severity,
+        OperationOutcomeIssueSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     @JsonKey(unknownEnumValue: OperationOutcomeIssueCode.unknown)
         OperationOutcomeIssueCode? code,

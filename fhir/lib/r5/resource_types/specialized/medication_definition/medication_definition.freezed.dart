@@ -2549,7 +2549,8 @@ class _$ClinicalUseIssueTearOff {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? type,
+      @JsonKey(unknownEnumValue: ClinicalUseIssueType.unknown)
+          ClinicalUseIssueType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       CodeableConcept? category,
@@ -2618,7 +2619,8 @@ mixin _$ClinicalUseIssue {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ClinicalUseIssueType.unknown)
+  ClinicalUseIssueType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   CodeableConcept? get category => throw _privateConstructorUsedError;
@@ -2665,7 +2667,8 @@ abstract class $ClinicalUseIssueCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? type,
+      @JsonKey(unknownEnumValue: ClinicalUseIssueType.unknown)
+          ClinicalUseIssueType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       CodeableConcept? category,
@@ -2782,7 +2785,7 @@ class _$ClinicalUseIssueCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ClinicalUseIssueType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -2991,7 +2994,8 @@ abstract class _$ClinicalUseIssueCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? type,
+      @JsonKey(unknownEnumValue: ClinicalUseIssueType.unknown)
+          ClinicalUseIssueType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       CodeableConcept? category,
@@ -3122,7 +3126,7 @@ class __$ClinicalUseIssueCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ClinicalUseIssueType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -3191,7 +3195,8 @@ class _$_ClinicalUseIssue extends _ClinicalUseIssue {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      this.type,
+      @JsonKey(unknownEnumValue: ClinicalUseIssueType.unknown)
+          this.type,
       @JsonKey(name: '_type')
           this.typeElement,
       this.category,
@@ -3239,7 +3244,8 @@ class _$_ClinicalUseIssue extends _ClinicalUseIssue {
   @override
   final List<Identifier>? identifier;
   @override
-  final Code? type;
+  @JsonKey(unknownEnumValue: ClinicalUseIssueType.unknown)
+  final ClinicalUseIssueType? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -3400,7 +3406,8 @@ abstract class _ClinicalUseIssue extends ClinicalUseIssue {
               List<FhirExtension>? extension_,
           List<FhirExtension>? modifierExtension,
           List<Identifier>? identifier,
-          Code? type,
+          @JsonKey(unknownEnumValue: ClinicalUseIssueType.unknown)
+              ClinicalUseIssueType? type,
           @JsonKey(name: '_type')
               Element? typeElement,
           CodeableConcept? category,
@@ -3450,7 +3457,8 @@ abstract class _ClinicalUseIssue extends ClinicalUseIssue {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ClinicalUseIssueType.unknown)
+  ClinicalUseIssueType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;

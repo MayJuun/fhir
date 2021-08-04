@@ -40,10 +40,12 @@ class _$CatalogEntryTearOff {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: CatalogEntryType.unknown)
+          CatalogEntryType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
+          CatalogEntryStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Period? effectivePeriod,
@@ -137,10 +139,12 @@ mixin _$CatalogEntry {
   String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CatalogEntryType.unknown)
+  CatalogEntryType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
+  CatalogEntryStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Period? get effectivePeriod => throw _privateConstructorUsedError;
@@ -198,10 +202,12 @@ abstract class $CatalogEntryCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: CatalogEntryType.unknown)
+          CatalogEntryType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
+          CatalogEntryStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Period? effectivePeriod,
@@ -351,7 +357,7 @@ class _$CatalogEntryCopyWithImpl<$Res> implements $CatalogEntryCopyWith<$Res> {
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CatalogEntryType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -359,7 +365,7 @@ class _$CatalogEntryCopyWithImpl<$Res> implements $CatalogEntryCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CatalogEntryStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -635,10 +641,12 @@ abstract class _$CatalogEntryCopyWith<$Res>
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: CatalogEntryType.unknown)
+          CatalogEntryType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
+          CatalogEntryStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Period? effectivePeriod,
@@ -806,7 +814,7 @@ class __$CatalogEntryCopyWithImpl<$Res> extends _$CatalogEntryCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CatalogEntryType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -814,7 +822,7 @@ class __$CatalogEntryCopyWithImpl<$Res> extends _$CatalogEntryCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CatalogEntryStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -914,10 +922,12 @@ class _$_CatalogEntry extends _CatalogEntry {
       this.name,
       @JsonKey(name: '_name')
           this.nameElement,
-      this.type,
+      @JsonKey(unknownEnumValue: CatalogEntryType.unknown)
+          this.type,
       @JsonKey(name: '_type')
           this.typeElement,
-      this.status,
+      @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.effectivePeriod,
@@ -981,12 +991,14 @@ class _$_CatalogEntry extends _CatalogEntry {
   @JsonKey(name: '_name')
   final Element? nameElement;
   @override
-  final Code? type;
+  @JsonKey(unknownEnumValue: CatalogEntryType.unknown)
+  final CatalogEntryType? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
+  final CatalogEntryStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -1190,10 +1202,12 @@ abstract class _CatalogEntry extends CatalogEntry {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: CatalogEntryType.unknown)
+          CatalogEntryType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
+          CatalogEntryStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Period? effectivePeriod,
@@ -1258,12 +1272,14 @@ abstract class _CatalogEntry extends CatalogEntry {
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CatalogEntryType.unknown)
+  CatalogEntryType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
+  CatalogEntryStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -1324,10 +1340,13 @@ class _$CatalogEntryRelatedEntryTearOff {
 
   _CatalogEntryRelatedEntry call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? relationship,
-      @JsonKey(name: '_relationship') Element? relationshipElement,
+      @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationship.unknown)
+          CatalogEntryRelatedEntryRelationship? relationship,
+      @JsonKey(name: '_relationship')
+          Element? relationshipElement,
       required Reference target}) {
     return _CatalogEntryRelatedEntry(
       id: id,
@@ -1354,7 +1373,9 @@ mixin _$CatalogEntryRelatedEntry {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get relationship => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationship.unknown)
+  CatalogEntryRelatedEntryRelationship? get relationship =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_relationship')
   Element? get relationshipElement => throw _privateConstructorUsedError;
   Reference get target => throw _privateConstructorUsedError;
@@ -1372,10 +1393,13 @@ abstract class $CatalogEntryRelatedEntryCopyWith<$Res> {
       _$CatalogEntryRelatedEntryCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? relationship,
-      @JsonKey(name: '_relationship') Element? relationshipElement,
+      @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationship.unknown)
+          CatalogEntryRelatedEntryRelationship? relationship,
+      @JsonKey(name: '_relationship')
+          Element? relationshipElement,
       Reference target});
 
   $ElementCopyWith<$Res>? get relationshipElement;
@@ -1416,7 +1440,7 @@ class _$CatalogEntryRelatedEntryCopyWithImpl<$Res>
       relationship: relationship == freezed
           ? _value.relationship
           : relationship // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CatalogEntryRelatedEntryRelationship?,
       relationshipElement: relationshipElement == freezed
           ? _value.relationshipElement
           : relationshipElement // ignore: cast_nullable_to_non_nullable
@@ -1456,10 +1480,13 @@ abstract class _$CatalogEntryRelatedEntryCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? relationship,
-      @JsonKey(name: '_relationship') Element? relationshipElement,
+      @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationship.unknown)
+          CatalogEntryRelatedEntryRelationship? relationship,
+      @JsonKey(name: '_relationship')
+          Element? relationshipElement,
       Reference target});
 
   @override
@@ -1505,7 +1532,7 @@ class __$CatalogEntryRelatedEntryCopyWithImpl<$Res>
       relationship: relationship == freezed
           ? _value.relationship
           : relationship // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CatalogEntryRelatedEntryRelationship?,
       relationshipElement: relationshipElement == freezed
           ? _value.relationshipElement
           : relationshipElement // ignore: cast_nullable_to_non_nullable
@@ -1523,10 +1550,13 @@ class __$CatalogEntryRelatedEntryCopyWithImpl<$Res>
 class _$_CatalogEntryRelatedEntry extends _CatalogEntryRelatedEntry {
   _$_CatalogEntryRelatedEntry(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
-      this.relationship,
-      @JsonKey(name: '_relationship') this.relationshipElement,
+      @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationship.unknown)
+          this.relationship,
+      @JsonKey(name: '_relationship')
+          this.relationshipElement,
       required this.target})
       : super._();
 
@@ -1541,7 +1571,8 @@ class _$_CatalogEntryRelatedEntry extends _CatalogEntryRelatedEntry {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? relationship;
+  @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationship.unknown)
+  final CatalogEntryRelatedEntryRelationship? relationship;
   @override
   @JsonKey(name: '_relationship')
   final Element? relationshipElement;
@@ -1600,10 +1631,13 @@ class _$_CatalogEntryRelatedEntry extends _CatalogEntryRelatedEntry {
 abstract class _CatalogEntryRelatedEntry extends CatalogEntryRelatedEntry {
   factory _CatalogEntryRelatedEntry(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? relationship,
-      @JsonKey(name: '_relationship') Element? relationshipElement,
+      @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationship.unknown)
+          CatalogEntryRelatedEntryRelationship? relationship,
+      @JsonKey(name: '_relationship')
+          Element? relationshipElement,
       required Reference target}) = _$_CatalogEntryRelatedEntry;
   _CatalogEntryRelatedEntry._() : super._();
 
@@ -1619,7 +1653,9 @@ abstract class _CatalogEntryRelatedEntry extends CatalogEntryRelatedEntry {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get relationship => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationship.unknown)
+  CatalogEntryRelatedEntryRelationship? get relationship =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_relationship')
   Element? get relationshipElement => throw _privateConstructorUsedError;
@@ -1656,7 +1692,8 @@ class _$CompositionTearOff {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: CompositionStatus.unknown)
+          CompositionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       required CodeableConcept type,
@@ -1739,7 +1776,8 @@ mixin _$Composition {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   Identifier? get identifier => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CompositionStatus.unknown)
+  CompositionStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept get type => throw _privateConstructorUsedError;
@@ -1791,7 +1829,8 @@ abstract class $CompositionCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: CompositionStatus.unknown)
+          CompositionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept type,
@@ -1922,7 +1961,7 @@ class _$CompositionCopyWithImpl<$Res> implements $CompositionCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CompositionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -2158,7 +2197,8 @@ abstract class _$CompositionCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: CompositionStatus.unknown)
+          CompositionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept type,
@@ -2304,7 +2344,7 @@ class __$CompositionCopyWithImpl<$Res> extends _$CompositionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CompositionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -2397,7 +2437,8 @@ class _$_Composition extends _Composition {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: CompositionStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       required this.type,
@@ -2453,7 +2494,8 @@ class _$_Composition extends _Composition {
   @override
   final Identifier? identifier;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: CompositionStatus.unknown)
+  final CompositionStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -2639,7 +2681,8 @@ abstract class _Composition extends Composition {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Identifier? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: CompositionStatus.unknown)
+          CompositionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       required CodeableConcept type,
@@ -2696,7 +2739,8 @@ abstract class _Composition extends Composition {
   @override
   Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CompositionStatus.unknown)
+  CompositionStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -2752,12 +2796,16 @@ class _$CompositionAttesterTearOff {
 
   _CompositionAttester call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
+          CompositionAttesterMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       FhirDateTime? time,
-      @JsonKey(name: '_time') Element? timeElement,
+      @JsonKey(name: '_time')
+          Element? timeElement,
       Reference? party}) {
     return _CompositionAttester(
       id: id,
@@ -2786,7 +2834,8 @@ mixin _$CompositionAttester {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get mode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
+  CompositionAttesterMode? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
   FhirDateTime? get time => throw _privateConstructorUsedError;
@@ -2807,12 +2856,16 @@ abstract class $CompositionAttesterCopyWith<$Res> {
       _$CompositionAttesterCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
+          CompositionAttesterMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       FhirDateTime? time,
-      @JsonKey(name: '_time') Element? timeElement,
+      @JsonKey(name: '_time')
+          Element? timeElement,
       Reference? party});
 
   $ElementCopyWith<$Res>? get modeElement;
@@ -2856,7 +2909,7 @@ class _$CompositionAttesterCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CompositionAttesterMode?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -2919,12 +2972,16 @@ abstract class _$CompositionAttesterCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
+          CompositionAttesterMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       FhirDateTime? time,
-      @JsonKey(name: '_time') Element? timeElement,
+      @JsonKey(name: '_time')
+          Element? timeElement,
       Reference? party});
 
   @override
@@ -2973,7 +3030,7 @@ class __$CompositionAttesterCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CompositionAttesterMode?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -3001,7 +3058,7 @@ class _$_CompositionAttester extends _CompositionAttester {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.mode,
+      @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown) this.mode,
       @JsonKey(name: '_mode') this.modeElement,
       this.time,
       @JsonKey(name: '_time') this.timeElement,
@@ -3019,7 +3076,8 @@ class _$_CompositionAttester extends _CompositionAttester {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? mode;
+  @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
+  final CompositionAttesterMode? mode;
   @override
   @JsonKey(name: '_mode')
   final Element? modeElement;
@@ -3089,12 +3147,16 @@ class _$_CompositionAttester extends _CompositionAttester {
 abstract class _CompositionAttester extends CompositionAttester {
   factory _CompositionAttester(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
+          CompositionAttesterMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       FhirDateTime? time,
-      @JsonKey(name: '_time') Element? timeElement,
+      @JsonKey(name: '_time')
+          Element? timeElement,
       Reference? party}) = _$_CompositionAttester;
   _CompositionAttester._() : super._();
 
@@ -3110,7 +3172,8 @@ abstract class _CompositionAttester extends CompositionAttester {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get mode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
+  CompositionAttesterMode? get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
@@ -4422,7 +4485,8 @@ class _$DocumentManifestTearOff {
       List<FhirExtension>? modifierExtension,
       Identifier? masterIdentifier,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
+          DocumentManifestStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? type,
@@ -4499,7 +4563,8 @@ mixin _$DocumentManifest {
       throw _privateConstructorUsedError;
   Identifier? get masterIdentifier => throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
+  DocumentManifestStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
@@ -4548,7 +4613,8 @@ abstract class $DocumentManifestCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       Identifier? masterIdentifier,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
+          DocumentManifestStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? type,
@@ -4675,7 +4741,7 @@ class _$DocumentManifestCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as DocumentManifestStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4878,7 +4944,8 @@ abstract class _$DocumentManifestCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       Identifier? masterIdentifier,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
+          DocumentManifestStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? type,
@@ -5018,7 +5085,7 @@ class __$DocumentManifestCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as DocumentManifestStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5096,7 +5163,8 @@ class _$_DocumentManifest extends _DocumentManifest {
       this.modifierExtension,
       this.masterIdentifier,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.type,
@@ -5150,7 +5218,8 @@ class _$_DocumentManifest extends _DocumentManifest {
   @override
   final List<Identifier>? identifier;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
+  final DocumentManifestStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -5324,7 +5393,8 @@ abstract class _DocumentManifest extends DocumentManifest {
       List<FhirExtension>? modifierExtension,
       Identifier? masterIdentifier,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
+          DocumentManifestStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? type,
@@ -5379,7 +5449,8 @@ abstract class _DocumentManifest extends DocumentManifest {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
+  DocumentManifestStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -5737,7 +5808,8 @@ class _$DocumentReferenceTearOff {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      Code? status,
+      @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
+          DocumentReferenceStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Code? docStatus,
@@ -5834,7 +5906,8 @@ mixin _$DocumentReference {
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
+  DocumentReferenceStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Code? get docStatus => throw _privateConstructorUsedError;
@@ -5896,7 +5969,8 @@ abstract class $DocumentReferenceCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      Code? status,
+      @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
+          DocumentReferenceStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Code? docStatus,
@@ -6047,7 +6121,7 @@ class _$DocumentReferenceCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as DocumentReferenceStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6334,7 +6408,8 @@ abstract class _$DocumentReferenceCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      Code? status,
+      @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
+          DocumentReferenceStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Code? docStatus,
@@ -6502,7 +6577,7 @@ class __$DocumentReferenceCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as DocumentReferenceStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6620,7 +6695,8 @@ class _$_DocumentReference extends _DocumentReference {
       this.modifierExtension,
       this.identifier,
       this.basedOn,
-      this.status,
+      @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.docStatus,
@@ -6684,7 +6760,8 @@ class _$_DocumentReference extends _DocumentReference {
   @override
   final List<Reference>? basedOn;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
+  final DocumentReferenceStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -6898,7 +6975,8 @@ abstract class _DocumentReference extends DocumentReference {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      Code? status,
+      @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
+          DocumentReferenceStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Code? docStatus,
@@ -6963,7 +7041,8 @@ abstract class _DocumentReference extends DocumentReference {
   @override
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
+  DocumentReferenceStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -7035,12 +7114,16 @@ class _$DocumentReferenceAttesterTearOff {
 
   _DocumentReferenceAttester call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: DocumentReferenceAttesterMode.unknown)
+          DocumentReferenceAttesterMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       FhirDateTime? time,
-      @JsonKey(name: '_time') Element? timeElement,
+      @JsonKey(name: '_time')
+          Element? timeElement,
       Reference? party}) {
     return _DocumentReferenceAttester(
       id: id,
@@ -7069,7 +7152,8 @@ mixin _$DocumentReferenceAttester {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get mode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: DocumentReferenceAttesterMode.unknown)
+  DocumentReferenceAttesterMode? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
   FhirDateTime? get time => throw _privateConstructorUsedError;
@@ -7090,12 +7174,16 @@ abstract class $DocumentReferenceAttesterCopyWith<$Res> {
       _$DocumentReferenceAttesterCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: DocumentReferenceAttesterMode.unknown)
+          DocumentReferenceAttesterMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       FhirDateTime? time,
-      @JsonKey(name: '_time') Element? timeElement,
+      @JsonKey(name: '_time')
+          Element? timeElement,
       Reference? party});
 
   $ElementCopyWith<$Res>? get modeElement;
@@ -7139,7 +7227,7 @@ class _$DocumentReferenceAttesterCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as DocumentReferenceAttesterMode?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -7202,12 +7290,16 @@ abstract class _$DocumentReferenceAttesterCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: DocumentReferenceAttesterMode.unknown)
+          DocumentReferenceAttesterMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       FhirDateTime? time,
-      @JsonKey(name: '_time') Element? timeElement,
+      @JsonKey(name: '_time')
+          Element? timeElement,
       Reference? party});
 
   @override
@@ -7257,7 +7349,7 @@ class __$DocumentReferenceAttesterCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as DocumentReferenceAttesterMode?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -7283,12 +7375,16 @@ class __$DocumentReferenceAttesterCopyWithImpl<$Res>
 class _$_DocumentReferenceAttester extends _DocumentReferenceAttester {
   _$_DocumentReferenceAttester(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
-      this.mode,
-      @JsonKey(name: '_mode') this.modeElement,
+      @JsonKey(unknownEnumValue: DocumentReferenceAttesterMode.unknown)
+          this.mode,
+      @JsonKey(name: '_mode')
+          this.modeElement,
       this.time,
-      @JsonKey(name: '_time') this.timeElement,
+      @JsonKey(name: '_time')
+          this.timeElement,
       this.party})
       : super._();
 
@@ -7303,7 +7399,8 @@ class _$_DocumentReferenceAttester extends _DocumentReferenceAttester {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? mode;
+  @JsonKey(unknownEnumValue: DocumentReferenceAttesterMode.unknown)
+  final DocumentReferenceAttesterMode? mode;
   @override
   @JsonKey(name: '_mode')
   final Element? modeElement;
@@ -7374,12 +7471,16 @@ class _$_DocumentReferenceAttester extends _DocumentReferenceAttester {
 abstract class _DocumentReferenceAttester extends DocumentReferenceAttester {
   factory _DocumentReferenceAttester(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: DocumentReferenceAttesterMode.unknown)
+          DocumentReferenceAttesterMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       FhirDateTime? time,
-      @JsonKey(name: '_time') Element? timeElement,
+      @JsonKey(name: '_time')
+          Element? timeElement,
       Reference? party}) = _$_DocumentReferenceAttester;
   _DocumentReferenceAttester._() : super._();
 
@@ -7395,7 +7496,8 @@ abstract class _DocumentReferenceAttester extends DocumentReferenceAttester {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get mode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: DocumentReferenceAttesterMode.unknown)
+  DocumentReferenceAttesterMode? get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
@@ -7423,10 +7525,13 @@ class _$DocumentReferenceRelatesToTearOff {
 
   _DocumentReferenceRelatesTo call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
+          DocumentReferenceRelatesToCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       required Reference target}) {
     return _DocumentReferenceRelatesTo(
       id: id,
@@ -7453,7 +7558,9 @@ mixin _$DocumentReferenceRelatesTo {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
+  DocumentReferenceRelatesToCode? get code =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   Reference get target => throw _privateConstructorUsedError;
@@ -7471,10 +7578,13 @@ abstract class $DocumentReferenceRelatesToCopyWith<$Res> {
       _$DocumentReferenceRelatesToCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
+          DocumentReferenceRelatesToCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       Reference target});
 
   $ElementCopyWith<$Res>? get codeElement;
@@ -7515,7 +7625,7 @@ class _$DocumentReferenceRelatesToCopyWithImpl<$Res>
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as DocumentReferenceRelatesToCode?,
       codeElement: codeElement == freezed
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -7556,10 +7666,13 @@ abstract class _$DocumentReferenceRelatesToCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
+          DocumentReferenceRelatesToCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       Reference target});
 
   @override
@@ -7605,7 +7718,7 @@ class __$DocumentReferenceRelatesToCopyWithImpl<$Res>
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as DocumentReferenceRelatesToCode?,
       codeElement: codeElement == freezed
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -7623,10 +7736,13 @@ class __$DocumentReferenceRelatesToCopyWithImpl<$Res>
 class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
   _$_DocumentReferenceRelatesTo(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
-      this.code,
-      @JsonKey(name: '_code') this.codeElement,
+      @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
+          this.code,
+      @JsonKey(name: '_code')
+          this.codeElement,
       required this.target})
       : super._();
 
@@ -7641,7 +7757,8 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? code;
+  @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
+  final DocumentReferenceRelatesToCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -7699,10 +7816,13 @@ class _$_DocumentReferenceRelatesTo extends _DocumentReferenceRelatesTo {
 abstract class _DocumentReferenceRelatesTo extends DocumentReferenceRelatesTo {
   factory _DocumentReferenceRelatesTo(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
+          DocumentReferenceRelatesToCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       required Reference target}) = _$_DocumentReferenceRelatesTo;
   _DocumentReferenceRelatesTo._() : super._();
 
@@ -7718,7 +7838,9 @@ abstract class _DocumentReferenceRelatesTo extends DocumentReferenceRelatesTo {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get code => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
+  DocumentReferenceRelatesToCode? get code =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;

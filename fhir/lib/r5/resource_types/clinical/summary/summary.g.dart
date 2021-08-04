@@ -46,8 +46,9 @@ _$_AdverseEvent _$$_AdverseEventFromJson(Map<String, dynamic> json) =>
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      actuality:
-          json['actuality'] == null ? null : Code.fromJson(json['actuality']),
+      actuality: _$enumDecodeNullable(
+          _$AdverseEventActualityEnumMap, json['actuality'],
+          unknownValue: AdverseEventActuality.unknown),
       actualityElement: json['_actuality'] == null
           ? null
           : Element.fromJson(json['_actuality'] as Map<String, dynamic>),
@@ -159,7 +160,7 @@ Map<String, dynamic> _$$_AdverseEventToJson(_$_AdverseEvent instance) {
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('actuality', instance.actuality?.toJson());
+  writeNotNull('actuality', _$AdverseEventActualityEnumMap[instance.actuality]);
   writeNotNull('_actuality', instance.actualityElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   writeNotNull('code', instance.code?.toJson());
@@ -383,6 +384,12 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ValueSet: 'ValueSet',
   R5ResourceType.VerificationResult: 'VerificationResult',
   R5ResourceType.VisionPrescription: 'VisionPrescription',
+};
+
+const _$AdverseEventActualityEnumMap = {
+  AdverseEventActuality.actual: 'actual',
+  AdverseEventActuality.potential: 'potential',
+  AdverseEventActuality.unknown: 'unknown',
 };
 
 _$_AdverseEventParticipant _$$_AdverseEventParticipantFromJson(
@@ -712,7 +719,8 @@ _$_AllergyIntolerance _$$_AllergyIntoleranceFromJson(
           ? null
           : CodeableConcept.fromJson(
               json['verificationStatus'] as Map<String, dynamic>),
-      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      type: _$enumDecodeNullable(_$AllergyIntoleranceTypeEnumMap, json['type'],
+          unknownValue: AllergyIntoleranceType.unknown),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -722,9 +730,9 @@ _$_AllergyIntolerance _$$_AllergyIntoleranceFromJson(
       categoryElement: (json['_category'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      criticality: json['criticality'] == null
-          ? null
-          : Code.fromJson(json['criticality']),
+      criticality: _$enumDecodeNullable(
+          _$AllergyIntoleranceCriticalityEnumMap, json['criticality'],
+          unknownValue: AllergyIntoleranceCriticality.unknown),
       criticalityElement: json['_criticality'] == null
           ? null
           : Element.fromJson(json['_criticality'] as Map<String, dynamic>),
@@ -810,12 +818,13 @@ Map<String, dynamic> _$$_AllergyIntoleranceToJson(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('clinicalStatus', instance.clinicalStatus?.toJson());
   writeNotNull('verificationStatus', instance.verificationStatus?.toJson());
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('type', _$AllergyIntoleranceTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   writeNotNull(
       '_category', instance.categoryElement?.map((e) => e.toJson()).toList());
-  writeNotNull('criticality', instance.criticality?.toJson());
+  writeNotNull('criticality',
+      _$AllergyIntoleranceCriticalityEnumMap[instance.criticality]);
   writeNotNull('_criticality', instance.criticalityElement?.toJson());
   writeNotNull('code', instance.code?.toJson());
   val['patient'] = instance.patient.toJson();
@@ -837,6 +846,19 @@ Map<String, dynamic> _$$_AllergyIntoleranceToJson(
   writeNotNull('reaction', instance.reaction?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$AllergyIntoleranceTypeEnumMap = {
+  AllergyIntoleranceType.allergy: 'allergy',
+  AllergyIntoleranceType.intolerance: 'intolerance',
+  AllergyIntoleranceType.unknown: 'unknown',
+};
+
+const _$AllergyIntoleranceCriticalityEnumMap = {
+  AllergyIntoleranceCriticality.low: 'low',
+  AllergyIntoleranceCriticality.high: 'high',
+  AllergyIntoleranceCriticality.unable_to_assess: 'unable-to-assess',
+  AllergyIntoleranceCriticality.unknown: 'unknown',
+};
 
 _$_AllergyIntoleranceReaction _$$_AllergyIntoleranceReactionFromJson(
         Map<String, dynamic> json) =>
@@ -863,8 +885,9 @@ _$_AllergyIntoleranceReaction _$$_AllergyIntoleranceReactionFromJson(
       onsetElement: json['_onset'] == null
           ? null
           : Element.fromJson(json['_onset'] as Map<String, dynamic>),
-      severity:
-          json['severity'] == null ? null : Code.fromJson(json['severity']),
+      severity: _$enumDecodeNullable(
+          _$AllergyIntoleranceReactionSeverityEnumMap, json['severity'],
+          unknownValue: AllergyIntoleranceReactionSeverity.unknown),
       severityElement: json['_severity'] == null
           ? null
           : Element.fromJson(json['_severity'] as Map<String, dynamic>),
@@ -898,12 +921,20 @@ Map<String, dynamic> _$$_AllergyIntoleranceReactionToJson(
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('onset', instance.onset?.toJson());
   writeNotNull('_onset', instance.onsetElement?.toJson());
-  writeNotNull('severity', instance.severity?.toJson());
+  writeNotNull('severity',
+      _$AllergyIntoleranceReactionSeverityEnumMap[instance.severity]);
   writeNotNull('_severity', instance.severityElement?.toJson());
   writeNotNull('exposureRoute', instance.exposureRoute?.toJson());
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$AllergyIntoleranceReactionSeverityEnumMap = {
+  AllergyIntoleranceReactionSeverity.mild: 'mild',
+  AllergyIntoleranceReactionSeverity.moderate: 'moderate',
+  AllergyIntoleranceReactionSeverity.severe: 'severe',
+  AllergyIntoleranceReactionSeverity.unknown: 'unknown',
+};
 
 _$_ClinicalImpression _$$_ClinicalImpressionFromJson(
         Map<String, dynamic> json) =>
@@ -1413,8 +1444,9 @@ _$_DetectedIssue _$$_DetectedIssueFromJson(Map<String, dynamic> json) =>
       code: json['code'] == null
           ? null
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-      severity:
-          json['severity'] == null ? null : Code.fromJson(json['severity']),
+      severity: _$enumDecodeNullable(
+          _$DetectedIssueSeverityEnumMap, json['severity'],
+          unknownValue: DetectedIssueSeverity.unknown),
       severityElement: json['_severity'] == null
           ? null
           : Element.fromJson(json['_severity'] as Map<String, dynamic>),
@@ -1486,7 +1518,7 @@ Map<String, dynamic> _$$_DetectedIssueToJson(_$_DetectedIssue instance) {
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('code', instance.code?.toJson());
-  writeNotNull('severity', instance.severity?.toJson());
+  writeNotNull('severity', _$DetectedIssueSeverityEnumMap[instance.severity]);
   writeNotNull('_severity', instance.severityElement?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('identifiedDateTime', instance.identifiedDateTime?.toJson());
@@ -1505,6 +1537,13 @@ Map<String, dynamic> _$$_DetectedIssueToJson(_$_DetectedIssue instance) {
       'mitigation', instance.mitigation?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$DetectedIssueSeverityEnumMap = {
+  DetectedIssueSeverity.high: 'high',
+  DetectedIssueSeverity.moderate: 'moderate',
+  DetectedIssueSeverity.low: 'low',
+  DetectedIssueSeverity.unknown: 'unknown',
+};
 
 _$_DetectedIssueEvidence _$$_DetectedIssueEvidenceFromJson(
         Map<String, dynamic> json) =>
@@ -1632,7 +1671,9 @@ _$_FamilyMemberHistory _$$_FamilyMemberHistoryFromJson(
       instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(
+          _$FamilyMemberHistoryStatusEnumMap, json['status'],
+          unknownValue: FamilyMemberHistoryStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1753,7 +1794,7 @@ Map<String, dynamic> _$$_FamilyMemberHistoryToJson(
       instance.instantiatesUri?.map((e) => e.toJson()).toList());
   writeNotNull('_instantiatesUri',
       instance.instantiatesUriElement?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$FamilyMemberHistoryStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('dataAbsentReason', instance.dataAbsentReason?.toJson());
   val['patient'] = instance.patient.toJson();
@@ -1790,6 +1831,14 @@ Map<String, dynamic> _$$_FamilyMemberHistoryToJson(
       'procedure', instance.procedure?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$FamilyMemberHistoryStatusEnumMap = {
+  FamilyMemberHistoryStatus.partial: 'partial',
+  FamilyMemberHistoryStatus.completed: 'completed',
+  FamilyMemberHistoryStatus.entered_in_error: 'entered-in-error',
+  FamilyMemberHistoryStatus.health_unknown: 'health-unknown',
+  FamilyMemberHistoryStatus.unknown: 'unknown',
+};
 
 _$_FamilyMemberHistoryCondition _$$_FamilyMemberHistoryConditionFromJson(
         Map<String, dynamic> json) =>

@@ -1275,7 +1275,8 @@ class _$BundleTearOff {
       @JsonKey(name: '_language')
           Element? languageElement,
       Identifier? identifier,
-      Code? type,
+      @JsonKey(unknownEnumValue: BundleType.unknown)
+          BundleType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Instant? timestamp,
@@ -1329,7 +1330,8 @@ mixin _$Bundle {
   @JsonKey(name: '_language')
   Element? get languageElement => throw _privateConstructorUsedError;
   Identifier? get identifier => throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: BundleType.unknown)
+  BundleType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   Instant? get timestamp => throw _privateConstructorUsedError;
@@ -1363,7 +1365,8 @@ abstract class $BundleCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Identifier? identifier,
-      Code? type,
+      @JsonKey(unknownEnumValue: BundleType.unknown)
+          BundleType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Instant? timestamp,
@@ -1450,7 +1453,7 @@ class _$BundleCopyWithImpl<$Res> implements $BundleCopyWith<$Res> {
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as BundleType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -1592,7 +1595,8 @@ abstract class _$BundleCopyWith<$Res> implements $BundleCopyWith<$Res> {
       @JsonKey(name: '_language')
           Element? languageElement,
       Identifier? identifier,
-      Code? type,
+      @JsonKey(unknownEnumValue: BundleType.unknown)
+          BundleType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Instant? timestamp,
@@ -1688,7 +1692,7 @@ class __$BundleCopyWithImpl<$Res> extends _$BundleCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as BundleType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -1740,7 +1744,8 @@ class _$_Bundle extends _Bundle {
       @JsonKey(name: '_language')
           this.languageElement,
       this.identifier,
-      this.type,
+      @JsonKey(unknownEnumValue: BundleType.unknown)
+          this.type,
       @JsonKey(name: '_type')
           this.typeElement,
       this.timestamp,
@@ -1777,7 +1782,8 @@ class _$_Bundle extends _Bundle {
   @override
   final Identifier? identifier;
   @override
-  final Code? type;
+  @JsonKey(unknownEnumValue: BundleType.unknown)
+  final BundleType? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -1899,7 +1905,8 @@ abstract class _Bundle extends Bundle {
       @JsonKey(name: '_language')
           Element? languageElement,
       Identifier? identifier,
-      Code? type,
+      @JsonKey(unknownEnumValue: BundleType.unknown)
+          BundleType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Instant? timestamp,
@@ -1935,7 +1942,8 @@ abstract class _Bundle extends Bundle {
   @override
   Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: BundleType.unknown)
+  BundleType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -2758,12 +2766,16 @@ class _$BundleSearchTearOff {
 
   _BundleSearch call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: BundleSearchMode.unknown)
+          BundleSearchMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       Decimal? score,
-      @JsonKey(name: '_score') Element? scoreElement}) {
+      @JsonKey(name: '_score')
+          Element? scoreElement}) {
     return _BundleSearch(
       id: id,
       extension_: extension_,
@@ -2790,7 +2802,8 @@ mixin _$BundleSearch {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get mode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: BundleSearchMode.unknown)
+  BundleSearchMode? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
   Decimal? get score => throw _privateConstructorUsedError;
@@ -2810,12 +2823,16 @@ abstract class $BundleSearchCopyWith<$Res> {
       _$BundleSearchCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: BundleSearchMode.unknown)
+          BundleSearchMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       Decimal? score,
-      @JsonKey(name: '_score') Element? scoreElement});
+      @JsonKey(name: '_score')
+          Element? scoreElement});
 
   $ElementCopyWith<$Res>? get modeElement;
   $ElementCopyWith<$Res>? get scoreElement;
@@ -2855,7 +2872,7 @@ class _$BundleSearchCopyWithImpl<$Res> implements $BundleSearchCopyWith<$Res> {
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as BundleSearchMode?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -2903,12 +2920,16 @@ abstract class _$BundleSearchCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: BundleSearchMode.unknown)
+          BundleSearchMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       Decimal? score,
-      @JsonKey(name: '_score') Element? scoreElement});
+      @JsonKey(name: '_score')
+          Element? scoreElement});
 
   @override
   $ElementCopyWith<$Res>? get modeElement;
@@ -2952,7 +2973,7 @@ class __$BundleSearchCopyWithImpl<$Res> extends _$BundleSearchCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as BundleSearchMode?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -2976,7 +2997,7 @@ class _$_BundleSearch extends _BundleSearch {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.mode,
+      @JsonKey(unknownEnumValue: BundleSearchMode.unknown) this.mode,
       @JsonKey(name: '_mode') this.modeElement,
       this.score,
       @JsonKey(name: '_score') this.scoreElement})
@@ -2993,7 +3014,8 @@ class _$_BundleSearch extends _BundleSearch {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? mode;
+  @JsonKey(unknownEnumValue: BundleSearchMode.unknown)
+  final BundleSearchMode? mode;
   @override
   @JsonKey(name: '_mode')
   final Element? modeElement;
@@ -3057,12 +3079,16 @@ class _$_BundleSearch extends _BundleSearch {
 abstract class _BundleSearch extends BundleSearch {
   factory _BundleSearch(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? mode,
-      @JsonKey(name: '_mode') Element? modeElement,
+      @JsonKey(unknownEnumValue: BundleSearchMode.unknown)
+          BundleSearchMode? mode,
+      @JsonKey(name: '_mode')
+          Element? modeElement,
       Decimal? score,
-      @JsonKey(name: '_score') Element? scoreElement}) = _$_BundleSearch;
+      @JsonKey(name: '_score')
+          Element? scoreElement}) = _$_BundleSearch;
   _BundleSearch._() : super._();
 
   factory _BundleSearch.fromJson(Map<String, dynamic> json) =
@@ -3077,7 +3103,8 @@ abstract class _BundleSearch extends BundleSearch {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get mode => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: BundleSearchMode.unknown)
+  BundleSearchMode? get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
@@ -3102,20 +3129,28 @@ class _$BundleRequestTearOff {
 
   _BundleRequest call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? method,
-      @JsonKey(name: '_method') Element? methodElement,
+      @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
+          BundleRequestMethod? method,
+      @JsonKey(name: '_method')
+          Element? methodElement,
       FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement,
+      @JsonKey(name: '_url')
+          Element? urlElement,
       String? ifNoneMatch,
-      @JsonKey(name: '_ifNoneMatch') Element? ifNoneMatchElement,
+      @JsonKey(name: '_ifNoneMatch')
+          Element? ifNoneMatchElement,
       Instant? ifModifiedSince,
-      @JsonKey(name: '_ifModifiedSince') Element? ifModifiedSinceElement,
+      @JsonKey(name: '_ifModifiedSince')
+          Element? ifModifiedSinceElement,
       String? ifMatch,
-      @JsonKey(name: '_ifMatch') Element? ifMatchElement,
+      @JsonKey(name: '_ifMatch')
+          Element? ifMatchElement,
       String? ifNoneExist,
-      @JsonKey(name: '_ifNoneExist') Element? ifNoneExistElement}) {
+      @JsonKey(name: '_ifNoneExist')
+          Element? ifNoneExistElement}) {
     return _BundleRequest(
       id: id,
       extension_: extension_,
@@ -3150,7 +3185,8 @@ mixin _$BundleRequest {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get method => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
+  BundleRequestMethod? get method => throw _privateConstructorUsedError;
   @JsonKey(name: '_method')
   Element? get methodElement => throw _privateConstructorUsedError;
   FhirUri? get url => throw _privateConstructorUsedError;
@@ -3182,20 +3218,28 @@ abstract class $BundleRequestCopyWith<$Res> {
       _$BundleRequestCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? method,
-      @JsonKey(name: '_method') Element? methodElement,
+      @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
+          BundleRequestMethod? method,
+      @JsonKey(name: '_method')
+          Element? methodElement,
       FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement,
+      @JsonKey(name: '_url')
+          Element? urlElement,
       String? ifNoneMatch,
-      @JsonKey(name: '_ifNoneMatch') Element? ifNoneMatchElement,
+      @JsonKey(name: '_ifNoneMatch')
+          Element? ifNoneMatchElement,
       Instant? ifModifiedSince,
-      @JsonKey(name: '_ifModifiedSince') Element? ifModifiedSinceElement,
+      @JsonKey(name: '_ifModifiedSince')
+          Element? ifModifiedSinceElement,
       String? ifMatch,
-      @JsonKey(name: '_ifMatch') Element? ifMatchElement,
+      @JsonKey(name: '_ifMatch')
+          Element? ifMatchElement,
       String? ifNoneExist,
-      @JsonKey(name: '_ifNoneExist') Element? ifNoneExistElement});
+      @JsonKey(name: '_ifNoneExist')
+          Element? ifNoneExistElement});
 
   $ElementCopyWith<$Res>? get methodElement;
   $ElementCopyWith<$Res>? get urlElement;
@@ -3248,7 +3292,7 @@ class _$BundleRequestCopyWithImpl<$Res>
       method: method == freezed
           ? _value.method
           : method // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as BundleRequestMethod?,
       methodElement: methodElement == freezed
           ? _value.methodElement
           : methodElement // ignore: cast_nullable_to_non_nullable
@@ -3372,20 +3416,28 @@ abstract class _$BundleRequestCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? method,
-      @JsonKey(name: '_method') Element? methodElement,
+      @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
+          BundleRequestMethod? method,
+      @JsonKey(name: '_method')
+          Element? methodElement,
       FhirUri? url,
-      @JsonKey(name: '_url') Element? urlElement,
+      @JsonKey(name: '_url')
+          Element? urlElement,
       String? ifNoneMatch,
-      @JsonKey(name: '_ifNoneMatch') Element? ifNoneMatchElement,
+      @JsonKey(name: '_ifNoneMatch')
+          Element? ifNoneMatchElement,
       Instant? ifModifiedSince,
-      @JsonKey(name: '_ifModifiedSince') Element? ifModifiedSinceElement,
+      @JsonKey(name: '_ifModifiedSince')
+          Element? ifModifiedSinceElement,
       String? ifMatch,
-      @JsonKey(name: '_ifMatch') Element? ifMatchElement,
+      @JsonKey(name: '_ifMatch')
+          Element? ifMatchElement,
       String? ifNoneExist,
-      @JsonKey(name: '_ifNoneExist') Element? ifNoneExistElement});
+      @JsonKey(name: '_ifNoneExist')
+          Element? ifNoneExistElement});
 
   @override
   $ElementCopyWith<$Res>? get methodElement;
@@ -3446,7 +3498,7 @@ class __$BundleRequestCopyWithImpl<$Res>
       method: method == freezed
           ? _value.method
           : method // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as BundleRequestMethod?,
       methodElement: methodElement == freezed
           ? _value.methodElement
           : methodElement // ignore: cast_nullable_to_non_nullable
@@ -3502,7 +3554,7 @@ class _$_BundleRequest extends _BundleRequest {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.method,
+      @JsonKey(unknownEnumValue: BundleRequestMethod.unknown) this.method,
       @JsonKey(name: '_method') this.methodElement,
       this.url,
       @JsonKey(name: '_url') this.urlElement,
@@ -3527,7 +3579,8 @@ class _$_BundleRequest extends _BundleRequest {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? method;
+  @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
+  final BundleRequestMethod? method;
   @override
   @JsonKey(name: '_method')
   final Element? methodElement;
@@ -3642,22 +3695,29 @@ class _$_BundleRequest extends _BundleRequest {
 
 abstract class _BundleRequest extends BundleRequest {
   factory _BundleRequest(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Code? method,
-          @JsonKey(name: '_method') Element? methodElement,
-          FhirUri? url,
-          @JsonKey(name: '_url') Element? urlElement,
-          String? ifNoneMatch,
-          @JsonKey(name: '_ifNoneMatch') Element? ifNoneMatchElement,
-          Instant? ifModifiedSince,
-          @JsonKey(name: '_ifModifiedSince') Element? ifModifiedSinceElement,
-          String? ifMatch,
-          @JsonKey(name: '_ifMatch') Element? ifMatchElement,
-          String? ifNoneExist,
-          @JsonKey(name: '_ifNoneExist') Element? ifNoneExistElement}) =
-      _$_BundleRequest;
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
+          BundleRequestMethod? method,
+      @JsonKey(name: '_method')
+          Element? methodElement,
+      FhirUri? url,
+      @JsonKey(name: '_url')
+          Element? urlElement,
+      String? ifNoneMatch,
+      @JsonKey(name: '_ifNoneMatch')
+          Element? ifNoneMatchElement,
+      Instant? ifModifiedSince,
+      @JsonKey(name: '_ifModifiedSince')
+          Element? ifModifiedSinceElement,
+      String? ifMatch,
+      @JsonKey(name: '_ifMatch')
+          Element? ifMatchElement,
+      String? ifNoneExist,
+      @JsonKey(name: '_ifNoneExist')
+          Element? ifNoneExistElement}) = _$_BundleRequest;
   _BundleRequest._() : super._();
 
   factory _BundleRequest.fromJson(Map<String, dynamic> json) =
@@ -3672,7 +3732,8 @@ abstract class _BundleRequest extends BundleRequest {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get method => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
+  BundleRequestMethod? get method => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_method')
   Element? get methodElement => throw _privateConstructorUsedError;
@@ -4845,7 +4906,7 @@ class _$LinkageItemTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType? type,
       @JsonKey(name: '_type') Element? typeElement,
       required Reference resource}) {
     return _LinkageItem(
@@ -4873,7 +4934,8 @@ mixin _$LinkageItem {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: LinkageItemType.unknown)
+  LinkageItemType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   Reference get resource => throw _privateConstructorUsedError;
@@ -4893,7 +4955,7 @@ abstract class $LinkageItemCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType? type,
       @JsonKey(name: '_type') Element? typeElement,
       Reference resource});
 
@@ -4934,7 +4996,7 @@ class _$LinkageItemCopyWithImpl<$Res> implements $LinkageItemCopyWith<$Res> {
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as LinkageItemType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -4976,7 +5038,7 @@ abstract class _$LinkageItemCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType? type,
       @JsonKey(name: '_type') Element? typeElement,
       Reference resource});
 
@@ -5021,7 +5083,7 @@ class __$LinkageItemCopyWithImpl<$Res> extends _$LinkageItemCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as LinkageItemType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -5041,7 +5103,7 @@ class _$_LinkageItem extends _LinkageItem {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.type,
+      @JsonKey(unknownEnumValue: LinkageItemType.unknown) this.type,
       @JsonKey(name: '_type') this.typeElement,
       required this.resource})
       : super._();
@@ -5057,7 +5119,8 @@ class _$_LinkageItem extends _LinkageItem {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? type;
+  @JsonKey(unknownEnumValue: LinkageItemType.unknown)
+  final LinkageItemType? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -5117,7 +5180,7 @@ abstract class _LinkageItem extends LinkageItem {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
+      @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType? type,
       @JsonKey(name: '_type') Element? typeElement,
       required Reference resource}) = _$_LinkageItem;
   _LinkageItem._() : super._();
@@ -5134,7 +5197,8 @@ abstract class _LinkageItem extends LinkageItem {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: LinkageItemType.unknown)
+  LinkageItemType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -7055,12 +7119,16 @@ class _$MessageHeaderResponseTearOff {
 
   _MessageHeaderResponse call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? identifier,
-      @JsonKey(name: '_identifier') Element? identifierElement,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(name: '_identifier')
+          Element? identifierElement,
+      @JsonKey(unknownEnumValue: MessageHeaderResponseCode.unknown)
+          MessageHeaderResponseCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       Reference? details}) {
     return _MessageHeaderResponse(
       id: id,
@@ -7092,7 +7160,8 @@ mixin _$MessageHeaderResponse {
   Id? get identifier => throw _privateConstructorUsedError;
   @JsonKey(name: '_identifier')
   Element? get identifierElement => throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: MessageHeaderResponseCode.unknown)
+  MessageHeaderResponseCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   Reference? get details => throw _privateConstructorUsedError;
@@ -7110,12 +7179,16 @@ abstract class $MessageHeaderResponseCopyWith<$Res> {
       _$MessageHeaderResponseCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? identifier,
-      @JsonKey(name: '_identifier') Element? identifierElement,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(name: '_identifier')
+          Element? identifierElement,
+      @JsonKey(unknownEnumValue: MessageHeaderResponseCode.unknown)
+          MessageHeaderResponseCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       Reference? details});
 
   $ElementCopyWith<$Res>? get identifierElement;
@@ -7167,7 +7240,7 @@ class _$MessageHeaderResponseCopyWithImpl<$Res>
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as MessageHeaderResponseCode?,
       codeElement: codeElement == freezed
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -7222,12 +7295,16 @@ abstract class _$MessageHeaderResponseCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? identifier,
-      @JsonKey(name: '_identifier') Element? identifierElement,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(name: '_identifier')
+          Element? identifierElement,
+      @JsonKey(unknownEnumValue: MessageHeaderResponseCode.unknown)
+          MessageHeaderResponseCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       Reference? details});
 
   @override
@@ -7284,7 +7361,7 @@ class __$MessageHeaderResponseCopyWithImpl<$Res>
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as MessageHeaderResponseCode?,
       codeElement: codeElement == freezed
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -7306,7 +7383,7 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
       this.modifierExtension,
       this.identifier,
       @JsonKey(name: '_identifier') this.identifierElement,
-      this.code,
+      @JsonKey(unknownEnumValue: MessageHeaderResponseCode.unknown) this.code,
       @JsonKey(name: '_code') this.codeElement,
       this.details})
       : super._();
@@ -7327,7 +7404,8 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
   @JsonKey(name: '_identifier')
   final Element? identifierElement;
   @override
-  final Code? code;
+  @JsonKey(unknownEnumValue: MessageHeaderResponseCode.unknown)
+  final MessageHeaderResponseCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -7393,12 +7471,16 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
 abstract class _MessageHeaderResponse extends MessageHeaderResponse {
   factory _MessageHeaderResponse(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? identifier,
-      @JsonKey(name: '_identifier') Element? identifierElement,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(name: '_identifier')
+          Element? identifierElement,
+      @JsonKey(unknownEnumValue: MessageHeaderResponseCode.unknown)
+          MessageHeaderResponseCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       Reference? details}) = _$_MessageHeaderResponse;
   _MessageHeaderResponse._() : super._();
 
@@ -7419,7 +7501,8 @@ abstract class _MessageHeaderResponse extends MessageHeaderResponse {
   @JsonKey(name: '_identifier')
   Element? get identifierElement => throw _privateConstructorUsedError;
   @override
-  Code? get code => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: MessageHeaderResponseCode.unknown)
+  MessageHeaderResponseCode? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
@@ -7963,19 +8046,27 @@ class _$OperationOutcomeIssueTearOff {
 
   _OperationOutcomeIssue call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? severity,
-      @JsonKey(name: '_severity') Element? severityElement,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
+          OperationOutcomeIssueSeverity? severity,
+      @JsonKey(name: '_severity')
+          Element? severityElement,
+      @JsonKey(unknownEnumValue: OperationOutcomeIssueCode.unknown)
+          OperationOutcomeIssueCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       CodeableConcept? details,
       String? diagnostics,
-      @JsonKey(name: '_diagnostics') Element? diagnosticsElement,
+      @JsonKey(name: '_diagnostics')
+          Element? diagnosticsElement,
       List<String>? location,
-      @JsonKey(name: '_location') List<Element>? locationElement,
+      @JsonKey(name: '_location')
+          List<Element>? locationElement,
       List<String>? expression,
-      @JsonKey(name: '_expression') List<Element>? expressionElement}) {
+      @JsonKey(name: '_expression')
+          List<Element>? expressionElement}) {
     return _OperationOutcomeIssue(
       id: id,
       extension_: extension_,
@@ -8009,10 +8100,13 @@ mixin _$OperationOutcomeIssue {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get severity => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
+  OperationOutcomeIssueSeverity? get severity =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_severity')
   Element? get severityElement => throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: OperationOutcomeIssueCode.unknown)
+  OperationOutcomeIssueCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   CodeableConcept? get details => throw _privateConstructorUsedError;
@@ -8039,19 +8133,27 @@ abstract class $OperationOutcomeIssueCopyWith<$Res> {
       _$OperationOutcomeIssueCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? severity,
-      @JsonKey(name: '_severity') Element? severityElement,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
+          OperationOutcomeIssueSeverity? severity,
+      @JsonKey(name: '_severity')
+          Element? severityElement,
+      @JsonKey(unknownEnumValue: OperationOutcomeIssueCode.unknown)
+          OperationOutcomeIssueCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       CodeableConcept? details,
       String? diagnostics,
-      @JsonKey(name: '_diagnostics') Element? diagnosticsElement,
+      @JsonKey(name: '_diagnostics')
+          Element? diagnosticsElement,
       List<String>? location,
-      @JsonKey(name: '_location') List<Element>? locationElement,
+      @JsonKey(name: '_location')
+          List<Element>? locationElement,
       List<String>? expression,
-      @JsonKey(name: '_expression') List<Element>? expressionElement});
+      @JsonKey(name: '_expression')
+          List<Element>? expressionElement});
 
   $ElementCopyWith<$Res>? get severityElement;
   $ElementCopyWith<$Res>? get codeElement;
@@ -8101,7 +8203,7 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
       severity: severity == freezed
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as OperationOutcomeIssueSeverity?,
       severityElement: severityElement == freezed
           ? _value.severityElement
           : severityElement // ignore: cast_nullable_to_non_nullable
@@ -8109,7 +8211,7 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as OperationOutcomeIssueCode?,
       codeElement: codeElement == freezed
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -8199,19 +8301,27 @@ abstract class _$OperationOutcomeIssueCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? severity,
-      @JsonKey(name: '_severity') Element? severityElement,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
+          OperationOutcomeIssueSeverity? severity,
+      @JsonKey(name: '_severity')
+          Element? severityElement,
+      @JsonKey(unknownEnumValue: OperationOutcomeIssueCode.unknown)
+          OperationOutcomeIssueCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       CodeableConcept? details,
       String? diagnostics,
-      @JsonKey(name: '_diagnostics') Element? diagnosticsElement,
+      @JsonKey(name: '_diagnostics')
+          Element? diagnosticsElement,
       List<String>? location,
-      @JsonKey(name: '_location') List<Element>? locationElement,
+      @JsonKey(name: '_location')
+          List<Element>? locationElement,
       List<String>? expression,
-      @JsonKey(name: '_expression') List<Element>? expressionElement});
+      @JsonKey(name: '_expression')
+          List<Element>? expressionElement});
 
   @override
   $ElementCopyWith<$Res>? get severityElement;
@@ -8267,7 +8377,7 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
       severity: severity == freezed
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as OperationOutcomeIssueSeverity?,
       severityElement: severityElement == freezed
           ? _value.severityElement
           : severityElement // ignore: cast_nullable_to_non_nullable
@@ -8275,7 +8385,7 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as OperationOutcomeIssueCode?,
       codeElement: codeElement == freezed
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -8317,19 +8427,27 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
 class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
   _$_OperationOutcomeIssue(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
-      this.severity,
-      @JsonKey(name: '_severity') this.severityElement,
-      this.code,
-      @JsonKey(name: '_code') this.codeElement,
+      @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
+          this.severity,
+      @JsonKey(name: '_severity')
+          this.severityElement,
+      @JsonKey(unknownEnumValue: OperationOutcomeIssueCode.unknown)
+          this.code,
+      @JsonKey(name: '_code')
+          this.codeElement,
       this.details,
       this.diagnostics,
-      @JsonKey(name: '_diagnostics') this.diagnosticsElement,
+      @JsonKey(name: '_diagnostics')
+          this.diagnosticsElement,
       this.location,
-      @JsonKey(name: '_location') this.locationElement,
+      @JsonKey(name: '_location')
+          this.locationElement,
       this.expression,
-      @JsonKey(name: '_expression') this.expressionElement})
+      @JsonKey(name: '_expression')
+          this.expressionElement})
       : super._();
 
   factory _$_OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
@@ -8343,12 +8461,14 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? severity;
+  @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
+  final OperationOutcomeIssueSeverity? severity;
   @override
   @JsonKey(name: '_severity')
   final Element? severityElement;
   @override
-  final Code? code;
+  @JsonKey(unknownEnumValue: OperationOutcomeIssueCode.unknown)
+  final OperationOutcomeIssueCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -8453,21 +8573,28 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
 
 abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
   factory _OperationOutcomeIssue(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Code? severity,
-          @JsonKey(name: '_severity') Element? severityElement,
-          Code? code,
-          @JsonKey(name: '_code') Element? codeElement,
-          CodeableConcept? details,
-          String? diagnostics,
-          @JsonKey(name: '_diagnostics') Element? diagnosticsElement,
-          List<String>? location,
-          @JsonKey(name: '_location') List<Element>? locationElement,
-          List<String>? expression,
-          @JsonKey(name: '_expression') List<Element>? expressionElement}) =
-      _$_OperationOutcomeIssue;
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
+          OperationOutcomeIssueSeverity? severity,
+      @JsonKey(name: '_severity')
+          Element? severityElement,
+      @JsonKey(unknownEnumValue: OperationOutcomeIssueCode.unknown)
+          OperationOutcomeIssueCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
+      CodeableConcept? details,
+      String? diagnostics,
+      @JsonKey(name: '_diagnostics')
+          Element? diagnosticsElement,
+      List<String>? location,
+      @JsonKey(name: '_location')
+          List<Element>? locationElement,
+      List<String>? expression,
+      @JsonKey(name: '_expression')
+          List<Element>? expressionElement}) = _$_OperationOutcomeIssue;
   _OperationOutcomeIssue._() : super._();
 
   factory _OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =
@@ -8482,12 +8609,15 @@ abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get severity => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
+  OperationOutcomeIssueSeverity? get severity =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_severity')
   Element? get severityElement => throw _privateConstructorUsedError;
   @override
-  Code? get code => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: OperationOutcomeIssueCode.unknown)
+  OperationOutcomeIssueCode? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
@@ -11743,7 +11873,8 @@ class _$SubscriptionTearOff {
       Code? contentType,
       @JsonKey(name: '_contentType')
           Element? contentTypeElement,
-      Code? content,
+      @JsonKey(unknownEnumValue: SubscriptionContent.unknown)
+          SubscriptionContent? content,
       @JsonKey(name: '_content')
           Element? contentElement,
       Code? notificationUrlLocation,
@@ -11855,7 +11986,8 @@ mixin _$Subscription {
   Code? get contentType => throw _privateConstructorUsedError;
   @JsonKey(name: '_contentType')
   Element? get contentTypeElement => throw _privateConstructorUsedError;
-  Code? get content => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: SubscriptionContent.unknown)
+  SubscriptionContent? get content => throw _privateConstructorUsedError;
   @JsonKey(name: '_content')
   Element? get contentElement => throw _privateConstructorUsedError;
   Code? get notificationUrlLocation => throw _privateConstructorUsedError;
@@ -11925,7 +12057,8 @@ abstract class $SubscriptionCopyWith<$Res> {
       Code? contentType,
       @JsonKey(name: '_contentType')
           Element? contentTypeElement,
-      Code? content,
+      @JsonKey(unknownEnumValue: SubscriptionContent.unknown)
+          SubscriptionContent? content,
       @JsonKey(name: '_content')
           Element? contentElement,
       Code? notificationUrlLocation,
@@ -12144,7 +12277,7 @@ class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
       content: content == freezed
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as SubscriptionContent?,
       contentElement: contentElement == freezed
           ? _value.contentElement
           : contentElement // ignore: cast_nullable_to_non_nullable
@@ -12397,7 +12530,8 @@ abstract class _$SubscriptionCopyWith<$Res>
       Code? contentType,
       @JsonKey(name: '_contentType')
           Element? contentTypeElement,
-      Code? content,
+      @JsonKey(unknownEnumValue: SubscriptionContent.unknown)
+          SubscriptionContent? content,
       @JsonKey(name: '_content')
           Element? contentElement,
       Code? notificationUrlLocation,
@@ -12634,7 +12768,7 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
       content: content == freezed
           ? _value.content
           : content // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as SubscriptionContent?,
       contentElement: contentElement == freezed
           ? _value.contentElement
           : contentElement // ignore: cast_nullable_to_non_nullable
@@ -12710,7 +12844,8 @@ class _$_Subscription extends _Subscription {
       this.contentType,
       @JsonKey(name: '_contentType')
           this.contentTypeElement,
-      this.content,
+      @JsonKey(unknownEnumValue: SubscriptionContent.unknown)
+          this.content,
       @JsonKey(name: '_content')
           this.contentElement,
       this.notificationUrlLocation,
@@ -12806,7 +12941,8 @@ class _$_Subscription extends _Subscription {
   @JsonKey(name: '_contentType')
   final Element? contentTypeElement;
   @override
-  final Code? content;
+  @JsonKey(unknownEnumValue: SubscriptionContent.unknown)
+  final SubscriptionContent? content;
   @override
   @JsonKey(name: '_content')
   final Element? contentElement;
@@ -13019,7 +13155,8 @@ abstract class _Subscription extends Subscription {
       Code? contentType,
       @JsonKey(name: '_contentType')
           Element? contentTypeElement,
-      Code? content,
+      @JsonKey(unknownEnumValue: SubscriptionContent.unknown)
+          SubscriptionContent? content,
       @JsonKey(name: '_content')
           Element? contentElement,
       Code? notificationUrlLocation,
@@ -13117,7 +13254,8 @@ abstract class _Subscription extends Subscription {
   @JsonKey(name: '_contentType')
   Element? get contentTypeElement => throw _privateConstructorUsedError;
   @override
-  Code? get content => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: SubscriptionContent.unknown)
+  SubscriptionContent? get content => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_content')
   Element? get contentElement => throw _privateConstructorUsedError;
@@ -13648,7 +13786,8 @@ class _$SubscriptionStatusTearOff {
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: SubscriptionStatusType.unknown)
+          SubscriptionStatusType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Integer64? eventsSinceSubscriptionStart,
@@ -13715,7 +13854,8 @@ mixin _$SubscriptionStatus {
   Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: SubscriptionStatusType.unknown)
+  SubscriptionStatusType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   Integer64? get eventsSinceSubscriptionStart =>
@@ -13761,7 +13901,8 @@ abstract class $SubscriptionStatusCopyWith<$Res> {
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: SubscriptionStatusType.unknown)
+          SubscriptionStatusType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Integer64? eventsSinceSubscriptionStart,
@@ -13875,7 +14016,7 @@ class _$SubscriptionStatusCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as SubscriptionStatusType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -14035,7 +14176,8 @@ abstract class _$SubscriptionStatusCopyWith<$Res>
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: SubscriptionStatusType.unknown)
+          SubscriptionStatusType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Integer64? eventsSinceSubscriptionStart,
@@ -14160,7 +14302,7 @@ class __$SubscriptionStatusCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as SubscriptionStatusType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -14220,7 +14362,8 @@ class _$_SubscriptionStatus extends _SubscriptionStatus {
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      this.type,
+      @JsonKey(unknownEnumValue: SubscriptionStatusType.unknown)
+          this.type,
       @JsonKey(name: '_type')
           this.typeElement,
       this.eventsSinceSubscriptionStart,
@@ -14269,7 +14412,8 @@ class _$_SubscriptionStatus extends _SubscriptionStatus {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Code? type;
+  @JsonKey(unknownEnumValue: SubscriptionStatusType.unknown)
+  final SubscriptionStatusType? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -14419,7 +14563,8 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: SubscriptionStatusType.unknown)
+          SubscriptionStatusType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Integer64? eventsSinceSubscriptionStart,
@@ -14469,7 +14614,8 @@ abstract class _SubscriptionStatus extends SubscriptionStatus {
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: SubscriptionStatusType.unknown)
+  SubscriptionStatusType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -14533,7 +14679,8 @@ class _$SubscriptionTopicTearOff {
       @JsonKey(name: '_title')
           Element? titleElement,
       List<Canonical>? derivedFrom,
-      Code? status,
+      @JsonKey(unknownEnumValue: SubscriptionTopicStatus.unknown)
+          SubscriptionTopicStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -14645,7 +14792,8 @@ mixin _$SubscriptionTopic {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   List<Canonical>? get derivedFrom => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: SubscriptionTopicStatus.unknown)
+  SubscriptionTopicStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -14715,7 +14863,8 @@ abstract class $SubscriptionTopicCopyWith<$Res> {
       @JsonKey(name: '_title')
           Element? titleElement,
       List<Canonical>? derivedFrom,
-      Code? status,
+      @JsonKey(unknownEnumValue: SubscriptionTopicStatus.unknown)
+          SubscriptionTopicStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -14898,7 +15047,7 @@ class _$SubscriptionTopicCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as SubscriptionTopicStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -15208,7 +15357,8 @@ abstract class _$SubscriptionTopicCopyWith<$Res>
       @JsonKey(name: '_title')
           Element? titleElement,
       List<Canonical>? derivedFrom,
-      Code? status,
+      @JsonKey(unknownEnumValue: SubscriptionTopicStatus.unknown)
+          SubscriptionTopicStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -15410,7 +15560,7 @@ class __$SubscriptionTopicCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as SubscriptionTopicStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -15529,7 +15679,8 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
       @JsonKey(name: '_title')
           this.titleElement,
       this.derivedFrom,
-      this.status,
+      @JsonKey(unknownEnumValue: SubscriptionTopicStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -15610,7 +15761,8 @@ class _$_SubscriptionTopic extends _SubscriptionTopic {
   @override
   final List<Canonical>? derivedFrom;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: SubscriptionTopicStatus.unknown)
+  final SubscriptionTopicStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -15841,7 +15993,8 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
           @JsonKey(name: '_title')
               Element? titleElement,
           List<Canonical>? derivedFrom,
-          Code? status,
+          @JsonKey(unknownEnumValue: SubscriptionTopicStatus.unknown)
+              SubscriptionTopicStatus? status,
           @JsonKey(name: '_status')
               Element? statusElement,
           Boolean? experimental,
@@ -15924,7 +16077,8 @@ abstract class _SubscriptionTopic extends SubscriptionTopic {
   @override
   List<Canonical>? get derivedFrom => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: SubscriptionTopicStatus.unknown)
+  SubscriptionTopicStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;

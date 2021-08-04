@@ -91,7 +91,8 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
     Reference? paymentIssuer,
     Reference? request,
     Reference? requestor,
-    Code? outcome,
+    @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
+        PaymentReconciliationOutcome? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,
@@ -170,7 +171,8 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? type,
+    @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
+        PaymentReconciliationProcessNoteType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,

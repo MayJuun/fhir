@@ -559,7 +559,8 @@ _$_ClinicalUseIssue _$$_ClinicalUseIssueFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      type: _$enumDecodeNullable(_$ClinicalUseIssueTypeEnumMap, json['type'],
+          unknownValue: ClinicalUseIssueType.unknown),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -625,7 +626,7 @@ Map<String, dynamic> _$$_ClinicalUseIssueToJson(_$_ClinicalUseIssue instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('type', _$ClinicalUseIssueTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('category', instance.category?.toJson());
   writeNotNull('subject', instance.subject?.map((e) => e.toJson()).toList());
@@ -640,6 +641,15 @@ Map<String, dynamic> _$$_ClinicalUseIssueToJson(_$_ClinicalUseIssue instance) {
   writeNotNull('undesirableEffect', instance.undesirableEffect?.toJson());
   return val;
 }
+
+const _$ClinicalUseIssueTypeEnumMap = {
+  ClinicalUseIssueType.indication: 'indication',
+  ClinicalUseIssueType.contraindication: 'contraindication',
+  ClinicalUseIssueType.interaction: 'interaction',
+  ClinicalUseIssueType.undesirable_effect: 'undesirable-effect',
+  ClinicalUseIssueType.warning: 'warning',
+  ClinicalUseIssueType.unknown: 'unknown',
+};
 
 _$_ClinicalUseIssueContraindication
     _$$_ClinicalUseIssueContraindicationFromJson(Map<String, dynamic> json) =>

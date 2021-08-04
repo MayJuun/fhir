@@ -35,9 +35,9 @@ class CarePlan with Resource, _$CarePlan {
     List<Reference>? basedOn,
     List<Reference>? replaces,
     List<Reference>? partOf,
-    Code? status,
+    @JsonKey(unknownEnumValue: CarePlanStatus.unknown) CarePlanStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
-    Code? intent,
+    @JsonKey(unknownEnumValue: CarePlanIntent.unknown) CarePlanIntent? intent,
     @JsonKey(name: '_intent') Element? intentElement,
     List<CodeableConcept>? category,
     String? title,
@@ -118,7 +118,8 @@ class CarePlanPlannedActivityDetail with _$CarePlanPlannedActivityDetail {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? kind,
+    @JsonKey(unknownEnumValue: CarePlanPlannedActivityDetailKind.unknown)
+        CarePlanPlannedActivityDetailKind? kind,
     @JsonKey(name: '_kind') Element? kindElement,
     List<Canonical>? instantiatesCanonical,
     List<FhirUri>? instantiatesUri,
@@ -126,7 +127,8 @@ class CarePlanPlannedActivityDetail with _$CarePlanPlannedActivityDetail {
     CodeableConcept? code,
     List<CodeableReference>? reason,
     List<Reference>? goal,
-    Code? status,
+    @JsonKey(unknownEnumValue: CarePlanPlannedActivityDetailStatus.unknown)
+        CarePlanPlannedActivityDetailStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? statusReason,
     Boolean? doNotPerform,
@@ -186,7 +188,7 @@ class CareTeam with Resource, _$CareTeam {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    Code? status,
+    @JsonKey(unknownEnumValue: CareTeamStatus.unknown) CareTeamStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? category,
     String? name,
@@ -271,7 +273,8 @@ class Goal with Resource, _$Goal {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    Code? lifecycleStatus,
+    @JsonKey(unknownEnumValue: GoalLifecycleStatus.unknown)
+        GoalLifecycleStatus? lifecycleStatus,
     @JsonKey(name: '_lifecycleStatus') Element? lifecycleStatusElement,
     CodeableConcept? achievementStatus,
     List<CodeableConcept>? category,
@@ -1252,7 +1255,8 @@ class VisionPrescriptionLensSpecification
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required CodeableConcept product,
-    Code? eye,
+    @JsonKey(unknownEnumValue: VisionPrescriptionLensSpecificationEye.unknown)
+        VisionPrescriptionLensSpecificationEye? eye,
     @JsonKey(name: '_eye') Element? eyeElement,
     Decimal? sphere,
     @JsonKey(name: '_sphere') Element? sphereElement,
@@ -1307,7 +1311,8 @@ class VisionPrescriptionPrism with _$VisionPrescriptionPrism {
     List<FhirExtension>? modifierExtension,
     Decimal? amount,
     @JsonKey(name: '_amount') Element? amountElement,
-    Code? base,
+    @JsonKey(unknownEnumValue: VisionPrescriptionPrismBase.unknown)
+        VisionPrescriptionPrismBase? base,
     @JsonKey(name: '_base') Element? baseElement,
   }) = _VisionPrescriptionPrism;
 

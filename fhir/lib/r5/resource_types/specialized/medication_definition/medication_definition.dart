@@ -229,7 +229,8 @@ class ClinicalUseIssue with Resource, _$ClinicalUseIssue {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    Code? type,
+    @JsonKey(unknownEnumValue: ClinicalUseIssueType.unknown)
+        ClinicalUseIssueType? type,
     @JsonKey(name: '_type') Element? typeElement,
     CodeableConcept? category,
     List<Reference>? subject,

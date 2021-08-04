@@ -333,7 +333,9 @@ _$_DiagnosticReport _$$_DiagnosticReportFromJson(Map<String, dynamic> json) =>
       basedOn: (json['basedOn'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(
+          _$DiagnosticReportStatusEnumMap, json['status'],
+          unknownValue: DiagnosticReportStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -422,7 +424,7 @@ Map<String, dynamic> _$$_DiagnosticReportToJson(_$_DiagnosticReport instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$DiagnosticReportStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   val['code'] = instance.code.toJson();
@@ -452,6 +454,19 @@ Map<String, dynamic> _$$_DiagnosticReportToJson(_$_DiagnosticReport instance) {
       'presentedForm', instance.presentedForm?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$DiagnosticReportStatusEnumMap = {
+  DiagnosticReportStatus.registered: 'registered',
+  DiagnosticReportStatus.partial: 'partial',
+  DiagnosticReportStatus.preliminary: 'preliminary',
+  DiagnosticReportStatus.final_: 'final',
+  DiagnosticReportStatus.amended: 'amended',
+  DiagnosticReportStatus.corrected: 'corrected',
+  DiagnosticReportStatus.appended: 'appended',
+  DiagnosticReportStatus.cancelled: 'cancelled',
+  DiagnosticReportStatus.entered_in_error: 'entered-in-error',
+  DiagnosticReportStatus.unknown: 'unknown',
+};
 
 _$_DiagnosticReportMedia _$$_DiagnosticReportMediaFromJson(
         Map<String, dynamic> json) =>
@@ -527,7 +542,8 @@ _$_ImagingStudy _$$_ImagingStudyFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(_$ImagingStudyStatusEnumMap, json['status'],
+          unknownValue: ImagingStudyStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -617,7 +633,7 @@ Map<String, dynamic> _$$_ImagingStudyToJson(_$_ImagingStudy instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$ImagingStudyStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('modality', instance.modality?.map((e) => e.toJson()).toList());
   val['subject'] = instance.subject.toJson();
@@ -644,6 +660,14 @@ Map<String, dynamic> _$$_ImagingStudyToJson(_$_ImagingStudy instance) {
   writeNotNull('series', instance.series?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$ImagingStudyStatusEnumMap = {
+  ImagingStudyStatus.registered: 'registered',
+  ImagingStudyStatus.available: 'available',
+  ImagingStudyStatus.cancelled: 'cancelled',
+  ImagingStudyStatus.entered_in_error: 'entered-in-error',
+  ImagingStudyStatus.unknown: 'unknown',
+};
 
 _$_ImagingStudyProcedure _$$_ImagingStudyProcedureFromJson(
         Map<String, dynamic> json) =>
@@ -902,7 +926,8 @@ _$_MolecularSequence _$$_MolecularSequenceFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      type: _$enumDecodeNullable(_$MolecularSequenceTypeEnumMap, json['type'],
+          unknownValue: MolecularSequenceType.unknown),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -989,7 +1014,7 @@ Map<String, dynamic> _$$_MolecularSequenceToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('type', _$MolecularSequenceTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('coordinateSystem', instance.coordinateSystem?.toJson());
   writeNotNull('_coordinateSystem', instance.coordinateSystemElement?.toJson());
@@ -1013,6 +1038,13 @@ Map<String, dynamic> _$$_MolecularSequenceToJson(
   return val;
 }
 
+const _$MolecularSequenceTypeEnumMap = {
+  MolecularSequenceType.aa: 'aa',
+  MolecularSequenceType.dna: 'dna',
+  MolecularSequenceType.rna: 'rna',
+  MolecularSequenceType.unknown: 'unknown',
+};
+
 _$_MolecularSequenceReferenceSeq _$$_MolecularSequenceReferenceSeqFromJson(
         Map<String, dynamic> json) =>
     _$_MolecularSequenceReferenceSeq(
@@ -1031,9 +1063,10 @@ _$_MolecularSequenceReferenceSeq _$$_MolecularSequenceReferenceSeqFromJson(
       genomeBuildElement: json['_genomeBuild'] == null
           ? null
           : Element.fromJson(json['_genomeBuild'] as Map<String, dynamic>),
-      orientation: json['orientation'] == null
-          ? null
-          : Code.fromJson(json['orientation']),
+      orientation: _$enumDecodeNullable(
+          _$MolecularSequenceReferenceSeqOrientationEnumMap,
+          json['orientation'],
+          unknownValue: MolecularSequenceReferenceSeqOrientation.unknown),
       orientationElement: json['_orientation'] == null
           ? null
           : Element.fromJson(json['_orientation'] as Map<String, dynamic>),
@@ -1050,7 +1083,9 @@ _$_MolecularSequenceReferenceSeq _$$_MolecularSequenceReferenceSeqFromJson(
           ? null
           : Element.fromJson(
               json['_referenceSeqString'] as Map<String, dynamic>),
-      strand: json['strand'] == null ? null : Code.fromJson(json['strand']),
+      strand: _$enumDecodeNullable(
+          _$MolecularSequenceReferenceSeqStrandEnumMap, json['strand'],
+          unknownValue: MolecularSequenceReferenceSeqStrand.unknown),
       strandElement: json['_strand'] == null
           ? null
           : Element.fromJson(json['_strand'] as Map<String, dynamic>),
@@ -1086,14 +1121,16 @@ Map<String, dynamic> _$$_MolecularSequenceReferenceSeqToJson(
   writeNotNull('chromosome', instance.chromosome?.toJson());
   writeNotNull('genomeBuild', instance.genomeBuild);
   writeNotNull('_genomeBuild', instance.genomeBuildElement?.toJson());
-  writeNotNull('orientation', instance.orientation?.toJson());
+  writeNotNull('orientation',
+      _$MolecularSequenceReferenceSeqOrientationEnumMap[instance.orientation]);
   writeNotNull('_orientation', instance.orientationElement?.toJson());
   writeNotNull('referenceSeqId', instance.referenceSeqId?.toJson());
   writeNotNull('referenceSeqPointer', instance.referenceSeqPointer?.toJson());
   writeNotNull('referenceSeqString', instance.referenceSeqString);
   writeNotNull(
       '_referenceSeqString', instance.referenceSeqStringElement?.toJson());
-  writeNotNull('strand', instance.strand?.toJson());
+  writeNotNull(
+      'strand', _$MolecularSequenceReferenceSeqStrandEnumMap[instance.strand]);
   writeNotNull('_strand', instance.strandElement?.toJson());
   writeNotNull('windowStart', instance.windowStart?.toJson());
   writeNotNull('_windowStart', instance.windowStartElement?.toJson());
@@ -1101,6 +1138,18 @@ Map<String, dynamic> _$$_MolecularSequenceReferenceSeqToJson(
   writeNotNull('_windowEnd', instance.windowEndElement?.toJson());
   return val;
 }
+
+const _$MolecularSequenceReferenceSeqOrientationEnumMap = {
+  MolecularSequenceReferenceSeqOrientation.sense: 'sense',
+  MolecularSequenceReferenceSeqOrientation.antisense: 'antisense',
+  MolecularSequenceReferenceSeqOrientation.unknown: 'unknown',
+};
+
+const _$MolecularSequenceReferenceSeqStrandEnumMap = {
+  MolecularSequenceReferenceSeqStrand.watson: 'watson',
+  MolecularSequenceReferenceSeqStrand.crick: 'crick',
+  MolecularSequenceReferenceSeqStrand.unknown: 'unknown',
+};
 
 _$_MolecularSequenceVariant _$$_MolecularSequenceVariantFromJson(
         Map<String, dynamic> json) =>
@@ -1176,7 +1225,9 @@ _$_MolecularSequenceQuality _$$_MolecularSequenceQualityFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      type: _$enumDecodeNullable(
+          _$MolecularSequenceQualityTypeEnumMap, json['type'],
+          unknownValue: MolecularSequenceQualityType.unknown),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -1256,7 +1307,7 @@ Map<String, dynamic> _$$_MolecularSequenceQualityToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('type', _$MolecularSequenceQualityTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('standardSequence', instance.standardSequence?.toJson());
   writeNotNull('start', instance.start?.toJson());
@@ -1284,6 +1335,12 @@ Map<String, dynamic> _$$_MolecularSequenceQualityToJson(
   writeNotNull('roc', instance.roc?.toJson());
   return val;
 }
+
+const _$MolecularSequenceQualityTypeEnumMap = {
+  MolecularSequenceQualityType.indel: 'indel',
+  MolecularSequenceQualityType.snp: 'snp',
+  MolecularSequenceQualityType.unknown: 'unknown',
+};
 
 _$_MolecularSequenceRoc _$$_MolecularSequenceRocFromJson(
         Map<String, dynamic> json) =>
@@ -1390,7 +1447,9 @@ _$_MolecularSequenceRepository _$$_MolecularSequenceRepositoryFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: json['type'] == null ? null : Code.fromJson(json['type']),
+      type: _$enumDecodeNullable(
+          _$MolecularSequenceRepositoryTypeEnumMap, json['type'],
+          unknownValue: MolecularSequenceRepositoryType.unknown),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -1431,7 +1490,7 @@ Map<String, dynamic> _$$_MolecularSequenceRepositoryToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('type', _$MolecularSequenceRepositoryTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('_url', instance.urlElement?.toJson());
@@ -1445,6 +1504,15 @@ Map<String, dynamic> _$$_MolecularSequenceRepositoryToJson(
   writeNotNull('_readsetId', instance.readsetIdElement?.toJson());
   return val;
 }
+
+const _$MolecularSequenceRepositoryTypeEnumMap = {
+  MolecularSequenceRepositoryType.directlink: 'directlink',
+  MolecularSequenceRepositoryType.openapi: 'openapi',
+  MolecularSequenceRepositoryType.login: 'login',
+  MolecularSequenceRepositoryType.oauth: 'oauth',
+  MolecularSequenceRepositoryType.other: 'other',
+  MolecularSequenceRepositoryType.unknown: 'unknown',
+};
 
 _$_MolecularSequenceStructureVariant
     _$$_MolecularSequenceStructureVariantFromJson(Map<String, dynamic> json) =>
@@ -1641,7 +1709,8 @@ _$_Observation _$$_ObservationFromJson(Map<String, dynamic> json) =>
       partOf: (json['partOf'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(_$ObservationStatusEnumMap, json['status'],
+          unknownValue: ObservationStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1806,7 +1875,7 @@ Map<String, dynamic> _$$_ObservationToJson(_$_Observation instance) {
       'instantiatesReference', instance.instantiatesReference?.toJson());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
   writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$ObservationStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   val['code'] = instance.code.toJson();
@@ -1859,6 +1928,17 @@ Map<String, dynamic> _$$_ObservationToJson(_$_Observation instance) {
       'component', instance.component?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$ObservationStatusEnumMap = {
+  ObservationStatus.registered: 'registered',
+  ObservationStatus.preliminary: 'preliminary',
+  ObservationStatus.final_: 'final',
+  ObservationStatus.amended: 'amended',
+  ObservationStatus.corrected: 'corrected',
+  ObservationStatus.cancelled: 'cancelled',
+  ObservationStatus.entered_in_error: 'entered-in-error',
+  ObservationStatus.unknown: 'unknown',
+};
 
 _$_ObservationReferenceRange _$$_ObservationReferenceRangeFromJson(
         Map<String, dynamic> json) =>
@@ -2079,7 +2159,9 @@ _$_QuestionnaireResponse _$$_QuestionnaireResponseFromJson(
       questionnaire: json['questionnaire'] == null
           ? null
           : Canonical.fromJson(json['questionnaire']),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(
+          _$QuestionnaireResponseStatusEnumMap, json['status'],
+          unknownValue: QuestionnaireResponseStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -2136,7 +2218,7 @@ Map<String, dynamic> _$$_QuestionnaireResponseToJson(
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
   writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
   writeNotNull('questionnaire', instance.questionnaire?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$QuestionnaireResponseStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
@@ -2147,6 +2229,15 @@ Map<String, dynamic> _$$_QuestionnaireResponseToJson(
   writeNotNull('item', instance.item?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$QuestionnaireResponseStatusEnumMap = {
+  QuestionnaireResponseStatus.in_progress: 'in-progress',
+  QuestionnaireResponseStatus.completed: 'completed',
+  QuestionnaireResponseStatus.amended: 'amended',
+  QuestionnaireResponseStatus.entered_in_error: 'entered-in-error',
+  QuestionnaireResponseStatus.stopped: 'stopped',
+  QuestionnaireResponseStatus.unknown: 'unknown',
+};
 
 _$_QuestionnaireResponseItem _$$_QuestionnaireResponseItemFromJson(
         Map<String, dynamic> json) =>
@@ -2358,7 +2449,8 @@ _$_Specimen _$$_SpecimenFromJson(Map<String, dynamic> json) => _$_Specimen(
           ? null
           : Identifier.fromJson(
               json['accessionIdentifier'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(_$SpecimenStatusEnumMap, json['status'],
+          unknownValue: SpecimenStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -2425,7 +2517,7 @@ Map<String, dynamic> _$$_SpecimenToJson(_$_Specimen instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('accessionIdentifier', instance.accessionIdentifier?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$SpecimenStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
@@ -2443,6 +2535,14 @@ Map<String, dynamic> _$$_SpecimenToJson(_$_Specimen instance) {
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$SpecimenStatusEnumMap = {
+  SpecimenStatus.available: 'available',
+  SpecimenStatus.unavailable: 'unavailable',
+  SpecimenStatus.unsatisfactory: 'unsatisfactory',
+  SpecimenStatus.entered_in_error: 'entered-in-error',
+  SpecimenStatus.unknown: 'unknown',
+};
 
 _$_SpecimenCollection _$$_SpecimenCollectionFromJson(
         Map<String, dynamic> json) =>

@@ -401,7 +401,8 @@ class CoverageEligibilityResponse with Resource, _$CoverageEligibilityResponse {
     @JsonKey(name: '_created') Element? createdElement,
     Reference? requestor,
     required Reference request,
-    Code? outcome,
+    @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
+        CoverageEligibilityResponseOutcome? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,
@@ -660,7 +661,8 @@ class EnrollmentResponse with Resource, _$EnrollmentResponse {
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Reference? request,
-    Code? outcome,
+    @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
+        EnrollmentResponseOutcome? outcome,
     @JsonKey(name: '_outcome') Element? outcomeElement,
     String? disposition,
     @JsonKey(name: '_disposition') Element? dispositionElement,

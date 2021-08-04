@@ -57,7 +57,8 @@ _$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(_$EvidenceStatusEnumMap, json['status'],
+          unknownValue: EvidenceStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -208,7 +209,7 @@ Map<String, dynamic> _$$_EvidenceToJson(_$_Evidence instance) {
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('title', instance.title);
   writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$EvidenceStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
@@ -447,6 +448,13 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
+const _$EvidenceStatusEnumMap = {
+  EvidenceStatus.draft: 'draft',
+  EvidenceStatus.active: 'active',
+  EvidenceStatus.retired: 'retired',
+  EvidenceStatus.unknown: 'unknown',
+};
+
 _$_EvidenceVariableDefinition _$$_EvidenceVariableDefinitionFromJson(
         Map<String, dynamic> json) =>
     _$_EvidenceVariableDefinition(
@@ -615,7 +623,9 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(
+          _$EvidenceVariableStatusEnumMap, json['status'],
+          unknownValue: EvidenceVariableStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -707,9 +717,10 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
       actualElement: json['_actual'] == null
           ? null
           : Element.fromJson(json['_actual'] as Map<String, dynamic>),
-      characteristicCombination: json['characteristicCombination'] == null
-          ? null
-          : Code.fromJson(json['characteristicCombination']),
+      characteristicCombination: _$enumDecodeNullable(
+          _$EvidenceVariableCharacteristicCombinationEnumMap,
+          json['characteristicCombination'],
+          unknownValue: EvidenceVariableCharacteristicCombination.unknown),
       characteristicCombinationElement:
           json['_characteristicCombination'] == null
               ? null
@@ -719,8 +730,9 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
           ?.map((e) => EvidenceVariableCharacteristic.fromJson(
               e as Map<String, dynamic>))
           .toList(),
-      handling:
-          json['handling'] == null ? null : Code.fromJson(json['handling']),
+      handling: _$enumDecodeNullable(
+          _$EvidenceVariableHandlingEnumMap, json['handling'],
+          unknownValue: EvidenceVariableHandling.unknown),
       handlingElement: json['_handling'] == null
           ? null
           : Element.fromJson(json['_handling'] as Map<String, dynamic>),
@@ -764,7 +776,7 @@ Map<String, dynamic> _$$_EvidenceVariableToJson(_$_EvidenceVariable instance) {
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('title', instance.title);
   writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$EvidenceVariableStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
@@ -802,17 +814,41 @@ Map<String, dynamic> _$$_EvidenceVariableToJson(_$_EvidenceVariable instance) {
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   writeNotNull('actual', instance.actual?.toJson());
   writeNotNull('_actual', instance.actualElement?.toJson());
-  writeNotNull('characteristicCombination',
-      instance.characteristicCombination?.toJson());
+  writeNotNull(
+      'characteristicCombination',
+      _$EvidenceVariableCharacteristicCombinationEnumMap[
+          instance.characteristicCombination]);
   writeNotNull('_characteristicCombination',
       instance.characteristicCombinationElement?.toJson());
   writeNotNull('characteristic',
       instance.characteristic?.map((e) => e.toJson()).toList());
-  writeNotNull('handling', instance.handling?.toJson());
+  writeNotNull(
+      'handling', _$EvidenceVariableHandlingEnumMap[instance.handling]);
   writeNotNull('_handling', instance.handlingElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$EvidenceVariableStatusEnumMap = {
+  EvidenceVariableStatus.draft: 'draft',
+  EvidenceVariableStatus.active: 'active',
+  EvidenceVariableStatus.retired: 'retired',
+  EvidenceVariableStatus.unknown: 'unknown',
+};
+
+const _$EvidenceVariableCharacteristicCombinationEnumMap = {
+  EvidenceVariableCharacteristicCombination.intersection: 'intersection',
+  EvidenceVariableCharacteristicCombination.union: 'union',
+  EvidenceVariableCharacteristicCombination.unknown: 'unknown',
+};
+
+const _$EvidenceVariableHandlingEnumMap = {
+  EvidenceVariableHandling.continuous: 'continuous',
+  EvidenceVariableHandling.dichotomous: 'dichotomous',
+  EvidenceVariableHandling.ordinal: 'ordinal',
+  EvidenceVariableHandling.polychotomous: 'polychotomous',
+  EvidenceVariableHandling.unknown: 'unknown',
+};
 
 _$_EvidenceVariableCharacteristic _$$_EvidenceVariableCharacteristicFromJson(
         Map<String, dynamic> json) =>
@@ -862,9 +898,10 @@ _$_EvidenceVariableCharacteristic _$$_EvidenceVariableCharacteristicFromJson(
           ? null
           : EvidenceVariableTimeFromStart.fromJson(
               json['timeFromStart'] as Map<String, dynamic>),
-      groupMeasure: json['groupMeasure'] == null
-          ? null
-          : Code.fromJson(json['groupMeasure']),
+      groupMeasure: _$enumDecodeNullable(
+          _$EvidenceVariableCharacteristicGroupMeasureEnumMap,
+          json['groupMeasure'],
+          unknownValue: EvidenceVariableCharacteristicGroupMeasure.unknown),
       groupMeasureElement: json['_groupMeasure'] == null
           ? null
           : Element.fromJson(json['_groupMeasure'] as Map<String, dynamic>),
@@ -899,10 +936,24 @@ Map<String, dynamic> _$$_EvidenceVariableCharacteristicToJson(
   writeNotNull('exclude', instance.exclude?.toJson());
   writeNotNull('_exclude', instance.excludeElement?.toJson());
   writeNotNull('timeFromStart', instance.timeFromStart?.toJson());
-  writeNotNull('groupMeasure', instance.groupMeasure?.toJson());
+  writeNotNull(
+      'groupMeasure',
+      _$EvidenceVariableCharacteristicGroupMeasureEnumMap[
+          instance.groupMeasure]);
   writeNotNull('_groupMeasure', instance.groupMeasureElement?.toJson());
   return val;
 }
+
+const _$EvidenceVariableCharacteristicGroupMeasureEnumMap = {
+  EvidenceVariableCharacteristicGroupMeasure.mean: 'mean',
+  EvidenceVariableCharacteristicGroupMeasure.median: 'median',
+  EvidenceVariableCharacteristicGroupMeasure.mean_of_mean: 'mean-of-mean',
+  EvidenceVariableCharacteristicGroupMeasure.mean_of_median: 'mean-of-median',
+  EvidenceVariableCharacteristicGroupMeasure.median_of_mean: 'median-of-mean',
+  EvidenceVariableCharacteristicGroupMeasure.median_of_median:
+      'median-of-median',
+  EvidenceVariableCharacteristicGroupMeasure.unknown: 'unknown',
+};
 
 _$_EvidenceVariableTimeFromStart _$$_EvidenceVariableTimeFromStartFromJson(
         Map<String, dynamic> json) =>

@@ -291,7 +291,8 @@ _$_Citation _$$_CitationFromJson(Map<String, dynamic> json) => _$_Citation(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(_$CitationStatusEnumMap, json['status'],
+          unknownValue: CitationStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -427,7 +428,7 @@ Map<String, dynamic> _$$_CitationToJson(_$_Citation instance) {
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('title', instance.title);
   writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$CitationStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
@@ -659,6 +660,13 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ValueSet: 'ValueSet',
   R5ResourceType.VerificationResult: 'VerificationResult',
   R5ResourceType.VisionPrescription: 'VisionPrescription',
+};
+
+const _$CitationStatusEnumMap = {
+  CitationStatus.draft: 'draft',
+  CitationStatus.active: 'active',
+  CitationStatus.retired: 'retired',
+  CitationStatus.unknown: 'unknown',
 };
 
 _$_CitationClassification _$$_CitationClassificationFromJson(
@@ -1917,7 +1925,9 @@ _$_EvidenceReport _$$_EvidenceReportFromJson(Map<String, dynamic> json) =>
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(
+          _$EvidenceReportStatusEnumMap, json['status'],
+          unknownValue: EvidenceReportStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -2058,7 +2068,7 @@ Map<String, dynamic> _$$_EvidenceReportToJson(_$_EvidenceReport instance) {
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('title', instance.title);
   writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$EvidenceReportStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
@@ -2102,6 +2112,13 @@ Map<String, dynamic> _$$_EvidenceReportToJson(_$_EvidenceReport instance) {
   writeNotNull('section', instance.section?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$EvidenceReportStatusEnumMap = {
+  EvidenceReportStatus.draft: 'draft',
+  EvidenceReportStatus.active: 'active',
+  EvidenceReportStatus.retired: 'retired',
+  EvidenceReportStatus.unknown: 'unknown',
+};
 
 _$_EvidenceReportSubject _$$_EvidenceReportSubjectFromJson(
         Map<String, dynamic> json) =>
@@ -2221,7 +2238,9 @@ _$_EvidenceReportRelatesTo _$$_EvidenceReportRelatesToFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
+      code: _$enumDecodeNullable(
+          _$EvidenceReportRelatesToCodeEnumMap, json['code'],
+          unknownValue: EvidenceReportRelatesToCode.unknown),
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
@@ -2249,12 +2268,20 @@ Map<String, dynamic> _$$_EvidenceReportRelatesToToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('code', instance.code?.toJson());
+  writeNotNull('code', _$EvidenceReportRelatesToCodeEnumMap[instance.code]);
   writeNotNull('_code', instance.codeElement?.toJson());
   writeNotNull('targetIdentifier', instance.targetIdentifier?.toJson());
   writeNotNull('targetReference', instance.targetReference?.toJson());
   return val;
 }
+
+const _$EvidenceReportRelatesToCodeEnumMap = {
+  EvidenceReportRelatesToCode.replaces: 'replaces',
+  EvidenceReportRelatesToCode.amends: 'amends',
+  EvidenceReportRelatesToCode.appends: 'appends',
+  EvidenceReportRelatesToCode.transforms: 'transforms',
+  EvidenceReportRelatesToCode.unknown: 'unknown',
+};
 
 _$_EvidenceReportSection _$$_EvidenceReportSectionFromJson(
         Map<String, dynamic> json) =>

@@ -41,7 +41,8 @@ _$_Encounter _$$_EncounterFromJson(Map<String, dynamic> json) => _$_Encounter(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(_$EncounterStatusEnumMap, json['status'],
+          unknownValue: EncounterStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -139,7 +140,7 @@ Map<String, dynamic> _$$_EncounterToJson(_$_Encounter instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$EncounterStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull(
       'statusHistory', instance.statusHistory?.map((e) => e.toJson()).toList());
@@ -360,6 +361,16 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
+const _$EncounterStatusEnumMap = {
+  EncounterStatus.planned: 'planned',
+  EncounterStatus.in_progress: 'in-progress',
+  EncounterStatus.onhold: 'onhold',
+  EncounterStatus.completed: 'completed',
+  EncounterStatus.cancelled: 'cancelled',
+  EncounterStatus.entered_in_error: 'entered-in-error',
+  EncounterStatus.unknown: 'unknown',
+};
+
 _$_EncounterStatusHistory _$$_EncounterStatusHistoryFromJson(
         Map<String, dynamic> json) =>
     _$_EncounterStatusHistory(
@@ -370,7 +381,9 @@ _$_EncounterStatusHistory _$$_EncounterStatusHistoryFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(
+          _$EncounterStatusHistoryStatusEnumMap, json['status'],
+          unknownValue: EncounterStatusHistoryStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -392,11 +405,22 @@ Map<String, dynamic> _$$_EncounterStatusHistoryToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull(
+      'status', _$EncounterStatusHistoryStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   val['period'] = instance.period.toJson();
   return val;
 }
+
+const _$EncounterStatusHistoryStatusEnumMap = {
+  EncounterStatusHistoryStatus.planned: 'planned',
+  EncounterStatusHistoryStatus.in_progress: 'in-progress',
+  EncounterStatusHistoryStatus.onhold: 'onhold',
+  EncounterStatusHistoryStatus.completed: 'completed',
+  EncounterStatusHistoryStatus.cancelled: 'cancelled',
+  EncounterStatusHistoryStatus.entered_in_error: 'entered-in-error',
+  EncounterStatusHistoryStatus.unknown: 'unknown',
+};
 
 _$_EncounterClassHistory _$$_EncounterClassHistoryFromJson(
         Map<String, dynamic> json) =>
@@ -600,7 +624,9 @@ _$_EncounterLocation _$$_EncounterLocationFromJson(Map<String, dynamic> json) =>
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       location: Reference.fromJson(json['location'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(
+          _$EncounterLocationStatusEnumMap, json['status'],
+          unknownValue: EncounterLocationStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -629,12 +655,20 @@ Map<String, dynamic> _$$_EncounterLocationToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['location'] = instance.location.toJson();
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$EncounterLocationStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('physicalType', instance.physicalType?.toJson());
   writeNotNull('period', instance.period?.toJson());
   return val;
 }
+
+const _$EncounterLocationStatusEnumMap = {
+  EncounterLocationStatus.planned: 'planned',
+  EncounterLocationStatus.active: 'active',
+  EncounterLocationStatus.reserved: 'reserved',
+  EncounterLocationStatus.completed: 'completed',
+  EncounterLocationStatus.unknown: 'unknown',
+};
 
 _$_EpisodeOfCare _$$_EpisodeOfCareFromJson(Map<String, dynamic> json) =>
     _$_EpisodeOfCare(
@@ -672,7 +706,8 @@ _$_EpisodeOfCare _$$_EpisodeOfCareFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(_$EpisodeOfCareStatusEnumMap, json['status'],
+          unknownValue: EpisodeOfCareStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -735,7 +770,7 @@ Map<String, dynamic> _$$_EpisodeOfCareToJson(_$_EpisodeOfCare instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$EpisodeOfCareStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull(
       'statusHistory', instance.statusHistory?.map((e) => e.toJson()).toList());
@@ -753,6 +788,17 @@ Map<String, dynamic> _$$_EpisodeOfCareToJson(_$_EpisodeOfCare instance) {
   return val;
 }
 
+const _$EpisodeOfCareStatusEnumMap = {
+  EpisodeOfCareStatus.planned: 'planned',
+  EpisodeOfCareStatus.waitlist: 'waitlist',
+  EpisodeOfCareStatus.active: 'active',
+  EpisodeOfCareStatus.onhold: 'onhold',
+  EpisodeOfCareStatus.finished: 'finished',
+  EpisodeOfCareStatus.cancelled: 'cancelled',
+  EpisodeOfCareStatus.entered_in_error: 'entered-in-error',
+  EpisodeOfCareStatus.unknown: 'unknown',
+};
+
 _$_EpisodeOfCareStatusHistory _$$_EpisodeOfCareStatusHistoryFromJson(
         Map<String, dynamic> json) =>
     _$_EpisodeOfCareStatusHistory(
@@ -763,7 +809,9 @@ _$_EpisodeOfCareStatusHistory _$$_EpisodeOfCareStatusHistoryFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(
+          _$EpisodeOfCareStatusHistoryStatusEnumMap, json['status'],
+          unknownValue: EpisodeOfCareStatusHistoryStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -785,11 +833,23 @@ Map<String, dynamic> _$$_EpisodeOfCareStatusHistoryToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull(
+      'status', _$EpisodeOfCareStatusHistoryStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   val['period'] = instance.period.toJson();
   return val;
 }
+
+const _$EpisodeOfCareStatusHistoryStatusEnumMap = {
+  EpisodeOfCareStatusHistoryStatus.planned: 'planned',
+  EpisodeOfCareStatusHistoryStatus.waitlist: 'waitlist',
+  EpisodeOfCareStatusHistoryStatus.active: 'active',
+  EpisodeOfCareStatusHistoryStatus.onhold: 'onhold',
+  EpisodeOfCareStatusHistoryStatus.finished: 'finished',
+  EpisodeOfCareStatusHistoryStatus.cancelled: 'cancelled',
+  EpisodeOfCareStatusHistoryStatus.entered_in_error: 'entered-in-error',
+  EpisodeOfCareStatusHistoryStatus.unknown: 'unknown',
+};
 
 _$_EpisodeOfCareDiagnosis _$$_EpisodeOfCareDiagnosisFromJson(
         Map<String, dynamic> json) =>
@@ -868,7 +928,8 @@ _$_Flag _$$_FlagFromJson(Map<String, dynamic> json) => _$_Flag(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(_$FlagStatusEnumMap, json['status'],
+          unknownValue: FlagStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -914,7 +975,7 @@ Map<String, dynamic> _$$_FlagToJson(_$_Flag instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$FlagStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   val['code'] = instance.code.toJson();
@@ -924,6 +985,13 @@ Map<String, dynamic> _$$_FlagToJson(_$_Flag instance) {
   writeNotNull('author', instance.author?.toJson());
   return val;
 }
+
+const _$FlagStatusEnumMap = {
+  FlagStatus.active: 'active',
+  FlagStatus.inactive: 'inactive',
+  FlagStatus.entered_in_error: 'entered-in-error',
+  FlagStatus.unknown: 'unknown',
+};
 
 _$_Library _$$_LibraryFromJson(Map<String, dynamic> json) => _$_Library(
       resourceType: _$enumDecodeNullable(
@@ -976,7 +1044,8 @@ _$_Library _$$_LibraryFromJson(Map<String, dynamic> json) => _$_Library(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(_$LibraryStatusEnumMap, json['status'],
+          unknownValue: LibraryStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1115,7 +1184,7 @@ Map<String, dynamic> _$$_LibraryToJson(_$_Library instance) {
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('title', instance.title);
   writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$LibraryStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
@@ -1161,6 +1230,13 @@ Map<String, dynamic> _$$_LibraryToJson(_$_Library instance) {
   writeNotNull('content', instance.content?.map((e) => e.toJson()).toList());
   return val;
 }
+
+const _$LibraryStatusEnumMap = {
+  LibraryStatus.draft: 'draft',
+  LibraryStatus.active: 'active',
+  LibraryStatus.retired: 'retired',
+  LibraryStatus.unknown: 'unknown',
+};
 
 _$_List_ _$$_List_FromJson(Map<String, dynamic> json) => _$_List_(
       resourceType: _$enumDecodeNullable(

@@ -31,7 +31,8 @@ class AdverseEvent with Resource, _$AdverseEvent {
     List<Identifier>? identifier,
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
-    Code? actuality,
+    @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
+        AdverseEventActuality? actuality,
     @JsonKey(name: '_actuality') Element? actualityElement,
     List<CodeableConcept>? category,
     CodeableConcept? code,
@@ -312,11 +313,13 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
     List<Identifier>? identifier,
     CodeableConcept? clinicalStatus,
     CodeableConcept? verificationStatus,
-    Code? type,
+    @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
+        AllergyIntoleranceType? type,
     @JsonKey(name: '_type') Element? typeElement,
     List<Code>? category,
     @JsonKey(name: '_category') List<Element>? categoryElement,
-    Code? criticality,
+    @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+        AllergyIntoleranceCriticality? criticality,
     @JsonKey(name: '_criticality') Element? criticalityElement,
     CodeableConcept? code,
     required Reference patient,
@@ -371,7 +374,8 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
     @JsonKey(name: '_description') Element? descriptionElement,
     FhirDateTime? onset,
     @JsonKey(name: '_onset') Element? onsetElement,
-    Code? severity,
+    @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
+        AllergyIntoleranceReactionSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     CodeableConcept? exposureRoute,
     List<Annotation>? note,
@@ -643,7 +647,8 @@ class DetectedIssue with Resource, _$DetectedIssue {
     Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? code,
-    Code? severity,
+    @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
+        DetectedIssueSeverity? severity,
     @JsonKey(name: '_severity') Element? severityElement,
     Reference? patient,
     FhirDateTime? identifiedDateTime,
@@ -762,7 +767,8 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
     List<Canonical>? instantiatesCanonical,
     List<FhirUri>? instantiatesUri,
     @JsonKey(name: '_instantiatesUri') List<Element>? instantiatesUriElement,
-    Code? status,
+    @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
+        FamilyMemberHistoryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? dataAbsentReason,
     required Reference patient,

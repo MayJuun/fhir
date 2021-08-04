@@ -74,7 +74,8 @@ _$_ResearchStudy _$$_ResearchStudyFromJson(Map<String, dynamic> json) =>
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(_$ResearchStudyStatusEnumMap, json['status'],
+          unknownValue: ResearchStudyStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -217,7 +218,7 @@ Map<String, dynamic> _$$_ResearchStudyToJson(_$_ResearchStudy instance) {
       instance.relatedArtifact?.map((e) => e.toJson()).toList());
   writeNotNull('date', instance.date?.toJson());
   writeNotNull('_date', instance.dateElement?.toJson());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$ResearchStudyStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('primaryPurposeType', instance.primaryPurposeType?.toJson());
   writeNotNull('phase', instance.phase?.toJson());
@@ -448,6 +449,24 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ValueSet: 'ValueSet',
   R5ResourceType.VerificationResult: 'VerificationResult',
   R5ResourceType.VisionPrescription: 'VisionPrescription',
+};
+
+const _$ResearchStudyStatusEnumMap = {
+  ResearchStudyStatus.active: 'active',
+  ResearchStudyStatus.administratively_completed: 'administratively-completed',
+  ResearchStudyStatus.approved: 'approved',
+  ResearchStudyStatus.closed_to_accrual: 'closed-to-accrual',
+  ResearchStudyStatus.closed_to_accrual_and_intervention:
+      'closed-to-accrual-and-intervention',
+  ResearchStudyStatus.completed: 'completed',
+  ResearchStudyStatus.disapproved: 'disapproved',
+  ResearchStudyStatus.in_review: 'in-review',
+  ResearchStudyStatus.temporarily_closed_to_accrual:
+      'temporarily-closed-to-accrual',
+  ResearchStudyStatus.temporarily_closed_to_accrual_and_intervention:
+      'temporarily-closed-to-accrual-and-intervention',
+  ResearchStudyStatus.withdrawn: 'withdrawn',
+  ResearchStudyStatus.unknown: 'unknown',
 };
 
 _$_ResearchStudyLabel _$$_ResearchStudyLabelFromJson(
@@ -963,7 +982,9 @@ _$_ResearchSubject _$$_ResearchSubjectFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      status: _$enumDecodeNullable(
+          _$ResearchSubjectStatusEnumMap, json['status'],
+          unknownValue: ResearchSubjectStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1015,7 +1036,7 @@ Map<String, dynamic> _$$_ResearchSubjectToJson(_$_ResearchSubject instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('status', _$ResearchSubjectStatusEnumMap[instance.status]);
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('progress', instance.progress?.map((e) => e.toJson()).toList());
   writeNotNull('period', instance.period?.toJson());
@@ -1028,6 +1049,23 @@ Map<String, dynamic> _$$_ResearchSubjectToJson(_$_ResearchSubject instance) {
   writeNotNull('consent', instance.consent?.toJson());
   return val;
 }
+
+const _$ResearchSubjectStatusEnumMap = {
+  ResearchSubjectStatus.candidate: 'candidate',
+  ResearchSubjectStatus.eligible: 'eligible',
+  ResearchSubjectStatus.follow_up: 'follow-up',
+  ResearchSubjectStatus.ineligible: 'ineligible',
+  ResearchSubjectStatus.not_registered: 'not-registered',
+  ResearchSubjectStatus.off_study: 'off-study',
+  ResearchSubjectStatus.on_study: 'on-study',
+  ResearchSubjectStatus.on_study_intervention: 'on-study-intervention',
+  ResearchSubjectStatus.on_study_observation: 'on-study-observation',
+  ResearchSubjectStatus.pending_on_study: 'pending-on-study',
+  ResearchSubjectStatus.potential_candidate: 'potential-candidate',
+  ResearchSubjectStatus.screening: 'screening',
+  ResearchSubjectStatus.withdrawn: 'withdrawn',
+  ResearchSubjectStatus.unknown: 'unknown',
+};
 
 _$_ResearchSubjectProgress _$$_ResearchSubjectProgressFromJson(
         Map<String, dynamic> json) =>

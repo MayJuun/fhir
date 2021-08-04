@@ -40,7 +40,8 @@ class _$GroupTearOff {
       Boolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: GroupType.unknown)
+          GroupType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Boolean? actual,
@@ -116,7 +117,8 @@ mixin _$Group {
   Boolean? get active => throw _privateConstructorUsedError;
   @JsonKey(name: '_active')
   Element? get activeElement => throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: GroupType.unknown)
+  GroupType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   Boolean? get actual => throw _privateConstructorUsedError;
@@ -163,7 +165,8 @@ abstract class $GroupCopyWith<$Res> {
       Boolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: GroupType.unknown)
+          GroupType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Boolean? actual,
@@ -290,7 +293,7 @@ class _$GroupCopyWithImpl<$Res> implements $GroupCopyWith<$Res> {
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as GroupType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -485,7 +488,8 @@ abstract class _$GroupCopyWith<$Res> implements $GroupCopyWith<$Res> {
       Boolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: GroupType.unknown)
+          GroupType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Boolean? actual,
@@ -624,7 +628,7 @@ class __$GroupCopyWithImpl<$Res> extends _$GroupCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as GroupType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -696,7 +700,8 @@ class _$_Group extends _Group {
       this.active,
       @JsonKey(name: '_active')
           this.activeElement,
-      this.type,
+      @JsonKey(unknownEnumValue: GroupType.unknown)
+          this.type,
       @JsonKey(name: '_type')
           this.typeElement,
       this.actual,
@@ -751,7 +756,8 @@ class _$_Group extends _Group {
   @JsonKey(name: '_active')
   final Element? activeElement;
   @override
-  final Code? type;
+  @JsonKey(unknownEnumValue: GroupType.unknown)
+  final GroupType? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -921,7 +927,8 @@ abstract class _Group extends Group {
       Boolean? active,
       @JsonKey(name: '_active')
           Element? activeElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: GroupType.unknown)
+          GroupType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Boolean? actual,
@@ -976,7 +983,8 @@ abstract class _Group extends Group {
   @JsonKey(name: '_active')
   Element? get activeElement => throw _privateConstructorUsedError;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: GroupType.unknown)
+  GroupType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -1970,7 +1978,8 @@ class _$PatientTearOff {
           Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      Code? gender,
+      @JsonKey(unknownEnumValue: PatientGender.unknown)
+          PatientGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -2068,7 +2077,8 @@ mixin _$Patient {
   Element? get activeElement => throw _privateConstructorUsedError;
   List<HumanName>? get name => throw _privateConstructorUsedError;
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
-  Code? get gender => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: PatientGender.unknown)
+  PatientGender? get gender => throw _privateConstructorUsedError;
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
   Date? get birthDate => throw _privateConstructorUsedError;
@@ -2130,7 +2140,8 @@ abstract class $PatientCopyWith<$Res> {
           Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      Code? gender,
+      @JsonKey(unknownEnumValue: PatientGender.unknown)
+          PatientGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -2287,7 +2298,7 @@ class _$PatientCopyWithImpl<$Res> implements $PatientCopyWith<$Res> {
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as PatientGender?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -2538,7 +2549,8 @@ abstract class _$PatientCopyWith<$Res> implements $PatientCopyWith<$Res> {
           Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      Code? gender,
+      @JsonKey(unknownEnumValue: PatientGender.unknown)
+          PatientGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -2709,7 +2721,7 @@ class __$PatientCopyWithImpl<$Res> extends _$PatientCopyWithImpl<$Res>
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as PatientGender?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -2815,7 +2827,8 @@ class _$_Patient extends _Patient {
           this.activeElement,
       this.name,
       this.telecom,
-      this.gender,
+      @JsonKey(unknownEnumValue: PatientGender.unknown)
+          this.gender,
       @JsonKey(name: '_gender')
           this.genderElement,
       this.birthDate,
@@ -2884,7 +2897,8 @@ class _$_Patient extends _Patient {
   @override
   final List<ContactPoint>? telecom;
   @override
-  final Code? gender;
+  @JsonKey(unknownEnumValue: PatientGender.unknown)
+  final PatientGender? gender;
   @override
   @JsonKey(name: '_gender')
   final Element? genderElement;
@@ -3093,7 +3107,8 @@ abstract class _Patient extends Patient {
           Element? activeElement,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      Code? gender,
+      @JsonKey(unknownEnumValue: PatientGender.unknown)
+          PatientGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -3162,7 +3177,8 @@ abstract class _Patient extends Patient {
   @override
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @override
-  Code? get gender => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: PatientGender.unknown)
+  PatientGender? get gender => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
@@ -3227,14 +3243,17 @@ class _$PatientContactTearOff {
 
   _PatientContact call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? relationship,
       HumanName? name,
       List<ContactPoint>? telecom,
       Address? address,
-      Code? gender,
-      @JsonKey(name: '_gender') Element? genderElement,
+      @JsonKey(unknownEnumValue: PatientContactGender.unknown)
+          PatientContactGender? gender,
+      @JsonKey(name: '_gender')
+          Element? genderElement,
       Reference? organization,
       Period? period}) {
     return _PatientContact(
@@ -3271,7 +3290,8 @@ mixin _$PatientContact {
   HumanName? get name => throw _privateConstructorUsedError;
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   Address? get address => throw _privateConstructorUsedError;
-  Code? get gender => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: PatientContactGender.unknown)
+  PatientContactGender? get gender => throw _privateConstructorUsedError;
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
   Reference? get organization => throw _privateConstructorUsedError;
@@ -3290,14 +3310,17 @@ abstract class $PatientContactCopyWith<$Res> {
       _$PatientContactCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? relationship,
       HumanName? name,
       List<ContactPoint>? telecom,
       Address? address,
-      Code? gender,
-      @JsonKey(name: '_gender') Element? genderElement,
+      @JsonKey(unknownEnumValue: PatientContactGender.unknown)
+          PatientContactGender? gender,
+      @JsonKey(name: '_gender')
+          Element? genderElement,
       Reference? organization,
       Period? period});
 
@@ -3363,7 +3386,7 @@ class _$PatientContactCopyWithImpl<$Res>
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as PatientContactGender?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -3444,14 +3467,17 @@ abstract class _$PatientContactCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? relationship,
       HumanName? name,
       List<ContactPoint>? telecom,
       Address? address,
-      Code? gender,
-      @JsonKey(name: '_gender') Element? genderElement,
+      @JsonKey(unknownEnumValue: PatientContactGender.unknown)
+          PatientContactGender? gender,
+      @JsonKey(name: '_gender')
+          Element? genderElement,
       Reference? organization,
       Period? period});
 
@@ -3524,7 +3550,7 @@ class __$PatientContactCopyWithImpl<$Res>
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as PatientContactGender?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -3552,7 +3578,7 @@ class _$_PatientContact extends _PatientContact {
       this.name,
       this.telecom,
       this.address,
-      this.gender,
+      @JsonKey(unknownEnumValue: PatientContactGender.unknown) this.gender,
       @JsonKey(name: '_gender') this.genderElement,
       this.organization,
       this.period})
@@ -3577,7 +3603,8 @@ class _$_PatientContact extends _PatientContact {
   @override
   final Address? address;
   @override
-  final Code? gender;
+  @JsonKey(unknownEnumValue: PatientContactGender.unknown)
+  final PatientContactGender? gender;
   @override
   @JsonKey(name: '_gender')
   final Element? genderElement;
@@ -3655,14 +3682,17 @@ class _$_PatientContact extends _PatientContact {
 abstract class _PatientContact extends PatientContact {
   factory _PatientContact(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? relationship,
       HumanName? name,
       List<ContactPoint>? telecom,
       Address? address,
-      Code? gender,
-      @JsonKey(name: '_gender') Element? genderElement,
+      @JsonKey(unknownEnumValue: PatientContactGender.unknown)
+          PatientContactGender? gender,
+      @JsonKey(name: '_gender')
+          Element? genderElement,
       Reference? organization,
       Period? period}) = _$_PatientContact;
   _PatientContact._() : super._();
@@ -3687,7 +3717,8 @@ abstract class _PatientContact extends PatientContact {
   @override
   Address? get address => throw _privateConstructorUsedError;
   @override
-  Code? get gender => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: PatientContactGender.unknown)
+  PatientContactGender? get gender => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
@@ -4032,7 +4063,7 @@ class _$PatientLinkTearOff {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       required Reference other,
-      Code? type,
+      @JsonKey(unknownEnumValue: PatientLinkType.unknown) PatientLinkType? type,
       @JsonKey(name: '_type') Element? typeElement}) {
     return _PatientLink(
       id: id,
@@ -4060,7 +4091,8 @@ mixin _$PatientLink {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   Reference get other => throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: PatientLinkType.unknown)
+  PatientLinkType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
 
@@ -4080,7 +4112,7 @@ abstract class $PatientLinkCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference other,
-      Code? type,
+      @JsonKey(unknownEnumValue: PatientLinkType.unknown) PatientLinkType? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   $ReferenceCopyWith<$Res> get other;
@@ -4124,7 +4156,7 @@ class _$PatientLinkCopyWithImpl<$Res> implements $PatientLinkCopyWith<$Res> {
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as PatientLinkType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -4163,7 +4195,7 @@ abstract class _$PatientLinkCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference other,
-      Code? type,
+      @JsonKey(unknownEnumValue: PatientLinkType.unknown) PatientLinkType? type,
       @JsonKey(name: '_type') Element? typeElement});
 
   @override
@@ -4211,7 +4243,7 @@ class __$PatientLinkCopyWithImpl<$Res> extends _$PatientLinkCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as PatientLinkType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -4228,7 +4260,7 @@ class _$_PatientLink extends _PatientLink {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       required this.other,
-      this.type,
+      @JsonKey(unknownEnumValue: PatientLinkType.unknown) this.type,
       @JsonKey(name: '_type') this.typeElement})
       : super._();
 
@@ -4245,7 +4277,8 @@ class _$_PatientLink extends _PatientLink {
   @override
   final Reference other;
   @override
-  final Code? type;
+  @JsonKey(unknownEnumValue: PatientLinkType.unknown)
+  final PatientLinkType? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -4304,7 +4337,7 @@ abstract class _PatientLink extends PatientLink {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       required Reference other,
-      Code? type,
+      @JsonKey(unknownEnumValue: PatientLinkType.unknown) PatientLinkType? type,
       @JsonKey(name: '_type') Element? typeElement}) = _$_PatientLink;
   _PatientLink._() : super._();
 
@@ -4322,7 +4355,8 @@ abstract class _PatientLink extends PatientLink {
   @override
   Reference get other => throw _privateConstructorUsedError;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: PatientLinkType.unknown)
+  PatientLinkType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -4359,7 +4393,8 @@ class _$PersonTearOff {
       List<Identifier>? identifier,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      Code? gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown)
+          PersonGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -4429,7 +4464,8 @@ mixin _$Person {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   List<HumanName>? get name => throw _privateConstructorUsedError;
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
-  Code? get gender => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
+  PersonGender? get gender => throw _privateConstructorUsedError;
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
   Date? get birthDate => throw _privateConstructorUsedError;
@@ -4471,7 +4507,8 @@ abstract class $PersonCopyWith<$Res> {
       List<Identifier>? identifier,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      Code? gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown)
+          PersonGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -4591,7 +4628,7 @@ class _$PersonCopyWithImpl<$Res> implements $PersonCopyWith<$Res> {
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as PersonGender?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -4755,7 +4792,8 @@ abstract class _$PersonCopyWith<$Res> implements $PersonCopyWith<$Res> {
       List<Identifier>? identifier,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      Code? gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown)
+          PersonGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -4885,7 +4923,7 @@ class __$PersonCopyWithImpl<$Res> extends _$PersonCopyWithImpl<$Res>
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as PersonGender?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -4948,7 +4986,8 @@ class _$_Person extends _Person {
       this.identifier,
       this.name,
       this.telecom,
-      this.gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown)
+          this.gender,
       @JsonKey(name: '_gender')
           this.genderElement,
       this.birthDate,
@@ -4999,7 +5038,8 @@ class _$_Person extends _Person {
   @override
   final List<ContactPoint>? telecom;
   @override
-  final Code? gender;
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
+  final PersonGender? gender;
   @override
   @JsonKey(name: '_gender')
   final Element? genderElement;
@@ -5156,7 +5196,8 @@ abstract class _Person extends Person {
       List<Identifier>? identifier,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      Code? gender,
+      @JsonKey(unknownEnumValue: PersonGender.unknown)
+          PersonGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -5207,7 +5248,8 @@ abstract class _Person extends Person {
   @override
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @override
-  Code? get gender => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: PersonGender.unknown)
+  PersonGender? get gender => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
@@ -5244,11 +5286,14 @@ class _$PersonLinkTearOff {
 
   _PersonLink call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       required Reference target,
-      Code? assurance,
-      @JsonKey(name: '_assurance') Element? assuranceElement}) {
+      @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
+          PersonLinkAssurance? assurance,
+      @JsonKey(name: '_assurance')
+          Element? assuranceElement}) {
     return _PersonLink(
       id: id,
       extension_: extension_,
@@ -5275,7 +5320,8 @@ mixin _$PersonLink {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   Reference get target => throw _privateConstructorUsedError;
-  Code? get assurance => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
+  PersonLinkAssurance? get assurance => throw _privateConstructorUsedError;
   @JsonKey(name: '_assurance')
   Element? get assuranceElement => throw _privateConstructorUsedError;
 
@@ -5292,11 +5338,14 @@ abstract class $PersonLinkCopyWith<$Res> {
       _$PersonLinkCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference target,
-      Code? assurance,
-      @JsonKey(name: '_assurance') Element? assuranceElement});
+      @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
+          PersonLinkAssurance? assurance,
+      @JsonKey(name: '_assurance')
+          Element? assuranceElement});
 
   $ReferenceCopyWith<$Res> get target;
   $ElementCopyWith<$Res>? get assuranceElement;
@@ -5339,7 +5388,7 @@ class _$PersonLinkCopyWithImpl<$Res> implements $PersonLinkCopyWith<$Res> {
       assurance: assurance == freezed
           ? _value.assurance
           : assurance // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as PersonLinkAssurance?,
       assuranceElement: assuranceElement == freezed
           ? _value.assuranceElement
           : assuranceElement // ignore: cast_nullable_to_non_nullable
@@ -5374,11 +5423,14 @@ abstract class _$PersonLinkCopyWith<$Res> implements $PersonLinkCopyWith<$Res> {
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Reference target,
-      Code? assurance,
-      @JsonKey(name: '_assurance') Element? assuranceElement});
+      @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
+          PersonLinkAssurance? assurance,
+      @JsonKey(name: '_assurance')
+          Element? assuranceElement});
 
   @override
   $ReferenceCopyWith<$Res> get target;
@@ -5425,7 +5477,7 @@ class __$PersonLinkCopyWithImpl<$Res> extends _$PersonLinkCopyWithImpl<$Res>
       assurance: assurance == freezed
           ? _value.assurance
           : assurance // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as PersonLinkAssurance?,
       assuranceElement: assuranceElement == freezed
           ? _value.assuranceElement
           : assuranceElement // ignore: cast_nullable_to_non_nullable
@@ -5442,7 +5494,7 @@ class _$_PersonLink extends _PersonLink {
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       required this.target,
-      this.assurance,
+      @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown) this.assurance,
       @JsonKey(name: '_assurance') this.assuranceElement})
       : super._();
 
@@ -5459,7 +5511,8 @@ class _$_PersonLink extends _PersonLink {
   @override
   final Reference target;
   @override
-  final Code? assurance;
+  @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
+  final PersonLinkAssurance? assurance;
   @override
   @JsonKey(name: '_assurance')
   final Element? assuranceElement;
@@ -5515,11 +5568,14 @@ class _$_PersonLink extends _PersonLink {
 abstract class _PersonLink extends PersonLink {
   factory _PersonLink(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       required Reference target,
-      Code? assurance,
-      @JsonKey(name: '_assurance') Element? assuranceElement}) = _$_PersonLink;
+      @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
+          PersonLinkAssurance? assurance,
+      @JsonKey(name: '_assurance')
+          Element? assuranceElement}) = _$_PersonLink;
   _PersonLink._() : super._();
 
   factory _PersonLink.fromJson(Map<String, dynamic> json) =
@@ -5536,7 +5592,8 @@ abstract class _PersonLink extends PersonLink {
   @override
   Reference get target => throw _privateConstructorUsedError;
   @override
-  Code? get assurance => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
+  PersonLinkAssurance? get assurance => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_assurance')
   Element? get assuranceElement => throw _privateConstructorUsedError;
@@ -5577,7 +5634,8 @@ class _$PractitionerTearOff {
       List<HumanName>? name,
       List<ContactPoint>? telecom,
       List<Address>? address,
-      Code? gender,
+      @JsonKey(unknownEnumValue: PractitionerGender.unknown)
+          PractitionerGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -5647,7 +5705,8 @@ mixin _$Practitioner {
   List<HumanName>? get name => throw _privateConstructorUsedError;
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   List<Address>? get address => throw _privateConstructorUsedError;
-  Code? get gender => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: PractitionerGender.unknown)
+  PractitionerGender? get gender => throw _privateConstructorUsedError;
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
   Date? get birthDate => throw _privateConstructorUsedError;
@@ -5693,7 +5752,8 @@ abstract class $PractitionerCopyWith<$Res> {
       List<HumanName>? name,
       List<ContactPoint>? telecom,
       List<Address>? address,
-      Code? gender,
+      @JsonKey(unknownEnumValue: PractitionerGender.unknown)
+          PractitionerGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -5819,7 +5879,7 @@ class _$PractitionerCopyWithImpl<$Res> implements $PractitionerCopyWith<$Res> {
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as PractitionerGender?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -5955,7 +6015,8 @@ abstract class _$PractitionerCopyWith<$Res>
       List<HumanName>? name,
       List<ContactPoint>? telecom,
       List<Address>? address,
-      Code? gender,
+      @JsonKey(unknownEnumValue: PractitionerGender.unknown)
+          PractitionerGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -6090,7 +6151,7 @@ class __$PractitionerCopyWithImpl<$Res> extends _$PractitionerCopyWithImpl<$Res>
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as PractitionerGender?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -6145,7 +6206,8 @@ class _$_Practitioner extends _Practitioner {
       this.name,
       this.telecom,
       this.address,
-      this.gender,
+      @JsonKey(unknownEnumValue: PractitionerGender.unknown)
+          this.gender,
       @JsonKey(name: '_gender')
           this.genderElement,
       this.birthDate,
@@ -6199,7 +6261,8 @@ class _$_Practitioner extends _Practitioner {
   @override
   final List<Address>? address;
   @override
-  final Code? gender;
+  @JsonKey(unknownEnumValue: PractitionerGender.unknown)
+  final PractitionerGender? gender;
   @override
   @JsonKey(name: '_gender')
   final Element? genderElement;
@@ -6354,7 +6417,8 @@ abstract class _Practitioner extends Practitioner {
       List<HumanName>? name,
       List<ContactPoint>? telecom,
       List<Address>? address,
-      Code? gender,
+      @JsonKey(unknownEnumValue: PractitionerGender.unknown)
+          PractitionerGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -6409,7 +6473,8 @@ abstract class _Practitioner extends Practitioner {
   @override
   List<Address>? get address => throw _privateConstructorUsedError;
   @override
-  Code? get gender => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: PractitionerGender.unknown)
+  PractitionerGender? get gender => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
@@ -8608,7 +8673,8 @@ class _$RelatedPersonTearOff {
       List<CodeableConcept>? relationship,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      Code? gender,
+      @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
+          RelatedPersonGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -8682,7 +8748,8 @@ mixin _$RelatedPerson {
   List<CodeableConcept>? get relationship => throw _privateConstructorUsedError;
   List<HumanName>? get name => throw _privateConstructorUsedError;
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
-  Code? get gender => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
+  RelatedPersonGender? get gender => throw _privateConstructorUsedError;
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;
   Date? get birthDate => throw _privateConstructorUsedError;
@@ -8729,7 +8796,8 @@ abstract class $RelatedPersonCopyWith<$Res> {
       List<CodeableConcept>? relationship,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      Code? gender,
+      @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
+          RelatedPersonGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -8865,7 +8933,7 @@ class _$RelatedPersonCopyWithImpl<$Res>
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as RelatedPersonGender?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -9024,7 +9092,8 @@ abstract class _$RelatedPersonCopyWith<$Res>
       List<CodeableConcept>? relationship,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      Code? gender,
+      @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
+          RelatedPersonGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -9171,7 +9240,7 @@ class __$RelatedPersonCopyWithImpl<$Res>
       gender: gender == freezed
           ? _value.gender
           : gender // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as RelatedPersonGender?,
       genderElement: genderElement == freezed
           ? _value.genderElement
           : genderElement // ignore: cast_nullable_to_non_nullable
@@ -9231,7 +9300,8 @@ class _$_RelatedPerson extends _RelatedPerson {
       this.relationship,
       this.name,
       this.telecom,
-      this.gender,
+      @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
+          this.gender,
       @JsonKey(name: '_gender')
           this.genderElement,
       this.birthDate,
@@ -9288,7 +9358,8 @@ class _$_RelatedPerson extends _RelatedPerson {
   @override
   final List<ContactPoint>? telecom;
   @override
-  final Code? gender;
+  @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
+  final RelatedPersonGender? gender;
   @override
   @JsonKey(name: '_gender')
   final Element? genderElement;
@@ -9452,7 +9523,8 @@ abstract class _RelatedPerson extends RelatedPerson {
       List<CodeableConcept>? relationship,
       List<HumanName>? name,
       List<ContactPoint>? telecom,
-      Code? gender,
+      @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
+          RelatedPersonGender? gender,
       @JsonKey(name: '_gender')
           Element? genderElement,
       Date? birthDate,
@@ -9510,7 +9582,8 @@ abstract class _RelatedPerson extends RelatedPerson {
   @override
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   @override
-  Code? get gender => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
+  RelatedPersonGender? get gender => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_gender')
   Element? get genderElement => throw _privateConstructorUsedError;

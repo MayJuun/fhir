@@ -1954,7 +1954,8 @@ class _$CitationTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: CitationStatus.unknown)
+          CitationStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -2096,7 +2097,8 @@ mixin _$Citation {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CitationStatus.unknown)
+  CitationStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -2184,7 +2186,8 @@ abstract class $CitationCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: CitationStatus.unknown)
+          CitationStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -2400,7 +2403,7 @@ class _$CitationCopyWithImpl<$Res> implements $CitationCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CitationStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -2784,7 +2787,8 @@ abstract class _$CitationCopyWith<$Res> implements $CitationCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: CitationStatus.unknown)
+          CitationStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -3020,7 +3024,7 @@ class __$CitationCopyWithImpl<$Res> extends _$CitationCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CitationStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3193,7 +3197,8 @@ class _$_Citation extends _Citation {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      this.status,
+      @JsonKey(unknownEnumValue: CitationStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -3291,7 +3296,8 @@ class _$_Citation extends _Citation {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: CitationStatus.unknown)
+  final CitationStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -3579,7 +3585,8 @@ abstract class _Citation extends Citation {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: CitationStatus.unknown)
+          CitationStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -3677,7 +3684,8 @@ abstract class _Citation extends Citation {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CitationStatus.unknown)
+  CitationStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -13476,7 +13484,8 @@ class _$EvidenceReportTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: EvidenceReportStatus.unknown)
+          EvidenceReportStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -13623,7 +13632,8 @@ mixin _$EvidenceReport {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: EvidenceReportStatus.unknown)
+  EvidenceReportStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -13714,7 +13724,8 @@ abstract class $EvidenceReportCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: EvidenceReportStatus.unknown)
+          EvidenceReportStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -13939,7 +13950,7 @@ class _$EvidenceReportCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as EvidenceReportStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -14362,7 +14373,8 @@ abstract class _$EvidenceReportCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: EvidenceReportStatus.unknown)
+          EvidenceReportStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -14611,7 +14623,7 @@ class __$EvidenceReportCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as EvidenceReportStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -14792,7 +14804,8 @@ class _$_EvidenceReport extends _EvidenceReport {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      this.status,
+      @JsonKey(unknownEnumValue: EvidenceReportStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -14893,7 +14906,8 @@ class _$_EvidenceReport extends _EvidenceReport {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: EvidenceReportStatus.unknown)
+  final EvidenceReportStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -15190,7 +15204,8 @@ abstract class _EvidenceReport extends EvidenceReport {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: EvidenceReportStatus.unknown)
+          EvidenceReportStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -15292,7 +15307,8 @@ abstract class _EvidenceReport extends EvidenceReport {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: EvidenceReportStatus.unknown)
+  EvidenceReportStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -16246,10 +16262,13 @@ class _$EvidenceReportRelatesToTearOff {
 
   _EvidenceReportRelatesTo call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(unknownEnumValue: EvidenceReportRelatesToCode.unknown)
+          EvidenceReportRelatesToCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       Identifier? targetIdentifier,
       Reference? targetReference}) {
     return _EvidenceReportRelatesTo(
@@ -16278,7 +16297,8 @@ mixin _$EvidenceReportRelatesTo {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get code => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: EvidenceReportRelatesToCode.unknown)
+  EvidenceReportRelatesToCode? get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   Identifier? get targetIdentifier => throw _privateConstructorUsedError;
@@ -16297,10 +16317,13 @@ abstract class $EvidenceReportRelatesToCopyWith<$Res> {
       _$EvidenceReportRelatesToCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(unknownEnumValue: EvidenceReportRelatesToCode.unknown)
+          EvidenceReportRelatesToCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       Identifier? targetIdentifier,
       Reference? targetReference});
 
@@ -16344,7 +16367,7 @@ class _$EvidenceReportRelatesToCopyWithImpl<$Res>
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as EvidenceReportRelatesToCode?,
       codeElement: codeElement == freezed
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -16403,10 +16426,13 @@ abstract class _$EvidenceReportRelatesToCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(unknownEnumValue: EvidenceReportRelatesToCode.unknown)
+          EvidenceReportRelatesToCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       Identifier? targetIdentifier,
       Reference? targetReference});
 
@@ -16456,7 +16482,7 @@ class __$EvidenceReportRelatesToCopyWithImpl<$Res>
       code: code == freezed
           ? _value.code
           : code // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as EvidenceReportRelatesToCode?,
       codeElement: codeElement == freezed
           ? _value.codeElement
           : codeElement // ignore: cast_nullable_to_non_nullable
@@ -16480,7 +16506,7 @@ class _$_EvidenceReportRelatesTo extends _EvidenceReportRelatesTo {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.code,
+      @JsonKey(unknownEnumValue: EvidenceReportRelatesToCode.unknown) this.code,
       @JsonKey(name: '_code') this.codeElement,
       this.targetIdentifier,
       this.targetReference})
@@ -16497,7 +16523,8 @@ class _$_EvidenceReportRelatesTo extends _EvidenceReportRelatesTo {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? code;
+  @JsonKey(unknownEnumValue: EvidenceReportRelatesToCode.unknown)
+  final EvidenceReportRelatesToCode? code;
   @override
   @JsonKey(name: '_code')
   final Element? codeElement;
@@ -16562,10 +16589,13 @@ class _$_EvidenceReportRelatesTo extends _EvidenceReportRelatesTo {
 abstract class _EvidenceReportRelatesTo extends EvidenceReportRelatesTo {
   factory _EvidenceReportRelatesTo(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? code,
-      @JsonKey(name: '_code') Element? codeElement,
+      @JsonKey(unknownEnumValue: EvidenceReportRelatesToCode.unknown)
+          EvidenceReportRelatesToCode? code,
+      @JsonKey(name: '_code')
+          Element? codeElement,
       Identifier? targetIdentifier,
       Reference? targetReference}) = _$_EvidenceReportRelatesTo;
   _EvidenceReportRelatesTo._() : super._();
@@ -16582,7 +16612,8 @@ abstract class _EvidenceReportRelatesTo extends EvidenceReportRelatesTo {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get code => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: EvidenceReportRelatesToCode.unknown)
+  EvidenceReportRelatesToCode? get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;

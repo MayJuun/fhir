@@ -29,7 +29,7 @@ class Account with Resource, _$Account {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    Code? status,
+    @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? type,
     String? name,
@@ -148,7 +148,8 @@ class ChargeItem with Resource, _$ChargeItem {
     List<FhirUri>? definitionUri,
     @JsonKey(name: '_definitionUri') List<Element>? definitionUriElement,
     List<Canonical>? definitionCanonical,
-    Code? status,
+    @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
+        ChargeItemStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<Reference>? partOf,
     required CodeableConcept code,
@@ -257,7 +258,8 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
     @JsonKey(name: '_name') Element? nameElement,
     String? title,
     @JsonKey(name: '_title') Element? titleElement,
-    Code? status,
+    @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
+        ChargeItemDefinitionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Boolean? experimental,
     @JsonKey(name: '_experimental') Element? experimentalElement,
@@ -1096,7 +1098,8 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    Code? status,
+    @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
+        ExplanationOfBenefitStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required CodeableConcept type,
     CodeableConcept? subType,
@@ -1843,7 +1846,8 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
     List<FhirExtension>? modifierExtension,
     PositiveInt? number,
     @JsonKey(name: '_number') Element? numberElement,
-    Code? type,
+    @JsonKey(unknownEnumValue: ExplanationOfBenefitProcessNoteType.unknown)
+        ExplanationOfBenefitProcessNoteType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? text,
     @JsonKey(name: '_text') Element? textElement,
@@ -1967,7 +1971,8 @@ class InsurancePlan with Resource, _$InsurancePlan {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    Code? status,
+    @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
+        InsurancePlanStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<CodeableConcept>? type,
     String? name,

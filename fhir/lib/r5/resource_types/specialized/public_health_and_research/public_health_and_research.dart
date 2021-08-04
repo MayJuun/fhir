@@ -43,7 +43,8 @@ class ResearchStudy with Resource, _$ResearchStudy {
     List<RelatedArtifact>? relatedArtifact,
     FhirDateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
-    Code? status,
+    @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
+        ResearchStudyStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? primaryPurposeType,
     CodeableConcept? phase,
@@ -441,7 +442,8 @@ class ResearchSubject with Resource, _$ResearchSubject {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    Code? status,
+    @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
+        ResearchSubjectStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     List<ResearchSubjectProgress>? progress,
     Period? period,

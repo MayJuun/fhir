@@ -37,7 +37,8 @@ class _$AccountTearOff {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: AccountStatus.unknown)
+          AccountStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? type,
@@ -109,7 +110,8 @@ mixin _$Account {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: AccountStatus.unknown)
+  AccountStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
@@ -152,7 +154,8 @@ abstract class $AccountCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: AccountStatus.unknown)
+          AccountStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? type,
@@ -270,7 +273,7 @@ class _$AccountCopyWithImpl<$Res> implements $AccountCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as AccountStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -466,7 +469,8 @@ abstract class _$AccountCopyWith<$Res> implements $AccountCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: AccountStatus.unknown)
+          AccountStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? type,
@@ -596,7 +600,7 @@ class __$AccountCopyWithImpl<$Res> extends _$AccountCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as AccountStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -669,7 +673,8 @@ class _$_Account extends _Account {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: AccountStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.type,
@@ -719,7 +724,8 @@ class _$_Account extends _Account {
   @override
   final List<Identifier>? identifier;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: AccountStatus.unknown)
+  final AccountStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -884,7 +890,8 @@ abstract class _Account extends Account {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: AccountStatus.unknown)
+          AccountStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? type,
@@ -934,7 +941,8 @@ abstract class _Account extends Account {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: AccountStatus.unknown)
+  AccountStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -1666,7 +1674,8 @@ class _$ChargeItemTearOff {
       @JsonKey(name: '_definitionUri')
           List<Element>? definitionUriElement,
       List<Canonical>? definitionCanonical,
-      Code? status,
+      @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
+          ChargeItemStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Reference>? partOf,
@@ -1784,7 +1793,8 @@ mixin _$ChargeItem {
   List<Element>? get definitionUriElement => throw _privateConstructorUsedError;
   List<Canonical>? get definitionCanonical =>
       throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
+  ChargeItemStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   List<Reference>? get partOf => throw _privateConstructorUsedError;
@@ -1856,7 +1866,8 @@ abstract class $ChargeItemCopyWith<$Res> {
       @JsonKey(name: '_definitionUri')
           List<Element>? definitionUriElement,
       List<Canonical>? definitionCanonical,
-      Code? status,
+      @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
+          ChargeItemStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Reference>? partOf,
@@ -2038,7 +2049,7 @@ class _$ChargeItemCopyWithImpl<$Res> implements $ChargeItemCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ChargeItemStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -2425,7 +2436,8 @@ abstract class _$ChargeItemCopyWith<$Res> implements $ChargeItemCopyWith<$Res> {
       @JsonKey(name: '_definitionUri')
           List<Element>? definitionUriElement,
       List<Canonical>? definitionCanonical,
-      Code? status,
+      @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
+          ChargeItemStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Reference>? partOf,
@@ -2631,7 +2643,7 @@ class __$ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ChargeItemStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -2780,7 +2792,8 @@ class _$_ChargeItem extends _ChargeItem {
       @JsonKey(name: '_definitionUri')
           this.definitionUriElement,
       this.definitionCanonical,
-      this.status,
+      @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.partOf,
@@ -2857,7 +2870,8 @@ class _$_ChargeItem extends _ChargeItem {
   @override
   final List<Canonical>? definitionCanonical;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
+  final ChargeItemStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -3106,7 +3120,8 @@ abstract class _ChargeItem extends ChargeItem {
       @JsonKey(name: '_definitionUri')
           List<Element>? definitionUriElement,
       List<Canonical>? definitionCanonical,
-      Code? status,
+      @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
+          ChargeItemStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<Reference>? partOf,
@@ -3185,7 +3200,8 @@ abstract class _ChargeItem extends ChargeItem {
   List<Canonical>? get definitionCanonical =>
       throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
+  ChargeItemStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -3585,7 +3601,8 @@ class _$ChargeItemDefinitionTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
+          ChargeItemDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -3730,7 +3747,8 @@ mixin _$ChargeItemDefinition {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
+  ChargeItemDefinitionStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -3821,7 +3839,8 @@ abstract class $ChargeItemDefinitionCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
+          ChargeItemDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -4041,7 +4060,7 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ChargeItemDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4431,7 +4450,8 @@ abstract class _$ChargeItemDefinitionCopyWith<$Res>
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
+          ChargeItemDefinitionStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -4672,7 +4692,7 @@ class __$ChargeItemDefinitionCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ChargeItemDefinitionStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4849,7 +4869,8 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      this.status,
+      @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -4949,7 +4970,8 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
+  final ChargeItemDefinitionStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -5243,7 +5265,8 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
           String? title,
           @JsonKey(name: '_title')
               Element? titleElement,
-          Code? status,
+          @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
+              ChargeItemDefinitionStatus? status,
           @JsonKey(name: '_status')
               Element? statusElement,
           Boolean? experimental,
@@ -5345,7 +5368,8 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
+  ChargeItemDefinitionStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -16598,7 +16622,8 @@ class _$ExplanationOfBenefitTearOff {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
+          ExplanationOfBenefitStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       required CodeableConcept type,
@@ -16746,7 +16771,8 @@ mixin _$ExplanationOfBenefit {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
+  ExplanationOfBenefitStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept get type => throw _privateConstructorUsedError;
@@ -16846,7 +16872,8 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
+          ExplanationOfBenefitStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept type,
@@ -17062,7 +17089,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ExplanationOfBenefitStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -17621,7 +17648,8 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
+          ExplanationOfBenefitStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept type,
@@ -17871,7 +17899,7 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ExplanationOfBenefitStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -18088,7 +18116,8 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       required this.type,
@@ -18178,7 +18207,8 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   @override
   final List<Identifier>? identifier;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
+  final ExplanationOfBenefitStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -18493,7 +18523,8 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
               List<FhirExtension>? extension_,
           List<FhirExtension>? modifierExtension,
           List<Identifier>? identifier,
-          Code? status,
+          @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
+              ExplanationOfBenefitStatus? status,
           @JsonKey(name: '_status')
               Element? statusElement,
           required CodeableConcept type,
@@ -18585,7 +18616,8 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
+  ExplanationOfBenefitStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -28492,14 +28524,19 @@ class _$ExplanationOfBenefitProcessNoteTearOff {
 
   _ExplanationOfBenefitProcessNote call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       PositiveInt? number,
-      @JsonKey(name: '_number') Element? numberElement,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(name: '_number')
+          Element? numberElement,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitProcessNoteType.unknown)
+          ExplanationOfBenefitProcessNoteType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       String? text,
-      @JsonKey(name: '_text') Element? textElement,
+      @JsonKey(name: '_text')
+          Element? textElement,
       CodeableConcept? language}) {
     return _ExplanationOfBenefitProcessNote(
       id: id,
@@ -28534,7 +28571,9 @@ mixin _$ExplanationOfBenefitProcessNote {
   PositiveInt? get number => throw _privateConstructorUsedError;
   @JsonKey(name: '_number')
   Element? get numberElement => throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ExplanationOfBenefitProcessNoteType.unknown)
+  ExplanationOfBenefitProcessNoteType? get type =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   String? get text => throw _privateConstructorUsedError;
@@ -28556,14 +28595,19 @@ abstract class $ExplanationOfBenefitProcessNoteCopyWith<$Res> {
       _$ExplanationOfBenefitProcessNoteCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       PositiveInt? number,
-      @JsonKey(name: '_number') Element? numberElement,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(name: '_number')
+          Element? numberElement,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitProcessNoteType.unknown)
+          ExplanationOfBenefitProcessNoteType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       String? text,
-      @JsonKey(name: '_text') Element? textElement,
+      @JsonKey(name: '_text')
+          Element? textElement,
       CodeableConcept? language});
 
   $ElementCopyWith<$Res>? get numberElement;
@@ -28618,7 +28662,7 @@ class _$ExplanationOfBenefitProcessNoteCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ExplanationOfBenefitProcessNoteType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -28693,14 +28737,19 @@ abstract class _$ExplanationOfBenefitProcessNoteCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       PositiveInt? number,
-      @JsonKey(name: '_number') Element? numberElement,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(name: '_number')
+          Element? numberElement,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitProcessNoteType.unknown)
+          ExplanationOfBenefitProcessNoteType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       String? text,
-      @JsonKey(name: '_text') Element? textElement,
+      @JsonKey(name: '_text')
+          Element? textElement,
       CodeableConcept? language});
 
   @override
@@ -28763,7 +28812,7 @@ class __$ExplanationOfBenefitProcessNoteCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ExplanationOfBenefitProcessNoteType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -28790,14 +28839,19 @@ class _$_ExplanationOfBenefitProcessNote
     extends _ExplanationOfBenefitProcessNote {
   _$_ExplanationOfBenefitProcessNote(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.number,
-      @JsonKey(name: '_number') this.numberElement,
-      this.type,
-      @JsonKey(name: '_type') this.typeElement,
+      @JsonKey(name: '_number')
+          this.numberElement,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitProcessNoteType.unknown)
+          this.type,
+      @JsonKey(name: '_type')
+          this.typeElement,
       this.text,
-      @JsonKey(name: '_text') this.textElement,
+      @JsonKey(name: '_text')
+          this.textElement,
       this.language})
       : super._();
 
@@ -28818,7 +28872,8 @@ class _$_ExplanationOfBenefitProcessNote
   @JsonKey(name: '_number')
   final Element? numberElement;
   @override
-  final Code? type;
+  @JsonKey(unknownEnumValue: ExplanationOfBenefitProcessNoteType.unknown)
+  final ExplanationOfBenefitProcessNoteType? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -28897,14 +28952,19 @@ abstract class _ExplanationOfBenefitProcessNote
     extends ExplanationOfBenefitProcessNote {
   factory _ExplanationOfBenefitProcessNote(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       PositiveInt? number,
-      @JsonKey(name: '_number') Element? numberElement,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(name: '_number')
+          Element? numberElement,
+      @JsonKey(unknownEnumValue: ExplanationOfBenefitProcessNoteType.unknown)
+          ExplanationOfBenefitProcessNoteType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       String? text,
-      @JsonKey(name: '_text') Element? textElement,
+      @JsonKey(name: '_text')
+          Element? textElement,
       CodeableConcept? language}) = _$_ExplanationOfBenefitProcessNote;
   _ExplanationOfBenefitProcessNote._() : super._();
 
@@ -28925,7 +28985,9 @@ abstract class _ExplanationOfBenefitProcessNote
   @JsonKey(name: '_number')
   Element? get numberElement => throw _privateConstructorUsedError;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ExplanationOfBenefitProcessNoteType.unknown)
+  ExplanationOfBenefitProcessNoteType? get type =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -30110,7 +30172,8 @@ class _$InsurancePlanTearOff {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
+          InsurancePlanStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? type,
@@ -30188,7 +30251,8 @@ mixin _$InsurancePlan {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
+  InsurancePlanStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get type => throw _privateConstructorUsedError;
@@ -30237,7 +30301,8 @@ abstract class $InsurancePlanCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
+          InsurancePlanStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? type,
@@ -30360,7 +30425,7 @@ class _$InsurancePlanCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as InsurancePlanStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -30548,7 +30613,8 @@ abstract class _$InsurancePlanCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
+          InsurancePlanStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? type,
@@ -30682,7 +30748,7 @@ class __$InsurancePlanCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as InsurancePlanStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -30767,7 +30833,8 @@ class _$_InsurancePlan extends _InsurancePlan {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.type,
@@ -30820,7 +30887,8 @@ class _$_InsurancePlan extends _InsurancePlan {
   @override
   final List<Identifier>? identifier;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
+  final InsurancePlanStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -30998,7 +31066,8 @@ abstract class _InsurancePlan extends InsurancePlan {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
+          InsurancePlanStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? type,
@@ -31052,7 +31121,8 @@ abstract class _InsurancePlan extends InsurancePlan {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
+  InsurancePlanStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;

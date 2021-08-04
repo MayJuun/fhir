@@ -40,7 +40,8 @@ class _$AdverseEventTearOff {
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? actuality,
+      @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
+          AdverseEventActuality? actuality,
       @JsonKey(name: '_actuality')
           Element? actualityElement,
       List<CodeableConcept>? category,
@@ -144,7 +145,8 @@ mixin _$AdverseEvent {
   Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  Code? get actuality => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
+  AdverseEventActuality? get actuality => throw _privateConstructorUsedError;
   @JsonKey(name: '_actuality')
   Element? get actualityElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
@@ -212,7 +214,8 @@ abstract class $AdverseEventCopyWith<$Res> {
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? actuality,
+      @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
+          AdverseEventActuality? actuality,
       @JsonKey(name: '_actuality')
           Element? actualityElement,
       List<CodeableConcept>? category,
@@ -373,7 +376,7 @@ class _$AdverseEventCopyWithImpl<$Res> implements $AdverseEventCopyWith<$Res> {
       actuality: actuality == freezed
           ? _value.actuality
           : actuality // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as AdverseEventActuality?,
       actualityElement: actualityElement == freezed
           ? _value.actualityElement
           : actualityElement // ignore: cast_nullable_to_non_nullable
@@ -688,7 +691,8 @@ abstract class _$AdverseEventCopyWith<$Res>
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? actuality,
+      @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
+          AdverseEventActuality? actuality,
       @JsonKey(name: '_actuality')
           Element? actualityElement,
       List<CodeableConcept>? category,
@@ -868,7 +872,7 @@ class __$AdverseEventCopyWithImpl<$Res> extends _$AdverseEventCopyWithImpl<$Res>
       actuality: actuality == freezed
           ? _value.actuality
           : actuality // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as AdverseEventActuality?,
       actualityElement: actualityElement == freezed
           ? _value.actualityElement
           : actualityElement // ignore: cast_nullable_to_non_nullable
@@ -996,7 +1000,8 @@ class _$_AdverseEvent extends _AdverseEvent {
       this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      this.actuality,
+      @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
+          this.actuality,
       @JsonKey(name: '_actuality')
           this.actualityElement,
       this.category,
@@ -1065,7 +1070,8 @@ class _$_AdverseEvent extends _AdverseEvent {
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Code? actuality;
+  @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
+  final AdverseEventActuality? actuality;
   @override
   @JsonKey(name: '_actuality')
   final Element? actualityElement;
@@ -1290,7 +1296,8 @@ abstract class _AdverseEvent extends AdverseEvent {
       Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? actuality,
+      @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
+          AdverseEventActuality? actuality,
       @JsonKey(name: '_actuality')
           Element? actualityElement,
       List<CodeableConcept>? category,
@@ -1360,7 +1367,8 @@ abstract class _AdverseEvent extends AdverseEvent {
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Code? get actuality => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: AdverseEventActuality.unknown)
+  AdverseEventActuality? get actuality => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_actuality')
   Element? get actualityElement => throw _privateConstructorUsedError;
@@ -3620,13 +3628,15 @@ class _$AllergyIntoleranceTearOff {
       List<Identifier>? identifier,
       CodeableConcept? clinicalStatus,
       CodeableConcept? verificationStatus,
-      Code? type,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
+          AllergyIntoleranceType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       List<Code>? category,
       @JsonKey(name: '_category')
           List<Element>? categoryElement,
-      Code? criticality,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+          AllergyIntoleranceCriticality? criticality,
       @JsonKey(name: '_criticality')
           Element? criticalityElement,
       CodeableConcept? code,
@@ -3722,13 +3732,16 @@ mixin _$AllergyIntolerance {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   CodeableConcept? get clinicalStatus => throw _privateConstructorUsedError;
   CodeableConcept? get verificationStatus => throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
+  AllergyIntoleranceType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   List<Code>? get category => throw _privateConstructorUsedError;
   @JsonKey(name: '_category')
   List<Element>? get categoryElement => throw _privateConstructorUsedError;
-  Code? get criticality => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+  AllergyIntoleranceCriticality? get criticality =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_criticality')
   Element? get criticalityElement => throw _privateConstructorUsedError;
   CodeableConcept? get code => throw _privateConstructorUsedError;
@@ -3785,13 +3798,15 @@ abstract class $AllergyIntoleranceCopyWith<$Res> {
       List<Identifier>? identifier,
       CodeableConcept? clinicalStatus,
       CodeableConcept? verificationStatus,
-      Code? type,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
+          AllergyIntoleranceType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       List<Code>? category,
       @JsonKey(name: '_category')
           List<Element>? categoryElement,
-      Code? criticality,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+          AllergyIntoleranceCriticality? criticality,
       @JsonKey(name: '_criticality')
           Element? criticalityElement,
       CodeableConcept? code,
@@ -3949,7 +3964,7 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as AllergyIntoleranceType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -3965,7 +3980,7 @@ class _$AllergyIntoleranceCopyWithImpl<$Res>
       criticality: criticality == freezed
           ? _value.criticality
           : criticality // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as AllergyIntoleranceCriticality?,
       criticalityElement: criticalityElement == freezed
           ? _value.criticalityElement
           : criticalityElement // ignore: cast_nullable_to_non_nullable
@@ -4288,13 +4303,15 @@ abstract class _$AllergyIntoleranceCopyWith<$Res>
       List<Identifier>? identifier,
       CodeableConcept? clinicalStatus,
       CodeableConcept? verificationStatus,
-      Code? type,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
+          AllergyIntoleranceType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       List<Code>? category,
       @JsonKey(name: '_category')
           List<Element>? categoryElement,
-      Code? criticality,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+          AllergyIntoleranceCriticality? criticality,
       @JsonKey(name: '_criticality')
           Element? criticalityElement,
       CodeableConcept? code,
@@ -4474,7 +4491,7 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as AllergyIntoleranceType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -4490,7 +4507,7 @@ class __$AllergyIntoleranceCopyWithImpl<$Res>
       criticality: criticality == freezed
           ? _value.criticality
           : criticality // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as AllergyIntoleranceCriticality?,
       criticalityElement: criticalityElement == freezed
           ? _value.criticalityElement
           : criticalityElement // ignore: cast_nullable_to_non_nullable
@@ -4593,13 +4610,15 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
       this.identifier,
       this.clinicalStatus,
       this.verificationStatus,
-      this.type,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
+          this.type,
       @JsonKey(name: '_type')
           this.typeElement,
       this.category,
       @JsonKey(name: '_category')
           this.categoryElement,
-      this.criticality,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+          this.criticality,
       @JsonKey(name: '_criticality')
           this.criticalityElement,
       this.code,
@@ -4662,7 +4681,8 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
   @override
   final CodeableConcept? verificationStatus;
   @override
-  final Code? type;
+  @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
+  final AllergyIntoleranceType? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -4672,7 +4692,8 @@ class _$_AllergyIntolerance extends _AllergyIntolerance {
   @JsonKey(name: '_category')
   final List<Element>? categoryElement;
   @override
-  final Code? criticality;
+  @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+  final AllergyIntoleranceCriticality? criticality;
   @override
   @JsonKey(name: '_criticality')
   final Element? criticalityElement;
@@ -4882,13 +4903,15 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
       List<Identifier>? identifier,
       CodeableConcept? clinicalStatus,
       CodeableConcept? verificationStatus,
-      Code? type,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
+          AllergyIntoleranceType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       List<Code>? category,
       @JsonKey(name: '_category')
           List<Element>? categoryElement,
-      Code? criticality,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+          AllergyIntoleranceCriticality? criticality,
       @JsonKey(name: '_criticality')
           Element? criticalityElement,
       CodeableConcept? code,
@@ -4952,7 +4975,8 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   @override
   CodeableConcept? get verificationStatus => throw _privateConstructorUsedError;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: AllergyIntoleranceType.unknown)
+  AllergyIntoleranceType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -4962,7 +4986,9 @@ abstract class _AllergyIntolerance extends AllergyIntolerance {
   @JsonKey(name: '_category')
   List<Element>? get categoryElement => throw _privateConstructorUsedError;
   @override
-  Code? get criticality => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: AllergyIntoleranceCriticality.unknown)
+  AllergyIntoleranceCriticality? get criticality =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_criticality')
   Element? get criticalityElement => throw _privateConstructorUsedError;
@@ -5024,16 +5050,21 @@ class _$AllergyIntoleranceReactionTearOff {
 
   _AllergyIntoleranceReaction call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? substance,
       required List<CodeableReference> manifestation,
       String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       FhirDateTime? onset,
-      @JsonKey(name: '_onset') Element? onsetElement,
-      Code? severity,
-      @JsonKey(name: '_severity') Element? severityElement,
+      @JsonKey(name: '_onset')
+          Element? onsetElement,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
+          AllergyIntoleranceReactionSeverity? severity,
+      @JsonKey(name: '_severity')
+          Element? severityElement,
       CodeableConcept? exposureRoute,
       List<Annotation>? note}) {
     return _AllergyIntoleranceReaction(
@@ -5077,7 +5108,9 @@ mixin _$AllergyIntoleranceReaction {
   FhirDateTime? get onset => throw _privateConstructorUsedError;
   @JsonKey(name: '_onset')
   Element? get onsetElement => throw _privateConstructorUsedError;
-  Code? get severity => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
+  AllergyIntoleranceReactionSeverity? get severity =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_severity')
   Element? get severityElement => throw _privateConstructorUsedError;
   CodeableConcept? get exposureRoute => throw _privateConstructorUsedError;
@@ -5096,16 +5129,21 @@ abstract class $AllergyIntoleranceReactionCopyWith<$Res> {
       _$AllergyIntoleranceReactionCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? substance,
       List<CodeableReference> manifestation,
       String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       FhirDateTime? onset,
-      @JsonKey(name: '_onset') Element? onsetElement,
-      Code? severity,
-      @JsonKey(name: '_severity') Element? severityElement,
+      @JsonKey(name: '_onset')
+          Element? onsetElement,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
+          AllergyIntoleranceReactionSeverity? severity,
+      @JsonKey(name: '_severity')
+          Element? severityElement,
       CodeableConcept? exposureRoute,
       List<Annotation>? note});
 
@@ -5181,7 +5219,7 @@ class _$AllergyIntoleranceReactionCopyWithImpl<$Res>
       severity: severity == freezed
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as AllergyIntoleranceReactionSeverity?,
       severityElement: severityElement == freezed
           ? _value.severityElement
           : severityElement // ignore: cast_nullable_to_non_nullable
@@ -5263,16 +5301,21 @@ abstract class _$AllergyIntoleranceReactionCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? substance,
       List<CodeableReference> manifestation,
       String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       FhirDateTime? onset,
-      @JsonKey(name: '_onset') Element? onsetElement,
-      Code? severity,
-      @JsonKey(name: '_severity') Element? severityElement,
+      @JsonKey(name: '_onset')
+          Element? onsetElement,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
+          AllergyIntoleranceReactionSeverity? severity,
+      @JsonKey(name: '_severity')
+          Element? severityElement,
       CodeableConcept? exposureRoute,
       List<Annotation>? note});
 
@@ -5356,7 +5399,7 @@ class __$AllergyIntoleranceReactionCopyWithImpl<$Res>
       severity: severity == freezed
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as AllergyIntoleranceReactionSeverity?,
       severityElement: severityElement == freezed
           ? _value.severityElement
           : severityElement // ignore: cast_nullable_to_non_nullable
@@ -5378,16 +5421,21 @@ class __$AllergyIntoleranceReactionCopyWithImpl<$Res>
 class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
   _$_AllergyIntoleranceReaction(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.substance,
       required this.manifestation,
       this.description,
-      @JsonKey(name: '_description') this.descriptionElement,
+      @JsonKey(name: '_description')
+          this.descriptionElement,
       this.onset,
-      @JsonKey(name: '_onset') this.onsetElement,
-      this.severity,
-      @JsonKey(name: '_severity') this.severityElement,
+      @JsonKey(name: '_onset')
+          this.onsetElement,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
+          this.severity,
+      @JsonKey(name: '_severity')
+          this.severityElement,
       this.exposureRoute,
       this.note})
       : super._();
@@ -5417,7 +5465,8 @@ class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
   @JsonKey(name: '_onset')
   final Element? onsetElement;
   @override
-  final Code? severity;
+  @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
+  final AllergyIntoleranceReactionSeverity? severity;
   @override
   @JsonKey(name: '_severity')
   final Element? severityElement;
@@ -5505,16 +5554,21 @@ class _$_AllergyIntoleranceReaction extends _AllergyIntoleranceReaction {
 abstract class _AllergyIntoleranceReaction extends AllergyIntoleranceReaction {
   factory _AllergyIntoleranceReaction(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? substance,
       required List<CodeableReference> manifestation,
       String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       FhirDateTime? onset,
-      @JsonKey(name: '_onset') Element? onsetElement,
-      Code? severity,
-      @JsonKey(name: '_severity') Element? severityElement,
+      @JsonKey(name: '_onset')
+          Element? onsetElement,
+      @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
+          AllergyIntoleranceReactionSeverity? severity,
+      @JsonKey(name: '_severity')
+          Element? severityElement,
       CodeableConcept? exposureRoute,
       List<Annotation>? note}) = _$_AllergyIntoleranceReaction;
   _AllergyIntoleranceReaction._() : super._();
@@ -5546,7 +5600,9 @@ abstract class _AllergyIntoleranceReaction extends AllergyIntoleranceReaction {
   @JsonKey(name: '_onset')
   Element? get onsetElement => throw _privateConstructorUsedError;
   @override
-  Code? get severity => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: AllergyIntoleranceReactionSeverity.unknown)
+  AllergyIntoleranceReactionSeverity? get severity =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_severity')
   Element? get severityElement => throw _privateConstructorUsedError;
@@ -9330,7 +9386,8 @@ class _$DetectedIssueTearOff {
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? code,
-      Code? severity,
+      @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
+          DetectedIssueSeverity? severity,
       @JsonKey(name: '_severity')
           Element? severityElement,
       Reference? patient,
@@ -9412,7 +9469,8 @@ mixin _$DetectedIssue {
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get code => throw _privateConstructorUsedError;
-  Code? get severity => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
+  DetectedIssueSeverity? get severity => throw _privateConstructorUsedError;
   @JsonKey(name: '_severity')
   Element? get severityElement => throw _privateConstructorUsedError;
   Reference? get patient => throw _privateConstructorUsedError;
@@ -9465,7 +9523,8 @@ abstract class $DetectedIssueCopyWith<$Res> {
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? code,
-      Code? severity,
+      @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
+          DetectedIssueSeverity? severity,
       @JsonKey(name: '_severity')
           Element? severityElement,
       Reference? patient,
@@ -9604,7 +9663,7 @@ class _$DetectedIssueCopyWithImpl<$Res>
       severity: severity == freezed
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as DetectedIssueSeverity?,
       severityElement: severityElement == freezed
           ? _value.severityElement
           : severityElement // ignore: cast_nullable_to_non_nullable
@@ -9832,7 +9891,8 @@ abstract class _$DetectedIssueCopyWith<$Res>
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? code,
-      Code? severity,
+      @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
+          DetectedIssueSeverity? severity,
       @JsonKey(name: '_severity')
           Element? severityElement,
       Reference? patient,
@@ -9986,7 +10046,7 @@ class __$DetectedIssueCopyWithImpl<$Res>
       severity: severity == freezed
           ? _value.severity
           : severity // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as DetectedIssueSeverity?,
       severityElement: severityElement == freezed
           ? _value.severityElement
           : severityElement // ignore: cast_nullable_to_non_nullable
@@ -10067,7 +10127,8 @@ class _$_DetectedIssue extends _DetectedIssue {
       @JsonKey(name: '_status')
           this.statusElement,
       this.code,
-      this.severity,
+      @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
+          this.severity,
       @JsonKey(name: '_severity')
           this.severityElement,
       this.patient,
@@ -10126,7 +10187,8 @@ class _$_DetectedIssue extends _DetectedIssue {
   @override
   final CodeableConcept? code;
   @override
-  final Code? severity;
+  @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
+  final DetectedIssueSeverity? severity;
   @override
   @JsonKey(name: '_severity')
   final Element? severityElement;
@@ -10306,7 +10368,8 @@ abstract class _DetectedIssue extends DetectedIssue {
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? code,
-      Code? severity,
+      @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
+          DetectedIssueSeverity? severity,
       @JsonKey(name: '_severity')
           Element? severityElement,
       Reference? patient,
@@ -10366,7 +10429,8 @@ abstract class _DetectedIssue extends DetectedIssue {
   @override
   CodeableConcept? get code => throw _privateConstructorUsedError;
   @override
-  Code? get severity => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: DetectedIssueSeverity.unknown)
+  DetectedIssueSeverity? get severity => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_severity')
   Element? get severityElement => throw _privateConstructorUsedError;
@@ -11051,7 +11115,8 @@ class _$FamilyMemberHistoryTearOff {
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element>? instantiatesUriElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
+          FamilyMemberHistoryStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? dataAbsentReason,
@@ -11179,7 +11244,8 @@ mixin _$FamilyMemberHistory {
   @JsonKey(name: '_instantiatesUri')
   List<Element>? get instantiatesUriElement =>
       throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
+  FamilyMemberHistoryStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get dataAbsentReason => throw _privateConstructorUsedError;
@@ -11257,7 +11323,8 @@ abstract class $FamilyMemberHistoryCopyWith<$Res> {
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element>? instantiatesUriElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
+          FamilyMemberHistoryStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? dataAbsentReason,
@@ -11450,7 +11517,7 @@ class _$FamilyMemberHistoryCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FamilyMemberHistoryStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -11856,7 +11923,8 @@ abstract class _$FamilyMemberHistoryCopyWith<$Res>
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element>? instantiatesUriElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
+          FamilyMemberHistoryStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? dataAbsentReason,
@@ -12074,7 +12142,7 @@ class __$FamilyMemberHistoryCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as FamilyMemberHistoryStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -12231,7 +12299,8 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
       this.instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           this.instantiatesUriElement,
-      this.status,
+      @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.dataAbsentReason,
@@ -12315,7 +12384,8 @@ class _$_FamilyMemberHistory extends _FamilyMemberHistory {
   @JsonKey(name: '_instantiatesUri')
   final List<Element>? instantiatesUriElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
+  final FamilyMemberHistoryStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -12578,7 +12648,8 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
       List<FhirUri>? instantiatesUri,
       @JsonKey(name: '_instantiatesUri')
           List<Element>? instantiatesUriElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
+          FamilyMemberHistoryStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? dataAbsentReason,
@@ -12665,7 +12736,8 @@ abstract class _FamilyMemberHistory extends FamilyMemberHistory {
   List<Element>? get instantiatesUriElement =>
       throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: FamilyMemberHistoryStatus.unknown)
+  FamilyMemberHistoryStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;

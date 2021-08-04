@@ -42,7 +42,8 @@ class _$ClaimTearOff {
           Element? statusElement,
       required CodeableConcept type,
       CodeableConcept? subType,
-      Code? use,
+      @JsonKey(unknownEnumValue: ClaimUse.unknown)
+          ClaimUse? use,
       @JsonKey(name: '_use')
           Element? useElement,
       required Reference patient,
@@ -146,7 +147,8 @@ mixin _$Claim {
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept get type => throw _privateConstructorUsedError;
   CodeableConcept? get subType => throw _privateConstructorUsedError;
-  Code? get use => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ClaimUse.unknown)
+  ClaimUse? get use => throw _privateConstructorUsedError;
   @JsonKey(name: '_use')
   Element? get useElement => throw _privateConstructorUsedError;
   Reference get patient => throw _privateConstructorUsedError;
@@ -206,7 +208,8 @@ abstract class $ClaimCopyWith<$Res> {
           Element? statusElement,
       CodeableConcept type,
       CodeableConcept? subType,
-      Code? use,
+      @JsonKey(unknownEnumValue: ClaimUse.unknown)
+          ClaimUse? use,
       @JsonKey(name: '_use')
           Element? useElement,
       Reference patient,
@@ -379,7 +382,7 @@ class _$ClaimCopyWithImpl<$Res> implements $ClaimCopyWith<$Res> {
       use: use == freezed
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ClaimUse?,
       useElement: useElement == freezed
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
@@ -744,7 +747,8 @@ abstract class _$ClaimCopyWith<$Res> implements $ClaimCopyWith<$Res> {
           Element? statusElement,
       CodeableConcept type,
       CodeableConcept? subType,
-      Code? use,
+      @JsonKey(unknownEnumValue: ClaimUse.unknown)
+          ClaimUse? use,
       @JsonKey(name: '_use')
           Element? useElement,
       Reference patient,
@@ -941,7 +945,7 @@ class __$ClaimCopyWithImpl<$Res> extends _$ClaimCopyWithImpl<$Res>
       use: use == freezed
           ? _value.use
           : use // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ClaimUse?,
       useElement: useElement == freezed
           ? _value.useElement
           : useElement // ignore: cast_nullable_to_non_nullable
@@ -1067,7 +1071,8 @@ class _$_Claim extends _Claim {
           this.statusElement,
       required this.type,
       this.subType,
-      this.use,
+      @JsonKey(unknownEnumValue: ClaimUse.unknown)
+          this.use,
       @JsonKey(name: '_use')
           this.useElement,
       required this.patient,
@@ -1137,7 +1142,8 @@ class _$_Claim extends _Claim {
   @override
   final CodeableConcept? subType;
   @override
-  final Code? use;
+  @JsonKey(unknownEnumValue: ClaimUse.unknown)
+  final ClaimUse? use;
   @override
   @JsonKey(name: '_use')
   final Element? useElement;
@@ -1363,7 +1369,8 @@ abstract class _Claim extends Claim {
           Element? statusElement,
       required CodeableConcept type,
       CodeableConcept? subType,
-      Code? use,
+      @JsonKey(unknownEnumValue: ClaimUse.unknown)
+          ClaimUse? use,
       @JsonKey(name: '_use')
           Element? useElement,
       required Reference patient,
@@ -1433,7 +1440,8 @@ abstract class _Claim extends Claim {
   @override
   CodeableConcept? get subType => throw _privateConstructorUsedError;
   @override
-  Code? get use => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ClaimUse.unknown)
+  ClaimUse? get use => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_use')
   Element? get useElement => throw _privateConstructorUsedError;
@@ -13837,14 +13845,19 @@ class _$ClaimResponseProcessNoteTearOff {
 
   _ClaimResponseProcessNote call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       PositiveInt? number,
-      @JsonKey(name: '_number') Element? numberElement,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(name: '_number')
+          Element? numberElement,
+      @JsonKey(unknownEnumValue: ClaimResponseProcessNoteType.unknown)
+          ClaimResponseProcessNoteType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       String? text,
-      @JsonKey(name: '_text') Element? textElement,
+      @JsonKey(name: '_text')
+          Element? textElement,
       CodeableConcept? language}) {
     return _ClaimResponseProcessNote(
       id: id,
@@ -13878,7 +13891,8 @@ mixin _$ClaimResponseProcessNote {
   PositiveInt? get number => throw _privateConstructorUsedError;
   @JsonKey(name: '_number')
   Element? get numberElement => throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ClaimResponseProcessNoteType.unknown)
+  ClaimResponseProcessNoteType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   String? get text => throw _privateConstructorUsedError;
@@ -13899,14 +13913,19 @@ abstract class $ClaimResponseProcessNoteCopyWith<$Res> {
       _$ClaimResponseProcessNoteCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       PositiveInt? number,
-      @JsonKey(name: '_number') Element? numberElement,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(name: '_number')
+          Element? numberElement,
+      @JsonKey(unknownEnumValue: ClaimResponseProcessNoteType.unknown)
+          ClaimResponseProcessNoteType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       String? text,
-      @JsonKey(name: '_text') Element? textElement,
+      @JsonKey(name: '_text')
+          Element? textElement,
       CodeableConcept? language});
 
   $ElementCopyWith<$Res>? get numberElement;
@@ -13961,7 +13980,7 @@ class _$ClaimResponseProcessNoteCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ClaimResponseProcessNoteType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -14035,14 +14054,19 @@ abstract class _$ClaimResponseProcessNoteCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       PositiveInt? number,
-      @JsonKey(name: '_number') Element? numberElement,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(name: '_number')
+          Element? numberElement,
+      @JsonKey(unknownEnumValue: ClaimResponseProcessNoteType.unknown)
+          ClaimResponseProcessNoteType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       String? text,
-      @JsonKey(name: '_text') Element? textElement,
+      @JsonKey(name: '_text')
+          Element? textElement,
       CodeableConcept? language});
 
   @override
@@ -14104,7 +14128,7 @@ class __$ClaimResponseProcessNoteCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as ClaimResponseProcessNoteType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -14130,14 +14154,19 @@ class __$ClaimResponseProcessNoteCopyWithImpl<$Res>
 class _$_ClaimResponseProcessNote extends _ClaimResponseProcessNote {
   _$_ClaimResponseProcessNote(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.number,
-      @JsonKey(name: '_number') this.numberElement,
-      this.type,
-      @JsonKey(name: '_type') this.typeElement,
+      @JsonKey(name: '_number')
+          this.numberElement,
+      @JsonKey(unknownEnumValue: ClaimResponseProcessNoteType.unknown)
+          this.type,
+      @JsonKey(name: '_type')
+          this.typeElement,
       this.text,
-      @JsonKey(name: '_text') this.textElement,
+      @JsonKey(name: '_text')
+          this.textElement,
       this.language})
       : super._();
 
@@ -14157,7 +14186,8 @@ class _$_ClaimResponseProcessNote extends _ClaimResponseProcessNote {
   @JsonKey(name: '_number')
   final Element? numberElement;
   @override
-  final Code? type;
+  @JsonKey(unknownEnumValue: ClaimResponseProcessNoteType.unknown)
+  final ClaimResponseProcessNoteType? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -14235,14 +14265,19 @@ class _$_ClaimResponseProcessNote extends _ClaimResponseProcessNote {
 abstract class _ClaimResponseProcessNote extends ClaimResponseProcessNote {
   factory _ClaimResponseProcessNote(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       PositiveInt? number,
-      @JsonKey(name: '_number') Element? numberElement,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(name: '_number')
+          Element? numberElement,
+      @JsonKey(unknownEnumValue: ClaimResponseProcessNoteType.unknown)
+          ClaimResponseProcessNoteType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       String? text,
-      @JsonKey(name: '_text') Element? textElement,
+      @JsonKey(name: '_text')
+          Element? textElement,
       CodeableConcept? language}) = _$_ClaimResponseProcessNote;
   _ClaimResponseProcessNote._() : super._();
 
@@ -14263,7 +14298,8 @@ abstract class _ClaimResponseProcessNote extends ClaimResponseProcessNote {
   @JsonKey(name: '_number')
   Element? get numberElement => throw _privateConstructorUsedError;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ClaimResponseProcessNoteType.unknown)
+  ClaimResponseProcessNoteType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -15264,7 +15300,8 @@ class _$InvoiceTearOff {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
+          InvoiceStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       String? cancelledReason,
@@ -15349,7 +15386,8 @@ mixin _$Invoice {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
+  InvoiceStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   String? get cancelledReason => throw _privateConstructorUsedError;
@@ -15401,7 +15439,8 @@ abstract class $InvoiceCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
+          InvoiceStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       String? cancelledReason,
@@ -15536,7 +15575,7 @@ class _$InvoiceCopyWithImpl<$Res> implements $InvoiceCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as InvoiceStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -15800,7 +15839,8 @@ abstract class _$InvoiceCopyWith<$Res> implements $InvoiceCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
+          InvoiceStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       String? cancelledReason,
@@ -15951,7 +15991,7 @@ class __$InvoiceCopyWithImpl<$Res> extends _$InvoiceCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as InvoiceStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -16048,7 +16088,8 @@ class _$_Invoice extends _Invoice {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.cancelledReason,
@@ -16105,7 +16146,8 @@ class _$_Invoice extends _Invoice {
   @override
   final List<Identifier>? identifier;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
+  final InvoiceStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -16295,7 +16337,8 @@ abstract class _Invoice extends Invoice {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
+          InvoiceStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       String? cancelledReason,
@@ -16352,7 +16395,8 @@ abstract class _Invoice extends Invoice {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: InvoiceStatus.unknown)
+  InvoiceStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -17089,13 +17133,17 @@ class _$InvoicePriceComponentTearOff {
 
   _InvoicePriceComponent call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
+          InvoicePriceComponentType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       CodeableConcept? code,
       Decimal? factor,
-      @JsonKey(name: '_factor') Element? factorElement,
+      @JsonKey(name: '_factor')
+          Element? factorElement,
       Money? amount}) {
     return _InvoicePriceComponent(
       id: id,
@@ -17125,7 +17173,8 @@ mixin _$InvoicePriceComponent {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
+  InvoicePriceComponentType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   CodeableConcept? get code => throw _privateConstructorUsedError;
@@ -17147,13 +17196,17 @@ abstract class $InvoicePriceComponentCopyWith<$Res> {
       _$InvoicePriceComponentCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
+          InvoicePriceComponentType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       CodeableConcept? code,
       Decimal? factor,
-      @JsonKey(name: '_factor') Element? factorElement,
+      @JsonKey(name: '_factor')
+          Element? factorElement,
       Money? amount});
 
   $ElementCopyWith<$Res>? get typeElement;
@@ -17199,7 +17252,7 @@ class _$InvoicePriceComponentCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as InvoicePriceComponentType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -17277,13 +17330,17 @@ abstract class _$InvoicePriceComponentCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
+          InvoicePriceComponentType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       CodeableConcept? code,
       Decimal? factor,
-      @JsonKey(name: '_factor') Element? factorElement,
+      @JsonKey(name: '_factor')
+          Element? factorElement,
       Money? amount});
 
   @override
@@ -17335,7 +17392,7 @@ class __$InvoicePriceComponentCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as InvoicePriceComponentType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -17367,7 +17424,7 @@ class _$_InvoicePriceComponent extends _InvoicePriceComponent {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.type,
+      @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown) this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.code,
       this.factor,
@@ -17386,7 +17443,8 @@ class _$_InvoicePriceComponent extends _InvoicePriceComponent {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? type;
+  @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
+  final InvoicePriceComponentType? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -17461,13 +17519,17 @@ class _$_InvoicePriceComponent extends _InvoicePriceComponent {
 abstract class _InvoicePriceComponent extends InvoicePriceComponent {
   factory _InvoicePriceComponent(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
+          InvoicePriceComponentType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       CodeableConcept? code,
       Decimal? factor,
-      @JsonKey(name: '_factor') Element? factorElement,
+      @JsonKey(name: '_factor')
+          Element? factorElement,
       Money? amount}) = _$_InvoicePriceComponent;
   _InvoicePriceComponent._() : super._();
 
@@ -17483,7 +17545,8 @@ abstract class _InvoicePriceComponent extends InvoicePriceComponent {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: InvoicePriceComponentType.unknown)
+  InvoicePriceComponentType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;

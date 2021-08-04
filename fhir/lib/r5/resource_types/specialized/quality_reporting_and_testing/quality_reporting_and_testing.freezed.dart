@@ -49,7 +49,8 @@ class _$MeasureTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: MeasureStatus.unknown)
+          MeasureStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -249,7 +250,8 @@ mixin _$Measure {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: MeasureStatus.unknown)
+  MeasureStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -372,7 +374,8 @@ abstract class $MeasureCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: MeasureStatus.unknown)
+          MeasureStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -659,7 +662,7 @@ class _$MeasureCopyWithImpl<$Res> implements $MeasureCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as MeasureStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1294,7 +1297,8 @@ abstract class _$MeasureCopyWith<$Res> implements $MeasureCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: MeasureStatus.unknown)
+          MeasureStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -1615,7 +1619,7 @@ class __$MeasureCopyWithImpl<$Res> extends _$MeasureCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as MeasureStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1882,7 +1886,8 @@ class _$_Measure extends _Measure {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      this.status,
+      @JsonKey(unknownEnumValue: MeasureStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -2014,7 +2019,8 @@ class _$_Measure extends _Measure {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: MeasureStatus.unknown)
+  final MeasureStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -2406,7 +2412,8 @@ abstract class _Measure extends Measure {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: MeasureStatus.unknown)
+          MeasureStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -2538,7 +2545,8 @@ abstract class _Measure extends Measure {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: MeasureStatus.unknown)
+  MeasureStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -4866,10 +4874,12 @@ class _$MeasureReportTearOff {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
+          MeasureReportStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: MeasureReportType.unknown)
+          MeasureReportType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Code? dataUpdateType,
@@ -4947,10 +4957,12 @@ mixin _$MeasureReport {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
+  MeasureReportStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: MeasureReportType.unknown)
+  MeasureReportType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   Code? get dataUpdateType => throw _privateConstructorUsedError;
@@ -4998,10 +5010,12 @@ abstract class $MeasureReportCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
+          MeasureReportStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: MeasureReportType.unknown)
+          MeasureReportType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Code? dataUpdateType,
@@ -5129,7 +5143,7 @@ class _$MeasureReportCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as MeasureReportStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5137,7 +5151,7 @@ class _$MeasureReportCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as MeasureReportType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -5372,10 +5386,12 @@ abstract class _$MeasureReportCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
+          MeasureReportStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: MeasureReportType.unknown)
+          MeasureReportType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Code? dataUpdateType,
@@ -5519,7 +5535,7 @@ class __$MeasureReportCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as MeasureReportStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5527,7 +5543,7 @@ class __$MeasureReportCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as MeasureReportType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -5608,10 +5624,12 @@ class _$_MeasureReport extends _MeasureReport {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
-      this.type,
+      @JsonKey(unknownEnumValue: MeasureReportType.unknown)
+          this.type,
       @JsonKey(name: '_type')
           this.typeElement,
       this.dataUpdateType,
@@ -5663,12 +5681,14 @@ class _$_MeasureReport extends _MeasureReport {
   @override
   final List<Identifier>? identifier;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
+  final MeasureReportStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Code? type;
+  @JsonKey(unknownEnumValue: MeasureReportType.unknown)
+  final MeasureReportType? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -5845,10 +5865,12 @@ abstract class _MeasureReport extends MeasureReport {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
+          MeasureReportStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
-      Code? type,
+      @JsonKey(unknownEnumValue: MeasureReportType.unknown)
+          MeasureReportType? type,
       @JsonKey(name: '_type')
           Element? typeElement,
       Code? dataUpdateType,
@@ -5901,12 +5923,14 @@ abstract class _MeasureReport extends MeasureReport {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: MeasureReportStatus.unknown)
+  MeasureReportStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: MeasureReportType.unknown)
+  MeasureReportType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -8794,11 +8818,13 @@ class _$TestReportTearOff {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: TestReportStatus.unknown)
+          TestReportStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       required Reference testScript,
-      Code? result,
+      @JsonKey(unknownEnumValue: TestReportResult.unknown)
+          TestReportResult? result,
       @JsonKey(name: '_result')
           Element? resultElement,
       Decimal? score,
@@ -8877,11 +8903,13 @@ mixin _$TestReport {
   String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestReportStatus.unknown)
+  TestReportStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Reference get testScript => throw _privateConstructorUsedError;
-  Code? get result => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestReportResult.unknown)
+  TestReportResult? get result => throw _privateConstructorUsedError;
   @JsonKey(name: '_result')
   Element? get resultElement => throw _privateConstructorUsedError;
   Decimal? get score => throw _privateConstructorUsedError;
@@ -8930,11 +8958,13 @@ abstract class $TestReportCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: TestReportStatus.unknown)
+          TestReportStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference testScript,
-      Code? result,
+      @JsonKey(unknownEnumValue: TestReportResult.unknown)
+          TestReportResult? result,
       @JsonKey(name: '_result')
           Element? resultElement,
       Decimal? score,
@@ -9067,7 +9097,7 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestReportStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -9079,7 +9109,7 @@ class _$TestReportCopyWithImpl<$Res> implements $TestReportCopyWith<$Res> {
       result: result == freezed
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestReportResult?,
       resultElement: resultElement == freezed
           ? _value.resultElement
           : resultElement // ignore: cast_nullable_to_non_nullable
@@ -9304,11 +9334,13 @@ abstract class _$TestReportCopyWith<$Res> implements $TestReportCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: TestReportStatus.unknown)
+          TestReportStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference testScript,
-      Code? result,
+      @JsonKey(unknownEnumValue: TestReportResult.unknown)
+          TestReportResult? result,
       @JsonKey(name: '_result')
           Element? resultElement,
       Decimal? score,
@@ -9457,7 +9489,7 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestReportStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -9469,7 +9501,7 @@ class __$TestReportCopyWithImpl<$Res> extends _$TestReportCopyWithImpl<$Res>
       result: result == freezed
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestReportResult?,
       resultElement: resultElement == freezed
           ? _value.resultElement
           : resultElement // ignore: cast_nullable_to_non_nullable
@@ -9541,11 +9573,13 @@ class _$_TestReport extends _TestReport {
       this.name,
       @JsonKey(name: '_name')
           this.nameElement,
-      this.status,
+      @JsonKey(unknownEnumValue: TestReportStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       required this.testScript,
-      this.result,
+      @JsonKey(unknownEnumValue: TestReportResult.unknown)
+          this.result,
       @JsonKey(name: '_result')
           this.resultElement,
       this.score,
@@ -9600,14 +9634,16 @@ class _$_TestReport extends _TestReport {
   @JsonKey(name: '_name')
   final Element? nameElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: TestReportStatus.unknown)
+  final TestReportStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
   final Reference testScript;
   @override
-  final Code? result;
+  @JsonKey(unknownEnumValue: TestReportResult.unknown)
+  final TestReportResult? result;
   @override
   @JsonKey(name: '_result')
   final Element? resultElement;
@@ -9783,11 +9819,13 @@ abstract class _TestReport extends TestReport {
       String? name,
       @JsonKey(name: '_name')
           Element? nameElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: TestReportStatus.unknown)
+          TestReportStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       required Reference testScript,
-      Code? result,
+      @JsonKey(unknownEnumValue: TestReportResult.unknown)
+          TestReportResult? result,
       @JsonKey(name: '_result')
           Element? resultElement,
       Decimal? score,
@@ -9843,14 +9881,16 @@ abstract class _TestReport extends TestReport {
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestReportStatus.unknown)
+  TestReportStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   @override
   Reference get testScript => throw _privateConstructorUsedError;
   @override
-  Code? get result => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestReportResult.unknown)
+  TestReportResult? get result => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_result')
   Element? get resultElement => throw _privateConstructorUsedError;
@@ -9895,14 +9935,19 @@ class _$TestReportParticipantTearOff {
 
   _TestReportParticipant call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
+          TestReportParticipantType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       FhirUri? uri,
-      @JsonKey(name: '_uri') Element? uriElement,
+      @JsonKey(name: '_uri')
+          Element? uriElement,
       String? display,
-      @JsonKey(name: '_display') Element? displayElement}) {
+      @JsonKey(name: '_display')
+          Element? displayElement}) {
     return _TestReportParticipant(
       id: id,
       extension_: extension_,
@@ -9931,7 +9976,8 @@ mixin _$TestReportParticipant {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
+  TestReportParticipantType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   FhirUri? get uri => throw _privateConstructorUsedError;
@@ -9954,14 +10000,19 @@ abstract class $TestReportParticipantCopyWith<$Res> {
       _$TestReportParticipantCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
+          TestReportParticipantType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       FhirUri? uri,
-      @JsonKey(name: '_uri') Element? uriElement,
+      @JsonKey(name: '_uri')
+          Element? uriElement,
       String? display,
-      @JsonKey(name: '_display') Element? displayElement});
+      @JsonKey(name: '_display')
+          Element? displayElement});
 
   $ElementCopyWith<$Res>? get typeElement;
   $ElementCopyWith<$Res>? get uriElement;
@@ -10005,7 +10056,7 @@ class _$TestReportParticipantCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestReportParticipantType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -10072,14 +10123,19 @@ abstract class _$TestReportParticipantCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? type,
-      @JsonKey(name: '_type') Element? typeElement,
+      @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
+          TestReportParticipantType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
       FhirUri? uri,
-      @JsonKey(name: '_uri') Element? uriElement,
+      @JsonKey(name: '_uri')
+          Element? uriElement,
       String? display,
-      @JsonKey(name: '_display') Element? displayElement});
+      @JsonKey(name: '_display')
+          Element? displayElement});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -10128,7 +10184,7 @@ class __$TestReportParticipantCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestReportParticipantType?,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -10160,7 +10216,7 @@ class _$_TestReportParticipant extends _TestReportParticipant {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.type,
+      @JsonKey(unknownEnumValue: TestReportParticipantType.unknown) this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.uri,
       @JsonKey(name: '_uri') this.uriElement,
@@ -10179,7 +10235,8 @@ class _$_TestReportParticipant extends _TestReportParticipant {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? type;
+  @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
+  final TestReportParticipantType? type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -10256,16 +10313,20 @@ class _$_TestReportParticipant extends _TestReportParticipant {
 
 abstract class _TestReportParticipant extends TestReportParticipant {
   factory _TestReportParticipant(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Code? type,
-          @JsonKey(name: '_type') Element? typeElement,
-          FhirUri? uri,
-          @JsonKey(name: '_uri') Element? uriElement,
-          String? display,
-          @JsonKey(name: '_display') Element? displayElement}) =
-      _$_TestReportParticipant;
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
+          TestReportParticipantType? type,
+      @JsonKey(name: '_type')
+          Element? typeElement,
+      FhirUri? uri,
+      @JsonKey(name: '_uri')
+          Element? uriElement,
+      String? display,
+      @JsonKey(name: '_display')
+          Element? displayElement}) = _$_TestReportParticipant;
   _TestReportParticipant._() : super._();
 
   factory _TestReportParticipant.fromJson(Map<String, dynamic> json) =
@@ -10280,7 +10341,8 @@ abstract class _TestReportParticipant extends TestReportParticipant {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get type => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestReportParticipantType.unknown)
+  TestReportParticipantType? get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -10841,14 +10903,19 @@ class _$TestReportOperationTearOff {
 
   _TestReportOperation call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? result,
-      @JsonKey(name: '_result') Element? resultElement,
+      @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
+          TestReportOperationResult? result,
+      @JsonKey(name: '_result')
+          Element? resultElement,
       Markdown? message,
-      @JsonKey(name: '_message') Element? messageElement,
+      @JsonKey(name: '_message')
+          Element? messageElement,
       FhirUri? detail,
-      @JsonKey(name: '_detail') Element? detailElement}) {
+      @JsonKey(name: '_detail')
+          Element? detailElement}) {
     return _TestReportOperation(
       id: id,
       extension_: extension_,
@@ -10877,7 +10944,8 @@ mixin _$TestReportOperation {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get result => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
+  TestReportOperationResult? get result => throw _privateConstructorUsedError;
   @JsonKey(name: '_result')
   Element? get resultElement => throw _privateConstructorUsedError;
   Markdown? get message => throw _privateConstructorUsedError;
@@ -10900,14 +10968,19 @@ abstract class $TestReportOperationCopyWith<$Res> {
       _$TestReportOperationCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? result,
-      @JsonKey(name: '_result') Element? resultElement,
+      @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
+          TestReportOperationResult? result,
+      @JsonKey(name: '_result')
+          Element? resultElement,
       Markdown? message,
-      @JsonKey(name: '_message') Element? messageElement,
+      @JsonKey(name: '_message')
+          Element? messageElement,
       FhirUri? detail,
-      @JsonKey(name: '_detail') Element? detailElement});
+      @JsonKey(name: '_detail')
+          Element? detailElement});
 
   $ElementCopyWith<$Res>? get resultElement;
   $ElementCopyWith<$Res>? get messageElement;
@@ -10951,7 +11024,7 @@ class _$TestReportOperationCopyWithImpl<$Res>
       result: result == freezed
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestReportOperationResult?,
       resultElement: resultElement == freezed
           ? _value.resultElement
           : resultElement // ignore: cast_nullable_to_non_nullable
@@ -11018,14 +11091,19 @@ abstract class _$TestReportOperationCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? result,
-      @JsonKey(name: '_result') Element? resultElement,
+      @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
+          TestReportOperationResult? result,
+      @JsonKey(name: '_result')
+          Element? resultElement,
       Markdown? message,
-      @JsonKey(name: '_message') Element? messageElement,
+      @JsonKey(name: '_message')
+          Element? messageElement,
       FhirUri? detail,
-      @JsonKey(name: '_detail') Element? detailElement});
+      @JsonKey(name: '_detail')
+          Element? detailElement});
 
   @override
   $ElementCopyWith<$Res>? get resultElement;
@@ -11074,7 +11152,7 @@ class __$TestReportOperationCopyWithImpl<$Res>
       result: result == freezed
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestReportOperationResult?,
       resultElement: resultElement == freezed
           ? _value.resultElement
           : resultElement // ignore: cast_nullable_to_non_nullable
@@ -11106,7 +11184,7 @@ class _$_TestReportOperation extends _TestReportOperation {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.result,
+      @JsonKey(unknownEnumValue: TestReportOperationResult.unknown) this.result,
       @JsonKey(name: '_result') this.resultElement,
       this.message,
       @JsonKey(name: '_message') this.messageElement,
@@ -11125,7 +11203,8 @@ class _$_TestReportOperation extends _TestReportOperation {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? result;
+  @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
+  final TestReportOperationResult? result;
   @override
   @JsonKey(name: '_result')
   final Element? resultElement;
@@ -11202,16 +11281,20 @@ class _$_TestReportOperation extends _TestReportOperation {
 
 abstract class _TestReportOperation extends TestReportOperation {
   factory _TestReportOperation(
-          {String? id,
-          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-          List<FhirExtension>? modifierExtension,
-          Code? result,
-          @JsonKey(name: '_result') Element? resultElement,
-          Markdown? message,
-          @JsonKey(name: '_message') Element? messageElement,
-          FhirUri? detail,
-          @JsonKey(name: '_detail') Element? detailElement}) =
-      _$_TestReportOperation;
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
+          TestReportOperationResult? result,
+      @JsonKey(name: '_result')
+          Element? resultElement,
+      Markdown? message,
+      @JsonKey(name: '_message')
+          Element? messageElement,
+      FhirUri? detail,
+      @JsonKey(name: '_detail')
+          Element? detailElement}) = _$_TestReportOperation;
   _TestReportOperation._() : super._();
 
   factory _TestReportOperation.fromJson(Map<String, dynamic> json) =
@@ -11226,7 +11309,8 @@ abstract class _TestReportOperation extends TestReportOperation {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get result => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestReportOperationResult.unknown)
+  TestReportOperationResult? get result => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_result')
   Element? get resultElement => throw _privateConstructorUsedError;
@@ -11256,14 +11340,19 @@ class _$TestReportAssertTearOff {
 
   _TestReportAssert call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? result,
-      @JsonKey(name: '_result') Element? resultElement,
+      @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
+          TestReportAssertResult? result,
+      @JsonKey(name: '_result')
+          Element? resultElement,
       Markdown? message,
-      @JsonKey(name: '_message') Element? messageElement,
+      @JsonKey(name: '_message')
+          Element? messageElement,
       String? detail,
-      @JsonKey(name: '_detail') Element? detailElement}) {
+      @JsonKey(name: '_detail')
+          Element? detailElement}) {
     return _TestReportAssert(
       id: id,
       extension_: extension_,
@@ -11292,7 +11381,8 @@ mixin _$TestReportAssert {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  Code? get result => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
+  TestReportAssertResult? get result => throw _privateConstructorUsedError;
   @JsonKey(name: '_result')
   Element? get resultElement => throw _privateConstructorUsedError;
   Markdown? get message => throw _privateConstructorUsedError;
@@ -11315,14 +11405,19 @@ abstract class $TestReportAssertCopyWith<$Res> {
       _$TestReportAssertCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? result,
-      @JsonKey(name: '_result') Element? resultElement,
+      @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
+          TestReportAssertResult? result,
+      @JsonKey(name: '_result')
+          Element? resultElement,
       Markdown? message,
-      @JsonKey(name: '_message') Element? messageElement,
+      @JsonKey(name: '_message')
+          Element? messageElement,
       String? detail,
-      @JsonKey(name: '_detail') Element? detailElement});
+      @JsonKey(name: '_detail')
+          Element? detailElement});
 
   $ElementCopyWith<$Res>? get resultElement;
   $ElementCopyWith<$Res>? get messageElement;
@@ -11366,7 +11461,7 @@ class _$TestReportAssertCopyWithImpl<$Res>
       result: result == freezed
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestReportAssertResult?,
       resultElement: resultElement == freezed
           ? _value.resultElement
           : resultElement // ignore: cast_nullable_to_non_nullable
@@ -11433,14 +11528,19 @@ abstract class _$TestReportAssertCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? result,
-      @JsonKey(name: '_result') Element? resultElement,
+      @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
+          TestReportAssertResult? result,
+      @JsonKey(name: '_result')
+          Element? resultElement,
       Markdown? message,
-      @JsonKey(name: '_message') Element? messageElement,
+      @JsonKey(name: '_message')
+          Element? messageElement,
       String? detail,
-      @JsonKey(name: '_detail') Element? detailElement});
+      @JsonKey(name: '_detail')
+          Element? detailElement});
 
   @override
   $ElementCopyWith<$Res>? get resultElement;
@@ -11489,7 +11589,7 @@ class __$TestReportAssertCopyWithImpl<$Res>
       result: result == freezed
           ? _value.result
           : result // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestReportAssertResult?,
       resultElement: resultElement == freezed
           ? _value.resultElement
           : resultElement // ignore: cast_nullable_to_non_nullable
@@ -11521,7 +11621,7 @@ class _$_TestReportAssert extends _TestReportAssert {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.result,
+      @JsonKey(unknownEnumValue: TestReportAssertResult.unknown) this.result,
       @JsonKey(name: '_result') this.resultElement,
       this.message,
       @JsonKey(name: '_message') this.messageElement,
@@ -11540,7 +11640,8 @@ class _$_TestReportAssert extends _TestReportAssert {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final Code? result;
+  @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
+  final TestReportAssertResult? result;
   @override
   @JsonKey(name: '_result')
   final Element? resultElement;
@@ -11617,14 +11718,19 @@ class _$_TestReportAssert extends _TestReportAssert {
 abstract class _TestReportAssert extends TestReportAssert {
   factory _TestReportAssert(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      Code? result,
-      @JsonKey(name: '_result') Element? resultElement,
+      @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
+          TestReportAssertResult? result,
+      @JsonKey(name: '_result')
+          Element? resultElement,
       Markdown? message,
-      @JsonKey(name: '_message') Element? messageElement,
+      @JsonKey(name: '_message')
+          Element? messageElement,
       String? detail,
-      @JsonKey(name: '_detail') Element? detailElement}) = _$_TestReportAssert;
+      @JsonKey(name: '_detail')
+          Element? detailElement}) = _$_TestReportAssert;
   _TestReportAssert._() : super._();
 
   factory _TestReportAssert.fromJson(Map<String, dynamic> json) =
@@ -11639,7 +11745,8 @@ abstract class _TestReportAssert extends TestReportAssert {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  Code? get result => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestReportAssertResult.unknown)
+  TestReportAssertResult? get result => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_result')
   Element? get resultElement => throw _privateConstructorUsedError;
@@ -12847,7 +12954,8 @@ class _$TestScriptTearOff {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
+          TestScriptStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -12971,7 +13079,8 @@ mixin _$TestScript {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
+  TestScriptStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Boolean? get experimental => throw _privateConstructorUsedError;
@@ -13047,7 +13156,8 @@ abstract class $TestScriptCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
+          TestScriptStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -13245,7 +13355,7 @@ class _$TestScriptCopyWithImpl<$Res> implements $TestScriptCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestScriptStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -13598,7 +13708,8 @@ abstract class _$TestScriptCopyWith<$Res> implements $TestScriptCopyWith<$Res> {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
+          TestScriptStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -13817,7 +13928,7 @@ class __$TestScriptCopyWithImpl<$Res> extends _$TestScriptCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestScriptStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -13958,7 +14069,8 @@ class _$_TestScript extends _TestScript {
       this.title,
       @JsonKey(name: '_title')
           this.titleElement,
-      this.status,
+      @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.experimental,
@@ -14046,7 +14158,8 @@ class _$_TestScript extends _TestScript {
   @JsonKey(name: '_title')
   final Element? titleElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
+  final TestScriptStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -14300,7 +14413,8 @@ abstract class _TestScript extends TestScript {
       String? title,
       @JsonKey(name: '_title')
           Element? titleElement,
-      Code? status,
+      @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
+          TestScriptStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Boolean? experimental,
@@ -14389,7 +14503,8 @@ abstract class _TestScript extends TestScript {
   @JsonKey(name: '_title')
   Element? get titleElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestScriptStatus.unknown)
+  TestScriptStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -18304,40 +18419,57 @@ class _$TestScriptOperationTearOff {
 
   _TestScriptOperation call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? type,
       Code? resource,
-      @JsonKey(name: '_resource') Element? resourceElement,
+      @JsonKey(name: '_resource')
+          Element? resourceElement,
       String? label,
-      @JsonKey(name: '_label') Element? labelElement,
+      @JsonKey(name: '_label')
+          Element? labelElement,
       String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       Code? accept,
-      @JsonKey(name: '_accept') Element? acceptElement,
+      @JsonKey(name: '_accept')
+          Element? acceptElement,
       Code? contentType,
-      @JsonKey(name: '_contentType') Element? contentTypeElement,
+      @JsonKey(name: '_contentType')
+          Element? contentTypeElement,
       Integer? destination,
-      @JsonKey(name: '_destination') Element? destinationElement,
+      @JsonKey(name: '_destination')
+          Element? destinationElement,
       Boolean? encodeRequestUrl,
-      @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
-      Code? method,
-      @JsonKey(name: '_method') Element? methodElement,
+      @JsonKey(name: '_encodeRequestUrl')
+          Element? encodeRequestUrlElement,
+      @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown)
+          TestScriptOperationMethod? method,
+      @JsonKey(name: '_method')
+          Element? methodElement,
       Integer? origin,
-      @JsonKey(name: '_origin') Element? originElement,
+      @JsonKey(name: '_origin')
+          Element? originElement,
       String? params,
-      @JsonKey(name: '_params') Element? paramsElement,
+      @JsonKey(name: '_params')
+          Element? paramsElement,
       List<TestScriptRequestHeader>? requestHeader,
       Id? requestId,
-      @JsonKey(name: '_requestId') Element? requestIdElement,
+      @JsonKey(name: '_requestId')
+          Element? requestIdElement,
       Id? responseId,
-      @JsonKey(name: '_responseId') Element? responseIdElement,
+      @JsonKey(name: '_responseId')
+          Element? responseIdElement,
       Id? sourceId,
-      @JsonKey(name: '_sourceId') Element? sourceIdElement,
+      @JsonKey(name: '_sourceId')
+          Element? sourceIdElement,
       Id? targetId,
-      @JsonKey(name: '_targetId') Element? targetIdElement,
+      @JsonKey(name: '_targetId')
+          Element? targetIdElement,
       String? url,
-      @JsonKey(name: '_url') Element? urlElement}) {
+      @JsonKey(name: '_url')
+          Element? urlElement}) {
     return _TestScriptOperation(
       id: id,
       extension_: extension_,
@@ -18414,7 +18546,8 @@ mixin _$TestScriptOperation {
   Boolean? get encodeRequestUrl => throw _privateConstructorUsedError;
   @JsonKey(name: '_encodeRequestUrl')
   Element? get encodeRequestUrlElement => throw _privateConstructorUsedError;
-  Code? get method => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown)
+  TestScriptOperationMethod? get method => throw _privateConstructorUsedError;
   @JsonKey(name: '_method')
   Element? get methodElement => throw _privateConstructorUsedError;
   Integer? get origin => throw _privateConstructorUsedError;
@@ -18454,40 +18587,57 @@ abstract class $TestScriptOperationCopyWith<$Res> {
       _$TestScriptOperationCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? type,
       Code? resource,
-      @JsonKey(name: '_resource') Element? resourceElement,
+      @JsonKey(name: '_resource')
+          Element? resourceElement,
       String? label,
-      @JsonKey(name: '_label') Element? labelElement,
+      @JsonKey(name: '_label')
+          Element? labelElement,
       String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       Code? accept,
-      @JsonKey(name: '_accept') Element? acceptElement,
+      @JsonKey(name: '_accept')
+          Element? acceptElement,
       Code? contentType,
-      @JsonKey(name: '_contentType') Element? contentTypeElement,
+      @JsonKey(name: '_contentType')
+          Element? contentTypeElement,
       Integer? destination,
-      @JsonKey(name: '_destination') Element? destinationElement,
+      @JsonKey(name: '_destination')
+          Element? destinationElement,
       Boolean? encodeRequestUrl,
-      @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
-      Code? method,
-      @JsonKey(name: '_method') Element? methodElement,
+      @JsonKey(name: '_encodeRequestUrl')
+          Element? encodeRequestUrlElement,
+      @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown)
+          TestScriptOperationMethod? method,
+      @JsonKey(name: '_method')
+          Element? methodElement,
       Integer? origin,
-      @JsonKey(name: '_origin') Element? originElement,
+      @JsonKey(name: '_origin')
+          Element? originElement,
       String? params,
-      @JsonKey(name: '_params') Element? paramsElement,
+      @JsonKey(name: '_params')
+          Element? paramsElement,
       List<TestScriptRequestHeader>? requestHeader,
       Id? requestId,
-      @JsonKey(name: '_requestId') Element? requestIdElement,
+      @JsonKey(name: '_requestId')
+          Element? requestIdElement,
       Id? responseId,
-      @JsonKey(name: '_responseId') Element? responseIdElement,
+      @JsonKey(name: '_responseId')
+          Element? responseIdElement,
       Id? sourceId,
-      @JsonKey(name: '_sourceId') Element? sourceIdElement,
+      @JsonKey(name: '_sourceId')
+          Element? sourceIdElement,
       Id? targetId,
-      @JsonKey(name: '_targetId') Element? targetIdElement,
+      @JsonKey(name: '_targetId')
+          Element? targetIdElement,
       String? url,
-      @JsonKey(name: '_url') Element? urlElement});
+      @JsonKey(name: '_url')
+          Element? urlElement});
 
   $CodingCopyWith<$Res>? get type;
   $ElementCopyWith<$Res>? get resourceElement;
@@ -18630,7 +18780,7 @@ class _$TestScriptOperationCopyWithImpl<$Res>
       method: method == freezed
           ? _value.method
           : method // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestScriptOperationMethod?,
       methodElement: methodElement == freezed
           ? _value.methodElement
           : methodElement // ignore: cast_nullable_to_non_nullable
@@ -18884,40 +19034,57 @@ abstract class _$TestScriptOperationCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? type,
       Code? resource,
-      @JsonKey(name: '_resource') Element? resourceElement,
+      @JsonKey(name: '_resource')
+          Element? resourceElement,
       String? label,
-      @JsonKey(name: '_label') Element? labelElement,
+      @JsonKey(name: '_label')
+          Element? labelElement,
       String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       Code? accept,
-      @JsonKey(name: '_accept') Element? acceptElement,
+      @JsonKey(name: '_accept')
+          Element? acceptElement,
       Code? contentType,
-      @JsonKey(name: '_contentType') Element? contentTypeElement,
+      @JsonKey(name: '_contentType')
+          Element? contentTypeElement,
       Integer? destination,
-      @JsonKey(name: '_destination') Element? destinationElement,
+      @JsonKey(name: '_destination')
+          Element? destinationElement,
       Boolean? encodeRequestUrl,
-      @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
-      Code? method,
-      @JsonKey(name: '_method') Element? methodElement,
+      @JsonKey(name: '_encodeRequestUrl')
+          Element? encodeRequestUrlElement,
+      @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown)
+          TestScriptOperationMethod? method,
+      @JsonKey(name: '_method')
+          Element? methodElement,
       Integer? origin,
-      @JsonKey(name: '_origin') Element? originElement,
+      @JsonKey(name: '_origin')
+          Element? originElement,
       String? params,
-      @JsonKey(name: '_params') Element? paramsElement,
+      @JsonKey(name: '_params')
+          Element? paramsElement,
       List<TestScriptRequestHeader>? requestHeader,
       Id? requestId,
-      @JsonKey(name: '_requestId') Element? requestIdElement,
+      @JsonKey(name: '_requestId')
+          Element? requestIdElement,
       Id? responseId,
-      @JsonKey(name: '_responseId') Element? responseIdElement,
+      @JsonKey(name: '_responseId')
+          Element? responseIdElement,
       Id? sourceId,
-      @JsonKey(name: '_sourceId') Element? sourceIdElement,
+      @JsonKey(name: '_sourceId')
+          Element? sourceIdElement,
       Id? targetId,
-      @JsonKey(name: '_targetId') Element? targetIdElement,
+      @JsonKey(name: '_targetId')
+          Element? targetIdElement,
       String? url,
-      @JsonKey(name: '_url') Element? urlElement});
+      @JsonKey(name: '_url')
+          Element? urlElement});
 
   @override
   $CodingCopyWith<$Res>? get type;
@@ -19078,7 +19245,7 @@ class __$TestScriptOperationCopyWithImpl<$Res>
       method: method == freezed
           ? _value.method
           : method // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestScriptOperationMethod?,
       methodElement: methodElement == freezed
           ? _value.methodElement
           : methodElement // ignore: cast_nullable_to_non_nullable
@@ -19169,7 +19336,7 @@ class _$_TestScriptOperation extends _TestScriptOperation {
       @JsonKey(name: '_destination') this.destinationElement,
       this.encodeRequestUrl,
       @JsonKey(name: '_encodeRequestUrl') this.encodeRequestUrlElement,
-      this.method,
+      @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown) this.method,
       @JsonKey(name: '_method') this.methodElement,
       this.origin,
       @JsonKey(name: '_origin') this.originElement,
@@ -19236,7 +19403,8 @@ class _$_TestScriptOperation extends _TestScriptOperation {
   @JsonKey(name: '_encodeRequestUrl')
   final Element? encodeRequestUrlElement;
   @override
-  final Code? method;
+  @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown)
+  final TestScriptOperationMethod? method;
   @override
   @JsonKey(name: '_method')
   final Element? methodElement;
@@ -19419,40 +19587,57 @@ class _$_TestScriptOperation extends _TestScriptOperation {
 abstract class _TestScriptOperation extends TestScriptOperation {
   factory _TestScriptOperation(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Coding? type,
       Code? resource,
-      @JsonKey(name: '_resource') Element? resourceElement,
+      @JsonKey(name: '_resource')
+          Element? resourceElement,
       String? label,
-      @JsonKey(name: '_label') Element? labelElement,
+      @JsonKey(name: '_label')
+          Element? labelElement,
       String? description,
-      @JsonKey(name: '_description') Element? descriptionElement,
+      @JsonKey(name: '_description')
+          Element? descriptionElement,
       Code? accept,
-      @JsonKey(name: '_accept') Element? acceptElement,
+      @JsonKey(name: '_accept')
+          Element? acceptElement,
       Code? contentType,
-      @JsonKey(name: '_contentType') Element? contentTypeElement,
+      @JsonKey(name: '_contentType')
+          Element? contentTypeElement,
       Integer? destination,
-      @JsonKey(name: '_destination') Element? destinationElement,
+      @JsonKey(name: '_destination')
+          Element? destinationElement,
       Boolean? encodeRequestUrl,
-      @JsonKey(name: '_encodeRequestUrl') Element? encodeRequestUrlElement,
-      Code? method,
-      @JsonKey(name: '_method') Element? methodElement,
+      @JsonKey(name: '_encodeRequestUrl')
+          Element? encodeRequestUrlElement,
+      @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown)
+          TestScriptOperationMethod? method,
+      @JsonKey(name: '_method')
+          Element? methodElement,
       Integer? origin,
-      @JsonKey(name: '_origin') Element? originElement,
+      @JsonKey(name: '_origin')
+          Element? originElement,
       String? params,
-      @JsonKey(name: '_params') Element? paramsElement,
+      @JsonKey(name: '_params')
+          Element? paramsElement,
       List<TestScriptRequestHeader>? requestHeader,
       Id? requestId,
-      @JsonKey(name: '_requestId') Element? requestIdElement,
+      @JsonKey(name: '_requestId')
+          Element? requestIdElement,
       Id? responseId,
-      @JsonKey(name: '_responseId') Element? responseIdElement,
+      @JsonKey(name: '_responseId')
+          Element? responseIdElement,
       Id? sourceId,
-      @JsonKey(name: '_sourceId') Element? sourceIdElement,
+      @JsonKey(name: '_sourceId')
+          Element? sourceIdElement,
       Id? targetId,
-      @JsonKey(name: '_targetId') Element? targetIdElement,
+      @JsonKey(name: '_targetId')
+          Element? targetIdElement,
       String? url,
-      @JsonKey(name: '_url') Element? urlElement}) = _$_TestScriptOperation;
+      @JsonKey(name: '_url')
+          Element? urlElement}) = _$_TestScriptOperation;
   _TestScriptOperation._() : super._();
 
   factory _TestScriptOperation.fromJson(Map<String, dynamic> json) =
@@ -19504,7 +19689,8 @@ abstract class _TestScriptOperation extends TestScriptOperation {
   @JsonKey(name: '_encodeRequestUrl')
   Element? get encodeRequestUrlElement => throw _privateConstructorUsedError;
   @override
-  Code? get method => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestScriptOperationMethod.unknown)
+  TestScriptOperationMethod? get method => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_method')
   Element? get methodElement => throw _privateConstructorUsedError;
@@ -19921,7 +20107,8 @@ class _$TestScriptAssertTearOff {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Code? direction,
+      @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
+          TestScriptAssertDirection? direction,
       @JsonKey(name: '_direction')
           Element? directionElement,
       String? compareToSourceId,
@@ -19948,13 +20135,15 @@ class _$TestScriptAssertTearOff {
       Boolean? navigationLinks,
       @JsonKey(name: '_navigationLinks')
           Element? navigationLinksElement,
-      Code? operator,
+      @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
+          TestScriptAssertOperator? operator_,
       @JsonKey(name: '_operator')
           Element? operatorElement,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
-      Code? requestMethod,
+      @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
+          TestScriptAssertRequestMethod? requestMethod,
       @JsonKey(name: '_requestMethod')
           Element? requestMethodElement,
       String? requestURL,
@@ -19963,7 +20152,8 @@ class _$TestScriptAssertTearOff {
       Code? resource,
       @JsonKey(name: '_resource')
           Element? resourceElement,
-      Code? response,
+      @JsonKey(unknownEnumValue: TestScriptAssertResponse.unknown)
+          TestScriptAssertResponse? response,
       @JsonKey(name: '_response')
           Element? responseElement,
       String? responseCode,
@@ -20010,7 +20200,7 @@ class _$TestScriptAssertTearOff {
       minimumIdElement: minimumIdElement,
       navigationLinks: navigationLinks,
       navigationLinksElement: navigationLinksElement,
-      operator: operator,
+      operator_: operator_,
       operatorElement: operatorElement,
       path: path,
       pathElement: pathElement,
@@ -20058,7 +20248,9 @@ mixin _$TestScriptAssert {
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  Code? get direction => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
+  TestScriptAssertDirection? get direction =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_direction')
   Element? get directionElement => throw _privateConstructorUsedError;
   String? get compareToSourceId => throw _privateConstructorUsedError;
@@ -20086,13 +20278,16 @@ mixin _$TestScriptAssert {
   Boolean? get navigationLinks => throw _privateConstructorUsedError;
   @JsonKey(name: '_navigationLinks')
   Element? get navigationLinksElement => throw _privateConstructorUsedError;
-  Code? get operator => throw _privateConstructorUsedError;
+  @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
+  TestScriptAssertOperator? get operator_ => throw _privateConstructorUsedError;
   @JsonKey(name: '_operator')
   Element? get operatorElement => throw _privateConstructorUsedError;
   String? get path => throw _privateConstructorUsedError;
   @JsonKey(name: '_path')
   Element? get pathElement => throw _privateConstructorUsedError;
-  Code? get requestMethod => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
+  TestScriptAssertRequestMethod? get requestMethod =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_requestMethod')
   Element? get requestMethodElement => throw _privateConstructorUsedError;
   String? get requestURL => throw _privateConstructorUsedError;
@@ -20101,7 +20296,8 @@ mixin _$TestScriptAssert {
   Code? get resource => throw _privateConstructorUsedError;
   @JsonKey(name: '_resource')
   Element? get resourceElement => throw _privateConstructorUsedError;
-  Code? get response => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestScriptAssertResponse.unknown)
+  TestScriptAssertResponse? get response => throw _privateConstructorUsedError;
   @JsonKey(name: '_response')
   Element? get responseElement => throw _privateConstructorUsedError;
   String? get responseCode => throw _privateConstructorUsedError;
@@ -20145,7 +20341,8 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Code? direction,
+      @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
+          TestScriptAssertDirection? direction,
       @JsonKey(name: '_direction')
           Element? directionElement,
       String? compareToSourceId,
@@ -20172,13 +20369,15 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       Boolean? navigationLinks,
       @JsonKey(name: '_navigationLinks')
           Element? navigationLinksElement,
-      Code? operator,
+      @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
+          TestScriptAssertOperator? operator_,
       @JsonKey(name: '_operator')
           Element? operatorElement,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
-      Code? requestMethod,
+      @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
+          TestScriptAssertRequestMethod? requestMethod,
       @JsonKey(name: '_requestMethod')
           Element? requestMethodElement,
       String? requestURL,
@@ -20187,7 +20386,8 @@ abstract class $TestScriptAssertCopyWith<$Res> {
       Code? resource,
       @JsonKey(name: '_resource')
           Element? resourceElement,
-      Code? response,
+      @JsonKey(unknownEnumValue: TestScriptAssertResponse.unknown)
+          TestScriptAssertResponse? response,
       @JsonKey(name: '_response')
           Element? responseElement,
       String? responseCode,
@@ -20270,7 +20470,7 @@ class _$TestScriptAssertCopyWithImpl<$Res>
     Object? minimumIdElement = freezed,
     Object? navigationLinks = freezed,
     Object? navigationLinksElement = freezed,
-    Object? operator = freezed,
+    Object? operator_ = freezed,
     Object? operatorElement = freezed,
     Object? path = freezed,
     Object? pathElement = freezed,
@@ -20327,7 +20527,7 @@ class _$TestScriptAssertCopyWithImpl<$Res>
       direction: direction == freezed
           ? _value.direction
           : direction // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestScriptAssertDirection?,
       directionElement: directionElement == freezed
           ? _value.directionElement
           : directionElement // ignore: cast_nullable_to_non_nullable
@@ -20397,10 +20597,10 @@ class _$TestScriptAssertCopyWithImpl<$Res>
           ? _value.navigationLinksElement
           : navigationLinksElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      operator: operator == freezed
-          ? _value.operator
-          : operator // ignore: cast_nullable_to_non_nullable
-              as Code?,
+      operator_: operator_ == freezed
+          ? _value.operator_
+          : operator_ // ignore: cast_nullable_to_non_nullable
+              as TestScriptAssertOperator?,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement // ignore: cast_nullable_to_non_nullable
@@ -20416,7 +20616,7 @@ class _$TestScriptAssertCopyWithImpl<$Res>
       requestMethod: requestMethod == freezed
           ? _value.requestMethod
           : requestMethod // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestScriptAssertRequestMethod?,
       requestMethodElement: requestMethodElement == freezed
           ? _value.requestMethodElement
           : requestMethodElement // ignore: cast_nullable_to_non_nullable
@@ -20440,7 +20640,7 @@ class _$TestScriptAssertCopyWithImpl<$Res>
       response: response == freezed
           ? _value.response
           : response // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestScriptAssertResponse?,
       responseElement: responseElement == freezed
           ? _value.responseElement
           : responseElement // ignore: cast_nullable_to_non_nullable
@@ -20769,7 +20969,8 @@ abstract class _$TestScriptAssertCopyWith<$Res>
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Code? direction,
+      @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
+          TestScriptAssertDirection? direction,
       @JsonKey(name: '_direction')
           Element? directionElement,
       String? compareToSourceId,
@@ -20796,13 +20997,15 @@ abstract class _$TestScriptAssertCopyWith<$Res>
       Boolean? navigationLinks,
       @JsonKey(name: '_navigationLinks')
           Element? navigationLinksElement,
-      Code? operator,
+      @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
+          TestScriptAssertOperator? operator_,
       @JsonKey(name: '_operator')
           Element? operatorElement,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
-      Code? requestMethod,
+      @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
+          TestScriptAssertRequestMethod? requestMethod,
       @JsonKey(name: '_requestMethod')
           Element? requestMethodElement,
       String? requestURL,
@@ -20811,7 +21014,8 @@ abstract class _$TestScriptAssertCopyWith<$Res>
       Code? resource,
       @JsonKey(name: '_resource')
           Element? resourceElement,
-      Code? response,
+      @JsonKey(unknownEnumValue: TestScriptAssertResponse.unknown)
+          TestScriptAssertResponse? response,
       @JsonKey(name: '_response')
           Element? responseElement,
       String? responseCode,
@@ -20919,7 +21123,7 @@ class __$TestScriptAssertCopyWithImpl<$Res>
     Object? minimumIdElement = freezed,
     Object? navigationLinks = freezed,
     Object? navigationLinksElement = freezed,
-    Object? operator = freezed,
+    Object? operator_ = freezed,
     Object? operatorElement = freezed,
     Object? path = freezed,
     Object? pathElement = freezed,
@@ -20976,7 +21180,7 @@ class __$TestScriptAssertCopyWithImpl<$Res>
       direction: direction == freezed
           ? _value.direction
           : direction // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestScriptAssertDirection?,
       directionElement: directionElement == freezed
           ? _value.directionElement
           : directionElement // ignore: cast_nullable_to_non_nullable
@@ -21046,10 +21250,10 @@ class __$TestScriptAssertCopyWithImpl<$Res>
           ? _value.navigationLinksElement
           : navigationLinksElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      operator: operator == freezed
-          ? _value.operator
-          : operator // ignore: cast_nullable_to_non_nullable
-              as Code?,
+      operator_: operator_ == freezed
+          ? _value.operator_
+          : operator_ // ignore: cast_nullable_to_non_nullable
+              as TestScriptAssertOperator?,
       operatorElement: operatorElement == freezed
           ? _value.operatorElement
           : operatorElement // ignore: cast_nullable_to_non_nullable
@@ -21065,7 +21269,7 @@ class __$TestScriptAssertCopyWithImpl<$Res>
       requestMethod: requestMethod == freezed
           ? _value.requestMethod
           : requestMethod // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestScriptAssertRequestMethod?,
       requestMethodElement: requestMethodElement == freezed
           ? _value.requestMethodElement
           : requestMethodElement // ignore: cast_nullable_to_non_nullable
@@ -21089,7 +21293,7 @@ class __$TestScriptAssertCopyWithImpl<$Res>
       response: response == freezed
           ? _value.response
           : response // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TestScriptAssertResponse?,
       responseElement: responseElement == freezed
           ? _value.responseElement
           : responseElement // ignore: cast_nullable_to_non_nullable
@@ -21160,7 +21364,8 @@ class _$_TestScriptAssert extends _TestScriptAssert {
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      this.direction,
+      @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
+          this.direction,
       @JsonKey(name: '_direction')
           this.directionElement,
       this.compareToSourceId,
@@ -21187,13 +21392,15 @@ class _$_TestScriptAssert extends _TestScriptAssert {
       this.navigationLinks,
       @JsonKey(name: '_navigationLinks')
           this.navigationLinksElement,
-      this.operator,
+      @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
+          this.operator_,
       @JsonKey(name: '_operator')
           this.operatorElement,
       this.path,
       @JsonKey(name: '_path')
           this.pathElement,
-      this.requestMethod,
+      @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
+          this.requestMethod,
       @JsonKey(name: '_requestMethod')
           this.requestMethodElement,
       this.requestURL,
@@ -21202,7 +21409,8 @@ class _$_TestScriptAssert extends _TestScriptAssert {
       this.resource,
       @JsonKey(name: '_resource')
           this.resourceElement,
-      this.response,
+      @JsonKey(unknownEnumValue: TestScriptAssertResponse.unknown)
+          this.response,
       @JsonKey(name: '_response')
           this.responseElement,
       this.responseCode,
@@ -21246,7 +21454,8 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  final Code? direction;
+  @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
+  final TestScriptAssertDirection? direction;
   @override
   @JsonKey(name: '_direction')
   final Element? directionElement;
@@ -21291,7 +21500,8 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   @JsonKey(name: '_navigationLinks')
   final Element? navigationLinksElement;
   @override
-  final Code? operator;
+  @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
+  final TestScriptAssertOperator? operator_;
   @override
   @JsonKey(name: '_operator')
   final Element? operatorElement;
@@ -21301,7 +21511,8 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   @JsonKey(name: '_path')
   final Element? pathElement;
   @override
-  final Code? requestMethod;
+  @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
+  final TestScriptAssertRequestMethod? requestMethod;
   @override
   @JsonKey(name: '_requestMethod')
   final Element? requestMethodElement;
@@ -21316,7 +21527,8 @@ class _$_TestScriptAssert extends _TestScriptAssert {
   @JsonKey(name: '_resource')
   final Element? resourceElement;
   @override
-  final Code? response;
+  @JsonKey(unknownEnumValue: TestScriptAssertResponse.unknown)
+  final TestScriptAssertResponse? response;
   @override
   @JsonKey(name: '_response')
   final Element? responseElement;
@@ -21353,7 +21565,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
 
   @override
   String toString() {
-    return 'TestScriptAssert(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, label: $label, labelElement: $labelElement, description: $description, descriptionElement: $descriptionElement, direction: $direction, directionElement: $directionElement, compareToSourceId: $compareToSourceId, compareToSourceIdElement: $compareToSourceIdElement, compareToSourceExpression: $compareToSourceExpression, compareToSourceExpressionElement: $compareToSourceExpressionElement, compareToSourcePath: $compareToSourcePath, compareToSourcePathElement: $compareToSourcePathElement, contentType: $contentType, contentTypeElement: $contentTypeElement, expression: $expression, expressionElement: $expressionElement, headerField: $headerField, headerFieldElement: $headerFieldElement, minimumId: $minimumId, minimumIdElement: $minimumIdElement, navigationLinks: $navigationLinks, navigationLinksElement: $navigationLinksElement, operator: $operator, operatorElement: $operatorElement, path: $path, pathElement: $pathElement, requestMethod: $requestMethod, requestMethodElement: $requestMethodElement, requestURL: $requestURL, requestURLElement: $requestURLElement, resource: $resource, resourceElement: $resourceElement, response: $response, responseElement: $responseElement, responseCode: $responseCode, responseCodeElement: $responseCodeElement, sourceId: $sourceId, sourceIdElement: $sourceIdElement, stopTestOnFail: $stopTestOnFail, stopTestOnFailElement: $stopTestOnFailElement, validateProfileId: $validateProfileId, validateProfileIdElement: $validateProfileIdElement, value: $value, valueElement: $valueElement, warningOnly: $warningOnly, warningOnlyElement: $warningOnlyElement)';
+    return 'TestScriptAssert(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, label: $label, labelElement: $labelElement, description: $description, descriptionElement: $descriptionElement, direction: $direction, directionElement: $directionElement, compareToSourceId: $compareToSourceId, compareToSourceIdElement: $compareToSourceIdElement, compareToSourceExpression: $compareToSourceExpression, compareToSourceExpressionElement: $compareToSourceExpressionElement, compareToSourcePath: $compareToSourcePath, compareToSourcePathElement: $compareToSourcePathElement, contentType: $contentType, contentTypeElement: $contentTypeElement, expression: $expression, expressionElement: $expressionElement, headerField: $headerField, headerFieldElement: $headerFieldElement, minimumId: $minimumId, minimumIdElement: $minimumIdElement, navigationLinks: $navigationLinks, navigationLinksElement: $navigationLinksElement, operator_: $operator_, operatorElement: $operatorElement, path: $path, pathElement: $pathElement, requestMethod: $requestMethod, requestMethodElement: $requestMethodElement, requestURL: $requestURL, requestURLElement: $requestURLElement, resource: $resource, resourceElement: $resourceElement, response: $response, responseElement: $responseElement, responseCode: $responseCode, responseCodeElement: $responseCodeElement, sourceId: $sourceId, sourceIdElement: $sourceIdElement, stopTestOnFail: $stopTestOnFail, stopTestOnFailElement: $stopTestOnFailElement, validateProfileId: $validateProfileId, validateProfileIdElement: $validateProfileIdElement, value: $value, valueElement: $valueElement, warningOnly: $warningOnly, warningOnlyElement: $warningOnlyElement)';
   }
 
   @override
@@ -21420,7 +21632,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
             (identical(other.minimumIdElement, minimumIdElement) || const DeepCollectionEquality().equals(other.minimumIdElement, minimumIdElement)) &&
             (identical(other.navigationLinks, navigationLinks) || const DeepCollectionEquality().equals(other.navigationLinks, navigationLinks)) &&
             (identical(other.navigationLinksElement, navigationLinksElement) || const DeepCollectionEquality().equals(other.navigationLinksElement, navigationLinksElement)) &&
-            (identical(other.operator, operator) || const DeepCollectionEquality().equals(other.operator, operator)) &&
+            (identical(other.operator_, operator_) || const DeepCollectionEquality().equals(other.operator_, operator_)) &&
             (identical(other.operatorElement, operatorElement) || const DeepCollectionEquality().equals(other.operatorElement, operatorElement)) &&
             (identical(other.path, path) || const DeepCollectionEquality().equals(other.path, path)) &&
             (identical(other.pathElement, pathElement) || const DeepCollectionEquality().equals(other.pathElement, pathElement)) &&
@@ -21474,7 +21686,7 @@ class _$_TestScriptAssert extends _TestScriptAssert {
       const DeepCollectionEquality().hash(minimumIdElement) ^
       const DeepCollectionEquality().hash(navigationLinks) ^
       const DeepCollectionEquality().hash(navigationLinksElement) ^
-      const DeepCollectionEquality().hash(operator) ^
+      const DeepCollectionEquality().hash(operator_) ^
       const DeepCollectionEquality().hash(operatorElement) ^
       const DeepCollectionEquality().hash(path) ^
       const DeepCollectionEquality().hash(pathElement) ^
@@ -21522,7 +21734,8 @@ abstract class _TestScriptAssert extends TestScriptAssert {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      Code? direction,
+      @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
+          TestScriptAssertDirection? direction,
       @JsonKey(name: '_direction')
           Element? directionElement,
       String? compareToSourceId,
@@ -21549,13 +21762,15 @@ abstract class _TestScriptAssert extends TestScriptAssert {
       Boolean? navigationLinks,
       @JsonKey(name: '_navigationLinks')
           Element? navigationLinksElement,
-      Code? operator,
+      @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
+          TestScriptAssertOperator? operator_,
       @JsonKey(name: '_operator')
           Element? operatorElement,
       String? path,
       @JsonKey(name: '_path')
           Element? pathElement,
-      Code? requestMethod,
+      @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
+          TestScriptAssertRequestMethod? requestMethod,
       @JsonKey(name: '_requestMethod')
           Element? requestMethodElement,
       String? requestURL,
@@ -21564,7 +21779,8 @@ abstract class _TestScriptAssert extends TestScriptAssert {
       Code? resource,
       @JsonKey(name: '_resource')
           Element? resourceElement,
-      Code? response,
+      @JsonKey(unknownEnumValue: TestScriptAssertResponse.unknown)
+          TestScriptAssertResponse? response,
       @JsonKey(name: '_response')
           Element? responseElement,
       String? responseCode,
@@ -21609,7 +21825,9 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  Code? get direction => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestScriptAssertDirection.unknown)
+  TestScriptAssertDirection? get direction =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_direction')
   Element? get directionElement => throw _privateConstructorUsedError;
@@ -21655,7 +21873,8 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   @JsonKey(name: '_navigationLinks')
   Element? get navigationLinksElement => throw _privateConstructorUsedError;
   @override
-  Code? get operator => throw _privateConstructorUsedError;
+  @JsonKey(name: 'operator', unknownEnumValue: TestScriptAssertOperator.unknown)
+  TestScriptAssertOperator? get operator_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_operator')
   Element? get operatorElement => throw _privateConstructorUsedError;
@@ -21665,7 +21884,9 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   @JsonKey(name: '_path')
   Element? get pathElement => throw _privateConstructorUsedError;
   @override
-  Code? get requestMethod => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestScriptAssertRequestMethod.unknown)
+  TestScriptAssertRequestMethod? get requestMethod =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_requestMethod')
   Element? get requestMethodElement => throw _privateConstructorUsedError;
@@ -21680,7 +21901,8 @@ abstract class _TestScriptAssert extends TestScriptAssert {
   @JsonKey(name: '_resource')
   Element? get resourceElement => throw _privateConstructorUsedError;
   @override
-  Code? get response => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TestScriptAssertResponse.unknown)
+  TestScriptAssertResponse? get response => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_response')
   Element? get responseElement => throw _privateConstructorUsedError;

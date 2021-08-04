@@ -5174,7 +5174,8 @@ class _$CoverageEligibilityResponseTearOff {
           Element? createdElement,
       Reference? requestor,
       required Reference request,
-      Code? outcome,
+      @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
+          CoverageEligibilityResponseOutcome? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? disposition,
@@ -5268,7 +5269,9 @@ mixin _$CoverageEligibilityResponse {
   Element? get createdElement => throw _privateConstructorUsedError;
   Reference? get requestor => throw _privateConstructorUsedError;
   Reference get request => throw _privateConstructorUsedError;
-  Code? get outcome => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
+  CoverageEligibilityResponseOutcome? get outcome =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_outcome')
   Element? get outcomeElement => throw _privateConstructorUsedError;
   String? get disposition => throw _privateConstructorUsedError;
@@ -5329,7 +5332,8 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
           Element? createdElement,
       Reference? requestor,
       Reference request,
-      Code? outcome,
+      @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
+          CoverageEligibilityResponseOutcome? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? disposition,
@@ -5507,7 +5511,7 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res>
       outcome: outcome == freezed
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CoverageEligibilityResponseOutcome?,
       outcomeElement: outcomeElement == freezed
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
@@ -5753,7 +5757,8 @@ abstract class _$CoverageEligibilityResponseCopyWith<$Res>
           Element? createdElement,
       Reference? requestor,
       Reference request,
-      Code? outcome,
+      @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
+          CoverageEligibilityResponseOutcome? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? disposition,
@@ -5951,7 +5956,7 @@ class __$CoverageEligibilityResponseCopyWithImpl<$Res>
       outcome: outcome == freezed
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as CoverageEligibilityResponseOutcome?,
       outcomeElement: outcomeElement == freezed
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
@@ -6028,7 +6033,8 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
           this.createdElement,
       this.requestor,
       required this.request,
-      this.outcome,
+      @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
+          this.outcome,
       @JsonKey(name: '_outcome')
           this.outcomeElement,
       this.disposition,
@@ -6103,7 +6109,8 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   @override
   final Reference request;
   @override
-  final Code? outcome;
+  @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
+  final CoverageEligibilityResponseOutcome? outcome;
   @override
   @JsonKey(name: '_outcome')
   final Element? outcomeElement;
@@ -6299,7 +6306,8 @@ abstract class _CoverageEligibilityResponse
           Element? createdElement,
       Reference? requestor,
       required Reference request,
-      Code? outcome,
+      @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
+          CoverageEligibilityResponseOutcome? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? disposition,
@@ -6376,7 +6384,9 @@ abstract class _CoverageEligibilityResponse
   @override
   Reference get request => throw _privateConstructorUsedError;
   @override
-  Code? get outcome => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
+  CoverageEligibilityResponseOutcome? get outcome =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_outcome')
   Element? get outcomeElement => throw _privateConstructorUsedError;
@@ -9424,7 +9434,8 @@ class _$EnrollmentResponseTearOff {
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? request,
-      Code? outcome,
+      @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
+          EnrollmentResponseOutcome? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? disposition,
@@ -9493,7 +9504,8 @@ mixin _$EnrollmentResponse {
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Reference? get request => throw _privateConstructorUsedError;
-  Code? get outcome => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
+  EnrollmentResponseOutcome? get outcome => throw _privateConstructorUsedError;
   @JsonKey(name: '_outcome')
   Element? get outcomeElement => throw _privateConstructorUsedError;
   String? get disposition => throw _privateConstructorUsedError;
@@ -9537,7 +9549,8 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? request,
-      Code? outcome,
+      @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
+          EnrollmentResponseOutcome? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? disposition,
@@ -9661,7 +9674,7 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
       outcome: outcome == freezed
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as EnrollmentResponseOutcome?,
       outcomeElement: outcomeElement == freezed
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
@@ -9843,7 +9856,8 @@ abstract class _$EnrollmentResponseCopyWith<$Res>
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? request,
-      Code? outcome,
+      @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
+          EnrollmentResponseOutcome? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? disposition,
@@ -9980,7 +9994,7 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
       outcome: outcome == freezed
           ? _value.outcome
           : outcome // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as EnrollmentResponseOutcome?,
       outcomeElement: outcomeElement == freezed
           ? _value.outcomeElement
           : outcomeElement // ignore: cast_nullable_to_non_nullable
@@ -10037,7 +10051,8 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
       @JsonKey(name: '_status')
           this.statusElement,
       this.request,
-      this.outcome,
+      @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
+          this.outcome,
       @JsonKey(name: '_outcome')
           this.outcomeElement,
       this.disposition,
@@ -10089,7 +10104,8 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
   @override
   final Reference? request;
   @override
-  final Code? outcome;
+  @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
+  final EnrollmentResponseOutcome? outcome;
   @override
   @JsonKey(name: '_outcome')
   final Element? outcomeElement;
@@ -10244,7 +10260,8 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
       @JsonKey(name: '_status')
           Element? statusElement,
       Reference? request,
-      Code? outcome,
+      @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
+          EnrollmentResponseOutcome? outcome,
       @JsonKey(name: '_outcome')
           Element? outcomeElement,
       String? disposition,
@@ -10297,7 +10314,8 @@ abstract class _EnrollmentResponse extends EnrollmentResponse {
   @override
   Reference? get request => throw _privateConstructorUsedError;
   @override
-  Code? get outcome => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
+  EnrollmentResponseOutcome? get outcome => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_outcome')
   Element? get outcomeElement => throw _privateConstructorUsedError;

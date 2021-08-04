@@ -97,18 +97,7 @@ enum ObservationDefinitionPermittedDataType {
   unknown,
 }
 
-enum ObservationDefinitionQualifiedIntervalCategory {
-  @JsonValue('reference')
-  reference,
-  @JsonValue('critical')
-  critical,
-  @JsonValue('absolute')
-  absolute,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ObservationDefinitionQualifiedIntervalGender {
+enum ObservationDefinitionQualifiedValueGender {
   @JsonValue('male')
   male,
   @JsonValue('female')

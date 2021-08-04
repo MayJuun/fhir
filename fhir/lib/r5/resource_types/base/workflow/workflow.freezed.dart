@@ -37,7 +37,8 @@ class _$AppointmentTearOff {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
+          AppointmentStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? cancelationReason,
@@ -144,7 +145,8 @@ mixin _$Appointment {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
+  AppointmentStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get cancelationReason => throw _privateConstructorUsedError;
@@ -212,7 +214,8 @@ abstract class $AppointmentCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
+          AppointmentStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? cancelationReason,
@@ -369,7 +372,7 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as AppointmentStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -671,7 +674,8 @@ abstract class _$AppointmentCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
+          AppointmentStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? cancelationReason,
@@ -845,7 +849,7 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as AppointmentStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -978,7 +982,8 @@ class _$_Appointment extends _Appointment {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      this.status,
+      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.cancelationReason,
@@ -1048,7 +1053,8 @@ class _$_Appointment extends _Appointment {
   @override
   final List<Identifier>? identifier;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
+  final AppointmentStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -1279,7 +1285,8 @@ abstract class _Appointment extends Appointment {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      Code? status,
+      @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
+          AppointmentStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? cancelationReason,
@@ -1350,7 +1357,8 @@ abstract class _Appointment extends Appointment {
   @override
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
+  AppointmentStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -1433,14 +1441,19 @@ class _$AppointmentParticipantTearOff {
 
   _AppointmentParticipant call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? type,
       Reference? actor,
-      @JsonKey(name: 'required') Code? required_,
-      @JsonKey(name: '_required') Element? requiredElement,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
+          AppointmentParticipantRequired? required_,
+      @JsonKey(name: '_required')
+          Element? requiredElement,
+      @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
+          AppointmentParticipantStatus? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Period? period}) {
     return _AppointmentParticipant(
       id: id,
@@ -1473,11 +1486,16 @@ mixin _$AppointmentParticipant {
       throw _privateConstructorUsedError;
   List<CodeableConcept>? get type => throw _privateConstructorUsedError;
   Reference? get actor => throw _privateConstructorUsedError;
-  @JsonKey(name: 'required')
-  Code? get required_ => throw _privateConstructorUsedError;
+  @JsonKey(
+      name: 'required',
+      unknownEnumValue: AppointmentParticipantRequired.unknown)
+  AppointmentParticipantRequired? get required_ =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_required')
   Element? get requiredElement => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
+  AppointmentParticipantStatus? get status =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Period? get period => throw _privateConstructorUsedError;
@@ -1495,14 +1513,19 @@ abstract class $AppointmentParticipantCopyWith<$Res> {
       _$AppointmentParticipantCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? type,
       Reference? actor,
-      @JsonKey(name: 'required') Code? required_,
-      @JsonKey(name: '_required') Element? requiredElement,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
+          AppointmentParticipantRequired? required_,
+      @JsonKey(name: '_required')
+          Element? requiredElement,
+      @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
+          AppointmentParticipantStatus? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Period? period});
 
   $ReferenceCopyWith<$Res>? get actor;
@@ -1557,7 +1580,7 @@ class _$AppointmentParticipantCopyWithImpl<$Res>
       required_: required_ == freezed
           ? _value.required_
           : required_ // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as AppointmentParticipantRequired?,
       requiredElement: requiredElement == freezed
           ? _value.requiredElement
           : requiredElement // ignore: cast_nullable_to_non_nullable
@@ -1565,7 +1588,7 @@ class _$AppointmentParticipantCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as AppointmentParticipantStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1631,14 +1654,19 @@ abstract class _$AppointmentParticipantCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? type,
       Reference? actor,
-      @JsonKey(name: 'required') Code? required_,
-      @JsonKey(name: '_required') Element? requiredElement,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
+          AppointmentParticipantRequired? required_,
+      @JsonKey(name: '_required')
+          Element? requiredElement,
+      @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
+          AppointmentParticipantStatus? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Period? period});
 
   @override
@@ -1699,7 +1727,7 @@ class __$AppointmentParticipantCopyWithImpl<$Res>
       required_: required_ == freezed
           ? _value.required_
           : required_ // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as AppointmentParticipantRequired?,
       requiredElement: requiredElement == freezed
           ? _value.requiredElement
           : requiredElement // ignore: cast_nullable_to_non_nullable
@@ -1707,7 +1735,7 @@ class __$AppointmentParticipantCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as AppointmentParticipantStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1725,14 +1753,19 @@ class __$AppointmentParticipantCopyWithImpl<$Res>
 class _$_AppointmentParticipant extends _AppointmentParticipant {
   _$_AppointmentParticipant(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
       this.type,
       this.actor,
-      @JsonKey(name: 'required') this.required_,
-      @JsonKey(name: '_required') this.requiredElement,
-      this.status,
-      @JsonKey(name: '_status') this.statusElement,
+      @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
+          this.required_,
+      @JsonKey(name: '_required')
+          this.requiredElement,
+      @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
       this.period})
       : super._();
 
@@ -1751,13 +1784,16 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
   @override
   final Reference? actor;
   @override
-  @JsonKey(name: 'required')
-  final Code? required_;
+  @JsonKey(
+      name: 'required',
+      unknownEnumValue: AppointmentParticipantRequired.unknown)
+  final AppointmentParticipantRequired? required_;
   @override
   @JsonKey(name: '_required')
   final Element? requiredElement;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
+  final AppointmentParticipantStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -1829,14 +1865,19 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
 abstract class _AppointmentParticipant extends AppointmentParticipant {
   factory _AppointmentParticipant(
       {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<CodeableConcept>? type,
       Reference? actor,
-      @JsonKey(name: 'required') Code? required_,
-      @JsonKey(name: '_required') Element? requiredElement,
-      Code? status,
-      @JsonKey(name: '_status') Element? statusElement,
+      @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
+          AppointmentParticipantRequired? required_,
+      @JsonKey(name: '_required')
+          Element? requiredElement,
+      @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
+          AppointmentParticipantStatus? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
       Period? period}) = _$_AppointmentParticipant;
   _AppointmentParticipant._() : super._();
 
@@ -1856,13 +1897,18 @@ abstract class _AppointmentParticipant extends AppointmentParticipant {
   @override
   Reference? get actor => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'required')
-  Code? get required_ => throw _privateConstructorUsedError;
+  @JsonKey(
+      name: 'required',
+      unknownEnumValue: AppointmentParticipantRequired.unknown)
+  AppointmentParticipantRequired? get required_ =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_required')
   Element? get requiredElement => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
+  AppointmentParticipantStatus? get status =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -3613,7 +3659,8 @@ class _$SlotTearOff {
       List<CodeableConcept>? specialty,
       CodeableConcept? appointmentType,
       required Reference schedule,
-      Code? status,
+      @JsonKey(unknownEnumValue: SlotStatus.unknown)
+          SlotStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Instant? start,
@@ -3692,7 +3739,8 @@ mixin _$Slot {
   List<CodeableConcept>? get specialty => throw _privateConstructorUsedError;
   CodeableConcept? get appointmentType => throw _privateConstructorUsedError;
   Reference get schedule => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: SlotStatus.unknown)
+  SlotStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Instant? get start => throw _privateConstructorUsedError;
@@ -3739,7 +3787,8 @@ abstract class $SlotCopyWith<$Res> {
       List<CodeableConcept>? specialty,
       CodeableConcept? appointmentType,
       Reference schedule,
-      Code? status,
+      @JsonKey(unknownEnumValue: SlotStatus.unknown)
+          SlotStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Instant? start,
@@ -3878,7 +3927,7 @@ class _$SlotCopyWithImpl<$Res> implements $SlotCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as SlotStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4063,7 +4112,8 @@ abstract class _$SlotCopyWith<$Res> implements $SlotCopyWith<$Res> {
       List<CodeableConcept>? specialty,
       CodeableConcept? appointmentType,
       Reference schedule,
-      Code? status,
+      @JsonKey(unknownEnumValue: SlotStatus.unknown)
+          SlotStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Instant? start,
@@ -4214,7 +4264,7 @@ class __$SlotCopyWithImpl<$Res> extends _$SlotCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as SlotStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4280,7 +4330,8 @@ class _$_Slot extends _Slot {
       this.specialty,
       this.appointmentType,
       required this.schedule,
-      this.status,
+      @JsonKey(unknownEnumValue: SlotStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.start,
@@ -4338,7 +4389,8 @@ class _$_Slot extends _Slot {
   @override
   final Reference schedule;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: SlotStatus.unknown)
+  final SlotStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -4509,7 +4561,8 @@ abstract class _Slot extends Slot {
       List<CodeableConcept>? specialty,
       CodeableConcept? appointmentType,
       required Reference schedule,
-      Code? status,
+      @JsonKey(unknownEnumValue: SlotStatus.unknown)
+          SlotStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Instant? start,
@@ -4569,7 +4622,8 @@ abstract class _Slot extends Slot {
   @override
   Reference get schedule => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: SlotStatus.unknown)
+  SlotStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -4630,12 +4684,14 @@ class _$TaskTearOff {
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       List<Reference>? partOf,
-      Code? status,
+      @JsonKey(unknownEnumValue: TaskStatus.unknown)
+          TaskStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
       CodeableConcept? businessStatus,
-      Code? intent,
+      @JsonKey(unknownEnumValue: TaskIntent.unknown)
+          TaskIntent? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
       Code? priority,
@@ -4755,12 +4811,14 @@ mixin _$Task {
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
   Identifier? get groupIdentifier => throw _privateConstructorUsedError;
   List<Reference>? get partOf => throw _privateConstructorUsedError;
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TaskStatus.unknown)
+  TaskStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get statusReason => throw _privateConstructorUsedError;
   CodeableConcept? get businessStatus => throw _privateConstructorUsedError;
-  Code? get intent => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TaskIntent.unknown)
+  TaskIntent? get intent => throw _privateConstructorUsedError;
   @JsonKey(name: '_intent')
   Element? get intentElement => throw _privateConstructorUsedError;
   Code? get priority => throw _privateConstructorUsedError;
@@ -4828,12 +4886,14 @@ abstract class $TaskCopyWith<$Res> {
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       List<Reference>? partOf,
-      Code? status,
+      @JsonKey(unknownEnumValue: TaskStatus.unknown)
+          TaskStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
       CodeableConcept? businessStatus,
-      Code? intent,
+      @JsonKey(unknownEnumValue: TaskIntent.unknown)
+          TaskIntent? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
       Code? priority,
@@ -5030,7 +5090,7 @@ class _$TaskCopyWithImpl<$Res> implements $TaskCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TaskStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5046,7 +5106,7 @@ class _$TaskCopyWithImpl<$Res> implements $TaskCopyWith<$Res> {
       intent: intent == freezed
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TaskIntent?,
       intentElement: intentElement == freezed
           ? _value.intentElement
           : intentElement // ignore: cast_nullable_to_non_nullable
@@ -5459,12 +5519,14 @@ abstract class _$TaskCopyWith<$Res> implements $TaskCopyWith<$Res> {
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       List<Reference>? partOf,
-      Code? status,
+      @JsonKey(unknownEnumValue: TaskStatus.unknown)
+          TaskStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
       CodeableConcept? businessStatus,
-      Code? intent,
+      @JsonKey(unknownEnumValue: TaskIntent.unknown)
+          TaskIntent? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
       Code? priority,
@@ -5687,7 +5749,7 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TaskStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5703,7 +5765,7 @@ class __$TaskCopyWithImpl<$Res> extends _$TaskCopyWithImpl<$Res>
       intent: intent == freezed
           ? _value.intent
           : intent // ignore: cast_nullable_to_non_nullable
-              as Code?,
+              as TaskIntent?,
       intentElement: intentElement == freezed
           ? _value.intentElement
           : intentElement // ignore: cast_nullable_to_non_nullable
@@ -5839,12 +5901,14 @@ class _$_Task extends _Task {
       this.basedOn,
       this.groupIdentifier,
       this.partOf,
-      this.status,
+      @JsonKey(unknownEnumValue: TaskStatus.unknown)
+          this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.statusReason,
       this.businessStatus,
-      this.intent,
+      @JsonKey(unknownEnumValue: TaskIntent.unknown)
+          this.intent,
       @JsonKey(name: '_intent')
           this.intentElement,
       this.priority,
@@ -5923,7 +5987,8 @@ class _$_Task extends _Task {
   @override
   final List<Reference>? partOf;
   @override
-  final Code? status;
+  @JsonKey(unknownEnumValue: TaskStatus.unknown)
+  final TaskStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -5932,7 +5997,8 @@ class _$_Task extends _Task {
   @override
   final CodeableConcept? businessStatus;
   @override
-  final Code? intent;
+  @JsonKey(unknownEnumValue: TaskIntent.unknown)
+  final TaskIntent? intent;
   @override
   @JsonKey(name: '_intent')
   final Element? intentElement;
@@ -6183,12 +6249,14 @@ abstract class _Task extends Task {
       List<Reference>? basedOn,
       Identifier? groupIdentifier,
       List<Reference>? partOf,
-      Code? status,
+      @JsonKey(unknownEnumValue: TaskStatus.unknown)
+          TaskStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       CodeableConcept? statusReason,
       CodeableConcept? businessStatus,
-      Code? intent,
+      @JsonKey(unknownEnumValue: TaskIntent.unknown)
+          TaskIntent? intent,
       @JsonKey(name: '_intent')
           Element? intentElement,
       Code? priority,
@@ -6268,7 +6336,8 @@ abstract class _Task extends Task {
   @override
   List<Reference>? get partOf => throw _privateConstructorUsedError;
   @override
-  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TaskStatus.unknown)
+  TaskStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -6277,7 +6346,8 @@ abstract class _Task extends Task {
   @override
   CodeableConcept? get businessStatus => throw _privateConstructorUsedError;
   @override
-  Code? get intent => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: TaskIntent.unknown)
+  TaskIntent? get intent => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_intent')
   Element? get intentElement => throw _privateConstructorUsedError;

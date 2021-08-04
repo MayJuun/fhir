@@ -31,9 +31,10 @@ class CatalogEntry with Resource, _$CatalogEntry {
     List<Identifier>? identifier,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
-    Code? type,
+    @JsonKey(unknownEnumValue: CatalogEntryType.unknown) CatalogEntryType? type,
     @JsonKey(name: '_type') Element? typeElement,
-    Code? status,
+    @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
+        CatalogEntryStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Period? effectivePeriod,
     Boolean? orderable,
@@ -81,7 +82,8 @@ class CatalogEntryRelatedEntry with _$CatalogEntryRelatedEntry {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? relationship,
+    @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationship.unknown)
+        CatalogEntryRelatedEntryRelationship? relationship,
     @JsonKey(name: '_relationship') Element? relationshipElement,
     required Reference target,
   }) = _CatalogEntryRelatedEntry;
@@ -123,7 +125,8 @@ class Composition with Resource, _$Composition {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
-    Code? status,
+    @JsonKey(unknownEnumValue: CompositionStatus.unknown)
+        CompositionStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     required CodeableConcept type,
     List<CodeableConcept>? category,
@@ -170,7 +173,8 @@ class CompositionAttester with _$CompositionAttester {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? mode,
+    @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
+        CompositionAttesterMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     FhirDateTime? time,
     @JsonKey(name: '_time') Element? timeElement,
@@ -318,7 +322,8 @@ class DocumentManifest with Resource, _$DocumentManifest {
     List<FhirExtension>? modifierExtension,
     Identifier? masterIdentifier,
     List<Identifier>? identifier,
-    Code? status,
+    @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
+        DocumentManifestStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     CodeableConcept? type,
     Reference? subject,
@@ -403,7 +408,8 @@ class DocumentReference with Resource, _$DocumentReference {
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
     List<Reference>? basedOn,
-    Code? status,
+    @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
+        DocumentReferenceStatus? status,
     @JsonKey(name: '_status') Element? statusElement,
     Code? docStatus,
     @JsonKey(name: '_docStatus') Element? docStatusElement,
@@ -456,7 +462,8 @@ class DocumentReferenceAttester with _$DocumentReferenceAttester {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? mode,
+    @JsonKey(unknownEnumValue: DocumentReferenceAttesterMode.unknown)
+        DocumentReferenceAttesterMode? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     FhirDateTime? time,
     @JsonKey(name: '_time') Element? timeElement,
@@ -489,7 +496,8 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Code? code,
+    @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
+        DocumentReferenceRelatesToCode? code,
     @JsonKey(name: '_code') Element? codeElement,
     required Reference target,
   }) = _DocumentReferenceRelatesTo;
