@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
+
 // import 'package:flutter/foundation.dart';
 
 import '../../../../r4.dart';
@@ -12,7 +13,7 @@ part 'public_health_and_research.freezed.dart';
 part 'public_health_and_research.g.dart';
 
 @freezed
-abstract class ResearchStudy with Resource implements _$ResearchStudy {
+class ResearchStudy with Resource, _$ResearchStudy {
   ResearchStudy._();
 
   /// [ResearchStudy]: A process where a researcher or organization plans and
@@ -37,11 +38,11 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -55,7 +56,7 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -81,7 +82,7 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
   ///
   /// [title]: A short, descriptive user-friendly label for the study.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [protocol]: The set of steps expected to be performed as part of the
   ///  execution of the study.
@@ -91,7 +92,7 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
   ///
   /// [status]: The current state of the study.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [primaryPurposeType]: The type of study based upon the intent of the
   ///  study's activities. A classification of the intent of the study.
@@ -124,7 +125,7 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
   ///
   /// [description]: A full description of how the study is being conducted.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [enrollment]: Reference to a Group that defines the criteria for and
   /// quantity of subjects participating in the study.  E.g. " 200 female
@@ -160,55 +161,57 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
     @Default(R4ResourceType.ResearchStudy)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchStudy)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    String title,
-    @JsonKey(name: '_title') Element titleElement,
-    List<Reference> protocol,
-    List<Reference> partOf,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    List<Reference>? protocol,
+    List<Reference>? partOf,
     @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-        ResearchStudyStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    CodeableConcept primaryPurposeType,
-    CodeableConcept phase,
-    List<CodeableConcept> category,
-    List<CodeableConcept> focus,
-    List<CodeableConcept> condition,
-    List<ContactDetail> contact,
-    List<RelatedArtifact> relatedArtifact,
-    List<CodeableConcept> keyword,
-    List<CodeableConcept> location,
-    Markdown description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<Reference> enrollment,
-    Period period,
-    Reference sponsor,
-    Reference principalInvestigator,
-    List<Reference> site,
-    CodeableConcept reasonStopped,
-    List<Annotation> note,
-    List<ResearchStudyArm> arm,
-    List<ResearchStudyObjective> objective,
+        ResearchStudyStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? primaryPurposeType,
+    CodeableConcept? phase,
+    List<CodeableConcept>? category,
+    List<CodeableConcept>? focus,
+    List<CodeableConcept>? condition,
+    List<ContactDetail>? contact,
+    List<RelatedArtifact>? relatedArtifact,
+    List<CodeableConcept>? keyword,
+    List<CodeableConcept>? location,
+    Markdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<Reference>? enrollment,
+    Period? period,
+    Reference? sponsor,
+    Reference? principalInvestigator,
+    List<Reference>? site,
+    CodeableConcept? reasonStopped,
+    List<Annotation>? note,
+    List<ResearchStudyArm>? arm,
+    List<ResearchStudyObjective>? objective,
   }) = _ResearchStudy;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ResearchStudy.fromYaml(dynamic yaml) => yaml is String
       ? ResearchStudy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ResearchStudy.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ResearchStudy cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchStudy.fromJson(Map<String, dynamic> json) =>
@@ -216,10 +219,10 @@ abstract class ResearchStudy with Resource implements _$ResearchStudy {
 }
 
 @freezed
-abstract class ResearchStudyArm implements _$ResearchStudyArm {
+class ResearchStudyArm with _$ResearchStudyArm {
   ResearchStudyArm._();
 
-  /// [ResearchStudy_Arm]: A process where a researcher or organization plans
+  /// [ResearchStudyArm]: A process where a researcher or organization plans
   /// and then executes a series of steps intended to increase the field of
   /// healthcare-related knowledge.  This includes studies of safety, efficacy,
   /// comparative effectiveness and other information about medications,
@@ -230,7 +233,7 @@ abstract class ResearchStudyArm implements _$ResearchStudyArm {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -253,7 +256,7 @@ abstract class ResearchStudyArm implements _$ResearchStudyArm {
   ///
   /// [name]: Unique, human-readable label for this arm of the study.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [type]: Categorization of study arm, e.g. experimental, active comparator,
   ///  placebo comparater.
@@ -261,27 +264,29 @@ abstract class ResearchStudyArm implements _$ResearchStudyArm {
   /// [description]: A succinct description of the path through the study that
   ///  would be followed by a subject adhering to this arm.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   factory ResearchStudyArm({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    CodeableConcept type,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    CodeableConcept? type,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
   }) = _ResearchStudyArm;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ResearchStudyArm.fromYaml(dynamic yaml) => yaml is String
       ? ResearchStudyArm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ResearchStudyArm.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ResearchStudyArm cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchStudyArm.fromJson(Map<String, dynamic> json) =>
@@ -289,10 +294,10 @@ abstract class ResearchStudyArm implements _$ResearchStudyArm {
 }
 
 @freezed
-abstract class ResearchStudyObjective implements _$ResearchStudyObjective {
+class ResearchStudyObjective with _$ResearchStudyObjective {
   ResearchStudyObjective._();
 
-  /// [ResearchStudy_Objective]: A process where a researcher or organization
+  /// [ResearchStudyObjective]: A process where a researcher or organization
   /// plans and then executes a series of steps intended to increase the field
   /// of healthcare-related knowledge.  This includes studies of safety,
   /// efficacy, comparative effectiveness and other information about
@@ -303,7 +308,7 @@ abstract class ResearchStudyObjective implements _$ResearchStudyObjective {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -326,27 +331,29 @@ abstract class ResearchStudyObjective implements _$ResearchStudyObjective {
   ///
   /// [name]: Unique, human-readable label for this objective of the study.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [type]: The kind of study objective.
   factory ResearchStudyObjective({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    CodeableConcept type,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    CodeableConcept? type,
   }) = _ResearchStudyObjective;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ResearchStudyObjective.fromYaml(dynamic yaml) => yaml is String
       ? ResearchStudyObjective.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ResearchStudyObjective.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ResearchStudyObjective cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchStudyObjective.fromJson(Map<String, dynamic> json) =>
@@ -354,7 +361,7 @@ abstract class ResearchStudyObjective implements _$ResearchStudyObjective {
 }
 
 @freezed
-abstract class ResearchSubject with Resource implements _$ResearchSubject {
+class ResearchSubject with Resource, _$ResearchSubject {
   ResearchSubject._();
 
   /// [ResearchSubject]: A physical entity which is the primary unit of
@@ -374,11 +381,11 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -392,7 +399,7 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -417,7 +424,7 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
   ///
   /// [status]: The current state of the subject.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [period]: The dates the subject began and ended their participation in the
   ///  study.
@@ -430,12 +437,12 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
   /// [assignedArm]: The name of the arm in the study the subject is expected to
   ///  follow as part of this study.
   ///
-  /// [_assignedArm]: Extensions for assignedArm
+  /// [assignedArmElement]: Extensions for assignedArm
   ///
   /// [actualArm]: The name of the arm in the study the subject actually
   ///  followed as part of this study.
   ///
-  /// [_actualArm]: Extensions for actualArm
+  /// [actualArmElement]: Extensions for actualArm
   ///
   /// [consent]: A record of the patient's informed agreement to participate in
   ///  the study.
@@ -443,39 +450,41 @@ abstract class ResearchSubject with Resource implements _$ResearchSubject {
     @Default(R4ResourceType.ResearchSubject)
     @JsonKey(unknownEnumValue: R4ResourceType.ResearchSubject)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-        ResearchSubjectStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Period period,
-    @required Reference study,
-    @required Reference individual,
-    String assignedArm,
-    @JsonKey(name: '_assignedArm') Element assignedArmElement,
-    String actualArm,
-    @JsonKey(name: '_actualArm') Element actualArmElement,
-    Reference consent,
+        ResearchSubjectStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Period? period,
+    required Reference study,
+    required Reference individual,
+    String? assignedArm,
+    @JsonKey(name: '_assignedArm') Element? assignedArmElement,
+    String? actualArm,
+    @JsonKey(name: '_actualArm') Element? actualArmElement,
+    Reference? consent,
   }) = _ResearchSubject;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ResearchSubject.fromYaml(dynamic yaml) => yaml is String
       ? ResearchSubject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ResearchSubject.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ResearchSubject cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchSubject.fromJson(Map<String, dynamic> json) =>

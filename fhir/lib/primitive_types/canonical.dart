@@ -1,16 +1,21 @@
 import 'dart:convert';
-import 'package:dartz/dartz.dart';
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
 class Canonical {
-  const Canonical._(this._value);
+  const Canonical._(this._valueString, this._valueCanonical, this._isValid);
 
-  factory Canonical(dynamic value) {
-    assert(value != null);
-    return Canonical._(
-      _validateCanonical(value),
-    );
+  factory Canonical(dynamic inValue) {
+    if (inValue is Uri) {
+      return Canonical._(inValue.toString(), inValue, true);
+    } else if (inValue is String) {
+      if (RegExp(r'^\S*$').hasMatch(inValue)) {
+        final Uri? tempUri = Uri.tryParse(inValue);
+        return Canonical._(inValue, tempUri, tempUri != null);
+      }
+      return Canonical._(inValue, null, false);
+    }
+
+    throw ArgumentError('Canonical cannot be constructed from $inValue.');
   }
 
   factory Canonical.fromJson(dynamic json) => Canonical(json);
@@ -19,27 +24,26 @@ class Canonical {
       ? Canonical.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Canonical.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw FormatException(
+              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final Either<String, String> _value;
-  String get value => _value.fold((l) => l, (r) => r);
-  bool get isValid => _value.isRight();
+  final String _valueString;
+  final Uri? _valueCanonical;
+  final bool _isValid;
 
-  String toString() => value;
-  String toJson() => value;
-  String toYaml() => value;
+  bool get isValid => _isValid;
+  int get hashCode => _valueString.hashCode;
+  Uri? get value => _valueCanonical;
+
+  String toString() => _valueString;
+  String toJson() => _valueString;
+  String toYaml() => _valueString;
 
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is Canonical || o is String
-          ? o == value
-          : false;
-
-  int get hashCode => value.hashCode;
+      : o is Canonical
+          ? o.value == _valueCanonical
+          : o is String
+              ? o == _valueString
+              : false;
 }
-
-Either<String, String> _validateCanonical(String value) =>
-    RegExp(r'^\S*$').hasMatch(value)
-        ? right(value)
-        : left('FormatError: "$value" is not a Canonical, as defined by:'
-            'https://www.hl7.org/fhir/datatypes.html#canonical');

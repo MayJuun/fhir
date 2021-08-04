@@ -12,7 +12,7 @@ part 'workflow.freezed.dart';
 part 'workflow.g.dart';
 
 @freezed
-abstract class Appointment with Resource implements _$Appointment {
+class Appointment with Resource, _$Appointment {
   Appointment._();
 
   /// [Appointment]: A booking of a healthcare event among patient(s),
@@ -33,11 +33,11 @@ abstract class Appointment with Resource implements _$Appointment {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -51,7 +51,7 @@ abstract class Appointment with Resource implements _$Appointment {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -81,7 +81,7 @@ abstract class Appointment with Resource implements _$Appointment {
   /// has their own participation status which indicates their involvement in
   ///  the process, however this status indicates the shared status.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [cancelationReason]: The coded reason for the appointment being cancelled.
   /// This is often used in reporting/billing/futher processing to determine if
@@ -112,24 +112,24 @@ abstract class Appointment with Resource implements _$Appointment {
   /// decisions if needing to re-prioritize appointments. (The iCal Standard
   ///  specifies 0 as undefined, 1 as highest, 9 as lowest priority).
   ///
-  /// [_priority]: Extensions for priority
+  /// [priorityElement]: Extensions for priority
   ///
   /// [description]: The brief description of the appointment as would be shown
   /// on a subject line in a meeting request, or appointment list. Detailed or
   ///  expanded information should be put in the comment field.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [supportingInformation]: Additional information to support the appointment
   ///  provided when making the appointment.
   ///
   /// [start]: Date/Time that the appointment is to take place.
   ///
-  /// [_start]: Extensions for start
+  /// [startElement]: Extensions for start
   ///
   /// [end]: Date/Time that the appointment is to conclude.
   ///
-  /// [_end]: Extensions for end
+  /// [endElement]: Extensions for end
   ///
   /// [minutesDuration]: Number of minutes that the appointment is to take. This
   /// can be less than the duration between the start and end times.  For
@@ -139,7 +139,7 @@ abstract class Appointment with Resource implements _$Appointment {
   /// long appointment, the duration may be 15 minutes less than the difference
   ///  between the start and end.
   ///
-  /// [_minutesDuration]: Extensions for minutesDuration
+  /// [minutesDurationElement]: Extensions for minutesDuration
   ///
   /// [slot]: The slots from the participants' schedules that will be filled by
   ///  the appointment.
@@ -149,18 +149,18 @@ abstract class Appointment with Resource implements _$Appointment {
   /// this could have been before the resource was created on the FHIR server,
   ///  and should remain unchanged over the lifespan of the appointment.
   ///
-  /// [_created]: Extensions for created
+  /// [createdElement]: Extensions for created
   ///
   /// [comment]: Additional comments about the appointment.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   ///
   /// [patientInstruction]: While Appointment.comment contains information for
   /// internal use, Appointment.patientInstructions is used to capture patient
   /// facing information about the Appointment (e.g. please bring your referral
   ///  or fast from 8pm night before).
   ///
-  /// [_patientInstruction]: Extensions for patientInstruction
+  /// [patientInstructionElement]: Extensions for patientInstruction
   ///
   /// [basedOn]: The service request this appointment is allocated to assess
   ///  (e.g. incoming referral or procedure request).
@@ -177,59 +177,61 @@ abstract class Appointment with Resource implements _$Appointment {
     @Default(R4ResourceType.Appointment)
     @JsonKey(unknownEnumValue: R4ResourceType.Appointment)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: AppointmentStatus.unknown)
-        AppointmentStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    CodeableConcept cancelationReason,
-    List<CodeableConcept> serviceCategory,
-    List<CodeableConcept> serviceType,
-    List<CodeableConcept> specialty,
-    CodeableConcept appointmentType,
-    List<CodeableConcept> reasonCode,
-    List<Reference> reasonReference,
-    UnsignedInt priority,
-    @JsonKey(name: '_priority') Element priorityElement,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<Reference> supportingInformation,
-    Instant start,
-    @JsonKey(name: '_start') Element startElement,
-    Instant end,
-    @JsonKey(name: '_end') Element endElement,
-    PositiveInt minutesDuration,
-    @JsonKey(name: '_minutesDuration') Element minutesDurationElement,
-    List<Reference> slot,
-    FhirDateTime created,
-    @JsonKey(name: '_created') Element createdElement,
-    String comment,
-    @JsonKey(name: '_comment') Element commentElement,
-    String patientInstruction,
-    @JsonKey(name: '_patientInstruction') Element patientInstructionElement,
-    List<Reference> basedOn,
-    @required List<AppointmentParticipant> participant,
-    List<Period> requestedPeriod,
+        AppointmentStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? cancelationReason,
+    List<CodeableConcept>? serviceCategory,
+    List<CodeableConcept>? serviceType,
+    List<CodeableConcept>? specialty,
+    CodeableConcept? appointmentType,
+    List<CodeableConcept>? reasonCode,
+    List<Reference>? reasonReference,
+    UnsignedInt? priority,
+    @JsonKey(name: '_priority') Element? priorityElement,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<Reference>? supportingInformation,
+    Instant? start,
+    @JsonKey(name: '_start') Element? startElement,
+    Instant? end,
+    @JsonKey(name: '_end') Element? endElement,
+    PositiveInt? minutesDuration,
+    @JsonKey(name: '_minutesDuration') Element? minutesDurationElement,
+    List<Reference>? slot,
+    FhirDateTime? created,
+    @JsonKey(name: '_created') Element? createdElement,
+    String? comment,
+    @JsonKey(name: '_comment') Element? commentElement,
+    String? patientInstruction,
+    @JsonKey(name: '_patientInstruction') Element? patientInstructionElement,
+    List<Reference>? basedOn,
+    required List<AppointmentParticipant> participant,
+    List<Period>? requestedPeriod,
   }) = _Appointment;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Appointment.fromYaml(dynamic yaml) => yaml is String
       ? Appointment.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Appointment.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Appointment cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Appointment.fromJson(Map<String, dynamic> json) =>
@@ -237,17 +239,17 @@ abstract class Appointment with Resource implements _$Appointment {
 }
 
 @freezed
-abstract class AppointmentParticipant implements _$AppointmentParticipant {
+class AppointmentParticipant with _$AppointmentParticipant {
   AppointmentParticipant._();
 
-  /// [Appointment_Participant]: A booking of a healthcare event among
+  /// [AppointmentParticipant]: A booking of a healthcare event among
   /// patient(s), practitioner(s), related person(s) and/or device(s) for a
   ///  specific date/time. This may result in one or more Encounter(s).
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -278,37 +280,39 @@ abstract class AppointmentParticipant implements _$AppointmentParticipant {
   /// the results for a specific patient, and the patient is not required to be
   ///  present.
   ///
-  /// [_required]: Extensions for required
+  /// [requiredElement]: Extensions for required
   ///
   /// [status]: Participation status of the actor.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [period]: Participation period of the actor.
   factory AppointmentParticipant({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<CodeableConcept> type,
-    Reference actor,
-    @JsonKey(unknownEnumValue: AppointmentParticipantRequired.unknown)
-        AppointmentParticipantRequired required,
-    @JsonKey(name: '_required') Element requiredElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<CodeableConcept>? type,
+    Reference? actor,
+    @JsonKey(name: 'required', unknownEnumValue: AppointmentParticipantRequired.unknown)
+        AppointmentParticipantRequired? required_,
+    @JsonKey(name: '_required') Element? requiredElement,
     @JsonKey(unknownEnumValue: AppointmentParticipantStatus.unknown)
-        AppointmentParticipantStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Period period,
+        AppointmentParticipantStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Period? period,
   }) = _AppointmentParticipant;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AppointmentParticipant.fromYaml(dynamic yaml) => yaml is String
       ? AppointmentParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AppointmentParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AppointmentParticipant cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AppointmentParticipant.fromJson(Map<String, dynamic> json) =>
@@ -316,9 +320,7 @@ abstract class AppointmentParticipant implements _$AppointmentParticipant {
 }
 
 @freezed
-abstract class AppointmentResponse
-    with Resource
-    implements _$AppointmentResponse {
+class AppointmentResponse with Resource, _$AppointmentResponse {
   AppointmentResponse._();
 
   /// [AppointmentResponse]: A reply to an appointment request for a patient
@@ -338,11 +340,11 @@ abstract class AppointmentResponse
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -356,7 +358,7 @@ abstract class AppointmentResponse
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -387,13 +389,13 @@ abstract class AppointmentResponse
   /// [start]: Date/Time that the appointment is to take place, or requested new
   ///  start time.
   ///
-  /// [_start]: Extensions for start
+  /// [startElement]: Extensions for start
   ///
   /// [end]: This may be either the same as the appointment request to confirm
   /// the details of the appointment, or alternately a new time to request a
   ///  re-negotiation of the end time.
   ///
-  /// [_end]: Extensions for end
+  /// [endElement]: Extensions for end
   ///
   /// [participantType]: Role of participant in the appointment.
   ///
@@ -406,48 +408,50 @@ abstract class AppointmentResponse
   /// time change. When the status is accepted, the times can either be the time
   ///  of the appointment (as a confirmation of the time) or can be empty.
   ///
-  /// [_participantStatus]: Extensions for participantStatus
+  /// [participantStatusElement]: Extensions for participantStatus
   ///
   /// [comment]: Additional comments about the appointment.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   factory AppointmentResponse({
     @Default(R4ResourceType.AppointmentResponse)
     @JsonKey(unknownEnumValue: R4ResourceType.AppointmentResponse)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @required Reference appointment,
-    Instant start,
-    @JsonKey(name: '_start') Element startElement,
-    Instant end,
-    @JsonKey(name: '_end') Element endElement,
-    List<CodeableConcept> participantType,
-    Reference actor,
-    Code participantStatus,
-    @JsonKey(name: '_participantStatus') Element participantStatusElement,
-    String comment,
-    @JsonKey(name: '_comment') Element commentElement,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    required Reference appointment,
+    Instant? start,
+    @JsonKey(name: '_start') Element? startElement,
+    Instant? end,
+    @JsonKey(name: '_end') Element? endElement,
+    List<CodeableConcept>? participantType,
+    Reference? actor,
+    Code? participantStatus,
+    @JsonKey(name: '_participantStatus') Element? participantStatusElement,
+    String? comment,
+    @JsonKey(name: '_comment') Element? commentElement,
   }) = _AppointmentResponse;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AppointmentResponse.fromYaml(dynamic yaml) => yaml is String
       ? AppointmentResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AppointmentResponse.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AppointmentResponse cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AppointmentResponse.fromJson(Map<String, dynamic> json) =>
@@ -455,7 +459,7 @@ abstract class AppointmentResponse
 }
 
 @freezed
-abstract class Schedule with Resource implements _$Schedule {
+class Schedule with Resource, _$Schedule {
   Schedule._();
 
   /// [Schedule]: A container for slots of time that may be available for
@@ -475,11 +479,11 @@ abstract class Schedule with Resource implements _$Schedule {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -493,7 +497,7 @@ abstract class Schedule with Resource implements _$Schedule {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -519,7 +523,7 @@ abstract class Schedule with Resource implements _$Schedule {
   /// [active]: Whether this schedule record is in active use or should not be
   ///  used (such as was entered in error).
   ///
-  /// [_active]: Extensions for active
+  /// [activeElement]: Extensions for active
   ///
   /// [serviceCategory]: A broad categorization of the service that is to be
   ///  performed during this appointment.
@@ -543,42 +547,44 @@ abstract class Schedule with Resource implements _$Schedule {
   /// information. Such as custom constraints on the slots that may be
   ///  associated.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   factory Schedule({
     @Default(R4ResourceType.Schedule)
     @JsonKey(unknownEnumValue: R4ResourceType.Schedule)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Boolean active,
-    @JsonKey(name: '_active') Element activeElement,
-    List<CodeableConcept> serviceCategory,
-    List<CodeableConcept> serviceType,
-    List<CodeableConcept> specialty,
-    @required List<Reference> actor,
-    Period planningHorizon,
-    String comment,
-    @JsonKey(name: '_comment') Element commentElement,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Boolean? active,
+    @JsonKey(name: '_active') Element? activeElement,
+    List<CodeableConcept>? serviceCategory,
+    List<CodeableConcept>? serviceType,
+    List<CodeableConcept>? specialty,
+    required List<Reference> actor,
+    Period? planningHorizon,
+    String? comment,
+    @JsonKey(name: '_comment') Element? commentElement,
   }) = _Schedule;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Schedule.fromYaml(dynamic yaml) => yaml is String
       ? Schedule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Schedule.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Schedule cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Schedule.fromJson(Map<String, dynamic> json) =>
@@ -586,7 +592,7 @@ abstract class Schedule with Resource implements _$Schedule {
 }
 
 @freezed
-abstract class Slot with Resource implements _$Slot {
+class Slot with Resource, _$Slot {
   Slot._();
 
   /// [Slot]: A slot of time on a schedule that may be available for booking
@@ -606,11 +612,11 @@ abstract class Slot with Resource implements _$Slot {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -624,7 +630,7 @@ abstract class Slot with Resource implements _$Slot {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -667,73 +673,75 @@ abstract class Slot with Resource implements _$Slot {
   /// [status]: busy | free | busy-unavailable | busy-tentative |
   ///  entered-in-error.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [start]: Date/Time that the slot is to begin.
   ///
-  /// [_start]: Extensions for start
+  /// [startElement]: Extensions for start
   ///
   /// [end]: Date/Time that the slot is to conclude.
   ///
-  /// [_end]: Extensions for end
+  /// [endElement]: Extensions for end
   ///
   /// [overbooked]: This slot has already been overbooked, appointments are
   ///  unlikely to be accepted for this time.
   ///
-  /// [_overbooked]: Extensions for overbooked
+  /// [overbookedElement]: Extensions for overbooked
   ///
   /// [comment]: Comments on the slot to describe any extended information. Such
   ///  as custom constraints on the slot.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   factory Slot({
     @Default(R4ResourceType.Slot)
     @JsonKey(unknownEnumValue: R4ResourceType.Slot)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<CodeableConcept> serviceCategory,
-    List<CodeableConcept> serviceType,
-    List<CodeableConcept> specialty,
-    CodeableConcept appointmentType,
-    @required Reference schedule,
-    @JsonKey(unknownEnumValue: SlotStatus.unknown) SlotStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Instant start,
-    @JsonKey(name: '_start') Element startElement,
-    Instant end,
-    @JsonKey(name: '_end') Element endElement,
-    Boolean overbooked,
-    @JsonKey(name: '_overbooked') Element overbookedElement,
-    String comment,
-    @JsonKey(name: '_comment') Element commentElement,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<CodeableConcept>? serviceCategory,
+    List<CodeableConcept>? serviceType,
+    List<CodeableConcept>? specialty,
+    CodeableConcept? appointmentType,
+    required Reference schedule,
+    @JsonKey(unknownEnumValue: SlotStatus.unknown) SlotStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Instant? start,
+    @JsonKey(name: '_start') Element? startElement,
+    Instant? end,
+    @JsonKey(name: '_end') Element? endElement,
+    Boolean? overbooked,
+    @JsonKey(name: '_overbooked') Element? overbookedElement,
+    String? comment,
+    @JsonKey(name: '_comment') Element? commentElement,
   }) = _Slot;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Slot.fromYaml(dynamic yaml) => yaml is String
       ? Slot.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Slot.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Slot cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Slot.fromJson(Map<String, dynamic> json) => _$SlotFromJson(json);
 }
 
 @freezed
-abstract class Task with Resource implements _$Task {
+class Task with Resource, _$Task {
   Task._();
 
   /// [Task]: A task to be performed.
@@ -752,11 +760,11 @@ abstract class Task with Resource implements _$Task {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -770,7 +778,7 @@ abstract class Task with Resource implements _$Task {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -801,7 +809,7 @@ abstract class Task with Resource implements _$Task {
   /// protocol, guideline, orderset or other definition that is adhered to in
   ///  whole or in part by this Task.
   ///
-  /// [_instantiatesUri]: Extensions for instantiatesUri
+  /// [instantiatesUriElement]: Extensions for instantiatesUri
   ///
   /// [basedOn]: BasedOn refers to a higher-level authorization that triggered
   /// the creation of the task.  It references a "request" resource such as a
@@ -818,7 +826,7 @@ abstract class Task with Resource implements _$Task {
   ///
   /// [status]: The current status of the task.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [statusReason]: An explanation as to why this task is held, failed, was
   ///  refused, etc.
@@ -830,24 +838,24 @@ abstract class Task with Resource implements _$Task {
   /// i.e. i+R[9]Cs this a proposed task, a planned task, an actionable task,
   ///  etc.
   ///
-  /// [_intent]: Extensions for intent
+  /// [intentElement]: Extensions for intent
   ///
   /// [priority]: Indicates how quickly the Task should be addressed with
   ///  respect to other requests.
   ///
-  /// [_priority]: Extensions for priority
+  /// [priorityElement]: Extensions for priority
   ///
   /// [code]: A name or code (or both) briefly describing what the task
   ///  involves.
   ///
   /// [description]: A free-text description of what is to be performed.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [focus]: The request being actioned or the resource being manipulated by
   ///  this task.
   ///
-  /// [for]: The entity who benefits from the performance of the service
+  /// [for_]: The entity who benefits from the performance of the service
   ///  specified in the task (e.g., the patient).
   ///
   /// [encounter]: The healthcare event  (e.g. a patient and healthcare provider
@@ -859,11 +867,11 @@ abstract class Task with Resource implements _$Task {
   ///
   /// [authoredOn]: The date and time this task was created.
   ///
-  /// [_authoredOn]: Extensions for authoredOn
+  /// [authoredOnElement]: Extensions for authoredOn
   ///
   /// [lastModified]: The date and time of last modification to this task.
   ///
-  /// [_lastModified]: Extensions for lastModified
+  /// [lastModifiedElement]: Extensions for lastModified
   ///
   /// [requester]: The creator of the task.
   ///
@@ -902,80 +910,82 @@ abstract class Task with Resource implements _$Task {
     @Default(R4ResourceType.Task)
     @JsonKey(unknownEnumValue: R4ResourceType.Task)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Canonical instantiatesCanonical,
-    FhirUri instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
-    List<Reference> basedOn,
-    Identifier groupIdentifier,
-    List<Reference> partOf,
-    @JsonKey(unknownEnumValue: TaskStatus.unknown) TaskStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    CodeableConcept statusReason,
-    CodeableConcept businessStatus,
-    @JsonKey(unknownEnumValue: TaskIntent.unknown) TaskIntent intent,
-    @JsonKey(name: '_intent') Element intentElement,
-    Code priority,
-    @JsonKey(name: '_priority') Element priorityElement,
-    CodeableConcept code,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    Reference focus,
-    @JsonKey(name: 'for') Reference for_,
-    Reference encounter,
-    Period executionPeriod,
-    FhirDateTime authoredOn,
-    @JsonKey(name: '_authoredOn') Element authoredOnElement,
-    FhirDateTime lastModified,
-    @JsonKey(name: '_lastModified') Element lastModifiedElement,
-    Reference requester,
-    List<CodeableConcept> performerType,
-    Reference owner,
-    Reference location,
-    CodeableConcept reasonCode,
-    Reference reasonReference,
-    List<Reference> insurance,
-    List<Annotation> note,
-    List<Reference> relevantHistory,
-    TaskRestriction restriction,
-    List<TaskInput> input,
-    List<TaskOutput> output,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Canonical? instantiatesCanonical,
+    FhirUri? instantiatesUri,
+    @JsonKey(name: '_instantiatesUri') Element? instantiatesUriElement,
+    List<Reference>? basedOn,
+    Identifier? groupIdentifier,
+    List<Reference>? partOf,
+    @JsonKey(unknownEnumValue: TaskStatus.unknown) TaskStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? statusReason,
+    CodeableConcept? businessStatus,
+    @JsonKey(unknownEnumValue: TaskIntent.unknown) TaskIntent? intent,
+    @JsonKey(name: '_intent') Element? intentElement,
+    Code? priority,
+    @JsonKey(name: '_priority') Element? priorityElement,
+    CodeableConcept? code,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    Reference? focus,
+    @JsonKey(name: 'for') Reference? for_,
+    Reference? encounter,
+    Period? executionPeriod,
+    FhirDateTime? authoredOn,
+    @JsonKey(name: '_authoredOn') Element? authoredOnElement,
+    FhirDateTime? lastModified,
+    @JsonKey(name: '_lastModified') Element? lastModifiedElement,
+    Reference? requester,
+    List<CodeableConcept>? performerType,
+    Reference? owner,
+    Reference? location,
+    CodeableConcept? reasonCode,
+    Reference? reasonReference,
+    List<Reference>? insurance,
+    List<Annotation>? note,
+    List<Reference>? relevantHistory,
+    TaskRestriction? restriction,
+    List<TaskInput>? input,
+    List<TaskOutput>? output,
   }) = _Task;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Task.fromYaml(dynamic yaml) => yaml is String
       ? Task.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Task.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Task cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Task.fromJson(Map<String, dynamic> json) => _$TaskFromJson(json);
 }
 
 @freezed
-abstract class TaskRestriction implements _$TaskRestriction {
+class TaskRestriction with _$TaskRestriction {
   TaskRestriction._();
 
-  /// [Task_Restriction]: A task to be performed.
+  /// [TaskRestriction]: A task to be performed.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -999,31 +1009,33 @@ abstract class TaskRestriction implements _$TaskRestriction {
   /// [repetitions]: Indicates the number of times the requested action should
   ///  occur.
   ///
-  /// [_repetitions]: Extensions for repetitions
+  /// [repetitionsElement]: Extensions for repetitions
   ///
   /// [period]: Over what time-period is fulfillment sought.
   ///
   /// [recipient]: For requests that are targeted to more than on potential
   ///  recipient/target, for whom is fulfillment sought?
   factory TaskRestriction({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt repetitions,
-    @JsonKey(name: '_repetitions') Element repetitionsElement,
-    Period period,
-    List<Reference> recipient,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? repetitions,
+    @JsonKey(name: '_repetitions') Element? repetitionsElement,
+    Period? period,
+    List<Reference>? recipient,
   }) = _TaskRestriction;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TaskRestriction.fromYaml(dynamic yaml) => yaml is String
       ? TaskRestriction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TaskRestriction.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TaskRestriction cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TaskRestriction.fromJson(Map<String, dynamic> json) =>
@@ -1031,15 +1043,15 @@ abstract class TaskRestriction implements _$TaskRestriction {
 }
 
 @freezed
-abstract class TaskInput implements _$TaskInput {
+class TaskInput with _$TaskInput {
   TaskInput._();
 
-  /// [Task_Input]: A task to be performed.
+  /// [TaskInput]: A task to be performed.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1065,79 +1077,79 @@ abstract class TaskInput implements _$TaskInput {
   ///
   /// [valueBase64Binary]: The value of the input parameter as a basic type.
   ///
-  /// [_valueBase64Binary]: Extensions for valueBase64Binary
+  /// [valueBase64BinaryElement]: Extensions for valueBase64Binary
   ///
   /// [valueBoolean]: The value of the input parameter as a basic type.
   ///
-  /// [_valueBoolean]: Extensions for valueBoolean
+  /// [valueBooleanElement]: Extensions for valueBoolean
   ///
   /// [valueCanonical]: The value of the input parameter as a basic type.
   ///
-  /// [_valueCanonical]: Extensions for valueCanonical
+  /// [valueCanonicalElement]: Extensions for valueCanonical
   ///
   /// [valueCode]: The value of the input parameter as a basic type.
   ///
-  /// [_valueCode]: Extensions for valueCode
+  /// [valueCodeElement]: Extensions for valueCode
   ///
   /// [valueDate]: The value of the input parameter as a basic type.
   ///
-  /// [_valueDate]: Extensions for valueDate
+  /// [valueDateElement]: Extensions for valueDate
   ///
   /// [valueDateTime]: The value of the input parameter as a basic type.
   ///
-  /// [_valueDateTime]: Extensions for valueDateTime
+  /// [valueDateTimeElement]: Extensions for valueDateTime
   ///
   /// [valueDecimal]: The value of the input parameter as a basic type.
   ///
-  /// [_valueDecimal]: Extensions for valueDecimal
+  /// [valueDecimalElement]: Extensions for valueDecimal
   ///
   /// [valueId]: The value of the input parameter as a basic type.
   ///
-  /// [_valueId]: Extensions for valueId
+  /// [valueIdElement]: Extensions for valueId
   ///
   /// [valueInstant]: The value of the input parameter as a basic type.
   ///
-  /// [_valueInstant]: Extensions for valueInstant
+  /// [valueInstantElement]: Extensions for valueInstant
   ///
   /// [valueInteger]: The value of the input parameter as a basic type.
   ///
-  /// [_valueInteger]: Extensions for valueInteger
+  /// [valueIntegerElement]: Extensions for valueInteger
   ///
   /// [valueMarkdown]: The value of the input parameter as a basic type.
   ///
-  /// [_valueMarkdown]: Extensions for valueMarkdown
+  /// [valueMarkdownElement]: Extensions for valueMarkdown
   ///
   /// [valueOid]: The value of the input parameter as a basic type.
   ///
-  /// [_valueOid]: Extensions for valueOid
+  /// [valueOidElement]: Extensions for valueOid
   ///
   /// [valuePositiveInt]: The value of the input parameter as a basic type.
   ///
-  /// [_valuePositiveInt]: Extensions for valuePositiveInt
+  /// [valuePositiveIntElement]: Extensions for valuePositiveInt
   ///
   /// [valueString]: The value of the input parameter as a basic type.
   ///
-  /// [_valueString]: Extensions for valueString
+  /// [valueStringElement]: Extensions for valueString
   ///
   /// [valueTime]: The value of the input parameter as a basic type.
   ///
-  /// [_valueTime]: Extensions for valueTime
+  /// [valueTimeElement]: Extensions for valueTime
   ///
   /// [valueUnsignedInt]: The value of the input parameter as a basic type.
   ///
-  /// [_valueUnsignedInt]: Extensions for valueUnsignedInt
+  /// [valueUnsignedIntElement]: Extensions for valueUnsignedInt
   ///
   /// [valueUri]: The value of the input parameter as a basic type.
   ///
-  /// [_valueUri]: Extensions for valueUri
+  /// [valueUriElement]: Extensions for valueUri
   ///
   /// [valueUrl]: The value of the input parameter as a basic type.
   ///
-  /// [_valueUrl]: Extensions for valueUrl
+  /// [valueUrlElement]: Extensions for valueUrl
   ///
   /// [valueUuid]: The value of the input parameter as a basic type.
   ///
-  /// [_valueUuid]: Extensions for valueUuid
+  /// [valueUuidElement]: Extensions for valueUuid
   ///
   /// [valueAddress]: The value of the input parameter as a basic type.
   ///
@@ -1203,90 +1215,92 @@ abstract class TaskInput implements _$TaskInput {
   ///
   /// [valueMeta]: The value of the input parameter as a basic type.
   factory TaskInput({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept type,
-    Base64Binary valueBase64Binary,
-    @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-    Boolean valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-    Canonical valueCanonical,
-    @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
-    Code valueCode,
-    @JsonKey(name: '_valueCode') Element valueCodeElement,
-    Date valueDate,
-    @JsonKey(name: '_valueDate') Element valueDateElement,
-    FhirDateTime valueDateTime,
-    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-    Decimal valueDecimal,
-    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-    Id valueId,
-    @JsonKey(name: '_valueId') Element valueIdElement,
-    Instant valueInstant,
-    @JsonKey(name: '_valueInstant') Element valueInstantElement,
-    Integer valueInteger,
-    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-    Markdown valueMarkdown,
-    @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
-    Oid valueOid,
-    @JsonKey(name: '_valueOid') Element valueOidElement,
-    PositiveInt valuePositiveInt,
-    @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-    String valueString,
-    @JsonKey(name: '_valueString') Element valueStringElement,
-    Time valueTime,
-    @JsonKey(name: '_valueTime') Element valueTimeElement,
-    UnsignedInt valueUnsignedInt,
-    @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-    FhirUri valueUri,
-    @JsonKey(name: '_valueUri') Element valueUriElement,
-    FhirUrl valueUrl,
-    @JsonKey(name: '_valueUrl') Element valueUrlElement,
-    Uuid valueUuid,
-    @JsonKey(name: '_valueUuid') Element valueUuidElement,
-    Address valueAddress,
-    Age valueAge,
-    Annotation valueAnnotation,
-    Attachment valueAttachment,
-    CodeableConcept valueCodeableConcept,
-    Coding valueCoding,
-    ContactPoint valueContactPoint,
-    Count valueCount,
-    Distance valueDistance,
-    FhirDuration valueDuration,
-    HumanName valueHumanName,
-    Identifier valueIdentifier,
-    Money valueMoney,
-    Period valuePeriod,
-    Quantity valueQuantity,
-    Range valueRange,
-    Ratio valueRatio,
-    Reference valueReference,
-    SampledData valueSampledData,
-    Signature valueSignature,
-    Timing valueTiming,
-    ContactDetail valueContactDetail,
-    Contributor valueContributor,
-    DataRequirement valueDataRequirement,
-    Expression valueExpression,
-    ParameterDefinition valueParameterDefinition,
-    RelatedArtifact valueRelatedArtifact,
-    TriggerDefinition valueTriggerDefinition,
-    UsageContext valueUsageContext,
-    Dosage valueDosage,
-    Meta valueMeta,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    Base64Binary? valueBase64Binary,
+    @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+    Boolean? valueBoolean,
+    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+    Canonical? valueCanonical,
+    @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
+    Code? valueCode,
+    @JsonKey(name: '_valueCode') Element? valueCodeElement,
+    Date? valueDate,
+    @JsonKey(name: '_valueDate') Element? valueDateElement,
+    FhirDateTime? valueDateTime,
+    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+    Decimal? valueDecimal,
+    @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+    Id? valueId,
+    @JsonKey(name: '_valueId') Element? valueIdElement,
+    Instant? valueInstant,
+    @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+    Integer? valueInteger,
+    @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+    Markdown? valueMarkdown,
+    @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
+    Oid? valueOid,
+    @JsonKey(name: '_valueOid') Element? valueOidElement,
+    PositiveInt? valuePositiveInt,
+    @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
+    String? valueString,
+    @JsonKey(name: '_valueString') Element? valueStringElement,
+    Time? valueTime,
+    @JsonKey(name: '_valueTime') Element? valueTimeElement,
+    UnsignedInt? valueUnsignedInt,
+    @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
+    FhirUri? valueUri,
+    @JsonKey(name: '_valueUri') Element? valueUriElement,
+    FhirUrl? valueUrl,
+    @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+    Uuid? valueUuid,
+    @JsonKey(name: '_valueUuid') Element? valueUuidElement,
+    Address? valueAddress,
+    Age? valueAge,
+    Annotation? valueAnnotation,
+    Attachment? valueAttachment,
+    CodeableConcept? valueCodeableConcept,
+    Coding? valueCoding,
+    ContactPoint? valueContactPoint,
+    Count? valueCount,
+    Distance? valueDistance,
+    FhirDuration? valueDuration,
+    HumanName? valueHumanName,
+    Identifier? valueIdentifier,
+    Money? valueMoney,
+    Period? valuePeriod,
+    Quantity? valueQuantity,
+    Range? valueRange,
+    Ratio? valueRatio,
+    Reference? valueReference,
+    SampledData? valueSampledData,
+    Signature? valueSignature,
+    Timing? valueTiming,
+    ContactDetail? valueContactDetail,
+    Contributor? valueContributor,
+    DataRequirement? valueDataRequirement,
+    Expression? valueExpression,
+    ParameterDefinition? valueParameterDefinition,
+    RelatedArtifact? valueRelatedArtifact,
+    TriggerDefinition? valueTriggerDefinition,
+    UsageContext? valueUsageContext,
+    Dosage? valueDosage,
+    Meta? valueMeta,
   }) = _TaskInput;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TaskInput.fromYaml(dynamic yaml) => yaml is String
       ? TaskInput.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TaskInput.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TaskInput cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TaskInput.fromJson(Map<String, dynamic> json) =>
@@ -1294,15 +1308,15 @@ abstract class TaskInput implements _$TaskInput {
 }
 
 @freezed
-abstract class TaskOutput implements _$TaskOutput {
+class TaskOutput with _$TaskOutput {
   TaskOutput._();
 
-  /// [Task_Output]: A task to be performed.
+  /// [TaskOutput]: A task to be performed.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1327,79 +1341,79 @@ abstract class TaskOutput implements _$TaskOutput {
   ///
   /// [valueBase64Binary]: The value of the Output parameter as a basic type.
   ///
-  /// [_valueBase64Binary]: Extensions for valueBase64Binary
+  /// [valueBase64BinaryElement]: Extensions for valueBase64Binary
   ///
   /// [valueBoolean]: The value of the Output parameter as a basic type.
   ///
-  /// [_valueBoolean]: Extensions for valueBoolean
+  /// [valueBooleanElement]: Extensions for valueBoolean
   ///
   /// [valueCanonical]: The value of the Output parameter as a basic type.
   ///
-  /// [_valueCanonical]: Extensions for valueCanonical
+  /// [valueCanonicalElement]: Extensions for valueCanonical
   ///
   /// [valueCode]: The value of the Output parameter as a basic type.
   ///
-  /// [_valueCode]: Extensions for valueCode
+  /// [valueCodeElement]: Extensions for valueCode
   ///
   /// [valueDate]: The value of the Output parameter as a basic type.
   ///
-  /// [_valueDate]: Extensions for valueDate
+  /// [valueDateElement]: Extensions for valueDate
   ///
   /// [valueDateTime]: The value of the Output parameter as a basic type.
   ///
-  /// [_valueDateTime]: Extensions for valueDateTime
+  /// [valueDateTimeElement]: Extensions for valueDateTime
   ///
   /// [valueDecimal]: The value of the Output parameter as a basic type.
   ///
-  /// [_valueDecimal]: Extensions for valueDecimal
+  /// [valueDecimalElement]: Extensions for valueDecimal
   ///
   /// [valueId]: The value of the Output parameter as a basic type.
   ///
-  /// [_valueId]: Extensions for valueId
+  /// [valueIdElement]: Extensions for valueId
   ///
   /// [valueInstant]: The value of the Output parameter as a basic type.
   ///
-  /// [_valueInstant]: Extensions for valueInstant
+  /// [valueInstantElement]: Extensions for valueInstant
   ///
   /// [valueInteger]: The value of the Output parameter as a basic type.
   ///
-  /// [_valueInteger]: Extensions for valueInteger
+  /// [valueIntegerElement]: Extensions for valueInteger
   ///
   /// [valueMarkdown]: The value of the Output parameter as a basic type.
   ///
-  /// [_valueMarkdown]: Extensions for valueMarkdown
+  /// [valueMarkdownElement]: Extensions for valueMarkdown
   ///
   /// [valueOid]: The value of the Output parameter as a basic type.
   ///
-  /// [_valueOid]: Extensions for valueOid
+  /// [valueOidElement]: Extensions for valueOid
   ///
   /// [valuePositiveInt]: The value of the Output parameter as a basic type.
   ///
-  /// [_valuePositiveInt]: Extensions for valuePositiveInt
+  /// [valuePositiveIntElement]: Extensions for valuePositiveInt
   ///
   /// [valueString]: The value of the Output parameter as a basic type.
   ///
-  /// [_valueString]: Extensions for valueString
+  /// [valueStringElement]: Extensions for valueString
   ///
   /// [valueTime]: The value of the Output parameter as a basic type.
   ///
-  /// [_valueTime]: Extensions for valueTime
+  /// [valueTimeElement]: Extensions for valueTime
   ///
   /// [valueUnsignedInt]: The value of the Output parameter as a basic type.
   ///
-  /// [_valueUnsignedInt]: Extensions for valueUnsignedInt
+  /// [valueUnsignedIntElement]: Extensions for valueUnsignedInt
   ///
   /// [valueUri]: The value of the Output parameter as a basic type.
   ///
-  /// [_valueUri]: Extensions for valueUri
+  /// [valueUriElement]: Extensions for valueUri
   ///
   /// [valueUrl]: The value of the Output parameter as a basic type.
   ///
-  /// [_valueUrl]: Extensions for valueUrl
+  /// [valueUrlElement]: Extensions for valueUrl
   ///
   /// [valueUuid]: The value of the Output parameter as a basic type.
   ///
-  /// [_valueUuid]: Extensions for valueUuid
+  /// [valueUuidElement]: Extensions for valueUuid
   ///
   /// [valueAddress]: The value of the Output parameter as a basic type.
   ///
@@ -1465,90 +1479,92 @@ abstract class TaskOutput implements _$TaskOutput {
   ///
   /// [valueMeta]: The value of the Output parameter as a basic type.
   factory TaskOutput({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept type,
-    Base64Binary valueBase64Binary,
-    @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-    Boolean valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-    Canonical valueCanonical,
-    @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
-    Code valueCode,
-    @JsonKey(name: '_valueCode') Element valueCodeElement,
-    Date valueDate,
-    @JsonKey(name: '_valueDate') Element valueDateElement,
-    FhirDateTime valueDateTime,
-    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-    Decimal valueDecimal,
-    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-    Id valueId,
-    @JsonKey(name: '_valueId') Element valueIdElement,
-    Instant valueInstant,
-    @JsonKey(name: '_valueInstant') Element valueInstantElement,
-    Integer valueInteger,
-    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-    Markdown valueMarkdown,
-    @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
-    Oid valueOid,
-    @JsonKey(name: '_valueOid') Element valueOidElement,
-    PositiveInt valuePositiveInt,
-    @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-    String valueString,
-    @JsonKey(name: '_valueString') Element valueStringElement,
-    Time valueTime,
-    @JsonKey(name: '_valueTime') Element valueTimeElement,
-    UnsignedInt valueUnsignedInt,
-    @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-    FhirUri valueUri,
-    @JsonKey(name: '_valueUri') Element valueUriElement,
-    FhirUrl valueUrl,
-    @JsonKey(name: '_valueUrl') Element valueUrlElement,
-    Uuid valueUuid,
-    @JsonKey(name: '_valueUuid') Element valueUuidElement,
-    Address valueAddress,
-    Age valueAge,
-    Annotation valueAnnotation,
-    Attachment valueAttachment,
-    CodeableConcept valueCodeableConcept,
-    Coding valueCoding,
-    ContactPoint valueContactPoint,
-    Count valueCount,
-    Distance valueDistance,
-    FhirDuration valueDuration,
-    HumanName valueHumanName,
-    Identifier valueIdentifier,
-    Money valueMoney,
-    Period valuePeriod,
-    Quantity valueQuantity,
-    Range valueRange,
-    Ratio valueRatio,
-    Reference valueReference,
-    SampledData valueSampledData,
-    Signature valueSignature,
-    Timing valueTiming,
-    ContactDetail valueContactDetail,
-    Contributor valueContributor,
-    DataRequirement valueDataRequirement,
-    Expression valueExpression,
-    ParameterDefinition valueParameterDefinition,
-    RelatedArtifact valueRelatedArtifact,
-    TriggerDefinition valueTriggerDefinition,
-    UsageContext valueUsageContext,
-    Dosage valueDosage,
-    Meta valueMeta,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    Base64Binary? valueBase64Binary,
+    @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+    Boolean? valueBoolean,
+    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+    Canonical? valueCanonical,
+    @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
+    Code? valueCode,
+    @JsonKey(name: '_valueCode') Element? valueCodeElement,
+    Date? valueDate,
+    @JsonKey(name: '_valueDate') Element? valueDateElement,
+    FhirDateTime? valueDateTime,
+    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+    Decimal? valueDecimal,
+    @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+    Id? valueId,
+    @JsonKey(name: '_valueId') Element? valueIdElement,
+    Instant? valueInstant,
+    @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+    Integer? valueInteger,
+    @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+    Markdown? valueMarkdown,
+    @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
+    Oid? valueOid,
+    @JsonKey(name: '_valueOid') Element? valueOidElement,
+    PositiveInt? valuePositiveInt,
+    @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
+    String? valueString,
+    @JsonKey(name: '_valueString') Element? valueStringElement,
+    Time? valueTime,
+    @JsonKey(name: '_valueTime') Element? valueTimeElement,
+    UnsignedInt? valueUnsignedInt,
+    @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
+    FhirUri? valueUri,
+    @JsonKey(name: '_valueUri') Element? valueUriElement,
+    FhirUrl? valueUrl,
+    @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+    Uuid? valueUuid,
+    @JsonKey(name: '_valueUuid') Element? valueUuidElement,
+    Address? valueAddress,
+    Age? valueAge,
+    Annotation? valueAnnotation,
+    Attachment? valueAttachment,
+    CodeableConcept? valueCodeableConcept,
+    Coding? valueCoding,
+    ContactPoint? valueContactPoint,
+    Count? valueCount,
+    Distance? valueDistance,
+    FhirDuration? valueDuration,
+    HumanName? valueHumanName,
+    Identifier? valueIdentifier,
+    Money? valueMoney,
+    Period? valuePeriod,
+    Quantity? valueQuantity,
+    Range? valueRange,
+    Ratio? valueRatio,
+    Reference? valueReference,
+    SampledData? valueSampledData,
+    Signature? valueSignature,
+    Timing? valueTiming,
+    ContactDetail? valueContactDetail,
+    Contributor? valueContributor,
+    DataRequirement? valueDataRequirement,
+    Expression? valueExpression,
+    ParameterDefinition? valueParameterDefinition,
+    RelatedArtifact? valueRelatedArtifact,
+    TriggerDefinition? valueTriggerDefinition,
+    UsageContext? valueUsageContext,
+    Dosage? valueDosage,
+    Meta? valueMeta,
   }) = _TaskOutput;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory TaskOutput.fromYaml(dynamic yaml) => yaml is String
       ? TaskOutput.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? TaskOutput.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'TaskOutput cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TaskOutput.fromJson(Map<String, dynamic> json) =>
@@ -1556,9 +1572,7 @@ abstract class TaskOutput implements _$TaskOutput {
 }
 
 @freezed
-abstract class VerificationResult
-    with Resource
-    implements _$VerificationResult {
+class VerificationResult with Resource, _$VerificationResult {
   VerificationResult._();
 
   /// [VerificationResult]: Describes validation requirements, source(s), status
@@ -1578,11 +1592,11 @@ abstract class VerificationResult
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1596,7 +1610,7 @@ abstract class VerificationResult
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1622,7 +1636,7 @@ abstract class VerificationResult
   /// [targetLocation]: The fhirpath location(s) within the resource that was
   ///  validated.
   ///
-  /// [_targetLocation]: Extensions for targetLocation
+  /// [targetLocationElement]: Extensions for targetLocation
   ///
   /// [need]: The frequency with which the target must be validated (none;
   ///  initial; periodic).
@@ -1630,11 +1644,11 @@ abstract class VerificationResult
   /// [status]: The validation status of the target (attested; validated; in
   ///  process; requires revalidation; validation failed; revalidation failed).
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [statusDate]: When the validation status was updated.
   ///
-  /// [_statusDate]: Extensions for statusDate
+  /// [statusDateElement]: Extensions for statusDate
   ///
   /// [validationType]: What the target is validated against (nothing; primary
   ///  source; multiple sources).
@@ -1648,11 +1662,11 @@ abstract class VerificationResult
   /// [lastPerformed]: The date/time validation was last completed (including
   ///  failed validations).
   ///
-  /// [_lastPerformed]: Extensions for lastPerformed
+  /// [lastPerformedElement]: Extensions for lastPerformed
   ///
   /// [nextScheduled]: The date when target is next validated, if appropriate.
   ///
-  /// [_nextScheduled]: Extensions for nextScheduled
+  /// [nextScheduledElement]: Extensions for nextScheduled
   ///
   /// [failureAction]: The result if validation fails (fatal; warning; record
   ///  only; none).
@@ -1667,46 +1681,48 @@ abstract class VerificationResult
     @Default(R4ResourceType.VerificationResult)
     @JsonKey(unknownEnumValue: R4ResourceType.VerificationResult)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Reference> target,
-    List<String> targetLocation,
-    @JsonKey(name: '_targetLocation') List<Element> targetLocationElement,
-    CodeableConcept need,
-    Code status,
-    @JsonKey(name: '_status') Element statusElement,
-    FhirDateTime statusDate,
-    @JsonKey(name: '_statusDate') Element statusDateElement,
-    CodeableConcept validationType,
-    List<CodeableConcept> validationProcess,
-    Timing frequency,
-    FhirDateTime lastPerformed,
-    @JsonKey(name: '_lastPerformed') Element lastPerformedElement,
-    Date nextScheduled,
-    @JsonKey(name: '_nextScheduled') Element nextScheduledElement,
-    CodeableConcept failureAction,
-    List<VerificationResultPrimarySource> primarySource,
-    VerificationResultAttestation attestation,
-    List<VerificationResultValidator> validator,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Reference>? target,
+    List<String>? targetLocation,
+    @JsonKey(name: '_targetLocation') List<Element?>? targetLocationElement,
+    CodeableConcept? need,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    FhirDateTime? statusDate,
+    @JsonKey(name: '_statusDate') Element? statusDateElement,
+    CodeableConcept? validationType,
+    List<CodeableConcept>? validationProcess,
+    Timing? frequency,
+    FhirDateTime? lastPerformed,
+    @JsonKey(name: '_lastPerformed') Element? lastPerformedElement,
+    Date? nextScheduled,
+    @JsonKey(name: '_nextScheduled') Element? nextScheduledElement,
+    CodeableConcept? failureAction,
+    List<VerificationResultPrimarySource>? primarySource,
+    VerificationResultAttestation? attestation,
+    List<VerificationResultValidator>? validator,
   }) = _VerificationResult;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory VerificationResult.fromYaml(dynamic yaml) => yaml is String
       ? VerificationResult.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? VerificationResult.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'VerificationResult cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory VerificationResult.fromJson(Map<String, dynamic> json) =>
@@ -1714,17 +1730,16 @@ abstract class VerificationResult
 }
 
 @freezed
-abstract class VerificationResultPrimarySource
-    implements _$VerificationResultPrimarySource {
+class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
   VerificationResultPrimarySource._();
 
-  /// [VerificationResult_PrimarySource]: Describes validation requirements,
+  /// [VerificationResultPrimarySource]: Describes validation requirements,
   ///  source(s), status and dates for one or more elements.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1760,7 +1775,7 @@ abstract class VerificationResultPrimarySource
   /// [validationDate]: When the target was validated against the primary
   ///  source.
   ///
-  /// [_validationDate]: Extensions for validationDate
+  /// [validationDateElement]: Extensions for validationDate
   ///
   /// [canPushUpdates]: Ability of the primary source to push updates/alerts
   ///  (yes; no; undetermined).
@@ -1768,31 +1783,33 @@ abstract class VerificationResultPrimarySource
   /// [pushTypeAvailable]: Type of alerts/updates the primary source can send
   ///  (specific requested changes; any changes; as defined by source).
   factory VerificationResultPrimarySource({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Reference who,
-    List<CodeableConcept> type,
-    List<CodeableConcept> communicationMethod,
-    CodeableConcept validationStatus,
-    FhirDateTime validationDate,
-    @JsonKey(name: '_validationDate') Element validationDateElement,
-    CodeableConcept canPushUpdates,
-    List<CodeableConcept> pushTypeAvailable,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Reference? who,
+    List<CodeableConcept>? type,
+    List<CodeableConcept>? communicationMethod,
+    CodeableConcept? validationStatus,
+    FhirDateTime? validationDate,
+    @JsonKey(name: '_validationDate') Element? validationDateElement,
+    CodeableConcept? canPushUpdates,
+    List<CodeableConcept>? pushTypeAvailable,
   }) = _VerificationResultPrimarySource;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory VerificationResultPrimarySource.fromYaml(dynamic yaml) =>
-      yaml is String
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory VerificationResultPrimarySource.fromYaml(dynamic yaml) => yaml
+          is String
+      ? VerificationResultPrimarySource.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? VerificationResultPrimarySource.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? VerificationResultPrimarySource.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'VerificationResultPrimarySource cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory VerificationResultPrimarySource.fromJson(Map<String, dynamic> json) =>
@@ -1800,17 +1817,16 @@ abstract class VerificationResultPrimarySource
 }
 
 @freezed
-abstract class VerificationResultAttestation
-    implements _$VerificationResultAttestation {
+class VerificationResultAttestation with _$VerificationResultAttestation {
   VerificationResultAttestation._();
 
-  /// [VerificationResult_Attestation]: Describes validation requirements,
+  /// [VerificationResultAttestation]: Describes validation requirements,
   ///  source(s), status and dates for one or more elements.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1841,18 +1857,18 @@ abstract class VerificationResultAttestation
   ///
   /// [date]: The date the information was attested to.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [sourceIdentityCertificate]: A digital identity certificate associated
   ///  with the attestation source.
   ///
-  /// [_sourceIdentityCertificate]: Extensions for sourceIdentityCertificate
+  /// [sourceIdentityCertificateElement]: Extensions for sourceIdentityCertificate
   ///
   /// [proxyIdentityCertificate]: A digital identity certificate associated with
   /// the proxy entity submitting attested information on behalf of the
   ///  attestation source.
   ///
-  /// [_proxyIdentityCertificate]: Extensions for proxyIdentityCertificate
+  /// [proxyIdentityCertificateElement]: Extensions for proxyIdentityCertificate
   ///
   /// [proxySignature]: Signed assertion by the proxy entity indicating that
   /// they have the right to submit attested information on behalf of the
@@ -1861,34 +1877,36 @@ abstract class VerificationResultAttestation
   /// [sourceSignature]: Signed assertion by the attestation source that they
   ///  have attested to the information.
   factory VerificationResultAttestation({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Reference who,
-    Reference onBehalfOf,
-    CodeableConcept communicationMethod,
-    Date date,
-    @JsonKey(name: '_date') Element dateElement,
-    String sourceIdentityCertificate,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Reference? who,
+    Reference? onBehalfOf,
+    CodeableConcept? communicationMethod,
+    Date? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    String? sourceIdentityCertificate,
     @JsonKey(name: '_sourceIdentityCertificate')
-        Element sourceIdentityCertificateElement,
-    String proxyIdentityCertificate,
+        Element? sourceIdentityCertificateElement,
+    String? proxyIdentityCertificate,
     @JsonKey(name: '_proxyIdentityCertificate')
-        Element proxyIdentityCertificateElement,
-    Signature proxySignature,
-    Signature sourceSignature,
+        Element? proxyIdentityCertificateElement,
+    Signature? proxySignature,
+    Signature? sourceSignature,
   }) = _VerificationResultAttestation;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory VerificationResultAttestation.fromYaml(dynamic yaml) => yaml is String
       ? VerificationResultAttestation.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? VerificationResultAttestation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'VerificationResultAttestation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory VerificationResultAttestation.fromJson(Map<String, dynamic> json) =>
@@ -1896,17 +1914,16 @@ abstract class VerificationResultAttestation
 }
 
 @freezed
-abstract class VerificationResultValidator
-    implements _$VerificationResultValidator {
+class VerificationResultValidator with _$VerificationResultValidator {
   VerificationResultValidator._();
 
-  /// [VerificationResult_Validator]: Describes validation requirements,
+  /// [VerificationResultValidator]: Describes validation requirements,
   ///  source(s), status and dates for one or more elements.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1932,30 +1949,32 @@ abstract class VerificationResultValidator
   /// [identityCertificate]: A digital identity certificate associated with the
   ///  validator.
   ///
-  /// [_identityCertificate]: Extensions for identityCertificate
+  /// [identityCertificateElement]: Extensions for identityCertificate
   ///
   /// [attestationSignature]: Signed assertion by the validator that they have
   ///  validated the information.
   factory VerificationResultValidator({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required Reference organization,
-    String identityCertificate,
-    @JsonKey(name: '_identityCertificate') Element identityCertificateElement,
-    Signature attestationSignature,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Reference organization,
+    String? identityCertificate,
+    @JsonKey(name: '_identityCertificate') Element? identityCertificateElement,
+    Signature? attestationSignature,
   }) = _VerificationResultValidator;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory VerificationResultValidator.fromYaml(dynamic yaml) => yaml is String
       ? VerificationResultValidator.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? VerificationResultValidator.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'VerificationResultValidator cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory VerificationResultValidator.fromJson(Map<String, dynamic> json) =>

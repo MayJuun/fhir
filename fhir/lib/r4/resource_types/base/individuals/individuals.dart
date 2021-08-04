@@ -8,12 +8,11 @@ import 'package:yaml/yaml.dart';
 import '../../../../r4.dart';
 
 part 'individuals.enums.dart';
-part 'individuals.uscore.dart';
 part 'individuals.freezed.dart';
 part 'individuals.g.dart';
 
 @freezed
-abstract class Group with Resource implements _$Group {
+class Group with Resource, _$Group {
   Group._();
 
   /// [Group]: Represents a defined collection of entities that may be discussed
@@ -35,11 +34,11 @@ abstract class Group with Resource implements _$Group {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -53,7 +52,7 @@ abstract class Group with Resource implements _$Group {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -79,18 +78,18 @@ abstract class Group with Resource implements _$Group {
   /// [active]: Indicates whether the record for the group is available for use
   ///  or is merely being retained for historical purposes.
   ///
-  /// [_active]: Extensions for active
+  /// [activeElement]: Extensions for active
   ///
   /// [type]: Identifies the broad classification of the kind of resources the
   ///  group includes.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [actual]: If true, indicates that the resource refers to a specific group
   /// of real individuals.  If false, the group defines a set of intended
   ///  individuals.
   ///
-  /// [_actual]: Extensions for actual
+  /// [actualElement]: Extensions for actual
   ///
   /// [code]: Provides a specific type of resource the group includes; e.g.
   ///  "cow", "syringe", etc.
@@ -98,12 +97,12 @@ abstract class Group with Resource implements _$Group {
   /// [name]: A label assigned to the group for human identification and
   ///  communication.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [quantity]: A count of the number of resource instances that are part of
   ///  the group.
   ///
-  /// [_quantity]: Extensions for quantity
+  /// [quantityElement]: Extensions for quantity
   ///
   /// [managingEntity]: Entity responsible for defining and maintaining Group
   ///  characteristics and/or registered members.
@@ -116,52 +115,54 @@ abstract class Group with Resource implements _$Group {
     @Default(R4ResourceType.Group)
     @JsonKey(unknownEnumValue: R4ResourceType.Group)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Boolean active,
-    @JsonKey(name: '_active') Element activeElement,
-    @JsonKey(unknownEnumValue: GroupType.unknown) GroupType type,
-    @JsonKey(name: '_type') Element typeElement,
-    Boolean actual,
-    @JsonKey(name: '_actual') Element actualElement,
-    CodeableConcept code,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    UnsignedInt quantity,
-    @JsonKey(name: '_quantity') Element quantityElement,
-    Reference managingEntity,
-    List<GroupCharacteristic> characteristic,
-    List<GroupMember> member,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Boolean? active,
+    @JsonKey(name: '_active') Element? activeElement,
+    @JsonKey(unknownEnumValue: GroupType.unknown) GroupType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    Boolean? actual,
+    @JsonKey(name: '_actual') Element? actualElement,
+    CodeableConcept? code,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    UnsignedInt? quantity,
+    @JsonKey(name: '_quantity') Element? quantityElement,
+    Reference? managingEntity,
+    List<GroupCharacteristic>? characteristic,
+    List<GroupMember>? member,
   }) = _Group;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Group.fromYaml(dynamic yaml) => yaml is String
       ? Group.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Group.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Group cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
 }
 
 @freezed
-abstract class GroupCharacteristic implements _$GroupCharacteristic {
+class GroupCharacteristic with _$GroupCharacteristic {
   GroupCharacteristic._();
 
-  /// [Group_Characteristic]: Represents a defined collection of entities that
+  /// [GroupCharacteristic]: Represents a defined collection of entities that
   /// may be discussed or acted upon collectively but which are not expected to
   /// act collectively, and are not formally or legally recognized; i.e. a
   ///  collection of entities that isn't an Organization.
@@ -169,7 +170,7 @@ abstract class GroupCharacteristic implements _$GroupCharacteristic {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -198,7 +199,7 @@ abstract class GroupCharacteristic implements _$GroupCharacteristic {
   /// [valueBoolean]: The value of the trait that holds (or does not hold - see
   ///  'exclude') for members of the group.
   ///
-  /// [_valueBoolean]: Extensions for valueBoolean
+  /// [valueBooleanElement]: Extensions for valueBoolean
   ///
   /// [valueQuantity]: The value of the trait that holds (or does not hold - see
   ///  'exclude') for members of the group.
@@ -212,35 +213,37 @@ abstract class GroupCharacteristic implements _$GroupCharacteristic {
   /// [exclude]: If true, indicates the characteristic is one that is NOT held
   ///  by members of the group.
   ///
-  /// [_exclude]: Extensions for exclude
+  /// [excludeElement]: Extensions for exclude
   ///
   /// [period]: The period over which the characteristic is tested; e.g. the
   ///  patient had an operation during the month of June.
   factory GroupCharacteristic({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept code,
-    CodeableConcept valueCodeableConcept,
-    Boolean valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-    Quantity valueQuantity,
-    Range valueRange,
-    Reference valueReference,
-    Boolean exclude,
-    @JsonKey(name: '_exclude') Element excludeElement,
-    Period period,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept code,
+    CodeableConcept? valueCodeableConcept,
+    Boolean? valueBoolean,
+    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+    Quantity? valueQuantity,
+    Range? valueRange,
+    Reference? valueReference,
+    Boolean? exclude,
+    @JsonKey(name: '_exclude') Element? excludeElement,
+    Period? period,
   }) = _GroupCharacteristic;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory GroupCharacteristic.fromYaml(dynamic yaml) => yaml is String
       ? GroupCharacteristic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? GroupCharacteristic.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'GroupCharacteristic cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory GroupCharacteristic.fromJson(Map<String, dynamic> json) =>
@@ -248,10 +251,10 @@ abstract class GroupCharacteristic implements _$GroupCharacteristic {
 }
 
 @freezed
-abstract class GroupMember implements _$GroupMember {
+class GroupMember with _$GroupMember {
   GroupMember._();
 
-  /// [Group_Member]: Represents a defined collection of entities that may be
+  /// [GroupMember]: Represents a defined collection of entities that may be
   /// discussed or acted upon collectively but which are not expected to act
   /// collectively, and are not formally or legally recognized; i.e. a
   ///  collection of entities that isn't an Organization.
@@ -259,7 +262,7 @@ abstract class GroupMember implements _$GroupMember {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -289,26 +292,28 @@ abstract class GroupMember implements _$GroupMember {
   /// [inactive]: A flag to indicate that the member is no longer in the group,
   ///  but previously may have been a member.
   ///
-  /// [_inactive]: Extensions for inactive
+  /// [inactiveElement]: Extensions for inactive
   factory GroupMember({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required Reference entity,
-    Period period,
-    Boolean inactive,
-    @JsonKey(name: '_inactive') Element inactiveElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Reference entity,
+    Period? period,
+    Boolean? inactive,
+    @JsonKey(name: '_inactive') Element? inactiveElement,
   }) = _GroupMember;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory GroupMember.fromYaml(dynamic yaml) => yaml is String
       ? GroupMember.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? GroupMember.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'GroupMember cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory GroupMember.fromJson(Map<String, dynamic> json) =>
@@ -316,7 +321,7 @@ abstract class GroupMember implements _$GroupMember {
 }
 
 @freezed
-abstract class Patient with Resource implements _$Patient {
+class Patient with Resource, _$Patient {
   Patient._();
 
   /// [Patient]: Demographics and other administrative information about an
@@ -336,11 +341,11 @@ abstract class Patient with Resource implements _$Patient {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -354,7 +359,7 @@ abstract class Patient with Resource implements _$Patient {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -385,7 +390,7 @@ abstract class Patient with Resource implements _$Patient {
   /// Deceased patients may also be marked as inactive for the same reasons, but
   ///  may be active for some time after death.
   ///
-  /// [_active]: Extensions for active
+  /// [activeElement]: Extensions for active
   ///
   /// [name]: A name associated with the individual.
   ///
@@ -395,19 +400,19 @@ abstract class Patient with Resource implements _$Patient {
   /// [gender]: Administrative Gender - the gender that the patient is
   ///  considered to have for administration and record keeping purposes.
   ///
-  /// [_gender]: Extensions for gender
+  /// [genderElement]: Extensions for gender
   ///
   /// [birthDate]: The date of birth for the individual.
   ///
-  /// [_birthDate]: Extensions for birthDate
+  /// [birthDateElement]: Extensions for birthDate
   ///
   /// [deceasedBoolean]: Indicates if the individual is deceased or not.
   ///
-  /// [_deceasedBoolean]: Extensions for deceasedBoolean
+  /// [deceasedBooleanElement]: Extensions for deceasedBoolean
   ///
   /// [deceasedDateTime]: Indicates if the individual is deceased or not.
   ///
-  /// [_deceasedDateTime]: Extensions for deceasedDateTime
+  /// [deceasedDateTimeElement]: Extensions for deceasedDateTime
   ///
   /// [address]: An address for the individual.
   ///
@@ -417,12 +422,12 @@ abstract class Patient with Resource implements _$Patient {
   /// [multipleBirthBoolean]: Indicates whether the patient is part of a
   ///  multiple (boolean) or indicates the actual birth order (integer).
   ///
-  /// [_multipleBirthBoolean]: Extensions for multipleBirthBoolean
+  /// [multipleBirthBooleanElement]: Extensions for multipleBirthBoolean
   ///
   /// [multipleBirthInteger]: Indicates whether the patient is part of a
   ///  multiple (boolean) or indicates the actual birth order (integer).
   ///
-  /// [_multipleBirthInteger]: Extensions for multipleBirthInteger
+  /// [multipleBirthIntegerElement]: Extensions for multipleBirthInteger
   ///
   /// [photo]: Image of the patient.
   ///
@@ -443,149 +448,56 @@ abstract class Patient with Resource implements _$Patient {
     @Default(R4ResourceType.Patient)
     @JsonKey(unknownEnumValue: R4ResourceType.Patient)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Boolean active,
-    @JsonKey(name: '_active') Element activeElement,
-    List<HumanName> name,
-    List<ContactPoint> telecom,
-    @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender gender,
-    @JsonKey(name: '_gender') Element genderElement,
-    Date birthDate,
-    @JsonKey(name: '_birthDate') Element birthDateElement,
-    Boolean deceasedBoolean,
-    @JsonKey(name: '_deceasedBoolean') Element deceasedBooleanElement,
-    FhirDateTime deceasedDateTime,
-    @JsonKey(name: '_deceasedDateTime') Element deceasedDateTimeElement,
-    List<Address> address,
-    CodeableConcept maritalStatus,
-    Boolean multipleBirthBoolean,
-    @JsonKey(name: '_multipleBirthBoolean') Element multipleBirthBooleanElement,
-    Integer multipleBirthInteger,
-    @JsonKey(name: '_multipleBirthInteger') Element multipleBirthIntegerElement,
-    List<Attachment> photo,
-    List<PatientContact> contact,
-    List<PatientCommunication> communication,
-    List<Reference> generalPractitioner,
-    Reference managingOrganization,
-    List<PatientLink> link,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Boolean? active,
+    @JsonKey(name: '_active') Element? activeElement,
+    List<HumanName>? name,
+    List<ContactPoint>? telecom,
+    @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender? gender,
+    @JsonKey(name: '_gender') Element? genderElement,
+    Date? birthDate,
+    @JsonKey(name: '_birthDate') Element? birthDateElement,
+    Boolean? deceasedBoolean,
+    @JsonKey(name: '_deceasedBoolean') Element? deceasedBooleanElement,
+    FhirDateTime? deceasedDateTime,
+    @JsonKey(name: '_deceasedDateTime') Element? deceasedDateTimeElement,
+    List<Address>? address,
+    CodeableConcept? maritalStatus,
+    Boolean? multipleBirthBoolean,
+    @JsonKey(name: '_multipleBirthBoolean')
+        Element? multipleBirthBooleanElement,
+    Integer? multipleBirthInteger,
+    @JsonKey(name: '_multipleBirthInteger')
+        Element? multipleBirthIntegerElement,
+    List<Attachment>? photo,
+    List<PatientContact>? contact,
+    List<PatientCommunication>? communication,
+    List<Reference>? generalPractitioner,
+    Reference? managingOrganization,
+    List<PatientLink>? link,
   }) = _Patient;
-
-  factory Patient.usCore({
-    List<PatientUsCoreRace> usCoreRace,
-    List<PatientUsCoreDetailedRace> usCoreDetailedRace,
-    FhirExtension usCoreRaceText,
-    PatientUsCoreEthnicity usCoreEthnicity,
-    List<PatientUsCoreDetailedEthnicity> usCoreDetailedEthnicity,
-    FhirExtension usCoreEthnicityText,
-    PatientUsCoreBirthSex usCoreBirthSex,
-    @required Identifier patientIdentifier,
-    List<Identifier> identifier,
-    @required HumanName patientName,
-    List<HumanName> name,
-    List<ContactPoint> telecom,
-    @required PatientGender gender,
-    Date birthDate,
-    List<Address> address,
-    List<PatientCommunication> communication,
-  }) {
-    identifier ??= <Identifier>[];
-    identifier.add(patientIdentifier);
-    name ??= <HumanName>[];
-    name.add(patientName);
-    var extension_ = <FhirExtension>[];
-    if (usCoreRace != null ||
-        usCoreDetailedRace != null ||
-        usCoreRaceText != null) {
-      final raceExtension = FhirExtension(
-          extension_: <FhirExtension>[],
-          url: FhirUri(
-              'http://hl7.org/fhir/us/core/StructureDefinition/us-core-race'));
-      if (usCoreRace != null) {
-        for (final race in usCoreRace) {
-          raceExtension.extension_.add(extensionFromRace[race]);
-        }
-      }
-      if (usCoreDetailedRace != null) {
-        for (final detailedRace in usCoreDetailedRace) {
-          raceExtension.extension_.add(extensionFromDetailedRace[detailedRace]);
-        }
-      }
-      if (usCoreRaceText != null) {
-        raceExtension.extension_.add(usCoreRaceText);
-      }
-      extension_.add(raceExtension);
-    }
-
-    if (usCoreEthnicity != null ||
-        usCoreDetailedEthnicity != null ||
-        usCoreEthnicityText != null) {
-      extension_ ??= <FhirExtension>[];
-      final ethnicityExtension = FhirExtension(
-          extension_: <FhirExtension>[],
-          url: FhirUri(
-              'http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity'));
-      if (usCoreEthnicity != null) {
-        ethnicityExtension.extension_
-            .add(extensionFromEthnicity[usCoreEthnicity]);
-      }
-      if (usCoreDetailedEthnicity != null) {
-        for (final detailedEthnicity in usCoreDetailedEthnicity) {
-          ethnicityExtension.extension_
-              .add(extensionFromDetailedEthnicity[detailedEthnicity]);
-        }
-      }
-      if (usCoreEthnicityText != null) {
-        ethnicityExtension.extension_.add(usCoreEthnicityText);
-      }
-      extension_.add(ethnicityExtension);
-    }
-
-    if (usCoreBirthSex != null) {
-      extension_ ??= <FhirExtension>[];
-      extension_.add(extensionFromBirthSex[usCoreBirthSex]);
-    }
-
-    return Patient(
-      extension_: extension_,
-      identifier: identifier,
-      name: name,
-      telecom: telecom,
-      gender: gender,
-      birthDate: birthDate,
-      address: address,
-      communication: communication,
-    );
-  }
-
-  factory Patient.usCoreMinimum({
-    @required Identifier patientIdentifier,
-    @required HumanName patientName,
-    @required PatientGender gender,
-  }) =>
-      Patient.usCore(
-          patientIdentifier: patientIdentifier,
-          patientName: patientName,
-          gender: gender);
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Patient.fromYaml(dynamic yaml) => yaml is String
       ? Patient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Patient.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Patient cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Patient.fromJson(Map<String, dynamic> json) =>
@@ -593,16 +505,16 @@ abstract class Patient with Resource implements _$Patient {
 }
 
 @freezed
-abstract class PatientContact implements _$PatientContact {
+class PatientContact with _$PatientContact {
   PatientContact._();
 
-  /// [Patient_Contact]: Demographics and other administrative information about
+  /// [PatientContact]: Demographics and other administrative information about
   ///  an individual or animal receiving care or other health-related services.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -636,7 +548,7 @@ abstract class PatientContact implements _$PatientContact {
   /// [gender]: Administrative Gender - the gender that the contact person is
   ///  considered to have for administration and record keeping purposes.
   ///
-  /// [_gender]: Extensions for gender
+  /// [genderElement]: Extensions for gender
   ///
   /// [organization]: Organization on behalf of which the contact is acting or
   ///  for which the contact is working.
@@ -644,29 +556,31 @@ abstract class PatientContact implements _$PatientContact {
   /// [period]: The period during which this contact person or organization is
   ///  valid to be contacted relating to this patient.
   factory PatientContact({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<CodeableConcept> relationship,
-    HumanName name,
-    List<ContactPoint> telecom,
-    Address address,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<CodeableConcept>? relationship,
+    HumanName? name,
+    List<ContactPoint>? telecom,
+    Address? address,
     @JsonKey(unknownEnumValue: PatientContactGender.unknown)
-        PatientContactGender gender,
-    @JsonKey(name: '_gender') Element genderElement,
-    Reference organization,
-    Period period,
+        PatientContactGender? gender,
+    @JsonKey(name: '_gender') Element? genderElement,
+    Reference? organization,
+    Period? period,
   }) = _PatientContact;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PatientContact.fromYaml(dynamic yaml) => yaml is String
       ? PatientContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PatientContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'PatientContact cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PatientContact.fromJson(Map<String, dynamic> json) =>
@@ -674,17 +588,17 @@ abstract class PatientContact implements _$PatientContact {
 }
 
 @freezed
-abstract class PatientCommunication implements _$PatientCommunication {
+class PatientCommunication with _$PatientCommunication {
   PatientCommunication._();
 
-  /// [Patient_Communication]: Demographics and other administrative information
+  /// [PatientCommunication]: Demographics and other administrative information
   /// about an individual or animal receiving care or other health-related
   ///  services.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -713,25 +627,27 @@ abstract class PatientCommunication implements _$PatientCommunication {
   /// [preferred]: Indicates whether or not the patient prefers this language
   ///  (over other languages he masters up a certain level).
   ///
-  /// [_preferred]: Extensions for preferred
+  /// [preferredElement]: Extensions for preferred
   factory PatientCommunication({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept language,
-    Boolean preferred,
-    @JsonKey(name: '_preferred') Element preferredElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept language,
+    Boolean? preferred,
+    @JsonKey(name: '_preferred') Element? preferredElement,
   }) = _PatientCommunication;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PatientCommunication.fromYaml(dynamic yaml) => yaml is String
       ? PatientCommunication.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PatientCommunication.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'PatientCommunication cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
@@ -739,16 +655,16 @@ abstract class PatientCommunication implements _$PatientCommunication {
 }
 
 @freezed
-abstract class PatientLink implements _$PatientLink {
+class PatientLink with _$PatientLink {
   PatientLink._();
 
-  /// [Patient_Link]: Demographics and other administrative information about an
+  /// [PatientLink]: Demographics and other administrative information about an
   ///  individual or animal receiving care or other health-related services.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -774,25 +690,27 @@ abstract class PatientLink implements _$PatientLink {
   /// [type]: The type of link between this patient resource and another patient
   ///  resource.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   factory PatientLink({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required Reference other,
-    @JsonKey(unknownEnumValue: PatientLinkType.unknown) PatientLinkType type,
-    @JsonKey(name: '_type') Element typeElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Reference other,
+    @JsonKey(unknownEnumValue: PatientLinkType.unknown) PatientLinkType? type,
+    @JsonKey(name: '_type') Element? typeElement,
   }) = _PatientLink;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PatientLink.fromYaml(dynamic yaml) => yaml is String
       ? PatientLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PatientLink.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'PatientLink cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PatientLink.fromJson(Map<String, dynamic> json) =>
@@ -800,7 +718,7 @@ abstract class PatientLink implements _$PatientLink {
 }
 
 @freezed
-abstract class Person with Resource implements _$Person {
+class Person with Resource, _$Person {
   Person._();
 
   /// [Person]: Demographics and administrative information about a person
@@ -820,11 +738,11 @@ abstract class Person with Resource implements _$Person {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -838,7 +756,7 @@ abstract class Person with Resource implements _$Person {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -868,11 +786,11 @@ abstract class Person with Resource implements _$Person {
   ///
   /// [gender]: Administrative Gender.
   ///
-  /// [_gender]: Extensions for gender
+  /// [genderElement]: Extensions for gender
   ///
   /// [birthDate]: The birth date for the person.
   ///
-  /// [_birthDate]: Extensions for birthDate
+  /// [birthDateElement]: Extensions for birthDate
   ///
   /// [address]: One or more addresses for the person.
   ///
@@ -884,63 +802,65 @@ abstract class Person with Resource implements _$Person {
   ///
   /// [active]: Whether this person's record is in active use.
   ///
-  /// [_active]: Extensions for active
+  /// [activeElement]: Extensions for active
   ///
   /// [link]: Link to a resource that concerns the same actual person.
   factory Person({
     @Default(R4ResourceType.Person)
     @JsonKey(unknownEnumValue: R4ResourceType.Person)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<HumanName> name,
-    List<ContactPoint> telecom,
-    @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender gender,
-    @JsonKey(name: '_gender') Element genderElement,
-    Date birthDate,
-    @JsonKey(name: '_birthDate') Element birthDateElement,
-    List<Address> address,
-    Attachment photo,
-    Reference managingOrganization,
-    Boolean active,
-    @JsonKey(name: '_active') Element activeElement,
-    List<PersonLink> link,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<HumanName>? name,
+    List<ContactPoint>? telecom,
+    @JsonKey(unknownEnumValue: PersonGender.unknown) PersonGender? gender,
+    @JsonKey(name: '_gender') Element? genderElement,
+    Date? birthDate,
+    @JsonKey(name: '_birthDate') Element? birthDateElement,
+    List<Address>? address,
+    Attachment? photo,
+    Reference? managingOrganization,
+    Boolean? active,
+    @JsonKey(name: '_active') Element? activeElement,
+    List<PersonLink>? link,
   }) = _Person;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Person.fromYaml(dynamic yaml) => yaml is String
       ? Person.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Person.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Person cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
 }
 
 @freezed
-abstract class PersonLink implements _$PersonLink {
+class PersonLink with _$PersonLink {
   PersonLink._();
 
-  /// [Person_Link]: Demographics and administrative information about a person
+  /// [PersonLink]: Demographics and administrative information about a person
   ///  independent of a specific health-related context.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -966,26 +886,28 @@ abstract class PersonLink implements _$PersonLink {
   /// [assurance]: Level of assurance that this link is associated with the
   ///  target resource.
   ///
-  /// [_assurance]: Extensions for assurance
+  /// [assuranceElement]: Extensions for assurance
   factory PersonLink({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required Reference target,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Reference target,
     @JsonKey(unknownEnumValue: PersonLinkAssurance.unknown)
-        PersonLinkAssurance assurance,
-    @JsonKey(name: '_assurance') Element assuranceElement,
+        PersonLinkAssurance? assurance,
+    @JsonKey(name: '_assurance') Element? assuranceElement,
   }) = _PersonLink;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PersonLink.fromYaml(dynamic yaml) => yaml is String
       ? PersonLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PersonLink.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'PersonLink cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PersonLink.fromJson(Map<String, dynamic> json) =>
@@ -993,7 +915,7 @@ abstract class PersonLink implements _$PersonLink {
 }
 
 @freezed
-abstract class Practitioner with Resource implements _$Practitioner {
+class Practitioner with Resource, _$Practitioner {
   Practitioner._();
 
   /// [Practitioner]: A person who is directly or indirectly involved in the
@@ -1013,11 +935,11 @@ abstract class Practitioner with Resource implements _$Practitioner {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1031,7 +953,7 @@ abstract class Practitioner with Resource implements _$Practitioner {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1056,7 +978,7 @@ abstract class Practitioner with Resource implements _$Practitioner {
   ///
   /// [active]: Whether this practitioner's record is in active use.
   ///
-  /// [_active]: Extensions for active
+  /// [activeElement]: Extensions for active
   ///
   /// [name]: The name(s) associated with the practitioner.
   ///
@@ -1071,11 +993,11 @@ abstract class Practitioner with Resource implements _$Practitioner {
   /// [gender]: Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
   ///
-  /// [_gender]: Extensions for gender
+  /// [genderElement]: Extensions for gender
   ///
   /// [birthDate]: The date of birth for the practitioner.
   ///
-  /// [_birthDate]: Extensions for birthDate
+  /// [birthDateElement]: Extensions for birthDate
   ///
   /// [photo]: Image of the person.
   ///
@@ -1091,41 +1013,43 @@ abstract class Practitioner with Resource implements _$Practitioner {
     @Default(R4ResourceType.Practitioner)
     @JsonKey(unknownEnumValue: R4ResourceType.Practitioner)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Boolean active,
-    @JsonKey(name: '_active') Element activeElement,
-    List<HumanName> name,
-    List<ContactPoint> telecom,
-    List<Address> address,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Boolean? active,
+    @JsonKey(name: '_active') Element? activeElement,
+    List<HumanName>? name,
+    List<ContactPoint>? telecom,
+    List<Address>? address,
     @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-        PractitionerGender gender,
-    @JsonKey(name: '_gender') Element genderElement,
-    Date birthDate,
-    @JsonKey(name: '_birthDate') Element birthDateElement,
-    List<Attachment> photo,
-    List<PractitionerQualification> qualification,
-    List<CodeableConcept> communication,
+        PractitionerGender? gender,
+    @JsonKey(name: '_gender') Element? genderElement,
+    Date? birthDate,
+    @JsonKey(name: '_birthDate') Element? birthDateElement,
+    List<Attachment>? photo,
+    List<PractitionerQualification>? qualification,
+    List<CodeableConcept>? communication,
   }) = _Practitioner;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Practitioner.fromYaml(dynamic yaml) => yaml is String
       ? Practitioner.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Practitioner.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Practitioner cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Practitioner.fromJson(Map<String, dynamic> json) =>
@@ -1133,17 +1057,16 @@ abstract class Practitioner with Resource implements _$Practitioner {
 }
 
 @freezed
-abstract class PractitionerQualification
-    implements _$PractitionerQualification {
+class PractitionerQualification with _$PractitionerQualification {
   PractitionerQualification._();
 
-  /// [Practitioner_Qualification]: A person who is directly or indirectly
+  /// [PractitionerQualification]: A person who is directly or indirectly
   ///  involved in the provisioning of healthcare.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1173,25 +1096,27 @@ abstract class PractitionerQualification
   ///
   /// [issuer]: Organization that regulates and issues the qualification.
   factory PractitionerQualification({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @required CodeableConcept code,
-    Period period,
-    Reference issuer,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    required CodeableConcept code,
+    Period? period,
+    Reference? issuer,
   }) = _PractitionerQualification;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PractitionerQualification.fromYaml(dynamic yaml) => yaml is String
       ? PractitionerQualification.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PractitionerQualification.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'PractitionerQualification cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PractitionerQualification.fromJson(Map<String, dynamic> json) =>
@@ -1199,7 +1124,7 @@ abstract class PractitionerQualification
 }
 
 @freezed
-abstract class PractitionerRole with Resource implements _$PractitionerRole {
+class PractitionerRole with Resource, _$PractitionerRole {
   PractitionerRole._();
 
   /// [PractitionerRole]: A specific set of Roles/Locations/specialties/services
@@ -1219,11 +1144,11 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1237,7 +1162,7 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1262,7 +1187,7 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
   ///
   /// [active]: Whether this practitioner role record is in active use.
   ///
-  /// [_active]: Extensions for active
+  /// [activeElement]: Extensions for active
   ///
   /// [period]: The period during which the person is authorized to act as a
   ///  practitioner in these role(s) for the organization.
@@ -1296,7 +1221,7 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
   /// exceptions to normal site availability as details in the available Times
   ///  and not available Times.
   ///
-  /// [_availabilityExceptions]: Extensions for availabilityExceptions
+  /// [availabilityExceptionsElement]: Extensions for availabilityExceptions
   ///
   /// [endpoint]: Technical endpoints providing access to services operated for
   ///  the practitioner with this role.
@@ -1304,44 +1229,46 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
     @Default(R4ResourceType.PractitionerRole)
     @JsonKey(unknownEnumValue: R4ResourceType.PractitionerRole)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Boolean active,
-    @JsonKey(name: '_active') Element activeElement,
-    Period period,
-    Reference practitioner,
-    Reference organization,
-    List<CodeableConcept> code,
-    List<CodeableConcept> specialty,
-    List<Reference> location,
-    List<Reference> healthcareService,
-    List<ContactPoint> telecom,
-    List<PractitionerRoleAvailableTime> availableTime,
-    List<PractitionerRoleNotAvailable> notAvailable,
-    String availabilityExceptions,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Boolean? active,
+    @JsonKey(name: '_active') Element? activeElement,
+    Period? period,
+    Reference? practitioner,
+    Reference? organization,
+    List<CodeableConcept>? code,
+    List<CodeableConcept>? specialty,
+    List<Reference>? location,
+    List<Reference>? healthcareService,
+    List<ContactPoint>? telecom,
+    List<PractitionerRoleAvailableTime>? availableTime,
+    List<PractitionerRoleNotAvailable>? notAvailable,
+    String? availabilityExceptions,
     @JsonKey(name: '_availabilityExceptions')
-        Element availabilityExceptionsElement,
-    List<Reference> endpoint,
+        Element? availabilityExceptionsElement,
+    List<Reference>? endpoint,
   }) = _PractitionerRole;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PractitionerRole.fromYaml(dynamic yaml) => yaml is String
       ? PractitionerRole.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PractitionerRole.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'PractitionerRole cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PractitionerRole.fromJson(Map<String, dynamic> json) =>
@@ -1349,18 +1276,17 @@ abstract class PractitionerRole with Resource implements _$PractitionerRole {
 }
 
 @freezed
-abstract class PractitionerRoleAvailableTime
-    implements _$PractitionerRoleAvailableTime {
+class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
   PractitionerRoleAvailableTime._();
 
-  /// [PractitionerRole_AvailableTime]: A specific set of
+  /// [PractitionerRoleAvailableTime]: A specific set of
   /// Roles/Locations/specialties/services that a practitioner may perform at an
   ///  organization for a period of time.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1384,46 +1310,48 @@ abstract class PractitionerRoleAvailableTime
   /// [daysOfWeek]: Indicates which days of the week are available between the
   ///  start and end Times.
   ///
-  /// [_daysOfWeek]: Extensions for daysOfWeek
+  /// [daysOfWeekElement]: Extensions for daysOfWeek
   ///
   /// [allDay]: Is this always available? (hence times are irrelevant) e.g. 24
   ///  hour service.
   ///
-  /// [_allDay]: Extensions for allDay
+  /// [allDayElement]: Extensions for allDay
   ///
   /// [availableStartTime]: The opening time of day. Note: If the AllDay flag is
   ///  set, then this time is ignored.
   ///
-  /// [_availableStartTime]: Extensions for availableStartTime
+  /// [availableStartTimeElement]: Extensions for availableStartTime
   ///
   /// [availableEndTime]: The closing time of day. Note: If the AllDay flag is
   ///  set, then this time is ignored.
   ///
-  /// [_availableEndTime]: Extensions for availableEndTime
+  /// [availableEndTimeElement]: Extensions for availableEndTime
   factory PractitionerRoleAvailableTime({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Code> daysOfWeek,
-    @JsonKey(name: '_daysOfWeek') List<Element> daysOfWeekElement,
-    Boolean allDay,
-    @JsonKey(name: '_allDay') Element allDayElement,
-    Time availableStartTime,
-    @JsonKey(name: '_availableStartTime') Element availableStartTimeElement,
-    Time availableEndTime,
-    @JsonKey(name: '_availableEndTime') Element availableEndTimeElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Code>? daysOfWeek,
+    @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
+    Boolean? allDay,
+    @JsonKey(name: '_allDay') Element? allDayElement,
+    Time? availableStartTime,
+    @JsonKey(name: '_availableStartTime') Element? availableStartTimeElement,
+    Time? availableEndTime,
+    @JsonKey(name: '_availableEndTime') Element? availableEndTimeElement,
   }) = _PractitionerRoleAvailableTime;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PractitionerRoleAvailableTime.fromYaml(dynamic yaml) => yaml is String
       ? PractitionerRoleAvailableTime.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PractitionerRoleAvailableTime.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'PractitionerRoleAvailableTime cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PractitionerRoleAvailableTime.fromJson(Map<String, dynamic> json) =>
@@ -1431,18 +1359,17 @@ abstract class PractitionerRoleAvailableTime
 }
 
 @freezed
-abstract class PractitionerRoleNotAvailable
-    implements _$PractitionerRoleNotAvailable {
+class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
   PractitionerRoleNotAvailable._();
 
-  /// [PractitionerRole_NotAvailable]: A specific set of
+  /// [PractitionerRoleNotAvailable]: A specific set of
   /// Roles/Locations/specialties/services that a practitioner may perform at an
   ///  organization for a period of time.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1466,29 +1393,31 @@ abstract class PractitionerRoleNotAvailable
   /// [description]: The reason that can be presented to the user as to why this
   ///  time is not available.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [during]: Service is not available (seasonally or for a public holiday)
   ///  from this date.
   factory PractitionerRoleNotAvailable({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    Period during,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    Period? during,
   }) = _PractitionerRoleNotAvailable;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory PractitionerRoleNotAvailable.fromYaml(dynamic yaml) => yaml is String
       ? PractitionerRoleNotAvailable.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? PractitionerRoleNotAvailable.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'PractitionerRoleNotAvailable cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PractitionerRoleNotAvailable.fromJson(Map<String, dynamic> json) =>
@@ -1496,7 +1425,7 @@ abstract class PractitionerRoleNotAvailable
 }
 
 @freezed
-abstract class RelatedPerson with Resource implements _$RelatedPerson {
+class RelatedPerson with Resource, _$RelatedPerson {
   RelatedPerson._();
 
   /// [RelatedPerson]: Information about a person that is involved in the care
@@ -1517,11 +1446,11 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1535,7 +1464,7 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1560,7 +1489,7 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
   ///
   /// [active]: Whether this related person record is in active use.
   ///
-  /// [_active]: Extensions for active
+  /// [activeElement]: Extensions for active
   ///
   /// [patient]: The patient this person is related to.
   ///
@@ -1575,11 +1504,11 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
   /// [gender]: Administrative Gender - the gender that the person is considered
   ///  to have for administration and record keeping purposes.
   ///
-  /// [_gender]: Extensions for gender
+  /// [genderElement]: Extensions for gender
   ///
   /// [birthDate]: The date on which the related person was born.
   ///
-  /// [_birthDate]: Extensions for birthDate
+  /// [birthDateElement]: Extensions for birthDate
   ///
   /// [address]: Address where the related person can be contacted or visited.
   ///
@@ -1594,43 +1523,45 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
     @Default(R4ResourceType.RelatedPerson)
     @JsonKey(unknownEnumValue: R4ResourceType.RelatedPerson)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Boolean active,
-    @JsonKey(name: '_active') Element activeElement,
-    @required Reference patient,
-    List<CodeableConcept> relationship,
-    List<HumanName> name,
-    List<ContactPoint> telecom,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Boolean? active,
+    @JsonKey(name: '_active') Element? activeElement,
+    required Reference patient,
+    List<CodeableConcept>? relationship,
+    List<HumanName>? name,
+    List<ContactPoint>? telecom,
     @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
-        RelatedPersonGender gender,
-    @JsonKey(name: '_gender') Element genderElement,
-    Date birthDate,
-    @JsonKey(name: '_birthDate') Element birthDateElement,
-    List<Address> address,
-    List<Attachment> photo,
-    Period period,
-    List<RelatedPersonCommunication> communication,
+        RelatedPersonGender? gender,
+    @JsonKey(name: '_gender') Element? genderElement,
+    Date? birthDate,
+    @JsonKey(name: '_birthDate') Element? birthDateElement,
+    List<Address>? address,
+    List<Attachment>? photo,
+    Period? period,
+    List<RelatedPersonCommunication>? communication,
   }) = _RelatedPerson;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory RelatedPerson.fromYaml(dynamic yaml) => yaml is String
       ? RelatedPerson.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? RelatedPerson.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'RelatedPerson cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RelatedPerson.fromJson(Map<String, dynamic> json) =>
@@ -1638,18 +1569,17 @@ abstract class RelatedPerson with Resource implements _$RelatedPerson {
 }
 
 @freezed
-abstract class RelatedPersonCommunication
-    implements _$RelatedPersonCommunication {
+class RelatedPersonCommunication with _$RelatedPersonCommunication {
   RelatedPersonCommunication._();
 
-  /// [RelatedPerson_Communication]: Information about a person that is involved
+  /// [RelatedPersonCommunication]: Information about a person that is involved
   /// in the care for a patient, but who is not the target of healthcare, nor
   ///  has a formal responsibility in the care process.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1678,26 +1608,28 @@ abstract class RelatedPersonCommunication
   /// [preferred]: Indicates whether or not the patient prefers this language
   ///  (over other languages he masters up a certain level).
   ///
-  /// [_preferred]: Extensions for preferred
+  /// [preferredElement]: Extensions for preferred
   factory RelatedPersonCommunication({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept language,
-    Boolean preferred,
-    @JsonKey(name: '_preferred') Element preferredElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept language,
+    Boolean? preferred,
+    @JsonKey(name: '_preferred') Element? preferredElement,
   }) = _RelatedPersonCommunication;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory RelatedPersonCommunication.fromYaml(dynamic yaml) => yaml is String
       ? RelatedPersonCommunication.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? RelatedPersonCommunication.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'RelatedPersonCommunication cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RelatedPersonCommunication.fromJson(Map<String, dynamic> json) =>

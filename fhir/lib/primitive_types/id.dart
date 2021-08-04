@@ -1,17 +1,13 @@
 import 'dart:convert';
-import 'package:dartz/dartz.dart';
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
 class Id {
-  const Id._(this._value);
+  const Id._(this._valueString, this._valueId, this._isValid);
 
-  factory Id(dynamic value) {
-    assert(value != null);
-    return Id._(
-      _validateId(value),
-    );
-  }
+  factory Id(String inValue) =>
+      RegExp(r'^[A-Za-z0-9\-\.]{1,64}$').hasMatch(inValue)
+          ? Id._(inValue, inValue, true)
+          : Id._(inValue, null, false);
 
   factory Id.fromJson(dynamic json) => Id(json);
 
@@ -19,27 +15,26 @@ class Id {
       ? Id.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Id.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw FormatException(
+              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final Either<String, String> _value;
-  String get value => _value.fold((l) => l, (r) => r);
-  bool get isValid => _value.isRight();
+  final String _valueString;
+  final String? _valueId;
+  final bool _isValid;
 
-  String toString() => value;
-  String toJson() => value;
-  String toYaml() => value;
+  bool get isValid => _isValid;
+  int get hashId => _valueString.hashCode;
+  String? get value => _valueId;
+
+  String toString() => _valueString;
+  String toJson() => _valueString;
+  String toYaml() => _valueString;
 
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is Id || o is String
-          ? o == value
-          : false;
-
-  int get hashCode => value.hashCode;
+      : o is Id
+          ? o.value == _valueId
+          : o is String
+              ? o == _valueString
+              : false;
 }
-
-Either<String, String> _validateId(String value) =>
-    RegExp(r'^[A-Za-z0-9\-\.]{1,64}$').hasMatch(value)
-        ? right(value)
-        : left('FormatError: "$value" is not an Id, as defined by: '
-            'https://www.hl7.org/fhir/datatypes.html#id');

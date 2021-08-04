@@ -1,3 +1,22 @@
+## [0.4.2]
+* Wrong Dart Version defined, now fixed
+
+## [0.4.1]
+* Updated dependencies
+* Removed test_coverage
+
+## [0.4.0]
+* Stable(ish) & null safe!
+
+## [0.3.0-nullsafety.1]
+* Null-safe, and all depencies stable
+
+## [0.3.0-nullsafety.0]
+* Upgraded example to use nullsafety
+
+## [0.2.1-nullsafety.1]
+* Migrating to null safety, didn't have to change anything apart from some dependencies.
+
 ## [0.2.1]
 * Still used the same, but was hanging on empty strings, should be fixed now.
 

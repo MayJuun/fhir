@@ -39,6 +39,8 @@ enum R5ResourceType {
   ChargeItem,
   @JsonValue('ChargeItemDefinition')
   ChargeItemDefinition,
+  @JsonValue('Citation')
+  Citation,
   @JsonValue('Claim')
   Claim,
   @JsonValue('ClaimResponse')
@@ -105,6 +107,8 @@ enum R5ResourceType {
   EventDefinition,
   @JsonValue('Evidence')
   Evidence,
+  @JsonValue('EvidenceReport')
+  EvidenceReport,
   @JsonValue('EvidenceVariable')
   EvidenceVariable,
   @JsonValue('ExampleScenario')

@@ -12,9 +12,8 @@ part 'entities2.freezed.dart';
 part 'entities2.g.dart';
 
 @freezed
-abstract class BiologicallyDerivedProduct
-    with Resource
-    implements _$BiologicallyDerivedProduct {
+class BiologicallyDerivedProduct
+    with Resource, _$BiologicallyDerivedProduct {
   BiologicallyDerivedProduct._();
 
   /// [BiologicallyDerivedProduct]: A material substance originating from a
@@ -35,11 +34,11 @@ abstract class BiologicallyDerivedProduct
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -53,7 +52,7 @@ abstract class BiologicallyDerivedProduct
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -82,20 +81,20 @@ abstract class BiologicallyDerivedProduct
   ///
   /// [productCategory]: Broad category of this product.
   ///
-  /// [_productCategory]: Extensions for productCategory
+  /// [productCategoryElement]: Extensions for productCategory
   ///
   /// [productCode]: A code that identifies the kind of this biologically
   ///  derived product (SNOMED Ctcode).
   ///
   /// [status]: Whether the product is currently available.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [request]: Procedure request to obtain this biologically derived product.
   ///
   /// [quantity]: Number of discrete units within this product.
   ///
-  /// [_quantity]: Extensions for quantity
+  /// [quantityElement]: Extensions for quantity
   ///
   /// [parent]: Parent product (if any).
   ///
@@ -115,44 +114,46 @@ abstract class BiologicallyDerivedProduct
     @Default(R4ResourceType.BiologicallyDerivedProduct)
     @JsonKey(unknownEnumValue: R4ResourceType.BiologicallyDerivedProduct)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: BiologicallyDerivedProductProductCategory.unknown)
-        BiologicallyDerivedProductProductCategory productCategory,
-    @JsonKey(name: '_productCategory') Element productCategoryElement,
-    CodeableConcept productCode,
+        BiologicallyDerivedProductProductCategory? productCategory,
+    @JsonKey(name: '_productCategory') Element? productCategoryElement,
+    CodeableConcept? productCode,
     @JsonKey(unknownEnumValue: BiologicallyDerivedProductStatus.unknown)
-        BiologicallyDerivedProductStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    List<Reference> request,
-    Integer quantity,
-    @JsonKey(name: '_quantity') Element quantityElement,
-    List<Reference> parent,
-    BiologicallyDerivedProductCollection collection,
-    List<BiologicallyDerivedProductProcessing> processing,
-    BiologicallyDerivedProductManipulation manipulation,
-    List<BiologicallyDerivedProductStorage> storage,
+        BiologicallyDerivedProductStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<Reference>? request,
+    Integer? quantity,
+    @JsonKey(name: '_quantity') Element? quantityElement,
+    List<Reference>? parent,
+    BiologicallyDerivedProductCollection? collection,
+    List<BiologicallyDerivedProductProcessing>? processing,
+    BiologicallyDerivedProductManipulation? manipulation,
+    List<BiologicallyDerivedProductStorage>? storage,
   }) = _BiologicallyDerivedProduct;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BiologicallyDerivedProduct.fromYaml(dynamic yaml) => yaml is String
       ? BiologicallyDerivedProduct.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? BiologicallyDerivedProduct.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'BiologicallyDerivedProduct cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BiologicallyDerivedProduct.fromJson(Map<String, dynamic> json) =>
@@ -160,18 +161,17 @@ abstract class BiologicallyDerivedProduct
 }
 
 @freezed
-abstract class BiologicallyDerivedProductCollection
-    implements _$BiologicallyDerivedProductCollection {
+class BiologicallyDerivedProductCollection with _$BiologicallyDerivedProductCollection {
   BiologicallyDerivedProductCollection._();
 
-  /// [BiologicallyDerivedProduct_Collection]: A material substance originating
+  /// [BiologicallyDerivedProductCollection]: A material substance originating
   ///  from a biological entity intended to be transplanted or infused
   /// into another (possibly the same) biological entity.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -199,32 +199,34 @@ abstract class BiologicallyDerivedProductCollection
   ///
   /// [collectedDateTime]: Time of product collection.
   ///
-  /// [_collectedDateTime]: Extensions for collectedDateTime
+  /// [collectedDateTimeElement]: Extensions for collectedDateTime
   ///
   /// [collectedPeriod]: Time of product collection.
   factory BiologicallyDerivedProductCollection({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Reference collector,
-    Reference source,
-    FhirDateTime collectedDateTime,
-    @JsonKey(name: '_collectedDateTime') Element collectedDateTimeElement,
-    Period collectedPeriod,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Reference? collector,
+    Reference? source,
+    FhirDateTime? collectedDateTime,
+    @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
+    Period? collectedPeriod,
   }) = _BiologicallyDerivedProductCollection;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory BiologicallyDerivedProductCollection.fromYaml(dynamic yaml) =>
-      yaml is String
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory BiologicallyDerivedProductCollection.fromYaml(dynamic yaml) => yaml
+          is String
+      ? BiologicallyDerivedProductCollection.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? BiologicallyDerivedProductCollection.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? BiologicallyDerivedProductCollection.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'BiologicallyDerivedProductCollection cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory BiologicallyDerivedProductCollection.fromJson(
           Map<String, dynamic> json) =>
@@ -232,18 +234,17 @@ abstract class BiologicallyDerivedProductCollection
 }
 
 @freezed
-abstract class BiologicallyDerivedProductProcessing
-    implements _$BiologicallyDerivedProductProcessing {
+class BiologicallyDerivedProductProcessing with _$BiologicallyDerivedProductProcessing {
   BiologicallyDerivedProductProcessing._();
 
-  /// [BiologicallyDerivedProduct_Processing]: A material substance originating
+  /// [BiologicallyDerivedProductProcessing]: A material substance originating
   ///  from a biological entity intended to be transplanted or infused
   /// into another (possibly the same) biological entity.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -266,7 +267,7 @@ abstract class BiologicallyDerivedProductProcessing
   ///
   /// [description]: Description of of processing.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [procedure]: Procesing code.
   ///
@@ -274,34 +275,36 @@ abstract class BiologicallyDerivedProductProcessing
   ///
   /// [timeDateTime]: Time of processing.
   ///
-  /// [_timeDateTime]: Extensions for timeDateTime
+  /// [timeDateTimeElement]: Extensions for timeDateTime
   ///
   /// [timePeriod]: Time of processing.
   factory BiologicallyDerivedProductProcessing({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    CodeableConcept procedure,
-    Reference additive,
-    FhirDateTime timeDateTime,
-    @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
-    Period timePeriod,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    CodeableConcept? procedure,
+    Reference? additive,
+    FhirDateTime? timeDateTime,
+    @JsonKey(name: '_timeDateTime') Element? timeDateTimeElement,
+    Period? timePeriod,
   }) = _BiologicallyDerivedProductProcessing;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory BiologicallyDerivedProductProcessing.fromYaml(dynamic yaml) =>
-      yaml is String
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory BiologicallyDerivedProductProcessing.fromYaml(dynamic yaml) => yaml
+          is String
+      ? BiologicallyDerivedProductProcessing.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? BiologicallyDerivedProductProcessing.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? BiologicallyDerivedProductProcessing.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'BiologicallyDerivedProductProcessing cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory BiologicallyDerivedProductProcessing.fromJson(
           Map<String, dynamic> json) =>
@@ -309,11 +312,10 @@ abstract class BiologicallyDerivedProductProcessing
 }
 
 @freezed
-abstract class BiologicallyDerivedProductManipulation
-    implements _$BiologicallyDerivedProductManipulation {
+class BiologicallyDerivedProductManipulation with _$BiologicallyDerivedProductManipulation {
   BiologicallyDerivedProductManipulation._();
 
-  /// [BiologicallyDerivedProduct_Manipulation]: A material substance
+  /// [BiologicallyDerivedProductManipulation]: A material substance
   /// originating from a biological entity intended to be transplanted or
   ///  infused
   /// into another (possibly the same) biological entity.
@@ -321,7 +323,7 @@ abstract class BiologicallyDerivedProductManipulation
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -344,36 +346,38 @@ abstract class BiologicallyDerivedProductManipulation
   ///
   /// [description]: Description of manipulation.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [timeDateTime]: Time of manipulation.
   ///
-  /// [_timeDateTime]: Extensions for timeDateTime
+  /// [timeDateTimeElement]: Extensions for timeDateTime
   ///
   /// [timePeriod]: Time of manipulation.
   factory BiologicallyDerivedProductManipulation({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    FhirDateTime timeDateTime,
-    @JsonKey(name: '_timeDateTime') Element timeDateTimeElement,
-    Period timePeriod,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    FhirDateTime? timeDateTime,
+    @JsonKey(name: '_timeDateTime') Element? timeDateTimeElement,
+    Period? timePeriod,
   }) = _BiologicallyDerivedProductManipulation;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory BiologicallyDerivedProductManipulation.fromYaml(dynamic yaml) =>
-      yaml is String
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory BiologicallyDerivedProductManipulation.fromYaml(dynamic yaml) => yaml
+          is String
+      ? BiologicallyDerivedProductManipulation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? BiologicallyDerivedProductManipulation.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? BiologicallyDerivedProductManipulation.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'BiologicallyDerivedProductManipulation cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory BiologicallyDerivedProductManipulation.fromJson(
           Map<String, dynamic> json) =>
@@ -381,18 +385,17 @@ abstract class BiologicallyDerivedProductManipulation
 }
 
 @freezed
-abstract class BiologicallyDerivedProductStorage
-    implements _$BiologicallyDerivedProductStorage {
+class BiologicallyDerivedProductStorage with _$BiologicallyDerivedProductStorage {
   BiologicallyDerivedProductStorage._();
 
-  /// [BiologicallyDerivedProduct_Storage]: A material substance originating
+  /// [BiologicallyDerivedProductStorage]: A material substance originating
   ///  from a biological entity intended to be transplanted or infused
   /// into another (possibly the same) biological entity.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -415,43 +418,45 @@ abstract class BiologicallyDerivedProductStorage
   ///
   /// [description]: Description of storage.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [temperature]: Storage temperature.
   ///
-  /// [_temperature]: Extensions for temperature
+  /// [temperatureElement]: Extensions for temperature
   ///
   /// [scale]: Temperature scale used.
   ///
-  /// [_scale]: Extensions for scale
+  /// [scaleElement]: Extensions for scale
   ///
   /// [duration]: Storage timeperiod.
   factory BiologicallyDerivedProductStorage({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    Decimal temperature,
-    @JsonKey(name: '_temperature') Element temperatureElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    Decimal? temperature,
+    @JsonKey(name: '_temperature') Element? temperatureElement,
     @JsonKey(unknownEnumValue: BiologicallyDerivedProductStorageScale.unknown)
-        BiologicallyDerivedProductStorageScale scale,
-    @JsonKey(name: '_scale') Element scaleElement,
-    Period duration,
+        BiologicallyDerivedProductStorageScale? scale,
+    @JsonKey(name: '_scale') Element? scaleElement,
+    Period? duration,
   }) = _BiologicallyDerivedProductStorage;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory BiologicallyDerivedProductStorage.fromYaml(dynamic yaml) =>
-      yaml is String
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory BiologicallyDerivedProductStorage.fromYaml(dynamic yaml) => yaml
+          is String
+      ? BiologicallyDerivedProductStorage.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? BiologicallyDerivedProductStorage.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? BiologicallyDerivedProductStorage.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'BiologicallyDerivedProductStorage cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory BiologicallyDerivedProductStorage.fromJson(
           Map<String, dynamic> json) =>
@@ -459,7 +464,7 @@ abstract class BiologicallyDerivedProductStorage
 }
 
 @freezed
-abstract class Device with Resource implements _$Device {
+class Device with Resource, _$Device {
   Device._();
 
   /// [Device]: A type of a manufactured item that is used in the provision of
@@ -480,11 +485,11 @@ abstract class Device with Resource implements _$Device {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -498,7 +503,7 @@ abstract class Device with Resource implements _$Device {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -531,7 +536,7 @@ abstract class Device with Resource implements _$Device {
   ///
   /// [status]: Status of the Device availability.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [statusReason]: Reason for the dtatus of the Device availability.
   ///
@@ -539,29 +544,29 @@ abstract class Device with Resource implements _$Device {
   /// regulation for a human cell, tissue, or cellular and tissue-based
   ///  product.
   ///
-  /// [_distinctIdentifier]: Extensions for distinctIdentifier
+  /// [distinctIdentifierElement]: Extensions for distinctIdentifier
   ///
   /// [manufacturer]: A name of the manufacturer.
   ///
-  /// [_manufacturer]: Extensions for manufacturer
+  /// [manufacturerElement]: Extensions for manufacturer
   ///
   /// [manufactureDate]: The date and time when the device was manufactured.
   ///
-  /// [_manufactureDate]: Extensions for manufactureDate
+  /// [manufactureDateElement]: Extensions for manufactureDate
   ///
   /// [expirationDate]: The date and time beyond which this device is no longer
   ///  valid or should not be used (if applicable).
   ///
-  /// [_expirationDate]: Extensions for expirationDate
+  /// [expirationDateElement]: Extensions for expirationDate
   ///
   /// [lotNumber]: Lot number assigned by the manufacturer.
   ///
-  /// [_lotNumber]: Extensions for lotNumber
+  /// [lotNumberElement]: Extensions for lotNumber
   ///
   /// [serialNumber]: The serial number assigned by the organization when the
   ///  device was manufactured.
   ///
-  /// [_serialNumber]: Extensions for serialNumber
+  /// [serialNumberElement]: Extensions for serialNumber
   ///
   /// [deviceName]: This represents the manufacturer's name of the device as
   /// provided by the device, from a UDI label, or by a person describing the
@@ -571,11 +576,11 @@ abstract class Device with Resource implements _$Device {
   ///
   /// [modelNumber]: The model number for the device.
   ///
-  /// [_modelNumber]: Extensions for modelNumber
+  /// [modelNumberElement]: Extensions for modelNumber
   ///
   /// [partNumber]: The part number of the device.
   ///
-  /// [_partNumber]: Extensions for partNumber
+  /// [partNumberElement]: Extensions for partNumber
   ///
   /// [type]: The kind or type of device.
   ///
@@ -601,7 +606,7 @@ abstract class Device with Resource implements _$Device {
   ///
   /// [url]: A network address on which the device may be contacted directly.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [note]: Descriptive information, usage information or implantation
   ///  information that is not captured in an existing element.
@@ -614,105 +619,82 @@ abstract class Device with Resource implements _$Device {
     @Default(R4ResourceType.Device)
     @JsonKey(unknownEnumValue: R4ResourceType.Device)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Reference definition,
-    List<DeviceUdiCarrier> udiCarrier,
-    @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    List<CodeableConcept> statusReason,
-    String distinctIdentifier,
-    @JsonKey(name: '_distinctIdentifier') Element distinctIdentifierElement,
-    String manufacturer,
-    @JsonKey(name: '_manufacturer') Element manufacturerElement,
-    FhirDateTime manufactureDate,
-    @JsonKey(name: '_manufactureDate') Element manufactureDateElement,
-    FhirDateTime expirationDate,
-    @JsonKey(name: '_expirationDate') Element expirationDateElement,
-    String lotNumber,
-    @JsonKey(name: '_lotNumber') Element lotNumberElement,
-    String serialNumber,
-    @JsonKey(name: '_serialNumber') Element serialNumberElement,
-    List<DeviceDeviceName> deviceName,
-    String modelNumber,
-    @JsonKey(name: '_modelNumber') Element modelNumberElement,
-    String partNumber,
-    @JsonKey(name: '_partNumber') Element partNumberElement,
-    CodeableConcept type,
-    List<DeviceSpecialization> specialization,
-    List<DeviceVersion> version,
-    List<DeviceProperty> property,
-    Reference patient,
-    Reference owner,
-    List<ContactPoint> contact,
-    Reference location,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
-    List<Annotation> note,
-    List<CodeableConcept> safety,
-    Reference parent,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Reference? definition,
+    List<DeviceUdiCarrier>? udiCarrier,
+    @JsonKey(unknownEnumValue: DeviceStatus.unknown) DeviceStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<CodeableConcept>? statusReason,
+    String? distinctIdentifier,
+    @JsonKey(name: '_distinctIdentifier') Element? distinctIdentifierElement,
+    String? manufacturer,
+    @JsonKey(name: '_manufacturer') Element? manufacturerElement,
+    FhirDateTime? manufactureDate,
+    @JsonKey(name: '_manufactureDate') Element? manufactureDateElement,
+    FhirDateTime? expirationDate,
+    @JsonKey(name: '_expirationDate') Element? expirationDateElement,
+    String? lotNumber,
+    @JsonKey(name: '_lotNumber') Element? lotNumberElement,
+    String? serialNumber,
+    @JsonKey(name: '_serialNumber') Element? serialNumberElement,
+    List<DeviceDeviceName>? deviceName,
+    String? modelNumber,
+    @JsonKey(name: '_modelNumber') Element? modelNumberElement,
+    String? partNumber,
+    @JsonKey(name: '_partNumber') Element? partNumberElement,
+    CodeableConcept? type,
+    List<DeviceSpecialization>? specialization,
+    List<DeviceVersion>? version,
+    List<DeviceProperty>? property,
+    Reference? patient,
+    Reference? owner,
+    List<ContactPoint>? contact,
+    Reference? location,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    List<Annotation>? note,
+    List<CodeableConcept>? safety,
+    Reference? parent,
   }) = _Device;
-
-  factory Device.usCore({
-    DeviceUdiCarrier udiCarrier,
-    String distinctIdentifier,
-    FhirDateTime manufactureDate,
-    FhirDateTime expirationDate,
-    String lotNumber,
-    @required CodeableConcept type,
-    @required Reference patient,
-  }) =>
-      Device(
-        udiCarrier: [udiCarrier],
-        distinctIdentifier: distinctIdentifier,
-        manufactureDate: manufactureDate,
-        expirationDate: expirationDate,
-        lotNumber: lotNumber,
-        type: type,
-        patient: patient,
-      );
-
-  factory Device.usCoreMinimum({
-    @required CodeableConcept type,
-    @required Reference patient,
-  }) =>
-      Device.usCore(type: type, patient: patient);
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Device.fromYaml(dynamic yaml) => yaml is String
       ? Device.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Device.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Device cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
 }
 
 @freezed
-abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
+class DeviceUdiCarrier with _$DeviceUdiCarrier {
   DeviceUdiCarrier._();
 
-  /// [Device_UdiCarrier]: A type of a manufactured item that is used in the
+  /// [DeviceUdiCarrier]: A type of a manufactured item that is used in the
   /// provision of healthcare without being substantially changed through that
   ///  activity. The device may be a medical or non-medical device.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -737,7 +719,7 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
   /// portion of a UDI that identifies the labeler and the specific version or
   ///  model of a device.
   ///
-  /// [_deviceIdentifier]: Extensions for deviceIdentifier
+  /// [deviceIdentifierElement]: Extensions for deviceIdentifier
   ///
   /// [issuer]: Organization that is charged with issuing UDIs for devices.  For
   ///  example, the US FDA issuers include :
@@ -750,7 +732,7 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
   /// 4) ICCBA for other devices:
   /// http://hl7.org/fhir/NamingSystem/iccbba-other-di.
   ///
-  /// [_issuer]: Extensions for issuer
+  /// [issuerElement]: Extensions for issuer
   ///
   /// [jurisdiction]: The identity of the authoritative source for UDI
   /// generation within a  jurisdiction.  All UDIs are globally unique within a
@@ -758,7 +740,7 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
   /// example,  UDIs of devices managed in the U.S. by the FDA, the value is
   ///  http://hl7.org/fhir/NamingSystem/fda-udi.
   ///
-  /// [_jurisdiction]: Extensions for jurisdiction
+  /// [jurisdictionElement]: Extensions for jurisdiction
   ///
   /// [carrierAIDC]: The full UDI carrier of the Automatic Identification and
   /// Data Capture (AIDC) technology representation of the barcode string as
@@ -766,45 +748,47 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
   /// Because of limitations on character sets in XML and the need to round-trip
   ///  JSON data through XML, AIDC Formats *SHALL* be base64 encoded.
   ///
-  /// [_carrierAIDC]: Extensions for carrierAIDC
+  /// [carrierAIDCElement]: Extensions for carrierAIDC
   ///
   /// [carrierHRF]: The full UDI carrier as the human readable form (HRF)
   /// representation of the barcode string as printed on the packaging of the
   ///  device.
   ///
-  /// [_carrierHRF]: Extensions for carrierHRF
+  /// [carrierHRFElement]: Extensions for carrierHRF
   ///
   /// [entryType]: A coded entry to indicate how the data was entered.
   ///
-  /// [_entryType]: Extensions for entryType
+  /// [entryTypeElement]: Extensions for entryType
   factory DeviceUdiCarrier({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String deviceIdentifier,
-    @JsonKey(name: '_deviceIdentifier') Element deviceIdentifierElement,
-    FhirUri issuer,
-    @JsonKey(name: '_issuer') Element issuerElement,
-    FhirUri jurisdiction,
-    @JsonKey(name: '_jurisdiction') Element jurisdictionElement,
-    Base64Binary carrierAIDC,
-    @JsonKey(name: '_carrierAIDC') Element carrierAIDCElement,
-    String carrierHRF,
-    @JsonKey(name: '_carrierHRF') Element carrierHRFElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? deviceIdentifier,
+    @JsonKey(name: '_deviceIdentifier') Element? deviceIdentifierElement,
+    FhirUri? issuer,
+    @JsonKey(name: '_issuer') Element? issuerElement,
+    FhirUri? jurisdiction,
+    @JsonKey(name: '_jurisdiction') Element? jurisdictionElement,
+    Base64Binary? carrierAIDC,
+    @JsonKey(name: '_carrierAIDC') Element? carrierAIDCElement,
+    String? carrierHRF,
+    @JsonKey(name: '_carrierHRF') Element? carrierHRFElement,
     @JsonKey(unknownEnumValue: DeviceUdiCarrierEntryType.unknown)
-        DeviceUdiCarrierEntryType entryType,
-    @JsonKey(name: '_entryType') Element entryTypeElement,
+        DeviceUdiCarrierEntryType? entryType,
+    @JsonKey(name: '_entryType') Element? entryTypeElement,
   }) = _DeviceUdiCarrier;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceUdiCarrier.fromYaml(dynamic yaml) => yaml is String
       ? DeviceUdiCarrier.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DeviceUdiCarrier.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DeviceUdiCarrier cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceUdiCarrier.fromJson(Map<String, dynamic> json) =>
@@ -812,17 +796,17 @@ abstract class DeviceUdiCarrier implements _$DeviceUdiCarrier {
 }
 
 @freezed
-abstract class DeviceDeviceName implements _$DeviceDeviceName {
+class DeviceDeviceName with _$DeviceDeviceName {
   DeviceDeviceName._();
 
-  /// [Device_DeviceName]: A type of a manufactured item that is used in the
+  /// [DeviceDeviceName]: A type of a manufactured item that is used in the
   /// provision of healthcare without being substantially changed through that
   ///  activity. The device may be a medical or non-medical device.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -845,33 +829,35 @@ abstract class DeviceDeviceName implements _$DeviceDeviceName {
   ///
   /// [name]: The name of the device.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [type]: The type of deviceName.
   /// UDILabelName | UserFriendlyName | PatientReportedName |
   ///  ManufactureDeviceName | ModelName.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   factory DeviceDeviceName({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
     @JsonKey(unknownEnumValue: DeviceDeviceNameType.unknown)
-        DeviceDeviceNameType type,
-    @JsonKey(name: '_type') Element typeElement,
+        DeviceDeviceNameType? type,
+    @JsonKey(name: '_type') Element? typeElement,
   }) = _DeviceDeviceName;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceDeviceName.fromYaml(dynamic yaml) => yaml is String
       ? DeviceDeviceName.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DeviceDeviceName.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DeviceDeviceName cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceDeviceName.fromJson(Map<String, dynamic> json) =>
@@ -879,17 +865,17 @@ abstract class DeviceDeviceName implements _$DeviceDeviceName {
 }
 
 @freezed
-abstract class DeviceSpecialization implements _$DeviceSpecialization {
+class DeviceSpecialization with _$DeviceSpecialization {
   DeviceSpecialization._();
 
-  /// [Device_Specialization]: A type of a manufactured item that is used in the
+  /// [DeviceSpecialization]: A type of a manufactured item that is used in the
   /// provision of healthcare without being substantially changed through that
   ///  activity. The device may be a medical or non-medical device.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -915,25 +901,27 @@ abstract class DeviceSpecialization implements _$DeviceSpecialization {
   /// [version]: The version of the standard that is used to operate and
   ///  communicate.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   factory DeviceSpecialization({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept systemType,
-    String version,
-    @JsonKey(name: '_version') Element versionElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept systemType,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
   }) = _DeviceSpecialization;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceSpecialization.fromYaml(dynamic yaml) => yaml is String
       ? DeviceSpecialization.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DeviceSpecialization.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DeviceSpecialization cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceSpecialization.fromJson(Map<String, dynamic> json) =>
@@ -941,17 +929,17 @@ abstract class DeviceSpecialization implements _$DeviceSpecialization {
 }
 
 @freezed
-abstract class DeviceVersion implements _$DeviceVersion {
+class DeviceVersion with _$DeviceVersion {
   DeviceVersion._();
 
-  /// [Device_Version]: A type of a manufactured item that is used in the
+  /// [DeviceVersion]: A type of a manufactured item that is used in the
   /// provision of healthcare without being substantially changed through that
   ///  activity. The device may be a medical or non-medical device.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -978,26 +966,28 @@ abstract class DeviceVersion implements _$DeviceVersion {
   ///
   /// [value]: The version text.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   factory DeviceVersion({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept type,
-    Identifier component,
-    String value,
-    @JsonKey(name: '_value') Element valueElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? type,
+    Identifier? component,
+    String? value,
+    @JsonKey(name: '_value') Element? valueElement,
   }) = _DeviceVersion;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceVersion.fromYaml(dynamic yaml) => yaml is String
       ? DeviceVersion.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DeviceVersion.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DeviceVersion cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceVersion.fromJson(Map<String, dynamic> json) =>
@@ -1005,17 +995,17 @@ abstract class DeviceVersion implements _$DeviceVersion {
 }
 
 @freezed
-abstract class DeviceProperty implements _$DeviceProperty {
+class DeviceProperty with _$DeviceProperty {
   DeviceProperty._();
 
-  /// [Device_Property]: A type of a manufactured item that is used in the
+  /// [DeviceProperty]: A type of a manufactured item that is used in the
   /// provision of healthcare without being substantially changed through that
   ///  activity. The device may be a medical or non-medical device.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1043,23 +1033,25 @@ abstract class DeviceProperty implements _$DeviceProperty {
   ///
   /// [valueCode]: Property value as a code, e.g., NTP4 (synced to NTP).
   factory DeviceProperty({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept type,
-    List<Quantity> valueQuantity,
-    List<CodeableConcept> valueCode,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    List<Quantity>? valueQuantity,
+    List<CodeableConcept>? valueCode,
   }) = _DeviceProperty;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceProperty.fromYaml(dynamic yaml) => yaml is String
       ? DeviceProperty.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DeviceProperty.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DeviceProperty cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceProperty.fromJson(Map<String, dynamic> json) =>
@@ -1067,7 +1059,7 @@ abstract class DeviceProperty implements _$DeviceProperty {
 }
 
 @freezed
-abstract class DeviceMetric with Resource implements _$DeviceMetric {
+class DeviceMetric with Resource, _$DeviceMetric {
   DeviceMetric._();
 
   /// [DeviceMetric]: Describes a measurement, calculation or setting capability
@@ -1087,11 +1079,11 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1105,7 +1097,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1150,7 +1142,7 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
   /// [operationalStatus]: Indicates current operational state of the device.
   ///  For example: On, Off, Standby, etc.
   ///
-  /// [_operationalStatus]: Extensions for operationalStatus
+  /// [operationalStatusElement]: Extensions for operationalStatus
   ///
   /// [color]: Describes the color representation for the metric. This is often
   /// used to aid clinicians to track and identify parameter types by color. In
@@ -1158,12 +1150,12 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
   /// example; the parameters are displayed in different characteristic colors,
   ///  such as HR-blue, BP-green, and PR and SpO2- magenta.
   ///
-  /// [_color]: Extensions for color
+  /// [colorElement]: Extensions for color
   ///
   /// [category]: Indicates the category of the observation generation process.
   ///  A DeviceMetric can be for example a setting, measurement, or calculation.
   ///
-  /// [_category]: Extensions for category
+  /// [categoryElement]: Extensions for category
   ///
   /// [measurementPeriod]: Describes the measurement repetition time. This is
   /// not necessarily the same as the update period. The measurement repetition
@@ -1181,43 +1173,45 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
     @Default(R4ResourceType.DeviceMetric)
     @JsonKey(unknownEnumValue: R4ResourceType.DeviceMetric)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @required CodeableConcept type,
-    CodeableConcept unit,
-    Reference source,
-    Reference parent,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    required CodeableConcept type,
+    CodeableConcept? unit,
+    Reference? source,
+    Reference? parent,
     @JsonKey(unknownEnumValue: DeviceMetricOperationalStatus.unknown)
-        DeviceMetricOperationalStatus operationalStatus,
-    @JsonKey(name: '_operationalStatus') Element operationalStatusElement,
+        DeviceMetricOperationalStatus? operationalStatus,
+    @JsonKey(name: '_operationalStatus') Element? operationalStatusElement,
     @JsonKey(unknownEnumValue: DeviceMetricColor.unknown)
-        DeviceMetricColor color,
-    @JsonKey(name: '_color') Element colorElement,
+        DeviceMetricColor? color,
+    @JsonKey(name: '_color') Element? colorElement,
     @JsonKey(unknownEnumValue: DeviceMetricCategory.unknown)
-        DeviceMetricCategory category,
-    @JsonKey(name: '_category') Element categoryElement,
-    Timing measurementPeriod,
-    List<DeviceMetricCalibration> calibration,
+        DeviceMetricCategory? category,
+    @JsonKey(name: '_category') Element? categoryElement,
+    Timing? measurementPeriod,
+    List<DeviceMetricCalibration>? calibration,
   }) = _DeviceMetric;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceMetric.fromYaml(dynamic yaml) => yaml is String
       ? DeviceMetric.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DeviceMetric.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DeviceMetric cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
@@ -1225,16 +1219,16 @@ abstract class DeviceMetric with Resource implements _$DeviceMetric {
 }
 
 @freezed
-abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
+class DeviceMetricCalibration with _$DeviceMetricCalibration {
   DeviceMetricCalibration._();
 
-  /// [DeviceMetric_Calibration]: Describes a measurement, calculation or
+  /// [DeviceMetricCalibration]: Describes a measurement, calculation or
   ///  setting capability of a medical device.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1257,38 +1251,40 @@ abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
   ///
   /// [type]: Describes the type of the calibration method.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [state]: Describes the state of the calibration.
   ///
-  /// [_state]: Extensions for state
+  /// [stateElement]: Extensions for state
   ///
   /// [time]: Describes the time last calibration has been performed.
   ///
-  /// [_time]: Extensions for time
+  /// [timeElement]: Extensions for time
   factory DeviceMetricCalibration({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: DeviceMetricCalibrationType.unknown)
-        DeviceMetricCalibrationType type,
-    @JsonKey(name: '_type') Element typeElement,
+        DeviceMetricCalibrationType? type,
+    @JsonKey(name: '_type') Element? typeElement,
     @JsonKey(unknownEnumValue: DeviceMetricCalibrationState.unknown)
-        DeviceMetricCalibrationState state,
-    @JsonKey(name: '_state') Element stateElement,
-    Instant time,
-    @JsonKey(name: '_time') Element timeElement,
+        DeviceMetricCalibrationState? state,
+    @JsonKey(name: '_state') Element? stateElement,
+    Instant? time,
+    @JsonKey(name: '_time') Element? timeElement,
   }) = _DeviceMetricCalibration;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DeviceMetricCalibration.fromYaml(dynamic yaml) => yaml is String
       ? DeviceMetricCalibration.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? DeviceMetricCalibration.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'DeviceMetricCalibration cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
@@ -1296,7 +1292,7 @@ abstract class DeviceMetricCalibration implements _$DeviceMetricCalibration {
 }
 
 @freezed
-abstract class Substance with Resource implements _$Substance {
+class Substance with Resource, _$Substance {
   Substance._();
 
   /// [Substance]: A homogeneous material with a definite composition.
@@ -1315,11 +1311,11 @@ abstract class Substance with Resource implements _$Substance {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1333,7 +1329,7 @@ abstract class Substance with Resource implements _$Substance {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1358,7 +1354,7 @@ abstract class Substance with Resource implements _$Substance {
   ///
   /// [status]: A code to indicate if the substance is actively used.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [category]: A code that classifies the general type of substance.  This is
   ///  used  for searching, sorting and display purposes.
@@ -1368,7 +1364,7 @@ abstract class Substance with Resource implements _$Substance {
   /// [description]: A description of the substance - its appearance, handling
   ///  requirements, and other usage notes.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [instance]: Substance may be used to describe a kind of substance, or a
   ///  specific package/container of the substance: an instance.
@@ -1378,36 +1374,38 @@ abstract class Substance with Resource implements _$Substance {
     @Default(R4ResourceType.Substance)
     @JsonKey(unknownEnumValue: R4ResourceType.Substance)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: SubstanceStatus.unknown) SubstanceStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    List<CodeableConcept> category,
-    @required CodeableConcept code,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<SubstanceInstance> instance,
-    List<SubstanceIngredient> ingredient,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    @JsonKey(unknownEnumValue: SubstanceStatus.unknown) SubstanceStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<CodeableConcept>? category,
+    required CodeableConcept code,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<SubstanceInstance>? instance,
+    List<SubstanceIngredient>? ingredient,
   }) = _Substance;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Substance.fromYaml(dynamic yaml) => yaml is String
       ? Substance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Substance.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Substance cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Substance.fromJson(Map<String, dynamic> json) =>
@@ -1415,15 +1413,15 @@ abstract class Substance with Resource implements _$Substance {
 }
 
 @freezed
-abstract class SubstanceInstance implements _$SubstanceInstance {
+class SubstanceInstance with _$SubstanceInstance {
   SubstanceInstance._();
 
-  /// [Substance_Instance]: A homogeneous material with a definite composition.
+  /// [SubstanceInstance]: A homogeneous material with a definite composition.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1450,28 +1448,30 @@ abstract class SubstanceInstance implements _$SubstanceInstance {
   /// [expiry]: When the substance is no longer valid to use. For some
   ///  substances, a single arbitrary date is used for expiry.
   ///
-  /// [_expiry]: Extensions for expiry
+  /// [expiryElement]: Extensions for expiry
   ///
   /// [quantity]: The amount of the substance.
   factory SubstanceInstance({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier identifier,
-    FhirDateTime expiry,
-    @JsonKey(name: '_expiry') Element expiryElement,
-    Quantity quantity,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? identifier,
+    FhirDateTime? expiry,
+    @JsonKey(name: '_expiry') Element? expiryElement,
+    Quantity? quantity,
   }) = _SubstanceInstance;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceInstance.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceInstance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SubstanceInstance.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SubstanceInstance cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceInstance.fromJson(Map<String, dynamic> json) =>
@@ -1479,16 +1479,16 @@ abstract class SubstanceInstance implements _$SubstanceInstance {
 }
 
 @freezed
-abstract class SubstanceIngredient implements _$SubstanceIngredient {
+class SubstanceIngredient with _$SubstanceIngredient {
   SubstanceIngredient._();
 
-  /// [Substance_Ingredient]: A homogeneous material with a definite
+  /// [SubstanceIngredient]: A homogeneous material with a definite
   ///  composition.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1518,23 +1518,25 @@ abstract class SubstanceIngredient implements _$SubstanceIngredient {
   /// [substanceReference]: Another substance that is a component of this
   ///  substance.
   factory SubstanceIngredient({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Ratio quantity,
-    CodeableConcept substanceCodeableConcept,
-    Reference substanceReference,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Ratio? quantity,
+    CodeableConcept? substanceCodeableConcept,
+    Reference? substanceReference,
   }) = _SubstanceIngredient;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceIngredient.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceIngredient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SubstanceIngredient.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SubstanceIngredient cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceIngredient.fromJson(Map<String, dynamic> json) =>

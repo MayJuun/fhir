@@ -1,3 +1,34 @@
+## [0.4.5]
+* Updated dart version
+* Added anlyzer to dev_dependencies
+* Not sure why pub.dev can't run dartanalyzer
+
+## [0.4.4]
+* Removed build.yaml
+
+## [0.4.3]
+* Dependencies updated
+* Run code gen
+* Trying to rid myself of some pub.dev errors
+
+## [0.4.2]
+* Dependencies updated
+
+## [0.4.1]
+* Dependencies updated
+
+## [0.4.0]
+* Stable(ish) & null safe!
+
+## [0.3.0-nullsafety.1]
+* updated dependencies
+* once all packages for all of our FHIR software has been updated to null safety, I'll release the next stable-ish version
+
+## [0.3.0-nullsafety.0]
+* Null safety!
+* Should be completely ready for null safety
+* Should generally work the same as previously, you'll just need to follow null safety requirements
+
 ## [0.2.5]
 * Update documentation
 

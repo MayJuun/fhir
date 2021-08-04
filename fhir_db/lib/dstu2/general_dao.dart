@@ -17,13 +17,14 @@ class GeneralDao {
       FhirDb.instance.updatePassword(oldPw, newPw);
 
   //checks that it's not null, then saves it
-  Future<String> save(String password, Map<String, dynamic> map,
-          {String key}) async =>
-      map != null
-          ? key == null
-              ? await _insert(password, map)
-              : await _insertKey(password, map, key)
-          : throw const FormatException('Map cannot be null');
+  Future<String> save(
+    String password,
+    Map<String, dynamic> map, {
+    String? key,
+  }) async =>
+      key == null
+          ? await _insert(password, map)
+          : await _insertKey(password, map, key);
 
   ///add and return key
   Future<String> _insert(String password, Map<String, dynamic> map) async =>

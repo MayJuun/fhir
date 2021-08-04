@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'other.dart';
 
@@ -8,6 +8,10 @@ part of 'other.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 ExplanationOfBenefit _$ExplanationOfBenefitFromJson(Map<String, dynamic> json) {
   return _ExplanationOfBenefit.fromJson(json);
 }
@@ -16,41 +20,40 @@ ExplanationOfBenefit _$ExplanationOfBenefitFromJson(Map<String, dynamic> json) {
 class _$ExplanationOfBenefitTearOff {
   const _$ExplanationOfBenefitTearOff();
 
-// ignore: unused_element
   _ExplanationOfBenefit call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
           Dstu2ResourceType
               resourceType = Dstu2ResourceType.ExplanationOfBenefit,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Reference request,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Reference? request,
       @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
-          ExplanationOfBenefitOutcome outcome,
+          ExplanationOfBenefitOutcome? outcome,
       @JsonKey(name: '_outcome')
-          Element outcomeElement,
-      String disposition,
+          Element? outcomeElement,
+      String? disposition,
       @JsonKey(name: '_disposition')
-          Element dispositionElement,
-      Coding ruleset,
-      Coding originalRuleset,
-      FhirDateTime created,
+          Element? dispositionElement,
+      Coding? ruleset,
+      Coding? originalRuleset,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference organization,
-      Reference requestProvider,
-      Reference requestOrganization}) {
+          Element? createdElement,
+      Reference? organization,
+      Reference? requestProvider,
+      Reference? requestOrganization}) {
     return _ExplanationOfBenefit(
       resourceType: resourceType,
       id: id,
@@ -79,54 +82,55 @@ class _$ExplanationOfBenefitTearOff {
     );
   }
 
-// ignore: unused_element
   ExplanationOfBenefit fromJson(Map<String, Object> json) {
     return ExplanationOfBenefit.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ExplanationOfBenefit = _$ExplanationOfBenefitTearOff();
 
 /// @nodoc
 mixin _$ExplanationOfBenefit {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
-  Dstu2ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
-  Reference get request;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  Reference? get request => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
-  ExplanationOfBenefitOutcome get outcome;
+  ExplanationOfBenefitOutcome? get outcome =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_outcome')
-  Element get outcomeElement;
-  String get disposition;
+  Element? get outcomeElement => throw _privateConstructorUsedError;
+  String? get disposition => throw _privateConstructorUsedError;
   @JsonKey(name: '_disposition')
-  Element get dispositionElement;
-  Coding get ruleset;
-  Coding get originalRuleset;
-  FhirDateTime get created;
+  Element? get dispositionElement => throw _privateConstructorUsedError;
+  Coding? get ruleset => throw _privateConstructorUsedError;
+  Coding? get originalRuleset => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
-  Element get createdElement;
-  Reference get organization;
-  Reference get requestProvider;
-  Reference get requestOrganization;
+  Element? get createdElement => throw _privateConstructorUsedError;
+  Reference? get organization => throw _privateConstructorUsedError;
+  Reference? get requestProvider => throw _privateConstructorUsedError;
+  Reference? get requestOrganization => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ExplanationOfBenefitCopyWith<ExplanationOfBenefit> get copyWith;
+  $ExplanationOfBenefitCopyWith<ExplanationOfBenefit> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -137,50 +141,50 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Reference request,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Reference? request,
       @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
-          ExplanationOfBenefitOutcome outcome,
+          ExplanationOfBenefitOutcome? outcome,
       @JsonKey(name: '_outcome')
-          Element outcomeElement,
-      String disposition,
+          Element? outcomeElement,
+      String? disposition,
       @JsonKey(name: '_disposition')
-          Element dispositionElement,
-      Coding ruleset,
-      Coding originalRuleset,
-      FhirDateTime created,
+          Element? dispositionElement,
+      Coding? ruleset,
+      Coding? originalRuleset,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference organization,
-      Reference requestProvider,
-      Reference requestOrganization});
+          Element? createdElement,
+      Reference? organization,
+      Reference? requestProvider,
+      Reference? requestOrganization});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
-  $ReferenceCopyWith<$Res> get request;
-  $ElementCopyWith<$Res> get outcomeElement;
-  $ElementCopyWith<$Res> get dispositionElement;
-  $CodingCopyWith<$Res> get ruleset;
-  $CodingCopyWith<$Res> get originalRuleset;
-  $ElementCopyWith<$Res> get createdElement;
-  $ReferenceCopyWith<$Res> get organization;
-  $ReferenceCopyWith<$Res> get requestProvider;
-  $ReferenceCopyWith<$Res> get requestOrganization;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ReferenceCopyWith<$Res>? get request;
+  $ElementCopyWith<$Res>? get outcomeElement;
+  $ElementCopyWith<$Res>? get dispositionElement;
+  $CodingCopyWith<$Res>? get ruleset;
+  $CodingCopyWith<$Res>? get originalRuleset;
+  $ElementCopyWith<$Res>? get createdElement;
+  $ReferenceCopyWith<$Res>? get organization;
+  $ReferenceCopyWith<$Res>? get requestProvider;
+  $ReferenceCopyWith<$Res>? get requestOrganization;
 }
 
 /// @nodoc
@@ -194,217 +198,270 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object request = freezed,
-    Object outcome = freezed,
-    Object outcomeElement = freezed,
-    Object disposition = freezed,
-    Object dispositionElement = freezed,
-    Object ruleset = freezed,
-    Object originalRuleset = freezed,
-    Object created = freezed,
-    Object createdElement = freezed,
-    Object organization = freezed,
-    Object requestProvider = freezed,
-    Object requestOrganization = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? request = freezed,
+    Object? outcome = freezed,
+    Object? outcomeElement = freezed,
+    Object? disposition = freezed,
+    Object? dispositionElement = freezed,
+    Object? ruleset = freezed,
+    Object? originalRuleset = freezed,
+    Object? created = freezed,
+    Object? createdElement = freezed,
+    Object? organization = freezed,
+    Object? requestProvider = freezed,
+    Object? requestOrganization = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      request: request == freezed ? _value.request : request as Reference,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      request: request == freezed
+          ? _value.request
+          : request // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       outcome: outcome == freezed
           ? _value.outcome
-          : outcome as ExplanationOfBenefitOutcome,
+          : outcome // ignore: cast_nullable_to_non_nullable
+              as ExplanationOfBenefitOutcome?,
       outcomeElement: outcomeElement == freezed
           ? _value.outcomeElement
-          : outcomeElement as Element,
-      disposition:
-          disposition == freezed ? _value.disposition : disposition as String,
+          : outcomeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      disposition: disposition == freezed
+          ? _value.disposition
+          : disposition // ignore: cast_nullable_to_non_nullable
+              as String?,
       dispositionElement: dispositionElement == freezed
           ? _value.dispositionElement
-          : dispositionElement as Element,
-      ruleset: ruleset == freezed ? _value.ruleset : ruleset as Coding,
+          : dispositionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      ruleset: ruleset == freezed
+          ? _value.ruleset
+          : ruleset // ignore: cast_nullable_to_non_nullable
+              as Coding?,
       originalRuleset: originalRuleset == freezed
           ? _value.originalRuleset
-          : originalRuleset as Coding,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+          : originalRuleset // ignore: cast_nullable_to_non_nullable
+              as Coding?,
+      created: created == freezed
+          ? _value.created
+          : created // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
-          : createdElement as Element,
+          : createdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       organization: organization == freezed
           ? _value.organization
-          : organization as Reference,
+          : organization // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       requestProvider: requestProvider == freezed
           ? _value.requestProvider
-          : requestProvider as Reference,
+          : requestProvider // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       requestOrganization: requestOrganization == freezed
           ? _value.requestOrganization
-          : requestOrganization as Reference,
+          : requestOrganization // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get request {
+  $ReferenceCopyWith<$Res>? get request {
     if (_value.request == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.request, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.request!, (value) {
       return _then(_value.copyWith(request: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get outcomeElement {
+  $ElementCopyWith<$Res>? get outcomeElement {
     if (_value.outcomeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.outcomeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.outcomeElement!, (value) {
       return _then(_value.copyWith(outcomeElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get dispositionElement {
+  $ElementCopyWith<$Res>? get dispositionElement {
     if (_value.dispositionElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.dispositionElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.dispositionElement!, (value) {
       return _then(_value.copyWith(dispositionElement: value));
     });
   }
 
   @override
-  $CodingCopyWith<$Res> get ruleset {
+  $CodingCopyWith<$Res>? get ruleset {
     if (_value.ruleset == null) {
       return null;
     }
-    return $CodingCopyWith<$Res>(_value.ruleset, (value) {
+
+    return $CodingCopyWith<$Res>(_value.ruleset!, (value) {
       return _then(_value.copyWith(ruleset: value));
     });
   }
 
   @override
-  $CodingCopyWith<$Res> get originalRuleset {
+  $CodingCopyWith<$Res>? get originalRuleset {
     if (_value.originalRuleset == null) {
       return null;
     }
-    return $CodingCopyWith<$Res>(_value.originalRuleset, (value) {
+
+    return $CodingCopyWith<$Res>(_value.originalRuleset!, (value) {
       return _then(_value.copyWith(originalRuleset: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get createdElement {
+  $ElementCopyWith<$Res>? get createdElement {
     if (_value.createdElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.createdElement!, (value) {
       return _then(_value.copyWith(createdElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get organization {
+  $ReferenceCopyWith<$Res>? get organization {
     if (_value.organization == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.organization, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.organization!, (value) {
       return _then(_value.copyWith(organization: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get requestProvider {
+  $ReferenceCopyWith<$Res>? get requestProvider {
     if (_value.requestProvider == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.requestProvider, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.requestProvider!, (value) {
       return _then(_value.copyWith(requestProvider: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get requestOrganization {
+  $ReferenceCopyWith<$Res>? get requestOrganization {
     if (_value.requestOrganization == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.requestOrganization, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.requestOrganization!, (value) {
       return _then(_value.copyWith(requestOrganization: value));
     });
   }
@@ -420,63 +477,63 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Reference request,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Reference? request,
       @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
-          ExplanationOfBenefitOutcome outcome,
+          ExplanationOfBenefitOutcome? outcome,
       @JsonKey(name: '_outcome')
-          Element outcomeElement,
-      String disposition,
+          Element? outcomeElement,
+      String? disposition,
       @JsonKey(name: '_disposition')
-          Element dispositionElement,
-      Coding ruleset,
-      Coding originalRuleset,
-      FhirDateTime created,
+          Element? dispositionElement,
+      Coding? ruleset,
+      Coding? originalRuleset,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference organization,
-      Reference requestProvider,
-      Reference requestOrganization});
+          Element? createdElement,
+      Reference? organization,
+      Reference? requestProvider,
+      Reference? requestOrganization});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
-  $ReferenceCopyWith<$Res> get request;
+  $ReferenceCopyWith<$Res>? get request;
   @override
-  $ElementCopyWith<$Res> get outcomeElement;
+  $ElementCopyWith<$Res>? get outcomeElement;
   @override
-  $ElementCopyWith<$Res> get dispositionElement;
+  $ElementCopyWith<$Res>? get dispositionElement;
   @override
-  $CodingCopyWith<$Res> get ruleset;
+  $CodingCopyWith<$Res>? get ruleset;
   @override
-  $CodingCopyWith<$Res> get originalRuleset;
+  $CodingCopyWith<$Res>? get originalRuleset;
   @override
-  $ElementCopyWith<$Res> get createdElement;
+  $ElementCopyWith<$Res>? get createdElement;
   @override
-  $ReferenceCopyWith<$Res> get organization;
+  $ReferenceCopyWith<$Res>? get organization;
   @override
-  $ReferenceCopyWith<$Res> get requestProvider;
+  $ReferenceCopyWith<$Res>? get requestProvider;
   @override
-  $ReferenceCopyWith<$Res> get requestOrganization;
+  $ReferenceCopyWith<$Res>? get requestOrganization;
 }
 
 /// @nodoc
@@ -492,95 +549,134 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object request = freezed,
-    Object outcome = freezed,
-    Object outcomeElement = freezed,
-    Object disposition = freezed,
-    Object dispositionElement = freezed,
-    Object ruleset = freezed,
-    Object originalRuleset = freezed,
-    Object created = freezed,
-    Object createdElement = freezed,
-    Object organization = freezed,
-    Object requestProvider = freezed,
-    Object requestOrganization = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? request = freezed,
+    Object? outcome = freezed,
+    Object? outcomeElement = freezed,
+    Object? disposition = freezed,
+    Object? dispositionElement = freezed,
+    Object? ruleset = freezed,
+    Object? originalRuleset = freezed,
+    Object? created = freezed,
+    Object? createdElement = freezed,
+    Object? organization = freezed,
+    Object? requestProvider = freezed,
+    Object? requestOrganization = freezed,
   }) {
     return _then(_ExplanationOfBenefit(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      request: request == freezed ? _value.request : request as Reference,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      request: request == freezed
+          ? _value.request
+          : request // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       outcome: outcome == freezed
           ? _value.outcome
-          : outcome as ExplanationOfBenefitOutcome,
+          : outcome // ignore: cast_nullable_to_non_nullable
+              as ExplanationOfBenefitOutcome?,
       outcomeElement: outcomeElement == freezed
           ? _value.outcomeElement
-          : outcomeElement as Element,
-      disposition:
-          disposition == freezed ? _value.disposition : disposition as String,
+          : outcomeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      disposition: disposition == freezed
+          ? _value.disposition
+          : disposition // ignore: cast_nullable_to_non_nullable
+              as String?,
       dispositionElement: dispositionElement == freezed
           ? _value.dispositionElement
-          : dispositionElement as Element,
-      ruleset: ruleset == freezed ? _value.ruleset : ruleset as Coding,
+          : dispositionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      ruleset: ruleset == freezed
+          ? _value.ruleset
+          : ruleset // ignore: cast_nullable_to_non_nullable
+              as Coding?,
       originalRuleset: originalRuleset == freezed
           ? _value.originalRuleset
-          : originalRuleset as Coding,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+          : originalRuleset // ignore: cast_nullable_to_non_nullable
+              as Coding?,
+      created: created == freezed
+          ? _value.created
+          : created // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
-          : createdElement as Element,
+          : createdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       organization: organization == freezed
           ? _value.organization
-          : organization as Reference,
+          : organization // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       requestProvider: requestProvider == freezed
           ? _value.requestProvider
-          : requestProvider as Reference,
+          : requestProvider // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       requestOrganization: requestOrganization == freezed
           ? _value.requestOrganization
-          : requestOrganization as Reference,
+          : requestOrganization // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   _$_ExplanationOfBenefit(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
@@ -615,68 +711,67 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
       this.organization,
       this.requestProvider,
       this.requestOrganization})
-      : assert(resourceType != null),
-        super._();
+      : super._();
 
   factory _$_ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
-      _$_$_ExplanationOfBenefitFromJson(json);
+      _$$_ExplanationOfBenefitFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
   final Dstu2ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<Identifier>? identifier;
   @override
-  final Reference request;
+  final Reference? request;
   @override
   @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
-  final ExplanationOfBenefitOutcome outcome;
+  final ExplanationOfBenefitOutcome? outcome;
   @override
   @JsonKey(name: '_outcome')
-  final Element outcomeElement;
+  final Element? outcomeElement;
   @override
-  final String disposition;
+  final String? disposition;
   @override
   @JsonKey(name: '_disposition')
-  final Element dispositionElement;
+  final Element? dispositionElement;
   @override
-  final Coding ruleset;
+  final Coding? ruleset;
   @override
-  final Coding originalRuleset;
+  final Coding? originalRuleset;
   @override
-  final FhirDateTime created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
-  final Element createdElement;
+  final Element? createdElement;
   @override
-  final Reference organization;
+  final Reference? organization;
   @override
-  final Reference requestProvider;
+  final Reference? requestProvider;
   @override
-  final Reference requestOrganization;
+  final Reference? requestOrganization;
 
   @override
   String toString() {
@@ -792,106 +887,109 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ExplanationOfBenefitToJson(this);
+    return _$$_ExplanationOfBenefitToJson(this);
   }
 }
 
 abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
-  _ExplanationOfBenefit._() : super._();
   factory _ExplanationOfBenefit(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Reference request,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Reference? request,
       @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
-          ExplanationOfBenefitOutcome outcome,
+          ExplanationOfBenefitOutcome? outcome,
       @JsonKey(name: '_outcome')
-          Element outcomeElement,
-      String disposition,
+          Element? outcomeElement,
+      String? disposition,
       @JsonKey(name: '_disposition')
-          Element dispositionElement,
-      Coding ruleset,
-      Coding originalRuleset,
-      FhirDateTime created,
+          Element? dispositionElement,
+      Coding? ruleset,
+      Coding? originalRuleset,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference organization,
-      Reference requestProvider,
-      Reference requestOrganization}) = _$_ExplanationOfBenefit;
+          Element? createdElement,
+      Reference? organization,
+      Reference? requestProvider,
+      Reference? requestOrganization}) = _$_ExplanationOfBenefit;
+  _ExplanationOfBenefit._() : super._();
 
   factory _ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =
       _$_ExplanationOfBenefit.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ExplanationOfBenefit)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier> get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Reference get request;
+  Reference? get request => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: ExplanationOfBenefitOutcome.unknown)
-  ExplanationOfBenefitOutcome get outcome;
+  ExplanationOfBenefitOutcome? get outcome =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_outcome')
-  Element get outcomeElement;
+  Element? get outcomeElement => throw _privateConstructorUsedError;
   @override
-  String get disposition;
+  String? get disposition => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_disposition')
-  Element get dispositionElement;
+  Element? get dispositionElement => throw _privateConstructorUsedError;
   @override
-  Coding get ruleset;
+  Coding? get ruleset => throw _privateConstructorUsedError;
   @override
-  Coding get originalRuleset;
+  Coding? get originalRuleset => throw _privateConstructorUsedError;
   @override
-  FhirDateTime get created;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
-  Element get createdElement;
+  Element? get createdElement => throw _privateConstructorUsedError;
   @override
-  Reference get organization;
+  Reference? get organization => throw _privateConstructorUsedError;
   @override
-  Reference get requestProvider;
+  Reference? get requestProvider => throw _privateConstructorUsedError;
   @override
-  Reference get requestOrganization;
+  Reference? get requestOrganization => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ExplanationOfBenefitCopyWith<_ExplanationOfBenefit> get copyWith;
+  _$ExplanationOfBenefitCopyWith<_ExplanationOfBenefit> get copyWith =>
+      throw _privateConstructorUsedError;
 }

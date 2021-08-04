@@ -157,3 +157,5 @@ await GeneralDao().delete('password','key');
 // returns map with that key
 await GeneralDao().find('password', 'key'); 
 ```
+
+FHIR® is a registered trademark of Health Level Seven International (HL7) and its use does not constitute an endorsement of products by HL7®

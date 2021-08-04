@@ -20,8 +20,6 @@ Future<void> main() async {
       await resourceDao.updatePw(null, 'newPw');
       final search1 = await resourceDao.find('newPw',
           resourceType: R4ResourceType.Patient, id: Id('1'));
-      print(saved.hashCode);
-      print(search1[0].hashCode);
       expect(saved, search1[0]);
 
       await resourceDao.updatePw('newPw', 'newerPw');
@@ -47,7 +45,7 @@ Future<void> main() async {
 
       expect(saved.id, id);
 
-      expect((saved as Patient).name[0], humanName);
+      expect((saved as Patient).name?[0], humanName);
     });
 
     test('Save Organization', () async {
@@ -82,7 +80,7 @@ Future<void> main() async {
 
       expect((saved as Observation).code.text, 'Observation #1 - Updated');
 
-      expect(saved.meta.versionId, Id('2'));
+      expect(saved.meta?.versionId, Id('2'));
     });
 
     test('Save Observation2', () async {
@@ -120,7 +118,7 @@ Future<void> main() async {
 
       expect(search.length, 1);
 
-      expect((search[0] as Patient).name[0], humanName);
+      expect((search[0] as Patient).name?[0], humanName);
     });
 
     test('Find 3rd Observation', () async {
@@ -238,7 +236,7 @@ Future<void> main() async {
 
       expect(saved.id, id);
 
-      expect((saved as Patient).name[0], humanName);
+      expect((saved as Patient).name?[0], humanName);
     });
 
     test('Save Organization', () async {
@@ -273,7 +271,7 @@ Future<void> main() async {
 
       expect((saved as Observation).code.text, 'Observation #1 - Updated');
 
-      expect(saved.meta.versionId, Id('2'));
+      expect(saved.meta?.versionId, Id('2'));
     });
 
     test('Save Observation2', () async {
@@ -311,7 +309,7 @@ Future<void> main() async {
 
       expect(search.length, 1);
 
-      expect((search[0] as Patient).name[0], humanName);
+      expect((search[0] as Patient).name?[0], humanName);
     });
 
     test('Find 3rd Observation', () async {

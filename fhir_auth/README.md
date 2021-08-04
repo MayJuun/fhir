@@ -91,7 +91,7 @@ I'm going to show here a copy (with numbers changed, obviously) of my API file t
   static const mihinAuthUrl = null;
   static const mihinTokenUrl = null;
 ```
-Note the url is the baseUrl for your query, if you attache /metadata to the end, it should return a CapabilityStatement/Conformance. Pay attention to this, because different servers creat their urls differently.
+Note the url is the fhirUrl for your query, if you attache /metadata to the end, it should return a CapabilityStatement/Conformance. Pay attention to this, because different servers creat their urls differently.
 
 ```Google Healthcare API```
 ```
@@ -123,7 +123,7 @@ I think the example shows the flow pretty well. I've also tried to make both the
 So for the SmartClient, initialize as:
 ```
   final client = SmartClient(
-    baseUrl: FhirUri(url),
+    fhirUrl: FhirUri(url),
     clientId: clientId,
     redirectUri: fhirCallback,
     scopes: Scopes(
@@ -145,7 +145,7 @@ So for the SmartClient, initialize as:
 GCS Client requires fewer arguments (because you don't need to specify scopes for their Healthcare API)
 ```
   final client = GcsClient(
-    baseUrl: FhirUri(url),
+    fhirUrl: FhirUri(url),
     clientId: clientId,
     scopes: scopes,
   );
@@ -154,16 +154,19 @@ After this, the flow is the same for both:
 ```
 await client.login();
 final newPatient = Patient(id: '123');
-final request1 = FhirRequest.create(base: client.baseUrl.uri);
+final request1 = FhirRequest.create(base: client.fhirUrl.uri);
 final response1 = await request1.request(headers: await client.authHeaders);
 final request2 = FhirRequest.read(
-  base: client.baseUrl.uri,
+  base: client.fhirUrl.uri,
   type: R4ResourceType.Patient,
   id: newId,
 );
 final response2 = await request2.request(headers: await client.authHeaders);
 ```
 
-# Alpha Version
+# Beta Version
 
 As is the case for all of the FHIR packages published so far, they are not yet ready for production (although some are very close). This one is a little further away for a number of reasons. The first is that I'd like to add the capability to use Azure AD and AWS Cognito. In addition, just because authentication/authorization is complicated but important enough that I want need to add more tests to ensure it works the way it's supposed to. As always, suggestions, complaints and PR are welcome. Contact me at grey@fhirfli.dev.
+
+
+FHIR® is a registered trademark of Health Level Seven International (HL7) and its use does not constitute an endorsement of products by HL7®

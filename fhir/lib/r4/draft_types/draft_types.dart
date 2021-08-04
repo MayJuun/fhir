@@ -11,7 +11,7 @@ part 'draft_types.freezed.dart';
 part 'draft_types.g.dart';
 
 @freezed
-abstract class Population implements _$Population {
+class Population with _$Population {
   Population._();
 
   /// [Population]: A populatioof people with some set of grouping criteria.
@@ -19,7 +19,7 @@ abstract class Population implements _$Population {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -51,25 +51,27 @@ abstract class Population implements _$Population {
   /// [physiologicalCondition]: The existing physiological conditions of the
   ///  specific population to which this applies.
   factory Population({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Range ageRange,
-    CodeableConcept ageCodeableConcept,
-    CodeableConcept gender,
-    CodeableConcept race,
-    CodeableConcept physiologicalCondition,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Range? ageRange,
+    CodeableConcept? ageCodeableConcept,
+    CodeableConcept? gender,
+    CodeableConcept? race,
+    CodeableConcept? physiologicalCondition,
   }) = _Population;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Population.fromYaml(dynamic yaml) => yaml is String
       ? Population.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Population.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Population cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Population.fromJson(Map<String, dynamic> json) =>
@@ -77,7 +79,7 @@ abstract class Population implements _$Population {
 }
 
 @freezed
-abstract class ProductShelfLife implements _$ProductShelfLife {
+class ProductShelfLife with _$ProductShelfLife {
   ProductShelfLife._();
 
   /// [ProductShelfLife]: The shelf-life and storage information for a medicinal
@@ -86,7 +88,7 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -125,24 +127,26 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
   /// can be specified using an appropriate controlled vocabulary The controlled
   ///  term and the controlled term identifier shall be specified.
   factory ProductShelfLife({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier identifier,
-    @required CodeableConcept type,
-    @required Quantity period,
-    List<CodeableConcept> specialPrecautionsForStorage,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? identifier,
+    required CodeableConcept type,
+    required Quantity period,
+    List<CodeableConcept>? specialPrecautionsForStorage,
   }) = _ProductShelfLife;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ProductShelfLife.fromYaml(dynamic yaml) => yaml is String
       ? ProductShelfLife.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ProductShelfLife.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ProductShelfLife cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProductShelfLife.fromJson(Map<String, dynamic> json) =>
@@ -150,7 +154,7 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
 }
 
 @freezed
-abstract class ProdCharacteristic implements _$ProdCharacteristic {
+class ProdCharacteristic with _$ProdCharacteristic {
   ProdCharacteristic._();
 
   /// [ProdCharacteristic]: The marketing status describes the date when a
@@ -160,7 +164,7 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -215,17 +219,17 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
   /// controlled vocabulary shall be used The term and the term identifier shall
   ///  be used.
   ///
-  /// [_shape]: Extensions for shape
+  /// [shapeElement]: Extensions for shape
   ///
   /// [color]: Where applicable, the color can be specified An appropriate
   /// controlled vocabulary shall be used The term and the term identifier shall
   ///  be used.
   ///
-  /// [_color]: Extensions for color
+  /// [colorElement]: Extensions for color
   ///
   /// [imprint]: Where applicable, the imprint can be specified as text.
   ///
-  /// [_imprint]: Extensions for imprint
+  /// [imprintElement]: Extensions for imprint
   ///
   /// [image]: Where applicable, the image can be provided The format of the
   ///  image attachment shall be specified by regional implementations.
@@ -234,34 +238,36 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
   /// controlled vocabulary shall be used The term and the term identifier shall
   ///  be used.
   factory ProdCharacteristic({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Quantity height,
-    Quantity width,
-    Quantity depth,
-    Quantity weight,
-    Quantity nominalVolume,
-    Quantity externalDiameter,
-    String shape,
-    @JsonKey(name: '_shape') Element shapeElement,
-    List<String> color,
-    @JsonKey(name: '_color') List<Element> colorElement,
-    List<String> imprint,
-    @JsonKey(name: '_imprint') List<Element> imprintElement,
-    List<Attachment> image,
-    CodeableConcept scoring,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Quantity? height,
+    Quantity? width,
+    Quantity? depth,
+    Quantity? weight,
+    Quantity? nominalVolume,
+    Quantity? externalDiameter,
+    String? shape,
+    @JsonKey(name: '_shape') Element? shapeElement,
+    List<String>? color,
+    @JsonKey(name: '_color') List<Element?>? colorElement,
+    List<String>? imprint,
+    @JsonKey(name: '_imprint') List<Element?>? imprintElement,
+    List<Attachment>? image,
+    CodeableConcept? scoring,
   }) = _ProdCharacteristic;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ProdCharacteristic.fromYaml(dynamic yaml) => yaml is String
       ? ProdCharacteristic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ProdCharacteristic.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ProdCharacteristic cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProdCharacteristic.fromJson(Map<String, dynamic> json) =>
@@ -269,7 +275,7 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
 }
 
 @freezed
-abstract class MarketingStatus implements _$MarketingStatus {
+class MarketingStatus with _$MarketingStatus {
   MarketingStatus._();
 
   /// [MarketingStatus]: The marketing status describes the date when a
@@ -279,7 +285,7 @@ abstract class MarketingStatus implements _$MarketingStatus {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -330,28 +336,30 @@ abstract class MarketingStatus implements _$MarketingStatus {
   /// refers to the release of the Medicinal Product into the distribution
   ///  chain.
   ///
-  /// [_restoreDate]: Extensions for restoreDate
+  /// [restoreDateElement]: Extensions for restoreDate
   factory MarketingStatus({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept country,
-    CodeableConcept jurisdiction,
-    @required CodeableConcept status,
-    @required Period dateRange,
-    FhirDateTime restoreDate,
-    @JsonKey(name: '_restoreDate') Element restoreDateElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept country,
+    CodeableConcept? jurisdiction,
+    required CodeableConcept status,
+    required Period dateRange,
+    FhirDateTime? restoreDate,
+    @JsonKey(name: '_restoreDate') Element? restoreDateElement,
   }) = _MarketingStatus;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MarketingStatus.fromYaml(dynamic yaml) => yaml is String
       ? MarketingStatus.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? MarketingStatus.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'MarketingStatus cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MarketingStatus.fromJson(Map<String, dynamic> json) =>
@@ -359,7 +367,7 @@ abstract class MarketingStatus implements _$MarketingStatus {
 }
 
 @freezed
-abstract class SubstanceAmount implements _$SubstanceAmount {
+class SubstanceAmount with _$SubstanceAmount {
   SubstanceAmount._();
 
   /// [SubstanceAmount]: Chemical substances are a single substance type whose
@@ -373,7 +381,7 @@ abstract class SubstanceAmount implements _$SubstanceAmount {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -409,7 +417,7 @@ abstract class SubstanceAmount implements _$SubstanceAmount {
   /// average. If only a single definite value for a given element is given, it
   ///  would be captured in this field.
   ///
-  /// [_amountString]: Extensions for amountString
+  /// [amountStringElement]: Extensions for amountString
   ///
   /// [amountType]: Most elements that require a quantitative value will also
   /// have a field called amount type. Amount type should always be specified
@@ -421,32 +429,34 @@ abstract class SubstanceAmount implements _$SubstanceAmount {
   ///
   /// [amountText]: A textual comment on a numeric value.
   ///
-  /// [_amountText]: Extensions for amountText
+  /// [amountTextElement]: Extensions for amountText
   ///
   /// [referenceRange]: Reference range of possible or expected values.
   factory SubstanceAmount({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Quantity amountQuantity,
-    Range amountRange,
-    String amountString,
-    @JsonKey(name: '_amountString') Element amountStringElement,
-    CodeableConcept amountType,
-    String amountText,
-    @JsonKey(name: '_amountText') Element amountTextElement,
-    SubstanceAmountReferenceRange referenceRange,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Quantity? amountQuantity,
+    Range? amountRange,
+    String? amountString,
+    @JsonKey(name: '_amountString') Element? amountStringElement,
+    CodeableConcept? amountType,
+    String? amountText,
+    @JsonKey(name: '_amountText') Element? amountTextElement,
+    SubstanceAmountReferenceRange? referenceRange,
   }) = _SubstanceAmount;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceAmount.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceAmount.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SubstanceAmount.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SubstanceAmount cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceAmount.fromJson(Map<String, dynamic> json) =>
@@ -454,11 +464,10 @@ abstract class SubstanceAmount implements _$SubstanceAmount {
 }
 
 @freezed
-abstract class SubstanceAmountReferenceRange
-    implements _$SubstanceAmountReferenceRange {
+class SubstanceAmountReferenceRange with _$SubstanceAmountReferenceRange {
   SubstanceAmountReferenceRange._();
 
-  /// [SubstanceAmount_ReferenceRange]: Chemical substances are a single
+  /// [SubstanceAmountReferenceRange]: Chemical substances are a single
   /// substance type whose primary defining element is the molecular structure.
   /// Chemical substances shall be defined on the basis of their complete
   /// covalent molecular structure; the presence of a salt (counter-ion) and/or
@@ -469,7 +478,7 @@ abstract class SubstanceAmountReferenceRange
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -494,23 +503,25 @@ abstract class SubstanceAmountReferenceRange
   ///
   /// [highLimit]: Upper limit possible or expected.
   factory SubstanceAmountReferenceRange({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Quantity lowLimit,
-    Quantity highLimit,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Quantity? lowLimit,
+    Quantity? highLimit,
   }) = _SubstanceAmountReferenceRange;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceAmountReferenceRange.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceAmountReferenceRange.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? SubstanceAmountReferenceRange.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'SubstanceAmountReferenceRange cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceAmountReferenceRange.fromJson(Map<String, dynamic> json) =>

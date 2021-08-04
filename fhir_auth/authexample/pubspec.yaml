@@ -1,0 +1,47 @@
+name: authexample
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.13.0 <3.0.0"
+
+dependencies:
+  cupertino_icons: ^1.0.2
+  fhir: ^0.4.6
+  fhir_at_rest: ^0.4.2
+  flutter:
+    sdk: flutter
+  oauth2_client: ^2.2.2
+
+flutter:
+  uses-material-design: true
+
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
