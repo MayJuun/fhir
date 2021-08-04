@@ -3,7 +3,8 @@ part of 'resource.dart';
 /// Acts like a constructor, returns a [Resource], accepts a
 /// [Map<String, Dyamic] as an argument
 Resource _resourceFromJson(Map<String, dynamic> json) {
-  switch (json['resourceType']) {
+  final resourceType = json['resourceType'];
+  switch (resourceType) {
     case 'Account':
       return Account.fromJson(json);
     case 'ActivityDefinition':
@@ -239,5 +240,6 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     case 'VisionPrescription':
       return VisionPrescription.fromJson(json);
   }
-  return null;
+
+  return _$ResourceFromJson(json);
 }

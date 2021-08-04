@@ -11,22 +11,24 @@ part 'element.freezed.dart';
 part 'element.g.dart';
 
 @freezed
-abstract class Element with _$Element {
+ class Element with _$Element {
   Element._();
   factory Element({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
   }) = _Element;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Element.fromYaml(dynamic yaml) => yaml is String
       ? Element.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Element.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Element cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Element.fromJson(Map<String, dynamic> json) =>

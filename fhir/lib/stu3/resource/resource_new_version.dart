@@ -1,12 +1,12 @@
 part of 'resource.dart';
 
 /// Returns an [Id] if one is passed, otherwise generates a new one
-Id _getId(int resourcehashCode, Id id) =>
+Id _getId(int resourcehashCode, Id? id) =>
     id ?? Id('fhirfli-$resourcehashCode-${DateTime.now().hashCode}');
 
 /// Returns a [Meta] object, creates a new one if none is passed, otherwise
 /// updates the [lastUpdated] and increases the [version] by 1
-Meta _updateMetaVersion(Meta oldMeta) {
+Meta _updateMetaVersion(Meta? oldMeta) {
   final version = oldMeta == null
       ? 1
       : oldMeta.versionId == null
@@ -22,7 +22,7 @@ Meta _updateMetaVersion(Meta oldMeta) {
 /// 1 to the version number and adds an [Id] if there is not already one,
 /// accepts [meta] as an argument and will update that field, otherwise will
 /// try and update the [meta] field already in the resource
-Resource _newResourceVersion(Resource resource, {Meta meta}) {
+Resource _newResourceVersion(Resource resource, {Meta? meta}) {
   switch (resource.resourceType) {
     case Stu3ResourceType.Account:
       return (resource as Account).copyWith(

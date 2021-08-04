@@ -12,7 +12,7 @@ part 'general.freezed.dart';
 part 'general.g.dart';
 
 @freezed
-abstract class Account with Resource implements _$Account {
+class Account with Resource, _$Account {
   Account._();
 
   /// [Account]: A financial tool for tracking value accrued for a particular
@@ -33,11 +33,11 @@ abstract class Account with Resource implements _$Account {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -51,7 +51,7 @@ abstract class Account with Resource implements _$Account {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -77,14 +77,14 @@ abstract class Account with Resource implements _$Account {
   ///
   /// [status]: Indicates whether the account is presently used/usable or not.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [type]: Categorizes the account for reporting and searching purposes.
   ///
   /// [name]: Name used for the account when displaying it to humans in reports,
   ///  etc.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [subject]: Identifies the entity which incurs the expenses. While the
   /// immediate recipients of services or goods might be entities related to the
@@ -102,7 +102,7 @@ abstract class Account with Resource implements _$Account {
   /// [description]: Provides additional information about what the account
   ///  tracks and how it is used.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [guarantor]: The parties responsible for balancing the account if other
   ///  payment options fall short.
@@ -112,41 +112,43 @@ abstract class Account with Resource implements _$Account {
     @Default(R4ResourceType.Account)
     @JsonKey(unknownEnumValue: R4ResourceType.Account)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    CodeableConcept type,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    List<Reference> subject,
-    Period servicePeriod,
-    List<AccountCoverage> coverage,
-    Reference owner,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<AccountGuarantor> guarantor,
-    Reference partOf,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    @JsonKey(unknownEnumValue: AccountStatus.unknown) AccountStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? type,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    List<Reference>? subject,
+    Period? servicePeriod,
+    List<AccountCoverage>? coverage,
+    Reference? owner,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<AccountGuarantor>? guarantor,
+    Reference? partOf,
   }) = _Account;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Account.fromYaml(dynamic yaml) => yaml is String
       ? Account.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Account.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Account cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Account.fromJson(Map<String, dynamic> json) =>
@@ -154,17 +156,17 @@ abstract class Account with Resource implements _$Account {
 }
 
 @freezed
-abstract class AccountCoverage implements _$AccountCoverage {
+class AccountCoverage with _$AccountCoverage {
   AccountCoverage._();
 
-  /// [Account_Coverage]: A financial tool for tracking value accrued for a
+  /// [AccountCoverage]: A financial tool for tracking value accrued for a
   /// particular purpose.  In the healthcare field, used to track charges for a
   ///  patient, cost centers, etc.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -193,25 +195,27 @@ abstract class AccountCoverage implements _$AccountCoverage {
   ///
   /// [priority]: The priority of the coverage in the context of this account.
   ///
-  /// [_priority]: Extensions for priority
+  /// [priorityElement]: Extensions for priority
   factory AccountCoverage({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required Reference coverage,
-    PositiveInt priority,
-    @JsonKey(name: '_priority') Element priorityElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Reference coverage,
+    PositiveInt? priority,
+    @JsonKey(name: '_priority') Element? priorityElement,
   }) = _AccountCoverage;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AccountCoverage.fromYaml(dynamic yaml) => yaml is String
       ? AccountCoverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AccountCoverage.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AccountCoverage cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AccountCoverage.fromJson(Map<String, dynamic> json) =>
@@ -219,17 +223,17 @@ abstract class AccountCoverage implements _$AccountCoverage {
 }
 
 @freezed
-abstract class AccountGuarantor implements _$AccountGuarantor {
+class AccountGuarantor with _$AccountGuarantor {
   AccountGuarantor._();
 
-  /// [Account_Guarantor]: A financial tool for tracking value accrued for a
+  /// [AccountGuarantor]: A financial tool for tracking value accrued for a
   /// particular purpose.  In the healthcare field, used to track charges for a
   ///  patient, cost centers, etc.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -255,29 +259,31 @@ abstract class AccountGuarantor implements _$AccountGuarantor {
   /// [onHold]: A guarantor may be placed on credit hold or otherwise have their
   ///  role temporarily suspended.
   ///
-  /// [_onHold]: Extensions for onHold
+  /// [onHoldElement]: Extensions for onHold
   ///
   /// [period]: The timeframe during which the guarantor accepts responsibility
   ///  for the account.
   factory AccountGuarantor({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required Reference party,
-    Boolean onHold,
-    @JsonKey(name: '_onHold') Element onHoldElement,
-    Period period,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Reference party,
+    Boolean? onHold,
+    @JsonKey(name: '_onHold') Element? onHoldElement,
+    Period? period,
   }) = _AccountGuarantor;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AccountGuarantor.fromYaml(dynamic yaml) => yaml is String
       ? AccountGuarantor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? AccountGuarantor.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'AccountGuarantor cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AccountGuarantor.fromJson(Map<String, dynamic> json) =>
@@ -285,7 +291,7 @@ abstract class AccountGuarantor implements _$AccountGuarantor {
 }
 
 @freezed
-abstract class ChargeItem with Resource implements _$ChargeItem {
+class ChargeItem with Resource, _$ChargeItem {
   ChargeItem._();
 
   /// [ChargeItem]: The resource ChargeItem describes the provision of
@@ -309,11 +315,11 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -327,7 +333,7 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -354,14 +360,14 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
   /// [definitionUri]: References the (external) source of pricing information,
   ///  rules of application for the code this ChargeItem uses.
   ///
-  /// [_definitionUri]: Extensions for definitionUri
+  /// [definitionUriElement]: Extensions for definitionUri
   ///
   /// [definitionCanonical]: References the source of pricing information, rules
   ///  of application for the code this ChargeItem uses.
   ///
   /// [status]: The current state of the ChargeItem.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [partOf]: ChargeItems can be grouped to larger ChargeItems covering the
   ///  whole set.
@@ -377,7 +383,7 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
   /// [occurrenceDateTime]: Date/time(s) or duration when the charged service
   ///  was applied.
   ///
-  /// [_occurrenceDateTime]: Extensions for occurrenceDateTime
+  /// [occurrenceDateTimeElement]: Extensions for occurrenceDateTime
   ///
   /// [occurrencePeriod]: Date/time(s) or duration when the charged service was
   ///  applied.
@@ -403,7 +409,7 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
   /// [factorOverride]: Factor overriding the factor determined by the rules
   ///  associated with the code.
   ///
-  /// [_factorOverride]: Extensions for factorOverride
+  /// [factorOverrideElement]: Extensions for factorOverride
   ///
   /// [priceOverride]: Total price of the charge overriding the list price
   ///  associated with the code.
@@ -412,13 +418,13 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
   /// with the code is overridden, this attribute can capture a text to indicate
   ///  the  reason for this action.
   ///
-  /// [_overrideReason]: Extensions for overrideReason
+  /// [overrideReasonElement]: Extensions for overrideReason
   ///
   /// [enterer]: The device, practitioner, etc. who entered the charge item.
   ///
   /// [enteredDate]: Date the charge item was entered.
   ///
-  /// [_enteredDate]: Extensions for enteredDate
+  /// [enteredDateElement]: Extensions for enteredDate
   ///
   /// [reason]: Describes why the event occurred in coded or textual form.
   ///
@@ -440,63 +446,65 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
     @Default(R4ResourceType.ChargeItem)
     @JsonKey(unknownEnumValue: R4ResourceType.ChargeItem)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<FhirUri> definitionUri,
-    @JsonKey(name: '_definitionUri') List<Element> definitionUriElement,
-    List<Canonical> definitionCanonical,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<FhirUri>? definitionUri,
+    @JsonKey(name: '_definitionUri') List<Element?>? definitionUriElement,
+    List<Canonical>? definitionCanonical,
     @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
-        ChargeItemStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    List<Reference> partOf,
-    @required CodeableConcept code,
-    @required Reference subject,
-    Reference context,
-    FhirDateTime occurrenceDateTime,
-    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-    Period occurrencePeriod,
-    Timing occurrenceTiming,
-    List<ChargeItemPerformer> performer,
-    Reference performingOrganization,
-    Reference requestingOrganization,
-    Reference costCenter,
-    Quantity quantity,
-    List<CodeableConcept> bodysite,
-    Decimal factorOverride,
-    @JsonKey(name: '_factorOverride') Element factorOverrideElement,
-    Money priceOverride,
-    String overrideReason,
-    @JsonKey(name: '_overrideReason') Element overrideReasonElement,
-    Reference enterer,
-    FhirDateTime enteredDate,
-    @JsonKey(name: '_enteredDate') Element enteredDateElement,
-    List<CodeableConcept> reason,
-    List<Reference> service,
-    Reference productReference,
-    CodeableConcept productCodeableConcept,
-    List<Reference> account,
-    List<Annotation> note,
-    List<Reference> supportingInformation,
+        ChargeItemStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<Reference>? partOf,
+    required CodeableConcept code,
+    required Reference subject,
+    Reference? context,
+    FhirDateTime? occurrenceDateTime,
+    @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
+    Period? occurrencePeriod,
+    Timing? occurrenceTiming,
+    List<ChargeItemPerformer>? performer,
+    Reference? performingOrganization,
+    Reference? requestingOrganization,
+    Reference? costCenter,
+    Quantity? quantity,
+    List<CodeableConcept>? bodysite,
+    Decimal? factorOverride,
+    @JsonKey(name: '_factorOverride') Element? factorOverrideElement,
+    Money? priceOverride,
+    String? overrideReason,
+    @JsonKey(name: '_overrideReason') Element? overrideReasonElement,
+    Reference? enterer,
+    FhirDateTime? enteredDate,
+    @JsonKey(name: '_enteredDate') Element? enteredDateElement,
+    List<CodeableConcept>? reason,
+    List<Reference>? service,
+    Reference? productReference,
+    CodeableConcept? productCodeableConcept,
+    List<Reference>? account,
+    List<Annotation>? note,
+    List<Reference>? supportingInformation,
   }) = _ChargeItem;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ChargeItem.fromYaml(dynamic yaml) => yaml is String
       ? ChargeItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ChargeItem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ChargeItem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ChargeItem.fromJson(Map<String, dynamic> json) =>
@@ -504,10 +512,10 @@ abstract class ChargeItem with Resource implements _$ChargeItem {
 }
 
 @freezed
-abstract class ChargeItemPerformer implements _$ChargeItemPerformer {
+class ChargeItemPerformer with _$ChargeItemPerformer {
   ChargeItemPerformer._();
 
-  /// [ChargeItem_Performer]: The resource ChargeItem describes the provision of
+  /// [ChargeItemPerformer]: The resource ChargeItem describes the provision of
   /// healthcare provider products for a certain patient, therefore referring
   /// not only to the product, but containing in addition details of the
   /// provision, like date, time, amounts and participating organizations and
@@ -517,7 +525,7 @@ abstract class ChargeItemPerformer implements _$ChargeItemPerformer {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -544,22 +552,24 @@ abstract class ChargeItemPerformer implements _$ChargeItemPerformer {
   /// [actor]: The device, practitioner, etc. who performed or participated in
   ///  the service.
   factory ChargeItemPerformer({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept function,
-    @required Reference actor,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? function,
+    required Reference actor,
   }) = _ChargeItemPerformer;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ChargeItemPerformer.fromYaml(dynamic yaml) => yaml is String
       ? ChargeItemPerformer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ChargeItemPerformer.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ChargeItemPerformer cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ChargeItemPerformer.fromJson(Map<String, dynamic> json) =>
@@ -567,9 +577,7 @@ abstract class ChargeItemPerformer implements _$ChargeItemPerformer {
 }
 
 @freezed
-abstract class ChargeItemDefinition
-    with Resource
-    implements _$ChargeItemDefinition {
+class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   ChargeItemDefinition._();
 
   /// [ChargeItemDefinition]: The ChargeItemDefinition resource provides the
@@ -592,11 +600,11 @@ abstract class ChargeItemDefinition
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -610,7 +618,7 @@ abstract class ChargeItemDefinition
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -639,7 +647,7 @@ abstract class ChargeItemDefinition
   /// URL can be the target of a canonical reference. It SHALL remain the same
   ///  when the charge item definition is stored on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this charge
   /// item definition when it is represented in other formats, or referenced in
@@ -657,17 +665,17 @@ abstract class ChargeItemDefinition
   /// knowledge assets, refer to the Decision Support Service specification.
   ///  Note that a version is required for non-experimental active assets.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [title]: A short, descriptive, user-friendly title for the charge item
   ///  definition.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [derivedFromUri]: The URL pointing to an externally-defined charge item
   ///  definition that is adhered to in whole or in part by this definition.
   ///
-  /// [_derivedFromUri]: Extensions for derivedFromUri
+  /// [derivedFromUriElement]: Extensions for derivedFromUri
   ///
   /// [partOf]: A larger definition of which this particular definition is a
   ///  component or step.
@@ -677,26 +685,26 @@ abstract class ChargeItemDefinition
   ///
   /// [status]: The current state of the ChargeItemDefinition.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this charge item
   /// definition is authored for testing purposes (or
   /// education/evaluation/marketing) and is not intended to be used for genuine
   ///  usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [date]: The date  (and optionally time) when the charge item definition
   /// was published. The date must change when the business version changes and
   /// it must change if the status code changes. In addition, it should change
   ///  when the substantive content of the charge item definition changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  charge item definition.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -704,7 +712,7 @@ abstract class ChargeItemDefinition
   /// [description]: A free text natural language description of the charge item
   ///  definition from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -719,19 +727,19 @@ abstract class ChargeItemDefinition
   /// and/or its contents. Copyright statements are generally legal restrictions
   ///  on the use and publishing of the charge item definition.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [approvalDate]: The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   ///
-  /// [_approvalDate]: Extensions for approvalDate
+  /// [approvalDateElement]: Extensions for approvalDate
   ///
   /// [lastReviewDate]: The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   ///
-  /// [_lastReviewDate]: Extensions for lastReviewDate
+  /// [lastReviewDateElement]: Extensions for lastReviewDate
   ///
   /// [effectivePeriod]: The period during which the charge item definition
   ///  content was or is planned to be in active use.
@@ -752,63 +760,65 @@ abstract class ChargeItemDefinition
     @Default(R4ResourceType.ChargeItemDefinition)
     @JsonKey(unknownEnumValue: R4ResourceType.ChargeItemDefinition)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
-    List<Identifier> identifier,
-    String version,
-    @JsonKey(name: '_version') Element versionElement,
-    String title,
-    @JsonKey(name: '_title') Element titleElement,
-    List<FhirUri> derivedFromUri,
-    @JsonKey(name: '_derivedFromUri') List<Element> derivedFromUriElement,
-    List<Canonical> partOf,
-    List<Canonical> replaces,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    List<Identifier>? identifier,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    List<FhirUri>? derivedFromUri,
+    @JsonKey(name: '_derivedFromUri') List<Element?>? derivedFromUriElement,
+    List<Canonical>? partOf,
+    List<Canonical>? replaces,
     @JsonKey(unknownEnumValue: ChargeItemDefinitionStatus.unknown)
-        ChargeItemDefinitionStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Boolean experimental,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-    String publisher,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    List<ContactDetail> contact,
-    Markdown description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<UsageContext> useContext,
-    List<CodeableConcept> jurisdiction,
-    Markdown copyright,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    Date approvalDate,
-    @JsonKey(name: '_approvalDate') Element approvalDateElement,
-    Date lastReviewDate,
-    @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
-    Period effectivePeriod,
-    CodeableConcept code,
-    List<Reference> instance,
-    List<ChargeItemDefinitionApplicability> applicability,
-    List<ChargeItemDefinitionPropertyGroup> propertyGroup,
+        ChargeItemDefinitionStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Boolean? experimental,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    List<ContactDetail>? contact,
+    Markdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
+    Markdown? copyright,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
+    Date? approvalDate,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+    Date? lastReviewDate,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+    Period? effectivePeriod,
+    CodeableConcept? code,
+    List<Reference>? instance,
+    List<ChargeItemDefinitionApplicability>? applicability,
+    List<ChargeItemDefinitionPropertyGroup>? propertyGroup,
   }) = _ChargeItemDefinition;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ChargeItemDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ChargeItemDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ChargeItemDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ChargeItemDefinition cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ChargeItemDefinition.fromJson(Map<String, dynamic> json) =>
@@ -816,11 +826,11 @@ abstract class ChargeItemDefinition
 }
 
 @freezed
-abstract class ChargeItemDefinitionApplicability
-    implements _$ChargeItemDefinitionApplicability {
+class ChargeItemDefinitionApplicability
+    with _$ChargeItemDefinitionApplicability {
   ChargeItemDefinitionApplicability._();
 
-  /// [ChargeItemDefinition_Applicability]: The ChargeItemDefinition resource
+  /// [ChargeItemDefinitionApplicability]: The ChargeItemDefinition resource
   /// provides the properties that apply to the (billing) codes necessary to
   /// calculate costs and prices. The properties may differ largely depending on
   /// type and realm, therefore this resource gives only a rough structure and
@@ -829,7 +839,7 @@ abstract class ChargeItemDefinitionApplicability
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -853,44 +863,46 @@ abstract class ChargeItemDefinitionApplicability
   /// [description]: A brief, natural language description of the condition that
   ///  effectively communicates the intended semantics.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [language]: The media type of the language for the expression, e.g.
   /// "text/cql" for Clinical Query Language expressions or "text/fhirpath" for
   ///  FHIRPath expressions.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [expression]: An expression that returns true or false, indicating whether
   /// the condition is satisfied. When using FHIRPath expressions, the %context
   /// environment variable must be replaced at runtime with the ChargeItem
   ///  resource to which this definition is applied.
   ///
-  /// [_expression]: Extensions for expression
+  /// [expressionElement]: Extensions for expression
   factory ChargeItemDefinitionApplicability({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    String language,
-    @JsonKey(name: '_language') Element languageElement,
-    String expression,
-    @JsonKey(name: '_expression') Element expressionElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    String? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    String? expression,
+    @JsonKey(name: '_expression') Element? expressionElement,
   }) = _ChargeItemDefinitionApplicability;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory ChargeItemDefinitionApplicability.fromYaml(dynamic yaml) =>
-      yaml is String
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory ChargeItemDefinitionApplicability.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ChargeItemDefinitionApplicability.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ChargeItemDefinitionApplicability.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ChargeItemDefinitionApplicability.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ChargeItemDefinitionApplicability cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory ChargeItemDefinitionApplicability.fromJson(
           Map<String, dynamic> json) =>
@@ -898,11 +910,11 @@ abstract class ChargeItemDefinitionApplicability
 }
 
 @freezed
-abstract class ChargeItemDefinitionPropertyGroup
-    implements _$ChargeItemDefinitionPropertyGroup {
+class ChargeItemDefinitionPropertyGroup
+    with _$ChargeItemDefinitionPropertyGroup {
   ChargeItemDefinitionPropertyGroup._();
 
-  /// [ChargeItemDefinition_PropertyGroup]: The ChargeItemDefinition resource
+  /// [ChargeItemDefinitionPropertyGroup]: The ChargeItemDefinition resource
   /// provides the properties that apply to the (billing) codes necessary to
   /// calculate costs and prices. The properties may differ largely depending on
   /// type and realm, therefore this resource gives only a rough structure and
@@ -911,7 +923,7 @@ abstract class ChargeItemDefinitionPropertyGroup
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -942,25 +954,27 @@ abstract class ChargeItemDefinitionPropertyGroup
   /// The priceComponent element can be used to offer transparency to the
   ///  recipient of the Invoice of how the prices have been calculated.
   factory ChargeItemDefinitionPropertyGroup({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<ChargeItemDefinitionApplicability> applicability,
-    List<ChargeItemDefinitionPriceComponent> priceComponent,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<ChargeItemDefinitionApplicability>? applicability,
+    List<ChargeItemDefinitionPriceComponent>? priceComponent,
   }) = _ChargeItemDefinitionPropertyGroup;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory ChargeItemDefinitionPropertyGroup.fromYaml(dynamic yaml) =>
-      yaml is String
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory ChargeItemDefinitionPropertyGroup.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ChargeItemDefinitionPropertyGroup.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ChargeItemDefinitionPropertyGroup.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ChargeItemDefinitionPropertyGroup.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ChargeItemDefinitionPropertyGroup cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory ChargeItemDefinitionPropertyGroup.fromJson(
           Map<String, dynamic> json) =>
@@ -968,11 +982,11 @@ abstract class ChargeItemDefinitionPropertyGroup
 }
 
 @freezed
-abstract class ChargeItemDefinitionPriceComponent
-    implements _$ChargeItemDefinitionPriceComponent {
+class ChargeItemDefinitionPriceComponent
+    with _$ChargeItemDefinitionPriceComponent {
   ChargeItemDefinitionPriceComponent._();
 
-  /// [ChargeItemDefinition_PriceComponent]: The ChargeItemDefinition resource
+  /// [ChargeItemDefinitionPriceComponent]: The ChargeItemDefinition resource
   /// provides the properties that apply to the (billing) codes necessary to
   /// calculate costs and prices. The properties may differ largely depending on
   /// type and realm, therefore this resource gives only a rough structure and
@@ -981,7 +995,7 @@ abstract class ChargeItemDefinitionPriceComponent
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1004,7 +1018,7 @@ abstract class ChargeItemDefinitionPriceComponent
   ///
   /// [type]: This code identifies the type of the component.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [code]: A code that identifies the component. Codes may be used to
   ///  differentiate between kinds of taxes, surcharges, discounts etc.
@@ -1012,33 +1026,35 @@ abstract class ChargeItemDefinitionPriceComponent
   /// [factor]: The factor that has been applied on the base price for
   ///  calculating this component.
   ///
-  /// [_factor]: Extensions for factor
+  /// [factorElement]: Extensions for factor
   ///
   /// [amount]: The amount calculated for this component.
   factory ChargeItemDefinitionPriceComponent({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Code type,
-    @JsonKey(name: '_type') Element typeElement,
-    CodeableConcept code,
-    Decimal factor,
-    @JsonKey(name: '_factor') Element factorElement,
-    Money amount,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Code? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    CodeableConcept? code,
+    Decimal? factor,
+    @JsonKey(name: '_factor') Element? factorElement,
+    Money? amount,
   }) = _ChargeItemDefinitionPriceComponent;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory ChargeItemDefinitionPriceComponent.fromYaml(dynamic yaml) =>
-      yaml is String
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory ChargeItemDefinitionPriceComponent.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ChargeItemDefinitionPriceComponent.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ChargeItemDefinitionPriceComponent.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ChargeItemDefinitionPriceComponent.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ChargeItemDefinitionPriceComponent cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory ChargeItemDefinitionPriceComponent.fromJson(
           Map<String, dynamic> json) =>
@@ -1046,7 +1062,7 @@ abstract class ChargeItemDefinitionPriceComponent
 }
 
 @freezed
-abstract class Contract with Resource implements _$Contract {
+class Contract with Resource, _$Contract {
   Contract._();
 
   /// [Contract]: Legally enforceable, formally recorded unilateral or bilateral
@@ -1066,11 +1082,11 @@ abstract class Contract with Resource implements _$Contract {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1084,7 +1100,7 @@ abstract class Contract with Resource implements _$Contract {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1111,16 +1127,16 @@ abstract class Contract with Resource implements _$Contract {
   /// [url]: Canonical identifier for this contract, represented as a URI
   ///  (globally unique).
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [version]: An edition identifier used for business purposes to label
   ///  business significant variants.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [status]: The status of the resource instance.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [legalState]: Legal states of the formation of a legal instrument, which
   /// is a formally executed written document that can be formally attributed to
@@ -1134,14 +1150,14 @@ abstract class Contract with Resource implements _$Contract {
   /// [instantiatesUri]: The URL pointing to an externally maintained definition
   ///  that is adhered to in whole or in part by this Contract.
   ///
-  /// [_instantiatesUri]: Extensions for instantiatesUri
+  /// [instantiatesUriElement]: Extensions for instantiatesUri
   ///
   /// [contentDerivative]: The minimal content derived from the basal
   ///  information source at a specific stage in its lifecycle.
   ///
   /// [issued]: When this  Contract was issued.
   ///
-  /// [_issued]: Extensions for issued
+  /// [issuedElement]: Extensions for issued
   ///
   /// [applies]: Relevant time or time-period when this Contract is applicable.
   ///
@@ -1170,25 +1186,25 @@ abstract class Contract with Resource implements _$Contract {
   /// for the module by machine processing applications such as code
   ///  generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for this Contract
   /// definition, derivative, or instance in any legal state.t giving additional
   ///  information about its content.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [subtitle]: An explanatory or alternate user-friendly title for this
   /// Contract definition, derivative, or instance in any legal state.t giving
   ///  additional information about its content.
   ///
-  /// [_subtitle]: Extensions for subtitle
+  /// [subtitleElement]: Extensions for subtitle
   ///
   /// [alias]: Alternative representation of the title for this Contract
   /// definition, derivative, or instance in any legal state., e.g., a domain
   ///  specific contract number related to legislation.
   ///
-  /// [_alias]: Extensions for alias
+  /// [aliasElement]: Extensions for alias
   ///
   /// [author]: The individual or organization that authored the Contract
   ///  definition, derivative, or instance in any legal state.
@@ -1260,71 +1276,73 @@ abstract class Contract with Resource implements _$Contract {
     @Default(R4ResourceType.Contract)
     @JsonKey(unknownEnumValue: R4ResourceType.Contract)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
-    String version,
-    @JsonKey(name: '_version') Element versionElement,
-    Code status,
-    @JsonKey(name: '_status') Element statusElement,
-    CodeableConcept legalState,
-    Reference instantiatesCanonical,
-    FhirUri instantiatesUri,
-    @JsonKey(name: '_instantiatesUri') Element instantiatesUriElement,
-    CodeableConcept contentDerivative,
-    FhirDateTime issued,
-    @JsonKey(name: '_issued') Element issuedElement,
-    Period applies,
-    CodeableConcept expirationType,
-    List<Reference> subject,
-    List<Reference> authority,
-    List<Reference> domain,
-    List<Reference> site,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    String title,
-    @JsonKey(name: '_title') Element titleElement,
-    String subtitle,
-    @JsonKey(name: '_subtitle') Element subtitleElement,
-    List<String> alias,
-    @JsonKey(name: '_alias') List<Element> aliasElement,
-    Reference author,
-    CodeableConcept scope,
-    CodeableConcept topicCodeableConcept,
-    Reference topicReference,
-    CodeableConcept type,
-    List<CodeableConcept> subType,
-    ContractContentDefinition contentDefinition,
-    List<ContractTerm> term,
-    List<Reference> supportingInfo,
-    List<Reference> relevantHistory,
-    List<ContractSigner> signer,
-    List<ContractFriendly> friendly,
-    List<ContractLegal> legal,
-    List<ContractRule> rule,
-    Attachment legallyBindingAttachment,
-    Reference legallyBindingReference,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? legalState,
+    Reference? instantiatesCanonical,
+    FhirUri? instantiatesUri,
+    @JsonKey(name: '_instantiatesUri') Element? instantiatesUriElement,
+    CodeableConcept? contentDerivative,
+    FhirDateTime? issued,
+    @JsonKey(name: '_issued') Element? issuedElement,
+    Period? applies,
+    CodeableConcept? expirationType,
+    List<Reference>? subject,
+    List<Reference>? authority,
+    List<Reference>? domain,
+    List<Reference>? site,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    String? subtitle,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
+    List<String>? alias,
+    @JsonKey(name: '_alias') List<Element?>? aliasElement,
+    Reference? author,
+    CodeableConcept? scope,
+    CodeableConcept? topicCodeableConcept,
+    Reference? topicReference,
+    CodeableConcept? type,
+    List<CodeableConcept>? subType,
+    ContractContentDefinition? contentDefinition,
+    List<ContractTerm>? term,
+    List<Reference>? supportingInfo,
+    List<Reference>? relevantHistory,
+    List<ContractSigner>? signer,
+    List<ContractFriendly>? friendly,
+    List<ContractLegal>? legal,
+    List<ContractRule>? rule,
+    Attachment? legallyBindingAttachment,
+    Reference? legallyBindingReference,
   }) = _Contract;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Contract.fromYaml(dynamic yaml) => yaml is String
       ? Contract.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Contract.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'Contract cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Contract.fromJson(Map<String, dynamic> json) =>
@@ -1332,17 +1350,16 @@ abstract class Contract with Resource implements _$Contract {
 }
 
 @freezed
-abstract class ContractContentDefinition
-    implements _$ContractContentDefinition {
+class ContractContentDefinition with _$ContractContentDefinition {
   ContractContentDefinition._();
 
-  /// [Contract_ContentDefinition]: Legally enforceable, formally recorded
+  /// [ContractContentDefinition]: Legally enforceable, formally recorded
   ///  unilateral or bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1377,44 +1394,46 @@ abstract class ContractContentDefinition
   /// must change if the status code changes. In addition, it should change when
   ///  the substantive content of the contract changes.
   ///
-  /// [_publicationDate]: Extensions for publicationDate
+  /// [publicationDateElement]: Extensions for publicationDate
   ///
   /// [publicationStatus]: amended | appended | cancelled | disputed |
   /// entered-in-error | executable | executed | negotiable | offered | policy |
   ///  rejected | renewed | revoked | resolved | terminated.
   ///
-  /// [_publicationStatus]: Extensions for publicationStatus
+  /// [publicationStatusElement]: Extensions for publicationStatus
   ///
   /// [copyright]: A copyright statement relating to Contract precursor content.
   /// Copyright statements are generally legal restrictions on the use and
   ///  publishing of the Contract precursor content.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   factory ContractContentDefinition({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept type,
-    CodeableConcept subType,
-    Reference publisher,
-    FhirDateTime publicationDate,
-    @JsonKey(name: '_publicationDate') Element publicationDateElement,
-    Code publicationStatus,
-    @JsonKey(name: '_publicationStatus') Element publicationStatusElement,
-    Markdown copyright,
-    @JsonKey(name: '_copyright') Element copyrightElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    CodeableConcept? subType,
+    Reference? publisher,
+    FhirDateTime? publicationDate,
+    @JsonKey(name: '_publicationDate') Element? publicationDateElement,
+    Code? publicationStatus,
+    @JsonKey(name: '_publicationStatus') Element? publicationStatusElement,
+    Markdown? copyright,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
   }) = _ContractContentDefinition;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractContentDefinition.fromYaml(dynamic yaml) => yaml is String
       ? ContractContentDefinition.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractContentDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractContentDefinition cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractContentDefinition.fromJson(Map<String, dynamic> json) =>
@@ -1422,16 +1441,16 @@ abstract class ContractContentDefinition
 }
 
 @freezed
-abstract class ContractTerm implements _$ContractTerm {
+class ContractTerm with _$ContractTerm {
   ContractTerm._();
 
-  /// [Contract_Term]: Legally enforceable, formally recorded unilateral or
+  /// [ContractTerm]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1456,7 +1475,7 @@ abstract class ContractTerm implements _$ContractTerm {
   ///
   /// [issued]: When this Contract Provision was issued.
   ///
-  /// [_issued]: Extensions for issued
+  /// [issuedElement]: Extensions for issued
   ///
   /// [applies]: Relevant time or time-period when this Contract Provision is
   ///  applicable.
@@ -1475,7 +1494,7 @@ abstract class ContractTerm implements _$ContractTerm {
   ///
   /// [text]: Statement of a provision in a policy or a contract.
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   ///
   /// [securityLabel]: Security labels that protect the handling of information
   ///  about the term and its elements, which may be specifically identified..
@@ -1490,35 +1509,37 @@ abstract class ContractTerm implements _$ContractTerm {
   ///
   /// [group]: Nested group of Contract Provisions.
   factory ContractTerm({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier identifier,
-    FhirDateTime issued,
-    @JsonKey(name: '_issued') Element issuedElement,
-    Period applies,
-    CodeableConcept topicCodeableConcept,
-    Reference topicReference,
-    CodeableConcept type,
-    CodeableConcept subType,
-    String text,
-    @JsonKey(name: '_text') Element textElement,
-    List<ContractSecurityLabel> securityLabel,
-    @required ContractOffer offer,
-    List<ContractAsset> asset,
-    List<ContractAction> action,
-    List<ContractTerm> group,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? identifier,
+    FhirDateTime? issued,
+    @JsonKey(name: '_issued') Element? issuedElement,
+    Period? applies,
+    CodeableConcept? topicCodeableConcept,
+    Reference? topicReference,
+    CodeableConcept? type,
+    CodeableConcept? subType,
+    String? text,
+    @JsonKey(name: '_text') Element? textElement,
+    List<ContractSecurityLabel>? securityLabel,
+    required ContractOffer offer,
+    List<ContractAsset>? asset,
+    List<ContractAction>? action,
+    List<ContractTerm>? group,
   }) = _ContractTerm;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractTerm.fromYaml(dynamic yaml) => yaml is String
       ? ContractTerm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractTerm.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractTerm cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractTerm.fromJson(Map<String, dynamic> json) =>
@@ -1526,16 +1547,16 @@ abstract class ContractTerm implements _$ContractTerm {
 }
 
 @freezed
-abstract class ContractSecurityLabel implements _$ContractSecurityLabel {
+class ContractSecurityLabel with _$ContractSecurityLabel {
   ContractSecurityLabel._();
 
-  /// [Contract_SecurityLabel]: Legally enforceable, formally recorded
+  /// [ContractSecurityLabel]: Legally enforceable, formally recorded
   ///  unilateral or bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1559,7 +1580,7 @@ abstract class ContractSecurityLabel implements _$ContractSecurityLabel {
   /// [number]: Number used to link this term or term element to the applicable
   ///  Security Label.
   ///
-  /// [_number]: Extensions for number
+  /// [numberElement]: Extensions for number
   ///
   /// [classification]: Security label privacy tag that species the level of
   ///  confidentiality protection required for this term and/or term elements.
@@ -1570,25 +1591,27 @@ abstract class ContractSecurityLabel implements _$ContractSecurityLabel {
   /// [control]: Security label privacy tag that species the manner in which
   ///  term and/or term elements are to be protected.
   factory ContractSecurityLabel({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<UnsignedInt> number,
-    @JsonKey(name: '_number') List<Element> numberElement,
-    @required Coding classification,
-    List<Coding> category,
-    List<Coding> control,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<UnsignedInt>? number,
+    @JsonKey(name: '_number') List<Element?>? numberElement,
+    required Coding classification,
+    List<Coding>? category,
+    List<Coding>? control,
   }) = _ContractSecurityLabel;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractSecurityLabel.fromYaml(dynamic yaml) => yaml is String
       ? ContractSecurityLabel.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractSecurityLabel.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractSecurityLabel cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractSecurityLabel.fromJson(Map<String, dynamic> json) =>
@@ -1596,16 +1619,16 @@ abstract class ContractSecurityLabel implements _$ContractSecurityLabel {
 }
 
 @freezed
-abstract class ContractOffer implements _$ContractOffer {
+class ContractOffer with _$ContractOffer {
   ContractOffer._();
 
-  /// [Contract_Offer]: Legally enforceable, formally recorded unilateral or
+  /// [ContractOffer]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1646,45 +1669,47 @@ abstract class ContractOffer implements _$ContractOffer {
   ///
   /// [text]: Human readable form of this Contract Offer.
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   ///
   /// [linkId]: The id of the clause or question text of the offer in the
   ///  referenced questionnaire/response.
   ///
-  /// [_linkId]: Extensions for linkId
+  /// [linkIdElement]: Extensions for linkId
   ///
   /// [securityLabelNumber]: Security labels that protects the offer.
   ///
-  /// [_securityLabelNumber]: Extensions for securityLabelNumber
+  /// [securityLabelNumberElement]: Extensions for securityLabelNumber
   factory ContractOffer({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    List<ContractParty> party,
-    Reference topic,
-    CodeableConcept type,
-    CodeableConcept decision,
-    List<CodeableConcept> decisionMode,
-    List<ContractAnswer> answer,
-    String text,
-    @JsonKey(name: '_text') Element textElement,
-    List<String> linkId,
-    @JsonKey(name: '_linkId') List<Element> linkIdElement,
-    List<UnsignedInt> securityLabelNumber,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<ContractParty>? party,
+    Reference? topic,
+    CodeableConcept? type,
+    CodeableConcept? decision,
+    List<CodeableConcept>? decisionMode,
+    List<ContractAnswer>? answer,
+    String? text,
+    @JsonKey(name: '_text') Element? textElement,
+    List<String>? linkId,
+    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
+    List<UnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
-        List<Element> securityLabelNumberElement,
+        List<Element>? securityLabelNumberElement,
   }) = _ContractOffer;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractOffer.fromYaml(dynamic yaml) => yaml is String
       ? ContractOffer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractOffer.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractOffer cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractOffer.fromJson(Map<String, dynamic> json) =>
@@ -1692,16 +1717,16 @@ abstract class ContractOffer implements _$ContractOffer {
 }
 
 @freezed
-abstract class ContractParty implements _$ContractParty {
+class ContractParty with _$ContractParty {
   ContractParty._();
 
-  /// [Contract_Party]: Legally enforceable, formally recorded unilateral or
+  /// [ContractParty]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1726,22 +1751,24 @@ abstract class ContractParty implements _$ContractParty {
   ///
   /// [role]: How the party participates in the offer.
   factory ContractParty({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required List<Reference> reference,
-    @required CodeableConcept role,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required List<Reference> reference,
+    required CodeableConcept role,
   }) = _ContractParty;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractParty.fromYaml(dynamic yaml) => yaml is String
       ? ContractParty.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractParty.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractParty cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractParty.fromJson(Map<String, dynamic> json) =>
@@ -1749,16 +1776,16 @@ abstract class ContractParty implements _$ContractParty {
 }
 
 @freezed
-abstract class ContractAnswer implements _$ContractAnswer {
+class ContractAnswer with _$ContractAnswer {
   ContractAnswer._();
 
-  /// [Contract_Answer]: Legally enforceable, formally recorded unilateral or
+  /// [ContractAnswer]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1784,56 +1811,56 @@ abstract class ContractAnswer implements _$ContractAnswer {
   /// participation, the date of occupancy of a rental, warrently duration, or
   ///  whether biospecimen may be used for further research.
   ///
-  /// [_valueBoolean]: Extensions for valueBoolean
+  /// [valueBooleanElement]: Extensions for valueBoolean
   ///
   /// [valueDecimal]: Response to an offer clause or question text,  which
   /// enables selection of values to be agreed to, e.g., the period of
   /// participation, the date of occupancy of a rental, warrently duration, or
   ///  whether biospecimen may be used for further research.
   ///
-  /// [_valueDecimal]: Extensions for valueDecimal
+  /// [valueDecimalElement]: Extensions for valueDecimal
   ///
   /// [valueInteger]: Response to an offer clause or question text,  which
   /// enables selection of values to be agreed to, e.g., the period of
   /// participation, the date of occupancy of a rental, warrently duration, or
   ///  whether biospecimen may be used for further research.
   ///
-  /// [_valueInteger]: Extensions for valueInteger
+  /// [valueIntegerElement]: Extensions for valueInteger
   ///
   /// [valueDate]: Response to an offer clause or question text,  which enables
   /// selection of values to be agreed to, e.g., the period of participation,
   /// the date of occupancy of a rental, warrently duration, or whether
   ///  biospecimen may be used for further research.
   ///
-  /// [_valueDate]: Extensions for valueDate
+  /// [valueDateElement]: Extensions for valueDate
   ///
   /// [valueDateTime]: Response to an offer clause or question text,  which
   /// enables selection of values to be agreed to, e.g., the period of
   /// participation, the date of occupancy of a rental, warrently duration, or
   ///  whether biospecimen may be used for further research.
   ///
-  /// [_valueDateTime]: Extensions for valueDateTime
+  /// [valueDateTimeElement]: Extensions for valueDateTime
   ///
   /// [valueTime]: Response to an offer clause or question text,  which enables
   /// selection of values to be agreed to, e.g., the period of participation,
   /// the date of occupancy of a rental, warrently duration, or whether
   ///  biospecimen may be used for further research.
   ///
-  /// [_valueTime]: Extensions for valueTime
+  /// [valueTimeElement]: Extensions for valueTime
   ///
   /// [valueString]: Response to an offer clause or question text,  which
   /// enables selection of values to be agreed to, e.g., the period of
   /// participation, the date of occupancy of a rental, warrently duration, or
   ///  whether biospecimen may be used for further research.
   ///
-  /// [_valueString]: Extensions for valueString
+  /// [valueStringElement]: Extensions for valueString
   ///
   /// [valueUri]: Response to an offer clause or question text,  which enables
   /// selection of values to be agreed to, e.g., the period of participation,
   /// the date of occupancy of a rental, warrently duration, or whether
   ///  biospecimen may be used for further research.
   ///
-  /// [_valueUri]: Extensions for valueUri
+  /// [valueUriElement]: Extensions for valueUri
   ///
   /// [valueAttachment]: Response to an offer clause or question text,  which
   /// enables selection of values to be agreed to, e.g., the period of
@@ -1855,40 +1882,42 @@ abstract class ContractAnswer implements _$ContractAnswer {
   /// participation, the date of occupancy of a rental, warrently duration, or
   ///  whether biospecimen may be used for further research.
   factory ContractAnswer({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Boolean valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-    Decimal valueDecimal,
-    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-    Integer valueInteger,
-    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-    Date valueDate,
-    @JsonKey(name: '_valueDate') Element valueDateElement,
-    FhirDateTime valueDateTime,
-    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-    Time valueTime,
-    @JsonKey(name: '_valueTime') Element valueTimeElement,
-    String valueString,
-    @JsonKey(name: '_valueString') Element valueStringElement,
-    FhirUri valueUri,
-    @JsonKey(name: '_valueUri') Element valueUriElement,
-    Attachment valueAttachment,
-    Coding valueCoding,
-    Quantity valueQuantity,
-    Reference valueReference,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Boolean? valueBoolean,
+    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+    Decimal? valueDecimal,
+    @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+    Integer? valueInteger,
+    @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+    Date? valueDate,
+    @JsonKey(name: '_valueDate') Element? valueDateElement,
+    FhirDateTime? valueDateTime,
+    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+    Time? valueTime,
+    @JsonKey(name: '_valueTime') Element? valueTimeElement,
+    String? valueString,
+    @JsonKey(name: '_valueString') Element? valueStringElement,
+    FhirUri? valueUri,
+    @JsonKey(name: '_valueUri') Element? valueUriElement,
+    Attachment? valueAttachment,
+    Coding? valueCoding,
+    Quantity? valueQuantity,
+    Reference? valueReference,
   }) = _ContractAnswer;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractAnswer.fromYaml(dynamic yaml) => yaml is String
       ? ContractAnswer.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractAnswer.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractAnswer cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractAnswer.fromJson(Map<String, dynamic> json) =>
@@ -1896,16 +1925,16 @@ abstract class ContractAnswer implements _$ContractAnswer {
 }
 
 @freezed
-abstract class ContractAsset implements _$ContractAsset {
+class ContractAsset with _$ContractAsset {
   ContractAsset._();
 
-  /// [Contract_Asset]: Legally enforceable, formally recorded unilateral or
+  /// [ContractAsset]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1943,7 +1972,7 @@ abstract class ContractAsset implements _$ContractAsset {
   /// [condition]: Description of the quality and completeness of the asset that
   ///  imay be a factor in its valuation.
   ///
-  /// [_condition]: Extensions for condition
+  /// [conditionElement]: Extensions for condition
   ///
   /// [periodType]: Type of Asset availability for use or ownership.
   ///
@@ -1955,55 +1984,57 @@ abstract class ContractAsset implements _$ContractAsset {
   /// linked form, such as a QuestionnaireResponse used in the formation of the
   ///  contract.
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   ///
   /// [linkId]: Id [identifier??] of the clause or question text about the asset
   ///  in the referenced form or QuestionnaireResponse.
   ///
-  /// [_linkId]: Extensions for linkId
+  /// [linkIdElement]: Extensions for linkId
   ///
   /// [answer]: Response to assets.
   ///
   /// [securityLabelNumber]: Security labels that protects the asset.
   ///
-  /// [_securityLabelNumber]: Extensions for securityLabelNumber
+  /// [securityLabelNumberElement]: Extensions for securityLabelNumber
   ///
   /// [valuedItem]: Contract Valued Item List.
   factory ContractAsset({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept scope,
-    List<CodeableConcept> type,
-    List<Reference> typeReference,
-    List<CodeableConcept> subtype,
-    Coding relationship,
-    List<ContractContext> context,
-    String condition,
-    @JsonKey(name: '_condition') Element conditionElement,
-    List<CodeableConcept> periodType,
-    List<Period> period,
-    List<Period> usePeriod,
-    String text,
-    @JsonKey(name: '_text') Element textElement,
-    List<String> linkId,
-    @JsonKey(name: '_linkId') List<Element> linkIdElement,
-    List<ContractAnswer> answer,
-    List<UnsignedInt> securityLabelNumber,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? scope,
+    List<CodeableConcept>? type,
+    List<Reference>? typeReference,
+    List<CodeableConcept>? subtype,
+    Coding? relationship,
+    List<ContractContext>? context,
+    String? condition,
+    @JsonKey(name: '_condition') Element? conditionElement,
+    List<CodeableConcept>? periodType,
+    List<Period>? period,
+    List<Period>? usePeriod,
+    String? text,
+    @JsonKey(name: '_text') Element? textElement,
+    List<String>? linkId,
+    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
+    List<ContractAnswer>? answer,
+    List<UnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
-        List<Element> securityLabelNumberElement,
-    List<ContractValuedItem> valuedItem,
+        List<Element>? securityLabelNumberElement,
+    List<ContractValuedItem>? valuedItem,
   }) = _ContractAsset;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractAsset.fromYaml(dynamic yaml) => yaml is String
       ? ContractAsset.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractAsset.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractAsset cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractAsset.fromJson(Map<String, dynamic> json) =>
@@ -2011,16 +2042,16 @@ abstract class ContractAsset implements _$ContractAsset {
 }
 
 @freezed
-abstract class ContractContext implements _$ContractContext {
+class ContractContext with _$ContractContext {
   ContractContext._();
 
-  /// [Contract_Context]: Legally enforceable, formally recorded unilateral or
+  /// [ContractContext]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2050,26 +2081,28 @@ abstract class ContractContext implements _$ContractContext {
   ///
   /// [text]: Context description.
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   factory ContractContext({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Reference reference,
-    List<CodeableConcept> code,
-    String text,
-    @JsonKey(name: '_text') Element textElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Reference? reference,
+    List<CodeableConcept>? code,
+    String? text,
+    @JsonKey(name: '_text') Element? textElement,
   }) = _ContractContext;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractContext.fromYaml(dynamic yaml) => yaml is String
       ? ContractContext.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractContext.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractContext cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractContext.fromJson(Map<String, dynamic> json) =>
@@ -2077,16 +2110,16 @@ abstract class ContractContext implements _$ContractContext {
 }
 
 @freezed
-abstract class ContractValuedItem implements _$ContractValuedItem {
+class ContractValuedItem with _$ContractValuedItem {
   ContractValuedItem._();
 
-  /// [Contract_ValuedItem]: Legally enforceable, formally recorded unilateral
+  /// [ContractValuedItem]: Legally enforceable, formally recorded unilateral
   ///  or bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2118,7 +2151,7 @@ abstract class ContractValuedItem implements _$ContractValuedItem {
   /// [effectiveTime]: Indicates the time during which this Contract ValuedItem
   ///  information is effective.
   ///
-  /// [_effectiveTime]: Extensions for effectiveTime
+  /// [effectiveTimeElement]: Extensions for effectiveTime
   ///
   /// [quantity]: Specifies the units by which the Contract Valued Item is
   /// measured or counted, and quantifies the countable or measurable Contract
@@ -2131,7 +2164,7 @@ abstract class ContractValuedItem implements _$ContractValuedItem {
   /// Factor allows for a discount or surcharge multiplier to be applied to a
   ///  monetary amount.
   ///
-  /// [_factor]: Extensions for factor
+  /// [factorElement]: Extensions for factor
   ///
   /// [points]: An amount that expresses the weighting (based on difficulty,
   /// cost and/or resource intensiveness) associated with the Contract Valued
@@ -2139,7 +2172,7 @@ abstract class ContractValuedItem implements _$ContractValuedItem {
   /// values for a Contract Valued Item, such that a monetary amount can be
   ///  assigned to each point.
   ///
-  /// [_points]: Extensions for points
+  /// [pointsElement]: Extensions for points
   ///
   /// [net]: Expresses the product of the Contract Valued Item unitQuantity and
   /// the unitPriceAmt. For example, the formula: unit Quantity * unit Price
@@ -2148,11 +2181,11 @@ abstract class ContractValuedItem implements _$ContractValuedItem {
   ///
   /// [payment]: Terms of valuation.
   ///
-  /// [_payment]: Extensions for payment
+  /// [paymentElement]: Extensions for payment
   ///
   /// [paymentDate]: When payment is due.
   ///
-  /// [_paymentDate]: Extensions for paymentDate
+  /// [paymentDateElement]: Extensions for paymentDate
   ///
   /// [responsible]: Who will make payment.
   ///
@@ -2161,50 +2194,52 @@ abstract class ContractValuedItem implements _$ContractValuedItem {
   /// [linkId]: Id  of the clause or question text related to the context of
   ///  this valuedItem in the referenced form or QuestionnaireResponse.
   ///
-  /// [_linkId]: Extensions for linkId
+  /// [linkIdElement]: Extensions for linkId
   ///
   /// [securityLabelNumber]: A set of security labels that define which terms
   ///  are controlled by this condition.
   ///
-  /// [_securityLabelNumber]: Extensions for securityLabelNumber
+  /// [securityLabelNumberElement]: Extensions for securityLabelNumber
   factory ContractValuedItem({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept entityCodeableConcept,
-    Reference entityReference,
-    Identifier identifier,
-    FhirDateTime effectiveTime,
-    @JsonKey(name: '_effectiveTime') Element effectiveTimeElement,
-    Quantity quantity,
-    Money unitPrice,
-    Decimal factor,
-    @JsonKey(name: '_factor') Element factorElement,
-    Decimal points,
-    @JsonKey(name: '_points') Element pointsElement,
-    Money net,
-    String payment,
-    @JsonKey(name: '_payment') Element paymentElement,
-    FhirDateTime paymentDate,
-    @JsonKey(name: '_paymentDate') Element paymentDateElement,
-    Reference responsible,
-    Reference recipient,
-    List<String> linkId,
-    @JsonKey(name: '_linkId') List<Element> linkIdElement,
-    List<UnsignedInt> securityLabelNumber,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? entityCodeableConcept,
+    Reference? entityReference,
+    Identifier? identifier,
+    FhirDateTime? effectiveTime,
+    @JsonKey(name: '_effectiveTime') Element? effectiveTimeElement,
+    Quantity? quantity,
+    Money? unitPrice,
+    Decimal? factor,
+    @JsonKey(name: '_factor') Element? factorElement,
+    Decimal? points,
+    @JsonKey(name: '_points') Element? pointsElement,
+    Money? net,
+    String? payment,
+    @JsonKey(name: '_payment') Element? paymentElement,
+    FhirDateTime? paymentDate,
+    @JsonKey(name: '_paymentDate') Element? paymentDateElement,
+    Reference? responsible,
+    Reference? recipient,
+    List<String>? linkId,
+    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
+    List<UnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
-        List<Element> securityLabelNumberElement,
+        List<Element>? securityLabelNumberElement,
   }) = _ContractValuedItem;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractValuedItem.fromYaml(dynamic yaml) => yaml is String
       ? ContractValuedItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractValuedItem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractValuedItem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractValuedItem.fromJson(Map<String, dynamic> json) =>
@@ -2212,16 +2247,16 @@ abstract class ContractValuedItem implements _$ContractValuedItem {
 }
 
 @freezed
-abstract class ContractAction implements _$ContractAction {
+class ContractAction with _$ContractAction {
   ContractAction._();
 
-  /// [Contract_Action]: Legally enforceable, formally recorded unilateral or
+  /// [ContractAction]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2244,7 +2279,7 @@ abstract class ContractAction implements _$ContractAction {
   ///
   /// [doNotPerform]: True if the term prohibits the  action.
   ///
-  /// [_doNotPerform]: Extensions for doNotPerform
+  /// [doNotPerformElement]: Extensions for doNotPerform
   ///
   /// [type]: Activity or service obligation to be done or not done, performed
   ///  or not performed, effectuated or not by this Contract term.
@@ -2257,7 +2292,7 @@ abstract class ContractAction implements _$ContractAction {
   /// [linkId]: Id [identifier??] of the clause or question text related to this
   ///  action in the referenced form or QuestionnaireResponse.
   ///
-  /// [_linkId]: Extensions for linkId
+  /// [linkIdElement]: Extensions for linkId
   ///
   /// [status]: Current state of the term action.
   ///
@@ -2268,11 +2303,11 @@ abstract class ContractAction implements _$ContractAction {
   /// to the requester of this action in the referenced form or
   ///  QuestionnaireResponse.
   ///
-  /// [_contextLinkId]: Extensions for contextLinkId
+  /// [contextLinkIdElement]: Extensions for contextLinkId
   ///
   /// [occurrenceDateTime]: When action happens.
   ///
-  /// [_occurrenceDateTime]: Extensions for occurrenceDateTime
+  /// [occurrenceDateTimeElement]: Extensions for occurrenceDateTime
   ///
   /// [occurrencePeriod]: When action happens.
   ///
@@ -2285,7 +2320,7 @@ abstract class ContractAction implements _$ContractAction {
   /// related to the requester of this action in the referenced form or
   ///  QuestionnaireResponse.
   ///
-  /// [_requesterLinkId]: Extensions for requesterLinkId
+  /// [requesterLinkIdElement]: Extensions for requesterLinkId
   ///
   /// [performerType]: The type of individual that is desired or required to
   ///  perform or not perform the action.
@@ -2300,7 +2335,7 @@ abstract class ContractAction implements _$ContractAction {
   /// related to the reason type or reference of this  action in the referenced
   ///  form or QuestionnaireResponse.
   ///
-  /// [_performerLinkId]: Extensions for performerLinkId
+  /// [performerLinkIdElement]: Extensions for performerLinkId
   ///
   /// [reasonCode]: Rationale for the action to be performed or not performed.
   ///  Describes why the action is permitted or prohibited.
@@ -2311,68 +2346,70 @@ abstract class ContractAction implements _$ContractAction {
   /// [reason]: Describes why the action is to be performed or not performed in
   ///  textual form.
   ///
-  /// [_reason]: Extensions for reason
+  /// [reasonElement]: Extensions for reason
   ///
   /// [reasonLinkId]: Id [identifier??] of the clause or question text related
   /// to the reason type or reference of this  action in the referenced form or
   ///  QuestionnaireResponse.
   ///
-  /// [_reasonLinkId]: Extensions for reasonLinkId
+  /// [reasonLinkIdElement]: Extensions for reasonLinkId
   ///
   /// [note]: Comments made about the term action made by the requester,
   ///  performer, subject or other participants.
   ///
   /// [securityLabelNumber]: Security labels that protects the action.
   ///
-  /// [_securityLabelNumber]: Extensions for securityLabelNumber
+  /// [securityLabelNumberElement]: Extensions for securityLabelNumber
   factory ContractAction({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Boolean doNotPerform,
-    @JsonKey(name: '_doNotPerform') Element doNotPerformElement,
-    @required CodeableConcept type,
-    List<ContractSubject> subject,
-    @required CodeableConcept intent,
-    List<String> linkId,
-    @JsonKey(name: '_linkId') List<Element> linkIdElement,
-    @required CodeableConcept status,
-    Reference context,
-    List<String> contextLinkId,
-    @JsonKey(name: '_contextLinkId') List<Element> contextLinkIdElement,
-    FhirDateTime occurrenceDateTime,
-    @JsonKey(name: '_occurrenceDateTime') Element occurrenceDateTimeElement,
-    Period occurrencePeriod,
-    Timing occurrenceTiming,
-    List<Reference> requester,
-    List<String> requesterLinkId,
-    @JsonKey(name: '_requesterLinkId') List<Element> requesterLinkIdElement,
-    List<CodeableConcept> performerType,
-    CodeableConcept performerRole,
-    Reference performer,
-    List<String> performerLinkId,
-    @JsonKey(name: '_performerLinkId') List<Element> performerLinkIdElement,
-    List<CodeableConcept> reasonCode,
-    List<Reference> reasonReference,
-    List<String> reason,
-    @JsonKey(name: '_reason') List<Element> reasonElement,
-    List<String> reasonLinkId,
-    @JsonKey(name: '_reasonLinkId') List<Element> reasonLinkIdElement,
-    List<Annotation> note,
-    List<UnsignedInt> securityLabelNumber,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Boolean? doNotPerform,
+    @JsonKey(name: '_doNotPerform') Element? doNotPerformElement,
+    required CodeableConcept type,
+    List<ContractSubject>? subject,
+    required CodeableConcept intent,
+    List<String>? linkId,
+    @JsonKey(name: '_linkId') List<Element?>? linkIdElement,
+    required CodeableConcept status,
+    Reference? context,
+    List<String>? contextLinkId,
+    @JsonKey(name: '_contextLinkId') List<Element?>? contextLinkIdElement,
+    FhirDateTime? occurrenceDateTime,
+    @JsonKey(name: '_occurrenceDateTime') Element? occurrenceDateTimeElement,
+    Period? occurrencePeriod,
+    Timing? occurrenceTiming,
+    List<Reference>? requester,
+    List<String>? requesterLinkId,
+    @JsonKey(name: '_requesterLinkId') List<Element?>? requesterLinkIdElement,
+    List<CodeableConcept>? performerType,
+    CodeableConcept? performerRole,
+    Reference? performer,
+    List<String>? performerLinkId,
+    @JsonKey(name: '_performerLinkId') List<Element?>? performerLinkIdElement,
+    List<CodeableConcept>? reasonCode,
+    List<Reference>? reasonReference,
+    List<String>? reason,
+    @JsonKey(name: '_reason') List<Element?>? reasonElement,
+    List<String>? reasonLinkId,
+    @JsonKey(name: '_reasonLinkId') List<Element?>? reasonLinkIdElement,
+    List<Annotation>? note,
+    List<UnsignedInt>? securityLabelNumber,
     @JsonKey(name: '_securityLabelNumber')
-        List<Element> securityLabelNumberElement,
+        List<Element>? securityLabelNumberElement,
   }) = _ContractAction;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractAction.fromYaml(dynamic yaml) => yaml is String
       ? ContractAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractAction.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractAction cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractAction.fromJson(Map<String, dynamic> json) =>
@@ -2380,16 +2417,16 @@ abstract class ContractAction implements _$ContractAction {
 }
 
 @freezed
-abstract class ContractSubject implements _$ContractSubject {
+class ContractSubject with _$ContractSubject {
   ContractSubject._();
 
-  /// [Contract_Subject]: Legally enforceable, formally recorded unilateral or
+  /// [ContractSubject]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2415,22 +2452,24 @@ abstract class ContractSubject implements _$ContractSubject {
   ///
   /// [role]: Role type of agent assigned roles in this Contract.
   factory ContractSubject({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required List<Reference> reference,
-    CodeableConcept role,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required List<Reference> reference,
+    CodeableConcept? role,
   }) = _ContractSubject;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractSubject.fromYaml(dynamic yaml) => yaml is String
       ? ContractSubject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractSubject.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractSubject cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractSubject.fromJson(Map<String, dynamic> json) =>
@@ -2438,16 +2477,16 @@ abstract class ContractSubject implements _$ContractSubject {
 }
 
 @freezed
-abstract class ContractSigner implements _$ContractSigner {
+class ContractSigner with _$ContractSigner {
   ContractSigner._();
 
-  /// [Contract_Signer]: Legally enforceable, formally recorded unilateral or
+  /// [ContractSigner]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2474,23 +2513,25 @@ abstract class ContractSigner implements _$ContractSigner {
   ///
   /// [signature]: Legally binding Contract DSIG signature contents in Base64.
   factory ContractSigner({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required Coding type,
-    @required Reference party,
-    @required List<Signature> signature,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Coding type,
+    required Reference party,
+    required List<Signature> signature,
   }) = _ContractSigner;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractSigner.fromYaml(dynamic yaml) => yaml is String
       ? ContractSigner.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractSigner.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractSigner cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractSigner.fromJson(Map<String, dynamic> json) =>
@@ -2498,16 +2539,16 @@ abstract class ContractSigner implements _$ContractSigner {
 }
 
 @freezed
-abstract class ContractFriendly implements _$ContractFriendly {
+class ContractFriendly with _$ContractFriendly {
   ContractFriendly._();
 
-  /// [Contract_Friendly]: Legally enforceable, formally recorded unilateral or
+  /// [ContractFriendly]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2536,22 +2577,24 @@ abstract class ContractFriendly implements _$ContractFriendly {
   /// and representation intended to enhance comprehension and ensure
   ///  understandability.
   factory ContractFriendly({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Attachment contentAttachment,
-    Reference contentReference,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Attachment? contentAttachment,
+    Reference? contentReference,
   }) = _ContractFriendly;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractFriendly.fromYaml(dynamic yaml) => yaml is String
       ? ContractFriendly.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractFriendly.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractFriendly cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractFriendly.fromJson(Map<String, dynamic> json) =>
@@ -2559,16 +2602,16 @@ abstract class ContractFriendly implements _$ContractFriendly {
 }
 
 @freezed
-abstract class ContractLegal implements _$ContractLegal {
+class ContractLegal with _$ContractLegal {
   ContractLegal._();
 
-  /// [Contract_Legal]: Legally enforceable, formally recorded unilateral or
+  /// [ContractLegal]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2593,22 +2636,24 @@ abstract class ContractLegal implements _$ContractLegal {
   ///
   /// [contentReference]: Contract legal text in human renderable form.
   factory ContractLegal({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Attachment contentAttachment,
-    Reference contentReference,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Attachment? contentAttachment,
+    Reference? contentReference,
   }) = _ContractLegal;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractLegal.fromYaml(dynamic yaml) => yaml is String
       ? ContractLegal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractLegal.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractLegal cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractLegal.fromJson(Map<String, dynamic> json) =>
@@ -2616,16 +2661,16 @@ abstract class ContractLegal implements _$ContractLegal {
 }
 
 @freezed
-abstract class ContractRule implements _$ContractRule {
+class ContractRule with _$ContractRule {
   ContractRule._();
 
-  /// [Contract_Rule]: Legally enforceable, formally recorded unilateral or
+  /// [ContractRule]: Legally enforceable, formally recorded unilateral or
   ///  bilateral directive i.e., a policy or agreement.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2652,22 +2697,24 @@ abstract class ContractRule implements _$ContractRule {
   /// [contentReference]: Computable Contract conveyed using a policy rule
   ///  language (e.g. XACML, DKAL, SecPal).
   factory ContractRule({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Attachment contentAttachment,
-    Reference contentReference,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Attachment? contentAttachment,
+    Reference? contentReference,
   }) = _ContractRule;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ContractRule.fromYaml(dynamic yaml) => yaml is String
       ? ContractRule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ContractRule.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ContractRule cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ContractRule.fromJson(Map<String, dynamic> json) =>
@@ -2675,9 +2722,7 @@ abstract class ContractRule implements _$ContractRule {
 }
 
 @freezed
-abstract class ExplanationOfBenefit
-    with Resource
-    implements _$ExplanationOfBenefit {
+class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   ExplanationOfBenefit._();
 
   /// [ExplanationOfBenefit]: This resource provides: the claim details;
@@ -2699,11 +2744,11 @@ abstract class ExplanationOfBenefit
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -2717,7 +2762,7 @@ abstract class ExplanationOfBenefit
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2742,7 +2787,7 @@ abstract class ExplanationOfBenefit
   ///
   /// [status]: The status of the resource instance.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [type]: The category of claim, e.g. oral, pharmacy, vision, institutional,
   ///  professional.
@@ -2757,7 +2802,7 @@ abstract class ExplanationOfBenefit
   /// the non-binding adjudication of the listed products and services which
   ///  could be provided in the future.
   ///
-  /// [_use]: Extensions for use
+  /// [useElement]: Extensions for use
   ///
   /// [patient]: The party to whom the professional services and/or products
   /// have been supplied or are being considered and for whom actual for
@@ -2767,7 +2812,7 @@ abstract class ExplanationOfBenefit
   ///
   /// [created]: The date this resource was created.
   ///
-  /// [_created]: Extensions for created
+  /// [createdElement]: Extensions for created
   ///
   /// [enterer]: Individual who created the claim, predetermination or
   ///  preauthorization.
@@ -2814,17 +2859,17 @@ abstract class ExplanationOfBenefit
   /// [outcome]: The outcome of the claim, predetermination, or preauthorization
   ///  processing.
   ///
-  /// [_outcome]: Extensions for outcome
+  /// [outcomeElement]: Extensions for outcome
   ///
   /// [disposition]: A human readable description of the status of the
   ///  adjudication.
   ///
-  /// [_disposition]: Extensions for disposition
+  /// [dispositionElement]: Extensions for disposition
   ///
   /// [preAuthRef]: Reference from the Insurer which is used in later
   ///  communications which refers to this adjudication.
   ///
-  /// [_preAuthRef]: Extensions for preAuthRef
+  /// [preAuthRefElement]: Extensions for preAuthRef
   ///
   /// [preAuthRefPeriod]: The timeframe during which the supplied
   /// preauthorization reference may be quoted on claims to obtain the
@@ -2845,7 +2890,7 @@ abstract class ExplanationOfBenefit
   /// [precedence]: This indicates the relative order of a series of EOBs
   ///  related to different coverages for the same suite of services.
   ///
-  /// [_precedence]: Extensions for precedence
+  /// [precedenceElement]: Extensions for precedence
   ///
   /// [insurance]: Financial instruments for reimbursement for the health care
   ///  products and services specified on the claim.
@@ -2881,78 +2926,80 @@ abstract class ExplanationOfBenefit
     @Default(R4ResourceType.ExplanationOfBenefit)
     @JsonKey(unknownEnumValue: R4ResourceType.ExplanationOfBenefit)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: ExplanationOfBenefitStatus.unknown)
-        ExplanationOfBenefitStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    @required CodeableConcept type,
-    CodeableConcept subType,
-    Code use,
-    @JsonKey(name: '_use') Element useElement,
-    @required Reference patient,
-    Period billablePeriod,
-    FhirDateTime created,
-    @JsonKey(name: '_created') Element createdElement,
-    Reference enterer,
-    @required Reference insurer,
-    @required Reference provider,
-    CodeableConcept priority,
-    CodeableConcept fundsReserveRequested,
-    CodeableConcept fundsReserve,
-    List<ExplanationOfBenefitRelated> related,
-    Reference prescription,
-    Reference originalPrescription,
-    ExplanationOfBenefitPayee payee,
-    Reference referral,
-    Reference facility,
-    Reference claim,
-    Reference claimResponse,
-    Code outcome,
-    @JsonKey(name: '_outcome') Element outcomeElement,
-    String disposition,
-    @JsonKey(name: '_disposition') Element dispositionElement,
-    List<String> preAuthRef,
-    @JsonKey(name: '_preAuthRef') List<Element> preAuthRefElement,
-    List<Period> preAuthRefPeriod,
-    List<ExplanationOfBenefitCareTeam> careTeam,
-    List<ExplanationOfBenefitSupportingInfo> supportingInfo,
-    List<ExplanationOfBenefitDiagnosis> diagnosis,
-    List<ExplanationOfBenefitProcedure> procedure,
-    PositiveInt precedence,
-    @JsonKey(name: '_precedence') Element precedenceElement,
-    @required List<ExplanationOfBenefitInsurance> insurance,
-    ExplanationOfBenefitAccident accident,
-    List<ExplanationOfBenefitItem> item,
-    List<ExplanationOfBenefitAddItem> addItem,
-    List<ExplanationOfBenefitAdjudication> adjudication,
-    List<ExplanationOfBenefitTotal> total,
-    ExplanationOfBenefitPayment payment,
-    CodeableConcept formCode,
-    Attachment form,
-    List<ExplanationOfBenefitProcessNote> processNote,
-    Period benefitPeriod,
-    List<ExplanationOfBenefitBenefitBalance> benefitBalance,
+        ExplanationOfBenefitStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    required CodeableConcept type,
+    CodeableConcept? subType,
+    Code? use,
+    @JsonKey(name: '_use') Element? useElement,
+    required Reference patient,
+    Period? billablePeriod,
+    FhirDateTime? created,
+    @JsonKey(name: '_created') Element? createdElement,
+    Reference? enterer,
+    required Reference insurer,
+    required Reference provider,
+    CodeableConcept? priority,
+    CodeableConcept? fundsReserveRequested,
+    CodeableConcept? fundsReserve,
+    List<ExplanationOfBenefitRelated>? related,
+    Reference? prescription,
+    Reference? originalPrescription,
+    ExplanationOfBenefitPayee? payee,
+    Reference? referral,
+    Reference? facility,
+    Reference? claim,
+    Reference? claimResponse,
+    Code? outcome,
+    @JsonKey(name: '_outcome') Element? outcomeElement,
+    String? disposition,
+    @JsonKey(name: '_disposition') Element? dispositionElement,
+    List<String>? preAuthRef,
+    @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
+    List<Period>? preAuthRefPeriod,
+    List<ExplanationOfBenefitCareTeam>? careTeam,
+    List<ExplanationOfBenefitSupportingInfo>? supportingInfo,
+    List<ExplanationOfBenefitDiagnosis>? diagnosis,
+    List<ExplanationOfBenefitProcedure>? procedure,
+    PositiveInt? precedence,
+    @JsonKey(name: '_precedence') Element? precedenceElement,
+    required List<ExplanationOfBenefitInsurance> insurance,
+    ExplanationOfBenefitAccident? accident,
+    List<ExplanationOfBenefitItem>? item,
+    List<ExplanationOfBenefitAddItem>? addItem,
+    List<ExplanationOfBenefitAdjudication>? adjudication,
+    List<ExplanationOfBenefitTotal>? total,
+    ExplanationOfBenefitPayment? payment,
+    CodeableConcept? formCode,
+    Attachment? form,
+    List<ExplanationOfBenefitProcessNote>? processNote,
+    Period? benefitPeriod,
+    List<ExplanationOfBenefitBenefitBalance>? benefitBalance,
   }) = _ExplanationOfBenefit;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefit.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ExplanationOfBenefit.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ExplanationOfBenefit cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefit.fromJson(Map<String, dynamic> json) =>
@@ -2960,11 +3007,10 @@ abstract class ExplanationOfBenefit
 }
 
 @freezed
-abstract class ExplanationOfBenefitRelated
-    implements _$ExplanationOfBenefitRelated {
+class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
   ExplanationOfBenefitRelated._();
 
-  /// [ExplanationOfBenefit_Related]: This resource provides: the claim details;
+  /// [ExplanationOfBenefitRelated]: This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
   /// account balance information, for informing the subscriber of the benefits
   ///  provided.
@@ -2972,7 +3018,7 @@ abstract class ExplanationOfBenefitRelated
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3000,24 +3046,26 @@ abstract class ExplanationOfBenefitRelated
   /// [reference]: An alternate organizational reference to the case or file to
   ///  which this particular claim pertains.
   factory ExplanationOfBenefitRelated({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Reference claim,
-    CodeableConcept relationship,
-    Identifier reference,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Reference? claim,
+    CodeableConcept? relationship,
+    Identifier? reference,
   }) = _ExplanationOfBenefitRelated;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitRelated.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitRelated.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ExplanationOfBenefitRelated.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ExplanationOfBenefitRelated cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitRelated.fromJson(Map<String, dynamic> json) =>
@@ -3025,11 +3073,10 @@ abstract class ExplanationOfBenefitRelated
 }
 
 @freezed
-abstract class ExplanationOfBenefitPayee
-    implements _$ExplanationOfBenefitPayee {
+class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
   ExplanationOfBenefitPayee._();
 
-  /// [ExplanationOfBenefit_Payee]: This resource provides: the claim details;
+  /// [ExplanationOfBenefitPayee]: This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
   /// account balance information, for informing the subscriber of the benefits
   ///  provided.
@@ -3037,7 +3084,7 @@ abstract class ExplanationOfBenefitPayee
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3063,23 +3110,25 @@ abstract class ExplanationOfBenefitPayee
   /// [party]: Reference to the individual or organization to whom any payment
   ///  will be made.
   factory ExplanationOfBenefitPayee({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept type,
-    Reference party,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? type,
+    Reference? party,
   }) = _ExplanationOfBenefitPayee;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitPayee.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitPayee.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ExplanationOfBenefitPayee.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ExplanationOfBenefitPayee cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitPayee.fromJson(Map<String, dynamic> json) =>
@@ -3087,11 +3136,10 @@ abstract class ExplanationOfBenefitPayee
 }
 
 @freezed
-abstract class ExplanationOfBenefitCareTeam
-    implements _$ExplanationOfBenefitCareTeam {
+class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
   ExplanationOfBenefitCareTeam._();
 
-  /// [ExplanationOfBenefit_CareTeam]: This resource provides: the claim
+  /// [ExplanationOfBenefitCareTeam]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -3099,7 +3147,7 @@ abstract class ExplanationOfBenefitCareTeam
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3122,14 +3170,14 @@ abstract class ExplanationOfBenefitCareTeam
   ///
   /// [sequence]: A number to uniquely identify care team entries.
   ///
-  /// [_sequence]: Extensions for sequence
+  /// [sequenceElement]: Extensions for sequence
   ///
   /// [provider]: Member of the team who provided the product or service.
   ///
   /// [responsible]: The party who is billing and/or responsible for the claimed
   ///  products or services.
   ///
-  /// [_responsible]: Extensions for responsible
+  /// [responsibleElement]: Extensions for responsible
   ///
   /// [role]: The lead, assisting or supervising practitioner and their
   ///  discipline if a multidisciplinary team.
@@ -3137,28 +3185,30 @@ abstract class ExplanationOfBenefitCareTeam
   /// [qualification]: The qualification of the practitioner which is applicable
   ///  for this service.
   factory ExplanationOfBenefitCareTeam({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt sequence,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @required Reference provider,
-    Boolean responsible,
-    @JsonKey(name: '_responsible') Element responsibleElement,
-    CodeableConcept role,
-    CodeableConcept qualification,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? sequence,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
+    required Reference provider,
+    Boolean? responsible,
+    @JsonKey(name: '_responsible') Element? responsibleElement,
+    CodeableConcept? role,
+    CodeableConcept? qualification,
   }) = _ExplanationOfBenefitCareTeam;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitCareTeam.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitCareTeam.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ExplanationOfBenefitCareTeam.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ExplanationOfBenefitCareTeam cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitCareTeam.fromJson(Map<String, dynamic> json) =>
@@ -3166,11 +3216,11 @@ abstract class ExplanationOfBenefitCareTeam
 }
 
 @freezed
-abstract class ExplanationOfBenefitSupportingInfo
-    implements _$ExplanationOfBenefitSupportingInfo {
+class ExplanationOfBenefitSupportingInfo
+    with _$ExplanationOfBenefitSupportingInfo {
   ExplanationOfBenefitSupportingInfo._();
 
-  /// [ExplanationOfBenefit_SupportingInfo]: This resource provides: the claim
+  /// [ExplanationOfBenefitSupportingInfo]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -3178,7 +3228,7 @@ abstract class ExplanationOfBenefitSupportingInfo
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3201,7 +3251,7 @@ abstract class ExplanationOfBenefitSupportingInfo
   ///
   /// [sequence]: A number to uniquely identify supporting information entries.
   ///
-  /// [_sequence]: Extensions for sequence
+  /// [sequenceElement]: Extensions for sequence
   ///
   /// [category]: The general class of the information supplied: information;
   ///  exception; accident, employment; onset, etc.
@@ -3212,7 +3262,7 @@ abstract class ExplanationOfBenefitSupportingInfo
   ///
   /// [timingDate]: The date when or period to which this information refers.
   ///
-  /// [_timingDate]: Extensions for timingDate
+  /// [timingDateElement]: Extensions for timingDate
   ///
   /// [timingPeriod]: The date when or period to which this information refers.
   ///
@@ -3220,13 +3270,13 @@ abstract class ExplanationOfBenefitSupportingInfo
   /// documents, images etc. including references to the data or the actual
   ///  inclusion of the data.
   ///
-  /// [_valueBoolean]: Extensions for valueBoolean
+  /// [valueBooleanElement]: Extensions for valueBoolean
   ///
   /// [valueString]: Additional data or information such as resources,
   /// documents, images etc. including references to the data or the actual
   ///  inclusion of the data.
   ///
-  /// [_valueString]: Extensions for valueString
+  /// [valueStringElement]: Extensions for valueString
   ///
   /// [valueQuantity]: Additional data or information such as resources,
   /// documents, images etc. including references to the data or the actual
@@ -3243,38 +3293,40 @@ abstract class ExplanationOfBenefitSupportingInfo
   /// [reason]: Provides the reason in the situation where a reason code is
   ///  required in addition to the content.
   factory ExplanationOfBenefitSupportingInfo({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt sequence,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    @required CodeableConcept category,
-    CodeableConcept code,
-    Date timingDate,
-    @JsonKey(name: '_timingDate') Element timingDateElement,
-    Period timingPeriod,
-    Boolean valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-    String valueString,
-    @JsonKey(name: '_valueString') Element valueStringElement,
-    Quantity valueQuantity,
-    Attachment valueAttachment,
-    Reference valueReference,
-    Coding reason,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? sequence,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
+    required CodeableConcept category,
+    CodeableConcept? code,
+    Date? timingDate,
+    @JsonKey(name: '_timingDate') Element? timingDateElement,
+    Period? timingPeriod,
+    Boolean? valueBoolean,
+    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+    String? valueString,
+    @JsonKey(name: '_valueString') Element? valueStringElement,
+    Quantity? valueQuantity,
+    Attachment? valueAttachment,
+    Reference? valueReference,
+    Coding? reason,
   }) = _ExplanationOfBenefitSupportingInfo;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory ExplanationOfBenefitSupportingInfo.fromYaml(dynamic yaml) =>
-      yaml is String
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory ExplanationOfBenefitSupportingInfo.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ExplanationOfBenefitSupportingInfo.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ExplanationOfBenefitSupportingInfo.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ExplanationOfBenefitSupportingInfo.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ExplanationOfBenefitSupportingInfo cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory ExplanationOfBenefitSupportingInfo.fromJson(
           Map<String, dynamic> json) =>
@@ -3282,11 +3334,10 @@ abstract class ExplanationOfBenefitSupportingInfo
 }
 
 @freezed
-abstract class ExplanationOfBenefitDiagnosis
-    implements _$ExplanationOfBenefitDiagnosis {
+class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
   ExplanationOfBenefitDiagnosis._();
 
-  /// [ExplanationOfBenefit_Diagnosis]: This resource provides: the claim
+  /// [ExplanationOfBenefitDiagnosis]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -3294,7 +3345,7 @@ abstract class ExplanationOfBenefitDiagnosis
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3317,7 +3368,7 @@ abstract class ExplanationOfBenefitDiagnosis
   ///
   /// [sequence]: A number to uniquely identify diagnosis entries.
   ///
-  /// [_sequence]: Extensions for sequence
+  /// [sequenceElement]: Extensions for sequence
   ///
   /// [diagnosisCodeableConcept]: The nature of illness or problem in a coded
   ///  form or as a reference to an external defined Condition.
@@ -3334,28 +3385,30 @@ abstract class ExplanationOfBenefitDiagnosis
   /// products and services to a particular health condition (such as heart
   ///  attack) which is based on a predetermined grouping code system.
   factory ExplanationOfBenefitDiagnosis({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt sequence,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    CodeableConcept diagnosisCodeableConcept,
-    Reference diagnosisReference,
-    List<CodeableConcept> type,
-    CodeableConcept onAdmission,
-    CodeableConcept packageCode,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? sequence,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
+    CodeableConcept? diagnosisCodeableConcept,
+    Reference? diagnosisReference,
+    List<CodeableConcept>? type,
+    CodeableConcept? onAdmission,
+    CodeableConcept? packageCode,
   }) = _ExplanationOfBenefitDiagnosis;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitDiagnosis.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitDiagnosis.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ExplanationOfBenefitDiagnosis.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ExplanationOfBenefitDiagnosis cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitDiagnosis.fromJson(Map<String, dynamic> json) =>
@@ -3363,11 +3416,10 @@ abstract class ExplanationOfBenefitDiagnosis
 }
 
 @freezed
-abstract class ExplanationOfBenefitProcedure
-    implements _$ExplanationOfBenefitProcedure {
+class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
   ExplanationOfBenefitProcedure._();
 
-  /// [ExplanationOfBenefit_Procedure]: This resource provides: the claim
+  /// [ExplanationOfBenefitProcedure]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -3375,7 +3427,7 @@ abstract class ExplanationOfBenefitProcedure
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3398,13 +3450,13 @@ abstract class ExplanationOfBenefitProcedure
   ///
   /// [sequence]: A number to uniquely identify procedure entries.
   ///
-  /// [_sequence]: Extensions for sequence
+  /// [sequenceElement]: Extensions for sequence
   ///
   /// [type]: When the condition was observed or the relative ranking.
   ///
   /// [date]: Date and optionally time the procedure was performed.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [procedureCodeableConcept]: The code or reference to a Procedure resource
   ///  which identifies the clinical intervention performed.
@@ -3414,29 +3466,31 @@ abstract class ExplanationOfBenefitProcedure
   ///
   /// [udi]: Unique Device Identifiers associated with this line item.
   factory ExplanationOfBenefitProcedure({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt sequence,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    List<CodeableConcept> type,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-    CodeableConcept procedureCodeableConcept,
-    Reference procedureReference,
-    List<Reference> udi,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? sequence,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
+    List<CodeableConcept>? type,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    CodeableConcept? procedureCodeableConcept,
+    Reference? procedureReference,
+    List<Reference>? udi,
   }) = _ExplanationOfBenefitProcedure;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitProcedure.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitProcedure.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ExplanationOfBenefitProcedure.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ExplanationOfBenefitProcedure cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitProcedure.fromJson(Map<String, dynamic> json) =>
@@ -3444,11 +3498,10 @@ abstract class ExplanationOfBenefitProcedure
 }
 
 @freezed
-abstract class ExplanationOfBenefitInsurance
-    implements _$ExplanationOfBenefitInsurance {
+class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
   ExplanationOfBenefitInsurance._();
 
-  /// [ExplanationOfBenefit_Insurance]: This resource provides: the claim
+  /// [ExplanationOfBenefitInsurance]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -3456,7 +3509,7 @@ abstract class ExplanationOfBenefitInsurance
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3480,7 +3533,7 @@ abstract class ExplanationOfBenefitInsurance
   /// [focal]: A flag to indicate that this Coverage is to be used for
   ///  adjudication of this claim when set to true.
   ///
-  /// [_focal]: Extensions for focal
+  /// [focalElement]: Extensions for focal
   ///
   /// [coverage]: Reference to the insurance card level information contained in
   /// the Coverage resource. The coverage issuing insurer will use these details
@@ -3491,28 +3544,30 @@ abstract class ExplanationOfBenefitInsurance
   /// provider to be quoted on subsequent claims containing services or products
   ///  related to the prior authorization.
   ///
-  /// [_preAuthRef]: Extensions for preAuthRef
+  /// [preAuthRefElement]: Extensions for preAuthRef
   factory ExplanationOfBenefitInsurance({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Boolean focal,
-    @JsonKey(name: '_focal') Element focalElement,
-    @required Reference coverage,
-    List<String> preAuthRef,
-    @JsonKey(name: '_preAuthRef') List<Element> preAuthRefElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Boolean? focal,
+    @JsonKey(name: '_focal') Element? focalElement,
+    required Reference coverage,
+    List<String>? preAuthRef,
+    @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement,
   }) = _ExplanationOfBenefitInsurance;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitInsurance.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitInsurance.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ExplanationOfBenefitInsurance.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ExplanationOfBenefitInsurance cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitInsurance.fromJson(Map<String, dynamic> json) =>
@@ -3520,11 +3575,10 @@ abstract class ExplanationOfBenefitInsurance
 }
 
 @freezed
-abstract class ExplanationOfBenefitAccident
-    implements _$ExplanationOfBenefitAccident {
+class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
   ExplanationOfBenefitAccident._();
 
-  /// [ExplanationOfBenefit_Accident]: This resource provides: the claim
+  /// [ExplanationOfBenefitAccident]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -3532,7 +3586,7 @@ abstract class ExplanationOfBenefitAccident
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3556,7 +3610,7 @@ abstract class ExplanationOfBenefitAccident
   /// [date]: Date of an accident event  related to the products and services
   ///  contained in the claim.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [type]: The type or context of the accident event for the purposes of
   /// selection of potential insurance coverages and determination of
@@ -3566,26 +3620,28 @@ abstract class ExplanationOfBenefitAccident
   ///
   /// [locationReference]: The physical location of the accident event.
   factory ExplanationOfBenefitAccident({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Date date,
-    @JsonKey(name: '_date') Element dateElement,
-    CodeableConcept type,
-    Address locationAddress,
-    Reference locationReference,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Date? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    CodeableConcept? type,
+    Address? locationAddress,
+    Reference? locationReference,
   }) = _ExplanationOfBenefitAccident;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitAccident.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitAccident.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ExplanationOfBenefitAccident.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ExplanationOfBenefitAccident cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitAccident.fromJson(Map<String, dynamic> json) =>
@@ -3593,10 +3649,10 @@ abstract class ExplanationOfBenefitAccident
 }
 
 @freezed
-abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
+class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   ExplanationOfBenefitItem._();
 
-  /// [ExplanationOfBenefit_Item]: This resource provides: the claim details;
+  /// [ExplanationOfBenefitItem]: This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
   /// account balance information, for informing the subscriber of the benefits
   ///  provided.
@@ -3604,7 +3660,7 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3627,24 +3683,24 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
   ///
   /// [sequence]: A number to uniquely identify item entries.
   ///
-  /// [_sequence]: Extensions for sequence
+  /// [sequenceElement]: Extensions for sequence
   ///
   /// [careTeamSequence]: Care team members related to this service or product.
   ///
-  /// [_careTeamSequence]: Extensions for careTeamSequence
+  /// [careTeamSequenceElement]: Extensions for careTeamSequence
   ///
   /// [diagnosisSequence]: Diagnoses applicable for this service or product.
   ///
-  /// [_diagnosisSequence]: Extensions for diagnosisSequence
+  /// [diagnosisSequenceElement]: Extensions for diagnosisSequence
   ///
   /// [procedureSequence]: Procedures applicable for this service or product.
   ///
-  /// [_procedureSequence]: Extensions for procedureSequence
+  /// [procedureSequenceElement]: Extensions for procedureSequence
   ///
   /// [informationSequence]: Exceptions, special conditions and supporting
   ///  information applicable for this service or product.
   ///
-  /// [_informationSequence]: Extensions for informationSequence
+  /// [informationSequenceElement]: Extensions for informationSequence
   ///
   /// [revenue]: The type of revenue or cost center providing the product and/or
   ///  service.
@@ -3664,7 +3720,7 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
   /// [servicedDate]: The date or dates when the service or product was
   ///  supplied, performed or completed.
   ///
-  /// [_servicedDate]: Extensions for servicedDate
+  /// [servicedDateElement]: Extensions for servicedDate
   ///
   /// [servicedPeriod]: The date or dates when the service or product was
   ///  supplied, performed or completed.
@@ -3686,7 +3742,7 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
   ///
-  /// [_factor]: Extensions for factor
+  /// [factorElement]: Extensions for factor
   ///
   /// [net]: The quantity times the unit price for an additional service or
   ///  product or charge.
@@ -3704,7 +3760,7 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
   /// [noteNumber]: The numbers associated with notes below which apply to the
   ///  adjudication of this item.
   ///
-  /// [_noteNumber]: Extensions for noteNumber
+  /// [noteNumberElement]: Extensions for noteNumber
   ///
   /// [adjudication]: If this item is a group then the values here are a summary
   /// of the adjudication of the detail items. If this item is a simple product
@@ -3712,56 +3768,60 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
   ///
   /// [detail]: Second-tier of goods and services.
   factory ExplanationOfBenefitItem({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt sequence,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    List<PositiveInt> careTeamSequence,
-    @JsonKey(name: '_careTeamSequence') List<Element> careTeamSequenceElement,
-    List<PositiveInt> diagnosisSequence,
-    @JsonKey(name: '_diagnosisSequence') List<Element> diagnosisSequenceElement,
-    List<PositiveInt> procedureSequence,
-    @JsonKey(name: '_procedureSequence') List<Element> procedureSequenceElement,
-    List<PositiveInt> informationSequence,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? sequence,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
+    List<PositiveInt>? careTeamSequence,
+    @JsonKey(name: '_careTeamSequence') List<Element?>? careTeamSequenceElement,
+    List<PositiveInt>? diagnosisSequence,
+    @JsonKey(name: '_diagnosisSequence')
+        List<Element>? diagnosisSequenceElement,
+    List<PositiveInt>? procedureSequence,
+    @JsonKey(name: '_procedureSequence')
+        List<Element>? procedureSequenceElement,
+    List<PositiveInt>? informationSequence,
     @JsonKey(name: '_informationSequence')
-        List<Element> informationSequenceElement,
-    CodeableConcept revenue,
-    CodeableConcept category,
-    @required CodeableConcept productOrService,
-    List<CodeableConcept> modifier,
-    List<CodeableConcept> programCode,
-    Date servicedDate,
-    @JsonKey(name: '_servicedDate') Element servicedDateElement,
-    Period servicedPeriod,
-    CodeableConcept locationCodeableConcept,
-    Address locationAddress,
-    Reference locationReference,
-    Quantity quantity,
-    Money unitPrice,
-    Decimal factor,
-    @JsonKey(name: '_factor') Element factorElement,
-    Money net,
-    List<Reference> udi,
-    CodeableConcept bodySite,
-    List<CodeableConcept> subSite,
-    List<Reference> encounter,
-    List<PositiveInt> noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
-    List<ExplanationOfBenefitAdjudication> adjudication,
-    List<ExplanationOfBenefitDetail> detail,
+        List<Element>? informationSequenceElement,
+    CodeableConcept? revenue,
+    CodeableConcept? category,
+    required CodeableConcept productOrService,
+    List<CodeableConcept>? modifier,
+    List<CodeableConcept>? programCode,
+    Date? servicedDate,
+    @JsonKey(name: '_servicedDate') Element? servicedDateElement,
+    Period? servicedPeriod,
+    CodeableConcept? locationCodeableConcept,
+    Address? locationAddress,
+    Reference? locationReference,
+    Quantity? quantity,
+    Money? unitPrice,
+    Decimal? factor,
+    @JsonKey(name: '_factor') Element? factorElement,
+    Money? net,
+    List<Reference>? udi,
+    CodeableConcept? bodySite,
+    List<CodeableConcept>? subSite,
+    List<Reference>? encounter,
+    List<PositiveInt>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    List<ExplanationOfBenefitAdjudication>? adjudication,
+    List<ExplanationOfBenefitDetail>? detail,
   }) = _ExplanationOfBenefitItem;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitItem.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitItem.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ExplanationOfBenefitItem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ExplanationOfBenefitItem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitItem.fromJson(Map<String, dynamic> json) =>
@@ -3769,11 +3829,10 @@ abstract class ExplanationOfBenefitItem implements _$ExplanationOfBenefitItem {
 }
 
 @freezed
-abstract class ExplanationOfBenefitAdjudication
-    implements _$ExplanationOfBenefitAdjudication {
+class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
   ExplanationOfBenefitAdjudication._();
 
-  /// [ExplanationOfBenefit_Adjudication]: This resource provides: the claim
+  /// [ExplanationOfBenefitAdjudication]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -3781,7 +3840,7 @@ abstract class ExplanationOfBenefitAdjudication
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3816,30 +3875,32 @@ abstract class ExplanationOfBenefitAdjudication
   /// [value]: A non-monetary value associated with the category. Mutually
   ///  exclusive to the amount element above.
   ///
-  /// [_value]: Extensions for value
+  /// [valueElement]: Extensions for value
   factory ExplanationOfBenefitAdjudication({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept category,
-    CodeableConcept reason,
-    Money amount,
-    Decimal value,
-    @JsonKey(name: '_value') Element valueElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept category,
+    CodeableConcept? reason,
+    Money? amount,
+    Decimal? value,
+    @JsonKey(name: '_value') Element? valueElement,
   }) = _ExplanationOfBenefitAdjudication;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory ExplanationOfBenefitAdjudication.fromYaml(dynamic yaml) =>
-      yaml is String
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory ExplanationOfBenefitAdjudication.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ExplanationOfBenefitAdjudication.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ExplanationOfBenefitAdjudication.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ExplanationOfBenefitAdjudication.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ExplanationOfBenefitAdjudication cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory ExplanationOfBenefitAdjudication.fromJson(
           Map<String, dynamic> json) =>
@@ -3847,11 +3908,10 @@ abstract class ExplanationOfBenefitAdjudication
 }
 
 @freezed
-abstract class ExplanationOfBenefitDetail
-    implements _$ExplanationOfBenefitDetail {
+class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   ExplanationOfBenefitDetail._();
 
-  /// [ExplanationOfBenefit_Detail]: This resource provides: the claim details;
+  /// [ExplanationOfBenefitDetail]: This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
   /// account balance information, for informing the subscriber of the benefits
   ///  provided.
@@ -3859,7 +3919,7 @@ abstract class ExplanationOfBenefitDetail
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3883,7 +3943,7 @@ abstract class ExplanationOfBenefitDetail
   /// [sequence]: A claim detail line. Either a simple (a product or service) or
   ///  a 'group' of sub-details which are simple items.
   ///
-  /// [_sequence]: Extensions for sequence
+  /// [sequenceElement]: Extensions for sequence
   ///
   /// [revenue]: The type of revenue or cost center providing the product and/or
   ///  service.
@@ -3911,7 +3971,7 @@ abstract class ExplanationOfBenefitDetail
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
   ///
-  /// [_factor]: Extensions for factor
+  /// [factorElement]: Extensions for factor
   ///
   /// [net]: The quantity times the unit price for an additional service or
   ///  product or charge.
@@ -3921,44 +3981,46 @@ abstract class ExplanationOfBenefitDetail
   /// [noteNumber]: The numbers associated with notes below which apply to the
   ///  adjudication of this item.
   ///
-  /// [_noteNumber]: Extensions for noteNumber
+  /// [noteNumberElement]: Extensions for noteNumber
   ///
   /// [adjudication]: The adjudication results.
   ///
   /// [subDetail]: Third-tier of goods and services.
   factory ExplanationOfBenefitDetail({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt sequence,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    CodeableConcept revenue,
-    CodeableConcept category,
-    @required CodeableConcept productOrService,
-    List<CodeableConcept> modifier,
-    List<CodeableConcept> programCode,
-    Quantity quantity,
-    Money unitPrice,
-    Decimal factor,
-    @JsonKey(name: '_factor') Element factorElement,
-    Money net,
-    List<Reference> udi,
-    List<PositiveInt> noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
-    List<ExplanationOfBenefitAdjudication> adjudication,
-    List<ExplanationOfBenefitSubDetail> subDetail,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? sequence,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
+    CodeableConcept? revenue,
+    CodeableConcept? category,
+    required CodeableConcept productOrService,
+    List<CodeableConcept>? modifier,
+    List<CodeableConcept>? programCode,
+    Quantity? quantity,
+    Money? unitPrice,
+    Decimal? factor,
+    @JsonKey(name: '_factor') Element? factorElement,
+    Money? net,
+    List<Reference>? udi,
+    List<PositiveInt>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    List<ExplanationOfBenefitAdjudication>? adjudication,
+    List<ExplanationOfBenefitSubDetail>? subDetail,
   }) = _ExplanationOfBenefitDetail;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitDetail.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitDetail.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ExplanationOfBenefitDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ExplanationOfBenefitDetail cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitDetail.fromJson(Map<String, dynamic> json) =>
@@ -3966,11 +4028,10 @@ abstract class ExplanationOfBenefitDetail
 }
 
 @freezed
-abstract class ExplanationOfBenefitSubDetail
-    implements _$ExplanationOfBenefitSubDetail {
+class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   ExplanationOfBenefitSubDetail._();
 
-  /// [ExplanationOfBenefit_SubDetail]: This resource provides: the claim
+  /// [ExplanationOfBenefitSubDetail]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -3978,7 +4039,7 @@ abstract class ExplanationOfBenefitSubDetail
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4002,7 +4063,7 @@ abstract class ExplanationOfBenefitSubDetail
   /// [sequence]: A claim detail line. Either a simple (a product or service) or
   ///  a 'group' of sub-details which are simple items.
   ///
-  /// [_sequence]: Extensions for sequence
+  /// [sequenceElement]: Extensions for sequence
   ///
   /// [revenue]: The type of revenue or cost center providing the product and/or
   ///  service.
@@ -4030,7 +4091,7 @@ abstract class ExplanationOfBenefitSubDetail
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
   ///
-  /// [_factor]: Extensions for factor
+  /// [factorElement]: Extensions for factor
   ///
   /// [net]: The quantity times the unit price for an additional service or
   ///  product or charge.
@@ -4040,41 +4101,43 @@ abstract class ExplanationOfBenefitSubDetail
   /// [noteNumber]: The numbers associated with notes below which apply to the
   ///  adjudication of this item.
   ///
-  /// [_noteNumber]: Extensions for noteNumber
+  /// [noteNumberElement]: Extensions for noteNumber
   ///
   /// [adjudication]: The adjudication results.
   factory ExplanationOfBenefitSubDetail({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt sequence,
-    @JsonKey(name: '_sequence') Element sequenceElement,
-    CodeableConcept revenue,
-    CodeableConcept category,
-    @required CodeableConcept productOrService,
-    List<CodeableConcept> modifier,
-    List<CodeableConcept> programCode,
-    Quantity quantity,
-    Money unitPrice,
-    Decimal factor,
-    @JsonKey(name: '_factor') Element factorElement,
-    Money net,
-    List<Reference> udi,
-    List<PositiveInt> noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
-    List<ExplanationOfBenefitAdjudication> adjudication,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? sequence,
+    @JsonKey(name: '_sequence') Element? sequenceElement,
+    CodeableConcept? revenue,
+    CodeableConcept? category,
+    required CodeableConcept productOrService,
+    List<CodeableConcept>? modifier,
+    List<CodeableConcept>? programCode,
+    Quantity? quantity,
+    Money? unitPrice,
+    Decimal? factor,
+    @JsonKey(name: '_factor') Element? factorElement,
+    Money? net,
+    List<Reference>? udi,
+    List<PositiveInt>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    List<ExplanationOfBenefitAdjudication>? adjudication,
   }) = _ExplanationOfBenefitSubDetail;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitSubDetail.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitSubDetail.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ExplanationOfBenefitSubDetail.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ExplanationOfBenefitSubDetail cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitSubDetail.fromJson(Map<String, dynamic> json) =>
@@ -4082,11 +4145,10 @@ abstract class ExplanationOfBenefitSubDetail
 }
 
 @freezed
-abstract class ExplanationOfBenefitAddItem
-    implements _$ExplanationOfBenefitAddItem {
+class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   ExplanationOfBenefitAddItem._();
 
-  /// [ExplanationOfBenefit_AddItem]: This resource provides: the claim details;
+  /// [ExplanationOfBenefitAddItem]: This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
   /// account balance information, for informing the subscriber of the benefits
   ///  provided.
@@ -4094,7 +4156,7 @@ abstract class ExplanationOfBenefitAddItem
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4118,17 +4180,17 @@ abstract class ExplanationOfBenefitAddItem
   /// [itemSequence]: Claim items which this service line is intended to
   ///  replace.
   ///
-  /// [_itemSequence]: Extensions for itemSequence
+  /// [itemSequenceElement]: Extensions for itemSequence
   ///
   /// [detailSequence]: The sequence number of the details within the claim item
   ///  which this line is intended to replace.
   ///
-  /// [_detailSequence]: Extensions for detailSequence
+  /// [detailSequenceElement]: Extensions for detailSequence
   ///
   /// [subDetailSequence]: The sequence number of the sub-details woithin the
   ///  details within the claim item which this line is intended to replace.
   ///
-  /// [_subDetailSequence]: Extensions for subDetailSequence
+  /// [subDetailSequenceElement]: Extensions for subDetailSequence
   ///
   /// [provider]: The providers who are authorized for the services rendered to
   ///  the patient.
@@ -4145,7 +4207,7 @@ abstract class ExplanationOfBenefitAddItem
   /// [servicedDate]: The date or dates when the service or product was
   ///  supplied, performed or completed.
   ///
-  /// [_servicedDate]: Extensions for servicedDate
+  /// [servicedDateElement]: Extensions for servicedDate
   ///
   /// [servicedPeriod]: The date or dates when the service or product was
   ///  supplied, performed or completed.
@@ -4167,7 +4229,7 @@ abstract class ExplanationOfBenefitAddItem
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
   ///
-  /// [_factor]: Extensions for factor
+  /// [factorElement]: Extensions for factor
   ///
   /// [net]: The quantity times the unit price for an additional service or
   ///  product or charge.
@@ -4180,54 +4242,57 @@ abstract class ExplanationOfBenefitAddItem
   /// [noteNumber]: The numbers associated with notes below which apply to the
   ///  adjudication of this item.
   ///
-  /// [_noteNumber]: Extensions for noteNumber
+  /// [noteNumberElement]: Extensions for noteNumber
   ///
   /// [adjudication]: The adjudication results.
   ///
   /// [detail]: The second-tier service adjudications for payor added services.
   factory ExplanationOfBenefitAddItem({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<PositiveInt> itemSequence,
-    @JsonKey(name: '_itemSequence') List<Element> itemSequenceElement,
-    List<PositiveInt> detailSequence,
-    @JsonKey(name: '_detailSequence') List<Element> detailSequenceElement,
-    List<PositiveInt> subDetailSequence,
-    @JsonKey(name: '_subDetailSequence') List<Element> subDetailSequenceElement,
-    List<Reference> provider,
-    @required CodeableConcept productOrService,
-    List<CodeableConcept> modifier,
-    List<CodeableConcept> programCode,
-    Date servicedDate,
-    @JsonKey(name: '_servicedDate') Element servicedDateElement,
-    Period servicedPeriod,
-    CodeableConcept locationCodeableConcept,
-    Address locationAddress,
-    Reference locationReference,
-    Quantity quantity,
-    Money unitPrice,
-    Decimal factor,
-    @JsonKey(name: '_factor') Element factorElement,
-    Money net,
-    CodeableConcept bodySite,
-    List<CodeableConcept> subSite,
-    List<PositiveInt> noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
-    List<ExplanationOfBenefitAdjudication> adjudication,
-    List<ExplanationOfBenefitDetail1> detail,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<PositiveInt>? itemSequence,
+    @JsonKey(name: '_itemSequence') List<Element?>? itemSequenceElement,
+    List<PositiveInt>? detailSequence,
+    @JsonKey(name: '_detailSequence') List<Element?>? detailSequenceElement,
+    List<PositiveInt>? subDetailSequence,
+    @JsonKey(name: '_subDetailSequence')
+        List<Element>? subDetailSequenceElement,
+    List<Reference>? provider,
+    required CodeableConcept productOrService,
+    List<CodeableConcept>? modifier,
+    List<CodeableConcept>? programCode,
+    Date? servicedDate,
+    @JsonKey(name: '_servicedDate') Element? servicedDateElement,
+    Period? servicedPeriod,
+    CodeableConcept? locationCodeableConcept,
+    Address? locationAddress,
+    Reference? locationReference,
+    Quantity? quantity,
+    Money? unitPrice,
+    Decimal? factor,
+    @JsonKey(name: '_factor') Element? factorElement,
+    Money? net,
+    CodeableConcept? bodySite,
+    List<CodeableConcept>? subSite,
+    List<PositiveInt>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    List<ExplanationOfBenefitAdjudication>? adjudication,
+    List<ExplanationOfBenefitDetail1>? detail,
   }) = _ExplanationOfBenefitAddItem;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitAddItem.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitAddItem.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ExplanationOfBenefitAddItem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ExplanationOfBenefitAddItem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitAddItem.fromJson(Map<String, dynamic> json) =>
@@ -4235,11 +4300,10 @@ abstract class ExplanationOfBenefitAddItem
 }
 
 @freezed
-abstract class ExplanationOfBenefitDetail1
-    implements _$ExplanationOfBenefitDetail1 {
+class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
   ExplanationOfBenefitDetail1._();
 
-  /// [ExplanationOfBenefit_Detail1]: This resource provides: the claim details;
+  /// [ExplanationOfBenefitDetail1]: This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
   /// account balance information, for informing the subscriber of the benefits
   ///  provided.
@@ -4247,7 +4311,7 @@ abstract class ExplanationOfBenefitDetail1
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4286,7 +4350,7 @@ abstract class ExplanationOfBenefitDetail1
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
   ///
-  /// [_factor]: Extensions for factor
+  /// [factorElement]: Extensions for factor
   ///
   /// [net]: The quantity times the unit price for an additional service or
   ///  product or charge.
@@ -4294,39 +4358,41 @@ abstract class ExplanationOfBenefitDetail1
   /// [noteNumber]: The numbers associated with notes below which apply to the
   ///  adjudication of this item.
   ///
-  /// [_noteNumber]: Extensions for noteNumber
+  /// [noteNumberElement]: Extensions for noteNumber
   ///
   /// [adjudication]: The adjudication results.
   ///
   /// [subDetail]: The third-tier service adjudications for payor added
   ///  services.
   factory ExplanationOfBenefitDetail1({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept productOrService,
-    List<CodeableConcept> modifier,
-    Quantity quantity,
-    Money unitPrice,
-    Decimal factor,
-    @JsonKey(name: '_factor') Element factorElement,
-    Money net,
-    List<PositiveInt> noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
-    List<ExplanationOfBenefitAdjudication> adjudication,
-    List<ExplanationOfBenefitSubDetail1> subDetail,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept productOrService,
+    List<CodeableConcept>? modifier,
+    Quantity? quantity,
+    Money? unitPrice,
+    Decimal? factor,
+    @JsonKey(name: '_factor') Element? factorElement,
+    Money? net,
+    List<PositiveInt>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    List<ExplanationOfBenefitAdjudication>? adjudication,
+    List<ExplanationOfBenefitSubDetail1>? subDetail,
   }) = _ExplanationOfBenefitDetail1;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitDetail1.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitDetail1.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ExplanationOfBenefitDetail1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ExplanationOfBenefitDetail1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitDetail1.fromJson(Map<String, dynamic> json) =>
@@ -4334,11 +4400,10 @@ abstract class ExplanationOfBenefitDetail1
 }
 
 @freezed
-abstract class ExplanationOfBenefitSubDetail1
-    implements _$ExplanationOfBenefitSubDetail1 {
+class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
   ExplanationOfBenefitSubDetail1._();
 
-  /// [ExplanationOfBenefit_SubDetail1]: This resource provides: the claim
+  /// [ExplanationOfBenefitSubDetail1]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -4346,7 +4411,7 @@ abstract class ExplanationOfBenefitSubDetail1
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4385,7 +4450,7 @@ abstract class ExplanationOfBenefitSubDetail1
   /// of a Factor allows for a discount or surcharge multiplier to be applied to
   ///  a monetary amount.
   ///
-  /// [_factor]: Extensions for factor
+  /// [factorElement]: Extensions for factor
   ///
   /// [net]: The quantity times the unit price for an additional service or
   ///  product or charge.
@@ -4393,37 +4458,39 @@ abstract class ExplanationOfBenefitSubDetail1
   /// [noteNumber]: The numbers associated with notes below which apply to the
   ///  adjudication of this item.
   ///
-  /// [_noteNumber]: Extensions for noteNumber
+  /// [noteNumberElement]: Extensions for noteNumber
   ///
   /// [adjudication]: The adjudication results.
   factory ExplanationOfBenefitSubDetail1({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept productOrService,
-    List<CodeableConcept> modifier,
-    Quantity quantity,
-    Money unitPrice,
-    Decimal factor,
-    @JsonKey(name: '_factor') Element factorElement,
-    Money net,
-    List<PositiveInt> noteNumber,
-    @JsonKey(name: '_noteNumber') List<Element> noteNumberElement,
-    List<ExplanationOfBenefitAdjudication> adjudication,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept productOrService,
+    List<CodeableConcept>? modifier,
+    Quantity? quantity,
+    Money? unitPrice,
+    Decimal? factor,
+    @JsonKey(name: '_factor') Element? factorElement,
+    Money? net,
+    List<PositiveInt>? noteNumber,
+    @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+    List<ExplanationOfBenefitAdjudication>? adjudication,
   }) = _ExplanationOfBenefitSubDetail1;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory ExplanationOfBenefitSubDetail1.fromYaml(dynamic yaml) =>
-      yaml is String
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory ExplanationOfBenefitSubDetail1.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ExplanationOfBenefitSubDetail1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ExplanationOfBenefitSubDetail1.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ExplanationOfBenefitSubDetail1.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ExplanationOfBenefitSubDetail1 cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitSubDetail1.fromJson(Map<String, dynamic> json) =>
@@ -4431,11 +4498,10 @@ abstract class ExplanationOfBenefitSubDetail1
 }
 
 @freezed
-abstract class ExplanationOfBenefitTotal
-    implements _$ExplanationOfBenefitTotal {
+class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
   ExplanationOfBenefitTotal._();
 
-  /// [ExplanationOfBenefit_Total]: This resource provides: the claim details;
+  /// [ExplanationOfBenefitTotal]: This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
   /// account balance information, for informing the subscriber of the benefits
   ///  provided.
@@ -4443,7 +4509,7 @@ abstract class ExplanationOfBenefitTotal
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4472,23 +4538,25 @@ abstract class ExplanationOfBenefitTotal
   ///
   /// [amount]: Monetary total amount associated with the category.
   factory ExplanationOfBenefitTotal({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept category,
-    @required Money amount,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept category,
+    required Money amount,
   }) = _ExplanationOfBenefitTotal;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitTotal.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitTotal.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ExplanationOfBenefitTotal.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ExplanationOfBenefitTotal cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitTotal.fromJson(Map<String, dynamic> json) =>
@@ -4496,11 +4564,10 @@ abstract class ExplanationOfBenefitTotal
 }
 
 @freezed
-abstract class ExplanationOfBenefitPayment
-    implements _$ExplanationOfBenefitPayment {
+class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
   ExplanationOfBenefitPayment._();
 
-  /// [ExplanationOfBenefit_Payment]: This resource provides: the claim details;
+  /// [ExplanationOfBenefitPayment]: This resource provides: the claim details;
   /// adjudication details from the processing of a Claim; and optionally
   /// account balance information, for informing the subscriber of the benefits
   ///  provided.
@@ -4508,7 +4575,7 @@ abstract class ExplanationOfBenefitPayment
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4540,34 +4607,36 @@ abstract class ExplanationOfBenefitPayment
   /// [date]: Estimated date the payment will be issued or the actual issue date
   ///  of payment.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [amount]: Benefits payable less any payment adjustment.
   ///
   /// [identifier]: Issuer's unique identifier for the payment instrument.
   factory ExplanationOfBenefitPayment({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept type,
-    Money adjustment,
-    CodeableConcept adjustmentReason,
-    Date date,
-    @JsonKey(name: '_date') Element dateElement,
-    Money amount,
-    Identifier identifier,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? type,
+    Money? adjustment,
+    CodeableConcept? adjustmentReason,
+    Date? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    Money? amount,
+    Identifier? identifier,
   }) = _ExplanationOfBenefitPayment;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitPayment.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitPayment.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ExplanationOfBenefitPayment.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ExplanationOfBenefitPayment cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitPayment.fromJson(Map<String, dynamic> json) =>
@@ -4575,11 +4644,10 @@ abstract class ExplanationOfBenefitPayment
 }
 
 @freezed
-abstract class ExplanationOfBenefitProcessNote
-    implements _$ExplanationOfBenefitProcessNote {
+class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
   ExplanationOfBenefitProcessNote._();
 
-  /// [ExplanationOfBenefit_ProcessNote]: This resource provides: the claim
+  /// [ExplanationOfBenefitProcessNote]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -4587,7 +4655,7 @@ abstract class ExplanationOfBenefitProcessNote
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4610,43 +4678,45 @@ abstract class ExplanationOfBenefitProcessNote
   ///
   /// [number]: A number to uniquely identify a note entry.
   ///
-  /// [_number]: Extensions for number
+  /// [numberElement]: Extensions for number
   ///
   /// [type]: The business purpose of the note text.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [text]: The explanation or description associated with the processing.
   ///
-  /// [_text]: Extensions for text
+  /// [textElement]: Extensions for text
   ///
   /// [language]: A code to define the language used in the text of the note.
   factory ExplanationOfBenefitProcessNote({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    PositiveInt number,
-    @JsonKey(name: '_number') Element numberElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    PositiveInt? number,
+    @JsonKey(name: '_number') Element? numberElement,
     @JsonKey(unknownEnumValue: ExplanationOfBenefitProcessNoteType.unknown)
-        ExplanationOfBenefitProcessNoteType type,
-    @JsonKey(name: '_type') Element typeElement,
-    String text,
-    @JsonKey(name: '_text') Element textElement,
-    CodeableConcept language,
+        ExplanationOfBenefitProcessNoteType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    String? text,
+    @JsonKey(name: '_text') Element? textElement,
+    CodeableConcept? language,
   }) = _ExplanationOfBenefitProcessNote;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory ExplanationOfBenefitProcessNote.fromYaml(dynamic yaml) =>
-      yaml is String
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory ExplanationOfBenefitProcessNote.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ExplanationOfBenefitProcessNote.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ExplanationOfBenefitProcessNote.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ExplanationOfBenefitProcessNote.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ExplanationOfBenefitProcessNote cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitProcessNote.fromJson(Map<String, dynamic> json) =>
@@ -4654,11 +4724,11 @@ abstract class ExplanationOfBenefitProcessNote
 }
 
 @freezed
-abstract class ExplanationOfBenefitBenefitBalance
-    implements _$ExplanationOfBenefitBenefitBalance {
+class ExplanationOfBenefitBenefitBalance
+    with _$ExplanationOfBenefitBenefitBalance {
   ExplanationOfBenefitBenefitBalance._();
 
-  /// [ExplanationOfBenefit_BenefitBalance]: This resource provides: the claim
+  /// [ExplanationOfBenefitBenefitBalance]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -4666,7 +4736,7 @@ abstract class ExplanationOfBenefitBenefitBalance
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4694,15 +4764,15 @@ abstract class ExplanationOfBenefitBenefitBalance
   /// plan, missing or False indicates the product or service is included in the
   ///  coverage.
   ///
-  /// [_excluded]: Extensions for excluded
+  /// [excludedElement]: Extensions for excluded
   ///
   /// [name]: A short name or tag for the benefit.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [description]: A richer description of the benefit or services covered.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [network]: Is a flag to indicate whether the benefits refer to in-network
   ///  providers or out-of-network providers.
@@ -4714,34 +4784,36 @@ abstract class ExplanationOfBenefitBenefitBalance
   ///
   /// [financial]: Benefits Used to date.
   factory ExplanationOfBenefitBenefitBalance({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept category,
-    Boolean excluded,
-    @JsonKey(name: '_excluded') Element excludedElement,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    CodeableConcept network,
-    CodeableConcept unit,
-    CodeableConcept term,
-    List<ExplanationOfBenefitFinancial> financial,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept category,
+    Boolean? excluded,
+    @JsonKey(name: '_excluded') Element? excludedElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    CodeableConcept? network,
+    CodeableConcept? unit,
+    CodeableConcept? term,
+    List<ExplanationOfBenefitFinancial>? financial,
   }) = _ExplanationOfBenefitBenefitBalance;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory ExplanationOfBenefitBenefitBalance.fromYaml(dynamic yaml) =>
-      yaml is String
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory ExplanationOfBenefitBenefitBalance.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ExplanationOfBenefitBenefitBalance.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))))
+      : yaml is YamlMap
           ? ExplanationOfBenefitBenefitBalance.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ExplanationOfBenefitBenefitBalance.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)))
+          : throw ArgumentError(
+              'ExplanationOfBenefitBenefitBalance cannot be constructed from input provided,'
+              ' it is neither a yaml string or a yaml map.');
 
   factory ExplanationOfBenefitBenefitBalance.fromJson(
           Map<String, dynamic> json) =>
@@ -4749,11 +4821,10 @@ abstract class ExplanationOfBenefitBenefitBalance
 }
 
 @freezed
-abstract class ExplanationOfBenefitFinancial
-    implements _$ExplanationOfBenefitFinancial {
+class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   ExplanationOfBenefitFinancial._();
 
-  /// [ExplanationOfBenefit_Financial]: This resource provides: the claim
+  /// [ExplanationOfBenefitFinancial]: This resource provides: the claim
   /// details; adjudication details from the processing of a Claim; and
   /// optionally account balance information, for informing the subscriber of
   ///  the benefits provided.
@@ -4761,7 +4832,7 @@ abstract class ExplanationOfBenefitFinancial
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -4787,12 +4858,12 @@ abstract class ExplanationOfBenefitFinancial
   /// [allowedUnsignedInt]: The quantity of the benefit which is permitted under
   ///  the coverage.
   ///
-  /// [_allowedUnsignedInt]: Extensions for allowedUnsignedInt
+  /// [allowedUnsignedIntElement]: Extensions for allowedUnsignedInt
   ///
   /// [allowedString]: The quantity of the benefit which is permitted under the
   ///  coverage.
   ///
-  /// [_allowedString]: Extensions for allowedString
+  /// [allowedStringElement]: Extensions for allowedString
   ///
   /// [allowedMoney]: The quantity of the benefit which is permitted under the
   ///  coverage.
@@ -4800,34 +4871,36 @@ abstract class ExplanationOfBenefitFinancial
   /// [usedUnsignedInt]: The quantity of the benefit which have been consumed to
   ///  date.
   ///
-  /// [_usedUnsignedInt]: Extensions for usedUnsignedInt
+  /// [usedUnsignedIntElement]: Extensions for usedUnsignedInt
   ///
   /// [usedMoney]: The quantity of the benefit which have been consumed to date.
   factory ExplanationOfBenefitFinancial({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept type,
-    UnsignedInt allowedUnsignedInt,
-    @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
-    String allowedString,
-    @JsonKey(name: '_allowedString') Element allowedStringElement,
-    Money allowedMoney,
-    UnsignedInt usedUnsignedInt,
-    @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
-    Money usedMoney,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    UnsignedInt? allowedUnsignedInt,
+    @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
+    String? allowedString,
+    @JsonKey(name: '_allowedString') Element? allowedStringElement,
+    Money? allowedMoney,
+    UnsignedInt? usedUnsignedInt,
+    @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
+    Money? usedMoney,
   }) = _ExplanationOfBenefitFinancial;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefitFinancial.fromYaml(dynamic yaml) => yaml is String
       ? ExplanationOfBenefitFinancial.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? ExplanationOfBenefitFinancial.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'ExplanationOfBenefitFinancial cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ExplanationOfBenefitFinancial.fromJson(Map<String, dynamic> json) =>
@@ -4835,7 +4908,7 @@ abstract class ExplanationOfBenefitFinancial
 }
 
 @freezed
-abstract class InsurancePlan with Resource implements _$InsurancePlan {
+class InsurancePlan with Resource, _$InsurancePlan {
   InsurancePlan._();
 
   /// [InsurancePlan]: Details of a Health Insurance product/plan provided by an
@@ -4855,11 +4928,11 @@ abstract class InsurancePlan with Resource implements _$InsurancePlan {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -4873,7 +4946,7 @@ abstract class InsurancePlan with Resource implements _$InsurancePlan {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -4900,19 +4973,19 @@ abstract class InsurancePlan with Resource implements _$InsurancePlan {
   ///
   /// [status]: The current state of the health insurance product.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [type]: The kind of health insurance product.
   ///
   /// [name]: Official name of the health insurance product as designated by the
   ///  owner.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [alias]: A list of alternate names that the product is known as, or was
   ///  known as in the past.
   ///
-  /// [_alias]: Extensions for alias
+  /// [aliasElement]: Extensions for alias
   ///
   /// [period]: The period of time that the health insurance product is
   ///  available.
@@ -4945,45 +5018,47 @@ abstract class InsurancePlan with Resource implements _$InsurancePlan {
     @Default(R4ResourceType.InsurancePlan)
     @JsonKey(unknownEnumValue: R4ResourceType.InsurancePlan)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: InsurancePlanStatus.unknown)
-        InsurancePlanStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    List<CodeableConcept> type,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    List<String> alias,
-    @JsonKey(name: '_alias') List<Element> aliasElement,
-    Period period,
-    Reference ownedBy,
-    Reference administeredBy,
-    List<Reference> coverageArea,
-    List<InsurancePlanContact> contact,
-    List<Reference> endpoint,
-    List<Reference> network,
-    List<InsurancePlanCoverage> coverage,
-    List<InsurancePlanPlan> plan,
+        InsurancePlanStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<CodeableConcept>? type,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    List<String>? alias,
+    @JsonKey(name: '_alias') List<Element?>? aliasElement,
+    Period? period,
+    Reference? ownedBy,
+    Reference? administeredBy,
+    List<Reference>? coverageArea,
+    List<InsurancePlanContact>? contact,
+    List<Reference>? endpoint,
+    List<Reference>? network,
+    List<InsurancePlanCoverage>? coverage,
+    List<InsurancePlanPlan>? plan,
   }) = _InsurancePlan;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlan.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlan.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? InsurancePlan.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'InsurancePlan cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlan.fromJson(Map<String, dynamic> json) =>
@@ -4991,16 +5066,16 @@ abstract class InsurancePlan with Resource implements _$InsurancePlan {
 }
 
 @freezed
-abstract class InsurancePlanContact implements _$InsurancePlanContact {
+class InsurancePlanContact with _$InsurancePlanContact {
   InsurancePlanContact._();
 
-  /// [InsurancePlan_Contact]: Details of a Health Insurance product/plan
+  /// [InsurancePlanContact]: Details of a Health Insurance product/plan
   ///  provided by an organization.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5030,24 +5105,26 @@ abstract class InsurancePlanContact implements _$InsurancePlanContact {
   ///
   /// [address]: Visiting or postal addresses for the contact.
   factory InsurancePlanContact({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept purpose,
-    HumanName name,
-    List<ContactPoint> telecom,
-    Address address,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? purpose,
+    HumanName? name,
+    List<ContactPoint>? telecom,
+    Address? address,
   }) = _InsurancePlanContact;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlanContact.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? InsurancePlanContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'InsurancePlanContact cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlanContact.fromJson(Map<String, dynamic> json) =>
@@ -5055,16 +5132,16 @@ abstract class InsurancePlanContact implements _$InsurancePlanContact {
 }
 
 @freezed
-abstract class InsurancePlanCoverage implements _$InsurancePlanCoverage {
+class InsurancePlanCoverage with _$InsurancePlanCoverage {
   InsurancePlanCoverage._();
 
-  /// [InsurancePlan_Coverage]: Details of a Health Insurance product/plan
+  /// [InsurancePlanCoverage]: Details of a Health Insurance product/plan
   ///  provided by an organization.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5092,23 +5169,25 @@ abstract class InsurancePlanCoverage implements _$InsurancePlanCoverage {
   ///
   /// [benefit]: Specific benefits under this type of coverage.
   factory InsurancePlanCoverage({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept type,
-    List<Reference> network,
-    @required List<InsurancePlanBenefit> benefit,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    List<Reference>? network,
+    required List<InsurancePlanBenefit> benefit,
   }) = _InsurancePlanCoverage;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlanCoverage.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanCoverage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? InsurancePlanCoverage.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'InsurancePlanCoverage cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlanCoverage.fromJson(Map<String, dynamic> json) =>
@@ -5116,16 +5195,16 @@ abstract class InsurancePlanCoverage implements _$InsurancePlanCoverage {
 }
 
 @freezed
-abstract class InsurancePlanBenefit implements _$InsurancePlanBenefit {
+class InsurancePlanBenefit with _$InsurancePlanBenefit {
   InsurancePlanBenefit._();
 
-  /// [InsurancePlan_Benefit]: Details of a Health Insurance product/plan
+  /// [InsurancePlanBenefit]: Details of a Health Insurance product/plan
   ///  provided by an organization.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5152,28 +5231,30 @@ abstract class InsurancePlanBenefit implements _$InsurancePlanBenefit {
   /// [requirement]: The referral requirements to have access/coverage for this
   ///  benefit.
   ///
-  /// [_requirement]: Extensions for requirement
+  /// [requirementElement]: Extensions for requirement
   ///
   /// [limit]: The specific limits on the benefit.
   factory InsurancePlanBenefit({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept type,
-    String requirement,
-    @JsonKey(name: '_requirement') Element requirementElement,
-    List<InsurancePlanLimit> limit,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    String? requirement,
+    @JsonKey(name: '_requirement') Element? requirementElement,
+    List<InsurancePlanLimit>? limit,
   }) = _InsurancePlanBenefit;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlanBenefit.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanBenefit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? InsurancePlanBenefit.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'InsurancePlanBenefit cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlanBenefit.fromJson(Map<String, dynamic> json) =>
@@ -5181,16 +5262,16 @@ abstract class InsurancePlanBenefit implements _$InsurancePlanBenefit {
 }
 
 @freezed
-abstract class InsurancePlanLimit implements _$InsurancePlanLimit {
+class InsurancePlanLimit with _$InsurancePlanLimit {
   InsurancePlanLimit._();
 
-  /// [InsurancePlan_Limit]: Details of a Health Insurance product/plan provided
+  /// [InsurancePlanLimit]: Details of a Health Insurance product/plan provided
   ///  by an organization.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5216,22 +5297,24 @@ abstract class InsurancePlanLimit implements _$InsurancePlanLimit {
   ///
   /// [code]: The specific limit on the benefit.
   factory InsurancePlanLimit({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Quantity value,
-    CodeableConcept code,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Quantity? value,
+    CodeableConcept? code,
   }) = _InsurancePlanLimit;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlanLimit.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanLimit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? InsurancePlanLimit.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'InsurancePlanLimit cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlanLimit.fromJson(Map<String, dynamic> json) =>
@@ -5239,16 +5322,16 @@ abstract class InsurancePlanLimit implements _$InsurancePlanLimit {
 }
 
 @freezed
-abstract class InsurancePlanPlan implements _$InsurancePlanPlan {
+class InsurancePlanPlan with _$InsurancePlanPlan {
   InsurancePlanPlan._();
 
-  /// [InsurancePlan_Plan]: Details of a Health Insurance product/plan provided
+  /// [InsurancePlanPlan]: Details of a Health Insurance product/plan provided
   ///  by an organization.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5285,26 +5368,28 @@ abstract class InsurancePlanPlan implements _$InsurancePlanPlan {
   /// [specificCost]: Costs associated with the coverage provided by the
   ///  product.
   factory InsurancePlanPlan({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    CodeableConcept type,
-    List<Reference> coverageArea,
-    List<Reference> network,
-    List<InsurancePlanGeneralCost> generalCost,
-    List<InsurancePlanSpecificCost> specificCost,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    CodeableConcept? type,
+    List<Reference>? coverageArea,
+    List<Reference>? network,
+    List<InsurancePlanGeneralCost>? generalCost,
+    List<InsurancePlanSpecificCost>? specificCost,
   }) = _InsurancePlanPlan;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlanPlan.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanPlan.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? InsurancePlanPlan.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'InsurancePlanPlan cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlanPlan.fromJson(Map<String, dynamic> json) =>
@@ -5312,16 +5397,16 @@ abstract class InsurancePlanPlan implements _$InsurancePlanPlan {
 }
 
 @freezed
-abstract class InsurancePlanGeneralCost implements _$InsurancePlanGeneralCost {
+class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
   InsurancePlanGeneralCost._();
 
-  /// [InsurancePlan_GeneralCost]: Details of a Health Insurance product/plan
+  /// [InsurancePlanGeneralCost]: Details of a Health Insurance product/plan
   ///  provided by an organization.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5346,36 +5431,38 @@ abstract class InsurancePlanGeneralCost implements _$InsurancePlanGeneralCost {
   ///
   /// [groupSize]: Number of participants enrolled in the plan.
   ///
-  /// [_groupSize]: Extensions for groupSize
+  /// [groupSizeElement]: Extensions for groupSize
   ///
   /// [cost]: Value of the cost.
   ///
   /// [comment]: Additional information about the general costs associated with
   ///  this plan.
   ///
-  /// [_comment]: Extensions for comment
+  /// [commentElement]: Extensions for comment
   factory InsurancePlanGeneralCost({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept type,
-    PositiveInt groupSize,
-    @JsonKey(name: '_groupSize') Element groupSizeElement,
-    Money cost,
-    String comment,
-    @JsonKey(name: '_comment') Element commentElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? type,
+    PositiveInt? groupSize,
+    @JsonKey(name: '_groupSize') Element? groupSizeElement,
+    Money? cost,
+    String? comment,
+    @JsonKey(name: '_comment') Element? commentElement,
   }) = _InsurancePlanGeneralCost;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlanGeneralCost.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanGeneralCost.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? InsurancePlanGeneralCost.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'InsurancePlanGeneralCost cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlanGeneralCost.fromJson(Map<String, dynamic> json) =>
@@ -5383,17 +5470,16 @@ abstract class InsurancePlanGeneralCost implements _$InsurancePlanGeneralCost {
 }
 
 @freezed
-abstract class InsurancePlanSpecificCost
-    implements _$InsurancePlanSpecificCost {
+class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
   InsurancePlanSpecificCost._();
 
-  /// [InsurancePlan_SpecificCost]: Details of a Health Insurance product/plan
+  /// [InsurancePlanSpecificCost]: Details of a Health Insurance product/plan
   ///  provided by an organization.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5419,23 +5505,25 @@ abstract class InsurancePlanSpecificCost
   ///
   /// [benefit]: List of the specific benefits under this category of benefit.
   factory InsurancePlanSpecificCost({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept category,
-    List<InsurancePlanBenefit1> benefit,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept category,
+    List<InsurancePlanBenefit1>? benefit,
   }) = _InsurancePlanSpecificCost;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlanSpecificCost.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanSpecificCost.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? InsurancePlanSpecificCost.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'InsurancePlanSpecificCost cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlanSpecificCost.fromJson(Map<String, dynamic> json) =>
@@ -5443,16 +5531,16 @@ abstract class InsurancePlanSpecificCost
 }
 
 @freezed
-abstract class InsurancePlanBenefit1 implements _$InsurancePlanBenefit1 {
+class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
   InsurancePlanBenefit1._();
 
-  /// [InsurancePlan_Benefit1]: Details of a Health Insurance product/plan
+  /// [InsurancePlanBenefit1]: Details of a Health Insurance product/plan
   ///  provided by an organization.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5478,22 +5566,24 @@ abstract class InsurancePlanBenefit1 implements _$InsurancePlanBenefit1 {
   ///
   /// [cost]: List of the costs associated with a specific benefit.
   factory InsurancePlanBenefit1({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept type,
-    List<InsurancePlanCost> cost,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    List<InsurancePlanCost>? cost,
   }) = _InsurancePlanBenefit1;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlanBenefit1.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanBenefit1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? InsurancePlanBenefit1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'InsurancePlanBenefit1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlanBenefit1.fromJson(Map<String, dynamic> json) =>
@@ -5501,16 +5591,16 @@ abstract class InsurancePlanBenefit1 implements _$InsurancePlanBenefit1 {
 }
 
 @freezed
-abstract class InsurancePlanCost implements _$InsurancePlanCost {
+class InsurancePlanCost with _$InsurancePlanCost {
   InsurancePlanCost._();
 
-  /// [InsurancePlan_Cost]: Details of a Health Insurance product/plan provided
+  /// [InsurancePlanCost]: Details of a Health Insurance product/plan provided
   ///  by an organization.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -5543,24 +5633,26 @@ abstract class InsurancePlanCost implements _$InsurancePlanCost {
   /// [value]: The actual cost value. (some of the costs may be represented as
   ///  percentages rather than currency, e.g. 10% coinsurance).
   factory InsurancePlanCost({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept type,
-    CodeableConcept applicability,
-    List<CodeableConcept> qualifiers,
-    Quantity value,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    CodeableConcept? applicability,
+    List<CodeableConcept>? qualifiers,
+    Quantity? value,
   }) = _InsurancePlanCost;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory InsurancePlanCost.fromYaml(dynamic yaml) => yaml is String
       ? InsurancePlanCost.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? InsurancePlanCost.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw ArgumentError(
+              'InsurancePlanCost cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory InsurancePlanCost.fromJson(Map<String, dynamic> json) =>

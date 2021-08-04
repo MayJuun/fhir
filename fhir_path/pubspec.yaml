@@ -1,0 +1,13 @@
+name: fhir_path
+
+environment:
+  sdk: '>=2.13.0 <3.0.0'
+
+dependencies:
+  collection: ^1.15.0
+  fhir: 
+    path: ../fhir
+  petitparser: ^4.2.0
+
+dev_dependencies:
+  test: ^1.17.10

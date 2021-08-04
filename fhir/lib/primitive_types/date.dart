@@ -1,5 +1,8 @@
 import 'dart:convert';
+
 import 'package:yaml/yaml.dart';
+
+import 'fhir_date_time_base.dart';
 
 enum DatePrecision {
   YYYY,
@@ -8,35 +11,29 @@ enum DatePrecision {
   INVALID,
 }
 
-class Date {
-  const Date._(this._valueString, this._valueDateTime, this._isValid,
-      this._precision, this._parseError);
+/// ToDo: Does not accept 'YYYY-MM'
+class Date extends FhirDateTimeBase{
+  const Date._(String valueString, DateTime? valueDateTime, bool isValid,
+      this._precision, Exception? parseError) : super(valueString, valueDateTime, isValid, parseError);
 
   factory Date(inValue) {
-    assert(inValue != null);
-
-    switch (inValue.runtimeType.toString()) {
-      case 'DateTime':
-        return Date._(inValue.toIso8601String(), inValue, true,
-            DatePrecision.YYYYMMDD, null);
-      case 'String':
-        try {
-          final dateTimeValue = _parseDate(inValue);
-          return Date._(
-              inValue, dateTimeValue, true, _getPrecision(inValue), null);
-        } on FormatException catch (e) {
-          return Date._(inValue, null, false, DatePrecision.INVALID, e);
-        }
-        break;
-      default:
-        throw ArgumentError('Date cannot be constructed from $inValue.');
+    if (inValue is DateTime) {
+      return Date.fromDateTime(inValue, DatePrecision.YYYYMMDD);
+    } else if (inValue is String) {
+      try {
+        final dateTimeValue = _parseDate(inValue);
+        return Date._(
+            inValue, dateTimeValue, true, _getPrecision(inValue), null);
+      } on FormatException catch (e) {
+        return Date._(inValue, null, false, DatePrecision.INVALID, e);
+      }
+    } else {
+      throw ArgumentError('Date cannot be constructed from $inValue.');
     }
   }
 
   factory Date.fromDateTime(DateTime dateTime,
       [DatePrecision precision = DatePrecision.YYYYMMDD]) {
-    assert(dateTime != null && precision != null);
-
     final dateString = dateTime.toIso8601String();
     final len = [4, 7, 10][precision.index];
 
@@ -50,33 +47,12 @@ class Date {
       ? Date.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Date.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw FormatException(
+              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final String _valueString;
-  final DateTime _valueDateTime;
-  final bool _isValid;
   final DatePrecision _precision;
-  final Exception _parseError;
 
-  bool get isValid => _isValid;
-  int get hashCode => _valueString.hashCode;
-  DateTime get value => _valueDateTime;
-  Exception get parseError => _parseError;
   DatePrecision get precision => _precision;
-
-  bool operator ==(Object o) => identical(this, o)
-      ? true
-      : o is Date
-          ? o == value
-          : o is DateTime
-              ? o == _valueDateTime
-              : o is String
-                  ? o == _valueString
-                  : false;
-
-  String toString() => _valueString;
-  String toJson() => _valueString;
-  String toYaml() => _valueString;
 
   static final _dateYYYYExp =
       RegExp(r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)$');
@@ -104,8 +80,6 @@ class Date {
   }
 
   static DateTime _parsePartialDate(String value) {
-    assert(value != null);
-
     if (_dateYYYYExp.hasMatch(value)) {
       return DateTime(int.parse(value));
     } else if (_dateYYYYMMExp.hasMatch(value)) {
@@ -120,8 +94,6 @@ class Date {
   }
 
   static DatePrecision _getPrecision(String value) {
-    assert(value != null);
-
     switch (value.length) {
       case 4:
         return DatePrecision.YYYY;

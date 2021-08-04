@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'draft_types.dart';
 
@@ -8,6 +8,10 @@ part of 'draft_types.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Population _$PopulationFromJson(Map<String, dynamic> json) {
   return _Population.fromJson(json);
 }
@@ -16,16 +20,15 @@ Population _$PopulationFromJson(Map<String, dynamic> json) {
 class _$PopulationTearOff {
   const _$PopulationTearOff();
 
-// ignore: unused_element
   _Population call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Range ageRange,
-      CodeableConcept ageCodeableConcept,
-      CodeableConcept gender,
-      CodeableConcept race,
-      CodeableConcept physiologicalCondition}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Range? ageRange,
+      CodeableConcept? ageCodeableConcept,
+      CodeableConcept? gender,
+      CodeableConcept? race,
+      CodeableConcept? physiologicalCondition}) {
     return _Population(
       id: id,
       extension_: extension_,
@@ -38,31 +41,32 @@ class _$PopulationTearOff {
     );
   }
 
-// ignore: unused_element
   Population fromJson(Map<String, Object> json) {
     return Population.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Population = _$PopulationTearOff();
 
 /// @nodoc
 mixin _$Population {
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  Range get ageRange;
-  CodeableConcept get ageCodeableConcept;
-  CodeableConcept get gender;
-  CodeableConcept get race;
-  CodeableConcept get physiologicalCondition;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Range? get ageRange => throw _privateConstructorUsedError;
+  CodeableConcept? get ageCodeableConcept => throw _privateConstructorUsedError;
+  CodeableConcept? get gender => throw _privateConstructorUsedError;
+  CodeableConcept? get race => throw _privateConstructorUsedError;
+  CodeableConcept? get physiologicalCondition =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PopulationCopyWith<Population> get copyWith;
+  $PopulationCopyWith<Population> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -71,20 +75,20 @@ abstract class $PopulationCopyWith<$Res> {
           Population value, $Res Function(Population) then) =
       _$PopulationCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Range ageRange,
-      CodeableConcept ageCodeableConcept,
-      CodeableConcept gender,
-      CodeableConcept race,
-      CodeableConcept physiologicalCondition});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Range? ageRange,
+      CodeableConcept? ageCodeableConcept,
+      CodeableConcept? gender,
+      CodeableConcept? race,
+      CodeableConcept? physiologicalCondition});
 
-  $RangeCopyWith<$Res> get ageRange;
-  $CodeableConceptCopyWith<$Res> get ageCodeableConcept;
-  $CodeableConceptCopyWith<$Res> get gender;
-  $CodeableConceptCopyWith<$Res> get race;
-  $CodeableConceptCopyWith<$Res> get physiologicalCondition;
+  $RangeCopyWith<$Res>? get ageRange;
+  $CodeableConceptCopyWith<$Res>? get ageCodeableConcept;
+  $CodeableConceptCopyWith<$Res>? get gender;
+  $CodeableConceptCopyWith<$Res>? get race;
+  $CodeableConceptCopyWith<$Res>? get physiologicalCondition;
 }
 
 /// @nodoc
@@ -97,81 +101,102 @@ class _$PopulationCopyWithImpl<$Res> implements $PopulationCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object ageRange = freezed,
-    Object ageCodeableConcept = freezed,
-    Object gender = freezed,
-    Object race = freezed,
-    Object physiologicalCondition = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? ageRange = freezed,
+    Object? ageCodeableConcept = freezed,
+    Object? gender = freezed,
+    Object? race = freezed,
+    Object? physiologicalCondition = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      ageRange: ageRange == freezed ? _value.ageRange : ageRange as Range,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      ageRange: ageRange == freezed
+          ? _value.ageRange
+          : ageRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
       ageCodeableConcept: ageCodeableConcept == freezed
           ? _value.ageCodeableConcept
-          : ageCodeableConcept as CodeableConcept,
-      gender: gender == freezed ? _value.gender : gender as CodeableConcept,
-      race: race == freezed ? _value.race : race as CodeableConcept,
+          : ageCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      gender: gender == freezed
+          ? _value.gender
+          : gender // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      race: race == freezed
+          ? _value.race
+          : race // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       physiologicalCondition: physiologicalCondition == freezed
           ? _value.physiologicalCondition
-          : physiologicalCondition as CodeableConcept,
+          : physiologicalCondition // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 
   @override
-  $RangeCopyWith<$Res> get ageRange {
+  $RangeCopyWith<$Res>? get ageRange {
     if (_value.ageRange == null) {
       return null;
     }
-    return $RangeCopyWith<$Res>(_value.ageRange, (value) {
+
+    return $RangeCopyWith<$Res>(_value.ageRange!, (value) {
       return _then(_value.copyWith(ageRange: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get ageCodeableConcept {
+  $CodeableConceptCopyWith<$Res>? get ageCodeableConcept {
     if (_value.ageCodeableConcept == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.ageCodeableConcept, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.ageCodeableConcept!, (value) {
       return _then(_value.copyWith(ageCodeableConcept: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get gender {
+  $CodeableConceptCopyWith<$Res>? get gender {
     if (_value.gender == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.gender, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.gender!, (value) {
       return _then(_value.copyWith(gender: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get race {
+  $CodeableConceptCopyWith<$Res>? get race {
     if (_value.race == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.race, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.race!, (value) {
       return _then(_value.copyWith(race: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get physiologicalCondition {
+  $CodeableConceptCopyWith<$Res>? get physiologicalCondition {
     if (_value.physiologicalCondition == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.physiologicalCondition,
+
+    return $CodeableConceptCopyWith<$Res>(_value.physiologicalCondition!,
         (value) {
       return _then(_value.copyWith(physiologicalCondition: value));
     });
@@ -185,25 +210,25 @@ abstract class _$PopulationCopyWith<$Res> implements $PopulationCopyWith<$Res> {
       __$PopulationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Range ageRange,
-      CodeableConcept ageCodeableConcept,
-      CodeableConcept gender,
-      CodeableConcept race,
-      CodeableConcept physiologicalCondition});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Range? ageRange,
+      CodeableConcept? ageCodeableConcept,
+      CodeableConcept? gender,
+      CodeableConcept? race,
+      CodeableConcept? physiologicalCondition});
 
   @override
-  $RangeCopyWith<$Res> get ageRange;
+  $RangeCopyWith<$Res>? get ageRange;
   @override
-  $CodeableConceptCopyWith<$Res> get ageCodeableConcept;
+  $CodeableConceptCopyWith<$Res>? get ageCodeableConcept;
   @override
-  $CodeableConceptCopyWith<$Res> get gender;
+  $CodeableConceptCopyWith<$Res>? get gender;
   @override
-  $CodeableConceptCopyWith<$Res> get race;
+  $CodeableConceptCopyWith<$Res>? get race;
   @override
-  $CodeableConceptCopyWith<$Res> get physiologicalCondition;
+  $CodeableConceptCopyWith<$Res>? get physiologicalCondition;
 }
 
 /// @nodoc
@@ -218,39 +243,54 @@ class __$PopulationCopyWithImpl<$Res> extends _$PopulationCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object ageRange = freezed,
-    Object ageCodeableConcept = freezed,
-    Object gender = freezed,
-    Object race = freezed,
-    Object physiologicalCondition = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? ageRange = freezed,
+    Object? ageCodeableConcept = freezed,
+    Object? gender = freezed,
+    Object? race = freezed,
+    Object? physiologicalCondition = freezed,
   }) {
     return _then(_Population(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      ageRange: ageRange == freezed ? _value.ageRange : ageRange as Range,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      ageRange: ageRange == freezed
+          ? _value.ageRange
+          : ageRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
       ageCodeableConcept: ageCodeableConcept == freezed
           ? _value.ageCodeableConcept
-          : ageCodeableConcept as CodeableConcept,
-      gender: gender == freezed ? _value.gender : gender as CodeableConcept,
-      race: race == freezed ? _value.race : race as CodeableConcept,
+          : ageCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      gender: gender == freezed
+          ? _value.gender
+          : gender // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      race: race == freezed
+          ? _value.race
+          : race // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       physiologicalCondition: physiologicalCondition == freezed
           ? _value.physiologicalCondition
-          : physiologicalCondition as CodeableConcept,
+          : physiologicalCondition // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Population extends _Population {
   _$_Population(
       {this.id,
@@ -264,25 +304,25 @@ class _$_Population extends _Population {
       : super._();
 
   factory _$_Population.fromJson(Map<String, dynamic> json) =>
-      _$_$_PopulationFromJson(json);
+      _$$_PopulationFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final Range ageRange;
+  final Range? ageRange;
   @override
-  final CodeableConcept ageCodeableConcept;
+  final CodeableConcept? ageCodeableConcept;
   @override
-  final CodeableConcept gender;
+  final CodeableConcept? gender;
   @override
-  final CodeableConcept race;
+  final CodeableConcept? race;
   @override
-  final CodeableConcept physiologicalCondition;
+  final CodeableConcept? physiologicalCondition;
 
   @override
   String toString() {
@@ -335,45 +375,48 @@ class _$_Population extends _Population {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PopulationToJson(this);
+    return _$$_PopulationToJson(this);
   }
 }
 
 abstract class _Population extends Population {
-  _Population._() : super._();
   factory _Population(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Range ageRange,
-      CodeableConcept ageCodeableConcept,
-      CodeableConcept gender,
-      CodeableConcept race,
-      CodeableConcept physiologicalCondition}) = _$_Population;
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Range? ageRange,
+      CodeableConcept? ageCodeableConcept,
+      CodeableConcept? gender,
+      CodeableConcept? race,
+      CodeableConcept? physiologicalCondition}) = _$_Population;
+  _Population._() : super._();
 
   factory _Population.fromJson(Map<String, dynamic> json) =
       _$_Population.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Range get ageRange;
+  Range? get ageRange => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get ageCodeableConcept;
+  CodeableConcept? get ageCodeableConcept => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get gender;
+  CodeableConcept? get gender => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get race;
+  CodeableConcept? get race => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get physiologicalCondition;
+  CodeableConcept? get physiologicalCondition =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PopulationCopyWith<_Population> get copyWith;
+  _$PopulationCopyWith<_Population> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ProductShelfLife _$ProductShelfLifeFromJson(Map<String, dynamic> json) {
@@ -384,15 +427,14 @@ ProductShelfLife _$ProductShelfLifeFromJson(Map<String, dynamic> json) {
 class _$ProductShelfLifeTearOff {
   const _$ProductShelfLifeTearOff();
 
-// ignore: unused_element
   _ProductShelfLife call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Identifier identifier,
-      @required CodeableConcept type,
-      @required Quantity period,
-      List<CodeableConcept> specialPrecautionsForStorage}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Identifier? identifier,
+      required CodeableConcept type,
+      required Quantity period,
+      List<CodeableConcept>? specialPrecautionsForStorage}) {
     return _ProductShelfLife(
       id: id,
       extension_: extension_,
@@ -404,30 +446,31 @@ class _$ProductShelfLifeTearOff {
     );
   }
 
-// ignore: unused_element
   ProductShelfLife fromJson(Map<String, Object> json) {
     return ProductShelfLife.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ProductShelfLife = _$ProductShelfLifeTearOff();
 
 /// @nodoc
 mixin _$ProductShelfLife {
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  Identifier get identifier;
-  CodeableConcept get type;
-  Quantity get period;
-  List<CodeableConcept> get specialPrecautionsForStorage;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Identifier? get identifier => throw _privateConstructorUsedError;
+  CodeableConcept get type => throw _privateConstructorUsedError;
+  Quantity get period => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get specialPrecautionsForStorage =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ProductShelfLifeCopyWith<ProductShelfLife> get copyWith;
+  $ProductShelfLifeCopyWith<ProductShelfLife> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -436,15 +479,15 @@ abstract class $ProductShelfLifeCopyWith<$Res> {
           ProductShelfLife value, $Res Function(ProductShelfLife) then) =
       _$ProductShelfLifeCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Identifier identifier,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Identifier? identifier,
       CodeableConcept type,
       Quantity period,
-      List<CodeableConcept> specialPrecautionsForStorage});
+      List<CodeableConcept>? specialPrecautionsForStorage});
 
-  $IdentifierCopyWith<$Res> get identifier;
+  $IdentifierCopyWith<$Res>? get identifier;
   $CodeableConceptCopyWith<$Res> get type;
   $QuantityCopyWith<$Res> get period;
 }
@@ -460,47 +503,59 @@ class _$ProductShelfLifeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object type = freezed,
-    Object period = freezed,
-    Object specialPrecautionsForStorage = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? type = freezed,
+    Object? period = freezed,
+    Object? specialPrecautionsForStorage = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      period: period == freezed ? _value.period : period as Quantity,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Quantity,
       specialPrecautionsForStorage: specialPrecautionsForStorage == freezed
           ? _value.specialPrecautionsForStorage
-          : specialPrecautionsForStorage as List<CodeableConcept>,
+          : specialPrecautionsForStorage // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
     ));
   }
 
   @override
-  $IdentifierCopyWith<$Res> get identifier {
+  $IdentifierCopyWith<$Res>? get identifier {
     if (_value.identifier == null) {
       return null;
     }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+
+    return $IdentifierCopyWith<$Res>(_value.identifier!, (value) {
       return _then(_value.copyWith(identifier: value));
     });
   }
 
   @override
   $CodeableConceptCopyWith<$Res> get type {
-    if (_value.type == null) {
-      return null;
-    }
     return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
@@ -508,9 +563,6 @@ class _$ProductShelfLifeCopyWithImpl<$Res>
 
   @override
   $QuantityCopyWith<$Res> get period {
-    if (_value.period == null) {
-      return null;
-    }
     return $QuantityCopyWith<$Res>(_value.period, (value) {
       return _then(_value.copyWith(period: value));
     });
@@ -525,16 +577,16 @@ abstract class _$ProductShelfLifeCopyWith<$Res>
       __$ProductShelfLifeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Identifier identifier,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Identifier? identifier,
       CodeableConcept type,
       Quantity period,
-      List<CodeableConcept> specialPrecautionsForStorage});
+      List<CodeableConcept>? specialPrecautionsForStorage});
 
   @override
-  $IdentifierCopyWith<$Res> get identifier;
+  $IdentifierCopyWith<$Res>? get identifier;
   @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
@@ -554,67 +606,78 @@ class __$ProductShelfLifeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object type = freezed,
-    Object period = freezed,
-    Object specialPrecautionsForStorage = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? type = freezed,
+    Object? period = freezed,
+    Object? specialPrecautionsForStorage = freezed,
   }) {
     return _then(_ProductShelfLife(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      period: period == freezed ? _value.period : period as Quantity,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Quantity,
       specialPrecautionsForStorage: specialPrecautionsForStorage == freezed
           ? _value.specialPrecautionsForStorage
-          : specialPrecautionsForStorage as List<CodeableConcept>,
+          : specialPrecautionsForStorage // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProductShelfLife extends _ProductShelfLife {
   _$_ProductShelfLife(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
-      @required this.type,
-      @required this.period,
+      required this.type,
+      required this.period,
       this.specialPrecautionsForStorage})
-      : assert(type != null),
-        assert(period != null),
-        super._();
+      : super._();
 
   factory _$_ProductShelfLife.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProductShelfLifeFromJson(json);
+      _$$_ProductShelfLifeFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final Identifier identifier;
+  final Identifier? identifier;
   @override
   final CodeableConcept type;
   @override
   final Quantity period;
   @override
-  final List<CodeableConcept> specialPrecautionsForStorage;
+  final List<CodeableConcept>? specialPrecautionsForStorage;
 
   @override
   String toString() {
@@ -665,43 +728,46 @@ class _$_ProductShelfLife extends _ProductShelfLife {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProductShelfLifeToJson(this);
+    return _$$_ProductShelfLifeToJson(this);
   }
 }
 
 abstract class _ProductShelfLife extends ProductShelfLife {
-  _ProductShelfLife._() : super._();
   factory _ProductShelfLife(
-          {String id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          Identifier identifier,
-          @required CodeableConcept type,
-          @required Quantity period,
-          List<CodeableConcept> specialPrecautionsForStorage}) =
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          Identifier? identifier,
+          required CodeableConcept type,
+          required Quantity period,
+          List<CodeableConcept>? specialPrecautionsForStorage}) =
       _$_ProductShelfLife;
+  _ProductShelfLife._() : super._();
 
   factory _ProductShelfLife.fromJson(Map<String, dynamic> json) =
       _$_ProductShelfLife.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  Quantity get period;
+  Quantity get period => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept> get specialPrecautionsForStorage;
+  List<CodeableConcept>? get specialPrecautionsForStorage =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ProductShelfLifeCopyWith<_ProductShelfLife> get copyWith;
+  _$ProductShelfLifeCopyWith<_ProductShelfLife> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ProdCharacteristic _$ProdCharacteristicFromJson(Map<String, dynamic> json) {
@@ -712,25 +778,24 @@ ProdCharacteristic _$ProdCharacteristicFromJson(Map<String, dynamic> json) {
 class _$ProdCharacteristicTearOff {
   const _$ProdCharacteristicTearOff();
 
-// ignore: unused_element
   _ProdCharacteristic call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity height,
-      Quantity width,
-      Quantity depth,
-      Quantity weight,
-      Quantity nominalVolume,
-      Quantity externalDiameter,
-      String shape,
-      @JsonKey(name: '_shape') Element shapeElement,
-      List<String> color,
-      @JsonKey(name: '_color') List<Element> colorElement,
-      List<String> imprint,
-      @JsonKey(name: '_imprint') List<Element> imprintElement,
-      List<Attachment> image,
-      CodeableConcept scoring}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Quantity? height,
+      Quantity? width,
+      Quantity? depth,
+      Quantity? weight,
+      Quantity? nominalVolume,
+      Quantity? externalDiameter,
+      String? shape,
+      @JsonKey(name: '_shape') Element? shapeElement,
+      List<String>? color,
+      @JsonKey(name: '_color') List<Element?>? colorElement,
+      List<String>? imprint,
+      @JsonKey(name: '_imprint') List<Element?>? imprintElement,
+      List<Attachment>? image,
+      CodeableConcept? scoring}) {
     return _ProdCharacteristic(
       id: id,
       extension_: extension_,
@@ -752,43 +817,43 @@ class _$ProdCharacteristicTearOff {
     );
   }
 
-// ignore: unused_element
   ProdCharacteristic fromJson(Map<String, Object> json) {
     return ProdCharacteristic.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ProdCharacteristic = _$ProdCharacteristicTearOff();
 
 /// @nodoc
 mixin _$ProdCharacteristic {
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  Quantity get height;
-  Quantity get width;
-  Quantity get depth;
-  Quantity get weight;
-  Quantity get nominalVolume;
-  Quantity get externalDiameter;
-  String get shape;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Quantity? get height => throw _privateConstructorUsedError;
+  Quantity? get width => throw _privateConstructorUsedError;
+  Quantity? get depth => throw _privateConstructorUsedError;
+  Quantity? get weight => throw _privateConstructorUsedError;
+  Quantity? get nominalVolume => throw _privateConstructorUsedError;
+  Quantity? get externalDiameter => throw _privateConstructorUsedError;
+  String? get shape => throw _privateConstructorUsedError;
   @JsonKey(name: '_shape')
-  Element get shapeElement;
-  List<String> get color;
+  Element? get shapeElement => throw _privateConstructorUsedError;
+  List<String>? get color => throw _privateConstructorUsedError;
   @JsonKey(name: '_color')
-  List<Element> get colorElement;
-  List<String> get imprint;
+  List<Element?>? get colorElement => throw _privateConstructorUsedError;
+  List<String>? get imprint => throw _privateConstructorUsedError;
   @JsonKey(name: '_imprint')
-  List<Element> get imprintElement;
-  List<Attachment> get image;
-  CodeableConcept get scoring;
+  List<Element?>? get imprintElement => throw _privateConstructorUsedError;
+  List<Attachment>? get image => throw _privateConstructorUsedError;
+  CodeableConcept? get scoring => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ProdCharacteristicCopyWith<ProdCharacteristic> get copyWith;
+  $ProdCharacteristicCopyWith<ProdCharacteristic> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -797,32 +862,32 @@ abstract class $ProdCharacteristicCopyWith<$Res> {
           ProdCharacteristic value, $Res Function(ProdCharacteristic) then) =
       _$ProdCharacteristicCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity height,
-      Quantity width,
-      Quantity depth,
-      Quantity weight,
-      Quantity nominalVolume,
-      Quantity externalDiameter,
-      String shape,
-      @JsonKey(name: '_shape') Element shapeElement,
-      List<String> color,
-      @JsonKey(name: '_color') List<Element> colorElement,
-      List<String> imprint,
-      @JsonKey(name: '_imprint') List<Element> imprintElement,
-      List<Attachment> image,
-      CodeableConcept scoring});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Quantity? height,
+      Quantity? width,
+      Quantity? depth,
+      Quantity? weight,
+      Quantity? nominalVolume,
+      Quantity? externalDiameter,
+      String? shape,
+      @JsonKey(name: '_shape') Element? shapeElement,
+      List<String>? color,
+      @JsonKey(name: '_color') List<Element?>? colorElement,
+      List<String>? imprint,
+      @JsonKey(name: '_imprint') List<Element?>? imprintElement,
+      List<Attachment>? image,
+      CodeableConcept? scoring});
 
-  $QuantityCopyWith<$Res> get height;
-  $QuantityCopyWith<$Res> get width;
-  $QuantityCopyWith<$Res> get depth;
-  $QuantityCopyWith<$Res> get weight;
-  $QuantityCopyWith<$Res> get nominalVolume;
-  $QuantityCopyWith<$Res> get externalDiameter;
-  $ElementCopyWith<$Res> get shapeElement;
-  $CodeableConceptCopyWith<$Res> get scoring;
+  $QuantityCopyWith<$Res>? get height;
+  $QuantityCopyWith<$Res>? get width;
+  $QuantityCopyWith<$Res>? get depth;
+  $QuantityCopyWith<$Res>? get weight;
+  $QuantityCopyWith<$Res>? get nominalVolume;
+  $QuantityCopyWith<$Res>? get externalDiameter;
+  $ElementCopyWith<$Res>? get shapeElement;
+  $CodeableConceptCopyWith<$Res>? get scoring;
 }
 
 /// @nodoc
@@ -836,135 +901,180 @@ class _$ProdCharacteristicCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object height = freezed,
-    Object width = freezed,
-    Object depth = freezed,
-    Object weight = freezed,
-    Object nominalVolume = freezed,
-    Object externalDiameter = freezed,
-    Object shape = freezed,
-    Object shapeElement = freezed,
-    Object color = freezed,
-    Object colorElement = freezed,
-    Object imprint = freezed,
-    Object imprintElement = freezed,
-    Object image = freezed,
-    Object scoring = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? height = freezed,
+    Object? width = freezed,
+    Object? depth = freezed,
+    Object? weight = freezed,
+    Object? nominalVolume = freezed,
+    Object? externalDiameter = freezed,
+    Object? shape = freezed,
+    Object? shapeElement = freezed,
+    Object? color = freezed,
+    Object? colorElement = freezed,
+    Object? imprint = freezed,
+    Object? imprintElement = freezed,
+    Object? image = freezed,
+    Object? scoring = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      height: height == freezed ? _value.height : height as Quantity,
-      width: width == freezed ? _value.width : width as Quantity,
-      depth: depth == freezed ? _value.depth : depth as Quantity,
-      weight: weight == freezed ? _value.weight : weight as Quantity,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      height: height == freezed
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      width: width == freezed
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      depth: depth == freezed
+          ? _value.depth
+          : depth // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      weight: weight == freezed
+          ? _value.weight
+          : weight // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       nominalVolume: nominalVolume == freezed
           ? _value.nominalVolume
-          : nominalVolume as Quantity,
+          : nominalVolume // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       externalDiameter: externalDiameter == freezed
           ? _value.externalDiameter
-          : externalDiameter as Quantity,
-      shape: shape == freezed ? _value.shape : shape as String,
+          : externalDiameter // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      shape: shape == freezed
+          ? _value.shape
+          : shape // ignore: cast_nullable_to_non_nullable
+              as String?,
       shapeElement: shapeElement == freezed
           ? _value.shapeElement
-          : shapeElement as Element,
-      color: color == freezed ? _value.color : color as List<String>,
+          : shapeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      color: color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       colorElement: colorElement == freezed
           ? _value.colorElement
-          : colorElement as List<Element>,
-      imprint: imprint == freezed ? _value.imprint : imprint as List<String>,
+          : colorElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      imprint: imprint == freezed
+          ? _value.imprint
+          : imprint // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       imprintElement: imprintElement == freezed
           ? _value.imprintElement
-          : imprintElement as List<Element>,
-      image: image == freezed ? _value.image : image as List<Attachment>,
-      scoring: scoring == freezed ? _value.scoring : scoring as CodeableConcept,
+          : imprintElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as List<Attachment>?,
+      scoring: scoring == freezed
+          ? _value.scoring
+          : scoring // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 
   @override
-  $QuantityCopyWith<$Res> get height {
+  $QuantityCopyWith<$Res>? get height {
     if (_value.height == null) {
       return null;
     }
-    return $QuantityCopyWith<$Res>(_value.height, (value) {
+
+    return $QuantityCopyWith<$Res>(_value.height!, (value) {
       return _then(_value.copyWith(height: value));
     });
   }
 
   @override
-  $QuantityCopyWith<$Res> get width {
+  $QuantityCopyWith<$Res>? get width {
     if (_value.width == null) {
       return null;
     }
-    return $QuantityCopyWith<$Res>(_value.width, (value) {
+
+    return $QuantityCopyWith<$Res>(_value.width!, (value) {
       return _then(_value.copyWith(width: value));
     });
   }
 
   @override
-  $QuantityCopyWith<$Res> get depth {
+  $QuantityCopyWith<$Res>? get depth {
     if (_value.depth == null) {
       return null;
     }
-    return $QuantityCopyWith<$Res>(_value.depth, (value) {
+
+    return $QuantityCopyWith<$Res>(_value.depth!, (value) {
       return _then(_value.copyWith(depth: value));
     });
   }
 
   @override
-  $QuantityCopyWith<$Res> get weight {
+  $QuantityCopyWith<$Res>? get weight {
     if (_value.weight == null) {
       return null;
     }
-    return $QuantityCopyWith<$Res>(_value.weight, (value) {
+
+    return $QuantityCopyWith<$Res>(_value.weight!, (value) {
       return _then(_value.copyWith(weight: value));
     });
   }
 
   @override
-  $QuantityCopyWith<$Res> get nominalVolume {
+  $QuantityCopyWith<$Res>? get nominalVolume {
     if (_value.nominalVolume == null) {
       return null;
     }
-    return $QuantityCopyWith<$Res>(_value.nominalVolume, (value) {
+
+    return $QuantityCopyWith<$Res>(_value.nominalVolume!, (value) {
       return _then(_value.copyWith(nominalVolume: value));
     });
   }
 
   @override
-  $QuantityCopyWith<$Res> get externalDiameter {
+  $QuantityCopyWith<$Res>? get externalDiameter {
     if (_value.externalDiameter == null) {
       return null;
     }
-    return $QuantityCopyWith<$Res>(_value.externalDiameter, (value) {
+
+    return $QuantityCopyWith<$Res>(_value.externalDiameter!, (value) {
       return _then(_value.copyWith(externalDiameter: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get shapeElement {
+  $ElementCopyWith<$Res>? get shapeElement {
     if (_value.shapeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.shapeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.shapeElement!, (value) {
       return _then(_value.copyWith(shapeElement: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get scoring {
+  $CodeableConceptCopyWith<$Res>? get scoring {
     if (_value.scoring == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.scoring, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.scoring!, (value) {
       return _then(_value.copyWith(scoring: value));
     });
   }
@@ -978,40 +1088,40 @@ abstract class _$ProdCharacteristicCopyWith<$Res>
       __$ProdCharacteristicCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity height,
-      Quantity width,
-      Quantity depth,
-      Quantity weight,
-      Quantity nominalVolume,
-      Quantity externalDiameter,
-      String shape,
-      @JsonKey(name: '_shape') Element shapeElement,
-      List<String> color,
-      @JsonKey(name: '_color') List<Element> colorElement,
-      List<String> imprint,
-      @JsonKey(name: '_imprint') List<Element> imprintElement,
-      List<Attachment> image,
-      CodeableConcept scoring});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Quantity? height,
+      Quantity? width,
+      Quantity? depth,
+      Quantity? weight,
+      Quantity? nominalVolume,
+      Quantity? externalDiameter,
+      String? shape,
+      @JsonKey(name: '_shape') Element? shapeElement,
+      List<String>? color,
+      @JsonKey(name: '_color') List<Element?>? colorElement,
+      List<String>? imprint,
+      @JsonKey(name: '_imprint') List<Element?>? imprintElement,
+      List<Attachment>? image,
+      CodeableConcept? scoring});
 
   @override
-  $QuantityCopyWith<$Res> get height;
+  $QuantityCopyWith<$Res>? get height;
   @override
-  $QuantityCopyWith<$Res> get width;
+  $QuantityCopyWith<$Res>? get width;
   @override
-  $QuantityCopyWith<$Res> get depth;
+  $QuantityCopyWith<$Res>? get depth;
   @override
-  $QuantityCopyWith<$Res> get weight;
+  $QuantityCopyWith<$Res>? get weight;
   @override
-  $QuantityCopyWith<$Res> get nominalVolume;
+  $QuantityCopyWith<$Res>? get nominalVolume;
   @override
-  $QuantityCopyWith<$Res> get externalDiameter;
+  $QuantityCopyWith<$Res>? get externalDiameter;
   @override
-  $ElementCopyWith<$Res> get shapeElement;
+  $ElementCopyWith<$Res>? get shapeElement;
   @override
-  $CodeableConceptCopyWith<$Res> get scoring;
+  $CodeableConceptCopyWith<$Res>? get scoring;
 }
 
 /// @nodoc
@@ -1027,63 +1137,99 @@ class __$ProdCharacteristicCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object height = freezed,
-    Object width = freezed,
-    Object depth = freezed,
-    Object weight = freezed,
-    Object nominalVolume = freezed,
-    Object externalDiameter = freezed,
-    Object shape = freezed,
-    Object shapeElement = freezed,
-    Object color = freezed,
-    Object colorElement = freezed,
-    Object imprint = freezed,
-    Object imprintElement = freezed,
-    Object image = freezed,
-    Object scoring = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? height = freezed,
+    Object? width = freezed,
+    Object? depth = freezed,
+    Object? weight = freezed,
+    Object? nominalVolume = freezed,
+    Object? externalDiameter = freezed,
+    Object? shape = freezed,
+    Object? shapeElement = freezed,
+    Object? color = freezed,
+    Object? colorElement = freezed,
+    Object? imprint = freezed,
+    Object? imprintElement = freezed,
+    Object? image = freezed,
+    Object? scoring = freezed,
   }) {
     return _then(_ProdCharacteristic(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      height: height == freezed ? _value.height : height as Quantity,
-      width: width == freezed ? _value.width : width as Quantity,
-      depth: depth == freezed ? _value.depth : depth as Quantity,
-      weight: weight == freezed ? _value.weight : weight as Quantity,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      height: height == freezed
+          ? _value.height
+          : height // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      width: width == freezed
+          ? _value.width
+          : width // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      depth: depth == freezed
+          ? _value.depth
+          : depth // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      weight: weight == freezed
+          ? _value.weight
+          : weight // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       nominalVolume: nominalVolume == freezed
           ? _value.nominalVolume
-          : nominalVolume as Quantity,
+          : nominalVolume // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
       externalDiameter: externalDiameter == freezed
           ? _value.externalDiameter
-          : externalDiameter as Quantity,
-      shape: shape == freezed ? _value.shape : shape as String,
+          : externalDiameter // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      shape: shape == freezed
+          ? _value.shape
+          : shape // ignore: cast_nullable_to_non_nullable
+              as String?,
       shapeElement: shapeElement == freezed
           ? _value.shapeElement
-          : shapeElement as Element,
-      color: color == freezed ? _value.color : color as List<String>,
+          : shapeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      color: color == freezed
+          ? _value.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       colorElement: colorElement == freezed
           ? _value.colorElement
-          : colorElement as List<Element>,
-      imprint: imprint == freezed ? _value.imprint : imprint as List<String>,
+          : colorElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      imprint: imprint == freezed
+          ? _value.imprint
+          : imprint // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       imprintElement: imprintElement == freezed
           ? _value.imprintElement
-          : imprintElement as List<Element>,
-      image: image == freezed ? _value.image : image as List<Attachment>,
-      scoring: scoring == freezed ? _value.scoring : scoring as CodeableConcept,
+          : imprintElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      image: image == freezed
+          ? _value.image
+          : image // ignore: cast_nullable_to_non_nullable
+              as List<Attachment>?,
+      scoring: scoring == freezed
+          ? _value.scoring
+          : scoring // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ProdCharacteristic extends _ProdCharacteristic {
   _$_ProdCharacteristic(
       {this.id,
@@ -1106,46 +1252,46 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
       : super._();
 
   factory _$_ProdCharacteristic.fromJson(Map<String, dynamic> json) =>
-      _$_$_ProdCharacteristicFromJson(json);
+      _$$_ProdCharacteristicFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final Quantity height;
+  final Quantity? height;
   @override
-  final Quantity width;
+  final Quantity? width;
   @override
-  final Quantity depth;
+  final Quantity? depth;
   @override
-  final Quantity weight;
+  final Quantity? weight;
   @override
-  final Quantity nominalVolume;
+  final Quantity? nominalVolume;
   @override
-  final Quantity externalDiameter;
+  final Quantity? externalDiameter;
   @override
-  final String shape;
+  final String? shape;
   @override
   @JsonKey(name: '_shape')
-  final Element shapeElement;
+  final Element? shapeElement;
   @override
-  final List<String> color;
+  final List<String>? color;
   @override
   @JsonKey(name: '_color')
-  final List<Element> colorElement;
+  final List<Element?>? colorElement;
   @override
-  final List<String> imprint;
+  final List<String>? imprint;
   @override
   @JsonKey(name: '_imprint')
-  final List<Element> imprintElement;
+  final List<Element?>? imprintElement;
   @override
-  final List<Attachment> image;
+  final List<Attachment>? image;
   @override
-  final CodeableConcept scoring;
+  final CodeableConcept? scoring;
 
   @override
   String toString() {
@@ -1228,75 +1374,77 @@ class _$_ProdCharacteristic extends _ProdCharacteristic {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ProdCharacteristicToJson(this);
+    return _$$_ProdCharacteristicToJson(this);
   }
 }
 
 abstract class _ProdCharacteristic extends ProdCharacteristic {
-  _ProdCharacteristic._() : super._();
   factory _ProdCharacteristic(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity height,
-      Quantity width,
-      Quantity depth,
-      Quantity weight,
-      Quantity nominalVolume,
-      Quantity externalDiameter,
-      String shape,
-      @JsonKey(name: '_shape') Element shapeElement,
-      List<String> color,
-      @JsonKey(name: '_color') List<Element> colorElement,
-      List<String> imprint,
-      @JsonKey(name: '_imprint') List<Element> imprintElement,
-      List<Attachment> image,
-      CodeableConcept scoring}) = _$_ProdCharacteristic;
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Quantity? height,
+      Quantity? width,
+      Quantity? depth,
+      Quantity? weight,
+      Quantity? nominalVolume,
+      Quantity? externalDiameter,
+      String? shape,
+      @JsonKey(name: '_shape') Element? shapeElement,
+      List<String>? color,
+      @JsonKey(name: '_color') List<Element?>? colorElement,
+      List<String>? imprint,
+      @JsonKey(name: '_imprint') List<Element?>? imprintElement,
+      List<Attachment>? image,
+      CodeableConcept? scoring}) = _$_ProdCharacteristic;
+  _ProdCharacteristic._() : super._();
 
   factory _ProdCharacteristic.fromJson(Map<String, dynamic> json) =
       _$_ProdCharacteristic.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Quantity get height;
+  Quantity? get height => throw _privateConstructorUsedError;
   @override
-  Quantity get width;
+  Quantity? get width => throw _privateConstructorUsedError;
   @override
-  Quantity get depth;
+  Quantity? get depth => throw _privateConstructorUsedError;
   @override
-  Quantity get weight;
+  Quantity? get weight => throw _privateConstructorUsedError;
   @override
-  Quantity get nominalVolume;
+  Quantity? get nominalVolume => throw _privateConstructorUsedError;
   @override
-  Quantity get externalDiameter;
+  Quantity? get externalDiameter => throw _privateConstructorUsedError;
   @override
-  String get shape;
+  String? get shape => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_shape')
-  Element get shapeElement;
+  Element? get shapeElement => throw _privateConstructorUsedError;
   @override
-  List<String> get color;
+  List<String>? get color => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_color')
-  List<Element> get colorElement;
+  List<Element?>? get colorElement => throw _privateConstructorUsedError;
   @override
-  List<String> get imprint;
+  List<String>? get imprint => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_imprint')
-  List<Element> get imprintElement;
+  List<Element?>? get imprintElement => throw _privateConstructorUsedError;
   @override
-  List<Attachment> get image;
+  List<Attachment>? get image => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get scoring;
+  CodeableConcept? get scoring => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ProdCharacteristicCopyWith<_ProdCharacteristic> get copyWith;
+  _$ProdCharacteristicCopyWith<_ProdCharacteristic> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 MarketingStatus _$MarketingStatusFromJson(Map<String, dynamic> json) {
@@ -1307,17 +1455,16 @@ MarketingStatus _$MarketingStatusFromJson(Map<String, dynamic> json) {
 class _$MarketingStatusTearOff {
   const _$MarketingStatusTearOff();
 
-// ignore: unused_element
   _MarketingStatus call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required CodeableConcept country,
-      CodeableConcept jurisdiction,
-      @required CodeableConcept status,
-      @required Period dateRange,
-      FhirDateTime restoreDate,
-      @JsonKey(name: '_restoreDate') Element restoreDateElement}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required CodeableConcept country,
+      CodeableConcept? jurisdiction,
+      required CodeableConcept status,
+      required Period dateRange,
+      FhirDateTime? restoreDate,
+      @JsonKey(name: '_restoreDate') Element? restoreDateElement}) {
     return _MarketingStatus(
       id: id,
       extension_: extension_,
@@ -1331,33 +1478,33 @@ class _$MarketingStatusTearOff {
     );
   }
 
-// ignore: unused_element
   MarketingStatus fromJson(Map<String, Object> json) {
     return MarketingStatus.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $MarketingStatus = _$MarketingStatusTearOff();
 
 /// @nodoc
 mixin _$MarketingStatus {
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  CodeableConcept get country;
-  CodeableConcept get jurisdiction;
-  CodeableConcept get status;
-  Period get dateRange;
-  FhirDateTime get restoreDate;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get country => throw _privateConstructorUsedError;
+  CodeableConcept? get jurisdiction => throw _privateConstructorUsedError;
+  CodeableConcept get status => throw _privateConstructorUsedError;
+  Period get dateRange => throw _privateConstructorUsedError;
+  FhirDateTime? get restoreDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_restoreDate')
-  Element get restoreDateElement;
+  Element? get restoreDateElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MarketingStatusCopyWith<MarketingStatus> get copyWith;
+  $MarketingStatusCopyWith<MarketingStatus> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1366,21 +1513,21 @@ abstract class $MarketingStatusCopyWith<$Res> {
           MarketingStatus value, $Res Function(MarketingStatus) then) =
       _$MarketingStatusCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept country,
-      CodeableConcept jurisdiction,
+      CodeableConcept? jurisdiction,
       CodeableConcept status,
       Period dateRange,
-      FhirDateTime restoreDate,
-      @JsonKey(name: '_restoreDate') Element restoreDateElement});
+      FhirDateTime? restoreDate,
+      @JsonKey(name: '_restoreDate') Element? restoreDateElement});
 
   $CodeableConceptCopyWith<$Res> get country;
-  $CodeableConceptCopyWith<$Res> get jurisdiction;
+  $CodeableConceptCopyWith<$Res>? get jurisdiction;
   $CodeableConceptCopyWith<$Res> get status;
   $PeriodCopyWith<$Res> get dateRange;
-  $ElementCopyWith<$Res> get restoreDateElement;
+  $ElementCopyWith<$Res>? get restoreDateElement;
 }
 
 /// @nodoc
@@ -1394,64 +1541,76 @@ class _$MarketingStatusCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object country = freezed,
-    Object jurisdiction = freezed,
-    Object status = freezed,
-    Object dateRange = freezed,
-    Object restoreDate = freezed,
-    Object restoreDateElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? country = freezed,
+    Object? jurisdiction = freezed,
+    Object? status = freezed,
+    Object? dateRange = freezed,
+    Object? restoreDate = freezed,
+    Object? restoreDateElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      country: country == freezed ? _value.country : country as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      country: country == freezed
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as CodeableConcept,
-      status: status == freezed ? _value.status : status as CodeableConcept,
-      dateRange: dateRange == freezed ? _value.dateRange : dateRange as Period,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      dateRange: dateRange == freezed
+          ? _value.dateRange
+          : dateRange // ignore: cast_nullable_to_non_nullable
+              as Period,
       restoreDate: restoreDate == freezed
           ? _value.restoreDate
-          : restoreDate as FhirDateTime,
+          : restoreDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       restoreDateElement: restoreDateElement == freezed
           ? _value.restoreDateElement
-          : restoreDateElement as Element,
+          : restoreDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
   @override
   $CodeableConceptCopyWith<$Res> get country {
-    if (_value.country == null) {
-      return null;
-    }
     return $CodeableConceptCopyWith<$Res>(_value.country, (value) {
       return _then(_value.copyWith(country: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get jurisdiction {
+  $CodeableConceptCopyWith<$Res>? get jurisdiction {
     if (_value.jurisdiction == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.jurisdiction, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.jurisdiction!, (value) {
       return _then(_value.copyWith(jurisdiction: value));
     });
   }
 
   @override
   $CodeableConceptCopyWith<$Res> get status {
-    if (_value.status == null) {
-      return null;
-    }
     return $CodeableConceptCopyWith<$Res>(_value.status, (value) {
       return _then(_value.copyWith(status: value));
     });
@@ -1459,20 +1618,18 @@ class _$MarketingStatusCopyWithImpl<$Res>
 
   @override
   $PeriodCopyWith<$Res> get dateRange {
-    if (_value.dateRange == null) {
-      return null;
-    }
     return $PeriodCopyWith<$Res>(_value.dateRange, (value) {
       return _then(_value.copyWith(dateRange: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get restoreDateElement {
+  $ElementCopyWith<$Res>? get restoreDateElement {
     if (_value.restoreDateElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.restoreDateElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.restoreDateElement!, (value) {
       return _then(_value.copyWith(restoreDateElement: value));
     });
   }
@@ -1486,26 +1643,26 @@ abstract class _$MarketingStatusCopyWith<$Res>
       __$MarketingStatusCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept country,
-      CodeableConcept jurisdiction,
+      CodeableConcept? jurisdiction,
       CodeableConcept status,
       Period dateRange,
-      FhirDateTime restoreDate,
-      @JsonKey(name: '_restoreDate') Element restoreDateElement});
+      FhirDateTime? restoreDate,
+      @JsonKey(name: '_restoreDate') Element? restoreDateElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get country;
   @override
-  $CodeableConceptCopyWith<$Res> get jurisdiction;
+  $CodeableConceptCopyWith<$Res>? get jurisdiction;
   @override
   $CodeableConceptCopyWith<$Res> get status;
   @override
   $PeriodCopyWith<$Res> get dateRange;
   @override
-  $ElementCopyWith<$Res> get restoreDateElement;
+  $ElementCopyWith<$Res>? get restoreDateElement;
 }
 
 /// @nodoc
@@ -1521,82 +1678,95 @@ class __$MarketingStatusCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object country = freezed,
-    Object jurisdiction = freezed,
-    Object status = freezed,
-    Object dateRange = freezed,
-    Object restoreDate = freezed,
-    Object restoreDateElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? country = freezed,
+    Object? jurisdiction = freezed,
+    Object? status = freezed,
+    Object? dateRange = freezed,
+    Object? restoreDate = freezed,
+    Object? restoreDateElement = freezed,
   }) {
     return _then(_MarketingStatus(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      country: country == freezed ? _value.country : country as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      country: country == freezed
+          ? _value.country
+          : country // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       jurisdiction: jurisdiction == freezed
           ? _value.jurisdiction
-          : jurisdiction as CodeableConcept,
-      status: status == freezed ? _value.status : status as CodeableConcept,
-      dateRange: dateRange == freezed ? _value.dateRange : dateRange as Period,
+          : jurisdiction // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      dateRange: dateRange == freezed
+          ? _value.dateRange
+          : dateRange // ignore: cast_nullable_to_non_nullable
+              as Period,
       restoreDate: restoreDate == freezed
           ? _value.restoreDate
-          : restoreDate as FhirDateTime,
+          : restoreDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       restoreDateElement: restoreDateElement == freezed
           ? _value.restoreDateElement
-          : restoreDateElement as Element,
+          : restoreDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MarketingStatus extends _MarketingStatus {
   _$_MarketingStatus(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required this.country,
+      required this.country,
       this.jurisdiction,
-      @required this.status,
-      @required this.dateRange,
+      required this.status,
+      required this.dateRange,
       this.restoreDate,
       @JsonKey(name: '_restoreDate') this.restoreDateElement})
-      : assert(country != null),
-        assert(status != null),
-        assert(dateRange != null),
-        super._();
+      : super._();
 
   factory _$_MarketingStatus.fromJson(Map<String, dynamic> json) =>
-      _$_$_MarketingStatusFromJson(json);
+      _$$_MarketingStatusFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept country;
   @override
-  final CodeableConcept jurisdiction;
+  final CodeableConcept? jurisdiction;
   @override
   final CodeableConcept status;
   @override
   final Period dateRange;
   @override
-  final FhirDateTime restoreDate;
+  final FhirDateTime? restoreDate;
   @override
   @JsonKey(name: '_restoreDate')
-  final Element restoreDateElement;
+  final Element? restoreDateElement;
 
   @override
   String toString() {
@@ -1654,50 +1824,52 @@ class _$_MarketingStatus extends _MarketingStatus {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MarketingStatusToJson(this);
+    return _$$_MarketingStatusToJson(this);
   }
 }
 
 abstract class _MarketingStatus extends MarketingStatus {
-  _MarketingStatus._() : super._();
   factory _MarketingStatus(
-          {String id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          @required CodeableConcept country,
-          CodeableConcept jurisdiction,
-          @required CodeableConcept status,
-          @required Period dateRange,
-          FhirDateTime restoreDate,
-          @JsonKey(name: '_restoreDate') Element restoreDateElement}) =
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          required CodeableConcept country,
+          CodeableConcept? jurisdiction,
+          required CodeableConcept status,
+          required Period dateRange,
+          FhirDateTime? restoreDate,
+          @JsonKey(name: '_restoreDate') Element? restoreDateElement}) =
       _$_MarketingStatus;
+  _MarketingStatus._() : super._();
 
   factory _MarketingStatus.fromJson(Map<String, dynamic> json) =
       _$_MarketingStatus.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get country;
+  CodeableConcept get country => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get jurisdiction;
+  CodeableConcept? get jurisdiction => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get status;
+  CodeableConcept get status => throw _privateConstructorUsedError;
   @override
-  Period get dateRange;
+  Period get dateRange => throw _privateConstructorUsedError;
   @override
-  FhirDateTime get restoreDate;
+  FhirDateTime? get restoreDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_restoreDate')
-  Element get restoreDateElement;
+  Element? get restoreDateElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MarketingStatusCopyWith<_MarketingStatus> get copyWith;
+  _$MarketingStatusCopyWith<_MarketingStatus> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 SubstanceAmount _$SubstanceAmountFromJson(Map<String, dynamic> json) {
@@ -1708,19 +1880,18 @@ SubstanceAmount _$SubstanceAmountFromJson(Map<String, dynamic> json) {
 class _$SubstanceAmountTearOff {
   const _$SubstanceAmountTearOff();
 
-// ignore: unused_element
   _SubstanceAmount call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity amountQuantity,
-      Range amountRange,
-      String amountString,
-      @JsonKey(name: '_amountString') Element amountStringElement,
-      CodeableConcept amountType,
-      String amountText,
-      @JsonKey(name: '_amountText') Element amountTextElement,
-      SubstanceAmountReferenceRange referenceRange}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Quantity? amountQuantity,
+      Range? amountRange,
+      String? amountString,
+      @JsonKey(name: '_amountString') Element? amountStringElement,
+      CodeableConcept? amountType,
+      String? amountText,
+      @JsonKey(name: '_amountText') Element? amountTextElement,
+      SubstanceAmountReferenceRange? referenceRange}) {
     return _SubstanceAmount(
       id: id,
       extension_: extension_,
@@ -1736,36 +1907,37 @@ class _$SubstanceAmountTearOff {
     );
   }
 
-// ignore: unused_element
   SubstanceAmount fromJson(Map<String, Object> json) {
     return SubstanceAmount.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $SubstanceAmount = _$SubstanceAmountTearOff();
 
 /// @nodoc
 mixin _$SubstanceAmount {
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  Quantity get amountQuantity;
-  Range get amountRange;
-  String get amountString;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Quantity? get amountQuantity => throw _privateConstructorUsedError;
+  Range? get amountRange => throw _privateConstructorUsedError;
+  String? get amountString => throw _privateConstructorUsedError;
   @JsonKey(name: '_amountString')
-  Element get amountStringElement;
-  CodeableConcept get amountType;
-  String get amountText;
+  Element? get amountStringElement => throw _privateConstructorUsedError;
+  CodeableConcept? get amountType => throw _privateConstructorUsedError;
+  String? get amountText => throw _privateConstructorUsedError;
   @JsonKey(name: '_amountText')
-  Element get amountTextElement;
-  SubstanceAmountReferenceRange get referenceRange;
+  Element? get amountTextElement => throw _privateConstructorUsedError;
+  SubstanceAmountReferenceRange? get referenceRange =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SubstanceAmountCopyWith<SubstanceAmount> get copyWith;
+  $SubstanceAmountCopyWith<SubstanceAmount> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1774,24 +1946,24 @@ abstract class $SubstanceAmountCopyWith<$Res> {
           SubstanceAmount value, $Res Function(SubstanceAmount) then) =
       _$SubstanceAmountCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity amountQuantity,
-      Range amountRange,
-      String amountString,
-      @JsonKey(name: '_amountString') Element amountStringElement,
-      CodeableConcept amountType,
-      String amountText,
-      @JsonKey(name: '_amountText') Element amountTextElement,
-      SubstanceAmountReferenceRange referenceRange});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Quantity? amountQuantity,
+      Range? amountRange,
+      String? amountString,
+      @JsonKey(name: '_amountString') Element? amountStringElement,
+      CodeableConcept? amountType,
+      String? amountText,
+      @JsonKey(name: '_amountText') Element? amountTextElement,
+      SubstanceAmountReferenceRange? referenceRange});
 
-  $QuantityCopyWith<$Res> get amountQuantity;
-  $RangeCopyWith<$Res> get amountRange;
-  $ElementCopyWith<$Res> get amountStringElement;
-  $CodeableConceptCopyWith<$Res> get amountType;
-  $ElementCopyWith<$Res> get amountTextElement;
-  $SubstanceAmountReferenceRangeCopyWith<$Res> get referenceRange;
+  $QuantityCopyWith<$Res>? get amountQuantity;
+  $RangeCopyWith<$Res>? get amountRange;
+  $ElementCopyWith<$Res>? get amountStringElement;
+  $CodeableConceptCopyWith<$Res>? get amountType;
+  $ElementCopyWith<$Res>? get amountTextElement;
+  $SubstanceAmountReferenceRangeCopyWith<$Res>? get referenceRange;
 }
 
 /// @nodoc
@@ -1805,107 +1977,128 @@ class _$SubstanceAmountCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object amountQuantity = freezed,
-    Object amountRange = freezed,
-    Object amountString = freezed,
-    Object amountStringElement = freezed,
-    Object amountType = freezed,
-    Object amountText = freezed,
-    Object amountTextElement = freezed,
-    Object referenceRange = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? amountQuantity = freezed,
+    Object? amountRange = freezed,
+    Object? amountString = freezed,
+    Object? amountStringElement = freezed,
+    Object? amountType = freezed,
+    Object? amountText = freezed,
+    Object? amountTextElement = freezed,
+    Object? referenceRange = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
-          : amountQuantity as Quantity,
-      amountRange:
-          amountRange == freezed ? _value.amountRange : amountRange as Range,
+          : amountQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      amountRange: amountRange == freezed
+          ? _value.amountRange
+          : amountRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
       amountString: amountString == freezed
           ? _value.amountString
-          : amountString as String,
+          : amountString // ignore: cast_nullable_to_non_nullable
+              as String?,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
-          : amountStringElement as Element,
+          : amountStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       amountType: amountType == freezed
           ? _value.amountType
-          : amountType as CodeableConcept,
-      amountText:
-          amountText == freezed ? _value.amountText : amountText as String,
+          : amountType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      amountText: amountText == freezed
+          ? _value.amountText
+          : amountText // ignore: cast_nullable_to_non_nullable
+              as String?,
       amountTextElement: amountTextElement == freezed
           ? _value.amountTextElement
-          : amountTextElement as Element,
+          : amountTextElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       referenceRange: referenceRange == freezed
           ? _value.referenceRange
-          : referenceRange as SubstanceAmountReferenceRange,
+          : referenceRange // ignore: cast_nullable_to_non_nullable
+              as SubstanceAmountReferenceRange?,
     ));
   }
 
   @override
-  $QuantityCopyWith<$Res> get amountQuantity {
+  $QuantityCopyWith<$Res>? get amountQuantity {
     if (_value.amountQuantity == null) {
       return null;
     }
-    return $QuantityCopyWith<$Res>(_value.amountQuantity, (value) {
+
+    return $QuantityCopyWith<$Res>(_value.amountQuantity!, (value) {
       return _then(_value.copyWith(amountQuantity: value));
     });
   }
 
   @override
-  $RangeCopyWith<$Res> get amountRange {
+  $RangeCopyWith<$Res>? get amountRange {
     if (_value.amountRange == null) {
       return null;
     }
-    return $RangeCopyWith<$Res>(_value.amountRange, (value) {
+
+    return $RangeCopyWith<$Res>(_value.amountRange!, (value) {
       return _then(_value.copyWith(amountRange: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get amountStringElement {
+  $ElementCopyWith<$Res>? get amountStringElement {
     if (_value.amountStringElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.amountStringElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.amountStringElement!, (value) {
       return _then(_value.copyWith(amountStringElement: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get amountType {
+  $CodeableConceptCopyWith<$Res>? get amountType {
     if (_value.amountType == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.amountType, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.amountType!, (value) {
       return _then(_value.copyWith(amountType: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get amountTextElement {
+  $ElementCopyWith<$Res>? get amountTextElement {
     if (_value.amountTextElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.amountTextElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.amountTextElement!, (value) {
       return _then(_value.copyWith(amountTextElement: value));
     });
   }
 
   @override
-  $SubstanceAmountReferenceRangeCopyWith<$Res> get referenceRange {
+  $SubstanceAmountReferenceRangeCopyWith<$Res>? get referenceRange {
     if (_value.referenceRange == null) {
       return null;
     }
-    return $SubstanceAmountReferenceRangeCopyWith<$Res>(_value.referenceRange,
+
+    return $SubstanceAmountReferenceRangeCopyWith<$Res>(_value.referenceRange!,
         (value) {
       return _then(_value.copyWith(referenceRange: value));
     });
@@ -1920,30 +2113,30 @@ abstract class _$SubstanceAmountCopyWith<$Res>
       __$SubstanceAmountCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity amountQuantity,
-      Range amountRange,
-      String amountString,
-      @JsonKey(name: '_amountString') Element amountStringElement,
-      CodeableConcept amountType,
-      String amountText,
-      @JsonKey(name: '_amountText') Element amountTextElement,
-      SubstanceAmountReferenceRange referenceRange});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Quantity? amountQuantity,
+      Range? amountRange,
+      String? amountString,
+      @JsonKey(name: '_amountString') Element? amountStringElement,
+      CodeableConcept? amountType,
+      String? amountText,
+      @JsonKey(name: '_amountText') Element? amountTextElement,
+      SubstanceAmountReferenceRange? referenceRange});
 
   @override
-  $QuantityCopyWith<$Res> get amountQuantity;
+  $QuantityCopyWith<$Res>? get amountQuantity;
   @override
-  $RangeCopyWith<$Res> get amountRange;
+  $RangeCopyWith<$Res>? get amountRange;
   @override
-  $ElementCopyWith<$Res> get amountStringElement;
+  $ElementCopyWith<$Res>? get amountStringElement;
   @override
-  $CodeableConceptCopyWith<$Res> get amountType;
+  $CodeableConceptCopyWith<$Res>? get amountType;
   @override
-  $ElementCopyWith<$Res> get amountTextElement;
+  $ElementCopyWith<$Res>? get amountTextElement;
   @override
-  $SubstanceAmountReferenceRangeCopyWith<$Res> get referenceRange;
+  $SubstanceAmountReferenceRangeCopyWith<$Res>? get referenceRange;
 }
 
 /// @nodoc
@@ -1959,55 +2152,69 @@ class __$SubstanceAmountCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object amountQuantity = freezed,
-    Object amountRange = freezed,
-    Object amountString = freezed,
-    Object amountStringElement = freezed,
-    Object amountType = freezed,
-    Object amountText = freezed,
-    Object amountTextElement = freezed,
-    Object referenceRange = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? amountQuantity = freezed,
+    Object? amountRange = freezed,
+    Object? amountString = freezed,
+    Object? amountStringElement = freezed,
+    Object? amountType = freezed,
+    Object? amountText = freezed,
+    Object? amountTextElement = freezed,
+    Object? referenceRange = freezed,
   }) {
     return _then(_SubstanceAmount(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       amountQuantity: amountQuantity == freezed
           ? _value.amountQuantity
-          : amountQuantity as Quantity,
-      amountRange:
-          amountRange == freezed ? _value.amountRange : amountRange as Range,
+          : amountQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      amountRange: amountRange == freezed
+          ? _value.amountRange
+          : amountRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
       amountString: amountString == freezed
           ? _value.amountString
-          : amountString as String,
+          : amountString // ignore: cast_nullable_to_non_nullable
+              as String?,
       amountStringElement: amountStringElement == freezed
           ? _value.amountStringElement
-          : amountStringElement as Element,
+          : amountStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       amountType: amountType == freezed
           ? _value.amountType
-          : amountType as CodeableConcept,
-      amountText:
-          amountText == freezed ? _value.amountText : amountText as String,
+          : amountType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      amountText: amountText == freezed
+          ? _value.amountText
+          : amountText // ignore: cast_nullable_to_non_nullable
+              as String?,
       amountTextElement: amountTextElement == freezed
           ? _value.amountTextElement
-          : amountTextElement as Element,
+          : amountTextElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       referenceRange: referenceRange == freezed
           ? _value.referenceRange
-          : referenceRange as SubstanceAmountReferenceRange,
+          : referenceRange // ignore: cast_nullable_to_non_nullable
+              as SubstanceAmountReferenceRange?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceAmount extends _SubstanceAmount {
   _$_SubstanceAmount(
       {this.id,
@@ -2024,33 +2231,33 @@ class _$_SubstanceAmount extends _SubstanceAmount {
       : super._();
 
   factory _$_SubstanceAmount.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubstanceAmountFromJson(json);
+      _$$_SubstanceAmountFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final Quantity amountQuantity;
+  final Quantity? amountQuantity;
   @override
-  final Range amountRange;
+  final Range? amountRange;
   @override
-  final String amountString;
+  final String? amountString;
   @override
   @JsonKey(name: '_amountString')
-  final Element amountStringElement;
+  final Element? amountStringElement;
   @override
-  final CodeableConcept amountType;
+  final CodeableConcept? amountType;
   @override
-  final String amountText;
+  final String? amountText;
   @override
   @JsonKey(name: '_amountText')
-  final Element amountTextElement;
+  final Element? amountTextElement;
   @override
-  final SubstanceAmountReferenceRange referenceRange;
+  final SubstanceAmountReferenceRange? referenceRange;
 
   @override
   String toString() {
@@ -2117,56 +2324,59 @@ class _$_SubstanceAmount extends _SubstanceAmount {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubstanceAmountToJson(this);
+    return _$$_SubstanceAmountToJson(this);
   }
 }
 
 abstract class _SubstanceAmount extends SubstanceAmount {
-  _SubstanceAmount._() : super._();
   factory _SubstanceAmount(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity amountQuantity,
-      Range amountRange,
-      String amountString,
-      @JsonKey(name: '_amountString') Element amountStringElement,
-      CodeableConcept amountType,
-      String amountText,
-      @JsonKey(name: '_amountText') Element amountTextElement,
-      SubstanceAmountReferenceRange referenceRange}) = _$_SubstanceAmount;
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Quantity? amountQuantity,
+      Range? amountRange,
+      String? amountString,
+      @JsonKey(name: '_amountString') Element? amountStringElement,
+      CodeableConcept? amountType,
+      String? amountText,
+      @JsonKey(name: '_amountText') Element? amountTextElement,
+      SubstanceAmountReferenceRange? referenceRange}) = _$_SubstanceAmount;
+  _SubstanceAmount._() : super._();
 
   factory _SubstanceAmount.fromJson(Map<String, dynamic> json) =
       _$_SubstanceAmount.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Quantity get amountQuantity;
+  Quantity? get amountQuantity => throw _privateConstructorUsedError;
   @override
-  Range get amountRange;
+  Range? get amountRange => throw _privateConstructorUsedError;
   @override
-  String get amountString;
+  String? get amountString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_amountString')
-  Element get amountStringElement;
+  Element? get amountStringElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get amountType;
+  CodeableConcept? get amountType => throw _privateConstructorUsedError;
   @override
-  String get amountText;
+  String? get amountText => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_amountText')
-  Element get amountTextElement;
+  Element? get amountTextElement => throw _privateConstructorUsedError;
   @override
-  SubstanceAmountReferenceRange get referenceRange;
+  SubstanceAmountReferenceRange? get referenceRange =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubstanceAmountCopyWith<_SubstanceAmount> get copyWith;
+  _$SubstanceAmountCopyWith<_SubstanceAmount> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 SubstanceAmountReferenceRange _$SubstanceAmountReferenceRangeFromJson(
@@ -2178,13 +2388,12 @@ SubstanceAmountReferenceRange _$SubstanceAmountReferenceRangeFromJson(
 class _$SubstanceAmountReferenceRangeTearOff {
   const _$SubstanceAmountReferenceRangeTearOff();
 
-// ignore: unused_element
   _SubstanceAmountReferenceRange call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity lowLimit,
-      Quantity highLimit}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Quantity? lowLimit,
+      Quantity? highLimit}) {
     return _SubstanceAmountReferenceRange(
       id: id,
       extension_: extension_,
@@ -2194,29 +2403,28 @@ class _$SubstanceAmountReferenceRangeTearOff {
     );
   }
 
-// ignore: unused_element
   SubstanceAmountReferenceRange fromJson(Map<String, Object> json) {
     return SubstanceAmountReferenceRange.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $SubstanceAmountReferenceRange = _$SubstanceAmountReferenceRangeTearOff();
 
 /// @nodoc
 mixin _$SubstanceAmountReferenceRange {
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  Quantity get lowLimit;
-  Quantity get highLimit;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Quantity? get lowLimit => throw _privateConstructorUsedError;
+  Quantity? get highLimit => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $SubstanceAmountReferenceRangeCopyWith<SubstanceAmountReferenceRange>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2226,14 +2434,14 @@ abstract class $SubstanceAmountReferenceRangeCopyWith<$Res> {
           $Res Function(SubstanceAmountReferenceRange) then) =
       _$SubstanceAmountReferenceRangeCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity lowLimit,
-      Quantity highLimit});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Quantity? lowLimit,
+      Quantity? highLimit});
 
-  $QuantityCopyWith<$Res> get lowLimit;
-  $QuantityCopyWith<$Res> get highLimit;
+  $QuantityCopyWith<$Res>? get lowLimit;
+  $QuantityCopyWith<$Res>? get highLimit;
 }
 
 /// @nodoc
@@ -2247,42 +2455,54 @@ class _$SubstanceAmountReferenceRangeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object lowLimit = freezed,
-    Object highLimit = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? lowLimit = freezed,
+    Object? highLimit = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      lowLimit: lowLimit == freezed ? _value.lowLimit : lowLimit as Quantity,
-      highLimit:
-          highLimit == freezed ? _value.highLimit : highLimit as Quantity,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      lowLimit: lowLimit == freezed
+          ? _value.lowLimit
+          : lowLimit // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      highLimit: highLimit == freezed
+          ? _value.highLimit
+          : highLimit // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
     ));
   }
 
   @override
-  $QuantityCopyWith<$Res> get lowLimit {
+  $QuantityCopyWith<$Res>? get lowLimit {
     if (_value.lowLimit == null) {
       return null;
     }
-    return $QuantityCopyWith<$Res>(_value.lowLimit, (value) {
+
+    return $QuantityCopyWith<$Res>(_value.lowLimit!, (value) {
       return _then(_value.copyWith(lowLimit: value));
     });
   }
 
   @override
-  $QuantityCopyWith<$Res> get highLimit {
+  $QuantityCopyWith<$Res>? get highLimit {
     if (_value.highLimit == null) {
       return null;
     }
-    return $QuantityCopyWith<$Res>(_value.highLimit, (value) {
+
+    return $QuantityCopyWith<$Res>(_value.highLimit!, (value) {
       return _then(_value.copyWith(highLimit: value));
     });
   }
@@ -2297,16 +2517,16 @@ abstract class _$SubstanceAmountReferenceRangeCopyWith<$Res>
       __$SubstanceAmountReferenceRangeCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity lowLimit,
-      Quantity highLimit});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Quantity? lowLimit,
+      Quantity? highLimit});
 
   @override
-  $QuantityCopyWith<$Res> get lowLimit;
+  $QuantityCopyWith<$Res>? get lowLimit;
   @override
-  $QuantityCopyWith<$Res> get highLimit;
+  $QuantityCopyWith<$Res>? get highLimit;
 }
 
 /// @nodoc
@@ -2324,30 +2544,39 @@ class __$SubstanceAmountReferenceRangeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object lowLimit = freezed,
-    Object highLimit = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? lowLimit = freezed,
+    Object? highLimit = freezed,
   }) {
     return _then(_SubstanceAmountReferenceRange(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      lowLimit: lowLimit == freezed ? _value.lowLimit : lowLimit as Quantity,
-      highLimit:
-          highLimit == freezed ? _value.highLimit : highLimit as Quantity,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      lowLimit: lowLimit == freezed
+          ? _value.lowLimit
+          : lowLimit // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      highLimit: highLimit == freezed
+          ? _value.highLimit
+          : highLimit // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubstanceAmountReferenceRange extends _SubstanceAmountReferenceRange {
   _$_SubstanceAmountReferenceRange(
       {this.id,
@@ -2359,19 +2588,19 @@ class _$_SubstanceAmountReferenceRange extends _SubstanceAmountReferenceRange {
 
   factory _$_SubstanceAmountReferenceRange.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_SubstanceAmountReferenceRangeFromJson(json);
+      _$$_SubstanceAmountReferenceRangeFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final Quantity lowLimit;
+  final Quantity? lowLimit;
   @override
-  final Quantity highLimit;
+  final Quantity? highLimit;
 
   @override
   String toString() {
@@ -2415,36 +2644,37 @@ class _$_SubstanceAmountReferenceRange extends _SubstanceAmountReferenceRange {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubstanceAmountReferenceRangeToJson(this);
+    return _$$_SubstanceAmountReferenceRangeToJson(this);
   }
 }
 
 abstract class _SubstanceAmountReferenceRange
     extends SubstanceAmountReferenceRange {
-  _SubstanceAmountReferenceRange._() : super._();
   factory _SubstanceAmountReferenceRange(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Quantity lowLimit,
-      Quantity highLimit}) = _$_SubstanceAmountReferenceRange;
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Quantity? lowLimit,
+      Quantity? highLimit}) = _$_SubstanceAmountReferenceRange;
+  _SubstanceAmountReferenceRange._() : super._();
 
   factory _SubstanceAmountReferenceRange.fromJson(Map<String, dynamic> json) =
       _$_SubstanceAmountReferenceRange.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Quantity get lowLimit;
+  Quantity? get lowLimit => throw _privateConstructorUsedError;
   @override
-  Quantity get highLimit;
+  Quantity? get highLimit => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SubstanceAmountReferenceRangeCopyWith<_SubstanceAmountReferenceRange>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }

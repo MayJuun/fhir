@@ -74,7 +74,7 @@ String _formatValue(
             _indentation(nesting + 1),
             s == 0 ? '"' : '',
             _withEscapes(split[s]),
-          ].join('');
+          ].join();
         }
         return '$finalString"';
       }
@@ -124,7 +124,7 @@ String _formatList(List<dynamic> list, int nesting, YamlStyle style) => list
 
 String _indentation(int nesting) => _spaces(nesting * 2);
 
-String _spaces(int n) => ''.padRight(n, ' ');
+String _spaces(int n) => ''.padRight(n);
 
 bool _isMultilineString(String s) => s.contains('\n');
 
