@@ -5505,17 +5505,17 @@ abstract class _DeviceRequestParameter extends DeviceRequestParameter {
       throw _privateConstructorUsedError;
 }
 
-DeviceUseStatement _$DeviceUseStatementFromJson(Map<String, dynamic> json) {
-  return _DeviceUseStatement.fromJson(json);
+DeviceUsage _$DeviceUsageFromJson(Map<String, dynamic> json) {
+  return _DeviceUsage.fromJson(json);
 }
 
 /// @nodoc
-class _$DeviceUseStatementTearOff {
-  const _$DeviceUseStatementTearOff();
+class _$DeviceUsageTearOff {
+  const _$DeviceUsageTearOff();
 
-  _DeviceUseStatement call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.DeviceUseStatement)
-          R5ResourceType resourceType = R5ResourceType.DeviceUseStatement,
+  _DeviceUsage call(
+      {@JsonKey(unknownEnumValue: R5ResourceType.DeviceUsage)
+          R5ResourceType resourceType = R5ResourceType.DeviceUsage,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -5531,8 +5531,8 @@ class _$DeviceUseStatementTearOff {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-          DeviceUseStatementStatus? status,
+      @JsonKey(unknownEnumValue: DeviceUsageStatus.unknown)
+          DeviceUsageStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -5550,13 +5550,11 @@ class _$DeviceUseStatementTearOff {
       CodeableConcept? usageStatus,
       List<CodeableConcept>? usageReason,
       Reference? informationSource,
-      CodeableConcept? deviceCodeableConcept,
-      Reference? deviceReference,
+      required CodeableReference? device,
       List<CodeableReference>? reason,
-      CodeableConcept? bodySiteCodeableConcept,
-      Reference? bodySiteReference,
+      CodeableReference? bodySite,
       List<Annotation>? note}) {
-    return _DeviceUseStatement(
+    return _DeviceUsage(
       resourceType: resourceType,
       id: id,
       meta: meta,
@@ -5585,26 +5583,24 @@ class _$DeviceUseStatementTearOff {
       usageStatus: usageStatus,
       usageReason: usageReason,
       informationSource: informationSource,
-      deviceCodeableConcept: deviceCodeableConcept,
-      deviceReference: deviceReference,
+      device: device,
       reason: reason,
-      bodySiteCodeableConcept: bodySiteCodeableConcept,
-      bodySiteReference: bodySiteReference,
+      bodySite: bodySite,
       note: note,
     );
   }
 
-  DeviceUseStatement fromJson(Map<String, Object> json) {
-    return DeviceUseStatement.fromJson(json);
+  DeviceUsage fromJson(Map<String, Object> json) {
+    return DeviceUsage.fromJson(json);
   }
 }
 
 /// @nodoc
-const $DeviceUseStatement = _$DeviceUseStatementTearOff();
+const $DeviceUsage = _$DeviceUsageTearOff();
 
 /// @nodoc
-mixin _$DeviceUseStatement {
-  @JsonKey(unknownEnumValue: R5ResourceType.DeviceUseStatement)
+mixin _$DeviceUsage {
+  @JsonKey(unknownEnumValue: R5ResourceType.DeviceUsage)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
@@ -5622,8 +5618,8 @@ mixin _$DeviceUseStatement {
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-  DeviceUseStatementStatus? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: DeviceUsageStatus.unknown)
+  DeviceUsageStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get category => throw _privateConstructorUsedError;
@@ -5641,28 +5637,24 @@ mixin _$DeviceUseStatement {
   CodeableConcept? get usageStatus => throw _privateConstructorUsedError;
   List<CodeableConcept>? get usageReason => throw _privateConstructorUsedError;
   Reference? get informationSource => throw _privateConstructorUsedError;
-  CodeableConcept? get deviceCodeableConcept =>
-      throw _privateConstructorUsedError;
-  Reference? get deviceReference => throw _privateConstructorUsedError;
+  CodeableReference? get device => throw _privateConstructorUsedError;
   List<CodeableReference>? get reason => throw _privateConstructorUsedError;
-  CodeableConcept? get bodySiteCodeableConcept =>
-      throw _privateConstructorUsedError;
-  Reference? get bodySiteReference => throw _privateConstructorUsedError;
+  CodeableReference? get bodySite => throw _privateConstructorUsedError;
   List<Annotation>? get note => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $DeviceUseStatementCopyWith<DeviceUseStatement> get copyWith =>
+  $DeviceUsageCopyWith<DeviceUsage> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $DeviceUseStatementCopyWith<$Res> {
-  factory $DeviceUseStatementCopyWith(
-          DeviceUseStatement value, $Res Function(DeviceUseStatement) then) =
-      _$DeviceUseStatementCopyWithImpl<$Res>;
+abstract class $DeviceUsageCopyWith<$Res> {
+  factory $DeviceUsageCopyWith(
+          DeviceUsage value, $Res Function(DeviceUsage) then) =
+      _$DeviceUsageCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.DeviceUseStatement)
+      {@JsonKey(unknownEnumValue: R5ResourceType.DeviceUsage)
           R5ResourceType resourceType,
       Id? id,
       Meta? meta,
@@ -5679,8 +5671,8 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-          DeviceUseStatementStatus? status,
+      @JsonKey(unknownEnumValue: DeviceUsageStatus.unknown)
+          DeviceUsageStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -5698,11 +5690,9 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
       CodeableConcept? usageStatus,
       List<CodeableConcept>? usageReason,
       Reference? informationSource,
-      CodeableConcept? deviceCodeableConcept,
-      Reference? deviceReference,
+      CodeableReference? device,
       List<CodeableReference>? reason,
-      CodeableConcept? bodySiteCodeableConcept,
-      Reference? bodySiteReference,
+      CodeableReference? bodySite,
       List<Annotation>? note});
 
   $MetaCopyWith<$Res>? get meta;
@@ -5718,20 +5708,17 @@ abstract class $DeviceUseStatementCopyWith<$Res> {
   $ElementCopyWith<$Res>? get dateAssertedElement;
   $CodeableConceptCopyWith<$Res>? get usageStatus;
   $ReferenceCopyWith<$Res>? get informationSource;
-  $CodeableConceptCopyWith<$Res>? get deviceCodeableConcept;
-  $ReferenceCopyWith<$Res>? get deviceReference;
-  $CodeableConceptCopyWith<$Res>? get bodySiteCodeableConcept;
-  $ReferenceCopyWith<$Res>? get bodySiteReference;
+  $CodeableReferenceCopyWith<$Res>? get device;
+  $CodeableReferenceCopyWith<$Res>? get bodySite;
 }
 
 /// @nodoc
-class _$DeviceUseStatementCopyWithImpl<$Res>
-    implements $DeviceUseStatementCopyWith<$Res> {
-  _$DeviceUseStatementCopyWithImpl(this._value, this._then);
+class _$DeviceUsageCopyWithImpl<$Res> implements $DeviceUsageCopyWith<$Res> {
+  _$DeviceUsageCopyWithImpl(this._value, this._then);
 
-  final DeviceUseStatement _value;
+  final DeviceUsage _value;
   // ignore: unused_field
-  final $Res Function(DeviceUseStatement) _then;
+  final $Res Function(DeviceUsage) _then;
 
   @override
   $Res call({
@@ -5763,11 +5750,9 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
     Object? usageStatus = freezed,
     Object? usageReason = freezed,
     Object? informationSource = freezed,
-    Object? deviceCodeableConcept = freezed,
-    Object? deviceReference = freezed,
+    Object? device = freezed,
     Object? reason = freezed,
-    Object? bodySiteCodeableConcept = freezed,
-    Object? bodySiteReference = freezed,
+    Object? bodySite = freezed,
     Object? note = freezed,
   }) {
     return _then(_value.copyWith(
@@ -5826,7 +5811,7 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as DeviceUseStatementStatus?,
+              as DeviceUsageStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5883,26 +5868,18 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
           ? _value.informationSource
           : informationSource // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      deviceCodeableConcept: deviceCodeableConcept == freezed
-          ? _value.deviceCodeableConcept
-          : deviceCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      deviceReference: deviceReference == freezed
-          ? _value.deviceReference
-          : deviceReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      device: device == freezed
+          ? _value.device
+          : device // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       reason: reason == freezed
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as List<CodeableReference>?,
-      bodySiteCodeableConcept: bodySiteCodeableConcept == freezed
-          ? _value.bodySiteCodeableConcept
-          : bodySiteCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      bodySiteReference: bodySiteReference == freezed
-          ? _value.bodySiteReference
-          : bodySiteReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      bodySite: bodySite == freezed
+          ? _value.bodySite
+          : bodySite // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       note: note == freezed
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
@@ -6050,61 +6027,37 @@ class _$DeviceUseStatementCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get deviceCodeableConcept {
-    if (_value.deviceCodeableConcept == null) {
+  $CodeableReferenceCopyWith<$Res>? get device {
+    if (_value.device == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(_value.deviceCodeableConcept!,
-        (value) {
-      return _then(_value.copyWith(deviceCodeableConcept: value));
+    return $CodeableReferenceCopyWith<$Res>(_value.device!, (value) {
+      return _then(_value.copyWith(device: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res>? get deviceReference {
-    if (_value.deviceReference == null) {
+  $CodeableReferenceCopyWith<$Res>? get bodySite {
+    if (_value.bodySite == null) {
       return null;
     }
 
-    return $ReferenceCopyWith<$Res>(_value.deviceReference!, (value) {
-      return _then(_value.copyWith(deviceReference: value));
-    });
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get bodySiteCodeableConcept {
-    if (_value.bodySiteCodeableConcept == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.bodySiteCodeableConcept!,
-        (value) {
-      return _then(_value.copyWith(bodySiteCodeableConcept: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res>? get bodySiteReference {
-    if (_value.bodySiteReference == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.bodySiteReference!, (value) {
-      return _then(_value.copyWith(bodySiteReference: value));
+    return $CodeableReferenceCopyWith<$Res>(_value.bodySite!, (value) {
+      return _then(_value.copyWith(bodySite: value));
     });
   }
 }
 
 /// @nodoc
-abstract class _$DeviceUseStatementCopyWith<$Res>
-    implements $DeviceUseStatementCopyWith<$Res> {
-  factory _$DeviceUseStatementCopyWith(
-          _DeviceUseStatement value, $Res Function(_DeviceUseStatement) then) =
-      __$DeviceUseStatementCopyWithImpl<$Res>;
+abstract class _$DeviceUsageCopyWith<$Res>
+    implements $DeviceUsageCopyWith<$Res> {
+  factory _$DeviceUsageCopyWith(
+          _DeviceUsage value, $Res Function(_DeviceUsage) then) =
+      __$DeviceUsageCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.DeviceUseStatement)
+      {@JsonKey(unknownEnumValue: R5ResourceType.DeviceUsage)
           R5ResourceType resourceType,
       Id? id,
       Meta? meta,
@@ -6121,8 +6074,8 @@ abstract class _$DeviceUseStatementCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-          DeviceUseStatementStatus? status,
+      @JsonKey(unknownEnumValue: DeviceUsageStatus.unknown)
+          DeviceUsageStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -6140,11 +6093,9 @@ abstract class _$DeviceUseStatementCopyWith<$Res>
       CodeableConcept? usageStatus,
       List<CodeableConcept>? usageReason,
       Reference? informationSource,
-      CodeableConcept? deviceCodeableConcept,
-      Reference? deviceReference,
+      CodeableReference? device,
       List<CodeableReference>? reason,
-      CodeableConcept? bodySiteCodeableConcept,
-      Reference? bodySiteReference,
+      CodeableReference? bodySite,
       List<Annotation>? note});
 
   @override
@@ -6174,25 +6125,20 @@ abstract class _$DeviceUseStatementCopyWith<$Res>
   @override
   $ReferenceCopyWith<$Res>? get informationSource;
   @override
-  $CodeableConceptCopyWith<$Res>? get deviceCodeableConcept;
+  $CodeableReferenceCopyWith<$Res>? get device;
   @override
-  $ReferenceCopyWith<$Res>? get deviceReference;
-  @override
-  $CodeableConceptCopyWith<$Res>? get bodySiteCodeableConcept;
-  @override
-  $ReferenceCopyWith<$Res>? get bodySiteReference;
+  $CodeableReferenceCopyWith<$Res>? get bodySite;
 }
 
 /// @nodoc
-class __$DeviceUseStatementCopyWithImpl<$Res>
-    extends _$DeviceUseStatementCopyWithImpl<$Res>
-    implements _$DeviceUseStatementCopyWith<$Res> {
-  __$DeviceUseStatementCopyWithImpl(
-      _DeviceUseStatement _value, $Res Function(_DeviceUseStatement) _then)
-      : super(_value, (v) => _then(v as _DeviceUseStatement));
+class __$DeviceUsageCopyWithImpl<$Res> extends _$DeviceUsageCopyWithImpl<$Res>
+    implements _$DeviceUsageCopyWith<$Res> {
+  __$DeviceUsageCopyWithImpl(
+      _DeviceUsage _value, $Res Function(_DeviceUsage) _then)
+      : super(_value, (v) => _then(v as _DeviceUsage));
 
   @override
-  _DeviceUseStatement get _value => super._value as _DeviceUseStatement;
+  _DeviceUsage get _value => super._value as _DeviceUsage;
 
   @override
   $Res call({
@@ -6224,14 +6170,12 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
     Object? usageStatus = freezed,
     Object? usageReason = freezed,
     Object? informationSource = freezed,
-    Object? deviceCodeableConcept = freezed,
-    Object? deviceReference = freezed,
+    Object? device = freezed,
     Object? reason = freezed,
-    Object? bodySiteCodeableConcept = freezed,
-    Object? bodySiteReference = freezed,
+    Object? bodySite = freezed,
     Object? note = freezed,
   }) {
-    return _then(_DeviceUseStatement(
+    return _then(_DeviceUsage(
       resourceType: resourceType == freezed
           ? _value.resourceType
           : resourceType // ignore: cast_nullable_to_non_nullable
@@ -6287,7 +6231,7 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as DeviceUseStatementStatus?,
+              as DeviceUsageStatus?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6344,26 +6288,18 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
           ? _value.informationSource
           : informationSource // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      deviceCodeableConcept: deviceCodeableConcept == freezed
-          ? _value.deviceCodeableConcept
-          : deviceCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      deviceReference: deviceReference == freezed
-          ? _value.deviceReference
-          : deviceReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      device: device == freezed
+          ? _value.device
+          : device // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       reason: reason == freezed
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
               as List<CodeableReference>?,
-      bodySiteCodeableConcept: bodySiteCodeableConcept == freezed
-          ? _value.bodySiteCodeableConcept
-          : bodySiteCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      bodySiteReference: bodySiteReference == freezed
-          ? _value.bodySiteReference
-          : bodySiteReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      bodySite: bodySite == freezed
+          ? _value.bodySite
+          : bodySite // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       note: note == freezed
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
@@ -6374,10 +6310,10 @@ class __$DeviceUseStatementCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$_DeviceUseStatement extends _DeviceUseStatement {
-  _$_DeviceUseStatement(
-      {@JsonKey(unknownEnumValue: R5ResourceType.DeviceUseStatement)
-          this.resourceType = R5ResourceType.DeviceUseStatement,
+class _$_DeviceUsage extends _DeviceUsage {
+  _$_DeviceUsage(
+      {@JsonKey(unknownEnumValue: R5ResourceType.DeviceUsage)
+          this.resourceType = R5ResourceType.DeviceUsage,
       this.id,
       this.meta,
       this.implicitRules,
@@ -6393,7 +6329,7 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
       this.modifierExtension,
       this.identifier,
       this.basedOn,
-      @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
+      @JsonKey(unknownEnumValue: DeviceUsageStatus.unknown)
           this.status,
       @JsonKey(name: '_status')
           this.statusElement,
@@ -6412,19 +6348,17 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
       this.usageStatus,
       this.usageReason,
       this.informationSource,
-      this.deviceCodeableConcept,
-      this.deviceReference,
+      required this.device,
       this.reason,
-      this.bodySiteCodeableConcept,
-      this.bodySiteReference,
+      this.bodySite,
       this.note})
       : super._();
 
-  factory _$_DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
-      _$$_DeviceUseStatementFromJson(json);
+  factory _$_DeviceUsage.fromJson(Map<String, dynamic> json) =>
+      _$$_DeviceUsageFromJson(json);
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.DeviceUseStatement)
+  @JsonKey(unknownEnumValue: R5ResourceType.DeviceUsage)
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -6454,8 +6388,8 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   @override
   final List<Reference>? basedOn;
   @override
-  @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-  final DeviceUseStatementStatus? status;
+  @JsonKey(unknownEnumValue: DeviceUsageStatus.unknown)
+  final DeviceUsageStatus? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -6488,27 +6422,23 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
   @override
   final Reference? informationSource;
   @override
-  final CodeableConcept? deviceCodeableConcept;
-  @override
-  final Reference? deviceReference;
+  final CodeableReference? device;
   @override
   final List<CodeableReference>? reason;
   @override
-  final CodeableConcept? bodySiteCodeableConcept;
-  @override
-  final Reference? bodySiteReference;
+  final CodeableReference? bodySite;
   @override
   final List<Annotation>? note;
 
   @override
   String toString() {
-    return 'DeviceUseStatement(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, status: $status, statusElement: $statusElement, category: $category, subject: $subject, derivedFrom: $derivedFrom, context: $context, timingTiming: $timingTiming, timingPeriod: $timingPeriod, timingDateTime: $timingDateTime, timingDateTimeElement: $timingDateTimeElement, dateAsserted: $dateAsserted, dateAssertedElement: $dateAssertedElement, usageStatus: $usageStatus, usageReason: $usageReason, informationSource: $informationSource, deviceCodeableConcept: $deviceCodeableConcept, deviceReference: $deviceReference, reason: $reason, bodySiteCodeableConcept: $bodySiteCodeableConcept, bodySiteReference: $bodySiteReference, note: $note)';
+    return 'DeviceUsage(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, basedOn: $basedOn, status: $status, statusElement: $statusElement, category: $category, subject: $subject, derivedFrom: $derivedFrom, context: $context, timingTiming: $timingTiming, timingPeriod: $timingPeriod, timingDateTime: $timingDateTime, timingDateTimeElement: $timingDateTimeElement, dateAsserted: $dateAsserted, dateAssertedElement: $dateAssertedElement, usageStatus: $usageStatus, usageReason: $usageReason, informationSource: $informationSource, device: $device, reason: $reason, bodySite: $bodySite, note: $note)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _DeviceUseStatement &&
+        (other is _DeviceUsage &&
             (identical(other.resourceType, resourceType) ||
                 const DeepCollectionEquality()
                     .equals(other.resourceType, resourceType)) &&
@@ -6579,11 +6509,9 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
             (identical(other.usageStatus, usageStatus) || const DeepCollectionEquality().equals(other.usageStatus, usageStatus)) &&
             (identical(other.usageReason, usageReason) || const DeepCollectionEquality().equals(other.usageReason, usageReason)) &&
             (identical(other.informationSource, informationSource) || const DeepCollectionEquality().equals(other.informationSource, informationSource)) &&
-            (identical(other.deviceCodeableConcept, deviceCodeableConcept) || const DeepCollectionEquality().equals(other.deviceCodeableConcept, deviceCodeableConcept)) &&
-            (identical(other.deviceReference, deviceReference) || const DeepCollectionEquality().equals(other.deviceReference, deviceReference)) &&
+            (identical(other.device, device) || const DeepCollectionEquality().equals(other.device, device)) &&
             (identical(other.reason, reason) || const DeepCollectionEquality().equals(other.reason, reason)) &&
-            (identical(other.bodySiteCodeableConcept, bodySiteCodeableConcept) || const DeepCollectionEquality().equals(other.bodySiteCodeableConcept, bodySiteCodeableConcept)) &&
-            (identical(other.bodySiteReference, bodySiteReference) || const DeepCollectionEquality().equals(other.bodySiteReference, bodySiteReference)) &&
+            (identical(other.bodySite, bodySite) || const DeepCollectionEquality().equals(other.bodySite, bodySite)) &&
             (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)));
   }
 
@@ -6618,27 +6546,25 @@ class _$_DeviceUseStatement extends _DeviceUseStatement {
       const DeepCollectionEquality().hash(usageStatus) ^
       const DeepCollectionEquality().hash(usageReason) ^
       const DeepCollectionEquality().hash(informationSource) ^
-      const DeepCollectionEquality().hash(deviceCodeableConcept) ^
-      const DeepCollectionEquality().hash(deviceReference) ^
+      const DeepCollectionEquality().hash(device) ^
       const DeepCollectionEquality().hash(reason) ^
-      const DeepCollectionEquality().hash(bodySiteCodeableConcept) ^
-      const DeepCollectionEquality().hash(bodySiteReference) ^
+      const DeepCollectionEquality().hash(bodySite) ^
       const DeepCollectionEquality().hash(note);
 
   @JsonKey(ignore: true)
   @override
-  _$DeviceUseStatementCopyWith<_DeviceUseStatement> get copyWith =>
-      __$DeviceUseStatementCopyWithImpl<_DeviceUseStatement>(this, _$identity);
+  _$DeviceUsageCopyWith<_DeviceUsage> get copyWith =>
+      __$DeviceUsageCopyWithImpl<_DeviceUsage>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$_DeviceUseStatementToJson(this);
+    return _$$_DeviceUsageToJson(this);
   }
 }
 
-abstract class _DeviceUseStatement extends DeviceUseStatement {
-  factory _DeviceUseStatement(
-      {@JsonKey(unknownEnumValue: R5ResourceType.DeviceUseStatement)
+abstract class _DeviceUsage extends DeviceUsage {
+  factory _DeviceUsage(
+      {@JsonKey(unknownEnumValue: R5ResourceType.DeviceUsage)
           R5ResourceType resourceType,
       Id? id,
       Meta? meta,
@@ -6655,8 +6581,8 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       List<Reference>? basedOn,
-      @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-          DeviceUseStatementStatus? status,
+      @JsonKey(unknownEnumValue: DeviceUsageStatus.unknown)
+          DeviceUsageStatus? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       List<CodeableConcept>? category,
@@ -6674,19 +6600,17 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
       CodeableConcept? usageStatus,
       List<CodeableConcept>? usageReason,
       Reference? informationSource,
-      CodeableConcept? deviceCodeableConcept,
-      Reference? deviceReference,
+      required CodeableReference? device,
       List<CodeableReference>? reason,
-      CodeableConcept? bodySiteCodeableConcept,
-      Reference? bodySiteReference,
-      List<Annotation>? note}) = _$_DeviceUseStatement;
-  _DeviceUseStatement._() : super._();
+      CodeableReference? bodySite,
+      List<Annotation>? note}) = _$_DeviceUsage;
+  _DeviceUsage._() : super._();
 
-  factory _DeviceUseStatement.fromJson(Map<String, dynamic> json) =
-      _$_DeviceUseStatement.fromJson;
+  factory _DeviceUsage.fromJson(Map<String, dynamic> json) =
+      _$_DeviceUsage.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.DeviceUseStatement)
+  @JsonKey(unknownEnumValue: R5ResourceType.DeviceUsage)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
   Id? get id => throw _privateConstructorUsedError;
@@ -6717,8 +6641,8 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   @override
   List<Reference>? get basedOn => throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: DeviceUseStatementStatus.unknown)
-  DeviceUseStatementStatus? get status => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: DeviceUsageStatus.unknown)
+  DeviceUsageStatus? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -6751,22 +6675,16 @@ abstract class _DeviceUseStatement extends DeviceUseStatement {
   @override
   Reference? get informationSource => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get deviceCodeableConcept =>
-      throw _privateConstructorUsedError;
-  @override
-  Reference? get deviceReference => throw _privateConstructorUsedError;
+  CodeableReference? get device => throw _privateConstructorUsedError;
   @override
   List<CodeableReference>? get reason => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get bodySiteCodeableConcept =>
-      throw _privateConstructorUsedError;
-  @override
-  Reference? get bodySiteReference => throw _privateConstructorUsedError;
+  CodeableReference? get bodySite => throw _privateConstructorUsedError;
   @override
   List<Annotation>? get note => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$DeviceUseStatementCopyWith<_DeviceUseStatement> get copyWith =>
+  _$DeviceUsageCopyWith<_DeviceUsage> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -10944,5 +10862,1978 @@ abstract class _SupplyRequestParameter extends SupplyRequestParameter {
   @override
   @JsonKey(ignore: true)
   _$SupplyRequestParameterCopyWith<_SupplyRequestParameter> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+InventoryReport _$InventoryReportFromJson(Map<String, dynamic> json) {
+  return _InventoryReport.fromJson(json);
+}
+
+/// @nodoc
+class _$InventoryReportTearOff {
+  const _$InventoryReportTearOff();
+
+  _InventoryReport call(
+      {@JsonKey(unknownEnumValue: R5ResourceType.InventoryReport)
+          R5ResourceType resourceType = R5ResourceType.InventoryReport,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      @JsonKey(unknownEnumValue: InventoryReportStatus.unknown)
+          InventoryReportStatus? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
+      @JsonKey(unknownEnumValue: InventoryReportCountyType.unknown)
+          InventoryReportCountyType? countType,
+      @JsonKey(name: '_countType')
+          Element? countTypeElement,
+      CodeableConcept? operationType,
+      CodeableConcept? operationTypeReason,
+      FhirDateTime? reportedDateTime,
+      @JsonKey(name: '_reportedDateTime')
+          Element? reportedDateTimeElement,
+      Reference? reporter,
+      Period? reportingPeriod,
+      List<InventoryReportInventoryListing>? inventoryListing,
+      Annotation? note}) {
+    return _InventoryReport(
+      resourceType: resourceType,
+      id: id,
+      meta: meta,
+      implicitRules: implicitRules,
+      implicitRulesElement: implicitRulesElement,
+      language: language,
+      languageElement: languageElement,
+      text: text,
+      contained: contained,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      identifier: identifier,
+      status: status,
+      statusElement: statusElement,
+      countType: countType,
+      countTypeElement: countTypeElement,
+      operationType: operationType,
+      operationTypeReason: operationTypeReason,
+      reportedDateTime: reportedDateTime,
+      reportedDateTimeElement: reportedDateTimeElement,
+      reporter: reporter,
+      reportingPeriod: reportingPeriod,
+      inventoryListing: inventoryListing,
+      note: note,
+    );
+  }
+
+  InventoryReport fromJson(Map<String, Object> json) {
+    return InventoryReport.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $InventoryReport = _$InventoryReportTearOff();
+
+/// @nodoc
+mixin _$InventoryReport {
+  @JsonKey(unknownEnumValue: R5ResourceType.InventoryReport)
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: InventoryReportStatus.unknown)
+  InventoryReportStatus? get status => throw _privateConstructorUsedError;
+  @JsonKey(name: '_status')
+  Element? get statusElement => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: InventoryReportCountyType.unknown)
+  InventoryReportCountyType? get countType =>
+      throw _privateConstructorUsedError;
+  @JsonKey(name: '_countType')
+  Element? get countTypeElement => throw _privateConstructorUsedError;
+  CodeableConcept? get operationType => throw _privateConstructorUsedError;
+  CodeableConcept? get operationTypeReason =>
+      throw _privateConstructorUsedError;
+  FhirDateTime? get reportedDateTime => throw _privateConstructorUsedError;
+  @JsonKey(name: '_reportedDateTime')
+  Element? get reportedDateTimeElement => throw _privateConstructorUsedError;
+  Reference? get reporter => throw _privateConstructorUsedError;
+  Period? get reportingPeriod => throw _privateConstructorUsedError;
+  List<InventoryReportInventoryListing>? get inventoryListing =>
+      throw _privateConstructorUsedError;
+  Annotation? get note => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $InventoryReportCopyWith<InventoryReport> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InventoryReportCopyWith<$Res> {
+  factory $InventoryReportCopyWith(
+          InventoryReport value, $Res Function(InventoryReport) then) =
+      _$InventoryReportCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(unknownEnumValue: R5ResourceType.InventoryReport)
+          R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      @JsonKey(unknownEnumValue: InventoryReportStatus.unknown)
+          InventoryReportStatus? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
+      @JsonKey(unknownEnumValue: InventoryReportCountyType.unknown)
+          InventoryReportCountyType? countType,
+      @JsonKey(name: '_countType')
+          Element? countTypeElement,
+      CodeableConcept? operationType,
+      CodeableConcept? operationTypeReason,
+      FhirDateTime? reportedDateTime,
+      @JsonKey(name: '_reportedDateTime')
+          Element? reportedDateTimeElement,
+      Reference? reporter,
+      Period? reportingPeriod,
+      List<InventoryReportInventoryListing>? inventoryListing,
+      Annotation? note});
+
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get statusElement;
+  $ElementCopyWith<$Res>? get countTypeElement;
+  $CodeableConceptCopyWith<$Res>? get operationType;
+  $CodeableConceptCopyWith<$Res>? get operationTypeReason;
+  $ElementCopyWith<$Res>? get reportedDateTimeElement;
+  $ReferenceCopyWith<$Res>? get reporter;
+  $PeriodCopyWith<$Res>? get reportingPeriod;
+  $AnnotationCopyWith<$Res>? get note;
+}
+
+/// @nodoc
+class _$InventoryReportCopyWithImpl<$Res>
+    implements $InventoryReportCopyWith<$Res> {
+  _$InventoryReportCopyWithImpl(this._value, this._then);
+
+  final InventoryReport _value;
+  // ignore: unused_field
+  final $Res Function(InventoryReport) _then;
+
+  @override
+  $Res call({
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? countType = freezed,
+    Object? countTypeElement = freezed,
+    Object? operationType = freezed,
+    Object? operationTypeReason = freezed,
+    Object? reportedDateTime = freezed,
+    Object? reportedDateTimeElement = freezed,
+    Object? reporter = freezed,
+    Object? reportingPeriod = freezed,
+    Object? inventoryListing = freezed,
+    Object? note = freezed,
+  }) {
+    return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as InventoryReportStatus?,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      countType: countType == freezed
+          ? _value.countType
+          : countType // ignore: cast_nullable_to_non_nullable
+              as InventoryReportCountyType?,
+      countTypeElement: countTypeElement == freezed
+          ? _value.countTypeElement
+          : countTypeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      operationType: operationType == freezed
+          ? _value.operationType
+          : operationType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      operationTypeReason: operationTypeReason == freezed
+          ? _value.operationTypeReason
+          : operationTypeReason // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      reportedDateTime: reportedDateTime == freezed
+          ? _value.reportedDateTime
+          : reportedDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      reportedDateTimeElement: reportedDateTimeElement == freezed
+          ? _value.reportedDateTimeElement
+          : reportedDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      reporter: reporter == freezed
+          ? _value.reporter
+          : reporter // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      reportingPeriod: reportingPeriod == freezed
+          ? _value.reportingPeriod
+          : reportingPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      inventoryListing: inventoryListing == freezed
+          ? _value.inventoryListing
+          : inventoryListing // ignore: cast_nullable_to_non_nullable
+              as List<InventoryReportInventoryListing>?,
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as Annotation?,
+    ));
+  }
+
+  @override
+  $MetaCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res>? get text {
+    if (_value.text == null) {
+      return null;
+    }
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get countTypeElement {
+    if (_value.countTypeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.countTypeElement!, (value) {
+      return _then(_value.copyWith(countTypeElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get operationType {
+    if (_value.operationType == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.operationType!, (value) {
+      return _then(_value.copyWith(operationType: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get operationTypeReason {
+    if (_value.operationTypeReason == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.operationTypeReason!, (value) {
+      return _then(_value.copyWith(operationTypeReason: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get reportedDateTimeElement {
+    if (_value.reportedDateTimeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.reportedDateTimeElement!, (value) {
+      return _then(_value.copyWith(reportedDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get reporter {
+    if (_value.reporter == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.reporter!, (value) {
+      return _then(_value.copyWith(reporter: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res>? get reportingPeriod {
+    if (_value.reportingPeriod == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.reportingPeriod!, (value) {
+      return _then(_value.copyWith(reportingPeriod: value));
+    });
+  }
+
+  @override
+  $AnnotationCopyWith<$Res>? get note {
+    if (_value.note == null) {
+      return null;
+    }
+
+    return $AnnotationCopyWith<$Res>(_value.note!, (value) {
+      return _then(_value.copyWith(note: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$InventoryReportCopyWith<$Res>
+    implements $InventoryReportCopyWith<$Res> {
+  factory _$InventoryReportCopyWith(
+          _InventoryReport value, $Res Function(_InventoryReport) then) =
+      __$InventoryReportCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(unknownEnumValue: R5ResourceType.InventoryReport)
+          R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      @JsonKey(unknownEnumValue: InventoryReportStatus.unknown)
+          InventoryReportStatus? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
+      @JsonKey(unknownEnumValue: InventoryReportCountyType.unknown)
+          InventoryReportCountyType? countType,
+      @JsonKey(name: '_countType')
+          Element? countTypeElement,
+      CodeableConcept? operationType,
+      CodeableConcept? operationTypeReason,
+      FhirDateTime? reportedDateTime,
+      @JsonKey(name: '_reportedDateTime')
+          Element? reportedDateTimeElement,
+      Reference? reporter,
+      Period? reportingPeriod,
+      List<InventoryReportInventoryListing>? inventoryListing,
+      Annotation? note});
+
+  @override
+  $MetaCopyWith<$Res>? get meta;
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
+  $NarrativeCopyWith<$Res>? get text;
+  @override
+  $ElementCopyWith<$Res>? get statusElement;
+  @override
+  $ElementCopyWith<$Res>? get countTypeElement;
+  @override
+  $CodeableConceptCopyWith<$Res>? get operationType;
+  @override
+  $CodeableConceptCopyWith<$Res>? get operationTypeReason;
+  @override
+  $ElementCopyWith<$Res>? get reportedDateTimeElement;
+  @override
+  $ReferenceCopyWith<$Res>? get reporter;
+  @override
+  $PeriodCopyWith<$Res>? get reportingPeriod;
+  @override
+  $AnnotationCopyWith<$Res>? get note;
+}
+
+/// @nodoc
+class __$InventoryReportCopyWithImpl<$Res>
+    extends _$InventoryReportCopyWithImpl<$Res>
+    implements _$InventoryReportCopyWith<$Res> {
+  __$InventoryReportCopyWithImpl(
+      _InventoryReport _value, $Res Function(_InventoryReport) _then)
+      : super(_value, (v) => _then(v as _InventoryReport));
+
+  @override
+  _InventoryReport get _value => super._value as _InventoryReport;
+
+  @override
+  $Res call({
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? countType = freezed,
+    Object? countTypeElement = freezed,
+    Object? operationType = freezed,
+    Object? operationTypeReason = freezed,
+    Object? reportedDateTime = freezed,
+    Object? reportedDateTimeElement = freezed,
+    Object? reporter = freezed,
+    Object? reportingPeriod = freezed,
+    Object? inventoryListing = freezed,
+    Object? note = freezed,
+  }) {
+    return _then(_InventoryReport(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as InventoryReportStatus?,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      countType: countType == freezed
+          ? _value.countType
+          : countType // ignore: cast_nullable_to_non_nullable
+              as InventoryReportCountyType?,
+      countTypeElement: countTypeElement == freezed
+          ? _value.countTypeElement
+          : countTypeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      operationType: operationType == freezed
+          ? _value.operationType
+          : operationType // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      operationTypeReason: operationTypeReason == freezed
+          ? _value.operationTypeReason
+          : operationTypeReason // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      reportedDateTime: reportedDateTime == freezed
+          ? _value.reportedDateTime
+          : reportedDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      reportedDateTimeElement: reportedDateTimeElement == freezed
+          ? _value.reportedDateTimeElement
+          : reportedDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      reporter: reporter == freezed
+          ? _value.reporter
+          : reporter // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      reportingPeriod: reportingPeriod == freezed
+          ? _value.reportingPeriod
+          : reportingPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      inventoryListing: inventoryListing == freezed
+          ? _value.inventoryListing
+          : inventoryListing // ignore: cast_nullable_to_non_nullable
+              as List<InventoryReportInventoryListing>?,
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as Annotation?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_InventoryReport extends _InventoryReport {
+  _$_InventoryReport(
+      {@JsonKey(unknownEnumValue: R5ResourceType.InventoryReport)
+          this.resourceType = R5ResourceType.InventoryReport,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules')
+          this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language')
+          this.languageElement,
+      this.text,
+      this.contained,
+      @JsonKey(name: 'extension')
+          this.extension_,
+      this.modifierExtension,
+      this.identifier,
+      @JsonKey(unknownEnumValue: InventoryReportStatus.unknown)
+          this.status,
+      @JsonKey(name: '_status')
+          this.statusElement,
+      @JsonKey(unknownEnumValue: InventoryReportCountyType.unknown)
+          this.countType,
+      @JsonKey(name: '_countType')
+          this.countTypeElement,
+      this.operationType,
+      this.operationTypeReason,
+      this.reportedDateTime,
+      @JsonKey(name: '_reportedDateTime')
+          this.reportedDateTimeElement,
+      this.reporter,
+      this.reportingPeriod,
+      this.inventoryListing,
+      this.note})
+      : super._();
+
+  factory _$_InventoryReport.fromJson(Map<String, dynamic> json) =>
+      _$$_InventoryReportFromJson(json);
+
+  @override
+  @JsonKey(unknownEnumValue: R5ResourceType.InventoryReport)
+  final R5ResourceType resourceType;
+  @override
+  final Id? id;
+  @override
+  final Meta? meta;
+  @override
+  final FhirUri? implicitRules;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element? implicitRulesElement;
+  @override
+  final Code? language;
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
+  @override
+  final Narrative? text;
+  @override
+  final List<Resource>? contained;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final List<Identifier>? identifier;
+  @override
+  @JsonKey(unknownEnumValue: InventoryReportStatus.unknown)
+  final InventoryReportStatus? status;
+  @override
+  @JsonKey(name: '_status')
+  final Element? statusElement;
+  @override
+  @JsonKey(unknownEnumValue: InventoryReportCountyType.unknown)
+  final InventoryReportCountyType? countType;
+  @override
+  @JsonKey(name: '_countType')
+  final Element? countTypeElement;
+  @override
+  final CodeableConcept? operationType;
+  @override
+  final CodeableConcept? operationTypeReason;
+  @override
+  final FhirDateTime? reportedDateTime;
+  @override
+  @JsonKey(name: '_reportedDateTime')
+  final Element? reportedDateTimeElement;
+  @override
+  final Reference? reporter;
+  @override
+  final Period? reportingPeriod;
+  @override
+  final List<InventoryReportInventoryListing>? inventoryListing;
+  @override
+  final Annotation? note;
+
+  @override
+  String toString() {
+    return 'InventoryReport(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, countType: $countType, countTypeElement: $countTypeElement, operationType: $operationType, operationTypeReason: $operationTypeReason, reportedDateTime: $reportedDateTime, reportedDateTimeElement: $reportedDateTimeElement, reporter: $reporter, reportingPeriod: $reportingPeriod, inventoryListing: $inventoryListing, note: $note)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _InventoryReport &&
+            (identical(other.resourceType, resourceType) ||
+                const DeepCollectionEquality()
+                    .equals(other.resourceType, resourceType)) &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.meta, meta) ||
+                const DeepCollectionEquality().equals(other.meta, meta)) &&
+            (identical(other.implicitRules, implicitRules) ||
+                const DeepCollectionEquality()
+                    .equals(other.implicitRules, implicitRules)) &&
+            (identical(other.implicitRulesElement, implicitRulesElement) ||
+                const DeepCollectionEquality().equals(
+                    other.implicitRulesElement, implicitRulesElement)) &&
+            (identical(other.language, language) ||
+                const DeepCollectionEquality()
+                    .equals(other.language, language)) &&
+            (identical(other.languageElement, languageElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.languageElement, languageElement)) &&
+            (identical(other.text, text) ||
+                const DeepCollectionEquality().equals(other.text, text)) &&
+            (identical(other.contained, contained) ||
+                const DeepCollectionEquality()
+                    .equals(other.contained, contained)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.identifier, identifier) ||
+                const DeepCollectionEquality()
+                    .equals(other.identifier, identifier)) &&
+            (identical(other.status, status) ||
+                const DeepCollectionEquality().equals(other.status, status)) &&
+            (identical(other.statusElement, statusElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.statusElement, statusElement)) &&
+            (identical(other.countType, countType) ||
+                const DeepCollectionEquality()
+                    .equals(other.countType, countType)) &&
+            (identical(other.countTypeElement, countTypeElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.countTypeElement, countTypeElement)) &&
+            (identical(other.operationType, operationType) ||
+                const DeepCollectionEquality()
+                    .equals(other.operationType, operationType)) &&
+            (identical(other.operationTypeReason, operationTypeReason) ||
+                const DeepCollectionEquality()
+                    .equals(other.operationTypeReason, operationTypeReason)) &&
+            (identical(other.reportedDateTime, reportedDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.reportedDateTime, reportedDateTime)) &&
+            (identical(other.reportedDateTimeElement, reportedDateTimeElement) ||
+                const DeepCollectionEquality().equals(
+                    other.reportedDateTimeElement, reportedDateTimeElement)) &&
+            (identical(other.reporter, reporter) ||
+                const DeepCollectionEquality()
+                    .equals(other.reporter, reporter)) &&
+            (identical(other.reportingPeriod, reportingPeriod) ||
+                const DeepCollectionEquality()
+                    .equals(other.reportingPeriod, reportingPeriod)) &&
+            (identical(other.inventoryListing, inventoryListing) ||
+                const DeepCollectionEquality()
+                    .equals(other.inventoryListing, inventoryListing)) &&
+            (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(resourceType) ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(meta) ^
+      const DeepCollectionEquality().hash(implicitRules) ^
+      const DeepCollectionEquality().hash(implicitRulesElement) ^
+      const DeepCollectionEquality().hash(language) ^
+      const DeepCollectionEquality().hash(languageElement) ^
+      const DeepCollectionEquality().hash(text) ^
+      const DeepCollectionEquality().hash(contained) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(identifier) ^
+      const DeepCollectionEquality().hash(status) ^
+      const DeepCollectionEquality().hash(statusElement) ^
+      const DeepCollectionEquality().hash(countType) ^
+      const DeepCollectionEquality().hash(countTypeElement) ^
+      const DeepCollectionEquality().hash(operationType) ^
+      const DeepCollectionEquality().hash(operationTypeReason) ^
+      const DeepCollectionEquality().hash(reportedDateTime) ^
+      const DeepCollectionEquality().hash(reportedDateTimeElement) ^
+      const DeepCollectionEquality().hash(reporter) ^
+      const DeepCollectionEquality().hash(reportingPeriod) ^
+      const DeepCollectionEquality().hash(inventoryListing) ^
+      const DeepCollectionEquality().hash(note);
+
+  @JsonKey(ignore: true)
+  @override
+  _$InventoryReportCopyWith<_InventoryReport> get copyWith =>
+      __$InventoryReportCopyWithImpl<_InventoryReport>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_InventoryReportToJson(this);
+  }
+}
+
+abstract class _InventoryReport extends InventoryReport {
+  factory _InventoryReport(
+      {@JsonKey(unknownEnumValue: R5ResourceType.InventoryReport)
+          R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules')
+          Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language')
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      @JsonKey(unknownEnumValue: InventoryReportStatus.unknown)
+          InventoryReportStatus? status,
+      @JsonKey(name: '_status')
+          Element? statusElement,
+      @JsonKey(unknownEnumValue: InventoryReportCountyType.unknown)
+          InventoryReportCountyType? countType,
+      @JsonKey(name: '_countType')
+          Element? countTypeElement,
+      CodeableConcept? operationType,
+      CodeableConcept? operationTypeReason,
+      FhirDateTime? reportedDateTime,
+      @JsonKey(name: '_reportedDateTime')
+          Element? reportedDateTimeElement,
+      Reference? reporter,
+      Period? reportingPeriod,
+      List<InventoryReportInventoryListing>? inventoryListing,
+      Annotation? note}) = _$_InventoryReport;
+  _InventoryReport._() : super._();
+
+  factory _InventoryReport.fromJson(Map<String, dynamic> json) =
+      _$_InventoryReport.fromJson;
+
+  @override
+  @JsonKey(unknownEnumValue: R5ResourceType.InventoryReport)
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @override
+  Id? get id => throw _privateConstructorUsedError;
+  @override
+  Meta? get meta => throw _privateConstructorUsedError;
+  @override
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @override
+  Code? get language => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+  @override
+  Narrative? get text => throw _privateConstructorUsedError;
+  @override
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(unknownEnumValue: InventoryReportStatus.unknown)
+  InventoryReportStatus? get status => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_status')
+  Element? get statusElement => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(unknownEnumValue: InventoryReportCountyType.unknown)
+  InventoryReportCountyType? get countType =>
+      throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_countType')
+  Element? get countTypeElement => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get operationType => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get operationTypeReason =>
+      throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get reportedDateTime => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_reportedDateTime')
+  Element? get reportedDateTimeElement => throw _privateConstructorUsedError;
+  @override
+  Reference? get reporter => throw _privateConstructorUsedError;
+  @override
+  Period? get reportingPeriod => throw _privateConstructorUsedError;
+  @override
+  List<InventoryReportInventoryListing>? get inventoryListing =>
+      throw _privateConstructorUsedError;
+  @override
+  Annotation? get note => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$InventoryReportCopyWith<_InventoryReport> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+InventoryReportInventoryListing _$InventoryReportInventoryListingFromJson(
+    Map<String, dynamic> json) {
+  return _InventoryReportInventoryListing.fromJson(json);
+}
+
+/// @nodoc
+class _$InventoryReportInventoryListingTearOff {
+  const _$InventoryReportInventoryListingTearOff();
+
+  _InventoryReportInventoryListing call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Reference? location,
+      CodeableConcept? itemStatus,
+      FhirDateTime? countingDateTime,
+      @JsonKey(name: '_countingDateTime') Element? countingDateTimeElement,
+      List<InventoryReportItems>? items}) {
+    return _InventoryReportInventoryListing(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      location: location,
+      itemStatus: itemStatus,
+      countingDateTime: countingDateTime,
+      countingDateTimeElement: countingDateTimeElement,
+      items: items,
+    );
+  }
+
+  InventoryReportInventoryListing fromJson(Map<String, Object> json) {
+    return InventoryReportInventoryListing.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $InventoryReportInventoryListing =
+    _$InventoryReportInventoryListingTearOff();
+
+/// @nodoc
+mixin _$InventoryReportInventoryListing {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Reference? get location => throw _privateConstructorUsedError;
+  CodeableConcept? get itemStatus => throw _privateConstructorUsedError;
+  FhirDateTime? get countingDateTime => throw _privateConstructorUsedError;
+  @JsonKey(name: '_countingDateTime')
+  Element? get countingDateTimeElement => throw _privateConstructorUsedError;
+  List<InventoryReportItems>? get items => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $InventoryReportInventoryListingCopyWith<InventoryReportInventoryListing>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InventoryReportInventoryListingCopyWith<$Res> {
+  factory $InventoryReportInventoryListingCopyWith(
+          InventoryReportInventoryListing value,
+          $Res Function(InventoryReportInventoryListing) then) =
+      _$InventoryReportInventoryListingCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Reference? location,
+      CodeableConcept? itemStatus,
+      FhirDateTime? countingDateTime,
+      @JsonKey(name: '_countingDateTime') Element? countingDateTimeElement,
+      List<InventoryReportItems>? items});
+
+  $ReferenceCopyWith<$Res>? get location;
+  $CodeableConceptCopyWith<$Res>? get itemStatus;
+  $ElementCopyWith<$Res>? get countingDateTimeElement;
+}
+
+/// @nodoc
+class _$InventoryReportInventoryListingCopyWithImpl<$Res>
+    implements $InventoryReportInventoryListingCopyWith<$Res> {
+  _$InventoryReportInventoryListingCopyWithImpl(this._value, this._then);
+
+  final InventoryReportInventoryListing _value;
+  // ignore: unused_field
+  final $Res Function(InventoryReportInventoryListing) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? location = freezed,
+    Object? itemStatus = freezed,
+    Object? countingDateTime = freezed,
+    Object? countingDateTimeElement = freezed,
+    Object? items = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      itemStatus: itemStatus == freezed
+          ? _value.itemStatus
+          : itemStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      countingDateTime: countingDateTime == freezed
+          ? _value.countingDateTime
+          : countingDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      countingDateTimeElement: countingDateTimeElement == freezed
+          ? _value.countingDateTimeElement
+          : countingDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      items: items == freezed
+          ? _value.items
+          : items // ignore: cast_nullable_to_non_nullable
+              as List<InventoryReportItems>?,
+    ));
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get location {
+    if (_value.location == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.location!, (value) {
+      return _then(_value.copyWith(location: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get itemStatus {
+    if (_value.itemStatus == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.itemStatus!, (value) {
+      return _then(_value.copyWith(itemStatus: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get countingDateTimeElement {
+    if (_value.countingDateTimeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.countingDateTimeElement!, (value) {
+      return _then(_value.copyWith(countingDateTimeElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$InventoryReportInventoryListingCopyWith<$Res>
+    implements $InventoryReportInventoryListingCopyWith<$Res> {
+  factory _$InventoryReportInventoryListingCopyWith(
+          _InventoryReportInventoryListing value,
+          $Res Function(_InventoryReportInventoryListing) then) =
+      __$InventoryReportInventoryListingCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Reference? location,
+      CodeableConcept? itemStatus,
+      FhirDateTime? countingDateTime,
+      @JsonKey(name: '_countingDateTime') Element? countingDateTimeElement,
+      List<InventoryReportItems>? items});
+
+  @override
+  $ReferenceCopyWith<$Res>? get location;
+  @override
+  $CodeableConceptCopyWith<$Res>? get itemStatus;
+  @override
+  $ElementCopyWith<$Res>? get countingDateTimeElement;
+}
+
+/// @nodoc
+class __$InventoryReportInventoryListingCopyWithImpl<$Res>
+    extends _$InventoryReportInventoryListingCopyWithImpl<$Res>
+    implements _$InventoryReportInventoryListingCopyWith<$Res> {
+  __$InventoryReportInventoryListingCopyWithImpl(
+      _InventoryReportInventoryListing _value,
+      $Res Function(_InventoryReportInventoryListing) _then)
+      : super(_value, (v) => _then(v as _InventoryReportInventoryListing));
+
+  @override
+  _InventoryReportInventoryListing get _value =>
+      super._value as _InventoryReportInventoryListing;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? location = freezed,
+    Object? itemStatus = freezed,
+    Object? countingDateTime = freezed,
+    Object? countingDateTimeElement = freezed,
+    Object? items = freezed,
+  }) {
+    return _then(_InventoryReportInventoryListing(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      itemStatus: itemStatus == freezed
+          ? _value.itemStatus
+          : itemStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      countingDateTime: countingDateTime == freezed
+          ? _value.countingDateTime
+          : countingDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      countingDateTimeElement: countingDateTimeElement == freezed
+          ? _value.countingDateTimeElement
+          : countingDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      items: items == freezed
+          ? _value.items
+          : items // ignore: cast_nullable_to_non_nullable
+              as List<InventoryReportItems>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_InventoryReportInventoryListing
+    extends _InventoryReportInventoryListing {
+  _$_InventoryReportInventoryListing(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.location,
+      this.itemStatus,
+      this.countingDateTime,
+      @JsonKey(name: '_countingDateTime') this.countingDateTimeElement,
+      this.items})
+      : super._();
+
+  factory _$_InventoryReportInventoryListing.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_InventoryReportInventoryListingFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final Reference? location;
+  @override
+  final CodeableConcept? itemStatus;
+  @override
+  final FhirDateTime? countingDateTime;
+  @override
+  @JsonKey(name: '_countingDateTime')
+  final Element? countingDateTimeElement;
+  @override
+  final List<InventoryReportItems>? items;
+
+  @override
+  String toString() {
+    return 'InventoryReportInventoryListing(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, location: $location, itemStatus: $itemStatus, countingDateTime: $countingDateTime, countingDateTimeElement: $countingDateTimeElement, items: $items)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _InventoryReportInventoryListing &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.location, location) ||
+                const DeepCollectionEquality()
+                    .equals(other.location, location)) &&
+            (identical(other.itemStatus, itemStatus) ||
+                const DeepCollectionEquality()
+                    .equals(other.itemStatus, itemStatus)) &&
+            (identical(other.countingDateTime, countingDateTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.countingDateTime, countingDateTime)) &&
+            (identical(
+                    other.countingDateTimeElement, countingDateTimeElement) ||
+                const DeepCollectionEquality().equals(
+                    other.countingDateTimeElement, countingDateTimeElement)) &&
+            (identical(other.items, items) ||
+                const DeepCollectionEquality().equals(other.items, items)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(location) ^
+      const DeepCollectionEquality().hash(itemStatus) ^
+      const DeepCollectionEquality().hash(countingDateTime) ^
+      const DeepCollectionEquality().hash(countingDateTimeElement) ^
+      const DeepCollectionEquality().hash(items);
+
+  @JsonKey(ignore: true)
+  @override
+  _$InventoryReportInventoryListingCopyWith<_InventoryReportInventoryListing>
+      get copyWith => __$InventoryReportInventoryListingCopyWithImpl<
+          _InventoryReportInventoryListing>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_InventoryReportInventoryListingToJson(this);
+  }
+}
+
+abstract class _InventoryReportInventoryListing
+    extends InventoryReportInventoryListing {
+  factory _InventoryReportInventoryListing(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Reference? location,
+      CodeableConcept? itemStatus,
+      FhirDateTime? countingDateTime,
+      @JsonKey(name: '_countingDateTime') Element? countingDateTimeElement,
+      List<InventoryReportItems>? items}) = _$_InventoryReportInventoryListing;
+  _InventoryReportInventoryListing._() : super._();
+
+  factory _InventoryReportInventoryListing.fromJson(Map<String, dynamic> json) =
+      _$_InventoryReportInventoryListing.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  Reference? get location => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get itemStatus => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get countingDateTime => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_countingDateTime')
+  Element? get countingDateTimeElement => throw _privateConstructorUsedError;
+  @override
+  List<InventoryReportItems>? get items => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$InventoryReportInventoryListingCopyWith<_InventoryReportInventoryListing>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+InventoryReportItems _$InventoryReportItemsFromJson(Map<String, dynamic> json) {
+  return _InventoryReportItems.fromJson(json);
+}
+
+/// @nodoc
+class _$InventoryReportItemsTearOff {
+  const _$InventoryReportItemsTearOff();
+
+  _InventoryReportItems call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? category,
+      required Quantity? quantity,
+      required CodeableReference? item,
+      String? lot,
+      @JsonKey(name: '_lot') Element? lotElement,
+      String? serial,
+      @JsonKey(name: '_serial') Element? serialElement,
+      FhirDateTime? expiry,
+      @JsonKey(name: '_expiry') Element? expiryElement,
+      FhirDateTime? manufacturingDate,
+      @JsonKey(name: '_manufacturingDate') Element? manufacturingDateElement}) {
+    return _InventoryReportItems(
+      id: id,
+      extension_: extension_,
+      modifierExtension: modifierExtension,
+      category: category,
+      quantity: quantity,
+      item: item,
+      lot: lot,
+      lotElement: lotElement,
+      serial: serial,
+      serialElement: serialElement,
+      expiry: expiry,
+      expiryElement: expiryElement,
+      manufacturingDate: manufacturingDate,
+      manufacturingDateElement: manufacturingDateElement,
+    );
+  }
+
+  InventoryReportItems fromJson(Map<String, Object> json) {
+    return InventoryReportItems.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $InventoryReportItems = _$InventoryReportItemsTearOff();
+
+/// @nodoc
+mixin _$InventoryReportItems {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get category => throw _privateConstructorUsedError;
+  Quantity? get quantity => throw _privateConstructorUsedError;
+  CodeableReference? get item => throw _privateConstructorUsedError;
+  String? get lot => throw _privateConstructorUsedError;
+  @JsonKey(name: '_lot')
+  Element? get lotElement => throw _privateConstructorUsedError;
+  String? get serial => throw _privateConstructorUsedError;
+  @JsonKey(name: '_serial')
+  Element? get serialElement => throw _privateConstructorUsedError;
+  FhirDateTime? get expiry => throw _privateConstructorUsedError;
+  @JsonKey(name: '_expiry')
+  Element? get expiryElement => throw _privateConstructorUsedError;
+  FhirDateTime? get manufacturingDate => throw _privateConstructorUsedError;
+  @JsonKey(name: '_manufacturingDate')
+  Element? get manufacturingDateElement => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $InventoryReportItemsCopyWith<InventoryReportItems> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $InventoryReportItemsCopyWith<$Res> {
+  factory $InventoryReportItemsCopyWith(InventoryReportItems value,
+          $Res Function(InventoryReportItems) then) =
+      _$InventoryReportItemsCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? category,
+      Quantity? quantity,
+      CodeableReference? item,
+      String? lot,
+      @JsonKey(name: '_lot') Element? lotElement,
+      String? serial,
+      @JsonKey(name: '_serial') Element? serialElement,
+      FhirDateTime? expiry,
+      @JsonKey(name: '_expiry') Element? expiryElement,
+      FhirDateTime? manufacturingDate,
+      @JsonKey(name: '_manufacturingDate') Element? manufacturingDateElement});
+
+  $CodeableConceptCopyWith<$Res>? get category;
+  $QuantityCopyWith<$Res>? get quantity;
+  $CodeableReferenceCopyWith<$Res>? get item;
+  $ElementCopyWith<$Res>? get lotElement;
+  $ElementCopyWith<$Res>? get serialElement;
+  $ElementCopyWith<$Res>? get expiryElement;
+  $ElementCopyWith<$Res>? get manufacturingDateElement;
+}
+
+/// @nodoc
+class _$InventoryReportItemsCopyWithImpl<$Res>
+    implements $InventoryReportItemsCopyWith<$Res> {
+  _$InventoryReportItemsCopyWithImpl(this._value, this._then);
+
+  final InventoryReportItems _value;
+  // ignore: unused_field
+  final $Res Function(InventoryReportItems) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? category = freezed,
+    Object? quantity = freezed,
+    Object? item = freezed,
+    Object? lot = freezed,
+    Object? lotElement = freezed,
+    Object? serial = freezed,
+    Object? serialElement = freezed,
+    Object? expiry = freezed,
+    Object? expiryElement = freezed,
+    Object? manufacturingDate = freezed,
+    Object? manufacturingDateElement = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      category: category == freezed
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      quantity: quantity == freezed
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      item: item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
+      lot: lot == freezed
+          ? _value.lot
+          : lot // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lotElement: lotElement == freezed
+          ? _value.lotElement
+          : lotElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      serial: serial == freezed
+          ? _value.serial
+          : serial // ignore: cast_nullable_to_non_nullable
+              as String?,
+      serialElement: serialElement == freezed
+          ? _value.serialElement
+          : serialElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      expiry: expiry == freezed
+          ? _value.expiry
+          : expiry // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      expiryElement: expiryElement == freezed
+          ? _value.expiryElement
+          : expiryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      manufacturingDate: manufacturingDate == freezed
+          ? _value.manufacturingDate
+          : manufacturingDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      manufacturingDateElement: manufacturingDateElement == freezed
+          ? _value.manufacturingDateElement
+          : manufacturingDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get category {
+    if (_value.category == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.category!, (value) {
+      return _then(_value.copyWith(category: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res>? get quantity {
+    if (_value.quantity == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.quantity!, (value) {
+      return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $CodeableReferenceCopyWith<$Res>? get item {
+    if (_value.item == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(_value.item!, (value) {
+      return _then(_value.copyWith(item: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get lotElement {
+    if (_value.lotElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.lotElement!, (value) {
+      return _then(_value.copyWith(lotElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get serialElement {
+    if (_value.serialElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.serialElement!, (value) {
+      return _then(_value.copyWith(serialElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get expiryElement {
+    if (_value.expiryElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.expiryElement!, (value) {
+      return _then(_value.copyWith(expiryElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get manufacturingDateElement {
+    if (_value.manufacturingDateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.manufacturingDateElement!, (value) {
+      return _then(_value.copyWith(manufacturingDateElement: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$InventoryReportItemsCopyWith<$Res>
+    implements $InventoryReportItemsCopyWith<$Res> {
+  factory _$InventoryReportItemsCopyWith(_InventoryReportItems value,
+          $Res Function(_InventoryReportItems) then) =
+      __$InventoryReportItemsCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? category,
+      Quantity? quantity,
+      CodeableReference? item,
+      String? lot,
+      @JsonKey(name: '_lot') Element? lotElement,
+      String? serial,
+      @JsonKey(name: '_serial') Element? serialElement,
+      FhirDateTime? expiry,
+      @JsonKey(name: '_expiry') Element? expiryElement,
+      FhirDateTime? manufacturingDate,
+      @JsonKey(name: '_manufacturingDate') Element? manufacturingDateElement});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get category;
+  @override
+  $QuantityCopyWith<$Res>? get quantity;
+  @override
+  $CodeableReferenceCopyWith<$Res>? get item;
+  @override
+  $ElementCopyWith<$Res>? get lotElement;
+  @override
+  $ElementCopyWith<$Res>? get serialElement;
+  @override
+  $ElementCopyWith<$Res>? get expiryElement;
+  @override
+  $ElementCopyWith<$Res>? get manufacturingDateElement;
+}
+
+/// @nodoc
+class __$InventoryReportItemsCopyWithImpl<$Res>
+    extends _$InventoryReportItemsCopyWithImpl<$Res>
+    implements _$InventoryReportItemsCopyWith<$Res> {
+  __$InventoryReportItemsCopyWithImpl(
+      _InventoryReportItems _value, $Res Function(_InventoryReportItems) _then)
+      : super(_value, (v) => _then(v as _InventoryReportItems));
+
+  @override
+  _InventoryReportItems get _value => super._value as _InventoryReportItems;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? category = freezed,
+    Object? quantity = freezed,
+    Object? item = freezed,
+    Object? lot = freezed,
+    Object? lotElement = freezed,
+    Object? serial = freezed,
+    Object? serialElement = freezed,
+    Object? expiry = freezed,
+    Object? expiryElement = freezed,
+    Object? manufacturingDate = freezed,
+    Object? manufacturingDateElement = freezed,
+  }) {
+    return _then(_InventoryReportItems(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      category: category == freezed
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      quantity: quantity == freezed
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      item: item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
+      lot: lot == freezed
+          ? _value.lot
+          : lot // ignore: cast_nullable_to_non_nullable
+              as String?,
+      lotElement: lotElement == freezed
+          ? _value.lotElement
+          : lotElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      serial: serial == freezed
+          ? _value.serial
+          : serial // ignore: cast_nullable_to_non_nullable
+              as String?,
+      serialElement: serialElement == freezed
+          ? _value.serialElement
+          : serialElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      expiry: expiry == freezed
+          ? _value.expiry
+          : expiry // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      expiryElement: expiryElement == freezed
+          ? _value.expiryElement
+          : expiryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      manufacturingDate: manufacturingDate == freezed
+          ? _value.manufacturingDate
+          : manufacturingDate // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      manufacturingDateElement: manufacturingDateElement == freezed
+          ? _value.manufacturingDateElement
+          : manufacturingDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_InventoryReportItems extends _InventoryReportItems {
+  _$_InventoryReportItems(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.modifierExtension,
+      this.category,
+      required this.quantity,
+      required this.item,
+      this.lot,
+      @JsonKey(name: '_lot') this.lotElement,
+      this.serial,
+      @JsonKey(name: '_serial') this.serialElement,
+      this.expiry,
+      @JsonKey(name: '_expiry') this.expiryElement,
+      this.manufacturingDate,
+      @JsonKey(name: '_manufacturingDate') this.manufacturingDateElement})
+      : super._();
+
+  factory _$_InventoryReportItems.fromJson(Map<String, dynamic> json) =>
+      _$$_InventoryReportItemsFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final List<FhirExtension>? modifierExtension;
+  @override
+  final CodeableConcept? category;
+  @override
+  final Quantity? quantity;
+  @override
+  final CodeableReference? item;
+  @override
+  final String? lot;
+  @override
+  @JsonKey(name: '_lot')
+  final Element? lotElement;
+  @override
+  final String? serial;
+  @override
+  @JsonKey(name: '_serial')
+  final Element? serialElement;
+  @override
+  final FhirDateTime? expiry;
+  @override
+  @JsonKey(name: '_expiry')
+  final Element? expiryElement;
+  @override
+  final FhirDateTime? manufacturingDate;
+  @override
+  @JsonKey(name: '_manufacturingDate')
+  final Element? manufacturingDateElement;
+
+  @override
+  String toString() {
+    return 'InventoryReportItems(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, category: $category, quantity: $quantity, item: $item, lot: $lot, lotElement: $lotElement, serial: $serial, serialElement: $serialElement, expiry: $expiry, expiryElement: $expiryElement, manufacturingDate: $manufacturingDate, manufacturingDateElement: $manufacturingDateElement)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _InventoryReportItems &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
+            (identical(other.extension_, extension_) ||
+                const DeepCollectionEquality()
+                    .equals(other.extension_, extension_)) &&
+            (identical(other.modifierExtension, modifierExtension) ||
+                const DeepCollectionEquality()
+                    .equals(other.modifierExtension, modifierExtension)) &&
+            (identical(other.category, category) ||
+                const DeepCollectionEquality()
+                    .equals(other.category, category)) &&
+            (identical(other.quantity, quantity) ||
+                const DeepCollectionEquality()
+                    .equals(other.quantity, quantity)) &&
+            (identical(other.item, item) ||
+                const DeepCollectionEquality().equals(other.item, item)) &&
+            (identical(other.lot, lot) ||
+                const DeepCollectionEquality().equals(other.lot, lot)) &&
+            (identical(other.lotElement, lotElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.lotElement, lotElement)) &&
+            (identical(other.serial, serial) ||
+                const DeepCollectionEquality().equals(other.serial, serial)) &&
+            (identical(other.serialElement, serialElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.serialElement, serialElement)) &&
+            (identical(other.expiry, expiry) ||
+                const DeepCollectionEquality().equals(other.expiry, expiry)) &&
+            (identical(other.expiryElement, expiryElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.expiryElement, expiryElement)) &&
+            (identical(other.manufacturingDate, manufacturingDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.manufacturingDate, manufacturingDate)) &&
+            (identical(
+                    other.manufacturingDateElement, manufacturingDateElement) ||
+                const DeepCollectionEquality().equals(
+                    other.manufacturingDateElement, manufacturingDateElement)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
+      const DeepCollectionEquality().hash(extension_) ^
+      const DeepCollectionEquality().hash(modifierExtension) ^
+      const DeepCollectionEquality().hash(category) ^
+      const DeepCollectionEquality().hash(quantity) ^
+      const DeepCollectionEquality().hash(item) ^
+      const DeepCollectionEquality().hash(lot) ^
+      const DeepCollectionEquality().hash(lotElement) ^
+      const DeepCollectionEquality().hash(serial) ^
+      const DeepCollectionEquality().hash(serialElement) ^
+      const DeepCollectionEquality().hash(expiry) ^
+      const DeepCollectionEquality().hash(expiryElement) ^
+      const DeepCollectionEquality().hash(manufacturingDate) ^
+      const DeepCollectionEquality().hash(manufacturingDateElement);
+
+  @JsonKey(ignore: true)
+  @override
+  _$InventoryReportItemsCopyWith<_InventoryReportItems> get copyWith =>
+      __$InventoryReportItemsCopyWithImpl<_InventoryReportItems>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_InventoryReportItemsToJson(this);
+  }
+}
+
+abstract class _InventoryReportItems extends InventoryReportItems {
+  factory _InventoryReportItems(
+      {String? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? category,
+      required Quantity? quantity,
+      required CodeableReference? item,
+      String? lot,
+      @JsonKey(name: '_lot')
+          Element? lotElement,
+      String? serial,
+      @JsonKey(name: '_serial')
+          Element? serialElement,
+      FhirDateTime? expiry,
+      @JsonKey(name: '_expiry')
+          Element? expiryElement,
+      FhirDateTime? manufacturingDate,
+      @JsonKey(name: '_manufacturingDate')
+          Element? manufacturingDateElement}) = _$_InventoryReportItems;
+  _InventoryReportItems._() : super._();
+
+  factory _InventoryReportItems.fromJson(Map<String, dynamic> json) =
+      _$_InventoryReportItems.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get category => throw _privateConstructorUsedError;
+  @override
+  Quantity? get quantity => throw _privateConstructorUsedError;
+  @override
+  CodeableReference? get item => throw _privateConstructorUsedError;
+  @override
+  String? get lot => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_lot')
+  Element? get lotElement => throw _privateConstructorUsedError;
+  @override
+  String? get serial => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_serial')
+  Element? get serialElement => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get expiry => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_expiry')
+  Element? get expiryElement => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get manufacturingDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_manufacturingDate')
+  Element? get manufacturingDateElement => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$InventoryReportItemsCopyWith<_InventoryReportItems> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -188,8 +188,8 @@ Resource _newResourceVersion(Resource resource, {Meta? meta}) {
       return (resource as DeviceRequest).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(meta ?? resource.meta));
-    case R5ResourceType.DeviceUseStatement:
-      return (resource as DeviceUseStatement).copyWith(
+    case R5ResourceType.DeviceUsage:
+      return (resource as DeviceUsage).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(meta ?? resource.meta));
     case R5ResourceType.DiagnosticReport:

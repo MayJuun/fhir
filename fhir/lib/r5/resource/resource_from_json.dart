@@ -87,8 +87,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return DeviceMetric.fromJson(json);
     case 'DeviceRequest':
       return DeviceRequest.fromJson(json);
-    case 'DeviceUseStatement':
-      return DeviceUseStatement.fromJson(json);
+    case 'DeviceUsage':
+      return DeviceUsage.fromJson(json);
     case 'DiagnosticReport':
       return DiagnosticReport.fromJson(json);
     case 'DocumentManifest':
