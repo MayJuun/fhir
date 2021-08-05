@@ -1,4 +1,9 @@
-import 'package:fhir/r4.dart';
+import 'package:fhir/primitive_types/primitive_types.dart';
+import 'package:fhir/r4.dart' as r4;
+import 'package:fhir/r5.dart' as r5;
+import 'package:fhir/dstu2.dart' as dstu2;
+import 'package:fhir/stu3.dart' as stu3;
+
 import '../../utils/deep_comparison_lists.dart';
 import '../../fhir_path.dart';
 
@@ -63,8 +68,22 @@ class OfTypeParser extends ValueParser<ParserList> {
     }
     final finalResults = [];
     results.forEach((e) {
-      if ((ResourceUtils.resourceTypeFromStringMap.keys
-                  .contains((executedValue.first as IdentifierParser).value) &&
+      if (((passed['version'] == FhirVersion.r4
+                  ? r4.ResourceUtils.resourceTypeFromStringMap.keys
+                      .contains((executedValue.first as IdentifierParser).value)
+                  : passed['version'] == FhirVersion.r5
+                      ? r5.ResourceUtils.resourceTypeFromStringMap.keys
+                          .contains(
+                              (executedValue.first as IdentifierParser).value)
+                      : passed['version'] == FhirVersion.dstu2
+                          ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
+                              .contains(
+                                  (executedValue.first as IdentifierParser)
+                                      .value)
+                          : stu3.ResourceUtils.resourceTypeFromStringMap.keys
+                              .contains(
+                              (executedValue.first as IdentifierParser).value,
+                            )) &&
               e is Map &&
               e['resourceType'] ==
                   (executedValue.first as IdentifierParser).value) ||
@@ -83,7 +102,7 @@ class OfTypeParser extends ValueParser<ParserList> {
           ((executedValue.first as IdentifierParser).value == 'time' &&
               e is Time) ||
           ((executedValue.first as IdentifierParser).value == 'quantity' &&
-              e is Quantity)) {
+              e is FhirPathQuantity)) {
         finalResults.add(e);
       }
     });

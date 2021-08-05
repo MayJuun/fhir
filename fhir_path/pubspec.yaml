@@ -1,4 +1,8 @@
 name: fhir_path
+description: FHIRPath implemented in pure Dart code using petiteparser.
+version: 0.5.0-1
+homepage: https://www.fhirfli.dev/
+repository: https://github.com/MayJuun/fhir/tree/main/fhir
 
 environment:
   sdk: '>=2.13.0 <3.0.0'
