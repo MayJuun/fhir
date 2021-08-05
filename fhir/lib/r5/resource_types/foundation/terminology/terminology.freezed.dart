@@ -7936,8 +7936,8 @@ class _$ConceptMapUnmappedTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
-          ConceptMapUnmappedMode? mode,
+      @JsonKey(required: true, unknownEnumValue: ConceptMapUnmappedMode.unknown)
+          required ConceptMapUnmappedMode mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       Code? code,
@@ -7976,8 +7976,8 @@ mixin _$ConceptMapUnmapped {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
-  ConceptMapUnmappedMode? get mode => throw _privateConstructorUsedError;
+  @JsonKey(required: true, unknownEnumValue: ConceptMapUnmappedMode.unknown)
+  ConceptMapUnmappedMode get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
   Code? get code => throw _privateConstructorUsedError;
@@ -8004,8 +8004,8 @@ abstract class $ConceptMapUnmappedCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
-          ConceptMapUnmappedMode? mode,
+      @JsonKey(required: true, unknownEnumValue: ConceptMapUnmappedMode.unknown)
+          ConceptMapUnmappedMode mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       Code? code,
@@ -8059,7 +8059,7 @@ class _$ConceptMapUnmappedCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as ConceptMapUnmappedMode?,
+              as ConceptMapUnmappedMode,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -8133,8 +8133,8 @@ abstract class _$ConceptMapUnmappedCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
-          ConceptMapUnmappedMode? mode,
+      @JsonKey(required: true, unknownEnumValue: ConceptMapUnmappedMode.unknown)
+          ConceptMapUnmappedMode mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       Code? code,
@@ -8193,7 +8193,7 @@ class __$ConceptMapUnmappedCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as ConceptMapUnmappedMode?,
+              as ConceptMapUnmappedMode,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -8227,14 +8227,19 @@ class __$ConceptMapUnmappedCopyWithImpl<$Res>
 class _$_ConceptMapUnmapped extends _ConceptMapUnmapped {
   _$_ConceptMapUnmapped(
       {this.id,
-      @JsonKey(name: 'extension') this.extension_,
+      @JsonKey(name: 'extension')
+          this.extension_,
       this.modifierExtension,
-      @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown) this.mode,
-      @JsonKey(name: '_mode') this.modeElement,
+      @JsonKey(required: true, unknownEnumValue: ConceptMapUnmappedMode.unknown)
+          required this.mode,
+      @JsonKey(name: '_mode')
+          this.modeElement,
       this.code,
-      @JsonKey(name: '_code') this.codeElement,
+      @JsonKey(name: '_code')
+          this.codeElement,
       this.display,
-      @JsonKey(name: '_display') this.displayElement,
+      @JsonKey(name: '_display')
+          this.displayElement,
       this.url})
       : super._();
 
@@ -8249,8 +8254,8 @@ class _$_ConceptMapUnmapped extends _ConceptMapUnmapped {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
-  final ConceptMapUnmappedMode? mode;
+  @JsonKey(required: true, unknownEnumValue: ConceptMapUnmappedMode.unknown)
+  final ConceptMapUnmappedMode mode;
   @override
   @JsonKey(name: '_mode')
   final Element? modeElement;
@@ -8335,8 +8340,8 @@ abstract class _ConceptMapUnmapped extends ConceptMapUnmapped {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
-          ConceptMapUnmappedMode? mode,
+      @JsonKey(required: true, unknownEnumValue: ConceptMapUnmappedMode.unknown)
+          required ConceptMapUnmappedMode mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       Code? code,
@@ -8360,8 +8365,8 @@ abstract class _ConceptMapUnmapped extends ConceptMapUnmapped {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
-  ConceptMapUnmappedMode? get mode => throw _privateConstructorUsedError;
+  @JsonKey(required: true, unknownEnumValue: ConceptMapUnmappedMode.unknown)
+  ConceptMapUnmappedMode get mode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;

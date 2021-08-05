@@ -505,8 +505,8 @@ class ConceptMapUnmapped with _$ConceptMapUnmapped {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    @JsonKey(unknownEnumValue: ConceptMapUnmappedMode.unknown)
-        ConceptMapUnmappedMode? mode,
+    @JsonKey(required: true, unknownEnumValue: ConceptMapUnmappedMode.unknown)
+        required ConceptMapUnmappedMode mode,
     @JsonKey(name: '_mode') Element? modeElement,
     Code? code,
     @JsonKey(name: '_code') Element? codeElement,

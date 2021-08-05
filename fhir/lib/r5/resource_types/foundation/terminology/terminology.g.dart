@@ -1176,30 +1176,35 @@ Map<String, dynamic> _$$_ConceptMapDependsOnToJson(
 }
 
 _$_ConceptMapUnmapped _$$_ConceptMapUnmappedFromJson(
-        Map<String, dynamic> json) =>
-    _$_ConceptMapUnmapped(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      mode: _$enumDecodeNullable(_$ConceptMapUnmappedModeEnumMap, json['mode'],
-          unknownValue: ConceptMapUnmappedMode.unknown),
-      modeElement: json['_mode'] == null
-          ? null
-          : Element.fromJson(json['_mode'] as Map<String, dynamic>),
-      code: json['code'] == null ? null : Code.fromJson(json['code']),
-      codeElement: json['_code'] == null
-          ? null
-          : Element.fromJson(json['_code'] as Map<String, dynamic>),
-      display: json['display'] as String?,
-      displayElement: json['_display'] == null
-          ? null
-          : Element.fromJson(json['_display'] as Map<String, dynamic>),
-      url: json['url'] == null ? null : Canonical.fromJson(json['url']),
-    );
+    Map<String, dynamic> json) {
+  $checkKeys(
+    json,
+    requiredKeys: const ['mode'],
+  );
+  return _$_ConceptMapUnmapped(
+    id: json['id'] as String?,
+    extension_: (json['extension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+        ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+        .toList(),
+    mode: _$enumDecode(_$ConceptMapUnmappedModeEnumMap, json['mode'],
+        unknownValue: ConceptMapUnmappedMode.unknown),
+    modeElement: json['_mode'] == null
+        ? null
+        : Element.fromJson(json['_mode'] as Map<String, dynamic>),
+    code: json['code'] == null ? null : Code.fromJson(json['code']),
+    codeElement: json['_code'] == null
+        ? null
+        : Element.fromJson(json['_code'] as Map<String, dynamic>),
+    display: json['display'] as String?,
+    displayElement: json['_display'] == null
+        ? null
+        : Element.fromJson(json['_display'] as Map<String, dynamic>),
+    url: json['url'] == null ? null : Canonical.fromJson(json['url']),
+  );
+}
 
 Map<String, dynamic> _$$_ConceptMapUnmappedToJson(
     _$_ConceptMapUnmapped instance) {
@@ -1216,7 +1221,7 @@ Map<String, dynamic> _$$_ConceptMapUnmappedToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('mode', _$ConceptMapUnmappedModeEnumMap[instance.mode]);
+  val['mode'] = _$ConceptMapUnmappedModeEnumMap[instance.mode];
   writeNotNull('_mode', instance.modeElement?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('_code', instance.codeElement?.toJson());
