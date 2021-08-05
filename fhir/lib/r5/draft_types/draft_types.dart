@@ -154,7 +154,7 @@ class MarketingStatus with _$MarketingStatus {
 }
 
 @freezed
-class Citation with _$Citation {
+class Citation with Resource, _$Citation {
   Citation._();
   factory Citation({
     @Default(R5ResourceType.Citation)
@@ -1000,7 +1000,7 @@ class CitationSummary with _$CitationSummary {
 }
 
 @freezed
-class EvidenceReport with _$EvidenceReport {
+class EvidenceReport with Resource, _$EvidenceReport {
   EvidenceReport._();
   factory EvidenceReport({
     @Default(R5ResourceType.EvidenceReport)

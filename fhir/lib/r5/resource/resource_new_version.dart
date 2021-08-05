@@ -100,6 +100,10 @@ Resource _newResourceVersion(Resource resource, {Meta? meta}) {
       return (resource as ChargeItemDefinition).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(meta ?? resource.meta));
+    case R5ResourceType.Citation:
+      return (resource as Citation).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(meta ?? resource.meta));
     case R5ResourceType.Claim:
       return (resource as Claim).copyWith(
           id: _getId(resource.hashCode, resource.id),
@@ -232,6 +236,10 @@ Resource _newResourceVersion(Resource resource, {Meta? meta}) {
       return (resource as Evidence).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(meta ?? resource.meta));
+    case R5ResourceType.EvidenceReport:
+      return (resource as EvidenceReport).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(meta ?? resource.meta));
     case R5ResourceType.EvidenceVariable:
       return (resource as EvidenceVariable).copyWith(
           id: _getId(resource.hashCode, resource.id),
@@ -294,6 +302,10 @@ Resource _newResourceVersion(Resource resource, {Meta? meta}) {
           meta: _updateMetaVersion(meta ?? resource.meta));
     case R5ResourceType.InsurancePlan:
       return (resource as InsurancePlan).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(meta ?? resource.meta));
+    case R5ResourceType.InventoryReport:
+      return (resource as InventoryReport).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(meta ?? resource.meta));
     case R5ResourceType.Invoice:

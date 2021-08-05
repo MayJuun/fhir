@@ -9,6 +9,10 @@ Future<List<String>> r5Validation() async {
     var resource = r5.Resource.fromJson(jsonDecode(contents));
     if (!DeepCollectionEquality()
         .equals(resource.toJson(), jsonDecode(contents))) {
+      print('\n');
+      print(jsonEncode(resource.toJson()));
+      print('\n\n');
+      print(jsonEncode(jsonDecode(contents)));
       string.add(file.path);
     }
     if (!DeepCollectionEquality()

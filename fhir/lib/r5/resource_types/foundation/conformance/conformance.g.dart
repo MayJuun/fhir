@@ -470,6 +470,7 @@ const _$CapabilityStatementFhirVersionEnumMap = {
   CapabilityStatementFhirVersion.v4_2_0: '4.2.0',
   CapabilityStatementFhirVersion.v4_4_0: '4.4.0',
   CapabilityStatementFhirVersion.v4_5_0: '4.5.0',
+  CapabilityStatementFhirVersion.v4_6_0: '4.6.0',
   CapabilityStatementFhirVersion.unknown: 'unknown',
 };
 
@@ -1578,6 +1579,7 @@ const _$CapabilityStatement2FhirVersionEnumMap = {
   CapabilityStatement2FhirVersion.v4_2_0: '4.2.0',
   CapabilityStatement2FhirVersion.v4_4_0: '4.4.0',
   CapabilityStatement2FhirVersion.v4_5_0: '4.5.0',
+  CapabilityStatement2FhirVersion.v4_6_0: '4.6.0',
   CapabilityStatement2FhirVersion.unknown: 'unknown',
 };
 
@@ -5946,6 +5948,7 @@ const _$StructureDefinitionFhirVersionEnumMap = {
   StructureDefinitionFhirVersion.v4_2_0: '4.2.0',
   StructureDefinitionFhirVersion.v4_4_0: '4.4.0',
   StructureDefinitionFhirVersion.v4_5_0: '4.5.0',
+  StructureDefinitionFhirVersion.v4_6_0: '4.6.0',
   StructureDefinitionFhirVersion.unknown: 'unknown',
 };
 
