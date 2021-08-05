@@ -3453,8 +3453,7 @@ class _$DeviceRequestTearOff {
       Boolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
-      CodeableConcept? codeCodeableConcept,
-      Reference? codeReference,
+      CodeableReference? code,
       Integer? quantity,
       @JsonKey(name: '_quantity')
           Element? quantityElement,
@@ -3504,8 +3503,7 @@ class _$DeviceRequestTearOff {
       priorityElement: priorityElement,
       doNotPerform: doNotPerform,
       doNotPerformElement: doNotPerformElement,
-      codeCodeableConcept: codeCodeableConcept,
-      codeReference: codeReference,
+      code: code,
       quantity: quantity,
       quantityElement: quantityElement,
       parameter: parameter,
@@ -3576,9 +3574,7 @@ mixin _$DeviceRequest {
   Boolean? get doNotPerform => throw _privateConstructorUsedError;
   @JsonKey(name: '_doNotPerform')
   Element? get doNotPerformElement => throw _privateConstructorUsedError;
-  CodeableConcept? get codeCodeableConcept =>
-      throw _privateConstructorUsedError;
-  Reference? get codeReference => throw _privateConstructorUsedError;
+  CodeableReference? get code => throw _privateConstructorUsedError;
   Integer? get quantity => throw _privateConstructorUsedError;
   @JsonKey(name: '_quantity')
   Element? get quantityElement => throw _privateConstructorUsedError;
@@ -3650,8 +3646,7 @@ abstract class $DeviceRequestCopyWith<$Res> {
       Boolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
-      CodeableConcept? codeCodeableConcept,
-      Reference? codeReference,
+      CodeableReference? code,
       Integer? quantity,
       @JsonKey(name: '_quantity')
           Element? quantityElement,
@@ -3684,8 +3679,7 @@ abstract class $DeviceRequestCopyWith<$Res> {
   $ElementCopyWith<$Res>? get intentElement;
   $ElementCopyWith<$Res>? get priorityElement;
   $ElementCopyWith<$Res>? get doNotPerformElement;
-  $CodeableConceptCopyWith<$Res>? get codeCodeableConcept;
-  $ReferenceCopyWith<$Res>? get codeReference;
+  $CodeableReferenceCopyWith<$Res>? get code;
   $ElementCopyWith<$Res>? get quantityElement;
   $ReferenceCopyWith<$Res> get subject;
   $ReferenceCopyWith<$Res>? get encounter;
@@ -3735,8 +3729,7 @@ class _$DeviceRequestCopyWithImpl<$Res>
     Object? priorityElement = freezed,
     Object? doNotPerform = freezed,
     Object? doNotPerformElement = freezed,
-    Object? codeCodeableConcept = freezed,
-    Object? codeReference = freezed,
+    Object? code = freezed,
     Object? quantity = freezed,
     Object? quantityElement = freezed,
     Object? parameter = freezed,
@@ -3862,14 +3855,10 @@ class _$DeviceRequestCopyWithImpl<$Res>
           ? _value.doNotPerformElement
           : doNotPerformElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      codeCodeableConcept: codeCodeableConcept == freezed
-          ? _value.codeCodeableConcept
-          : codeCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      codeReference: codeReference == freezed
-          ? _value.codeReference
-          : codeReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       quantity: quantity == freezed
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
@@ -4049,24 +4038,13 @@ class _$DeviceRequestCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get codeCodeableConcept {
-    if (_value.codeCodeableConcept == null) {
+  $CodeableReferenceCopyWith<$Res>? get code {
+    if (_value.code == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(_value.codeCodeableConcept!, (value) {
-      return _then(_value.copyWith(codeCodeableConcept: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res>? get codeReference {
-    if (_value.codeReference == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.codeReference!, (value) {
-      return _then(_value.copyWith(codeReference: value));
+    return $CodeableReferenceCopyWith<$Res>(_value.code!, (value) {
+      return _then(_value.copyWith(code: value));
     });
   }
 
@@ -4220,8 +4198,7 @@ abstract class _$DeviceRequestCopyWith<$Res>
       Boolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
-      CodeableConcept? codeCodeableConcept,
-      Reference? codeReference,
+      CodeableReference? code,
       Integer? quantity,
       @JsonKey(name: '_quantity')
           Element? quantityElement,
@@ -4264,9 +4241,7 @@ abstract class _$DeviceRequestCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get doNotPerformElement;
   @override
-  $CodeableConceptCopyWith<$Res>? get codeCodeableConcept;
-  @override
-  $ReferenceCopyWith<$Res>? get codeReference;
+  $CodeableReferenceCopyWith<$Res>? get code;
   @override
   $ElementCopyWith<$Res>? get quantityElement;
   @override
@@ -4328,8 +4303,7 @@ class __$DeviceRequestCopyWithImpl<$Res>
     Object? priorityElement = freezed,
     Object? doNotPerform = freezed,
     Object? doNotPerformElement = freezed,
-    Object? codeCodeableConcept = freezed,
-    Object? codeReference = freezed,
+    Object? code = freezed,
     Object? quantity = freezed,
     Object? quantityElement = freezed,
     Object? parameter = freezed,
@@ -4455,14 +4429,10 @@ class __$DeviceRequestCopyWithImpl<$Res>
           ? _value.doNotPerformElement
           : doNotPerformElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      codeCodeableConcept: codeCodeableConcept == freezed
-          ? _value.codeCodeableConcept
-          : codeCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      codeReference: codeReference == freezed
-          ? _value.codeReference
-          : codeReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       quantity: quantity == freezed
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
@@ -4582,8 +4552,7 @@ class _$_DeviceRequest extends _DeviceRequest {
       this.doNotPerform,
       @JsonKey(name: '_doNotPerform')
           this.doNotPerformElement,
-      this.codeCodeableConcept,
-      this.codeReference,
+      this.code,
       this.quantity,
       @JsonKey(name: '_quantity')
           this.quantityElement,
@@ -4673,9 +4642,7 @@ class _$_DeviceRequest extends _DeviceRequest {
   @JsonKey(name: '_doNotPerform')
   final Element? doNotPerformElement;
   @override
-  final CodeableConcept? codeCodeableConcept;
-  @override
-  final Reference? codeReference;
+  final CodeableReference? code;
   @override
   final Integer? quantity;
   @override
@@ -4720,7 +4687,7 @@ class _$_DeviceRequest extends _DeviceRequest {
 
   @override
   String toString() {
-    return 'DeviceRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, priorRequest: $priorRequest, groupIdentifier: $groupIdentifier, status: $status, statusElement: $statusElement, intent: $intent, intentElement: $intentElement, priority: $priority, priorityElement: $priorityElement, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, codeCodeableConcept: $codeCodeableConcept, codeReference: $codeReference, quantity: $quantity, quantityElement: $quantityElement, parameter: $parameter, subject: $subject, encounter: $encounter, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceTiming: $occurrenceTiming, authoredOn: $authoredOn, authoredOnElement: $authoredOnElement, requester: $requester, performerType: $performerType, performer: $performer, reason: $reason, insurance: $insurance, supportingInfo: $supportingInfo, note: $note, relevantHistory: $relevantHistory)';
+    return 'DeviceRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, priorRequest: $priorRequest, groupIdentifier: $groupIdentifier, status: $status, statusElement: $statusElement, intent: $intent, intentElement: $intentElement, priority: $priority, priorityElement: $priorityElement, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, code: $code, quantity: $quantity, quantityElement: $quantityElement, parameter: $parameter, subject: $subject, encounter: $encounter, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceTiming: $occurrenceTiming, authoredOn: $authoredOn, authoredOnElement: $authoredOnElement, requester: $requester, performerType: $performerType, performer: $performer, reason: $reason, insurance: $insurance, supportingInfo: $supportingInfo, note: $note, relevantHistory: $relevantHistory)';
   }
 
   @override
@@ -4795,8 +4762,7 @@ class _$_DeviceRequest extends _DeviceRequest {
                 const DeepCollectionEquality().equals(other.priorityElement, priorityElement)) &&
             (identical(other.doNotPerform, doNotPerform) || const DeepCollectionEquality().equals(other.doNotPerform, doNotPerform)) &&
             (identical(other.doNotPerformElement, doNotPerformElement) || const DeepCollectionEquality().equals(other.doNotPerformElement, doNotPerformElement)) &&
-            (identical(other.codeCodeableConcept, codeCodeableConcept) || const DeepCollectionEquality().equals(other.codeCodeableConcept, codeCodeableConcept)) &&
-            (identical(other.codeReference, codeReference) || const DeepCollectionEquality().equals(other.codeReference, codeReference)) &&
+            (identical(other.code, code) || const DeepCollectionEquality().equals(other.code, code)) &&
             (identical(other.quantity, quantity) || const DeepCollectionEquality().equals(other.quantity, quantity)) &&
             (identical(other.quantityElement, quantityElement) || const DeepCollectionEquality().equals(other.quantityElement, quantityElement)) &&
             (identical(other.parameter, parameter) || const DeepCollectionEquality().equals(other.parameter, parameter)) &&
@@ -4847,8 +4813,7 @@ class _$_DeviceRequest extends _DeviceRequest {
       const DeepCollectionEquality().hash(priorityElement) ^
       const DeepCollectionEquality().hash(doNotPerform) ^
       const DeepCollectionEquality().hash(doNotPerformElement) ^
-      const DeepCollectionEquality().hash(codeCodeableConcept) ^
-      const DeepCollectionEquality().hash(codeReference) ^
+      const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(quantity) ^
       const DeepCollectionEquality().hash(quantityElement) ^
       const DeepCollectionEquality().hash(parameter) ^
@@ -4917,8 +4882,7 @@ abstract class _DeviceRequest extends DeviceRequest {
       Boolean? doNotPerform,
       @JsonKey(name: '_doNotPerform')
           Element? doNotPerformElement,
-      CodeableConcept? codeCodeableConcept,
-      Reference? codeReference,
+      CodeableReference? code,
       Integer? quantity,
       @JsonKey(name: '_quantity')
           Element? quantityElement,
@@ -5011,10 +4975,7 @@ abstract class _DeviceRequest extends DeviceRequest {
   @JsonKey(name: '_doNotPerform')
   Element? get doNotPerformElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get codeCodeableConcept =>
-      throw _privateConstructorUsedError;
-  @override
-  Reference? get codeReference => throw _privateConstructorUsedError;
+  CodeableReference? get code => throw _privateConstructorUsedError;
   @override
   Integer? get quantity => throw _privateConstructorUsedError;
   @override
@@ -9238,8 +9199,7 @@ class _$SupplyRequestTearOff {
       Code? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
-      CodeableConcept? itemCodeableConcept,
-      Reference? itemReference,
+      CodeableReference? item,
       required Quantity quantity,
       List<SupplyRequestParameter>? parameter,
       FhirDateTime? occurrenceDateTime,
@@ -9273,8 +9233,7 @@ class _$SupplyRequestTearOff {
       category: category,
       priority: priority,
       priorityElement: priorityElement,
-      itemCodeableConcept: itemCodeableConcept,
-      itemReference: itemReference,
+      item: item,
       quantity: quantity,
       parameter: parameter,
       occurrenceDateTime: occurrenceDateTime,
@@ -9325,9 +9284,7 @@ mixin _$SupplyRequest {
   Code? get priority => throw _privateConstructorUsedError;
   @JsonKey(name: '_priority')
   Element? get priorityElement => throw _privateConstructorUsedError;
-  CodeableConcept? get itemCodeableConcept =>
-      throw _privateConstructorUsedError;
-  Reference? get itemReference => throw _privateConstructorUsedError;
+  CodeableReference? get item => throw _privateConstructorUsedError;
   Quantity get quantity => throw _privateConstructorUsedError;
   List<SupplyRequestParameter>? get parameter =>
       throw _privateConstructorUsedError;
@@ -9380,8 +9337,7 @@ abstract class $SupplyRequestCopyWith<$Res> {
       Code? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
-      CodeableConcept? itemCodeableConcept,
-      Reference? itemReference,
+      CodeableReference? item,
       Quantity quantity,
       List<SupplyRequestParameter>? parameter,
       FhirDateTime? occurrenceDateTime,
@@ -9405,8 +9361,7 @@ abstract class $SupplyRequestCopyWith<$Res> {
   $ElementCopyWith<$Res>? get statusElement;
   $CodeableConceptCopyWith<$Res>? get category;
   $ElementCopyWith<$Res>? get priorityElement;
-  $CodeableConceptCopyWith<$Res>? get itemCodeableConcept;
-  $ReferenceCopyWith<$Res>? get itemReference;
+  $CodeableReferenceCopyWith<$Res>? get item;
   $QuantityCopyWith<$Res> get quantity;
   $ElementCopyWith<$Res>? get occurrenceDateTimeElement;
   $PeriodCopyWith<$Res>? get occurrencePeriod;
@@ -9445,8 +9400,7 @@ class _$SupplyRequestCopyWithImpl<$Res>
     Object? category = freezed,
     Object? priority = freezed,
     Object? priorityElement = freezed,
-    Object? itemCodeableConcept = freezed,
-    Object? itemReference = freezed,
+    Object? item = freezed,
     Object? quantity = freezed,
     Object? parameter = freezed,
     Object? occurrenceDateTime = freezed,
@@ -9530,14 +9484,10 @@ class _$SupplyRequestCopyWithImpl<$Res>
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      itemCodeableConcept: itemCodeableConcept == freezed
-          ? _value.itemCodeableConcept
-          : itemCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      itemReference: itemReference == freezed
-          ? _value.itemReference
-          : itemReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      item: item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       quantity: quantity == freezed
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
@@ -9671,24 +9621,13 @@ class _$SupplyRequestCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get itemCodeableConcept {
-    if (_value.itemCodeableConcept == null) {
+  $CodeableReferenceCopyWith<$Res>? get item {
+    if (_value.item == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(_value.itemCodeableConcept!, (value) {
-      return _then(_value.copyWith(itemCodeableConcept: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res>? get itemReference {
-    if (_value.itemReference == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.itemReference!, (value) {
-      return _then(_value.copyWith(itemReference: value));
+    return $CodeableReferenceCopyWith<$Res>(_value.item!, (value) {
+      return _then(_value.copyWith(item: value));
     });
   }
 
@@ -9808,8 +9747,7 @@ abstract class _$SupplyRequestCopyWith<$Res>
       Code? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
-      CodeableConcept? itemCodeableConcept,
-      Reference? itemReference,
+      CodeableReference? item,
       Quantity quantity,
       List<SupplyRequestParameter>? parameter,
       FhirDateTime? occurrenceDateTime,
@@ -9841,9 +9779,7 @@ abstract class _$SupplyRequestCopyWith<$Res>
   @override
   $ElementCopyWith<$Res>? get priorityElement;
   @override
-  $CodeableConceptCopyWith<$Res>? get itemCodeableConcept;
-  @override
-  $ReferenceCopyWith<$Res>? get itemReference;
+  $CodeableReferenceCopyWith<$Res>? get item;
   @override
   $QuantityCopyWith<$Res> get quantity;
   @override
@@ -9892,8 +9828,7 @@ class __$SupplyRequestCopyWithImpl<$Res>
     Object? category = freezed,
     Object? priority = freezed,
     Object? priorityElement = freezed,
-    Object? itemCodeableConcept = freezed,
-    Object? itemReference = freezed,
+    Object? item = freezed,
     Object? quantity = freezed,
     Object? parameter = freezed,
     Object? occurrenceDateTime = freezed,
@@ -9977,14 +9912,10 @@ class __$SupplyRequestCopyWithImpl<$Res>
           ? _value.priorityElement
           : priorityElement // ignore: cast_nullable_to_non_nullable
               as Element?,
-      itemCodeableConcept: itemCodeableConcept == freezed
-          ? _value.itemCodeableConcept
-          : itemCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      itemReference: itemReference == freezed
-          ? _value.itemReference
-          : itemReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      item: item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       quantity: quantity == freezed
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
@@ -10068,8 +9999,7 @@ class _$_SupplyRequest extends _SupplyRequest {
       this.priority,
       @JsonKey(name: '_priority')
           this.priorityElement,
-      this.itemCodeableConcept,
-      this.itemReference,
+      this.item,
       required this.quantity,
       this.parameter,
       this.occurrenceDateTime,
@@ -10131,9 +10061,7 @@ class _$_SupplyRequest extends _SupplyRequest {
   @JsonKey(name: '_priority')
   final Element? priorityElement;
   @override
-  final CodeableConcept? itemCodeableConcept;
-  @override
-  final Reference? itemReference;
+  final CodeableReference? item;
   @override
   final Quantity quantity;
   @override
@@ -10165,7 +10093,7 @@ class _$_SupplyRequest extends _SupplyRequest {
 
   @override
   String toString() {
-    return 'SupplyRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, category: $category, priority: $priority, priorityElement: $priorityElement, itemCodeableConcept: $itemCodeableConcept, itemReference: $itemReference, quantity: $quantity, parameter: $parameter, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceTiming: $occurrenceTiming, authoredOn: $authoredOn, authoredOnElement: $authoredOnElement, requester: $requester, supplier: $supplier, reason: $reason, deliverFrom: $deliverFrom, deliverTo: $deliverTo)';
+    return 'SupplyRequest(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, category: $category, priority: $priority, priorityElement: $priorityElement, item: $item, quantity: $quantity, parameter: $parameter, occurrenceDateTime: $occurrenceDateTime, occurrenceDateTimeElement: $occurrenceDateTimeElement, occurrencePeriod: $occurrencePeriod, occurrenceTiming: $occurrenceTiming, authoredOn: $authoredOn, authoredOnElement: $authoredOnElement, requester: $requester, supplier: $supplier, reason: $reason, deliverFrom: $deliverFrom, deliverTo: $deliverTo)';
   }
 
   @override
@@ -10219,12 +10147,8 @@ class _$_SupplyRequest extends _SupplyRequest {
             (identical(other.priorityElement, priorityElement) ||
                 const DeepCollectionEquality()
                     .equals(other.priorityElement, priorityElement)) &&
-            (identical(other.itemCodeableConcept, itemCodeableConcept) ||
-                const DeepCollectionEquality()
-                    .equals(other.itemCodeableConcept, itemCodeableConcept)) &&
-            (identical(other.itemReference, itemReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.itemReference, itemReference)) &&
+            (identical(other.item, item) ||
+                const DeepCollectionEquality().equals(other.item, item)) &&
             (identical(other.quantity, quantity) ||
                 const DeepCollectionEquality()
                     .equals(other.quantity, quantity)) &&
@@ -10236,8 +10160,11 @@ class _$_SupplyRequest extends _SupplyRequest {
                     .equals(other.occurrenceDateTime, occurrenceDateTime)) &&
             (identical(other.occurrenceDateTimeElement, occurrenceDateTimeElement) ||
                 const DeepCollectionEquality().equals(
-                    other.occurrenceDateTimeElement, occurrenceDateTimeElement)) &&
-            (identical(other.occurrencePeriod, occurrencePeriod) || const DeepCollectionEquality().equals(other.occurrencePeriod, occurrencePeriod)) &&
+                    other.occurrenceDateTimeElement,
+                    occurrenceDateTimeElement)) &&
+            (identical(other.occurrencePeriod, occurrencePeriod) ||
+                const DeepCollectionEquality()
+                    .equals(other.occurrencePeriod, occurrencePeriod)) &&
             (identical(other.occurrenceTiming, occurrenceTiming) || const DeepCollectionEquality().equals(other.occurrenceTiming, occurrenceTiming)) &&
             (identical(other.authoredOn, authoredOn) || const DeepCollectionEquality().equals(other.authoredOn, authoredOn)) &&
             (identical(other.authoredOnElement, authoredOnElement) || const DeepCollectionEquality().equals(other.authoredOnElement, authoredOnElement)) &&
@@ -10268,8 +10195,7 @@ class _$_SupplyRequest extends _SupplyRequest {
       const DeepCollectionEquality().hash(category) ^
       const DeepCollectionEquality().hash(priority) ^
       const DeepCollectionEquality().hash(priorityElement) ^
-      const DeepCollectionEquality().hash(itemCodeableConcept) ^
-      const DeepCollectionEquality().hash(itemReference) ^
+      const DeepCollectionEquality().hash(item) ^
       const DeepCollectionEquality().hash(quantity) ^
       const DeepCollectionEquality().hash(parameter) ^
       const DeepCollectionEquality().hash(occurrenceDateTime) ^
@@ -10320,8 +10246,7 @@ abstract class _SupplyRequest extends SupplyRequest {
       Code? priority,
       @JsonKey(name: '_priority')
           Element? priorityElement,
-      CodeableConcept? itemCodeableConcept,
-      Reference? itemReference,
+      CodeableReference? item,
       required Quantity quantity,
       List<SupplyRequestParameter>? parameter,
       FhirDateTime? occurrenceDateTime,
@@ -10384,10 +10309,7 @@ abstract class _SupplyRequest extends SupplyRequest {
   @JsonKey(name: '_priority')
   Element? get priorityElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get itemCodeableConcept =>
-      throw _privateConstructorUsedError;
-  @override
-  Reference? get itemReference => throw _privateConstructorUsedError;
+  CodeableReference? get item => throw _privateConstructorUsedError;
   @override
   Quantity get quantity => throw _privateConstructorUsedError;
   @override

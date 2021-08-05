@@ -18477,6 +18477,8 @@ class _$ElementDefinitionTypeTearOff {
       @JsonKey(name: '_code')
           Element? codeElement,
       List<Canonical>? profile,
+      @JsonKey(name: '_profile')
+          List<Element>? profileElement,
       List<Canonical>? targetProfile,
       List<ElementDefinitionTypeAggregation>? aggregation,
       @JsonKey(name: '_aggregation')
@@ -18492,6 +18494,7 @@ class _$ElementDefinitionTypeTearOff {
       code: code,
       codeElement: codeElement,
       profile: profile,
+      profileElement: profileElement,
       targetProfile: targetProfile,
       aggregation: aggregation,
       aggregationElement: aggregationElement,
@@ -18519,6 +18522,8 @@ mixin _$ElementDefinitionType {
   @JsonKey(name: '_code')
   Element? get codeElement => throw _privateConstructorUsedError;
   List<Canonical>? get profile => throw _privateConstructorUsedError;
+  @JsonKey(name: '_profile')
+  List<Element>? get profileElement => throw _privateConstructorUsedError;
   List<Canonical>? get targetProfile => throw _privateConstructorUsedError;
   List<ElementDefinitionTypeAggregation>? get aggregation =>
       throw _privateConstructorUsedError;
@@ -18550,6 +18555,8 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
       @JsonKey(name: '_code')
           Element? codeElement,
       List<Canonical>? profile,
+      @JsonKey(name: '_profile')
+          List<Element>? profileElement,
       List<Canonical>? targetProfile,
       List<ElementDefinitionTypeAggregation>? aggregation,
       @JsonKey(name: '_aggregation')
@@ -18580,6 +18587,7 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
     Object? code = freezed,
     Object? codeElement = freezed,
     Object? profile = freezed,
+    Object? profileElement = freezed,
     Object? targetProfile = freezed,
     Object? aggregation = freezed,
     Object? aggregationElement = freezed,
@@ -18611,6 +18619,10 @@ class _$ElementDefinitionTypeCopyWithImpl<$Res>
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<Canonical>?,
+      profileElement: profileElement == freezed
+          ? _value.profileElement
+          : profileElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
       targetProfile: targetProfile == freezed
           ? _value.targetProfile
           : targetProfile // ignore: cast_nullable_to_non_nullable
@@ -18673,6 +18685,8 @@ abstract class _$ElementDefinitionTypeCopyWith<$Res>
       @JsonKey(name: '_code')
           Element? codeElement,
       List<Canonical>? profile,
+      @JsonKey(name: '_profile')
+          List<Element>? profileElement,
       List<Canonical>? targetProfile,
       List<ElementDefinitionTypeAggregation>? aggregation,
       @JsonKey(name: '_aggregation')
@@ -18707,6 +18721,7 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
     Object? code = freezed,
     Object? codeElement = freezed,
     Object? profile = freezed,
+    Object? profileElement = freezed,
     Object? targetProfile = freezed,
     Object? aggregation = freezed,
     Object? aggregationElement = freezed,
@@ -18738,6 +18753,10 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
           ? _value.profile
           : profile // ignore: cast_nullable_to_non_nullable
               as List<Canonical>?,
+      profileElement: profileElement == freezed
+          ? _value.profileElement
+          : profileElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
       targetProfile: targetProfile == freezed
           ? _value.targetProfile
           : targetProfile // ignore: cast_nullable_to_non_nullable
@@ -18774,6 +18793,8 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
       @JsonKey(name: '_code')
           this.codeElement,
       this.profile,
+      @JsonKey(name: '_profile')
+          this.profileElement,
       this.targetProfile,
       this.aggregation,
       @JsonKey(name: '_aggregation')
@@ -18802,6 +18823,9 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   @override
   final List<Canonical>? profile;
   @override
+  @JsonKey(name: '_profile')
+  final List<Element>? profileElement;
+  @override
   final List<Canonical>? targetProfile;
   @override
   final List<ElementDefinitionTypeAggregation>? aggregation;
@@ -18817,7 +18841,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
 
   @override
   String toString() {
-    return 'ElementDefinitionType(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, profile: $profile, targetProfile: $targetProfile, aggregation: $aggregation, aggregationElement: $aggregationElement, versioning: $versioning, versioningElement: $versioningElement)';
+    return 'ElementDefinitionType(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, code: $code, codeElement: $codeElement, profile: $profile, profileElement: $profileElement, targetProfile: $targetProfile, aggregation: $aggregation, aggregationElement: $aggregationElement, versioning: $versioning, versioningElement: $versioningElement)';
   }
 
   @override
@@ -18840,6 +18864,9 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
             (identical(other.profile, profile) ||
                 const DeepCollectionEquality()
                     .equals(other.profile, profile)) &&
+            (identical(other.profileElement, profileElement) ||
+                const DeepCollectionEquality()
+                    .equals(other.profileElement, profileElement)) &&
             (identical(other.targetProfile, targetProfile) ||
                 const DeepCollectionEquality()
                     .equals(other.targetProfile, targetProfile)) &&
@@ -18866,6 +18893,7 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
       const DeepCollectionEquality().hash(code) ^
       const DeepCollectionEquality().hash(codeElement) ^
       const DeepCollectionEquality().hash(profile) ^
+      const DeepCollectionEquality().hash(profileElement) ^
       const DeepCollectionEquality().hash(targetProfile) ^
       const DeepCollectionEquality().hash(aggregation) ^
       const DeepCollectionEquality().hash(aggregationElement) ^
@@ -18894,6 +18922,8 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
       @JsonKey(name: '_code')
           Element? codeElement,
       List<Canonical>? profile,
+      @JsonKey(name: '_profile')
+          List<Element>? profileElement,
       List<Canonical>? targetProfile,
       List<ElementDefinitionTypeAggregation>? aggregation,
       @JsonKey(name: '_aggregation')
@@ -18922,6 +18952,9 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
   Element? get codeElement => throw _privateConstructorUsedError;
   @override
   List<Canonical>? get profile => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_profile')
+  List<Element>? get profileElement => throw _privateConstructorUsedError;
   @override
   List<Canonical>? get targetProfile => throw _privateConstructorUsedError;
   @override

@@ -290,6 +290,8 @@ enum QuestionnaireItemType {
   choice,
   @JsonValue('open-choice')
   open_choice,
+  @JsonValue('coding')
+  coding,
   @JsonValue('attachment')
   attachment,
   @JsonValue('reference')

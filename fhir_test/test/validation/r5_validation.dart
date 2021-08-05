@@ -4,15 +4,10 @@ Future<List<String>> r5Validation() async {
   var dir = Directory('./test/r5_examples');
   var string = <String>[];
   for (var file in await dir.list().toList()) {
-    print(file.path);
     var contents = await File(file.path).readAsString();
     var resource = r5.Resource.fromJson(jsonDecode(contents));
     if (!DeepCollectionEquality()
         .equals(resource.toJson(), jsonDecode(contents))) {
-      print('\n');
-      print(jsonEncode(resource.toJson()));
-      print('\n\n');
-      print(jsonEncode(jsonDecode(contents)));
       string.add(file.path);
     }
     if (!DeepCollectionEquality()

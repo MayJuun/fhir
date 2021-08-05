@@ -14,18 +14,18 @@ part 'stu3_validation.dart';
 
 Future<List<String>> jsonValidation() async {
   var tested = <String>[];
-  // tested.addAll(await dstu2Validation());
-  // tested.addAll(await stu3Validation());
-  // tested.addAll(await r4Validation());
+  tested.addAll(await dstu2Validation());
+  tested.addAll(await stu3Validation());
+  tested.addAll(await r4Validation());
   tested.addAll(await r5Validation());
   return tested;
 }
 
 Future<List<String>> yamlValidation() async {
   var tested = <String>[];
-  // tested.addAll(await dstu2ValidationYaml());
-  // tested.addAll(await stu3ValidationYaml());
-  // tested.addAll(await r4ValidationYaml());
+  tested.addAll(await dstu2ValidationYaml());
+  tested.addAll(await stu3ValidationYaml());
+  tested.addAll(await r4ValidationYaml());
   tested.addAll(await r5ValidationYaml());
   return tested;
 }

@@ -1426,8 +1426,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
     FhirDuration? timingDuration,
     Range? timingRange,
     Timing? timingTiming,
-    CodeableConcept? locationCodeableConcept,
-    Reference? locationReference,
+    CodeableReference? location,
     List<PlanDefinitionParticipant>? participant,
     CodeableConcept? type,
     @JsonKey(unknownEnumValue: PlanDefinitionActionGroupingBehavior.unknown)

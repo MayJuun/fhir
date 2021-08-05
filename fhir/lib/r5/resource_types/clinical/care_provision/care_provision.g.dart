@@ -499,14 +499,10 @@ _$_CarePlanPlannedActivityDetail _$$_CarePlanPlannedActivityDetailFromJson(
       scheduledStringElement: json['_scheduledString'] == null
           ? null
           : Element.fromJson(json['_scheduledString'] as Map<String, dynamic>),
-      locationCodeableConcept: json['locationCodeableConcept'] == null
+      location: json['location'] == null
           ? null
-          : CodeableConcept.fromJson(
-              json['locationCodeableConcept'] as Map<String, dynamic>),
-      locationReference: json['locationReference'] == null
-          ? null
-          : Reference.fromJson(
-              json['locationReference'] as Map<String, dynamic>),
+          : CodeableReference.fromJson(
+              json['location'] as Map<String, dynamic>),
       reportedBoolean: json['reportedBoolean'] == null
           ? null
           : Boolean.fromJson(json['reportedBoolean']),
@@ -577,9 +573,7 @@ Map<String, dynamic> _$$_CarePlanPlannedActivityDetailToJson(
   writeNotNull('scheduledPeriod', instance.scheduledPeriod?.toJson());
   writeNotNull('scheduledString', instance.scheduledString);
   writeNotNull('_scheduledString', instance.scheduledStringElement?.toJson());
-  writeNotNull(
-      'locationCodeableConcept', instance.locationCodeableConcept?.toJson());
-  writeNotNull('locationReference', instance.locationReference?.toJson());
+  writeNotNull('location', instance.location?.toJson());
   writeNotNull('reportedBoolean', instance.reportedBoolean?.toJson());
   writeNotNull('_reportedBoolean', instance.reportedBooleanElement?.toJson());
   writeNotNull('reportedReference', instance.reportedReference?.toJson());
@@ -1225,15 +1219,10 @@ _$_NutritionIntakeConsumedItem _$$_NutritionIntakeConsumedItemFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-      nutritionProductCodeableConcept:
-          json['nutritionProductCodeableConcept'] == null
-              ? null
-              : CodeableConcept.fromJson(json['nutritionProductCodeableConcept']
-                  as Map<String, dynamic>),
-      nutritionProductReference: json['nutritionProductReference'] == null
+      nutritionProduct: json['nutritionProduct'] == null
           ? null
-          : Reference.fromJson(
-              json['nutritionProductReference'] as Map<String, dynamic>),
+          : CodeableReference.fromJson(
+              json['nutritionProduct'] as Map<String, dynamic>),
       schedule: json['schedule'] == null
           ? null
           : Timing.fromJson(json['schedule'] as Map<String, dynamic>),
@@ -1271,10 +1260,7 @@ Map<String, dynamic> _$$_NutritionIntakeConsumedItemToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['type'] = instance.type.toJson();
-  writeNotNull('nutritionProductCodeableConcept',
-      instance.nutritionProductCodeableConcept?.toJson());
-  writeNotNull('nutritionProductReference',
-      instance.nutritionProductReference?.toJson());
+  writeNotNull('nutritionProduct', instance.nutritionProduct?.toJson());
   writeNotNull('schedule', instance.schedule?.toJson());
   writeNotNull('amount', instance.amount?.toJson());
   writeNotNull('rate', instance.rate?.toJson());
@@ -1294,14 +1280,10 @@ _$_NutritionIntakeIngredientLabel _$$_NutritionIntakeIngredientLabelFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      nutrientCodeableConcept: json['nutrientCodeableConcept'] == null
+      nutrient: json['nutrient'] == null
           ? null
-          : CodeableConcept.fromJson(
-              json['nutrientCodeableConcept'] as Map<String, dynamic>),
-      nutrientReference: json['nutrientReference'] == null
-          ? null
-          : Reference.fromJson(
-              json['nutrientReference'] as Map<String, dynamic>),
+          : CodeableReference.fromJson(
+              json['nutrient'] as Map<String, dynamic>),
       amount: Quantity.fromJson(json['amount'] as Map<String, dynamic>),
     );
 
@@ -1320,9 +1302,7 @@ Map<String, dynamic> _$$_NutritionIntakeIngredientLabelToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'nutrientCodeableConcept', instance.nutrientCodeableConcept?.toJson());
-  writeNotNull('nutrientReference', instance.nutrientReference?.toJson());
+  writeNotNull('nutrient', instance.nutrient?.toJson());
   val['amount'] = instance.amount.toJson();
   return val;
 }
@@ -2064,14 +2044,10 @@ _$_RequestGroupAction _$$_RequestGroupActionFromJson(
       timingTiming: json['timingTiming'] == null
           ? null
           : Timing.fromJson(json['timingTiming'] as Map<String, dynamic>),
-      locationCodeableConcept: json['locationCodeableConcept'] == null
+      location: json['location'] == null
           ? null
-          : CodeableConcept.fromJson(
-              json['locationCodeableConcept'] as Map<String, dynamic>),
-      locationReference: json['locationReference'] == null
-          ? null
-          : Reference.fromJson(
-              json['locationReference'] as Map<String, dynamic>),
+          : CodeableReference.fromJson(
+              json['location'] as Map<String, dynamic>),
       participant: (json['participant'] as List<dynamic>?)
           ?.map((e) =>
               RequestGroupParticipant.fromJson(e as Map<String, dynamic>))
@@ -2158,9 +2134,7 @@ Map<String, dynamic> _$$_RequestGroupActionToJson(
   writeNotNull('timingDuration', instance.timingDuration?.toJson());
   writeNotNull('timingRange', instance.timingRange?.toJson());
   writeNotNull('timingTiming', instance.timingTiming?.toJson());
-  writeNotNull(
-      'locationCodeableConcept', instance.locationCodeableConcept?.toJson());
-  writeNotNull('locationReference', instance.locationReference?.toJson());
+  writeNotNull('location', instance.location?.toJson());
   writeNotNull(
       'participant', instance.participant?.map((e) => e.toJson()).toList());
   writeNotNull('type', instance.type?.toJson());

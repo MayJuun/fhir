@@ -2383,6 +2383,9 @@ _$_ElementDefinitionType _$$_ElementDefinitionTypeFromJson(
       profile: (json['profile'] as List<dynamic>?)
           ?.map((e) => Canonical.fromJson(e))
           .toList(),
+      profileElement: (json['_profile'] as List<dynamic>?)
+          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          .toList(),
       targetProfile: (json['targetProfile'] as List<dynamic>?)
           ?.map((e) => Canonical.fromJson(e))
           .toList(),
@@ -2419,6 +2422,8 @@ Map<String, dynamic> _$$_ElementDefinitionTypeToJson(
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('_code', instance.codeElement?.toJson());
   writeNotNull('profile', instance.profile?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      '_profile', instance.profileElement?.map((e) => e.toJson()).toList());
   writeNotNull(
       'targetProfile', instance.targetProfile?.map((e) => e.toJson()).toList());
   writeNotNull(

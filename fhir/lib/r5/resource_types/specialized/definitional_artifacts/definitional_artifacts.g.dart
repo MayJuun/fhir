@@ -200,14 +200,10 @@ _$_ActivityDefinition _$$_ActivityDefinitionFromJson(
           ? null
           : FhirDuration.fromJson(
               json['timingDuration'] as Map<String, dynamic>),
-      locationCodeableConcept: json['locationCodeableConcept'] == null
+      location: json['location'] == null
           ? null
-          : CodeableConcept.fromJson(
-              json['locationCodeableConcept'] as Map<String, dynamic>),
-      locationReference: json['locationReference'] == null
-          ? null
-          : Reference.fromJson(
-              json['locationReference'] as Map<String, dynamic>),
+          : CodeableReference.fromJson(
+              json['location'] as Map<String, dynamic>),
       participant: (json['participant'] as List<dynamic>?)
           ?.map((e) =>
               ActivityDefinitionParticipant.fromJson(e as Map<String, dynamic>))
@@ -338,9 +334,7 @@ Map<String, dynamic> _$$_ActivityDefinitionToJson(
   writeNotNull('timingAge', instance.timingAge?.toJson());
   writeNotNull('timingRange', instance.timingRange?.toJson());
   writeNotNull('timingDuration', instance.timingDuration?.toJson());
-  writeNotNull(
-      'locationCodeableConcept', instance.locationCodeableConcept?.toJson());
-  writeNotNull('locationReference', instance.locationReference?.toJson());
+  writeNotNull('location', instance.location?.toJson());
   writeNotNull(
       'participant', instance.participant?.map((e) => e.toJson()).toList());
   writeNotNull('productReference', instance.productReference?.toJson());
@@ -3172,14 +3166,10 @@ _$_PlanDefinitionAction _$$_PlanDefinitionActionFromJson(
       timingTiming: json['timingTiming'] == null
           ? null
           : Timing.fromJson(json['timingTiming'] as Map<String, dynamic>),
-      locationCodeableConcept: json['locationCodeableConcept'] == null
+      location: json['location'] == null
           ? null
-          : CodeableConcept.fromJson(
-              json['locationCodeableConcept'] as Map<String, dynamic>),
-      locationReference: json['locationReference'] == null
-          ? null
-          : Reference.fromJson(
-              json['locationReference'] as Map<String, dynamic>),
+          : CodeableReference.fromJson(
+              json['location'] as Map<String, dynamic>),
       participant: (json['participant'] as List<dynamic>?)
           ?.map((e) =>
               PlanDefinitionParticipant.fromJson(e as Map<String, dynamic>))
@@ -3297,9 +3287,7 @@ Map<String, dynamic> _$$_PlanDefinitionActionToJson(
   writeNotNull('timingDuration', instance.timingDuration?.toJson());
   writeNotNull('timingRange', instance.timingRange?.toJson());
   writeNotNull('timingTiming', instance.timingTiming?.toJson());
-  writeNotNull(
-      'locationCodeableConcept', instance.locationCodeableConcept?.toJson());
-  writeNotNull('locationReference', instance.locationReference?.toJson());
+  writeNotNull('location', instance.location?.toJson());
   writeNotNull(
       'participant', instance.participant?.map((e) => e.toJson()).toList());
   writeNotNull('type', instance.type?.toJson());
@@ -4080,6 +4068,7 @@ const _$QuestionnaireItemTypeEnumMap = {
   QuestionnaireItemType.url: 'url',
   QuestionnaireItemType.choice: 'choice',
   QuestionnaireItemType.open_choice: 'open-choice',
+  QuestionnaireItemType.coding: 'coding',
   QuestionnaireItemType.attachment: 'attachment',
   QuestionnaireItemType.reference: 'reference',
   QuestionnaireItemType.quantity: 'quantity',

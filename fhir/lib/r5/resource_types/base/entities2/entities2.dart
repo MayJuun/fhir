@@ -670,8 +670,7 @@ class NutritionProductNutrient with _$NutritionProductNutrient {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    CodeableConcept? itemCodeableConcept,
-    Reference? itemReference,
+    CodeableReference? item,
     List<Ratio>? amount,
   }) = _NutritionProductNutrient;
 
@@ -701,8 +700,7 @@ class NutritionProductIngredient with _$NutritionProductIngredient {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    CodeableConcept? itemCodeableConcept,
-    Reference? itemReference,
+    CodeableReference? item,
     List<Ratio>? amount,
   }) = _NutritionProductIngredient;
 

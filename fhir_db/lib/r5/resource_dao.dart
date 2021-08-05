@@ -7,7 +7,10 @@ import 'fhir_db.dart';
 class ResourceDao {
   ResourceDao({
     this.databaseMode = mode.DatabaseMode.PERSISTENCE_DB,
-  });
+    bool isForTesting = false,
+  }) {
+    if (isForTesting) FhirDb.prepareForTesting();
+  }
 
   mode.DatabaseMode databaseMode;
 

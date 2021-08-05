@@ -1,5 +1,5 @@
 import 'package:fhir/r4.dart';
-import 'package:fhir_db/r5/database_mode.dart' as mode;
+import 'package:fhir_db/r4/database_mode.dart' as mode;
 import 'package:sembast/sembast.dart';
 
 import 'fhir_db.dart';
@@ -7,7 +7,10 @@ import 'fhir_db.dart';
 class ResourceDao {
   ResourceDao({
     this.databaseMode = mode.DatabaseMode.PERSISTENCE_DB,
-  });
+    bool isForTesting = false,
+  }) {
+    if (isForTesting) FhirDb.prepareForTesting();
+  }
 
   mode.DatabaseMode databaseMode;
 

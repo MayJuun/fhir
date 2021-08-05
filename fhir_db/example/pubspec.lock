@@ -116,24 +116,24 @@ packages:
   fhir:
     dependency: "direct main"
     description:
-      name: fhir
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.4.7"
+      path: "../../fhir"
+      relative: true
+    source: path
+    version: "0.5.0-1"
   fhir_db:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.4.4"
+    version: "0.5.0-1"
   fhir_yaml:
     dependency: transitive
     description:
       name: fhir_yaml
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.2"
+    version: "0.5.0"
   file:
     dependency: transitive
     description:
@@ -417,6 +417,20 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.0.0+2"
+  sqflite_common_ffi:
+    dependency: transitive
+    description:
+      name: sqflite_common_ffi
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.0+1"
+  sqlite3:
+    dependency: transitive
+    description:
+      name: sqlite3
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.1.2"
   stack_trace:
     dependency: transitive
     description:

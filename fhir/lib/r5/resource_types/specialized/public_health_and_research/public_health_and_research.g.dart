@@ -1051,19 +1051,9 @@ Map<String, dynamic> _$$_ResearchSubjectToJson(_$_ResearchSubject instance) {
 }
 
 const _$ResearchSubjectStatusEnumMap = {
-  ResearchSubjectStatus.candidate: 'candidate',
-  ResearchSubjectStatus.eligible: 'eligible',
-  ResearchSubjectStatus.follow_up: 'follow-up',
-  ResearchSubjectStatus.ineligible: 'ineligible',
-  ResearchSubjectStatus.not_registered: 'not-registered',
-  ResearchSubjectStatus.off_study: 'off-study',
-  ResearchSubjectStatus.on_study: 'on-study',
-  ResearchSubjectStatus.on_study_intervention: 'on-study-intervention',
-  ResearchSubjectStatus.on_study_observation: 'on-study-observation',
-  ResearchSubjectStatus.pending_on_study: 'pending-on-study',
-  ResearchSubjectStatus.potential_candidate: 'potential-candidate',
-  ResearchSubjectStatus.screening: 'screening',
-  ResearchSubjectStatus.withdrawn: 'withdrawn',
+  ResearchSubjectStatus.draft: 'draft',
+  ResearchSubjectStatus.active: 'active',
+  ResearchSubjectStatus.retired: 'retired',
   ResearchSubjectStatus.unknown: 'unknown',
 };
 

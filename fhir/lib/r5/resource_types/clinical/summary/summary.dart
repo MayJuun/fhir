@@ -471,8 +471,7 @@ class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    CodeableConcept? itemCodeableConcept,
-    Reference? itemReference,
+    CodeableReference? item,
     String? basis,
     @JsonKey(name: '_basis') Element? basisElement,
   }) = _ClinicalImpressionFinding;

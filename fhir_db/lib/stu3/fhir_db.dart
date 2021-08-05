@@ -7,6 +7,7 @@ import 'package:sembast/sembast.dart';
 import 'package:sembast/utils/sembast_import_export.dart';
 import 'package:sembast_sqflite/sembast_sqflite.dart';
 import 'package:sqflite/sqflite.dart' as sqflite;
+import 'package:sqflite_common_ffi/sqflite_ffi.dart' as sqflite_common_ffi;
 
 import '../encrypt/aes.dart';
 // import '../salsa.dart';
@@ -21,11 +22,18 @@ class FhirDb {
   /// Singleton Accessor
   static FhirDb get instance => _db;
 
+  static void prepareForTesting() {
+    sqflite_common_ffi.sqfliteFfiInit();
+    _db._dbFactory =
+        getDatabaseFactorySqflite(sqflite_common_ffi.databaseFactoryFfi);
+  }
+
   /// Completer to transform synchronous -> asynchronous (I hate completers)
   Completer<Database>? _dbOpenCompleter;
 
   /// Database Factory
-  final _dbFactory = getDatabaseFactorySqflite(sqflite.databaseFactory);
+  DatabaseFactory _dbFactory =
+      getDatabaseFactorySqflite(sqflite.databaseFactory);
 
   /// Update old password to new
   Future updatePassword(String? oldPw, String? newPw) async =>

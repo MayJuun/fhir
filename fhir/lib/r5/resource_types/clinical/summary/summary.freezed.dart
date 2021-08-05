@@ -6926,16 +6926,14 @@ class _$ClinicalImpressionFindingTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? itemCodeableConcept,
-      Reference? itemReference,
+      CodeableReference? item,
       String? basis,
       @JsonKey(name: '_basis') Element? basisElement}) {
     return _ClinicalImpressionFinding(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      itemCodeableConcept: itemCodeableConcept,
-      itemReference: itemReference,
+      item: item,
       basis: basis,
       basisElement: basisElement,
     );
@@ -6956,9 +6954,7 @@ mixin _$ClinicalImpressionFinding {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  CodeableConcept? get itemCodeableConcept =>
-      throw _privateConstructorUsedError;
-  Reference? get itemReference => throw _privateConstructorUsedError;
+  CodeableReference? get item => throw _privateConstructorUsedError;
   String? get basis => throw _privateConstructorUsedError;
   @JsonKey(name: '_basis')
   Element? get basisElement => throw _privateConstructorUsedError;
@@ -6978,13 +6974,11 @@ abstract class $ClinicalImpressionFindingCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? itemCodeableConcept,
-      Reference? itemReference,
+      CodeableReference? item,
       String? basis,
       @JsonKey(name: '_basis') Element? basisElement});
 
-  $CodeableConceptCopyWith<$Res>? get itemCodeableConcept;
-  $ReferenceCopyWith<$Res>? get itemReference;
+  $CodeableReferenceCopyWith<$Res>? get item;
   $ElementCopyWith<$Res>? get basisElement;
 }
 
@@ -7002,8 +6996,7 @@ class _$ClinicalImpressionFindingCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? itemCodeableConcept = freezed,
-    Object? itemReference = freezed,
+    Object? item = freezed,
     Object? basis = freezed,
     Object? basisElement = freezed,
   }) {
@@ -7020,14 +7013,10 @@ class _$ClinicalImpressionFindingCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      itemCodeableConcept: itemCodeableConcept == freezed
-          ? _value.itemCodeableConcept
-          : itemCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      itemReference: itemReference == freezed
-          ? _value.itemReference
-          : itemReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      item: item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       basis: basis == freezed
           ? _value.basis
           : basis // ignore: cast_nullable_to_non_nullable
@@ -7040,24 +7029,13 @@ class _$ClinicalImpressionFindingCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get itemCodeableConcept {
-    if (_value.itemCodeableConcept == null) {
+  $CodeableReferenceCopyWith<$Res>? get item {
+    if (_value.item == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(_value.itemCodeableConcept!, (value) {
-      return _then(_value.copyWith(itemCodeableConcept: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res>? get itemReference {
-    if (_value.itemReference == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.itemReference!, (value) {
-      return _then(_value.copyWith(itemReference: value));
+    return $CodeableReferenceCopyWith<$Res>(_value.item!, (value) {
+      return _then(_value.copyWith(item: value));
     });
   }
 
@@ -7084,15 +7062,12 @@ abstract class _$ClinicalImpressionFindingCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? itemCodeableConcept,
-      Reference? itemReference,
+      CodeableReference? item,
       String? basis,
       @JsonKey(name: '_basis') Element? basisElement});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get itemCodeableConcept;
-  @override
-  $ReferenceCopyWith<$Res>? get itemReference;
+  $CodeableReferenceCopyWith<$Res>? get item;
   @override
   $ElementCopyWith<$Res>? get basisElement;
 }
@@ -7114,8 +7089,7 @@ class __$ClinicalImpressionFindingCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? itemCodeableConcept = freezed,
-    Object? itemReference = freezed,
+    Object? item = freezed,
     Object? basis = freezed,
     Object? basisElement = freezed,
   }) {
@@ -7132,14 +7106,10 @@ class __$ClinicalImpressionFindingCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      itemCodeableConcept: itemCodeableConcept == freezed
-          ? _value.itemCodeableConcept
-          : itemCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      itemReference: itemReference == freezed
-          ? _value.itemReference
-          : itemReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      item: item == freezed
+          ? _value.item
+          : item // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       basis: basis == freezed
           ? _value.basis
           : basis // ignore: cast_nullable_to_non_nullable
@@ -7159,8 +7129,7 @@ class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.itemCodeableConcept,
-      this.itemReference,
+      this.item,
       this.basis,
       @JsonKey(name: '_basis') this.basisElement})
       : super._();
@@ -7176,9 +7145,7 @@ class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final CodeableConcept? itemCodeableConcept;
-  @override
-  final Reference? itemReference;
+  final CodeableReference? item;
   @override
   final String? basis;
   @override
@@ -7187,7 +7154,7 @@ class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
 
   @override
   String toString() {
-    return 'ClinicalImpressionFinding(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, itemCodeableConcept: $itemCodeableConcept, itemReference: $itemReference, basis: $basis, basisElement: $basisElement)';
+    return 'ClinicalImpressionFinding(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, item: $item, basis: $basis, basisElement: $basisElement)';
   }
 
   @override
@@ -7202,12 +7169,8 @@ class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
             (identical(other.modifierExtension, modifierExtension) ||
                 const DeepCollectionEquality()
                     .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.itemCodeableConcept, itemCodeableConcept) ||
-                const DeepCollectionEquality()
-                    .equals(other.itemCodeableConcept, itemCodeableConcept)) &&
-            (identical(other.itemReference, itemReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.itemReference, itemReference)) &&
+            (identical(other.item, item) ||
+                const DeepCollectionEquality().equals(other.item, item)) &&
             (identical(other.basis, basis) ||
                 const DeepCollectionEquality().equals(other.basis, basis)) &&
             (identical(other.basisElement, basisElement) ||
@@ -7221,8 +7184,7 @@ class _$_ClinicalImpressionFinding extends _ClinicalImpressionFinding {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(extension_) ^
       const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(itemCodeableConcept) ^
-      const DeepCollectionEquality().hash(itemReference) ^
+      const DeepCollectionEquality().hash(item) ^
       const DeepCollectionEquality().hash(basis) ^
       const DeepCollectionEquality().hash(basisElement);
 
@@ -7244,8 +7206,7 @@ abstract class _ClinicalImpressionFinding extends ClinicalImpressionFinding {
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
           List<FhirExtension>? modifierExtension,
-          CodeableConcept? itemCodeableConcept,
-          Reference? itemReference,
+          CodeableReference? item,
           String? basis,
           @JsonKey(name: '_basis') Element? basisElement}) =
       _$_ClinicalImpressionFinding;
@@ -7263,10 +7224,7 @@ abstract class _ClinicalImpressionFinding extends ClinicalImpressionFinding {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get itemCodeableConcept =>
-      throw _privateConstructorUsedError;
-  @override
-  Reference? get itemReference => throw _privateConstructorUsedError;
+  CodeableReference? get item => throw _privateConstructorUsedError;
   @override
   String? get basis => throw _privateConstructorUsedError;
   @override

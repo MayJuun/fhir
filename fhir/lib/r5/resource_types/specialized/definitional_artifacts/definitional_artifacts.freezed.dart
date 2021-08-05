@@ -118,8 +118,7 @@ class _$ActivityDefinitionTearOff {
       Age? timingAge,
       Range? timingRange,
       FhirDuration? timingDuration,
-      CodeableConcept? locationCodeableConcept,
-      Reference? locationReference,
+      CodeableReference? location,
       List<ActivityDefinitionParticipant>? participant,
       Reference? productReference,
       CodeableConcept? productCodeableConcept,
@@ -203,8 +202,7 @@ class _$ActivityDefinitionTearOff {
       timingAge: timingAge,
       timingRange: timingRange,
       timingDuration: timingDuration,
-      locationCodeableConcept: locationCodeableConcept,
-      locationReference: locationReference,
+      location: location,
       participant: participant,
       productReference: productReference,
       productCodeableConcept: productCodeableConcept,
@@ -329,9 +327,7 @@ mixin _$ActivityDefinition {
   Age? get timingAge => throw _privateConstructorUsedError;
   Range? get timingRange => throw _privateConstructorUsedError;
   FhirDuration? get timingDuration => throw _privateConstructorUsedError;
-  CodeableConcept? get locationCodeableConcept =>
-      throw _privateConstructorUsedError;
-  Reference? get locationReference => throw _privateConstructorUsedError;
+  CodeableReference? get location => throw _privateConstructorUsedError;
   List<ActivityDefinitionParticipant>? get participant =>
       throw _privateConstructorUsedError;
   Reference? get productReference => throw _privateConstructorUsedError;
@@ -459,8 +455,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       Age? timingAge,
       Range? timingRange,
       FhirDuration? timingDuration,
-      CodeableConcept? locationCodeableConcept,
-      Reference? locationReference,
+      CodeableReference? location,
       List<ActivityDefinitionParticipant>? participant,
       Reference? productReference,
       CodeableConcept? productCodeableConcept,
@@ -505,8 +500,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
   $AgeCopyWith<$Res>? get timingAge;
   $RangeCopyWith<$Res>? get timingRange;
   $FhirDurationCopyWith<$Res>? get timingDuration;
-  $CodeableConceptCopyWith<$Res>? get locationCodeableConcept;
-  $ReferenceCopyWith<$Res>? get locationReference;
+  $CodeableReferenceCopyWith<$Res>? get location;
   $ReferenceCopyWith<$Res>? get productReference;
   $CodeableConceptCopyWith<$Res>? get productCodeableConcept;
   $QuantityCopyWith<$Res>? get quantity;
@@ -594,8 +588,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
     Object? timingAge = freezed,
     Object? timingRange = freezed,
     Object? timingDuration = freezed,
-    Object? locationCodeableConcept = freezed,
-    Object? locationReference = freezed,
+    Object? location = freezed,
     Object? participant = freezed,
     Object? productReference = freezed,
     Object? productCodeableConcept = freezed,
@@ -893,14 +886,10 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
           ? _value.timingDuration
           : timingDuration // ignore: cast_nullable_to_non_nullable
               as FhirDuration?,
-      locationCodeableConcept: locationCodeableConcept == freezed
-          ? _value.locationCodeableConcept
-          : locationCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      locationReference: locationReference == freezed
-          ? _value.locationReference
-          : locationReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       participant: participant == freezed
           ? _value.participant
           : participant // ignore: cast_nullable_to_non_nullable
@@ -1302,25 +1291,13 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get locationCodeableConcept {
-    if (_value.locationCodeableConcept == null) {
+  $CodeableReferenceCopyWith<$Res>? get location {
+    if (_value.location == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(_value.locationCodeableConcept!,
-        (value) {
-      return _then(_value.copyWith(locationCodeableConcept: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res>? get locationReference {
-    if (_value.locationReference == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.locationReference!, (value) {
-      return _then(_value.copyWith(locationReference: value));
+    return $CodeableReferenceCopyWith<$Res>(_value.location!, (value) {
+      return _then(_value.copyWith(location: value));
     });
   }
 
@@ -1464,8 +1441,7 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
       Age? timingAge,
       Range? timingRange,
       FhirDuration? timingDuration,
-      CodeableConcept? locationCodeableConcept,
-      Reference? locationReference,
+      CodeableReference? location,
       List<ActivityDefinitionParticipant>? participant,
       Reference? productReference,
       CodeableConcept? productCodeableConcept,
@@ -1543,9 +1519,7 @@ abstract class _$ActivityDefinitionCopyWith<$Res>
   @override
   $FhirDurationCopyWith<$Res>? get timingDuration;
   @override
-  $CodeableConceptCopyWith<$Res>? get locationCodeableConcept;
-  @override
-  $ReferenceCopyWith<$Res>? get locationReference;
+  $CodeableReferenceCopyWith<$Res>? get location;
   @override
   $ReferenceCopyWith<$Res>? get productReference;
   @override
@@ -1638,8 +1612,7 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
     Object? timingAge = freezed,
     Object? timingRange = freezed,
     Object? timingDuration = freezed,
-    Object? locationCodeableConcept = freezed,
-    Object? locationReference = freezed,
+    Object? location = freezed,
     Object? participant = freezed,
     Object? productReference = freezed,
     Object? productCodeableConcept = freezed,
@@ -1937,14 +1910,10 @@ class __$ActivityDefinitionCopyWithImpl<$Res>
           ? _value.timingDuration
           : timingDuration // ignore: cast_nullable_to_non_nullable
               as FhirDuration?,
-      locationCodeableConcept: locationCodeableConcept == freezed
-          ? _value.locationCodeableConcept
-          : locationCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      locationReference: locationReference == freezed
-          ? _value.locationReference
-          : locationReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       participant: participant == freezed
           ? _value.participant
           : participant // ignore: cast_nullable_to_non_nullable
@@ -2094,8 +2063,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       this.timingAge,
       this.timingRange,
       this.timingDuration,
-      this.locationCodeableConcept,
-      this.locationReference,
+      this.location,
       this.participant,
       this.productReference,
       this.productCodeableConcept,
@@ -2281,9 +2249,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @override
   final FhirDuration? timingDuration;
   @override
-  final CodeableConcept? locationCodeableConcept;
-  @override
-  final Reference? locationReference;
+  final CodeableReference? location;
   @override
   final List<ActivityDefinitionParticipant>? participant;
   @override
@@ -2309,7 +2275,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
 
   @override
   String toString() {
-    return 'ActivityDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, subtitle: $subtitle, subtitleElement: $subtitleElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, subjectCanonical: $subjectCanonical, subjectCanonicalElement: $subjectCanonicalElement, usage: $usage, usageElement: $usageElement, library_: $library_, kind: $kind, kindElement: $kindElement, profile: $profile, code: $code, intent: $intent, intentElement: $intentElement, priority: $priority, priorityElement: $priorityElement, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, timingTiming: $timingTiming, timingAge: $timingAge, timingRange: $timingRange, timingDuration: $timingDuration, locationCodeableConcept: $locationCodeableConcept, locationReference: $locationReference, participant: $participant, productReference: $productReference, productCodeableConcept: $productCodeableConcept, quantity: $quantity, dosage: $dosage, bodySite: $bodySite, specimenRequirement: $specimenRequirement, observationRequirement: $observationRequirement, observationResultRequirement: $observationResultRequirement, transform: $transform, dynamicValue: $dynamicValue)';
+    return 'ActivityDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, subtitle: $subtitle, subtitleElement: $subtitleElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, subjectCanonical: $subjectCanonical, subjectCanonicalElement: $subjectCanonicalElement, usage: $usage, usageElement: $usageElement, library_: $library_, kind: $kind, kindElement: $kindElement, profile: $profile, code: $code, intent: $intent, intentElement: $intentElement, priority: $priority, priorityElement: $priorityElement, doNotPerform: $doNotPerform, doNotPerformElement: $doNotPerformElement, timingTiming: $timingTiming, timingAge: $timingAge, timingRange: $timingRange, timingDuration: $timingDuration, location: $location, participant: $participant, productReference: $productReference, productCodeableConcept: $productCodeableConcept, quantity: $quantity, dosage: $dosage, bodySite: $bodySite, specimenRequirement: $specimenRequirement, observationRequirement: $observationRequirement, observationResultRequirement: $observationResultRequirement, transform: $transform, dynamicValue: $dynamicValue)';
   }
 
   @override
@@ -2430,8 +2396,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
             (identical(other.timingAge, timingAge) || const DeepCollectionEquality().equals(other.timingAge, timingAge)) &&
             (identical(other.timingRange, timingRange) || const DeepCollectionEquality().equals(other.timingRange, timingRange)) &&
             (identical(other.timingDuration, timingDuration) || const DeepCollectionEquality().equals(other.timingDuration, timingDuration)) &&
-            (identical(other.locationCodeableConcept, locationCodeableConcept) || const DeepCollectionEquality().equals(other.locationCodeableConcept, locationCodeableConcept)) &&
-            (identical(other.locationReference, locationReference) || const DeepCollectionEquality().equals(other.locationReference, locationReference)) &&
+            (identical(other.location, location) || const DeepCollectionEquality().equals(other.location, location)) &&
             (identical(other.participant, participant) || const DeepCollectionEquality().equals(other.participant, participant)) &&
             (identical(other.productReference, productReference) || const DeepCollectionEquality().equals(other.productReference, productReference)) &&
             (identical(other.productCodeableConcept, productCodeableConcept) || const DeepCollectionEquality().equals(other.productCodeableConcept, productCodeableConcept)) &&
@@ -2519,8 +2484,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
       const DeepCollectionEquality().hash(timingAge) ^
       const DeepCollectionEquality().hash(timingRange) ^
       const DeepCollectionEquality().hash(timingDuration) ^
-      const DeepCollectionEquality().hash(locationCodeableConcept) ^
-      const DeepCollectionEquality().hash(locationReference) ^
+      const DeepCollectionEquality().hash(location) ^
       const DeepCollectionEquality().hash(participant) ^
       const DeepCollectionEquality().hash(productReference) ^
       const DeepCollectionEquality().hash(productCodeableConcept) ^
@@ -2643,8 +2607,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           Age? timingAge,
           Range? timingRange,
           FhirDuration? timingDuration,
-          CodeableConcept? locationCodeableConcept,
-          Reference? locationReference,
+          CodeableReference? location,
           List<ActivityDefinitionParticipant>? participant,
           Reference? productReference,
           CodeableConcept? productCodeableConcept,
@@ -2834,10 +2797,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @override
   FhirDuration? get timingDuration => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get locationCodeableConcept =>
-      throw _privateConstructorUsedError;
-  @override
-  Reference? get locationReference => throw _privateConstructorUsedError;
+  CodeableReference? get location => throw _privateConstructorUsedError;
   @override
   List<ActivityDefinitionParticipant>? get participant =>
       throw _privateConstructorUsedError;
@@ -22237,8 +22197,7 @@ class _$PlanDefinitionActionTearOff {
       FhirDuration? timingDuration,
       Range? timingRange,
       Timing? timingTiming,
-      CodeableConcept? locationCodeableConcept,
-      Reference? locationReference,
+      CodeableReference? location,
       List<PlanDefinitionParticipant>? participant,
       CodeableConcept? type,
       @JsonKey(unknownEnumValue: PlanDefinitionActionGroupingBehavior.unknown)
@@ -22302,8 +22261,7 @@ class _$PlanDefinitionActionTearOff {
       timingDuration: timingDuration,
       timingRange: timingRange,
       timingTiming: timingTiming,
-      locationCodeableConcept: locationCodeableConcept,
-      locationReference: locationReference,
+      location: location,
       participant: participant,
       type: type,
       groupingBehavior: groupingBehavior,
@@ -22380,9 +22338,7 @@ mixin _$PlanDefinitionAction {
   FhirDuration? get timingDuration => throw _privateConstructorUsedError;
   Range? get timingRange => throw _privateConstructorUsedError;
   Timing? get timingTiming => throw _privateConstructorUsedError;
-  CodeableConcept? get locationCodeableConcept =>
-      throw _privateConstructorUsedError;
-  Reference? get locationReference => throw _privateConstructorUsedError;
+  CodeableReference? get location => throw _privateConstructorUsedError;
   List<PlanDefinitionParticipant>? get participant =>
       throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
@@ -22473,8 +22429,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       FhirDuration? timingDuration,
       Range? timingRange,
       Timing? timingTiming,
-      CodeableConcept? locationCodeableConcept,
-      Reference? locationReference,
+      CodeableReference? location,
       List<PlanDefinitionParticipant>? participant,
       CodeableConcept? type,
       @JsonKey(unknownEnumValue: PlanDefinitionActionGroupingBehavior.unknown)
@@ -22520,8 +22475,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
   $FhirDurationCopyWith<$Res>? get timingDuration;
   $RangeCopyWith<$Res>? get timingRange;
   $TimingCopyWith<$Res>? get timingTiming;
-  $CodeableConceptCopyWith<$Res>? get locationCodeableConcept;
-  $ReferenceCopyWith<$Res>? get locationReference;
+  $CodeableReferenceCopyWith<$Res>? get location;
   $CodeableConceptCopyWith<$Res>? get type;
   $ElementCopyWith<$Res>? get groupingBehaviorElement;
   $ElementCopyWith<$Res>? get selectionBehaviorElement;
@@ -22574,8 +22528,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
     Object? timingDuration = freezed,
     Object? timingRange = freezed,
     Object? timingTiming = freezed,
-    Object? locationCodeableConcept = freezed,
-    Object? locationReference = freezed,
+    Object? location = freezed,
     Object? participant = freezed,
     Object? type = freezed,
     Object? groupingBehavior = freezed,
@@ -22721,14 +22674,10 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
           ? _value.timingTiming
           : timingTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      locationCodeableConcept: locationCodeableConcept == freezed
-          ? _value.locationCodeableConcept
-          : locationCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      locationReference: locationReference == freezed
-          ? _value.locationReference
-          : locationReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       participant: participant == freezed
           ? _value.participant
           : participant // ignore: cast_nullable_to_non_nullable
@@ -22953,25 +22902,13 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get locationCodeableConcept {
-    if (_value.locationCodeableConcept == null) {
+  $CodeableReferenceCopyWith<$Res>? get location {
+    if (_value.location == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(_value.locationCodeableConcept!,
-        (value) {
-      return _then(_value.copyWith(locationCodeableConcept: value));
-    });
-  }
-
-  @override
-  $ReferenceCopyWith<$Res>? get locationReference {
-    if (_value.locationReference == null) {
-      return null;
-    }
-
-    return $ReferenceCopyWith<$Res>(_value.locationReference!, (value) {
-      return _then(_value.copyWith(locationReference: value));
+    return $CodeableReferenceCopyWith<$Res>(_value.location!, (value) {
+      return _then(_value.copyWith(location: value));
     });
   }
 
@@ -23111,8 +23048,7 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
       FhirDuration? timingDuration,
       Range? timingRange,
       Timing? timingTiming,
-      CodeableConcept? locationCodeableConcept,
-      Reference? locationReference,
+      CodeableReference? location,
       List<PlanDefinitionParticipant>? participant,
       CodeableConcept? type,
       @JsonKey(unknownEnumValue: PlanDefinitionActionGroupingBehavior.unknown)
@@ -23172,9 +23108,7 @@ abstract class _$PlanDefinitionActionCopyWith<$Res>
   @override
   $TimingCopyWith<$Res>? get timingTiming;
   @override
-  $CodeableConceptCopyWith<$Res>? get locationCodeableConcept;
-  @override
-  $ReferenceCopyWith<$Res>? get locationReference;
+  $CodeableReferenceCopyWith<$Res>? get location;
   @override
   $CodeableConceptCopyWith<$Res>? get type;
   @override
@@ -23237,8 +23171,7 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
     Object? timingDuration = freezed,
     Object? timingRange = freezed,
     Object? timingTiming = freezed,
-    Object? locationCodeableConcept = freezed,
-    Object? locationReference = freezed,
+    Object? location = freezed,
     Object? participant = freezed,
     Object? type = freezed,
     Object? groupingBehavior = freezed,
@@ -23384,14 +23317,10 @@ class __$PlanDefinitionActionCopyWithImpl<$Res>
           ? _value.timingTiming
           : timingTiming // ignore: cast_nullable_to_non_nullable
               as Timing?,
-      locationCodeableConcept: locationCodeableConcept == freezed
-          ? _value.locationCodeableConcept
-          : locationCodeableConcept // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      locationReference: locationReference == freezed
-          ? _value.locationReference
-          : locationReference // ignore: cast_nullable_to_non_nullable
-              as Reference?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
       participant: participant == freezed
           ? _value.participant
           : participant // ignore: cast_nullable_to_non_nullable
@@ -23515,8 +23444,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
       this.timingDuration,
       this.timingRange,
       this.timingTiming,
-      this.locationCodeableConcept,
-      this.locationReference,
+      this.location,
       this.participant,
       this.type,
       @JsonKey(unknownEnumValue: PlanDefinitionActionGroupingBehavior.unknown)
@@ -23624,9 +23552,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   @override
   final Timing? timingTiming;
   @override
-  final CodeableConcept? locationCodeableConcept;
-  @override
-  final Reference? locationReference;
+  final CodeableReference? location;
   @override
   final List<PlanDefinitionParticipant>? participant;
   @override
@@ -23680,7 +23606,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
 
   @override
   String toString() {
-    return 'PlanDefinitionAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, prefix: $prefix, prefixElement: $prefixElement, title: $title, titleElement: $titleElement, description: $description, descriptionElement: $descriptionElement, textEquivalent: $textEquivalent, textEquivalentElement: $textEquivalentElement, priority: $priority, priorityElement: $priorityElement, code: $code, reason: $reason, documentation: $documentation, goalId: $goalId, goalIdElement: $goalIdElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, subjectCanonical: $subjectCanonical, subjectCanonicalElement: $subjectCanonicalElement, trigger: $trigger, condition: $condition, input: $input, output: $output, relatedAction: $relatedAction, timingAge: $timingAge, timingDuration: $timingDuration, timingRange: $timingRange, timingTiming: $timingTiming, locationCodeableConcept: $locationCodeableConcept, locationReference: $locationReference, participant: $participant, type: $type, groupingBehavior: $groupingBehavior, groupingBehaviorElement: $groupingBehaviorElement, selectionBehavior: $selectionBehavior, selectionBehaviorElement: $selectionBehaviorElement, requiredBehavior: $requiredBehavior, requiredBehaviorElement: $requiredBehaviorElement, precheckBehavior: $precheckBehavior, precheckBehaviorElement: $precheckBehaviorElement, cardinalityBehavior: $cardinalityBehavior, cardinalityBehaviorElement: $cardinalityBehaviorElement, definitionCanonical: $definitionCanonical, definitionCanonicalElement: $definitionCanonicalElement, definitionUri: $definitionUri, definitionUriElement: $definitionUriElement, transform: $transform, dynamicValue: $dynamicValue, action: $action)';
+    return 'PlanDefinitionAction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, prefix: $prefix, prefixElement: $prefixElement, title: $title, titleElement: $titleElement, description: $description, descriptionElement: $descriptionElement, textEquivalent: $textEquivalent, textEquivalentElement: $textEquivalentElement, priority: $priority, priorityElement: $priorityElement, code: $code, reason: $reason, documentation: $documentation, goalId: $goalId, goalIdElement: $goalIdElement, subjectCodeableConcept: $subjectCodeableConcept, subjectReference: $subjectReference, subjectCanonical: $subjectCanonical, subjectCanonicalElement: $subjectCanonicalElement, trigger: $trigger, condition: $condition, input: $input, output: $output, relatedAction: $relatedAction, timingAge: $timingAge, timingDuration: $timingDuration, timingRange: $timingRange, timingTiming: $timingTiming, location: $location, participant: $participant, type: $type, groupingBehavior: $groupingBehavior, groupingBehaviorElement: $groupingBehaviorElement, selectionBehavior: $selectionBehavior, selectionBehaviorElement: $selectionBehaviorElement, requiredBehavior: $requiredBehavior, requiredBehaviorElement: $requiredBehaviorElement, precheckBehavior: $precheckBehavior, precheckBehaviorElement: $precheckBehaviorElement, cardinalityBehavior: $cardinalityBehavior, cardinalityBehaviorElement: $cardinalityBehaviorElement, definitionCanonical: $definitionCanonical, definitionCanonicalElement: $definitionCanonicalElement, definitionUri: $definitionUri, definitionUriElement: $definitionUriElement, transform: $transform, dynamicValue: $dynamicValue, action: $action)';
   }
 
   @override
@@ -23760,8 +23686,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
             (identical(other.timingDuration, timingDuration) || const DeepCollectionEquality().equals(other.timingDuration, timingDuration)) &&
             (identical(other.timingRange, timingRange) || const DeepCollectionEquality().equals(other.timingRange, timingRange)) &&
             (identical(other.timingTiming, timingTiming) || const DeepCollectionEquality().equals(other.timingTiming, timingTiming)) &&
-            (identical(other.locationCodeableConcept, locationCodeableConcept) || const DeepCollectionEquality().equals(other.locationCodeableConcept, locationCodeableConcept)) &&
-            (identical(other.locationReference, locationReference) || const DeepCollectionEquality().equals(other.locationReference, locationReference)) &&
+            (identical(other.location, location) || const DeepCollectionEquality().equals(other.location, location)) &&
             (identical(other.participant, participant) || const DeepCollectionEquality().equals(other.participant, participant)) &&
             (identical(other.type, type) || const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.groupingBehavior, groupingBehavior) || const DeepCollectionEquality().equals(other.groupingBehavior, groupingBehavior)) &&
@@ -23817,8 +23742,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
       const DeepCollectionEquality().hash(timingDuration) ^
       const DeepCollectionEquality().hash(timingRange) ^
       const DeepCollectionEquality().hash(timingTiming) ^
-      const DeepCollectionEquality().hash(locationCodeableConcept) ^
-      const DeepCollectionEquality().hash(locationReference) ^
+      const DeepCollectionEquality().hash(location) ^
       const DeepCollectionEquality().hash(participant) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(groupingBehavior) ^
@@ -23892,8 +23816,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       FhirDuration? timingDuration,
       Range? timingRange,
       Timing? timingTiming,
-      CodeableConcept? locationCodeableConcept,
-      Reference? locationReference,
+      CodeableReference? location,
       List<PlanDefinitionParticipant>? participant,
       CodeableConcept? type,
       @JsonKey(unknownEnumValue: PlanDefinitionActionGroupingBehavior.unknown)
@@ -24006,10 +23929,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   @override
   Timing? get timingTiming => throw _privateConstructorUsedError;
   @override
-  CodeableConcept? get locationCodeableConcept =>
-      throw _privateConstructorUsedError;
-  @override
-  Reference? get locationReference => throw _privateConstructorUsedError;
+  CodeableReference? get location => throw _privateConstructorUsedError;
   @override
   List<PlanDefinitionParticipant>? get participant =>
       throw _privateConstructorUsedError;

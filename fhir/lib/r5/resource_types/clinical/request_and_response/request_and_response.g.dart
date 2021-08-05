@@ -716,13 +716,9 @@ _$_DeviceRequest _$$_DeviceRequestFromJson(Map<String, dynamic> json) =>
       doNotPerformElement: json['_doNotPerform'] == null
           ? null
           : Element.fromJson(json['_doNotPerform'] as Map<String, dynamic>),
-      codeCodeableConcept: json['codeCodeableConcept'] == null
+      code: json['code'] == null
           ? null
-          : CodeableConcept.fromJson(
-              json['codeCodeableConcept'] as Map<String, dynamic>),
-      codeReference: json['codeReference'] == null
-          ? null
-          : Reference.fromJson(json['codeReference'] as Map<String, dynamic>),
+          : CodeableReference.fromJson(json['code'] as Map<String, dynamic>),
       quantity:
           json['quantity'] == null ? null : Integer.fromJson(json['quantity']),
       quantityElement: json['_quantity'] == null
@@ -826,8 +822,7 @@ Map<String, dynamic> _$$_DeviceRequestToJson(_$_DeviceRequest instance) {
   writeNotNull('_priority', instance.priorityElement?.toJson());
   writeNotNull('doNotPerform', instance.doNotPerform?.toJson());
   writeNotNull('_doNotPerform', instance.doNotPerformElement?.toJson());
-  writeNotNull('codeCodeableConcept', instance.codeCodeableConcept?.toJson());
-  writeNotNull('codeReference', instance.codeReference?.toJson());
+  writeNotNull('code', instance.code?.toJson());
   writeNotNull('quantity', instance.quantity?.toJson());
   writeNotNull('_quantity', instance.quantityElement?.toJson());
   writeNotNull(
@@ -1433,13 +1428,9 @@ _$_SupplyRequest _$$_SupplyRequestFromJson(Map<String, dynamic> json) =>
       priorityElement: json['_priority'] == null
           ? null
           : Element.fromJson(json['_priority'] as Map<String, dynamic>),
-      itemCodeableConcept: json['itemCodeableConcept'] == null
+      item: json['item'] == null
           ? null
-          : CodeableConcept.fromJson(
-              json['itemCodeableConcept'] as Map<String, dynamic>),
-      itemReference: json['itemReference'] == null
-          ? null
-          : Reference.fromJson(json['itemReference'] as Map<String, dynamic>),
+          : CodeableReference.fromJson(json['item'] as Map<String, dynamic>),
       quantity: Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
       parameter: (json['parameter'] as List<dynamic>?)
           ?.map(
@@ -1512,8 +1503,7 @@ Map<String, dynamic> _$$_SupplyRequestToJson(_$_SupplyRequest instance) {
   writeNotNull('category', instance.category?.toJson());
   writeNotNull('priority', instance.priority?.toJson());
   writeNotNull('_priority', instance.priorityElement?.toJson());
-  writeNotNull('itemCodeableConcept', instance.itemCodeableConcept?.toJson());
-  writeNotNull('itemReference', instance.itemReference?.toJson());
+  writeNotNull('item', instance.item?.toJson());
   val['quantity'] = instance.quantity.toJson();
   writeNotNull(
       'parameter', instance.parameter?.map((e) => e.toJson()).toList());
