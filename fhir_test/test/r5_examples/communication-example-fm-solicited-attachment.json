@@ -36,6 +36,7 @@
         }
       ],
       "status": "completed",
+      "intent": "proposal",
       "subject": {
         "reference": "Patient/1"
       }

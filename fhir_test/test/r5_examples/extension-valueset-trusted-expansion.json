@@ -12,13 +12,13 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/valueset-trusted-expansion",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "trusted-expansion",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2020-12-28T16:55:11+11:00",
   "publisher": "HL7",
   "description": "Indicates an authoritative source for performing value set expansions.",
-  "fhirVersion": "4.2.0",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "rim",
@@ -44,7 +44,7 @@
         "path": "Extension",
         "short": "Reference to a trusted expansion",
         "definition": "Indicates an authoritative source for performing value set expansions.",
-        "comment": "If the designated \"authoritative source\" (as specified in the valueset-authoritativeSource extension, if present) is unable to provide a valid expansion, this extension indicates an alternate authoritative source where the value set expansion may be obtained.",
+        "comment": "If the designated \"authoritative source\" (as specified in the valueset-authoritativeSource extension, if present) is unable to provide a valid expansion, this extension indicates the base URL of a FHIR server that is an alternate trusted source where the value set expansion may be obtained.  This may be via a ValueSet $expand operation request (if supported by the server), or via the ValueSet endpoint directly which will return an instance of the ValueSet resource containing a persisted expansion (and the parameters that expansion is based on). \n\nThis extension should only be used if the \"authoritative source\" (valueset-authoritativeSource extension) does not have a FHIR service which is capable of generating or returning a valid FHIR value set expansion.",
         "min": 0,
         "max": "*",
         "base": {
@@ -59,7 +59,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -141,7 +141,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -149,7 +149,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -206,7 +206,7 @@
         },
         "type": [
           {
-            "code": "uri"
+            "code": "url"
           }
         ],
         "constraint": [
@@ -216,7 +216,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -237,7 +237,7 @@
         "path": "Extension",
         "short": "Reference to a trusted expansion",
         "definition": "Indicates an authoritative source for performing value set expansions.",
-        "comment": "If the designated \"authoritative source\" (as specified in the valueset-authoritativeSource extension, if present) is unable to provide a valid expansion, this extension indicates an alternate authoritative source where the value set expansion may be obtained.",
+        "comment": "If the designated \"authoritative source\" (as specified in the valueset-authoritativeSource extension, if present) is unable to provide a valid expansion, this extension indicates the base URL of a FHIR server that is an alternate trusted source where the value set expansion may be obtained.  This may be via a ValueSet $expand operation request (if supported by the server), or via the ValueSet endpoint directly which will return an instance of the ValueSet resource containing a persisted expansion (and the parameters that expansion is based on). \n\nThis extension should only be used if the \"authoritative source\" (valueset-authoritativeSource extension) does not have a FHIR service which is capable of generating or returning a valid FHIR value set expansion.",
         "min": 0,
         "max": "*",
         "isModifier": false
@@ -258,7 +258,7 @@
         "min": 1,
         "type": [
           {
-            "code": "uri"
+            "code": "url"
           }
         ]
       }

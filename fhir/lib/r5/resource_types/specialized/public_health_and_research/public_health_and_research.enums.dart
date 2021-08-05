@@ -28,32 +28,12 @@ enum ResearchStudyStatus {
 }
 
 enum ResearchSubjectStatus {
-  @JsonValue('candidate')
-  candidate,
-  @JsonValue('eligible')
-  eligible,
-  @JsonValue('follow-up')
-  follow_up,
-  @JsonValue('ineligible')
-  ineligible,
-  @JsonValue('not-registered')
-  not_registered,
-  @JsonValue('off-study')
-  off_study,
-  @JsonValue('on-study')
-  on_study,
-  @JsonValue('on-study-intervention')
-  on_study_intervention,
-  @JsonValue('on-study-observation')
-  on_study_observation,
-  @JsonValue('pending-on-study')
-  pending_on_study,
-  @JsonValue('potential-candidate')
-  potential_candidate,
-  @JsonValue('screening')
-  screening,
-  @JsonValue('withdrawn')
-  withdrawn,
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('retired')
+  retired,
   @JsonValue('unknown')
   unknown,
 }

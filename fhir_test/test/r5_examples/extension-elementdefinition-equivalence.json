@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-equivalence",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "equivalence",
   "status": "draft",
   "date": "2015-02-28",
@@ -28,7 +28,7 @@
     }
   ],
   "description": "The level of equivalence between the element containing the mapping and the element mapped to.",
-  "fhirVersion": "4.2.0",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "rim",
@@ -68,7 +68,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -156,7 +156,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -164,7 +164,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -231,13 +231,17 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
         "isSummary": false,
         "binding": {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "valueString": "The degree of equivalence between concepts."
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
               "valueString": "ConceptMapEquivalence"
@@ -248,8 +252,7 @@
             }
           ],
           "strength": "required",
-          "description": "The degree of equivalence between concepts.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/concept-map-equivalence|4.2.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/concept-map-equivalence|4.6.0"
         },
         "mapping": [
           {
@@ -298,6 +301,10 @@
         "binding": {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "valueString": "The degree of equivalence between concepts."
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
               "valueString": "ConceptMapEquivalence"
             },
@@ -307,8 +314,7 @@
             }
           ],
           "strength": "required",
-          "description": "The degree of equivalence between concepts.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/concept-map-equivalence|4.2.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/concept-map-equivalence|4.6.0"
         }
       }
     ]

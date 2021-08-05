@@ -49,13 +49,16 @@ class TestReport with Resource, _$TestReport {
   }) = _TestReport;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestReport.fromYaml(dynamic yaml) => yaml is String
-      ? TestReport.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestReport.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestReport.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestReport.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestReport cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -82,9 +85,11 @@ class TestReportParticipant with _$TestReportParticipant {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestReportParticipant.fromYaml(dynamic yaml) => yaml is String
-      ? TestReportParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestReportParticipant.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestReportParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestReportParticipant.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestReportParticipant cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -106,9 +111,11 @@ class TestReportSetup with _$TestReportSetup {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestReportSetup.fromYaml(dynamic yaml) => yaml is String
-      ? TestReportSetup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestReportSetup.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestReportSetup.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestReportSetup.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestReportSetup cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -131,9 +138,11 @@ class TestReportAction with _$TestReportAction {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestReportAction.fromYaml(dynamic yaml) => yaml is String
-      ? TestReportAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestReportAction.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestReportAction.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestReportAction.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestReportAction cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -160,9 +169,11 @@ class TestReportOperation with _$TestReportOperation {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestReportOperation.fromYaml(dynamic yaml) => yaml is String
-      ? TestReportOperation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestReportOperation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestReportOperation.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestReportOperation.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestReportOperation cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -189,9 +200,11 @@ class TestReportAssert with _$TestReportAssert {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestReportAssert.fromYaml(dynamic yaml) => yaml is String
-      ? TestReportAssert.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestReportAssert.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestReportAssert.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestReportAssert.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestReportAssert cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -217,9 +230,11 @@ class TestReportTest with _$TestReportTest {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestReportTest.fromYaml(dynamic yaml) => yaml is String
-      ? TestReportTest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestReportTest.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestReportTest.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestReportTest.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestReportTest cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -242,9 +257,11 @@ class TestReportAction1 with _$TestReportAction1 {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestReportAction1.fromYaml(dynamic yaml) => yaml is String
-      ? TestReportAction1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestReportAction1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestReportAction1.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestReportAction1.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestReportAction1 cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -266,9 +283,11 @@ class TestReportTeardown with _$TestReportTeardown {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestReportTeardown.fromYaml(dynamic yaml) => yaml is String
-      ? TestReportTeardown.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestReportTeardown.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestReportTeardown.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestReportTeardown.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestReportTeardown cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -290,9 +309,11 @@ class TestReportAction2 with _$TestReportAction2 {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestReportAction2.fromYaml(dynamic yaml) => yaml is String
-      ? TestReportAction2.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestReportAction2.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestReportAction2.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestReportAction2.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestReportAction2 cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -359,13 +380,16 @@ class TestScript with Resource, _$TestScript {
   }) = _TestScript;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScript.fromYaml(dynamic yaml) => yaml is String
-      ? TestScript.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScript.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScript.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScript.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScript cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -389,9 +413,11 @@ class TestScriptOrigin with _$TestScriptOrigin {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptOrigin.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptOrigin.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptOrigin.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptOrigin.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptOrigin.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptOrigin cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -415,9 +441,11 @@ class TestScriptDestination with _$TestScriptDestination {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptDestination.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptDestination.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptDestination.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptDestination.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptDestination.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptDestination cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -440,9 +468,11 @@ class TestScriptMetadata with _$TestScriptMetadata {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptMetadata.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptMetadata.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptMetadata.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptMetadata.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptMetadata.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptMetadata cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -467,9 +497,11 @@ class TestScriptLink with _$TestScriptLink {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptLink.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptLink.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptLink.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptLink.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptLink cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -503,9 +535,11 @@ class TestScriptCapability with _$TestScriptCapability {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptCapability.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptCapability.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptCapability.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptCapability.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptCapability.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptCapability cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -531,9 +565,11 @@ class TestScriptFixture with _$TestScriptFixture {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptFixture.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptFixture.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptFixture.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptFixture.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptFixture.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptFixture cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -570,9 +606,11 @@ class TestScriptVariable with _$TestScriptVariable {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptVariable.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptVariable.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptVariable.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptVariable.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptVariable.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptVariable cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -595,9 +633,11 @@ class TestScriptRule with _$TestScriptRule {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptRule.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptRule.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptRule.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptRule.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptRule.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptRule cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -622,9 +662,11 @@ class TestScriptParam with _$TestScriptParam {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptParam.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptParam.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptParam.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptParam.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptParam.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptParam cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -647,9 +689,11 @@ class TestScriptRuleset with _$TestScriptRuleset {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptRuleset.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptRuleset.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptRuleset.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptRuleset.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptRuleset.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptRuleset cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -673,9 +717,11 @@ class TestScriptRule1 with _$TestScriptRule1 {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptRule1.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptRule1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptRule1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptRule1.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptRule1.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptRule1 cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -700,9 +746,11 @@ class TestScriptParam1 with _$TestScriptParam1 {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptParam1.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptParam1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptParam1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptParam1.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptParam1.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptParam1 cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -724,9 +772,11 @@ class TestScriptSetup with _$TestScriptSetup {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptSetup.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptSetup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptSetup.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptSetup.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptSetup.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptSetup cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -749,9 +799,11 @@ class TestScriptAction with _$TestScriptAction {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptAction.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptAction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptAction.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptAction.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptAction.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptAction cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -802,9 +854,11 @@ class TestScriptOperation with _$TestScriptOperation {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptOperation.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptOperation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptOperation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptOperation.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptOperation.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptOperation cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -829,9 +883,11 @@ class TestScriptRequestHeader with _$TestScriptRequestHeader {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptRequestHeader.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptRequestHeader.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptRequestHeader.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptRequestHeader.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptRequestHeader.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptRequestHeader cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -899,9 +955,11 @@ class TestScriptAssert with _$TestScriptAssert {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptAssert.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptAssert.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptAssert.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptAssert.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptAssert.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptAssert cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -925,9 +983,11 @@ class TestScriptRule2 with _$TestScriptRule2 {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptRule2.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptRule2.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptRule2.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptRule2.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptRule2.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptRule2 cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -952,9 +1012,11 @@ class TestScriptParam2 with _$TestScriptParam2 {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptParam2.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptParam2.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptParam2.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptParam2.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptParam2.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptParam2 cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -978,9 +1040,11 @@ class TestScriptRuleset1 with _$TestScriptRuleset1 {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptRuleset1.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptRuleset1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptRuleset1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptRuleset1.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptRuleset1.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptRuleset1 cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1004,9 +1068,11 @@ class TestScriptRule3 with _$TestScriptRule3 {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptRule3.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptRule3.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptRule3.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptRule3.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptRule3.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptRule3 cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1031,9 +1097,11 @@ class TestScriptParam3 with _$TestScriptParam3 {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptParam3.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptParam3.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptParam3.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptParam3.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptParam3.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptParam3 cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1059,9 +1127,11 @@ class TestScriptTest with _$TestScriptTest {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptTest.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptTest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptTest.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptTest.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptTest.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptTest cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1084,9 +1154,11 @@ class TestScriptAction1 with _$TestScriptAction1 {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptAction1.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptAction1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptAction1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptAction1.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptAction1.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptAction1 cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1108,9 +1180,11 @@ class TestScriptTeardown with _$TestScriptTeardown {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptTeardown.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptTeardown.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptTeardown.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptTeardown.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptTeardown.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptTeardown cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1132,9 +1206,11 @@ class TestScriptAction2 with _$TestScriptAction2 {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TestScriptAction2.fromYaml(dynamic yaml) => yaml is String
-      ? TestScriptAction2.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TestScriptAction2.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TestScriptAction2.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TestScriptAction2.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TestScriptAction2 cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');

@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for Claim.supportingInfo.timing[x]",
       "expansion": {
-        "identifier": "urn:uuid:7563de0b-e45b-461f-a261-053eb8b5c469",
-        "timestamp": "2019-12-31T21:08:57+11:00",
+        "identifier": "urn:uuid:3ff85fec-362b-42aa-aa50-711278de95f7",
+        "timestamp": "2021-04-15T12:28:14+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -32,8 +32,8 @@
       "status": "active",
       "description": "Type options for Claim.supportingInfo.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:c2545726-53c1-4b98-b746-17e46460666e",
-        "timestamp": "2019-12-31T21:08:57+11:00",
+        "identifier": "urn:uuid:09e64bfa-4790-418f-9ca2-0fdc9a4ffb29",
+        "timestamp": "2021-04-15T12:28:14+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -70,8 +70,8 @@
       "status": "active",
       "description": "Type options for Claim.diagnosis.diagnosis[x]",
       "expansion": {
-        "identifier": "urn:uuid:4ec317c7-4fb2-4e1f-82a9-36813a6d9d6c",
-        "timestamp": "2019-12-31T21:08:57+11:00",
+        "identifier": "urn:uuid:17bcabdd-047f-4145-a295-4dd38fe8514e",
+        "timestamp": "2021-04-15T12:28:14+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -93,8 +93,8 @@
       "status": "active",
       "description": "Type options for Claim.procedure.procedure[x]",
       "expansion": {
-        "identifier": "urn:uuid:bb42a526-5677-4fbb-8e61-81974a71adac",
-        "timestamp": "2019-12-31T21:08:57+11:00",
+        "identifier": "urn:uuid:fba11668-33cb-4010-b984-0193fa27e863",
+        "timestamp": "2021-04-15T12:28:14+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -116,8 +116,8 @@
       "status": "active",
       "description": "Type options for Claim.accident.location[x]",
       "expansion": {
-        "identifier": "urn:uuid:9d9f20db-2bb7-4ac0-ad48-44df2e07796d",
-        "timestamp": "2019-12-31T21:08:57+11:00",
+        "identifier": "urn:uuid:8a8b3735-8ae3-47e9-a877-91c212b8af2c",
+        "timestamp": "2021-04-15T12:28:14+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -139,8 +139,8 @@
       "status": "active",
       "description": "Type options for Claim.item.serviced[x]",
       "expansion": {
-        "identifier": "urn:uuid:ec10ec00-50a0-4d8c-b25b-9875d3c0941c",
-        "timestamp": "2019-12-31T21:08:57+11:00",
+        "identifier": "urn:uuid:dc4fbf03-7314-44a8-a34c-72729cd41ccc",
+        "timestamp": "2021-04-15T12:28:14+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -162,8 +162,8 @@
       "status": "active",
       "description": "Type options for Claim.item.location[x]",
       "expansion": {
-        "identifier": "urn:uuid:887d2c96-4464-4842-8db4-9581c4c3ef8a",
-        "timestamp": "2019-12-31T21:08:57+11:00",
+        "identifier": "urn:uuid:32cedbe0-d9e5-411c-b877-67bdb62639d1",
+        "timestamp": "2021-04-15T12:28:14+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -189,9 +189,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Financial Management)",
   "item": [
     {
@@ -254,7 +254,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -413,7 +413,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -440,7 +440,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]

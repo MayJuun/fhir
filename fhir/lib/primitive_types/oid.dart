@@ -1,3 +1,5 @@
+//ignore_for_file: avoid_equals_and_hash_code_on_mutable_classes, avoid_renaming_method_parameters, avoid_bool_literals_in_conditional_expressions
+
 import 'dart:convert';
 
 import 'package:yaml/yaml.dart';
@@ -5,10 +7,10 @@ import 'package:yaml/yaml.dart';
 class Oid {
   const Oid._(this._valueString, this._valueOid, this._isValid);
 
-  factory Oid(String inValue) =>
-      RegExp(r'^urn:oid:[0-2](\.(0|[1-9][0-9]*))+$').hasMatch(inValue)
-          ? Oid._(inValue, inValue, true)
-          : Oid._(inValue, null, false);
+  factory Oid(dynamic inValue) => inValue is String &&
+          RegExp(r'^urn:oid:[0-2](\.(0|[1-9][0-9]*))+$').hasMatch(inValue)
+      ? Oid._(inValue, inValue, true)
+      : Oid._(inValue.toString(), null, false);
 
   factory Oid.fromJson(dynamic json) => Oid(json);
 
@@ -24,13 +26,16 @@ class Oid {
   final bool _isValid;
 
   bool get isValid => _isValid;
-  int get hashOid => _valueString.hashCode;
+  @override
+  int get hashCode => _valueString.hashCode;
   String? get value => _valueOid;
 
+  @override
   String toString() => _valueString;
   String toJson() => _valueString;
   String toYaml() => _valueString;
 
+  @override
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is Oid

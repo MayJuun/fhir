@@ -1,7 +1,8 @@
 import '../../r5.dart';
 
 class ResourceUtils {
-  static const resourceTypeFromStringMap = {
+  static const Map<String, R5ResourceType> resourceTypeFromStringMap =
+      <String, R5ResourceType>{
     'Account': R5ResourceType.Account,
     'ActivityDefinition': R5ResourceType.ActivityDefinition,
     'AdverseEvent': R5ResourceType.AdverseEvent,
@@ -44,7 +45,7 @@ class ResourceUtils {
     'DeviceDefinition': R5ResourceType.DeviceDefinition,
     'DeviceMetric': R5ResourceType.DeviceMetric,
     'DeviceRequest': R5ResourceType.DeviceRequest,
-    'DeviceUseStatement': R5ResourceType.DeviceUseStatement,
+    'DeviceUsage': R5ResourceType.DeviceUsage,
     'DiagnosticReport': R5ResourceType.DiagnosticReport,
     'DocumentManifest': R5ResourceType.DocumentManifest,
     'DocumentReference': R5ResourceType.DocumentReference,
@@ -72,6 +73,7 @@ class ResourceUtils {
     'ImmunizationRecommendation': R5ResourceType.ImmunizationRecommendation,
     'ImplementationGuide': R5ResourceType.ImplementationGuide,
     'InsurancePlan': R5ResourceType.InsurancePlan,
+    'InventoryReport': R5ResourceType.InventoryReport,
     'Invoice': R5ResourceType.Invoice,
     'Library': R5ResourceType.Library,
     'Linkage': R5ResourceType.Linkage,
@@ -153,7 +155,8 @@ class ResourceUtils {
     'VisionPrescription': R5ResourceType.VisionPrescription,
   };
 
-  static const resourceTypeToStringMap = {
+  static const Map<R5ResourceType, String> resourceTypeToStringMap =
+      <R5ResourceType, String>{
     R5ResourceType.Account: 'Account',
     R5ResourceType.ActivityDefinition: 'ActivityDefinition',
     R5ResourceType.AdverseEvent: 'AdverseEvent',
@@ -196,7 +199,7 @@ class ResourceUtils {
     R5ResourceType.DeviceDefinition: 'DeviceDefinition',
     R5ResourceType.DeviceMetric: 'DeviceMetric',
     R5ResourceType.DeviceRequest: 'DeviceRequest',
-    R5ResourceType.DeviceUseStatement: 'DeviceUseStatement',
+    R5ResourceType.DeviceUsage: 'DeviceUsage',
     R5ResourceType.DiagnosticReport: 'DiagnosticReport',
     R5ResourceType.DocumentManifest: 'DocumentManifest',
     R5ResourceType.DocumentReference: 'DocumentReference',
@@ -224,6 +227,7 @@ class ResourceUtils {
     R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
     R5ResourceType.ImplementationGuide: 'ImplementationGuide',
     R5ResourceType.InsurancePlan: 'InsurancePlan',
+    R5ResourceType.InventoryReport: 'InventoryReport',
     R5ResourceType.Invoice: 'Invoice',
     R5ResourceType.Library: 'Library',
     R5ResourceType.Linkage: 'Linkage',

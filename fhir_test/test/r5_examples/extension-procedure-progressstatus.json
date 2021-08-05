@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/procedure-progressStatus",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "progressStatus",
   "title": "progressStatus",
   "status": "draft",
@@ -29,7 +29,7 @@
     }
   ],
   "description": "A code to track a detailed progress of  a procedure (e.g. In Recovery, Prepared for Surgery).",
-  "fhirVersion": "4.2.0",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "rim",
@@ -69,7 +69,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -151,7 +151,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -159,7 +159,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -226,7 +226,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -234,12 +234,16 @@
         "binding": {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "valueString": "A code to describe a detailed status/stage of the procedure."
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
               "valueString": "ProcedureProgress"
             }
           ],
           "strength": "example",
-          "description": "A code to describe a detailed status/stage of the procedure.",
+          "description": "Codes representing the possible status of a procedure",
           "valueSet": "http://hl7.org/fhir/ValueSet/procedure-progress-status-codes"
         },
         "mapping": [
@@ -283,12 +287,16 @@
         "binding": {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "valueString": "A code to describe a detailed status/stage of the procedure."
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
               "valueString": "ProcedureProgress"
             }
           ],
           "strength": "example",
-          "description": "A code to describe a detailed status/stage of the procedure.",
+          "description": "Codes representing the possible status of a procedure",
           "valueSet": "http://hl7.org/fhir/ValueSet/procedure-progress-status-codes"
         }
       }

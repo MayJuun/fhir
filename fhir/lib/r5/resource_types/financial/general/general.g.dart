@@ -200,7 +200,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
-  R5ResourceType.DeviceUseStatement: 'DeviceUseStatement',
+  R5ResourceType.DeviceUsage: 'DeviceUsage',
   R5ResourceType.DiagnosticReport: 'DiagnosticReport',
   R5ResourceType.DocumentManifest: 'DocumentManifest',
   R5ResourceType.DocumentReference: 'DocumentReference',
@@ -228,6 +228,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
+  R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
   R5ResourceType.Library: 'Library',
   R5ResourceType.Linkage: 'Linkage',
@@ -561,7 +562,7 @@ Map<String, dynamic> _$$_ChargeItemToJson(_$_ChargeItem instance) {
   writeNotNull(
       'definitionUri', instance.definitionUri?.map((e) => e.toJson()).toList());
   writeNotNull('_definitionUri',
-      instance.definitionUriElement?.map((e) => e?.toJson()).toList());
+      instance.definitionUriElement?.map((e) => e.toJson()).toList());
   writeNotNull('definitionCanonical',
       instance.definitionCanonical?.map((e) => e.toJson()).toList());
   writeNotNull('status', _$ChargeItemStatusEnumMap[instance.status]);
@@ -764,6 +765,24 @@ _$_ChargeItemDefinition _$$_ChargeItemDefinitionFromJson(
       effectivePeriod: json['effectivePeriod'] == null
           ? null
           : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
+      topic: (json['topic'] as List<dynamic>?)
+          ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      author: (json['author'] as List<dynamic>?)
+          ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      editor: (json['editor'] as List<dynamic>?)
+          ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      reviewer: (json['reviewer'] as List<dynamic>?)
+          ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      endorser: (json['endorser'] as List<dynamic>?)
+          ?.map((e) => ContactDetail.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      relatedArtifact: (json['relatedArtifact'] as List<dynamic>?)
+          ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
+          .toList(),
       derivedFromUri: (json['derivedFromUri'] as List<dynamic>?)
           ?.map((e) => FhirUri.fromJson(e))
           .toList(),
@@ -851,10 +870,17 @@ Map<String, dynamic> _$$_ChargeItemDefinitionToJson(
   writeNotNull('lastReviewDate', instance.lastReviewDate?.toJson());
   writeNotNull('_lastReviewDate', instance.lastReviewDateElement?.toJson());
   writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
+  writeNotNull('topic', instance.topic?.map((e) => e.toJson()).toList());
+  writeNotNull('author', instance.author?.map((e) => e.toJson()).toList());
+  writeNotNull('editor', instance.editor?.map((e) => e.toJson()).toList());
+  writeNotNull('reviewer', instance.reviewer?.map((e) => e.toJson()).toList());
+  writeNotNull('endorser', instance.endorser?.map((e) => e.toJson()).toList());
+  writeNotNull('relatedArtifact',
+      instance.relatedArtifact?.map((e) => e.toJson()).toList());
   writeNotNull('derivedFromUri',
       instance.derivedFromUri?.map((e) => e.toJson()).toList());
   writeNotNull('_derivedFromUri',
-      instance.derivedFromUriElement?.map((e) => e?.toJson()).toList());
+      instance.derivedFromUriElement?.map((e) => e.toJson()).toList());
   writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
   writeNotNull('replaces', instance.replaces?.map((e) => e.toJson()).toList());
   writeNotNull('code', instance.code?.toJson());
@@ -1229,7 +1255,7 @@ Map<String, dynamic> _$$_ContractToJson(_$_Contract instance) {
   writeNotNull('_subtitle', instance.subtitleElement?.toJson());
   writeNotNull('alias', instance.alias);
   writeNotNull(
-      '_alias', instance.aliasElement?.map((e) => e?.toJson()).toList());
+      '_alias', instance.aliasElement?.map((e) => e.toJson()).toList());
   writeNotNull('author', instance.author?.toJson());
   writeNotNull('scope', instance.scope?.toJson());
   writeNotNull('topicCodeableConcept', instance.topicCodeableConcept?.toJson());
@@ -1448,7 +1474,7 @@ Map<String, dynamic> _$$_ContractSecurityLabelToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('number', instance.number?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_number', instance.numberElement?.map((e) => e?.toJson()).toList());
+      '_number', instance.numberElement?.map((e) => e.toJson()).toList());
   val['classification'] = instance.classification.toJson();
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
   writeNotNull('control', instance.control?.map((e) => e.toJson()).toList());
@@ -1530,7 +1556,7 @@ Map<String, dynamic> _$$_ContractOfferToJson(_$_ContractOffer instance) {
   writeNotNull('_text', instance.textElement?.toJson());
   writeNotNull('linkId', instance.linkId);
   writeNotNull(
-      '_linkId', instance.linkIdElement?.map((e) => e?.toJson()).toList());
+      '_linkId', instance.linkIdElement?.map((e) => e.toJson()).toList());
   writeNotNull('securityLabelNumber',
       instance.securityLabelNumber?.map((e) => e.toJson()).toList());
   writeNotNull('_securityLabelNumber',
@@ -1772,7 +1798,7 @@ Map<String, dynamic> _$$_ContractAssetToJson(_$_ContractAsset instance) {
   writeNotNull('_text', instance.textElement?.toJson());
   writeNotNull('linkId', instance.linkId);
   writeNotNull(
-      '_linkId', instance.linkIdElement?.map((e) => e?.toJson()).toList());
+      '_linkId', instance.linkIdElement?.map((e) => e.toJson()).toList());
   writeNotNull('answer', instance.answer?.map((e) => e.toJson()).toList());
   writeNotNull('securityLabelNumber',
       instance.securityLabelNumber?.map((e) => e.toJson()).toList());
@@ -1934,7 +1960,7 @@ Map<String, dynamic> _$$_ContractValuedItemToJson(
   writeNotNull('recipient', instance.recipient?.toJson());
   writeNotNull('linkId', instance.linkId);
   writeNotNull(
-      '_linkId', instance.linkIdElement?.map((e) => e?.toJson()).toList());
+      '_linkId', instance.linkIdElement?.map((e) => e.toJson()).toList());
   writeNotNull('securityLabelNumber',
       instance.securityLabelNumber?.map((e) => e.toJson()).toList());
   writeNotNull('_securityLabelNumber',
@@ -2057,12 +2083,12 @@ Map<String, dynamic> _$$_ContractActionToJson(_$_ContractAction instance) {
   val['intent'] = instance.intent.toJson();
   writeNotNull('linkId', instance.linkId);
   writeNotNull(
-      '_linkId', instance.linkIdElement?.map((e) => e?.toJson()).toList());
+      '_linkId', instance.linkIdElement?.map((e) => e.toJson()).toList());
   val['status'] = instance.status.toJson();
   writeNotNull('context', instance.context?.toJson());
   writeNotNull('contextLinkId', instance.contextLinkId);
   writeNotNull('_contextLinkId',
-      instance.contextLinkIdElement?.map((e) => e?.toJson()).toList());
+      instance.contextLinkIdElement?.map((e) => e.toJson()).toList());
   writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
   writeNotNull(
       '_occurrenceDateTime', instance.occurrenceDateTimeElement?.toJson());
@@ -2072,18 +2098,18 @@ Map<String, dynamic> _$$_ContractActionToJson(_$_ContractAction instance) {
       'requester', instance.requester?.map((e) => e.toJson()).toList());
   writeNotNull('requesterLinkId', instance.requesterLinkId);
   writeNotNull('_requesterLinkId',
-      instance.requesterLinkIdElement?.map((e) => e?.toJson()).toList());
+      instance.requesterLinkIdElement?.map((e) => e.toJson()).toList());
   writeNotNull(
       'performerType', instance.performerType?.map((e) => e.toJson()).toList());
   writeNotNull('performerRole', instance.performerRole?.toJson());
   writeNotNull('performer', instance.performer?.toJson());
   writeNotNull('performerLinkId', instance.performerLinkId);
   writeNotNull('_performerLinkId',
-      instance.performerLinkIdElement?.map((e) => e?.toJson()).toList());
+      instance.performerLinkIdElement?.map((e) => e.toJson()).toList());
   writeNotNull('reason', instance.reason?.map((e) => e.toJson()).toList());
   writeNotNull('reasonLinkId', instance.reasonLinkId);
   writeNotNull('_reasonLinkId',
-      instance.reasonLinkIdElement?.map((e) => e?.toJson()).toList());
+      instance.reasonLinkIdElement?.map((e) => e.toJson()).toList());
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   writeNotNull('securityLabelNumber',
       instance.securityLabelNumber?.map((e) => e.toJson()).toList());
@@ -2526,7 +2552,7 @@ Map<String, dynamic> _$$_ExplanationOfBenefitToJson(
   writeNotNull('_disposition', instance.dispositionElement?.toJson());
   writeNotNull('preAuthRef', instance.preAuthRef);
   writeNotNull('_preAuthRef',
-      instance.preAuthRefElement?.map((e) => e?.toJson()).toList());
+      instance.preAuthRefElement?.map((e) => e.toJson()).toList());
   writeNotNull('preAuthRefPeriod',
       instance.preAuthRefPeriod?.map((e) => e.toJson()).toList());
   writeNotNull('careTeam', instance.careTeam?.map((e) => e.toJson()).toList());
@@ -2961,7 +2987,7 @@ Map<String, dynamic> _$$_ExplanationOfBenefitInsuranceToJson(
   val['coverage'] = instance.coverage.toJson();
   writeNotNull('preAuthRef', instance.preAuthRef);
   writeNotNull('_preAuthRef',
-      instance.preAuthRefElement?.map((e) => e?.toJson()).toList());
+      instance.preAuthRefElement?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -3150,7 +3176,7 @@ Map<String, dynamic> _$$_ExplanationOfBenefitItemToJson(
   writeNotNull('careTeamSequence',
       instance.careTeamSequence?.map((e) => e.toJson()).toList());
   writeNotNull('_careTeamSequence',
-      instance.careTeamSequenceElement?.map((e) => e?.toJson()).toList());
+      instance.careTeamSequenceElement?.map((e) => e.toJson()).toList());
   writeNotNull('diagnosisSequence',
       instance.diagnosisSequence?.map((e) => e.toJson()).toList());
   writeNotNull('_diagnosisSequence',
@@ -3189,7 +3215,7 @@ Map<String, dynamic> _$$_ExplanationOfBenefitItemToJson(
   writeNotNull(
       'noteNumber', instance.noteNumber?.map((e) => e.toJson()).toList());
   writeNotNull('_noteNumber',
-      instance.noteNumberElement?.map((e) => e?.toJson()).toList());
+      instance.noteNumberElement?.map((e) => e.toJson()).toList());
   writeNotNull(
       'adjudication', instance.adjudication?.map((e) => e.toJson()).toList());
   writeNotNull('detail', instance.detail?.map((e) => e.toJson()).toList());
@@ -3338,7 +3364,7 @@ Map<String, dynamic> _$$_ExplanationOfBenefitDetailToJson(
   writeNotNull(
       'noteNumber', instance.noteNumber?.map((e) => e.toJson()).toList());
   writeNotNull('_noteNumber',
-      instance.noteNumberElement?.map((e) => e?.toJson()).toList());
+      instance.noteNumberElement?.map((e) => e.toJson()).toList());
   writeNotNull(
       'adjudication', instance.adjudication?.map((e) => e.toJson()).toList());
   writeNotNull(
@@ -3436,7 +3462,7 @@ Map<String, dynamic> _$$_ExplanationOfBenefitSubDetailToJson(
   writeNotNull(
       'noteNumber', instance.noteNumber?.map((e) => e.toJson()).toList());
   writeNotNull('_noteNumber',
-      instance.noteNumberElement?.map((e) => e?.toJson()).toList());
+      instance.noteNumberElement?.map((e) => e.toJson()).toList());
   writeNotNull(
       'adjudication', instance.adjudication?.map((e) => e.toJson()).toList());
   return val;
@@ -3554,11 +3580,11 @@ Map<String, dynamic> _$$_ExplanationOfBenefitAddItemToJson(
   writeNotNull(
       'itemSequence', instance.itemSequence?.map((e) => e.toJson()).toList());
   writeNotNull('_itemSequence',
-      instance.itemSequenceElement?.map((e) => e?.toJson()).toList());
+      instance.itemSequenceElement?.map((e) => e.toJson()).toList());
   writeNotNull('detailSequence',
       instance.detailSequence?.map((e) => e.toJson()).toList());
   writeNotNull('_detailSequence',
-      instance.detailSequenceElement?.map((e) => e?.toJson()).toList());
+      instance.detailSequenceElement?.map((e) => e.toJson()).toList());
   writeNotNull('subDetailSequence',
       instance.subDetailSequence?.map((e) => e.toJson()).toList());
   writeNotNull('_subDetailSequence',
@@ -3585,7 +3611,7 @@ Map<String, dynamic> _$$_ExplanationOfBenefitAddItemToJson(
   writeNotNull(
       'noteNumber', instance.noteNumber?.map((e) => e.toJson()).toList());
   writeNotNull('_noteNumber',
-      instance.noteNumberElement?.map((e) => e?.toJson()).toList());
+      instance.noteNumberElement?.map((e) => e.toJson()).toList());
   writeNotNull(
       'adjudication', instance.adjudication?.map((e) => e.toJson()).toList());
   writeNotNull('detail', instance.detail?.map((e) => e.toJson()).toList());
@@ -3661,7 +3687,7 @@ Map<String, dynamic> _$$_ExplanationOfBenefitDetail1ToJson(
   writeNotNull(
       'noteNumber', instance.noteNumber?.map((e) => e.toJson()).toList());
   writeNotNull('_noteNumber',
-      instance.noteNumberElement?.map((e) => e?.toJson()).toList());
+      instance.noteNumberElement?.map((e) => e.toJson()).toList());
   writeNotNull(
       'adjudication', instance.adjudication?.map((e) => e.toJson()).toList());
   writeNotNull(
@@ -3734,7 +3760,7 @@ Map<String, dynamic> _$$_ExplanationOfBenefitSubDetail1ToJson(
   writeNotNull(
       'noteNumber', instance.noteNumber?.map((e) => e.toJson()).toList());
   writeNotNull('_noteNumber',
-      instance.noteNumberElement?.map((e) => e?.toJson()).toList());
+      instance.noteNumberElement?.map((e) => e.toJson()).toList());
   writeNotNull(
       'adjudication', instance.adjudication?.map((e) => e.toJson()).toList());
   return val;
@@ -4147,7 +4173,7 @@ Map<String, dynamic> _$$_InsurancePlanToJson(_$_InsurancePlan instance) {
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('alias', instance.alias);
   writeNotNull(
-      '_alias', instance.aliasElement?.map((e) => e?.toJson()).toList());
+      '_alias', instance.aliasElement?.map((e) => e.toJson()).toList());
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('ownedBy', instance.ownedBy?.toJson());
   writeNotNull('administeredBy', instance.administeredBy?.toJson());

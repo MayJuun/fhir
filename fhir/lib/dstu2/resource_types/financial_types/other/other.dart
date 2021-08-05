@@ -45,13 +45,16 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   }) = _ExplanationOfBenefit;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ExplanationOfBenefit.fromYaml(dynamic yaml) => yaml is String
-      ? ExplanationOfBenefit.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ExplanationOfBenefit.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ExplanationOfBenefit.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ExplanationOfBenefit.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ExplanationOfBenefit cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');

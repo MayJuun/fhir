@@ -3,17 +3,19 @@
   "id": "example006",
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: example006\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: active\u003c/p\u003e\u003cp\u003e\u003cb\u003emedication\u003c/b\u003e: Amoxicillin (product) \u003cspan\u003e(Details : {SNOMED CT code \u002727658006\u0027 \u003d \u0027p-Hydroxyampicillin\u0027, given as \u0027Amoxicillin (product)\u0027})\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca\u003eDonald Duck\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eeffective\u003c/b\u003e: 2014-02-01\u003c/p\u003e\u003cp\u003e\u003cb\u003edateAsserted\u003c/b\u003e: 2014-02-22\u003c/p\u003e\u003cp\u003e\u003cb\u003einformationSource\u003c/b\u003e: \u003ca\u003ePeter Chalmers\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003enote\u003c/b\u003e: Father indicates they miss the occasional dose\u003c/p\u003e\u003cp\u003e\u003cb\u003edosage\u003c/b\u003e: \u003c/p\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: completed\u003c/p\u003e\u003ch3\u003eMedications\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca\u003eDonald Duck. Generated Summary: Medical record number: 654321 (USUAL); active; Duck Donald (OFFICIAL); gender: male\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eeffective\u003c/b\u003e: 2014-02-01\u003c/p\u003e\u003cp\u003e\u003cb\u003edateAsserted\u003c/b\u003e: 2014-02-22\u003c/p\u003e\u003cp\u003e\u003cb\u003einformationSource\u003c/b\u003e: \u003ca\u003ePeter Chalmers. Generated Summary: \u003cspan\u003eEmergency Contact\u003c/span\u003e; Peter James Chalmers (OFFICIAL); Phone: (03) 5555 6473; gender: male; period: 2012-03-11 --\u0026gt; (ongoing)\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003enote\u003c/b\u003e: Father indicates they miss the occasional dose\u003c/p\u003e\u003ch3\u003eDosages\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
   },
-  "status": "active",
-  "medicationCodeableConcept": {
-    "coding": [
-      {
-        "system": "http://snomed.info/sct",
-        "code": "27658006",
-        "display": "Amoxicillin (product)"
-      }
-    ]
+  "status": "completed",
+  "medication": {
+    "concept": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "27658006",
+          "display": "Amoxicillin (product)"
+        }
+      ]
+    }
   },
   "subject": {
     "reference": "Patient/pat1",

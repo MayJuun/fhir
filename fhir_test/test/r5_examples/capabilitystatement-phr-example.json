@@ -24,7 +24,7 @@
   "software": {
     "name": "ACME PHR Server"
   },
-  "fhirVersion": "4.2.0",
+  "fhirVersion": "4.6.0",
   "format": [
     "json",
     "xml"

@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "route-codes",
   "meta": {
-    "lastUpdated": "2019-12-31T21:03:40.621+11:00",
+    "lastUpdated": "2021-04-15T12:25:09.461+10:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
@@ -14,7 +14,7 @@
   "extension": [
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg",
-      "valueCode": "phx"
+      "valueCode": "fhir"
     },
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
@@ -32,12 +32,12 @@
       "value": "urn:oid:2.16.840.1.113883.4.642.3.98"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "SNOMEDCTRouteCodes",
   "title": "SNOMED CT Route Codes",
   "status": "draft",
   "experimental": false,
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "FHIR Project team",
   "contact": [
     {

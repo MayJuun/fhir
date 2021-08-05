@@ -66,9 +66,11 @@ class Population with _$Population {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Population.fromYaml(dynamic yaml) => yaml is String
-      ? Population.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Population.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Population.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Population.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Population cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -141,9 +143,11 @@ class ProductShelfLife with _$ProductShelfLife {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ProductShelfLife.fromYaml(dynamic yaml) => yaml is String
-      ? ProductShelfLife.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ProductShelfLife.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ProductShelfLife.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ProductShelfLife.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ProductShelfLife cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -262,9 +266,11 @@ class ProdCharacteristic with _$ProdCharacteristic {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ProdCharacteristic.fromYaml(dynamic yaml) => yaml is String
-      ? ProdCharacteristic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ProdCharacteristic.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ProdCharacteristic.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ProdCharacteristic.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ProdCharacteristic cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -354,9 +360,11 @@ class MarketingStatus with _$MarketingStatus {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MarketingStatus.fromYaml(dynamic yaml) => yaml is String
-      ? MarketingStatus.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MarketingStatus.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MarketingStatus.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MarketingStatus.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MarketingStatus cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -451,9 +459,11 @@ class SubstanceAmount with _$SubstanceAmount {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceAmount.fromYaml(dynamic yaml) => yaml is String
-      ? SubstanceAmount.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? SubstanceAmount.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? SubstanceAmount.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? SubstanceAmount.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'SubstanceAmount cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -516,9 +526,10 @@ class SubstanceAmountReferenceRange with _$SubstanceAmountReferenceRange {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubstanceAmountReferenceRange.fromYaml(dynamic yaml) => yaml is String
       ? SubstanceAmountReferenceRange.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? SubstanceAmountReferenceRange.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? SubstanceAmountReferenceRange.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'SubstanceAmountReferenceRange cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');

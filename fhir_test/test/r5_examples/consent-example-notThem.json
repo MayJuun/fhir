@@ -24,12 +24,12 @@
       ]
     }
   ],
-  "patient": {
+  "subject": {
     "reference": "Patient/mom",
     "display": "Eve Everywoman"
   },
   "dateTime": "2018-12-24",
-  "organization": [
+  "controller": [
     {
       "reference": "Organization/f001"
     }

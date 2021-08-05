@@ -18,7 +18,7 @@
   "severity": "high",
   "identifiedDateTime": "2014-01-05",
   "author": {
-    "reference": "Device/software"
+    "reference": "Device/example"
   },
   "implicated": [
     {

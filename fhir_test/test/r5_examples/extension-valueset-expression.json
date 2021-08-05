@@ -12,13 +12,13 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/valueset-expression",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "expression",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2020-12-28T16:55:11+11:00",
   "publisher": "HL7",
-  "description": "An expression that provides an alternative definition of the content of the value set. There are two different ways to use this expression extension: If both an expression and a compose element is present, the compose is understood the make the same statement as the expression. If there is no compose, the expression is the only definition of the value set, and the value set can only be processed by a server that understands the expression syntax, it that is computable.",
-  "fhirVersion": "4.2.0",
+  "description": "An expression that provides an alternative definition of the content of the value set (compose). There are two different ways to use this expression extension: If both an expression (this extension) and a compose element is present, the compose is understood to the make the same statement as the expression. If there is no compose, the expression is the only definition of the value set, and the value set can only be processed by a server that understands the expression syntax, the expression is computable.",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "rim",
@@ -43,8 +43,8 @@
         "id": "Extension",
         "path": "Extension",
         "short": "An alternative computable expression of the value set content",
-        "definition": "An expression that provides an alternative definition of the content of the value set. There are two different ways to use this expression extension: If both an expression and a compose element is present, the compose is understood the make the same statement as the expression. If there is no compose, the expression is the only definition of the value set, and the value set can only be processed by a server that understands the expression syntax, it that is computable.",
-        "comment": "The expression may be a reference or the actual expression, and ss expected to be a computable format (use the [rules-text extension](extension-valueset-rules-text.html) for a non-computable description).",
+        "definition": "An expression that provides an alternative definition of the content of the value set (compose). There are two different ways to use this expression extension: If both an expression (this extension) and a compose element is present, the compose is understood to the make the same statement as the expression. If there is no compose, the expression is the only definition of the value set, and the value set can only be processed by a server that understands the expression syntax, the expression is computable.",
+        "comment": "The expression may be a reference or the actual expression, and is expected to be in a computable format. Use the [rules-text extension](extension-valueset-rules-text.html) for a non-computable expression of the value set definition (compose).",
         "min": 0,
         "max": "1",
         "base": {
@@ -59,7 +59,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -141,7 +141,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -149,7 +149,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -216,7 +216,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -236,8 +236,8 @@
         "id": "Extension",
         "path": "Extension",
         "short": "An alternative computable expression of the value set content",
-        "definition": "An expression that provides an alternative definition of the content of the value set. There are two different ways to use this expression extension: If both an expression and a compose element is present, the compose is understood the make the same statement as the expression. If there is no compose, the expression is the only definition of the value set, and the value set can only be processed by a server that understands the expression syntax, it that is computable.",
-        "comment": "The expression may be a reference or the actual expression, and ss expected to be a computable format (use the [rules-text extension](extension-valueset-rules-text.html) for a non-computable description).",
+        "definition": "An expression that provides an alternative definition of the content of the value set (compose). There are two different ways to use this expression extension: If both an expression (this extension) and a compose element is present, the compose is understood to the make the same statement as the expression. If there is no compose, the expression is the only definition of the value set, and the value set can only be processed by a server that understands the expression syntax, the expression is computable.",
+        "comment": "The expression may be a reference or the actual expression, and is expected to be in a computable format. Use the [rules-text extension](extension-valueset-rules-text.html) for a non-computable expression of the value set definition (compose).",
         "min": 0,
         "max": "1"
       },

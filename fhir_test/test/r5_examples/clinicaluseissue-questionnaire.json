@@ -5,50 +5,12 @@
     {
       "resourceType": "ValueSet",
       "id": "vs2",
-      "name": "Type options for ClinicalUseIssue.contraindication.otherTherapy.medication[x]",
-      "status": "active",
-      "description": "Type options for ClinicalUseIssue.contraindication.otherTherapy.medication[x]",
-      "expansion": {
-        "identifier": "urn:uuid:2ff9bb74-8cf7-4d3e-8cba-f463797d92c6",
-        "timestamp": "2019-12-31T21:09:38+11:00",
-        "contains": [
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "CodeableConcept",
-            "display": "CodeableConcept"
-          },
-          {
-            "system": "http://hl7.org/fhir/resource-types",
-            "code": "MedicinalProductDefinition",
-            "display": "MedicinalProductDefinition"
-          },
-          {
-            "system": "http://hl7.org/fhir/resource-types",
-            "code": "Medication",
-            "display": "Medication"
-          },
-          {
-            "system": "http://hl7.org/fhir/resource-types",
-            "code": "Substance",
-            "display": "Substance"
-          },
-          {
-            "system": "http://hl7.org/fhir/resource-types",
-            "code": "SubstanceDefinition",
-            "display": "SubstanceDefinition"
-          }
-        ]
-      }
-    },
-    {
-      "resourceType": "ValueSet",
-      "id": "vs3",
       "name": "Type options for ClinicalUseIssue.interaction.interactant.item[x]",
       "status": "active",
       "description": "Type options for ClinicalUseIssue.interaction.interactant.item[x]",
       "expansion": {
-        "identifier": "urn:uuid:30698879-9f15-4791-a2a7-631ea606d967",
-        "timestamp": "2019-12-31T21:09:38+11:00",
+        "identifier": "urn:uuid:be89b230-aad7-4e2b-bcaf-43d0d20cd4ce",
+        "timestamp": "2021-04-15T12:28:18+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/resource-types",
@@ -84,14 +46,14 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Biomedical Research and Regulation)",
   "item": [
     {
       "linkId": "ClinicalUseIssue",
-      "text": "A single item of clinical particulars - an indication, contraindication, interaction etc. for a medicinal product",
+      "text": "A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure",
       "type": "group",
       "required": false,
       "repeats": true,
@@ -111,7 +73,7 @@
               }
             }
           ],
-          "text": "A single usage issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.",
+          "text": "A single issue - either an indication, contraindication, interaction or an undesirable effect for a medicinal product, medication, device or procedure.",
           "type": "display"
         },
         {
@@ -145,7 +107,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -304,7 +266,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -331,7 +293,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -479,13 +441,64 @@
                   }
                 }
               ],
-              "text": "indication | contraindication | interaction | undesirable-effect | other.",
+              "text": "indication | contraindication | interaction | undesirable-effect | warning.",
               "type": "display"
             },
             {
               "linkId": "ClinicalUseIssue.type.value",
               "text": "type",
               "type": "choice",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "CodeableConcept"
+            }
+          ],
+          "linkId": "ClinicalUseIssue.category",
+          "text": "A categorisation of the issue, primarily for dividing warnings into subject heading areas such as \"Pregnancy and Lactation\", \"Overdose\", \"Effects on Ability to Drive and Use Machines\"",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "A categorisation of the issue, primarily for dividing warnings into subject heading areas such as \"Pregnancy and Lactation\", \"Overdose\", \"Effects on Ability to Drive and Use Machines\".",
+              "type": "display"
+            },
+            {
+              "linkId": "ClinicalUseIssue.category.coding",
+              "text": "code:",
+              "type": "open-choice",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "ClinicalUseIssue.category.text",
+              "text": "text:",
+              "type": "string",
               "required": false,
               "repeats": false
             }
@@ -552,7 +565,7 @@
             }
           ],
           "linkId": "ClinicalUseIssue.status",
-          "text": "General description",
+          "text": "Whether this is a current issue or one that has been retired etc",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -572,7 +585,7 @@
                   }
                 }
               ],
-              "text": "General description.",
+              "text": "Whether this is a current issue or one that has been retired etc.",
               "type": "display"
             },
             {
@@ -622,12 +635,12 @@
                   }
                 }
               ],
-              "text": "General description.",
+              "text": "General description of an effect (particularly for a general warning, rather than any of the more specific types such as indication) for when a distinct coded or textual description is not appropriate using  Indication.diseaseSymptomProcedure.text, Contraindication.diseaseSymptomProcedure.text etc. For example \"May affect ability to drive\".",
               "type": "display"
             },
             {
               "linkId": "ClinicalUseIssue.description.value",
-              "text": "General description",
+              "text": "General description of an effect (particularly for a general warning, rather than any of the more specific types such as indication) for when a distinct coded or textual description is not appropriate using  Indication.diseaseSymptomProcedure.text, Contraindication.diseaseSymptomProcedure.text etc. For example \"May affect ability to drive\"",
               "type": "string",
               "required": false,
               "repeats": false
@@ -767,17 +780,13 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "CodeableConcept"
                 }
               ],
               "linkId": "ClinicalUseIssue.contraindication.diseaseSymptomProcedure",
               "text": "The situation that is being documented as contraindicating against this item",
               "type": "group",
               "required": false,
-              "repeats": true,
+              "repeats": false,
               "item": [
                 {
                   "extension": [
@@ -796,20 +805,6 @@
                   ],
                   "text": "The situation that is being documented as contraindicating against this item.",
                   "type": "display"
-                },
-                {
-                  "linkId": "ClinicalUseIssue.contraindication.diseaseSymptomProcedure.coding",
-                  "text": "code:",
-                  "type": "open-choice",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "ClinicalUseIssue.contraindication.diseaseSymptomProcedure.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
                 }
               ]
             },
@@ -818,17 +813,13 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "CodeableConcept"
                 }
               ],
               "linkId": "ClinicalUseIssue.contraindication.diseaseStatus",
               "text": "The status of the disease or symptom for the contraindication",
               "type": "group",
               "required": false,
-              "repeats": true,
+              "repeats": false,
               "item": [
                 {
                   "extension": [
@@ -847,30 +838,10 @@
                   ],
                   "text": "The status of the disease or symptom for the contraindication.",
                   "type": "display"
-                },
-                {
-                  "linkId": "ClinicalUseIssue.contraindication.diseaseStatus.coding",
-                  "text": "code:",
-                  "type": "open-choice",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "ClinicalUseIssue.contraindication.diseaseStatus.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
                 }
               ]
             },
             {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "CodeableConcept"
-                }
-              ],
               "linkId": "ClinicalUseIssue.contraindication.comorbidity",
               "text": "A comorbidity (concurrent condition) or coinfection",
               "type": "group",
@@ -894,20 +865,6 @@
                   ],
                   "text": "A comorbidity (concurrent condition) or coinfection.",
                   "type": "display"
-                },
-                {
-                  "linkId": "ClinicalUseIssue.contraindication.comorbidity.coding",
-                  "text": "code:",
-                  "type": "open-choice",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "ClinicalUseIssue.contraindication.comorbidity.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
                 }
               ]
             },
@@ -962,7 +919,7 @@
             },
             {
               "linkId": "ClinicalUseIssue.contraindication.otherTherapy",
-              "text": "Information about the use of the medicinal product in relation to other therapies described as part of the indication",
+              "text": "Information about the use of the medicinal product in relation to other therapies described as part of the contraindication",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -982,7 +939,7 @@
                       }
                     }
                   ],
-                  "text": "Information about the use of the medicinal product in relation to other therapies described as part of the indication.",
+                  "text": "Information about the use of the medicinal product in relation to other therapies described as part of the contraindication.",
                   "type": "display"
                 },
                 {
@@ -1097,7 +1054,7 @@
                       "valueString": "CodeableConcept"
                     }
                   ],
-                  "linkId": "ClinicalUseIssue.contraindication.otherTherapy.therapyRelationshipType",
+                  "linkId": "ClinicalUseIssue.contraindication.otherTherapy.relationshipType",
                   "text": "The type of relationship between the medicinal product indication or contraindication and another therapy",
                   "type": "group",
                   "required": true,
@@ -1122,14 +1079,14 @@
                       "type": "display"
                     },
                     {
-                      "linkId": "ClinicalUseIssue.contraindication.otherTherapy.therapyRelationshipType.coding",
+                      "linkId": "ClinicalUseIssue.contraindication.otherTherapy.relationshipType.coding",
                       "text": "code:",
                       "type": "open-choice",
                       "required": false,
                       "repeats": false
                     },
                     {
-                      "linkId": "ClinicalUseIssue.contraindication.otherTherapy.therapyRelationshipType.text",
+                      "linkId": "ClinicalUseIssue.contraindication.otherTherapy.relationshipType.text",
                       "text": "text:",
                       "type": "string",
                       "required": false,
@@ -1148,11 +1105,11 @@
                       "valueInteger": 1
                     }
                   ],
-                  "linkId": "ClinicalUseIssue.contraindication.otherTherapy.medication[x]",
+                  "linkId": "ClinicalUseIssue.contraindication.otherTherapy.therapy",
                   "text": "Reference to a specific medication (active substance, medicinal product or class of products) as part of an indication or contraindication",
                   "type": "group",
                   "required": true,
-                  "repeats": true,
+                  "repeats": false,
                   "item": [
                     {
                       "extension": [
@@ -1171,70 +1128,6 @@
                       ],
                       "text": "Reference to a specific medication (active substance, medicinal product or class of products) as part of an indication or contraindication.",
                       "type": "display"
-                    },
-                    {
-                      "linkId": "ClinicalUseIssue.contraindication.otherTherapy.medication[x]._type",
-                      "text": "type",
-                      "type": "choice",
-                      "required": false,
-                      "repeats": false,
-                      "answerValueSet": "#vs2",
-                      "item": [
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                              "valueString": "CodeableConcept"
-                            }
-                          ],
-                          "linkId": "ClinicalUseIssue.contraindication.otherTherapy.medication[x]._null",
-                          "type": "group",
-                          "item": [
-                            {
-                              "linkId": "ClinicalUseIssue.contraindication.otherTherapy.medication[x]._null.coding",
-                              "text": "code:",
-                              "type": "open-choice",
-                              "required": false,
-                              "repeats": false
-                            },
-                            {
-                              "linkId": "ClinicalUseIssue.contraindication.otherTherapy.medication[x]._null.text",
-                              "text": "text:",
-                              "type": "string",
-                              "required": false,
-                              "repeats": false
-                            }
-                          ]
-                        },
-                        {
-                          "extension": [
-                            {
-                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                              "valueString": "Reference"
-                            }
-                          ],
-                          "linkId": "ClinicalUseIssue.contraindication.otherTherapy.medication[x]._null",
-                          "type": "group",
-                          "item": [
-                            {
-                              "extension": [
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                                  "valueCode": "MedicinalProductDefinition, Medication, Substance, SubstanceDefinition"
-                                },
-                                {
-                                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                                }
-                              ],
-                              "linkId": "ClinicalUseIssue.contraindication.otherTherapy.medication[x]._null.value",
-                              "type": "reference",
-                              "required": false,
-                              "repeats": false
-                            }
-                          ]
-                        }
-                      ]
                     }
                   ]
                 }
@@ -1375,17 +1268,13 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "CodeableConcept"
                 }
               ],
               "linkId": "ClinicalUseIssue.indication.diseaseSymptomProcedure",
               "text": "The situation that is being documented as an indicaton for this item",
               "type": "group",
               "required": false,
-              "repeats": true,
+              "repeats": false,
               "item": [
                 {
                   "extension": [
@@ -1404,20 +1293,6 @@
                   ],
                   "text": "The situation that is being documented as an indicaton for this item.",
                   "type": "display"
-                },
-                {
-                  "linkId": "ClinicalUseIssue.indication.diseaseSymptomProcedure.coding",
-                  "text": "code:",
-                  "type": "open-choice",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "ClinicalUseIssue.indication.diseaseSymptomProcedure.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
                 }
               ]
             },
@@ -1426,17 +1301,13 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "CodeableConcept"
                 }
               ],
               "linkId": "ClinicalUseIssue.indication.diseaseStatus",
               "text": "The status of the disease or symptom for the indication",
               "type": "group",
               "required": false,
-              "repeats": true,
+              "repeats": false,
               "item": [
                 {
                   "extension": [
@@ -1455,30 +1326,10 @@
                   ],
                   "text": "The status of the disease or symptom for the indication.",
                   "type": "display"
-                },
-                {
-                  "linkId": "ClinicalUseIssue.indication.diseaseStatus.coding",
-                  "text": "code:",
-                  "type": "open-choice",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "ClinicalUseIssue.indication.diseaseStatus.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
                 }
               ]
             },
             {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "CodeableConcept"
-                }
-              ],
               "linkId": "ClinicalUseIssue.indication.comorbidity",
               "text": "A comorbidity (concurrent condition) or coinfection as part of the indication",
               "type": "group",
@@ -1502,20 +1353,6 @@
                   ],
                   "text": "A comorbidity (concurrent condition) or coinfection as part of the indication.",
                   "type": "display"
-                },
-                {
-                  "linkId": "ClinicalUseIssue.indication.comorbidity.coding",
-                  "text": "code:",
-                  "type": "open-choice",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "ClinicalUseIssue.indication.comorbidity.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
                 }
               ]
             },
@@ -1524,17 +1361,13 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "CodeableConcept"
                 }
               ],
               "linkId": "ClinicalUseIssue.indication.intendedEffect",
-              "text": "For an indication - the intended effect, aim or strategy to be achieved",
+              "text": "The intended effect, aim or strategy to be achieved",
               "type": "group",
               "required": false,
-              "repeats": true,
+              "repeats": false,
               "item": [
                 {
                   "extension": [
@@ -1551,22 +1384,8 @@
                       }
                     }
                   ],
-                  "text": "For an indication - the intended effect, aim or strategy to be achieved.",
+                  "text": "The intended effect, aim or strategy to be achieved.",
                   "type": "display"
-                },
-                {
-                  "linkId": "ClinicalUseIssue.indication.intendedEffect.coding",
-                  "text": "code:",
-                  "type": "open-choice",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "ClinicalUseIssue.indication.intendedEffect.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
                 }
               ]
             },
@@ -1582,7 +1401,7 @@
                 }
               ],
               "linkId": "ClinicalUseIssue.indication.duration",
-              "text": "For an indication - timing or duration information",
+              "text": "Timing or duration information",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1602,7 +1421,7 @@
                       }
                     }
                   ],
-                  "text": "For an indication - timing or duration information.",
+                  "text": "Timing or duration information.",
                   "type": "display"
                 },
                 {
@@ -1669,7 +1488,7 @@
                       }
                     }
                   ],
-                  "text": "For an indicaton - the specific undesirable effects of the medicinal product.",
+                  "text": "The specific undesirable effects of the medicinal product.",
                   "type": "display"
                 },
                 {
@@ -1684,7 +1503,7 @@
                     }
                   ],
                   "linkId": "ClinicalUseIssue.indication.undesirableEffect.value",
-                  "text": "For an indicaton - the specific undesirable effects of the medicinal product",
+                  "text": "The specific undesirable effects of the medicinal product",
                   "type": "reference",
                   "required": false,
                   "repeats": false
@@ -1693,7 +1512,7 @@
             },
             {
               "linkId": "ClinicalUseIssue.indication.otherTherapy",
-              "text": "Information about the use of the medicinal product in relation to other therapies described as part of the contraindication",
+              "text": "Information about the use of the medicinal product in relation to other therapies described as part of the indication",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1713,7 +1532,7 @@
                       }
                     }
                   ],
-                  "text": "Information about the use of the medicinal product in relation to other therapies described as part of the contraindication.",
+                  "text": "Information about the use of the medicinal product in relation to other therapies described as part of the indication.",
                   "type": "display"
                 }
               ]
@@ -1850,7 +1669,7 @@
             },
             {
               "linkId": "ClinicalUseIssue.interaction.interactant",
-              "text": "The specific medication, food or laboratory test that interacts",
+              "text": "The specific medication, food, substance or laboratory test that interacts",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1870,7 +1689,7 @@
                       }
                     }
                   ],
-                  "text": "The specific medication, food or laboratory test that interacts.",
+                  "text": "The specific medication, food, substance or laboratory test that interacts.",
                   "type": "display"
                 },
                 {
@@ -2011,7 +1830,7 @@
                       "type": "choice",
                       "required": false,
                       "repeats": false,
-                      "answerValueSet": "#vs3",
+                      "answerValueSet": "#vs2",
                       "item": [
                         {
                           "extension": [
@@ -2129,17 +1948,13 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "CodeableConcept"
                 }
               ],
               "linkId": "ClinicalUseIssue.interaction.effect",
               "text": "The effect of the interaction, for example \"reduced gastric absorption of primary medication\"",
               "type": "group",
               "required": false,
-              "repeats": true,
+              "repeats": false,
               "item": [
                 {
                   "extension": [
@@ -2158,20 +1973,6 @@
                   ],
                   "text": "The effect of the interaction, for example \"reduced gastric absorption of primary medication\".",
                   "type": "display"
-                },
-                {
-                  "linkId": "ClinicalUseIssue.interaction.effect.coding",
-                  "text": "code:",
-                  "type": "open-choice",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "ClinicalUseIssue.interaction.effect.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
                 }
               ]
             },
@@ -2439,17 +2240,13 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "CodeableConcept"
                 }
               ],
               "linkId": "ClinicalUseIssue.undesirableEffect.symptomConditionEffect",
               "text": "The situation in which the undesirable effect may manifest",
               "type": "group",
               "required": false,
-              "repeats": true,
+              "repeats": false,
               "item": [
                 {
                   "extension": [
@@ -2468,20 +2265,6 @@
                   ],
                   "text": "The situation in which the undesirable effect may manifest.",
                   "type": "display"
-                },
-                {
-                  "linkId": "ClinicalUseIssue.undesirableEffect.symptomConditionEffect.coding",
-                  "text": "code:",
-                  "type": "open-choice",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "ClinicalUseIssue.undesirableEffect.symptomConditionEffect.text",
-                  "text": "text:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
                 }
               ]
             },

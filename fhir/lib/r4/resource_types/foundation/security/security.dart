@@ -140,13 +140,16 @@ class AuditEvent with Resource, _$AuditEvent {
   }) = _AuditEvent;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AuditEvent.fromYaml(dynamic yaml) => yaml is String
-      ? AuditEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? AuditEvent.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? AuditEvent.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? AuditEvent.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'AuditEvent cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -256,9 +259,11 @@ class AuditEventAgent with _$AuditEventAgent {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AuditEventAgent.fromYaml(dynamic yaml) => yaml is String
-      ? AuditEventAgent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? AuditEventAgent.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? AuditEventAgent.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? AuditEventAgent.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'AuditEventAgent cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -325,9 +330,11 @@ class AuditEventNetwork with _$AuditEventNetwork {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AuditEventNetwork.fromYaml(dynamic yaml) => yaml is String
-      ? AuditEventNetwork.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? AuditEventNetwork.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? AuditEventNetwork.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? AuditEventNetwork.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'AuditEventNetwork cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -393,9 +400,11 @@ class AuditEventSource with _$AuditEventSource {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AuditEventSource.fromYaml(dynamic yaml) => yaml is String
-      ? AuditEventSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? AuditEventSource.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? AuditEventSource.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? AuditEventSource.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'AuditEventSource cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -486,9 +495,11 @@ class AuditEventEntity with _$AuditEventEntity {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AuditEventEntity.fromYaml(dynamic yaml) => yaml is String
-      ? AuditEventEntity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? AuditEventEntity.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? AuditEventEntity.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? AuditEventEntity.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'AuditEventEntity cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -558,9 +569,11 @@ class AuditEventDetail with _$AuditEventDetail {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory AuditEventDetail.fromYaml(dynamic yaml) => yaml is String
-      ? AuditEventDetail.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? AuditEventDetail.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? AuditEventDetail.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? AuditEventDetail.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'AuditEventDetail cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -716,13 +729,16 @@ class Consent with Resource, _$Consent {
   }) = _Consent;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Consent.fromYaml(dynamic yaml) => yaml is String
-      ? Consent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Consent.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Consent.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Consent.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Consent cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -790,9 +806,11 @@ class ConsentPolicy with _$ConsentPolicy {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConsentPolicy.fromYaml(dynamic yaml) => yaml is String
-      ? ConsentPolicy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ConsentPolicy.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConsentPolicy.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ConsentPolicy.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ConsentPolicy cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -861,9 +879,11 @@ class ConsentVerification with _$ConsentVerification {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConsentVerification.fromYaml(dynamic yaml) => yaml is String
-      ? ConsentVerification.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ConsentVerification.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConsentVerification.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ConsentVerification.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ConsentVerification cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -962,9 +982,11 @@ class ConsentProvision with _$ConsentProvision {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConsentProvision.fromYaml(dynamic yaml) => yaml is String
-      ? ConsentProvision.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ConsentProvision.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConsentProvision.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ConsentProvision.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ConsentProvision cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1026,9 +1048,11 @@ class ConsentActor with _$ConsentActor {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConsentActor.fromYaml(dynamic yaml) => yaml is String
-      ? ConsentActor.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ConsentActor.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConsentActor.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ConsentActor.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ConsentActor cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1093,9 +1117,11 @@ class ConsentData with _$ConsentData {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ConsentData.fromYaml(dynamic yaml) => yaml is String
-      ? ConsentData.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ConsentData.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConsentData.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ConsentData.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ConsentData cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1240,13 +1266,16 @@ class Provenance with Resource, _$Provenance {
   }) = _Provenance;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Provenance.fromYaml(dynamic yaml) => yaml is String
-      ? Provenance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Provenance.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Provenance.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Provenance.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Provenance cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1320,9 +1349,11 @@ class ProvenanceAgent with _$ProvenanceAgent {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ProvenanceAgent.fromYaml(dynamic yaml) => yaml is String
-      ? ProvenanceAgent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ProvenanceAgent.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ProvenanceAgent.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ProvenanceAgent.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ProvenanceAgent cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -1398,9 +1429,11 @@ class ProvenanceEntity with _$ProvenanceEntity {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ProvenanceEntity.fromYaml(dynamic yaml) => yaml is String
-      ? ProvenanceEntity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ProvenanceEntity.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ProvenanceEntity.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ProvenanceEntity.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ProvenanceEntity cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');

@@ -11,15 +11,17 @@
       "id": "1111",
       "status": "unknown",
       "intent": "proposal",
-      "medicationCodeableConcept": {
-        "coding": [
-          {
-            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-            "code": "12574",
-            "display": "gemcitabine"
-          }
-        ],
-        "text": "gemcitabine"
+      "medication": {
+        "concept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "12574",
+              "display": "gemcitabine"
+            }
+          ],
+          "text": "gemcitabine"
+        }
       },
       "subject": {
         "reference": "Patient/example"
@@ -61,15 +63,17 @@
       "id": "2222",
       "status": "unknown",
       "intent": "proposal",
-      "medicationCodeableConcept": {
-        "coding": [
-          {
-            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-            "code": "40048",
-            "display": "Carboplatin"
-          }
-        ],
-        "text": "CARBOplatin"
+      "medication": {
+        "concept": {
+          "coding": [
+            {
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "code": "40048",
+              "display": "Carboplatin"
+            }
+          ],
+          "text": "CARBOplatin"
+        }
       },
       "subject": {
         "reference": "Patient/example"
@@ -117,7 +121,7 @@
     }
   ],
   "instantiatesCanonical": [
-    "PlanDefinition/KDN5"
+    "http://example.org/fhir/PlanDefinition/KDN5"
   ],
   "status": "draft",
   "intent": "plan",
@@ -192,7 +196,7 @@
                       "textEquivalent": "CARBOplatin AUC 5 IV over 30 minutes on Day 1",
                       "relatedAction": [
                         {
-                          "actionId": "action-1",
+                          "targetId": "action-1",
                           "relationship": "concurrent-with-start"
                         }
                       ],

@@ -168,7 +168,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
-  R5ResourceType.DeviceUseStatement: 'DeviceUseStatement',
+  R5ResourceType.DeviceUsage: 'DeviceUsage',
   R5ResourceType.DiagnosticReport: 'DiagnosticReport',
   R5ResourceType.DocumentManifest: 'DocumentManifest',
   R5ResourceType.DocumentReference: 'DocumentReference',
@@ -196,6 +196,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
+  R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
   R5ResourceType.Library: 'Library',
   R5ResourceType.Linkage: 'Linkage',
@@ -1278,10 +1279,10 @@ Map<String, dynamic> _$$_OperationOutcomeIssueToJson(
   writeNotNull('_diagnostics', instance.diagnosticsElement?.toJson());
   writeNotNull('location', instance.location);
   writeNotNull(
-      '_location', instance.locationElement?.map((e) => e?.toJson()).toList());
+      '_location', instance.locationElement?.map((e) => e.toJson()).toList());
   writeNotNull('expression', instance.expression);
   writeNotNull('_expression',
-      instance.expressionElement?.map((e) => e?.toJson()).toList());
+      instance.expressionElement?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -1628,7 +1629,7 @@ _$_ParametersParameter _$$_ParametersParameterFromJson(
       resource: json['resource'] == null
           ? null
           : Resource.fromJson(json['resource'] as Map<String, dynamic>),
-      part_: (json['part'] as List<dynamic>?)
+      part: (json['part'] as List<dynamic>?)
           ?.map((e) => ParametersParameter.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
@@ -1725,7 +1726,7 @@ Map<String, dynamic> _$$_ParametersParameterToJson(
   writeNotNull('valueDosage', instance.valueDosage?.toJson());
   writeNotNull('valueMeta', instance.valueMeta?.toJson());
   writeNotNull('resource', instance.resource?.toJson());
-  writeNotNull('part', instance.part_?.map((e) => e.toJson()).toList());
+  writeNotNull('part', instance.part?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -1773,7 +1774,7 @@ _$_Subscription _$$_SubscriptionFromJson(Map<String, dynamic> json) =>
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      topic: Reference.fromJson(json['topic'] as Map<String, dynamic>),
+      topic: Canonical.fromJson(json['topic']),
       contact: (json['contact'] as List<dynamic>?)
           ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1823,6 +1824,19 @@ _$_Subscription _$$_SubscriptionFromJson(Map<String, dynamic> json) =>
       contentElement: json['_content'] == null
           ? null
           : Element.fromJson(json['_content'] as Map<String, dynamic>),
+      notificationUrlLocation: json['notificationUrlLocation'] == null
+          ? null
+          : Code.fromJson(json['notificationUrlLocation']),
+      notificationUrlLocationElement: json['_notificationUrlLocation'] == null
+          ? null
+          : Element.fromJson(
+              json['_notificationUrlLocation'] as Map<String, dynamic>),
+      maxCount: json['maxCount'] == null
+          ? null
+          : PositiveInt.fromJson(json['maxCount']),
+      maxCountElement: json['_maxCount'] == null
+          ? null
+          : Element.fromJson(json['_maxCount'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_SubscriptionToJson(_$_Subscription instance) {
@@ -1867,7 +1881,7 @@ Map<String, dynamic> _$$_SubscriptionToJson(_$_Subscription instance) {
   writeNotNull('_endpoint', instance.endpointElement?.toJson());
   writeNotNull('header', instance.header);
   writeNotNull(
-      '_header', instance.headerElement?.map((e) => e?.toJson()).toList());
+      '_header', instance.headerElement?.map((e) => e.toJson()).toList());
   writeNotNull('heartbeatPeriod', instance.heartbeatPeriod?.toJson());
   writeNotNull('_heartbeatPeriod', instance.heartbeatPeriodElement?.toJson());
   writeNotNull('timeout', instance.timeout?.toJson());
@@ -1876,6 +1890,12 @@ Map<String, dynamic> _$$_SubscriptionToJson(_$_Subscription instance) {
   writeNotNull('_contentType', instance.contentTypeElement?.toJson());
   writeNotNull('content', _$SubscriptionContentEnumMap[instance.content]);
   writeNotNull('_content', instance.contentElement?.toJson());
+  writeNotNull(
+      'notificationUrlLocation', instance.notificationUrlLocation?.toJson());
+  writeNotNull('_notificationUrlLocation',
+      instance.notificationUrlLocationElement?.toJson());
+  writeNotNull('maxCount', instance.maxCount?.toJson());
+  writeNotNull('_maxCount', instance.maxCountElement?.toJson());
   return val;
 }
 
@@ -1896,6 +1916,12 @@ _$_SubscriptionFilterBy _$$_SubscriptionFilterByFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
+      resourceType: json['resourceType'] == null
+          ? null
+          : FhirUri.fromJson(json['resourceType']),
+      resourceTypeElement: json['_resourceType'] == null
+          ? null
+          : Element.fromJson(json['_resourceType'] as Map<String, dynamic>),
       searchParamName: json['searchParamName'] as String?,
       searchParamNameElement: json['_searchParamName'] == null
           ? null
@@ -1927,6 +1953,8 @@ Map<String, dynamic> _$$_SubscriptionFilterByToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('resourceType', instance.resourceType?.toJson());
+  writeNotNull('_resourceType', instance.resourceTypeElement?.toJson());
   writeNotNull('searchParamName', instance.searchParamName);
   writeNotNull('_searchParamName', instance.searchParamNameElement?.toJson());
   writeNotNull('searchModifier', instance.searchModifier?.toJson());
@@ -1970,6 +1998,10 @@ _$_SubscriptionStatus _$$_SubscriptionStatusFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      statusElement: json['_status'] == null
+          ? null
+          : Element.fromJson(json['_status'] as Map<String, dynamic>),
       type: _$enumDecodeNullable(_$SubscriptionStatusTypeEnumMap, json['type'],
           unknownValue: SubscriptionStatusType.unknown),
       typeElement: json['_type'] == null
@@ -1992,10 +2024,6 @@ _$_SubscriptionStatus _$$_SubscriptionStatusFromJson(
               json['_eventsInNotification'] as Map<String, dynamic>),
       subscription:
           Reference.fromJson(json['subscription'] as Map<String, dynamic>),
-      status: json['status'] == null ? null : Code.fromJson(json['status']),
-      statusElement: json['_status'] == null
-          ? null
-          : Element.fromJson(json['_status'] as Map<String, dynamic>),
       topic: Canonical.fromJson(json['topic']),
       error: (json['error'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
@@ -2027,6 +2055,8 @@ Map<String, dynamic> _$$_SubscriptionStatusToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('type', _$SubscriptionStatusTypeEnumMap[instance.type]);
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('eventsSinceSubscriptionStart',
@@ -2037,8 +2067,6 @@ Map<String, dynamic> _$$_SubscriptionStatusToJson(
   writeNotNull(
       '_eventsInNotification', instance.eventsInNotificationElement?.toJson());
   val['subscription'] = instance.subscription.toJson();
-  writeNotNull('status', instance.status?.toJson());
-  writeNotNull('_status', instance.statusElement?.toJson());
   val['topic'] = instance.topic.toJson();
   writeNotNull('error', instance.error?.map((e) => e.toJson()).toList());
   return val;
@@ -2163,13 +2191,9 @@ _$_SubscriptionTopic _$$_SubscriptionTopicFromJson(Map<String, dynamic> json) =>
       effectivePeriod: json['effectivePeriod'] == null
           ? null
           : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-      resourceTrigger: json['resourceTrigger'] == null
-          ? null
-          : SubscriptionTopicResourceTrigger.fromJson(
-              json['resourceTrigger'] as Map<String, dynamic>),
-      canFilterBy: (json['canFilterBy'] as List<dynamic>?)
-          ?.map((e) =>
-              SubscriptionTopicCanFilterBy.fromJson(e as Map<String, dynamic>))
+      resourceTrigger: (json['resourceTrigger'] as List<dynamic>?)
+          ?.map((e) => SubscriptionTopicResourceTrigger.fromJson(
+              e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -2231,9 +2255,8 @@ Map<String, dynamic> _$$_SubscriptionTopicToJson(
   writeNotNull('lastReviewDate', instance.lastReviewDate?.toJson());
   writeNotNull('_lastReviewDate', instance.lastReviewDateElement?.toJson());
   writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
-  writeNotNull('resourceTrigger', instance.resourceTrigger?.toJson());
-  writeNotNull(
-      'canFilterBy', instance.canFilterBy?.map((e) => e.toJson()).toList());
+  writeNotNull('resourceTrigger',
+      instance.resourceTrigger?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -2258,12 +2281,12 @@ _$_SubscriptionTopicResourceTrigger
           descriptionElement: json['_description'] == null
               ? null
               : Element.fromJson(json['_description'] as Map<String, dynamic>),
-          resourceType: (json['resourceType'] as List<dynamic>?)
-              ?.map((e) => Code.fromJson(e))
-              .toList(),
-          resourceTypeElement: (json['_resourceType'] as List<dynamic>?)
-              ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
-              .toList(),
+          resourceType: json['resourceType'] == null
+              ? null
+              : FhirUri.fromJson(json['resourceType']),
+          resourceTypeElement: json['_resourceType'] == null
+              ? null
+              : Element.fromJson(json['_resourceType'] as Map<String, dynamic>),
           methodCriteria: (json['methodCriteria'] as List<dynamic>?)
               ?.map((e) => Code.fromJson(e))
               .toList(),
@@ -2279,6 +2302,10 @@ _$_SubscriptionTopicResourceTrigger
               .toList(),
           fhirPathCriteriaElement: (json['_fhirPathCriteria'] as List<dynamic>?)
               ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+              .toList(),
+          canFilterBy: (json['canFilterBy'] as List<dynamic>?)
+              ?.map((e) => SubscriptionTopicCanFilterBy.fromJson(
+                  e as Map<String, dynamic>))
               .toList(),
         );
 
@@ -2299,18 +2326,18 @@ Map<String, dynamic> _$$_SubscriptionTopicResourceTriggerToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
-  writeNotNull(
-      'resourceType', instance.resourceType?.map((e) => e.toJson()).toList());
-  writeNotNull('_resourceType',
-      instance.resourceTypeElement?.map((e) => e?.toJson()).toList());
+  writeNotNull('resourceType', instance.resourceType?.toJson());
+  writeNotNull('_resourceType', instance.resourceTypeElement?.toJson());
   writeNotNull('methodCriteria',
       instance.methodCriteria?.map((e) => e.toJson()).toList());
   writeNotNull('_methodCriteria',
-      instance.methodCriteriaElement?.map((e) => e?.toJson()).toList());
+      instance.methodCriteriaElement?.map((e) => e.toJson()).toList());
   writeNotNull('queryCriteria', instance.queryCriteria?.toJson());
   writeNotNull('fhirPathCriteria', instance.fhirPathCriteria);
   writeNotNull('_fhirPathCriteria',
-      instance.fhirPathCriteriaElement?.map((e) => e?.toJson()).toList());
+      instance.fhirPathCriteriaElement?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'canFilterBy', instance.canFilterBy?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -2328,10 +2355,22 @@ _$_SubscriptionTopicQueryCriteria _$$_SubscriptionTopicQueryCriteriaFromJson(
       previousElement: json['_previous'] == null
           ? null
           : Element.fromJson(json['_previous'] as Map<String, dynamic>),
+      resultForCreate: json['resultForCreate'] == null
+          ? null
+          : Code.fromJson(json['resultForCreate']),
+      resultForCreateElement: json['_resultForCreate'] == null
+          ? null
+          : Element.fromJson(json['_resultForCreate'] as Map<String, dynamic>),
       current: json['current'] as String?,
       currentElement: json['_current'] == null
           ? null
           : Element.fromJson(json['_current'] as Map<String, dynamic>),
+      resultForDelete: json['resultForDelete'] == null
+          ? null
+          : Code.fromJson(json['resultForDelete']),
+      resultForDeleteElement: json['_resultForDelete'] == null
+          ? null
+          : Element.fromJson(json['_resultForDelete'] as Map<String, dynamic>),
       requireBoth: json['requireBoth'] == null
           ? null
           : Boolean.fromJson(json['requireBoth']),
@@ -2357,8 +2396,12 @@ Map<String, dynamic> _$$_SubscriptionTopicQueryCriteriaToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('previous', instance.previous);
   writeNotNull('_previous', instance.previousElement?.toJson());
+  writeNotNull('resultForCreate', instance.resultForCreate?.toJson());
+  writeNotNull('_resultForCreate', instance.resultForCreateElement?.toJson());
   writeNotNull('current', instance.current);
   writeNotNull('_current', instance.currentElement?.toJson());
+  writeNotNull('resultForDelete', instance.resultForDelete?.toJson());
+  writeNotNull('_resultForDelete', instance.resultForDeleteElement?.toJson());
   writeNotNull('requireBoth', instance.requireBoth?.toJson());
   writeNotNull('_requireBoth', instance.requireBothElement?.toJson());
   return val;
@@ -2412,7 +2455,7 @@ Map<String, dynamic> _$$_SubscriptionTopicCanFilterByToJson(
   writeNotNull('searchModifier',
       instance.searchModifier?.map((e) => e.toJson()).toList());
   writeNotNull('_searchModifier',
-      instance.searchModifierElement?.map((e) => e?.toJson()).toList());
+      instance.searchModifierElement?.map((e) => e.toJson()).toList());
   writeNotNull('documentation', instance.documentation?.toJson());
   writeNotNull('_documentation', instance.documentationElement?.toJson());
   return val;

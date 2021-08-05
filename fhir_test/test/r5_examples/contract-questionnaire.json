@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for Contract.topic[x]",
       "expansion": {
-        "identifier": "urn:uuid:a45e0fb6-e559-4256-b07a-841ecc361be3",
-        "timestamp": "2019-12-31T21:10:34+11:00",
+        "identifier": "urn:uuid:86267f78-5902-468a-afa1-ed1ec924621e",
+        "timestamp": "2021-04-15T12:28:25+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -32,8 +32,8 @@
       "status": "active",
       "description": "Type options for Contract.term.topic[x]",
       "expansion": {
-        "identifier": "urn:uuid:726ffe08-772d-4e10-b99f-ab5c6714376a",
-        "timestamp": "2019-12-31T21:10:34+11:00",
+        "identifier": "urn:uuid:2c5c1869-7a12-4013-9e95-5360216f4775",
+        "timestamp": "2021-04-15T12:28:25+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -55,8 +55,8 @@
       "status": "active",
       "description": "Type options for Contract.term.offer.answer.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:91ee6ae5-4be6-48f3-8216-d0311b3cda36",
-        "timestamp": "2019-12-31T21:10:34+11:00",
+        "identifier": "urn:uuid:4bb06f3f-c037-49cf-ab05-20ee8a922ee5",
+        "timestamp": "2021-04-15T12:28:25+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -128,8 +128,8 @@
       "status": "active",
       "description": "Type options for Contract.term.asset.valuedItem.entity[x]",
       "expansion": {
-        "identifier": "urn:uuid:f4554bb7-8f48-4890-a580-10a9583e2e4b",
-        "timestamp": "2019-12-31T21:10:34+11:00",
+        "identifier": "urn:uuid:bb9f5260-ef4a-46d6-8a73-c0c769932b7c",
+        "timestamp": "2021-04-15T12:28:25+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -151,8 +151,8 @@
       "status": "active",
       "description": "Type options for Contract.term.action.occurrence[x]",
       "expansion": {
-        "identifier": "urn:uuid:d88eb597-ede1-4cee-a484-3a689f6c0b1e",
-        "timestamp": "2019-12-31T21:10:34+11:00",
+        "identifier": "urn:uuid:cc592a10-8ee7-4075-a00e-31bac17e8704",
+        "timestamp": "2021-04-15T12:28:25+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -179,8 +179,8 @@
       "status": "active",
       "description": "Type options for Contract.friendly.content[x]",
       "expansion": {
-        "identifier": "urn:uuid:6220ffe7-71a7-4bbe-bb93-b48b51ee92dc",
-        "timestamp": "2019-12-31T21:10:34+11:00",
+        "identifier": "urn:uuid:17e453df-cb75-4ce1-9248-bffdc9d2e5b5",
+        "timestamp": "2021-04-15T12:28:25+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -212,8 +212,8 @@
       "status": "active",
       "description": "Type options for Contract.legal.content[x]",
       "expansion": {
-        "identifier": "urn:uuid:da0bcf0e-2b19-45b5-880a-0430ca7c657f",
-        "timestamp": "2019-12-31T21:10:34+11:00",
+        "identifier": "urn:uuid:828e0f93-fdb9-4399-817a-058d11a2f6b0",
+        "timestamp": "2021-04-15T12:28:25+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -245,8 +245,8 @@
       "status": "active",
       "description": "Type options for Contract.rule.content[x]",
       "expansion": {
-        "identifier": "urn:uuid:ecca5b89-77da-4f84-883b-8a25d41ec2d0",
-        "timestamp": "2019-12-31T21:10:34+11:00",
+        "identifier": "urn:uuid:6c6b02a9-33aa-466f-8199-0e80990a014d",
+        "timestamp": "2021-04-15T12:28:25+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -268,8 +268,8 @@
       "status": "active",
       "description": "Type options for Contract.legallyBinding[x]",
       "expansion": {
-        "identifier": "urn:uuid:e7dff015-7813-4fc2-bba3-c5c316766852",
-        "timestamp": "2019-12-31T21:10:34+11:00",
+        "identifier": "urn:uuid:120f463f-f599-4e7f-989a-03edeaa58c97",
+        "timestamp": "2021-04-15T12:28:25+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -305,9 +305,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Financial Management)",
   "item": [
     {
@@ -366,7 +366,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -525,7 +525,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -552,7 +552,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]

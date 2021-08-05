@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for SpecimenDefinition.subject[x]",
       "expansion": {
-        "identifier": "urn:uuid:39c2d770-fa03-4f41-a976-bbca448c0b4c",
-        "timestamp": "2019-12-31T21:17:16+11:00",
+        "identifier": "urn:uuid:6a53afb5-a952-4023-951b-82cbcc3c60b1",
+        "timestamp": "2021-04-15T12:30:02+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -32,8 +32,8 @@
       "status": "active",
       "description": "Type options for SpecimenDefinition.typeTested.container.minimumVolume[x]",
       "expansion": {
-        "identifier": "urn:uuid:406a7882-708b-4715-95a8-e825890d13bc",
-        "timestamp": "2019-12-31T21:17:16+11:00",
+        "identifier": "urn:uuid:5c32436c-ed84-471f-b03b-588e9e7f9385",
+        "timestamp": "2021-04-15T12:30:02+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/resource-types",
@@ -55,8 +55,8 @@
       "status": "active",
       "description": "Type options for SpecimenDefinition.typeTested.container.additive.additive[x]",
       "expansion": {
-        "identifier": "urn:uuid:49416b0a-7d18-4c68-a454-91eca7dbd1d5",
-        "timestamp": "2019-12-31T21:17:16+11:00",
+        "identifier": "urn:uuid:b4c3e08f-3484-49fe-94cf-e037c12d9d3b",
+        "timestamp": "2021-04-15T12:30:02+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -77,9 +77,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Orders and Observations)",
   "item": [
     {
@@ -138,7 +138,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -297,7 +297,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -324,7 +324,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -1248,7 +1248,7 @@
             },
             {
               "linkId": "SpecimenDefinition.lastReviewDate.value",
-              "text": "Last review date for the SpecimenDefinition",
+              "text": "The date on which the asset content was last reviewed",
               "type": "dateTime",
               "required": false,
               "repeats": false
@@ -1897,7 +1897,7 @@
                     }
                   ],
                   "linkId": "SpecimenDefinition.typeTested.container.material",
-                  "text": "Container material",
+                  "text": "The material type used for the container",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -2074,7 +2074,7 @@
                     },
                     {
                       "linkId": "SpecimenDefinition.typeTested.container.description.value",
-                      "text": "Container description",
+                      "text": "The description of the kind of container",
                       "type": "string",
                       "required": false,
                       "repeats": false
@@ -2093,7 +2093,7 @@
                     }
                   ],
                   "linkId": "SpecimenDefinition.typeTested.container.capacity",
-                  "text": "Container capacity",
+                  "text": "The capacity of this kind of container",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -2522,7 +2522,7 @@
                     },
                     {
                       "linkId": "SpecimenDefinition.typeTested.container.preparation.value",
-                      "text": "Specimen container preparation",
+                      "text": "Special processing applied to the container for this specimen type",
                       "type": "string",
                       "required": false,
                       "repeats": false
@@ -2567,7 +2567,7 @@
                 },
                 {
                   "linkId": "SpecimenDefinition.typeTested.requirement.value",
-                  "text": "Specimen requirements",
+                  "text": "Requirements for specimen delivery and special handling",
                   "type": "string",
                   "required": false,
                   "repeats": false
@@ -2586,7 +2586,7 @@
                 }
               ],
               "linkId": "SpecimenDefinition.typeTested.retentionTime",
-              "text": "Specimen retention time",
+              "text": "The usual time for retaining this kind of specimen",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2697,7 +2697,7 @@
                 }
               ],
               "linkId": "SpecimenDefinition.typeTested.rejectionCriterion",
-              "text": "Rejection criterion",
+              "text": "Criterion specified for specimen rejection",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2870,7 +2870,7 @@
                     }
                   ],
                   "linkId": "SpecimenDefinition.typeTested.handling.temperatureQualifier",
-                  "text": "Temperature qualifier",
+                  "text": "Qualifies the interval of temperature",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -2921,7 +2921,7 @@
                     }
                   ],
                   "linkId": "SpecimenDefinition.typeTested.handling.temperatureRange",
-                  "text": "Temperature range",
+                  "text": "Temperature range for these handling instructions",
                   "type": "group",
                   "required": false,
                   "repeats": true,

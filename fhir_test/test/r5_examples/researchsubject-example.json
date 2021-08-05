@@ -14,32 +14,56 @@
       "value": "123"
     }
   ],
-  "status": "candidate",
+  "status": "active",
   "progress": [
     {
       "type": {
-        "text": "Local enrollment system"
+        "coding": [
+          {
+            "code": "state"
+          }
+        ]
       },
-      "state": {
-        "text": "local version of on-study"
+      "subjectState": {
+        "coding": [
+          {
+            "code": "on-study"
+          }
+        ]
       },
       "startDate": "2019-06-10"
     },
     {
       "type": {
-        "text": "Local milestone system"
+        "coding": [
+          {
+            "code": "milestone"
+          }
+        ]
       },
       "milestone": {
-        "text": "Local versdion of signed up"
+        "coding": [
+          {
+            "code": "SignedUp"
+          }
+        ]
       },
       "startDate": "2019-06-06"
     },
     {
       "type": {
-        "text": "Local milestone system"
+        "coding": [
+          {
+            "code": "milestone"
+          }
+        ]
       },
       "milestone": {
-        "text": "Local version of randomised"
+        "coding": [
+          {
+            "code": "Randomized"
+          }
+        ]
       },
       "startDate": "2019-06-10"
     }
@@ -47,7 +71,7 @@
   "study": {
     "reference": "ResearchStudy/example"
   },
-  "individual": {
+  "subject": {
     "reference": "Patient/example"
   },
   "meta": {

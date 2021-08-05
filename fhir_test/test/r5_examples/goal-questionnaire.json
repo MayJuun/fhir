@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for Goal.start[x]",
       "expansion": {
-        "identifier": "urn:uuid:bc515c5f-9674-4617-b847-2fada954b15a",
-        "timestamp": "2019-12-31T21:13:21+11:00",
+        "identifier": "urn:uuid:5e7637ea-bbeb-431c-9889-918786577122",
+        "timestamp": "2021-04-15T12:28:49+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -32,8 +32,8 @@
       "status": "active",
       "description": "Type options for Goal.target.detail[x]",
       "expansion": {
-        "identifier": "urn:uuid:9db9e707-3446-4e3b-97bb-e8588434f29d",
-        "timestamp": "2019-12-31T21:13:21+11:00",
+        "identifier": "urn:uuid:86e13da7-752a-40da-b986-ecb5447f6b6f",
+        "timestamp": "2021-04-15T12:28:49+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -80,8 +80,8 @@
       "status": "active",
       "description": "Type options for Goal.target.due[x]",
       "expansion": {
-        "identifier": "urn:uuid:27937491-49c8-4d37-aae0-f376b4e5ecf8",
-        "timestamp": "2019-12-31T21:13:21+11:00",
+        "identifier": "urn:uuid:0f3b1090-683b-4b21-8b9f-037347c11a1d",
+        "timestamp": "2021-04-15T12:28:49+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -102,9 +102,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Patient Care)",
   "item": [
     {
@@ -167,7 +167,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -326,7 +326,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -353,7 +353,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -1524,7 +1524,7 @@
               "valueString": "Reference"
             }
           ],
-          "linkId": "Goal.expressedBy",
+          "linkId": "Goal.source",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -1544,21 +1544,21 @@
                   }
                 }
               ],
-              "text": "Indicates whose goal this is - patient goal, practitioner goal, etc. This is the individual responsible for establishing the goal, not necessarily who recorded it.  (For that, use the Provenance resource.).",
+              "text": "Indicates whose goal this is - patient goal, practitioner goal, etc. This is the individual or team responsible for establishing the goal, not necessarily who recorded it.  (For that, use the Provenance resource.).",
               "type": "display"
             },
             {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient, Practitioner, PractitionerRole, RelatedPerson"
+                  "valueCode": "Patient, Practitioner, PractitionerRole, RelatedPerson, CareTeam"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
                   "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                 }
               ],
-              "linkId": "Goal.expressedBy.value",
+              "linkId": "Goal.source.value",
               "text": "Who\u0027s responsible for creating Goal?",
               "type": "reference",
               "required": false,

@@ -252,7 +252,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
-  R5ResourceType.DeviceUseStatement: 'DeviceUseStatement',
+  R5ResourceType.DeviceUsage: 'DeviceUsage',
   R5ResourceType.DiagnosticReport: 'DiagnosticReport',
   R5ResourceType.DocumentManifest: 'DocumentManifest',
   R5ResourceType.DocumentReference: 'DocumentReference',
@@ -280,6 +280,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
+  R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
   R5ResourceType.Library: 'Library',
   R5ResourceType.Linkage: 'Linkage',
@@ -1103,23 +1104,6 @@ _$_Library _$$_LibraryFromJson(Map<String, dynamic> json) => _$_Library(
       effectivePeriod: json['effectivePeriod'] == null
           ? null
           : Period.fromJson(json['effectivePeriod'] as Map<String, dynamic>),
-      subtitle: json['subtitle'] as String?,
-      subtitleElement: json['_subtitle'] == null
-          ? null
-          : Element.fromJson(json['_subtitle'] as Map<String, dynamic>),
-      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-      subjectCodeableConcept: json['subjectCodeableConcept'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['subjectCodeableConcept'] as Map<String, dynamic>),
-      subjectReference: json['subjectReference'] == null
-          ? null
-          : Reference.fromJson(
-              json['subjectReference'] as Map<String, dynamic>),
-      usage: json['usage'] as String?,
-      usageElement: json['_usage'] == null
-          ? null
-          : Element.fromJson(json['_usage'] as Map<String, dynamic>),
       topic: (json['topic'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1138,6 +1122,23 @@ _$_Library _$$_LibraryFromJson(Map<String, dynamic> json) => _$_Library(
       relatedArtifact: (json['relatedArtifact'] as List<dynamic>?)
           ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
           .toList(),
+      subtitle: json['subtitle'] as String?,
+      subtitleElement: json['_subtitle'] == null
+          ? null
+          : Element.fromJson(json['_subtitle'] as Map<String, dynamic>),
+      type: CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+      subjectCodeableConcept: json['subjectCodeableConcept'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['subjectCodeableConcept'] as Map<String, dynamic>),
+      subjectReference: json['subjectReference'] == null
+          ? null
+          : Reference.fromJson(
+              json['subjectReference'] as Map<String, dynamic>),
+      usage: json['usage'] as String?,
+      usageElement: json['_usage'] == null
+          ? null
+          : Element.fromJson(json['_usage'] as Map<String, dynamic>),
       parameter: (json['parameter'] as List<dynamic>?)
           ?.map((e) => ParameterDefinition.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1207,6 +1208,13 @@ Map<String, dynamic> _$$_LibraryToJson(_$_Library instance) {
   writeNotNull('lastReviewDate', instance.lastReviewDate?.toJson());
   writeNotNull('_lastReviewDate', instance.lastReviewDateElement?.toJson());
   writeNotNull('effectivePeriod', instance.effectivePeriod?.toJson());
+  writeNotNull('topic', instance.topic?.map((e) => e.toJson()).toList());
+  writeNotNull('author', instance.author?.map((e) => e.toJson()).toList());
+  writeNotNull('editor', instance.editor?.map((e) => e.toJson()).toList());
+  writeNotNull('reviewer', instance.reviewer?.map((e) => e.toJson()).toList());
+  writeNotNull('endorser', instance.endorser?.map((e) => e.toJson()).toList());
+  writeNotNull('relatedArtifact',
+      instance.relatedArtifact?.map((e) => e.toJson()).toList());
   writeNotNull('subtitle', instance.subtitle);
   writeNotNull('_subtitle', instance.subtitleElement?.toJson());
   val['type'] = instance.type.toJson();
@@ -1215,13 +1223,6 @@ Map<String, dynamic> _$$_LibraryToJson(_$_Library instance) {
   writeNotNull('subjectReference', instance.subjectReference?.toJson());
   writeNotNull('usage', instance.usage);
   writeNotNull('_usage', instance.usageElement?.toJson());
-  writeNotNull('topic', instance.topic?.map((e) => e.toJson()).toList());
-  writeNotNull('author', instance.author?.map((e) => e.toJson()).toList());
-  writeNotNull('editor', instance.editor?.map((e) => e.toJson()).toList());
-  writeNotNull('reviewer', instance.reviewer?.map((e) => e.toJson()).toList());
-  writeNotNull('endorser', instance.endorser?.map((e) => e.toJson()).toList());
-  writeNotNull('relatedArtifact',
-      instance.relatedArtifact?.map((e) => e.toJson()).toList());
   writeNotNull(
       'parameter', instance.parameter?.map((e) => e.toJson()).toList());
   writeNotNull('dataRequirement',
@@ -1272,13 +1273,11 @@ _$_List_ _$$_List_FromJson(Map<String, dynamic> json) => _$_List_(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$List_StatusEnumMap, json['status'],
-          unknownValue: List_Status.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      mode: _$enumDecodeNullable(_$List_ModeEnumMap, json['mode'],
-          unknownValue: List_Mode.unknown),
+      mode: json['mode'] == null ? null : Code.fromJson(json['mode']),
       modeElement: json['_mode'] == null
           ? null
           : Element.fromJson(json['_mode'] as Map<String, dynamic>),
@@ -1343,9 +1342,9 @@ Map<String, dynamic> _$$_List_ToJson(_$_List_ instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$List_StatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('mode', _$List_ModeEnumMap[instance.mode]);
+  writeNotNull('mode', instance.mode?.toJson());
   writeNotNull('_mode', instance.modeElement?.toJson());
   writeNotNull('title', instance.title);
   writeNotNull('_title', instance.titleElement?.toJson());
@@ -1361,20 +1360,6 @@ Map<String, dynamic> _$$_List_ToJson(_$_List_ instance) {
   writeNotNull('emptyReason', instance.emptyReason?.toJson());
   return val;
 }
-
-const _$List_StatusEnumMap = {
-  List_Status.current: 'current',
-  List_Status.retired: 'retired',
-  List_Status.entered_in_error: 'entered-in-error',
-  List_Status.unknown: 'unknown',
-};
-
-const _$List_ModeEnumMap = {
-  List_Mode.working: 'working',
-  List_Mode.snapshot: 'snapshot',
-  List_Mode.changes: 'changes',
-  List_Mode.unknown: 'unknown',
-};
 
 _$_ListEntry _$$_ListEntryFromJson(Map<String, dynamic> json) => _$_ListEntry(
       id: json['id'] as String?,

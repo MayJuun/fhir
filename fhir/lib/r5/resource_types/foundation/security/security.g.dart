@@ -62,11 +62,18 @@ _$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
       recordedElement: json['_recorded'] == null
           ? null
           : Element.fromJson(json['_recorded'] as Map<String, dynamic>),
-      outcome:
-          json['outcome'] == null ? null : Integer.fromJson(json['outcome']),
+      outcome: json['outcome'] == null
+          ? null
+          : CodeableConcept.fromJson(json['outcome'] as Map<String, dynamic>),
       purposeOfEvent: (json['purposeOfEvent'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
+      basedOn: (json['basedOn'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      encounter: json['encounter'] == null
+          ? null
+          : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
       agent: (json['agent'] as List<dynamic>)
           .map((e) => AuditEventAgent.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -112,6 +119,8 @@ Map<String, dynamic> _$$_AuditEventToJson(_$_AuditEvent instance) {
   writeNotNull('outcome', instance.outcome?.toJson());
   writeNotNull('purposeOfEvent',
       instance.purposeOfEvent?.map((e) => e.toJson()).toList());
+  writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
+  writeNotNull('encounter', instance.encounter?.toJson());
   val['agent'] = instance.agent.map((e) => e.toJson()).toList();
   val['source'] = instance.source.toJson();
   writeNotNull('entity', instance.entity?.map((e) => e.toJson()).toList());
@@ -198,7 +207,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
-  R5ResourceType.DeviceUseStatement: 'DeviceUseStatement',
+  R5ResourceType.DeviceUsage: 'DeviceUsage',
   R5ResourceType.DiagnosticReport: 'DiagnosticReport',
   R5ResourceType.DocumentManifest: 'DocumentManifest',
   R5ResourceType.DocumentReference: 'DocumentReference',
@@ -226,6 +235,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
+  R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
   R5ResourceType.Library: 'Library',
   R5ResourceType.Linkage: 'Linkage',
@@ -405,7 +415,7 @@ Map<String, dynamic> _$$_AuditEventAgentToJson(_$_AuditEventAgent instance) {
   writeNotNull('location', instance.location?.toJson());
   writeNotNull('policy', instance.policy?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_policy', instance.policyElement?.map((e) => e?.toJson()).toList());
+      '_policy', instance.policyElement?.map((e) => e.toJson()).toList());
   writeNotNull('media', instance.media?.toJson());
   writeNotNull('network', instance.network?.toJson());
   writeNotNull(
@@ -860,7 +870,7 @@ Map<String, dynamic> _$$_ConsentVerificationToJson(
   writeNotNull('verificationDate',
       instance.verificationDate?.map((e) => e.toJson()).toList());
   writeNotNull('_verificationDate',
-      instance.verificationDateElement?.map((e) => e?.toJson()).toList());
+      instance.verificationDateElement?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -1128,7 +1138,7 @@ Map<String, dynamic> _$$_PermissionToJson(_$_Permission instance) {
   writeNotNull(
       'assertionDate', instance.assertionDate?.map((e) => e.toJson()).toList());
   writeNotNull('_assertionDate',
-      instance.assertionDateElement?.map((e) => e?.toJson()).toList());
+      instance.assertionDateElement?.map((e) => e.toJson()).toList());
   writeNotNull('validity', instance.validity?.toJson());
   writeNotNull('purpose', instance.purpose?.map((e) => e.toJson()).toList());
   writeNotNull(
@@ -1296,6 +1306,12 @@ _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
       activity: json['activity'] == null
           ? null
           : CodeableConcept.fromJson(json['activity'] as Map<String, dynamic>),
+      basedOn: (json['basedOn'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      encounter: json['encounter'] == null
+          ? null
+          : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
       agent: (json['agent'] as List<dynamic>)
           .map((e) => ProvenanceAgent.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1339,10 +1355,12 @@ Map<String, dynamic> _$$_ProvenanceToJson(_$_Provenance instance) {
   writeNotNull('_recorded', instance.recordedElement?.toJson());
   writeNotNull('policy', instance.policy?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_policy', instance.policyElement?.map((e) => e?.toJson()).toList());
+      '_policy', instance.policyElement?.map((e) => e.toJson()).toList());
   writeNotNull('location', instance.location?.toJson());
   writeNotNull('reason', instance.reason?.map((e) => e.toJson()).toList());
   writeNotNull('activity', instance.activity?.toJson());
+  writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
+  writeNotNull('encounter', instance.encounter?.toJson());
   val['agent'] = instance.agent.map((e) => e.toJson()).toList();
   writeNotNull('entity', instance.entity?.map((e) => e.toJson()).toList());
   writeNotNull(

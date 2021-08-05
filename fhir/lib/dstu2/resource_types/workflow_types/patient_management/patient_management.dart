@@ -54,13 +54,16 @@ class Encounter with Resource, _$Encounter {
   }) = _Encounter;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Encounter.fromYaml(dynamic yaml) => yaml is String
-      ? Encounter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Encounter.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Encounter.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Encounter.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Encounter cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -88,9 +91,11 @@ class EncounterStatusHistory with _$EncounterStatusHistory {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory EncounterStatusHistory.fromYaml(dynamic yaml) => yaml is String
-      ? EncounterStatusHistory.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? EncounterStatusHistory.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EncounterStatusHistory.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? EncounterStatusHistory.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'EncounterStatusHistory cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -117,9 +122,11 @@ class EncounterParticipant with _$EncounterParticipant {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory EncounterParticipant.fromYaml(dynamic yaml) => yaml is String
-      ? EncounterParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? EncounterParticipant.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EncounterParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? EncounterParticipant.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'EncounterParticipant cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -156,9 +163,10 @@ class EncounterHospitalization with _$EncounterHospitalization {
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory EncounterHospitalization.fromYaml(dynamic yaml) => yaml is String
       ? EncounterHospitalization.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EncounterHospitalization.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? EncounterHospitalization.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'EncounterHospitalization cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -187,9 +195,11 @@ class EncounterLocation with _$EncounterLocation {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory EncounterLocation.fromYaml(dynamic yaml) => yaml is String
-      ? EncounterLocation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? EncounterLocation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EncounterLocation.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? EncounterLocation.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'EncounterLocation cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -232,13 +242,16 @@ class EpisodeOfCare with Resource, _$EpisodeOfCare {
   }) = _EpisodeOfCare;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory EpisodeOfCare.fromYaml(dynamic yaml) => yaml is String
-      ? EpisodeOfCare.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? EpisodeOfCare.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EpisodeOfCare.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? EpisodeOfCare.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'EpisodeOfCare cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -267,9 +280,10 @@ class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory EpisodeOfCareStatusHistory.fromYaml(dynamic yaml) => yaml is String
       ? EpisodeOfCareStatusHistory.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EpisodeOfCareStatusHistory.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? EpisodeOfCareStatusHistory.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'EpisodeOfCareStatusHistory cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -296,9 +310,11 @@ class EpisodeOfCareCareTeam with _$EpisodeOfCareCareTeam {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory EpisodeOfCareCareTeam.fromYaml(dynamic yaml) => yaml is String
-      ? EpisodeOfCareCareTeam.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? EpisodeOfCareCareTeam.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EpisodeOfCareCareTeam.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? EpisodeOfCareCareTeam.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'EpisodeOfCareCareTeam cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -345,13 +361,16 @@ class Communication with Resource, _$Communication {
   }) = _Communication;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Communication.fromYaml(dynamic yaml) => yaml is String
-      ? Communication.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Communication.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Communication.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Communication.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Communication cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -379,9 +398,11 @@ class CommunicationPayload with _$CommunicationPayload {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory CommunicationPayload.fromYaml(dynamic yaml) => yaml is String
-      ? CommunicationPayload.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? CommunicationPayload.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CommunicationPayload.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? CommunicationPayload.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'CommunicationPayload cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -420,13 +441,15 @@ class Flag with Resource, _$Flag {
   }) = _Flag;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Flag.fromYaml(dynamic yaml) => yaml is String
-      ? Flag.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Flag.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Flag.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Flag.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Flag cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');

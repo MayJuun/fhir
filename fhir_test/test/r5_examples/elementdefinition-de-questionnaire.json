@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for ElementDefinition.defaultValue[x]",
       "expansion": {
-        "identifier": "urn:uuid:235c35c4-e095-4aba-8ac5-f874e1bc6bd6",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:44f0a33f-9469-48c3-982d-39fda03ba42d",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -267,8 +267,8 @@
       "status": "active",
       "description": "Type options for DataRequirement.subject[x]",
       "expansion": {
-        "identifier": "urn:uuid:93bab10b-0aa2-415d-a70c-2d35ab4d692b",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:8bb68a53-e423-4e2a-a454-10916fdc5261",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -290,8 +290,8 @@
       "status": "active",
       "description": "Type options for DataRequirement.dateFilter.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:40836a2f-30d1-495d-9318-94d914c21efb",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:01d4ed8c-4015-4f3e-9375-16727d6b2667",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -318,8 +318,8 @@
       "status": "active",
       "description": "Type options for TriggerDefinition.timing[x]",
       "expansion": {
-        "identifier": "urn:uuid:99af00a0-e54e-4828-bbac-7c00cc3e7d3e",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:3ae420d9-c8c9-4827-a037-396e9d7bfafa",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -351,8 +351,8 @@
       "status": "active",
       "description": "Type options for UsageContext.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:e6e0d6e1-18cd-4954-b4b1-09c5fdf01bd6",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:5cc77c19-b1bc-4d70-ad49-a1b9b8343d06",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -414,8 +414,8 @@
       "status": "active",
       "description": "Type options for Dosage.asNeeded[x]",
       "expansion": {
-        "identifier": "urn:uuid:2be4601b-fa0b-4f11-9a12-0413a8f3bed7",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:d3815a80-ecd1-4ec4-8792-87129136d39b",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -437,8 +437,8 @@
       "status": "active",
       "description": "Type options for Dosage.doseAndRate.dose[x]",
       "expansion": {
-        "identifier": "urn:uuid:7e7acd1d-e597-42a1-b918-042713c21e85",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:06dd843e-be15-45c8-a706-88553d8b26ae",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -460,8 +460,8 @@
       "status": "active",
       "description": "Type options for Dosage.doseAndRate.rate[x]",
       "expansion": {
-        "identifier": "urn:uuid:818b5d0e-248a-4da2-a41f-ee925069948c",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:982a4fd7-7d8b-4093-a07c-1002c55da29a",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -488,8 +488,8 @@
       "status": "active",
       "description": "Type options for ElementDefinition.fixed[x]",
       "expansion": {
-        "identifier": "urn:uuid:e5fdf17c-f65c-48d0-912e-02f8c48bdf74",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:b793b239-60d1-465d-b65f-0c49902c88f7",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -746,8 +746,8 @@
       "status": "active",
       "description": "Type options for DataRequirement.subject[x]",
       "expansion": {
-        "identifier": "urn:uuid:ce5452f1-680a-4f02-af9c-5f8377584b14",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:0a84b0de-4cff-47f2-a6f1-7969aa8692bc",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -769,8 +769,8 @@
       "status": "active",
       "description": "Type options for DataRequirement.dateFilter.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:575a7dfd-06f1-4639-a381-20de707fb79b",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:10ed6daa-67c5-435b-b137-1a127bc39be6",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -797,8 +797,8 @@
       "status": "active",
       "description": "Type options for TriggerDefinition.timing[x]",
       "expansion": {
-        "identifier": "urn:uuid:d6f478ef-b682-499f-b589-807b9120fce6",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:8ccf2f3c-8322-44e6-b777-34b616bab21b",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -830,8 +830,8 @@
       "status": "active",
       "description": "Type options for UsageContext.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:e5c416a6-1380-4155-9494-c69cab26e16a",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:b8d801cb-d8ac-452c-bdba-2c533f3b59cd",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -893,8 +893,8 @@
       "status": "active",
       "description": "Type options for Dosage.asNeeded[x]",
       "expansion": {
-        "identifier": "urn:uuid:3a267060-893b-4fc6-8eaa-3366f728534f",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:10467dab-d9d5-460d-8829-fc8599ceafcf",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -916,8 +916,8 @@
       "status": "active",
       "description": "Type options for Dosage.doseAndRate.dose[x]",
       "expansion": {
-        "identifier": "urn:uuid:5837e3c5-d463-4ba5-bd56-64a1ef58f553",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:ebcdc120-e2c1-4b87-a8d3-7cedd86f8c5b",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -939,8 +939,8 @@
       "status": "active",
       "description": "Type options for Dosage.doseAndRate.rate[x]",
       "expansion": {
-        "identifier": "urn:uuid:21191bc6-6e17-46c9-9d8b-63d5b4ab8029",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:8b964f64-f401-4d01-a8b9-45ea0e66e4c8",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -967,8 +967,8 @@
       "status": "active",
       "description": "Type options for ElementDefinition.pattern[x]",
       "expansion": {
-        "identifier": "urn:uuid:6c686ebb-2660-410b-9b02-3aba7e305acc",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:e2baf5e5-933c-409d-a4b9-5d1efd50ccd5",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -1225,8 +1225,8 @@
       "status": "active",
       "description": "Type options for DataRequirement.subject[x]",
       "expansion": {
-        "identifier": "urn:uuid:8c487261-81ad-41d0-9694-7edf711d05b8",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:8c717c85-a9af-4eac-aa70-b0caba94afad",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -1248,8 +1248,8 @@
       "status": "active",
       "description": "Type options for DataRequirement.dateFilter.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:e1800983-8c51-4d0b-8e09-30357406df04",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:2ae91d63-09bd-435f-976f-7fcaa403e27f",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -1276,8 +1276,8 @@
       "status": "active",
       "description": "Type options for TriggerDefinition.timing[x]",
       "expansion": {
-        "identifier": "urn:uuid:f7e648c6-7c5e-453d-8c4d-7692419e9daa",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:07129d1d-8f2b-4885-b6b5-e97be3c44905",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -1309,8 +1309,8 @@
       "status": "active",
       "description": "Type options for UsageContext.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:fe17ea1a-a72c-460f-a606-811c2a54745b",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:219a5c91-96a5-4448-9f00-368411a5d5b4",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -1372,8 +1372,8 @@
       "status": "active",
       "description": "Type options for Dosage.asNeeded[x]",
       "expansion": {
-        "identifier": "urn:uuid:28e65a0c-ae09-47f7-bcd3-05816e937a16",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:fa3fd80d-bd90-4705-a6d4-c0ac2b10ed76",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -1395,8 +1395,8 @@
       "status": "active",
       "description": "Type options for Dosage.doseAndRate.dose[x]",
       "expansion": {
-        "identifier": "urn:uuid:7aa08a1d-a2ba-4fed-99ed-5128ef58f426",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:4bc026bb-95f6-42e7-a12b-4833ab10d0f5",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -1418,8 +1418,8 @@
       "status": "active",
       "description": "Type options for Dosage.doseAndRate.rate[x]",
       "expansion": {
-        "identifier": "urn:uuid:fc3aeb69-b1e0-4ccd-94ef-773ae48fb850",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:3d6628e9-7f24-4e05-87e0-2ec60ee59a07",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -1446,8 +1446,8 @@
       "status": "active",
       "description": "Type options for ElementDefinition.example.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:4497f4a2-a17a-44b1-8208-9b39362aceb3",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:fe993ba2-92d9-4925-943c-b777d70f0793",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -1704,8 +1704,8 @@
       "status": "active",
       "description": "Type options for DataRequirement.subject[x]",
       "expansion": {
-        "identifier": "urn:uuid:5cdf9b2c-f788-4428-b86d-3c692a5a6ece",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:75ba7112-1cda-461d-a3c0-26dfb230f042",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -1727,8 +1727,8 @@
       "status": "active",
       "description": "Type options for DataRequirement.dateFilter.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:a46370a2-41cb-429a-969c-8079e9413afa",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:875e8d97-a0b4-491d-99ac-c641d6b35208",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -1755,8 +1755,8 @@
       "status": "active",
       "description": "Type options for TriggerDefinition.timing[x]",
       "expansion": {
-        "identifier": "urn:uuid:df114141-46ec-4130-b4c5-0de6728f3f32",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:104523a7-4942-4834-aa61-2211848076df",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -1788,8 +1788,8 @@
       "status": "active",
       "description": "Type options for UsageContext.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:5f88be88-3c79-4e0e-86c8-50aaec75fa1e",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:a2dc2589-b220-412d-b49f-d33cf135df1e",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -1851,8 +1851,8 @@
       "status": "active",
       "description": "Type options for Dosage.asNeeded[x]",
       "expansion": {
-        "identifier": "urn:uuid:a521cc4f-fc2a-4200-82a9-d966048fe74b",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:d498658f-3ac0-4eac-a62a-91b598989ce5",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -1874,8 +1874,8 @@
       "status": "active",
       "description": "Type options for Dosage.doseAndRate.dose[x]",
       "expansion": {
-        "identifier": "urn:uuid:b5bc5cae-edb5-4c33-999c-472c80365b82",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:83a7db4d-f356-4ccb-b016-f466e8678994",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -1897,8 +1897,8 @@
       "status": "active",
       "description": "Type options for Dosage.doseAndRate.rate[x]",
       "expansion": {
-        "identifier": "urn:uuid:d4781fae-f407-4eda-937f-74f881774d39",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:e9fb0e1e-dbdc-4d06-9422-2614e902a327",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -1925,8 +1925,8 @@
       "status": "active",
       "description": "Type options for ElementDefinition.minValue[x]",
       "expansion": {
-        "identifier": "urn:uuid:4a804668-73aa-471f-a521-644d53a2bc70",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:860662a1-f65f-4688-a919-e636684ef24a",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -1988,8 +1988,8 @@
       "status": "active",
       "description": "Type options for ElementDefinition.maxValue[x]",
       "expansion": {
-        "identifier": "urn:uuid:c9e0c944-f6cc-4209-ac95-4fa93c512439",
-        "timestamp": "2019-12-31T21:19:00+11:00",
+        "identifier": "urn:uuid:af779f54-1b6a-4ab5-9799-91c2e5b22fe6",
+        "timestamp": "2021-04-15T12:30:30+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -2050,7 +2050,7 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
   "date": "2015-02-28T00:00:00+11:00",
   "publisher": "Health Level Seven International (Orders and Observations)",
@@ -2721,7 +2721,7 @@
                           }
                         }
                       ],
-                      "text": "A FHIRPath expression, using [the simple subset of FHIRPath](http://hl7.org/fhir/fhirpath.html#simple), that is used to identify the element on which discrimination is based. The only FHIRPath functions that are allowed are as(type), resolve(), and extension(url).",
+                      "text": "A FHIRPath expression, using [the simple subset of FHIRPath](fhirpath.html#simple), that is used to identify the element on which discrimination is based. The only FHIRPath functions that are allowed are as(type), resolve(), and extension(url).",
                       "type": "display"
                     },
                     {
@@ -3307,7 +3307,7 @@
                       }
                     }
                   ],
-                  "text": "The Path that identifies the base element - this matches the ElementDefinition.path for that element. Across FHIR, there is only one base definition of any element - that is, an element definition on a [StructureDefinition](http://hl7.org/fhir/structuredefinition.html#) without a StructureDefinition.base.",
+                  "text": "The Path that identifies the base element - this matches the ElementDefinition.path for that element. Across FHIR, there is only one base definition of any element - that is, an element definition on a [StructureDefinition](structuredefinition.html#) without a StructureDefinition.base.",
                   "type": "display"
                 },
                 {
@@ -3635,7 +3635,7 @@
                       }
                     }
                   ],
-                  "text": "Identifies a profile structure or implementation Guide that applies to the datatype this element refers to. If any profiles are specified, then the content must conform to at least one of them. The URL can be a local reference - to a contained StructureDefinition, or a reference to another StructureDefinition or Implementation Guide by a canonical URL. When an implementation guide is specified, the type SHALL conform to at least one profile defined in the implementation guide. It is possible to profile  backbone element (e.g. part of a resource), using the [profile-element](http://hl7.org/fhir/extension-elementdefinition-profile-element.html) extension.",
+                  "text": "Identifies a profile structure or implementation Guide that applies to the datatype this element refers to. If any profiles are specified, then the content must conform to at least one of them. The URL can be a local reference - to a contained StructureDefinition, or a reference to another StructureDefinition or Implementation Guide by a canonical URL. When an implementation guide is specified, the type SHALL conform to at least one profile defined in the implementation guide. It is possible to profile  backbone element (e.g. part of a resource), using the [profile-element](extension-elementdefinition-profile-element.html) extension.",
                   "type": "display"
                 },
                 {
@@ -3717,7 +3717,7 @@
                       }
                     }
                   ],
-                  "text": "If the type is a reference to another resource, how the resource is or can be aggregated - is it a contained resource, or a reference, and if the context is a bundle, is it included in the bundle. See [Aggregation Rules](http://hl7.org/fhir/elementdefinition.html#aggregation) for further clarification.",
+                  "text": "If the type is a reference to another resource, how the resource is or can be aggregated - is it a contained resource, or a reference, and if the context is a bundle, is it included in the bundle. See [Aggregation Rules](elementdefinition.html#aggregation) for further clarification.",
                   "type": "display"
                 },
                 {
@@ -3760,7 +3760,7 @@
                       }
                     }
                   ],
-                  "text": "Whether this reference needs to be version specific or version independent, or whether either can be used. The base specification never makes a rule as to which form is allowed, but implementation guides may do this. See [Aggregation Rules](http://hl7.org/fhir/elementdefinition.html#aggregation) for further clarification.",
+                  "text": "Whether this reference needs to be version specific or version independent, or whether either can be used. The base specification never makes a rule as to which form is allowed, but implementation guides may do this. See [Aggregation Rules](elementdefinition.html#aggregation) for further clarification.",
                   "type": "display"
                 },
                 {
@@ -27444,7 +27444,7 @@
                   }
                 }
               ],
-              "text": "The minimum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity. Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](http://hl7.org/fhir/datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.",
+              "text": "The minimum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity. Except for date/date/instant, the type of the minValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of minValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is subtracted from the current clock to determine the minimum allowable value.   A minimum value for a Quantity is interpreted as an canonical minimum - e.g. you cannot provide 100mg if the minimum value is 10g.",
               "type": "display"
             },
             {
@@ -27812,7 +27812,7 @@
                   }
                 }
               ],
-              "text": "The maximum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity. Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](http://hl7.org/fhir/datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.",
+              "text": "The maximum allowed value for the element. The value is inclusive. This is allowed for the types date, dateTime, instant, time, decimal, integer, and Quantity. Except for date/date/instant, the type of the maxValue[x] SHALL be the same as the specified type of the element. For the date/dateTime/instant values, the type of maxValue[x] SHALL be either the same, or a [Duration](datatypes.html#Duration) which specifies a relative time limit to the current time. The duration value is positive, and is added to the current clock to determine the maximum allowable value.   A maximum value for a Quantity is interpreted as an canonical maximum - e.g. you cannot provide 10g if the maximum value is 50mg.",
               "type": "display"
             },
             {
@@ -28548,7 +28548,7 @@
                       }
                     }
                   ],
-                  "text": "A [FHIRPath](http://hl7.org/fhir/fhirpath.html) expression of constraint that can be executed to see if this constraint is met. In the absense of an expression, the expression is likely not enforceable by validators, and might be missed by many systems.",
+                  "text": "A [FHIRPath](fhirpath.html) expression of constraint that can be executed to see if this constraint is met. In the absense of an expression, the expression is likely not enforceable by validators, and might be missed by many systems.",
                   "type": "display"
                 },
                 {
@@ -28679,7 +28679,7 @@
                   }
                 }
               ],
-              "text": "If true, implementations that produce or consume resources SHALL provide \"support\" for the element in some meaningful way.  If false, the element may be ignored and not supported. If false, whether to populate or use the data element in any way is at the discretion of the implementation. \"Something useful\" is context dependent and impossible to describe in the base FHIR specification. For this reason, tue mustSupport flag is never set to true by the FHIR specification itself - it is only set to true in profiles.  A profile on a type can always make musSupport \u003d true if it is false in the base type but cannot make mustSupport \u003d false if it is true in the base type.   This is done in [Resource Profiles](http://hl7.org/fhir/profiling.html#mustsupport), where the profile labels an element as mustSupport\u003dtrue. When a profile does this, it SHALL also make clear exactly what kind of \"support\" is required, as this can mean many things.    Note that an element that has the property IsModifier is not necessarily a \"key\" element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements.",
+              "text": "If true, implementations that produce or consume resources SHALL provide \"support\" for the element in some meaningful way.  If false, the element may be ignored and not supported. If false, whether to populate or use the data element in any way is at the discretion of the implementation. \"Something useful\" is context dependent and impossible to describe in the base FHIR specification. For this reason, tue mustSupport flag is never set to true by the FHIR specification itself - it is only set to true in profiles.  A profile on a type can always make musSupport \u003d true if it is false in the base type but cannot make mustSupport \u003d false if it is true in the base type.   This is done in [Resource Profiles](profiling.html#mustsupport), where the profile labels an element as mustSupport\u003dtrue. When a profile does this, it SHALL also make clear exactly what kind of \"support\" is required, as this can mean many things.    Note that an element that has the property IsModifier is not necessarily a \"key\" element (e.g. one of the important elements to make use of the resource), nor is it automatically mustSupport - however both of these things are more likely to be true for IsModifier elements than for other elements.",
               "type": "display"
             },
             {
@@ -28960,7 +28960,7 @@
                       }
                     }
                   ],
-                  "text": "Indicates the degree of conformance expectations associated with this binding - that is, the degree to which the provided value set must be adhered to in the instances. For further discussion, see [Using Terminologies](http://hl7.org/fhir/terminologies.html).",
+                  "text": "Indicates the degree of conformance expectations associated with this binding - that is, the degree to which the provided value set must be adhered to in the instances. For further discussion, see [Using Terminologies](terminologies.html).",
                   "type": "display"
                 },
                 {

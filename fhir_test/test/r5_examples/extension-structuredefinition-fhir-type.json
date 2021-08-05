@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "fhir-type",
   "status": "draft",
   "date": "2014-01-31",
@@ -28,7 +28,7 @@
     }
   ],
   "description": "The FHIR type of a property - used on the value property of a primitive type (for which there is no type in the FHIR typing system), and Element.id, Resource.id, and Extension.url. All of these have a non-FHIR type in thir structure definition, and this specifies the applicable FHIR type.",
-  "fhirVersion": "4.2.0",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "rim",
@@ -69,7 +69,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -151,7 +151,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -159,7 +159,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -226,7 +226,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -244,7 +244,7 @@
           ],
           "strength": "required",
           "description": "A version specific list of the data types defined by the FHIR specification for use as an element  type (any of the FHIR defined data types).",
-          "valueSet": "http://hl7.org/fhir/ValueSet/data-types|4.2.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/data-types"
         },
         "mapping": [
           {
@@ -298,7 +298,7 @@
           ],
           "strength": "required",
           "description": "A version specific list of the data types defined by the FHIR specification for use as an element  type (any of the FHIR defined data types).",
-          "valueSet": "http://hl7.org/fhir/ValueSet/data-types|4.2.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/data-types"
         }
       }
     ]

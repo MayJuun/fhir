@@ -70,7 +70,7 @@
   ],
   "statusDate": "2016-02-14",
   "statusReason": "Patient wants to defer weight loss until after honeymoon.",
-  "expressedBy": {
+  "source": {
     "reference": "Patient/example",
     "display": "Peter James Chalmers"
   },

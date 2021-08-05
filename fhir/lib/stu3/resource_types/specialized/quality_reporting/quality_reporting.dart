@@ -92,13 +92,16 @@ class Measure with Resource, _$Measure {
   }) = _Measure;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Measure.fromYaml(dynamic yaml) => yaml is String
-      ? Measure.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Measure.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Measure.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Measure.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Measure cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -126,9 +129,11 @@ class MeasureGroup with _$MeasureGroup {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureGroup.fromYaml(dynamic yaml) => yaml is String
-      ? MeasureGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MeasureGroup.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasureGroup.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MeasureGroup.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MeasureGroup cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -157,9 +162,11 @@ class MeasurePopulation with _$MeasurePopulation {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasurePopulation.fromYaml(dynamic yaml) => yaml is String
-      ? MeasurePopulation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MeasurePopulation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasurePopulation.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MeasurePopulation.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MeasurePopulation cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -185,9 +192,11 @@ class MeasureStratifier with _$MeasureStratifier {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureStratifier.fromYaml(dynamic yaml) => yaml is String
-      ? MeasureStratifier.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MeasureStratifier.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasureStratifier.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MeasureStratifier.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MeasureStratifier cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -214,9 +223,11 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureSupplementalData.fromYaml(dynamic yaml) => yaml is String
-      ? MeasureSupplementalData.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MeasureSupplementalData.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasureSupplementalData.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MeasureSupplementalData.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MeasureSupplementalData cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -259,13 +270,16 @@ class MeasureReport with Resource, _$MeasureReport {
   }) = _MeasureReport;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureReport.fromYaml(dynamic yaml) => yaml is String
-      ? MeasureReport.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MeasureReport.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasureReport.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MeasureReport.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MeasureReport cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -291,9 +305,11 @@ class MeasureReportGroup with _$MeasureReportGroup {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureReportGroup.fromYaml(dynamic yaml) => yaml is String
-      ? MeasureReportGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MeasureReportGroup.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasureReportGroup.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MeasureReportGroup.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MeasureReportGroup cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -319,9 +335,11 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureReportPopulation.fromYaml(dynamic yaml) => yaml is String
-      ? MeasureReportPopulation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MeasureReportPopulation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasureReportPopulation.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MeasureReportPopulation.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MeasureReportPopulation cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -344,9 +362,11 @@ class MeasureReportStratifier with _$MeasureReportStratifier {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureReportStratifier.fromYaml(dynamic yaml) => yaml is String
-      ? MeasureReportStratifier.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MeasureReportStratifier.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasureReportStratifier.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MeasureReportStratifier.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MeasureReportStratifier cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -372,9 +392,11 @@ class MeasureReportStratum with _$MeasureReportStratum {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureReportStratum.fromYaml(dynamic yaml) => yaml is String
-      ? MeasureReportStratum.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MeasureReportStratum.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasureReportStratum.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MeasureReportStratum.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MeasureReportStratum cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -401,9 +423,10 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureReportPopulation1.fromYaml(dynamic yaml) => yaml is String
       ? MeasureReportPopulation1.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasureReportPopulation1.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MeasureReportPopulation1.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MeasureReportPopulation1 cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');

@@ -16,7 +16,7 @@ class Integer64 extends FhirNumber {
           ? Integer64._(inValue.toString(), inValue, true, false)
           : Integer64._(inValue.toString(), null, false, false);
     } else if (inValue is String) {
-      final tempInteger64 = int.tryParse(inValue);
+      final int? tempInteger64 = int.tryParse(inValue);
       return tempInteger64 == null
           ? Integer64._(inValue, null, false, true)
           : tempInteger64 <= pow(2, 63) && tempInteger64 >= pow(2, 63)

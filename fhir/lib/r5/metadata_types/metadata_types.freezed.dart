@@ -650,7 +650,7 @@ class _$DataRequirementTearOff {
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
       List<String>? mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
+      @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
       List<DataRequirementCodeFilter>? codeFilter,
       List<DataRequirementDateFilter>? dateFilter,
       PositiveInt? limit,
@@ -696,7 +696,7 @@ mixin _$DataRequirement {
   Reference? get subjectReference => throw _privateConstructorUsedError;
   List<String>? get mustSupport => throw _privateConstructorUsedError;
   @JsonKey(name: '_mustSupport')
-  List<Element?>? get mustSupportElement => throw _privateConstructorUsedError;
+  List<Element>? get mustSupportElement => throw _privateConstructorUsedError;
   List<DataRequirementCodeFilter>? get codeFilter =>
       throw _privateConstructorUsedError;
   List<DataRequirementDateFilter>? get dateFilter =>
@@ -726,7 +726,7 @@ abstract class $DataRequirementCopyWith<$Res> {
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
       List<String>? mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
+      @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
       List<DataRequirementCodeFilter>? codeFilter,
       List<DataRequirementDateFilter>? dateFilter,
       PositiveInt? limit,
@@ -801,7 +801,7 @@ class _$DataRequirementCopyWithImpl<$Res>
       mustSupportElement: mustSupportElement == freezed
           ? _value.mustSupportElement
           : mustSupportElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       codeFilter: codeFilter == freezed
           ? _value.codeFilter
           : codeFilter // ignore: cast_nullable_to_non_nullable
@@ -887,7 +887,7 @@ abstract class _$DataRequirementCopyWith<$Res>
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
       List<String>? mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
+      @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
       List<DataRequirementCodeFilter>? codeFilter,
       List<DataRequirementDateFilter>? dateFilter,
       PositiveInt? limit,
@@ -968,7 +968,7 @@ class __$DataRequirementCopyWithImpl<$Res>
       mustSupportElement: mustSupportElement == freezed
           ? _value.mustSupportElement
           : mustSupportElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       codeFilter: codeFilter == freezed
           ? _value.codeFilter
           : codeFilter // ignore: cast_nullable_to_non_nullable
@@ -1036,7 +1036,7 @@ class _$_DataRequirement extends _DataRequirement {
   final List<String>? mustSupport;
   @override
   @JsonKey(name: '_mustSupport')
-  final List<Element?>? mustSupportElement;
+  final List<Element>? mustSupportElement;
   @override
   final List<DataRequirementCodeFilter>? codeFilter;
   @override
@@ -1137,7 +1137,7 @@ abstract class _DataRequirement extends DataRequirement {
       CodeableConcept? subjectCodeableConcept,
       Reference? subjectReference,
       List<String>? mustSupport,
-      @JsonKey(name: '_mustSupport') List<Element?>? mustSupportElement,
+      @JsonKey(name: '_mustSupport') List<Element>? mustSupportElement,
       List<DataRequirementCodeFilter>? codeFilter,
       List<DataRequirementDateFilter>? dateFilter,
       PositiveInt? limit,
@@ -1169,7 +1169,7 @@ abstract class _DataRequirement extends DataRequirement {
   List<String>? get mustSupport => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_mustSupport')
-  List<Element?>? get mustSupportElement => throw _privateConstructorUsedError;
+  List<Element>? get mustSupportElement => throw _privateConstructorUsedError;
   @override
   List<DataRequirementCodeFilter>? get codeFilter =>
       throw _privateConstructorUsedError;

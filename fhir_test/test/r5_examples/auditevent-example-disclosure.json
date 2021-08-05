@@ -17,10 +17,18 @@
     }
   ],
   "action": "R",
-  "severity": "Notice",
+  "severity": "notice",
   "recorded": "2013-09-22T00:08:00Z",
-  "outcome": "0",
-  "outcomeDesc": "Successful  Disclosure",
+  "outcome": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/audit-event-outcome",
+        "code": "0",
+        "display": "Success"
+      }
+    ],
+    "text": "Successful Disclosure"
+  },
   "purposeOfEvent": [
     {
       "coding": [

@@ -2,7 +2,8 @@ import 'package:fhir/r4.dart';
 import 'package:fhir_path/fhir_path.dart';
 import 'package:test/test.dart';
 
-dynamic walkPath(dynamic arg) => walkFhirPath(resource, arg).toString();
+dynamic walkPath(dynamic arg) =>
+    walkFhirPath(resource.toJson(), arg).toString();
 
 void testQuestionnaire() {
   group('Questionnaire Logic', () {
@@ -10,14 +11,14 @@ void testQuestionnaire() {
     test('Partial Score', () {
       expect(
           walkFhirPath(
-              response,
+              response.toJson(),
               "QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.valueDecimal + "
               "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.valueDecimal+ "
               "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.valueDecimal"),
           [13]);
       expect(
           walkFhirPath(
-              response,
+              response.toJson(),
               "(QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.valueDecimal + "
               "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.valueDecimal+ "
               "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.valueDecimal) < 12"),
@@ -25,7 +26,7 @@ void testQuestionnaire() {
     });
     test('Total Score Aggregate', () {
       expect(
-          walkFhirPath(response,
+          walkFhirPath(response.toJson(),
               r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"),
           [13]);
     });

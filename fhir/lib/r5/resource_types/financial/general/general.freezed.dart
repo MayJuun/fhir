@@ -1672,7 +1672,7 @@ class _$ChargeItemTearOff {
       List<Identifier>? identifier,
       List<FhirUri>? definitionUri,
       @JsonKey(name: '_definitionUri')
-          List<Element?>? definitionUriElement,
+          List<Element>? definitionUriElement,
       List<Canonical>? definitionCanonical,
       @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
           ChargeItemStatus? status,
@@ -1790,8 +1790,7 @@ mixin _$ChargeItem {
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
   List<FhirUri>? get definitionUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_definitionUri')
-  List<Element?>? get definitionUriElement =>
-      throw _privateConstructorUsedError;
+  List<Element>? get definitionUriElement => throw _privateConstructorUsedError;
   List<Canonical>? get definitionCanonical =>
       throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
@@ -1865,7 +1864,7 @@ abstract class $ChargeItemCopyWith<$Res> {
       List<Identifier>? identifier,
       List<FhirUri>? definitionUri,
       @JsonKey(name: '_definitionUri')
-          List<Element?>? definitionUriElement,
+          List<Element>? definitionUriElement,
       List<Canonical>? definitionCanonical,
       @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
           ChargeItemStatus? status,
@@ -2042,7 +2041,7 @@ class _$ChargeItemCopyWithImpl<$Res> implements $ChargeItemCopyWith<$Res> {
       definitionUriElement: definitionUriElement == freezed
           ? _value.definitionUriElement
           : definitionUriElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       definitionCanonical: definitionCanonical == freezed
           ? _value.definitionCanonical
           : definitionCanonical // ignore: cast_nullable_to_non_nullable
@@ -2435,7 +2434,7 @@ abstract class _$ChargeItemCopyWith<$Res> implements $ChargeItemCopyWith<$Res> {
       List<Identifier>? identifier,
       List<FhirUri>? definitionUri,
       @JsonKey(name: '_definitionUri')
-          List<Element?>? definitionUriElement,
+          List<Element>? definitionUriElement,
       List<Canonical>? definitionCanonical,
       @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
           ChargeItemStatus? status,
@@ -2636,7 +2635,7 @@ class __$ChargeItemCopyWithImpl<$Res> extends _$ChargeItemCopyWithImpl<$Res>
       definitionUriElement: definitionUriElement == freezed
           ? _value.definitionUriElement
           : definitionUriElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       definitionCanonical: definitionCanonical == freezed
           ? _value.definitionCanonical
           : definitionCanonical // ignore: cast_nullable_to_non_nullable
@@ -2867,7 +2866,7 @@ class _$_ChargeItem extends _ChargeItem {
   final List<FhirUri>? definitionUri;
   @override
   @JsonKey(name: '_definitionUri')
-  final List<Element?>? definitionUriElement;
+  final List<Element>? definitionUriElement;
   @override
   final List<Canonical>? definitionCanonical;
   @override
@@ -3119,7 +3118,7 @@ abstract class _ChargeItem extends ChargeItem {
       List<Identifier>? identifier,
       List<FhirUri>? definitionUri,
       @JsonKey(name: '_definitionUri')
-          List<Element?>? definitionUriElement,
+          List<Element>? definitionUriElement,
       List<Canonical>? definitionCanonical,
       @JsonKey(unknownEnumValue: ChargeItemStatus.unknown)
           ChargeItemStatus? status,
@@ -3196,8 +3195,7 @@ abstract class _ChargeItem extends ChargeItem {
   List<FhirUri>? get definitionUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_definitionUri')
-  List<Element?>? get definitionUriElement =>
-      throw _privateConstructorUsedError;
+  List<Element>? get definitionUriElement => throw _privateConstructorUsedError;
   @override
   List<Canonical>? get definitionCanonical =>
       throw _privateConstructorUsedError;
@@ -3635,9 +3633,15 @@ class _$ChargeItemDefinitionTearOff {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
       List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
-          List<Element?>? derivedFromUriElement,
+          List<Element>? derivedFromUriElement,
       List<Canonical>? partOf,
       List<Canonical>? replaces,
       CodeableConcept? code,
@@ -3687,6 +3691,12 @@ class _$ChargeItemDefinitionTearOff {
       lastReviewDate: lastReviewDate,
       lastReviewDateElement: lastReviewDateElement,
       effectivePeriod: effectivePeriod,
+      topic: topic,
+      author: author,
+      editor: editor,
+      reviewer: reviewer,
+      endorser: endorser,
+      relatedArtifact: relatedArtifact,
       derivedFromUri: derivedFromUri,
       derivedFromUriElement: derivedFromUriElement,
       partOf: partOf,
@@ -3769,9 +3779,16 @@ mixin _$ChargeItemDefinition {
   @JsonKey(name: '_lastReviewDate')
   Element? get lastReviewDateElement => throw _privateConstructorUsedError;
   Period? get effectivePeriod => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
+  List<ContactDetail>? get author => throw _privateConstructorUsedError;
+  List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+  List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
+  List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+  List<RelatedArtifact>? get relatedArtifact =>
+      throw _privateConstructorUsedError;
   List<FhirUri>? get derivedFromUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_derivedFromUri')
-  List<Element?>? get derivedFromUriElement =>
+  List<Element>? get derivedFromUriElement =>
       throw _privateConstructorUsedError;
   List<Canonical>? get partOf => throw _privateConstructorUsedError;
   List<Canonical>? get replaces => throw _privateConstructorUsedError;
@@ -3854,9 +3871,15 @@ abstract class $ChargeItemDefinitionCopyWith<$Res> {
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
       List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
-          List<Element?>? derivedFromUriElement,
+          List<Element>? derivedFromUriElement,
       List<Canonical>? partOf,
       List<Canonical>? replaces,
       CodeableConcept? code,
@@ -3938,6 +3961,12 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res>
     Object? lastReviewDate = freezed,
     Object? lastReviewDateElement = freezed,
     Object? effectivePeriod = freezed,
+    Object? topic = freezed,
+    Object? author = freezed,
+    Object? editor = freezed,
+    Object? reviewer = freezed,
+    Object? endorser = freezed,
+    Object? relatedArtifact = freezed,
     Object? derivedFromUri = freezed,
     Object? derivedFromUriElement = freezed,
     Object? partOf = freezed,
@@ -4116,6 +4145,30 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res>
           ? _value.effectivePeriod
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
+      topic: topic == freezed
+          ? _value.topic
+          : topic // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      author: author == freezed
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      editor: editor == freezed
+          ? _value.editor
+          : editor // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      reviewer: reviewer == freezed
+          ? _value.reviewer
+          : reviewer // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      endorser: endorser == freezed
+          ? _value.endorser
+          : endorser // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      relatedArtifact: relatedArtifact == freezed
+          ? _value.relatedArtifact
+          : relatedArtifact // ignore: cast_nullable_to_non_nullable
+              as List<RelatedArtifact>?,
       derivedFromUri: derivedFromUri == freezed
           ? _value.derivedFromUri
           : derivedFromUri // ignore: cast_nullable_to_non_nullable
@@ -4123,7 +4176,7 @@ class _$ChargeItemDefinitionCopyWithImpl<$Res>
       derivedFromUriElement: derivedFromUriElement == freezed
           ? _value.derivedFromUriElement
           : derivedFromUriElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       partOf: partOf == freezed
           ? _value.partOf
           : partOf // ignore: cast_nullable_to_non_nullable
@@ -4429,9 +4482,15 @@ abstract class _$ChargeItemDefinitionCopyWith<$Res>
       @JsonKey(name: '_lastReviewDate')
           Element? lastReviewDateElement,
       Period? effectivePeriod,
+      List<CodeableConcept>? topic,
+      List<ContactDetail>? author,
+      List<ContactDetail>? editor,
+      List<ContactDetail>? reviewer,
+      List<ContactDetail>? endorser,
+      List<RelatedArtifact>? relatedArtifact,
       List<FhirUri>? derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
-          List<Element?>? derivedFromUriElement,
+          List<Element>? derivedFromUriElement,
       List<Canonical>? partOf,
       List<Canonical>? replaces,
       CodeableConcept? code,
@@ -4534,6 +4593,12 @@ class __$ChargeItemDefinitionCopyWithImpl<$Res>
     Object? lastReviewDate = freezed,
     Object? lastReviewDateElement = freezed,
     Object? effectivePeriod = freezed,
+    Object? topic = freezed,
+    Object? author = freezed,
+    Object? editor = freezed,
+    Object? reviewer = freezed,
+    Object? endorser = freezed,
+    Object? relatedArtifact = freezed,
     Object? derivedFromUri = freezed,
     Object? derivedFromUriElement = freezed,
     Object? partOf = freezed,
@@ -4712,6 +4777,30 @@ class __$ChargeItemDefinitionCopyWithImpl<$Res>
           ? _value.effectivePeriod
           : effectivePeriod // ignore: cast_nullable_to_non_nullable
               as Period?,
+      topic: topic == freezed
+          ? _value.topic
+          : topic // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      author: author == freezed
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      editor: editor == freezed
+          ? _value.editor
+          : editor // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      reviewer: reviewer == freezed
+          ? _value.reviewer
+          : reviewer // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      endorser: endorser == freezed
+          ? _value.endorser
+          : endorser // ignore: cast_nullable_to_non_nullable
+              as List<ContactDetail>?,
+      relatedArtifact: relatedArtifact == freezed
+          ? _value.relatedArtifact
+          : relatedArtifact // ignore: cast_nullable_to_non_nullable
+              as List<RelatedArtifact>?,
       derivedFromUri: derivedFromUri == freezed
           ? _value.derivedFromUri
           : derivedFromUri // ignore: cast_nullable_to_non_nullable
@@ -4719,7 +4808,7 @@ class __$ChargeItemDefinitionCopyWithImpl<$Res>
       derivedFromUriElement: derivedFromUriElement == freezed
           ? _value.derivedFromUriElement
           : derivedFromUriElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       partOf: partOf == freezed
           ? _value.partOf
           : partOf // ignore: cast_nullable_to_non_nullable
@@ -4812,6 +4901,12 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
       @JsonKey(name: '_lastReviewDate')
           this.lastReviewDateElement,
       this.effectivePeriod,
+      this.topic,
+      this.author,
+      this.editor,
+      this.reviewer,
+      this.endorser,
+      this.relatedArtifact,
       this.derivedFromUri,
       @JsonKey(name: '_derivedFromUri')
           this.derivedFromUriElement,
@@ -4929,10 +5024,22 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
   @override
   final Period? effectivePeriod;
   @override
+  final List<CodeableConcept>? topic;
+  @override
+  final List<ContactDetail>? author;
+  @override
+  final List<ContactDetail>? editor;
+  @override
+  final List<ContactDetail>? reviewer;
+  @override
+  final List<ContactDetail>? endorser;
+  @override
+  final List<RelatedArtifact>? relatedArtifact;
+  @override
   final List<FhirUri>? derivedFromUri;
   @override
   @JsonKey(name: '_derivedFromUri')
-  final List<Element?>? derivedFromUriElement;
+  final List<Element>? derivedFromUriElement;
   @override
   final List<Canonical>? partOf;
   @override
@@ -4948,7 +5055,7 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
 
   @override
   String toString() {
-    return 'ChargeItemDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, derivedFromUri: $derivedFromUri, derivedFromUriElement: $derivedFromUriElement, partOf: $partOf, replaces: $replaces, code: $code, instance: $instance, applicability: $applicability, propertyGroup: $propertyGroup)';
+    return 'ChargeItemDefinition(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, url: $url, urlElement: $urlElement, identifier: $identifier, version: $version, versionElement: $versionElement, name: $name, nameElement: $nameElement, title: $title, titleElement: $titleElement, status: $status, statusElement: $statusElement, experimental: $experimental, experimentalElement: $experimentalElement, date: $date, dateElement: $dateElement, publisher: $publisher, publisherElement: $publisherElement, contact: $contact, description: $description, descriptionElement: $descriptionElement, useContext: $useContext, jurisdiction: $jurisdiction, purpose: $purpose, purposeElement: $purposeElement, copyright: $copyright, copyrightElement: $copyrightElement, approvalDate: $approvalDate, approvalDateElement: $approvalDateElement, lastReviewDate: $lastReviewDate, lastReviewDateElement: $lastReviewDateElement, effectivePeriod: $effectivePeriod, topic: $topic, author: $author, editor: $editor, reviewer: $reviewer, endorser: $endorser, relatedArtifact: $relatedArtifact, derivedFromUri: $derivedFromUri, derivedFromUriElement: $derivedFromUriElement, partOf: $partOf, replaces: $replaces, code: $code, instance: $instance, applicability: $applicability, propertyGroup: $propertyGroup)';
   }
 
   @override
@@ -5040,6 +5147,12 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
             (identical(other.lastReviewDate, lastReviewDate) || const DeepCollectionEquality().equals(other.lastReviewDate, lastReviewDate)) &&
             (identical(other.lastReviewDateElement, lastReviewDateElement) || const DeepCollectionEquality().equals(other.lastReviewDateElement, lastReviewDateElement)) &&
             (identical(other.effectivePeriod, effectivePeriod) || const DeepCollectionEquality().equals(other.effectivePeriod, effectivePeriod)) &&
+            (identical(other.topic, topic) || const DeepCollectionEquality().equals(other.topic, topic)) &&
+            (identical(other.author, author) || const DeepCollectionEquality().equals(other.author, author)) &&
+            (identical(other.editor, editor) || const DeepCollectionEquality().equals(other.editor, editor)) &&
+            (identical(other.reviewer, reviewer) || const DeepCollectionEquality().equals(other.reviewer, reviewer)) &&
+            (identical(other.endorser, endorser) || const DeepCollectionEquality().equals(other.endorser, endorser)) &&
+            (identical(other.relatedArtifact, relatedArtifact) || const DeepCollectionEquality().equals(other.relatedArtifact, relatedArtifact)) &&
             (identical(other.derivedFromUri, derivedFromUri) || const DeepCollectionEquality().equals(other.derivedFromUri, derivedFromUri)) &&
             (identical(other.derivedFromUriElement, derivedFromUriElement) || const DeepCollectionEquality().equals(other.derivedFromUriElement, derivedFromUriElement)) &&
             (identical(other.partOf, partOf) || const DeepCollectionEquality().equals(other.partOf, partOf)) &&
@@ -5095,6 +5208,12 @@ class _$_ChargeItemDefinition extends _ChargeItemDefinition {
       const DeepCollectionEquality().hash(lastReviewDate) ^
       const DeepCollectionEquality().hash(lastReviewDateElement) ^
       const DeepCollectionEquality().hash(effectivePeriod) ^
+      const DeepCollectionEquality().hash(topic) ^
+      const DeepCollectionEquality().hash(author) ^
+      const DeepCollectionEquality().hash(editor) ^
+      const DeepCollectionEquality().hash(reviewer) ^
+      const DeepCollectionEquality().hash(endorser) ^
+      const DeepCollectionEquality().hash(relatedArtifact) ^
       const DeepCollectionEquality().hash(derivedFromUri) ^
       const DeepCollectionEquality().hash(derivedFromUriElement) ^
       const DeepCollectionEquality().hash(partOf) ^
@@ -5178,9 +5297,15 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
           @JsonKey(name: '_lastReviewDate')
               Element? lastReviewDateElement,
           Period? effectivePeriod,
+          List<CodeableConcept>? topic,
+          List<ContactDetail>? author,
+          List<ContactDetail>? editor,
+          List<ContactDetail>? reviewer,
+          List<ContactDetail>? endorser,
+          List<RelatedArtifact>? relatedArtifact,
           List<FhirUri>? derivedFromUri,
           @JsonKey(name: '_derivedFromUri')
-              List<Element?>? derivedFromUriElement,
+              List<Element>? derivedFromUriElement,
           List<Canonical>? partOf,
           List<Canonical>? replaces,
           CodeableConcept? code,
@@ -5297,10 +5422,23 @@ abstract class _ChargeItemDefinition extends ChargeItemDefinition {
   @override
   Period? get effectivePeriod => throw _privateConstructorUsedError;
   @override
+  List<CodeableConcept>? get topic => throw _privateConstructorUsedError;
+  @override
+  List<ContactDetail>? get author => throw _privateConstructorUsedError;
+  @override
+  List<ContactDetail>? get editor => throw _privateConstructorUsedError;
+  @override
+  List<ContactDetail>? get reviewer => throw _privateConstructorUsedError;
+  @override
+  List<ContactDetail>? get endorser => throw _privateConstructorUsedError;
+  @override
+  List<RelatedArtifact>? get relatedArtifact =>
+      throw _privateConstructorUsedError;
+  @override
   List<FhirUri>? get derivedFromUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_derivedFromUri')
-  List<Element?>? get derivedFromUriElement =>
+  List<Element>? get derivedFromUriElement =>
       throw _privateConstructorUsedError;
   @override
   List<Canonical>? get partOf => throw _privateConstructorUsedError;
@@ -6527,7 +6665,7 @@ class _$ContractTearOff {
           Element? subtitleElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       Reference? author,
       CodeableConcept? scope,
       CodeableConcept? topicCodeableConcept,
@@ -6665,7 +6803,7 @@ mixin _$Contract {
   Element? get subtitleElement => throw _privateConstructorUsedError;
   List<String>? get alias => throw _privateConstructorUsedError;
   @JsonKey(name: '_alias')
-  List<Element?>? get aliasElement => throw _privateConstructorUsedError;
+  List<Element>? get aliasElement => throw _privateConstructorUsedError;
   Reference? get author => throw _privateConstructorUsedError;
   CodeableConcept? get scope => throw _privateConstructorUsedError;
   CodeableConcept? get topicCodeableConcept =>
@@ -6748,7 +6886,7 @@ abstract class $ContractCopyWith<$Res> {
           Element? subtitleElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       Reference? author,
       CodeableConcept? scope,
       CodeableConcept? topicCodeableConcept,
@@ -7015,7 +7153,7 @@ class _$ContractCopyWithImpl<$Res> implements $ContractCopyWith<$Res> {
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
           : aliasElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       author: author == freezed
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
@@ -7418,7 +7556,7 @@ abstract class _$ContractCopyWith<$Res> implements $ContractCopyWith<$Res> {
           Element? subtitleElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       Reference? author,
       CodeableConcept? scope,
       CodeableConcept? topicCodeableConcept,
@@ -7711,7 +7849,7 @@ class __$ContractCopyWithImpl<$Res> extends _$ContractCopyWithImpl<$Res>
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
           : aliasElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       author: author == freezed
           ? _value.author
           : author // ignore: cast_nullable_to_non_nullable
@@ -7947,7 +8085,7 @@ class _$_Contract extends _Contract {
   final List<String>? alias;
   @override
   @JsonKey(name: '_alias')
-  final List<Element?>? aliasElement;
+  final List<Element>? aliasElement;
   @override
   final Reference? author;
   @override
@@ -8212,7 +8350,7 @@ abstract class _Contract extends Contract {
           Element? subtitleElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       Reference? author,
       CodeableConcept? scope,
       CodeableConcept? topicCodeableConcept,
@@ -8324,7 +8462,7 @@ abstract class _Contract extends Contract {
   List<String>? get alias => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_alias')
-  List<Element?>? get aliasElement => throw _privateConstructorUsedError;
+  List<Element>? get aliasElement => throw _privateConstructorUsedError;
   @override
   Reference? get author => throw _privateConstructorUsedError;
   @override
@@ -9630,7 +9768,7 @@ class _$ContractSecurityLabelTearOff {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<UnsignedInt>? number,
-      @JsonKey(name: '_number') List<Element?>? numberElement,
+      @JsonKey(name: '_number') List<Element>? numberElement,
       required Coding classification,
       List<Coding>? category,
       List<Coding>? control}) {
@@ -9663,7 +9801,7 @@ mixin _$ContractSecurityLabel {
       throw _privateConstructorUsedError;
   List<UnsignedInt>? get number => throw _privateConstructorUsedError;
   @JsonKey(name: '_number')
-  List<Element?>? get numberElement => throw _privateConstructorUsedError;
+  List<Element>? get numberElement => throw _privateConstructorUsedError;
   Coding get classification => throw _privateConstructorUsedError;
   List<Coding>? get category => throw _privateConstructorUsedError;
   List<Coding>? get control => throw _privateConstructorUsedError;
@@ -9684,7 +9822,7 @@ abstract class $ContractSecurityLabelCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<UnsignedInt>? number,
-      @JsonKey(name: '_number') List<Element?>? numberElement,
+      @JsonKey(name: '_number') List<Element>? numberElement,
       Coding classification,
       List<Coding>? category,
       List<Coding>? control});
@@ -9732,7 +9870,7 @@ class _$ContractSecurityLabelCopyWithImpl<$Res>
       numberElement: numberElement == freezed
           ? _value.numberElement
           : numberElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       classification: classification == freezed
           ? _value.classification
           : classification // ignore: cast_nullable_to_non_nullable
@@ -9768,7 +9906,7 @@ abstract class _$ContractSecurityLabelCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<UnsignedInt>? number,
-      @JsonKey(name: '_number') List<Element?>? numberElement,
+      @JsonKey(name: '_number') List<Element>? numberElement,
       Coding classification,
       List<Coding>? category,
       List<Coding>? control});
@@ -9819,7 +9957,7 @@ class __$ContractSecurityLabelCopyWithImpl<$Res>
       numberElement: numberElement == freezed
           ? _value.numberElement
           : numberElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       classification: classification == freezed
           ? _value.classification
           : classification // ignore: cast_nullable_to_non_nullable
@@ -9864,7 +10002,7 @@ class _$_ContractSecurityLabel extends _ContractSecurityLabel {
   final List<UnsignedInt>? number;
   @override
   @JsonKey(name: '_number')
-  final List<Element?>? numberElement;
+  final List<Element>? numberElement;
   @override
   final Coding classification;
   @override
@@ -9934,7 +10072,7 @@ abstract class _ContractSecurityLabel extends ContractSecurityLabel {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<UnsignedInt>? number,
-      @JsonKey(name: '_number') List<Element?>? numberElement,
+      @JsonKey(name: '_number') List<Element>? numberElement,
       required Coding classification,
       List<Coding>? category,
       List<Coding>? control}) = _$_ContractSecurityLabel;
@@ -9955,7 +10093,7 @@ abstract class _ContractSecurityLabel extends ContractSecurityLabel {
   List<UnsignedInt>? get number => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_number')
-  List<Element?>? get numberElement => throw _privateConstructorUsedError;
+  List<Element>? get numberElement => throw _privateConstructorUsedError;
   @override
   Coding get classification => throw _privateConstructorUsedError;
   @override
@@ -9993,7 +10131,7 @@ class _$ContractOfferTearOff {
           Element? textElement,
       List<String>? linkId,
       @JsonKey(name: '_linkId')
-          List<Element?>? linkIdElement,
+          List<Element>? linkIdElement,
       List<UnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           List<Element>? securityLabelNumberElement}) {
@@ -10044,7 +10182,7 @@ mixin _$ContractOffer {
   Element? get textElement => throw _privateConstructorUsedError;
   List<String>? get linkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_linkId')
-  List<Element?>? get linkIdElement => throw _privateConstructorUsedError;
+  List<Element>? get linkIdElement => throw _privateConstructorUsedError;
   List<UnsignedInt>? get securityLabelNumber =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_securityLabelNumber')
@@ -10079,7 +10217,7 @@ abstract class $ContractOfferCopyWith<$Res> {
           Element? textElement,
       List<String>? linkId,
       @JsonKey(name: '_linkId')
-          List<Element?>? linkIdElement,
+          List<Element>? linkIdElement,
       List<UnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           List<Element>? securityLabelNumberElement});
@@ -10174,7 +10312,7 @@ class _$ContractOfferCopyWithImpl<$Res>
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
           : linkIdElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       securityLabelNumber: securityLabelNumber == freezed
           ? _value.securityLabelNumber
           : securityLabelNumber // ignore: cast_nullable_to_non_nullable
@@ -10255,7 +10393,7 @@ abstract class _$ContractOfferCopyWith<$Res>
           Element? textElement,
       List<String>? linkId,
       @JsonKey(name: '_linkId')
-          List<Element?>? linkIdElement,
+          List<Element>? linkIdElement,
       List<UnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           List<Element>? securityLabelNumberElement});
@@ -10356,7 +10494,7 @@ class __$ContractOfferCopyWithImpl<$Res>
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
           : linkIdElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       securityLabelNumber: securityLabelNumber == freezed
           ? _value.securityLabelNumber
           : securityLabelNumber // ignore: cast_nullable_to_non_nullable
@@ -10424,7 +10562,7 @@ class _$_ContractOffer extends _ContractOffer {
   final List<String>? linkId;
   @override
   @JsonKey(name: '_linkId')
-  final List<Element?>? linkIdElement;
+  final List<Element>? linkIdElement;
   @override
   final List<UnsignedInt>? securityLabelNumber;
   @override
@@ -10534,7 +10672,7 @@ abstract class _ContractOffer extends ContractOffer {
           Element? textElement,
       List<String>? linkId,
       @JsonKey(name: '_linkId')
-          List<Element?>? linkIdElement,
+          List<Element>? linkIdElement,
       List<UnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           List<Element>? securityLabelNumberElement}) = _$_ContractOffer;
@@ -10574,7 +10712,7 @@ abstract class _ContractOffer extends ContractOffer {
   List<String>? get linkId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_linkId')
-  List<Element?>? get linkIdElement => throw _privateConstructorUsedError;
+  List<Element>? get linkIdElement => throw _privateConstructorUsedError;
   @override
   List<UnsignedInt>? get securityLabelNumber =>
       throw _privateConstructorUsedError;
@@ -11795,7 +11933,7 @@ class _$ContractAssetTearOff {
           Element? textElement,
       List<String>? linkId,
       @JsonKey(name: '_linkId')
-          List<Element?>? linkIdElement,
+          List<Element>? linkIdElement,
       List<ContractAnswer>? answer,
       List<UnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
@@ -11859,7 +11997,7 @@ mixin _$ContractAsset {
   Element? get textElement => throw _privateConstructorUsedError;
   List<String>? get linkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_linkId')
-  List<Element?>? get linkIdElement => throw _privateConstructorUsedError;
+  List<Element>? get linkIdElement => throw _privateConstructorUsedError;
   List<ContractAnswer>? get answer => throw _privateConstructorUsedError;
   List<UnsignedInt>? get securityLabelNumber =>
       throw _privateConstructorUsedError;
@@ -11902,7 +12040,7 @@ abstract class $ContractAssetCopyWith<$Res> {
           Element? textElement,
       List<String>? linkId,
       @JsonKey(name: '_linkId')
-          List<Element?>? linkIdElement,
+          List<Element>? linkIdElement,
       List<ContractAnswer>? answer,
       List<UnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
@@ -12021,7 +12159,7 @@ class _$ContractAssetCopyWithImpl<$Res>
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
           : linkIdElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       answer: answer == freezed
           ? _value.answer
           : answer // ignore: cast_nullable_to_non_nullable
@@ -12115,7 +12253,7 @@ abstract class _$ContractAssetCopyWith<$Res>
           Element? textElement,
       List<String>? linkId,
       @JsonKey(name: '_linkId')
-          List<Element?>? linkIdElement,
+          List<Element>? linkIdElement,
       List<ContractAnswer>? answer,
       List<UnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
@@ -12240,7 +12378,7 @@ class __$ContractAssetCopyWithImpl<$Res>
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
           : linkIdElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       answer: answer == freezed
           ? _value.answer
           : answer // ignore: cast_nullable_to_non_nullable
@@ -12331,7 +12469,7 @@ class _$_ContractAsset extends _ContractAsset {
   final List<String>? linkId;
   @override
   @JsonKey(name: '_linkId')
-  final List<Element?>? linkIdElement;
+  final List<Element>? linkIdElement;
   @override
   final List<ContractAnswer>? answer;
   @override
@@ -12474,7 +12612,7 @@ abstract class _ContractAsset extends ContractAsset {
           Element? textElement,
       List<String>? linkId,
       @JsonKey(name: '_linkId')
-          List<Element?>? linkIdElement,
+          List<Element>? linkIdElement,
       List<ContractAnswer>? answer,
       List<UnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
@@ -12525,7 +12663,7 @@ abstract class _ContractAsset extends ContractAsset {
   List<String>? get linkId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_linkId')
-  List<Element?>? get linkIdElement => throw _privateConstructorUsedError;
+  List<Element>? get linkIdElement => throw _privateConstructorUsedError;
   @override
   List<ContractAnswer>? get answer => throw _privateConstructorUsedError;
   @override
@@ -12925,7 +13063,7 @@ class _$ContractValuedItemTearOff {
       Reference? recipient,
       List<String>? linkId,
       @JsonKey(name: '_linkId')
-          List<Element?>? linkIdElement,
+          List<Element>? linkIdElement,
       List<UnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           List<Element>? securityLabelNumberElement}) {
@@ -12999,7 +13137,7 @@ mixin _$ContractValuedItem {
   Reference? get recipient => throw _privateConstructorUsedError;
   List<String>? get linkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_linkId')
-  List<Element?>? get linkIdElement => throw _privateConstructorUsedError;
+  List<Element>? get linkIdElement => throw _privateConstructorUsedError;
   List<UnsignedInt>? get securityLabelNumber =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_securityLabelNumber')
@@ -13047,7 +13185,7 @@ abstract class $ContractValuedItemCopyWith<$Res> {
       Reference? recipient,
       List<String>? linkId,
       @JsonKey(name: '_linkId')
-          List<Element?>? linkIdElement,
+          List<Element>? linkIdElement,
       List<UnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           List<Element>? securityLabelNumberElement});
@@ -13196,7 +13334,7 @@ class _$ContractValuedItemCopyWithImpl<$Res>
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
           : linkIdElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       securityLabelNumber: securityLabelNumber == freezed
           ? _value.securityLabelNumber
           : securityLabelNumber // ignore: cast_nullable_to_non_nullable
@@ -13390,7 +13528,7 @@ abstract class _$ContractValuedItemCopyWith<$Res>
       Reference? recipient,
       List<String>? linkId,
       @JsonKey(name: '_linkId')
-          List<Element?>? linkIdElement,
+          List<Element>? linkIdElement,
       List<UnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           List<Element>? securityLabelNumberElement});
@@ -13554,7 +13692,7 @@ class __$ContractValuedItemCopyWithImpl<$Res>
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
           : linkIdElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       securityLabelNumber: securityLabelNumber == freezed
           ? _value.securityLabelNumber
           : securityLabelNumber // ignore: cast_nullable_to_non_nullable
@@ -13653,7 +13791,7 @@ class _$_ContractValuedItem extends _ContractValuedItem {
   final List<String>? linkId;
   @override
   @JsonKey(name: '_linkId')
-  final List<Element?>? linkIdElement;
+  final List<Element>? linkIdElement;
   @override
   final List<UnsignedInt>? securityLabelNumber;
   @override
@@ -13810,7 +13948,7 @@ abstract class _ContractValuedItem extends ContractValuedItem {
       Reference? recipient,
       List<String>? linkId,
       @JsonKey(name: '_linkId')
-          List<Element?>? linkIdElement,
+          List<Element>? linkIdElement,
       List<UnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
           List<Element>? securityLabelNumberElement}) = _$_ContractValuedItem;
@@ -13873,7 +14011,7 @@ abstract class _ContractValuedItem extends ContractValuedItem {
   List<String>? get linkId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_linkId')
-  List<Element?>? get linkIdElement => throw _privateConstructorUsedError;
+  List<Element>? get linkIdElement => throw _privateConstructorUsedError;
   @override
   List<UnsignedInt>? get securityLabelNumber =>
       throw _privateConstructorUsedError;
@@ -13908,12 +14046,12 @@ class _$ContractActionTearOff {
       required CodeableConcept intent,
       List<String>? linkId,
       @JsonKey(name: '_linkId')
-          List<Element?>? linkIdElement,
+          List<Element>? linkIdElement,
       required CodeableConcept status,
       Reference? context,
       List<String>? contextLinkId,
       @JsonKey(name: '_contextLinkId')
-          List<Element?>? contextLinkIdElement,
+          List<Element>? contextLinkIdElement,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element? occurrenceDateTimeElement,
@@ -13922,17 +14060,17 @@ class _$ContractActionTearOff {
       List<Reference>? requester,
       List<String>? requesterLinkId,
       @JsonKey(name: '_requesterLinkId')
-          List<Element?>? requesterLinkIdElement,
+          List<Element>? requesterLinkIdElement,
       List<CodeableConcept>? performerType,
       CodeableConcept? performerRole,
       Reference? performer,
       List<String>? performerLinkId,
       @JsonKey(name: '_performerLinkId')
-          List<Element?>? performerLinkIdElement,
+          List<Element>? performerLinkIdElement,
       List<CodeableReference>? reason,
       List<String>? reasonLinkId,
       @JsonKey(name: '_reasonLinkId')
-          List<Element?>? reasonLinkIdElement,
+          List<Element>? reasonLinkIdElement,
       List<Annotation>? note,
       List<UnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
@@ -13996,13 +14134,12 @@ mixin _$ContractAction {
   CodeableConcept get intent => throw _privateConstructorUsedError;
   List<String>? get linkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_linkId')
-  List<Element?>? get linkIdElement => throw _privateConstructorUsedError;
+  List<Element>? get linkIdElement => throw _privateConstructorUsedError;
   CodeableConcept get status => throw _privateConstructorUsedError;
   Reference? get context => throw _privateConstructorUsedError;
   List<String>? get contextLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_contextLinkId')
-  List<Element?>? get contextLinkIdElement =>
-      throw _privateConstructorUsedError;
+  List<Element>? get contextLinkIdElement => throw _privateConstructorUsedError;
   FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_occurrenceDateTime')
   Element? get occurrenceDateTimeElement => throw _privateConstructorUsedError;
@@ -14011,7 +14148,7 @@ mixin _$ContractAction {
   List<Reference>? get requester => throw _privateConstructorUsedError;
   List<String>? get requesterLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_requesterLinkId')
-  List<Element?>? get requesterLinkIdElement =>
+  List<Element>? get requesterLinkIdElement =>
       throw _privateConstructorUsedError;
   List<CodeableConcept>? get performerType =>
       throw _privateConstructorUsedError;
@@ -14019,12 +14156,12 @@ mixin _$ContractAction {
   Reference? get performer => throw _privateConstructorUsedError;
   List<String>? get performerLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_performerLinkId')
-  List<Element?>? get performerLinkIdElement =>
+  List<Element>? get performerLinkIdElement =>
       throw _privateConstructorUsedError;
   List<CodeableReference>? get reason => throw _privateConstructorUsedError;
   List<String>? get reasonLinkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_reasonLinkId')
-  List<Element?>? get reasonLinkIdElement => throw _privateConstructorUsedError;
+  List<Element>? get reasonLinkIdElement => throw _privateConstructorUsedError;
   List<Annotation>? get note => throw _privateConstructorUsedError;
   List<UnsignedInt>? get securityLabelNumber =>
       throw _privateConstructorUsedError;
@@ -14056,12 +14193,12 @@ abstract class $ContractActionCopyWith<$Res> {
       CodeableConcept intent,
       List<String>? linkId,
       @JsonKey(name: '_linkId')
-          List<Element?>? linkIdElement,
+          List<Element>? linkIdElement,
       CodeableConcept status,
       Reference? context,
       List<String>? contextLinkId,
       @JsonKey(name: '_contextLinkId')
-          List<Element?>? contextLinkIdElement,
+          List<Element>? contextLinkIdElement,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element? occurrenceDateTimeElement,
@@ -14070,17 +14207,17 @@ abstract class $ContractActionCopyWith<$Res> {
       List<Reference>? requester,
       List<String>? requesterLinkId,
       @JsonKey(name: '_requesterLinkId')
-          List<Element?>? requesterLinkIdElement,
+          List<Element>? requesterLinkIdElement,
       List<CodeableConcept>? performerType,
       CodeableConcept? performerRole,
       Reference? performer,
       List<String>? performerLinkId,
       @JsonKey(name: '_performerLinkId')
-          List<Element?>? performerLinkIdElement,
+          List<Element>? performerLinkIdElement,
       List<CodeableReference>? reason,
       List<String>? reasonLinkId,
       @JsonKey(name: '_reasonLinkId')
-          List<Element?>? reasonLinkIdElement,
+          List<Element>? reasonLinkIdElement,
       List<Annotation>? note,
       List<UnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
@@ -14182,7 +14319,7 @@ class _$ContractActionCopyWithImpl<$Res>
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
           : linkIdElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -14198,7 +14335,7 @@ class _$ContractActionCopyWithImpl<$Res>
       contextLinkIdElement: contextLinkIdElement == freezed
           ? _value.contextLinkIdElement
           : contextLinkIdElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
@@ -14226,7 +14363,7 @@ class _$ContractActionCopyWithImpl<$Res>
       requesterLinkIdElement: requesterLinkIdElement == freezed
           ? _value.requesterLinkIdElement
           : requesterLinkIdElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       performerType: performerType == freezed
           ? _value.performerType
           : performerType // ignore: cast_nullable_to_non_nullable
@@ -14246,7 +14383,7 @@ class _$ContractActionCopyWithImpl<$Res>
       performerLinkIdElement: performerLinkIdElement == freezed
           ? _value.performerLinkIdElement
           : performerLinkIdElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       reason: reason == freezed
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
@@ -14258,7 +14395,7 @@ class _$ContractActionCopyWithImpl<$Res>
       reasonLinkIdElement: reasonLinkIdElement == freezed
           ? _value.reasonLinkIdElement
           : reasonLinkIdElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       note: note == freezed
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
@@ -14393,12 +14530,12 @@ abstract class _$ContractActionCopyWith<$Res>
       CodeableConcept intent,
       List<String>? linkId,
       @JsonKey(name: '_linkId')
-          List<Element?>? linkIdElement,
+          List<Element>? linkIdElement,
       CodeableConcept status,
       Reference? context,
       List<String>? contextLinkId,
       @JsonKey(name: '_contextLinkId')
-          List<Element?>? contextLinkIdElement,
+          List<Element>? contextLinkIdElement,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element? occurrenceDateTimeElement,
@@ -14407,17 +14544,17 @@ abstract class _$ContractActionCopyWith<$Res>
       List<Reference>? requester,
       List<String>? requesterLinkId,
       @JsonKey(name: '_requesterLinkId')
-          List<Element?>? requesterLinkIdElement,
+          List<Element>? requesterLinkIdElement,
       List<CodeableConcept>? performerType,
       CodeableConcept? performerRole,
       Reference? performer,
       List<String>? performerLinkId,
       @JsonKey(name: '_performerLinkId')
-          List<Element?>? performerLinkIdElement,
+          List<Element>? performerLinkIdElement,
       List<CodeableReference>? reason,
       List<String>? reasonLinkId,
       @JsonKey(name: '_reasonLinkId')
-          List<Element?>? reasonLinkIdElement,
+          List<Element>? reasonLinkIdElement,
       List<Annotation>? note,
       List<UnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
@@ -14531,7 +14668,7 @@ class __$ContractActionCopyWithImpl<$Res>
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
           : linkIdElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
@@ -14547,7 +14684,7 @@ class __$ContractActionCopyWithImpl<$Res>
       contextLinkIdElement: contextLinkIdElement == freezed
           ? _value.contextLinkIdElement
           : contextLinkIdElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       occurrenceDateTime: occurrenceDateTime == freezed
           ? _value.occurrenceDateTime
           : occurrenceDateTime // ignore: cast_nullable_to_non_nullable
@@ -14575,7 +14712,7 @@ class __$ContractActionCopyWithImpl<$Res>
       requesterLinkIdElement: requesterLinkIdElement == freezed
           ? _value.requesterLinkIdElement
           : requesterLinkIdElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       performerType: performerType == freezed
           ? _value.performerType
           : performerType // ignore: cast_nullable_to_non_nullable
@@ -14595,7 +14732,7 @@ class __$ContractActionCopyWithImpl<$Res>
       performerLinkIdElement: performerLinkIdElement == freezed
           ? _value.performerLinkIdElement
           : performerLinkIdElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       reason: reason == freezed
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
@@ -14607,7 +14744,7 @@ class __$ContractActionCopyWithImpl<$Res>
       reasonLinkIdElement: reasonLinkIdElement == freezed
           ? _value.reasonLinkIdElement
           : reasonLinkIdElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       note: note == freezed
           ? _value.note
           : note // ignore: cast_nullable_to_non_nullable
@@ -14687,7 +14824,7 @@ class _$_ContractAction extends _ContractAction {
   final List<String>? linkId;
   @override
   @JsonKey(name: '_linkId')
-  final List<Element?>? linkIdElement;
+  final List<Element>? linkIdElement;
   @override
   final CodeableConcept status;
   @override
@@ -14696,7 +14833,7 @@ class _$_ContractAction extends _ContractAction {
   final List<String>? contextLinkId;
   @override
   @JsonKey(name: '_contextLinkId')
-  final List<Element?>? contextLinkIdElement;
+  final List<Element>? contextLinkIdElement;
   @override
   final FhirDateTime? occurrenceDateTime;
   @override
@@ -14712,7 +14849,7 @@ class _$_ContractAction extends _ContractAction {
   final List<String>? requesterLinkId;
   @override
   @JsonKey(name: '_requesterLinkId')
-  final List<Element?>? requesterLinkIdElement;
+  final List<Element>? requesterLinkIdElement;
   @override
   final List<CodeableConcept>? performerType;
   @override
@@ -14723,14 +14860,14 @@ class _$_ContractAction extends _ContractAction {
   final List<String>? performerLinkId;
   @override
   @JsonKey(name: '_performerLinkId')
-  final List<Element?>? performerLinkIdElement;
+  final List<Element>? performerLinkIdElement;
   @override
   final List<CodeableReference>? reason;
   @override
   final List<String>? reasonLinkId;
   @override
   @JsonKey(name: '_reasonLinkId')
-  final List<Element?>? reasonLinkIdElement;
+  final List<Element>? reasonLinkIdElement;
   @override
   final List<Annotation>? note;
   @override
@@ -14883,12 +15020,12 @@ abstract class _ContractAction extends ContractAction {
       required CodeableConcept intent,
       List<String>? linkId,
       @JsonKey(name: '_linkId')
-          List<Element?>? linkIdElement,
+          List<Element>? linkIdElement,
       required CodeableConcept status,
       Reference? context,
       List<String>? contextLinkId,
       @JsonKey(name: '_contextLinkId')
-          List<Element?>? contextLinkIdElement,
+          List<Element>? contextLinkIdElement,
       FhirDateTime? occurrenceDateTime,
       @JsonKey(name: '_occurrenceDateTime')
           Element? occurrenceDateTimeElement,
@@ -14897,17 +15034,17 @@ abstract class _ContractAction extends ContractAction {
       List<Reference>? requester,
       List<String>? requesterLinkId,
       @JsonKey(name: '_requesterLinkId')
-          List<Element?>? requesterLinkIdElement,
+          List<Element>? requesterLinkIdElement,
       List<CodeableConcept>? performerType,
       CodeableConcept? performerRole,
       Reference? performer,
       List<String>? performerLinkId,
       @JsonKey(name: '_performerLinkId')
-          List<Element?>? performerLinkIdElement,
+          List<Element>? performerLinkIdElement,
       List<CodeableReference>? reason,
       List<String>? reasonLinkId,
       @JsonKey(name: '_reasonLinkId')
-          List<Element?>? reasonLinkIdElement,
+          List<Element>? reasonLinkIdElement,
       List<Annotation>? note,
       List<UnsignedInt>? securityLabelNumber,
       @JsonKey(name: '_securityLabelNumber')
@@ -14940,7 +15077,7 @@ abstract class _ContractAction extends ContractAction {
   List<String>? get linkId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_linkId')
-  List<Element?>? get linkIdElement => throw _privateConstructorUsedError;
+  List<Element>? get linkIdElement => throw _privateConstructorUsedError;
   @override
   CodeableConcept get status => throw _privateConstructorUsedError;
   @override
@@ -14949,8 +15086,7 @@ abstract class _ContractAction extends ContractAction {
   List<String>? get contextLinkId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_contextLinkId')
-  List<Element?>? get contextLinkIdElement =>
-      throw _privateConstructorUsedError;
+  List<Element>? get contextLinkIdElement => throw _privateConstructorUsedError;
   @override
   FhirDateTime? get occurrenceDateTime => throw _privateConstructorUsedError;
   @override
@@ -14966,7 +15102,7 @@ abstract class _ContractAction extends ContractAction {
   List<String>? get requesterLinkId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_requesterLinkId')
-  List<Element?>? get requesterLinkIdElement =>
+  List<Element>? get requesterLinkIdElement =>
       throw _privateConstructorUsedError;
   @override
   List<CodeableConcept>? get performerType =>
@@ -14979,7 +15115,7 @@ abstract class _ContractAction extends ContractAction {
   List<String>? get performerLinkId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_performerLinkId')
-  List<Element?>? get performerLinkIdElement =>
+  List<Element>? get performerLinkIdElement =>
       throw _privateConstructorUsedError;
   @override
   List<CodeableReference>? get reason => throw _privateConstructorUsedError;
@@ -14987,7 +15123,7 @@ abstract class _ContractAction extends ContractAction {
   List<String>? get reasonLinkId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_reasonLinkId')
-  List<Element?>? get reasonLinkIdElement => throw _privateConstructorUsedError;
+  List<Element>? get reasonLinkIdElement => throw _privateConstructorUsedError;
   @override
   List<Annotation>? get note => throw _privateConstructorUsedError;
   @override
@@ -16522,7 +16658,7 @@ class _$ExplanationOfBenefitTearOff {
           Element? dispositionElement,
       List<String>? preAuthRef,
       @JsonKey(name: '_preAuthRef')
-          List<Element?>? preAuthRefElement,
+          List<Element>? preAuthRefElement,
       List<Period>? preAuthRefPeriod,
       List<ExplanationOfBenefitCareTeam>? careTeam,
       List<ExplanationOfBenefitSupportingInfo>? supportingInfo,
@@ -16673,7 +16809,7 @@ mixin _$ExplanationOfBenefit {
   Element? get dispositionElement => throw _privateConstructorUsedError;
   List<String>? get preAuthRef => throw _privateConstructorUsedError;
   @JsonKey(name: '_preAuthRef')
-  List<Element?>? get preAuthRefElement => throw _privateConstructorUsedError;
+  List<Element>? get preAuthRefElement => throw _privateConstructorUsedError;
   List<Period>? get preAuthRefPeriod => throw _privateConstructorUsedError;
   List<ExplanationOfBenefitCareTeam>? get careTeam =>
       throw _privateConstructorUsedError;
@@ -16772,7 +16908,7 @@ abstract class $ExplanationOfBenefitCopyWith<$Res> {
           Element? dispositionElement,
       List<String>? preAuthRef,
       @JsonKey(name: '_preAuthRef')
-          List<Element?>? preAuthRefElement,
+          List<Element>? preAuthRefElement,
       List<Period>? preAuthRefPeriod,
       List<ExplanationOfBenefitCareTeam>? careTeam,
       List<ExplanationOfBenefitSupportingInfo>? supportingInfo,
@@ -17069,7 +17205,7 @@ class _$ExplanationOfBenefitCopyWithImpl<$Res>
       preAuthRefElement: preAuthRefElement == freezed
           ? _value.preAuthRefElement
           : preAuthRefElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       preAuthRefPeriod: preAuthRefPeriod == freezed
           ? _value.preAuthRefPeriod
           : preAuthRefPeriod // ignore: cast_nullable_to_non_nullable
@@ -17548,7 +17684,7 @@ abstract class _$ExplanationOfBenefitCopyWith<$Res>
           Element? dispositionElement,
       List<String>? preAuthRef,
       @JsonKey(name: '_preAuthRef')
-          List<Element?>? preAuthRefElement,
+          List<Element>? preAuthRefElement,
       List<Period>? preAuthRefPeriod,
       List<ExplanationOfBenefitCareTeam>? careTeam,
       List<ExplanationOfBenefitSupportingInfo>? supportingInfo,
@@ -17879,7 +18015,7 @@ class __$ExplanationOfBenefitCopyWithImpl<$Res>
       preAuthRefElement: preAuthRefElement == freezed
           ? _value.preAuthRefElement
           : preAuthRefElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       preAuthRefPeriod: preAuthRefPeriod == freezed
           ? _value.preAuthRefPeriod
           : preAuthRefPeriod // ignore: cast_nullable_to_non_nullable
@@ -18136,7 +18272,7 @@ class _$_ExplanationOfBenefit extends _ExplanationOfBenefit {
   final List<String>? preAuthRef;
   @override
   @JsonKey(name: '_preAuthRef')
-  final List<Element?>? preAuthRefElement;
+  final List<Element>? preAuthRefElement;
   @override
   final List<Period>? preAuthRefPeriod;
   @override
@@ -18423,7 +18559,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
               Element? dispositionElement,
           List<String>? preAuthRef,
           @JsonKey(name: '_preAuthRef')
-              List<Element?>? preAuthRefElement,
+              List<Element>? preAuthRefElement,
           List<Period>? preAuthRefPeriod,
           List<ExplanationOfBenefitCareTeam>? careTeam,
           List<ExplanationOfBenefitSupportingInfo>? supportingInfo,
@@ -18547,7 +18683,7 @@ abstract class _ExplanationOfBenefit extends ExplanationOfBenefit {
   List<String>? get preAuthRef => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_preAuthRef')
-  List<Element?>? get preAuthRefElement => throw _privateConstructorUsedError;
+  List<Element>? get preAuthRefElement => throw _privateConstructorUsedError;
   @override
   List<Period>? get preAuthRefPeriod => throw _privateConstructorUsedError;
   @override
@@ -21444,7 +21580,7 @@ class _$ExplanationOfBenefitInsuranceTearOff {
       @JsonKey(name: '_focal') Element? focalElement,
       required Reference coverage,
       List<String>? preAuthRef,
-      @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement}) {
+      @JsonKey(name: '_preAuthRef') List<Element>? preAuthRefElement}) {
     return _ExplanationOfBenefitInsurance(
       id: id,
       extension_: extension_,
@@ -21478,7 +21614,7 @@ mixin _$ExplanationOfBenefitInsurance {
   Reference get coverage => throw _privateConstructorUsedError;
   List<String>? get preAuthRef => throw _privateConstructorUsedError;
   @JsonKey(name: '_preAuthRef')
-  List<Element?>? get preAuthRefElement => throw _privateConstructorUsedError;
+  List<Element>? get preAuthRefElement => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -21500,7 +21636,7 @@ abstract class $ExplanationOfBenefitInsuranceCopyWith<$Res> {
       @JsonKey(name: '_focal') Element? focalElement,
       Reference coverage,
       List<String>? preAuthRef,
-      @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement});
+      @JsonKey(name: '_preAuthRef') List<Element>? preAuthRefElement});
 
   $ElementCopyWith<$Res>? get focalElement;
   $ReferenceCopyWith<$Res> get coverage;
@@ -21558,7 +21694,7 @@ class _$ExplanationOfBenefitInsuranceCopyWithImpl<$Res>
       preAuthRefElement: preAuthRefElement == freezed
           ? _value.preAuthRefElement
           : preAuthRefElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
     ));
   }
 
@@ -21597,7 +21733,7 @@ abstract class _$ExplanationOfBenefitInsuranceCopyWith<$Res>
       @JsonKey(name: '_focal') Element? focalElement,
       Reference coverage,
       List<String>? preAuthRef,
-      @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement});
+      @JsonKey(name: '_preAuthRef') List<Element>? preAuthRefElement});
 
   @override
   $ElementCopyWith<$Res>? get focalElement;
@@ -21661,7 +21797,7 @@ class __$ExplanationOfBenefitInsuranceCopyWithImpl<$Res>
       preAuthRefElement: preAuthRefElement == freezed
           ? _value.preAuthRefElement
           : preAuthRefElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
     ));
   }
 }
@@ -21702,7 +21838,7 @@ class _$_ExplanationOfBenefitInsurance extends _ExplanationOfBenefitInsurance {
   final List<String>? preAuthRef;
   @override
   @JsonKey(name: '_preAuthRef')
-  final List<Element?>? preAuthRefElement;
+  final List<Element>? preAuthRefElement;
 
   @override
   String toString() {
@@ -21771,7 +21907,7 @@ abstract class _ExplanationOfBenefitInsurance
           @JsonKey(name: '_focal') Element? focalElement,
           required Reference coverage,
           List<String>? preAuthRef,
-          @JsonKey(name: '_preAuthRef') List<Element?>? preAuthRefElement}) =
+          @JsonKey(name: '_preAuthRef') List<Element>? preAuthRefElement}) =
       _$_ExplanationOfBenefitInsurance;
   _ExplanationOfBenefitInsurance._() : super._();
 
@@ -21797,7 +21933,7 @@ abstract class _ExplanationOfBenefitInsurance
   List<String>? get preAuthRef => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_preAuthRef')
-  List<Element?>? get preAuthRefElement => throw _privateConstructorUsedError;
+  List<Element>? get preAuthRefElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$ExplanationOfBenefitInsuranceCopyWith<_ExplanationOfBenefitInsurance>
@@ -22226,7 +22362,7 @@ class _$ExplanationOfBenefitItemTearOff {
           Element? sequenceElement,
       List<PositiveInt>? careTeamSequence,
       @JsonKey(name: '_careTeamSequence')
-          List<Element?>? careTeamSequenceElement,
+          List<Element>? careTeamSequenceElement,
       List<PositiveInt>? diagnosisSequence,
       @JsonKey(name: '_diagnosisSequence')
           List<Element>? diagnosisSequenceElement,
@@ -22260,7 +22396,7 @@ class _$ExplanationOfBenefitItemTearOff {
       List<Reference>? encounter,
       List<PositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber')
-          List<Element?>? noteNumberElement,
+          List<Element>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
       List<ExplanationOfBenefitDetail>? detail}) {
     return _ExplanationOfBenefitItem(
@@ -22324,7 +22460,7 @@ mixin _$ExplanationOfBenefitItem {
   Element? get sequenceElement => throw _privateConstructorUsedError;
   List<PositiveInt>? get careTeamSequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_careTeamSequence')
-  List<Element?>? get careTeamSequenceElement =>
+  List<Element>? get careTeamSequenceElement =>
       throw _privateConstructorUsedError;
   List<PositiveInt>? get diagnosisSequence =>
       throw _privateConstructorUsedError;
@@ -22366,7 +22502,7 @@ mixin _$ExplanationOfBenefitItem {
   List<Reference>? get encounter => throw _privateConstructorUsedError;
   List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
   @JsonKey(name: '_noteNumber')
-  List<Element?>? get noteNumberElement => throw _privateConstructorUsedError;
+  List<Element>? get noteNumberElement => throw _privateConstructorUsedError;
   List<ExplanationOfBenefitAdjudication>? get adjudication =>
       throw _privateConstructorUsedError;
   List<ExplanationOfBenefitDetail>? get detail =>
@@ -22393,7 +22529,7 @@ abstract class $ExplanationOfBenefitItemCopyWith<$Res> {
           Element? sequenceElement,
       List<PositiveInt>? careTeamSequence,
       @JsonKey(name: '_careTeamSequence')
-          List<Element?>? careTeamSequenceElement,
+          List<Element>? careTeamSequenceElement,
       List<PositiveInt>? diagnosisSequence,
       @JsonKey(name: '_diagnosisSequence')
           List<Element>? diagnosisSequenceElement,
@@ -22427,7 +22563,7 @@ abstract class $ExplanationOfBenefitItemCopyWith<$Res> {
       List<Reference>? encounter,
       List<PositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber')
-          List<Element?>? noteNumberElement,
+          List<Element>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
       List<ExplanationOfBenefitDetail>? detail});
 
@@ -22524,7 +22660,7 @@ class _$ExplanationOfBenefitItemCopyWithImpl<$Res>
       careTeamSequenceElement: careTeamSequenceElement == freezed
           ? _value.careTeamSequenceElement
           : careTeamSequenceElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       diagnosisSequence: diagnosisSequence == freezed
           ? _value.diagnosisSequence
           : diagnosisSequence // ignore: cast_nullable_to_non_nullable
@@ -22636,7 +22772,7 @@ class _$ExplanationOfBenefitItemCopyWithImpl<$Res>
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
@@ -22817,7 +22953,7 @@ abstract class _$ExplanationOfBenefitItemCopyWith<$Res>
           Element? sequenceElement,
       List<PositiveInt>? careTeamSequence,
       @JsonKey(name: '_careTeamSequence')
-          List<Element?>? careTeamSequenceElement,
+          List<Element>? careTeamSequenceElement,
       List<PositiveInt>? diagnosisSequence,
       @JsonKey(name: '_diagnosisSequence')
           List<Element>? diagnosisSequenceElement,
@@ -22851,7 +22987,7 @@ abstract class _$ExplanationOfBenefitItemCopyWith<$Res>
       List<Reference>? encounter,
       List<PositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber')
-          List<Element?>? noteNumberElement,
+          List<Element>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
       List<ExplanationOfBenefitDetail>? detail});
 
@@ -22965,7 +23101,7 @@ class __$ExplanationOfBenefitItemCopyWithImpl<$Res>
       careTeamSequenceElement: careTeamSequenceElement == freezed
           ? _value.careTeamSequenceElement
           : careTeamSequenceElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       diagnosisSequence: diagnosisSequence == freezed
           ? _value.diagnosisSequence
           : diagnosisSequence // ignore: cast_nullable_to_non_nullable
@@ -23077,7 +23213,7 @@ class __$ExplanationOfBenefitItemCopyWithImpl<$Res>
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
@@ -23152,7 +23288,7 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
   final List<PositiveInt>? careTeamSequence;
   @override
   @JsonKey(name: '_careTeamSequence')
-  final List<Element?>? careTeamSequenceElement;
+  final List<Element>? careTeamSequenceElement;
   @override
   final List<PositiveInt>? diagnosisSequence;
   @override
@@ -23214,7 +23350,7 @@ class _$_ExplanationOfBenefitItem extends _ExplanationOfBenefitItem {
   final List<PositiveInt>? noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  final List<Element?>? noteNumberElement;
+  final List<Element>? noteNumberElement;
   @override
   final List<ExplanationOfBenefitAdjudication>? adjudication;
   @override
@@ -23363,7 +23499,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
           Element? sequenceElement,
       List<PositiveInt>? careTeamSequence,
       @JsonKey(name: '_careTeamSequence')
-          List<Element?>? careTeamSequenceElement,
+          List<Element>? careTeamSequenceElement,
       List<PositiveInt>? diagnosisSequence,
       @JsonKey(name: '_diagnosisSequence')
           List<Element>? diagnosisSequenceElement,
@@ -23397,7 +23533,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
       List<Reference>? encounter,
       List<PositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber')
-          List<Element?>? noteNumberElement,
+          List<Element>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
       List<ExplanationOfBenefitDetail>? detail}) = _$_ExplanationOfBenefitItem;
   _ExplanationOfBenefitItem._() : super._();
@@ -23422,7 +23558,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
   List<PositiveInt>? get careTeamSequence => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_careTeamSequence')
-  List<Element?>? get careTeamSequenceElement =>
+  List<Element>? get careTeamSequenceElement =>
       throw _privateConstructorUsedError;
   @override
   List<PositiveInt>? get diagnosisSequence =>
@@ -23492,7 +23628,7 @@ abstract class _ExplanationOfBenefitItem extends ExplanationOfBenefitItem {
   List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_noteNumber')
-  List<Element?>? get noteNumberElement => throw _privateConstructorUsedError;
+  List<Element>? get noteNumberElement => throw _privateConstructorUsedError;
   @override
   List<ExplanationOfBenefitAdjudication>? get adjudication =>
       throw _privateConstructorUsedError;
@@ -23934,7 +24070,7 @@ class _$ExplanationOfBenefitDetailTearOff {
       Money? net,
       List<Reference>? udi,
       List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
       List<ExplanationOfBenefitSubDetail>? subDetail}) {
     return _ExplanationOfBenefitDetail(
@@ -23993,7 +24129,7 @@ mixin _$ExplanationOfBenefitDetail {
   List<Reference>? get udi => throw _privateConstructorUsedError;
   List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
   @JsonKey(name: '_noteNumber')
-  List<Element?>? get noteNumberElement => throw _privateConstructorUsedError;
+  List<Element>? get noteNumberElement => throw _privateConstructorUsedError;
   List<ExplanationOfBenefitAdjudication>? get adjudication =>
       throw _privateConstructorUsedError;
   List<ExplanationOfBenefitSubDetail>? get subDetail =>
@@ -24028,7 +24164,7 @@ abstract class $ExplanationOfBenefitDetailCopyWith<$Res> {
       Money? net,
       List<Reference>? udi,
       List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
       List<ExplanationOfBenefitSubDetail>? subDetail});
 
@@ -24146,7 +24282,7 @@ class _$ExplanationOfBenefitDetailCopyWithImpl<$Res>
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
@@ -24269,7 +24405,7 @@ abstract class _$ExplanationOfBenefitDetailCopyWith<$Res>
       Money? net,
       List<Reference>? udi,
       List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
       List<ExplanationOfBenefitSubDetail>? subDetail});
 
@@ -24398,7 +24534,7 @@ class __$ExplanationOfBenefitDetailCopyWithImpl<$Res>
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
@@ -24479,7 +24615,7 @@ class _$_ExplanationOfBenefitDetail extends _ExplanationOfBenefitDetail {
   final List<PositiveInt>? noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  final List<Element?>? noteNumberElement;
+  final List<Element>? noteNumberElement;
   @override
   final List<ExplanationOfBenefitAdjudication>? adjudication;
   @override
@@ -24607,7 +24743,7 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
           Money? net,
           List<Reference>? udi,
           List<PositiveInt>? noteNumber,
-          @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+          @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
           List<ExplanationOfBenefitAdjudication>? adjudication,
           List<ExplanationOfBenefitSubDetail>? subDetail}) =
       _$_ExplanationOfBenefitDetail;
@@ -24656,7 +24792,7 @@ abstract class _ExplanationOfBenefitDetail extends ExplanationOfBenefitDetail {
   List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_noteNumber')
-  List<Element?>? get noteNumberElement => throw _privateConstructorUsedError;
+  List<Element>? get noteNumberElement => throw _privateConstructorUsedError;
   @override
   List<ExplanationOfBenefitAdjudication>? get adjudication =>
       throw _privateConstructorUsedError;
@@ -24696,7 +24832,7 @@ class _$ExplanationOfBenefitSubDetailTearOff {
       Money? net,
       List<Reference>? udi,
       List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication}) {
     return _ExplanationOfBenefitSubDetail(
       id: id,
@@ -24753,7 +24889,7 @@ mixin _$ExplanationOfBenefitSubDetail {
   List<Reference>? get udi => throw _privateConstructorUsedError;
   List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
   @JsonKey(name: '_noteNumber')
-  List<Element?>? get noteNumberElement => throw _privateConstructorUsedError;
+  List<Element>? get noteNumberElement => throw _privateConstructorUsedError;
   List<ExplanationOfBenefitAdjudication>? get adjudication =>
       throw _privateConstructorUsedError;
 
@@ -24787,7 +24923,7 @@ abstract class $ExplanationOfBenefitSubDetailCopyWith<$Res> {
       Money? net,
       List<Reference>? udi,
       List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication});
 
   $ElementCopyWith<$Res>? get sequenceElement;
@@ -24903,7 +25039,7 @@ class _$ExplanationOfBenefitSubDetailCopyWithImpl<$Res>
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
@@ -25022,7 +25158,7 @@ abstract class _$ExplanationOfBenefitSubDetailCopyWith<$Res>
       Money? net,
       List<Reference>? udi,
       List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication});
 
   @override
@@ -25150,7 +25286,7 @@ class __$ExplanationOfBenefitSubDetailCopyWithImpl<$Res>
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
@@ -25227,7 +25363,7 @@ class _$_ExplanationOfBenefitSubDetail extends _ExplanationOfBenefitSubDetail {
   final List<PositiveInt>? noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  final List<Element?>? noteNumberElement;
+  final List<Element>? noteNumberElement;
   @override
   final List<ExplanationOfBenefitAdjudication>? adjudication;
 
@@ -25350,7 +25486,7 @@ abstract class _ExplanationOfBenefitSubDetail
           Money? net,
           List<Reference>? udi,
           List<PositiveInt>? noteNumber,
-          @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+          @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
           List<ExplanationOfBenefitAdjudication>? adjudication}) =
       _$_ExplanationOfBenefitSubDetail;
   _ExplanationOfBenefitSubDetail._() : super._();
@@ -25398,7 +25534,7 @@ abstract class _ExplanationOfBenefitSubDetail
   List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_noteNumber')
-  List<Element?>? get noteNumberElement => throw _privateConstructorUsedError;
+  List<Element>? get noteNumberElement => throw _privateConstructorUsedError;
   @override
   List<ExplanationOfBenefitAdjudication>? get adjudication =>
       throw _privateConstructorUsedError;
@@ -25424,10 +25560,10 @@ class _$ExplanationOfBenefitAddItemTearOff {
       List<FhirExtension>? modifierExtension,
       List<PositiveInt>? itemSequence,
       @JsonKey(name: '_itemSequence')
-          List<Element?>? itemSequenceElement,
+          List<Element>? itemSequenceElement,
       List<PositiveInt>? detailSequence,
       @JsonKey(name: '_detailSequence')
-          List<Element?>? detailSequenceElement,
+          List<Element>? detailSequenceElement,
       List<PositiveInt>? subDetailSequence,
       @JsonKey(name: '_subDetailSequence')
           List<Element>? subDetailSequenceElement,
@@ -25452,7 +25588,7 @@ class _$ExplanationOfBenefitAddItemTearOff {
       List<CodeableConcept>? subSite,
       List<PositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber')
-          List<Element?>? noteNumberElement,
+          List<Element>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
       List<ExplanationOfBenefitDetail1>? detail}) {
     return _ExplanationOfBenefitAddItem(
@@ -25506,10 +25642,10 @@ mixin _$ExplanationOfBenefitAddItem {
       throw _privateConstructorUsedError;
   List<PositiveInt>? get itemSequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_itemSequence')
-  List<Element?>? get itemSequenceElement => throw _privateConstructorUsedError;
+  List<Element>? get itemSequenceElement => throw _privateConstructorUsedError;
   List<PositiveInt>? get detailSequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_detailSequence')
-  List<Element?>? get detailSequenceElement =>
+  List<Element>? get detailSequenceElement =>
       throw _privateConstructorUsedError;
   List<PositiveInt>? get subDetailSequence =>
       throw _privateConstructorUsedError;
@@ -25538,7 +25674,7 @@ mixin _$ExplanationOfBenefitAddItem {
   List<CodeableConcept>? get subSite => throw _privateConstructorUsedError;
   List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
   @JsonKey(name: '_noteNumber')
-  List<Element?>? get noteNumberElement => throw _privateConstructorUsedError;
+  List<Element>? get noteNumberElement => throw _privateConstructorUsedError;
   List<ExplanationOfBenefitAdjudication>? get adjudication =>
       throw _privateConstructorUsedError;
   List<ExplanationOfBenefitDetail1>? get detail =>
@@ -25563,10 +25699,10 @@ abstract class $ExplanationOfBenefitAddItemCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       List<PositiveInt>? itemSequence,
       @JsonKey(name: '_itemSequence')
-          List<Element?>? itemSequenceElement,
+          List<Element>? itemSequenceElement,
       List<PositiveInt>? detailSequence,
       @JsonKey(name: '_detailSequence')
-          List<Element?>? detailSequenceElement,
+          List<Element>? detailSequenceElement,
       List<PositiveInt>? subDetailSequence,
       @JsonKey(name: '_subDetailSequence')
           List<Element>? subDetailSequenceElement,
@@ -25591,7 +25727,7 @@ abstract class $ExplanationOfBenefitAddItemCopyWith<$Res> {
       List<CodeableConcept>? subSite,
       List<PositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber')
-          List<Element?>? noteNumberElement,
+          List<Element>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
       List<ExplanationOfBenefitDetail1>? detail});
 
@@ -25670,7 +25806,7 @@ class _$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
       itemSequenceElement: itemSequenceElement == freezed
           ? _value.itemSequenceElement
           : itemSequenceElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       detailSequence: detailSequence == freezed
           ? _value.detailSequence
           : detailSequence // ignore: cast_nullable_to_non_nullable
@@ -25678,7 +25814,7 @@ class _$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
       detailSequenceElement: detailSequenceElement == freezed
           ? _value.detailSequenceElement
           : detailSequenceElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       subDetailSequence: subDetailSequence == freezed
           ? _value.subDetailSequence
           : subDetailSequence // ignore: cast_nullable_to_non_nullable
@@ -25762,7 +25898,7 @@ class _$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
@@ -25908,10 +26044,10 @@ abstract class _$ExplanationOfBenefitAddItemCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       List<PositiveInt>? itemSequence,
       @JsonKey(name: '_itemSequence')
-          List<Element?>? itemSequenceElement,
+          List<Element>? itemSequenceElement,
       List<PositiveInt>? detailSequence,
       @JsonKey(name: '_detailSequence')
-          List<Element?>? detailSequenceElement,
+          List<Element>? detailSequenceElement,
       List<PositiveInt>? subDetailSequence,
       @JsonKey(name: '_subDetailSequence')
           List<Element>? subDetailSequenceElement,
@@ -25936,7 +26072,7 @@ abstract class _$ExplanationOfBenefitAddItemCopyWith<$Res>
       List<CodeableConcept>? subSite,
       List<PositiveInt>? noteNumber,
       @JsonKey(name: '_noteNumber')
-          List<Element?>? noteNumberElement,
+          List<Element>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
       List<ExplanationOfBenefitDetail1>? detail});
 
@@ -26030,7 +26166,7 @@ class __$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
       itemSequenceElement: itemSequenceElement == freezed
           ? _value.itemSequenceElement
           : itemSequenceElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       detailSequence: detailSequence == freezed
           ? _value.detailSequence
           : detailSequence // ignore: cast_nullable_to_non_nullable
@@ -26038,7 +26174,7 @@ class __$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
       detailSequenceElement: detailSequenceElement == freezed
           ? _value.detailSequenceElement
           : detailSequenceElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       subDetailSequence: subDetailSequence == freezed
           ? _value.subDetailSequence
           : subDetailSequence // ignore: cast_nullable_to_non_nullable
@@ -26122,7 +26258,7 @@ class __$ExplanationOfBenefitAddItemCopyWithImpl<$Res>
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
@@ -26185,12 +26321,12 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
   final List<PositiveInt>? itemSequence;
   @override
   @JsonKey(name: '_itemSequence')
-  final List<Element?>? itemSequenceElement;
+  final List<Element>? itemSequenceElement;
   @override
   final List<PositiveInt>? detailSequence;
   @override
   @JsonKey(name: '_detailSequence')
-  final List<Element?>? detailSequenceElement;
+  final List<Element>? detailSequenceElement;
   @override
   final List<PositiveInt>? subDetailSequence;
   @override
@@ -26236,7 +26372,7 @@ class _$_ExplanationOfBenefitAddItem extends _ExplanationOfBenefitAddItem {
   final List<PositiveInt>? noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  final List<Element?>? noteNumberElement;
+  final List<Element>? noteNumberElement;
   @override
   final List<ExplanationOfBenefitAdjudication>? adjudication;
   @override
@@ -26375,10 +26511,10 @@ abstract class _ExplanationOfBenefitAddItem
           List<FhirExtension>? modifierExtension,
           List<PositiveInt>? itemSequence,
           @JsonKey(name: '_itemSequence')
-              List<Element?>? itemSequenceElement,
+              List<Element>? itemSequenceElement,
           List<PositiveInt>? detailSequence,
           @JsonKey(name: '_detailSequence')
-              List<Element?>? detailSequenceElement,
+              List<Element>? detailSequenceElement,
           List<PositiveInt>? subDetailSequence,
           @JsonKey(name: '_subDetailSequence')
               List<Element>? subDetailSequenceElement,
@@ -26403,7 +26539,7 @@ abstract class _ExplanationOfBenefitAddItem
           List<CodeableConcept>? subSite,
           List<PositiveInt>? noteNumber,
           @JsonKey(name: '_noteNumber')
-              List<Element?>? noteNumberElement,
+              List<Element>? noteNumberElement,
           List<ExplanationOfBenefitAdjudication>? adjudication,
           List<ExplanationOfBenefitDetail1>? detail}) =
       _$_ExplanationOfBenefitAddItem;
@@ -26424,12 +26560,12 @@ abstract class _ExplanationOfBenefitAddItem
   List<PositiveInt>? get itemSequence => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_itemSequence')
-  List<Element?>? get itemSequenceElement => throw _privateConstructorUsedError;
+  List<Element>? get itemSequenceElement => throw _privateConstructorUsedError;
   @override
   List<PositiveInt>? get detailSequence => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_detailSequence')
-  List<Element?>? get detailSequenceElement =>
+  List<Element>? get detailSequenceElement =>
       throw _privateConstructorUsedError;
   @override
   List<PositiveInt>? get subDetailSequence =>
@@ -26479,7 +26615,7 @@ abstract class _ExplanationOfBenefitAddItem
   List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_noteNumber')
-  List<Element?>? get noteNumberElement => throw _privateConstructorUsedError;
+  List<Element>? get noteNumberElement => throw _privateConstructorUsedError;
   @override
   List<ExplanationOfBenefitAdjudication>? get adjudication =>
       throw _privateConstructorUsedError;
@@ -26513,7 +26649,7 @@ class _$ExplanationOfBenefitDetail1TearOff {
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
       List<ExplanationOfBenefitSubDetail1>? subDetail}) {
     return _ExplanationOfBenefitDetail1(
@@ -26559,7 +26695,7 @@ mixin _$ExplanationOfBenefitDetail1 {
   Money? get net => throw _privateConstructorUsedError;
   List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
   @JsonKey(name: '_noteNumber')
-  List<Element?>? get noteNumberElement => throw _privateConstructorUsedError;
+  List<Element>? get noteNumberElement => throw _privateConstructorUsedError;
   List<ExplanationOfBenefitAdjudication>? get adjudication =>
       throw _privateConstructorUsedError;
   List<ExplanationOfBenefitSubDetail1>? get subDetail =>
@@ -26589,7 +26725,7 @@ abstract class $ExplanationOfBenefitDetail1CopyWith<$Res> {
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
       List<ExplanationOfBenefitSubDetail1>? subDetail});
 
@@ -26674,7 +26810,7 @@ class _$ExplanationOfBenefitDetail1CopyWithImpl<$Res>
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
@@ -26758,7 +26894,7 @@ abstract class _$ExplanationOfBenefitDetail1CopyWith<$Res>
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication,
       List<ExplanationOfBenefitSubDetail1>? subDetail});
 
@@ -26852,7 +26988,7 @@ class __$ExplanationOfBenefitDetail1CopyWithImpl<$Res>
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
@@ -26914,7 +27050,7 @@ class _$_ExplanationOfBenefitDetail1 extends _ExplanationOfBenefitDetail1 {
   final List<PositiveInt>? noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  final List<Element?>? noteNumberElement;
+  final List<Element>? noteNumberElement;
   @override
   final List<ExplanationOfBenefitAdjudication>? adjudication;
   @override
@@ -27014,7 +27150,7 @@ abstract class _ExplanationOfBenefitDetail1
           @JsonKey(name: '_factor') Element? factorElement,
           Money? net,
           List<PositiveInt>? noteNumber,
-          @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+          @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
           List<ExplanationOfBenefitAdjudication>? adjudication,
           List<ExplanationOfBenefitSubDetail1>? subDetail}) =
       _$_ExplanationOfBenefitDetail1;
@@ -27050,7 +27186,7 @@ abstract class _ExplanationOfBenefitDetail1
   List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_noteNumber')
-  List<Element?>? get noteNumberElement => throw _privateConstructorUsedError;
+  List<Element>? get noteNumberElement => throw _privateConstructorUsedError;
   @override
   List<ExplanationOfBenefitAdjudication>? get adjudication =>
       throw _privateConstructorUsedError;
@@ -27084,7 +27220,7 @@ class _$ExplanationOfBenefitSubDetail1TearOff {
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication}) {
     return _ExplanationOfBenefitSubDetail1(
       id: id,
@@ -27129,7 +27265,7 @@ mixin _$ExplanationOfBenefitSubDetail1 {
   Money? get net => throw _privateConstructorUsedError;
   List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
   @JsonKey(name: '_noteNumber')
-  List<Element?>? get noteNumberElement => throw _privateConstructorUsedError;
+  List<Element>? get noteNumberElement => throw _privateConstructorUsedError;
   List<ExplanationOfBenefitAdjudication>? get adjudication =>
       throw _privateConstructorUsedError;
 
@@ -27157,7 +27293,7 @@ abstract class $ExplanationOfBenefitSubDetail1CopyWith<$Res> {
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication});
 
   $CodeableConceptCopyWith<$Res> get productOrService;
@@ -27240,7 +27376,7 @@ class _$ExplanationOfBenefitSubDetail1CopyWithImpl<$Res>
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
@@ -27320,7 +27456,7 @@ abstract class _$ExplanationOfBenefitSubDetail1CopyWith<$Res>
       @JsonKey(name: '_factor') Element? factorElement,
       Money? net,
       List<PositiveInt>? noteNumber,
-      @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+      @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
       List<ExplanationOfBenefitAdjudication>? adjudication});
 
   @override
@@ -27412,7 +27548,7 @@ class __$ExplanationOfBenefitSubDetail1CopyWithImpl<$Res>
       noteNumberElement: noteNumberElement == freezed
           ? _value.noteNumberElement
           : noteNumberElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       adjudication: adjudication == freezed
           ? _value.adjudication
           : adjudication // ignore: cast_nullable_to_non_nullable
@@ -27471,7 +27607,7 @@ class _$_ExplanationOfBenefitSubDetail1
   final List<PositiveInt>? noteNumber;
   @override
   @JsonKey(name: '_noteNumber')
-  final List<Element?>? noteNumberElement;
+  final List<Element>? noteNumberElement;
   @override
   final List<ExplanationOfBenefitAdjudication>? adjudication;
 
@@ -27565,7 +27701,7 @@ abstract class _ExplanationOfBenefitSubDetail1
           @JsonKey(name: '_factor') Element? factorElement,
           Money? net,
           List<PositiveInt>? noteNumber,
-          @JsonKey(name: '_noteNumber') List<Element?>? noteNumberElement,
+          @JsonKey(name: '_noteNumber') List<Element>? noteNumberElement,
           List<ExplanationOfBenefitAdjudication>? adjudication}) =
       _$_ExplanationOfBenefitSubDetail1;
   _ExplanationOfBenefitSubDetail1._() : super._();
@@ -27600,7 +27736,7 @@ abstract class _ExplanationOfBenefitSubDetail1
   List<PositiveInt>? get noteNumber => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_noteNumber')
-  List<Element?>? get noteNumberElement => throw _privateConstructorUsedError;
+  List<Element>? get noteNumberElement => throw _privateConstructorUsedError;
   @override
   List<ExplanationOfBenefitAdjudication>? get adjudication =>
       throw _privateConstructorUsedError;
@@ -30046,7 +30182,7 @@ class _$InsurancePlanTearOff {
           Element? nameElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       Period? period,
       Reference? ownedBy,
       Reference? administeredBy,
@@ -30125,7 +30261,7 @@ mixin _$InsurancePlan {
   Element? get nameElement => throw _privateConstructorUsedError;
   List<String>? get alias => throw _privateConstructorUsedError;
   @JsonKey(name: '_alias')
-  List<Element?>? get aliasElement => throw _privateConstructorUsedError;
+  List<Element>? get aliasElement => throw _privateConstructorUsedError;
   Period? get period => throw _privateConstructorUsedError;
   Reference? get ownedBy => throw _privateConstructorUsedError;
   Reference? get administeredBy => throw _privateConstructorUsedError;
@@ -30175,7 +30311,7 @@ abstract class $InsurancePlanCopyWith<$Res> {
           Element? nameElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       Period? period,
       Reference? ownedBy,
       Reference? administeredBy,
@@ -30313,7 +30449,7 @@ class _$InsurancePlanCopyWithImpl<$Res>
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
           : aliasElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       period: period == freezed
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
@@ -30487,7 +30623,7 @@ abstract class _$InsurancePlanCopyWith<$Res>
           Element? nameElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       Period? period,
       Reference? ownedBy,
       Reference? administeredBy,
@@ -30636,7 +30772,7 @@ class __$InsurancePlanCopyWithImpl<$Res>
       aliasElement: aliasElement == freezed
           ? _value.aliasElement
           : aliasElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       period: period == freezed
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
@@ -30767,7 +30903,7 @@ class _$_InsurancePlan extends _InsurancePlan {
   final List<String>? alias;
   @override
   @JsonKey(name: '_alias')
-  final List<Element?>? aliasElement;
+  final List<Element>? aliasElement;
   @override
   final Period? period;
   @override
@@ -30940,7 +31076,7 @@ abstract class _InsurancePlan extends InsurancePlan {
           Element? nameElement,
       List<String>? alias,
       @JsonKey(name: '_alias')
-          List<Element?>? aliasElement,
+          List<Element>? aliasElement,
       Period? period,
       Reference? ownedBy,
       Reference? administeredBy,
@@ -31001,7 +31137,7 @@ abstract class _InsurancePlan extends InsurancePlan {
   List<String>? get alias => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_alias')
-  List<Element?>? get aliasElement => throw _privateConstructorUsedError;
+  List<Element>? get aliasElement => throw _privateConstructorUsedError;
   @override
   Period? get period => throw _privateConstructorUsedError;
   @override

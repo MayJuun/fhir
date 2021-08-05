@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for ActivityDefinition.subject[x]",
       "expansion": {
-        "identifier": "urn:uuid:33aa3f0d-264c-49e5-bd08-4178f2156ec7",
-        "timestamp": "2019-12-31T21:07:28+11:00",
+        "identifier": "urn:uuid:ae253d29-21e0-428c-8f7b-7970b16bd08f",
+        "timestamp": "2021-04-15T12:27:56+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -32,8 +32,8 @@
       "status": "active",
       "description": "Type options for ActivityDefinition.timing[x]",
       "expansion": {
-        "identifier": "urn:uuid:78dc30dd-15aa-49c5-a13a-7ee8ab7be8a0",
-        "timestamp": "2019-12-31T21:07:28+11:00",
+        "identifier": "urn:uuid:f2690879-dde3-4543-a70c-fd131c15ce67",
+        "timestamp": "2021-04-15T12:27:56+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -42,18 +42,8 @@
           },
           {
             "system": "http://hl7.org/fhir/data-types",
-            "code": "dateTime",
-            "display": "dateTime"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
             "code": "Age",
             "display": "Age"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "Period",
-            "display": "Period"
           },
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -75,8 +65,8 @@
       "status": "active",
       "description": "Type options for ActivityDefinition.product[x]",
       "expansion": {
-        "identifier": "urn:uuid:20ce0410-d4b3-414f-8536-1253011edb18",
-        "timestamp": "2019-12-31T21:07:28+11:00",
+        "identifier": "urn:uuid:414d3dbf-647f-47a4-a515-7795e57bb767",
+        "timestamp": "2021-04-15T12:27:56+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/resource-types",
@@ -87,6 +77,11 @@
             "system": "http://hl7.org/fhir/resource-types",
             "code": "Substance",
             "display": "Substance"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "Ingredient",
+            "display": "Ingredient"
           },
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -102,9 +97,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2020-12-28T16:55:11+11:00",
   "publisher": "HL7",
   "item": [
     {
@@ -173,7 +168,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -332,7 +327,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -359,7 +354,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -453,7 +448,7 @@
                   }
                 }
               ],
-              "text": "An absolute URI that is used to identify this activity definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this activity definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the activity definition is stored on different servers. Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.\n\nThe determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](http://hl7.org/fhir/resource.html#versions). \n\nIn some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](http://hl7.org/fhir/resource.html#meta) element to indicate where the current master source of the resource can be found.",
+              "text": "An absolute URI that is used to identify this activity definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this activity definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the activity definition is stored on different servers. Can be a urn:uuid: or a urn:oid: but real http: addresses are preferred.  Multiple instances may share the same URL if they have a distinct version.\n\nThe determination of when to create a new version of a resource (same url, new version) vs. defining a new artifact is up to the author.  Considerations for making this decision are found in [Technical and Business Versions](resource.html#versions). \n\nIn some cases, the resource can no longer be found at the stated url, but the url itself cannot change. Implementations can use the [meta.source](resource.html#meta) element to indicate where the current master source of the resource can be found.",
               "type": "display"
             },
             {
@@ -821,7 +816,7 @@
                   }
                 }
               ],
-              "text": "A code or group definition that describes the intended subject of the activity being defined.",
+              "text": "A code, group definition, or canonical reference that describes  or identifies the intended subject of the activity being defined.  Canonical references are allowed to support the definition of protocols for drug and substance quality specifications, and is allowed to reference a MedicinalProductDefinition, SubstanceDefinition, AdministrableProductDefinition, ManufacturedItemDefinition, or PackagedProductDefinition resource.",
               "type": "display"
             },
             {
@@ -881,6 +876,24 @@
                       ],
                       "linkId": "ActivityDefinition.subject[x]._null.value",
                       "type": "reference",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "uri"
+                    }
+                  ],
+                  "linkId": "ActivityDefinition.subject[x]._null",
+                  "type": "group",
+                  "item": [
+                    {
+                      "linkId": "ActivityDefinition.subject[x]._null.value",
+                      "type": "string",
                       "required": false,
                       "repeats": false
                     }
@@ -1921,7 +1934,7 @@
                   }
                 }
               ],
-              "text": "The period, timing or frequency upon which the described activity is to occur.",
+              "text": "The timing or frequency upon which the described activity is to occur. The intent of the timing element is to provide timing when the action should be performed. As a definitional resource, this timing is interpreted as part of an apply operation so that the timing of the result actions in a CarePlan or RequestGroup, for example, would be specified by evaluating the timing definition in the context of the apply and setting the resulting timing on the appropriate elements of the target resource. If the timing is an Age, the activity is expected to be performed when the subject is the given Age. When the timing is a Duration, the activity is expected to be performed within the specified duration from the apply. When the timing is a Range, it may be a range of Ages or Durations, providing a range for the expected timing of the resulting activity. When the timing is a Timing, it is establishing a schedule for the timing of the resulting activity.",
               "type": "display"
             },
             {
@@ -1983,24 +1996,6 @@
                   "extension": [
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "datetime"
-                    }
-                  ],
-                  "linkId": "ActivityDefinition.timing[x]._null",
-                  "type": "group",
-                  "item": [
-                    {
-                      "linkId": "ActivityDefinition.timing[x]._null.value",
-                      "type": "dateTime",
-                      "required": false,
-                      "repeats": false
-                    }
-                  ]
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
                       "valueString": "Quantity"
                     }
                   ],
@@ -2039,32 +2034,6 @@
                       "linkId": "ActivityDefinition.timing[x]._null.system",
                       "text": "units system:",
                       "type": "string",
-                      "required": false,
-                      "repeats": false
-                    }
-                  ]
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "Period"
-                    }
-                  ],
-                  "linkId": "ActivityDefinition.timing[x]._null",
-                  "type": "group",
-                  "item": [
-                    {
-                      "linkId": "ActivityDefinition.timing[x]._null.low",
-                      "text": "start:",
-                      "type": "dateTime",
-                      "required": false,
-                      "repeats": false
-                    },
-                    {
-                      "linkId": "ActivityDefinition.timing[x]._null.end",
-                      "text": "end:",
-                      "type": "dateTime",
                       "required": false,
                       "repeats": false
                     }
@@ -2159,17 +2128,18 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
               "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "Reference"
             }
           ],
           "linkId": "ActivityDefinition.location",
+          "text": "Where it should happen",
           "type": "group",
           "required": false,
-          "repeats": true,
+          "repeats": false,
           "item": [
+            {
+              "text": "May reference a specific clinical location or may just identify a type of location.",
+              "type": "display"
+            },
             {
               "extension": [
                 {
@@ -2185,25 +2155,8 @@
                   }
                 }
               ],
-              "text": "Identifies the facility where the activity will occur; e.g. home, hospital, specific clinic, etc. May reference a specific clinical location or may just identify a type of location.",
+              "text": "Identifies the facility where the activity will occur; e.g. home, hospital, specific clinic, etc.",
               "type": "display"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Location"
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                }
-              ],
-              "linkId": "ActivityDefinition.location.value",
-              "text": "Where it should happen",
-              "type": "reference",
-              "required": false,
-              "repeats": false
             }
           ]
         },
@@ -2332,10 +2285,6 @@
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-minOccurs",
-                  "valueInteger": 1
-                },
-                {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
                 },
@@ -2346,7 +2295,7 @@
               ],
               "linkId": "ActivityDefinition.participant.type",
               "type": "group",
-              "required": true,
+              "required": false,
               "repeats": true,
               "item": [
                 {
@@ -2371,6 +2320,59 @@
                   "linkId": "ActivityDefinition.participant.type.value",
                   "text": "type",
                   "type": "choice",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "Reference"
+                }
+              ],
+              "linkId": "ActivityDefinition.participant.typeReference",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "text": "The type of participant in the action. When this element is a reference, it SHOULD be a reference to a definitional resource (for example, a location type, rather than a specific location).",
+                  "type": "display"
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                      "valueCode": "CareTeam, Device, Group, HealthcareService, Location, Organization, Patient, Practitioner, PractitionerRole, RelatedPerson"
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                      "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                    }
+                  ],
+                  "linkId": "ActivityDefinition.participant.typeReference.value",
+                  "text": "Who or what can participate",
+                  "type": "reference",
                   "required": false,
                   "repeats": false
                 }
@@ -2420,6 +2422,57 @@
                 },
                 {
                   "linkId": "ActivityDefinition.participant.role.text",
+                  "text": "text:",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "CodeableConcept"
+                }
+              ],
+              "linkId": "ActivityDefinition.participant.function",
+              "text": "E.g. Author, Reviewer, Witness, etc.",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "text": "Indicates how the actor will be involved in the action - author, reviewer, witness, etc.",
+                  "type": "display"
+                },
+                {
+                  "linkId": "ActivityDefinition.participant.function.coding",
+                  "text": "code:",
+                  "type": "open-choice",
+                  "required": false,
+                  "repeats": false
+                },
+                {
+                  "linkId": "ActivityDefinition.participant.function.text",
                   "text": "text:",
                   "type": "string",
                   "required": false,
@@ -2482,7 +2535,7 @@
                       "extension": [
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                          "valueCode": "Medication, Substance"
+                          "valueCode": "Medication, Substance, Ingredient"
                         },
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -3027,7 +3080,7 @@
                       }
                     }
                   ],
-                  "text": "The path to the element to be customized. This is the path on the resource that will hold the result of the calculation defined by the expression. The specified path SHALL be a FHIRPath resolveable on the specified target type of the ActivityDefinition, and SHALL consist only of identifiers, constant indexers, and a restricted subset of functions. The path is allowed to contain qualifiers (.) to traverse sub-elements, as well as indexers ([x]) to traverse multiple-cardinality sub-elements (see the [Simple FHIRPath Profile](http://hl7.org/fhir/fhirpath.html#simple) for full details). The path attribute contains a [Simple FHIRPath Subset](http://hl7.org/fhir/fhirpath.html#simple) that allows path traversal, but not calculation.",
+                  "text": "The path to the element to be customized. This is the path on the resource that will hold the result of the calculation defined by the expression. The specified path SHALL be a FHIRPath resolveable on the specified target type of the ActivityDefinition, and SHALL consist only of identifiers, constant indexers, and a restricted subset of functions. The path is allowed to contain qualifiers (.) to traverse sub-elements, as well as indexers ([x]) to traverse multiple-cardinality sub-elements (see the [Simple FHIRPath Profile](fhirpath.html#simple) for full details). The path attribute contains a [Simple FHIRPath Subset](fhirpath.html#simple) that allows path traversal, but not calculation.",
                   "type": "display"
                 },
                 {

@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "bestpractice",
   "status": "draft",
   "date": "2015-02-28",
@@ -28,7 +28,7 @@
     }
   ],
   "description": "Mark that an invariant represents \u0027best practice\u0027 rule - a rule that implementers may choose to enforce at error level in some or all circumstances.",
-  "fhirVersion": "4.2.0",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "rim",
@@ -69,7 +69,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -157,7 +157,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -165,7 +165,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -235,13 +235,17 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
         "isSummary": false,
         "binding": {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "valueString": "Indicates the countries, regions, disciplines and other aspects of use within which this artifact is targeted for use."
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
               "valueString": "ConformanceUseContext"
@@ -252,7 +256,6 @@
             }
           ],
           "strength": "extensible",
-          "description": "Indicates the countries, regions, disciplines and other aspects of use within which this artifact is targeted for use.",
           "valueSet": "http://hl7.org/fhir/ValueSet/use-context"
         },
         "mapping": [
@@ -306,6 +309,10 @@
         "binding": {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "valueString": "Indicates the countries, regions, disciplines and other aspects of use within which this artifact is targeted for use."
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
               "valueString": "ConformanceUseContext"
             },
@@ -315,7 +322,6 @@
             }
           ],
           "strength": "extensible",
-          "description": "Indicates the countries, regions, disciplines and other aspects of use within which this artifact is targeted for use.",
           "valueSet": "http://hl7.org/fhir/ValueSet/use-context"
         }
       }

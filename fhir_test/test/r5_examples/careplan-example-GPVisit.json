@@ -113,14 +113,14 @@
   ],
   "activity": [
     {
-      "outcome": [
+      "performedActivity": [
         {
           "reference": {
             "reference": "Encounter/example"
           }
         }
       ],
-      "detail": {
+      "plannedActivityDetail": {
         "kind": "Appointment",
         "code": {
           "coding": [
@@ -146,7 +146,7 @@
       }
     },
     {
-      "detail": {
+      "plannedActivityDetail": {
         "kind": "Appointment",
         "code": {
           "coding": [

@@ -95,9 +95,11 @@ class FhirExtension with _$FhirExtension {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory FhirExtension.fromYaml(dynamic yaml) => yaml is String
-      ? FhirExtension.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? FhirExtension.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? FhirExtension.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? FhirExtension.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'FhirExtension cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');

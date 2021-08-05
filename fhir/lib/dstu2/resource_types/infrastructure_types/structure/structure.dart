@@ -48,13 +48,15 @@ class Media with Resource, _$Media {
   }) = _Media;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Media.fromYaml(dynamic yaml) => yaml is String
-      ? Media.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Media.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Media.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Media.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Media cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -82,13 +84,16 @@ class Binary with Resource, _$Binary {
   }) = _Binary;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Binary.fromYaml(dynamic yaml) => yaml is String
-      ? Binary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Binary.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Binary.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Binary.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Binary cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -120,13 +125,16 @@ class Bundle with Resource, _$Bundle {
   }) = _Bundle;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Bundle.fromYaml(dynamic yaml) => yaml is String
-      ? Bundle.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Bundle.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Bundle.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Bundle.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Bundle cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -154,9 +162,11 @@ class BundleLink with _$BundleLink {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory BundleLink.fromYaml(dynamic yaml) => yaml is String
-      ? BundleLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? BundleLink.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? BundleLink.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? BundleLink.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'BundleLink cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -188,9 +198,11 @@ class BundleEntry with _$BundleEntry {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory BundleEntry.fromYaml(dynamic yaml) => yaml is String
-      ? BundleEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? BundleEntry.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? BundleEntry.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? BundleEntry.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'BundleEntry cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -219,9 +231,11 @@ class BundleEntrySearch with _$BundleEntrySearch {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory BundleEntrySearch.fromYaml(dynamic yaml) => yaml is String
-      ? BundleEntrySearch.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? BundleEntrySearch.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? BundleEntrySearch.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? BundleEntrySearch.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'BundleEntrySearch cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -259,9 +273,11 @@ class BundleEntryRequest with _$BundleEntryRequest {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory BundleEntryRequest.fromYaml(dynamic yaml) => yaml is String
-      ? BundleEntryRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? BundleEntryRequest.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? BundleEntryRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? BundleEntryRequest.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'BundleEntryRequest cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -294,9 +310,11 @@ class BundleEntryResponse with _$BundleEntryResponse {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory BundleEntryResponse.fromYaml(dynamic yaml) => yaml is String
-      ? BundleEntryResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? BundleEntryResponse.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? BundleEntryResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? BundleEntryResponse.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'BundleEntryResponse cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -332,13 +350,15 @@ class Basic with Resource, _$Basic {
   }) = _Basic;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Basic.fromYaml(dynamic yaml) => yaml is String
-      ? Basic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Basic.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Basic.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Basic.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Basic cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');

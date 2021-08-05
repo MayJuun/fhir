@@ -5,12 +5,12 @@
     {
       "resourceType": "ValueSet",
       "id": "vs2",
-      "name": "Type options for CarePlan.activity.detail.scheduled[x]",
+      "name": "Type options for CarePlan.activity.plannedActivityDetail.scheduled[x]",
       "status": "active",
-      "description": "Type options for CarePlan.activity.detail.scheduled[x]",
+      "description": "Type options for CarePlan.activity.plannedActivityDetail.scheduled[x]",
       "expansion": {
-        "identifier": "urn:uuid:7aa376ad-f41d-4a28-a563-fd556ef2477c",
-        "timestamp": "2019-12-31T21:08:34+11:00",
+        "identifier": "urn:uuid:9be24ebf-742e-4a88-8d62-808de8428b23",
+        "timestamp": "2021-04-15T12:28:09+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -33,12 +33,12 @@
     {
       "resourceType": "ValueSet",
       "id": "vs3",
-      "name": "Type options for CarePlan.activity.detail.reported[x]",
+      "name": "Type options for CarePlan.activity.plannedActivityDetail.reported[x]",
       "status": "active",
-      "description": "Type options for CarePlan.activity.detail.reported[x]",
+      "description": "Type options for CarePlan.activity.plannedActivityDetail.reported[x]",
       "expansion": {
-        "identifier": "urn:uuid:1d4a5a58-ed13-4ec7-89a2-5c8319180072",
-        "timestamp": "2019-12-31T21:08:34+11:00",
+        "identifier": "urn:uuid:5a527f6d-49af-4c95-a90a-cd31fe934582",
+        "timestamp": "2021-04-15T12:28:09+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -76,12 +76,12 @@
     {
       "resourceType": "ValueSet",
       "id": "vs4",
-      "name": "Type options for CarePlan.activity.detail.product[x]",
+      "name": "Type options for CarePlan.activity.plannedActivityDetail.product[x]",
       "status": "active",
-      "description": "Type options for CarePlan.activity.detail.product[x]",
+      "description": "Type options for CarePlan.activity.plannedActivityDetail.product[x]",
       "expansion": {
-        "identifier": "urn:uuid:0a0e1a85-2b4f-4e62-a854-7f8b7562a67a",
-        "timestamp": "2019-12-31T21:08:34+11:00",
+        "identifier": "urn:uuid:2f397919-7610-417f-8bf3-f3d9dd772bea",
+        "timestamp": "2021-04-15T12:28:09+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -107,9 +107,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Patient Care)",
   "item": [
     {
@@ -168,7 +168,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -327,7 +327,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -354,7 +354,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -1526,14 +1526,14 @@
               ]
             },
             {
-              "linkId": "CarePlan.activity.outcome",
+              "linkId": "CarePlan.activity.performedActivity",
               "text": "Results of the activity (concept, or Appointment, Encounter, Procedure, etc)",
               "type": "group",
               "required": false,
               "repeats": true,
               "item": [
                 {
-                  "text": "Note that this should not duplicate the activity status (e.g. completed or in progress).  The activity outcome is independent of the outcome of the related goal(s).  For example, if the goal is to achieve a target body weight of 150 lbs and an activity is defined to diet, then the activity outcome could be calories consumed whereas the goal outcome is an observation for the actual body weight measured.",
+                  "text": "Note that this should not duplicate the activity status (e.g. completed or in progress). The activity performed is independent of the outcome of the related goal(s). For example, if the goal is to achieve a target body weight of 150 lbs and an activity is defined to exercise, then the activity performed could be amount and intensity of exercise performed whereas the goal outcome is an observation for the actual body weight measured.",
                   "type": "display"
                 },
                 {
@@ -1551,7 +1551,7 @@
                       }
                     }
                   ],
-                  "text": "Identifies the outcome at the point when the status of the activity is assessed.  For example, the outcome of an education activity could be patient understands (or not).  The reference to an \"event\" resource, such as Procedure or Encounter or Observation, is the result/outcome of the activity itself.  The activity can be conveyed using CarePlan.activity.detail OR using the CarePlan.activity.reference (a reference to a “request” resource).",
+                  "text": "Identifies the activity that was performed. For example, an activity could be patient education, exercise, or a medication administration. The reference to an \"event\" resource, such as Procedure or Encounter or Observation, represents the activity that was performed. The requested activity can be conveyed using CarePlan.activity.plannedActivityDetail OR using the CarePlan.activity.plannedActivityReference (a reference to a “request” resource).",
                   "type": "display"
                 }
               ]
@@ -1600,7 +1600,7 @@
                   "valueString": "Reference"
                 }
               ],
-              "linkId": "CarePlan.activity.reference",
+              "linkId": "CarePlan.activity.plannedActivityReference",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1620,7 +1620,7 @@
                       }
                     }
                   ],
-                  "text": "The details of the proposed activity represented in a specific resource. Standard extension exists ([resource-pertainsToGoal](extension-resource-pertainstogoal.html)) that allows goals to be referenced from any of the referenced resources in CarePlan.activity.reference.  \rThe goal should be visible when the resource referenced by CarePlan.activity.reference is viewed independently from the CarePlan.  Requests that are pointed to by a CarePlan using this element should *not* point to this CarePlan using the \"basedOn\" element.  i.e. Requests that are part of a CarePlan are not \"based on\" the CarePlan.",
+                  "text": "The details of the proposed activity represented in a specific resource. Standard extension exists ([resource-pertainsToGoal](extension-resource-pertainstogoal.html)) that allows goals to be referenced from any of the referenced resources in CarePlan.activity.plannedActivityReference.  \nThe goal should be visible when the resource referenced by CarePlan.activity.plannedActivityReference is viewed independently from the CarePlan.  Requests that are pointed to by a CarePlan using this element should *not* point to this CarePlan using the \"basedOn\" element.  i.e. Requests that are part of a CarePlan are not \"based on\" the CarePlan.",
                   "type": "display"
                 },
                 {
@@ -1634,8 +1634,8 @@
                       "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                     }
                   ],
-                  "linkId": "CarePlan.activity.reference.value",
-                  "text": "Activity details defined in specific resource",
+                  "linkId": "CarePlan.activity.plannedActivityReference.value",
+                  "text": "Activity that is intended to be part of the care plan",
                   "type": "reference",
                   "required": false,
                   "repeats": false
@@ -1649,7 +1649,7 @@
                   "valueInteger": 1
                 }
               ],
-              "linkId": "CarePlan.activity.detail",
+              "linkId": "CarePlan.activity.plannedActivityDetail",
               "text": "In-line definition of activity",
               "type": "group",
               "required": false,
@@ -1684,7 +1684,7 @@
                       "valueString": "string"
                     }
                   ],
-                  "linkId": "CarePlan.activity.detail.id",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.id",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -1708,7 +1708,7 @@
                       "type": "display"
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.id.value",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.id.value",
                       "text": "Unique id for inter-element referencing",
                       "type": "string",
                       "required": false,
@@ -1717,7 +1717,7 @@
                   ]
                 },
                 {
-                  "linkId": "CarePlan.activity.detail.extension",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.extension",
                   "text": "Additional content defined by implementations",
                   "type": "group",
                   "required": false,
@@ -1744,7 +1744,7 @@
                   ]
                 },
                 {
-                  "linkId": "CarePlan.activity.detail.modifierExtension",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.modifierExtension",
                   "text": "Extensions that cannot be ignored even if unrecognized",
                   "type": "group",
                   "required": false,
@@ -1781,7 +1781,7 @@
                       "valueString": "code"
                     }
                   ],
-                  "linkId": "CarePlan.activity.detail.kind",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.kind",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -1805,7 +1805,7 @@
                       "type": "display"
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.kind.value",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.kind.value",
                       "text": "kind",
                       "type": "choice",
                       "required": false,
@@ -1820,7 +1820,7 @@
                       "valueString": "uri"
                     }
                   ],
-                  "linkId": "CarePlan.activity.detail.instantiatesCanonical",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.instantiatesCanonical",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -1844,7 +1844,7 @@
                       "type": "display"
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.instantiatesCanonical.value",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.instantiatesCanonical.value",
                       "text": "Instantiates FHIR protocol or definition",
                       "type": "string",
                       "required": false,
@@ -1859,7 +1859,7 @@
                       "valueString": "uri"
                     }
                   ],
-                  "linkId": "CarePlan.activity.detail.instantiatesUri",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.instantiatesUri",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -1883,7 +1883,7 @@
                       "type": "display"
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.instantiatesUri.value",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.instantiatesUri.value",
                       "text": "Instantiates external protocol or definition",
                       "type": "string",
                       "required": false,
@@ -1902,7 +1902,7 @@
                       "valueString": "CodeableConcept"
                     }
                   ],
-                  "linkId": "CarePlan.activity.detail.code",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.code",
                   "text": "Detail type of activity",
                   "type": "group",
                   "required": false,
@@ -1927,14 +1927,14 @@
                       "type": "display"
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.code.coding",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.code.coding",
                       "text": "code:",
                       "type": "open-choice",
                       "required": false,
                       "repeats": false
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.code.text",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.code.text",
                       "text": "text:",
                       "type": "string",
                       "required": false,
@@ -1943,7 +1943,7 @@
                   ]
                 },
                 {
-                  "linkId": "CarePlan.activity.detail.reason",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.reason",
                   "text": "Why activity should be done or why activity was prohibited",
                   "type": "group",
                   "required": false,
@@ -1980,7 +1980,7 @@
                       "valueString": "Reference"
                     }
                   ],
-                  "linkId": "CarePlan.activity.detail.goal",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.goal",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -2014,7 +2014,7 @@
                           "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                         }
                       ],
-                      "linkId": "CarePlan.activity.detail.goal.value",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.goal.value",
                       "text": "Goals this activity relates to",
                       "type": "reference",
                       "required": false,
@@ -2037,7 +2037,7 @@
                       "valueString": "code"
                     }
                   ],
-                  "linkId": "CarePlan.activity.detail.status",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.status",
                   "type": "group",
                   "required": true,
                   "repeats": true,
@@ -2061,7 +2061,7 @@
                       "type": "display"
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.status.value",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.status.value",
                       "text": "status",
                       "type": "choice",
                       "required": false,
@@ -2080,7 +2080,7 @@
                       "valueString": "CodeableConcept"
                     }
                   ],
-                  "linkId": "CarePlan.activity.detail.statusReason",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.statusReason",
                   "text": "Reason for current status",
                   "type": "group",
                   "required": false,
@@ -2105,14 +2105,14 @@
                       "type": "display"
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.statusReason.coding",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.statusReason.coding",
                       "text": "code:",
                       "type": "open-choice",
                       "required": false,
                       "repeats": false
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.statusReason.text",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.statusReason.text",
                       "text": "text:",
                       "type": "string",
                       "required": false,
@@ -2131,7 +2131,7 @@
                       "valueString": "boolean"
                     }
                   ],
-                  "linkId": "CarePlan.activity.detail.doNotPerform",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.doNotPerform",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -2155,7 +2155,7 @@
                       "type": "display"
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.doNotPerform.value",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.doNotPerform.value",
                       "text": "If true, activity is prohibiting action",
                       "type": "boolean",
                       "required": false,
@@ -2170,7 +2170,7 @@
                       "valueInteger": 1
                     }
                   ],
-                  "linkId": "CarePlan.activity.detail.scheduled[x]",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.scheduled[x]",
                   "text": "When activity is to occur",
                   "type": "group",
                   "required": false,
@@ -2195,7 +2195,7 @@
                       "type": "display"
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.scheduled[x]._type",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.scheduled[x]._type",
                       "text": "type",
                       "type": "choice",
                       "required": false,
@@ -2209,18 +2209,18 @@
                               "valueString": "Schedule"
                             }
                           ],
-                          "linkId": "CarePlan.activity.detail.scheduled[x]._null",
+                          "linkId": "CarePlan.activity.plannedActivityDetail.scheduled[x]._null",
                           "type": "group",
                           "item": [
                             {
-                              "linkId": "CarePlan.activity.detail.scheduled[x]._null.text",
+                              "linkId": "CarePlan.activity.plannedActivityDetail.scheduled[x]._null.text",
                               "text": "text:",
                               "type": "string",
                               "required": false,
                               "repeats": false
                             },
                             {
-                              "linkId": "CarePlan.activity.detail.scheduled[x]._null.date",
+                              "linkId": "CarePlan.activity.plannedActivityDetail.scheduled[x]._null.date",
                               "text": "date:",
                               "type": "dateTime",
                               "required": false,
@@ -2241,7 +2241,7 @@
                                   "valueCode": "RelatedPerson"
                                 }
                               ],
-                              "linkId": "CarePlan.activity.detail.scheduled[x]._null.author",
+                              "linkId": "CarePlan.activity.plannedActivityDetail.scheduled[x]._null.author",
                               "text": "author:",
                               "type": "reference",
                               "required": false,
@@ -2256,18 +2256,18 @@
                               "valueString": "Period"
                             }
                           ],
-                          "linkId": "CarePlan.activity.detail.scheduled[x]._null",
+                          "linkId": "CarePlan.activity.plannedActivityDetail.scheduled[x]._null",
                           "type": "group",
                           "item": [
                             {
-                              "linkId": "CarePlan.activity.detail.scheduled[x]._null.low",
+                              "linkId": "CarePlan.activity.plannedActivityDetail.scheduled[x]._null.low",
                               "text": "start:",
                               "type": "dateTime",
                               "required": false,
                               "repeats": false
                             },
                             {
-                              "linkId": "CarePlan.activity.detail.scheduled[x]._null.end",
+                              "linkId": "CarePlan.activity.plannedActivityDetail.scheduled[x]._null.end",
                               "text": "end:",
                               "type": "dateTime",
                               "required": false,
@@ -2282,11 +2282,11 @@
                               "valueString": "string"
                             }
                           ],
-                          "linkId": "CarePlan.activity.detail.scheduled[x]._null",
+                          "linkId": "CarePlan.activity.plannedActivityDetail.scheduled[x]._null",
                           "type": "group",
                           "item": [
                             {
-                              "linkId": "CarePlan.activity.detail.scheduled[x]._null.value",
+                              "linkId": "CarePlan.activity.plannedActivityDetail.scheduled[x]._null.value",
                               "type": "string",
                               "required": false,
                               "repeats": false
@@ -2302,17 +2302,18 @@
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                       "valueInteger": 1
-                    },
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "Reference"
                     }
                   ],
-                  "linkId": "CarePlan.activity.detail.location",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.location",
+                  "text": "Where it should happen",
                   "type": "group",
                   "required": false,
-                  "repeats": true,
+                  "repeats": false,
                   "item": [
+                    {
+                      "text": "May reference a specific clinical location or may identify a type of location.",
+                      "type": "display"
+                    },
                     {
                       "extension": [
                         {
@@ -2328,25 +2329,8 @@
                           }
                         }
                       ],
-                      "text": "Identifies the facility where the activity will occur; e.g. home, hospital, specific clinic, etc. May reference a specific clinical location or may identify a type of location.",
+                      "text": "Identifies the facility where the activity will occur; e.g. home, hospital, specific clinic, etc.",
                       "type": "display"
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                          "valueCode": "Location"
-                        },
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                          "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                        }
-                      ],
-                      "linkId": "CarePlan.activity.detail.location.value",
-                      "text": "Where it should happen",
-                      "type": "reference",
-                      "required": false,
-                      "repeats": false
                     }
                   ]
                 },
@@ -2357,7 +2341,7 @@
                       "valueInteger": 1
                     }
                   ],
-                  "linkId": "CarePlan.activity.detail.reported[x]",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.reported[x]",
                   "text": "Reported rather than primary record",
                   "type": "group",
                   "required": false,
@@ -2382,7 +2366,7 @@
                       "type": "display"
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.reported[x]._type",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.reported[x]._type",
                       "text": "type",
                       "type": "choice",
                       "required": false,
@@ -2396,11 +2380,11 @@
                               "valueString": "boolean"
                             }
                           ],
-                          "linkId": "CarePlan.activity.detail.reported[x]._null",
+                          "linkId": "CarePlan.activity.plannedActivityDetail.reported[x]._null",
                           "type": "group",
                           "item": [
                             {
-                              "linkId": "CarePlan.activity.detail.reported[x]._null.value",
+                              "linkId": "CarePlan.activity.plannedActivityDetail.reported[x]._null.value",
                               "type": "boolean",
                               "required": false,
                               "repeats": false
@@ -2414,7 +2398,7 @@
                               "valueString": "Reference"
                             }
                           ],
-                          "linkId": "CarePlan.activity.detail.reported[x]._null",
+                          "linkId": "CarePlan.activity.plannedActivityDetail.reported[x]._null",
                           "type": "group",
                           "item": [
                             {
@@ -2428,7 +2412,7 @@
                                   "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                                 }
                               ],
-                              "linkId": "CarePlan.activity.detail.reported[x]._null.value",
+                              "linkId": "CarePlan.activity.plannedActivityDetail.reported[x]._null.value",
                               "type": "reference",
                               "required": false,
                               "repeats": false
@@ -2446,7 +2430,7 @@
                       "valueString": "Reference"
                     }
                   ],
-                  "linkId": "CarePlan.activity.detail.performer",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.performer",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -2480,7 +2464,7 @@
                           "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                         }
                       ],
-                      "linkId": "CarePlan.activity.detail.performer.value",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.performer.value",
                       "text": "Who will be responsible?",
                       "type": "reference",
                       "required": false,
@@ -2495,7 +2479,7 @@
                       "valueInteger": 1
                     }
                   ],
-                  "linkId": "CarePlan.activity.detail.product[x]",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.product[x]",
                   "text": "What is to be administered/supplied",
                   "type": "group",
                   "required": false,
@@ -2520,7 +2504,7 @@
                       "type": "display"
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.product[x]._type",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.product[x]._type",
                       "text": "type",
                       "type": "choice",
                       "required": false,
@@ -2534,18 +2518,18 @@
                               "valueString": "CodeableConcept"
                             }
                           ],
-                          "linkId": "CarePlan.activity.detail.product[x]._null",
+                          "linkId": "CarePlan.activity.plannedActivityDetail.product[x]._null",
                           "type": "group",
                           "item": [
                             {
-                              "linkId": "CarePlan.activity.detail.product[x]._null.coding",
+                              "linkId": "CarePlan.activity.plannedActivityDetail.product[x]._null.coding",
                               "text": "code:",
                               "type": "open-choice",
                               "required": false,
                               "repeats": false
                             },
                             {
-                              "linkId": "CarePlan.activity.detail.product[x]._null.text",
+                              "linkId": "CarePlan.activity.plannedActivityDetail.product[x]._null.text",
                               "text": "text:",
                               "type": "string",
                               "required": false,
@@ -2560,7 +2544,7 @@
                               "valueString": "Reference"
                             }
                           ],
-                          "linkId": "CarePlan.activity.detail.product[x]._null",
+                          "linkId": "CarePlan.activity.plannedActivityDetail.product[x]._null",
                           "type": "group",
                           "item": [
                             {
@@ -2574,7 +2558,7 @@
                                   "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                                 }
                               ],
-                              "linkId": "CarePlan.activity.detail.product[x]._null.value",
+                              "linkId": "CarePlan.activity.plannedActivityDetail.product[x]._null.value",
                               "type": "reference",
                               "required": false,
                               "repeats": false
@@ -2596,7 +2580,7 @@
                       "valueString": "Quantity"
                     }
                   ],
-                  "linkId": "CarePlan.activity.detail.dailyAmount",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.dailyAmount",
                   "text": "How to consume/day?",
                   "type": "group",
                   "required": false,
@@ -2621,35 +2605,35 @@
                       "type": "display"
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.dailyAmount.comparator",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.dailyAmount.comparator",
                       "text": "comp:",
                       "type": "choice",
                       "required": false,
                       "repeats": false
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.dailyAmount.value",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.dailyAmount.value",
                       "text": "value:",
                       "type": "decimal",
                       "required": false,
                       "repeats": false
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.dailyAmount.units",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.dailyAmount.units",
                       "text": "units:",
                       "type": "string",
                       "required": false,
                       "repeats": false
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.dailyAmount.code",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.dailyAmount.code",
                       "text": "coded units:",
                       "type": "string",
                       "required": false,
                       "repeats": false
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.dailyAmount.system",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.dailyAmount.system",
                       "text": "units system:",
                       "type": "string",
                       "required": false,
@@ -2668,7 +2652,7 @@
                       "valueString": "Quantity"
                     }
                   ],
-                  "linkId": "CarePlan.activity.detail.quantity",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.quantity",
                   "text": "How much to administer/supply/consume",
                   "type": "group",
                   "required": false,
@@ -2693,35 +2677,35 @@
                       "type": "display"
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.quantity.comparator",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.quantity.comparator",
                       "text": "comp:",
                       "type": "choice",
                       "required": false,
                       "repeats": false
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.quantity.value",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.quantity.value",
                       "text": "value:",
                       "type": "decimal",
                       "required": false,
                       "repeats": false
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.quantity.units",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.quantity.units",
                       "text": "units:",
                       "type": "string",
                       "required": false,
                       "repeats": false
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.quantity.code",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.quantity.code",
                       "text": "coded units:",
                       "type": "string",
                       "required": false,
                       "repeats": false
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.quantity.system",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.quantity.system",
                       "text": "units system:",
                       "type": "string",
                       "required": false,
@@ -2740,7 +2724,7 @@
                       "valueString": "string"
                     }
                   ],
-                  "linkId": "CarePlan.activity.detail.description",
+                  "linkId": "CarePlan.activity.plannedActivityDetail.description",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -2764,7 +2748,7 @@
                       "type": "display"
                     },
                     {
-                      "linkId": "CarePlan.activity.detail.description.value",
+                      "linkId": "CarePlan.activity.plannedActivityDetail.description.value",
                       "text": "Extra info describing activity to perform",
                       "type": "string",
                       "required": false,

@@ -1,11 +1,9 @@
-import 'dart:convert';
-
 import 'package:fhir/r4.dart';
 import 'package:fhir_path/fhir_path.dart';
 import 'package:fhir_path/run_fhir_path.dart';
 
 void main() {
-  print(walkFhirPath(resource, r'0.aggregate(1 + $total, 0)'));
+  print(walkFhirPath(resource.toJson(), r'0.aggregate(1 + $total, 0)'));
   // JsonEncoder encoder = new JsonEncoder.withIndent('  ');
   // String prettyprint = encoder.convert(resource.toJson());
   // print(prettyprint);
@@ -15,11 +13,11 @@ void main() {
 
   final response = QuestionnaireResponse.fromJson(questionnaireResponse);
   print(walkFhirPath(
-      response,
+      response.toJson(),
       "(QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.valueDecimal + "
       "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.valueDecimal+ "
       "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.valueDecimal) < 12"));
-  print(walkFhirPath(response,
+  print(walkFhirPath(response.toJson(),
       r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"));
 }
 

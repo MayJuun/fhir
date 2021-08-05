@@ -36,7 +36,7 @@
       ]
     }
   ],
-  "name": "Peter James Charlmers Care Plan for Inpatient Encounter",
+  "name": "Peter James Charlmers Care Team for Inpatient Encounter",
   "subject": {
     "reference": "Patient/example",
     "display": "Peter James Chalmers"

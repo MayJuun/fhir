@@ -121,12 +121,12 @@ Map<String, dynamic> _$$_EndpointToJson(_$_Endpoint instance) {
   writeNotNull('payloadMimeType',
       instance.payloadMimeType?.map((e) => e.toJson()).toList());
   writeNotNull('_payloadMimeType',
-      instance.payloadMimeTypeElement?.map((e) => e?.toJson()).toList());
+      instance.payloadMimeTypeElement?.map((e) => e.toJson()).toList());
   writeNotNull('address', instance.address?.toJson());
   writeNotNull('_address', instance.addressElement?.toJson());
   writeNotNull('header', instance.header);
   writeNotNull(
-      '_header', instance.headerElement?.map((e) => e?.toJson()).toList());
+      '_header', instance.headerElement?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -210,7 +210,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
-  R5ResourceType.DeviceUseStatement: 'DeviceUseStatement',
+  R5ResourceType.DeviceUsage: 'DeviceUsage',
   R5ResourceType.DiagnosticReport: 'DiagnosticReport',
   R5ResourceType.DocumentManifest: 'DocumentManifest',
   R5ResourceType.DocumentReference: 'DocumentReference',
@@ -238,6 +238,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
+  R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
   R5ResourceType.Library: 'Library',
   R5ResourceType.Linkage: 'Linkage',
@@ -618,7 +619,7 @@ Map<String, dynamic> _$$_HealthcareServiceAvailableTimeToJson(
           ?.map((e) => _$HealthcareServiceAvailableTimeDaysOfWeekEnumMap[e])
           .toList());
   writeNotNull('_daysOfWeek',
-      instance.daysOfWeekElement?.map((e) => e?.toJson()).toList());
+      instance.daysOfWeekElement?.map((e) => e.toJson()).toList());
   writeNotNull('allDay', instance.allDay?.toJson());
   writeNotNull('_allDay', instance.allDayElement?.toJson());
   writeNotNull('availableStartTime', instance.availableStartTime?.toJson());
@@ -811,7 +812,7 @@ Map<String, dynamic> _$$_LocationToJson(_$_Location instance) {
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('alias', instance.alias);
   writeNotNull(
-      '_alias', instance.aliasElement?.map((e) => e?.toJson()).toList());
+      '_alias', instance.aliasElement?.map((e) => e.toJson()).toList());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('mode', _$LocationModeEnumMap[instance.mode]);
@@ -947,7 +948,7 @@ Map<String, dynamic> _$$_LocationHoursOfOperationToJson(
   writeNotNull(
       'daysOfWeek', instance.daysOfWeek?.map((e) => e.toJson()).toList());
   writeNotNull('_daysOfWeek',
-      instance.daysOfWeekElement?.map((e) => e?.toJson()).toList());
+      instance.daysOfWeekElement?.map((e) => e.toJson()).toList());
   writeNotNull('allDay', instance.allDay?.toJson());
   writeNotNull('_allDay', instance.allDayElement?.toJson());
   writeNotNull('openingTime', instance.openingTime?.toJson());
@@ -1059,7 +1060,7 @@ Map<String, dynamic> _$$_OrganizationToJson(_$_Organization instance) {
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('alias', instance.alias);
   writeNotNull(
-      '_alias', instance.aliasElement?.map((e) => e?.toJson()).toList());
+      '_alias', instance.aliasElement?.map((e) => e.toJson()).toList());
   writeNotNull('telecom', instance.telecom?.map((e) => e.toJson()).toList());
   writeNotNull('address', instance.address?.map((e) => e.toJson()).toList());
   writeNotNull('partOf', instance.partOf?.toJson());

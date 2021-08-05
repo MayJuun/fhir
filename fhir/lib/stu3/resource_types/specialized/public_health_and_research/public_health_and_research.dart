@@ -54,13 +54,16 @@ class ResearchStudy with Resource, _$ResearchStudy {
   }) = _ResearchStudy;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ResearchStudy.fromYaml(dynamic yaml) => yaml is String
-      ? ResearchStudy.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ResearchStudy.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ResearchStudy.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ResearchStudy.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ResearchStudy cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -86,9 +89,11 @@ class ResearchStudyArm with _$ResearchStudyArm {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ResearchStudyArm.fromYaml(dynamic yaml) => yaml is String
-      ? ResearchStudyArm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ResearchStudyArm.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ResearchStudyArm.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ResearchStudyArm.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ResearchStudyArm cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -129,13 +134,16 @@ class ResearchSubject with Resource, _$ResearchSubject {
   }) = _ResearchSubject;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ResearchSubject.fromYaml(dynamic yaml) => yaml is String
-      ? ResearchSubject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ResearchSubject.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ResearchSubject.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ResearchSubject.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ResearchSubject cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');

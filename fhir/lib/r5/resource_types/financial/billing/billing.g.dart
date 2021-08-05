@@ -263,7 +263,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
-  R5ResourceType.DeviceUseStatement: 'DeviceUseStatement',
+  R5ResourceType.DeviceUsage: 'DeviceUsage',
   R5ResourceType.DiagnosticReport: 'DiagnosticReport',
   R5ResourceType.DocumentManifest: 'DocumentManifest',
   R5ResourceType.DocumentReference: 'DocumentReference',
@@ -291,6 +291,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
+  R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
   R5ResourceType.Library: 'Library',
   R5ResourceType.Linkage: 'Linkage',
@@ -781,7 +782,7 @@ Map<String, dynamic> _$$_ClaimInsuranceToJson(_$_ClaimInsurance instance) {
       '_businessArrangement', instance.businessArrangementElement?.toJson());
   writeNotNull('preAuthRef', instance.preAuthRef);
   writeNotNull('_preAuthRef',
-      instance.preAuthRefElement?.map((e) => e?.toJson()).toList());
+      instance.preAuthRefElement?.map((e) => e.toJson()).toList());
   writeNotNull('claimResponse', instance.claimResponse?.toJson());
   return val;
 }
@@ -955,7 +956,7 @@ Map<String, dynamic> _$$_ClaimItemToJson(_$_ClaimItem instance) {
   writeNotNull('careTeamSequence',
       instance.careTeamSequence?.map((e) => e.toJson()).toList());
   writeNotNull('_careTeamSequence',
-      instance.careTeamSequenceElement?.map((e) => e?.toJson()).toList());
+      instance.careTeamSequenceElement?.map((e) => e.toJson()).toList());
   writeNotNull('diagnosisSequence',
       instance.diagnosisSequence?.map((e) => e.toJson()).toList());
   writeNotNull('_diagnosisSequence',
@@ -1394,7 +1395,7 @@ Map<String, dynamic> _$$_ClaimResponseItemToJson(
   writeNotNull(
       'noteNumber', instance.noteNumber?.map((e) => e.toJson()).toList());
   writeNotNull('_noteNumber',
-      instance.noteNumberElement?.map((e) => e?.toJson()).toList());
+      instance.noteNumberElement?.map((e) => e.toJson()).toList());
   val['adjudication'] = instance.adjudication.map((e) => e.toJson()).toList();
   writeNotNull('detail', instance.detail?.map((e) => e.toJson()).toList());
   return val;
@@ -1499,7 +1500,7 @@ Map<String, dynamic> _$$_ClaimResponseDetailToJson(
   writeNotNull(
       'noteNumber', instance.noteNumber?.map((e) => e.toJson()).toList());
   writeNotNull('_noteNumber',
-      instance.noteNumberElement?.map((e) => e?.toJson()).toList());
+      instance.noteNumberElement?.map((e) => e.toJson()).toList());
   val['adjudication'] = instance.adjudication.map((e) => e.toJson()).toList();
   writeNotNull(
       'subDetail', instance.subDetail?.map((e) => e.toJson()).toList());
@@ -1556,7 +1557,7 @@ Map<String, dynamic> _$$_ClaimResponseSubDetailToJson(
   writeNotNull(
       'noteNumber', instance.noteNumber?.map((e) => e.toJson()).toList());
   writeNotNull('_noteNumber',
-      instance.noteNumberElement?.map((e) => e?.toJson()).toList());
+      instance.noteNumberElement?.map((e) => e.toJson()).toList());
   writeNotNull(
       'adjudication', instance.adjudication?.map((e) => e.toJson()).toList());
   return val;
@@ -1673,11 +1674,11 @@ Map<String, dynamic> _$$_ClaimResponseAddItemToJson(
   writeNotNull(
       'itemSequence', instance.itemSequence?.map((e) => e.toJson()).toList());
   writeNotNull('_itemSequence',
-      instance.itemSequenceElement?.map((e) => e?.toJson()).toList());
+      instance.itemSequenceElement?.map((e) => e.toJson()).toList());
   writeNotNull('detailSequence',
       instance.detailSequence?.map((e) => e.toJson()).toList());
   writeNotNull('_detailSequence',
-      instance.detailSequenceElement?.map((e) => e?.toJson()).toList());
+      instance.detailSequenceElement?.map((e) => e.toJson()).toList());
   writeNotNull('subdetailSequence',
       instance.subdetailSequence?.map((e) => e.toJson()).toList());
   writeNotNull('_subdetailSequence',
@@ -1704,7 +1705,7 @@ Map<String, dynamic> _$$_ClaimResponseAddItemToJson(
   writeNotNull(
       'noteNumber', instance.noteNumber?.map((e) => e.toJson()).toList());
   writeNotNull('_noteNumber',
-      instance.noteNumberElement?.map((e) => e?.toJson()).toList());
+      instance.noteNumberElement?.map((e) => e.toJson()).toList());
   val['adjudication'] = instance.adjudication.map((e) => e.toJson()).toList();
   writeNotNull('detail', instance.detail?.map((e) => e.toJson()).toList());
   return val;
@@ -1779,7 +1780,7 @@ Map<String, dynamic> _$$_ClaimResponseDetail1ToJson(
   writeNotNull(
       'noteNumber', instance.noteNumber?.map((e) => e.toJson()).toList());
   writeNotNull('_noteNumber',
-      instance.noteNumberElement?.map((e) => e?.toJson()).toList());
+      instance.noteNumberElement?.map((e) => e.toJson()).toList());
   val['adjudication'] = instance.adjudication.map((e) => e.toJson()).toList();
   writeNotNull(
       'subDetail', instance.subDetail?.map((e) => e.toJson()).toList());
@@ -1851,7 +1852,7 @@ Map<String, dynamic> _$$_ClaimResponseSubDetail1ToJson(
   writeNotNull(
       'noteNumber', instance.noteNumber?.map((e) => e.toJson()).toList());
   writeNotNull('_noteNumber',
-      instance.noteNumberElement?.map((e) => e?.toJson()).toList());
+      instance.noteNumberElement?.map((e) => e.toJson()).toList());
   val['adjudication'] = instance.adjudication.map((e) => e.toJson()).toList();
   return val;
 }

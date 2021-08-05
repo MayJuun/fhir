@@ -2,11 +2,14 @@
   "resourceType": "CodeSystem",
   "id": "state-change-reason",
   "meta": {
-    "lastUpdated": "2019-12-31T21:03:40.621+11:00"
+    "lastUpdated": "2021-04-15T13:25:09.461+11:00",
+    "profile": [
+      "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
+    ]
   },
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003ch2\u003eStateChangeReason\u003c/h2\u003e\u003cdiv\u003e\u003cp\u003eIndicates why the state of the subject changed.\u003c/p\u003e\n\u003c/div\u003e\u003cp\u003eThis code system http://terminology.hl7.org/CodeSystem/state-change-reason defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eadverseEvent\u003ca name\u003d\"state-change-reason-adverseEvent\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eadverse event\u003c/td\u003e\u003ctd\u003eadverse event.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003edeath\u003ca name\u003d\"state-change-reason-death\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003edeath (adverse event)\u003c/td\u003e\u003ctd\u003edeath (adverse event).\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003enotEligible\u003ca name\u003d\"state-change-reason-notEligible\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003edid not meet eligibility criteria\u003c/td\u003e\u003ctd\u003edid not meet eligibility criteria.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eeligibleButNo\u003ca name\u003d\"state-change-reason-eligibleButNo\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eeligible but unwilling or unable to participate\u003c/td\u003e\u003ctd\u003eeligible but unwilling or unable to participate.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eenrolled\u003ca name\u003d\"state-change-reason-enrolled\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eenrolled or registered\u003c/td\u003e\u003ctd\u003eenrolled or registered.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eexclusion\u003ca name\u003d\"state-change-reason-exclusion\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eexclusion\u003c/td\u003e\u003ctd\u003eexclusion.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003efollowUpComplete\u003ca name\u003d\"state-change-reason-followUpComplete\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003efollow-up complete\u003c/td\u003e\u003ctd\u003efollow-up complete.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003einclusion\u003ca name\u003d\"state-change-reason-inclusion\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003einclusion\u003c/td\u003e\u003ctd\u003einclusion.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003einformedConsentSigned\u003ca name\u003d\"state-change-reason-informedConsentSigned\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eInformed consent signed\u003c/td\u003e\u003ctd\u003eInformed consent signed.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eintOrObsComplete\u003ca name\u003d\"state-change-reason-intOrObsComplete\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eintervention or observation complete\u003c/td\u003e\u003ctd\u003eintervention or observation complete.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003enonCompliance\u003ca name\u003d\"state-change-reason-nonCompliance\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003enon-compliance\u003c/td\u003e\u003ctd\u003enon-compliance.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003epreReg\u003ca name\u003d\"state-change-reason-preReg\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003epre-registered or slot reserved\u003c/td\u003e\u003ctd\u003epre-registered or slot reserved.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003erefuseConsent\u003ca name\u003d\"state-change-reason-refuseConsent\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003erefuse consent\u003c/td\u003e\u003ctd\u003erefuse consent.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003escreenFailure\u003ca name\u003d\"state-change-reason-screenFailure\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003escreen failure\u003c/td\u003e\u003ctd\u003escreen failure.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003estudyClosed\u003ca name\u003d\"state-change-reason-studyClosed\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003estudy permanently closed to accrual\u003c/td\u003e\u003ctd\u003estudy permanently closed to accrual.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003estudyTerminated\u003ca name\u003d\"state-change-reason-studyTerminated\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003estudy terminated\u003c/td\u003e\u003ctd\u003estudy terminated.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003esubjectRefusal\u003ca name\u003d\"state-change-reason-subjectRefusal\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003esubject refusal\u003c/td\u003e\u003ctd\u003esubject refusal.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eunwillingOrUnable\u003ca name\u003d\"state-change-reason-unwillingOrUnable\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eunwilling or unable to participate\u003c/td\u003e\u003ctd\u003eunwilling or unable to participate.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ewithdrawnConsent\u003ca name\u003d\"state-change-reason-withdrawnConsent\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ewithdrawn consent\u003c/td\u003e\u003ctd\u003ewithdrawn consent.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis code system http://terminology.hl7.org/CodeSystem/state-change-reason defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eadverseEvent\u003ca name\u003d\"state-change-reason-adverseEvent\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eadverse event\u003c/td\u003e\u003ctd\u003eadverse event.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003edeath\u003ca name\u003d\"state-change-reason-death\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003edeath (adverse event)\u003c/td\u003e\u003ctd\u003edeath (adverse event).\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003enotEligible\u003ca name\u003d\"state-change-reason-notEligible\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003edid not meet eligibility criteria\u003c/td\u003e\u003ctd\u003edid not meet eligibility criteria.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eeligibleButNo\u003ca name\u003d\"state-change-reason-eligibleButNo\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eeligible but unwilling or unable to participate\u003c/td\u003e\u003ctd\u003eeligible but unwilling or unable to participate.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eenrolled\u003ca name\u003d\"state-change-reason-enrolled\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eenrolled or registered\u003c/td\u003e\u003ctd\u003eenrolled or registered.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eexclusion\u003ca name\u003d\"state-change-reason-exclusion\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eexclusion\u003c/td\u003e\u003ctd\u003eexclusion.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003efollowUpComplete\u003ca name\u003d\"state-change-reason-followUpComplete\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003efollow-up complete\u003c/td\u003e\u003ctd\u003efollow-up complete.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003einclusion\u003ca name\u003d\"state-change-reason-inclusion\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003einclusion\u003c/td\u003e\u003ctd\u003einclusion.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003einformedConsentSigned\u003ca name\u003d\"state-change-reason-informedConsentSigned\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eInformed consent signed\u003c/td\u003e\u003ctd\u003eInformed consent signed.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eintOrObsComplete\u003ca name\u003d\"state-change-reason-intOrObsComplete\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eintervention or observation complete\u003c/td\u003e\u003ctd\u003eintervention or observation complete.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003enonCompliance\u003ca name\u003d\"state-change-reason-nonCompliance\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003enon-compliance\u003c/td\u003e\u003ctd\u003enon-compliance.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003epreReg\u003ca name\u003d\"state-change-reason-preReg\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003epre-registered or slot reserved\u003c/td\u003e\u003ctd\u003epre-registered or slot reserved.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003erefuseConsent\u003ca name\u003d\"state-change-reason-refuseConsent\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003erefuse consent\u003c/td\u003e\u003ctd\u003erefuse consent.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003escreenFailure\u003ca name\u003d\"state-change-reason-screenFailure\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003escreen failure\u003c/td\u003e\u003ctd\u003escreen failure.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003estudyClosed\u003ca name\u003d\"state-change-reason-studyClosed\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003estudy permanently closed to accrual\u003c/td\u003e\u003ctd\u003estudy permanently closed to accrual.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003estudyTerminated\u003ca name\u003d\"state-change-reason-studyTerminated\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003estudy terminated\u003c/td\u003e\u003ctd\u003estudy terminated.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003esubjectRefusal\u003ca name\u003d\"state-change-reason-subjectRefusal\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003esubject refusal\u003c/td\u003e\u003ctd\u003esubject refusal.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eunwillingOrUnable\u003ca name\u003d\"state-change-reason-unwillingOrUnable\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eunwilling or unable to participate\u003c/td\u003e\u003ctd\u003eunwilling or unable to participate.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ewithdrawnConsent\u003ca name\u003d\"state-change-reason-withdrawnConsent\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ewithdrawn consent\u003c/td\u003e\u003ctd\u003ewithdrawn consent.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ediseaseRelapse\u003ca name\u003d\"state-change-reason-diseaseRelapse\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eDisease Relapse\u003c/td\u003e\u003ctd\u003eRelapse of disease.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003efailedRandomization\u003ca name\u003d\"state-change-reason-failedRandomization\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eFailed Randomization\u003c/td\u003e\u003ctd\u003eSubject failed randomization.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003elackOfEfficacy\u003ca name\u003d\"state-change-reason-lackOfEfficacy\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eLack Of Efficacy\u003c/td\u003e\u003ctd\u003eThe study activities were not efficient in dealing with the underlying issue.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003elostToFollowUp\u003ca name\u003d\"state-change-reason-lostToFollowUp\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eLost To Follow Up\u003c/td\u003e\u003ctd\u003eThe subject can no longer be followed up.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ephysicianDecision\u003ca name\u003d\"state-change-reason-physicianDecision\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePhysician Decision\u003c/td\u003e\u003ctd\u003eA physician has decided the subject should no longer continue on the study.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003epregnancy\u003ca name\u003d\"state-change-reason-pregnancy\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePregnancy\u003c/td\u003e\u003ctd\u003eSubject is now pregnant and no longer meets the inclusion criteria.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eprogressiveDisease\u003ca name\u003d\"state-change-reason-progressiveDisease\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eProgressive Disease\u003c/td\u003e\u003ctd\u003eThe subject has a disease that has progressed to far to allow them to continue in the study.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eprotocolDeviation\u003ca name\u003d\"state-change-reason-protocolDeviation\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eProtocol Deviation\u003c/td\u003e\u003ctd\u003eThere has been a protocol deviation that cannot be corrected or compensated for.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003erecovery\u003ca name\u003d\"state-change-reason-recovery\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eRecovery\u003c/td\u003e\u003ctd\u003eThe subject has recovered and no longer meets the inclusion criteria.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003esiteTerminated\u003ca name\u003d\"state-change-reason-siteTerminated\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSite Terminated\u003c/td\u003e\u003ctd\u003eThe site where the subject was being treated is no longer in the study.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003etechnicalProblems\u003ca name\u003d\"state-change-reason-technicalProblems\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eTechnical Problems\u003c/td\u003e\u003ctd\u003eThe subject cannot continue on the study due to technical issues.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ecomplete\u003ca name\u003d\"state-change-reason-complete\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eComplete\u003c/td\u003e\u003ctd\u003eThe study is now complete.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -26,15 +29,15 @@
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986",
-      "value": "urn:oid:2.16.840.1.113883.4.642.1.0"
+      "value": "urn:oid:2.16.840.1.113883.4.642.1.1477"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "StateChangeReason",
   "title": "StateChangeReason",
   "status": "draft",
   "experimental": false,
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2020-12-28T16:55:11+11:00",
   "publisher": "HL7 (FHIR Project)",
   "contact": [
     {
@@ -149,6 +152,66 @@
       "code": "withdrawnConsent",
       "display": "withdrawn consent",
       "definition": "withdrawn consent."
+    },
+    {
+      "code": "diseaseRelapse",
+      "display": "Disease Relapse",
+      "definition": "Relapse of disease."
+    },
+    {
+      "code": "failedRandomization",
+      "display": "Failed Randomization",
+      "definition": "Subject failed randomization."
+    },
+    {
+      "code": "lackOfEfficacy",
+      "display": "Lack Of Efficacy",
+      "definition": "The study activities were not efficient in dealing with the underlying issue."
+    },
+    {
+      "code": "lostToFollowUp",
+      "display": "Lost To Follow Up",
+      "definition": "The subject can no longer be followed up."
+    },
+    {
+      "code": "physicianDecision",
+      "display": "Physician Decision",
+      "definition": "A physician has decided the subject should no longer continue on the study."
+    },
+    {
+      "code": "pregnancy",
+      "display": "Pregnancy",
+      "definition": "Subject is now pregnant and no longer meets the inclusion criteria."
+    },
+    {
+      "code": "progressiveDisease",
+      "display": "Progressive Disease",
+      "definition": "The subject has a disease that has progressed to far to allow them to continue in the study."
+    },
+    {
+      "code": "protocolDeviation",
+      "display": "Protocol Deviation",
+      "definition": "There has been a protocol deviation that cannot be corrected or compensated for."
+    },
+    {
+      "code": "recovery",
+      "display": "Recovery",
+      "definition": "The subject has recovered and no longer meets the inclusion criteria."
+    },
+    {
+      "code": "siteTerminated",
+      "display": "Site Terminated",
+      "definition": "The site where the subject was being treated is no longer in the study."
+    },
+    {
+      "code": "technicalProblems",
+      "display": "Technical Problems",
+      "definition": "The subject cannot continue on the study due to technical issues."
+    },
+    {
+      "code": "complete",
+      "display": "Complete",
+      "definition": "The study is now complete."
     }
   ]
 }
