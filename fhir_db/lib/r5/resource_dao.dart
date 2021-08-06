@@ -116,27 +116,27 @@ class ResourceDao {
 
       Resource _newResource;
 
-    switch (databaseMode) {
-      case mode.DatabaseMode.PERSISTENCE_DB:
-        _newResource =  oldResource.meta == null
+      switch (databaseMode) {
+        case mode.DatabaseMode.PERSISTENCE_DB:
+          _newResource = oldResource.meta == null
               ? resource.newVersion()
-              :oldResource.meta == null
-            ? resource.newVersion()
-            : resource.newVersion(oldMeta: oldResource.meta);break;
+              : oldResource.meta == null
+                  ? resource.newVersion()
+                  : resource.newVersion(oldMeta: oldResource.meta);
+          break;
+        case mode.DatabaseMode.CACHE_DB:
+          _newResource = resource;
+          break;
         case mode.DatabaseMode.CACHE_DB:
           _newResource = resource;
           break;
       }
-        break;
-      case mode.DatabaseMode.CACHE_DB:
-        _newResource = resource;
-        break;
-    }
 
-    await _resourceStore
-        .record(id)
-        .put(await _db(password), _newResource.toJson(), merge: true);
-    return _newResource;}
+      await _resourceStore
+          .record(id)
+          .put(await _db(password), _newResource.toJson(), merge: true);
+      return _newResource;
+    }
   }
 
   /// searches for a specific [Resource]. That resource can be defined by
