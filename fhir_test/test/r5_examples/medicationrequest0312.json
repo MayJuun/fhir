@@ -3,7 +3,7 @@
   "id": "medrx0312",
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: medrx0312\u003c/p\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: 12345689 (OFFICIAL)\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: active\u003c/p\u003e\u003cp\u003e\u003cb\u003eintent\u003c/b\u003e: order\u003c/p\u003e\u003cp\u003e\u003cb\u003emedication\u003c/b\u003e: Phenytoin 25mg/ml oral suspension \u003cspan\u003e(Details : {RxNorm code \u00271313112\u0027 \u003d \u0027phenytoin 125 MG in 5 mL Oral Suspension\u0027, given as \u0027Phenytoin 25mg/ml oral suspension\u0027})\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca\u003eDonald Duck\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthoredOn\u003c/b\u003e: 2015-01-15\u003c/p\u003e\u003cp\u003e\u003cb\u003erequester\u003c/b\u003e: \u003ca\u003ePatrick Pump\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ereason\u003c/b\u003e: \u003c/p\u003e\u003cp\u003e\u003cb\u003enote\u003c/b\u003e: Patient should be counselled to ensure good dental hygiene\u003c/p\u003e\u003cp\u003e\u003cb\u003edosageInstruction\u003c/b\u003e: \u003c/p\u003e\u003ch3\u003eDispenseRequests\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eValidityPeriod\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eNumberOfRepeatsAllowed\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eQuantity\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eExpectedSupplyDuration\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003e2015-01-15 --\u0026gt; 2016-01-15\u003c/td\u003e\u003ctd\u003e3\u003c/td\u003e\u003ctd\u003e360 mL\u003cspan\u003e (Details: UCUM code mL \u003d \u0027mL\u0027)\u003c/span\u003e\u003c/td\u003e\u003ctd\u003e30 days\u003cspan\u003e (Details: UCUM code d \u003d \u0027d\u0027)\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003ch3\u003eSubstitutions\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eAllowed[x]\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eReason\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003etrue\u003c/td\u003e\u003ctd\u003eContinuing therapy \u003cspan\u003e(Details : {http://terminology.hl7.org/CodeSystem/v3-ActReason code \u0027CT\u0027 \u003d \u0027continuing therapy\u0027, given as \u0027Continuing therapy\u0027})\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cp\u003e\u003cb\u003epriorPrescription\u003c/b\u003e: \u003ca\u003eMedicationRequest/medrx0304\u003c/a\u003e\u003c/p\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: id: 12345689 (OFFICIAL)\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: active\u003c/p\u003e\u003cp\u003e\u003cb\u003eintent\u003c/b\u003e: order\u003c/p\u003e\u003ch3\u003eMedications\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca\u003eDonald Duck. Generated Summary: Medical record number: 654321 (USUAL); active; Duck Donald (OFFICIAL); gender: male\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eauthoredOn\u003c/b\u003e: 2015-01-15\u003c/p\u003e\u003cp\u003e\u003cb\u003erequester\u003c/b\u003e: \u003ca\u003ePatrick Pump. Generated Summary: id: 874635264 (OFFICIAL), id: 567IUI51C154 (USUAL); Simone Heps (OFFICIAL); Phone: 020556936, S.M.Heps@bmc.nl, Fax: 0205669283; gender: female; birthDate: 1971-11-07\u003c/a\u003e\u003c/p\u003e\u003ch3\u003eReasons\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cp\u003e\u003cb\u003enote\u003c/b\u003e: Patient should be counselled to ensure good dental hygiene\u003c/p\u003e\u003ch3\u003eDosageInstructions\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003edispenseRequest\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003evalidityPeriod\u003c/b\u003e: 2015-01-15 --\u0026gt; 2016-01-15\u003c/p\u003e\u003cp\u003e\u003cb\u003enumberOfRepeatsAllowed\u003c/b\u003e: 3\u003c/p\u003e\u003cp\u003e\u003cb\u003equantity\u003c/b\u003e: 360 mL\u003c/p\u003e\u003ch3\u003eExpectedSupplyDurations\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/blockquote\u003e\u003ch3\u003eSubstitutions\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eAllowed[x]\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eReason\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003etrue\u003c/td\u003e\u003ctd\u003e\u003cspan\u003eContinuing therapy\u003c/span\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cp\u003e\u003cb\u003epriorPrescription\u003c/b\u003e: \u003ca\u003eGenerated Summary: id: 12345689 (OFFICIAL); status: completed; intent: order; authoredOn: 2015-01-15\u003c/a\u003e\u003c/p\u003e\u003c/div\u003e"
   },
   "identifier": [
     {
@@ -14,14 +14,16 @@
   ],
   "status": "active",
   "intent": "order",
-  "medicationCodeableConcept": {
-    "coding": [
-      {
-        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
-        "code": "1313112",
-        "display": "Phenytoin 25mg/ml oral suspension"
-      }
-    ]
+  "medication": {
+    "concept": {
+      "coding": [
+        {
+          "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+          "code": "1313112",
+          "display": "Phenytoin 25mg/ml oral suspension"
+        }
+      ]
+    }
   },
   "subject": {
     "reference": "Patient/pat1",

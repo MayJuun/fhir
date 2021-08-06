@@ -12,16 +12,17 @@ enum DatePrecision {
 }
 
 /// ToDo: Does not accept 'YYYY-MM'
-class Date extends FhirDateTimeBase{
+class Date extends FhirDateTimeBase {
   const Date._(String valueString, DateTime? valueDateTime, bool isValid,
-      this._precision, Exception? parseError) : super(valueString, valueDateTime, isValid, parseError);
+      this._precision, Exception? parseError)
+      : super(valueString, valueDateTime, isValid, parseError);
 
-  factory Date(inValue) {
+  factory Date(dynamic inValue) {
     if (inValue is DateTime) {
       return Date.fromDateTime(inValue, DatePrecision.YYYYMMDD);
     } else if (inValue is String) {
       try {
-        final dateTimeValue = _parseDate(inValue);
+        final DateTime dateTimeValue = _parseDate(inValue);
         return Date._(
             inValue, dateTimeValue, true, _getPrecision(inValue), null);
       } on FormatException catch (e) {
@@ -34,8 +35,8 @@ class Date extends FhirDateTimeBase{
 
   factory Date.fromDateTime(DateTime dateTime,
       [DatePrecision precision = DatePrecision.YYYYMMDD]) {
-    final dateString = dateTime.toIso8601String();
-    final len = [4, 7, 10][precision.index];
+    final String dateString = dateTime.toIso8601String();
+    final int len = <int>[4, 7, 10][precision.index];
 
     return Date._(
         dateString.substring(0, len), dateTime, true, precision, null);
@@ -54,11 +55,11 @@ class Date extends FhirDateTimeBase{
 
   DatePrecision get precision => _precision;
 
-  static final _dateYYYYExp =
+  static final RegExp _dateYYYYExp =
       RegExp(r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)$');
-  static final _dateYYYYMMExp = RegExp(
+  static final RegExp _dateYYYYMMExp = RegExp(
       r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)-(0[1-9]|1[0-2])$');
-  static final _dateYYYYMMDDExp = RegExp(
+  static final RegExp _dateYYYYMMDDExp = RegExp(
       r'([0-9]([0-9]([0-9][1-9]|[1-9]0)|[1-9]00)|[1-9]000)(-(0[1-9]|1[0-2])(-(0[1-9]|[1-2][0-9]|3[0-1]))?)?');
 
   static DateTime _parseDate(String value) {
@@ -69,7 +70,7 @@ class Date extends FhirDateTimeBase{
         if (_dateYYYYMMDDExp.hasMatch(value)) {
           return DateTime.parse(value);
         } else {
-          throw FormatException();
+          throw const FormatException();
         }
       } on FormatException {
         throw FormatException(
@@ -83,8 +84,8 @@ class Date extends FhirDateTimeBase{
     if (_dateYYYYExp.hasMatch(value)) {
       return DateTime(int.parse(value));
     } else if (_dateYYYYMMExp.hasMatch(value)) {
-      var year = int.parse(value.split('-')[0]);
-      var month = int.parse(value.split('-')[1]);
+      final int year = int.parse(value.split('-')[0]);
+      final int month = int.parse(value.split('-')[1]);
       return DateTime(year, month);
     } else {
       throw FormatException(

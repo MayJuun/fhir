@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for Immunization.occurrence[x]",
       "expansion": {
-        "identifier": "urn:uuid:ae6e0e73-018c-4abd-b62a-e477c4ba32a2",
-        "timestamp": "2019-12-31T21:13:39+11:00",
+        "identifier": "urn:uuid:f21d1ed7-2e2c-4be9-ba3c-58b69881abd1",
+        "timestamp": "2021-04-15T12:28:52+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -32,8 +32,8 @@
       "status": "active",
       "description": "Type options for Immunization.informationSource[x]",
       "expansion": {
-        "identifier": "urn:uuid:27a44aae-80ab-4e16-b3d4-85b11212d0a5",
-        "timestamp": "2019-12-31T21:13:39+11:00",
+        "identifier": "urn:uuid:55f60622-1762-48d2-825c-67a532905578",
+        "timestamp": "2021-04-15T12:28:52+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -67,52 +67,6 @@
           }
         ]
       }
-    },
-    {
-      "resourceType": "ValueSet",
-      "id": "vs4",
-      "name": "Type options for Immunization.protocolApplied.doseNumber[x]",
-      "status": "active",
-      "description": "Type options for Immunization.protocolApplied.doseNumber[x]",
-      "expansion": {
-        "identifier": "urn:uuid:dbeab171-71bc-4b8a-8e21-072443430588",
-        "timestamp": "2019-12-31T21:13:39+11:00",
-        "contains": [
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "positiveInt",
-            "display": "positiveInt"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "string",
-            "display": "string"
-          }
-        ]
-      }
-    },
-    {
-      "resourceType": "ValueSet",
-      "id": "vs5",
-      "name": "Type options for Immunization.protocolApplied.seriesDoses[x]",
-      "status": "active",
-      "description": "Type options for Immunization.protocolApplied.seriesDoses[x]",
-      "expansion": {
-        "identifier": "urn:uuid:7cf5bef7-4632-41fc-96b0-52a4711c6f7f",
-        "timestamp": "2019-12-31T21:13:39+11:00",
-        "contains": [
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "positiveInt",
-            "display": "positiveInt"
-          },
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "string",
-            "display": "string"
-          }
-        ]
-      }
     }
   ],
   "identifier": [
@@ -120,9 +74,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Public Health and Emergency Response)",
   "item": [
     {
@@ -181,7 +135,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -340,7 +294,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -367,7 +321,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -475,6 +429,133 @@
               "linkId": "Immunization.identifier.value",
               "text": "value:",
               "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "uri"
+            }
+          ],
+          "linkId": "Immunization.instantiatesCanonical",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "The URL pointing to a FHIR-defined protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Immunization.",
+              "type": "display"
+            },
+            {
+              "linkId": "Immunization.instantiatesCanonical.value",
+              "text": "Instantiates FHIR protocol or definition for the immunization event",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "uri"
+            }
+          ],
+          "linkId": "Immunization.instantiatesUri",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "The URL pointing to an externally maintained protocol, guideline, orderset or other definition that is adhered to in whole or in part by this Immunization. This might be an HTML page, PDF, etc. or could just be a non-resolvable URI identifier.",
+              "type": "display"
+            },
+            {
+              "linkId": "Immunization.instantiatesUri.value",
+              "text": "Instantiates external protocol or definition for the immunization event",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Reference"
+            }
+          ],
+          "linkId": "Immunization.basedOn",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "A plan, order or recommendation fulfilled in whole or in part by this immunization. Allows tracing of an authorization for the Immunization.",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                  "valueCode": "CarePlan, MedicationRequest, ImmunizationRecommendation"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                }
+              ],
+              "linkId": "Immunization.basedOn.value",
+              "text": "Authority that the immunization event is based on",
+              "type": "reference",
               "required": false,
               "repeats": false
             }
@@ -614,7 +695,7 @@
                   }
                 }
               ],
-              "text": "Vaccine that was administered or was to be administered.",
+              "text": "Vaccine that was administered or was to be administered. The code for the administered vaccine may be reported at various levels of granularity from a very generic code for a general type of vaccine (e.g. the SNOMED or CVX code for the flu vaccine) to a very discrete code for a specific product including the form and packaging (e.g. an NDC code). Because vaccineCode uses the CodeableConcept data type, multiple codes at different levels of granularity may be reported for a single immunization event provided that all codes are appropriate for the same vaccine. For example, both NDC and CVX codes may be provided for a given immunization event by repeating the coding element within vaccineCode.",
               "type": "display"
             },
             {
@@ -628,6 +709,145 @@
               "linkId": "Immunization.vaccineCode.text",
               "text": "text:",
               "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Reference"
+            }
+          ],
+          "linkId": "Immunization.manufacturer",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "Name of vaccine manufacturer.",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                  "valueCode": "Organization"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                }
+              ],
+              "linkId": "Immunization.manufacturer.value",
+              "text": "Vaccine manufacturer",
+              "type": "reference",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "string"
+            }
+          ],
+          "linkId": "Immunization.lotNumber",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "Lot number of the  vaccine product.",
+              "type": "display"
+            },
+            {
+              "linkId": "Immunization.lotNumber.value",
+              "text": "Vaccine lot number",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "datetime"
+            }
+          ],
+          "linkId": "Immunization.expirationDate",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "Date vaccine batch expires.",
+              "type": "display"
+            },
+            {
+              "linkId": "Immunization.expirationDate.value",
+              "text": "Vaccine expiration date",
+              "type": "dateTime",
               "required": false,
               "repeats": false
             }
@@ -1057,145 +1277,6 @@
               "linkId": "Immunization.location.value",
               "text": "Where immunization occurred",
               "type": "reference",
-              "required": false,
-              "repeats": false
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "Reference"
-            }
-          ],
-          "linkId": "Immunization.manufacturer",
-          "type": "group",
-          "required": false,
-          "repeats": true,
-          "item": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "text": "Name of vaccine manufacturer.",
-              "type": "display"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Organization"
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                }
-              ],
-              "linkId": "Immunization.manufacturer.value",
-              "text": "Vaccine manufacturer",
-              "type": "reference",
-              "required": false,
-              "repeats": false
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "string"
-            }
-          ],
-          "linkId": "Immunization.lotNumber",
-          "type": "group",
-          "required": false,
-          "repeats": true,
-          "item": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "text": "Lot number of the  vaccine product.",
-              "type": "display"
-            },
-            {
-              "linkId": "Immunization.lotNumber.value",
-              "text": "Vaccine lot number",
-              "type": "string",
-              "required": false,
-              "repeats": false
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "datetime"
-            }
-          ],
-          "linkId": "Immunization.expirationDate",
-          "type": "group",
-          "required": false,
-          "repeats": true,
-          "item": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "text": "Date vaccine batch expires.",
-              "type": "display"
-            },
-            {
-              "linkId": "Immunization.expirationDate.value",
-              "text": "Vaccine expiration date",
-              "type": "dateTime",
               "required": false,
               "repeats": false
             }
@@ -2692,10 +2773,13 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "string"
                 }
               ],
-              "linkId": "Immunization.protocolApplied.doseNumber[x]",
-              "text": "Dose number within series",
+              "linkId": "Immunization.protocolApplied.doseNumber",
               "type": "group",
               "required": true,
               "repeats": true,
@@ -2715,54 +2799,15 @@
                       }
                     }
                   ],
-                  "text": "Nominal position in a series. The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).",
+                  "text": "Nominal position in a series as intended by the practitioner administering the dose. The use of an integer is preferred if known. Text should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).",
                   "type": "display"
                 },
                 {
-                  "linkId": "Immunization.protocolApplied.doseNumber[x]._type",
-                  "text": "type",
-                  "type": "choice",
+                  "linkId": "Immunization.protocolApplied.doseNumber.value",
+                  "text": "Dose number within series",
+                  "type": "string",
                   "required": false,
-                  "repeats": false,
-                  "answerValueSet": "#vs4",
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "integer"
-                        }
-                      ],
-                      "linkId": "Immunization.protocolApplied.doseNumber[x]._null",
-                      "type": "group",
-                      "item": [
-                        {
-                          "linkId": "Immunization.protocolApplied.doseNumber[x]._null.value",
-                          "type": "integer",
-                          "required": false,
-                          "repeats": false
-                        }
-                      ]
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "string"
-                        }
-                      ],
-                      "linkId": "Immunization.protocolApplied.doseNumber[x]._null",
-                      "type": "group",
-                      "item": [
-                        {
-                          "linkId": "Immunization.protocolApplied.doseNumber[x]._null.value",
-                          "type": "string",
-                          "required": false,
-                          "repeats": false
-                        }
-                      ]
-                    }
-                  ]
+                  "repeats": false
                 }
               ]
             },
@@ -2771,10 +2816,13 @@
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                   "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "string"
                 }
               ],
-              "linkId": "Immunization.protocolApplied.seriesDoses[x]",
-              "text": "Recommended number of doses for immunity",
+              "linkId": "Immunization.protocolApplied.seriesDoses",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2794,54 +2842,15 @@
                       }
                     }
                   ],
-                  "text": "The recommended number of doses to achieve immunity. The use of an integer is preferred if known. A string should only be used in cases where an integer is not available (such as when documenting a recurring booster dose).",
+                  "text": "The recommended number of doses to achieve immunity as intended by the practitioner administering the dose. The use of an integer is preferred if known.",
                   "type": "display"
                 },
                 {
-                  "linkId": "Immunization.protocolApplied.seriesDoses[x]._type",
-                  "text": "type",
-                  "type": "choice",
+                  "linkId": "Immunization.protocolApplied.seriesDoses.value",
+                  "text": "Recommended number of doses for immunity",
+                  "type": "string",
                   "required": false,
-                  "repeats": false,
-                  "answerValueSet": "#vs5",
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "integer"
-                        }
-                      ],
-                      "linkId": "Immunization.protocolApplied.seriesDoses[x]._null",
-                      "type": "group",
-                      "item": [
-                        {
-                          "linkId": "Immunization.protocolApplied.seriesDoses[x]._null.value",
-                          "type": "integer",
-                          "required": false,
-                          "repeats": false
-                        }
-                      ]
-                    },
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "string"
-                        }
-                      ],
-                      "linkId": "Immunization.protocolApplied.seriesDoses[x]._null",
-                      "type": "group",
-                      "item": [
-                        {
-                          "linkId": "Immunization.protocolApplied.seriesDoses[x]._null.value",
-                          "type": "string",
-                          "required": false,
-                          "repeats": false
-                        }
-                      ]
-                    }
-                  ]
+                  "repeats": false
                 }
               ]
             }

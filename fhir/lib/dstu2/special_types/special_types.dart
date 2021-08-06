@@ -32,9 +32,10 @@ class Meta with _$Meta {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Meta.fromYaml(dynamic yaml) => yaml is String
-      ? Meta.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Meta.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Meta.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Meta.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Meta cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -61,9 +62,11 @@ class Reference with _$Reference {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Reference.fromYaml(dynamic yaml) => yaml is String
-      ? Reference.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Reference.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Reference.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Reference.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Reference cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -425,9 +428,11 @@ class ElementDefinition with _$ElementDefinition {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ElementDefinition.fromYaml(dynamic yaml) => yaml is String
-      ? ElementDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ElementDefinition.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ElementDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ElementDefinition.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ElementDefinition cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -455,9 +460,11 @@ class Narrative with _$Narrative {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Narrative.fromYaml(dynamic yaml) => yaml is String
-      ? Narrative.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Narrative.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Narrative.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Narrative.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Narrative cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -489,9 +496,10 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ElementDefinitionSlicing.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionSlicing.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ElementDefinitionSlicing.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ElementDefinitionSlicing.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ElementDefinitionSlicing cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -520,9 +528,11 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ElementDefinitionBase.fromYaml(dynamic yaml) => yaml is String
-      ? ElementDefinitionBase.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ElementDefinitionBase.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ElementDefinitionBase.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ElementDefinitionBase.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ElementDefinitionBase cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -551,9 +561,11 @@ class ElementDefinitionType with _$ElementDefinitionType {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ElementDefinitionType.fromYaml(dynamic yaml) => yaml is String
-      ? ElementDefinitionType.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ElementDefinitionType.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ElementDefinitionType.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ElementDefinitionType.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ElementDefinitionType cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -575,9 +587,11 @@ class TypeCodeExtension with _$TypeCodeExtension {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory TypeCodeExtension.fromYaml(dynamic yaml) => yaml is String
-      ? TypeCodeExtension.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? TypeCodeExtension.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TypeCodeExtension.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? TypeCodeExtension.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'TypeCodeExtension cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -612,9 +626,10 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ElementDefinitionConstraint.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionConstraint.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ElementDefinitionConstraint.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ElementDefinitionConstraint.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ElementDefinitionConstraint cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -645,9 +660,10 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ElementDefinitionBinding.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionBinding.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ElementDefinitionBinding.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ElementDefinitionBinding.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ElementDefinitionBinding cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -678,9 +694,10 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ElementDefinitionMapping.fromYaml(dynamic yaml) => yaml is String
       ? ElementDefinitionMapping.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ElementDefinitionMapping.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ElementDefinitionMapping.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ElementDefinitionMapping cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');

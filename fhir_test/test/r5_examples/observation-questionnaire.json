@@ -5,12 +5,35 @@
     {
       "resourceType": "ValueSet",
       "id": "vs2",
+      "name": "Type options for Observation.instantiates[x]",
+      "status": "active",
+      "description": "Type options for Observation.instantiates[x]",
+      "expansion": {
+        "identifier": "urn:uuid:166c3cbf-8ff8-4819-9cbb-922ae8a8dfb5",
+        "timestamp": "2021-04-15T12:29:25+10:00",
+        "contains": [
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "ObservationDefinition",
+            "display": "ObservationDefinition"
+          },
+          {
+            "system": "http://hl7.org/fhir/resource-types",
+            "code": "ObservationDefinition",
+            "display": "ObservationDefinition"
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ValueSet",
+      "id": "vs3",
       "name": "Type options for Observation.effective[x]",
       "status": "active",
       "description": "Type options for Observation.effective[x]",
       "expansion": {
-        "identifier": "urn:uuid:e6a84707-24dc-4117-9bb9-a83a0f41eacb",
-        "timestamp": "2019-12-31T21:15:30+11:00",
+        "identifier": "urn:uuid:34dce90d-7969-4d40-a864-a009267f3def",
+        "timestamp": "2021-04-15T12:29:25+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -37,13 +60,13 @@
     },
     {
       "resourceType": "ValueSet",
-      "id": "vs3",
+      "id": "vs4",
       "name": "Type options for Observation.value[x]",
       "status": "active",
       "description": "Type options for Observation.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:2fe2c56d-3f35-41e7-bc31-d1f0c459c648",
-        "timestamp": "2019-12-31T21:15:30+11:00",
+        "identifier": "urn:uuid:37dba7a7-33ff-4071-8cc7-609a6c20950e",
+        "timestamp": "2021-04-15T12:29:25+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -110,13 +133,13 @@
     },
     {
       "resourceType": "ValueSet",
-      "id": "vs4",
+      "id": "vs5",
       "name": "Type options for Observation.component.value[x]",
       "status": "active",
       "description": "Type options for Observation.component.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:c1fcabba-f9a2-49f6-a81a-d825e4dd3935",
-        "timestamp": "2019-12-31T21:15:30+11:00",
+        "identifier": "urn:uuid:eb63e87b-d57d-487b-8465-fcea695f162b",
+        "timestamp": "2021-04-15T12:29:25+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -187,9 +210,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "active",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Orders and Observations)",
   "item": [
     {
@@ -252,7 +275,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -411,7 +434,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -438,7 +461,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -548,6 +571,95 @@
               "type": "string",
               "required": false,
               "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            }
+          ],
+          "linkId": "Observation.instantiates[x]",
+          "text": "Instantiates FHIR ObservationDefinition",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "The reference to a FHIR ObservationDefinition resource that provides the definition that is adhered to in whole or in part by this Observation instance. ObservationDefinition can be referenced by its canonical url using instantiatesCanonical, or by a name or an identifier using the appropriate sub-elements of instantiatesReference.",
+              "type": "display"
+            },
+            {
+              "linkId": "Observation.instantiates[x]._type",
+              "text": "type",
+              "type": "choice",
+              "required": false,
+              "repeats": false,
+              "answerValueSet": "#vs2",
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "uri"
+                    }
+                  ],
+                  "linkId": "Observation.instantiates[x]._null",
+                  "type": "group",
+                  "item": [
+                    {
+                      "linkId": "Observation.instantiates[x]._null.value",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "Reference"
+                    }
+                  ],
+                  "linkId": "Observation.instantiates[x]._null",
+                  "type": "group",
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                          "valueCode": "ObservationDefinition"
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                          "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                        }
+                      ],
+                      "linkId": "Observation.instantiates[x]._null.value",
+                      "type": "reference",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -829,14 +941,14 @@
                   }
                 }
               ],
-              "text": "The patient, or group of patients, location, or device this observation is about and into whose record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation. One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated.",
+              "text": "The patient, or group of patients, location, device, organization, procedure or practitioner this observation is about and into whose or what record the observation is placed. If the actual focus of the observation is different from the subject (or a sample of, part, or region of the subject), the `focus` element or the `code` itself specifies the actual focus of the observation. One would expect this element to be a cardinality of 1..1. The only circumstance in which the subject can be missing is when the observation is made by a device that does not know the patient. In this case, the observation SHALL be matched to a patient through some context/channel matching technique, and at this point, the observation should be updated. The subject of an Observation may in some cases be a procedure.  This supports the regulatory inspection use case where observations are captured during inspections of a procedure that is being performed (independent of any particular patient or whether patient related at all).",
               "type": "display"
             },
             {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient, Group, Device, Location"
+                  "valueCode": "Patient, Group, Device, Location, Organization, Procedure, Practitioner, Medication, Substance"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -990,7 +1102,7 @@
               "type": "choice",
               "required": false,
               "repeats": false,
-              "answerValueSet": "#vs2",
+              "answerValueSet": "#vs3",
               "item": [
                 {
                   "extension": [
@@ -1234,7 +1346,7 @@
               "type": "choice",
               "required": false,
               "repeats": false,
-              "answerValueSet": "#vs3",
+              "answerValueSet": "#vs4",
               "item": [
                 {
                   "extension": [
@@ -2641,7 +2753,7 @@
                   "type": "choice",
                   "required": false,
                   "repeats": false,
-                  "answerValueSet": "#vs4",
+                  "answerValueSet": "#vs5",
                   "item": [
                     {
                       "extension": [

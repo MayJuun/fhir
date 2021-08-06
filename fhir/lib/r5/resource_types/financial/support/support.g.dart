@@ -230,7 +230,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
-  R5ResourceType.DeviceUseStatement: 'DeviceUseStatement',
+  R5ResourceType.DeviceUsage: 'DeviceUsage',
   R5ResourceType.DiagnosticReport: 'DiagnosticReport',
   R5ResourceType.DocumentManifest: 'DocumentManifest',
   R5ResourceType.DocumentReference: 'DocumentReference',
@@ -258,6 +258,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
+  R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
   R5ResourceType.Library: 'Library',
   R5ResourceType.Linkage: 'Linkage',
@@ -507,8 +508,7 @@ _$_CoverageEligibilityRequest _$$_CoverageEligibilityRequestFromJson(
           ? null
           : CodeableConcept.fromJson(json['priority'] as Map<String, dynamic>),
       purpose: (json['purpose'] as List<dynamic>?)
-          ?.map((e) =>
-              _$enumDecode(_$CoverageEligibilityRequestPurposeEnumMap, e))
+          ?.map((e) => Code.fromJson(e))
           .toList(),
       purposeElement: (json['_purpose'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -583,13 +583,9 @@ Map<String, dynamic> _$$_CoverageEligibilityRequestToJson(
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('priority', instance.priority?.toJson());
+  writeNotNull('purpose', instance.purpose?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'purpose',
-      instance.purpose
-          ?.map((e) => _$CoverageEligibilityRequestPurposeEnumMap[e])
-          .toList());
-  writeNotNull(
-      '_purpose', instance.purposeElement?.map((e) => e?.toJson()).toList());
+      '_purpose', instance.purposeElement?.map((e) => e.toJson()).toList());
   val['patient'] = instance.patient.toJson();
   writeNotNull('servicedDate', instance.servicedDate?.toJson());
   writeNotNull('_servicedDate', instance.servicedDateElement?.toJson());
@@ -607,14 +603,6 @@ Map<String, dynamic> _$$_CoverageEligibilityRequestToJson(
   writeNotNull('item', instance.item?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$CoverageEligibilityRequestPurposeEnumMap = {
-  CoverageEligibilityRequestPurpose.auth_requirements: 'auth-requirements',
-  CoverageEligibilityRequestPurpose.benefits: 'benefits',
-  CoverageEligibilityRequestPurpose.discovery: 'discovery',
-  CoverageEligibilityRequestPurpose.validation: 'validation',
-  CoverageEligibilityRequestPurpose.unknown: 'unknown',
-};
 
 _$_CoverageEligibilityRequestSupportingInfo
     _$$_CoverageEligibilityRequestSupportingInfoFromJson(
@@ -878,8 +866,7 @@ _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       purpose: (json['purpose'] as List<dynamic>?)
-          ?.map((e) =>
-              _$enumDecode(_$CoverageEligibilityResponsePurposeEnumMap, e))
+          ?.map((e) => Code.fromJson(e))
           .toList(),
       purposeElement: (json['_purpose'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -961,13 +948,9 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseToJson(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('purpose', instance.purpose?.map((e) => e.toJson()).toList());
   writeNotNull(
-      'purpose',
-      instance.purpose
-          ?.map((e) => _$CoverageEligibilityResponsePurposeEnumMap[e])
-          .toList());
-  writeNotNull(
-      '_purpose', instance.purposeElement?.map((e) => e?.toJson()).toList());
+      '_purpose', instance.purposeElement?.map((e) => e.toJson()).toList());
   val['patient'] = instance.patient.toJson();
   writeNotNull('servicedDate', instance.servicedDate?.toJson());
   writeNotNull('_servicedDate', instance.servicedDateElement?.toJson());
@@ -990,14 +973,6 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseToJson(
   writeNotNull('error', instance.error?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$CoverageEligibilityResponsePurposeEnumMap = {
-  CoverageEligibilityResponsePurpose.auth_requirements: 'auth-requirements',
-  CoverageEligibilityResponsePurpose.benefits: 'benefits',
-  CoverageEligibilityResponsePurpose.discovery: 'discovery',
-  CoverageEligibilityResponsePurpose.validation: 'validation',
-  CoverageEligibilityResponsePurpose.unknown: 'unknown',
-};
 
 const _$CoverageEligibilityResponseOutcomeEnumMap = {
   CoverageEligibilityResponseOutcome.queued: 'queued',

@@ -77,6 +77,8 @@ enum CapabilityStatementFhirVersion {
   v4_4_0,
   @JsonValue('4.5.0')
   v4_5_0,
+  @JsonValue('4.6.0')
+  v4_6_0,
   @JsonValue('unknown')
   unknown,
 }
@@ -283,6 +285,8 @@ enum CapabilityStatement2FhirVersion {
   v4_4_0,
   @JsonValue('4.5.0')
   v4_5_0,
+  @JsonValue('4.6.0')
+  v4_6_0,
   @JsonValue('unknown')
   unknown,
 }
@@ -1152,6 +1156,8 @@ enum ImplementationGuideFhirVersion {
   v4_4_0,
   @JsonValue('4.5.0')
   v4_5_0,
+  @JsonValue('4.6.0')
+  v4_6_0,
   @JsonValue('unknown')
   unknown,
 }
@@ -1211,6 +1217,8 @@ enum ImplementationGuideResourceFhirVersion {
   v4_4_0,
   @JsonValue('4.5.0')
   v4_5_0,
+  @JsonValue('4.6.0')
+  v4_6_0,
   @JsonValue('unknown')
   unknown,
 }
@@ -1495,6 +1503,8 @@ enum StructureDefinitionFhirVersion {
   v4_4_0,
   @JsonValue('4.5.0')
   v4_5_0,
+  @JsonValue('4.6.0')
+  v4_6_0,
   @JsonValue('unknown')
   unknown,
 }

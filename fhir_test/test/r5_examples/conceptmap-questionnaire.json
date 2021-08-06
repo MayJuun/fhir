@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for ConceptMap.source[x]",
       "expansion": {
-        "identifier": "urn:uuid:46b58c5f-1170-4ffc-bb8f-22eccb8a2cc3",
-        "timestamp": "2019-12-31T21:10:05+11:00",
+        "identifier": "urn:uuid:d238d603-5b51-4ab9-ac76-90c456c917f9",
+        "timestamp": "2021-04-15T12:28:20+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -32,8 +32,8 @@
       "status": "active",
       "description": "Type options for ConceptMap.target[x]",
       "expansion": {
-        "identifier": "urn:uuid:4d5202da-af3a-4e10-a20d-2b05dd2abe73",
-        "timestamp": "2019-12-31T21:10:05+11:00",
+        "identifier": "urn:uuid:66eb6c0c-cd31-4a80-88d3-dab206d7b5d8",
+        "timestamp": "2021-04-15T12:28:20+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -54,9 +54,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Vocabulary)",
   "item": [
     {
@@ -115,7 +115,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -274,7 +274,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -301,7 +301,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -405,10 +405,6 @@
         },
         {
           "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
               "valueString": "Identifier"
@@ -1335,49 +1331,6 @@
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "string"
-                }
-              ],
-              "linkId": "ConceptMap.group.sourceVersion",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "The specific version of the code system, as determined by the code system authority. The specification of a particular code system version may be required for code systems which lack concept permanence.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "ConceptMap.group.sourceVersion.value",
-                  "text": "Specific version of the  code system",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
                   "valueString": "uri"
                 }
               ],
@@ -1407,49 +1360,6 @@
                 {
                   "linkId": "ConceptMap.group.target.value",
                   "text": "Target system that the concepts are to be mapped to",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "string"
-                }
-              ],
-              "linkId": "ConceptMap.group.targetVersion",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "The specific version of the code system, as determined by the code system authority. The specification of a particular code system version may be required for code systems which lack concept permanence.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "ConceptMap.group.targetVersion.value",
-                  "text": "Specific version of the  code system",
                   "type": "string",
                   "required": false,
                   "repeats": false
@@ -1725,7 +1635,7 @@
                   "repeats": true,
                   "item": [
                     {
-                      "text": "Ideally there would only be one map, with an \u0027equivalent\u0027 mapping. But multiple maps are allowed for several narrower options, or to assert that other concepts are not related.",
+                      "text": "Ideally there would only be one map, with an \u0027equivalent\u0027 mapping. But multiple maps are allowed for several narrower (i.e. source-is-broader-than-target) options, or to assert that other concepts are not related.",
                       "type": "display"
                     },
                     {
@@ -1964,7 +1874,7 @@
                               }
                             }
                           ],
-                          "text": "The relationship between the source and target concepts. The relationship is read from target to source (e.g. the target is \u0027broader\u0027 than the source). This element is labeled as a modifier because it may indicate that there is no mapping.",
+                          "text": "The relationship between the source and target concepts. The relationship is read from source to target (e.g. source-is-narrower-than-target). This element is labeled as a modifier because it may indicate that there is no mapping.",
                           "type": "display"
                         },
                         {

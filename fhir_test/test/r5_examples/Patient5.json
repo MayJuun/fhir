@@ -1,0 +1,1 @@
+{"resourceType":"Patient","id":"123a","text":{"status":"generated","div":"\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eSome narrative\u003c/div\u003e"},"active":true,"name":[{"use":"official","family":"Chalmers","given":["Peter","James"]}],"gender":"male","birthDate":"1974-12-25"}

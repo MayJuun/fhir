@@ -16,10 +16,10 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/SimpleQuantity",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "SimpleQuantity",
   "status": "active",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "HL7 FHIR Standard",
   "contact": [
     {
@@ -32,7 +32,7 @@
     }
   ],
   "description": "A fixed quantity (no comparator)",
-  "fhirVersion": "4.2.0",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "v2",
@@ -72,7 +72,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "qty-3",
@@ -180,7 +180,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -188,7 +188,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -226,7 +226,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -245,7 +245,7 @@
       {
         "id": "Quantity.comparator",
         "path": "Quantity.comparator",
-        "short": "\u003c | \u003c\u003d | \u003e\u003d | \u003e - how to understand the value",
+        "short": "\u003c | \u003c\u003d | \u003e\u003d | \u003e | ad - how to understand the value",
         "definition": "Not allowed to be used in this context",
         "requirements": "Need a framework for handling measures where the value is \u003c5ug/L or \u003e400mg/L due to the limitations of measuring methodology.",
         "min": 0,
@@ -268,7 +268,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": true,
@@ -277,13 +277,16 @@
         "binding": {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "valueString": "How the Quantity should be understood and represented."
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
               "valueString": "QuantityComparator"
             }
           ],
           "strength": "required",
-          "description": "How the Quantity should be understood and represented.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/quantity-comparator|4.2.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/quantity-comparator|4.6.0"
         },
         "mapping": [
           {
@@ -299,6 +302,10 @@
       {
         "id": "Quantity.unit",
         "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
+            "valueBoolean": true
+          },
           {
             "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable",
             "valueBoolean": true
@@ -327,7 +334,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -371,7 +378,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -389,6 +396,12 @@
       },
       {
         "id": "Quantity.code",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/build/StructureDefinition/no-binding",
+            "valueBoolean": true
+          }
+        ],
         "path": "Quantity.code",
         "short": "Coded form of the unit",
         "definition": "A computer processable form of the unit in some unit representation system.",
@@ -413,7 +426,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,

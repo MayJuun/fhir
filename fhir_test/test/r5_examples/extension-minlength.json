@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/minLength",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "minLength",
   "status": "draft",
   "date": "2014-04-27",
@@ -28,7 +28,7 @@
     }
   ],
   "description": "The minimum number of characters that must be present in the simple data type to be considered a \"valid\" instance.",
-  "fhirVersion": "4.2.0",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "v2",
@@ -63,7 +63,7 @@
         "path": "Extension",
         "short": "At least this many characters",
         "definition": "The minimum number of characters that must be present in the simple data type to be considered a \"valid\" instance.",
-        "comment": "For base64binary, reflects the number of characters representing the encoded data, not the number of bytes of the binary data.",
+        "comment": "For base64binary, reflects the number of characters representing the encoded data, not the number of bytes of the binary data.  For questionnaires, see additional guidance and examples in the [SDC implementation guide](http://build.fhir.org/ig/HL7/sdc/behavior.html#minLength).",
         "min": 0,
         "max": "1",
         "base": {
@@ -78,7 +78,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -170,7 +170,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -178,7 +178,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -245,7 +245,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -266,7 +266,7 @@
         "path": "Extension",
         "short": "At least this many characters",
         "definition": "The minimum number of characters that must be present in the simple data type to be considered a \"valid\" instance.",
-        "comment": "For base64binary, reflects the number of characters representing the encoded data, not the number of bytes of the binary data.",
+        "comment": "For base64binary, reflects the number of characters representing the encoded data, not the number of bytes of the binary data.  For questionnaires, see additional guidance and examples in the [SDC implementation guide](http://build.fhir.org/ig/HL7/sdc/behavior.html#minLength).",
         "min": 0,
         "max": "1",
         "mapping": [

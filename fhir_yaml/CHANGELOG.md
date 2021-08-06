@@ -1,3 +1,6 @@
+## [0.5.0]
+* Dependencies updated
+
 ## [0.4.2]
 * Wrong Dart Version defined, now fixed
 

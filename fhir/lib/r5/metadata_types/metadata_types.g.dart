@@ -188,7 +188,7 @@ Map<String, dynamic> _$$_DataRequirementToJson(_$_DataRequirement instance) {
   writeNotNull('subjectReference', instance.subjectReference?.toJson());
   writeNotNull('mustSupport', instance.mustSupport);
   writeNotNull('_mustSupport',
-      instance.mustSupportElement?.map((e) => e?.toJson()).toList());
+      instance.mustSupportElement?.map((e) => e.toJson()).toList());
   writeNotNull(
       'codeFilter', instance.codeFilter?.map((e) => e.toJson()).toList());
   writeNotNull(

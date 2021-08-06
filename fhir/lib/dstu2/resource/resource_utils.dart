@@ -1,7 +1,8 @@
 import '../dstu2.dart';
 
 class ResourceUtils {
-  static const resourceTypeFromStringMap = {
+  static const Map<String, Dstu2ResourceType> resourceTypeFromStringMap =
+      <String, Dstu2ResourceType>{
     'Account': Dstu2ResourceType.Account,
     'AllergyIntolerance': Dstu2ResourceType.AllergyIntolerance,
     'Appointment': Dstu2ResourceType.Appointment,
@@ -99,7 +100,8 @@ class ResourceUtils {
     'VisionPrescription': Dstu2ResourceType.VisionPrescription,
   };
 
-  static const resourceTypeToStringMap = {
+  static const Map<Dstu2ResourceType, String> resourceTypeToStringMap =
+      <Dstu2ResourceType, String>{
     Dstu2ResourceType.Account: 'Account',
     Dstu2ResourceType.AllergyIntolerance: 'AllergyIntolerance',
     Dstu2ResourceType.Appointment: 'Appointment',

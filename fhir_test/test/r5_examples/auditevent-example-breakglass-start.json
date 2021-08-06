@@ -19,8 +19,16 @@
   ],
   "action": "E",
   "recorded": "2013-09-22T00:08:00Z",
-  "outcome": "0",
-  "outcomeDesc": "Successful  Start of Break-Glass",
+  "outcome": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/audit-event-outcome",
+        "code": "0",
+        "display": "Success"
+      }
+    ],
+    "text": "Successful  Start of Break-Glass"
+  },
   "purposeOfEvent": [
     {
       "coding": [

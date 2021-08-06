@@ -47,9 +47,7 @@ class _$AppointmentTearOff {
       List<CodeableConcept>? specialty,
       CodeableConcept? appointmentType,
       List<CodeableReference>? reason,
-      UnsignedInt? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
+      CodeableConcept? priority,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
@@ -98,7 +96,6 @@ class _$AppointmentTearOff {
       appointmentType: appointmentType,
       reason: reason,
       priority: priority,
-      priorityElement: priorityElement,
       description: description,
       descriptionElement: descriptionElement,
       supportingInformation: supportingInformation,
@@ -159,9 +156,7 @@ mixin _$Appointment {
   List<CodeableConcept>? get specialty => throw _privateConstructorUsedError;
   CodeableConcept? get appointmentType => throw _privateConstructorUsedError;
   List<CodeableReference>? get reason => throw _privateConstructorUsedError;
-  UnsignedInt? get priority => throw _privateConstructorUsedError;
-  @JsonKey(name: '_priority')
-  Element? get priorityElement => throw _privateConstructorUsedError;
+  CodeableConcept? get priority => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
@@ -229,9 +224,7 @@ abstract class $AppointmentCopyWith<$Res> {
       List<CodeableConcept>? specialty,
       CodeableConcept? appointmentType,
       List<CodeableReference>? reason,
-      UnsignedInt? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
+      CodeableConcept? priority,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
@@ -266,7 +259,7 @@ abstract class $AppointmentCopyWith<$Res> {
   $ElementCopyWith<$Res>? get statusElement;
   $CodeableConceptCopyWith<$Res>? get cancelationReason;
   $CodeableConceptCopyWith<$Res>? get appointmentType;
-  $ElementCopyWith<$Res>? get priorityElement;
+  $CodeableConceptCopyWith<$Res>? get priority;
   $ElementCopyWith<$Res>? get descriptionElement;
   $ElementCopyWith<$Res>? get startElement;
   $ElementCopyWith<$Res>? get endElement;
@@ -307,7 +300,6 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
     Object? appointmentType = freezed,
     Object? reason = freezed,
     Object? priority = freezed,
-    Object? priorityElement = freezed,
     Object? description = freezed,
     Object? descriptionElement = freezed,
     Object? supportingInformation = freezed,
@@ -412,11 +404,7 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
       priority: priority == freezed
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
-      priorityElement: priorityElement == freezed
-          ? _value.priorityElement
-          : priorityElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
+              as CodeableConcept?,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -574,13 +562,13 @@ class _$AppointmentCopyWithImpl<$Res> implements $AppointmentCopyWith<$Res> {
   }
 
   @override
-  $ElementCopyWith<$Res>? get priorityElement {
-    if (_value.priorityElement == null) {
+  $CodeableConceptCopyWith<$Res>? get priority {
+    if (_value.priority == null) {
       return null;
     }
 
-    return $ElementCopyWith<$Res>(_value.priorityElement!, (value) {
-      return _then(_value.copyWith(priorityElement: value));
+    return $CodeableConceptCopyWith<$Res>(_value.priority!, (value) {
+      return _then(_value.copyWith(priority: value));
     });
   }
 
@@ -696,9 +684,7 @@ abstract class _$AppointmentCopyWith<$Res>
       List<CodeableConcept>? specialty,
       CodeableConcept? appointmentType,
       List<CodeableReference>? reason,
-      UnsignedInt? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
+      CodeableConcept? priority,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
@@ -741,7 +727,7 @@ abstract class _$AppointmentCopyWith<$Res>
   @override
   $CodeableConceptCopyWith<$Res>? get appointmentType;
   @override
-  $ElementCopyWith<$Res>? get priorityElement;
+  $CodeableConceptCopyWith<$Res>? get priority;
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
   @override
@@ -791,7 +777,6 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
     Object? appointmentType = freezed,
     Object? reason = freezed,
     Object? priority = freezed,
-    Object? priorityElement = freezed,
     Object? description = freezed,
     Object? descriptionElement = freezed,
     Object? supportingInformation = freezed,
@@ -896,11 +881,7 @@ class __$AppointmentCopyWithImpl<$Res> extends _$AppointmentCopyWithImpl<$Res>
       priority: priority == freezed
           ? _value.priority
           : priority // ignore: cast_nullable_to_non_nullable
-              as UnsignedInt?,
-      priorityElement: priorityElement == freezed
-          ? _value.priorityElement
-          : priorityElement // ignore: cast_nullable_to_non_nullable
-              as Element?,
+              as CodeableConcept?,
       description: description == freezed
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -1012,8 +993,6 @@ class _$_Appointment extends _Appointment {
       this.appointmentType,
       this.reason,
       this.priority,
-      @JsonKey(name: '_priority')
-          this.priorityElement,
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
@@ -1092,10 +1071,7 @@ class _$_Appointment extends _Appointment {
   @override
   final List<CodeableReference>? reason;
   @override
-  final UnsignedInt? priority;
-  @override
-  @JsonKey(name: '_priority')
-  final Element? priorityElement;
+  final CodeableConcept? priority;
   @override
   final String? description;
   @override
@@ -1144,7 +1120,7 @@ class _$_Appointment extends _Appointment {
 
   @override
   String toString() {
-    return 'Appointment(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, cancelationReason: $cancelationReason, serviceCategory: $serviceCategory, serviceType: $serviceType, specialty: $specialty, appointmentType: $appointmentType, reason: $reason, priority: $priority, priorityElement: $priorityElement, description: $description, descriptionElement: $descriptionElement, supportingInformation: $supportingInformation, start: $start, startElement: $startElement, end: $end, endElement: $endElement, minutesDuration: $minutesDuration, minutesDurationElement: $minutesDurationElement, slot: $slot, created: $created, createdElement: $createdElement, comment: $comment, commentElement: $commentElement, patientInstruction: $patientInstruction, patientInstructionElement: $patientInstructionElement, basedOn: $basedOn, participant: $participant, requestedPeriod: $requestedPeriod)';
+    return 'Appointment(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, cancelationReason: $cancelationReason, serviceCategory: $serviceCategory, serviceType: $serviceType, specialty: $specialty, appointmentType: $appointmentType, reason: $reason, priority: $priority, description: $description, descriptionElement: $descriptionElement, supportingInformation: $supportingInformation, start: $start, startElement: $startElement, end: $end, endElement: $endElement, minutesDuration: $minutesDuration, minutesDurationElement: $minutesDurationElement, slot: $slot, created: $created, createdElement: $createdElement, comment: $comment, commentElement: $commentElement, patientInstruction: $patientInstruction, patientInstructionElement: $patientInstructionElement, basedOn: $basedOn, participant: $participant, requestedPeriod: $requestedPeriod)';
   }
 
   @override
@@ -1209,16 +1185,15 @@ class _$_Appointment extends _Appointment {
             (identical(other.priority, priority) ||
                 const DeepCollectionEquality()
                     .equals(other.priority, priority)) &&
-            (identical(other.priorityElement, priorityElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.priorityElement, priorityElement)) &&
             (identical(other.description, description) ||
                 const DeepCollectionEquality()
                     .equals(other.description, description)) &&
             (identical(other.descriptionElement, descriptionElement) ||
                 const DeepCollectionEquality()
                     .equals(other.descriptionElement, descriptionElement)) &&
-            (identical(other.supportingInformation, supportingInformation) || const DeepCollectionEquality().equals(other.supportingInformation, supportingInformation)) &&
+            (identical(other.supportingInformation, supportingInformation) ||
+                const DeepCollectionEquality()
+                    .equals(other.supportingInformation, supportingInformation)) &&
             (identical(other.start, start) || const DeepCollectionEquality().equals(other.start, start)) &&
             (identical(other.startElement, startElement) || const DeepCollectionEquality().equals(other.startElement, startElement)) &&
             (identical(other.end, end) || const DeepCollectionEquality().equals(other.end, end)) &&
@@ -1261,7 +1236,6 @@ class _$_Appointment extends _Appointment {
       const DeepCollectionEquality().hash(appointmentType) ^
       const DeepCollectionEquality().hash(reason) ^
       const DeepCollectionEquality().hash(priority) ^
-      const DeepCollectionEquality().hash(priorityElement) ^
       const DeepCollectionEquality().hash(description) ^
       const DeepCollectionEquality().hash(descriptionElement) ^
       const DeepCollectionEquality().hash(supportingInformation) ^
@@ -1321,9 +1295,7 @@ abstract class _Appointment extends Appointment {
       List<CodeableConcept>? specialty,
       CodeableConcept? appointmentType,
       List<CodeableReference>? reason,
-      UnsignedInt? priority,
-      @JsonKey(name: '_priority')
-          Element? priorityElement,
+      CodeableConcept? priority,
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
@@ -1404,10 +1376,7 @@ abstract class _Appointment extends Appointment {
   @override
   List<CodeableReference>? get reason => throw _privateConstructorUsedError;
   @override
-  UnsignedInt? get priority => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(name: '_priority')
-  Element? get priorityElement => throw _privateConstructorUsedError;
+  CodeableConcept? get priority => throw _privateConstructorUsedError;
   @override
   String? get description => throw _privateConstructorUsedError;
   @override
@@ -12200,7 +12169,7 @@ class _$VerificationResultTearOff {
       List<Reference>? target,
       List<String>? targetLocation,
       @JsonKey(name: '_targetLocation')
-          List<Element?>? targetLocationElement,
+          List<Element>? targetLocationElement,
       CodeableConcept? need,
       Code? status,
       @JsonKey(name: '_status')
@@ -12284,7 +12253,7 @@ mixin _$VerificationResult {
   List<Reference>? get target => throw _privateConstructorUsedError;
   List<String>? get targetLocation => throw _privateConstructorUsedError;
   @JsonKey(name: '_targetLocation')
-  List<Element?>? get targetLocationElement =>
+  List<Element>? get targetLocationElement =>
       throw _privateConstructorUsedError;
   CodeableConcept? get need => throw _privateConstructorUsedError;
   Code? get status => throw _privateConstructorUsedError;
@@ -12341,7 +12310,7 @@ abstract class $VerificationResultCopyWith<$Res> {
       List<Reference>? target,
       List<String>? targetLocation,
       @JsonKey(name: '_targetLocation')
-          List<Element?>? targetLocationElement,
+          List<Element>? targetLocationElement,
       CodeableConcept? need,
       Code? status,
       @JsonKey(name: '_status')
@@ -12476,7 +12445,7 @@ class _$VerificationResultCopyWithImpl<$Res>
       targetLocationElement: targetLocationElement == freezed
           ? _value.targetLocationElement
           : targetLocationElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       need: need == freezed
           ? _value.need
           : need // ignore: cast_nullable_to_non_nullable
@@ -12715,7 +12684,7 @@ abstract class _$VerificationResultCopyWith<$Res>
       List<Reference>? target,
       List<String>? targetLocation,
       @JsonKey(name: '_targetLocation')
-          List<Element?>? targetLocationElement,
+          List<Element>? targetLocationElement,
       CodeableConcept? need,
       Code? status,
       @JsonKey(name: '_status')
@@ -12865,7 +12834,7 @@ class __$VerificationResultCopyWithImpl<$Res>
       targetLocationElement: targetLocationElement == freezed
           ? _value.targetLocationElement
           : targetLocationElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       need: need == freezed
           ? _value.need
           : need // ignore: cast_nullable_to_non_nullable
@@ -13014,7 +12983,7 @@ class _$_VerificationResult extends _VerificationResult {
   final List<String>? targetLocation;
   @override
   @JsonKey(name: '_targetLocation')
-  final List<Element?>? targetLocationElement;
+  final List<Element>? targetLocationElement;
   @override
   final CodeableConcept? need;
   @override
@@ -13200,7 +13169,7 @@ abstract class _VerificationResult extends VerificationResult {
       List<Reference>? target,
       List<String>? targetLocation,
       @JsonKey(name: '_targetLocation')
-          List<Element?>? targetLocationElement,
+          List<Element>? targetLocationElement,
       CodeableConcept? need,
       Code? status,
       @JsonKey(name: '_status')
@@ -13259,7 +13228,7 @@ abstract class _VerificationResult extends VerificationResult {
   List<String>? get targetLocation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_targetLocation')
-  List<Element?>? get targetLocationElement =>
+  List<Element>? get targetLocationElement =>
       throw _privateConstructorUsedError;
   @override
   CodeableConcept? get need => throw _privateConstructorUsedError;

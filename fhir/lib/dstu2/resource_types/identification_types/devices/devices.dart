@@ -53,13 +53,16 @@ class Device with Resource, _$Device {
   }) = _Device;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Device.fromYaml(dynamic yaml) => yaml is String
-      ? Device.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Device.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Device.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Device.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Device cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -98,13 +101,16 @@ class DeviceComponent with Resource, _$DeviceComponent {
   }) = _DeviceComponent;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory DeviceComponent.fromYaml(dynamic yaml) => yaml is String
-      ? DeviceComponent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? DeviceComponent.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DeviceComponent.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? DeviceComponent.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'DeviceComponent cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -134,10 +140,10 @@ class DeviceComponentProductionSpecification
   factory DeviceComponentProductionSpecification.fromYaml(dynamic yaml) => yaml
           is String
       ? DeviceComponentProductionSpecification.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
           ? DeviceComponentProductionSpecification.fromJson(
-              jsonDecode(jsonEncode(yaml)))
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'DeviceComponentProductionSpecification cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -183,13 +189,16 @@ class DeviceMetric with Resource, _$DeviceMetric {
   }) = _DeviceMetric;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory DeviceMetric.fromYaml(dynamic yaml) => yaml is String
-      ? DeviceMetric.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? DeviceMetric.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DeviceMetric.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? DeviceMetric.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'DeviceMetric cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -220,9 +229,11 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory DeviceMetricCalibration.fromYaml(dynamic yaml) => yaml is String
-      ? DeviceMetricCalibration.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? DeviceMetricCalibration.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DeviceMetricCalibration.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? DeviceMetricCalibration.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'DeviceMetricCalibration cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');

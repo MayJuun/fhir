@@ -1,4 +1,8 @@
-import 'package:fhir/r4.dart';
+import 'package:fhir/primitive_types/primitive_types.dart';
+import 'package:fhir/r4.dart' as r4;
+import 'package:fhir/r5.dart' as r5;
+import 'package:fhir/dstu2.dart' as dstu2;
+import 'package:fhir/stu3.dart' as stu3;
 
 import '../../fhir_path.dart';
 
@@ -20,8 +24,17 @@ class IsParser extends OperatorParser {
             'passed the following\n'
             'Operand1: $executedBefore\n'
             'Operand2: $executedAfter')
-        : ResourceUtils.resourceTypeFromStringMap.keys
-                    .contains(executedAfter.first) &&
+        : (passed['version'] == FhirVersion.r4
+                    ? r4.ResourceUtils.resourceTypeFromStringMap.keys
+                        .contains(executedAfter.first)
+                    : passed['version'] == FhirVersion.r5
+                        ? r5.ResourceUtils.resourceTypeFromStringMap.keys
+                            .contains(executedAfter.first)
+                        : passed['version'] == FhirVersion.dstu2
+                            ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
+                                .contains(executedAfter.first)
+                            : stu3.ResourceUtils.resourceTypeFromStringMap.keys
+                                .contains(executedAfter.first)) &&
                 executedBefore.first is Map &&
                 executedBefore.first['resourceType'] == executedAfter.first
             ? [true]
@@ -52,7 +65,10 @@ class IsParser extends OperatorParser {
                                     : executedAfter.first == 'Time'
                                         ? [executedBefore.first is Time]
                                         : executedAfter.first == 'Quantity'
-                                            ? [executedBefore.first is Quantity]
+                                            ? [
+                                                executedBefore.first
+                                                    is FhirPathQuantity
+                                              ]
                                             : [false];
   }
 }
@@ -73,8 +89,17 @@ class AsParser extends OperatorParser {
           'has a single item that resolves to an identifier, but was passed:\n'
           'Operand 2: $after\n');
     }
-    return (ResourceUtils.resourceTypeFromStringMap.keys
-                    .contains((after.first as IdentifierParser).value) &&
+    return ((passed['version'] == FhirVersion.r4
+                    ? r4.ResourceUtils.resourceTypeFromStringMap.keys
+                        .contains((after.first as IdentifierParser).value)
+                    : passed['version'] == FhirVersion.r5
+                        ? r5.ResourceUtils.resourceTypeFromStringMap.keys
+                            .contains((after.first as IdentifierParser).value)
+                        : passed['version'] == FhirVersion.dstu2
+                            ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys.contains(
+                                (after.first as IdentifierParser).value)
+                            : stu3.ResourceUtils.resourceTypeFromStringMap.keys.contains(
+                                (after.first as IdentifierParser).value)) &&
                 executedBefore.first is Map &&
                 executedBefore.first['resourceType'] ==
                     (after.first as IdentifierParser).value) ||
@@ -92,12 +117,9 @@ class AsParser extends OperatorParser {
             ((after.first as IdentifierParser).value == 'date' &&
                 executedBefore.first is Date) ||
             ((after.first as IdentifierParser).value == 'datetime' &&
-                (executedBefore.first is DateTime ||
-                    executedBefore.first is FhirDateTime)) ||
-            ((after.first as IdentifierParser).value == 'time' &&
-                executedBefore.first is Time) ||
-            ((after.first as IdentifierParser).value == 'quantity' &&
-                executedBefore.first is Quantity)
+                (executedBefore.first is DateTime || executedBefore.first is FhirDateTime)) ||
+            ((after.first as IdentifierParser).value == 'time' && executedBefore.first is Time) ||
+            ((after.first as IdentifierParser).value == 'quantity' && executedBefore.first is FhirPathQuantity)
         ? executedBefore
         : [];
   }

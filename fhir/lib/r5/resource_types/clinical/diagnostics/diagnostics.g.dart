@@ -185,7 +185,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
-  R5ResourceType.DeviceUseStatement: 'DeviceUseStatement',
+  R5ResourceType.DeviceUsage: 'DeviceUsage',
   R5ResourceType.DiagnosticReport: 'DiagnosticReport',
   R5ResourceType.DocumentManifest: 'DocumentManifest',
   R5ResourceType.DocumentReference: 'DocumentReference',
@@ -213,6 +213,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
+  R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
   R5ResourceType.Library: 'Library',
   R5ResourceType.Linkage: 'Linkage',
@@ -381,6 +382,9 @@ _$_DiagnosticReport _$$_DiagnosticReportFromJson(Map<String, dynamic> json) =>
           ?.map(
               (e) => DiagnosticReportMedia.fromJson(e as Map<String, dynamic>))
           .toList(),
+      composition: json['composition'] == null
+          ? null
+          : Reference.fromJson(json['composition'] as Map<String, dynamic>),
       conclusion: json['conclusion'] as String?,
       conclusionElement: json['_conclusion'] == null
           ? null
@@ -441,6 +445,7 @@ Map<String, dynamic> _$$_DiagnosticReportToJson(_$_DiagnosticReport instance) {
   writeNotNull(
       'imagingStudy', instance.imagingStudy?.map((e) => e.toJson()).toList());
   writeNotNull('media', instance.media?.map((e) => e.toJson()).toList());
+  writeNotNull('composition', instance.composition?.toJson());
   writeNotNull('conclusion', instance.conclusion);
   writeNotNull('_conclusion', instance.conclusionElement?.toJson());
   writeNotNull('conclusionCode',
@@ -1408,27 +1413,27 @@ Map<String, dynamic> _$$_MolecularSequenceRocToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('score', instance.score?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_score', instance.scoreElement?.map((e) => e?.toJson()).toList());
+      '_score', instance.scoreElement?.map((e) => e.toJson()).toList());
   writeNotNull('numTP', instance.numTP?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_numTP', instance.numTPElement?.map((e) => e?.toJson()).toList());
+      '_numTP', instance.numTPElement?.map((e) => e.toJson()).toList());
   writeNotNull('numFP', instance.numFP?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_numFP', instance.numFPElement?.map((e) => e?.toJson()).toList());
+      '_numFP', instance.numFPElement?.map((e) => e.toJson()).toList());
   writeNotNull('numFN', instance.numFN?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_numFN', instance.numFNElement?.map((e) => e?.toJson()).toList());
+      '_numFN', instance.numFNElement?.map((e) => e.toJson()).toList());
   writeNotNull(
       'precision', instance.precision?.map((e) => e.toJson()).toList());
-  writeNotNull('_precision',
-      instance.precisionElement?.map((e) => e?.toJson()).toList());
+  writeNotNull(
+      '_precision', instance.precisionElement?.map((e) => e.toJson()).toList());
   writeNotNull(
       'sensitivity', instance.sensitivity?.map((e) => e.toJson()).toList());
   writeNotNull('_sensitivity',
-      instance.sensitivityElement?.map((e) => e?.toJson()).toList());
+      instance.sensitivityElement?.map((e) => e.toJson()).toList());
   writeNotNull('fMeasure', instance.fMeasure?.map((e) => e.toJson()).toList());
   writeNotNull(
-      '_fMeasure', instance.fMeasureElement?.map((e) => e?.toJson()).toList());
+      '_fMeasure', instance.fMeasureElement?.map((e) => e.toJson()).toList());
   return val;
 }
 
@@ -1687,6 +1692,17 @@ _$_Observation _$$_ObservationFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
+      instantiatesCanonical: json['instantiatesCanonical'] == null
+          ? null
+          : Canonical.fromJson(json['instantiatesCanonical']),
+      instantiatesCanonicalElement: json['_instantiatesCanonical'] == null
+          ? null
+          : Element.fromJson(
+              json['_instantiatesCanonical'] as Map<String, dynamic>),
+      instantiatesReference: json['instantiatesReference'] == null
+          ? null
+          : Reference.fromJson(
+              json['instantiatesReference'] as Map<String, dynamic>),
       basedOn: (json['basedOn'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -1851,6 +1867,12 @@ Map<String, dynamic> _$$_ObservationToJson(_$_Observation instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'instantiatesCanonical', instance.instantiatesCanonical?.toJson());
+  writeNotNull('_instantiatesCanonical',
+      instance.instantiatesCanonicalElement?.toJson());
+  writeNotNull(
+      'instantiatesReference', instance.instantiatesReference?.toJson());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
   writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
   writeNotNull('status', _$ObservationStatusEnumMap[instance.status]);

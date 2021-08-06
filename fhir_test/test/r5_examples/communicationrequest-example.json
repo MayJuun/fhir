@@ -6,6 +6,7 @@
     "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003eTo be filled out at a later time\u003c/div\u003e"
   },
   "status": "active",
+  "intent": "proposal",
   "subject": {
     "reference": "Patient/example"
   },

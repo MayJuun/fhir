@@ -295,7 +295,7 @@
                       "textEquivalent": "CARBOplatin AUC 5 IV over 30 minutes on Day 1",
                       "relatedAction": [
                         {
-                          "actionId": "action-1",
+                          "targetId": "action-1",
                           "relationship": "concurrent-with-start"
                         }
                       ],

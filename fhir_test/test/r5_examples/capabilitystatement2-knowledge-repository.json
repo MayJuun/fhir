@@ -26,7 +26,7 @@
   "software": {
     "name": "ACME Knowledge Repository Service"
   },
-  "fhirVersion": "4.2.0",
+  "fhirVersion": "4.6.0",
   "format": [
     "json",
     "xml"
@@ -38,7 +38,7 @@
       "resource": [
         {
           "type": "Library",
-          "profile": "StructureDefinition/Library",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Library",
           "interaction": [
             {
               "code": "read",
@@ -109,7 +109,7 @@
         },
         {
           "type": "PlanDefinition",
-          "profile": "StructureDefinition/PlanDefinition",
+          "profile": "http://hl7.org/fhir/StructureDefinition/PlanDefinition",
           "interaction": [
             {
               "code": "read",
@@ -180,7 +180,7 @@
         },
         {
           "type": "ActivityDefinition",
-          "profile": "StructureDefinition/ActivityDefinition",
+          "profile": "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",
           "interaction": [
             {
               "code": "read",
@@ -251,7 +251,7 @@
         },
         {
           "type": "Measure",
-          "profile": "StructureDefinition/Measure",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Measure",
           "interaction": [
             {
               "code": "read",
@@ -322,7 +322,7 @@
         },
         {
           "type": "Questionnaire",
-          "profile": "StructureDefinition/Questionnaire",
+          "profile": "http://hl7.org/fhir/StructureDefinition/Questionnaire",
           "interaction": [
             {
               "code": "read",
@@ -380,7 +380,7 @@
       "operation": [
         {
           "name": "data-requirements",
-          "definition": "OperationDefinition/Library-data-requirements"
+          "definition": "http://hl7.org/fhir/OperationDefinition/Library-data-requirements"
         }
       ]
     }

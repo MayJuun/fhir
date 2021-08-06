@@ -3,7 +3,8 @@ import 'package:test/test.dart';
 
 import 'package:fhir_path/fhir_path.dart';
 
-dynamic walkPath(dynamic arg) => walkFhirPath(resource, arg).toString();
+dynamic walkPath(dynamic arg) =>
+    walkFhirPath(resource.toJson(), arg).toString();
 
 void testPaths() {
   group('Path Test', () {
@@ -65,8 +66,9 @@ void testPaths() {
           '[Mg, mL, Kg, Km, Feet, inches]');
     });
     test('Sample Patient', () {
-      expect(walkFhirPath(patient, 'Patient.text.status'), ['generated']);
-      expect(walkFhirPath(patient, 'Patient.text.div'), [
+      expect(
+          walkFhirPath(patient.toJson(), 'Patient.text.status'), ['generated']);
+      expect(walkFhirPath(patient.toJson(), 'Patient.text.div'), [
         '<div xmlns="http://www.w3.org/1999/xhtml">\n'
             '\t\t\t<table>\n'
             '\t\t\t\t<tbody>\n'

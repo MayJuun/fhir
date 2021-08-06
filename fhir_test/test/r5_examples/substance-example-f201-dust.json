@@ -3,16 +3,19 @@
   "id": "f201",
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative with Details\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eid\u003c/b\u003e: f201\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: House dust allergen \u003cspan\u003e(Details : {SNOMED CT code \u0027406466009\u0027 \u003d \u0027House dust allergen\u0027, given as \u0027House dust allergen\u0027})\u003c/span\u003e\u003c/p\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003einstance\u003c/b\u003e: false\u003c/p\u003e\u003ch3\u003eCodes\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
   },
+  "instance": false,
   "code": {
-    "coding": [
-      {
-        "system": "http://snomed.info/sct",
-        "code": "406466009",
-        "display": "House dust allergen"
-      }
-    ]
+    "concept": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "406466009",
+          "display": "House dust allergen"
+        }
+      ]
+    }
   },
   "meta": {
     "tag": [

@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/entryFormat",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "entryFormat",
   "status": "draft",
   "date": "2014-04-27",
@@ -28,7 +28,7 @@
     }
   ],
   "description": "Additional instructions for the user to guide their input (i.e. a human readable version of a regular expression like \"nnn-nnn-nnn\"). In most UIs this is the placeholder (or \u0027ghost\u0027) text placed directly inside the edit controls and that disappear when the control gets the focus.",
-  "fhirVersion": "4.2.0",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "v2",
@@ -63,6 +63,7 @@
         "path": "Extension",
         "short": "User prompt for format",
         "definition": "Additional instructions for the user to guide their input (i.e. a human readable version of a regular expression like \"nnn-nnn-nnn\"). In most UIs this is the placeholder (or \u0027ghost\u0027) text placed directly inside the edit controls and that disappear when the control gets the focus.",
+        "comment": "For questionnaires, see additional guidance and examples in the [SDC implementation guide](http://build.fhir.org/ig/HL7/sdc/rendering.html#entryFormat).",
         "min": 0,
         "max": "1",
         "base": {
@@ -77,7 +78,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -169,7 +170,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -177,7 +178,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -244,7 +245,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -265,6 +266,7 @@
         "path": "Extension",
         "short": "User prompt for format",
         "definition": "Additional instructions for the user to guide their input (i.e. a human readable version of a regular expression like \"nnn-nnn-nnn\"). In most UIs this is the placeholder (or \u0027ghost\u0027) text placed directly inside the edit controls and that disappear when the control gets the focus.",
+        "comment": "For questionnaires, see additional guidance and examples in the [SDC implementation guide](http://build.fhir.org/ig/HL7/sdc/rendering.html#entryFormat).",
         "min": 0,
         "max": "1",
         "mapping": [

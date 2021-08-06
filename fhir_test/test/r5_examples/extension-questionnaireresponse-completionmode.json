@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/questionnaireresponse-completionMode",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "completionMode",
   "status": "draft",
   "date": "2013-07-04",
@@ -28,7 +28,7 @@
     }
   ],
   "description": "Indicates how the individual completing the QuestionnaireResponse provided their responses.",
-  "fhirVersion": "4.2.0",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "rim",
@@ -68,7 +68,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -150,7 +150,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -158,7 +158,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -225,7 +225,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -239,7 +239,7 @@
           ],
           "strength": "required",
           "description": "Codes indicating how the questionnaire was completed.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/questionnaireresponse-mode|4.2.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/questionnaireresponse-mode"
         },
         "mapping": [
           {
@@ -288,7 +288,7 @@
           ],
           "strength": "required",
           "description": "Codes indicating how the questionnaire was completed.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/questionnaireresponse-mode|4.2.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/questionnaireresponse-mode"
         }
       }
     ]

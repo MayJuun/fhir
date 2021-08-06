@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for Specimen.collection.collected[x]",
       "expansion": {
-        "identifier": "urn:uuid:3cd796b4-4a60-4a26-8ce8-b9e59662e07a",
-        "timestamp": "2019-12-31T21:17:12+11:00",
+        "identifier": "urn:uuid:ff55e57e-b61f-409e-8345-ed7218e649e3",
+        "timestamp": "2021-04-15T12:30:01+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -32,8 +32,8 @@
       "status": "active",
       "description": "Type options for Specimen.collection.fastingStatus[x]",
       "expansion": {
-        "identifier": "urn:uuid:cbd1a3a7-c094-4a92-8a49-2e02c2946953",
-        "timestamp": "2019-12-31T21:17:12+11:00",
+        "identifier": "urn:uuid:ab37b06b-3740-412a-95da-a9a274dd455d",
+        "timestamp": "2021-04-15T12:30:01+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -55,8 +55,8 @@
       "status": "active",
       "description": "Type options for Specimen.processing.time[x]",
       "expansion": {
-        "identifier": "urn:uuid:ee3ebb84-c9f0-4d2e-9ffa-2fd446732867",
-        "timestamp": "2019-12-31T21:17:12+11:00",
+        "identifier": "urn:uuid:11658f5b-fda0-4ee7-9027-1226b62eb228",
+        "timestamp": "2021-04-15T12:30:01+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -78,8 +78,8 @@
       "status": "active",
       "description": "Type options for Specimen.container.additive[x]",
       "expansion": {
-        "identifier": "urn:uuid:21a67cf1-b70d-4e6e-a15d-787f30b64a91",
-        "timestamp": "2019-12-31T21:17:12+11:00",
+        "identifier": "urn:uuid:b6796df7-9d52-4ccb-b919-55471612fbab",
+        "timestamp": "2021-04-15T12:30:01+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -100,9 +100,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Orders and Observations)",
   "item": [
     {
@@ -161,7 +161,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -320,7 +320,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -347,7 +347,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]

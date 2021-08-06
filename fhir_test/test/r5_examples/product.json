@@ -12,11 +12,11 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/Product",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "Product",
   "title": "product",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International fhir",
   "contact": [
     {
@@ -29,7 +29,7 @@
     }
   ],
   "description": "Logical Model: A pattern to be followed by resources that represent a product used in healthcare, for clinical or operational purposes.",
-  "fhirVersion": "4.2.0",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "rim",
@@ -71,7 +71,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -87,7 +87,7 @@
         "id": "Product.status",
         "path": "Product.status",
         "short": "active | inactive | entered-in-error",
-        "definition": "The current state of the {{title}}.",
+        "definition": "The current state of the product.",
         "comment": "Unknown does not represent \"other\" - one of the defined statuses must apply.  Unknown is used when the authoring system is not sure what the current status is.",
         "min": 1,
         "max": "1",
@@ -108,7 +108,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": true,
@@ -117,13 +117,16 @@
         "binding": {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "valueString": "Codes identifying the lifecycle stage of a product."
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
               "valueString": "ProductStatus"
             }
           ],
           "strength": "required",
-          "description": "Codes identifying the lifecycle stage of a product.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/product-status|4.2.0"
+          "valueSet": "http://hl7.org/fhir/ValueSet/product-status|4.6.0"
         },
         "mapping": [
           {
@@ -144,7 +147,7 @@
         "id": "Product.category",
         "path": "Product.category",
         "short": "A category or class of the product",
-        "definition": "A category of the product. For example drug class, or device type… A product can have one or several categories. The categories can be from an official / regulatory source, or internal categorization or classification schemes. Categories are useful in search and retrieval of products, or can be used for determining authorizations, e.g. who can order which kinds of products.",
+        "definition": "A category of the product. For example drug class, or device type. A product can have one or several categories. The categories can be from an official / regulatory source, or internal categorization or classification schemes. Categories are useful in search and retrieval of products, or can be used for determining authorizations, e.g. who can order which kinds of products.",
         "alias": [
           "class"
         ],
@@ -167,7 +170,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -210,7 +213,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -253,7 +256,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -289,7 +292,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -298,8 +301,8 @@
       {
         "id": "Product.instance.quantity",
         "path": "Product.instance.quantity",
-        "short": "The amount of items or instances",
-        "definition": "The amount of items or instances that the resource considers, for instance when referring to 2 identical units together.",
+        "short": "The amount of items",
+        "definition": "For products that represent a particular quantity of a substance or type of item, indicates how \u0027much\u0027 of the product (by weight, volume, count, etc.) is represented by this resource instance.",
         "min": 0,
         "max": "1",
         "base": {
@@ -322,7 +325,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -355,7 +358,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -385,7 +388,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -415,7 +418,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -424,18 +427,18 @@
       {
         "id": "Product.instance.subject",
         "path": "Product.instance.subject",
-        "short": "Individual to which the product is associated with, or which has used the product",
-        "definition": "Individual to which the product is associated with, or which has used the product.",
+        "short": "Individual the product is associated with, or which has used the product",
+        "definition": "Individual the product is associated with, or which has used the product.",
         "comment": "[For resources that aren\u0027t patient-specific, the set of allowed resources may be extended to include other things.  Group should generally be retained unless there\u0027s certainty this resource won\u0027t be used for veterinary, research or public health settings where Group may be necessary (e.g. this cage of rats/crate of chickens, group of people in a 5 mile radious of the incident, etc.)].",
-        "requirements": "Links the {{title}} to the Patient context.",
+        "requirements": "Links the product to the Patient context.",
         "alias": [
           "patient"
         ],
-        "min": 1,
+        "min": 0,
         "max": "1",
         "base": {
           "path": "Product.instance.subject",
-          "min": 1,
+          "min": 0,
           "max": "1"
         },
         "type": [
@@ -454,7 +457,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -498,7 +501,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,

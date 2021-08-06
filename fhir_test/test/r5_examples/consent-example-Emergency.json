@@ -24,12 +24,12 @@
       ]
     }
   ],
-  "patient": {
+  "subject": {
     "reference": "Patient/f001",
     "display": "Pieter van de Heuvel"
   },
   "dateTime": "2018-12-24",
-  "organization": [
+  "controller": [
     {
       "reference": "Organization/f201"
     }

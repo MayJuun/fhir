@@ -1,5 +1,8 @@
 import 'package:fhir/primitive_types/primitive_types.dart';
-import 'package:fhir/r4.dart';
+import 'package:fhir/r4.dart' as r4;
+import 'package:fhir/r5.dart' as r5;
+import 'package:fhir/dstu2.dart' as dstu2;
+import 'package:fhir/stu3.dart' as stu3;
 
 import '../fhir_path.dart';
 
@@ -57,10 +60,18 @@ class IdentifierParser extends ValueParser<String> {
   String value;
   List execute(List results, Map passed, {bool where = false}) {
     final finalResults = [];
-    if (ResourceUtils.resourceTypeFromStringMap.keys.contains(value) &&
-        (passed['%resource'] == null
-            ? false
-            : passed['%resource']['resourceType'] == value)) {
+    if (passed['version'] == FhirVersion.r4
+        ? r4.ResourceUtils.resourceTypeFromStringMap.keys.contains(value)
+        : passed['version'] == FhirVersion.r5
+            ? r5.ResourceUtils.resourceTypeFromStringMap.keys.contains(value)
+            : passed['version'] == FhirVersion.dstu2
+                ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
+                    .contains(value)
+                : stu3.ResourceUtils.resourceTypeFromStringMap.keys
+                        .contains(value) &&
+                    (passed['%resource'] == null
+                        ? false
+                        : passed['%resource']['resourceType'] == value)) {
       finalResults.add(passed['%resource']);
     } else {
       results.forEach((r) {

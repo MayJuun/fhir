@@ -23,14 +23,16 @@ class FhirDb {
 
   static void prepareForTesting() {
     sqflite_common_ffi.sqfliteFfiInit();
-    _db._dbFactory = getDatabaseFactorySqflite(sqflite_common_ffi.databaseFactoryFfi);
+    _db._dbFactory =
+        getDatabaseFactorySqflite(sqflite_common_ffi.databaseFactoryFfi);
   }
 
   /// Completer to transform synchronous -> asynchronous (I hate completers)
   Completer<Database>? _dbOpenCompleter;
 
   /// Database Factory
-  DatabaseFactory _dbFactory = getDatabaseFactorySqflite(sqflite.databaseFactory);
+  DatabaseFactory _dbFactory =
+      getDatabaseFactorySqflite(sqflite.databaseFactory);
 
   /// Update old password to new
   Future updatePassword(String? oldPw, String? newPw) async =>

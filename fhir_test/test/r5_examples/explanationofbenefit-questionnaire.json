@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for ExplanationOfBenefit.supportingInfo.timing[x]",
       "expansion": {
-        "identifier": "urn:uuid:f76bb128-7b10-43fa-8b0b-848f477c3220",
-        "timestamp": "2019-12-31T21:12:59+11:00",
+        "identifier": "urn:uuid:01108027-e326-4d82-94c3-6905f019f532",
+        "timestamp": "2021-04-15T12:28:46+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -32,8 +32,8 @@
       "status": "active",
       "description": "Type options for ExplanationOfBenefit.supportingInfo.value[x]",
       "expansion": {
-        "identifier": "urn:uuid:d4b967ff-a96b-49a3-a154-3503da7b3b4e",
-        "timestamp": "2019-12-31T21:12:59+11:00",
+        "identifier": "urn:uuid:27e21b2c-241d-4822-856a-bc83ec28ba6f",
+        "timestamp": "2021-04-15T12:28:46+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -70,8 +70,8 @@
       "status": "active",
       "description": "Type options for ExplanationOfBenefit.diagnosis.diagnosis[x]",
       "expansion": {
-        "identifier": "urn:uuid:61960b80-bfd4-4e07-8e8b-9597a408ff52",
-        "timestamp": "2019-12-31T21:12:59+11:00",
+        "identifier": "urn:uuid:e7a77ed8-8030-445e-9656-1aa934da9136",
+        "timestamp": "2021-04-15T12:28:46+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -93,8 +93,8 @@
       "status": "active",
       "description": "Type options for ExplanationOfBenefit.procedure.procedure[x]",
       "expansion": {
-        "identifier": "urn:uuid:982221b9-ac75-4bda-a558-0a63868212be",
-        "timestamp": "2019-12-31T21:12:59+11:00",
+        "identifier": "urn:uuid:c72dea48-eab9-4a00-ac22-dc05b9876c72",
+        "timestamp": "2021-04-15T12:28:46+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -116,8 +116,8 @@
       "status": "active",
       "description": "Type options for ExplanationOfBenefit.accident.location[x]",
       "expansion": {
-        "identifier": "urn:uuid:aa13a29f-95c6-4e69-9958-0bad6e4536bb",
-        "timestamp": "2019-12-31T21:12:59+11:00",
+        "identifier": "urn:uuid:c43e2d42-5c03-4747-8836-89ae5052fbaa",
+        "timestamp": "2021-04-15T12:28:46+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -139,8 +139,8 @@
       "status": "active",
       "description": "Type options for ExplanationOfBenefit.item.serviced[x]",
       "expansion": {
-        "identifier": "urn:uuid:ffb88a0e-13e5-4e16-b1c7-c25bd982ea96",
-        "timestamp": "2019-12-31T21:12:59+11:00",
+        "identifier": "urn:uuid:5044bd88-fec0-441d-bb4d-dd3d2f2ff4ce",
+        "timestamp": "2021-04-15T12:28:46+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -162,8 +162,8 @@
       "status": "active",
       "description": "Type options for ExplanationOfBenefit.item.location[x]",
       "expansion": {
-        "identifier": "urn:uuid:d2e82735-b3d7-4f95-89a6-d479388b6c3c",
-        "timestamp": "2019-12-31T21:12:59+11:00",
+        "identifier": "urn:uuid:a63c17b6-9576-4f2e-b6d9-a25bacaa3436",
+        "timestamp": "2021-04-15T12:28:46+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -190,8 +190,8 @@
       "status": "active",
       "description": "Type options for ExplanationOfBenefit.addItem.serviced[x]",
       "expansion": {
-        "identifier": "urn:uuid:2cd22804-5fa8-4900-83d9-ffc7e1eb4014",
-        "timestamp": "2019-12-31T21:12:59+11:00",
+        "identifier": "urn:uuid:4b936383-3109-48c5-b619-c250b2bf3237",
+        "timestamp": "2021-04-15T12:28:46+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -213,8 +213,8 @@
       "status": "active",
       "description": "Type options for ExplanationOfBenefit.addItem.location[x]",
       "expansion": {
-        "identifier": "urn:uuid:cb442047-6d82-45ae-b146-e716c8ae0580",
-        "timestamp": "2019-12-31T21:12:59+11:00",
+        "identifier": "urn:uuid:3dd0a80b-7ee7-446f-a283-da25b64bcc93",
+        "timestamp": "2021-04-15T12:28:46+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -241,8 +241,8 @@
       "status": "active",
       "description": "Type options for ExplanationOfBenefit.benefitBalance.financial.allowed[x]",
       "expansion": {
-        "identifier": "urn:uuid:2d8343e7-0bf5-4882-ae86-09252aab832f",
-        "timestamp": "2019-12-31T21:12:59+11:00",
+        "identifier": "urn:uuid:b9eb2f7d-b61f-40a1-8522-d963cc220455",
+        "timestamp": "2021-04-15T12:28:46+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -269,8 +269,8 @@
       "status": "active",
       "description": "Type options for ExplanationOfBenefit.benefitBalance.financial.used[x]",
       "expansion": {
-        "identifier": "urn:uuid:b724b1aa-6545-454f-9a98-3398b8374853",
-        "timestamp": "2019-12-31T21:12:59+11:00",
+        "identifier": "urn:uuid:fe848487-d185-4e02-9961-c95ee09d4e29",
+        "timestamp": "2021-04-15T12:28:46+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -291,9 +291,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Financial Management)",
   "item": [
     {
@@ -352,7 +352,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -511,7 +511,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -538,7 +538,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]

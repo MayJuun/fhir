@@ -58,13 +58,16 @@ class Immunization with Resource, _$Immunization {
   }) = _Immunization;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Immunization.fromYaml(dynamic yaml) => yaml is String
-      ? Immunization.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Immunization.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Immunization.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Immunization.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Immunization cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -88,9 +91,10 @@ class ImmunizationPractitioner with _$ImmunizationPractitioner {
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ImmunizationPractitioner.fromYaml(dynamic yaml) => yaml is String
       ? ImmunizationPractitioner.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ImmunizationPractitioner.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ImmunizationPractitioner.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ImmunizationPractitioner cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -113,9 +117,11 @@ class ImmunizationExplanation with _$ImmunizationExplanation {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ImmunizationExplanation.fromYaml(dynamic yaml) => yaml is String
-      ? ImmunizationExplanation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ImmunizationExplanation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ImmunizationExplanation.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ImmunizationExplanation.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ImmunizationExplanation cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -141,9 +147,11 @@ class ImmunizationReaction with _$ImmunizationReaction {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ImmunizationReaction.fromYaml(dynamic yaml) => yaml is String
-      ? ImmunizationReaction.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ImmunizationReaction.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ImmunizationReaction.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ImmunizationReaction.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ImmunizationReaction cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -178,10 +186,10 @@ class ImmunizationVaccinationProtocol with _$ImmunizationVaccinationProtocol {
   factory ImmunizationVaccinationProtocol.fromYaml(dynamic yaml) => yaml
           is String
       ? ImmunizationVaccinationProtocol.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
           ? ImmunizationVaccinationProtocol.fromJson(
-              jsonDecode(jsonEncode(yaml)))
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ImmunizationVaccinationProtocol cannot be constructed from input provided,'
               ' it is neither a yaml string or a yaml map.');
@@ -214,14 +222,16 @@ class ImmunizationRecommendation with Resource, _$ImmunizationRecommendation {
   }) = _ImmunizationRecommendation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ImmunizationRecommendation.fromYaml(dynamic yaml) => yaml is String
       ? ImmunizationRecommendation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ImmunizationRecommendation.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? ImmunizationRecommendation.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ImmunizationRecommendation cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -256,10 +266,10 @@ class ImmunizationRecommendationRecommendation
   factory ImmunizationRecommendationRecommendation.fromYaml(dynamic yaml) => yaml
           is String
       ? ImmunizationRecommendationRecommendation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
           ? ImmunizationRecommendationRecommendation.fromJson(
-              jsonDecode(jsonEncode(yaml)))
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ImmunizationRecommendationRecommendation cannot be constructed from input provided,'
               ' it is neither a yaml string or a yaml map.');
@@ -286,10 +296,10 @@ class ImmunizationRecommendationDateCriterion
   factory ImmunizationRecommendationDateCriterion.fromYaml(dynamic yaml) => yaml
           is String
       ? ImmunizationRecommendationDateCriterion.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
           ? ImmunizationRecommendationDateCriterion.fromJson(
-              jsonDecode(jsonEncode(yaml)))
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ImmunizationRecommendationDateCriterion cannot be constructed from input provided,'
               ' it is neither a yaml string or a yaml map.');
@@ -320,10 +330,10 @@ class ImmunizationRecommendationProtocol
   factory ImmunizationRecommendationProtocol.fromYaml(dynamic yaml) => yaml
           is String
       ? ImmunizationRecommendationProtocol.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
           ? ImmunizationRecommendationProtocol.fromJson(
-              jsonDecode(jsonEncode(yaml)))
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'ImmunizationRecommendationProtocol cannot be constructed from input provided,'
               ' it is neither a yaml string or a yaml map.');
@@ -365,13 +375,16 @@ class Medication with Resource, _$Medication {
   }) = _Medication;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Medication.fromYaml(dynamic yaml) => yaml is String
-      ? Medication.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Medication.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Medication.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Medication.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Medication cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -397,9 +410,11 @@ class MedicationIngredient with _$MedicationIngredient {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MedicationIngredient.fromYaml(dynamic yaml) => yaml is String
-      ? MedicationIngredient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MedicationIngredient.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MedicationIngredient.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MedicationIngredient.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MedicationIngredient cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -423,9 +438,11 @@ class MedicationPackage with _$MedicationPackage {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MedicationPackage.fromYaml(dynamic yaml) => yaml is String
-      ? MedicationPackage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MedicationPackage.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MedicationPackage.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MedicationPackage.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MedicationPackage cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -449,9 +466,11 @@ class MedicationContent with _$MedicationContent {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MedicationContent.fromYaml(dynamic yaml) => yaml is String
-      ? MedicationContent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MedicationContent.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MedicationContent.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MedicationContent.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MedicationContent cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -476,9 +495,11 @@ class MedicationBatch with _$MedicationBatch {
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MedicationBatch.fromYaml(dynamic yaml) => yaml is String
-      ? MedicationBatch.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MedicationBatch.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MedicationBatch.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MedicationBatch.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MedicationBatch cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -533,14 +554,16 @@ class MedicationAdministration with Resource, _$MedicationAdministration {
   }) = _MedicationAdministration;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MedicationAdministration.fromYaml(dynamic yaml) => yaml is String
       ? MedicationAdministration.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MedicationAdministration.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MedicationAdministration.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MedicationAdministration cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -566,10 +589,10 @@ class MedicationAdministrationPerformer
   factory MedicationAdministrationPerformer.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicationAdministrationPerformer.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
           ? MedicationAdministrationPerformer.fromJson(
-              jsonDecode(jsonEncode(yaml)))
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MedicationAdministrationPerformer cannot be constructed from input provided,'
               ' it is neither a yaml string or a yaml map.');
@@ -600,10 +623,10 @@ class MedicationAdministrationDosage with _$MedicationAdministrationDosage {
   factory MedicationAdministrationDosage.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicationAdministrationDosage.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
           ? MedicationAdministrationDosage.fromJson(
-              jsonDecode(jsonEncode(yaml)))
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MedicationAdministrationDosage cannot be constructed from input provided,'
               ' it is neither a yaml string or a yaml map.');
@@ -663,13 +686,16 @@ class MedicationDispense with Resource, _$MedicationDispense {
   }) = _MedicationDispense;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MedicationDispense.fromYaml(dynamic yaml) => yaml is String
-      ? MedicationDispense.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MedicationDispense.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MedicationDispense.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MedicationDispense.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MedicationDispense cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -693,9 +719,10 @@ class MedicationDispensePerformer with _$MedicationDispensePerformer {
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MedicationDispensePerformer.fromYaml(dynamic yaml) => yaml is String
       ? MedicationDispensePerformer.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MedicationDispensePerformer.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MedicationDispensePerformer.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MedicationDispensePerformer cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -723,10 +750,10 @@ class MedicationDispenseSubstitution with _$MedicationDispenseSubstitution {
   factory MedicationDispenseSubstitution.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicationDispenseSubstitution.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
           ? MedicationDispenseSubstitution.fromJson(
-              jsonDecode(jsonEncode(yaml)))
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MedicationDispenseSubstitution cannot be constructed from input provided,'
               ' it is neither a yaml string or a yaml map.');
@@ -785,13 +812,16 @@ class MedicationRequest with Resource, _$MedicationRequest {
   }) = _MedicationRequest;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MedicationRequest.fromYaml(dynamic yaml) => yaml is String
-      ? MedicationRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MedicationRequest.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MedicationRequest.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MedicationRequest.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MedicationRequest cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -815,9 +845,10 @@ class MedicationRequestRequester with _$MedicationRequestRequester {
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MedicationRequestRequester.fromYaml(dynamic yaml) => yaml is String
       ? MedicationRequestRequester.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MedicationRequestRequester.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MedicationRequestRequester.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MedicationRequestRequester cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -847,10 +878,10 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
   factory MedicationRequestDispenseRequest.fromYaml(dynamic yaml) => yaml
           is String
       ? MedicationRequestDispenseRequest.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
           ? MedicationRequestDispenseRequest.fromJson(
-              jsonDecode(jsonEncode(yaml)))
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MedicationRequestDispenseRequest cannot be constructed from input provided,'
               ' it is neither a yaml string or a yaml map.');
@@ -875,9 +906,10 @@ class MedicationRequestSubstitution with _$MedicationRequestSubstitution {
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MedicationRequestSubstitution.fromYaml(dynamic yaml) => yaml is String
       ? MedicationRequestSubstitution.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MedicationRequestSubstitution.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MedicationRequestSubstitution.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MedicationRequestSubstitution cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -931,13 +963,16 @@ class MedicationStatement with Resource, _$MedicationStatement {
   }) = _MedicationStatement;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MedicationStatement.fromYaml(dynamic yaml) => yaml is String
-      ? MedicationStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MedicationStatement.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MedicationStatement.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? MedicationStatement.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'MedicationStatement cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');

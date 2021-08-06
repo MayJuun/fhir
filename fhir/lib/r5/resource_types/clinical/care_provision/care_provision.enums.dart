@@ -1,6 +1,59 @@
 part of 'care_provision.dart';
 
-enum CarePlanDetailStatus {
+enum CarePlanStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('active')
+  active,
+  @JsonValue('on-hold')
+  on_hold,
+  @JsonValue('revoked')
+  revoked,
+  @JsonValue('completed')
+  completed,
+  @JsonValue('entered-in-error')
+  entered_in_error,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum CarePlanIntent {
+  @JsonValue('proposal')
+  proposal,
+  @JsonValue('plan')
+  plan,
+  @JsonValue('order')
+  order,
+  @JsonValue('option')
+  option,
+  @JsonValue('directive')
+  directive,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum CarePlanPlannedActivityDetailKind {
+  @JsonValue('Appointment')
+  Appointment,
+  @JsonValue('CommunicationRequest')
+  CommunicationRequest,
+  @JsonValue('DeviceRequest')
+  DeviceRequest,
+  @JsonValue('MedicationRequest')
+  MedicationRequest,
+  @JsonValue('NutritionOrder')
+  NutritionOrder,
+  @JsonValue('Task')
+  Task,
+  @JsonValue('ServiceRequest')
+  ServiceRequest,
+  @JsonValue('VisionPrescription')
+  VisionPrescription,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum CarePlanPlannedActivityDetailStatus {
   @JsonValue('not-started')
   not_started,
   @JsonValue('scheduled')

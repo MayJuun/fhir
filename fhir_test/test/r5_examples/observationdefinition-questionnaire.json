@@ -1,39 +1,14 @@
 {
   "resourceType": "Questionnaire",
   "id": "qs1",
-  "contained": [
-    {
-      "resourceType": "ValueSet",
-      "id": "vs2",
-      "name": "Type options for ObservationDefinition.subject[x]",
-      "status": "active",
-      "description": "Type options for ObservationDefinition.subject[x]",
-      "expansion": {
-        "identifier": "urn:uuid:dd735c7b-df79-40b1-8f96-414fb004c304",
-        "timestamp": "2019-12-31T21:15:43+11:00",
-        "contains": [
-          {
-            "system": "http://hl7.org/fhir/data-types",
-            "code": "CodeableConcept",
-            "display": "CodeableConcept"
-          },
-          {
-            "system": "http://hl7.org/fhir/resource-types",
-            "code": "Group",
-            "display": "Group"
-          }
-        ]
-      }
-    }
-  ],
   "identifier": [
     {
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Orders and Observations)",
   "item": [
     {
@@ -96,7 +71,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -255,7 +230,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -282,7 +257,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -496,6 +471,49 @@
               "valueString": "string"
             }
           ],
+          "linkId": "ObservationDefinition.name",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "A natural language name identifying the ObservationDefinition. This name should be usable as an identifier for the module by machine processing applications such as code generation. The name is not expected to be globally unique. The name should be a simple alphanumeric type name to ensure that it is machine-processing friendly.",
+              "type": "display"
+            },
+            {
+              "linkId": "ObservationDefinition.name.value",
+              "text": "Name for this ObservationDefinition (computer friendly)",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "string"
+            }
+          ],
           "linkId": "ObservationDefinition.title",
           "type": "group",
           "required": false,
@@ -521,85 +539,7 @@
             },
             {
               "linkId": "ObservationDefinition.title.value",
-              "text": "Name for this ObservationDefinition (Human friendly)",
-              "type": "string",
-              "required": false,
-              "repeats": false
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "uri"
-            }
-          ],
-          "linkId": "ObservationDefinition.derivedFromCanonical",
-          "type": "group",
-          "required": false,
-          "repeats": true,
-          "item": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "text": "The canonical URL pointing to another FHIR-defined ObservationDefinition that is adhered to in whole or in part by this definition.",
-              "type": "display"
-            },
-            {
-              "linkId": "ObservationDefinition.derivedFromCanonical.value",
-              "text": "Based on FHIR definition of another observation",
-              "type": "string",
-              "required": false,
-              "repeats": false
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "uri"
-            }
-          ],
-          "linkId": "ObservationDefinition.derivedFromUri",
-          "type": "group",
-          "required": false,
-          "repeats": true,
-          "item": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "text": "The URL pointing to an externally-defined observation definition, guideline or other definition that is adhered to in whole or in part by this definition.",
-              "type": "display"
-            },
-            {
-              "linkId": "ObservationDefinition.derivedFromUri.value",
-              "text": "Based on external definition",
+              "text": "Name for this ObservationDefinition (human friendly)",
               "type": "string",
               "required": false,
               "repeats": false
@@ -701,103 +641,6 @@
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
               "valueInteger": 1
-            }
-          ],
-          "linkId": "ObservationDefinition.subject[x]",
-          "text": "Type of subject for the defined observation",
-          "type": "group",
-          "required": false,
-          "repeats": true,
-          "item": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "text": "A code or group definition that describes the intended subject of Observation instances conforming to this ObservationDefinition. Examples: person, animal, device, air, surface ….",
-              "type": "display"
-            },
-            {
-              "linkId": "ObservationDefinition.subject[x]._type",
-              "text": "type",
-              "type": "choice",
-              "required": false,
-              "repeats": false,
-              "answerValueSet": "#vs2",
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "CodeableConcept"
-                    }
-                  ],
-                  "linkId": "ObservationDefinition.subject[x]._null",
-                  "type": "group",
-                  "item": [
-                    {
-                      "linkId": "ObservationDefinition.subject[x]._null.coding",
-                      "text": "code:",
-                      "type": "open-choice",
-                      "required": false,
-                      "repeats": false
-                    },
-                    {
-                      "linkId": "ObservationDefinition.subject[x]._null.text",
-                      "text": "text:",
-                      "type": "string",
-                      "required": false,
-                      "repeats": false
-                    }
-                  ]
-                },
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "Reference"
-                    }
-                  ],
-                  "linkId": "ObservationDefinition.subject[x]._null",
-                  "type": "group",
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                          "valueCode": "Group"
-                        },
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                          "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
-                        }
-                      ],
-                      "linkId": "ObservationDefinition.subject[x]._null.value",
-                      "type": "reference",
-                      "required": false,
-                      "repeats": false
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
             },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
@@ -824,12 +667,12 @@
                   }
                 }
               ],
-              "text": "For draft definitions, indicates the date of initial creation. For active definitions, represents the date of activation. For withdrawn definitions, indicates the date of withdrawal.",
+              "text": "The date (and optionally time) when the ObservationDefinition was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the ObservationDefinition changes. Note that this is not the same as the resource last-modified-date, since the resource may be a secondary representation of the ObservationDefinition. Additional specific dates may be added as extensions or be found by consulting Provenances associated with past versions of the resource.",
               "type": "display"
             },
             {
               "linkId": "ObservationDefinition.date.value",
-              "text": "Date status first applied",
+              "text": "Date last changed",
               "type": "dateTime",
               "required": false,
               "repeats": false
@@ -989,7 +832,7 @@
                   }
                 }
               ],
-              "text": "The content was developed with a focus and intent of supporting the contexts that are listed. These terms may be used to assist with indexing and searching of observation definitions.",
+              "text": "The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate ObservationDefinition instances.",
               "type": "display"
             }
           ]
@@ -1022,7 +865,7 @@
                   }
                 }
               ],
-              "text": "A jurisdiction in which the ObservationDefinition is intended to be used.",
+              "text": "A jurisdiction in which the ObservationDefinition is intended to be used. It may be possible for the ObservationDefinition to be used in jurisdictions other than those for which it was originally designed or intended.",
               "type": "display"
             },
             {
@@ -1206,7 +1049,7 @@
             },
             {
               "linkId": "ObservationDefinition.lastReviewDate.value",
-              "text": "Last review date for the ObservationDefinition",
+              "text": "Date on which the asset content was last reviewed",
               "type": "dateTime",
               "required": false,
               "repeats": false
@@ -1245,7 +1088,7 @@
                   }
                 }
               ],
-              "text": "The period during which the ObservationDefinition content was or is planned to be effective. The effective period for an ObservationDefinition determines when the content is applicable for usage and is independent of publication and review dates. For example, an observation intended to be used for the year 2020 would be published in 2019.",
+              "text": "The period during which the ObservationDefinition content was or is planned to be effective. The effective period for an ObservationDefinition determines when the content is applicable for usage and is independent of publication and review dates. For example, an observation intended to be used for the year 2021 might be published in 2020.",
               "type": "display"
             },
             {
@@ -1259,6 +1102,135 @@
               "linkId": "ObservationDefinition.effectivePeriod.end",
               "text": "end:",
               "type": "dateTime",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "uri"
+            }
+          ],
+          "linkId": "ObservationDefinition.derivedFromCanonical",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "The canonical URL pointing to another FHIR-defined ObservationDefinition that is adhered to in whole or in part by this definition.",
+              "type": "display"
+            },
+            {
+              "linkId": "ObservationDefinition.derivedFromCanonical.value",
+              "text": "Based on FHIR definition of another observation",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "uri"
+            }
+          ],
+          "linkId": "ObservationDefinition.derivedFromUri",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "The URL pointing to an externally-defined observation definition, guideline or other definition that is adhered to in whole or in part by this definition.",
+              "type": "display"
+            },
+            {
+              "linkId": "ObservationDefinition.derivedFromUri.value",
+              "text": "Based on external definition",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "CodeableConcept"
+            }
+          ],
+          "linkId": "ObservationDefinition.subject",
+          "text": "Type of subject for the defined observation",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "A code that describes the intended kind of subject of Observation instances conforming to this ObservationDefinition. Examples: person, animal, device, air, surface ….",
+              "type": "display"
+            },
+            {
+              "linkId": "ObservationDefinition.subject.coding",
+              "text": "code:",
+              "type": "open-choice",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "ObservationDefinition.subject.text",
+              "text": "text:",
+              "type": "string",
               "required": false,
               "repeats": false
             }
@@ -1323,7 +1295,7 @@
             }
           ],
           "linkId": "ObservationDefinition.category",
-          "text": "Category of observation",
+          "text": "General type of observation",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -1492,7 +1464,7 @@
             },
             {
               "linkId": "ObservationDefinition.multipleResultsAllowed.value",
-              "text": "Multiple results allowed",
+              "text": "Multiple results allowed for conforming observations",
               "type": "boolean",
               "required": false,
               "repeats": false
@@ -1604,10 +1576,6 @@
         {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
-            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
               "valueString": "Reference"
             }
@@ -1632,7 +1600,7 @@
                   }
                 }
               ],
-              "text": "The kind of specimen that this type of observation is produced on. Only used for in vitro observations.",
+              "text": "The kind of specimen that this type of observation is produced on. Only used for in vitro observations. When multiple occurrences of specimen are present, they are to be combined with a logical AND: all specified specimens  are needed for the observation.",
               "type": "display"
             },
             {
@@ -1656,10 +1624,6 @@
         },
         {
           "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
               "valueString": "Reference"
@@ -1685,14 +1649,14 @@
                   }
                 }
               ],
-              "text": "The measurement device used to produce observations of this type.",
+              "text": "The measurement model of device or actual device used to produce observations of this type. When multiple occurrences of device are present, they are to be combined with a logical OR: at least one of the specified devices is used to produce the observation.",
               "type": "display"
             },
             {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Device"
+                  "valueCode": "DeviceDefinition, Device"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -1700,7 +1664,7 @@
                 }
               ],
               "linkId": "ObservationDefinition.device.value",
-              "text": "Measurement device",
+              "text": "Measurement device or model of device",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -1743,7 +1707,7 @@
             },
             {
               "linkId": "ObservationDefinition.preferredReportName.value",
-              "text": "Preferred report name",
+              "text": "The preferred name to be used when reporting the observation results",
               "type": "string",
               "required": false,
               "repeats": false
@@ -1778,7 +1742,7 @@
                   }
                 }
               ],
-              "text": "Characteristics for quantitative results of this observation.",
+              "text": "Characteristics for quantitative results of observations conforming to this ObservationDefinition.",
               "type": "display"
             },
             {
@@ -1889,8 +1853,8 @@
                   "valueString": "CodeableConcept"
                 }
               ],
-              "linkId": "ObservationDefinition.quantitativeDetails.customaryUnit",
-              "text": "Customary unit for quantitative results",
+              "linkId": "ObservationDefinition.quantitativeDetails.unit",
+              "text": "Primary unit for quantitative results",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1910,18 +1874,18 @@
                       }
                     }
                   ],
-                  "text": "Customary unit used to report quantitative results of observations conforming to this ObservationDefinition.",
+                  "text": "Primary unit used to report quantitative results of observations conforming to this ObservationDefinition.",
                   "type": "display"
                 },
                 {
-                  "linkId": "ObservationDefinition.quantitativeDetails.customaryUnit.coding",
+                  "linkId": "ObservationDefinition.quantitativeDetails.unit.coding",
                   "text": "code:",
                   "type": "open-choice",
                   "required": false,
                   "repeats": false
                 },
                 {
-                  "linkId": "ObservationDefinition.quantitativeDetails.customaryUnit.text",
+                  "linkId": "ObservationDefinition.quantitativeDetails.unit.text",
                   "text": "text:",
                   "type": "string",
                   "required": false,
@@ -1940,8 +1904,8 @@
                   "valueString": "CodeableConcept"
                 }
               ],
-              "linkId": "ObservationDefinition.quantitativeDetails.unit",
-              "text": "SI unit for quantitative results",
+              "linkId": "ObservationDefinition.quantitativeDetails.customaryUnit",
+              "text": "Customary (secondary) unit for quantitative results",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1961,18 +1925,18 @@
                       }
                     }
                   ],
-                  "text": "SI unit used to report quantitative results of observations conforming to this ObservationDefinition.",
+                  "text": "Secondary unit used to report quantitative results of observations conforming to this ObservationDefinition.",
                   "type": "display"
                 },
                 {
-                  "linkId": "ObservationDefinition.quantitativeDetails.unit.coding",
+                  "linkId": "ObservationDefinition.quantitativeDetails.customaryUnit.coding",
                   "text": "code:",
                   "type": "open-choice",
                   "required": false,
                   "repeats": false
                 },
                 {
-                  "linkId": "ObservationDefinition.quantitativeDetails.unit.text",
+                  "linkId": "ObservationDefinition.quantitativeDetails.customaryUnit.text",
                   "text": "text:",
                   "type": "string",
                   "required": false,
@@ -2011,12 +1975,12 @@
                       }
                     }
                   ],
-                  "text": "Factor for converting value expressed with SI unit to value expressed with customary unit.",
+                  "text": "Factor for converting value expressed with primary unit to value expressed with secondary unit.",
                   "type": "display"
                 },
                 {
                   "linkId": "ObservationDefinition.quantitativeDetails.conversionFactor.value",
-                  "text": "SI to Customary unit conversion factor",
+                  "text": "Primary to secondary unit conversion factor",
                   "type": "decimal",
                   "required": false,
                   "repeats": false
@@ -2069,8 +2033,8 @@
           ]
         },
         {
-          "linkId": "ObservationDefinition.qualifiedInterval",
-          "text": "Qualified range for continuous and ordinal observation results",
+          "linkId": "ObservationDefinition.qualifiedValue",
+          "text": "Set of qualified values for observation results",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -2090,7 +2054,7 @@
                   }
                 }
               ],
-              "text": "Multiple  ranges of results qualified by different contexts for ordinal or continuous observations conforming to this ObservationDefinition.",
+              "text": "A set of qualified values associated with a context and a set of conditions -  provides a range for quantitative and ordinal observations and a collection of value sets for qualitative observations.",
               "type": "display"
             },
             {
@@ -2104,7 +2068,7 @@
                   "valueString": "string"
                 }
               ],
-              "linkId": "ObservationDefinition.qualifiedInterval.id",
+              "linkId": "ObservationDefinition.qualifiedValue.id",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2128,7 +2092,7 @@
                   "type": "display"
                 },
                 {
-                  "linkId": "ObservationDefinition.qualifiedInterval.id.value",
+                  "linkId": "ObservationDefinition.qualifiedValue.id.value",
                   "text": "Unique id for inter-element referencing",
                   "type": "string",
                   "required": false,
@@ -2137,7 +2101,7 @@
               ]
             },
             {
-              "linkId": "ObservationDefinition.qualifiedInterval.extension",
+              "linkId": "ObservationDefinition.qualifiedValue.extension",
               "text": "Additional content defined by implementations",
               "type": "group",
               "required": false,
@@ -2164,7 +2128,7 @@
               ]
             },
             {
-              "linkId": "ObservationDefinition.qualifiedInterval.modifierExtension",
+              "linkId": "ObservationDefinition.qualifiedValue.modifierExtension",
               "text": "Extensions that cannot be ignored even if unrecognized",
               "type": "group",
               "required": false,
@@ -2198,112 +2162,11 @@
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "code"
-                }
-              ],
-              "linkId": "ObservationDefinition.qualifiedInterval.category",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "The category of interval of values for continuous or ordinal observations conforming to this ObservationDefinition.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "ObservationDefinition.qualifiedInterval.category.value",
-                  "text": "category",
-                  "type": "choice",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "Range"
-                }
-              ],
-              "linkId": "ObservationDefinition.qualifiedInterval.range",
-              "text": "The interval itself, for continuous or ordinal observations",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "The low and high values determining the interval. There may be only one of the two.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "ObservationDefinition.qualifiedInterval.range.low",
-                  "text": "low:",
-                  "type": "decimal",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "ObservationDefinition.qualifiedInterval.range.high",
-                  "text": "high:",
-                  "type": "decimal",
-                  "required": false,
-                  "repeats": false
-                },
-                {
-                  "linkId": "ObservationDefinition.qualifiedInterval.range.units",
-                  "text": "units:",
-                  "type": "string",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
                   "valueString": "CodeableConcept"
                 }
               ],
-              "linkId": "ObservationDefinition.qualifiedInterval.context",
-              "text": "Range context qualifier",
+              "linkId": "ObservationDefinition.qualifiedValue.context",
+              "text": "Context qualifier for the set of qualified values",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2323,18 +2186,18 @@
                       }
                     }
                   ],
-                  "text": "Codes to indicate the health context the range applies to. For example, the normal or therapeutic range.",
+                  "text": "A concept defining the context for this set of qualified values.",
                   "type": "display"
                 },
                 {
-                  "linkId": "ObservationDefinition.qualifiedInterval.context.coding",
+                  "linkId": "ObservationDefinition.qualifiedValue.context.coding",
                   "text": "code:",
                   "type": "open-choice",
                   "required": false,
                   "repeats": false
                 },
                 {
-                  "linkId": "ObservationDefinition.qualifiedInterval.context.text",
+                  "linkId": "ObservationDefinition.qualifiedValue.context.text",
                   "text": "text:",
                   "type": "string",
                   "required": false,
@@ -2349,8 +2212,8 @@
                   "valueString": "CodeableConcept"
                 }
               ],
-              "linkId": "ObservationDefinition.qualifiedInterval.appliesTo",
-              "text": "Targetted population of the range",
+              "linkId": "ObservationDefinition.qualifiedValue.appliesTo",
+              "text": "Targetted population for the set of qualified values",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2370,18 +2233,18 @@
                       }
                     }
                   ],
-                  "text": "Codes to indicate the target population this reference range applies to. If this element is not present then the global population is assumed.",
+                  "text": "The target population this  set of qualified values applies to. If this element is not present then the global population is assumed.",
                   "type": "display"
                 },
                 {
-                  "linkId": "ObservationDefinition.qualifiedInterval.appliesTo.coding",
+                  "linkId": "ObservationDefinition.qualifiedValue.appliesTo.coding",
                   "text": "code:",
                   "type": "open-choice",
                   "required": false,
                   "repeats": false
                 },
                 {
-                  "linkId": "ObservationDefinition.qualifiedInterval.appliesTo.text",
+                  "linkId": "ObservationDefinition.qualifiedValue.appliesTo.text",
                   "text": "text:",
                   "type": "string",
                   "required": false,
@@ -2400,7 +2263,7 @@
                   "valueString": "code"
                 }
               ],
-              "linkId": "ObservationDefinition.qualifiedInterval.gender",
+              "linkId": "ObservationDefinition.qualifiedValue.gender",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2420,11 +2283,11 @@
                       }
                     }
                   ],
-                  "text": "Sex of the population the range applies to.",
+                  "text": "The gender this  set of qualified values applies to.",
                   "type": "display"
                 },
                 {
-                  "linkId": "ObservationDefinition.qualifiedInterval.gender.value",
+                  "linkId": "ObservationDefinition.qualifiedValue.gender.value",
                   "text": "gender",
                   "type": "choice",
                   "required": false,
@@ -2443,8 +2306,8 @@
                   "valueString": "Range"
                 }
               ],
-              "linkId": "ObservationDefinition.qualifiedInterval.age",
-              "text": "Applicable age range, if relevant",
+              "linkId": "ObservationDefinition.qualifiedValue.age",
+              "text": "Applicable age range for the set of qualified values",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2464,25 +2327,25 @@
                       }
                     }
                   ],
-                  "text": "The age at which this reference range is applicable. This is a neonatal age (e.g. number of weeks at term) if the meaning says so. Some analytes vary greatly over age.",
+                  "text": "The age range this  set of qualified values applies to. Some analytes vary greatly over age.",
                   "type": "display"
                 },
                 {
-                  "linkId": "ObservationDefinition.qualifiedInterval.age.low",
+                  "linkId": "ObservationDefinition.qualifiedValue.age.low",
                   "text": "low:",
                   "type": "decimal",
                   "required": false,
                   "repeats": false
                 },
                 {
-                  "linkId": "ObservationDefinition.qualifiedInterval.age.high",
+                  "linkId": "ObservationDefinition.qualifiedValue.age.high",
                   "text": "high:",
                   "type": "decimal",
                   "required": false,
                   "repeats": false
                 },
                 {
-                  "linkId": "ObservationDefinition.qualifiedInterval.age.units",
+                  "linkId": "ObservationDefinition.qualifiedValue.age.units",
                   "text": "units:",
                   "type": "string",
                   "required": false,
@@ -2501,8 +2364,8 @@
                   "valueString": "Range"
                 }
               ],
-              "linkId": "ObservationDefinition.qualifiedInterval.gestationalAge",
-              "text": "Applicable gestational age range, if relevant",
+              "linkId": "ObservationDefinition.qualifiedValue.gestationalAge",
+              "text": "Applicable gestational age range for the set of qualified values",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2522,25 +2385,25 @@
                       }
                     }
                   ],
-                  "text": "The gestational age to which this reference range is applicable, in the context of pregnancy.",
+                  "text": "The gestational age this  set of qualified values applies to.",
                   "type": "display"
                 },
                 {
-                  "linkId": "ObservationDefinition.qualifiedInterval.gestationalAge.low",
+                  "linkId": "ObservationDefinition.qualifiedValue.gestationalAge.low",
                   "text": "low:",
                   "type": "decimal",
                   "required": false,
                   "repeats": false
                 },
                 {
-                  "linkId": "ObservationDefinition.qualifiedInterval.gestationalAge.high",
+                  "linkId": "ObservationDefinition.qualifiedValue.gestationalAge.high",
                   "text": "high:",
                   "type": "decimal",
                   "required": false,
                   "repeats": false
                 },
                 {
-                  "linkId": "ObservationDefinition.qualifiedInterval.gestationalAge.units",
+                  "linkId": "ObservationDefinition.qualifiedValue.gestationalAge.units",
                   "text": "units:",
                   "type": "string",
                   "required": false,
@@ -2559,7 +2422,7 @@
                   "valueString": "string"
                 }
               ],
-              "linkId": "ObservationDefinition.qualifiedInterval.condition",
+              "linkId": "ObservationDefinition.qualifiedValue.condition",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -2579,229 +2442,290 @@
                       }
                     }
                   ],
-                  "text": "Text based condition for which the reference range is valid.",
+                  "text": "Text based condition for which the the set of qualified values is valid.",
                   "type": "display"
                 },
                 {
-                  "linkId": "ObservationDefinition.qualifiedInterval.condition.value",
-                  "text": "Condition associated with the reference range",
+                  "linkId": "ObservationDefinition.qualifiedValue.condition.value",
+                  "text": "Condition associated with the set of qualified values",
                   "type": "string",
                   "required": false,
                   "repeats": false
                 }
               ]
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "Reference"
-            }
-          ],
-          "linkId": "ObservationDefinition.validCodedValueSet",
-          "type": "group",
-          "required": false,
-          "repeats": true,
-          "item": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "text": "The set of valid coded results for the observations  conforming to this ObservationDefinition.",
-              "type": "display"
             },
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "ValueSet"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
                 },
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "code"
                 }
               ],
-              "linkId": "ObservationDefinition.validCodedValueSet.value",
-              "text": "Value set of valid coded values for the observations conforming to this ObservationDefinition",
-              "type": "reference",
+              "linkId": "ObservationDefinition.qualifiedValue.rangeCategory",
+              "type": "group",
               "required": false,
-              "repeats": false
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "Reference"
-            }
-          ],
-          "linkId": "ObservationDefinition.normalCodedValueSet",
-          "type": "group",
-          "required": false,
-          "repeats": true,
-          "item": [
-            {
-              "extension": [
+              "repeats": true,
+              "item": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
                       }
-                    ]
-                  }
-                }
-              ],
-              "text": "The set of normal coded results for the observations conforming to this ObservationDefinition.",
-              "type": "display"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "ValueSet"
+                    }
+                  ],
+                  "text": "The category of range of values for continuous or ordinal observations that match the criteria of this set of qualified values.",
+                  "type": "display"
                 },
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                  "linkId": "ObservationDefinition.qualifiedValue.rangeCategory.value",
+                  "text": "range category",
+                  "type": "choice",
+                  "required": false,
+                  "repeats": false
                 }
-              ],
-              "linkId": "ObservationDefinition.normalCodedValueSet.value",
-              "text": "Value set of normal coded values for the observations conforming to this ObservationDefinition",
-              "type": "reference",
-              "required": false,
-              "repeats": false
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "Reference"
-            }
-          ],
-          "linkId": "ObservationDefinition.abnormalCodedValueSet",
-          "type": "group",
-          "required": false,
-          "repeats": true,
-          "item": [
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
-                      }
-                    ]
-                  }
-                }
-              ],
-              "text": "The set of abnormal coded results for the observation conforming to this ObservationDefinition.",
-              "type": "display"
+              ]
             },
             {
               "extension": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "ValueSet"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
                 },
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "Range"
                 }
               ],
-              "linkId": "ObservationDefinition.abnormalCodedValueSet.value",
-              "text": "Value set of abnormal coded values for the observations conforming to this ObservationDefinition",
-              "type": "reference",
+              "linkId": "ObservationDefinition.qualifiedValue.range",
+              "text": "The range for continuous or ordinal observations",
+              "type": "group",
               "required": false,
-              "repeats": false
-            }
-          ]
-        },
-        {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "Reference"
-            }
-          ],
-          "linkId": "ObservationDefinition.criticalCodedValueSet",
-          "type": "group",
-          "required": false,
-          "repeats": true,
-          "item": [
-            {
-              "extension": [
+              "repeats": true,
+              "item": [
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                  "valueCodeableConcept": {
-                    "coding": [
-                      {
-                        "system": "http://hl7.org/fhir/questionnaire-item-control",
-                        "code": "flyover",
-                        "display": "Fly-over"
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
                       }
-                    ]
-                  }
-                }
-              ],
-              "text": "The set of critical coded results for the observation conforming to this ObservationDefinition.",
-              "type": "display"
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "ValueSet"
+                    }
+                  ],
+                  "text": "The range of values defined for continuous or ordinal observations that match the criteria of this set of qualified values.",
+                  "type": "display"
                 },
                 {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                  "linkId": "ObservationDefinition.qualifiedValue.range.low",
+                  "text": "low:",
+                  "type": "decimal",
+                  "required": false,
+                  "repeats": false
+                },
+                {
+                  "linkId": "ObservationDefinition.qualifiedValue.range.high",
+                  "text": "high:",
+                  "type": "decimal",
+                  "required": false,
+                  "repeats": false
+                },
+                {
+                  "linkId": "ObservationDefinition.qualifiedValue.range.units",
+                  "text": "units:",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "uri"
                 }
               ],
-              "linkId": "ObservationDefinition.criticalCodedValueSet.value",
-              "text": "Value set of critical coded values for the observations conforming to this ObservationDefinition",
-              "type": "reference",
+              "linkId": "ObservationDefinition.qualifiedValue.validCodedValueSet",
+              "type": "group",
               "required": false,
-              "repeats": false
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "text": "The set of valid coded results for qualitative observations  that match the criteria of this set of qualified values.",
+                  "type": "display"
+                },
+                {
+                  "linkId": "ObservationDefinition.qualifiedValue.validCodedValueSet.value",
+                  "text": "Value set of valid coded values as part of this set of qualified values",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "uri"
+                }
+              ],
+              "linkId": "ObservationDefinition.qualifiedValue.normalCodedValueSet",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "text": "The set of normal coded results for qualitative observations  that match the criteria of this set of qualified values.",
+                  "type": "display"
+                },
+                {
+                  "linkId": "ObservationDefinition.qualifiedValue.normalCodedValueSet.value",
+                  "text": "Value set of normal coded values as part of this set of qualified values",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "uri"
+                }
+              ],
+              "linkId": "ObservationDefinition.qualifiedValue.abnormalCodedValueSet",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "text": "The set of abnormal coded results for qualitative observations  that match the criteria of this set of qualified values.",
+                  "type": "display"
+                },
+                {
+                  "linkId": "ObservationDefinition.qualifiedValue.abnormalCodedValueSet.value",
+                  "text": "Value set of abnormal coded values as part of this set of qualified values",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                  "valueInteger": 1
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                  "valueString": "uri"
+                }
+              ],
+              "linkId": "ObservationDefinition.qualifiedValue.criticalCodedValueSet",
+              "type": "group",
+              "required": false,
+              "repeats": true,
+              "item": [
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                      "valueCodeableConcept": {
+                        "coding": [
+                          {
+                            "system": "http://hl7.org/fhir/questionnaire-item-control",
+                            "code": "flyover",
+                            "display": "Fly-over"
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "text": "The set of critical coded results for qualitative observations  that match the criteria of this set of qualified values.",
+                  "type": "display"
+                },
+                {
+                  "linkId": "ObservationDefinition.qualifiedValue.criticalCodedValueSet.value",
+                  "text": "Value set of critical coded values as part of this set of qualified values",
+                  "type": "string",
+                  "required": false,
+                  "repeats": false
+                }
+              ]
             }
           ]
         },
@@ -3078,7 +3002,7 @@
                 }
               ],
               "linkId": "ObservationDefinition.component.quantitativeDetails",
-              "text": "Quantitative details",
+              "text": "Characteristics of quantitative results",
               "type": "group",
               "required": false,
               "repeats": false,
@@ -3098,14 +3022,14 @@
                       }
                     }
                   ],
-                  "text": "The quantitative details specified.",
+                  "text": "Characteristics for quantitative results of this observation.",
                   "type": "display"
                 }
               ]
             },
             {
-              "linkId": "ObservationDefinition.component.qualifiedInterval",
-              "text": "Qualified interval",
+              "linkId": "ObservationDefinition.component.qualifiedValue",
+              "text": "Set of qualified values for observation results",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -3125,7 +3049,7 @@
                       }
                     }
                   ],
-                  "text": "The qualified interval specified.",
+                  "text": "A set of qualified values associated with a context and a set of conditions -  provides a range for quantitative and ordinal observations and a collection of value sets for qualitative observations.",
                   "type": "display"
                 }
               ]

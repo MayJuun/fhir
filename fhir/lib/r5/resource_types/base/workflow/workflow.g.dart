@@ -69,10 +69,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
           .toList(),
       priority: json['priority'] == null
           ? null
-          : UnsignedInt.fromJson(json['priority']),
-      priorityElement: json['_priority'] == null
-          ? null
-          : Element.fromJson(json['_priority'] as Map<String, dynamic>),
+          : CodeableConcept.fromJson(json['priority'] as Map<String, dynamic>),
       description: json['description'] as String?,
       descriptionElement: json['_description'] == null
           ? null
@@ -162,7 +159,6 @@ Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
   writeNotNull('appointmentType', instance.appointmentType?.toJson());
   writeNotNull('reason', instance.reason?.map((e) => e.toJson()).toList());
   writeNotNull('priority', instance.priority?.toJson());
-  writeNotNull('_priority', instance.priorityElement?.toJson());
   writeNotNull('description', instance.description);
   writeNotNull('_description', instance.descriptionElement?.toJson());
   writeNotNull('supportingInformation',
@@ -268,7 +264,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.DeviceDefinition: 'DeviceDefinition',
   R5ResourceType.DeviceMetric: 'DeviceMetric',
   R5ResourceType.DeviceRequest: 'DeviceRequest',
-  R5ResourceType.DeviceUseStatement: 'DeviceUseStatement',
+  R5ResourceType.DeviceUsage: 'DeviceUsage',
   R5ResourceType.DiagnosticReport: 'DiagnosticReport',
   R5ResourceType.DocumentManifest: 'DocumentManifest',
   R5ResourceType.DocumentReference: 'DocumentReference',
@@ -296,6 +292,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.ImmunizationRecommendation: 'ImmunizationRecommendation',
   R5ResourceType.ImplementationGuide: 'ImplementationGuide',
   R5ResourceType.InsurancePlan: 'InsurancePlan',
+  R5ResourceType.InventoryReport: 'InventoryReport',
   R5ResourceType.Invoice: 'Invoice',
   R5ResourceType.Library: 'Library',
   R5ResourceType.Linkage: 'Linkage',
@@ -1863,7 +1860,7 @@ Map<String, dynamic> _$$_VerificationResultToJson(
   writeNotNull('target', instance.target?.map((e) => e.toJson()).toList());
   writeNotNull('targetLocation', instance.targetLocation);
   writeNotNull('_targetLocation',
-      instance.targetLocationElement?.map((e) => e?.toJson()).toList());
+      instance.targetLocationElement?.map((e) => e.toJson()).toList());
   writeNotNull('need', instance.need?.toJson());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());

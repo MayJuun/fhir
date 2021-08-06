@@ -7846,7 +7846,7 @@ class _$PractitionerRoleAvailableTimeTearOff {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Code>? daysOfWeek,
-      @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
+      @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? availableStartTime,
@@ -7885,7 +7885,7 @@ mixin _$PractitionerRoleAvailableTime {
       throw _privateConstructorUsedError;
   List<Code>? get daysOfWeek => throw _privateConstructorUsedError;
   @JsonKey(name: '_daysOfWeek')
-  List<Element?>? get daysOfWeekElement => throw _privateConstructorUsedError;
+  List<Element>? get daysOfWeekElement => throw _privateConstructorUsedError;
   Boolean? get allDay => throw _privateConstructorUsedError;
   @JsonKey(name: '_allDay')
   Element? get allDayElement => throw _privateConstructorUsedError;
@@ -7913,7 +7913,7 @@ abstract class $PractitionerRoleAvailableTimeCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Code>? daysOfWeek,
-      @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
+      @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? availableStartTime,
@@ -7969,7 +7969,7 @@ class _$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
       daysOfWeekElement: daysOfWeekElement == freezed
           ? _value.daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       allDay: allDay == freezed
           ? _value.allDay
           : allDay // ignore: cast_nullable_to_non_nullable
@@ -8044,7 +8044,7 @@ abstract class _$PractitionerRoleAvailableTimeCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Code>? daysOfWeek,
-      @JsonKey(name: '_daysOfWeek') List<Element?>? daysOfWeekElement,
+      @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
       Time? availableStartTime,
@@ -8107,7 +8107,7 @@ class __$PractitionerRoleAvailableTimeCopyWithImpl<$Res>
       daysOfWeekElement: daysOfWeekElement == freezed
           ? _value.daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
-              as List<Element?>?,
+              as List<Element>?,
       allDay: allDay == freezed
           ? _value.allDay
           : allDay // ignore: cast_nullable_to_non_nullable
@@ -8168,7 +8168,7 @@ class _$_PractitionerRoleAvailableTime extends _PractitionerRoleAvailableTime {
   final List<Code>? daysOfWeek;
   @override
   @JsonKey(name: '_daysOfWeek')
-  final List<Element?>? daysOfWeekElement;
+  final List<Element>? daysOfWeekElement;
   @override
   final Boolean? allDay;
   @override
@@ -8266,7 +8266,7 @@ abstract class _PractitionerRoleAvailableTime
       List<FhirExtension>? modifierExtension,
       List<Code>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek')
-          List<Element?>? daysOfWeekElement,
+          List<Element>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay')
           Element? allDayElement,
@@ -8293,7 +8293,7 @@ abstract class _PractitionerRoleAvailableTime
   List<Code>? get daysOfWeek => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_daysOfWeek')
-  List<Element?>? get daysOfWeekElement => throw _privateConstructorUsedError;
+  List<Element>? get daysOfWeekElement => throw _privateConstructorUsedError;
   @override
   Boolean? get allDay => throw _privateConstructorUsedError;
   @override

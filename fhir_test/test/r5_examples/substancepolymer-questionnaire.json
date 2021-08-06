@@ -6,14 +6,14 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Biomedical Research and Regulation)",
   "item": [
     {
       "linkId": "SubstancePolymer",
-      "text": "Todo",
+      "text": "Properties of a substance specific to it being a polymer",
       "type": "group",
       "required": false,
       "repeats": true,
@@ -33,7 +33,7 @@
               }
             }
           ],
-          "text": "Todo.",
+          "text": "Properties of a substance specific to it being a polymer.",
           "type": "display"
         },
         {
@@ -67,7 +67,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -226,7 +226,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -253,7 +253,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -320,11 +320,11 @@
             },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-              "valueString": "CodeableConcept"
+              "valueString": "Identifier"
             }
           ],
-          "linkId": "SubstancePolymer.class",
-          "text": "Todo",
+          "linkId": "SubstancePolymer.identifier",
+          "text": "A business idenfier for this polymer, but typically this is handled by a SubstanceDefinition identifier",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -344,7 +344,65 @@
                   }
                 }
               ],
-              "text": "Todo.",
+              "text": "A business idenfier for this polymer, but typically this is handled by a SubstanceDefinition identifier.",
+              "type": "display"
+            },
+            {
+              "linkId": "SubstancePolymer.identifier.label",
+              "text": "label:",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "SubstancePolymer.identifier.system",
+              "text": "system:",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "SubstancePolymer.identifier.value",
+              "text": "value:",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "CodeableConcept"
+            }
+          ],
+          "linkId": "SubstancePolymer.class",
+          "text": "Overall type of the polymer",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "Overall type of the polymer.",
               "type": "display"
             },
             {
@@ -375,7 +433,7 @@
             }
           ],
           "linkId": "SubstancePolymer.geometry",
-          "text": "Todo",
+          "text": "Polymer geometry, e.g. linear, branched, cross-linked, network or dendritic",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -395,7 +453,7 @@
                   }
                 }
               ],
-              "text": "Todo.",
+              "text": "Polymer geometry, e.g. linear, branched, cross-linked, network or dendritic.",
               "type": "display"
             },
             {
@@ -422,7 +480,7 @@
             }
           ],
           "linkId": "SubstancePolymer.copolymerConnectivity",
-          "text": "Todo",
+          "text": "Descrtibes the copolymer sequence type (polymer connectivity)",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -442,7 +500,7 @@
                   }
                 }
               ],
-              "text": "Todo.",
+              "text": "Descrtibes the copolymer sequence type (polymer connectivity).",
               "type": "display"
             },
             {
@@ -463,6 +521,10 @@
         },
         {
           "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
               "valueString": "string"
@@ -488,12 +550,12 @@
                   }
                 }
               ],
-              "text": "Todo.",
+              "text": "Todo - this is intended to connect to a repeating full modification structure, also used by Protein and Nucleic Acid . String is just a placeholder.",
               "type": "display"
             },
             {
               "linkId": "SubstancePolymer.modification.value",
-              "text": "Todo",
+              "text": "Todo - this is intended to connect to a repeating full modification structure, also used by Protein and Nucleic Acid . String is just a placeholder",
               "type": "string",
               "required": false,
               "repeats": false
@@ -634,7 +696,7 @@
                 }
               ],
               "linkId": "SubstancePolymer.monomerSet.ratioType",
-              "text": "Todo",
+              "text": "Captures the type of ratio to the entire polymer, e.g. Monomer/Polymer ratio, SRU/Polymer Ratio",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -654,7 +716,7 @@
                       }
                     }
                   ],
-                  "text": "Todo.",
+                  "text": "Captures the type of ratio to the entire polymer, e.g. Monomer/Polymer ratio, SRU/Polymer Ratio.",
                   "type": "display"
                 },
                 {
@@ -675,7 +737,7 @@
             },
             {
               "linkId": "SubstancePolymer.monomerSet.startingMaterial",
-              "text": "Todo",
+              "text": "The starting materials - monomer(s) used in the synthesis of the polymer",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -695,7 +757,7 @@
                       }
                     }
                   ],
-                  "text": "Todo.",
+                  "text": "The starting materials - monomer(s) used in the synthesis of the polymer.",
                   "type": "display"
                 },
                 {
@@ -806,8 +868,8 @@
                       "valueString": "CodeableConcept"
                     }
                   ],
-                  "linkId": "SubstancePolymer.monomerSet.startingMaterial.material",
-                  "text": "Todo",
+                  "linkId": "SubstancePolymer.monomerSet.startingMaterial.code",
+                  "text": "The type of substance for this starting material",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -827,18 +889,18 @@
                           }
                         }
                       ],
-                      "text": "Todo.",
+                      "text": "The type of substance for this starting material.",
                       "type": "display"
                     },
                     {
-                      "linkId": "SubstancePolymer.monomerSet.startingMaterial.material.coding",
+                      "linkId": "SubstancePolymer.monomerSet.startingMaterial.code.coding",
                       "text": "code:",
                       "type": "open-choice",
                       "required": false,
                       "repeats": false
                     },
                     {
-                      "linkId": "SubstancePolymer.monomerSet.startingMaterial.material.text",
+                      "linkId": "SubstancePolymer.monomerSet.startingMaterial.code.text",
                       "text": "text:",
                       "type": "string",
                       "required": false,
@@ -857,8 +919,8 @@
                       "valueString": "CodeableConcept"
                     }
                   ],
-                  "linkId": "SubstancePolymer.monomerSet.startingMaterial.type",
-                  "text": "Todo",
+                  "linkId": "SubstancePolymer.monomerSet.startingMaterial.category",
+                  "text": "Substance high level category, e.g. chemical substance",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -878,18 +940,18 @@
                           }
                         }
                       ],
-                      "text": "Todo.",
+                      "text": "Substance high level category, e.g. chemical substance.",
                       "type": "display"
                     },
                     {
-                      "linkId": "SubstancePolymer.monomerSet.startingMaterial.type.coding",
+                      "linkId": "SubstancePolymer.monomerSet.startingMaterial.category.coding",
                       "text": "code:",
                       "type": "open-choice",
                       "required": false,
                       "repeats": false
                     },
                     {
-                      "linkId": "SubstancePolymer.monomerSet.startingMaterial.type.text",
+                      "linkId": "SubstancePolymer.monomerSet.startingMaterial.category.text",
                       "text": "text:",
                       "type": "string",
                       "required": false,
@@ -928,12 +990,12 @@
                           }
                         }
                       ],
-                      "text": "Todo.",
+                      "text": "Used to specify whether the attribute described is a defining element for the unique identification of the polymer.",
                       "type": "display"
                     },
                     {
                       "linkId": "SubstancePolymer.monomerSet.startingMaterial.isDefining.value",
-                      "text": "Todo",
+                      "text": "Used to specify whether the attribute described is a defining element for the unique identification of the polymer",
                       "type": "boolean",
                       "required": false,
                       "repeats": false
@@ -945,13 +1007,17 @@
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                       "valueInteger": 1
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "Quantity"
                     }
                   ],
                   "linkId": "SubstancePolymer.monomerSet.startingMaterial.amount",
-                  "text": "Todo",
+                  "text": "A percentage",
                   "type": "group",
                   "required": false,
-                  "repeats": false,
+                  "repeats": true,
                   "item": [
                     {
                       "extension": [
@@ -968,8 +1034,43 @@
                           }
                         }
                       ],
-                      "text": "Todo.",
+                      "text": "A percentage.",
                       "type": "display"
+                    },
+                    {
+                      "linkId": "SubstancePolymer.monomerSet.startingMaterial.amount.comparator",
+                      "text": "comp:",
+                      "type": "choice",
+                      "required": false,
+                      "repeats": false
+                    },
+                    {
+                      "linkId": "SubstancePolymer.monomerSet.startingMaterial.amount.value",
+                      "text": "value:",
+                      "type": "decimal",
+                      "required": false,
+                      "repeats": false
+                    },
+                    {
+                      "linkId": "SubstancePolymer.monomerSet.startingMaterial.amount.units",
+                      "text": "units:",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    },
+                    {
+                      "linkId": "SubstancePolymer.monomerSet.startingMaterial.amount.code",
+                      "text": "coded units:",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    },
+                    {
+                      "linkId": "SubstancePolymer.monomerSet.startingMaterial.amount.system",
+                      "text": "units system:",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
                     }
                   ]
                 }
@@ -979,7 +1080,7 @@
         },
         {
           "linkId": "SubstancePolymer.repeat",
-          "text": "Todo",
+          "text": "Specifies and quantifies the repeated units and their configuration",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -999,7 +1100,7 @@
                   }
                 }
               ],
-              "text": "Todo.",
+              "text": "Specifies and quantifies the repeated units and their configuration.",
               "type": "display"
             },
             {
@@ -1107,49 +1208,6 @@
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                  "valueString": "integer"
-                }
-              ],
-              "linkId": "SubstancePolymer.repeat.numberOfUnits",
-              "type": "group",
-              "required": false,
-              "repeats": true,
-              "item": [
-                {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                      "valueCodeableConcept": {
-                        "coding": [
-                          {
-                            "system": "http://hl7.org/fhir/questionnaire-item-control",
-                            "code": "flyover",
-                            "display": "Fly-over"
-                          }
-                        ]
-                      }
-                    }
-                  ],
-                  "text": "Todo.",
-                  "type": "display"
-                },
-                {
-                  "linkId": "SubstancePolymer.repeat.numberOfUnits.value",
-                  "text": "Todo",
-                  "type": "integer",
-                  "required": false,
-                  "repeats": false
-                }
-              ]
-            },
-            {
-              "extension": [
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                  "valueInteger": 1
-                },
-                {
-                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
                   "valueString": "string"
                 }
               ],
@@ -1173,12 +1231,12 @@
                       }
                     }
                   ],
-                  "text": "Todo.",
+                  "text": "A representation of an (average) molecular formula from a polymer.",
                   "type": "display"
                 },
                 {
                   "linkId": "SubstancePolymer.repeat.averageMolecularFormula.value",
-                  "text": "Todo",
+                  "text": "A representation of an (average) molecular formula from a polymer",
                   "type": "string",
                   "required": false,
                   "repeats": false
@@ -1197,7 +1255,7 @@
                 }
               ],
               "linkId": "SubstancePolymer.repeat.repeatUnitAmountType",
-              "text": "Todo",
+              "text": "How the quantitative amount of Structural Repeat Units is captured (e.g. Exact, Numeric, Average)",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1217,7 +1275,7 @@
                       }
                     }
                   ],
-                  "text": "Todo.",
+                  "text": "How the quantitative amount of Structural Repeat Units is captured (e.g. Exact, Numeric, Average).",
                   "type": "display"
                 },
                 {
@@ -1238,7 +1296,7 @@
             },
             {
               "linkId": "SubstancePolymer.repeat.repeatUnit",
-              "text": "Todo",
+              "text": "An SRU - Structural Repeat Unit",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1258,7 +1316,7 @@
                       }
                     }
                   ],
-                  "text": "Todo.",
+                  "text": "An SRU - Structural Repeat Unit.",
                   "type": "display"
                 },
                 {
@@ -1366,11 +1424,10 @@
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "CodeableConcept"
+                      "valueString": "string"
                     }
                   ],
-                  "linkId": "SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation",
-                  "text": "Todo",
+                  "linkId": "SubstancePolymer.repeat.repeatUnit.unit",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -1390,18 +1447,62 @@
                           }
                         }
                       ],
-                      "text": "Todo.",
+                      "text": "Structural repeat units are essential elements for defining polymers.",
                       "type": "display"
                     },
                     {
-                      "linkId": "SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation.coding",
+                      "linkId": "SubstancePolymer.repeat.repeatUnit.unit.value",
+                      "text": "Structural repeat units are essential elements for defining polymers",
+                      "type": "string",
+                      "required": false,
+                      "repeats": false
+                    }
+                  ]
+                },
+                {
+                  "extension": [
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                      "valueInteger": 1
+                    },
+                    {
+                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                      "valueString": "CodeableConcept"
+                    }
+                  ],
+                  "linkId": "SubstancePolymer.repeat.repeatUnit.orientation",
+                  "text": "The orientation of the polymerisation, e.g. head-tail, head-head, random",
+                  "type": "group",
+                  "required": false,
+                  "repeats": true,
+                  "item": [
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                          "valueCodeableConcept": {
+                            "coding": [
+                              {
+                                "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                "code": "flyover",
+                                "display": "Fly-over"
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "text": "The orientation of the polymerisation, e.g. head-tail, head-head, random.",
+                      "type": "display"
+                    },
+                    {
+                      "linkId": "SubstancePolymer.repeat.repeatUnit.orientation.coding",
                       "text": "code:",
                       "type": "open-choice",
                       "required": false,
                       "repeats": false
                     },
                     {
-                      "linkId": "SubstancePolymer.repeat.repeatUnit.orientationOfPolymerisation.text",
+                      "linkId": "SubstancePolymer.repeat.repeatUnit.orientation.text",
                       "text": "text:",
                       "type": "string",
                       "required": false,
@@ -1417,10 +1518,10 @@
                     },
                     {
                       "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                      "valueString": "string"
+                      "valueString": "integer"
                     }
                   ],
-                  "linkId": "SubstancePolymer.repeat.repeatUnit.repeatUnit",
+                  "linkId": "SubstancePolymer.repeat.repeatUnit.amount",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -1440,54 +1541,21 @@
                           }
                         }
                       ],
-                      "text": "Todo.",
+                      "text": "Number of repeats of this unit.",
                       "type": "display"
                     },
                     {
-                      "linkId": "SubstancePolymer.repeat.repeatUnit.repeatUnit.value",
-                      "text": "Todo",
-                      "type": "string",
+                      "linkId": "SubstancePolymer.repeat.repeatUnit.amount.value",
+                      "text": "Number of repeats of this unit",
+                      "type": "integer",
                       "required": false,
                       "repeats": false
                     }
                   ]
                 },
                 {
-                  "extension": [
-                    {
-                      "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-                      "valueInteger": 1
-                    }
-                  ],
-                  "linkId": "SubstancePolymer.repeat.repeatUnit.amount",
-                  "text": "Todo",
-                  "type": "group",
-                  "required": false,
-                  "repeats": false,
-                  "item": [
-                    {
-                      "extension": [
-                        {
-                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
-                          "valueCodeableConcept": {
-                            "coding": [
-                              {
-                                "system": "http://hl7.org/fhir/questionnaire-item-control",
-                                "code": "flyover",
-                                "display": "Fly-over"
-                              }
-                            ]
-                          }
-                        }
-                      ],
-                      "text": "Todo.",
-                      "type": "display"
-                    }
-                  ]
-                },
-                {
                   "linkId": "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation",
-                  "text": "Todo",
+                  "text": "Applies to homopolymer and block co-polymers where the degree of polymerisation within a block can be described",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -1507,7 +1575,7 @@
                           }
                         }
                       ],
-                      "text": "Todo.",
+                      "text": "Applies to homopolymer and block co-polymers where the degree of polymerisation within a block can be described.",
                       "type": "display"
                     },
                     {
@@ -1618,8 +1686,8 @@
                           "valueString": "CodeableConcept"
                         }
                       ],
-                      "linkId": "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree",
-                      "text": "Todo",
+                      "linkId": "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.type",
+                      "text": "The type of the degree of polymerisation shall be described, e.g. SRU/Polymer Ratio",
                       "type": "group",
                       "required": false,
                       "repeats": true,
@@ -1639,18 +1707,18 @@
                               }
                             }
                           ],
-                          "text": "Todo.",
+                          "text": "The type of the degree of polymerisation shall be described, e.g. SRU/Polymer Ratio.",
                           "type": "display"
                         },
                         {
-                          "linkId": "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree.coding",
+                          "linkId": "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.type.coding",
                           "text": "code:",
                           "type": "open-choice",
                           "required": false,
                           "repeats": false
                         },
                         {
-                          "linkId": "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.degree.text",
+                          "linkId": "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.type.text",
                           "text": "text:",
                           "type": "string",
                           "required": false,
@@ -1663,13 +1731,16 @@
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
                           "valueInteger": 1
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "integer"
                         }
                       ],
-                      "linkId": "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.amount",
-                      "text": "Todo",
+                      "linkId": "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.average",
                       "type": "group",
                       "required": false,
-                      "repeats": false,
+                      "repeats": true,
                       "item": [
                         {
                           "extension": [
@@ -1686,8 +1757,101 @@
                               }
                             }
                           ],
-                          "text": "Todo.",
+                          "text": "An average amount of polymerisation.",
                           "type": "display"
+                        },
+                        {
+                          "linkId": "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.average.value",
+                          "text": "An average amount of polymerisation",
+                          "type": "integer",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                          "valueInteger": 1
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "integer"
+                        }
+                      ],
+                      "linkId": "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.low",
+                      "type": "group",
+                      "required": false,
+                      "repeats": true,
+                      "item": [
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "text": "A low expected limit of the amount.",
+                          "type": "display"
+                        },
+                        {
+                          "linkId": "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.low.value",
+                          "text": "A low expected limit of the amount",
+                          "type": "integer",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                          "valueInteger": 1
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "integer"
+                        }
+                      ],
+                      "linkId": "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.high",
+                      "type": "group",
+                      "required": false,
+                      "repeats": true,
+                      "item": [
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "text": "A high expected limit of the amount.",
+                          "type": "display"
+                        },
+                        {
+                          "linkId": "SubstancePolymer.repeat.repeatUnit.degreeOfPolymerisation.high.value",
+                          "text": "A high expected limit of the amount",
+                          "type": "integer",
+                          "required": false,
+                          "repeats": false
                         }
                       ]
                     }
@@ -1695,7 +1859,7 @@
                 },
                 {
                   "linkId": "SubstancePolymer.repeat.repeatUnit.structuralRepresentation",
-                  "text": "Todo",
+                  "text": "A graphical structure for this SRU",
                   "type": "group",
                   "required": false,
                   "repeats": true,
@@ -1715,7 +1879,7 @@
                           }
                         }
                       ],
-                      "text": "Todo.",
+                      "text": "A graphical structure for this SRU.",
                       "type": "display"
                     },
                     {
@@ -1827,7 +1991,7 @@
                         }
                       ],
                       "linkId": "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.type",
-                      "text": "Todo",
+                      "text": "The type of structure (e.g. Full, Partial, Representative)",
                       "type": "group",
                       "required": false,
                       "repeats": true,
@@ -1847,7 +2011,7 @@
                               }
                             }
                           ],
-                          "text": "Todo.",
+                          "text": "The type of structure (e.g. Full, Partial, Representative).",
                           "type": "display"
                         },
                         {
@@ -1897,12 +2061,12 @@
                               }
                             }
                           ],
-                          "text": "Todo.",
+                          "text": "The structural representation as text string in a standard format e.g. InChI, SMILES, MOLFILE, CDX, SDF, PDB, mmCIF.",
                           "type": "display"
                         },
                         {
                           "linkId": "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.representation.value",
-                          "text": "Todo",
+                          "text": "The structural representation as text string in a standard format e.g. InChI, SMILES, MOLFILE, CDX, SDF, PDB, mmCIF",
                           "type": "string",
                           "required": false,
                           "repeats": false
@@ -1917,11 +2081,11 @@
                         },
                         {
                           "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
-                          "valueString": "Attachment"
+                          "valueString": "CodeableConcept"
                         }
                       ],
-                      "linkId": "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment",
-                      "text": "Todo",
+                      "linkId": "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.format",
+                      "text": "The format of the representation e.g. InChI, SMILES, MOLFILE, CDX, SDF, PDB, mmCIF",
                       "type": "group",
                       "required": false,
                       "repeats": true,
@@ -1941,7 +2105,58 @@
                               }
                             }
                           ],
-                          "text": "Todo.",
+                          "text": "The format of the representation e.g. InChI, SMILES, MOLFILE, CDX, SDF, PDB, mmCIF.",
+                          "type": "display"
+                        },
+                        {
+                          "linkId": "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.format.coding",
+                          "text": "code:",
+                          "type": "open-choice",
+                          "required": false,
+                          "repeats": false
+                        },
+                        {
+                          "linkId": "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.format.text",
+                          "text": "text:",
+                          "type": "string",
+                          "required": false,
+                          "repeats": false
+                        }
+                      ]
+                    },
+                    {
+                      "extension": [
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+                          "valueInteger": 1
+                        },
+                        {
+                          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+                          "valueString": "Attachment"
+                        }
+                      ],
+                      "linkId": "SubstancePolymer.repeat.repeatUnit.structuralRepresentation.attachment",
+                      "text": "An attached file with the structural representation",
+                      "type": "group",
+                      "required": false,
+                      "repeats": true,
+                      "item": [
+                        {
+                          "extension": [
+                            {
+                              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                              "valueCodeableConcept": {
+                                "coding": [
+                                  {
+                                    "system": "http://hl7.org/fhir/questionnaire-item-control",
+                                    "code": "flyover",
+                                    "display": "Fly-over"
+                                  }
+                                ]
+                              }
+                            }
+                          ],
+                          "text": "An attached file with the structural representation.",
                           "type": "display"
                         }
                       ]

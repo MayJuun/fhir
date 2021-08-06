@@ -6,9 +6,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Community Based Collaborative Care)",
   "item": [
     {
@@ -71,7 +71,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -230,7 +230,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -257,7 +257,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -433,7 +433,7 @@
             }
           ],
           "linkId": "Consent.scope",
-          "text": "Which of the four areas this resource covers (extensible)",
+          "text": "Which of the three areas this resource covers (extensible)",
           "type": "group",
           "required": true,
           "repeats": true,
@@ -453,7 +453,7 @@
                   }
                 }
               ],
-              "text": "A selector of the type of consent being presented: Privacy, Treatment,  or Research.  This list is now extensible.",
+              "text": "A selector of the type of consent being presented with the base being Privacy, Treatment,  or Research.",
               "type": "display"
             },
             {
@@ -534,7 +534,7 @@
               "valueString": "Reference"
             }
           ],
-          "linkId": "Consent.patient",
+          "linkId": "Consent.subject",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -554,21 +554,21 @@
                   }
                 }
               ],
-              "text": "The patient/healthcare consumer to whom this consent applies. Commonly, the patient the consent pertains to is the author, but for young and old people, it may be some other person.",
+              "text": "The patient/healthcare practitioner to whom this consent applies. Commonly, the subject the consent pertains to is the author, but for young and old people, it may be some other person.",
               "type": "display"
             },
             {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient"
+                  "valueCode": "Patient, Practitioner"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
                   "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                 }
               ],
-              "linkId": "Consent.patient.value",
+              "linkId": "Consent.subject.value",
               "text": "Who the consent applies to",
               "type": "reference",
               "required": false,
@@ -646,7 +646,7 @@
                   }
                 }
               ],
-              "text": "Either the Grantor, which is the entity responsible for granting the rights listed in a Consent Directive or the Grantee, which is the entity responsible for complying with the Consent Directive, including any obligations or limitations on authorizations and enforcement of prohibitions. Commonly, the patient the consent pertains to is the consentor, but particularly for young and old people, it may be some other person - e.g. a legal guardian.  Where HealthCareService is listed, some services might not be appropriate based on the type of service and if they can be segmented as an independent or dependent individual entity that might not be eligible to be a grantee.",
+              "text": "Either the Grantor, which is the entity responsible for granting the rights listed in a Consent Directive or the Grantee, which is the entity responsible for complying with the Consent Directive, including any obligations or limitations on authorizations and enforcement of prohibitions. Commonly, the patient the consent pertains to is the consentor, but particularly for young and old people, it may be some other person - e.g. a legal guardian.  Where HealthCareService is listed, some services might not be appropriate based on the type of service and if they can be segmented as an independent or dependent individual entity that might not be eligible to be a grantee.\n\nA Consent without a listed performer may be used as a statement of preference by the subject and is not in force.",
               "type": "display"
             },
             {
@@ -675,7 +675,7 @@
               "valueString": "Reference"
             }
           ],
-          "linkId": "Consent.organization",
+          "linkId": "Consent.manager",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -695,22 +695,71 @@
                   }
                 }
               ],
-              "text": "The organization that manages the consent, and the framework within which it is executed.",
+              "text": "The actor that manages the consent through its lifecycle.",
               "type": "display"
             },
             {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Organization"
+                  "valueCode": "HealthcareService, Organization, Patient, Practitioner"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
                   "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
                 }
               ],
-              "linkId": "Consent.organization.value",
-              "text": "Custodian of the consent",
+              "linkId": "Consent.manager.value",
+              "text": "Consent workflow management",
+              "type": "reference",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Reference"
+            }
+          ],
+          "linkId": "Consent.controller",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "The actor that controls/enforces the access according to the consent.",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                  "valueCode": "HealthcareService, Organization, Patient, Practitioner"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                }
+              ],
+              "linkId": "Consent.controller.value",
+              "text": "Consent Enforcer",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -806,6 +855,10 @@
           "required": false,
           "repeats": true,
           "item": [
+            {
+              "text": "if policy and policyRule are not present, the resource must include the policy being agreed to, or complied with, and that policy and/or policyRule SHOULD be populated as soon as is practical to support workflows that require computability. In addition, the policy could be indicated via the sourceReference or sourceAttachment content.\n\nAlternately, creating an invariant for individual scopes that forces one or more of the elements to be populated as part of a profile or Implementation Guide may be advisable.",
+              "type": "display"
+            },
             {
               "extension": [
                 {

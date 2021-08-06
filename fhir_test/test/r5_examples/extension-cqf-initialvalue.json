@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/cqf-initialValue",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "initialValue",
   "title": "initialValue",
   "status": "draft",
@@ -28,8 +28,8 @@
       ]
     }
   ],
-  "description": "The name of an expression in a referenced library that determines an initial value.",
-  "fhirVersion": "4.2.0",
+  "description": "An expression that determines an initial value. The expression may be simply the name of a expression in a referenced library, or it may be a complete inline expression.",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "rim",
@@ -54,7 +54,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "An initial value expression",
-        "definition": "The name of an expression in a referenced library that determines an initial value.",
+        "definition": "An expression that determines an initial value. The expression may be simply the name of a expression in a referenced library, or it may be a complete inline expression.",
         "min": 0,
         "max": "*",
         "base": {
@@ -69,7 +69,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -151,7 +151,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -159,7 +159,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -216,7 +216,7 @@
         },
         "type": [
           {
-            "code": "string"
+            "code": "Expression"
           }
         ],
         "constraint": [
@@ -226,7 +226,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -246,7 +246,7 @@
         "id": "Extension",
         "path": "Extension",
         "short": "An initial value expression",
-        "definition": "The name of an expression in a referenced library that determines an initial value.",
+        "definition": "An expression that determines an initial value. The expression may be simply the name of a expression in a referenced library, or it may be a complete inline expression.",
         "min": 0,
         "max": "*"
       },
@@ -266,7 +266,7 @@
         "min": 1,
         "type": [
           {
-            "code": "string"
+            "code": "Expression"
           }
         ]
       }

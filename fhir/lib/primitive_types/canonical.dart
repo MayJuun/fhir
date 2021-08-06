@@ -1,3 +1,5 @@
+//ignore_for_file: avoid_equals_and_hash_code_on_mutable_classes, avoid_renaming_method_parameters, avoid_bool_literals_in_conditional_expressions
+
 import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
@@ -32,13 +34,16 @@ class Canonical {
   final bool _isValid;
 
   bool get isValid => _isValid;
+  @override
   int get hashCode => _valueString.hashCode;
   Uri? get value => _valueCanonical;
 
+  @override
   String toString() => _valueString;
   String toJson() => _valueString;
   String toYaml() => _valueString;
 
+  @override
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is Canonical

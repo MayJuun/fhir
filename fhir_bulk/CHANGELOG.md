@@ -1,3 +1,8 @@
+## [0.5.0-1]
+* Updated dart version
+* Added anlyzer to dev_dependencies
+* Not sure why pub.dev cant' run dartanalyzer
+
 ## [0.4.4]
 * Updated dart version
 * Added anlyzer to dev_dependencies

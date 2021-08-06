@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for RegulatedAuthorization.relatedDate.date[x]",
       "expansion": {
-        "identifier": "urn:uuid:c0179d4a-eaeb-44e5-8311-6dd22accd67e",
-        "timestamp": "2019-12-31T21:16:46+11:00",
+        "identifier": "urn:uuid:bd56c106-8f25-42fb-85d9-63e496a62423",
+        "timestamp": "2021-04-15T12:29:53+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -32,8 +32,8 @@
       "status": "active",
       "description": "Type options for RegulatedAuthorization.case.date[x]",
       "expansion": {
-        "identifier": "urn:uuid:0237b1dd-3f15-4930-8315-4b34c155a6b2",
-        "timestamp": "2019-12-31T21:16:46+11:00",
+        "identifier": "urn:uuid:7f744610-42dd-46e9-ba02-9bafe4257aa5",
+        "timestamp": "2021-04-15T12:29:53+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -54,14 +54,14 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Biomedical Research and Regulation)",
   "item": [
     {
       "linkId": "RegulatedAuthorization",
-      "text": "The regulatory authorization of a medicinal product",
+      "text": "Regulatory approval, clearance or licencing related to a regulated product, treatment, facility or activity that is cited in a guidance, regulation, rule or legislative act. An example is Market Authorization relating to a Medicinal Product",
       "type": "group",
       "required": false,
       "repeats": true,
@@ -81,7 +81,7 @@
               }
             }
           ],
-          "text": "The regulatory authorization of a medicinal product.",
+          "text": "Regulatory approval, clearance or licencing related to a regulated product, treatment, facility or activity that is cited in a guidance, regulation, rule or legislative act. An example is Market Authorization relating to a Medicinal Product.",
           "type": "display"
         },
         {
@@ -115,7 +115,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -274,7 +274,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -301,7 +301,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -368,7 +368,7 @@
             }
           ],
           "linkId": "RegulatedAuthorization.identifier",
-          "text": "Business identifier for the marketing authorization, as assigned by a regulator",
+          "text": "Business identifier for the authorization, typically this is assigned by the authorizing body",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -388,7 +388,7 @@
                   }
                 }
               ],
-              "text": "Business identifier for the marketing authorization, as assigned by a regulator.",
+              "text": "Business identifier for the authorization, typically this is assigned by the authorizing body.",
               "type": "display"
             },
             {
@@ -445,14 +445,14 @@
                   }
                 }
               ],
-              "text": "The product that is being authorized.",
+              "text": "The type of regulated product, treatment, facility or activity that is being authorized.",
               "type": "display"
             },
             {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "MedicinalProductDefinition, PackagedProductDefinition, DeviceDefinition, ResearchStudy, ActivityDefinition, PlanDefinition, ObservationDefinition"
+                  "valueCode": "MedicinalProductDefinition, BiologicallyDerivedProduct, NutritionProduct, PackagedProductDefinition, SubstanceDefinition, DeviceDefinition, ResearchStudy, ActivityDefinition, PlanDefinition, ObservationDefinition, Practitioner, Organization, Location"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -460,7 +460,7 @@
                 }
               ],
               "linkId": "RegulatedAuthorization.subject.value",
-              "text": "The product that is being authorized",
+              "text": "The type of regulated product, treatment, facility or activity that is being authorized",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -479,7 +479,7 @@
             }
           ],
           "linkId": "RegulatedAuthorization.type",
-          "text": "Type of this authorization, for example drug marketing approval, orphan drug designation",
+          "text": "Overall type of this authorization, for example drug marketing approval, orphan drug designation",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -499,7 +499,7 @@
                   }
                 }
               ],
-              "text": "Type of this authorization, for example drug marketing approval, orphan drug designation.",
+              "text": "Overall type of this authorization, for example drug marketing approval, orphan drug designation.",
               "type": "display"
             },
             {
@@ -569,7 +569,7 @@
             }
           ],
           "linkId": "RegulatedAuthorization.region",
-          "text": "The region (country, jurisdiction etc.) in which the marketing authorization has been granted",
+          "text": "The territory (e.g., country, jurisdiction etc.) in which the authorization has been granted",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -589,7 +589,7 @@
                   }
                 }
               ],
-              "text": "The region (country, jurisdiction etc.) in which the marketing authorization has been granted.",
+              "text": "The territory (e.g., country, jurisdiction etc.) in which the authorization has been granted.",
               "type": "display"
             },
             {
@@ -620,7 +620,7 @@
             }
           ],
           "linkId": "RegulatedAuthorization.status",
-          "text": "The status of the marketing authorization",
+          "text": "The status that is authorised e.g. approved. Intermediate states can be tracked with cases and applications",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -640,7 +640,7 @@
                   }
                 }
               ],
-              "text": "The status of the marketing authorization.",
+              "text": "The status that is authorised e.g. approved. Intermediate states can be tracked with cases and applications.",
               "type": "display"
             },
             {
@@ -690,12 +690,12 @@
                   }
                 }
               ],
-              "text": "The date at which the given status has become applicable.",
+              "text": "The date at which the current status was assigned.",
               "type": "display"
             },
             {
               "linkId": "RegulatedAuthorization.statusDate.value",
-              "text": "The date at which the given status has become applicable",
+              "text": "The date at which the current status was assigned",
               "type": "dateTime",
               "required": false,
               "repeats": false
@@ -714,7 +714,7 @@
             }
           ],
           "linkId": "RegulatedAuthorization.validityPeriod",
-          "text": "The beginning of the time period in which the marketing authorization is in the specific status shall be specified A complete date consisting of day, month and year shall be specified using the ISO 8601 date format",
+          "text": "The time period in which the regulatory approval, clearance or licencing is in effect. As an example, a Marketing Authorization includes the date of authorization and/or an expiration date",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -734,7 +734,7 @@
                   }
                 }
               ],
-              "text": "The beginning of the time period in which the marketing authorization is in the specific status shall be specified A complete date consisting of day, month and year shall be specified using the ISO 8601 date format.",
+              "text": "The time period in which the regulatory approval, clearance or licencing is in effect. As an example, a Marketing Authorization includes the date of authorization and/or an expiration date.",
               "type": "display"
             },
             {
@@ -756,12 +756,49 @@
         {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            }
+          ],
+          "linkId": "RegulatedAuthorization.indication",
+          "text": "Condition for which the use of the regulated product  applies",
+          "type": "group",
+          "required": false,
+          "repeats": false,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "Condition for which the use of the regulated product applies.",
+              "type": "display"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
+              "valueInteger": 1
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
               "valueString": "CodeableConcept"
             }
           ],
-          "linkId": "RegulatedAuthorization.basis",
-          "text": "The legal framework against which this authorization is granted, or other reasons for it",
+          "linkId": "RegulatedAuthorization.intendedUse",
+          "text": "The intended use of the product, e.g. prevention, treatment",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -781,7 +818,54 @@
                   }
                 }
               ],
-              "text": "The legal framework against which this authorization is granted, or other reasons for it.",
+              "text": "The intended use of the product, e.g. prevention, treatment.",
+              "type": "display"
+            },
+            {
+              "linkId": "RegulatedAuthorization.intendedUse.coding",
+              "text": "code:",
+              "type": "open-choice",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "RegulatedAuthorization.intendedUse.text",
+              "text": "text:",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "CodeableConcept"
+            }
+          ],
+          "linkId": "RegulatedAuthorization.basis",
+          "text": "The legal or regulatory framework against which this authorization is granted, or other reasons for it",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "The legal or regulatory framework against which this authorization is granted, or other reasons for it.",
               "type": "display"
             },
             {
@@ -1029,7 +1113,7 @@
                 }
               ],
               "linkId": "RegulatedAuthorization.relatedDate.type",
-              "text": "Type of this date, for example the data exclusitity period for a medicinal product",
+              "text": "The meaning of the related date for a regulated product, treatment, facility or activity.  As an example, the data exclusivity period for a regulated product",
               "type": "group",
               "required": true,
               "repeats": true,
@@ -1049,7 +1133,7 @@
                       }
                     }
                   ],
-                  "text": "Type of this date, for example the data exclusitity period for a medicinal product.",
+                  "text": "The meaning of the related date for a regulated product, treatment, facility or activity.  As an example, the data exclusivity period for a regulated product.",
                   "type": "display"
                 },
                 {
@@ -1150,7 +1234,7 @@
                   }
                 }
               ],
-              "text": "Marketing Authorization Holder.",
+              "text": "The organization that holds the granted authorization.",
               "type": "display"
             },
             {
@@ -1165,7 +1249,7 @@
                 }
               ],
               "linkId": "RegulatedAuthorization.holder.value",
-              "text": "Marketing Authorization Holder",
+              "text": "The organization that holds the granted authorization",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -1203,7 +1287,7 @@
                   }
                 }
               ],
-              "text": "Medicines Regulatory Agency.",
+              "text": "The regulatory authority or authorizing body granting the authorization. For example, European Medicines Agency (EMA), Food and Drug Administration (FDA), Health Canada (HC), etc.",
               "type": "display"
             },
             {
@@ -1218,7 +1302,56 @@
                 }
               ],
               "linkId": "RegulatedAuthorization.regulator.value",
-              "text": "Medicines Regulatory Agency",
+              "text": "The regulatory authority or authorizing body granting the authorization",
+              "type": "reference",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Reference"
+            }
+          ],
+          "linkId": "RegulatedAuthorization.attachedDocument",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "Additional information or supporting documentation about the authorization.",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                  "valueCode": "DocumentReference"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                }
+              ],
+              "linkId": "RegulatedAuthorization.attachedDocument.value",
+              "text": "Additional information or supporting documentation about the authorization",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -1233,7 +1366,7 @@
             }
           ],
           "linkId": "RegulatedAuthorization.case",
-          "text": "The case or regulatory procedure for granting or amending a marketing authorization",
+          "text": "The case or regulatory procedure for granting or amending a marketing authorization. Note: This area is subject to ongoing review and the workgroup is seeking implementer feedback on its use (see link at bottom of page)",
           "type": "group",
           "required": false,
           "repeats": false,
@@ -1253,7 +1386,7 @@
                   }
                 }
               ],
-              "text": "The case or regulatory procedure for granting or amending a marketing authorization.",
+              "text": "The case or regulatory procedure for granting or amending a marketing authorization. Note: This area is subject to ongoing review and the workgroup is seeking implementer feedback on its use (see link at bottom of page).",
               "type": "display"
             },
             {
@@ -1365,7 +1498,7 @@
                 }
               ],
               "linkId": "RegulatedAuthorization.case.identifier",
-              "text": "Identifier for this case",
+              "text": "Identifier by which this case can be referenced",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1385,7 +1518,7 @@
                       }
                     }
                   ],
-                  "text": "Identifier for this case.",
+                  "text": "Identifier by which this case can be referenced.",
                   "type": "display"
                 },
                 {
@@ -1423,7 +1556,7 @@
                 }
               ],
               "linkId": "RegulatedAuthorization.case.type",
-              "text": "Type of case",
+              "text": "The defining type of case",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1443,7 +1576,7 @@
                       }
                     }
                   ],
-                  "text": "Type of case.",
+                  "text": "The defining type of case.",
                   "type": "display"
                 },
                 {
@@ -1474,7 +1607,7 @@
                 }
               ],
               "linkId": "RegulatedAuthorization.case.status",
-              "text": "The status of the case",
+              "text": "The status associated with the case",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1494,7 +1627,7 @@
                       }
                     }
                   ],
-                  "text": "The status of the case.",
+                  "text": "The status associated with the case.",
                   "type": "display"
                 },
                 {
@@ -1521,7 +1654,7 @@
                 }
               ],
               "linkId": "RegulatedAuthorization.case.date[x]",
-              "text": "Date of case",
+              "text": "Relevant date for this of case",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1541,7 +1674,7 @@
                       }
                     }
                   ],
-                  "text": "Date of case.",
+                  "text": "Relevant date for this of case.",
                   "type": "display"
                 },
                 {
@@ -1602,7 +1735,7 @@
             },
             {
               "linkId": "RegulatedAuthorization.case.application",
-              "text": "Applcations submitted to obtain a marketing authorization. Steps within the longer running case or procedure",
+              "text": "Applications submitted to obtain a marketing authorization. Steps within the longer running case or procedure",
               "type": "group",
               "required": false,
               "repeats": true,
@@ -1622,7 +1755,7 @@
                       }
                     }
                   ],
-                  "text": "Applcations submitted to obtain a marketing authorization. Steps within the longer running case or procedure.",
+                  "text": "Applications submitted to obtain a marketing authorization. Steps within the longer running case or procedure.",
                   "type": "display"
                 }
               ]

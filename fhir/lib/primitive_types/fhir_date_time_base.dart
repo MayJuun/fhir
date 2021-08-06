@@ -1,3 +1,5 @@
+//ignore_for_file: avoid_equals_and_hash_code_on_mutable_classes, avoid_renaming_method_parameters, avoid_bool_literals_in_conditional_expressions
+
 import 'primitive_types.dart';
 
 abstract class FhirDateTimeBase {
@@ -9,15 +11,18 @@ abstract class FhirDateTimeBase {
   final DateTime? valueDateTime;
   final Exception? parseError;
 
+  @override
   int get hashCode => valueString.hashCode;
   DateTime? get value => valueDateTime;
 
   String? get iso8601String => valueDateTime?.toIso8601String();
 
+  @override
   String toString() => valueString;
   String toJson() => valueString;
   String toYaml() => valueString;
 
+  @override
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is! FhirDateTimeBase

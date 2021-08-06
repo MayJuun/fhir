@@ -1,13 +1,15 @@
+//ignore_for_file: avoid_equals_and_hash_code_on_mutable_classes, avoid_renaming_method_parameters, avoid_bool_literals_in_conditional_expressions
+
 import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
 class Id {
   const Id._(this._valueString, this._valueId, this._isValid);
 
-  factory Id(String inValue) =>
-      RegExp(r'^[A-Za-z0-9\-\.]{1,64}$').hasMatch(inValue)
+  factory Id(dynamic inValue) =>
+      inValue is String && RegExp(r'^[A-Za-z0-9\-\.]{1,64}$').hasMatch(inValue)
           ? Id._(inValue, inValue, true)
-          : Id._(inValue, null, false);
+          : Id._(inValue.toString(), null, false);
 
   factory Id.fromJson(dynamic json) => Id(json);
 
@@ -23,13 +25,16 @@ class Id {
   final bool _isValid;
 
   bool get isValid => _isValid;
-  int get hashId => _valueString.hashCode;
+  @override
+  int get hashCode => _valueString.hashCode;
   String? get value => _valueId;
 
+  @override
   String toString() => _valueString;
   String toJson() => _valueString;
   String toYaml() => _valueString;
 
+  @override
   bool operator ==(Object o) => identical(this, o)
       ? true
       : o is Id

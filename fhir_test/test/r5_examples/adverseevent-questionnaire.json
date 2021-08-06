@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for AdverseEvent.occurrence[x]",
       "expansion": {
-        "identifier": "urn:uuid:210105f6-e6ae-42a2-8110-9365bf78f220",
-        "timestamp": "2019-12-31T21:07:39+11:00",
+        "identifier": "urn:uuid:cf9e782b-f0bb-4d65-a6f3-6444fa5436b1",
+        "timestamp": "2021-04-15T12:28:01+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -37,8 +37,8 @@
       "status": "active",
       "description": "Type options for AdverseEvent.suspectEntity.instance[x]",
       "expansion": {
-        "identifier": "urn:uuid:edda34fb-16df-4465-957e-6ea67f55fd54",
-        "timestamp": "2019-12-31T21:07:39+11:00",
+        "identifier": "urn:uuid:309bdd42-e9ac-49e5-8a0f-51956f9d1de1",
+        "timestamp": "2021-04-15T12:28:01+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -90,8 +90,8 @@
       "status": "active",
       "description": "Type options for AdverseEvent.contributingFactor.item[x]",
       "expansion": {
-        "identifier": "urn:uuid:540248db-70ea-473f-a1a6-20965405cc53",
-        "timestamp": "2019-12-31T21:07:39+11:00",
+        "identifier": "urn:uuid:801f756c-aa5e-412e-9e70-d31f2c4c1bdd",
+        "timestamp": "2021-04-15T12:28:01+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/resource-types",
@@ -143,8 +143,8 @@
       "status": "active",
       "description": "Type options for AdverseEvent.preventiveAction.item[x]",
       "expansion": {
-        "identifier": "urn:uuid:0978c7ae-2d69-4f7e-9df4-941831d54928",
-        "timestamp": "2019-12-31T21:07:39+11:00",
+        "identifier": "urn:uuid:22efd6da-a437-43c5-92a2-e86afbb2c047",
+        "timestamp": "2021-04-15T12:28:01+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/resource-types",
@@ -186,8 +186,8 @@
       "status": "active",
       "description": "Type options for AdverseEvent.mitigatingAction.item[x]",
       "expansion": {
-        "identifier": "urn:uuid:290a19a1-9b78-4922-9b46-a46212a326a1",
-        "timestamp": "2019-12-31T21:07:39+11:00",
+        "identifier": "urn:uuid:5d4aa93e-b7da-4681-a791-588d8860ea36",
+        "timestamp": "2021-04-15T12:28:01+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/resource-types",
@@ -224,8 +224,8 @@
       "status": "active",
       "description": "Type options for AdverseEvent.supportingInfo.item[x]",
       "expansion": {
-        "identifier": "urn:uuid:d430dd7f-c575-4eed-9e38-bdc2f9084c12",
-        "timestamp": "2019-12-31T21:07:39+11:00",
+        "identifier": "urn:uuid:21bd330b-32be-4d5f-8036-af32e69630e7",
+        "timestamp": "2021-04-15T12:28:01+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/resource-types",
@@ -276,9 +276,9 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Patient Care)",
   "item": [
     {
@@ -337,7 +337,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -496,7 +496,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -523,7 +523,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -671,7 +671,7 @@
                   }
                 }
               ],
-              "text": "The current state of the data entry of the adverse event or potential adverse event. This is not the reporting of the event to any regulatory or quality organization.",
+              "text": "The current state of the adverse event or potential adverse event. This is not the reporting of the event to any regulatory or quality organization.  This is not the outcome of the patient\u0027s condition.",
               "type": "display"
             },
             {
@@ -738,7 +738,7 @@
             }
           ],
           "linkId": "AdverseEvent.category",
-          "text": "product-problem | product-quality | product-use-error | wrong-dose | incorrect-prescribing-information | wrong-technique | wrong-route-of-administration | wrong-rate | wrong-duration | wrong-time | expired-drug | medical-device-use-error | problem-different-manufacturer | unsafe-physical-environment",
+          "text": "wrong-patient | procedure-mishap | medication-mishap | device | unsafe-physical-environment | hospital-aquired-infection | wrong-body-site",
           "type": "group",
           "required": false,
           "repeats": true,
@@ -916,7 +916,7 @@
                   }
                 }
               ],
-              "text": "The Encounter during which AdverseEvent was created or to which the creation of this record is tightly associated. This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter.  For example, if a medication administration was considered an adverse event because it resulted in a rash, then the encounter when the medication administration was given is the context.  If the patient reports the AdverseEvent during a second encounter, that second encounter is not the context.",
+              "text": "The Encounter associated with the start of the AdverseEvent. This will typically be the encounter the event occurred within, but some activities may be initiated prior to or after the official completion of an encounter but still be tied to the context of the encounter. For example, if a medication administration was considered an adverse event because it resulted in a rash, then the encounter when the medication administration was given is the associated encounter. If the patient reports the AdverseEvent during a second encounter, that second encounter is not the associated encounter.",
               "type": "display"
             },
             {
@@ -931,7 +931,7 @@
                 }
               ],
               "linkId": "AdverseEvent.encounter.value",
-              "text": "The Encounter during which this AdverseEvent was created",
+              "text": "The Encounter associated with the start of the AdverseEvent",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -1185,7 +1185,7 @@
                   }
                 }
               ],
-              "text": "Includes information about the reaction that occurred as a result of exposure to a substance (for example, a drug or a chemical).",
+              "text": "Information about the condition that occurred as a result of the adverse event, such as hives due to the exposure to a substance (for example, a drug or a chemical) or a broken leg as a result of the fall.",
               "type": "display"
             },
             {
@@ -1313,10 +1313,6 @@
         },
         {
           "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-maxOccurs",
-              "valueInteger": 1
-            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
               "valueString": "CodeableConcept"

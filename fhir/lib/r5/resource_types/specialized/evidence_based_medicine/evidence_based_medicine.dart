@@ -59,16 +59,18 @@ class Evidence with Resource, _$Evidence {
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
+    List<CodeableConcept>? topic,
     List<ContactDetail>? author,
     List<ContactDetail>? editor,
     List<ContactDetail>? reviewer,
     List<ContactDetail>? endorser,
     List<RelatedArtifact>? relatedArtifact,
+    Reference? citeAsReference,
+    Markdown? citeAsMarkdown,
+    @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
     Markdown? assertion,
     @JsonKey(name: '_assertion') Element? assertionElement,
-    // ToDo
-    //  List<Annotation> note,
-    Annotation? note,
+    List<Annotation>? note,
     required List<EvidenceVariableDefinition> variableDefinition,
     CodeableConcept? synthesisType,
     CodeableConcept? studyType,
@@ -78,13 +80,16 @@ class Evidence with Resource, _$Evidence {
   }) = _Evidence;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Evidence.fromYaml(dynamic yaml) => yaml is String
-      ? Evidence.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Evidence.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Evidence.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? Evidence.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'Evidence cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -116,9 +121,10 @@ class EvidenceVariableDefinition with _$EvidenceVariableDefinition {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EvidenceVariableDefinition.fromYaml(dynamic yaml) => yaml is String
       ? EvidenceVariableDefinition.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EvidenceVariableDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? EvidenceVariableDefinition.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'EvidenceVariableDefinition cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -137,11 +143,12 @@ class EvidenceCertainty with _$EvidenceCertainty {
     List<FhirExtension>? modifierExtension,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    // ToDo
-    // List<Annotation> note,
-    Annotation? note,
-    List<CodeableConcept>? rating,
-    List<EvidenceCertaintySubcomponent>? certaintySubcomponent,
+    List<Annotation>? note,
+    CodeableConcept? type,
+    CodeableConcept? rating,
+    String? rater,
+    @JsonKey(name: '_rater') Element? raterElement,
+    List<EvidenceCertainty>? subcomponent,
   }) = _EvidenceCertainty;
 
   /// Produces a Yaml formatted String version of the object
@@ -149,9 +156,11 @@ class EvidenceCertainty with _$EvidenceCertainty {
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EvidenceCertainty.fromYaml(dynamic yaml) => yaml is String
-      ? EvidenceCertainty.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? EvidenceCertainty.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EvidenceCertainty.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? EvidenceCertainty.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'EvidenceCertainty cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -159,40 +168,6 @@ class EvidenceCertainty with _$EvidenceCertainty {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceCertainty.fromJson(Map<String, dynamic> json) =>
       _$EvidenceCertaintyFromJson(json);
-}
-
-@freezed
-class EvidenceCertaintySubcomponent with _$EvidenceCertaintySubcomponent {
-  EvidenceCertaintySubcomponent._();
-  factory EvidenceCertaintySubcomponent({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    // ToDo
-    // List<Annotation> note,
-    Annotation? note,
-    List<CodeableConcept>? type,
-    List<CodeableConcept>? rating,
-  }) = _EvidenceCertaintySubcomponent;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory EvidenceCertaintySubcomponent.fromYaml(dynamic yaml) => yaml is String
-      ? EvidenceCertaintySubcomponent.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? EvidenceCertaintySubcomponent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : throw ArgumentError(
-              'EvidenceCertaintySubcomponent cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory EvidenceCertaintySubcomponent.fromJson(Map<String, dynamic> json) =>
-      _$EvidenceCertaintySubcomponentFromJson(json);
 }
 
 @freezed
@@ -244,16 +219,17 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
     Date? lastReviewDate,
     @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
     Period? effectivePeriod,
-    String? shortTitle,
-    @JsonKey(name: '_shortTitle') Element? shortTitleElement,
-    String? subtitle,
-    @JsonKey(name: '_subtitle') Element? subtitleElement,
-    List<Annotation>? note,
+    List<CodeableConcept>? topic,
     List<ContactDetail>? author,
     List<ContactDetail>? editor,
     List<ContactDetail>? reviewer,
     List<ContactDetail>? endorser,
     List<RelatedArtifact>? relatedArtifact,
+    String? shortTitle,
+    @JsonKey(name: '_shortTitle') Element? shortTitleElement,
+    String? subtitle,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
+    List<Annotation>? note,
     Boolean? actual,
     @JsonKey(name: '_actual') Element? actualElement,
     @JsonKey(unknownEnumValue: EvidenceVariableCharacteristicCombination.unknown)
@@ -268,13 +244,16 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   }) = _EvidenceVariable;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EvidenceVariable.fromYaml(dynamic yaml) => yaml is String
-      ? EvidenceVariable.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? EvidenceVariable.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EvidenceVariable.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? EvidenceVariable.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'EvidenceVariable cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -315,13 +294,13 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   factory EvidenceVariableCharacteristic.fromYaml(dynamic yaml) => yaml
           is String
       ? EvidenceVariableCharacteristic.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
           ? EvidenceVariableCharacteristic.fromJson(
-              jsonDecode(jsonEncode(yaml)))
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'EvidenceVariableCharacteristic cannot be constructed from input provided,'
-              ' it is neither a yaml string or a yaml map.');
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =>
@@ -348,9 +327,10 @@ class EvidenceVariableTimeFromStart with _$EvidenceVariableTimeFromStart {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EvidenceVariableTimeFromStart.fromYaml(dynamic yaml) => yaml is String
       ? EvidenceVariableTimeFromStart.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EvidenceVariableTimeFromStart.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? EvidenceVariableTimeFromStart.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'EvidenceVariableTimeFromStart cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
@@ -380,9 +360,10 @@ class EvidenceVariableCategory with _$EvidenceVariableCategory {
   /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EvidenceVariableCategory.fromYaml(dynamic yaml) => yaml is String
       ? EvidenceVariableCategory.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EvidenceVariableCategory.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? EvidenceVariableCategory.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'EvidenceVariableCategory cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');

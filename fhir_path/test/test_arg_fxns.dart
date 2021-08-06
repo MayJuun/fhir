@@ -7,8 +7,9 @@ dynamic walkPath(dynamic arg) => arg;
 void testArgFxns() {
   group('Functions with Arguments: ', () {
     test('\$this', () {
-      expect(walkFhirPath(resource, r'Patient.name.exists($this)'), [true]);
-      expect(walkFhirPath(resource, r'Patient.name.where($this)'), [
+      expect(walkFhirPath(resource.toJson(), r'Patient.name.exists($this)'),
+          [true]);
+      expect(walkFhirPath(resource.toJson(), r'Patient.name.where($this)'), [
         {
           'use': 'official',
           'family': 'Faulkenberry',
@@ -28,7 +29,8 @@ void testArgFxns() {
           'given': ['John', 'Jacob', 'Jingleheimer']
         }
       ]);
-      expect(walkFhirPath(resource, r'Patient.name.given.where($this)'), [
+      expect(
+          walkFhirPath(resource.toJson(), r'Patient.name.given.where($this)'), [
         'Jason',
         'Grey',
         'Jason',
@@ -42,76 +44,77 @@ void testArgFxns() {
     test('exists', () {
       final response = QuestionnaireResponse.fromJson(questionnaireResponse);
       expect(
-          walkFhirPath(response,
+          walkFhirPath(response.toJson(),
               r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"),
           [13]);
     });
     test('exists', () {
-      expect(walkFhirPath(resource, 'name.given.exists()'), [true]);
-      expect(walkFhirPath(resource, 'Patient.language.exists()'), [false]);
-      expect(
-          walkFhirPath(resource, "telecom.exists(system = 'email')"), [true]);
-      expect(
-          walkFhirPath(
-              resource, "telecom.exists(system = 'email' and use = 'mobile')"),
-          [true]);
-      expect(
-          walkFhirPath(
-              resource, "telecom.exists(system = 'sms' and use = 'mobile')"),
+      expect(walkFhirPath(resource.toJson(), 'name.given.exists()'), [true]);
+      expect(walkFhirPath(resource.toJson(), 'Patient.language.exists()'),
           [false]);
       expect(
-          walkFhirPath(
-              resource, "telecom.exists(system = 'email' and use = 'any')"),
+          walkFhirPath(resource.toJson(), "telecom.exists(system = 'email')"),
+          [true]);
+      expect(
+          walkFhirPath(resource.toJson(),
+              "telecom.exists(system = 'email' and use = 'mobile')"),
+          [true]);
+      expect(
+          walkFhirPath(resource.toJson(),
+              "telecom.exists(system = 'sms' and use = 'mobile')"),
+          [false]);
+      expect(
+          walkFhirPath(resource.toJson(),
+              "telecom.exists(system = 'email' and use = 'any')"),
           [false]);
     });
     test('all', () {
-      expect(walkFhirPath(resource, 'Patient.language.all()'), [true]);
-      expect(walkFhirPath(resource, "name.all(use = 'official')"), [false]);
-      expect(walkFhirPath(resource, "name.all(use = 'usual')"), [false]);
-      expect(walkFhirPath(resource, "telecom.all(system = 'email')"), [true]);
-      expect(walkFhirPath(resource, "telecom.all(use = 'mobile')"), [true]);
+      expect(walkFhirPath(resource.toJson(), 'Patient.language.all()'), [true]);
+      expect(walkFhirPath(resource.toJson(), "name.all(use = 'official')"),
+          [false]);
       expect(
-          walkFhirPath(
-              resource, "telecom.all(system = 'email' and use = 'mobile')"),
+          walkFhirPath(resource.toJson(), "name.all(use = 'usual')"), [false]);
+      expect(walkFhirPath(resource.toJson(), "telecom.all(system = 'email')"),
+          [true]);
+      expect(walkFhirPath(resource.toJson(), "telecom.all(use = 'mobile')"),
+          [true]);
+      expect(
+          walkFhirPath(resource.toJson(),
+              "telecom.all(system = 'email' and use = 'mobile')"),
           [true]);
     });
     test('subsetOf', () {
       expect(
-          walkFhirPath(
-              resource, "Patient.name.given[2].subsetOf(Patient.name.given)"),
+          walkFhirPath(resource.toJson(),
+              "Patient.name.given[2].subsetOf(Patient.name.given)"),
+          [true]);
+      expect(
+          walkFhirPath(resource.toJson(),
+              "Patient.name.given.subsetOf(Patient.name.given)"),
           [true]);
       expect(
           walkFhirPath(
-              resource, "Patient.name.given.subsetOf(Patient.name.given)"),
-          [true]);
-      expect(
-          walkFhirPath(resource, "Patient.name.subsetOf(Patient.name.given)"),
+              resource.toJson(), "Patient.name.subsetOf(Patient.name.given)"),
           [false]);
     });
     test('supersetOf', () {
       expect(
-          walkFhirPath(
-              resource, "Patient.name.given.supersetOf(Patient.name.given[2])"),
+          walkFhirPath(resource.toJson(),
+              "Patient.name.given.supersetOf(Patient.name.given[2])"),
+          [true]);
+      expect(
+          walkFhirPath(resource.toJson(),
+              "Patient.name.given.supersetOf(Patient.name.given)"),
           [true]);
       expect(
           walkFhirPath(
-              resource, "Patient.name.given.supersetOf(Patient.name.given)"),
-          [true]);
-      expect(
-          walkFhirPath(resource, "Patient.name.given.supersetOf(Patient.name)"),
+              resource.toJson(), "Patient.name.given.supersetOf(Patient.name)"),
           [false]);
     });
     test('where', () {
-      expect(walkFhirPath(resource, "Patient.telecom.where(use = 'mobile')"), [
-        {
-          'system': 'email',
-          'use': 'mobile',
-          'rank': 3,
-        }
-      ]);
       expect(
           walkFhirPath(
-              resource, "Patient.telecom.where(use = 'mobile' and rank = 3)"),
+              resource.toJson(), "Patient.telecom.where(use = 'mobile')"),
           [
             {
               'system': 'email',
@@ -120,7 +123,17 @@ void testArgFxns() {
             }
           ]);
       expect(
-          walkFhirPath(resource,
+          walkFhirPath(resource.toJson(),
+              "Patient.telecom.where(use = 'mobile' and rank = 3)"),
+          [
+            {
+              'system': 'email',
+              'use': 'mobile',
+              'rank': 3,
+            }
+          ]);
+      expect(
+          walkFhirPath(resource.toJson(),
               "Patient.telecom.where(use = 'mobile' and system = 'email')"),
           [
             {
@@ -130,7 +143,7 @@ void testArgFxns() {
             }
           ]);
       expect(
-          walkFhirPath(resource,
+          walkFhirPath(resource.toJson(),
               "Patient.telecom.where(use = 'mobile' and system = 'email' and rank = 3)"),
           [
             {
@@ -140,39 +153,48 @@ void testArgFxns() {
             }
           ]);
       expect(
-          walkFhirPath(
-              resource, "Patient.telecom.where(use = 'mobile' and rank = 2)"),
+          walkFhirPath(resource.toJson(),
+              "Patient.telecom.where(use = 'mobile' and rank = 2)"),
           []);
-      expect(walkFhirPath(resource, "Patient.name.where(use = 'official')"), [
-        {
-          'use': 'official',
-          'family': 'Faulkenberry',
-          'given': [
-            'Jason',
-            'Grey',
-          ]
-        },
-        {
-          'use': 'official',
-          'family': 'Faulkenberry',
-          'given': [
-            'Jason',
-            'Grey',
-          ]
-        }
-      ]);
+      expect(
+          walkFhirPath(
+              resource.toJson(), "Patient.name.where(use = 'official')"),
+          [
+            {
+              'use': 'official',
+              'family': 'Faulkenberry',
+              'given': [
+                'Jason',
+                'Grey',
+              ]
+            },
+            {
+              'use': 'official',
+              'family': 'Faulkenberry',
+              'given': [
+                'Jason',
+                'Grey',
+              ]
+            }
+          ]);
     });
     test('select', () {
-      expect(walkFhirPath(resource, 'Patient.telecom.select(rank as integer)'),
-          [3]);
-      expect(walkFhirPath(bundle, 'Bundle.entry.select(resource as Patient)'), [
-        {'resourceType': 'Patient', 'id': '1'},
-        {'resourceType': 'Patient', 'id': '3'},
-        {'resourceType': 'Patient', 'id': '6'},
-        {'resourceType': 'Patient', 'id': '7'}
-      ]);
       expect(
-          walkFhirPath(bundle, 'Bundle.entry.select(resource as Practitioner)'),
+          walkFhirPath(
+              resource.toJson(), 'Patient.telecom.select(rank as integer)'),
+          [3]);
+      expect(
+          walkFhirPath(
+              bundle.toJson(), 'Bundle.entry.select(resource as Patient)'),
+          [
+            {'resourceType': 'Patient', 'id': '1'},
+            {'resourceType': 'Patient', 'id': '3'},
+            {'resourceType': 'Patient', 'id': '6'},
+            {'resourceType': 'Patient', 'id': '7'}
+          ]);
+      expect(
+          walkFhirPath(
+              bundle.toJson(), 'Bundle.entry.select(resource as Practitioner)'),
           [
             {'resourceType': 'Practitioner', 'id': '2'},
             {'resourceType': 'Practitioner', 'id': '4'},
@@ -181,7 +203,7 @@ void testArgFxns() {
     });
     test('repeat', () {
       expect(
-          walkFhirPath(resource,
+          walkFhirPath(resource.toJson(),
               'Patient.address.period.extension.extension.extension.repeat(extension)'),
           [
             {
@@ -192,7 +214,7 @@ void testArgFxns() {
             }
           ]);
       expect(
-          walkFhirPath(resource,
+          walkFhirPath(resource.toJson(),
               'Patient.address.period.extension.extension.repeat(extension)'),
           [
             {
@@ -214,8 +236,8 @@ void testArgFxns() {
             }
           ]);
       expect(
-          walkFhirPath(
-              resource, 'Patient.address.period.extension.repeat(extension)'),
+          walkFhirPath(resource.toJson(),
+              'Patient.address.period.extension.repeat(extension)'),
           [
             {
               "extension": [
@@ -257,8 +279,8 @@ void testArgFxns() {
     });
     test('ofType', () {
       expect(
-          walkFhirPath(
-              bundle, walkPath("Bundle.entry.resource.ofType(Patient)")),
+          walkFhirPath(bundle.toJson(),
+              walkPath("Bundle.entry.resource.ofType(Patient)")),
           [
             {"resourceType": "Patient", "id": "1"},
             {"resourceType": "Patient", "id": "3"},
@@ -266,8 +288,8 @@ void testArgFxns() {
             {"resourceType": "Patient", "id": "7"},
           ]);
       expect(
-          walkFhirPath(
-              bundle, walkPath("Bundle.entry.resource.ofType(Practitioner)")),
+          walkFhirPath(bundle.toJson(),
+              walkPath("Bundle.entry.resource.ofType(Practitioner)")),
           [
             {"resourceType": "Practitioner", "id": "2"},
             {"resourceType": "Practitioner", "id": "4"},
@@ -275,7 +297,7 @@ void testArgFxns() {
           ]);
     });
     test('index', () {
-      expect(walkFhirPath(resource, 'Patient.name[3]'), [
+      expect(walkFhirPath(resource.toJson(), 'Patient.name[3]'), [
         {
           'family': 'Smith',
           'given': [
@@ -285,11 +307,11 @@ void testArgFxns() {
           ]
         }
       ]);
-      expect(walkFhirPath(resource, 'Patient.name[12]'), []);
+      expect(walkFhirPath(resource.toJson(), 'Patient.name[12]'), []);
     });
     test('skip', () {
-      expect(walkFhirPath(resource, 'Patient.name.id.skip(1)'), []);
-      expect(walkFhirPath(resource, 'Patient.name.given.skip(3)'), [
+      expect(walkFhirPath(resource.toJson(), 'Patient.name.id.skip(1)'), []);
+      expect(walkFhirPath(resource.toJson(), 'Patient.name.given.skip(3)'), [
         'Grey',
         'Kristin',
         'John',
@@ -298,13 +320,13 @@ void testArgFxns() {
       ]);
     });
     test('take', () {
-      expect(walkFhirPath(resource, 'Patient.name.id.take(1)'), []);
-      expect(walkFhirPath(resource, 'Patient.name.given.take(3)'), [
+      expect(walkFhirPath(resource.toJson(), 'Patient.name.id.take(1)'), []);
+      expect(walkFhirPath(resource.toJson(), 'Patient.name.given.take(3)'), [
         'Jason',
         'Grey',
         'Jason',
       ]);
-      expect(walkFhirPath(resource, 'Patient.name.given.take(13)'), [
+      expect(walkFhirPath(resource.toJson(), 'Patient.name.given.take(13)'), [
         'Jason',
         'Grey',
         'Jason',
@@ -317,24 +339,28 @@ void testArgFxns() {
     });
     test('intersect', () {
       expect(
-          walkFhirPath(resource, "Patient.name.given.intersect(%nameList)",
+          walkFhirPath(
+              resource.toJson(),
+              "Patient.name.given.intersect(%nameList)",
               {'%nameList': 'Jason'}),
           ['Jason', 'Jason']);
       expect(
-          walkFhirPath(resource, "Patient.name.given.intersect(%nameList)", {
+          walkFhirPath(
+              resource.toJson(), "Patient.name.given.intersect(%nameList)", {
             '%nameList': ['Jason', 'Kristin']
           }),
           ['Jason', 'Jason', 'Kristin']);
       expect(
-          walkFhirPath(resource, "Patient.name.given.intersect(%nameList)", {
+          walkFhirPath(
+              resource.toJson(), "Patient.name.given.intersect(%nameList)", {
             '%nameList': ['Jason', 'Fnuts']
           }),
           ['Jason', 'Jason']);
     });
     test('exclude', () {
       expect(
-          walkFhirPath(resource, "Patient.name.given.exclude(%nameList)",
-              {'%nameList': 'Jason'}),
+          walkFhirPath(resource.toJson(),
+              "Patient.name.given.exclude(%nameList)", {'%nameList': 'Jason'}),
           [
             'Grey',
             'Grey',
@@ -345,7 +371,8 @@ void testArgFxns() {
           ]);
 
       expect(
-          walkFhirPath(resource, "Patient.name.given.exclude(%nameList)", {
+          walkFhirPath(
+              resource.toJson(), "Patient.name.given.exclude(%nameList)", {
             '%nameList': ['Jason', 'Kristin']
           }),
           [
@@ -356,7 +383,8 @@ void testArgFxns() {
             'Jingleheimer',
           ]);
       expect(
-          walkFhirPath(resource, "Patient.name.given.exclude(%nameList)", {
+          walkFhirPath(
+              resource.toJson(), "Patient.name.given.exclude(%nameList)", {
             '%nameList': ['Jason', 'Fnuts']
           }),
           [
@@ -370,136 +398,166 @@ void testArgFxns() {
     });
     test('union', () {
       expect(
-          walkFhirPath(resource, walkPath("%a.union(%b)"), {
+          walkFhirPath(resource.toJson(), walkPath("%a.union(%b)"), {
             '%a': [1, 1, 2, 3],
             '%b': [2, 3]
           }),
           [1, 2, 3]);
       expect(
-          walkFhirPath(resource, walkPath("%a.union()"), {
+          walkFhirPath(resource.toJson(), walkPath("%a.union()"), {
             '%a': [1, 1, 2, 3],
           }),
           [1, 2, 3]);
     });
     test('combine', () {
       expect(
-          walkFhirPath(resource, walkPath("%a.combine(%b)"), {
+          walkFhirPath(resource.toJson(), walkPath("%a.combine(%b)"), {
             '%a': [1, 1, 2, 3],
             '%b': [2, 3]
           }),
           [2, 3, 1, 1, 2, 3]);
       expect(
-          walkFhirPath(resource, walkPath("%a.combine()"), {
+          walkFhirPath(resource.toJson(), walkPath("%a.combine()"), {
             '%a': [1, 1, 2, 3],
           }),
           [1, 1, 2, 3]);
     });
     test('indexOf', () {
-      expect(walkFhirPath(resource, walkPath("'abcdefg'.indexOf('bc') // 1")),
+      expect(
+          walkFhirPath(
+              resource.toJson(), walkPath("'abcdefg'.indexOf('bc') // 1")),
           [1]);
-      expect(walkFhirPath(resource, walkPath("'abcdefg'.indexOf('x') // -1")),
+      expect(
+          walkFhirPath(
+              resource.toJson(), walkPath("'abcdefg'.indexOf('x') // -1")),
           [-1]);
       expect(
-          walkFhirPath(resource, walkPath("'abcdefg'.indexOf('abcdefg') // 0")),
+          walkFhirPath(
+              resource.toJson(), walkPath("'abcdefg'.indexOf('abcdefg') // 0")),
           [0]);
     });
     test('Substring Function', () {
       expect(
-          walkFhirPath(resource, walkPath("'abcdefg'.substring(3) // 'defg'")),
+          walkFhirPath(
+              resource.toJson(), walkPath("'abcdefg'.substring(3) // 'defg'")),
           ['defg']);
       expect(
-          walkFhirPath(resource, walkPath("'abcdefg'.substring(1, 2) // 'bc'")),
+          walkFhirPath(
+              resource.toJson(), walkPath("'abcdefg'.substring(1, 2) // 'bc'")),
           ['bc']);
       expect(
-          walkFhirPath(resource, walkPath("'abcdefg'.substring(6, 2) // 'g'")),
+          walkFhirPath(
+              resource.toJson(), walkPath("'abcdefg'.substring(6, 2) // 'g'")),
           ['g']);
       expect(
-          walkFhirPath(resource, walkPath("'abcdefg'.substring(7, 1) // { }")),
+          walkFhirPath(
+              resource.toJson(), walkPath("'abcdefg'.substring(7, 1) // { }")),
           []);
     });
     test('startsWith', () {
       expect(
-          walkFhirPath(
-              resource, walkPath("'abcdefg'.startsWith('abc') // true")),
+          walkFhirPath(resource.toJson(),
+              walkPath("'abcdefg'.startsWith('abc') // true")),
           [true]);
       expect(
-          walkFhirPath(
-              resource, walkPath("'abcdefg'.startsWith('xyz') // false")),
+          walkFhirPath(resource.toJson(),
+              walkPath("'abcdefg'.startsWith('xyz') // false")),
           [false]);
     });
     test('endsWith', () {
       expect(
-          walkFhirPath(resource, walkPath("'abcdefg'.endsWith('efg') // true")),
+          walkFhirPath(
+              resource.toJson(), walkPath("'abcdefg'.endsWith('efg') // true")),
           [true]);
       expect(
-          walkFhirPath(
-              resource, walkPath("'abcdefg'.endsWith('abc') // false")),
+          walkFhirPath(resource.toJson(),
+              walkPath("'abcdefg'.endsWith('abc') // false")),
           [false]);
     });
     test('contains', () {
-      expect(walkFhirPath(resource, walkPath("'abc'.contains('b') // true")),
+      expect(
+          walkFhirPath(
+              resource.toJson(), walkPath("'abc'.contains('b') // true")),
           [true]);
-      expect(walkFhirPath(resource, walkPath("'abc'.contains('bc') // true")),
+      expect(
+          walkFhirPath(
+              resource.toJson(), walkPath("'abc'.contains('bc') // true")),
           [true]);
-      expect(walkFhirPath(resource, walkPath("'abc'.contains('d') // false")),
+      expect(
+          walkFhirPath(
+              resource.toJson(), walkPath("'abc'.contains('d') // false")),
           [false]);
     });
     test('replace', () {
       expect(
-          walkFhirPath(resource,
+          walkFhirPath(resource.toJson(),
               walkPath("'abcdefg'.replace('cde', '123') // 'ab123fg'")),
           ['ab123fg']);
       expect(
-          walkFhirPath(
-              resource, walkPath("'abcdefg'.replace('cde', '') // 'abfg'")),
+          walkFhirPath(resource.toJson(),
+              walkPath("'abcdefg'.replace('cde', '') // 'abfg'")),
           ['abfg']);
       expect(
-          walkFhirPath(
-              resource, walkPath("'abc'.replace('', 'x') // 'xaxbxcx'")),
+          walkFhirPath(resource.toJson(),
+              walkPath("'abc'.replace('', 'x') // 'xaxbxcx'")),
           ['xaxbxcx']);
     });
     test('matches', () {
       expect(
-          walkFhirPath(resource, walkPath("'hello'.matches('hello')")), [true]);
-      expect(
-          walkFhirPath(resource, walkPath("35.matches('[2-9]|[12]\d|3[0-6]')")),
-          [true]);
-      expect(
-          walkFhirPath(resource, walkPath("38.matches('[2-9]|[12]\d|3[0-6]')")),
+          walkFhirPath(resource.toJson(), walkPath("'hello'.matches('hello')")),
           [true]);
       expect(
           walkFhirPath(
-              resource, walkPath("'35'.matches('[2-9]|[12]\d|3[0-6]')")),
+              resource.toJson(), walkPath("35.matches('[2-9]|[12]\d|3[0-6]')")),
           [true]);
       expect(
           walkFhirPath(
-              resource, walkPath("'38'.matches('[2-9]|[12]\d|3[0-6]')")),
+              resource.toJson(), walkPath("38.matches('[2-9]|[12]\d|3[0-6]')")),
           [true]);
-      expect(walkFhirPath(resource, walkPath("'google'.matches('g(oog)+le')")),
+      expect(
+          walkFhirPath(resource.toJson(),
+              walkPath("'35'.matches('[2-9]|[12]\d|3[0-6]')")),
+          [true]);
+      expect(
+          walkFhirPath(resource.toJson(),
+              walkPath("'38'.matches('[2-9]|[12]\d|3[0-6]')")),
           [true]);
       expect(
           walkFhirPath(
-              resource, walkPath("'googoogoogoogle'.matches('g(oog)+le')")),
+              resource.toJson(), walkPath("'google'.matches('g(oog)+le')")),
           [true]);
       expect(
-          walkFhirPath(resource, walkPath("'goooooogle'.matches('g(oog)+le')")),
+          walkFhirPath(resource.toJson(),
+              walkPath("'googoogoogoogle'.matches('g(oog)+le')")),
+          [true]);
+      expect(
+          walkFhirPath(
+              resource.toJson(), walkPath("'goooooogle'.matches('g(oog)+le')")),
           [false]);
     });
 
     /// ToDo replaceMatches
     test('log', () {
-      expect(walkFhirPath(resource, walkPath("16.log(2) // 4.0")), [4.0]);
-      expect(walkFhirPath(resource, walkPath("100.0.log(10.0) // 2.0")), [2.0]);
+      expect(
+          walkFhirPath(resource.toJson(), walkPath("16.log(2) // 4.0")), [4.0]);
+      expect(
+          walkFhirPath(resource.toJson(), walkPath("100.0.log(10.0) // 2.0")),
+          [2.0]);
     });
     test('power', () {
-      expect(walkFhirPath(resource, walkPath("2.power(3) // 8")), [8]);
-      expect(walkFhirPath(resource, walkPath("2.5.power(2) // 6.25")), [6.25]);
-      expect(walkFhirPath(resource, walkPath("(-1).power(0.5) // empty ({ })")),
+      expect(walkFhirPath(resource.toJson(), walkPath("2.power(3) // 8")), [8]);
+      expect(walkFhirPath(resource.toJson(), walkPath("2.5.power(2) // 6.25")),
+          [6.25]);
+      expect(
+          walkFhirPath(
+              resource.toJson(), walkPath("(-1).power(0.5) // empty ({ })")),
           []);
     });
     test('round', () {
-      expect(walkFhirPath(resource, walkPath("1.round() // 1")), [1]);
-      expect(walkFhirPath(resource, walkPath("3.14159.round(3) // 3.142")),
+      expect(walkFhirPath(resource.toJson(), walkPath("1.round() // 1")), [1]);
+      expect(
+          walkFhirPath(
+              resource.toJson(), walkPath("3.14159.round(3) // 3.142")),
           [3.142]);
     });
 

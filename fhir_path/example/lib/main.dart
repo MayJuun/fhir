@@ -39,8 +39,8 @@ class _MyHomePageState extends State<MyHomePage> {
       try {
         final newResource = Resource.fromJson(jsonDecode(resource.text));
         JsonEncoder encoder = new JsonEncoder.withIndent('  ');
-        displayString = encoder.convert(
-            jsonDecode(jsonEncode(walkFhirPath(newResource, path.text))));
+        displayString = encoder.convert(jsonDecode(
+            jsonEncode(walkFhirPath(newResource.toJson(), path.text))));
       } catch (e) {
         displayString = e.toString();
       }

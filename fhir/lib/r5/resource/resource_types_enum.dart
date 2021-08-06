@@ -85,8 +85,8 @@ enum R5ResourceType {
   DeviceMetric,
   @JsonValue('DeviceRequest')
   DeviceRequest,
-  @JsonValue('DeviceUseStatement')
-  DeviceUseStatement,
+  @JsonValue('DeviceUsage')
+  DeviceUsage,
   @JsonValue('DiagnosticReport')
   DiagnosticReport,
   @JsonValue('DocumentManifest')
@@ -141,6 +141,8 @@ enum R5ResourceType {
   ImplementationGuide,
   @JsonValue('InsurancePlan')
   InsurancePlan,
+  @JsonValue('InventoryReport')
+  InventoryReport,
   @JsonValue('Invoice')
   Invoice,
   @JsonValue('Library')

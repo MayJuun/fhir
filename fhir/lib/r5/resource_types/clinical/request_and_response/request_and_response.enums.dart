@@ -1,6 +1,6 @@
 part of 'request_and_response.dart';
 
-enum DeviceUseStatementStatus {
+enum DeviceUsageStatus {
   @JsonValue('active')
   active,
   @JsonValue('completed')
@@ -60,6 +60,28 @@ enum SupplyRequestStatus {
   completed,
   @JsonValue('entered-in-error')
   entered_in_error,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum InventoryReportStatus {
+  @JsonValue('draft')
+  draft,
+  @JsonValue('requested')
+  requested,
+  @JsonValue('active')
+  active,
+  @JsonValue('entered-in-error')
+  entered_in_error,
+  @JsonValue('unknown')
+  unknown,
+}
+
+enum InventoryReportCountyType {
+  @JsonValue('snapshot')
+  snapshot,
+  @JsonValue('difference')
+  difference,
   @JsonValue('unknown')
   unknown,
 }

@@ -9,12 +9,16 @@
     {
       "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm",
       "valueInteger": 1
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status",
+      "valueCode": "deprecated"
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "referenceFilter",
-  "status": "draft",
+  "status": "retired",
   "date": "2013-07-04",
   "publisher": "HL7",
   "contact": [
@@ -27,8 +31,8 @@
       ]
     }
   ],
-  "description": "Identifies a filter to apply when looking up candidate answers for the question.",
-  "fhirVersion": "4.2.0",
+  "description": "Identifies a filter to apply when looking up candidate answers for the question.  **This extension has been replaced by the Structured Data Capture candidateExpression extension.**",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "rim",
@@ -42,10 +46,6 @@
     {
       "type": "element",
       "expression": "Questionnaire.item"
-    },
-    {
-      "type": "element",
-      "expression": "Questionnaire.item.item"
     }
   ],
   "contextInvariant": [
@@ -61,7 +61,7 @@
         "path": "Extension",
         "short": "Filter to apply when looking up references",
         "definition": "Identifies a filter to apply when looking up candidate answers for the question.",
-        "comment": "The filter may include $subj and/or $encounter which should be substituted by the implementer with the subject and/or encounter id relevant in the context in which the questionnaire is being populated.",
+        "comment": "The filter may include $subj and/or $encounter which should be substituted by the implementer with the subject and/or encounter id relevant in the context in which the questionnaire is being populated.     **This extension has been replaced by the Structured Data Capture candidateExpression extension.**",
         "min": 0,
         "max": "1",
         "base": {
@@ -76,7 +76,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -164,7 +164,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -172,7 +172,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -239,7 +239,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -260,7 +260,7 @@
         "path": "Extension",
         "short": "Filter to apply when looking up references",
         "definition": "Identifies a filter to apply when looking up candidate answers for the question.",
-        "comment": "The filter may include $subj and/or $encounter which should be substituted by the implementer with the subject and/or encounter id relevant in the context in which the questionnaire is being populated.",
+        "comment": "The filter may include $subj and/or $encounter which should be substituted by the implementer with the subject and/or encounter id relevant in the context in which the questionnaire is being populated.     **This extension has been replaced by the Structured Data Capture candidateExpression extension.**",
         "min": 0,
         "max": "1",
         "mapping": [

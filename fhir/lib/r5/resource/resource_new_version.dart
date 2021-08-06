@@ -7,7 +7,7 @@ Id _getId(int resourcehashCode, Id? id) =>
 /// Returns a [Meta] object, creates a new one if none is passed, otherwise
 /// updates the [lastUpdated] and increases the [version] by 1
 Meta _updateMetaVersion(Meta? oldMeta) {
-  final version = oldMeta == null
+  final int version = oldMeta == null
       ? 1
       : oldMeta.versionId == null
           ? 1
@@ -100,6 +100,10 @@ Resource _newResourceVersion(Resource resource, {Meta? meta}) {
       return (resource as ChargeItemDefinition).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(meta ?? resource.meta));
+    case R5ResourceType.Citation:
+      return (resource as Citation).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(meta ?? resource.meta));
     case R5ResourceType.Claim:
       return (resource as Claim).copyWith(
           id: _getId(resource.hashCode, resource.id),
@@ -188,8 +192,8 @@ Resource _newResourceVersion(Resource resource, {Meta? meta}) {
       return (resource as DeviceRequest).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(meta ?? resource.meta));
-    case R5ResourceType.DeviceUseStatement:
-      return (resource as DeviceUseStatement).copyWith(
+    case R5ResourceType.DeviceUsage:
+      return (resource as DeviceUsage).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(meta ?? resource.meta));
     case R5ResourceType.DiagnosticReport:
@@ -230,6 +234,10 @@ Resource _newResourceVersion(Resource resource, {Meta? meta}) {
           meta: _updateMetaVersion(meta ?? resource.meta));
     case R5ResourceType.Evidence:
       return (resource as Evidence).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(meta ?? resource.meta));
+    case R5ResourceType.EvidenceReport:
+      return (resource as EvidenceReport).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(meta ?? resource.meta));
     case R5ResourceType.EvidenceVariable:
@@ -294,6 +302,10 @@ Resource _newResourceVersion(Resource resource, {Meta? meta}) {
           meta: _updateMetaVersion(meta ?? resource.meta));
     case R5ResourceType.InsurancePlan:
       return (resource as InsurancePlan).copyWith(
+          id: _getId(resource.hashCode, resource.id),
+          meta: _updateMetaVersion(meta ?? resource.meta));
+    case R5ResourceType.InventoryReport:
+      return (resource as InventoryReport).copyWith(
           id: _getId(resource.hashCode, resource.id),
           meta: _updateMetaVersion(meta ?? resource.meta));
     case R5ResourceType.Invoice:

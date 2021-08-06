@@ -49,13 +49,16 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
   }) = _GuidanceResponse;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor, accepts a [String] in YAML format as an argument
   factory GuidanceResponse.fromYaml(dynamic yaml) => yaml is String
-      ? GuidanceResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? GuidanceResponse.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? GuidanceResponse.fromJson(jsonDecode(jsonEncode(yaml)))
+          ? GuidanceResponse.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
               'GuidanceResponse cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');

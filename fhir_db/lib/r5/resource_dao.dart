@@ -119,8 +119,14 @@ class ResourceDao {
     switch (databaseMode) {
       case mode.DatabaseMode.PERSISTENCE_DB:
         _newResource =  oldResource.meta == null
+              ? resource.newVersion()
+              :oldResource.meta == null
             ? resource.newVersion()
-            : resource.newVersion(oldMeta: oldResource.meta);
+            : resource.newVersion(oldMeta: oldResource.meta);break;
+        case mode.DatabaseMode.CACHE_DB:
+          _newResource = resource;
+          break;
+      }
         break;
       case mode.DatabaseMode.CACHE_DB:
         _newResource = resource;

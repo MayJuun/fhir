@@ -9,8 +9,8 @@
       "status": "active",
       "description": "Type options for Procedure.occurrence[x]",
       "expansion": {
-        "identifier": "urn:uuid:f7a85206-f7fb-49e9-9169-749936288112",
-        "timestamp": "2019-12-31T21:16:29+11:00",
+        "identifier": "urn:uuid:c5e72ef9-d371-48f0-8ec0-0bfefde260de",
+        "timestamp": "2021-04-15T12:29:49+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -52,8 +52,8 @@
       "status": "active",
       "description": "Type options for Procedure.reported[x]",
       "expansion": {
-        "identifier": "urn:uuid:ed252092-0a0e-490a-9508-ff8e81e735aa",
-        "timestamp": "2019-12-31T21:16:29+11:00",
+        "identifier": "urn:uuid:5d85a677-429e-4b3c-903e-819b9987fb6c",
+        "timestamp": "2021-04-15T12:29:49+10:00",
         "contains": [
           {
             "system": "http://hl7.org/fhir/data-types",
@@ -94,14 +94,14 @@
       "system": "urn:ietf:rfc:3986"
     }
   ],
-  "version": "4.2.0",
+  "version": "4.6.0",
   "status": "draft",
-  "date": "2019-12-31T21:03:40+11:00",
+  "date": "2021-04-15T12:25:09+10:00",
   "publisher": "Health Level Seven International (Patient Care)",
   "item": [
     {
       "linkId": "Procedure",
-      "text": "An action that is being or was performed on a patient",
+      "text": "An action that is being or was performed on an individual or entity",
       "type": "group",
       "required": false,
       "repeats": true,
@@ -121,7 +121,7 @@
               }
             }
           ],
-          "text": "An action that is or was performed on or for a patient. This can be a physical intervention like an operation, or less invasive like long term services, counseling, or hypnotherapy.",
+          "text": "An action that is or was performed on or for a patient, practitioner, device, organization, or location. For example, this can be a physical intervention on a patient like an operation, or less invasive like long term services, counseling, or hypnotherapy.  This can be a quality or safety inspection for a location, organization, or device.  This can be an accreditation procedure on a practitioner for licensing.",
           "type": "display"
         },
         {
@@ -155,7 +155,7 @@
                   }
                 }
               ],
-              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. The only time that a resource does not have an id is when it is being submitted to the server using a create operation.",
+              "text": "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes. Typically, the resource has an id except for cases like the create operation, conditional updates.",
               "type": "display"
             },
             {
@@ -314,7 +314,7 @@
                   }
                 }
               ],
-              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
+              "text": "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety. Contained resources do not have a narrative. Resources that are not contained SHOULD have a narrative. In some cases, a resource may only have text with little or no additional discrete data (as long as all minOccurs\u003d1 elements are satisfied).  This may be necessary for data from legacy systems where information is captured as a \"text blob\" or where text is additionally entered raw or narrated and encoded information is added later.",
               "type": "display"
             }
           ]
@@ -341,7 +341,7 @@
                   }
                 }
               ],
-              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, and nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
+              "text": "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope. This should never be done when the content can be identified properly, as once identification is lost, it is extremely difficult (and context dependent) to restore it again. Contained resources may have profiles and tags In their meta elements, but SHALL NOT have security labels.",
               "type": "display"
             }
           ]
@@ -861,14 +861,14 @@
                   }
                 }
               ],
-              "text": "The person, animal or group on which the procedure was performed.",
+              "text": "On whom or what the procedure was performed. This is usually an individual human, but can also be performed on animals, groups of humans or animals, organizations or practitioners (for licensing), locations or devices (for safety inspections or regulatory authorizations).",
               "type": "display"
             },
             {
               "extension": [
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
-                  "valueCode": "Patient, Group"
+                  "valueCode": "Patient, Group, Device, Practitioner, Organization, Location"
                 },
                 {
                   "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
@@ -876,7 +876,7 @@
                 }
               ],
               "linkId": "Procedure.subject.value",
-              "text": "Who the procedure was performed on",
+              "text": "Individual or entity the procedure was performed on",
               "type": "reference",
               "required": false,
               "repeats": false
@@ -1199,7 +1199,7 @@
                   }
                 }
               ],
-              "text": "The date the occurrence of the procedure was first captured in the record - potentially significantly after the occurrence of the event.",
+              "text": "The date the occurrence of the procedure was first captured in the record regardless of Procedure.status (potentially after the occurrence of the event).",
               "type": "display"
             },
             {
@@ -2305,6 +2305,55 @@
               ],
               "text": "Identifies medications, devices and any other substance used as part of the procedure.",
               "type": "display"
+            }
+          ]
+        },
+        {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-fhirType",
+              "valueString": "Reference"
+            }
+          ],
+          "linkId": "Procedure.supportingInfo",
+          "type": "group",
+          "required": false,
+          "repeats": true,
+          "item": [
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-itemControl",
+                  "valueCodeableConcept": {
+                    "coding": [
+                      {
+                        "system": "http://hl7.org/fhir/questionnaire-item-control",
+                        "code": "flyover",
+                        "display": "Fly-over"
+                      }
+                    ]
+                  }
+                }
+              ],
+              "text": "Other resources from the patient record that may be relevant to the procedure.  The information from these resources was either used to create the instance or is provided to help with its interpretation. This extension should not be used if more specific inline elements or extensions are available.",
+              "type": "display"
+            },
+            {
+              "extension": [
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-allowedResource",
+                  "valueCode": "Resource"
+                },
+                {
+                  "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-referenceFilter",
+                  "valueString": "subject\u003d$subj\u0026patient\u003d$subj\u0026encounter\u003d$encounter"
+                }
+              ],
+              "linkId": "Procedure.supportingInfo.value",
+              "text": "Extra information relevant to the procedure",
+              "type": "reference",
+              "required": false,
+              "repeats": false
             }
           ]
         }

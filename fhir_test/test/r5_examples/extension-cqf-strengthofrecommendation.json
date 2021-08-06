@@ -12,7 +12,7 @@
     }
   ],
   "url": "http://hl7.org/fhir/StructureDefinition/cqf-strengthOfRecommendation",
-  "version": "4.2.0",
+  "version": "4.6.0",
   "name": "strengthOfRecommendation",
   "title": "strengthOfRecommendation",
   "status": "draft",
@@ -29,7 +29,7 @@
     }
   ],
   "description": "The strength of the recommendation assigned to this reference. The code system used specifies the rating scale used to rate this recommendation while the code specifies the actual recommendation rating (represented as a coded value) associated with this recommendation.",
-  "fhirVersion": "4.2.0",
+  "fhirVersion": "4.6.0",
   "mapping": [
     {
       "identity": "rim",
@@ -42,7 +42,7 @@
   "context": [
     {
       "type": "element",
-      "expression": "Attachment"
+      "expression": "Element"
     }
   ],
   "type": "Extension",
@@ -69,7 +69,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -151,7 +151,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           },
           {
             "key": "ext-1",
@@ -159,7 +159,7 @@
             "human": "Must have either extensions or value[x], not both",
             "expression": "extension.exists() !\u003d value.exists()",
             "xpath": "exists(f:extension)!\u003dexists(f:*[starts-with(local-name(.), \"value\")])",
-            "source": "Extension"
+            "source": "http://hl7.org/fhir/StructureDefinition/Extension"
           }
         ],
         "isModifier": false,
@@ -226,7 +226,7 @@
             "human": "All FHIR elements must have a @value or children",
             "expression": "hasValue() or (children().count() \u003e id.count())",
             "xpath": "@value|f:*|h:div",
-            "source": "Element"
+            "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
         "isModifier": false,
@@ -234,12 +234,15 @@
         "binding": {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "valueString": "A rating system that describes the strength of the recommendation, such as the GRADE, DynaMed, or HGPS systems."
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
               "valueString": "StrengthOfRecommendationRating"
             }
           ],
           "strength": "example",
-          "description": "A rating system that describes the strength of the recommendation, such as the GRADE, DynaMed, or HGPS systems.",
           "valueSet": "http://hl7.org/fhir/ValueSet/recommendation-strength"
         },
         "mapping": [
@@ -283,12 +286,15 @@
         "binding": {
           "extension": [
             {
+              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "valueString": "A rating system that describes the strength of the recommendation, such as the GRADE, DynaMed, or HGPS systems."
+            },
+            {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
               "valueString": "StrengthOfRecommendationRating"
             }
           ],
           "strength": "example",
-          "description": "A rating system that describes the strength of the recommendation, such as the GRADE, DynaMed, or HGPS systems.",
           "valueSet": "http://hl7.org/fhir/ValueSet/recommendation-strength"
         }
       }

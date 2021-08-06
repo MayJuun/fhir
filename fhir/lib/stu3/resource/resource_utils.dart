@@ -1,7 +1,8 @@
 import '../stu3.dart';
 
 class ResourceUtils {
-  static const resourceTypeFromStringMap = {
+  static const Map<String, Stu3ResourceType> resourceTypeFromStringMap =
+      <String, Stu3ResourceType>{
     'Account': Stu3ResourceType.Account,
     'ActivityDefinition': Stu3ResourceType.ActivityDefinition,
     'AdverseEvent': Stu3ResourceType.AdverseEvent,
@@ -121,7 +122,8 @@ class ResourceUtils {
     'VisionPrescription': Stu3ResourceType.VisionPrescription,
   };
 
-  static const resourceTypeToStringMap = {
+  static const Map<Stu3ResourceType, String> resourceTypeToStringMap =
+      <Stu3ResourceType, String>{
     Stu3ResourceType.Account: 'Account',
     Stu3ResourceType.ActivityDefinition: 'ActivityDefinition',
     Stu3ResourceType.AdverseEvent: 'AdverseEvent',

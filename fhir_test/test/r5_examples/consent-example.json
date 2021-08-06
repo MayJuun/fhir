@@ -24,12 +24,12 @@
       ]
     }
   ],
-  "patient": {
+  "subject": {
     "reference": "Patient/Example",
     "display": "Peter James Chalmers"
   },
   "dateTime": "2018-12-28",
-  "organization": [
+  "controller": [
     {
       "reference": "Organization/f001"
     }

@@ -1,7 +1,8 @@
 import '../r4.dart';
 
 class ResourceUtils {
-  static const resourceTypeFromStringMap = {
+  static const Map<String, R4ResourceType> resourceTypeFromStringMap =
+      <String, R4ResourceType>{
     'Account': R4ResourceType.Account,
     'ActivityDefinition': R4ResourceType.ActivityDefinition,
     'AdverseEvent': R4ResourceType.AdverseEvent,
@@ -155,7 +156,8 @@ class ResourceUtils {
     'VisionPrescription': R4ResourceType.VisionPrescription,
   };
 
-  static const resourceTypeToStringMap = {
+  static const Map<R4ResourceType, String> resourceTypeToStringMap =
+      <R4ResourceType, String>{
     R4ResourceType.Account: 'Account',
     R4ResourceType.ActivityDefinition: 'ActivityDefinition',
     R4ResourceType.AdverseEvent: 'AdverseEvent',
