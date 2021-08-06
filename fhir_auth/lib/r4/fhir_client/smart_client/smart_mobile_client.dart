@@ -21,30 +21,20 @@ class SmartMobileClient extends SmartClient {
     FhirUri? authUrl,
     FhirUri? tokenUrl,
   }) {
-    _redirectUri = redirectUri;
-    _clientId = clientId;
-    client = OAuth2Client(
-      /// Just one slash, required by Google specs
-      redirectUri: redirectUri.toString(),
-      customUriScheme: redirectUri.value?.scheme ?? redirectUri.toString(),
-      authorizeUrl: authUrl.toString(),
-      tokenUrl: tokenUrl.toString(),
-    );
-    helper = OAuth2Helper(client!,
-        grantType: OAuth2Helper.AUTHORIZATION_CODE,
-        clientId: clientId,
-        scopes: scopes);
+    _getEndpoints.then((value) {
+      client = OAuth2Client(
+        /// Just one slash, required by Google specs
+        redirectUri: redirectUri.toString(),
+        customUriScheme: redirectUri.value?.scheme ?? redirectUri.toString(),
+        authorizeUrl: authUrl.toString(),
+        tokenUrl: tokenUrl.toString(),
+      );
+      helper = OAuth2Helper(client!,
+          grantType: OAuth2Helper.AUTHORIZATION_CODE,
+          clientId: clientId,
+          scopes: scopes);
+    });
   }
-
-  /// the redurectUri of your app, must be pre-registered with the authorization
-  /// server, need to follow the instructions from flutter_appauth
-  /// https://pub.dev/packages/flutter_appauth
-  /// about editing files for Android and iOS
-  late FhirUri _redirectUri;
-
-  /// the clientId of your app, must be pre-registered with the authorization
-  /// server
-  late String _clientId;
 
   /// specify the fhirUrl of the Capability Statement (or conformance
   /// statement for Dstu2). Note this may not be the same as the authentication
@@ -73,6 +63,9 @@ class SmartMobileClient extends SmartClient {
   /// Request for the CapabilityStatement (or Conformance) and then identifying
   /// the authUrl endpoint & tokenurl endpoing
   Future<void> get _getEndpoints async {
+    if (authUrl != null && tokenUrl != null) {
+      return;
+    }
     var thisRequest = '$fhirUri/metadata?mode=full&_format=json';
 
     var result = await get(Uri.parse(thisRequest));
