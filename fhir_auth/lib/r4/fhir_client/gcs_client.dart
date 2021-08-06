@@ -1,57 +1,36 @@
 import 'package:fhir/primitive_types/primitive_types.dart';
-import 'package:flutter/services.dart';
-import 'package:google_sign_in/google_sign_in.dart';
+import 'package:oauth2_client/google_oauth2_client.dart';
+import 'package:oauth2_client/oauth2_client.dart';
+import 'package:oauth2_client/oauth2_helper.dart';
 
-import '../fhir_client/fhir_client.dart';
+import '../../r4.dart';
 
 class GcsClient extends FhirClient {
   GcsClient({
-    required this.fhirUrl,
-    List<String>? scopes,
-    String? clientId,
+    required this.redirectUri,
+    required this.clientId,
+    required this.fhirUri,
+    this.scopes,
   }) {
-    googleSignIn = GoogleSignIn(clientId: clientId, scopes: scopes ?? []);
+    client = GoogleOAuth2Client(
+        redirectUri: redirectUri.toString(),
+        customUriScheme: redirectUri?.value?.scheme ?? redirectUri.toString());
+    helper = OAuth2Helper(client!,
+        grantType: OAuth2Helper.AUTHORIZATION_CODE,
+        clientId: clientId!,
+        scopes: ['https://www.googleapis.com/auth/cloud-platform']);
   }
 
   @override
-  FhirUri fhirUrl;
-  late GoogleSignIn googleSignIn;
+  FhirUri? redirectUri;
   @override
-  bool isLoggedIn = false;
-
+  String? clientId;
   @override
-  Future<void> login() async {
-    try {
-      await googleSignIn.signIn();
-    } catch (e, stacktrace) {
-      throw PlatformException(
-          code: e.toString(),
-          message: 'Exception raised from GoogleAuth.signIn()',
-          stacktrace: stacktrace.toString());
-    }
-    isLoggedIn = true;
-  }
-
+  FhirUri? fhirUri;
   @override
-  Future<Map<String, String>> get authHeaders async {
-    if (!isLoggedIn) {
-      await login();
-    }
-    var headers = await googleSignIn.currentUser?.authHeaders;
-    headers ??= <String, String>{};
-    headers['Content-Type'] = 'application/fhir+json';
-    return headers;
-  }
-
+  List<String>? scopes;
   @override
-  Future<void> logout() async {
-    try {
-      await googleSignIn.signOut();
-    } catch (e) {
-      throw PlatformException(
-          code: e.toString(),
-          message: 'Exception raised from GoogleAuth.signIn()');
-    }
-    isLoggedIn = false;
-  }
+  OAuth2Client? client;
+  @override
+  OAuth2Helper? helper;
 }
