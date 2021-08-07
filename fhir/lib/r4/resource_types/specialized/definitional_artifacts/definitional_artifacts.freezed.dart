@@ -18939,7 +18939,7 @@ class _$QuestionnaireItemTearOff {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      String? linkId,
+      required String linkId,
       @JsonKey(name: '_linkId')
           Element? linkIdElement,
       FhirUri? definition,
@@ -18953,7 +18953,7 @@ class _$QuestionnaireItemTearOff {
       @JsonKey(name: '_text')
           Element? textElement,
       @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-          QuestionnaireItemType? type,
+          required QuestionnaireItemType type,
       @JsonKey(name: '_type')
           Element? typeElement,
       List<QuestionnaireEnableWhen>? enableWhen,
@@ -19026,7 +19026,7 @@ mixin _$QuestionnaireItem {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  String? get linkId => throw _privateConstructorUsedError;
+  String get linkId => throw _privateConstructorUsedError;
   @JsonKey(name: '_linkId')
   Element? get linkIdElement => throw _privateConstructorUsedError;
   FhirUri? get definition => throw _privateConstructorUsedError;
@@ -19040,7 +19040,7 @@ mixin _$QuestionnaireItem {
   @JsonKey(name: '_text')
   Element? get textElement => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-  QuestionnaireItemType? get type => throw _privateConstructorUsedError;
+  QuestionnaireItemType get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
   List<QuestionnaireEnableWhen>? get enableWhen =>
@@ -19085,7 +19085,7 @@ abstract class $QuestionnaireItemCopyWith<$Res> {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      String? linkId,
+      String linkId,
       @JsonKey(name: '_linkId')
           Element? linkIdElement,
       FhirUri? definition,
@@ -19099,7 +19099,7 @@ abstract class $QuestionnaireItemCopyWith<$Res> {
       @JsonKey(name: '_text')
           Element? textElement,
       @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-          QuestionnaireItemType? type,
+          QuestionnaireItemType type,
       @JsonKey(name: '_type')
           Element? typeElement,
       List<QuestionnaireEnableWhen>? enableWhen,
@@ -19194,7 +19194,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
       linkId: linkId == freezed
           ? _value.linkId
           : linkId // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
           : linkIdElement // ignore: cast_nullable_to_non_nullable
@@ -19230,7 +19230,7 @@ class _$QuestionnaireItemCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as QuestionnaireItemType?,
+              as QuestionnaireItemType,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -19421,7 +19421,7 @@ abstract class _$QuestionnaireItemCopyWith<$Res>
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      String? linkId,
+      String linkId,
       @JsonKey(name: '_linkId')
           Element? linkIdElement,
       FhirUri? definition,
@@ -19435,7 +19435,7 @@ abstract class _$QuestionnaireItemCopyWith<$Res>
       @JsonKey(name: '_text')
           Element? textElement,
       @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-          QuestionnaireItemType? type,
+          QuestionnaireItemType type,
       @JsonKey(name: '_type')
           Element? typeElement,
       List<QuestionnaireEnableWhen>? enableWhen,
@@ -19542,7 +19542,7 @@ class __$QuestionnaireItemCopyWithImpl<$Res>
       linkId: linkId == freezed
           ? _value.linkId
           : linkId // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as String,
       linkIdElement: linkIdElement == freezed
           ? _value.linkIdElement
           : linkIdElement // ignore: cast_nullable_to_non_nullable
@@ -19578,7 +19578,7 @@ class __$QuestionnaireItemCopyWithImpl<$Res>
       type: type == freezed
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as QuestionnaireItemType?,
+              as QuestionnaireItemType,
       typeElement: typeElement == freezed
           ? _value.typeElement
           : typeElement // ignore: cast_nullable_to_non_nullable
@@ -19655,7 +19655,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
       @JsonKey(name: 'extension')
           this.extension_,
       this.modifierExtension,
-      this.linkId,
+      required this.linkId,
       @JsonKey(name: '_linkId')
           this.linkIdElement,
       this.definition,
@@ -19669,7 +19669,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
       @JsonKey(name: '_text')
           this.textElement,
       @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-          this.type,
+          required this.type,
       @JsonKey(name: '_type')
           this.typeElement,
       this.enableWhen,
@@ -19707,7 +19707,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final String? linkId;
+  final String linkId;
   @override
   @JsonKey(name: '_linkId')
   final Element? linkIdElement;
@@ -19730,7 +19730,7 @@ class _$_QuestionnaireItem extends _QuestionnaireItem {
   final Element? textElement;
   @override
   @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-  final QuestionnaireItemType? type;
+  final QuestionnaireItemType type;
   @override
   @JsonKey(name: '_type')
   final Element? typeElement;
@@ -19905,7 +19905,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
       @JsonKey(name: 'extension')
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      String? linkId,
+      required String linkId,
       @JsonKey(name: '_linkId')
           Element? linkIdElement,
       FhirUri? definition,
@@ -19919,7 +19919,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
       @JsonKey(name: '_text')
           Element? textElement,
       @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-          QuestionnaireItemType? type,
+          required QuestionnaireItemType type,
       @JsonKey(name: '_type')
           Element? typeElement,
       List<QuestionnaireEnableWhen>? enableWhen,
@@ -19958,7 +19958,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   @override
-  String? get linkId => throw _privateConstructorUsedError;
+  String get linkId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_linkId')
   Element? get linkIdElement => throw _privateConstructorUsedError;
@@ -19981,7 +19981,7 @@ abstract class _QuestionnaireItem extends QuestionnaireItem {
   Element? get textElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-  QuestionnaireItemType? get type => throw _privateConstructorUsedError;
+  QuestionnaireItemType get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
