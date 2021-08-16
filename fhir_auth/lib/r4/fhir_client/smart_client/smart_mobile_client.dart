@@ -29,7 +29,7 @@ class SmartMobileClient extends SmartClient {
         authorizeUrl: authUrl.toString(),
         tokenUrl: tokenUrl.toString(),
       );
-      helper = OAuth2Helper(client!,
+      helper = OAuth2Helper(client,
           grantType: OAuth2Helper.AUTHORIZATION_CODE,
           clientId: clientId,
           scopes: scopes);
@@ -54,7 +54,7 @@ class SmartMobileClient extends SmartClient {
 
   /// Oauth2Client
   @override
-  OAuth2Client? client;
+  late OAuth2Client client;
 
   /// Oauth2Helper
   @override

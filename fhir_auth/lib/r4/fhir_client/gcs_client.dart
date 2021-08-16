@@ -15,22 +15,22 @@ class GcsClient extends FhirClient {
     client = GoogleOAuth2Client(
         redirectUri: redirectUri.toString(),
         customUriScheme: redirectUri?.value?.scheme ?? redirectUri.toString());
-    helper = OAuth2Helper(client!,
+    helper = OAuth2Helper(client,
         grantType: OAuth2Helper.AUTHORIZATION_CODE,
-        clientId: clientId!,
+        clientId: clientId,
         scopes: ['https://www.googleapis.com/auth/cloud-platform']);
   }
 
   @override
   FhirUri? redirectUri;
   @override
-  String? clientId;
+  String clientId;
   @override
   FhirUri? fhirUri;
   @override
   List<String>? scopes;
   @override
-  OAuth2Client? client;
+  late OAuth2Client client;
   @override
   OAuth2Helper? helper;
 }

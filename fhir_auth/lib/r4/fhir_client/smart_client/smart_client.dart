@@ -33,13 +33,10 @@ abstract class SmartClient extends FhirClient {
       return SmartWebClient(
         redirectUri: redirectUri,
         clientId: clientId,
-        // fhirUri: fhirUri,
-        // scopes: scopes,
+        fhirUri: fhirUri,
+        scopes: scopes,
         authUrl: authUrl,
         tokenUrl: tokenUrl,
-        additionalParameters: {},
-        isLoggedIn: false,
-        fhirUrl: fhirUri,
       );
     } else {
       return SmartMobileClient(

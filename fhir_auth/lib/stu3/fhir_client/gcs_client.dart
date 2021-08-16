@@ -3,7 +3,7 @@ import 'package:oauth2_client/google_oauth2_client.dart';
 import 'package:oauth2_client/oauth2_client.dart';
 import 'package:oauth2_client/oauth2_helper.dart';
 
-import '../../r4.dart';
+import '../../stu3.dart';
 
 class GcsClient extends FhirClient {
   GcsClient({
@@ -15,22 +15,22 @@ class GcsClient extends FhirClient {
     client = GoogleOAuth2Client(
         redirectUri: redirectUri.toString(),
         customUriScheme: redirectUri?.value?.scheme ?? redirectUri.toString());
-    helper = OAuth2Helper(client!,
+    helper = OAuth2Helper(client,
         grantType: OAuth2Helper.AUTHORIZATION_CODE,
-        clientId: clientId!,
+        clientId: clientId,
         scopes: ['https://www.googleapis.com/auth/cloud-platform']);
   }
 
   @override
   FhirUri? redirectUri;
   @override
-  String? clientId;
+  String clientId;
   @override
   FhirUri? fhirUri;
   @override
   List<String>? scopes;
   @override
-  OAuth2Client? client;
+  late OAuth2Client client;
   @override
   OAuth2Helper? helper;
 }

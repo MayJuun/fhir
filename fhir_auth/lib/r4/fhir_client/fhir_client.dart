@@ -5,10 +5,10 @@ import 'package:oauth2_client/oauth2_helper.dart';
 
 abstract class FhirClient {
   FhirUri? redirectUri;
-  String? clientId;
+  late String clientId;
   FhirUri? fhirUri;
   List<String>? scopes;
-  OAuth2Client? client;
+  late OAuth2Client client;
   OAuth2Helper? helper;
 
   Future<Response>? get(String url,

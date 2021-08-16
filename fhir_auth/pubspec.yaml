@@ -16,9 +16,9 @@ dependencies:
   flutter_web_plugins:
     sdk: flutter
   freezed_annotation: ^0.14.2
-  google_sign_in: ^5.0.4
+  # google_sign_in: ^5.0.4
   http: ^0.13.3
-  oauth2: ^2.0.0
+  # oauth2: ^2.0.0
   oauth2_client: ^2.2.2
   universal_html: ^2.0.8
 

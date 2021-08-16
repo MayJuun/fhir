@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_final_locals
 
-import 'package:fhir/r5.dart';
+import 'package:fhir/r4.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'clinical_scope.dart';

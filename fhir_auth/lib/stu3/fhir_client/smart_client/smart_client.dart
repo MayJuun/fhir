@@ -1,14 +1,15 @@
-import 'package:fhir/r4.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
-import '../../../r4.dart';
+import 'package:fhir/stu3.dart';
 
-import 'smart_client_stub.dart' // Stub implementation
-    if (dart.library.html) 'smart_web_client.dart' // universal_html implementation
-    if (dart.library.io) 'smart_mobile_client.dart'; // dart:io implementation
+import '../../../stu3.dart';
+
+import 'smart_mobile_client.dart'; // dart:io implementation
+import 'smart_web_client.dart'; // universal_html implementation
 
 abstract class SmartClient extends FhirClient {
   // Return the correct implementation
-  factory SmartClient({
+  SmartClient getSmartClient({
     /// registerd redirectUri, see Web and Mobile client for specific details
     /// about setting this up
     required FhirUri redirectUri,
@@ -27,8 +28,9 @@ abstract class SmartClient extends FhirClient {
 
     /// the token Url from the Conformance/Capability Statement
     FhirUri? tokenUrl,
-  }) =>
-      getSmartClient(
+  }) {
+    if (kIsWeb) {
+      return SmartWebClient(
         redirectUri: redirectUri,
         clientId: clientId,
         fhirUri: fhirUri,
@@ -36,4 +38,15 @@ abstract class SmartClient extends FhirClient {
         authUrl: authUrl,
         tokenUrl: tokenUrl,
       );
+    } else {
+      return SmartMobileClient(
+        redirectUri: redirectUri,
+        clientId: clientId,
+        fhirUri: fhirUri,
+        scopes: scopes,
+        authUrl: authUrl,
+        tokenUrl: tokenUrl,
+      );
+    }
+  }
 }
