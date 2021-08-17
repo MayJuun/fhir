@@ -3,8 +3,6 @@ import 'package:http/http.dart';
 import 'package:oauth2_client/oauth2_client.dart';
 import 'package:oauth2_client/oauth2_helper.dart';
 
-class InsecureFhirClient extends FhirClient {}
-
 abstract class FhirClient {
   FhirUri? redirectUri;
   late String clientId;

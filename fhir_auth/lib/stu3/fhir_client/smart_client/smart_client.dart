@@ -9,7 +9,7 @@ import 'smart_web_client.dart'; // universal_html implementation
 
 abstract class SmartClient extends FhirClient {
   // Return the correct implementation
-  SmartClient getSmartClient({
+  static SmartClient getSmartClient({
     /// registerd redirectUri, see Web and Mobile client for specific details
     /// about setting this up
     required FhirUri redirectUri,
