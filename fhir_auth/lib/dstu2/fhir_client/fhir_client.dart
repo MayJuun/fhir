@@ -8,7 +8,7 @@ abstract class FhirClient {
   late String clientId;
   FhirUri? fhirUri;
   List<String>? scopes;
-  late OAuth2Client client;
+  OAuth2Client? client;
   OAuth2Helper? helper;
 
   Future<Response>? get(String url,
