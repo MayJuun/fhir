@@ -9,8 +9,7 @@ Future gcsRequest() async {
   final client = GcsClient(
     redirectUri: Api.fhirCallback,
     fhirUri: FhirUri(Api.gcsUrl),
-    scopes: Api.gcsScopes,
-    clientId: Api.gcsUrl,
+    clientId: Api.gcsClientId,
   );
 
   final _newPatient = newPatient();
@@ -30,6 +29,7 @@ Future gcsRequest() async {
     } catch (e) {
       print(e);
     }
+
     if (newId is! Id) {
       print(newId);
     } else {
@@ -37,6 +37,7 @@ Future gcsRequest() async {
         base: client.fhirUri!.value!,
         type: R4ResourceType.Patient,
         id: newId,
+        fhirClient: client,
       );
       try {
         final response2 = await request2.request(headers: {});

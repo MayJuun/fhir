@@ -601,6 +601,7 @@ class FhirRequest with _$FhirRequest {
           }
         case RestfulRequest.post_:
           {
+            print(thisRequest);
             headers['Content-Type'] = formData != null
                 ? 'application/x-www-form-urlencoded'
                 : 'application/fhir+json';

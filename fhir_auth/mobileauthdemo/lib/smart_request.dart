@@ -10,18 +10,10 @@ Future smartRequest() async {
     fhirUri: FhirUri(Api.interopUrl),
     clientId: Api.interopClientId,
     redirectUri: Api.fhirCallback,
-    scopes: Scopes(
-      clinicalScopes: [
-        ClinicalScope(
-          Role.patient,
-          R4ResourceType.Patient,
-          Interaction.any,
-        ),
-      ],
-      openid: true,
-      offlineAccess: true,
-    ).scopesList(),
+    scopes: Api.scopes.scopesList(),
   );
+
+  await client.initialize();
 
   if (client.fhirUri?.value != null) {
     final _newPatient = newPatient();
@@ -30,6 +22,7 @@ Future smartRequest() async {
       base: client.fhirUri!.value!,
       //?? Uri.parse('127.0.0.1'),
       resource: _newPatient,
+      fhirClient: client,
     );
 
     Id? newId;
@@ -47,6 +40,7 @@ Future smartRequest() async {
         base: client.fhirUri!.value ?? Uri.parse('127.0.0.1'),
         type: R4ResourceType.Patient,
         id: newId,
+        fhirClient: client,
       );
       try {
         final response = await request2.request(headers: {});

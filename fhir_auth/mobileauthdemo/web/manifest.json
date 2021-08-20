@@ -1,6 +1,6 @@
 {
-    "name": "mobile_auth_demo",
-    "short_name": "mobile_auth_demo",
+    "name": "mobileauthdemo",
+    "short_name": "mobileauthdemo",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

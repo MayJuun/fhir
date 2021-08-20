@@ -1,4 +1,4 @@
-# mobile_auth_demo
+# mobileauthdemo
 
 A new Flutter project.
 
