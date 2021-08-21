@@ -13,7 +13,11 @@ Future smartRequest() async {
     scopes: Api.scopes.scopesList(),
   );
 
-  await client.initialize();
+  try {
+    await client.initialize();
+  } catch (e) {
+    print(e);
+  }
 
   if (client.fhirUri?.value != null) {
     final _newPatient = newPatient();
@@ -27,7 +31,7 @@ Future smartRequest() async {
 
     Id? newId;
     try {
-      final response = await request1.request(headers: {});
+      final response = await request1.request();
       print('Response from upload:\n${response?.toJson()}');
       newId = response?.id;
     } catch (e) {
@@ -43,7 +47,7 @@ Future smartRequest() async {
         fhirClient: client,
       );
       try {
-        final response = await request2.request(headers: {});
+        final response = await request2.request();
         print('Response from read:\n${response?.toJson()}');
       } catch (e) {
         print(e);

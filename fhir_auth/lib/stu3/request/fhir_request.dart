@@ -216,66 +216,66 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirOperationRequest;
 
   Future<Resource?> request({
-    required Map<String, String> headers,
+    Map<String, String>? headers,
   }) async {
     return await map(
       read: (m) async => await _request(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
-        headers,
         'Read',
+        headers: headers,
       ),
       vRead: (m) async => await _request(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
-        headers,
         'Vread',
+        headers: headers,
       ),
       update: (m) async => await _request(
         RestfulRequest.put_,
         uri(parameters: m.parameters),
-        headers,
         'Update',
+        headers: headers,
         resource: m.resource,
       ),
       patch: (m) async => await _request(
         RestfulRequest.patch_,
         uri(parameters: m.parameters),
-        headers,
         'Patch',
+        headers: headers,
         resource: m.resource,
       ),
       delete: (m) async => await _request(
         RestfulRequest.delete_,
         uri(parameters: m.parameters),
-        headers,
         'Delete',
+        headers: headers,
       ),
       create: (m) async => await _request(
         RestfulRequest.post_,
         uri(parameters: m.parameters),
-        headers,
         'Create',
+        headers: headers,
         resource: m.resource,
       ),
       search: (m) async => await _request(
         m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
         m.usePost ? url : uri(parameters: m.parameters),
-        headers,
         'Search',
+        headers: headers,
         formData: m.usePost ? m.formData(parameters: m.parameters) : null,
       ),
       searchAll: (m) async => await _request(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
-        headers,
         'Search All',
+        headers: headers,
       ),
       capabilities: (m) async => await _request(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
-        headers,
         'Capabilities',
+        headers: headers,
       ),
       transaction: (m) async {
         if (m.bundle.type != BundleType.transaction) {
@@ -298,8 +298,8 @@ class FhirRequest with _$FhirRequest {
         return await _request(
           RestfulRequest.post_,
           uri(),
-          headers,
           'Transaction',
+          headers: headers,
           resource: m.bundle,
         );
       },
@@ -325,8 +325,8 @@ class FhirRequest with _$FhirRequest {
         return await _request(
           RestfulRequest.post_,
           uri(),
-          headers,
           'Batch',
+          headers: headers,
           resource: m.bundle,
         );
       },
@@ -344,8 +344,8 @@ class FhirRequest with _$FhirRequest {
         return await _request(
           RestfulRequest.get_,
           uri(parameters: parameterList),
-          headers,
           'History',
+          headers: headers,
         );
       },
       historyType: (m) async {
@@ -362,8 +362,8 @@ class FhirRequest with _$FhirRequest {
         return await _request(
           RestfulRequest.get_,
           uri(parameters: parameterList),
-          headers,
           'History Type',
+          headers: headers,
         );
       },
       historyAll: (m) async {
@@ -380,15 +380,15 @@ class FhirRequest with _$FhirRequest {
         return await _request(
           RestfulRequest.get_,
           uri(parameters: parameterList),
-          headers,
           'History all',
+          headers: headers,
         );
       },
       operation: (m) async => await _request(
         m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
         m.usePost ? url : uri(parameters: parameters),
-        headers,
         'Operation',
+        headers: headers,
         resource: m.usePost && m.useFormData
             ? null
             : Resource.fromJson(m.fhirParameter),
@@ -424,8 +424,8 @@ class FhirRequest with _$FhirRequest {
   Future<Resource?> _request(
     RestfulRequest type,
     String uri,
-    Map<String, String> headers,
     String requestType, {
+    Map<String, String>? headers,
     Resource? resource,
     String? formData,
   }) async {
@@ -549,7 +549,7 @@ class FhirRequest with _$FhirRequest {
   Future<Resource?> _makeRequest({
     required RestfulRequest type,
     required String thisRequest,
-    required Map<String, String> headers,
+    Map<String, String>? headers,
     Map<String, dynamic>? resource,
     String? formData,
     FhirClient? fhirClient,
@@ -573,6 +573,7 @@ class FhirRequest with _$FhirRequest {
           }
         case RestfulRequest.put_:
           {
+            headers ??= {};
             headers['Content-Type'] = 'application/fhir+json';
             result = await fhirClient.put(
               thisRequest,
@@ -591,6 +592,7 @@ class FhirRequest with _$FhirRequest {
           }
         case RestfulRequest.patch_:
           {
+            headers ??= {};
             headers['Content-Type'] = 'application/fhir+json';
             result = await fhirClient.patch(
               thisRequest,
@@ -601,6 +603,7 @@ class FhirRequest with _$FhirRequest {
           }
         case RestfulRequest.post_:
           {
+            headers ??= {};
             headers['Content-Type'] = formData != null
                 ? 'application/x-www-form-urlencoded'
                 : 'application/fhir+json';

@@ -1,7 +1,9 @@
 import 'package:fhir/r4.dart';
 import 'package:flutter/material.dart';
 
-import 'server_call.dart';
+import 'gcs_request.dart';
+import 'hapi_request.dart';
+import 'smart_request.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,7 +25,7 @@ class DemoPage extends StatelessWidget {
       host: currentUri.host,
       scheme: currentUri.scheme,
       port: currentUri.port,
-      path: '/static.html',
+      path: '/redirect.html',
     );
     print(fhirCallback);
     return MaterialApp(
@@ -35,37 +37,22 @@ class DemoPage extends StatelessWidget {
               ElevatedButton(
                   child: const Text('Hapi', style: TextStyle(fontSize: 44)),
                   onPressed: () async {
-                    final resources = await hapi();
-                    _buildPopupDialog(context, resources);
+                    await hapiRequest();
+                    // _buildPopupDialog(context, resources);
                   }),
               ElevatedButton(
-                  child: const Text('Logica', style: TextStyle(fontSize: 44)),
+                  child: const Text('Interop', style: TextStyle(fontSize: 44)),
                   onPressed: () async {
-                    final resources = await logica(fhirCallback);
-                    _buildPopupDialog(context, resources);
-                  }),
-              ElevatedButton(
-                  child: const Text('Mihin', style: TextStyle(fontSize: 44)),
-                  onPressed: () async {
-                    final resources = await mihin(fhirCallback);
-                    _buildPopupDialog(context, resources);
+                    await smartRequest(fhirCallback);
+                    // _buildPopupDialog(context, resources);
                   }),
               ElevatedButton(
                   child:
                       const Text('GCP Health', style: TextStyle(fontSize: 44)),
                   onPressed: () async {
-                    final resources = await gcs();
-                    _buildPopupDialog(context, resources);
+                    await gcsRequest(fhirCallback);
+                    // _buildPopupDialog(context, resources);
                   }),
-              ElevatedButton(
-                  child: const Text('Aidbox', style: TextStyle(fontSize: 44)),
-                  onPressed: () {}),
-              ElevatedButton(
-                  child: const Text('AWS', style: TextStyle(fontSize: 44)),
-                  onPressed: () {}),
-              ElevatedButton(
-                  child: const Text('Azure', style: TextStyle(fontSize: 44)),
-                  onPressed: () {}),
             ],
           ),
         ),

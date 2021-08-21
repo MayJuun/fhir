@@ -2,9 +2,11 @@ import 'dart:convert';
 
 import 'package:collection/collection.dart';
 import 'package:fhir/r4.dart';
+import 'package:flutter/services.dart';
 import 'package:http/http.dart';
 import 'package:oauth2_client/access_token_response.dart';
 import 'package:oauth2_client/oauth2_client.dart';
+import 'package:universal_html/html.dart' as html;
 
 import '../../../r4.dart';
 
@@ -12,7 +14,7 @@ import '../../../r4.dart';
 /// will provide the client for interacting with the FHIR server
 class SmartWebClient extends SmartClient {
   SmartWebClient({
-    required FhirUri redirectUri,
+    required this.redirectUri,
     required this.clientId,
     required this.fhirUri,
     this.scopes,
@@ -25,6 +27,9 @@ class SmartWebClient extends SmartClient {
   /// server or the FHIR data server
   @override
   FhirUri? fhirUri;
+
+  @override
+  FhirUri? redirectUri;
 
   /// The registered clientId for the application
   @override
@@ -49,6 +54,7 @@ class SmartWebClient extends SmartClient {
   @override
   Future<void> initialize() async {
     await _getEndpoints;
+    print('got endpoints');
     if (redirectUri != null) {
       client = OAuth2Client(
         /// Just one slash, required by Google specs
@@ -58,13 +64,70 @@ class SmartWebClient extends SmartClient {
         tokenUrl: tokenUrl.toString(),
       );
     }
+    await getTokenResponse();
   }
 
   Future<void> getTokenResponse() async {
     if (tokenResponse?.isExpired() ?? true && client != null) {
-      tokenResponse = await client!
-          .getTokenWithAuthCodeFlow(clientId: clientId, scopes: scopes);
-      tokenResponse?.refreshToken = '';
+      try {
+        // html.WindowBase? _popupWin;
+        // _popupWin = html.window.open(
+        //     '${client!.getAuthorizeUrl(clientId: clientId, scopes: scopes)}'
+        //         // '&nonce=${_nonce()}'
+        //         '&aud=${fhirUri.toString()}',
+        //     'Auth');
+        print('popupWinow');
+        await client!.requestAuthorization(
+            clientId: clientId,
+            scopes: scopes,
+            customParams: {'aud': fhirUri?.value.toString()});
+
+        // getTokenWithAuthCodeFlow(
+        //     clientId: clientId,
+        //     scopes: scopes,
+        //     authCodeParams: {'aud': fhirUri?.value.toString()});
+        html.window.onMessage.listen((event) {
+          print(event.data);
+        });
+        // ('any', (event) => print(event));
+        // tokenResponse?.refreshToken = '';
+        // _popupWin.addEventListener('change', (event) => print(event.path));
+        //  .onMessage.listen((event) async {
+        // print('listening');
+        // print(event.data.toString());
+        // if (event.data.toString().contains('code=') &&
+        //     event.data.toString().contains('redirect.html')) {
+        //   await authorize(event.data.toString());
+        //   if (_popupWin != null) {
+        //     _popupWin!.close();
+        //     _popupWin = null;
+        //   }
+        // }
+        // });
+      } catch (e, stack) {
+        throw PlatformException(
+          code: e.toString(),
+          message: 'Failed to authenticate',
+          stacktrace: stack.toString(),
+        );
+      }
+    }
+    print('finished token response');
+  }
+
+  Future<void> authorize(String uriWithCode) async {
+    if (uriWithCode.contains('code=') &&
+        uriWithCode.contains('redirect.html')) {
+      final authorizationCode =
+          uriWithCode.split('code=')[1].split('?')[0].split('&')[0];
+      if (client != null) {
+        await client?.requestAccessToken(
+            code: authorizationCode, clientId: clientId);
+      }
+    } else {
+      throw PlatformException(
+          code: 'Incorrect Uri passed to authorization function',
+          message: 'Incorrect Uri passed to authorization function');
     }
   }
 
