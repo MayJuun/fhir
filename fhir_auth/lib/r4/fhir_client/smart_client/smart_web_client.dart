@@ -46,6 +46,7 @@ class SmartWebClient extends SmartClient {
 
   AccessTokenResponse? tokenResponse;
 
+  @override
   Future<void> initialize() async {
     await _getEndpoints;
     if (redirectUri != null) {

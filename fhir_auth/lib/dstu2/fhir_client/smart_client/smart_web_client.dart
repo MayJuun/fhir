@@ -16,19 +16,9 @@ class SmartWebClient extends SmartClient {
     required this.clientId,
     required this.fhirUri,
     this.scopes,
-    FhirUri? authUrl,
-    FhirUri? tokenUrl,
-  }) {
-    _getEndpoints.then((value) async {
-      client = OAuth2Client(
-        /// Just one slash, required by Google specs
-        redirectUri: redirectUri.toString(),
-        customUriScheme: redirectUri.value?.scheme ?? redirectUri.toString(),
-        authorizeUrl: authUrl.toString(),
-        tokenUrl: tokenUrl.toString(),
-      );
-    });
-  }
+    this.authUrl,
+    this.tokenUrl,
+  });
 
   /// specify the fhirUrl of the Capability Statement (or conformance
   /// statement for Dstu2). Note this may not be the same as the authentication
@@ -52,14 +42,28 @@ class SmartWebClient extends SmartClient {
 
   /// Oauth2Client
   @override
-  late OAuth2Client client;
+  OAuth2Client? client;
 
   AccessTokenResponse? tokenResponse;
 
+  @override
+  Future<void> initialize() async {
+    await _getEndpoints;
+    if (redirectUri != null) {
+      client = OAuth2Client(
+        /// Just one slash, required by Google specs
+        redirectUri: redirectUri.toString(),
+        customUriScheme: redirectUri!.value?.scheme ?? redirectUri.toString(),
+        authorizeUrl: authUrl.toString(),
+        tokenUrl: tokenUrl.toString(),
+      );
+    }
+  }
+
   Future<void> getTokenResponse() async {
-    if (tokenResponse?.isExpired() ?? true) {
-      tokenResponse = await client.getTokenWithAuthCodeFlow(
-          clientId: clientId, scopes: scopes);
+    if (tokenResponse?.isExpired() ?? true && client != null) {
+      tokenResponse = await client!
+          .getTokenWithAuthCodeFlow(clientId: clientId, scopes: scopes);
       tokenResponse?.refreshToken = '';
     }
   }
