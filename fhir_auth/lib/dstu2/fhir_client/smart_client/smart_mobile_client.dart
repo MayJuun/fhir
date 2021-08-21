@@ -14,33 +14,25 @@ import '../../../dstu2.dart';
 /// will provide the client for interacting with the FHIR server
 class SmartMobileClient extends SmartClient {
   SmartMobileClient({
-    required FhirUri redirectUri,
-    required String clientId,
+    required this.redirectUri,
+    required this.clientId,
     required this.fhirUri,
     this.scopes,
-    FhirUri? authUrl,
-    FhirUri? tokenUrl,
-  }) {
-    _getEndpoints.then((value) {
-      client = OAuth2Client(
-        /// Just one slash, required by Google specs
-        redirectUri: redirectUri.toString(),
-        customUriScheme: redirectUri.value?.scheme ?? redirectUri.toString(),
-        authorizeUrl: authUrl.toString(),
-        tokenUrl: tokenUrl.toString(),
-      );
-      helper = OAuth2Helper(client,
-          grantType: OAuth2Helper.AUTHORIZATION_CODE,
-          clientId: clientId,
-          scopes: scopes);
-    });
-  }
+    this.authUrl,
+    this.tokenUrl,
+  });
 
   /// specify the fhirUrl of the Capability Statement (or conformance
   /// statement for Dstu2). Note this may not be the same as the authentication
   /// server or the FHIR data server
   @override
   FhirUri? fhirUri;
+
+  @override
+  FhirUri? redirectUri;
+
+  @override
+  String clientId;
 
   /// the scopes that will be included with the request
   @override
@@ -54,11 +46,32 @@ class SmartMobileClient extends SmartClient {
 
   /// Oauth2Client
   @override
-  late OAuth2Client client;
+  OAuth2Client? client;
 
   /// Oauth2Helper
   @override
   OAuth2Helper? helper;
+
+  @override
+  Future<void> initialize() async {
+    await _getEndpoints;
+    if (redirectUri != null) {
+      client = OAuth2Client(
+        /// Just one slash, required by Google specs
+        redirectUri: redirectUri.toString(),
+        customUriScheme: redirectUri!.value?.scheme ?? redirectUri.toString(),
+        authorizeUrl: authUrl.toString(),
+        tokenUrl: tokenUrl.toString(),
+      );
+    }
+    if (client != null) {
+      helper = OAuth2Helper(client!,
+          grantType: OAuth2Helper.AUTHORIZATION_CODE,
+          clientId: clientId,
+          scopes: scopes,
+          authCodeParams: {'aud': fhirUri?.value.toString()});
+    }
+  }
 
   /// Request for the CapabilityStatement (or Conformance) and then identifying
   /// the authUrl endpoint & tokenurl endpoing
