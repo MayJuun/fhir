@@ -2,7 +2,8 @@ import 'dart:convert';
 
 import 'package:collection/collection.dart';
 import 'package:fhir/r5.dart';
-import 'package:http/http.dart';
+import 'package:flutter/services.dart';
+import 'package:http/http.dart' as http;
 import 'package:oauth2_client/access_token_response.dart';
 import 'package:oauth2_client/oauth2_client.dart';
 
@@ -12,7 +13,7 @@ import '../../../r5.dart';
 /// will provide the client for interacting with the FHIR server
 class SmartWebClient extends SmartClient {
   SmartWebClient({
-    required FhirUri redirectUri,
+    required this.redirectUri,
     required this.clientId,
     required this.fhirUri,
     this.scopes,
@@ -25,6 +26,9 @@ class SmartWebClient extends SmartClient {
   /// server or the FHIR data server
   @override
   FhirUri? fhirUri;
+
+  @override
+  FhirUri? redirectUri;
 
   /// The registered clientId for the application
   @override
@@ -44,7 +48,46 @@ class SmartWebClient extends SmartClient {
   @override
   OAuth2Client? client;
 
-  AccessTokenResponse? tokenResponse;
+  AccessTokenResponse? _tokenResponse;
+
+  Future<Map<String, String>> authHeaders(Map<String, String>? headers) async {
+    headers ??= {};
+    headers['Authorization'] = 'Bearer ' + (_tokenResponse?.accessToken ?? '');
+    return headers;
+  }
+
+  @override
+  Future<http.Response>? get(String url,
+          {Map<String, String>? headers, http.Client? httpClient}) async =>
+      http.get(Uri.parse(url), headers: await authHeaders(headers));
+
+  @override
+  Future<http.Response>? put(String url,
+          {Map<String, String>? headers,
+          dynamic body,
+          http.Client? httpClient}) async =>
+      http.put(Uri.parse(url), headers: await authHeaders(headers), body: body);
+
+  @override
+  Future<http.Response>? post(String url,
+          {Map<String, String>? headers,
+          dynamic body,
+          http.Client? httpClient}) async =>
+      http.post(Uri.parse(url),
+          headers: await authHeaders(headers), body: body);
+
+  @override
+  Future<http.Response>? delete(String url,
+          {Map<String, String>? headers, http.Client? httpClient}) async =>
+      http.delete(Uri.parse(url), headers: await authHeaders(headers));
+
+  @override
+  Future<http.Response>? patch(String url,
+          {Map<String, String>? headers,
+          dynamic body,
+          http.Client? httpClient}) async =>
+      http.patch(Uri.parse(url),
+          headers: await authHeaders(headers), body: body);
 
   @override
   Future<void> initialize() async {
@@ -58,13 +101,25 @@ class SmartWebClient extends SmartClient {
         tokenUrl: tokenUrl.toString(),
       );
     }
+    await getTokenResponse();
   }
 
   Future<void> getTokenResponse() async {
-    if (tokenResponse?.isExpired() ?? true && client != null) {
-      tokenResponse = await client!
-          .getTokenWithAuthCodeFlow(clientId: clientId, scopes: scopes);
-      tokenResponse?.refreshToken = '';
+    if (_tokenResponse?.isExpired() ?? true && client != null) {
+      try {
+        final authorizationResponse = await client!.requestAuthorization(
+            clientId: clientId,
+            scopes: scopes,
+            customParams: {'aud': fhirUri?.value.toString()});
+        _tokenResponse = await client?.requestAccessToken(
+            code: authorizationResponse.code ?? '', clientId: clientId);
+      } catch (e, stack) {
+        throw PlatformException(
+          code: e.toString(),
+          message: 'Failed to authenticate',
+          stacktrace: stack.toString(),
+        );
+      }
     }
   }
 
@@ -76,7 +131,7 @@ class SmartWebClient extends SmartClient {
     }
     var thisRequest = '$fhirUri/metadata?mode=full&_format=json';
 
-    var result = await get(Uri.parse(thisRequest));
+    var result = await http.get(Uri.parse(thisRequest));
 
     if (_errorCodeMap.containsKey(result.statusCode)) {
       if (result.statusCode == 422) {
@@ -84,7 +139,7 @@ class SmartWebClient extends SmartClient {
           '_format=json',
           '_format=application/json',
         );
-        result = await get(Uri.parse(thisRequest));
+        result = await http.get(Uri.parse(thisRequest));
       }
       if (_errorCodeMap.containsKey(result.statusCode)) {
         throw Exception('StatusCode: ${result.statusCode}\n${result.body}');

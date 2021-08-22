@@ -3,10 +3,9 @@ import 'dart:convert';
 import 'package:collection/collection.dart';
 import 'package:fhir/r4.dart';
 import 'package:flutter/services.dart';
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 import 'package:oauth2_client/access_token_response.dart';
 import 'package:oauth2_client/oauth2_client.dart';
-import 'package:universal_html/html.dart' as html;
 
 import '../../../r4.dart';
 
@@ -49,12 +48,50 @@ class SmartWebClient extends SmartClient {
   @override
   OAuth2Client? client;
 
-  AccessTokenResponse? tokenResponse;
+  AccessTokenResponse? _tokenResponse;
+
+  Future<Map<String, String>> authHeaders(Map<String, String>? headers) async {
+    headers ??= {};
+    headers['Authorization'] = 'Bearer ' + (_tokenResponse?.accessToken ?? '');
+    return headers;
+  }
+
+  @override
+  Future<http.Response>? get(String url,
+          {Map<String, String>? headers, http.Client? httpClient}) async =>
+      http.get(Uri.parse(url), headers: await authHeaders(headers));
+
+  @override
+  Future<http.Response>? put(String url,
+          {Map<String, String>? headers,
+          dynamic body,
+          http.Client? httpClient}) async =>
+      http.put(Uri.parse(url), headers: await authHeaders(headers), body: body);
+
+  @override
+  Future<http.Response>? post(String url,
+          {Map<String, String>? headers,
+          dynamic body,
+          http.Client? httpClient}) async =>
+      http.post(Uri.parse(url),
+          headers: await authHeaders(headers), body: body);
+
+  @override
+  Future<http.Response>? delete(String url,
+          {Map<String, String>? headers, http.Client? httpClient}) async =>
+      http.delete(Uri.parse(url), headers: await authHeaders(headers));
+
+  @override
+  Future<http.Response>? patch(String url,
+          {Map<String, String>? headers,
+          dynamic body,
+          http.Client? httpClient}) async =>
+      http.patch(Uri.parse(url),
+          headers: await authHeaders(headers), body: body);
 
   @override
   Future<void> initialize() async {
     await _getEndpoints;
-    print('got endpoints');
     if (redirectUri != null) {
       client = OAuth2Client(
         /// Just one slash, required by Google specs
@@ -68,42 +105,14 @@ class SmartWebClient extends SmartClient {
   }
 
   Future<void> getTokenResponse() async {
-    if (tokenResponse?.isExpired() ?? true && client != null) {
+    if (_tokenResponse?.isExpired() ?? true && client != null) {
       try {
-        // html.WindowBase? _popupWin;
-        // _popupWin = html.window.open(
-        //     '${client!.getAuthorizeUrl(clientId: clientId, scopes: scopes)}'
-        //         // '&nonce=${_nonce()}'
-        //         '&aud=${fhirUri.toString()}',
-        //     'Auth');
-        print('popupWinow');
-        await client!.requestAuthorization(
+        final authorizationResponse = await client!.requestAuthorization(
             clientId: clientId,
             scopes: scopes,
             customParams: {'aud': fhirUri?.value.toString()});
-
-        // getTokenWithAuthCodeFlow(
-        //     clientId: clientId,
-        //     scopes: scopes,
-        //     authCodeParams: {'aud': fhirUri?.value.toString()});
-        html.window.onMessage.listen((event) {
-          print(event.data);
-        });
-        // ('any', (event) => print(event));
-        // tokenResponse?.refreshToken = '';
-        // _popupWin.addEventListener('change', (event) => print(event.path));
-        //  .onMessage.listen((event) async {
-        // print('listening');
-        // print(event.data.toString());
-        // if (event.data.toString().contains('code=') &&
-        //     event.data.toString().contains('redirect.html')) {
-        //   await authorize(event.data.toString());
-        //   if (_popupWin != null) {
-        //     _popupWin!.close();
-        //     _popupWin = null;
-        //   }
-        // }
-        // });
+        _tokenResponse = await client?.requestAccessToken(
+            code: authorizationResponse.code ?? '', clientId: clientId);
       } catch (e, stack) {
         throw PlatformException(
           code: e.toString(),
@@ -111,23 +120,6 @@ class SmartWebClient extends SmartClient {
           stacktrace: stack.toString(),
         );
       }
-    }
-    print('finished token response');
-  }
-
-  Future<void> authorize(String uriWithCode) async {
-    if (uriWithCode.contains('code=') &&
-        uriWithCode.contains('redirect.html')) {
-      final authorizationCode =
-          uriWithCode.split('code=')[1].split('?')[0].split('&')[0];
-      if (client != null) {
-        await client?.requestAccessToken(
-            code: authorizationCode, clientId: clientId);
-      }
-    } else {
-      throw PlatformException(
-          code: 'Incorrect Uri passed to authorization function',
-          message: 'Incorrect Uri passed to authorization function');
     }
   }
 
@@ -139,7 +131,7 @@ class SmartWebClient extends SmartClient {
     }
     var thisRequest = '$fhirUri/metadata?mode=full&_format=json';
 
-    var result = await get(Uri.parse(thisRequest));
+    var result = await http.get(Uri.parse(thisRequest));
 
     if (_errorCodeMap.containsKey(result.statusCode)) {
       if (result.statusCode == 422) {
@@ -147,7 +139,7 @@ class SmartWebClient extends SmartClient {
           '_format=json',
           '_format=application/json',
         );
-        result = await get(Uri.parse(thisRequest));
+        result = await http.get(Uri.parse(thisRequest));
       }
       if (_errorCodeMap.containsKey(result.statusCode)) {
         throw Exception('StatusCode: ${result.statusCode}\n${result.body}');

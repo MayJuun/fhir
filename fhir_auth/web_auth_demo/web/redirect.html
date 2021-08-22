@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Connection Succeeded</title>
+    <title>Connexion Succeeded</title>
     <meta name="description"
         content="Simple, quick, standalone responsive placeholder without any additional resources">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,14 +13,7 @@
 <body>
 </body>
 <script>
-    window.onload = function() {
-	const urlParams = new URLSearchParams(window.location.search);
-	const code = urlParams.get('code');
-	if(code) {
-		window.opener.postMessage(window.location.href, _url_of_the_opener_window_);
-	}
-}
-    // window.opener.postMessage(window.location.href, '*');
+    window.opener.postMessage(window.location.href, '*');
 </script>
 
 </html>

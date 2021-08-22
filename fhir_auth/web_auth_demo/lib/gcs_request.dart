@@ -23,7 +23,7 @@ Future<void> gcsRequest(Uri fhirCallback) async {
 
     Id? newId;
     try {
-      final response = await request1.request(headers: {});
+      final response = await request1.request();
       newId = response?.id;
       print('Response from upload: ${response?.toJson()}');
     } catch (e) {
@@ -40,7 +40,7 @@ Future<void> gcsRequest(Uri fhirCallback) async {
         fhirClient: client,
       );
       try {
-        final response2 = await request2.request(headers: {});
+        final response2 = await request2.request();
         print('Response from read:\n${response2?.toJson()}');
       } catch (e) {
         print(e);
