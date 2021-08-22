@@ -52,40 +52,44 @@ class SmartWebClient extends SmartClient {
 
   Future<Map<String, String>> authHeaders(Map<String, String>? headers) async {
     headers ??= {};
+    await getTokenResponse();
     headers['Authorization'] = 'Bearer ' + (_tokenResponse?.accessToken ?? '');
     return headers;
   }
 
   @override
   Future<http.Response>? get(String url,
-          {Map<String, String>? headers, http.Client? httpClient}) async =>
+          {Map<String, String>? headers}) async =>
       http.get(Uri.parse(url), headers: await authHeaders(headers));
 
   @override
-  Future<http.Response>? put(String url,
-          {Map<String, String>? headers,
-          dynamic body,
-          http.Client? httpClient}) async =>
+  Future<http.Response>? put(
+    String url, {
+    Map<String, String>? headers,
+    dynamic body,
+  }) async =>
       http.put(Uri.parse(url), headers: await authHeaders(headers), body: body);
 
   @override
-  Future<http.Response>? post(String url,
-          {Map<String, String>? headers,
-          dynamic body,
-          http.Client? httpClient}) async =>
+  Future<http.Response>? post(
+    String url, {
+    Map<String, String>? headers,
+    dynamic body,
+  }) async =>
       http.post(Uri.parse(url),
           headers: await authHeaders(headers), body: body);
 
   @override
   Future<http.Response>? delete(String url,
-          {Map<String, String>? headers, http.Client? httpClient}) async =>
+          {Map<String, String>? headers}) async =>
       http.delete(Uri.parse(url), headers: await authHeaders(headers));
 
   @override
-  Future<http.Response>? patch(String url,
-          {Map<String, String>? headers,
-          dynamic body,
-          http.Client? httpClient}) async =>
+  Future<http.Response>? patch(
+    String url, {
+    Map<String, String>? headers,
+    dynamic body,
+  }) async =>
       http.patch(Uri.parse(url),
           headers: await authHeaders(headers), body: body);
 
