@@ -129,8 +129,7 @@ class SmartMobileClient extends SmartClient {
         ?.extension_
         ?.firstWhereOrNull((_) => true)
         ?.extension_
-        ?.firstWhereOrNull(
-            (ext) => (ext.url == null ? null : ext.url.toString()) == type)
+        ?.firstWhereOrNull((ext) => ext.url.toString() == type)
         ?.valueUri;
   }
 

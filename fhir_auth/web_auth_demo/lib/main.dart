@@ -1,4 +1,3 @@
-import 'package:fhir/r4.dart';
 import 'package:flutter/material.dart';
 
 import 'gcs_request.dart';
@@ -38,20 +37,17 @@ class DemoPage extends StatelessWidget {
                   child: const Text('Hapi', style: TextStyle(fontSize: 44)),
                   onPressed: () async {
                     await hapiRequest();
-                    // _buildPopupDialog(context, resources);
                   }),
               ElevatedButton(
                   child: const Text('Interop', style: TextStyle(fontSize: 44)),
                   onPressed: () async {
                     await smartRequest(fhirCallback);
-                    // _buildPopupDialog(context, resources);
                   }),
               ElevatedButton(
                   child:
                       const Text('GCP Health', style: TextStyle(fontSize: 44)),
                   onPressed: () async {
                     await gcsRequest(fhirCallback);
-                    // _buildPopupDialog(context, resources);
                   }),
             ],
           ),
@@ -59,42 +55,4 @@ class DemoPage extends StatelessWidget {
       ),
     );
   }
-}
-
-Future _buildPopupDialog(BuildContext context, List<Resource> resources) {
-  return showDialog(
-    context: context,
-    builder: (BuildContext cxt) => AlertDialog(
-      title: const Text('Resources'),
-      content: SingleChildScrollView(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            const Text(
-              'Created Patient',
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            Text('${resources[0].toYaml()}\n'),
-            const Text(
-              'Request Response',
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            Text('${resources[1].toYaml()}\n'),
-            const Text(
-              'Read Response',
-              style: TextStyle(fontWeight: FontWeight.bold),
-            ),
-            Text('${resources[2].toYaml()}\n'),
-          ],
-        ),
-      ),
-      actions: <Widget>[
-        TextButton(
-          onPressed: () => Navigator.of(context).pop(),
-          child: const Text('Close'),
-        ),
-      ],
-    ),
-  );
 }

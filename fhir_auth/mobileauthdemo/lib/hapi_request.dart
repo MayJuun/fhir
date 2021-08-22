@@ -6,7 +6,7 @@ import 'api.dart';
 import 'new_patient.dart';
 
 Future hapiRequest() async {
-  final hapiUrl = Api.hapiUrl;
+  const hapiUrl = Api.hapiUrl;
   final _newPatient = newPatient();
   print('Patient to be uploaded:\n${_newPatient.toJson()}');
   final request1 = FhirRequest.create(
