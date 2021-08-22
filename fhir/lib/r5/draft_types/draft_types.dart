@@ -217,6 +217,7 @@ class Citation with Resource, _$Citation {
   }) = _Citation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1066,6 +1067,7 @@ class EvidenceReport with Resource, _$EvidenceReport {
   }) = _EvidenceReport;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

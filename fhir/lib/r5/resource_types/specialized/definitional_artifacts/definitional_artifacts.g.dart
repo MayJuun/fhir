@@ -3918,7 +3918,7 @@ _$_QuestionnaireItem _$$_QuestionnaireItemFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      linkId: json['linkId'] as String?,
+      linkId: json['linkId'] as String,
       linkIdElement: json['_linkId'] == null
           ? null
           : Element.fromJson(json['_linkId'] as Map<String, dynamic>),
@@ -3939,7 +3939,7 @@ _$_QuestionnaireItem _$$_QuestionnaireItemFromJson(Map<String, dynamic> json) =>
       textElement: json['_text'] == null
           ? null
           : Element.fromJson(json['_text'] as Map<String, dynamic>),
-      type: _$enumDecodeNullable(_$QuestionnaireItemTypeEnumMap, json['type'],
+      type: _$enumDecode(_$QuestionnaireItemTypeEnumMap, json['type'],
           unknownValue: QuestionnaireItemType.unknown),
       typeElement: json['_type'] == null
           ? null
@@ -4017,7 +4017,7 @@ Map<String, dynamic> _$$_QuestionnaireItemToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('linkId', instance.linkId);
+  val['linkId'] = instance.linkId;
   writeNotNull('_linkId', instance.linkIdElement?.toJson());
   writeNotNull('definition', instance.definition?.toJson());
   writeNotNull('_definition', instance.definitionElement?.toJson());
@@ -4026,7 +4026,7 @@ Map<String, dynamic> _$$_QuestionnaireItemToJson(
   writeNotNull('_prefix', instance.prefixElement?.toJson());
   writeNotNull('text', instance.text?.toJson());
   writeNotNull('_text', instance.textElement?.toJson());
-  writeNotNull('type', _$QuestionnaireItemTypeEnumMap[instance.type]);
+  val['type'] = _$QuestionnaireItemTypeEnumMap[instance.type];
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull(
       'enableWhen', instance.enableWhen?.map((e) => e.toJson()).toList());

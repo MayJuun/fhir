@@ -1761,7 +1761,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    String? linkId,
+    required String linkId,
     @JsonKey(name: '_linkId') Element? linkIdElement,
     FhirUri? definition,
     @JsonKey(name: '_definition') Element? definitionElement,
@@ -1771,7 +1771,7 @@ class QuestionnaireItem with _$QuestionnaireItem {
     Markdown? text,
     @JsonKey(name: '_text') Element? textElement,
     @JsonKey(unknownEnumValue: QuestionnaireItemType.unknown)
-        QuestionnaireItemType? type,
+        required QuestionnaireItemType type,
     @JsonKey(name: '_type') Element? typeElement,
     List<QuestionnaireEnableWhen>? enableWhen,
     @JsonKey(unknownEnumValue: QuestionnaireItemEnableBehavior.unknown)
