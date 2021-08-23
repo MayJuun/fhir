@@ -1,3 +1,6 @@
+## [0.5.0-1]
+* Mostly just updating to the new FHIR dependency
+
 ## [0.4.5]
 * Updated dart version
 * Added anlyzer to dev_dependencies
