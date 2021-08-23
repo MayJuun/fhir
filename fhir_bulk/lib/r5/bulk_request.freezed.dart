@@ -1,3 +1,4 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
@@ -82,6 +83,19 @@ mixin _$BulkRequest {
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+            Client? client)?
+        patient,
+    TResult Function(Uri base, Id id, FhirDateTime? since,
+            List<WhichResource>? types, Client? client)?
+        group,
+    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+            Client? client)?
+        system,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
@@ -100,6 +114,13 @@ mixin _$BulkRequest {
     required TResult Function(_BulkPatientRequest value) patient,
     required TResult Function(_BulkGroupRequest value) group,
     required TResult Function(_BulkSystemRequest value) system,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_BulkPatientRequest value)? patient,
+    TResult Function(_BulkGroupRequest value)? group,
+    TResult Function(_BulkSystemRequest value)? system,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -283,6 +304,22 @@ class _$_BulkPatientRequest extends _BulkPatientRequest {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+            Client? client)?
+        patient,
+    TResult Function(Uri base, Id id, FhirDateTime? since,
+            List<WhichResource>? types, Client? client)?
+        group,
+    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+            Client? client)?
+        system,
+  }) {
+    return patient?.call(base, since, types, client);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
@@ -309,6 +346,16 @@ class _$_BulkPatientRequest extends _BulkPatientRequest {
     required TResult Function(_BulkSystemRequest value) system,
   }) {
     return patient(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_BulkPatientRequest value)? patient,
+    TResult Function(_BulkGroupRequest value)? group,
+    TResult Function(_BulkSystemRequest value)? system,
+  }) {
+    return patient?.call(this);
   }
 
   @override
@@ -482,6 +529,22 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+            Client? client)?
+        patient,
+    TResult Function(Uri base, Id id, FhirDateTime? since,
+            List<WhichResource>? types, Client? client)?
+        group,
+    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+            Client? client)?
+        system,
+  }) {
+    return group?.call(base, id, since, types, client);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
@@ -508,6 +571,16 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
     required TResult Function(_BulkSystemRequest value) system,
   }) {
     return group(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_BulkPatientRequest value)? patient,
+    TResult Function(_BulkGroupRequest value)? group,
+    TResult Function(_BulkSystemRequest value)? system,
+  }) {
+    return group?.call(this);
   }
 
   @override
@@ -668,6 +741,22 @@ class _$_BulkSystemRequest extends _BulkSystemRequest {
 
   @override
   @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+            Client? client)?
+        patient,
+    TResult Function(Uri base, Id id, FhirDateTime? since,
+            List<WhichResource>? types, Client? client)?
+        group,
+    TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
+            Client? client)?
+        system,
+  }) {
+    return system?.call(base, since, types, client);
+  }
+
+  @override
+  @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Uri base, FhirDateTime? since, List<WhichResource>? types,
             Client? client)?
@@ -694,6 +783,16 @@ class _$_BulkSystemRequest extends _BulkSystemRequest {
     required TResult Function(_BulkSystemRequest value) system,
   }) {
     return system(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_BulkPatientRequest value)? patient,
+    TResult Function(_BulkGroupRequest value)? group,
+    TResult Function(_BulkSystemRequest value)? system,
+  }) {
+    return system?.call(this);
   }
 
   @override
