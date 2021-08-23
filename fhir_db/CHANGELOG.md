@@ -1,3 +1,7 @@
+## [0.5.0-1]
+* Updating dependencies
+* I think [Luca](https://github.com/lucaspal) added some changes too, but I can't remember what they are now (it's what happens when I wait too long to commit)
+
 ## [0.4.4]
 * Failed to properly commit changes in 0.4.3
 
