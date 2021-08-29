@@ -31,6 +31,14 @@ void testQuestionnaire() {
           [13]);
     });
   });
+  group('Faiadashu', () {
+    test('Calculate an enableWhen', () {
+      expect(
+          walkFhirPath(faiadashuResponse.toJson(),
+              "%resource.repeat(item).where(linkId='4.2.b.1').answer.valueCoding.code ='female' and today().toString().substring(0, 4).toInteger() - %resource.repeat(item).where(linkId='4.2.b.5').answer.valueDate.toString().substring(0, 4).toInteger() >= 40"),
+          [false]);
+    });
+  });
 }
 
 final questionnaireResponse = {
@@ -215,6 +223,77 @@ final resource = QuestionnaireResponse.fromJson({
               "answer": [
                 {"valueString": "Already able to speak Chinese"}
               ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+});
+
+final faiadashuResponse = QuestionnaireResponse.fromJson({
+  "resourceType": "QuestionnaireResponse",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/4.0/StructureDefinition/QuestionnaireResponse",
+      "http://hl7.org/fhir/uv/sdc/StructureDefinition/sdc-questionnaireresponse",
+      "http://fhir.org/guides/argonaut/questionnaire/StructureDefinition/argo-questionnaireresponse"
+    ]
+  },
+  "language": "en",
+  "text": {
+    "status": "generated",
+    "div":
+        "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\" xml:lang=\"en\"><h3>Enter your birthdate (MM/DD/YYYY)</h3><p>8/22/2013</p><h3>Have you had mammogram before?(enableWhenExpression = only when gender is female and age > 40)</h3><p>- Don’t know</p><p>&nbsp;</p></div>"
+  },
+  "contained": [
+    {
+      "resourceType": "Patient",
+      "id": "14603",
+      "name": [
+        {
+          "family": "Lee",
+          "given": ["Emma"]
+        }
+      ]
+    }
+  ],
+  "questionnaire": "http://build.fhir.org/ig/HL7/sdc/examples.html",
+  "_questionnaire": {
+    "extension": [
+      {
+        "url": "http://hl7.org/fhir/StructureDefinition/display",
+        "valueString": "SDC Demo Survey"
+      }
+    ]
+  },
+  "status": "in-progress",
+  "subject": {"reference": "#14603", "type": "Patient"},
+  "authored": "2021-08-28T23:57:20.643979+02:00",
+  "item": [
+    {
+      "linkId": "4.2.b",
+      "item": [
+        {
+          "linkId": "4.2.b.5",
+          "text": "Enter your birthdate (MM/DD/YYYY)",
+          "answer": [
+            {"valueDate": "2013-08-22"}
+          ]
+        },
+        {
+          "linkId": "4.2.b.6",
+          "text":
+              "Have you had mammogram before?(enableWhenExpression = only when gender is female and age > 40)",
+          "answer": [
+            {
+              "valueCoding": {
+                "system":
+                    "http://terminology.hl7.org/CodeSystem/data-absent-reason",
+                "code": "asked-unknown",
+                "display": "Don’t know",
+                "userSelected": true
+              }
             }
           ]
         }

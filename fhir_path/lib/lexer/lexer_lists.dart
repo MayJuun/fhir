@@ -35,7 +35,7 @@ final symbolOperationLexer = notEquivalentLexer |
     greaterLexer |
     unionOperatorLexer |
     andSignLexer |
-    // minusLexer |
+    minusLexer |
     plusLexer |
     divSignLexer |
     starLexer |

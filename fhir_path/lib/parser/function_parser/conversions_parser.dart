@@ -189,14 +189,15 @@ class ConvertsToDecimalParser extends FhirPathParser {
 
 class ToStringParser extends FhirPathParser {
   ToStringParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _conversionException('.toString()', results)
-              : _isAllTypes(results)
-                  ? []
-                  : [results.first.toString()];
+  List execute(List results, Map passed, {bool where = false}) {
+    return results.length == 0
+        ? []
+        : results.length > 1
+            ? throw _conversionException('.toString()', results)
+            : _isAllTypes(results)
+                ? [false]
+                : [results.first.toString()];
+  }
 }
 
 class ConvertsToStringParser extends FhirPathParser {
