@@ -181,9 +181,7 @@ class DateParser extends BaseDateTimeParser<Date> {
     value = Date(valueString.replaceFirst('@', ''));
   }
   late Date value;
-  List execute(List results, Map passed, {bool where = false}) {
-    return [value];
-  }
+  List execute(List results, Map passed, {bool where = false}) => [value];
 
   String toString() => value.toString();
 }
@@ -192,38 +190,9 @@ class TimeParser extends BaseDateTimeParser<Time> {
   TimeParser(String stringValue) {
     final removeAt = stringValue.replaceFirst('@', '');
     value = Time(removeAt.replaceFirst('T', ''));
-    // print(removeT);
-    // final valueList = removeT.split(':');
-    // value = valueList.length == 1
-    //     ? [
-    //         IntegerParser(valueList[0]),
-    //       ]
-    //     : valueList.length == 2
-    //         ? [
-    //             IntegerParser(valueList[0]),
-    //             IntegerParser(valueList[1]),
-    //           ]
-    //         : [
-    //             IntegerParser(valueList[0]),
-    //             IntegerParser(valueList[1]),
-    //             DecimalParser(valueList[2]),
-    //           ];
   }
   late Time value;
-  List execute(List results, Map passed, {bool where = false}) {
-    return [value];
-    // var timeString = '';
+  List execute(List results, Map passed, {bool where = false}) => [value];
 
-    // value.forEach((e) => timeString +=
-    //     '${e.value}'.length == 1 ? '0${e.value}:' : '${e.value}:');
-    // timeString = timeString.substring(0, timeString.length - 1);
-    // return [Time(timeString)];
-  }
-
-  String toString() {
-    return value.toString();
-    // var timeString = '';
-    // value.forEach((e) => timeString += '${e.value}:');
-    // return timeString.substring(0, timeString.length - 1);
-  }
+  String toString() => value.toString();
 }

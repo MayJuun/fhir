@@ -46,31 +46,19 @@ The passed resource WILL be added to this map as `'%resource'`, so you don't nee
 
 ### ToDo (functionality not supported yet)
 
-- Polymorphic Items
 - Non-escape sequences
 - Quantities, toQuantity, convertsToQuantity
 - trace
 - iff
 - date/time arithmetic
-- unary operators
 - Reflection
 - Complicated, nested tests
 
 ### Notes on Structure
 
 1. When executing a FHIRParser class, any result will be a List<dynamic>
-2. After execution (which acts recursively and traverses down the tree) there will be only values in the Lists, no more FHIR parsers
-3. These values can be any of these types (most are from the FHIR base package, but also note the existence of FhirPathString & FhirPathQuantity):
-
-- Boolean
-- FhirPathString
-- Integer
-- Decimal
-- Date
-- DateTime
-- Time
-
-4. Quantity: TBD
+2. During the execution, this takes advantage of the FHIR datatypes
+2. However After execution (which acts recursively and traverses down the tree) there will be only values in the Lists, no more FHIR parsers
 
 ### [PetitParser](https://pub.dev/packages/petitparser)
 - I personally found PetitParser more convenient to use than ANTLR for this library
