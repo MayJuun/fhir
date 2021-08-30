@@ -1,7 +1,7 @@
+import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart' as r4;
 import 'package:fhir/r5.dart' as r5;
-import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/stu3.dart' as stu3;
 
 import '../fhir_path.dart';
@@ -76,10 +76,23 @@ class IdentifierParser extends ValueParser<String> {
     } else {
       results.forEach((r) {
         if (r is Map) {
-          if (r[value] is List) {
-            finalResults.addAll(r[value]);
-          } else if (r[value] != null) {
-            finalResults.add(r[value]);
+          dynamic rValue = r[value];
+          if (rValue == null) {
+            // Support for polymorphism:
+            // If the key cannot be found in the r-map, then find
+            // a key that starts with the same word, e.g. 'value' identifier will
+            // match 'valueDateTime' key.
+            r.forEach((k, v) {
+              if (k.toString().startsWith(value)) {
+                rValue = v;
+              }
+            });
+          }
+
+          if (rValue is List) {
+            finalResults.addAll(rValue);
+          } else if (rValue != null) {
+            finalResults.add(rValue);
           } else if (r['resourceType'] == value) {
             finalResults.add(r);
           }
