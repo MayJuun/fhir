@@ -1,3 +1,6 @@
+## [0.5.0-2]
+* Updating some documentation
+
 ## [0.5.0-1]
 * Mostly just updating to the new FHIR dependency
 

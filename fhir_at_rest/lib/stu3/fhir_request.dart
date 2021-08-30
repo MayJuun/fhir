@@ -13,7 +13,18 @@ part 'fhir_request.freezed.dart';
 class FhirRequest with _$FhirRequest {
   FhirRequest._();
 
-  ///  READ constructor
+  /// READ constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [id] - the id for the resource
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.read({
     required Uri base,
     required Stu3ResourceType type,
@@ -27,6 +38,18 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirReadRequest;
 
   ///  VREAD constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [id] - the id for the resource
+  /// [vid] - the version id of the rsource
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.vRead({
     required Uri base,
     required Stu3ResourceType type,
@@ -41,6 +64,15 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirVReadRequest;
 
   ///  UPDATE constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.update({
     required Uri base,
     required Resource resource,
@@ -53,6 +85,15 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirUpdateRequest;
 
   ///  PATCH constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.patch({
     required Uri base,
     required Resource resource,
@@ -65,6 +106,17 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirPatchRequest;
 
   ///  DELETE constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [id] - the id for the resource
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.delete({
     required Uri base,
     required Stu3ResourceType type,
@@ -78,6 +130,15 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirDeleteRequest;
 
   ///  CREATE constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.create({
     required Uri base,
     required Resource resource,
@@ -90,6 +151,18 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirCreateRequest;
 
   ///  SEARCH constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [usePost] - defines if you would prefer to use a post request instead of
+  ///   a get request for this search
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.search({
     required Uri base,
     required Stu3ResourceType type,
@@ -104,6 +177,15 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirSearchRequest;
 
   ///  SEARCH-ALL constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.searchAll({
     required Uri base,
     @Default(false) bool pretty,
@@ -115,6 +197,16 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirSearchAllRequest;
 
   ///  SEARCH-ALL constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [mode] - defines the mode as defined https://www.hl7.org/fhir/http.html#capabilities
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.capabilities({
     required Uri base,
     @Default(false) bool pretty,
@@ -126,7 +218,17 @@ class FhirRequest with _$FhirRequest {
     Client? client,
   }) = _FhirCapabilitiesRequest;
 
-  ///  BATCH/TRANSACTION constructor
+  ///  TRANSACTION constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [bundle] - the bundle to be uploaded
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.transaction({
     required Uri base,
     @Default(false) bool pretty,
@@ -138,6 +240,17 @@ class FhirRequest with _$FhirRequest {
     Client? client,
   }) = _FhirTransactionRequest;
 
+  ///  BATCH constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [bundle] - the bundle to be uploaded
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.batch({
     required Uri base,
     @Default(false) bool pretty,
@@ -150,6 +263,26 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirBatchRequest;
 
   ///  HISTORY constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [id] - the id for the resource
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [count] - The maximum number of search results on a page, excluding related
+  ///   resources included by _include or _revinclude or OperationOutcomes. The
+  ///   server is not bound to return the number requested, but cannot return more
+  /// [since] - Only include resource versions that were created at or after the
+  ///   given instant in time
+  /// [at] - Only include resource versions that were current at some point
+  ///   during the time period specified in the date time value
+  /// [reference] - Only include resource versions that are referenced in
+  ///   the specified list
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.history({
     required Uri base,
     required Stu3ResourceType type,
@@ -167,6 +300,25 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirHistoryRequest;
 
   ///  HISTORY-TYPE constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [count] - The maximum number of search results on a page, excluding related
+  ///   resources included by _include or _revinclude or OperationOutcomes. The
+  ///   server is not bound to return the number requested, but cannot return more
+  /// [since] - Only include resource versions that were created at or after the
+  ///   given instant in time
+  /// [at] - Only include resource versions that were current at some point
+  ///   during the time period specified in the date time value
+  /// [reference] - Only include resource versions that are referenced in
+  ///   the specified list
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.historyType({
     required Uri base,
     required Stu3ResourceType type,
@@ -183,6 +335,24 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirHistoryTypeRequest;
 
   ///  HISTORY-ALL constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [count] - The maximum number of search results on a page, excluding related
+  ///   resources included by _include or _revinclude or OperationOutcomes. The
+  ///   server is not bound to return the number requested, but cannot return more
+  /// [since] - Only include resource versions that were created at or after the
+  ///   given instant in time
+  /// [at] - Only include resource versions that were current at some point
+  ///   during the time period specified in the date time value
+  /// [reference] - Only include resource versions that are referenced in
+  ///   the specified list
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.historyAll({
     required Uri base,
     @Default(false) bool pretty,
@@ -198,6 +368,20 @@ class FhirRequest with _$FhirRequest {
   }) = _FhirHistoryAllRequest;
 
   ///  OPERATION constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [id] - the id for the resource
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [fhirParameters] - any extra fhirParameters
+  ///   ToDo: why did I include this?
+  /// [usePost] - defines if you would prefer to use a post request instead of
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.operation({
     required Uri base,
     Stu3ResourceType? type,
@@ -214,6 +398,10 @@ class FhirRequest with _$FhirRequest {
     Client? client,
   }) = _FhirOperationRequest;
 
+  /// REQUEST
+  /// after creating a request with the above constructors, they can be called
+  /// to interact with the server by using this method. If necessary,
+  /// authorization or other headers can be passed in as well
   Future<Resource?> request({
     required Map<String, String> headers,
   }) async {
@@ -398,6 +586,9 @@ class FhirRequest with _$FhirRequest {
     );
   }
 
+  /// _hxParameters
+  /// private method for return a list of the history parameters for history
+  /// requests
   List<String> _hxParameters(
     int? count,
     Instant? since,
@@ -420,6 +611,10 @@ class FhirRequest with _$FhirRequest {
     return parameters;
   }
 
+  /// REQUEST
+  /// Private request method where we try to actually make the request, it's
+  /// mostly to make it easier to catch any errors and still return them as
+  /// a FHIR resource
   Future<Resource?> _request(
     RestfulRequest type,
     String uri,
@@ -442,6 +637,7 @@ class FhirRequest with _$FhirRequest {
     }
   }
 
+  /// Constructs the uri
   String uri({List<String> parameters = const <String>[]}) {
     String uri = _url();
     uri += '?';
@@ -454,6 +650,7 @@ class FhirRequest with _$FhirRequest {
     return uri;
   }
 
+  /// Getter for the uri
   String get url {
     String uri = _url();
     uri += '?';
@@ -465,33 +662,41 @@ class FhirRequest with _$FhirRequest {
     return uri;
   }
 
+  /// Return a string from the formData
   String formData({List<String> parameters = const <String>[]}) {
     return _parameters(parameters, join: false);
   }
 
+  /// encodeParameters
   String _encodeParam(String value, {bool join = true}) =>
       '${join ? '&' : ''}$value';
 
+  /// specifies the mode
   String _mode({bool join = false}) => maybeMap(
       capabilities: (f) =>
           _encodeParam('mode=${enumToString(f.mode)}', join: join),
       orElse: () => '');
 
+  /// specifies the format
   String _format({bool join = false}) => maybeMap(
       capabilities: (f) => _encodeParam('_format=${f.format}', join: true),
       orElse: () => _encodeParam('_format=$format', join: join));
 
+  /// assigns if you want it pretty
   String _pretty({bool join = true}) =>
       _encodeParam('_pretty=${pretty.toString()}', join: join);
 
+  /// assigns if you want the summary
   String _summary({bool join = true}) => summary != Summary.none
       ? _encodeParam('_summary=${enumToString(summary)}', join: join)
       : '';
 
+  /// places any elements
   String _elements({bool join = true}) => elements.isNotEmpty
       ? _encodeParam('_elements=${elements.join(",")}', join: join)
       : '';
 
+  /// places any parameters
   String _parameters(List<String> parameters, {bool join = true}) {
     if (parameters.isEmpty) {
       return '';
@@ -504,6 +709,7 @@ class FhirRequest with _$FhirRequest {
     }
   }
 
+  /// unioon method to get the url
   String _url() => map(
         // READ
         read: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}',
@@ -545,6 +751,8 @@ class FhirRequest with _$FhirRequest {
             '\$${f.operation}',
       );
 
+  /// MAKE REQUEST
+  /// where we finally and actually make the request to the outside server
   Future<Resource?> _makeRequest({
     required RestfulRequest type,
     required String thisRequest,
@@ -636,6 +844,8 @@ class FhirRequest with _$FhirRequest {
     return Resource.fromJson(json.decode(result.body));
   }
 
+  /// Allows us to return an error as a FHIR resource, whether the problem
+  /// is locally or on the server side
   OperationOutcome _operationOutcome(String issue, {String? diagnostics}) =>
       OperationOutcome(issue: [
         OperationOutcomeIssue(
@@ -646,6 +856,8 @@ class FhirRequest with _$FhirRequest {
         )
       ]);
 
+  /// List of the most common types of error codes that will be returned
+  /// from the server
   static const _errorCodes = {
     400: 'Bad Request',
     401: 'Not Authorized',
