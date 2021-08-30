@@ -21,7 +21,6 @@ final Parser<DivStringParser> divStringLexer =
 final Parser<DivModParser> divModLexer =
     string(' mod ').map((_) => DivModParser());
 
-/// ToDo: Unary symbols
 final plusLexer = char('+').map((_) => PlusParser());
 
 final minusLexer = char('-').map((_) => MinusParser());

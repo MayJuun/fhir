@@ -45,17 +45,13 @@ final Parser<QuantityParser> quantityLexer =
 
 final numberLexer = decimalLexer | integerLexer;
 
-final Parser<DecimalParser> decimalLexer = ((char('-') | char('+')).optional() &
-        digit().plus() &
-        char('.') &
-        digit().plus())
-    .flatten()
-    .map((value) => DecimalParser(value));
+final Parser<DecimalParser> decimalLexer =
+    (digit().plus() & char('.') & digit().plus())
+        .flatten()
+        .map((value) => DecimalParser(value));
 
 final Parser<IntegerParser> integerLexer =
-    ((char('-') | char('+')).optional() & digit().plus())
-        .flatten()
-        .map((value) => IntegerParser(value));
+    digit().plus().flatten().map((value) => IntegerParser(value));
 
 /// A String is signified by single quotes (') on either end
 final Parser<StringParser> stringLexer =

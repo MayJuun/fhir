@@ -1,25 +1,39 @@
 ## FHIRPath
 
-- Checkout [this page](http://hl7.org/fhirpath/) from HL7 for the full specification
+- Checkout [this page](https://hl7.org/fhirpath/) from HL7 for the full specification
 
 ### Functionality
 
-- [Basic Types](petitparser/test/basic_types.dart)
-- [Path selection](petitparser/test/path_test.dart)
+- [Basic Types](fhir_path/test/test_basic_types.dart)
+- [Path selection](fhir_path/test/test_paths.dart)
+- [Basic Operators](fhir_path/test/test_basic_operators.dart)
+- [Functions without arguments](fhir_path/test/test_no_arg_fxns.dart)
+- [Functions with arguments](fhir_path/test/test_arg_fxns.dart)
 
 ### How To Use
 
-- To use this library, all you need to do is call this function:
+- To use this library, you can call one of two functions:
 
 ```dart
-List walkFhirPath(
-  Resource? resource,
+List r4WalkFhirPath(
+  r4.Resource? resource,
   String pathExpression, [
   Map<String, dynamic>? passed,
-])
-```
+]) =>
+    walkFhirPath(resource?.toJson(), pathExpression, passed, FhirVersion.r4);
 
-The resource is the main resource you're acting on. The pathExpression is the expression that will be evaluated and applied to the resource. If you need to pass in environmental variables, these are passed as the map. The passed Map's keys need to have a "%" in front of them, for instance:
+/// OR
+
+List walkFhirPath(
+  Map<String, dynamic>? resource,
+  String pathExpression, [
+  Map<String, dynamic>? passed,
+  FhirVersion version = FhirVersion.r4,
+]) {
+```
+This allows you to call the ```walkFhirPath``` function directly and pass it the FHIR version you are using, or you can call the function specifically for your version and it will pass that with it. This way the library can easily work with all versions of FHIR.
+
+The resource is the main resource you're acting on (if you call walkFhirPath directly, you must pass it as a Map - call .toJson() on your resource). The pathExpression is the expression that will be evaluated and applied to the resource. If you need to pass in environmental variables, these are passed as the map. The passed Map's keys need to have a "%" in front of them, for instance:
 
 ```dart
 {
@@ -28,7 +42,7 @@ The resource is the main resource you're acting on. The pathExpression is the ex
 }
 ```
 
-The passed resource WILL be added to this map as `'%resource'`, so you don't need to add it, but be aware this it will be present.
+The passed resource WILL be added to this map as `'%resource'`, so you don't need to add it, but be aware this it will be present, and if you try to pass in a different `'%resource'` it will be overwritten.
 
 ### ToDo (functionality not supported yet)
 
@@ -58,4 +72,9 @@ The passed resource WILL be added to this map as `'%resource'`, so you don't nee
 
 4. Quantity: TBD
 
-## http://hl7.org/fhirpath/fhirpath.g4
+### [PetitParser](https://pub.dev/packages/petitparser)
+- I personally found PetitParser more convenient to use than ANTLR for this library
+- However, the actual parsing is done separately from the tokenization (lexing), so if at some point someone wanted to change it to use ANTLR instead, they could swap out the lexer and the library should still function
+
+## https://hl7.org/fhirpath/fhirpath.g4
+- Official FHIRPath grammar

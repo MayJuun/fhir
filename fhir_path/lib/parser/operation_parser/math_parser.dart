@@ -133,6 +133,12 @@ class PlusParser extends OperatorParser {
     final executedBefore =
         before.execute(results.toList(), passed, where: where);
     final executedAfter = after.execute(results.toList(), passed, where: where);
+    if (before.isEmpty &&
+        executedAfter.isNotEmpty &&
+        executedAfter.length == 1 &&
+        executedAfter.first is num) {
+      return [(executedAfter.first as num)];
+    }
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
       return [];
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
@@ -192,6 +198,12 @@ class MinusParser extends OperatorParser {
     final executedBefore =
         before.execute(results.toList(), passed, where: where);
     final executedAfter = after.execute(results.toList(), passed, where: where);
+    if (before.isEmpty &&
+        executedAfter.isNotEmpty &&
+        executedAfter.length == 1 &&
+        executedAfter.first is num) {
+      return [(executedAfter.first as num) * -1];
+    }
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
       return [];
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
