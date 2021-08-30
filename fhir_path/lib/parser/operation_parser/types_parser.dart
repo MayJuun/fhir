@@ -89,38 +89,49 @@ class AsParser extends OperatorParser {
           'has a single item that resolves to an identifier, but was passed:\n'
           'Operand 2: $after\n');
     }
-    return ((passed['version'] == FhirVersion.r4
-                    ? r4.ResourceUtils.resourceTypeFromStringMap.keys
-                        .contains((after.first as IdentifierParser).value)
-                    : passed['version'] == FhirVersion.r5
-                        ? r5.ResourceUtils.resourceTypeFromStringMap.keys
-                            .contains((after.first as IdentifierParser).value)
-                        : passed['version'] == FhirVersion.dstu2
-                            ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys.contains(
-                                (after.first as IdentifierParser).value)
-                            : stu3.ResourceUtils.resourceTypeFromStringMap.keys.contains(
-                                (after.first as IdentifierParser).value)) &&
-                executedBefore.first is Map &&
-                executedBefore.first['resourceType'] ==
-                    (after.first as IdentifierParser).value) ||
-            ((after.first as IdentifierParser).value == 'string' &&
-                (executedBefore.first is String)) ||
-            ((after.first as IdentifierParser).value == 'boolean' &&
-                (executedBefore.first is bool ||
-                    executedBefore.first is Boolean)) ||
-            ((after.first as IdentifierParser).value == 'integer' &&
-                (executedBefore.first is int ||
-                    executedBefore.first is Integer)) ||
-            ((after.first as IdentifierParser).value == 'decimal' &&
-                (executedBefore.first is double ||
-                    executedBefore.first is Decimal)) ||
-            ((after.first as IdentifierParser).value == 'date' &&
-                executedBefore.first is Date) ||
-            ((after.first as IdentifierParser).value == 'datetime' &&
-                (executedBefore.first is DateTime || executedBefore.first is FhirDateTime)) ||
-            ((after.first as IdentifierParser).value == 'time' && executedBefore.first is Time) ||
-            ((after.first as IdentifierParser).value == 'quantity' && executedBefore.first is FhirPathQuantity)
-        ? executedBefore
-        : [];
+    final identifierValue = (after.first as IdentifierParser).value;
+    if (((passed['version'] == FhirVersion.r4
+                ? r4.ResourceUtils.resourceTypeFromStringMap.keys
+                    .contains(identifierValue)
+                : passed['version'] == FhirVersion.r5
+                    ? r5.ResourceUtils.resourceTypeFromStringMap.keys
+                        .contains(identifierValue)
+                    : passed['version'] == FhirVersion.dstu2
+                        ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
+                            .contains(identifierValue)
+                        : stu3.ResourceUtils.resourceTypeFromStringMap.keys
+                            .contains(identifierValue)) &&
+            executedBefore.first is Map &&
+            executedBefore.first['resourceType'] == identifierValue) ||
+        (identifierValue.toLowerCase() == 'string' &&
+            (executedBefore.first is String)) ||
+        (identifierValue.toLowerCase() == 'boolean' &&
+            (executedBefore.first is bool ||
+                executedBefore.first is Boolean)) ||
+        (identifierValue.toLowerCase() == 'integer' &&
+            (executedBefore.first is int || executedBefore.first is Integer)) ||
+        (identifierValue.toLowerCase() == 'decimal' &&
+            (executedBefore.first is double ||
+                executedBefore.first is Decimal)) ||
+        (identifierValue.toLowerCase() == 'date' &&
+            executedBefore.first is Date) ||
+        (identifierValue.toLowerCase() == 'datetime' &&
+            (executedBefore.first is DateTime ||
+                executedBefore.first is FhirDateTime)) ||
+        (identifierValue.toLowerCase() == 'time' &&
+            executedBefore.first is Time) ||
+        (identifierValue == 'quantity' &&
+            executedBefore.first is FhirPathQuantity)) {
+      return executedBefore;
+    }
+
+    if (FhirDatatypes.contains(identifierValue)) {
+      final polymorphicString = 'value' + identifierValue;
+      final polymorphicIdentifier = IdentifierParser(polymorphicString);
+      final polymorphicParserList = ParserList([polymorphicIdentifier]);
+      return polymorphicParserList.execute(results.toList(), passed,
+          where: where);
+    }
+    return [];
   }
 }
