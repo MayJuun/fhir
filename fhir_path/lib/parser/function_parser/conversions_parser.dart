@@ -2,6 +2,39 @@ import 'package:fhir/primitive_types/primitive_types.dart';
 
 import '../../fhir_path.dart';
 
+class IifParser extends FunctionParser {
+  IifParser();
+  late ParserList value;
+  List execute(List results, Map passed, {bool where = false}) {
+    var executedValue =
+        value.first.execute(results.toList(), passed, where: where);
+    if (executedValue.length < 2 || executedValue.length > 3) {
+      throw Exception(
+          'The function iif must evaluate to a criterion expression '
+          ' a true-result collection, and an optional other-wise-result'
+          ' but instead evaluated to: $executedValue');
+    } else if (executedValue.first is! bool) {
+      throw Exception(
+          'The function iif requires that its criterion expression evaluates '
+          'to a boolean value, instead it evaluated to: ${executedValue.first}');
+    } else if (executedValue.first) {
+      if (executedValue[1] is List) {
+        return executedValue[1];
+      } else {
+        return [executedValue[1]];
+      }
+    } else if (executedValue.length == 3) {
+      if (executedValue[2] is List) {
+        return executedValue[2];
+      } else {
+        return [executedValue[2]];
+      }
+    } else {
+      return [];
+    }
+  }
+}
+
 class ToBooleanParser extends FhirPathParser {
   ToBooleanParser();
   List execute(List results, Map passed, {bool where = false}) =>
