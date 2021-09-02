@@ -10,18 +10,26 @@ import '../../fhir_path.dart';
 class WhereParser extends FunctionParser {
   WhereParser();
   late ParserList value;
-  List execute(List results, Map passed, {bool where = false}) => value.isEmpty
-      ? results
-      : value.execute(results.toList(), passed, where: true);
+  List execute(List results, Map passed) {
+    final returnList = [];
+    results.forEach((element) {
+      final newResult = value.execute([element], passed);
+      if (newResult.isNotEmpty) {
+        if (!(newResult.length == 1 && newResult.first == false)) {
+          returnList.add(element);
+        }
+      }
+    });
+    return returnList;
+  }
 }
 
 class SelectParser extends ValueParser<ParserList> {
   SelectParser();
   late ParserList value;
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     final finalResults = [];
-    results.forEach(
-        (e) => finalResults.addAll(value.execute([e], passed, where: where)));
+    results.forEach((e) => finalResults.addAll(value.execute([e], passed)));
     return finalResults;
   }
 }
@@ -29,10 +37,10 @@ class SelectParser extends ValueParser<ParserList> {
 class RepeatParser extends ValueParser<ParserList> {
   RepeatParser();
   late ParserList value;
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     var finalResults = [];
     results.forEach((r) {
-      value.execute([r], passed, where: where).forEach((e) {
+      value.execute([r], passed).forEach((e) {
         if (notFoundInList(finalResults, e)) {
           finalResults.add(e);
         }
@@ -43,7 +51,7 @@ class RepeatParser extends ValueParser<ParserList> {
       results = finalResults.toList();
       len = finalResults.length;
       results.forEach((r) {
-        value.execute([r], passed, where: where).forEach((e) {
+        value.execute([r], passed).forEach((e) {
           if (notFoundInList(finalResults, e)) {
             finalResults.add(e);
           }
@@ -57,10 +65,10 @@ class RepeatParser extends ValueParser<ParserList> {
 class OfTypeParser extends ValueParser<ParserList> {
   OfTypeParser();
   late ParserList value;
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     final executedValue = value.length == 1 && value.first is IdentifierParser
         ? [value.first]
-        : value.execute(results.toList(), passed, where: where);
+        : value.execute(results.toList(), passed);
     if (executedValue.length != 1) {
       throw Exception('The "ofType" function requires an argument that '
           'resolves to 1 item but was passed the following:\n'

@@ -4,8 +4,7 @@ import '../../fhir_path.dart';
 /// Returns true if the input collection is empty ({ }) and false otherwise.
 class EmptyParser extends FhirPathParser {
   EmptyParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.isEmpty ? [true] : [false];
+  List execute(List results, Map passed) => results.isEmpty ? [true] : [false];
 }
 
 /// Returns true if the collection has any elements, and false otherwise.
@@ -18,19 +17,28 @@ class EmptyParser extends FhirPathParser {
 class ExistsParser extends FunctionParser {
   ExistsParser();
   late ParserList value;
-  List execute(List results, Map passed, {bool where = false}) {
-    return [value.execute(results, passed, where: true).isNotEmpty];
+  List execute(List results, Map passed) {
+    final returnList = [];
+    results.forEach((element) {
+      final newResult = value.execute([element], passed);
+      if (newResult.isNotEmpty) {
+        if (!(newResult.length == 1 && newResult.first == false)) {
+          returnList.add(element);
+        }
+      }
+    });
+    return [returnList.isNotEmpty];
   }
 }
 
 class AllParser extends ValueParser<ParserList> {
   AllParser();
   late ParserList value;
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     if (results.isEmpty) {
       return [true];
     }
-    final executedValue = value.execute(results.toList(), passed, where: where);
+    final executedValue = value.execute(results.toList(), passed);
     for (var r in executedValue) {
       if (r != true) {
         return [false];
@@ -44,7 +52,7 @@ class AllParser extends ValueParser<ParserList> {
 /// If any items are false, the result is false. If the input is empty ({ }), the result is true.
 class AllTrueParser extends FhirPathParser {
   AllTrueParser();
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     if (results.isEmpty) {
       return [true];
     }
@@ -57,7 +65,7 @@ class AllTrueParser extends FhirPathParser {
 /// If all the items are false, or if the input is empty ({ }), the result is false.
 class AnyTrueParser extends FhirPathParser {
   AnyTrueParser();
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     if (results.isEmpty) {
       return [false];
     }
@@ -70,7 +78,7 @@ class AnyTrueParser extends FhirPathParser {
 /// If any items are true, the result is false. If the input is empty ({ }), the result is true.
 class AllFalseParser extends FhirPathParser {
   AllFalseParser();
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     if (results.isEmpty) {
       return [true];
     }
@@ -83,7 +91,7 @@ class AllFalseParser extends FhirPathParser {
 /// If all the items are true, or if the input is empty ({ }), the result is false.
 class AnyFalseParser extends FhirPathParser {
   AnyFalseParser();
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     if (results.isEmpty) {
       return [false];
     }
@@ -95,12 +103,11 @@ class AnyFalseParser extends FhirPathParser {
 class SubsetOfParser extends ValueParser<ParserList> {
   SubsetOfParser();
   late ParserList value;
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     if (results.isEmpty) {
       return [true];
     } else {
-      final executedValue =
-          value.execute(results.toList(), passed, where: where);
+      final executedValue = value.execute(results.toList(), passed);
       for (var r in results) {
         if (notFoundInList(executedValue, r)) {
           return [false];
@@ -114,12 +121,11 @@ class SubsetOfParser extends ValueParser<ParserList> {
 class SupersetOfParser extends FhirPathParser {
   SupersetOfParser();
   dynamic value;
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     if (results.isEmpty) {
       return [false];
     } else {
-      final executedValue =
-          value.execute(results.toList(), passed, where: where);
+      final executedValue = value.execute(results.toList(), passed);
       for (var v in executedValue) {
         if (notFoundInList(results, v)) {
           return [false];
@@ -132,13 +138,12 @@ class SupersetOfParser extends FhirPathParser {
 
 class CountParser extends FhirPathParser {
   CountParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      [results.length];
+  List execute(List results, Map passed) => [results.length];
 }
 
 class DistinctParser extends FhirPathParser {
   DistinctParser();
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     final resultsList = [];
     for (var r in results) {
       if (notFoundInList(resultsList, r)) {
@@ -151,7 +156,7 @@ class DistinctParser extends FhirPathParser {
 
 class IsDistinctParser extends FhirPathParser {
   IsDistinctParser();
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     final resultsList = [];
     for (var r in results) {
       if (notFoundInList(resultsList, r)) {
