@@ -11,14 +11,14 @@ import '../fhir_path.dart';
 class WhiteSpaceParser extends ValueParser<String> {
   WhiteSpaceParser(this.value);
   String value;
-  List execute(List results, Map passed, {bool where = false}) => results;
+  List execute(List results, Map passed) => results;
 }
 
 /// Boolean Parser, it returns a FHIR Boolean value
 class BooleanParser extends ValueParser<bool> {
   BooleanParser(String newValue) : value = newValue == 'true';
   bool value;
-  List execute(List results, Map passed, {bool where = false}) => [value];
+  List execute(List results, Map passed) => [value];
 }
 
 /// This allows the passing of a variable from the environment into the
@@ -26,12 +26,11 @@ class BooleanParser extends ValueParser<bool> {
 class EnvVariableParser extends ValueParser<String> {
   EnvVariableParser(this.value);
   String value;
-  List execute(List results, Map passed, {bool where = false}) =>
-      passed[value] == null
-          ? []
-          : passed[value] is List
-              ? passed[value]
-              : [passed[value]];
+  List execute(List results, Map passed) => passed[value] == null
+      ? []
+      : passed[value] is List
+          ? passed[value]
+          : [passed[value]];
 }
 
 class QuantityParser extends ValueParser<FhirPathQuantity> {
@@ -40,25 +39,25 @@ class QuantityParser extends ValueParser<FhirPathQuantity> {
     value = FhirPathQuantity(num.parse(stringList.first), stringList.last);
   }
   late FhirPathQuantity value;
-  List execute(List results, Map passed, {bool where = false}) => [value];
+  List execute(List results, Map passed) => [value];
 }
 
 class IntegerParser extends ValueParser<int> {
   IntegerParser(String newValue) : value = int.parse(newValue);
   int value;
-  List execute(List results, Map passed, {bool where = false}) => [value];
+  List execute(List results, Map passed) => [value];
 }
 
 class DecimalParser extends ValueParser<double> {
   DecimalParser(String newValue) : value = double.parse(newValue);
   double value;
-  List execute(List results, Map passed, {bool where = false}) => [value];
+  List execute(List results, Map passed) => [value];
 }
 
 class IdentifierParser extends ValueParser<String> {
   IdentifierParser(this.value);
   String value;
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     final finalResults = [];
     if (passed['version'] == FhirVersion.r4
         ? r4.ResourceUtils.resourceTypeFromStringMap.keys.contains(value)
@@ -107,7 +106,7 @@ class DelimitedIdentifierParser extends ValueParser<String> {
   DelimitedIdentifierParser(String newValue)
       : value = newValue.substring(1, newValue.length - 1);
   String value;
-  List execute(List results, Map passed, {bool where = false}) => [value];
+  List execute(List results, Map passed) => [value];
 }
 
 class StringParser extends ValueParser<String> {
@@ -116,7 +115,7 @@ class StringParser extends ValueParser<String> {
             ? ''
             : newValue.substring(1, newValue.length - 1);
   String value;
-  List execute(List results, Map passed, {bool where = false}) => [value];
+  List execute(List results, Map passed) => [value];
 }
 
 class DateTimeParser extends BaseDateTimeParser<List> {
@@ -155,7 +154,7 @@ class DateTimeParser extends BaseDateTimeParser<List> {
     }
   }
   late List value;
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     if (value.length == 0) {
       return [];
     } else if (value.length == 1) {
@@ -181,7 +180,7 @@ class DateParser extends BaseDateTimeParser<Date> {
     value = Date(valueString.replaceFirst('@', ''));
   }
   late Date value;
-  List execute(List results, Map passed, {bool where = false}) => [value];
+  List execute(List results, Map passed) => [value];
 
   String toString() => value.toString();
 }
@@ -192,7 +191,7 @@ class TimeParser extends BaseDateTimeParser<Time> {
     value = Time(removeAt.replaceFirst('T', ''));
   }
   late Time value;
-  List execute(List results, Map passed, {bool where = false}) => [value];
+  List execute(List results, Map passed) => [value];
 
   String toString() => value.toString();
 }

@@ -3,7 +3,7 @@ import '../../fhir_path.dart';
 
 class ChildrenParser extends FhirPathParser {
   ChildrenParser();
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     final finalResults = [];
     for (var r in results) {
       if (r is Map) {
@@ -43,7 +43,7 @@ class DescendantsParser extends FhirPathParser {
     return descendants;
   }
 
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     final finalResults = [];
     for (var value in results) {
       if (value is List) {

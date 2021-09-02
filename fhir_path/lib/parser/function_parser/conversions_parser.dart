@@ -5,9 +5,8 @@ import '../../fhir_path.dart';
 class IifParser extends FunctionParser {
   IifParser();
   late ParserList value;
-  List execute(List results, Map passed, {bool where = false}) {
-    var executedValue =
-        value.first.execute(results.toList(), passed, where: where);
+  List execute(List results, Map passed) {
+    var executedValue = value.first.execute(results.toList(), passed);
     if (executedValue.length < 2 || executedValue.length > 3) {
       throw Exception(
           'The function iif must evaluate to a criterion expression '
@@ -37,192 +36,176 @@ class IifParser extends FunctionParser {
 
 class ToBooleanParser extends FhirPathParser {
   ToBooleanParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _conversionException('.toBoolean()', results)
-              : _isNotAcceptedType(results)
-                  ? []
-                  : results.first == true ||
-                          results.first == 1 ||
-                          ['true', 't', 'yes', 'y', '1', '1.0'].indexWhere(
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _conversionException('.toBoolean()', results)
+          : _isNotAcceptedType(results)
+              ? []
+              : results.first == true ||
+                      results.first == 1 ||
+                      ['true', 't', 'yes', 'y', '1', '1.0'].indexWhere(
+                              (element) =>
+                                  element ==
+                                  results.first.toString().toLowerCase()) !=
+                          -1
+                  ? [true]
+                  : results.first == false ||
+                          results.first == 0 ||
+                          ['false', 'f', 'no', 'n', '0', '0.0'].indexWhere(
                                   (element) =>
                                       element ==
                                       results.first.toString().toLowerCase()) !=
                               -1
-                      ? [true]
-                      : results.first == false ||
-                              results.first == 0 ||
-                              [
-                                    'false',
-                                    'f',
-                                    'no',
-                                    'n',
-                                    '0',
-                                    '0.0'
-                                  ].indexWhere((element) =>
-                                      element ==
-                                      results.first.toString().toLowerCase()) !=
-                                  -1
-                          ? [false]
-                          : [];
+                      ? [false]
+                      : [];
 }
 
 class ConvertsToBooleanParser extends FhirPathParser {
   ConvertsToBooleanParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _conversionException('.convertsToBoolean()', results)
-              : _isNotAcceptedType(results)
-                  ? [false]
-                  : results.first is bool ||
-                          results.first == 1 ||
-                          results.first == 0 ||
-                          [
-                                'true',
-                                't',
-                                'yes',
-                                'y',
-                                '1',
-                                '1.0',
-                                'false',
-                                'f',
-                                'no',
-                                'n',
-                                '0',
-                                '0.0'
-                              ].indexWhere((element) =>
-                                  element ==
-                                  results.first.toString().toLowerCase()) !=
-                              -1
-                      ? [true]
-                      : [false];
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _conversionException('.convertsToBoolean()', results)
+          : _isNotAcceptedType(results)
+              ? [false]
+              : results.first is bool ||
+                      results.first == 1 ||
+                      results.first == 0 ||
+                      [
+                            'true',
+                            't',
+                            'yes',
+                            'y',
+                            '1',
+                            '1.0',
+                            'false',
+                            'f',
+                            'no',
+                            'n',
+                            '0',
+                            '0.0'
+                          ].indexWhere((element) =>
+                              element ==
+                              results.first.toString().toLowerCase()) !=
+                          -1
+                  ? [true]
+                  : [false];
 }
 
 class ToIntegerParser extends FhirPathParser {
   ToIntegerParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _conversionException('.toInteger()', results)
-              : _isNotAcceptedType(results)
-                  ? [false]
-                  : results.first is bool
-                      ? [results.first == true ? 1 : 0]
-                      : results.first is num
-                          ? [results.first.toInt()]
-                          : int.tryParse(results.first) != null
-                              ? [int.parse(results.first)]
-                              : [];
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _conversionException('.toInteger()', results)
+          : _isNotAcceptedType(results)
+              ? [false]
+              : results.first is bool
+                  ? [results.first == true ? 1 : 0]
+                  : results.first is num
+                      ? [results.first.toInt()]
+                      : int.tryParse(results.first) != null
+                          ? [int.parse(results.first)]
+                          : [];
 }
 
 class ConvertsToIntegerParser extends FhirPathParser {
   ConvertsToIntegerParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _conversionException('.convertsToInteger()', results)
-              : _isNotAcceptedType(results)
-                  ? []
-                  : results.first is bool
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _conversionException('.convertsToInteger()', results)
+          : _isNotAcceptedType(results)
+              ? []
+              : results.first is bool
+                  ? [true]
+                  : results.first is num
                       ? [true]
-                      : results.first is num
+                      : int.tryParse(results.first) != null
                           ? [true]
-                          : int.tryParse(results.first) != null
-                              ? [true]
-                              : [false];
+                          : [false];
 }
 
 class ToDateParser extends FhirPathParser {
   ToDateParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _conversionException('.toDate()', results)
-              : Date(results.first.toString()).isValid
-                  ? [Date(results.first.toString())]
-                  : [];
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _conversionException('.toDate()', results)
+          : Date(results.first.toString()).isValid
+              ? [Date(results.first.toString())]
+              : [];
 }
 
 class ConvertsToDateParser extends FhirPathParser {
   ConvertsToDateParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _conversionException('.convertsToDate()', results)
-              : [Date(results.first.toString()).isValid];
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _conversionException('.convertsToDate()', results)
+          : [Date(results.first.toString()).isValid];
 }
 
 class ToDateTimeParser extends FhirPathParser {
   ToDateTimeParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _conversionException('.toDateTime()', results)
-              : FhirDateTime(results.first.toString()).isValid
-                  ? [FhirDateTime(results.first.toString())]
-                  : [];
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _conversionException('.toDateTime()', results)
+          : FhirDateTime(results.first.toString()).isValid
+              ? [FhirDateTime(results.first.toString())]
+              : [];
 }
 
 class ConvertsToDateTimeParser extends FhirPathParser {
   ConvertsToDateTimeParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _conversionException('.convertsToDateTime()', results)
-              : FhirDateTime(results.first.toString()).isValid
-                  ? [FhirDateTime(results.first.toString()).isValid]
-                  : [];
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _conversionException('.convertsToDateTime()', results)
+          : FhirDateTime(results.first.toString()).isValid
+              ? [FhirDateTime(results.first.toString()).isValid]
+              : [];
 }
 
 class ToDecimalParser extends FhirPathParser {
   ToDecimalParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _conversionException('.toDecimal()', results)
-              : _isNotAcceptedType(results)
-                  ? [false]
-                  : results.first is bool
-                      ? [results.first == true ? 1 : 0]
-                      : results.first is num
-                          ? [results.first.toDouble()]
-                          : double.tryParse(results.first) != null
-                              ? [double.parse(results.first)]
-                              : [];
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _conversionException('.toDecimal()', results)
+          : _isNotAcceptedType(results)
+              ? [false]
+              : results.first is bool
+                  ? [results.first == true ? 1 : 0]
+                  : results.first is num
+                      ? [results.first.toDouble()]
+                      : double.tryParse(results.first) != null
+                          ? [double.parse(results.first)]
+                          : [];
 }
 
 class ConvertsToDecimalParser extends FhirPathParser {
   ConvertsToDecimalParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _conversionException('.convertsToDecimal()', results)
-              : _isNotAcceptedType(results)
-                  ? []
-                  : results.first is bool
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _conversionException('.convertsToDecimal()', results)
+          : _isNotAcceptedType(results)
+              ? []
+              : results.first is bool
+                  ? [true]
+                  : results.first is num
                       ? [true]
-                      : results.first is num
+                      : double.tryParse(results.first) != null
                           ? [true]
-                          : double.tryParse(results.first) != null
-                              ? [true]
-                              : [false];
+                          : [false];
 }
 
 class ToStringParser extends FhirPathParser {
   ToStringParser();
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     return results.length == 0
         ? []
         : results.length > 1
@@ -235,51 +218,48 @@ class ToStringParser extends FhirPathParser {
 
 class ConvertsToStringParser extends FhirPathParser {
   ConvertsToStringParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _conversionException('.convertsToString()', results)
-              : _isAllTypes(results)
-                  ? [false]
-                  : [true];
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _conversionException('.convertsToString()', results)
+          : _isAllTypes(results)
+              ? [false]
+              : [true];
 }
 
 class ToTimeParser extends FhirPathParser {
   ToTimeParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _conversionException('.toTime()', results)
-              : results.first is Time
-                  ? [results.first]
-                  : results.first is String && Time(results.first).isValid
-                      ? [Time(results.first)]
-                      : [];
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _conversionException('.toTime()', results)
+          : results.first is Time
+              ? [results.first]
+              : results.first is String && Time(results.first).isValid
+                  ? [Time(results.first)]
+                  : [];
 }
 
 class ConvertsToTimeParser extends FhirPathParser {
   ConvertsToTimeParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _conversionException('.convertsToTime()', results)
-              : results.first is Time ||
-                      (results.first is String && Time(results.first).isValid)
-                  ? [true]
-                  : [false];
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _conversionException('.convertsToTime()', results)
+          : results.first is Time ||
+                  (results.first is String && Time(results.first).isValid)
+              ? [true]
+              : [false];
 }
 
 class ToQuantityParser extends FhirPathParser {
   ToQuantityParser();
-  List execute(List results, Map passed, {bool where = false}) => [];
+  List execute(List results, Map passed) => [];
 }
 
 class ConvertsToQuantityParser extends FhirPathParser {
   ConvertsToQuantityParser();
-  List execute(List results, Map passed, {bool where = false}) => [];
+  List execute(List results, Map passed) => [];
 }
 
 bool _isNotAcceptedType(List results) =>

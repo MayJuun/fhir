@@ -2,14 +2,14 @@ import 'package:fhir_path/fhir_path.dart';
 
 /// FhirPathParser: base parser
 abstract class FhirPathParser {
-  List execute(List results, Map passed, {bool where = false}) => [];
+  List execute(List results, Map passed) => [];
 }
 
 /// ValueParser: basic parser that holds a value
 abstract class ValueParser<T> extends FhirPathParser {
   ValueParser();
   late T value;
-  List execute(List results, Map passed, {bool where = false});
+  List execute(List results, Map passed);
   String toString();
 }
 
@@ -18,7 +18,7 @@ abstract class OperatorParser extends FhirPathParser {
   OperatorParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed, {bool where = false});
+  List execute(List results, Map passed);
   String toString();
   bool operator ==(Object o);
 }
@@ -29,7 +29,7 @@ class ParserList extends FhirPathParser {
   List<FhirPathParser> value;
   String toString() => 'ParserList: ${value.map((e) => e.toString())}';
 
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     void addToList(List toAdd) => results
       ..clear()
       ..addAll(toAdd);
@@ -39,17 +39,17 @@ class ParserList extends FhirPathParser {
         if (v is ThisParser) {
           final tempResults = [];
           for (var r in results) {
-            tempResults.addAll(v.execute([r], passed, where: where).toList());
+            tempResults.addAll(v.execute([r], passed).toList());
           }
           addToList(tempResults);
         } else if (v is IndexParser) {
           final tempResults = [];
           for (var i = 0; i < results.length; i++) {
-            tempResults.addAll(v.execute([i], passed, where: where).toList());
+            tempResults.addAll(v.execute([i], passed).toList());
           }
           addToList(tempResults);
         } else {
-          addToList(v.execute(results, passed, where: where).toList());
+          addToList(v.execute(results, passed).toList());
         }
       }
     });

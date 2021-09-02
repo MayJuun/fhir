@@ -10,12 +10,11 @@ class IsParser extends OperatorParser {
   IsParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed, {bool where = false}) {
-    final executedBefore =
-        before.execute(results.toList(), passed, where: where);
+  List execute(List results, Map passed) {
+    final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.length == 1 && after.first is IdentifierParser
         ? [(after.first as IdentifierParser).value]
-        : after.execute(results.toList(), passed, where: where);
+        : after.execute(results.toList(), passed);
     return executedBefore.isEmpty ||
             executedBefore.length != 1 ||
             executedAfter.isEmpty ||
@@ -77,9 +76,8 @@ class AsParser extends OperatorParser {
   AsParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed, {bool where = false}) {
-    final executedBefore =
-        before.execute(results.toList(), passed, where: where);
+  List execute(List results, Map passed) {
+    final executedBefore = before.execute(results.toList(), passed);
     if (executedBefore.length != 1) {
       throw Exception('The "as" operation requires a left operand with 1 item, '
           'but was passed the following\n'
@@ -129,8 +127,7 @@ class AsParser extends OperatorParser {
       final polymorphicString = 'value' + identifierValue;
       final polymorphicIdentifier = IdentifierParser(polymorphicString);
       final polymorphicParserList = ParserList([polymorphicIdentifier]);
-      return polymorphicParserList.execute(results.toList(), passed,
-          where: where);
+      return polymorphicParserList.execute(results.toList(), passed);
     }
     return [];
   }

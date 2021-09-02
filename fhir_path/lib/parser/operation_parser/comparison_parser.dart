@@ -6,7 +6,7 @@ class GreaterParser extends OperatorParser {
   GreaterParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed, {bool where = false}) =>
+  List execute(List results, Map passed) =>
       executeComparisons(results, before, after, passed, Comparator.gt);
 }
 
@@ -14,7 +14,7 @@ class LessParser extends OperatorParser {
   LessParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed, {bool where = false}) =>
+  List execute(List results, Map passed) =>
       executeComparisons(results, before, after, passed, Comparator.lt);
 }
 
@@ -22,7 +22,7 @@ class GreaterEqualParser extends OperatorParser {
   GreaterEqualParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed, {bool where = false}) {
+  List execute(List results, Map passed) {
     return executeComparisons(results, before, after, passed, Comparator.gte);
   }
 }
@@ -31,7 +31,7 @@ class LessEqualParser extends OperatorParser {
   LessEqualParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed, {bool where = false}) =>
+  List execute(List results, Map passed) =>
       executeComparisons(results, before, after, passed, Comparator.lte);
 }
 
@@ -81,8 +81,8 @@ List executeComparisons(List results, ParserList before, ParserList after,
     }
   }
 
-  final executedBefore = before.execute(results.toList(), passed, where: where);
-  final executedAfter = after.execute(results.toList(), passed, where: where);
+  final executedBefore = before.execute(results.toList(), passed);
+  final executedAfter = after.execute(results.toList(), passed);
   if (executedBefore.isEmpty || executedAfter.isEmpty) {
     return [];
   } else {

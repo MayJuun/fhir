@@ -3,23 +3,65 @@ import 'package:fhir_path/fhir_path.dart';
 import 'package:fhir_path/run_fhir_path.dart';
 
 void main() {
-  print(walkFhirPath(resource.toJson(), r'0.aggregate(1 + $total, 0)'));
-  // JsonEncoder encoder = new JsonEncoder.withIndent('  ');
-  // String prettyprint = encoder.convert(resource.toJson());
-  // print(prettyprint);
-  // print(walkFhirPath(resource, r'Patient.name.exists($this)'));
-  // print(walkFhirPath(resource, r'Patient.name.where($this)'));
-  // print(walkFhirPath(resource, r'Patient.name.given.where($this)'));
-
-  final response = QuestionnaireResponse.fromJson(questionnaireResponse);
   print(walkFhirPath(
-      response.toJson(),
-      "(QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.valueDecimal + "
-      "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.valueDecimal+ "
-      "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.valueDecimal) < 12"));
-  print(walkFhirPath(response.toJson(),
-      r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"));
+    newResponse.toJson(),
+    r"%resource.repeat(item).where(answer.exists())",
+  ));
 }
+
+final newResponse = QuestionnaireResponse.fromJson({
+  "resourceType": "QuestionnaireResponse",
+  "item": [
+    {"linkId": "/psc/preschool"},
+    {
+      "linkId": "/psc/preschool/irritability/nervous",
+      "answer": [
+        {
+          "valueCoding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "valueDecimal": 1
+              }
+            ],
+            "code": "Somewhat",
+            "display": "Somewhat"
+          }
+        }
+      ]
+    },
+    {"linkId": "/psc/preschool/irritability/sad"},
+    {"linkId": "/psc/preschool/irritability/upset"},
+    {"linkId": "/psc/preschool/irritability/change"},
+    {"linkId": "/psc/preschool/irritability/trouble_playing"},
+    {"linkId": "/psc/preschool/irritability/break_things"},
+    {"linkId": "/psc/preschool/inflexibility/irritability/fights"},
+    {"linkId": "/psc/preschool/inflexibility/irritability/attention"},
+    {"linkId": "/psc/preschool/inflexibility/irritability/calming_down"},
+    {"linkId": "/psc/preschool/irritability/one_activity"},
+    {"linkId": "/psc/preschool/subscore_irritability"},
+    {"linkId": "/psc/preschool/inflexibility/aggressive"},
+    {"linkId": "/psc/preschool/routines/inflexibility/fidgety"},
+    {"linkId": "/psc/preschool/routines/inflexibility/angry"}
+  ]
+});
+
+// print(walkFhirPath(resource.toJson(), r'0.aggregate(1 + $total, 0)'));
+// // JsonEncoder encoder = new JsonEncoder.withIndent('  ');
+// // String prettyprint = encoder.convert(resource.toJson());
+// // print(prettyprint);
+// // print(walkFhirPath(resource, r'Patient.name.exists($this)'));
+// // print(walkFhirPath(resource, r'Patient.name.where($this)'));
+// // print(walkFhirPath(resource, r'Patient.name.given.where($this)'));
+
+// final response = QuestionnaireResponse.fromJson(questionnaireResponse);
+// print(walkFhirPath(
+//     response.toJson(),
+//     "(QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.valueDecimal + "
+//     "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.valueDecimal+ "
+//     "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.valueDecimal) < 12"));
+// print(walkFhirPath(response.toJson(),
+//     r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"));
 
 final extPatient = Patient.fromJson({
   "resourceType": "Patient",

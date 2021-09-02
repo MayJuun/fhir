@@ -4,75 +4,70 @@ import '../../fhir_path.dart';
 
 class AbsParser extends FhirPathParser {
   AbsParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _wrongLength('.abs()', results)
-              : results.first is num
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _wrongLength('.abs()', results)
+          : results.first is num
+              ? results.first.abs().isNaN
+                  ? []
+                  : [results.first.abs()]
+              : results.first is FhirPathQuantity
                   ? results.first.abs().isNaN
                       ? []
                       : [results.first.abs()]
-                  : results.first is FhirPathQuantity
-                      ? results.first.abs().isNaN
-                          ? []
-                          : [results.first.abs()]
-                      : throw _wrongTypes('.abs()', results, 'none');
+                  : throw _wrongTypes('.abs()', results, 'none');
 }
 
 class CeilingParser extends FhirPathParser {
   CeilingParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _wrongLength('.ceiling()', results)
-              : results.first is num
-                  ? [results.first.ceil()]
-                  : throw _wrongTypes('.ceiling()', results, 'none');
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _wrongLength('.ceiling()', results)
+          : results.first is num
+              ? [results.first.ceil()]
+              : throw _wrongTypes('.ceiling()', results, 'none');
 }
 
 class ExpParser extends FhirPathParser {
   ExpParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _wrongLength('.exp()', results)
-              : results.first is num
-                  ? [exp(results.first)]
-                  : throw _wrongTypes('.exp()', results, 'none');
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _wrongLength('.exp()', results)
+          : results.first is num
+              ? [exp(results.first)]
+              : throw _wrongTypes('.exp()', results, 'none');
 }
 
 class FloorParser extends FhirPathParser {
   FloorParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _wrongLength('.floor()', results)
-              : results.first is num
-                  ? [results.first.floor()]
-                  : throw _wrongTypes('.floor()', results, 'none');
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _wrongLength('.floor()', results)
+          : results.first is num
+              ? [results.first.floor()]
+              : throw _wrongTypes('.floor()', results, 'none');
 }
 
 class LnParser extends FhirPathParser {
   LnParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _wrongLength('.ln()', results)
-              : results.first is num
-                  ? [log(results.first)]
-                  : throw _wrongTypes('.ln()', results, 'none');
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _wrongLength('.ln()', results)
+          : results.first is num
+              ? [log(results.first)]
+              : throw _wrongTypes('.ln()', results, 'none');
 }
 
 class LogParser extends ValueParser<ParserList> {
   LogParser();
   late ParserList value;
-  List execute(List results, Map passed, {bool where = false}) {
-    final executedValue = value.execute(results.toList(), passed, where: where);
+  List execute(List results, Map passed) {
+    final executedValue = value.execute(results.toList(), passed);
     return results.length == 0
         ? []
         : results.length > 1
@@ -88,8 +83,8 @@ class LogParser extends ValueParser<ParserList> {
 class PowerParser extends ValueParser<ParserList> {
   PowerParser();
   late ParserList value;
-  List execute(List results, Map passed, {bool where = false}) {
-    final executedValue = value.execute(results.toList(), passed, where: where);
+  List execute(List results, Map passed) {
+    final executedValue = value.execute(results.toList(), passed);
     if (results.length == 0 || executedValue.length == 0) {
       return [];
     } else if (results.length > 1) {
@@ -112,8 +107,8 @@ class PowerParser extends ValueParser<ParserList> {
 class RoundParser extends ValueParser<ParserList> {
   RoundParser();
   late ParserList value;
-  List execute(List results, Map passed, {bool where = false}) {
-    final executedValue = value.execute(results.toList(), passed, where: where);
+  List execute(List results, Map passed) {
+    final executedValue = value.execute(results.toList(), passed);
     return results.length == 0
         ? []
         : results.length > 1
@@ -131,27 +126,25 @@ class RoundParser extends ValueParser<ParserList> {
 
 class SqrtParser extends FhirPathParser {
   SqrtParser();
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _wrongLength('.sqrt()', results)
-              : results.first is num
-                  ? [sqrt(results.first)]
-                  : throw _wrongTypes('.sqrt()', results, 'none');
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _wrongLength('.sqrt()', results)
+          : results.first is num
+              ? [sqrt(results.first)]
+              : throw _wrongTypes('.sqrt()', results, 'none');
 }
 
 class TruncateParser extends ValueParser {
   TruncateParser();
   dynamic value;
-  List execute(List results, Map passed, {bool where = false}) =>
-      results.length == 0
-          ? []
-          : results.length > 1
-              ? throw _wrongLength('.truncate()', results)
-              : results.first is num
-                  ? [(results.first).toInt()]
-                  : throw _wrongTypes('.truncate()', results, 'none');
+  List execute(List results, Map passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _wrongLength('.truncate()', results)
+          : results.first is num
+              ? [(results.first).toInt()]
+              : throw _wrongTypes('.truncate()', results, 'none');
 }
 
 Exception _wrongLength(String functionName, List results) =>
