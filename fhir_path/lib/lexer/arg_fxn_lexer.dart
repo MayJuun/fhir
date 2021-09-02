@@ -104,3 +104,6 @@ final Parser<TraceParser> traceLexer =
 final Parser<AggregateParser> aggregateLexer =
     (string('aggregate(') | string('.aggregate('))
         .map((_) => AggregateParser());
+
+final Parser<IifParser> iifLexer =
+    (string('iif(') | string('.iif(')).map((_) => IifParser());

@@ -6,80 +6,127 @@ dynamic walkPath(dynamic arg) =>
     walkFhirPath(resource.toJson(), arg).toString();
 
 void testQuestionnaire() {
-  group('Questionnaire Logic', () {
-    final response = QuestionnaireResponse.fromJson(questionnaireResponse);
-    test('Partial Score', () {
-      expect(
-          walkFhirPath(
-              response.toJson(),
-              "QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.valueDecimal + "
-              "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.valueDecimal+ "
-              "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.valueDecimal"),
-          [13]);
-      expect(
-          walkFhirPath(
-              response.toJson(),
-              "(QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.valueDecimal + "
-              "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.valueDecimal+ "
-              "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.valueDecimal) < 12"),
-          [false]);
-    });
-    test('Total Score Aggregate', () {
-      expect(
-          walkFhirPath(response.toJson(),
-              r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"),
-          [13]);
-    });
-  });
-  group('Faiadashu', () {
-    test('EnableWhen with specific polymorphic items', () {
-      expect(
-          walkFhirPath(
-              faiadashuResponse.toJson(),
-              "%resource.repeat(item).where(linkId='4.2.b.1').answer.valueCoding.code "
-              "="
-              "'female' "
-              "and"
-              " today().toString().substring(0, 4).toInteger() "
-              "-"
-              " %resource.repeat(item).where(linkId='4.2.b.5').answer.valueDate.toString().substring(0, 4).toInteger() "
-              ">="
-              " 40"),
-          [false]);
-    });
-    test('EnableWhen using generic value polymorphic type', () {
-      expect(
-          walkFhirPath(
-              faiadashuResponse.toJson(),
-              "%resource.repeat(item).where(linkId='4.2.b.1').answer.value.code "
-              "="
-              "'female' "
-              "and"
-              " today().toString().substring(0, 4).toInteger() "
-              "-"
-              " %resource.repeat(item).where(linkId='4.2.b.5').answer.value.toString().substring(0, 4).toInteger() "
-              ">="
-              " 40"),
-          [false]);
-    });
-    test('EnableWhen using a defined polymorphic type', () {
-      expect(
-          walkFhirPath(
-            faiadashuResponse.toJson(),
-            "%resource.repeat(item).where(linkId='4.2.b.1').answer.(value as Coding).code "
-            "="
-            "'female' "
-            "and"
-            " today().toString().substring(0, 4).toInteger() "
-            "-"
-            " %resource.repeat(item).where(linkId='4.2.b.5').answer.(value as Date).toString().substring(0, 4).toInteger() "
-            ">="
-            " 40",
-          ),
-          [false]);
+  // group('Questionnaire Logic', () {
+  //   final response = QuestionnaireResponse.fromJson(questionnaireResponse);
+  //   test('Partial Score', () {
+  //     expect(
+  //         walkFhirPath(
+  //             response.toJson(),
+  //             "QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.valueDecimal + "
+  //             "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.valueDecimal+ "
+  //             "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.valueDecimal"),
+  //         [13]);
+  //     expect(
+  //         walkFhirPath(
+  //             response.toJson(),
+  //             "(QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.valueDecimal + "
+  //             "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.valueDecimal+ "
+  //             "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.valueDecimal) < 12"),
+  //         [false]);
+  //   });
+  //   test('Total Score Aggregate', () {
+  //     expect(
+  //         walkFhirPath(response.toJson(),
+  //             r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"),
+  //         [13]);
+  //   });
+  // });
+  // group('Faiadashu', () {
+  //   test('EnableWhen with specific polymorphic items', () {
+  //     expect(
+  //         walkFhirPath(
+  //             faiadashuResponse.toJson(),
+  //             "%resource.repeat(item).where(linkId='4.2.b.1').answer.valueCoding.code "
+  //             "="
+  //             "'female' "
+  //             "and"
+  //             " today().toString().substring(0, 4).toInteger() "
+  //             "-"
+  //             " %resource.repeat(item).where(linkId='4.2.b.5').answer.valueDate.toString().substring(0, 4).toInteger() "
+  //             ">="
+  //             " 40"),
+  //         [false]);
+  //   });
+  //   test('EnableWhen using generic value polymorphic type', () {
+  //     expect(
+  //         walkFhirPath(
+  //             faiadashuResponse.toJson(),
+  //             "%resource.repeat(item).where(linkId='4.2.b.1').answer.value.code "
+  //             "="
+  //             "'female' "
+  //             "and"
+  //             " today().toString().substring(0, 4).toInteger() "
+  //             "-"
+  //             " %resource.repeat(item).where(linkId='4.2.b.5').answer.value.toString().substring(0, 4).toInteger() "
+  //             ">="
+  //             " 40"),
+  //         [false]);
+  //   });
+  //   test('EnableWhen using a defined polymorphic type', () {
+  //     expect(
+  //         walkFhirPath(
+  //           faiadashuResponse.toJson(),
+  //           "%resource.repeat(item).where(linkId='4.2.b.1').answer.(value as Coding).code "
+  //           "="
+  //           "'female' "
+  //           "and"
+  //           " today().toString().substring(0, 4).toInteger() "
+  //           "-"
+  //           " %resource.repeat(item).where(linkId='4.2.b.5').answer.(value as Date).toString().substring(0, 4).toInteger() "
+  //           ">="
+  //           " 40",
+  //         ),
+  //         [false]);
+  //   });
+  // });
+  group('More Complicated Responses', () {
+    test('Contains on more than one item', () {
+      print(walkFhirPath(newResponse.toJson(),
+          "%resource.item.where(linkId.contains('/psc/preschool/irritability'))"));
+      // expect(
+      //     walkFhirPath(newResponse.toJson(),
+      //         "%resource.item.where(linkId.contains('/psc/preschool/irritability'))"),
+      //     [false]);
     });
   });
 }
+
+final newResponse = QuestionnaireResponse.fromJson({
+  "resourceType": "QuestionnaireResponse",
+  "item": [
+    {"linkId": "/psc/preschool"},
+    {
+      "linkId": "/psc/preschool/irritability/nervous",
+      "answer": [
+        {
+          "valueCoding": {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+                "valueDecimal": 1
+              }
+            ],
+            "code": "Somewhat",
+            "display": "Somewhat"
+          }
+        }
+      ]
+    },
+    {"linkId": "/psc/preschool/irritability/sad"},
+    {"linkId": "/psc/preschool/irritability/upset"},
+    {"linkId": "/psc/preschool/irritability/change"},
+    {"linkId": "/psc/preschool/irritability/trouble_playing"},
+    {"linkId": "/psc/preschool/irritability/break_things"},
+    {"linkId": "/psc/preschool/inflexibility/irritability/fights"},
+    {"linkId": "/psc/preschool/inflexibility/irritability/attention"},
+    {"linkId": "/psc/preschool/inflexibility/irritability/calming_down"},
+    {"linkId": "/psc/preschool/irritability/one_activity"},
+    {"linkId": "/psc/preschool/subscore_irritability"},
+    {"linkId": "/psc/preschool/inflexibility/aggressive"},
+    {"linkId": "/psc/preschool/routines/inflexibility/fidgety"},
+    {"linkId": "/psc/preschool/routines/inflexibility/angry"}
+  ]
+});
 
 final faiadashuResponse = QuestionnaireResponse.fromJson({
   "resourceType": "QuestionnaireResponse",

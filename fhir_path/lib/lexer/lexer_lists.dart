@@ -69,7 +69,8 @@ final functionLexer = unionFunctionLexer |
     intersectLexer |
     excludeLexer |
     traceLexer |
-    aggregateLexer;
+    aggregateLexer |
+    iifLexer;
 
 final wsLexer = whiteSpaceLexer | lineCommentLexer | multiLineCommentLexer;
 
