@@ -1,3 +1,6 @@
+## [0.5.0-4]
+* For polymorphic items, it was allowing searches with only parts of identifiers, now fixed, so only works with "value" polymorphic items
+
 ## [0.5.0-3]
 * Refactored how I managed 'where' & 'exists'
 * Now allows 'contains' on list.length > 1 (this is contrary to the official spec)

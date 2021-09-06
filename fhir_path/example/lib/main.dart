@@ -56,32 +56,20 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Column(
-          children: <Widget>[
-            Row(
-              children: [
-                ElevatedButton(
-                    child: const Text('Press to test\nexpression',
-                        style: TextStyle(fontSize: 22)),
-                    onPressed: () => _runPath()),
-                SizedBox(width: 10),
-                Expanded(
-                  child: TextFormField(
+        child: Row(
+          children: [
+            SizedBox(
+              width: MediaQuery.of(context).size.width * 0.5,
+              child: Column(
+                children: [
+                  TextFormField(
                     controller: path,
                     decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         hintText: 'Enter FHIRPath expression'),
+                    onChanged: (_) => _runPath(),
                   ),
-                ),
-              ],
-            ),
-            SizedBox(height: 10),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Container(
-                  width: MediaQuery.of(context).size.width * 0.65,
-                  child: TextFormField(
+                  TextFormField(
                     maxLines: numLines,
                     controller: resource,
                     decoration: InputDecoration(
@@ -89,34 +77,39 @@ class _MyHomePageState extends State<MyHomePage> {
                       hintText:
                           'Enter JSON FHIR Resource Here' + ('\n' * numLines),
                     ),
+                    onChanged: (_) => _runPath(),
                   ),
+                ],
+              ),
+            ),
+            SizedBox(width: 20),
+            Column(
+              children: [
+                Link(
+                  uri: Uri.parse('https://hl7.github.io/fhirpath.js/'),
+                  target: LinkTarget.blank,
+                  builder: (ctx, openLink) {
+                    return TextButton.icon(
+                      onPressed: openLink,
+                      label: Text(
+                          'Completely Inspired By: https://hl7.github.io/fhirpath.js/'),
+                      icon: Icon(Icons.read_more),
+                    );
+                  },
                 ),
-                SizedBox(width: 10),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.3,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      Link(
-                        uri: Uri.parse('https://hl7.github.io/fhirpath.js/'),
-                        target: LinkTarget.blank,
-                        builder: (ctx, openLink) {
-                          return TextButton.icon(
-                            onPressed: openLink,
-                            label: Text(
-                                'Completely Inspired By: https://hl7.github.io/fhirpath.js/'),
-                            icon: Icon(Icons.read_more),
-                          );
-                        },
-                      ),
-                      SizedBox(height: 30),
-                      Text('Results', style: TextStyle(fontSize: 22)),
-                      Text(
+                SizedBox(height: 10),
+                Text('Results', style: TextStyle(fontSize: 22)),
+                SizedBox(height: 10),
+                Expanded(
+                  child: SingleChildScrollView(
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.3,
+                      child: Text(
                         displayString,
                         textAlign: TextAlign.start,
                         style: TextStyle(fontSize: 17),
                       ),
-                    ],
+                    ),
                   ),
                 ),
               ],

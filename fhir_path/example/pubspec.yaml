@@ -1,7 +1,6 @@
 name: example
 description: A new Flutter project.
 publish_to: "none"
-version: 1.0.0+1
 
 environment:
   sdk: ">=2.13.0 <3.0.0"
@@ -12,7 +11,7 @@ dependencies:
   fhir: ^0.5.0-1
   fhir_path:
     path: ../../fhir_path
-  url_launcher: ^6.0.9
+  url_launcher: ^6.0.10
 
 dependency_overrides:
   meta: ^1.4.0
