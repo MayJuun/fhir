@@ -18,12 +18,12 @@ List walkFhirPath(
   FhirVersion version = FhirVersion.r4,
 ]) {
   passed ??= {};
-  passed['%resource'] = resource;
+  passed['%resource'] = resource ?? [];
   passed['version'] = version;
   final ast = lexer().parse(pathExpression).value;
-  return resource == null || (ast is ParserList && ast.isEmpty)
+  return (ast is ParserList && ast.isEmpty)
       ? []
-      : ast.execute([resource], passed);
+      : ast.execute(resource == null ? [] : [resource], passed);
 }
 
 List r4WalkFhirPath(

@@ -5,7 +5,7 @@ import 'package:fhir_path/run_fhir_path.dart';
 void main() {
   print(walkFhirPath(
     newResponse.toJson(),
-    r"%resource.repeat(item).where(answer.exists())",
+    "today()",
   ));
 }
 
