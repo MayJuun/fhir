@@ -23,11 +23,29 @@ void testQuestionnaire() {
               "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.valueDecimal+ "
               "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.valueDecimal) < 12"),
           [false]);
+      expect(
+          walkFhirPath(
+              response.toJson(),
+              "QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.value + "
+              "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.value + "
+              "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.value"),
+          [13]);
+      expect(
+          walkFhirPath(
+              response.toJson(),
+              "(QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.value + "
+              "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.value + "
+              "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.value) < 12"),
+          [false]);
     });
     test('Total Score Aggregate', () {
       expect(
           walkFhirPath(response.toJson(),
               r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"),
+          [13]);
+      expect(
+          walkFhirPath(response.toJson(),
+              r"QuestionnaireResponse.item.answer.valueCoding.extension.value.aggregate($this + $total, 0)"),
           [13]);
     });
   });
@@ -93,6 +111,10 @@ void testQuestionnaire() {
       expect(
           walkFhirPath(newResponse.toJson(),
               r"item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"),
+          [2]);
+      expect(
+          walkFhirPath(newResponse.toJson(),
+              r"item.answer.valueCoding.extension.value.aggregate($this + $total, 0)"),
           [2]);
     });
   });
