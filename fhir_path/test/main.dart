@@ -3,11 +3,20 @@ import 'package:fhir_path/fhir_path.dart';
 import 'package:fhir_path/run_fhir_path.dart';
 
 void main() {
-  print(walkFhirPath(
-    newResponse.toJson(),
-    "today()",
-  ));
+  print(
+    walkFhirPath(
+      newResponse.toJson(),
+      "%relatedPerson.name[0].family + ', ' + %relatedPerson.name[0].given.aggregate(\$total + ' ' + \$this, '')",
+      {'%patient': resource.toJson(), '%relatedPerson': relatedPerson.toJson()},
+    ),
+  );
 }
+
+final relatedPerson =
+    RelatedPerson(patient: Reference(reference: 'Patient/testPatient'), name: [
+  HumanName(
+      family: 'Faulkenberry', given: ['William', 'Laurie', 'Beverly', 'Miller'])
+]);
 
 final newResponse = QuestionnaireResponse.fromJson({
   "resourceType": "QuestionnaireResponse",
