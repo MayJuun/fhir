@@ -1,3 +1,7 @@
+## [0.5.0-5]
+* Fine, all polymorphic items work
+* Added full list of polymorphic prefixes (current list for R4)
+
 ## [0.5.0-4]
 * For polymorphic items, it was allowing searches with only parts of identifiers, now fixed, so only works with "value" polymorphic items
 
