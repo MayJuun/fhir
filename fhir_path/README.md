@@ -49,7 +49,6 @@ The passed resource WILL be added to this map as `'%resource'`, so you don't nee
 - Non-escape sequences
 - Quantities, toQuantity, convertsToQuantity
 - trace
-- iff
 - date/time arithmetic
 - Reflection
 - Complicated, nested tests

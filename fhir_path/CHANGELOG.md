@@ -1,3 +1,7 @@
+## [0.5.0-6]
+* Easier ability to create simple server for testing
+* Iif now included (previously included too, but now removed from the Readme ToDo list)
+
 ## [0.5.0-5]
 * Fine, all polymorphic items work
 * Added full list of polymorphic prefixes (current list for R4)
