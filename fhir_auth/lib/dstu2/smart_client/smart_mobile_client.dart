@@ -2,8 +2,8 @@ import 'dart:convert';
 // import 'dart:math';
 
 import 'package:collection/collection.dart';
-import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/dstu2.dart';
+import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:http/http.dart';
 import 'package:oauth2_client/oauth2_client.dart';
 import 'package:oauth2_client/oauth2_helper.dart';
@@ -153,8 +153,7 @@ class SmartMobileClient extends SmartClient {
         ?.extension_
         ?.firstWhereOrNull((_) => true)
         ?.extension_
-        ?.firstWhereOrNull(
-            (ext) => (ext.url == null ? null : ext.url.toString()) == type)
+        ?.firstWhereOrNull((ext) => ext.url.toString() == type)
         ?.valueUri;
   }
 

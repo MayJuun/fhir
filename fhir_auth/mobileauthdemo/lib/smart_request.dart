@@ -13,10 +13,13 @@ Future smartRequest() async {
     scopes: Api.scopes.scopesList(),
   );
 
+  print(client.runtimeType);
+
   try {
     await client.initialize();
-  } catch (e) {
-    print(e);
+  } catch (e, stack) {
+    print('Error $e');
+    print('Stack $stack');
   }
 
   if (client.fhirUri?.value != null) {

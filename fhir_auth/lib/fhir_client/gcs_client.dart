@@ -13,7 +13,6 @@ class GcsClient extends FhirClient {
         'openid',
         'profile',
         'email',
-        'user/*.*',
         'https://www.googleapis.com/auth/cloud-platform',
       ]}) {
     _googleSignIn = GoogleSignIn(
@@ -31,6 +30,11 @@ class GcsClient extends FhirClient {
   FhirUri? fhirUri;
   @override
   List<String> scopes;
+
+  @override
+  Future<void> initialize() async => await _googleSignIn.signIn();
+
+  Future<bool> isSignedIn() async => await _googleSignIn.isSignedIn();
 
   Future<Map<String, String>> newHeaders(Map<String, String>? headers) async {
     if (headers == null) {

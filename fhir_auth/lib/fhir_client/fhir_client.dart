@@ -7,6 +7,8 @@ abstract class FhirClient {
   FhirUri? fhirUri;
   List<String> scopes = ['openid', 'profile', 'email', 'user/*.*'];
 
+  Future<void> initialize();
+
   Future<Response?> get(String url, {Map<String, String>? headers});
 
   Future<Response?> put(String url,

@@ -75,7 +75,7 @@ class SmartWebClient extends SmartClient {
               .split('?')[0]
               .split('&')[0];
           if (authorizationCode != null) {
-            _popupWin.close();
+            _popupWin?.close();
             if (tokenUrl!.isValid) {
               final response = await http.post(
                 tokenUrl!.value!,

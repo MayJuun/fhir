@@ -4,7 +4,7 @@ import 'dart:convert';
 import 'package:collection/collection.dart';
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart';
-import 'package:http/http.dart';
+import 'package:http/http.dart' as http;
 import 'package:oauth2_client/oauth2_client.dart';
 import 'package:oauth2_client/oauth2_helper.dart';
 
@@ -72,25 +72,27 @@ class SmartMobileClient extends SmartClient {
   }
 
   @override
-  Future<Response?> get(String url, {Map<String, String>? headers}) async =>
+  Future<http.Response?> get(String url,
+          {Map<String, String>? headers}) async =>
       helper?.get(url, headers: headers);
 
   @override
-  Future<Response?> put(String url,
+  Future<http.Response?> put(String url,
           {Map<String, String>? headers, dynamic body}) async =>
       helper?.put(url, headers: headers, body: body);
 
   @override
-  Future<Response?> post(String url,
+  Future<http.Response?> post(String url,
           {Map<String, String>? headers, dynamic body}) async =>
       helper?.post(url, headers: headers, body: body);
 
   @override
-  Future<Response?> delete(String url, {Map<String, String>? headers}) async =>
+  Future<http.Response?> delete(String url,
+          {Map<String, String>? headers}) async =>
       helper?.delete(url, headers: headers);
 
   @override
-  Future<Response?> patch(String url,
+  Future<http.Response?> patch(String url,
           {Map<String, String>? headers, dynamic body}) async =>
       helper?.patch(url, headers: headers, body: body);
 
@@ -102,18 +104,23 @@ class SmartMobileClient extends SmartClient {
     }
     var thisRequest = '$fhirUri/metadata?mode=full&_format=json';
 
-    var result = await get(thisRequest);
+    print(thisRequest);
 
-    if (_errorCodeMap.containsKey(result?.statusCode ?? false)) {
-      if (result!.statusCode == 422) {
+    var result = await http.get(Uri.parse(thisRequest));
+
+    print(result.body);
+    print(result.headers);
+
+    if (_errorCodeMap.containsKey(result.statusCode)) {
+      if (result.statusCode == 422) {
         thisRequest = thisRequest.replaceFirst(
           '_format=json',
           '_format=application/json',
         );
-        result = await get(thisRequest);
+        result = await http.get(Uri.parse(thisRequest));
       }
-      if (_errorCodeMap.containsKey(result?.statusCode ?? false)) {
-        throw Exception('StatusCode: ${result!.statusCode}\n${result.body}');
+      if (_errorCodeMap.containsKey(result.statusCode)) {
+        throw Exception('StatusCode: ${result.statusCode}\n${result.body}');
       }
     }
     Map<String, dynamic> returnResult;
@@ -121,11 +128,10 @@ class SmartMobileClient extends SmartClient {
     /// because I can't figure out why aidbox only has strings not lists for
     /// the referencePolicy field
     if (thisRequest.contains('aidbox')) {
-      returnResult = jsonDecode(result?.body.replaceAll(
-              '"referencePolicy":"local"', '"referencePolicy":["local"]') ??
-          '');
+      returnResult = jsonDecode(result.body.replaceAll(
+          '"referencePolicy":"local"', '"referencePolicy":["local"]'));
     } else {
-      returnResult = jsonDecode(result?.body ?? '');
+      returnResult = jsonDecode(result.body);
     }
 
     final CapabilityStatement capabilityStatement =

@@ -8,6 +8,9 @@ class InsecureFhirClient extends FhirClient {
       http.get(Uri.parse(url), headers: headers);
 
   @override
+  Future<void> initialize() async {}
+
+  @override
   Future<http.Response?> put(String url,
           {Map<String, String>? headers, dynamic body}) =>
       http.put(Uri.parse(url), headers: headers, body: body);

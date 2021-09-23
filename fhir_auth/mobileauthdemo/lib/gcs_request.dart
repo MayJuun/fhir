@@ -12,6 +12,8 @@ Future gcsRequest() async {
     clientId: Api.gcsClientId,
   );
 
+  await client.initialize();
+
   final _newPatient = newPatient();
   print('Patient to be uploaded: ${_newPatient.toJson()}');
   if (client.fhirUri?.value != null) {

@@ -49,5 +49,6 @@ abstract class SmartClient extends FhirClient {
     }
   }
 
+  @override
   Future<void> initialize();
 }
