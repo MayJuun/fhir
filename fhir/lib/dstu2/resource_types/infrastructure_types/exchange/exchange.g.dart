@@ -907,7 +907,8 @@ _$_SubscriptionChannel _$$_SubscriptionChannelFromJson(
           : Element.fromJson(json['_payload'] as Map<String, dynamic>),
       header: json['header'] as String?,
       headerElement: (json['_header'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

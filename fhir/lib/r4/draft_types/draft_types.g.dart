@@ -134,12 +134,14 @@ _$_ProdCharacteristic _$$_ProdCharacteristicFromJson(
       color:
           (json['color'] as List<dynamic>?)?.map((e) => e as String).toList(),
       colorElement: (json['_color'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       imprint:
           (json['imprint'] as List<dynamic>?)?.map((e) => e as String).toList(),
       imprintElement: (json['_imprint'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       image: (json['image'] as List<dynamic>?)
           ?.map((e) => Attachment.fromJson(e as Map<String, dynamic>))

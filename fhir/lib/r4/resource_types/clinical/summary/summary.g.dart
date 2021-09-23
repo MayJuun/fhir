@@ -505,7 +505,8 @@ _$_AllergyIntolerance _$$_AllergyIntoleranceFromJson(
           ?.map((e) => _$enumDecode(_$AllergyIntoleranceCategoryEnumMap, e))
           .toList(),
       categoryElement: (json['_category'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       criticality: _$enumDecodeNullable(
           _$AllergyIntoleranceCriticalityEnumMap, json['criticality'],
@@ -812,7 +813,8 @@ _$_ClinicalImpression _$$_ClinicalImpressionFromJson(
           ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       protocolElement: (json['_protocol'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       summary: json['summary'] as String?,
       summaryElement: json['_summary'] == null
@@ -1506,7 +1508,8 @@ _$_FamilyMemberHistory _$$_FamilyMemberHistoryFromJson(
           ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       status: _$enumDecodeNullable(
           _$FamilyMemberHistoryStatusEnumMap, json['status'],
@@ -1787,7 +1790,8 @@ _$_Procedure _$$_ProcedureFromJson(Map<String, dynamic> json) => _$_Procedure(
           ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       basedOn: (json['basedOn'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))

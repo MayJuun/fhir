@@ -201,7 +201,8 @@ _$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
           ?.map((e) => Markdown.fromJson(e))
           .toList(),
       definitionElement: (json['_definition'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       guidance:
           json['guidance'] == null ? null : Markdown.fromJson(json['guidance']),
@@ -2042,7 +2043,8 @@ _$_TestScriptCapability _$$_TestScriptCapabilityFromJson(
           ?.map((e) => Integer.fromJson(e))
           .toList(),
       originElement: (json['_origin'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       destination: json['destination'] == null
           ? null
@@ -2054,7 +2056,8 @@ _$_TestScriptCapability _$$_TestScriptCapabilityFromJson(
           ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       linkElement: (json['_link'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       capabilities: Canonical.fromJson(json['capabilities']),
     );

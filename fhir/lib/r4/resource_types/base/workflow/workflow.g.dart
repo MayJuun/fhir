@@ -1771,7 +1771,8 @@ _$_VerificationResult _$$_VerificationResultFromJson(
           ?.map((e) => e as String)
           .toList(),
       targetLocationElement: (json['_targetLocation'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       need: json['need'] == null
           ? null

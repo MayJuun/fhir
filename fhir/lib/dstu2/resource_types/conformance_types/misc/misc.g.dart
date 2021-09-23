@@ -92,7 +92,8 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
     fhirVersion:
         json['fhirVersion'] == null ? null : Id.fromJson(json['fhirVersion']),
     fhirVersionElement: (json['_fhirVersion'] as List<dynamic>?)
-        ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+        ?.map((e) =>
+            e == null ? null : Element.fromJson(e as Map<String, dynamic>))
         .toList(),
     dependency: (json['dependency'] as List<dynamic>?)
         ?.map((e) =>
@@ -933,7 +934,8 @@ _$_TestScriptMetadataCapability _$$_TestScriptMetadataCapabilityFromJson(
           ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       linkElement: (json['_link'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       conformance:
           Reference.fromJson(json['conformance'] as Map<String, dynamic>),

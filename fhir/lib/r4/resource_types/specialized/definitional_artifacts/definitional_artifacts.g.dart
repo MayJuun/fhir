@@ -700,7 +700,8 @@ _$_DeviceDefinition _$$_DeviceDefinitionFromJson(Map<String, dynamic> json) =>
       version:
           (json['version'] as List<dynamic>?)?.map((e) => e as String).toList(),
       versionElement: (json['_version'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       safety: (json['safety'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
@@ -2053,7 +2054,8 @@ _$_PlanDefinitionAction _$$_PlanDefinitionActionFromJson(
           ?.map((e) => Id.fromJson(e))
           .toList(),
       goalIdElement: (json['_goalId'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       subjectCodeableConcept: json['subjectCodeableConcept'] == null
           ? null
@@ -2572,7 +2574,8 @@ _$_Questionnaire _$$_QuestionnaireFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Code.fromJson(e))
           .toList(),
       subjectTypeElement: (json['_subjectType'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
       dateElement: json['_date'] == null

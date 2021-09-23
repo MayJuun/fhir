@@ -169,7 +169,8 @@ _$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
           ?.map((e) => e as String)
           .toList(),
       definitionElement: (json['_definition'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       guidance: json['guidance'] as String?,
       guidanceElement: json['_guidance'] == null

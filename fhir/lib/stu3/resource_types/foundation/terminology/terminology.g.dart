@@ -411,7 +411,8 @@ _$_CodeSystemFilter _$$_CodeSystemFilterFromJson(Map<String, dynamic> json) =>
           ?.map((e) => e as String)
           .toList(),
       operatorElement: (json['_operator'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       value: json['value'] as String?,
       valueElement: json['_value'] == null
@@ -1940,7 +1941,8 @@ _$_ValueSetInclude _$$_ValueSetIncludeFromJson(Map<String, dynamic> json) =>
           ?.map((e) => e as String)
           .toList(),
       valueSetElement: (json['_valueSet'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

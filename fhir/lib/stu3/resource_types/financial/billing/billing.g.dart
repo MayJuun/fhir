@@ -627,7 +627,8 @@ _$_ClaimInsurance _$$_ClaimInsuranceFromJson(Map<String, dynamic> json) =>
           ?.map((e) => e as String)
           .toList(),
       preAuthRefElement: (json['_preAuthRef'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       claimResponse: json['claimResponse'] == null
           ? null
@@ -703,19 +704,22 @@ _$_ClaimItem _$$_ClaimItemFromJson(Map<String, dynamic> json) => _$_ClaimItem(
           ?.map((e) => Id.fromJson(e))
           .toList(),
       careTeamLinkIdElement: (json['_careTeamLinkId'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       diagnosisLinkId: (json['diagnosisLinkId'] as List<dynamic>?)
           ?.map((e) => Id.fromJson(e))
           .toList(),
       diagnosisLinkIdElement: (json['_diagnosisLinkId'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       procedureLinkId: (json['procedureLinkId'] as List<dynamic>?)
           ?.map((e) => Id.fromJson(e))
           .toList(),
       procedureLinkIdElement: (json['_procedureLinkId'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       informationLinkId: (json['informationLinkId'] as List<dynamic>?)
           ?.map((e) => Id.fromJson(e))
@@ -1159,7 +1163,8 @@ _$_ClaimResponseItem _$$_ClaimResponseItemFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Decimal.fromJson(e))
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       adjudication: (json['adjudication'] as List<dynamic>?)
           ?.map((e) =>
@@ -1241,7 +1246,8 @@ _$_ClaimResponseDetail _$$_ClaimResponseDetailFromJson(
           ?.map((e) => Decimal.fromJson(e))
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       adjudication: (json['adjudication'] as List<dynamic>?)
           ?.map((e) =>
@@ -1289,7 +1295,8 @@ _$_ClaimResponseSubDetail _$$_ClaimResponseSubDetailFromJson(
           ?.map((e) => Decimal.fromJson(e))
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       adjudication: (json['adjudication'] as List<dynamic>?)
           ?.map((e) =>
@@ -1325,7 +1332,8 @@ _$_ClaimResponseAddItem _$$_ClaimResponseAddItemFromJson(
           ?.map((e) => Id.fromJson(e))
           .toList(),
       sequenceLinkIdElement: (json['_sequenceLinkId'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       revenue: json['revenue'] == null
           ? null
@@ -1346,7 +1354,8 @@ _$_ClaimResponseAddItem _$$_ClaimResponseAddItemFromJson(
           ?.map((e) => Decimal.fromJson(e))
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       adjudication: (json['adjudication'] as List<dynamic>?)
           ?.map((e) =>
@@ -1408,7 +1417,8 @@ _$_ClaimResponseDetail1 _$$_ClaimResponseDetail1FromJson(
           ?.map((e) => Decimal.fromJson(e))
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       adjudication: (json['adjudication'] as List<dynamic>?)
           ?.map((e) =>
@@ -1594,7 +1604,8 @@ _$_ClaimResponseInsurance _$$_ClaimResponseInsuranceFromJson(
           ?.map((e) => e as String)
           .toList(),
       preAuthRefElement: (json['_preAuthRef'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       claimResponse: json['claimResponse'] == null
           ? null

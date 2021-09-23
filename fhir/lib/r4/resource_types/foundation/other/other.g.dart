@@ -1243,13 +1243,15 @@ _$_OperationOutcomeIssue _$$_OperationOutcomeIssueFromJson(
           ?.map((e) => e as String)
           .toList(),
       locationElement: (json['_location'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       expression: (json['expression'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
       expressionElement: (json['_expression'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -1856,7 +1858,8 @@ _$_SubscriptionChannel _$$_SubscriptionChannelFromJson(
       header:
           (json['header'] as List<dynamic>?)?.map((e) => e as String).toList(),
       headerElement: (json['_header'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

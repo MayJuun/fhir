@@ -430,7 +430,8 @@ _$_AllergyIntolerance _$$_AllergyIntoleranceFromJson(
           ?.map((e) => _$enumDecode(_$AllergyIntoleranceCategoryEnumMap, e))
           .toList(),
       categoryElement: (json['_category'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       criticality: _$enumDecodeNullable(
           _$AllergyIntoleranceCriticalityEnumMap, json['criticality']),
@@ -735,7 +736,8 @@ _$_ClinicalImpression _$$_ClinicalImpressionFromJson(
           ?.map((e) => e as String)
           .toList(),
       protocolElement: (json['_protocol'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       summary: json['summary'] as String?,
       summaryElement: json['_summary'] == null

@@ -66,7 +66,8 @@ _$_MedicinalProduct _$$_MedicinalProductFromJson(Map<String, dynamic> json) =>
           ?.map((e) => e as String)
           .toList(),
       specialMeasuresElement: (json['_specialMeasures'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       paediatricUseIndicator: json['paediatricUseIndicator'] == null
           ? null
@@ -2661,7 +2662,8 @@ _$_SubstancePolymer _$$_SubstancePolymerFromJson(Map<String, dynamic> json) =>
           ?.map((e) => e as String)
           .toList(),
       modificationElement: (json['_modification'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       monomerSet: (json['monomerSet'] as List<dynamic>?)
           ?.map((e) =>
@@ -3052,7 +3054,8 @@ _$_SubstanceProtein _$$_SubstanceProteinFromJson(Map<String, dynamic> json) =>
           ?.map((e) => e as String)
           .toList(),
       disulfideLinkageElement: (json['_disulfideLinkage'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       subunit: (json['subunit'] as List<dynamic>?)
           ?.map((e) =>

@@ -1266,7 +1266,8 @@ _$_MedicationAdministration _$$_MedicationAdministrationFromJson(
           ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       instantiatesElement: (json['_instantiates'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       partOf: (json['partOf'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
@@ -1829,7 +1830,8 @@ _$_MedicationKnowledge _$$_MedicationKnowledgeFromJson(
       synonym:
           (json['synonym'] as List<dynamic>?)?.map((e) => e as String).toList(),
       synonymElement: (json['_synonym'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       relatedMedicationKnowledge: (json['relatedMedicationKnowledge']
               as List<dynamic>?)
@@ -2287,7 +2289,9 @@ _$_MedicationKnowledgePatientCharacteristics
               ?.map((e) => e as String)
               .toList(),
           valueElement: (json['_value'] as List<dynamic>?)
-              ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+              ?.map((e) => e == null
+                  ? null
+                  : Element.fromJson(e as Map<String, dynamic>))
               .toList(),
         );
 
@@ -2778,7 +2782,8 @@ _$_MedicationRequest _$$_MedicationRequestFromJson(Map<String, dynamic> json) =>
           ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       basedOn: (json['basedOn'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))

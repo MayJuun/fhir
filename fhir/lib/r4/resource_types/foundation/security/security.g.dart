@@ -365,7 +365,8 @@ _$_AuditEventAgent _$$_AuditEventAgentFromJson(Map<String, dynamic> json) =>
           ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       policyElement: (json['_policy'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       media: json['media'] == null
           ? null
@@ -1070,7 +1071,8 @@ _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
           ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       policyElement: (json['_policy'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       location: json['location'] == null
           ? null

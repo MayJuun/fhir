@@ -787,17 +787,20 @@ _$_HumanName _$$_HumanNameFromJson(Map<String, dynamic> json) => _$_HumanName(
       given:
           (json['given'] as List<dynamic>?)?.map((e) => e as String).toList(),
       givenElement: (json['_given'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       prefix:
           (json['prefix'] as List<dynamic>?)?.map((e) => e as String).toList(),
       prefixElement: (json['_prefix'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       suffix:
           (json['suffix'] as List<dynamic>?)?.map((e) => e as String).toList(),
       suffixElement: (json['_suffix'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       period: json['period'] == null
           ? null
@@ -858,7 +861,8 @@ _$_Address _$$_AddressFromJson(Map<String, dynamic> json) => _$_Address(
           : Element.fromJson(json['_text'] as Map<String, dynamic>),
       line: (json['line'] as List<dynamic>?)?.map((e) => e as String).toList(),
       lineElement: (json['_line'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       city: json['city'] as String?,
       cityElement: json['_city'] == null
@@ -999,7 +1003,8 @@ _$_Timing _$$_TimingFromJson(Map<String, dynamic> json) => _$_Timing(
       event:
           (json['event'] as List<dynamic>?)?.map((e) => e as String).toList(),
       eventElement: (json['_event'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       repeat: json['repeat'] == null
           ? null
@@ -1094,19 +1099,22 @@ _$_TimingRepeat _$$_TimingRepeatFromJson(Map<String, dynamic> json) =>
           ?.map((e) => e as String)
           .toList(),
       dayOfWeekElement: (json['_dayOfWeek'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       timeOfDay: (json['timeOfDay'] as List<dynamic>?)
           ?.map((e) => Time.fromJson(e))
           .toList(),
       timeOfDayElement: (json['_timeOfDay'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       when: (json['when'] as List<dynamic>?)
           ?.map((e) => _$enumDecode(_$TimingRepeatWhenEnumMap, e))
           .toList(),
       whenElement: (json['_when'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       offset: json['offset'] == null ? null : Decimal.fromJson(json['offset']),
       offsetElement: json['_offset'] == null

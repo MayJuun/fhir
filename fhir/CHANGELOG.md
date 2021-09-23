@@ -1,5 +1,8 @@
 # fhir
 
+## [0.5.0-2]
+* Updated to Dart 2.14.0
+
 ## [0.5.0-1]
 * Created a FhirNumber class
 * Created FhirDateTimeBase class

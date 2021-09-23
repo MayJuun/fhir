@@ -69,7 +69,8 @@ _$_Questionnaire _$$_QuestionnaireFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Code.fromJson(e))
           .toList(),
       subjectTypeElement: (json['_subjectType'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       group: QuestionnaireGroup.fromJson(json['group'] as Map<String, dynamic>),
     );
@@ -831,7 +832,8 @@ _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
           ?.map((e) => FhirUri.fromJson(e))
           .toList(),
       policyElement: (json['_policy'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       agent: (json['agent'] as List<dynamic>?)
           ?.map((e) => ProvenanceAgent.fromJson(e as Map<String, dynamic>))
