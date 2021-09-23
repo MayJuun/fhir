@@ -1,25 +1,26 @@
 import 'dart:convert';
+// import 'dart:math';
 
 import 'package:collection/collection.dart';
-import 'package:fhir/stu3.dart';
-import 'package:flutter/services.dart';
-import 'package:http/http.dart' as http;
-import 'package:oauth2_client/access_token_response.dart';
+import 'package:fhir/primitive_types/primitive_types.dart';
+import 'package:fhir/dstu2.dart';
+import 'package:http/http.dart';
 import 'package:oauth2_client/oauth2_client.dart';
+import 'package:oauth2_client/oauth2_helper.dart';
 
-import '../../../stu3.dart';
+import 'smart_client.dart';
 
 /// the star of our show, who you've all come to see, the Smart object who
 /// will provide the client for interacting with the FHIR server
-class SmartWebClient extends SmartClient {
-  SmartWebClient({
+class SmartMobileClient extends SmartClient {
+  SmartMobileClient({
     required this.redirectUri,
     required this.clientId,
     required this.fhirUri,
-    this.scopes,
+    List<String>? scopes,
     this.authUrl,
     this.tokenUrl,
-  });
+  }) : scopes = scopes ?? ['openid', 'profile', 'email', 'user/*.*'];
 
   /// specify the fhirUrl of the Capability Statement (or conformance
   /// statement for Dstu2). Note this may not be the same as the authentication
@@ -30,13 +31,12 @@ class SmartWebClient extends SmartClient {
   @override
   FhirUri? redirectUri;
 
-  /// The registered clientId for the application
   @override
   String clientId;
 
   /// the scopes that will be included with the request
   @override
-  List<String>? scopes;
+  List<String> scopes;
 
   /// the authorize Url from the Conformance/Capability Statement
   FhirUri? authUrl;
@@ -45,53 +45,10 @@ class SmartWebClient extends SmartClient {
   FhirUri? tokenUrl;
 
   /// Oauth2Client
-  @override
   OAuth2Client? client;
 
-  AccessTokenResponse? _tokenResponse;
-
-  Future<Map<String, String>> authHeaders(Map<String, String>? headers) async {
-    headers ??= {};
-    await getTokenResponse();
-    headers['Authorization'] = 'Bearer ' + (_tokenResponse?.accessToken ?? '');
-    return headers;
-  }
-
-  @override
-  Future<http.Response>? get(String url,
-          {Map<String, String>? headers}) async =>
-      http.get(Uri.parse(url), headers: await authHeaders(headers));
-
-  @override
-  Future<http.Response>? put(
-    String url, {
-    Map<String, String>? headers,
-    dynamic body,
-  }) async =>
-      http.put(Uri.parse(url), headers: await authHeaders(headers), body: body);
-
-  @override
-  Future<http.Response>? post(
-    String url, {
-    Map<String, String>? headers,
-    dynamic body,
-  }) async =>
-      http.post(Uri.parse(url),
-          headers: await authHeaders(headers), body: body);
-
-  @override
-  Future<http.Response>? delete(String url,
-          {Map<String, String>? headers}) async =>
-      http.delete(Uri.parse(url), headers: await authHeaders(headers));
-
-  @override
-  Future<http.Response>? patch(
-    String url, {
-    Map<String, String>? headers,
-    dynamic body,
-  }) async =>
-      http.patch(Uri.parse(url),
-          headers: await authHeaders(headers), body: body);
+  /// Oauth2Helper
+  OAuth2Helper? helper;
 
   @override
   Future<void> initialize() async {
@@ -105,27 +62,37 @@ class SmartWebClient extends SmartClient {
         tokenUrl: tokenUrl.toString(),
       );
     }
-    await getTokenResponse();
-  }
-
-  Future<void> getTokenResponse() async {
-    if (_tokenResponse?.isExpired() ?? true && client != null) {
-      try {
-        final authorizationResponse = await client!.requestAuthorization(
-            clientId: clientId,
-            scopes: scopes,
-            customParams: {'aud': fhirUri?.value.toString()});
-        _tokenResponse = await client?.requestAccessToken(
-            code: authorizationResponse.code ?? '', clientId: clientId);
-      } catch (e, stack) {
-        throw PlatformException(
-          code: e.toString(),
-          message: 'Failed to authenticate',
-          stacktrace: stack.toString(),
-        );
-      }
+    if (client != null) {
+      helper = OAuth2Helper(client!,
+          grantType: OAuth2Helper.AUTHORIZATION_CODE,
+          clientId: clientId,
+          scopes: scopes,
+          authCodeParams: {'aud': fhirUri?.value.toString()});
     }
   }
+
+  @override
+  Future<Response?> get(String url, {Map<String, String>? headers}) async =>
+      helper?.get(url, headers: headers);
+
+  @override
+  Future<Response?> put(String url,
+          {Map<String, String>? headers, dynamic body}) async =>
+      helper?.put(url, headers: headers, body: body);
+
+  @override
+  Future<Response?> post(String url,
+          {Map<String, String>? headers, dynamic body}) async =>
+      helper?.post(url, headers: headers, body: body);
+
+  @override
+  Future<Response?> delete(String url, {Map<String, String>? headers}) async =>
+      helper?.delete(url, headers: headers);
+
+  @override
+  Future<Response?> patch(String url,
+          {Map<String, String>? headers, dynamic body}) async =>
+      helper?.patch(url, headers: headers, body: body);
 
   /// Request for the CapabilityStatement (or Conformance) and then identifying
   /// the authUrl endpoint & tokenurl endpoing
@@ -135,18 +102,18 @@ class SmartWebClient extends SmartClient {
     }
     var thisRequest = '$fhirUri/metadata?mode=full&_format=json';
 
-    var result = await http.get(Uri.parse(thisRequest));
+    var result = await get(thisRequest);
 
-    if (_errorCodeMap.containsKey(result.statusCode)) {
-      if (result.statusCode == 422) {
+    if (_errorCodeMap.containsKey(result?.statusCode ?? false)) {
+      if (result!.statusCode == 422) {
         thisRequest = thisRequest.replaceFirst(
           '_format=json',
           '_format=application/json',
         );
-        result = await http.get(Uri.parse(thisRequest));
+        result = await get(thisRequest);
       }
-      if (_errorCodeMap.containsKey(result.statusCode)) {
-        throw Exception('StatusCode: ${result.statusCode}\n${result.body}');
+      if (_errorCodeMap.containsKey(result?.statusCode ?? false)) {
+        throw Exception('StatusCode: ${result!.statusCode}\n${result.body}');
       }
     }
     Map<String, dynamic> returnResult;
@@ -154,10 +121,11 @@ class SmartWebClient extends SmartClient {
     /// because I can't figure out why aidbox only has strings not lists for
     /// the referencePolicy field
     if (thisRequest.contains('aidbox')) {
-      returnResult = json.decode(result.body.replaceAll(
-          '"referencePolicy":"local"', '"referencePolicy":["local"]'));
+      returnResult = jsonDecode(result?.body.replaceAll(
+              '"referencePolicy":"local"', '"referencePolicy":["local"]') ??
+          '');
     } else {
-      returnResult = json.decode(result.body);
+      returnResult = jsonDecode(result?.body ?? '');
     }
 
     final CapabilityStatement capabilityStatement =
@@ -165,6 +133,8 @@ class SmartWebClient extends SmartClient {
 
     tokenUrl = _getUri(capabilityStatement, 'token');
     authUrl = _getUri(capabilityStatement, 'authorize');
+    print(tokenUrl);
+    print(authUrl);
 
     /// if either authorize or token are still null, we return a failure
     if (authUrl == null) {

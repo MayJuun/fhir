@@ -4,10 +4,9 @@ import 'package:collection/collection.dart';
 import 'package:fhir/r4.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
-import 'package:oauth2_client/access_token_response.dart';
-import 'package:oauth2_client/oauth2_client.dart';
+import 'package:universal_html/html.dart' as html;
 
-import '../../../r4.dart';
+import 'smart_client.dart';
 
 /// the star of our show, who you've all come to see, the Smart object who
 /// will provide the client for interacting with the FHIR server
@@ -16,10 +15,10 @@ class SmartWebClient extends SmartClient {
     required this.redirectUri,
     required this.clientId,
     required this.fhirUri,
-    this.scopes,
+    List<String>? scopes,
     this.authUrl,
     this.tokenUrl,
-  });
+  }) : scopes = scopes ?? ['openid', 'profile', 'email', 'user/*.*'];
 
   /// specify the fhirUrl of the Capability Statement (or conformance
   /// statement for Dstu2). Note this may not be the same as the authentication
@@ -36,7 +35,7 @@ class SmartWebClient extends SmartClient {
 
   /// the scopes that will be included with the request
   @override
-  List<String>? scopes;
+  List<String> scopes = ['openid', 'profile', 'email', 'user/*.*'];
 
   /// the authorize Url from the Conformance/Capability Statement
   FhirUri? authUrl;
@@ -44,26 +43,84 @@ class SmartWebClient extends SmartClient {
   /// the token Url from the Conformance/Capability Statement
   FhirUri? tokenUrl;
 
-  /// Oauth2Client
-  @override
-  OAuth2Client? client;
+  String? _$_$_accessToken;
 
-  AccessTokenResponse? _tokenResponse;
+  @override
+  Future<void> initialize() async {
+    try {
+      await _getEndpoints;
+    } catch (e) {
+      throw PlatformException(
+          code: e.toString(), message: 'Failed to get Auth & Token Endpoints');
+    }
+
+    await authenticate();
+  }
+
+  Future<void> authenticate() async {
+    try {
+      final authorizationUrl = '$authUrl'
+          '?response_type=code'
+          '&client_id=$clientId'
+          '&redirect_uri=${redirectUri!.value}'
+          '&scope=${scopes.join(" ")}';
+      final _popupWin = html.window.open(authorizationUrl, 'Auth');
+      String? authorizationCode;
+      html.window.onMessage.listen((event) async {
+        if (event.data.toString().contains('code=') &&
+            event.data.toString().contains('redirect.html')) {
+          authorizationCode = event.data
+              .toString()
+              .split('code=')[1]
+              .split('?')[0]
+              .split('&')[0];
+          if (authorizationCode != null) {
+            _popupWin.close();
+            if (tokenUrl!.isValid) {
+              final response = await http.post(
+                tokenUrl!.value!,
+                headers: {
+                  'Content-Type': 'application/x-www-form-urlencoded',
+                  'grant_type': 'authorization_code',
+                },
+                body: jsonEncode(
+                  {
+                    'grant_type': 'authorization_code',
+                    'client_id': '$clientId',
+                    'redirect_uri': '${redirectUri!.value}',
+                    'code': '$authorizationCode',
+                  },
+                ),
+              );
+              print(response.headers);
+              print(response.body);
+            }
+          }
+        }
+      });
+    } catch (e, stack) {
+      throw PlatformException(
+        code: e.toString(),
+        message: 'Failed to authenticate',
+        stacktrace: stack.toString(),
+      );
+    }
+  }
 
   Future<Map<String, String>> authHeaders(Map<String, String>? headers) async {
     headers ??= {};
     await getTokenResponse();
-    headers['Authorization'] = 'Bearer ' + (_tokenResponse?.accessToken ?? '');
+    headers['Authorization'] = 'Bearer ${_$_$_accessToken}';
     return headers;
   }
 
   @override
-  Future<http.Response>? get(String url,
+  Future<http.Response?> get(String url,
           {Map<String, String>? headers}) async =>
       http.get(Uri.parse(url), headers: await authHeaders(headers));
 
   @override
-  Future<http.Response>? put(
+  Future<http.Response?> put(
     String url, {
     Map<String, String>? headers,
     dynamic body,
@@ -71,7 +128,7 @@ class SmartWebClient extends SmartClient {
       http.put(Uri.parse(url), headers: await authHeaders(headers), body: body);
 
   @override
-  Future<http.Response>? post(
+  Future<http.Response?> post(
     String url, {
     Map<String, String>? headers,
     dynamic body,
@@ -80,12 +137,12 @@ class SmartWebClient extends SmartClient {
           headers: await authHeaders(headers), body: body);
 
   @override
-  Future<http.Response>? delete(String url,
+  Future<http.Response?> delete(String url,
           {Map<String, String>? headers}) async =>
       http.delete(Uri.parse(url), headers: await authHeaders(headers));
 
   @override
-  Future<http.Response>? patch(
+  Future<http.Response?> patch(
     String url, {
     Map<String, String>? headers,
     dynamic body,
@@ -93,38 +150,25 @@ class SmartWebClient extends SmartClient {
       http.patch(Uri.parse(url),
           headers: await authHeaders(headers), body: body);
 
-  @override
-  Future<void> initialize() async {
-    await _getEndpoints;
-    if (redirectUri != null) {
-      client = OAuth2Client(
-        /// Just one slash, required by Google specs
-        redirectUri: redirectUri.toString(),
-        customUriScheme: redirectUri!.value?.scheme ?? redirectUri.toString(),
-        authorizeUrl: authUrl.toString(),
-        tokenUrl: tokenUrl.toString(),
-      );
-    }
-    await getTokenResponse();
-  }
-
   Future<void> getTokenResponse() async {
-    if (_tokenResponse?.isExpired() ?? true && client != null) {
-      try {
-        final authorizationResponse = await client!.requestAuthorization(
-            clientId: clientId,
-            scopes: scopes,
-            customParams: {'aud': fhirUri?.value.toString()});
-        _tokenResponse = await client?.requestAccessToken(
-            code: authorizationResponse.code ?? '', clientId: clientId);
-      } catch (e, stack) {
-        throw PlatformException(
-          code: e.toString(),
-          message: 'Failed to authenticate',
-          stacktrace: stack.toString(),
-        );
-      }
-    }
+    // if (tokenIsExpired) {
+    //   refreshToken();
+    // }
+    // if (_tokenResponse?.isExpired() ?? true && client != null) {
+    //   try {
+    //     final authorizationResponse = await client!.requestAuthorization(
+    //         clientId: clientId,
+    //         scopes: scopes,
+    //         customParams: {'aud': fhirUri?.value.toString()});
+    //     _tokenResponse = await client?.requestAccessToken(
+    //         code: authorizationResponse.code ?? '', clientId: clientId);
+    //   } catch (e, stack) {
+    //     throw PlatformException(
+    //       code: e.toString(),
+    //       message: 'Failed to authenticate',
+    //       stacktrace: stack.toString(),
+    //     );
+    //   }
   }
 
   /// Request for the CapabilityStatement (or Conformance) and then identifying
@@ -154,10 +198,10 @@ class SmartWebClient extends SmartClient {
     /// because I can't figure out why aidbox only has strings not lists for
     /// the referencePolicy field
     if (thisRequest.contains('aidbox')) {
-      returnResult = json.decode(result.body.replaceAll(
+      returnResult = jsonDecode(result.body.replaceAll(
           '"referencePolicy":"local"', '"referencePolicy":["local"]'));
     } else {
-      returnResult = json.decode(result.body);
+      returnResult = jsonDecode(result.body);
     }
 
     final CapabilityStatement capabilityStatement =

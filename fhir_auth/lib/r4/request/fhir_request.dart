@@ -636,7 +636,7 @@ class FhirRequest with _$FhirRequest {
           )
         ]);
       }
-      return Resource.fromJson(json.decode(result.body));
+      return Resource.fromJson(jsonDecode(result.body));
     }
   }
 

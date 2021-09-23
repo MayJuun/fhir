@@ -12,21 +12,21 @@ Future<void> compressTest() async {
   var resources = await FhirBulk.fromFile('./test/ndjson/Account.ndjson');
   var stringList = '';
   for (final resource in resources) {
-    stringList += '\n${json.encode(resource?.toJson())}';
+    stringList += '\n${jsonEncode(resource?.toJson())}';
   }
   stringList = stringList.replaceFirst('\n', '');
 
   resources = await FhirBulk.fromFile('./test/ndjson/MedicationRequest.ndjson');
   stringList = '';
   for (final resource in resources) {
-    stringList += '\n${json.encode(resource?.toJson())}';
+    stringList += '\n${jsonEncode(resource?.toJson())}';
   }
   stringList = stringList.replaceFirst('\n', '');
 
   resources = await FhirBulk.fromCompressedFile('./test/ndjson/account.zip');
   stringList = '';
   for (final resource in resources) {
-    stringList += '\n${json.encode(resource?.toJson())}';
+    stringList += '\n${jsonEncode(resource?.toJson())}';
   }
   stringList = stringList.replaceFirst('\n', '');
 
@@ -34,7 +34,7 @@ Future<void> compressTest() async {
       await FhirBulk.fromCompressedFile('./test/ndjson/medicationRequest.zip');
   stringList = '';
   for (final resource in resources) {
-    stringList += '\n${json.encode(resource?.toJson())}';
+    stringList += '\n${jsonEncode(resource?.toJson())}';
   }
   stringList = stringList.replaceFirst('\n', '');
 
@@ -42,7 +42,7 @@ Future<void> compressTest() async {
       await FhirBulk.fromCompressedFile('./test/ndjson/accountMedRequest.zip');
   stringList = '';
   for (final resource in resources) {
-    stringList += '\n${json.encode(resource?.toJson())}';
+    stringList += '\n${jsonEncode(resource?.toJson())}';
   }
   stringList = stringList.replaceFirst('\n', '');
 
@@ -50,7 +50,7 @@ Future<void> compressTest() async {
       await FhirBulk.fromCompressedFile('./test/ndjson/Account.ndjson.gz');
   stringList = '';
   for (final resource in resources) {
-    stringList += '\n${json.encode(resource?.toJson())}';
+    stringList += '\n${jsonEncode(resource?.toJson())}';
   }
   stringList = stringList.replaceFirst('\n', '');
 
@@ -58,14 +58,14 @@ Future<void> compressTest() async {
       './test/ndjson/MedicationRequest.ndjson.gz');
   stringList = '';
   for (final resource in resources) {
-    stringList += '\n${json.encode(resource?.toJson())}';
+    stringList += '\n${jsonEncode(resource?.toJson())}';
   }
   stringList = stringList.replaceFirst('\n', '');
 
   resources = await FhirBulk.fromCompressedFile('./test/ndjson/tarGzip.tar.gz');
   stringList = '';
   for (final resource in resources) {
-    stringList += '\n${json.encode(resource?.toJson())}';
+    stringList += '\n${jsonEncode(resource?.toJson())}';
   }
   stringList = stringList.replaceFirst('\n', '');
 }
@@ -122,7 +122,7 @@ Future<void> requestTest() async {
   response = await request.request(headers: {'test': 'header'});
   var fileString = '';
   for (final res in response) {
-    fileString += json.encode(res?.toJson());
+    fileString += jsonEncode(res?.toJson());
   }
   print(fileString);
 }

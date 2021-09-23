@@ -3,12 +3,12 @@ import 'dart:convert';
 
 import 'package:collection/collection.dart';
 import 'package:fhir/primitive_types/primitive_types.dart';
-import 'package:fhir/r4.dart';
+import 'package:fhir/stu3.dart';
 import 'package:http/http.dart';
 import 'package:oauth2_client/oauth2_client.dart';
 import 'package:oauth2_client/oauth2_helper.dart';
 
-import '../../../r4.dart';
+import 'smart_client.dart';
 
 /// the star of our show, who you've all come to see, the Smart object who
 /// will provide the client for interacting with the FHIR server
@@ -17,10 +17,10 @@ class SmartMobileClient extends SmartClient {
     required this.redirectUri,
     required this.clientId,
     required this.fhirUri,
-    this.scopes,
+    List<String>? scopes,
     this.authUrl,
     this.tokenUrl,
-  });
+  }) : scopes = scopes ?? ['openid', 'profile', 'email', 'user/*.*'];
 
   /// specify the fhirUrl of the Capability Statement (or conformance
   /// statement for Dstu2). Note this may not be the same as the authentication
@@ -36,7 +36,7 @@ class SmartMobileClient extends SmartClient {
 
   /// the scopes that will be included with the request
   @override
-  List<String>? scopes;
+  List<String> scopes;
 
   /// the authorize Url from the Conformance/Capability Statement
   FhirUri? authUrl;
@@ -45,11 +45,9 @@ class SmartMobileClient extends SmartClient {
   FhirUri? tokenUrl;
 
   /// Oauth2Client
-  @override
   OAuth2Client? client;
 
   /// Oauth2Helper
-  @override
   OAuth2Helper? helper;
 
   @override
@@ -73,6 +71,29 @@ class SmartMobileClient extends SmartClient {
     }
   }
 
+  @override
+  Future<Response?> get(String url, {Map<String, String>? headers}) async =>
+      helper?.get(url, headers: headers);
+
+  @override
+  Future<Response?> put(String url,
+          {Map<String, String>? headers, dynamic body}) async =>
+      helper?.put(url, headers: headers, body: body);
+
+  @override
+  Future<Response?> post(String url,
+          {Map<String, String>? headers, dynamic body}) async =>
+      helper?.post(url, headers: headers, body: body);
+
+  @override
+  Future<Response?> delete(String url, {Map<String, String>? headers}) async =>
+      helper?.delete(url, headers: headers);
+
+  @override
+  Future<Response?> patch(String url,
+          {Map<String, String>? headers, dynamic body}) async =>
+      helper?.patch(url, headers: headers, body: body);
+
   /// Request for the CapabilityStatement (or Conformance) and then identifying
   /// the authUrl endpoint & tokenurl endpoing
   Future<void> get _getEndpoints async {
@@ -81,18 +102,18 @@ class SmartMobileClient extends SmartClient {
     }
     var thisRequest = '$fhirUri/metadata?mode=full&_format=json';
 
-    var result = await get(Uri.parse(thisRequest));
+    var result = await get(thisRequest);
 
-    if (_errorCodeMap.containsKey(result.statusCode)) {
-      if (result.statusCode == 422) {
+    if (_errorCodeMap.containsKey(result?.statusCode ?? false)) {
+      if (result!.statusCode == 422) {
         thisRequest = thisRequest.replaceFirst(
           '_format=json',
           '_format=application/json',
         );
-        result = await get(Uri.parse(thisRequest));
+        result = await get(thisRequest);
       }
-      if (_errorCodeMap.containsKey(result.statusCode)) {
-        throw Exception('StatusCode: ${result.statusCode}\n${result.body}');
+      if (_errorCodeMap.containsKey(result?.statusCode ?? false)) {
+        throw Exception('StatusCode: ${result!.statusCode}\n${result.body}');
       }
     }
     Map<String, dynamic> returnResult;
@@ -100,10 +121,11 @@ class SmartMobileClient extends SmartClient {
     /// because I can't figure out why aidbox only has strings not lists for
     /// the referencePolicy field
     if (thisRequest.contains('aidbox')) {
-      returnResult = json.decode(result.body.replaceAll(
-          '"referencePolicy":"local"', '"referencePolicy":["local"]'));
+      returnResult = jsonDecode(result?.body.replaceAll(
+              '"referencePolicy":"local"', '"referencePolicy":["local"]') ??
+          '');
     } else {
-      returnResult = json.decode(result.body);
+      returnResult = jsonDecode(result?.body ?? '');
     }
 
     final CapabilityStatement capabilityStatement =
