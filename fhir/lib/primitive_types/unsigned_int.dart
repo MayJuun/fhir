@@ -1,52 +1,39 @@
 import 'dart:convert';
-import 'package:dartz/dartz.dart';
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
-class UnsignedInt {
-  const UnsignedInt._(this._value);
+import 'fhir_number.dart';
 
-  factory UnsignedInt(dynamic value) {
-    assert(value != null);
-    return UnsignedInt._(
-      _validateUnsignedInt(value),
-    );
+class UnsignedInt extends FhirNumber {
+  const UnsignedInt._(
+      String valueString, int? valueNumber, bool isValid, bool isString)
+      : super(valueString, valueNumber, isValid, isString);
+
+  factory UnsignedInt(dynamic inValue) {
+    if (inValue is int) {
+      return inValue >= 0
+          ? UnsignedInt._(inValue.toString(), inValue, true, false)
+          : UnsignedInt._(inValue.toString(), null, false, false);
+    } else if (inValue is String) {
+      final int? tempUnsignedInt = int.tryParse(inValue);
+      return tempUnsignedInt == null
+          ? UnsignedInt._(inValue, null, false, true)
+          : tempUnsignedInt >= 0
+              ? UnsignedInt._(inValue, tempUnsignedInt, true, true)
+              : UnsignedInt._(inValue, null, false, true);
+    }
+    throw ArgumentError('UnsignedInt cannot be constructed from $inValue.');
   }
 
   factory UnsignedInt.fromJson(dynamic json) => UnsignedInt(json);
 
   factory UnsignedInt.fromYaml(dynamic yaml) => yaml is String
-      ? UnsignedInt.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? UnsignedInt.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? UnsignedInt.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? UnsignedInt.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw FormatException(
+              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final Either<String, int> _value;
-  dynamic get value => _value.fold((l) => l, (r) => r);
-  bool get isValid => _value.isRight();
-
-  String toString() => value.toString();
-  dynamic toJson() => value;
-  dynamic toYaml() => value;
-
-  bool operator ==(Object o) => identical(this, o)
-      ? true
-      : o is UnsignedInt || o is int
-          ? o == value
-          : o is String
-              ? o == value.toString()
-              : false;
-
-  int get hashCode => value.hashCode;
-}
-
-Either<String, int> _validateUnsignedInt(dynamic value) {
-  var val = int.tryParse(value.toString());
-  return val != null
-      ? val >= 0
-          ? right(val)
-          : left('FormatError: "$value" is not an UnsignedInt, as defined by: '
-              'https://www.hl7.org/fhir/datatypes.html#unsignedInt')
-      : left('FormatError: "$value" is not a UnsignedInt, as defined by: '
-          'https://www.hl7.org/fhir/datatypes.html#unsignedInt');
+  int? get value => valueNumber as int?;
 }

@@ -4,7 +4,6 @@ import 'dart:typed_data';
 
 import 'package:crypto/crypto.dart';
 import 'package:encrypt/encrypt.dart';
-import 'package:meta/meta.dart';
 import 'package:sembast/sembast.dart';
 
 /// Create a codec to use to open a database with encrypted stored data.
@@ -22,14 +21,14 @@ import 'package:sembast/sembast.dart';
 /// The usage is then
 ///
 /// ```dart
-/// // Initialize the encryption codec with a user password
-/// var codec = getEncryptSembastCodec(password: '[your_user_password]');
-/// // Open the database with the codec
+/// Initialize the encryption codec with a user password
+/// var codec = getEncryptSembastCodec(password: 'your_user_password');
+/// Open the database with the codec
 /// Database db = await factory.openDatabase(dbPath, codec: codec);
 ///
-/// // ...your database is ready to use
+/// ...your database is ready to use
 /// ```
-SembastCodec getEncryptSembastCodecAES({@required String password}) =>
+SembastCodec getEncryptSembastCodecAES({required String password}) =>
     SembastCodec(
         signature: _encryptCodecSignature,
         codec: _EncryptCodec(_generateEncryptPassword(password)));
@@ -45,8 +44,8 @@ Uint8List _generateEncryptPassword(String password) {
 
 /// AES-256 based Codec
 class _EncryptCodec extends Codec<dynamic, String> {
-  _EncryptEncoder _encoder;
-  _EncryptDecoder _decoder;
+  late _EncryptEncoder _encoder;
+  late _EncryptDecoder _decoder;
 
   _EncryptCodec(Uint8List passwordBytes) {
     var encrypter = AES((Key(passwordBytes)), mode: AESMode.cbc);
@@ -69,15 +68,16 @@ class _EncryptEncoder extends Converter<dynamic, String> {
 
   @override
   String convert(dynamic input) {
-    // Generate random initial value
+    /// Generate random initial value
     final iv = _randBytes(16);
     final ivEncoded = base64.encode(iv);
     assert(ivEncoded.length == 24);
-    // Encode the input value
+
+    /// Encode the input value
     final encoded =
         Encrypter(encrypter).encrypt(json.encode(input), iv: IV(iv)).base64;
 
-    // Prepend the initial value
+    /// Prepend the initial value
     return '$ivEncoded$encoded';
   }
 }
@@ -90,14 +90,14 @@ class _EncryptDecoder extends Converter<String, dynamic> {
 
   @override
   dynamic convert(String input) {
-    // Read the initial value that was prepended
+    /// Read the initial value that was prepended
     assert(input.length >= 24);
     final iv = base64.decode(input.substring(0, 24));
 
-    // Extract the real input
+    /// Extract the real input
     input = input.substring(24);
 
-    // Decode the input
+    /// Decode the input
     var decoded =
         json.decode(Encrypter(encrypter).decrypt64(input, iv: IV(iv)));
     if (decoded is Map) {

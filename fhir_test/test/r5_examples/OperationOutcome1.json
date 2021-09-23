@@ -1,0 +1,1 @@
+{"resourceType":"OperationOutcome","id":"03f9aa7d-b395-47b9-84e0-053678b6e4e3","text":{"status":"generated","div":"\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n            MPI approval rating: 80%\n          \u003c/div\u003e"},"issue":[{"severity":"information","code":"informational","details":{"text":"MPI approval rating: 80%"}}]}

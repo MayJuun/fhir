@@ -1,0 +1,35 @@
+{
+  "resourceType": "ValueSet",
+  "id": "all-media-types",
+  "meta": {
+    "lastUpdated": "2021-04-15T12:25:09.461+10:00"
+  },
+  "text": {
+    "status": "generated",
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003cp\u003e\n        This value set includes all possible media types defined by \u003ca href\u003d\"http://www.rfc-editor.org/bcp/bcp13.txt\"\u003eMultipurpose Internet Mail Extensions (MIME) Part Four - BCP 13\u003c/a\u003e\n      \u003c/p\u003e\n    \u003c/div\u003e"
+  },
+  "url": "http://hl7.org/fhir/ValueSet/all-media-types",
+  "version": "4.6.0",
+  "name": "AllMediaTypes",
+  "title": "All Media Types",
+  "status": "draft",
+  "publisher": "FHIR Project team",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/fhir"
+        }
+      ]
+    }
+  ],
+  "description": "All media types (Multipurpose Internet Mail Extensions (MIME) Part Four - BCP 13)",
+  "compose": {
+    "include": [
+      {
+        "system": "urn:ietf:bcp:13"
+      }
+    ]
+  }
+}

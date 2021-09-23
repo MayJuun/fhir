@@ -1,17 +1,16 @@
+//ignore_for_file: avoid_equals_and_hash_code_on_mutable_classes, avoid_renaming_method_parameters, avoid_bool_literals_in_conditional_expressions
+
 import 'dart:convert';
-import 'package:dartz/dartz.dart';
+
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
 class Oid {
-  const Oid._(this._value);
+  const Oid._(this._valueString, this._valueOid, this._isValid);
 
-  factory Oid(String value) {
-    assert(value != null);
-    return Oid._(
-      _validateOid(value),
-    );
-  }
+  factory Oid(dynamic inValue) => inValue is String &&
+          RegExp(r'^urn:oid:[0-2](\.(0|[1-9][0-9]*))+$').hasMatch(inValue)
+      ? Oid._(inValue, inValue, true)
+      : Oid._(inValue.toString(), null, false);
 
   factory Oid.fromJson(dynamic json) => Oid(json);
 
@@ -19,27 +18,29 @@ class Oid {
       ? Oid.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Oid.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw FormatException(
+              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final Either<String, String> _value;
-  String get value => _value.fold((l) => l, (r) => r);
-  bool get isValid => _value.isRight();
+  final String _valueString;
+  final String? _valueOid;
+  final bool _isValid;
 
-  String toString() => value;
-  String toJson() => value;
-  String toYaml() => value;
+  bool get isValid => _isValid;
+  @override
+  int get hashCode => _valueString.hashCode;
+  String? get value => _valueOid;
 
+  @override
+  String toString() => _valueString;
+  String toJson() => _valueString;
+  String toYaml() => _valueString;
+
+  @override
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is Oid || o is String
-          ? o == value
-          : false;
-
-  int get hashCode => value.hashCode;
+      : o is Oid
+          ? o.value == _valueOid
+          : o is String
+              ? o == _valueString
+              : false;
 }
-
-Either<String, String> _validateOid(String value) =>
-    RegExp(r'^urn:oid:[0-2](\.(0|[1-9][0-9]*))+$').hasMatch(value)
-        ? right(value)
-        : left('FormatError: "$value" is not an Oid, as defined by: '
-            'https://www.hl7.org/fhir/datatypes.html#oid');

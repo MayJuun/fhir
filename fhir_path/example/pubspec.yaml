@@ -1,0 +1,17 @@
+name: example
+description: A new Flutter project.
+publish_to: "none"
+
+environment:
+  sdk: ">=2.14.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  fhir: ^0.5.0-2
+  fhir_path:
+    path: ../../fhir_path
+  url_launcher: ^6.0.11
+
+flutter:
+  uses-material-design: true

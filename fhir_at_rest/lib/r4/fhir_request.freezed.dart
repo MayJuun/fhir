@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'fhir_request.dart';
 
@@ -9,21 +10,23 @@ part of 'fhir_request.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$FhirRequestTearOff {
   const _$FhirRequestTearOff();
 
-// ignore: unused_element
   _FhirReadRequest read(
-      {@required Uri base,
-      @required R4ResourceType type,
-      @required Id id,
+      {required Uri base,
+      required R4ResourceType type,
+      required Id id,
       bool pretty = false,
       Summary summary = Summary.none,
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
-      Client client}) {
+      Client? client}) {
     return _FhirReadRequest(
       base: base,
       type: type,
@@ -37,18 +40,17 @@ class _$FhirRequestTearOff {
     );
   }
 
-// ignore: unused_element
   _FhirVReadRequest vRead(
-      {@required Uri base,
-      @required R4ResourceType type,
-      @required Id id,
-      @required Id vid,
+      {required Uri base,
+      required R4ResourceType type,
+      required Id id,
+      required Id vid,
       bool pretty = false,
       Summary summary = Summary.none,
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
-      Client client}) {
+      Client? client}) {
     return _FhirVReadRequest(
       base: base,
       type: type,
@@ -63,16 +65,15 @@ class _$FhirRequestTearOff {
     );
   }
 
-// ignore: unused_element
   _FhirUpdateRequest update(
-      {@required Uri base,
-      @required Resource resource,
+      {required Uri base,
+      required Resource resource,
       bool pretty = false,
       Summary summary = Summary.none,
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
-      Client client}) {
+      Client? client}) {
     return _FhirUpdateRequest(
       base: base,
       resource: resource,
@@ -85,16 +86,15 @@ class _$FhirRequestTearOff {
     );
   }
 
-// ignore: unused_element
   _FhirPatchRequest patch(
-      {@required Uri base,
-      @required Resource resource,
+      {required Uri base,
+      required Resource resource,
       bool pretty = false,
       Summary summary = Summary.none,
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
-      Client client}) {
+      Client? client}) {
     return _FhirPatchRequest(
       base: base,
       resource: resource,
@@ -107,17 +107,16 @@ class _$FhirRequestTearOff {
     );
   }
 
-// ignore: unused_element
   _FhirDeleteRequest delete(
-      {@required Uri base,
-      @required R4ResourceType type,
-      @required Id id,
+      {required Uri base,
+      required R4ResourceType type,
+      required Id id,
       bool pretty = false,
       Summary summary = Summary.none,
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
-      Client client}) {
+      Client? client}) {
     return _FhirDeleteRequest(
       base: base,
       type: type,
@@ -131,16 +130,15 @@ class _$FhirRequestTearOff {
     );
   }
 
-// ignore: unused_element
   _FhirCreateRequest create(
-      {@required Uri base,
-      @required Resource resource,
+      {required Uri base,
+      required Resource resource,
       bool pretty = false,
       Summary summary = Summary.none,
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
-      Client client}) {
+      Client? client}) {
     return _FhirCreateRequest(
       base: base,
       resource: resource,
@@ -153,10 +151,9 @@ class _$FhirRequestTearOff {
     );
   }
 
-// ignore: unused_element
   _FhirSearchRequest search(
-      {@required Uri base,
-      @required R4ResourceType type,
+      {required Uri base,
+      required R4ResourceType type,
       bool pretty = false,
       Summary summary = Summary.none,
       String format = 'json',
@@ -164,7 +161,7 @@ class _$FhirRequestTearOff {
       List<String> parameters = const <String>[],
       bool usePost = false,
       RestfulRequest restfulRequest = RestfulRequest.get_,
-      Client client}) {
+      Client? client}) {
     return _FhirSearchRequest(
       base: base,
       type: type,
@@ -179,15 +176,14 @@ class _$FhirRequestTearOff {
     );
   }
 
-// ignore: unused_element
   _FhirSearchAllRequest searchAll(
-      {@required Uri base,
+      {required Uri base,
       bool pretty = false,
       Summary summary = Summary.none,
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
-      Client client}) {
+      Client? client}) {
     return _FhirSearchAllRequest(
       base: base,
       pretty: pretty,
@@ -199,16 +195,15 @@ class _$FhirRequestTearOff {
     );
   }
 
-// ignore: unused_element
   _FhirCapabilitiesRequest capabilities(
-      {@required Uri base,
+      {required Uri base,
       bool pretty = false,
       Summary summary = Summary.none,
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       Mode mode = Mode.full,
-      Client client}) {
+      Client? client}) {
     return _FhirCapabilitiesRequest(
       base: base,
       pretty: pretty,
@@ -221,16 +216,15 @@ class _$FhirRequestTearOff {
     );
   }
 
-// ignore: unused_element
   _FhirTransactionRequest transaction(
-      {@required Uri base,
+      {required Uri base,
       bool pretty = false,
       Summary summary = Summary.none,
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
-      @required Bundle bundle,
-      Client client}) {
+      required Bundle bundle,
+      Client? client}) {
     return _FhirTransactionRequest(
       base: base,
       pretty: pretty,
@@ -243,16 +237,15 @@ class _$FhirRequestTearOff {
     );
   }
 
-// ignore: unused_element
   _FhirBatchRequest batch(
-      {@required Uri base,
+      {required Uri base,
       bool pretty = false,
       Summary summary = Summary.none,
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
-      @required Bundle bundle,
-      Client client}) {
+      required Bundle bundle,
+      Client? client}) {
     return _FhirBatchRequest(
       base: base,
       pretty: pretty,
@@ -265,21 +258,20 @@ class _$FhirRequestTearOff {
     );
   }
 
-// ignore: unused_element
   _FhirHistoryRequest history(
-      {@required Uri base,
-      @required R4ResourceType type,
-      @required Id id,
+      {required Uri base,
+      required R4ResourceType type,
+      required Id id,
       bool pretty = false,
       Summary summary = Summary.none,
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
-      int count,
-      Instant since,
-      FhirDateTime at,
-      String reference,
-      Client client}) {
+      int? count,
+      Instant? since,
+      FhirDateTime? at,
+      String? reference,
+      Client? client}) {
     return _FhirHistoryRequest(
       base: base,
       type: type,
@@ -297,20 +289,19 @@ class _$FhirRequestTearOff {
     );
   }
 
-// ignore: unused_element
   _FhirHistoryTypeRequest historyType(
-      {@required Uri base,
-      @required R4ResourceType type,
+      {required Uri base,
+      required R4ResourceType type,
       bool pretty = false,
       Summary summary = Summary.none,
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
-      int count,
-      Instant since,
-      FhirDateTime at,
-      String reference,
-      Client client}) {
+      int? count,
+      Instant? since,
+      FhirDateTime? at,
+      String? reference,
+      Client? client}) {
     return _FhirHistoryTypeRequest(
       base: base,
       type: type,
@@ -327,19 +318,18 @@ class _$FhirRequestTearOff {
     );
   }
 
-// ignore: unused_element
   _FhirHistoryAllRequest historyAll(
-      {@required Uri base,
+      {required Uri base,
       bool pretty = false,
       Summary summary = Summary.none,
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
-      int count,
-      Instant since,
-      FhirDateTime at,
-      String reference,
-      Client client}) {
+      int? count,
+      Instant? since,
+      FhirDateTime? at,
+      String? reference,
+      Client? client}) {
     return _FhirHistoryAllRequest(
       base: base,
       pretty: pretty,
@@ -355,21 +345,20 @@ class _$FhirRequestTearOff {
     );
   }
 
-// ignore: unused_element
   _FhirOperationRequest operation(
-      {@required Uri base,
-      R4ResourceType type,
-      Id id,
+      {required Uri base,
+      R4ResourceType? type,
+      Id? id,
       bool pretty = false,
       Summary summary = Summary.none,
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       Map<String, dynamic> fhirParameter = const <String, dynamic>{},
-      @required String operation,
+      required String operation,
       bool usePost = false,
       bool useFormData = false,
-      Client client}) {
+      Client? client}) {
     return _FhirOperationRequest(
       base: base,
       type: type,
@@ -389,23 +378,21 @@ class _$FhirRequestTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $FhirRequest = _$FhirRequestTearOff();
 
 /// @nodoc
 mixin _$FhirRequest {
-  Uri get base;
-  bool get pretty;
-  Summary get summary;
-  String get format;
-  List<String> get elements;
-  List<String> get parameters;
-  Client get client;
+  Uri get base => throw _privateConstructorUsedError;
+  bool get pretty => throw _privateConstructorUsedError;
+  Summary get summary => throw _privateConstructorUsedError;
+  String get format => throw _privateConstructorUsedError;
+  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  Client? get client => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult read(
+  TResult when<TResult extends Object?>({
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -414,9 +401,9 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult vRead(
+            Client? client)
+        read,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -426,9 +413,9 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult update(
+            Client? client)
+        vRead,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -436,9 +423,9 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult patch(
+            Client? client)
+        update,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -446,9 +433,9 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult delete(
+            Client? client)
+        patch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -457,9 +444,9 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult create(
+            Client? client)
+        delete,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -467,9 +454,9 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult search(
+            Client? client)
+        create,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -479,12 +466,18 @@ mixin _$FhirRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            Client client),
-    @required
-        TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client client),
-    @required
-        TResult capabilities(
+            Client? client)
+        search,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        searchAll,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -492,9 +485,9 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            Client client),
-    @required
-        TResult transaction(
+            Client? client)
+        capabilities,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -502,9 +495,9 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult batch(
+            Client? client)
+        transaction,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -512,9 +505,9 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult history(
+            Client? client)
+        batch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -523,13 +516,13 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyType(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        history,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -537,29 +530,29 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyAll(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyType,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult operation(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyAll,
+    required TResult Function(
             Uri base,
-            R4ResourceType type,
-            Id id,
+            R4ResourceType? type,
+            Id? id,
             bool pretty,
             Summary summary,
             String format,
@@ -569,203 +562,413 @@ mixin _$FhirRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            Client client),
-  });
+            Client? client)
+        operation,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult read(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult vRead(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        Id vid,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult update(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult patch(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult delete(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult create(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult search(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        bool usePost,
-        RestfulRequest restfulRequest,
-        Client client),
-    TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-        List<String> elements, List<String> parameters, Client client),
-    TResult capabilities(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Mode mode,
-        Client client),
-    TResult transaction(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult batch(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult history(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyType(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyAll(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult operation(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Map<String, dynamic> fhirParameter,
-        String operation,
-        bool usePost,
-        bool useFormData,
-        Client client),
-    @required TResult orElse(),
-  });
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult read(_FhirReadRequest value),
-    @required TResult vRead(_FhirVReadRequest value),
-    @required TResult update(_FhirUpdateRequest value),
-    @required TResult patch(_FhirPatchRequest value),
-    @required TResult delete(_FhirDeleteRequest value),
-    @required TResult create(_FhirCreateRequest value),
-    @required TResult search(_FhirSearchRequest value),
-    @required TResult searchAll(_FhirSearchAllRequest value),
-    @required TResult capabilities(_FhirCapabilitiesRequest value),
-    @required TResult transaction(_FhirTransactionRequest value),
-    @required TResult batch(_FhirBatchRequest value),
-    @required TResult history(_FhirHistoryRequest value),
-    @required TResult historyType(_FhirHistoryTypeRequest value),
-    @required TResult historyAll(_FhirHistoryAllRequest value),
-    @required TResult operation(_FhirOperationRequest value),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult read(_FhirReadRequest value),
-    TResult vRead(_FhirVReadRequest value),
-    TResult update(_FhirUpdateRequest value),
-    TResult patch(_FhirPatchRequest value),
-    TResult delete(_FhirDeleteRequest value),
-    TResult create(_FhirCreateRequest value),
-    TResult search(_FhirSearchRequest value),
-    TResult searchAll(_FhirSearchAllRequest value),
-    TResult capabilities(_FhirCapabilitiesRequest value),
-    TResult transaction(_FhirTransactionRequest value),
-    TResult batch(_FhirBatchRequest value),
-    TResult history(_FhirHistoryRequest value),
-    TResult historyType(_FhirHistoryTypeRequest value),
-    TResult historyAll(_FhirHistoryAllRequest value),
-    TResult operation(_FhirOperationRequest value),
-    @required TResult orElse(),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FhirReadRequest value) read,
+    required TResult Function(_FhirVReadRequest value) vRead,
+    required TResult Function(_FhirUpdateRequest value) update,
+    required TResult Function(_FhirPatchRequest value) patch,
+    required TResult Function(_FhirDeleteRequest value) delete,
+    required TResult Function(_FhirCreateRequest value) create,
+    required TResult Function(_FhirSearchRequest value) search,
+    required TResult Function(_FhirSearchAllRequest value) searchAll,
+    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(_FhirTransactionRequest value) transaction,
+    required TResult Function(_FhirBatchRequest value) batch,
+    required TResult Function(_FhirHistoryRequest value) history,
+    required TResult Function(_FhirHistoryTypeRequest value) historyType,
+    required TResult Function(_FhirHistoryAllRequest value) historyAll,
+    required TResult Function(_FhirOperationRequest value) operation,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
+  }) =>
+      throw _privateConstructorUsedError;
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
-  $FhirRequestCopyWith<FhirRequest> get copyWith;
+  $FhirRequestCopyWith<FhirRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -780,7 +983,7 @@ abstract class $FhirRequestCopyWith<$Res> {
       String format,
       List<String> elements,
       List<String> parameters,
-      Client client});
+      Client? client});
 }
 
 /// @nodoc
@@ -793,25 +996,43 @@ class _$FhirRequestCopyWithImpl<$Res> implements $FhirRequestCopyWith<$Res> {
 
   @override
   $Res call({
-    Object base = freezed,
-    Object pretty = freezed,
-    Object summary = freezed,
-    Object format = freezed,
-    Object elements = freezed,
-    Object parameters = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? pretty = freezed,
+    Object? summary = freezed,
+    Object? format = freezed,
+    Object? elements = freezed,
+    Object? parameters = freezed,
+    Object? client = freezed,
   }) {
     return _then(_value.copyWith(
-      base: base == freezed ? _value.base : base as Uri,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      client: client == freezed ? _value.client : client as Client,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
@@ -832,7 +1053,7 @@ abstract class _$FhirReadRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
-      Client client});
+      Client? client});
 }
 
 /// @nodoc
@@ -848,54 +1069,71 @@ class __$FhirReadRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object base = freezed,
-    Object type = freezed,
-    Object id = freezed,
-    Object pretty = freezed,
-    Object summary = freezed,
-    Object format = freezed,
-    Object elements = freezed,
-    Object parameters = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? type = freezed,
+    Object? id = freezed,
+    Object? pretty = freezed,
+    Object? summary = freezed,
+    Object? format = freezed,
+    Object? elements = freezed,
+    Object? parameters = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirReadRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      type: type == freezed ? _value.type : type as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      client: client == freezed ? _value.client : client as Client,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_FhirReadRequest extends _FhirReadRequest {
   _$_FhirReadRequest(
-      {@required this.base,
-      @required this.type,
-      @required this.id,
+      {required this.base,
+      required this.type,
+      required this.id,
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.client})
-      : assert(base != null),
-        assert(type != null),
-        assert(id != null),
-        assert(pretty != null),
-        assert(summary != null),
-        assert(format != null),
-        assert(elements != null),
-        assert(parameters != null),
-        super._();
+      : super._();
 
   @override
   final Uri base;
@@ -919,7 +1157,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
   @override
   final List<String> parameters;
   @override
-  final Client client;
+  final Client? client;
 
   @override
   String toString() {
@@ -973,9 +1211,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult read(
+  TResult when<TResult extends Object?>({
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -984,9 +1221,9 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult vRead(
+            Client? client)
+        read,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -996,9 +1233,9 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult update(
+            Client? client)
+        vRead,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -1006,9 +1243,9 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult patch(
+            Client? client)
+        update,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -1016,9 +1253,9 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult delete(
+            Client? client)
+        patch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -1027,9 +1264,9 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult create(
+            Client? client)
+        delete,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -1037,9 +1274,9 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult search(
+            Client? client)
+        create,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -1049,12 +1286,18 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            Client client),
-    @required
-        TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client client),
-    @required
-        TResult capabilities(
+            Client? client)
+        search,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        searchAll,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -1062,9 +1305,9 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            Client client),
-    @required
-        TResult transaction(
+            Client? client)
+        capabilities,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -1072,9 +1315,9 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult batch(
+            Client? client)
+        transaction,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -1082,9 +1325,9 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult history(
+            Client? client)
+        batch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -1093,13 +1336,13 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyType(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        history,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -1107,29 +1350,29 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyAll(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyType,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult operation(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyAll,
+    required TResult Function(
             Uri base,
-            R4ResourceType type,
-            Id id,
+            R4ResourceType? type,
+            Id? id,
             bool pretty,
             Summary summary,
             String format,
@@ -1139,184 +1382,358 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            Client client),
+            Client? client)
+        operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return read(
         base, type, id, pretty, summary, format, elements, parameters, client);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult read(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult vRead(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        Id vid,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult update(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult patch(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult delete(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult create(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult search(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        bool usePost,
-        RestfulRequest restfulRequest,
-        Client client),
-    TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-        List<String> elements, List<String> parameters, Client client),
-    TResult capabilities(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Mode mode,
-        Client client),
-    TResult transaction(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult batch(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult history(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyType(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyAll(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult operation(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Map<String, dynamic> fhirParameter,
-        String operation,
-        bool usePost,
-        bool useFormData,
-        Client client),
-    @required TResult orElse(),
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
   }) {
-    assert(orElse != null);
+    return read?.call(
+        base, type, id, pretty, summary, format, elements, parameters, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+    required TResult orElse(),
+  }) {
     if (read != null) {
       return read(base, type, id, pretty, summary, format, elements, parameters,
           client);
@@ -1326,62 +1743,68 @@ class _$_FhirReadRequest extends _FhirReadRequest {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult read(_FhirReadRequest value),
-    @required TResult vRead(_FhirVReadRequest value),
-    @required TResult update(_FhirUpdateRequest value),
-    @required TResult patch(_FhirPatchRequest value),
-    @required TResult delete(_FhirDeleteRequest value),
-    @required TResult create(_FhirCreateRequest value),
-    @required TResult search(_FhirSearchRequest value),
-    @required TResult searchAll(_FhirSearchAllRequest value),
-    @required TResult capabilities(_FhirCapabilitiesRequest value),
-    @required TResult transaction(_FhirTransactionRequest value),
-    @required TResult batch(_FhirBatchRequest value),
-    @required TResult history(_FhirHistoryRequest value),
-    @required TResult historyType(_FhirHistoryTypeRequest value),
-    @required TResult historyAll(_FhirHistoryAllRequest value),
-    @required TResult operation(_FhirOperationRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FhirReadRequest value) read,
+    required TResult Function(_FhirVReadRequest value) vRead,
+    required TResult Function(_FhirUpdateRequest value) update,
+    required TResult Function(_FhirPatchRequest value) patch,
+    required TResult Function(_FhirDeleteRequest value) delete,
+    required TResult Function(_FhirCreateRequest value) create,
+    required TResult Function(_FhirSearchRequest value) search,
+    required TResult Function(_FhirSearchAllRequest value) searchAll,
+    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(_FhirTransactionRequest value) transaction,
+    required TResult Function(_FhirBatchRequest value) batch,
+    required TResult Function(_FhirHistoryRequest value) history,
+    required TResult Function(_FhirHistoryTypeRequest value) historyType,
+    required TResult Function(_FhirHistoryAllRequest value) historyAll,
+    required TResult Function(_FhirOperationRequest value) operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return read(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult read(_FhirReadRequest value),
-    TResult vRead(_FhirVReadRequest value),
-    TResult update(_FhirUpdateRequest value),
-    TResult patch(_FhirPatchRequest value),
-    TResult delete(_FhirDeleteRequest value),
-    TResult create(_FhirCreateRequest value),
-    TResult search(_FhirSearchRequest value),
-    TResult searchAll(_FhirSearchAllRequest value),
-    TResult capabilities(_FhirCapabilitiesRequest value),
-    TResult transaction(_FhirTransactionRequest value),
-    TResult batch(_FhirBatchRequest value),
-    TResult history(_FhirHistoryRequest value),
-    TResult historyType(_FhirHistoryTypeRequest value),
-    TResult historyAll(_FhirHistoryAllRequest value),
-    TResult operation(_FhirOperationRequest value),
-    @required TResult orElse(),
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
   }) {
-    assert(orElse != null);
+    return read?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
+    required TResult orElse(),
+  }) {
     if (read != null) {
       return read(this);
     }
@@ -1390,37 +1813,38 @@ class _$_FhirReadRequest extends _FhirReadRequest {
 }
 
 abstract class _FhirReadRequest extends FhirRequest {
-  _FhirReadRequest._() : super._();
   factory _FhirReadRequest(
-      {@required Uri base,
-      @required R4ResourceType type,
-      @required Id id,
+      {required Uri base,
+      required R4ResourceType type,
+      required Id id,
       bool pretty,
       Summary summary,
       String format,
       List<String> elements,
       List<String> parameters,
-      Client client}) = _$_FhirReadRequest;
+      Client? client}) = _$_FhirReadRequest;
+  _FhirReadRequest._() : super._();
 
   @override
-  Uri get base;
-  R4ResourceType get type;
-  Id get id;
+  Uri get base => throw _privateConstructorUsedError;
+  R4ResourceType get type => throw _privateConstructorUsedError;
+  Id get id => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  Client get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirReadRequestCopyWith<_FhirReadRequest> get copyWith;
+  _$FhirReadRequestCopyWith<_FhirReadRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1440,7 +1864,7 @@ abstract class _$FhirVReadRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
-      Client client});
+      Client? client});
 }
 
 /// @nodoc
@@ -1456,58 +1880,77 @@ class __$FhirVReadRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object base = freezed,
-    Object type = freezed,
-    Object id = freezed,
-    Object vid = freezed,
-    Object pretty = freezed,
-    Object summary = freezed,
-    Object format = freezed,
-    Object elements = freezed,
-    Object parameters = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? type = freezed,
+    Object? id = freezed,
+    Object? vid = freezed,
+    Object? pretty = freezed,
+    Object? summary = freezed,
+    Object? format = freezed,
+    Object? elements = freezed,
+    Object? parameters = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirVReadRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      type: type == freezed ? _value.type : type as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      vid: vid == freezed ? _value.vid : vid as Id,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id,
+      vid: vid == freezed
+          ? _value.vid
+          : vid // ignore: cast_nullable_to_non_nullable
+              as Id,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      client: client == freezed ? _value.client : client as Client,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_FhirVReadRequest extends _FhirVReadRequest {
   _$_FhirVReadRequest(
-      {@required this.base,
-      @required this.type,
-      @required this.id,
-      @required this.vid,
+      {required this.base,
+      required this.type,
+      required this.id,
+      required this.vid,
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.client})
-      : assert(base != null),
-        assert(type != null),
-        assert(id != null),
-        assert(vid != null),
-        assert(pretty != null),
-        assert(summary != null),
-        assert(format != null),
-        assert(elements != null),
-        assert(parameters != null),
-        super._();
+      : super._();
 
   @override
   final Uri base;
@@ -1533,7 +1976,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
   @override
   final List<String> parameters;
   @override
-  final Client client;
+  final Client? client;
 
   @override
   String toString() {
@@ -1590,9 +2033,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult read(
+  TResult when<TResult extends Object?>({
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -1601,9 +2043,9 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult vRead(
+            Client? client)
+        read,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -1613,9 +2055,9 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult update(
+            Client? client)
+        vRead,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -1623,9 +2065,9 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult patch(
+            Client? client)
+        update,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -1633,9 +2075,9 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult delete(
+            Client? client)
+        patch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -1644,9 +2086,9 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult create(
+            Client? client)
+        delete,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -1654,9 +2096,9 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult search(
+            Client? client)
+        create,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -1666,12 +2108,18 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            Client client),
-    @required
-        TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client client),
-    @required
-        TResult capabilities(
+            Client? client)
+        search,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        searchAll,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -1679,9 +2127,9 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            Client client),
-    @required
-        TResult transaction(
+            Client? client)
+        capabilities,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -1689,9 +2137,9 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult batch(
+            Client? client)
+        transaction,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -1699,9 +2147,9 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult history(
+            Client? client)
+        batch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -1710,13 +2158,13 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyType(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        history,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -1724,29 +2172,29 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyAll(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyType,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult operation(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyAll,
+    required TResult Function(
             Uri base,
-            R4ResourceType type,
-            Id id,
+            R4ResourceType? type,
+            Id? id,
             bool pretty,
             Summary summary,
             String format,
@@ -1756,184 +2204,358 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            Client client),
+            Client? client)
+        operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return vRead(base, type, id, vid, pretty, summary, format, elements,
         parameters, client);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult read(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult vRead(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        Id vid,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult update(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult patch(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult delete(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult create(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult search(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        bool usePost,
-        RestfulRequest restfulRequest,
-        Client client),
-    TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-        List<String> elements, List<String> parameters, Client client),
-    TResult capabilities(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Mode mode,
-        Client client),
-    TResult transaction(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult batch(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult history(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyType(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyAll(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult operation(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Map<String, dynamic> fhirParameter,
-        String operation,
-        bool usePost,
-        bool useFormData,
-        Client client),
-    @required TResult orElse(),
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
   }) {
-    assert(orElse != null);
+    return vRead?.call(base, type, id, vid, pretty, summary, format, elements,
+        parameters, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+    required TResult orElse(),
+  }) {
     if (vRead != null) {
       return vRead(base, type, id, vid, pretty, summary, format, elements,
           parameters, client);
@@ -1943,62 +2565,68 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult read(_FhirReadRequest value),
-    @required TResult vRead(_FhirVReadRequest value),
-    @required TResult update(_FhirUpdateRequest value),
-    @required TResult patch(_FhirPatchRequest value),
-    @required TResult delete(_FhirDeleteRequest value),
-    @required TResult create(_FhirCreateRequest value),
-    @required TResult search(_FhirSearchRequest value),
-    @required TResult searchAll(_FhirSearchAllRequest value),
-    @required TResult capabilities(_FhirCapabilitiesRequest value),
-    @required TResult transaction(_FhirTransactionRequest value),
-    @required TResult batch(_FhirBatchRequest value),
-    @required TResult history(_FhirHistoryRequest value),
-    @required TResult historyType(_FhirHistoryTypeRequest value),
-    @required TResult historyAll(_FhirHistoryAllRequest value),
-    @required TResult operation(_FhirOperationRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FhirReadRequest value) read,
+    required TResult Function(_FhirVReadRequest value) vRead,
+    required TResult Function(_FhirUpdateRequest value) update,
+    required TResult Function(_FhirPatchRequest value) patch,
+    required TResult Function(_FhirDeleteRequest value) delete,
+    required TResult Function(_FhirCreateRequest value) create,
+    required TResult Function(_FhirSearchRequest value) search,
+    required TResult Function(_FhirSearchAllRequest value) searchAll,
+    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(_FhirTransactionRequest value) transaction,
+    required TResult Function(_FhirBatchRequest value) batch,
+    required TResult Function(_FhirHistoryRequest value) history,
+    required TResult Function(_FhirHistoryTypeRequest value) historyType,
+    required TResult Function(_FhirHistoryAllRequest value) historyAll,
+    required TResult Function(_FhirOperationRequest value) operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return vRead(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult read(_FhirReadRequest value),
-    TResult vRead(_FhirVReadRequest value),
-    TResult update(_FhirUpdateRequest value),
-    TResult patch(_FhirPatchRequest value),
-    TResult delete(_FhirDeleteRequest value),
-    TResult create(_FhirCreateRequest value),
-    TResult search(_FhirSearchRequest value),
-    TResult searchAll(_FhirSearchAllRequest value),
-    TResult capabilities(_FhirCapabilitiesRequest value),
-    TResult transaction(_FhirTransactionRequest value),
-    TResult batch(_FhirBatchRequest value),
-    TResult history(_FhirHistoryRequest value),
-    TResult historyType(_FhirHistoryTypeRequest value),
-    TResult historyAll(_FhirHistoryAllRequest value),
-    TResult operation(_FhirOperationRequest value),
-    @required TResult orElse(),
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
   }) {
-    assert(orElse != null);
+    return vRead?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
+    required TResult orElse(),
+  }) {
     if (vRead != null) {
       return vRead(this);
     }
@@ -2007,39 +2635,40 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
 }
 
 abstract class _FhirVReadRequest extends FhirRequest {
-  _FhirVReadRequest._() : super._();
   factory _FhirVReadRequest(
-      {@required Uri base,
-      @required R4ResourceType type,
-      @required Id id,
-      @required Id vid,
+      {required Uri base,
+      required R4ResourceType type,
+      required Id id,
+      required Id vid,
       bool pretty,
       Summary summary,
       String format,
       List<String> elements,
       List<String> parameters,
-      Client client}) = _$_FhirVReadRequest;
+      Client? client}) = _$_FhirVReadRequest;
+  _FhirVReadRequest._() : super._();
 
   @override
-  Uri get base;
-  R4ResourceType get type;
-  Id get id;
-  Id get vid;
+  Uri get base => throw _privateConstructorUsedError;
+  R4ResourceType get type => throw _privateConstructorUsedError;
+  Id get id => throw _privateConstructorUsedError;
+  Id get vid => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  Client get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirVReadRequestCopyWith<_FhirVReadRequest> get copyWith;
+  _$FhirVReadRequestCopyWith<_FhirVReadRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2057,7 +2686,7 @@ abstract class _$FhirUpdateRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
-      Client client});
+      Client? client});
 }
 
 /// @nodoc
@@ -2073,50 +2702,65 @@ class __$FhirUpdateRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object base = freezed,
-    Object resource = freezed,
-    Object pretty = freezed,
-    Object summary = freezed,
-    Object format = freezed,
-    Object elements = freezed,
-    Object parameters = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? resource = freezed,
+    Object? pretty = freezed,
+    Object? summary = freezed,
+    Object? format = freezed,
+    Object? elements = freezed,
+    Object? parameters = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirUpdateRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      resource: resource == freezed ? _value.resource : resource as Resource,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as Resource,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      client: client == freezed ? _value.client : client as Client,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_FhirUpdateRequest extends _FhirUpdateRequest {
   _$_FhirUpdateRequest(
-      {@required this.base,
-      @required this.resource,
+      {required this.base,
+      required this.resource,
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.client})
-      : assert(base != null),
-        assert(resource != null),
-        assert(pretty != null),
-        assert(summary != null),
-        assert(format != null),
-        assert(elements != null),
-        assert(parameters != null),
-        super._();
+      : super._();
 
   @override
   final Uri base;
@@ -2138,7 +2782,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
   @override
   final List<String> parameters;
   @override
-  final Client client;
+  final Client? client;
 
   @override
   String toString() {
@@ -2190,9 +2834,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult read(
+  TResult when<TResult extends Object?>({
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -2201,9 +2844,9 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult vRead(
+            Client? client)
+        read,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -2213,9 +2856,9 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult update(
+            Client? client)
+        vRead,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -2223,9 +2866,9 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult patch(
+            Client? client)
+        update,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -2233,9 +2876,9 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult delete(
+            Client? client)
+        patch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -2244,9 +2887,9 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult create(
+            Client? client)
+        delete,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -2254,9 +2897,9 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult search(
+            Client? client)
+        create,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -2266,12 +2909,18 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            Client client),
-    @required
-        TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client client),
-    @required
-        TResult capabilities(
+            Client? client)
+        search,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        searchAll,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -2279,9 +2928,9 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            Client client),
-    @required
-        TResult transaction(
+            Client? client)
+        capabilities,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -2289,9 +2938,9 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult batch(
+            Client? client)
+        transaction,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -2299,9 +2948,9 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult history(
+            Client? client)
+        batch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -2310,13 +2959,13 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyType(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        history,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -2324,29 +2973,29 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyAll(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyType,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult operation(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyAll,
+    required TResult Function(
             Uri base,
-            R4ResourceType type,
-            Id id,
+            R4ResourceType? type,
+            Id? id,
             bool pretty,
             Summary summary,
             String format,
@@ -2356,184 +3005,358 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            Client client),
+            Client? client)
+        operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return update(
         base, resource, pretty, summary, format, elements, parameters, client);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult read(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult vRead(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        Id vid,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult update(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult patch(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult delete(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult create(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult search(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        bool usePost,
-        RestfulRequest restfulRequest,
-        Client client),
-    TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-        List<String> elements, List<String> parameters, Client client),
-    TResult capabilities(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Mode mode,
-        Client client),
-    TResult transaction(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult batch(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult history(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyType(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyAll(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult operation(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Map<String, dynamic> fhirParameter,
-        String operation,
-        bool usePost,
-        bool useFormData,
-        Client client),
-    @required TResult orElse(),
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
   }) {
-    assert(orElse != null);
+    return update?.call(
+        base, resource, pretty, summary, format, elements, parameters, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+    required TResult orElse(),
+  }) {
     if (update != null) {
       return update(base, resource, pretty, summary, format, elements,
           parameters, client);
@@ -2543,62 +3366,68 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult read(_FhirReadRequest value),
-    @required TResult vRead(_FhirVReadRequest value),
-    @required TResult update(_FhirUpdateRequest value),
-    @required TResult patch(_FhirPatchRequest value),
-    @required TResult delete(_FhirDeleteRequest value),
-    @required TResult create(_FhirCreateRequest value),
-    @required TResult search(_FhirSearchRequest value),
-    @required TResult searchAll(_FhirSearchAllRequest value),
-    @required TResult capabilities(_FhirCapabilitiesRequest value),
-    @required TResult transaction(_FhirTransactionRequest value),
-    @required TResult batch(_FhirBatchRequest value),
-    @required TResult history(_FhirHistoryRequest value),
-    @required TResult historyType(_FhirHistoryTypeRequest value),
-    @required TResult historyAll(_FhirHistoryAllRequest value),
-    @required TResult operation(_FhirOperationRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FhirReadRequest value) read,
+    required TResult Function(_FhirVReadRequest value) vRead,
+    required TResult Function(_FhirUpdateRequest value) update,
+    required TResult Function(_FhirPatchRequest value) patch,
+    required TResult Function(_FhirDeleteRequest value) delete,
+    required TResult Function(_FhirCreateRequest value) create,
+    required TResult Function(_FhirSearchRequest value) search,
+    required TResult Function(_FhirSearchAllRequest value) searchAll,
+    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(_FhirTransactionRequest value) transaction,
+    required TResult Function(_FhirBatchRequest value) batch,
+    required TResult Function(_FhirHistoryRequest value) history,
+    required TResult Function(_FhirHistoryTypeRequest value) historyType,
+    required TResult Function(_FhirHistoryAllRequest value) historyAll,
+    required TResult Function(_FhirOperationRequest value) operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return update(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult read(_FhirReadRequest value),
-    TResult vRead(_FhirVReadRequest value),
-    TResult update(_FhirUpdateRequest value),
-    TResult patch(_FhirPatchRequest value),
-    TResult delete(_FhirDeleteRequest value),
-    TResult create(_FhirCreateRequest value),
-    TResult search(_FhirSearchRequest value),
-    TResult searchAll(_FhirSearchAllRequest value),
-    TResult capabilities(_FhirCapabilitiesRequest value),
-    TResult transaction(_FhirTransactionRequest value),
-    TResult batch(_FhirBatchRequest value),
-    TResult history(_FhirHistoryRequest value),
-    TResult historyType(_FhirHistoryTypeRequest value),
-    TResult historyAll(_FhirHistoryAllRequest value),
-    TResult operation(_FhirOperationRequest value),
-    @required TResult orElse(),
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
   }) {
-    assert(orElse != null);
+    return update?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
+    required TResult orElse(),
+  }) {
     if (update != null) {
       return update(this);
     }
@@ -2607,35 +3436,36 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
 }
 
 abstract class _FhirUpdateRequest extends FhirRequest {
-  _FhirUpdateRequest._() : super._();
   factory _FhirUpdateRequest(
-      {@required Uri base,
-      @required Resource resource,
+      {required Uri base,
+      required Resource resource,
       bool pretty,
       Summary summary,
       String format,
       List<String> elements,
       List<String> parameters,
-      Client client}) = _$_FhirUpdateRequest;
+      Client? client}) = _$_FhirUpdateRequest;
+  _FhirUpdateRequest._() : super._();
 
   @override
-  Uri get base;
-  Resource get resource;
+  Uri get base => throw _privateConstructorUsedError;
+  Resource get resource => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  Client get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirUpdateRequestCopyWith<_FhirUpdateRequest> get copyWith;
+  _$FhirUpdateRequestCopyWith<_FhirUpdateRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2653,7 +3483,7 @@ abstract class _$FhirPatchRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
-      Client client});
+      Client? client});
 }
 
 /// @nodoc
@@ -2669,50 +3499,65 @@ class __$FhirPatchRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object base = freezed,
-    Object resource = freezed,
-    Object pretty = freezed,
-    Object summary = freezed,
-    Object format = freezed,
-    Object elements = freezed,
-    Object parameters = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? resource = freezed,
+    Object? pretty = freezed,
+    Object? summary = freezed,
+    Object? format = freezed,
+    Object? elements = freezed,
+    Object? parameters = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirPatchRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      resource: resource == freezed ? _value.resource : resource as Resource,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as Resource,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      client: client == freezed ? _value.client : client as Client,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_FhirPatchRequest extends _FhirPatchRequest {
   _$_FhirPatchRequest(
-      {@required this.base,
-      @required this.resource,
+      {required this.base,
+      required this.resource,
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.client})
-      : assert(base != null),
-        assert(resource != null),
-        assert(pretty != null),
-        assert(summary != null),
-        assert(format != null),
-        assert(elements != null),
-        assert(parameters != null),
-        super._();
+      : super._();
 
   @override
   final Uri base;
@@ -2734,7 +3579,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
   @override
   final List<String> parameters;
   @override
-  final Client client;
+  final Client? client;
 
   @override
   String toString() {
@@ -2786,9 +3631,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult read(
+  TResult when<TResult extends Object?>({
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -2797,9 +3641,9 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult vRead(
+            Client? client)
+        read,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -2809,9 +3653,9 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult update(
+            Client? client)
+        vRead,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -2819,9 +3663,9 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult patch(
+            Client? client)
+        update,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -2829,9 +3673,9 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult delete(
+            Client? client)
+        patch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -2840,9 +3684,9 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult create(
+            Client? client)
+        delete,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -2850,9 +3694,9 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult search(
+            Client? client)
+        create,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -2862,12 +3706,18 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            Client client),
-    @required
-        TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client client),
-    @required
-        TResult capabilities(
+            Client? client)
+        search,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        searchAll,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -2875,9 +3725,9 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            Client client),
-    @required
-        TResult transaction(
+            Client? client)
+        capabilities,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -2885,9 +3735,9 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult batch(
+            Client? client)
+        transaction,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -2895,9 +3745,9 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult history(
+            Client? client)
+        batch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -2906,13 +3756,13 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyType(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        history,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -2920,29 +3770,29 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyAll(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyType,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult operation(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyAll,
+    required TResult Function(
             Uri base,
-            R4ResourceType type,
-            Id id,
+            R4ResourceType? type,
+            Id? id,
             bool pretty,
             Summary summary,
             String format,
@@ -2952,184 +3802,358 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            Client client),
+            Client? client)
+        operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return patch(
         base, resource, pretty, summary, format, elements, parameters, client);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult read(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult vRead(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        Id vid,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult update(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult patch(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult delete(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult create(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult search(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        bool usePost,
-        RestfulRequest restfulRequest,
-        Client client),
-    TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-        List<String> elements, List<String> parameters, Client client),
-    TResult capabilities(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Mode mode,
-        Client client),
-    TResult transaction(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult batch(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult history(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyType(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyAll(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult operation(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Map<String, dynamic> fhirParameter,
-        String operation,
-        bool usePost,
-        bool useFormData,
-        Client client),
-    @required TResult orElse(),
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
   }) {
-    assert(orElse != null);
+    return patch?.call(
+        base, resource, pretty, summary, format, elements, parameters, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+    required TResult orElse(),
+  }) {
     if (patch != null) {
       return patch(base, resource, pretty, summary, format, elements,
           parameters, client);
@@ -3139,62 +4163,68 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult read(_FhirReadRequest value),
-    @required TResult vRead(_FhirVReadRequest value),
-    @required TResult update(_FhirUpdateRequest value),
-    @required TResult patch(_FhirPatchRequest value),
-    @required TResult delete(_FhirDeleteRequest value),
-    @required TResult create(_FhirCreateRequest value),
-    @required TResult search(_FhirSearchRequest value),
-    @required TResult searchAll(_FhirSearchAllRequest value),
-    @required TResult capabilities(_FhirCapabilitiesRequest value),
-    @required TResult transaction(_FhirTransactionRequest value),
-    @required TResult batch(_FhirBatchRequest value),
-    @required TResult history(_FhirHistoryRequest value),
-    @required TResult historyType(_FhirHistoryTypeRequest value),
-    @required TResult historyAll(_FhirHistoryAllRequest value),
-    @required TResult operation(_FhirOperationRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FhirReadRequest value) read,
+    required TResult Function(_FhirVReadRequest value) vRead,
+    required TResult Function(_FhirUpdateRequest value) update,
+    required TResult Function(_FhirPatchRequest value) patch,
+    required TResult Function(_FhirDeleteRequest value) delete,
+    required TResult Function(_FhirCreateRequest value) create,
+    required TResult Function(_FhirSearchRequest value) search,
+    required TResult Function(_FhirSearchAllRequest value) searchAll,
+    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(_FhirTransactionRequest value) transaction,
+    required TResult Function(_FhirBatchRequest value) batch,
+    required TResult Function(_FhirHistoryRequest value) history,
+    required TResult Function(_FhirHistoryTypeRequest value) historyType,
+    required TResult Function(_FhirHistoryAllRequest value) historyAll,
+    required TResult Function(_FhirOperationRequest value) operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return patch(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult read(_FhirReadRequest value),
-    TResult vRead(_FhirVReadRequest value),
-    TResult update(_FhirUpdateRequest value),
-    TResult patch(_FhirPatchRequest value),
-    TResult delete(_FhirDeleteRequest value),
-    TResult create(_FhirCreateRequest value),
-    TResult search(_FhirSearchRequest value),
-    TResult searchAll(_FhirSearchAllRequest value),
-    TResult capabilities(_FhirCapabilitiesRequest value),
-    TResult transaction(_FhirTransactionRequest value),
-    TResult batch(_FhirBatchRequest value),
-    TResult history(_FhirHistoryRequest value),
-    TResult historyType(_FhirHistoryTypeRequest value),
-    TResult historyAll(_FhirHistoryAllRequest value),
-    TResult operation(_FhirOperationRequest value),
-    @required TResult orElse(),
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
   }) {
-    assert(orElse != null);
+    return patch?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
+    required TResult orElse(),
+  }) {
     if (patch != null) {
       return patch(this);
     }
@@ -3203,35 +4233,36 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
 }
 
 abstract class _FhirPatchRequest extends FhirRequest {
-  _FhirPatchRequest._() : super._();
   factory _FhirPatchRequest(
-      {@required Uri base,
-      @required Resource resource,
+      {required Uri base,
+      required Resource resource,
       bool pretty,
       Summary summary,
       String format,
       List<String> elements,
       List<String> parameters,
-      Client client}) = _$_FhirPatchRequest;
+      Client? client}) = _$_FhirPatchRequest;
+  _FhirPatchRequest._() : super._();
 
   @override
-  Uri get base;
-  Resource get resource;
+  Uri get base => throw _privateConstructorUsedError;
+  Resource get resource => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  Client get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirPatchRequestCopyWith<_FhirPatchRequest> get copyWith;
+  _$FhirPatchRequestCopyWith<_FhirPatchRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3250,7 +4281,7 @@ abstract class _$FhirDeleteRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
-      Client client});
+      Client? client});
 }
 
 /// @nodoc
@@ -3266,54 +4297,71 @@ class __$FhirDeleteRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object base = freezed,
-    Object type = freezed,
-    Object id = freezed,
-    Object pretty = freezed,
-    Object summary = freezed,
-    Object format = freezed,
-    Object elements = freezed,
-    Object parameters = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? type = freezed,
+    Object? id = freezed,
+    Object? pretty = freezed,
+    Object? summary = freezed,
+    Object? format = freezed,
+    Object? elements = freezed,
+    Object? parameters = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirDeleteRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      type: type == freezed ? _value.type : type as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      client: client == freezed ? _value.client : client as Client,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   _$_FhirDeleteRequest(
-      {@required this.base,
-      @required this.type,
-      @required this.id,
+      {required this.base,
+      required this.type,
+      required this.id,
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.client})
-      : assert(base != null),
-        assert(type != null),
-        assert(id != null),
-        assert(pretty != null),
-        assert(summary != null),
-        assert(format != null),
-        assert(elements != null),
-        assert(parameters != null),
-        super._();
+      : super._();
 
   @override
   final Uri base;
@@ -3337,7 +4385,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   @override
   final List<String> parameters;
   @override
-  final Client client;
+  final Client? client;
 
   @override
   String toString() {
@@ -3391,9 +4439,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult read(
+  TResult when<TResult extends Object?>({
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -3402,9 +4449,9 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult vRead(
+            Client? client)
+        read,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -3414,9 +4461,9 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult update(
+            Client? client)
+        vRead,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -3424,9 +4471,9 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult patch(
+            Client? client)
+        update,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -3434,9 +4481,9 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult delete(
+            Client? client)
+        patch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -3445,9 +4492,9 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult create(
+            Client? client)
+        delete,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -3455,9 +4502,9 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult search(
+            Client? client)
+        create,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -3467,12 +4514,18 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            Client client),
-    @required
-        TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client client),
-    @required
-        TResult capabilities(
+            Client? client)
+        search,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        searchAll,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -3480,9 +4533,9 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            Client client),
-    @required
-        TResult transaction(
+            Client? client)
+        capabilities,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -3490,9 +4543,9 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult batch(
+            Client? client)
+        transaction,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -3500,9 +4553,9 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult history(
+            Client? client)
+        batch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -3511,13 +4564,13 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyType(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        history,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -3525,29 +4578,29 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyAll(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyType,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult operation(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyAll,
+    required TResult Function(
             Uri base,
-            R4ResourceType type,
-            Id id,
+            R4ResourceType? type,
+            Id? id,
             bool pretty,
             Summary summary,
             String format,
@@ -3557,184 +4610,358 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            Client client),
+            Client? client)
+        operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return delete(
         base, type, id, pretty, summary, format, elements, parameters, client);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult read(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult vRead(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        Id vid,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult update(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult patch(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult delete(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult create(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult search(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        bool usePost,
-        RestfulRequest restfulRequest,
-        Client client),
-    TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-        List<String> elements, List<String> parameters, Client client),
-    TResult capabilities(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Mode mode,
-        Client client),
-    TResult transaction(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult batch(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult history(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyType(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyAll(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult operation(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Map<String, dynamic> fhirParameter,
-        String operation,
-        bool usePost,
-        bool useFormData,
-        Client client),
-    @required TResult orElse(),
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
   }) {
-    assert(orElse != null);
+    return delete?.call(
+        base, type, id, pretty, summary, format, elements, parameters, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+    required TResult orElse(),
+  }) {
     if (delete != null) {
       return delete(base, type, id, pretty, summary, format, elements,
           parameters, client);
@@ -3744,62 +4971,68 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult read(_FhirReadRequest value),
-    @required TResult vRead(_FhirVReadRequest value),
-    @required TResult update(_FhirUpdateRequest value),
-    @required TResult patch(_FhirPatchRequest value),
-    @required TResult delete(_FhirDeleteRequest value),
-    @required TResult create(_FhirCreateRequest value),
-    @required TResult search(_FhirSearchRequest value),
-    @required TResult searchAll(_FhirSearchAllRequest value),
-    @required TResult capabilities(_FhirCapabilitiesRequest value),
-    @required TResult transaction(_FhirTransactionRequest value),
-    @required TResult batch(_FhirBatchRequest value),
-    @required TResult history(_FhirHistoryRequest value),
-    @required TResult historyType(_FhirHistoryTypeRequest value),
-    @required TResult historyAll(_FhirHistoryAllRequest value),
-    @required TResult operation(_FhirOperationRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FhirReadRequest value) read,
+    required TResult Function(_FhirVReadRequest value) vRead,
+    required TResult Function(_FhirUpdateRequest value) update,
+    required TResult Function(_FhirPatchRequest value) patch,
+    required TResult Function(_FhirDeleteRequest value) delete,
+    required TResult Function(_FhirCreateRequest value) create,
+    required TResult Function(_FhirSearchRequest value) search,
+    required TResult Function(_FhirSearchAllRequest value) searchAll,
+    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(_FhirTransactionRequest value) transaction,
+    required TResult Function(_FhirBatchRequest value) batch,
+    required TResult Function(_FhirHistoryRequest value) history,
+    required TResult Function(_FhirHistoryTypeRequest value) historyType,
+    required TResult Function(_FhirHistoryAllRequest value) historyAll,
+    required TResult Function(_FhirOperationRequest value) operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return delete(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult read(_FhirReadRequest value),
-    TResult vRead(_FhirVReadRequest value),
-    TResult update(_FhirUpdateRequest value),
-    TResult patch(_FhirPatchRequest value),
-    TResult delete(_FhirDeleteRequest value),
-    TResult create(_FhirCreateRequest value),
-    TResult search(_FhirSearchRequest value),
-    TResult searchAll(_FhirSearchAllRequest value),
-    TResult capabilities(_FhirCapabilitiesRequest value),
-    TResult transaction(_FhirTransactionRequest value),
-    TResult batch(_FhirBatchRequest value),
-    TResult history(_FhirHistoryRequest value),
-    TResult historyType(_FhirHistoryTypeRequest value),
-    TResult historyAll(_FhirHistoryAllRequest value),
-    TResult operation(_FhirOperationRequest value),
-    @required TResult orElse(),
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
   }) {
-    assert(orElse != null);
+    return delete?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
+    required TResult orElse(),
+  }) {
     if (delete != null) {
       return delete(this);
     }
@@ -3808,37 +5041,38 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
 }
 
 abstract class _FhirDeleteRequest extends FhirRequest {
-  _FhirDeleteRequest._() : super._();
   factory _FhirDeleteRequest(
-      {@required Uri base,
-      @required R4ResourceType type,
-      @required Id id,
+      {required Uri base,
+      required R4ResourceType type,
+      required Id id,
       bool pretty,
       Summary summary,
       String format,
       List<String> elements,
       List<String> parameters,
-      Client client}) = _$_FhirDeleteRequest;
+      Client? client}) = _$_FhirDeleteRequest;
+  _FhirDeleteRequest._() : super._();
 
   @override
-  Uri get base;
-  R4ResourceType get type;
-  Id get id;
+  Uri get base => throw _privateConstructorUsedError;
+  R4ResourceType get type => throw _privateConstructorUsedError;
+  Id get id => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  Client get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirDeleteRequestCopyWith<_FhirDeleteRequest> get copyWith;
+  _$FhirDeleteRequestCopyWith<_FhirDeleteRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3856,7 +5090,7 @@ abstract class _$FhirCreateRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
-      Client client});
+      Client? client});
 }
 
 /// @nodoc
@@ -3872,50 +5106,65 @@ class __$FhirCreateRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object base = freezed,
-    Object resource = freezed,
-    Object pretty = freezed,
-    Object summary = freezed,
-    Object format = freezed,
-    Object elements = freezed,
-    Object parameters = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? resource = freezed,
+    Object? pretty = freezed,
+    Object? summary = freezed,
+    Object? format = freezed,
+    Object? elements = freezed,
+    Object? parameters = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirCreateRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      resource: resource == freezed ? _value.resource : resource as Resource,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as Resource,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      client: client == freezed ? _value.client : client as Client,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_FhirCreateRequest extends _FhirCreateRequest {
   _$_FhirCreateRequest(
-      {@required this.base,
-      @required this.resource,
+      {required this.base,
+      required this.resource,
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.client})
-      : assert(base != null),
-        assert(resource != null),
-        assert(pretty != null),
-        assert(summary != null),
-        assert(format != null),
-        assert(elements != null),
-        assert(parameters != null),
-        super._();
+      : super._();
 
   @override
   final Uri base;
@@ -3937,7 +5186,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
   @override
   final List<String> parameters;
   @override
-  final Client client;
+  final Client? client;
 
   @override
   String toString() {
@@ -3989,9 +5238,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult read(
+  TResult when<TResult extends Object?>({
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -4000,9 +5248,9 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult vRead(
+            Client? client)
+        read,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -4012,9 +5260,9 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult update(
+            Client? client)
+        vRead,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -4022,9 +5270,9 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult patch(
+            Client? client)
+        update,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -4032,9 +5280,9 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult delete(
+            Client? client)
+        patch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -4043,9 +5291,9 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult create(
+            Client? client)
+        delete,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -4053,9 +5301,9 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult search(
+            Client? client)
+        create,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -4065,12 +5313,18 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            Client client),
-    @required
-        TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client client),
-    @required
-        TResult capabilities(
+            Client? client)
+        search,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        searchAll,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -4078,9 +5332,9 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            Client client),
-    @required
-        TResult transaction(
+            Client? client)
+        capabilities,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -4088,9 +5342,9 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult batch(
+            Client? client)
+        transaction,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -4098,9 +5352,9 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult history(
+            Client? client)
+        batch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -4109,13 +5363,13 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyType(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        history,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -4123,29 +5377,29 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyAll(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyType,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult operation(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyAll,
+    required TResult Function(
             Uri base,
-            R4ResourceType type,
-            Id id,
+            R4ResourceType? type,
+            Id? id,
             bool pretty,
             Summary summary,
             String format,
@@ -4155,184 +5409,358 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            Client client),
+            Client? client)
+        operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return create(
         base, resource, pretty, summary, format, elements, parameters, client);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult read(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult vRead(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        Id vid,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult update(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult patch(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult delete(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult create(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult search(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        bool usePost,
-        RestfulRequest restfulRequest,
-        Client client),
-    TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-        List<String> elements, List<String> parameters, Client client),
-    TResult capabilities(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Mode mode,
-        Client client),
-    TResult transaction(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult batch(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult history(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyType(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyAll(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult operation(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Map<String, dynamic> fhirParameter,
-        String operation,
-        bool usePost,
-        bool useFormData,
-        Client client),
-    @required TResult orElse(),
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
   }) {
-    assert(orElse != null);
+    return create?.call(
+        base, resource, pretty, summary, format, elements, parameters, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+    required TResult orElse(),
+  }) {
     if (create != null) {
       return create(base, resource, pretty, summary, format, elements,
           parameters, client);
@@ -4342,62 +5770,68 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult read(_FhirReadRequest value),
-    @required TResult vRead(_FhirVReadRequest value),
-    @required TResult update(_FhirUpdateRequest value),
-    @required TResult patch(_FhirPatchRequest value),
-    @required TResult delete(_FhirDeleteRequest value),
-    @required TResult create(_FhirCreateRequest value),
-    @required TResult search(_FhirSearchRequest value),
-    @required TResult searchAll(_FhirSearchAllRequest value),
-    @required TResult capabilities(_FhirCapabilitiesRequest value),
-    @required TResult transaction(_FhirTransactionRequest value),
-    @required TResult batch(_FhirBatchRequest value),
-    @required TResult history(_FhirHistoryRequest value),
-    @required TResult historyType(_FhirHistoryTypeRequest value),
-    @required TResult historyAll(_FhirHistoryAllRequest value),
-    @required TResult operation(_FhirOperationRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FhirReadRequest value) read,
+    required TResult Function(_FhirVReadRequest value) vRead,
+    required TResult Function(_FhirUpdateRequest value) update,
+    required TResult Function(_FhirPatchRequest value) patch,
+    required TResult Function(_FhirDeleteRequest value) delete,
+    required TResult Function(_FhirCreateRequest value) create,
+    required TResult Function(_FhirSearchRequest value) search,
+    required TResult Function(_FhirSearchAllRequest value) searchAll,
+    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(_FhirTransactionRequest value) transaction,
+    required TResult Function(_FhirBatchRequest value) batch,
+    required TResult Function(_FhirHistoryRequest value) history,
+    required TResult Function(_FhirHistoryTypeRequest value) historyType,
+    required TResult Function(_FhirHistoryAllRequest value) historyAll,
+    required TResult Function(_FhirOperationRequest value) operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return create(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult read(_FhirReadRequest value),
-    TResult vRead(_FhirVReadRequest value),
-    TResult update(_FhirUpdateRequest value),
-    TResult patch(_FhirPatchRequest value),
-    TResult delete(_FhirDeleteRequest value),
-    TResult create(_FhirCreateRequest value),
-    TResult search(_FhirSearchRequest value),
-    TResult searchAll(_FhirSearchAllRequest value),
-    TResult capabilities(_FhirCapabilitiesRequest value),
-    TResult transaction(_FhirTransactionRequest value),
-    TResult batch(_FhirBatchRequest value),
-    TResult history(_FhirHistoryRequest value),
-    TResult historyType(_FhirHistoryTypeRequest value),
-    TResult historyAll(_FhirHistoryAllRequest value),
-    TResult operation(_FhirOperationRequest value),
-    @required TResult orElse(),
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
   }) {
-    assert(orElse != null);
+    return create?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
+    required TResult orElse(),
+  }) {
     if (create != null) {
       return create(this);
     }
@@ -4406,35 +5840,36 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
 }
 
 abstract class _FhirCreateRequest extends FhirRequest {
-  _FhirCreateRequest._() : super._();
   factory _FhirCreateRequest(
-      {@required Uri base,
-      @required Resource resource,
+      {required Uri base,
+      required Resource resource,
       bool pretty,
       Summary summary,
       String format,
       List<String> elements,
       List<String> parameters,
-      Client client}) = _$_FhirCreateRequest;
+      Client? client}) = _$_FhirCreateRequest;
+  _FhirCreateRequest._() : super._();
 
   @override
-  Uri get base;
-  Resource get resource;
+  Uri get base => throw _privateConstructorUsedError;
+  Resource get resource => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  Client get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirCreateRequestCopyWith<_FhirCreateRequest> get copyWith;
+  _$FhirCreateRequestCopyWith<_FhirCreateRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4454,7 +5889,7 @@ abstract class _$FhirSearchRequestCopyWith<$Res>
       List<String> parameters,
       bool usePost,
       RestfulRequest restfulRequest,
-      Client client});
+      Client? client});
 }
 
 /// @nodoc
@@ -4470,42 +5905,68 @@ class __$FhirSearchRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object base = freezed,
-    Object type = freezed,
-    Object pretty = freezed,
-    Object summary = freezed,
-    Object format = freezed,
-    Object elements = freezed,
-    Object parameters = freezed,
-    Object usePost = freezed,
-    Object restfulRequest = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? type = freezed,
+    Object? pretty = freezed,
+    Object? summary = freezed,
+    Object? format = freezed,
+    Object? elements = freezed,
+    Object? parameters = freezed,
+    Object? usePost = freezed,
+    Object? restfulRequest = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirSearchRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      type: type == freezed ? _value.type : type as R4ResourceType,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      usePost: usePost == freezed ? _value.usePost : usePost as bool,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      usePost: usePost == freezed
+          ? _value.usePost
+          : usePost // ignore: cast_nullable_to_non_nullable
+              as bool,
       restfulRequest: restfulRequest == freezed
           ? _value.restfulRequest
-          : restfulRequest as RestfulRequest,
-      client: client == freezed ? _value.client : client as Client,
+          : restfulRequest // ignore: cast_nullable_to_non_nullable
+              as RestfulRequest,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_FhirSearchRequest extends _FhirSearchRequest {
   _$_FhirSearchRequest(
-      {@required this.base,
-      @required this.type,
+      {required this.base,
+      required this.type,
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
@@ -4514,16 +5975,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
       this.usePost = false,
       this.restfulRequest = RestfulRequest.get_,
       this.client})
-      : assert(base != null),
-        assert(type != null),
-        assert(pretty != null),
-        assert(summary != null),
-        assert(format != null),
-        assert(elements != null),
-        assert(parameters != null),
-        assert(usePost != null),
-        assert(restfulRequest != null),
-        super._();
+      : super._();
 
   @override
   final Uri base;
@@ -4551,7 +6003,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
   @override
   final RestfulRequest restfulRequest;
   @override
-  final Client client;
+  final Client? client;
 
   @override
   String toString() {
@@ -4610,9 +6062,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult read(
+  TResult when<TResult extends Object?>({
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -4621,9 +6072,9 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult vRead(
+            Client? client)
+        read,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -4633,9 +6084,9 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult update(
+            Client? client)
+        vRead,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -4643,9 +6094,9 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult patch(
+            Client? client)
+        update,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -4653,9 +6104,9 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult delete(
+            Client? client)
+        patch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -4664,9 +6115,9 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult create(
+            Client? client)
+        delete,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -4674,9 +6125,9 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult search(
+            Client? client)
+        create,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -4686,12 +6137,18 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            Client client),
-    @required
-        TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client client),
-    @required
-        TResult capabilities(
+            Client? client)
+        search,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        searchAll,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -4699,9 +6156,9 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            Client client),
-    @required
-        TResult transaction(
+            Client? client)
+        capabilities,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -4709,9 +6166,9 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult batch(
+            Client? client)
+        transaction,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -4719,9 +6176,9 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult history(
+            Client? client)
+        batch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -4730,13 +6187,13 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyType(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        history,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -4744,29 +6201,29 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyAll(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyType,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult operation(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyAll,
+    required TResult Function(
             Uri base,
-            R4ResourceType type,
-            Id id,
+            R4ResourceType? type,
+            Id? id,
             bool pretty,
             Summary summary,
             String format,
@@ -4776,184 +6233,358 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            Client client),
+            Client? client)
+        operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return search(base, type, pretty, summary, format, elements, parameters,
         usePost, restfulRequest, client);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult read(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult vRead(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        Id vid,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult update(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult patch(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult delete(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult create(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult search(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        bool usePost,
-        RestfulRequest restfulRequest,
-        Client client),
-    TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-        List<String> elements, List<String> parameters, Client client),
-    TResult capabilities(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Mode mode,
-        Client client),
-    TResult transaction(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult batch(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult history(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyType(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyAll(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult operation(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Map<String, dynamic> fhirParameter,
-        String operation,
-        bool usePost,
-        bool useFormData,
-        Client client),
-    @required TResult orElse(),
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
   }) {
-    assert(orElse != null);
+    return search?.call(base, type, pretty, summary, format, elements,
+        parameters, usePost, restfulRequest, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+    required TResult orElse(),
+  }) {
     if (search != null) {
       return search(base, type, pretty, summary, format, elements, parameters,
           usePost, restfulRequest, client);
@@ -4963,62 +6594,68 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult read(_FhirReadRequest value),
-    @required TResult vRead(_FhirVReadRequest value),
-    @required TResult update(_FhirUpdateRequest value),
-    @required TResult patch(_FhirPatchRequest value),
-    @required TResult delete(_FhirDeleteRequest value),
-    @required TResult create(_FhirCreateRequest value),
-    @required TResult search(_FhirSearchRequest value),
-    @required TResult searchAll(_FhirSearchAllRequest value),
-    @required TResult capabilities(_FhirCapabilitiesRequest value),
-    @required TResult transaction(_FhirTransactionRequest value),
-    @required TResult batch(_FhirBatchRequest value),
-    @required TResult history(_FhirHistoryRequest value),
-    @required TResult historyType(_FhirHistoryTypeRequest value),
-    @required TResult historyAll(_FhirHistoryAllRequest value),
-    @required TResult operation(_FhirOperationRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FhirReadRequest value) read,
+    required TResult Function(_FhirVReadRequest value) vRead,
+    required TResult Function(_FhirUpdateRequest value) update,
+    required TResult Function(_FhirPatchRequest value) patch,
+    required TResult Function(_FhirDeleteRequest value) delete,
+    required TResult Function(_FhirCreateRequest value) create,
+    required TResult Function(_FhirSearchRequest value) search,
+    required TResult Function(_FhirSearchAllRequest value) searchAll,
+    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(_FhirTransactionRequest value) transaction,
+    required TResult Function(_FhirBatchRequest value) batch,
+    required TResult Function(_FhirHistoryRequest value) history,
+    required TResult Function(_FhirHistoryTypeRequest value) historyType,
+    required TResult Function(_FhirHistoryAllRequest value) historyAll,
+    required TResult Function(_FhirOperationRequest value) operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return search(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult read(_FhirReadRequest value),
-    TResult vRead(_FhirVReadRequest value),
-    TResult update(_FhirUpdateRequest value),
-    TResult patch(_FhirPatchRequest value),
-    TResult delete(_FhirDeleteRequest value),
-    TResult create(_FhirCreateRequest value),
-    TResult search(_FhirSearchRequest value),
-    TResult searchAll(_FhirSearchAllRequest value),
-    TResult capabilities(_FhirCapabilitiesRequest value),
-    TResult transaction(_FhirTransactionRequest value),
-    TResult batch(_FhirBatchRequest value),
-    TResult history(_FhirHistoryRequest value),
-    TResult historyType(_FhirHistoryTypeRequest value),
-    TResult historyAll(_FhirHistoryAllRequest value),
-    TResult operation(_FhirOperationRequest value),
-    @required TResult orElse(),
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
   }) {
-    assert(orElse != null);
+    return search?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
+    required TResult orElse(),
+  }) {
     if (search != null) {
       return search(this);
     }
@@ -5027,10 +6664,9 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
 }
 
 abstract class _FhirSearchRequest extends FhirRequest {
-  _FhirSearchRequest._() : super._();
   factory _FhirSearchRequest(
-      {@required Uri base,
-      @required R4ResourceType type,
+      {required Uri base,
+      required R4ResourceType type,
       bool pretty,
       Summary summary,
       String format,
@@ -5038,28 +6674,30 @@ abstract class _FhirSearchRequest extends FhirRequest {
       List<String> parameters,
       bool usePost,
       RestfulRequest restfulRequest,
-      Client client}) = _$_FhirSearchRequest;
+      Client? client}) = _$_FhirSearchRequest;
+  _FhirSearchRequest._() : super._();
 
   @override
-  Uri get base;
-  R4ResourceType get type;
+  Uri get base => throw _privateConstructorUsedError;
+  R4ResourceType get type => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  bool get usePost;
-  RestfulRequest get restfulRequest;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  bool get usePost => throw _privateConstructorUsedError;
+  RestfulRequest get restfulRequest => throw _privateConstructorUsedError;
   @override
-  Client get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirSearchRequestCopyWith<_FhirSearchRequest> get copyWith;
+  _$FhirSearchRequestCopyWith<_FhirSearchRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5076,7 +6714,7 @@ abstract class _$FhirSearchAllRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
-      Client client});
+      Client? client});
 }
 
 /// @nodoc
@@ -5092,46 +6730,59 @@ class __$FhirSearchAllRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object base = freezed,
-    Object pretty = freezed,
-    Object summary = freezed,
-    Object format = freezed,
-    Object elements = freezed,
-    Object parameters = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? pretty = freezed,
+    Object? summary = freezed,
+    Object? format = freezed,
+    Object? elements = freezed,
+    Object? parameters = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirSearchAllRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      client: client == freezed ? _value.client : client as Client,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
   _$_FhirSearchAllRequest(
-      {@required this.base,
+      {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.client})
-      : assert(base != null),
-        assert(pretty != null),
-        assert(summary != null),
-        assert(format != null),
-        assert(elements != null),
-        assert(parameters != null),
-        super._();
+      : super._();
 
   @override
   final Uri base;
@@ -5151,7 +6802,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
   @override
   final List<String> parameters;
   @override
-  final Client client;
+  final Client? client;
 
   @override
   String toString() {
@@ -5200,9 +6851,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult read(
+  TResult when<TResult extends Object?>({
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -5211,9 +6861,9 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult vRead(
+            Client? client)
+        read,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -5223,9 +6873,9 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult update(
+            Client? client)
+        vRead,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -5233,9 +6883,9 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult patch(
+            Client? client)
+        update,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -5243,9 +6893,9 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult delete(
+            Client? client)
+        patch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -5254,9 +6904,9 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult create(
+            Client? client)
+        delete,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -5264,9 +6914,9 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult search(
+            Client? client)
+        create,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -5276,12 +6926,18 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            Client client),
-    @required
-        TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client client),
-    @required
-        TResult capabilities(
+            Client? client)
+        search,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        searchAll,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -5289,9 +6945,9 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            Client client),
-    @required
-        TResult transaction(
+            Client? client)
+        capabilities,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -5299,9 +6955,9 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult batch(
+            Client? client)
+        transaction,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -5309,9 +6965,9 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult history(
+            Client? client)
+        batch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -5320,13 +6976,13 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyType(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        history,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -5334,29 +6990,29 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyAll(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyType,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult operation(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyAll,
+    required TResult Function(
             Uri base,
-            R4ResourceType type,
-            Id id,
+            R4ResourceType? type,
+            Id? id,
             bool pretty,
             Summary summary,
             String format,
@@ -5366,184 +7022,358 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            Client client),
+            Client? client)
+        operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return searchAll(
         base, pretty, summary, format, elements, parameters, client);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult read(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult vRead(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        Id vid,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult update(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult patch(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult delete(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult create(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult search(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        bool usePost,
-        RestfulRequest restfulRequest,
-        Client client),
-    TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-        List<String> elements, List<String> parameters, Client client),
-    TResult capabilities(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Mode mode,
-        Client client),
-    TResult transaction(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult batch(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult history(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyType(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyAll(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult operation(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Map<String, dynamic> fhirParameter,
-        String operation,
-        bool usePost,
-        bool useFormData,
-        Client client),
-    @required TResult orElse(),
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
   }) {
-    assert(orElse != null);
+    return searchAll?.call(
+        base, pretty, summary, format, elements, parameters, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+    required TResult orElse(),
+  }) {
     if (searchAll != null) {
       return searchAll(
           base, pretty, summary, format, elements, parameters, client);
@@ -5553,62 +7383,68 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult read(_FhirReadRequest value),
-    @required TResult vRead(_FhirVReadRequest value),
-    @required TResult update(_FhirUpdateRequest value),
-    @required TResult patch(_FhirPatchRequest value),
-    @required TResult delete(_FhirDeleteRequest value),
-    @required TResult create(_FhirCreateRequest value),
-    @required TResult search(_FhirSearchRequest value),
-    @required TResult searchAll(_FhirSearchAllRequest value),
-    @required TResult capabilities(_FhirCapabilitiesRequest value),
-    @required TResult transaction(_FhirTransactionRequest value),
-    @required TResult batch(_FhirBatchRequest value),
-    @required TResult history(_FhirHistoryRequest value),
-    @required TResult historyType(_FhirHistoryTypeRequest value),
-    @required TResult historyAll(_FhirHistoryAllRequest value),
-    @required TResult operation(_FhirOperationRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FhirReadRequest value) read,
+    required TResult Function(_FhirVReadRequest value) vRead,
+    required TResult Function(_FhirUpdateRequest value) update,
+    required TResult Function(_FhirPatchRequest value) patch,
+    required TResult Function(_FhirDeleteRequest value) delete,
+    required TResult Function(_FhirCreateRequest value) create,
+    required TResult Function(_FhirSearchRequest value) search,
+    required TResult Function(_FhirSearchAllRequest value) searchAll,
+    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(_FhirTransactionRequest value) transaction,
+    required TResult Function(_FhirBatchRequest value) batch,
+    required TResult Function(_FhirHistoryRequest value) history,
+    required TResult Function(_FhirHistoryTypeRequest value) historyType,
+    required TResult Function(_FhirHistoryAllRequest value) historyAll,
+    required TResult Function(_FhirOperationRequest value) operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return searchAll(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult read(_FhirReadRequest value),
-    TResult vRead(_FhirVReadRequest value),
-    TResult update(_FhirUpdateRequest value),
-    TResult patch(_FhirPatchRequest value),
-    TResult delete(_FhirDeleteRequest value),
-    TResult create(_FhirCreateRequest value),
-    TResult search(_FhirSearchRequest value),
-    TResult searchAll(_FhirSearchAllRequest value),
-    TResult capabilities(_FhirCapabilitiesRequest value),
-    TResult transaction(_FhirTransactionRequest value),
-    TResult batch(_FhirBatchRequest value),
-    TResult history(_FhirHistoryRequest value),
-    TResult historyType(_FhirHistoryTypeRequest value),
-    TResult historyAll(_FhirHistoryAllRequest value),
-    TResult operation(_FhirOperationRequest value),
-    @required TResult orElse(),
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
   }) {
-    assert(orElse != null);
+    return searchAll?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
+    required TResult orElse(),
+  }) {
     if (searchAll != null) {
       return searchAll(this);
     }
@@ -5617,33 +7453,34 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
 }
 
 abstract class _FhirSearchAllRequest extends FhirRequest {
-  _FhirSearchAllRequest._() : super._();
   factory _FhirSearchAllRequest(
-      {@required Uri base,
+      {required Uri base,
       bool pretty,
       Summary summary,
       String format,
       List<String> elements,
       List<String> parameters,
-      Client client}) = _$_FhirSearchAllRequest;
+      Client? client}) = _$_FhirSearchAllRequest;
+  _FhirSearchAllRequest._() : super._();
 
   @override
-  Uri get base;
+  Uri get base => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
+  List<String> get parameters => throw _privateConstructorUsedError;
   @override
-  Client get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirSearchAllRequestCopyWith<_FhirSearchAllRequest> get copyWith;
+  _$FhirSearchAllRequestCopyWith<_FhirSearchAllRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5661,7 +7498,7 @@ abstract class _$FhirCapabilitiesRequestCopyWith<$Res>
       List<String> elements,
       List<String> parameters,
       Mode mode,
-      Client client});
+      Client? client});
 }
 
 /// @nodoc
@@ -5678,35 +7515,57 @@ class __$FhirCapabilitiesRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object base = freezed,
-    Object pretty = freezed,
-    Object summary = freezed,
-    Object format = freezed,
-    Object elements = freezed,
-    Object parameters = freezed,
-    Object mode = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? pretty = freezed,
+    Object? summary = freezed,
+    Object? format = freezed,
+    Object? elements = freezed,
+    Object? parameters = freezed,
+    Object? mode = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirCapabilitiesRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      mode: mode == freezed ? _value.mode : mode as Mode,
-      client: client == freezed ? _value.client : client as Client,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      mode: mode == freezed
+          ? _value.mode
+          : mode // ignore: cast_nullable_to_non_nullable
+              as Mode,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
   _$_FhirCapabilitiesRequest(
-      {@required this.base,
+      {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
@@ -5714,14 +7573,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
       this.parameters = const <String>[],
       this.mode = Mode.full,
       this.client})
-      : assert(base != null),
-        assert(pretty != null),
-        assert(summary != null),
-        assert(format != null),
-        assert(elements != null),
-        assert(parameters != null),
-        assert(mode != null),
-        super._();
+      : super._();
 
   @override
   final Uri base;
@@ -5744,7 +7596,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
   @override
   final Mode mode;
   @override
-  final Client client;
+  final Client? client;
 
   @override
   String toString() {
@@ -5796,9 +7648,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult read(
+  TResult when<TResult extends Object?>({
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -5807,9 +7658,9 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult vRead(
+            Client? client)
+        read,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -5819,9 +7670,9 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult update(
+            Client? client)
+        vRead,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -5829,9 +7680,9 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult patch(
+            Client? client)
+        update,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -5839,9 +7690,9 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult delete(
+            Client? client)
+        patch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -5850,9 +7701,9 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult create(
+            Client? client)
+        delete,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -5860,9 +7711,9 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult search(
+            Client? client)
+        create,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -5872,12 +7723,18 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            Client client),
-    @required
-        TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client client),
-    @required
-        TResult capabilities(
+            Client? client)
+        search,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        searchAll,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -5885,9 +7742,9 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            Client client),
-    @required
-        TResult transaction(
+            Client? client)
+        capabilities,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -5895,9 +7752,9 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult batch(
+            Client? client)
+        transaction,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -5905,9 +7762,9 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult history(
+            Client? client)
+        batch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -5916,13 +7773,13 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyType(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        history,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -5930,29 +7787,29 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyAll(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyType,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult operation(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyAll,
+    required TResult Function(
             Uri base,
-            R4ResourceType type,
-            Id id,
+            R4ResourceType? type,
+            Id? id,
             bool pretty,
             Summary summary,
             String format,
@@ -5962,184 +7819,358 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            Client client),
+            Client? client)
+        operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return capabilities(
         base, pretty, summary, format, elements, parameters, mode, client);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult read(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult vRead(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        Id vid,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult update(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult patch(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult delete(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult create(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult search(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        bool usePost,
-        RestfulRequest restfulRequest,
-        Client client),
-    TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-        List<String> elements, List<String> parameters, Client client),
-    TResult capabilities(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Mode mode,
-        Client client),
-    TResult transaction(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult batch(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult history(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyType(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyAll(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult operation(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Map<String, dynamic> fhirParameter,
-        String operation,
-        bool usePost,
-        bool useFormData,
-        Client client),
-    @required TResult orElse(),
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
   }) {
-    assert(orElse != null);
+    return capabilities?.call(
+        base, pretty, summary, format, elements, parameters, mode, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+    required TResult orElse(),
+  }) {
     if (capabilities != null) {
       return capabilities(
           base, pretty, summary, format, elements, parameters, mode, client);
@@ -6149,62 +8180,68 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult read(_FhirReadRequest value),
-    @required TResult vRead(_FhirVReadRequest value),
-    @required TResult update(_FhirUpdateRequest value),
-    @required TResult patch(_FhirPatchRequest value),
-    @required TResult delete(_FhirDeleteRequest value),
-    @required TResult create(_FhirCreateRequest value),
-    @required TResult search(_FhirSearchRequest value),
-    @required TResult searchAll(_FhirSearchAllRequest value),
-    @required TResult capabilities(_FhirCapabilitiesRequest value),
-    @required TResult transaction(_FhirTransactionRequest value),
-    @required TResult batch(_FhirBatchRequest value),
-    @required TResult history(_FhirHistoryRequest value),
-    @required TResult historyType(_FhirHistoryTypeRequest value),
-    @required TResult historyAll(_FhirHistoryAllRequest value),
-    @required TResult operation(_FhirOperationRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FhirReadRequest value) read,
+    required TResult Function(_FhirVReadRequest value) vRead,
+    required TResult Function(_FhirUpdateRequest value) update,
+    required TResult Function(_FhirPatchRequest value) patch,
+    required TResult Function(_FhirDeleteRequest value) delete,
+    required TResult Function(_FhirCreateRequest value) create,
+    required TResult Function(_FhirSearchRequest value) search,
+    required TResult Function(_FhirSearchAllRequest value) searchAll,
+    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(_FhirTransactionRequest value) transaction,
+    required TResult Function(_FhirBatchRequest value) batch,
+    required TResult Function(_FhirHistoryRequest value) history,
+    required TResult Function(_FhirHistoryTypeRequest value) historyType,
+    required TResult Function(_FhirHistoryAllRequest value) historyAll,
+    required TResult Function(_FhirOperationRequest value) operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return capabilities(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult read(_FhirReadRequest value),
-    TResult vRead(_FhirVReadRequest value),
-    TResult update(_FhirUpdateRequest value),
-    TResult patch(_FhirPatchRequest value),
-    TResult delete(_FhirDeleteRequest value),
-    TResult create(_FhirCreateRequest value),
-    TResult search(_FhirSearchRequest value),
-    TResult searchAll(_FhirSearchAllRequest value),
-    TResult capabilities(_FhirCapabilitiesRequest value),
-    TResult transaction(_FhirTransactionRequest value),
-    TResult batch(_FhirBatchRequest value),
-    TResult history(_FhirHistoryRequest value),
-    TResult historyType(_FhirHistoryTypeRequest value),
-    TResult historyAll(_FhirHistoryAllRequest value),
-    TResult operation(_FhirOperationRequest value),
-    @required TResult orElse(),
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
   }) {
-    assert(orElse != null);
+    return capabilities?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
+    required TResult orElse(),
+  }) {
     if (capabilities != null) {
       return capabilities(this);
     }
@@ -6213,35 +8250,36 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
 }
 
 abstract class _FhirCapabilitiesRequest extends FhirRequest {
-  _FhirCapabilitiesRequest._() : super._();
   factory _FhirCapabilitiesRequest(
-      {@required Uri base,
+      {required Uri base,
       bool pretty,
       Summary summary,
       String format,
       List<String> elements,
       List<String> parameters,
       Mode mode,
-      Client client}) = _$_FhirCapabilitiesRequest;
+      Client? client}) = _$_FhirCapabilitiesRequest;
+  _FhirCapabilitiesRequest._() : super._();
 
   @override
-  Uri get base;
+  Uri get base => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  Mode get mode;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  Mode get mode => throw _privateConstructorUsedError;
   @override
-  Client get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirCapabilitiesRequestCopyWith<_FhirCapabilitiesRequest> get copyWith;
+  _$FhirCapabilitiesRequestCopyWith<_FhirCapabilitiesRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -6259,7 +8297,7 @@ abstract class _$FhirTransactionRequestCopyWith<$Res>
       List<String> elements,
       List<String> parameters,
       Bundle bundle,
-      Client client});
+      Client? client});
 
   $BundleCopyWith<$Res> get bundle;
 }
@@ -6277,35 +8315,53 @@ class __$FhirTransactionRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object base = freezed,
-    Object pretty = freezed,
-    Object summary = freezed,
-    Object format = freezed,
-    Object elements = freezed,
-    Object parameters = freezed,
-    Object bundle = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? pretty = freezed,
+    Object? summary = freezed,
+    Object? format = freezed,
+    Object? elements = freezed,
+    Object? parameters = freezed,
+    Object? bundle = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirTransactionRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      bundle: bundle == freezed ? _value.bundle : bundle as Bundle,
-      client: client == freezed ? _value.client : client as Client,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      bundle: bundle == freezed
+          ? _value.bundle
+          : bundle // ignore: cast_nullable_to_non_nullable
+              as Bundle,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 
   @override
   $BundleCopyWith<$Res> get bundle {
-    if (_value.bundle == null) {
-      return null;
-    }
     return $BundleCopyWith<$Res>(_value.bundle, (value) {
       return _then(_value.copyWith(bundle: value));
     });
@@ -6313,24 +8369,18 @@ class __$FhirTransactionRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_FhirTransactionRequest extends _FhirTransactionRequest {
   _$_FhirTransactionRequest(
-      {@required this.base,
+      {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
-      @required this.bundle,
+      required this.bundle,
       this.client})
-      : assert(base != null),
-        assert(pretty != null),
-        assert(summary != null),
-        assert(format != null),
-        assert(elements != null),
-        assert(parameters != null),
-        assert(bundle != null),
-        super._();
+      : super._();
 
   @override
   final Uri base;
@@ -6352,7 +8402,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
   @override
   final Bundle bundle;
   @override
-  final Client client;
+  final Client? client;
 
   @override
   String toString() {
@@ -6404,9 +8454,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult read(
+  TResult when<TResult extends Object?>({
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -6415,9 +8464,9 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult vRead(
+            Client? client)
+        read,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -6427,9 +8476,9 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult update(
+            Client? client)
+        vRead,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -6437,9 +8486,9 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult patch(
+            Client? client)
+        update,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -6447,9 +8496,9 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult delete(
+            Client? client)
+        patch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -6458,9 +8507,9 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult create(
+            Client? client)
+        delete,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -6468,9 +8517,9 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult search(
+            Client? client)
+        create,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -6480,12 +8529,18 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            Client client),
-    @required
-        TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client client),
-    @required
-        TResult capabilities(
+            Client? client)
+        search,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        searchAll,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -6493,9 +8548,9 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            Client client),
-    @required
-        TResult transaction(
+            Client? client)
+        capabilities,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -6503,9 +8558,9 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult batch(
+            Client? client)
+        transaction,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -6513,9 +8568,9 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult history(
+            Client? client)
+        batch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -6524,13 +8579,13 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyType(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        history,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -6538,29 +8593,29 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyAll(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyType,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult operation(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyAll,
+    required TResult Function(
             Uri base,
-            R4ResourceType type,
-            Id id,
+            R4ResourceType? type,
+            Id? id,
             bool pretty,
             Summary summary,
             String format,
@@ -6570,184 +8625,358 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            Client client),
+            Client? client)
+        operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return transaction(
         base, pretty, summary, format, elements, parameters, bundle, client);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult read(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult vRead(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        Id vid,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult update(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult patch(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult delete(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult create(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult search(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        bool usePost,
-        RestfulRequest restfulRequest,
-        Client client),
-    TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-        List<String> elements, List<String> parameters, Client client),
-    TResult capabilities(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Mode mode,
-        Client client),
-    TResult transaction(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult batch(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult history(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyType(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyAll(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult operation(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Map<String, dynamic> fhirParameter,
-        String operation,
-        bool usePost,
-        bool useFormData,
-        Client client),
-    @required TResult orElse(),
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
   }) {
-    assert(orElse != null);
+    return transaction?.call(
+        base, pretty, summary, format, elements, parameters, bundle, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+    required TResult orElse(),
+  }) {
     if (transaction != null) {
       return transaction(
           base, pretty, summary, format, elements, parameters, bundle, client);
@@ -6757,62 +8986,68 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult read(_FhirReadRequest value),
-    @required TResult vRead(_FhirVReadRequest value),
-    @required TResult update(_FhirUpdateRequest value),
-    @required TResult patch(_FhirPatchRequest value),
-    @required TResult delete(_FhirDeleteRequest value),
-    @required TResult create(_FhirCreateRequest value),
-    @required TResult search(_FhirSearchRequest value),
-    @required TResult searchAll(_FhirSearchAllRequest value),
-    @required TResult capabilities(_FhirCapabilitiesRequest value),
-    @required TResult transaction(_FhirTransactionRequest value),
-    @required TResult batch(_FhirBatchRequest value),
-    @required TResult history(_FhirHistoryRequest value),
-    @required TResult historyType(_FhirHistoryTypeRequest value),
-    @required TResult historyAll(_FhirHistoryAllRequest value),
-    @required TResult operation(_FhirOperationRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FhirReadRequest value) read,
+    required TResult Function(_FhirVReadRequest value) vRead,
+    required TResult Function(_FhirUpdateRequest value) update,
+    required TResult Function(_FhirPatchRequest value) patch,
+    required TResult Function(_FhirDeleteRequest value) delete,
+    required TResult Function(_FhirCreateRequest value) create,
+    required TResult Function(_FhirSearchRequest value) search,
+    required TResult Function(_FhirSearchAllRequest value) searchAll,
+    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(_FhirTransactionRequest value) transaction,
+    required TResult Function(_FhirBatchRequest value) batch,
+    required TResult Function(_FhirHistoryRequest value) history,
+    required TResult Function(_FhirHistoryTypeRequest value) historyType,
+    required TResult Function(_FhirHistoryAllRequest value) historyAll,
+    required TResult Function(_FhirOperationRequest value) operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return transaction(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult read(_FhirReadRequest value),
-    TResult vRead(_FhirVReadRequest value),
-    TResult update(_FhirUpdateRequest value),
-    TResult patch(_FhirPatchRequest value),
-    TResult delete(_FhirDeleteRequest value),
-    TResult create(_FhirCreateRequest value),
-    TResult search(_FhirSearchRequest value),
-    TResult searchAll(_FhirSearchAllRequest value),
-    TResult capabilities(_FhirCapabilitiesRequest value),
-    TResult transaction(_FhirTransactionRequest value),
-    TResult batch(_FhirBatchRequest value),
-    TResult history(_FhirHistoryRequest value),
-    TResult historyType(_FhirHistoryTypeRequest value),
-    TResult historyAll(_FhirHistoryAllRequest value),
-    TResult operation(_FhirOperationRequest value),
-    @required TResult orElse(),
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
   }) {
-    assert(orElse != null);
+    return transaction?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
+    required TResult orElse(),
+  }) {
     if (transaction != null) {
       return transaction(this);
     }
@@ -6821,35 +9056,36 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
 }
 
 abstract class _FhirTransactionRequest extends FhirRequest {
-  _FhirTransactionRequest._() : super._();
   factory _FhirTransactionRequest(
-      {@required Uri base,
+      {required Uri base,
       bool pretty,
       Summary summary,
       String format,
       List<String> elements,
       List<String> parameters,
-      @required Bundle bundle,
-      Client client}) = _$_FhirTransactionRequest;
+      required Bundle bundle,
+      Client? client}) = _$_FhirTransactionRequest;
+  _FhirTransactionRequest._() : super._();
 
   @override
-  Uri get base;
+  Uri get base => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  Bundle get bundle;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  Bundle get bundle => throw _privateConstructorUsedError;
   @override
-  Client get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirTransactionRequestCopyWith<_FhirTransactionRequest> get copyWith;
+  _$FhirTransactionRequestCopyWith<_FhirTransactionRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -6867,7 +9103,7 @@ abstract class _$FhirBatchRequestCopyWith<$Res>
       List<String> elements,
       List<String> parameters,
       Bundle bundle,
-      Client client});
+      Client? client});
 
   $BundleCopyWith<$Res> get bundle;
 }
@@ -6885,35 +9121,53 @@ class __$FhirBatchRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object base = freezed,
-    Object pretty = freezed,
-    Object summary = freezed,
-    Object format = freezed,
-    Object elements = freezed,
-    Object parameters = freezed,
-    Object bundle = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? pretty = freezed,
+    Object? summary = freezed,
+    Object? format = freezed,
+    Object? elements = freezed,
+    Object? parameters = freezed,
+    Object? bundle = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirBatchRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      bundle: bundle == freezed ? _value.bundle : bundle as Bundle,
-      client: client == freezed ? _value.client : client as Client,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      bundle: bundle == freezed
+          ? _value.bundle
+          : bundle // ignore: cast_nullable_to_non_nullable
+              as Bundle,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 
   @override
   $BundleCopyWith<$Res> get bundle {
-    if (_value.bundle == null) {
-      return null;
-    }
     return $BundleCopyWith<$Res>(_value.bundle, (value) {
       return _then(_value.copyWith(bundle: value));
     });
@@ -6921,24 +9175,18 @@ class __$FhirBatchRequestCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_FhirBatchRequest extends _FhirBatchRequest {
   _$_FhirBatchRequest(
-      {@required this.base,
+      {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
-      @required this.bundle,
+      required this.bundle,
       this.client})
-      : assert(base != null),
-        assert(pretty != null),
-        assert(summary != null),
-        assert(format != null),
-        assert(elements != null),
-        assert(parameters != null),
-        assert(bundle != null),
-        super._();
+      : super._();
 
   @override
   final Uri base;
@@ -6960,7 +9208,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
   @override
   final Bundle bundle;
   @override
-  final Client client;
+  final Client? client;
 
   @override
   String toString() {
@@ -7011,9 +9259,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult read(
+  TResult when<TResult extends Object?>({
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -7022,9 +9269,9 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult vRead(
+            Client? client)
+        read,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -7034,9 +9281,9 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult update(
+            Client? client)
+        vRead,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -7044,9 +9291,9 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult patch(
+            Client? client)
+        update,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -7054,9 +9301,9 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult delete(
+            Client? client)
+        patch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -7065,9 +9312,9 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult create(
+            Client? client)
+        delete,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -7075,9 +9322,9 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult search(
+            Client? client)
+        create,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -7087,12 +9334,18 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            Client client),
-    @required
-        TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client client),
-    @required
-        TResult capabilities(
+            Client? client)
+        search,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        searchAll,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -7100,9 +9353,9 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            Client client),
-    @required
-        TResult transaction(
+            Client? client)
+        capabilities,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -7110,9 +9363,9 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult batch(
+            Client? client)
+        transaction,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -7120,9 +9373,9 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult history(
+            Client? client)
+        batch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -7131,13 +9384,13 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyType(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        history,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -7145,29 +9398,29 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyAll(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyType,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult operation(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyAll,
+    required TResult Function(
             Uri base,
-            R4ResourceType type,
-            Id id,
+            R4ResourceType? type,
+            Id? id,
             bool pretty,
             Summary summary,
             String format,
@@ -7177,184 +9430,358 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            Client client),
+            Client? client)
+        operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return batch(
         base, pretty, summary, format, elements, parameters, bundle, client);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult read(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult vRead(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        Id vid,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult update(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult patch(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult delete(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult create(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult search(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        bool usePost,
-        RestfulRequest restfulRequest,
-        Client client),
-    TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-        List<String> elements, List<String> parameters, Client client),
-    TResult capabilities(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Mode mode,
-        Client client),
-    TResult transaction(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult batch(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult history(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyType(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyAll(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult operation(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Map<String, dynamic> fhirParameter,
-        String operation,
-        bool usePost,
-        bool useFormData,
-        Client client),
-    @required TResult orElse(),
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
   }) {
-    assert(orElse != null);
+    return batch?.call(
+        base, pretty, summary, format, elements, parameters, bundle, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+    required TResult orElse(),
+  }) {
     if (batch != null) {
       return batch(
           base, pretty, summary, format, elements, parameters, bundle, client);
@@ -7364,62 +9791,68 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult read(_FhirReadRequest value),
-    @required TResult vRead(_FhirVReadRequest value),
-    @required TResult update(_FhirUpdateRequest value),
-    @required TResult patch(_FhirPatchRequest value),
-    @required TResult delete(_FhirDeleteRequest value),
-    @required TResult create(_FhirCreateRequest value),
-    @required TResult search(_FhirSearchRequest value),
-    @required TResult searchAll(_FhirSearchAllRequest value),
-    @required TResult capabilities(_FhirCapabilitiesRequest value),
-    @required TResult transaction(_FhirTransactionRequest value),
-    @required TResult batch(_FhirBatchRequest value),
-    @required TResult history(_FhirHistoryRequest value),
-    @required TResult historyType(_FhirHistoryTypeRequest value),
-    @required TResult historyAll(_FhirHistoryAllRequest value),
-    @required TResult operation(_FhirOperationRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FhirReadRequest value) read,
+    required TResult Function(_FhirVReadRequest value) vRead,
+    required TResult Function(_FhirUpdateRequest value) update,
+    required TResult Function(_FhirPatchRequest value) patch,
+    required TResult Function(_FhirDeleteRequest value) delete,
+    required TResult Function(_FhirCreateRequest value) create,
+    required TResult Function(_FhirSearchRequest value) search,
+    required TResult Function(_FhirSearchAllRequest value) searchAll,
+    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(_FhirTransactionRequest value) transaction,
+    required TResult Function(_FhirBatchRequest value) batch,
+    required TResult Function(_FhirHistoryRequest value) history,
+    required TResult Function(_FhirHistoryTypeRequest value) historyType,
+    required TResult Function(_FhirHistoryAllRequest value) historyAll,
+    required TResult Function(_FhirOperationRequest value) operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return batch(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult read(_FhirReadRequest value),
-    TResult vRead(_FhirVReadRequest value),
-    TResult update(_FhirUpdateRequest value),
-    TResult patch(_FhirPatchRequest value),
-    TResult delete(_FhirDeleteRequest value),
-    TResult create(_FhirCreateRequest value),
-    TResult search(_FhirSearchRequest value),
-    TResult searchAll(_FhirSearchAllRequest value),
-    TResult capabilities(_FhirCapabilitiesRequest value),
-    TResult transaction(_FhirTransactionRequest value),
-    TResult batch(_FhirBatchRequest value),
-    TResult history(_FhirHistoryRequest value),
-    TResult historyType(_FhirHistoryTypeRequest value),
-    TResult historyAll(_FhirHistoryAllRequest value),
-    TResult operation(_FhirOperationRequest value),
-    @required TResult orElse(),
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
   }) {
-    assert(orElse != null);
+    return batch?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
+    required TResult orElse(),
+  }) {
     if (batch != null) {
       return batch(this);
     }
@@ -7428,35 +9861,36 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
 }
 
 abstract class _FhirBatchRequest extends FhirRequest {
-  _FhirBatchRequest._() : super._();
   factory _FhirBatchRequest(
-      {@required Uri base,
+      {required Uri base,
       bool pretty,
       Summary summary,
       String format,
       List<String> elements,
       List<String> parameters,
-      @required Bundle bundle,
-      Client client}) = _$_FhirBatchRequest;
+      required Bundle bundle,
+      Client? client}) = _$_FhirBatchRequest;
+  _FhirBatchRequest._() : super._();
 
   @override
-  Uri get base;
+  Uri get base => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  Bundle get bundle;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  Bundle get bundle => throw _privateConstructorUsedError;
   @override
-  Client get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirBatchRequestCopyWith<_FhirBatchRequest> get copyWith;
+  _$FhirBatchRequestCopyWith<_FhirBatchRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -7475,11 +9909,11 @@ abstract class _$FhirHistoryRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
-      int count,
-      Instant since,
-      FhirDateTime at,
-      String reference,
-      Client client});
+      int? count,
+      Instant? since,
+      FhirDateTime? at,
+      String? reference,
+      Client? client});
 }
 
 /// @nodoc
@@ -7495,47 +9929,84 @@ class __$FhirHistoryRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object base = freezed,
-    Object type = freezed,
-    Object id = freezed,
-    Object pretty = freezed,
-    Object summary = freezed,
-    Object format = freezed,
-    Object elements = freezed,
-    Object parameters = freezed,
-    Object count = freezed,
-    Object since = freezed,
-    Object at = freezed,
-    Object reference = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? type = freezed,
+    Object? id = freezed,
+    Object? pretty = freezed,
+    Object? summary = freezed,
+    Object? format = freezed,
+    Object? elements = freezed,
+    Object? parameters = freezed,
+    Object? count = freezed,
+    Object? since = freezed,
+    Object? at = freezed,
+    Object? reference = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirHistoryRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      type: type == freezed ? _value.type : type as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      count: count == freezed ? _value.count : count as int,
-      since: since == freezed ? _value.since : since as Instant,
-      at: at == freezed ? _value.at : at as FhirDateTime,
-      reference: reference == freezed ? _value.reference : reference as String,
-      client: client == freezed ? _value.client : client as Client,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      count: count == freezed
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as int?,
+      since: since == freezed
+          ? _value.since
+          : since // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      at: at == freezed
+          ? _value.at
+          : at // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as String?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   _$_FhirHistoryRequest(
-      {@required this.base,
-      @required this.type,
-      @required this.id,
+      {required this.base,
+      required this.type,
+      required this.id,
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
@@ -7546,15 +10017,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
       this.at,
       this.reference,
       this.client})
-      : assert(base != null),
-        assert(type != null),
-        assert(id != null),
-        assert(pretty != null),
-        assert(summary != null),
-        assert(format != null),
-        assert(elements != null),
-        assert(parameters != null),
-        super._();
+      : super._();
 
   @override
   final Uri base;
@@ -7578,15 +10041,15 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   @override
   final List<String> parameters;
   @override
-  final int count;
+  final int? count;
   @override
-  final Instant since;
+  final Instant? since;
   @override
-  final FhirDateTime at;
+  final FhirDateTime? at;
   @override
-  final String reference;
+  final String? reference;
   @override
-  final Client client;
+  final Client? client;
 
   @override
   String toString() {
@@ -7653,9 +10116,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult read(
+  TResult when<TResult extends Object?>({
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -7664,9 +10126,9 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult vRead(
+            Client? client)
+        read,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -7676,9 +10138,9 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult update(
+            Client? client)
+        vRead,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -7686,9 +10148,9 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult patch(
+            Client? client)
+        update,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -7696,9 +10158,9 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult delete(
+            Client? client)
+        patch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -7707,9 +10169,9 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult create(
+            Client? client)
+        delete,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -7717,9 +10179,9 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult search(
+            Client? client)
+        create,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -7729,12 +10191,18 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            Client client),
-    @required
-        TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client client),
-    @required
-        TResult capabilities(
+            Client? client)
+        search,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        searchAll,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -7742,9 +10210,9 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            Client client),
-    @required
-        TResult transaction(
+            Client? client)
+        capabilities,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -7752,9 +10220,9 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult batch(
+            Client? client)
+        transaction,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -7762,9 +10230,9 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult history(
+            Client? client)
+        batch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -7773,13 +10241,13 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyType(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        history,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -7787,29 +10255,29 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyAll(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyType,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult operation(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyAll,
+    required TResult Function(
             Uri base,
-            R4ResourceType type,
-            Id id,
+            R4ResourceType? type,
+            Id? id,
             bool pretty,
             Summary summary,
             String format,
@@ -7819,184 +10287,358 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            Client client),
+            Client? client)
+        operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return history(base, type, id, pretty, summary, format, elements,
         parameters, count, since, at, reference, client);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult read(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult vRead(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        Id vid,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult update(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult patch(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult delete(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult create(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult search(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        bool usePost,
-        RestfulRequest restfulRequest,
-        Client client),
-    TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-        List<String> elements, List<String> parameters, Client client),
-    TResult capabilities(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Mode mode,
-        Client client),
-    TResult transaction(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult batch(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult history(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyType(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyAll(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult operation(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Map<String, dynamic> fhirParameter,
-        String operation,
-        bool usePost,
-        bool useFormData,
-        Client client),
-    @required TResult orElse(),
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
   }) {
-    assert(orElse != null);
+    return history?.call(base, type, id, pretty, summary, format, elements,
+        parameters, count, since, at, reference, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+    required TResult orElse(),
+  }) {
     if (history != null) {
       return history(base, type, id, pretty, summary, format, elements,
           parameters, count, since, at, reference, client);
@@ -8006,62 +10648,68 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult read(_FhirReadRequest value),
-    @required TResult vRead(_FhirVReadRequest value),
-    @required TResult update(_FhirUpdateRequest value),
-    @required TResult patch(_FhirPatchRequest value),
-    @required TResult delete(_FhirDeleteRequest value),
-    @required TResult create(_FhirCreateRequest value),
-    @required TResult search(_FhirSearchRequest value),
-    @required TResult searchAll(_FhirSearchAllRequest value),
-    @required TResult capabilities(_FhirCapabilitiesRequest value),
-    @required TResult transaction(_FhirTransactionRequest value),
-    @required TResult batch(_FhirBatchRequest value),
-    @required TResult history(_FhirHistoryRequest value),
-    @required TResult historyType(_FhirHistoryTypeRequest value),
-    @required TResult historyAll(_FhirHistoryAllRequest value),
-    @required TResult operation(_FhirOperationRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FhirReadRequest value) read,
+    required TResult Function(_FhirVReadRequest value) vRead,
+    required TResult Function(_FhirUpdateRequest value) update,
+    required TResult Function(_FhirPatchRequest value) patch,
+    required TResult Function(_FhirDeleteRequest value) delete,
+    required TResult Function(_FhirCreateRequest value) create,
+    required TResult Function(_FhirSearchRequest value) search,
+    required TResult Function(_FhirSearchAllRequest value) searchAll,
+    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(_FhirTransactionRequest value) transaction,
+    required TResult Function(_FhirBatchRequest value) batch,
+    required TResult Function(_FhirHistoryRequest value) history,
+    required TResult Function(_FhirHistoryTypeRequest value) historyType,
+    required TResult Function(_FhirHistoryAllRequest value) historyAll,
+    required TResult Function(_FhirOperationRequest value) operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return history(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult read(_FhirReadRequest value),
-    TResult vRead(_FhirVReadRequest value),
-    TResult update(_FhirUpdateRequest value),
-    TResult patch(_FhirPatchRequest value),
-    TResult delete(_FhirDeleteRequest value),
-    TResult create(_FhirCreateRequest value),
-    TResult search(_FhirSearchRequest value),
-    TResult searchAll(_FhirSearchAllRequest value),
-    TResult capabilities(_FhirCapabilitiesRequest value),
-    TResult transaction(_FhirTransactionRequest value),
-    TResult batch(_FhirBatchRequest value),
-    TResult history(_FhirHistoryRequest value),
-    TResult historyType(_FhirHistoryTypeRequest value),
-    TResult historyAll(_FhirHistoryAllRequest value),
-    TResult operation(_FhirOperationRequest value),
-    @required TResult orElse(),
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
   }) {
-    assert(orElse != null);
+    return history?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
+    required TResult orElse(),
+  }) {
     if (history != null) {
       return history(this);
     }
@@ -8070,45 +10718,46 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
 }
 
 abstract class _FhirHistoryRequest extends FhirRequest {
-  _FhirHistoryRequest._() : super._();
   factory _FhirHistoryRequest(
-      {@required Uri base,
-      @required R4ResourceType type,
-      @required Id id,
+      {required Uri base,
+      required R4ResourceType type,
+      required Id id,
       bool pretty,
       Summary summary,
       String format,
       List<String> elements,
       List<String> parameters,
-      int count,
-      Instant since,
-      FhirDateTime at,
-      String reference,
-      Client client}) = _$_FhirHistoryRequest;
+      int? count,
+      Instant? since,
+      FhirDateTime? at,
+      String? reference,
+      Client? client}) = _$_FhirHistoryRequest;
+  _FhirHistoryRequest._() : super._();
 
   @override
-  Uri get base;
-  R4ResourceType get type;
-  Id get id;
+  Uri get base => throw _privateConstructorUsedError;
+  R4ResourceType get type => throw _privateConstructorUsedError;
+  Id get id => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  int get count;
-  Instant get since;
-  FhirDateTime get at;
-  String get reference;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  int? get count => throw _privateConstructorUsedError;
+  Instant? get since => throw _privateConstructorUsedError;
+  FhirDateTime? get at => throw _privateConstructorUsedError;
+  String? get reference => throw _privateConstructorUsedError;
   @override
-  Client get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirHistoryRequestCopyWith<_FhirHistoryRequest> get copyWith;
+  _$FhirHistoryRequestCopyWith<_FhirHistoryRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -8126,11 +10775,11 @@ abstract class _$FhirHistoryTypeRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
-      int count,
-      Instant since,
-      FhirDateTime at,
-      String reference,
-      Client client});
+      int? count,
+      Instant? since,
+      FhirDateTime? at,
+      String? reference,
+      Client? client});
 }
 
 /// @nodoc
@@ -8146,44 +10795,78 @@ class __$FhirHistoryTypeRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object base = freezed,
-    Object type = freezed,
-    Object pretty = freezed,
-    Object summary = freezed,
-    Object format = freezed,
-    Object elements = freezed,
-    Object parameters = freezed,
-    Object count = freezed,
-    Object since = freezed,
-    Object at = freezed,
-    Object reference = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? type = freezed,
+    Object? pretty = freezed,
+    Object? summary = freezed,
+    Object? format = freezed,
+    Object? elements = freezed,
+    Object? parameters = freezed,
+    Object? count = freezed,
+    Object? since = freezed,
+    Object? at = freezed,
+    Object? reference = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirHistoryTypeRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      type: type == freezed ? _value.type : type as R4ResourceType,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      count: count == freezed ? _value.count : count as int,
-      since: since == freezed ? _value.since : since as Instant,
-      at: at == freezed ? _value.at : at as FhirDateTime,
-      reference: reference == freezed ? _value.reference : reference as String,
-      client: client == freezed ? _value.client : client as Client,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      count: count == freezed
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as int?,
+      since: since == freezed
+          ? _value.since
+          : since // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      at: at == freezed
+          ? _value.at
+          : at // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as String?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
   _$_FhirHistoryTypeRequest(
-      {@required this.base,
-      @required this.type,
+      {required this.base,
+      required this.type,
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
@@ -8194,14 +10877,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
       this.at,
       this.reference,
       this.client})
-      : assert(base != null),
-        assert(type != null),
-        assert(pretty != null),
-        assert(summary != null),
-        assert(format != null),
-        assert(elements != null),
-        assert(parameters != null),
-        super._();
+      : super._();
 
   @override
   final Uri base;
@@ -8223,15 +10899,15 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
   @override
   final List<String> parameters;
   @override
-  final int count;
+  final int? count;
   @override
-  final Instant since;
+  final Instant? since;
   @override
-  final FhirDateTime at;
+  final FhirDateTime? at;
   @override
-  final String reference;
+  final String? reference;
   @override
-  final Client client;
+  final Client? client;
 
   @override
   String toString() {
@@ -8296,9 +10972,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult read(
+  TResult when<TResult extends Object?>({
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -8307,9 +10982,9 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult vRead(
+            Client? client)
+        read,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -8319,9 +10994,9 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult update(
+            Client? client)
+        vRead,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -8329,9 +11004,9 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult patch(
+            Client? client)
+        update,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -8339,9 +11014,9 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult delete(
+            Client? client)
+        patch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -8350,9 +11025,9 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult create(
+            Client? client)
+        delete,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -8360,9 +11035,9 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult search(
+            Client? client)
+        create,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -8372,12 +11047,18 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            Client client),
-    @required
-        TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client client),
-    @required
-        TResult capabilities(
+            Client? client)
+        search,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        searchAll,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -8385,9 +11066,9 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            Client client),
-    @required
-        TResult transaction(
+            Client? client)
+        capabilities,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -8395,9 +11076,9 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult batch(
+            Client? client)
+        transaction,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -8405,9 +11086,9 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult history(
+            Client? client)
+        batch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -8416,13 +11097,13 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyType(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        history,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -8430,29 +11111,29 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyAll(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyType,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult operation(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyAll,
+    required TResult Function(
             Uri base,
-            R4ResourceType type,
-            Id id,
+            R4ResourceType? type,
+            Id? id,
             bool pretty,
             Summary summary,
             String format,
@@ -8462,184 +11143,358 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            Client client),
+            Client? client)
+        operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return historyType(base, type, pretty, summary, format, elements,
         parameters, count, since, at, reference, client);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult read(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult vRead(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        Id vid,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult update(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult patch(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult delete(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult create(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult search(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        bool usePost,
-        RestfulRequest restfulRequest,
-        Client client),
-    TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-        List<String> elements, List<String> parameters, Client client),
-    TResult capabilities(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Mode mode,
-        Client client),
-    TResult transaction(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult batch(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult history(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyType(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyAll(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult operation(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Map<String, dynamic> fhirParameter,
-        String operation,
-        bool usePost,
-        bool useFormData,
-        Client client),
-    @required TResult orElse(),
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
   }) {
-    assert(orElse != null);
+    return historyType?.call(base, type, pretty, summary, format, elements,
+        parameters, count, since, at, reference, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+    required TResult orElse(),
+  }) {
     if (historyType != null) {
       return historyType(base, type, pretty, summary, format, elements,
           parameters, count, since, at, reference, client);
@@ -8649,62 +11504,68 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult read(_FhirReadRequest value),
-    @required TResult vRead(_FhirVReadRequest value),
-    @required TResult update(_FhirUpdateRequest value),
-    @required TResult patch(_FhirPatchRequest value),
-    @required TResult delete(_FhirDeleteRequest value),
-    @required TResult create(_FhirCreateRequest value),
-    @required TResult search(_FhirSearchRequest value),
-    @required TResult searchAll(_FhirSearchAllRequest value),
-    @required TResult capabilities(_FhirCapabilitiesRequest value),
-    @required TResult transaction(_FhirTransactionRequest value),
-    @required TResult batch(_FhirBatchRequest value),
-    @required TResult history(_FhirHistoryRequest value),
-    @required TResult historyType(_FhirHistoryTypeRequest value),
-    @required TResult historyAll(_FhirHistoryAllRequest value),
-    @required TResult operation(_FhirOperationRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FhirReadRequest value) read,
+    required TResult Function(_FhirVReadRequest value) vRead,
+    required TResult Function(_FhirUpdateRequest value) update,
+    required TResult Function(_FhirPatchRequest value) patch,
+    required TResult Function(_FhirDeleteRequest value) delete,
+    required TResult Function(_FhirCreateRequest value) create,
+    required TResult Function(_FhirSearchRequest value) search,
+    required TResult Function(_FhirSearchAllRequest value) searchAll,
+    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(_FhirTransactionRequest value) transaction,
+    required TResult Function(_FhirBatchRequest value) batch,
+    required TResult Function(_FhirHistoryRequest value) history,
+    required TResult Function(_FhirHistoryTypeRequest value) historyType,
+    required TResult Function(_FhirHistoryAllRequest value) historyAll,
+    required TResult Function(_FhirOperationRequest value) operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return historyType(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult read(_FhirReadRequest value),
-    TResult vRead(_FhirVReadRequest value),
-    TResult update(_FhirUpdateRequest value),
-    TResult patch(_FhirPatchRequest value),
-    TResult delete(_FhirDeleteRequest value),
-    TResult create(_FhirCreateRequest value),
-    TResult search(_FhirSearchRequest value),
-    TResult searchAll(_FhirSearchAllRequest value),
-    TResult capabilities(_FhirCapabilitiesRequest value),
-    TResult transaction(_FhirTransactionRequest value),
-    TResult batch(_FhirBatchRequest value),
-    TResult history(_FhirHistoryRequest value),
-    TResult historyType(_FhirHistoryTypeRequest value),
-    TResult historyAll(_FhirHistoryAllRequest value),
-    TResult operation(_FhirOperationRequest value),
-    @required TResult orElse(),
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
   }) {
-    assert(orElse != null);
+    return historyType?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
+    required TResult orElse(),
+  }) {
     if (historyType != null) {
       return historyType(this);
     }
@@ -8713,43 +11574,44 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
 }
 
 abstract class _FhirHistoryTypeRequest extends FhirRequest {
-  _FhirHistoryTypeRequest._() : super._();
   factory _FhirHistoryTypeRequest(
-      {@required Uri base,
-      @required R4ResourceType type,
+      {required Uri base,
+      required R4ResourceType type,
       bool pretty,
       Summary summary,
       String format,
       List<String> elements,
       List<String> parameters,
-      int count,
-      Instant since,
-      FhirDateTime at,
-      String reference,
-      Client client}) = _$_FhirHistoryTypeRequest;
+      int? count,
+      Instant? since,
+      FhirDateTime? at,
+      String? reference,
+      Client? client}) = _$_FhirHistoryTypeRequest;
+  _FhirHistoryTypeRequest._() : super._();
 
   @override
-  Uri get base;
-  R4ResourceType get type;
+  Uri get base => throw _privateConstructorUsedError;
+  R4ResourceType get type => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  int get count;
-  Instant get since;
-  FhirDateTime get at;
-  String get reference;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  int? get count => throw _privateConstructorUsedError;
+  Instant? get since => throw _privateConstructorUsedError;
+  FhirDateTime? get at => throw _privateConstructorUsedError;
+  String? get reference => throw _privateConstructorUsedError;
   @override
-  Client get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirHistoryTypeRequestCopyWith<_FhirHistoryTypeRequest> get copyWith;
+  _$FhirHistoryTypeRequestCopyWith<_FhirHistoryTypeRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -8766,11 +11628,11 @@ abstract class _$FhirHistoryAllRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
-      int count,
-      Instant since,
-      FhirDateTime at,
-      String reference,
-      Client client});
+      int? count,
+      Instant? since,
+      FhirDateTime? at,
+      String? reference,
+      Client? client});
 }
 
 /// @nodoc
@@ -8786,41 +11648,72 @@ class __$FhirHistoryAllRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object base = freezed,
-    Object pretty = freezed,
-    Object summary = freezed,
-    Object format = freezed,
-    Object elements = freezed,
-    Object parameters = freezed,
-    Object count = freezed,
-    Object since = freezed,
-    Object at = freezed,
-    Object reference = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? pretty = freezed,
+    Object? summary = freezed,
+    Object? format = freezed,
+    Object? elements = freezed,
+    Object? parameters = freezed,
+    Object? count = freezed,
+    Object? since = freezed,
+    Object? at = freezed,
+    Object? reference = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirHistoryAllRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
-      count: count == freezed ? _value.count : count as int,
-      since: since == freezed ? _value.since : since as Instant,
-      at: at == freezed ? _value.at : at as FhirDateTime,
-      reference: reference == freezed ? _value.reference : reference as String,
-      client: client == freezed ? _value.client : client as Client,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      count: count == freezed
+          ? _value.count
+          : count // ignore: cast_nullable_to_non_nullable
+              as int?,
+      since: since == freezed
+          ? _value.since
+          : since // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      at: at == freezed
+          ? _value.at
+          : at // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      reference: reference == freezed
+          ? _value.reference
+          : reference // ignore: cast_nullable_to_non_nullable
+              as String?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
   _$_FhirHistoryAllRequest(
-      {@required this.base,
+      {required this.base,
       this.pretty = false,
       this.summary = Summary.none,
       this.format = 'json',
@@ -8831,13 +11724,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
       this.at,
       this.reference,
       this.client})
-      : assert(base != null),
-        assert(pretty != null),
-        assert(summary != null),
-        assert(format != null),
-        assert(elements != null),
-        assert(parameters != null),
-        super._();
+      : super._();
 
   @override
   final Uri base;
@@ -8857,15 +11744,15 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
   @override
   final List<String> parameters;
   @override
-  final int count;
+  final int? count;
   @override
-  final Instant since;
+  final Instant? since;
   @override
-  final FhirDateTime at;
+  final FhirDateTime? at;
   @override
-  final String reference;
+  final String? reference;
   @override
-  final Client client;
+  final Client? client;
 
   @override
   String toString() {
@@ -8927,9 +11814,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult read(
+  TResult when<TResult extends Object?>({
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -8938,9 +11824,9 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult vRead(
+            Client? client)
+        read,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -8950,9 +11836,9 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult update(
+            Client? client)
+        vRead,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -8960,9 +11846,9 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult patch(
+            Client? client)
+        update,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -8970,9 +11856,9 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult delete(
+            Client? client)
+        patch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -8981,9 +11867,9 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult create(
+            Client? client)
+        delete,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -8991,9 +11877,9 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult search(
+            Client? client)
+        create,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -9003,12 +11889,18 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            Client client),
-    @required
-        TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client client),
-    @required
-        TResult capabilities(
+            Client? client)
+        search,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        searchAll,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -9016,9 +11908,9 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            Client client),
-    @required
-        TResult transaction(
+            Client? client)
+        capabilities,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -9026,9 +11918,9 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult batch(
+            Client? client)
+        transaction,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -9036,9 +11928,9 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult history(
+            Client? client)
+        batch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -9047,13 +11939,13 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyType(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        history,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -9061,29 +11953,29 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyAll(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyType,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult operation(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyAll,
+    required TResult Function(
             Uri base,
-            R4ResourceType type,
-            Id id,
+            R4ResourceType? type,
+            Id? id,
             bool pretty,
             Summary summary,
             String format,
@@ -9093,184 +11985,358 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            Client client),
+            Client? client)
+        operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return historyAll(base, pretty, summary, format, elements, parameters,
         count, since, at, reference, client);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult read(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult vRead(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        Id vid,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult update(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult patch(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult delete(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult create(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult search(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        bool usePost,
-        RestfulRequest restfulRequest,
-        Client client),
-    TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-        List<String> elements, List<String> parameters, Client client),
-    TResult capabilities(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Mode mode,
-        Client client),
-    TResult transaction(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult batch(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult history(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyType(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyAll(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult operation(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Map<String, dynamic> fhirParameter,
-        String operation,
-        bool usePost,
-        bool useFormData,
-        Client client),
-    @required TResult orElse(),
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
   }) {
-    assert(orElse != null);
+    return historyAll?.call(base, pretty, summary, format, elements, parameters,
+        count, since, at, reference, client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+    required TResult orElse(),
+  }) {
     if (historyAll != null) {
       return historyAll(base, pretty, summary, format, elements, parameters,
           count, since, at, reference, client);
@@ -9280,62 +12346,68 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult read(_FhirReadRequest value),
-    @required TResult vRead(_FhirVReadRequest value),
-    @required TResult update(_FhirUpdateRequest value),
-    @required TResult patch(_FhirPatchRequest value),
-    @required TResult delete(_FhirDeleteRequest value),
-    @required TResult create(_FhirCreateRequest value),
-    @required TResult search(_FhirSearchRequest value),
-    @required TResult searchAll(_FhirSearchAllRequest value),
-    @required TResult capabilities(_FhirCapabilitiesRequest value),
-    @required TResult transaction(_FhirTransactionRequest value),
-    @required TResult batch(_FhirBatchRequest value),
-    @required TResult history(_FhirHistoryRequest value),
-    @required TResult historyType(_FhirHistoryTypeRequest value),
-    @required TResult historyAll(_FhirHistoryAllRequest value),
-    @required TResult operation(_FhirOperationRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FhirReadRequest value) read,
+    required TResult Function(_FhirVReadRequest value) vRead,
+    required TResult Function(_FhirUpdateRequest value) update,
+    required TResult Function(_FhirPatchRequest value) patch,
+    required TResult Function(_FhirDeleteRequest value) delete,
+    required TResult Function(_FhirCreateRequest value) create,
+    required TResult Function(_FhirSearchRequest value) search,
+    required TResult Function(_FhirSearchAllRequest value) searchAll,
+    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(_FhirTransactionRequest value) transaction,
+    required TResult Function(_FhirBatchRequest value) batch,
+    required TResult Function(_FhirHistoryRequest value) history,
+    required TResult Function(_FhirHistoryTypeRequest value) historyType,
+    required TResult Function(_FhirHistoryAllRequest value) historyAll,
+    required TResult Function(_FhirOperationRequest value) operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return historyAll(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult read(_FhirReadRequest value),
-    TResult vRead(_FhirVReadRequest value),
-    TResult update(_FhirUpdateRequest value),
-    TResult patch(_FhirPatchRequest value),
-    TResult delete(_FhirDeleteRequest value),
-    TResult create(_FhirCreateRequest value),
-    TResult search(_FhirSearchRequest value),
-    TResult searchAll(_FhirSearchAllRequest value),
-    TResult capabilities(_FhirCapabilitiesRequest value),
-    TResult transaction(_FhirTransactionRequest value),
-    TResult batch(_FhirBatchRequest value),
-    TResult history(_FhirHistoryRequest value),
-    TResult historyType(_FhirHistoryTypeRequest value),
-    TResult historyAll(_FhirHistoryAllRequest value),
-    TResult operation(_FhirOperationRequest value),
-    @required TResult orElse(),
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
   }) {
-    assert(orElse != null);
+    return historyAll?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
+    required TResult orElse(),
+  }) {
     if (historyAll != null) {
       return historyAll(this);
     }
@@ -9344,41 +12416,42 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
 }
 
 abstract class _FhirHistoryAllRequest extends FhirRequest {
-  _FhirHistoryAllRequest._() : super._();
   factory _FhirHistoryAllRequest(
-      {@required Uri base,
+      {required Uri base,
       bool pretty,
       Summary summary,
       String format,
       List<String> elements,
       List<String> parameters,
-      int count,
-      Instant since,
-      FhirDateTime at,
-      String reference,
-      Client client}) = _$_FhirHistoryAllRequest;
+      int? count,
+      Instant? since,
+      FhirDateTime? at,
+      String? reference,
+      Client? client}) = _$_FhirHistoryAllRequest;
+  _FhirHistoryAllRequest._() : super._();
 
   @override
-  Uri get base;
+  Uri get base => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  int get count;
-  Instant get since;
-  FhirDateTime get at;
-  String get reference;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  int? get count => throw _privateConstructorUsedError;
+  Instant? get since => throw _privateConstructorUsedError;
+  FhirDateTime? get at => throw _privateConstructorUsedError;
+  String? get reference => throw _privateConstructorUsedError;
   @override
-  Client get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirHistoryAllRequestCopyWith<_FhirHistoryAllRequest> get copyWith;
+  _$FhirHistoryAllRequestCopyWith<_FhirHistoryAllRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -9390,8 +12463,8 @@ abstract class _$FhirOperationRequestCopyWith<$Res>
   @override
   $Res call(
       {Uri base,
-      R4ResourceType type,
-      Id id,
+      R4ResourceType? type,
+      Id? id,
       bool pretty,
       Summary summary,
       String format,
@@ -9401,7 +12474,7 @@ abstract class _$FhirOperationRequestCopyWith<$Res>
       String operation,
       bool usePost,
       bool useFormData,
-      Client client});
+      Client? client});
 }
 
 /// @nodoc
@@ -9417,48 +12490,82 @@ class __$FhirOperationRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object base = freezed,
-    Object type = freezed,
-    Object id = freezed,
-    Object pretty = freezed,
-    Object summary = freezed,
-    Object format = freezed,
-    Object elements = freezed,
-    Object parameters = freezed,
-    Object fhirParameter = freezed,
-    Object operation = freezed,
-    Object usePost = freezed,
-    Object useFormData = freezed,
-    Object client = freezed,
+    Object? base = freezed,
+    Object? type = freezed,
+    Object? id = freezed,
+    Object? pretty = freezed,
+    Object? summary = freezed,
+    Object? format = freezed,
+    Object? elements = freezed,
+    Object? parameters = freezed,
+    Object? fhirParameter = freezed,
+    Object? operation = freezed,
+    Object? usePost = freezed,
+    Object? useFormData = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirOperationRequest(
-      base: base == freezed ? _value.base : base as Uri,
-      type: type == freezed ? _value.type : type as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      pretty: pretty == freezed ? _value.pretty : pretty as bool,
-      summary: summary == freezed ? _value.summary : summary as Summary,
-      format: format == freezed ? _value.format : format as String,
-      elements:
-          elements == freezed ? _value.elements : elements as List<String>,
+      base: base == freezed
+          ? _value.base
+          : base // ignore: cast_nullable_to_non_nullable
+              as Uri,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType?,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      pretty: pretty == freezed
+          ? _value.pretty
+          : pretty // ignore: cast_nullable_to_non_nullable
+              as bool,
+      summary: summary == freezed
+          ? _value.summary
+          : summary // ignore: cast_nullable_to_non_nullable
+              as Summary,
+      format: format == freezed
+          ? _value.format
+          : format // ignore: cast_nullable_to_non_nullable
+              as String,
+      elements: elements == freezed
+          ? _value.elements
+          : elements // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       parameters: parameters == freezed
           ? _value.parameters
-          : parameters as List<String>,
+          : parameters // ignore: cast_nullable_to_non_nullable
+              as List<String>,
       fhirParameter: fhirParameter == freezed
           ? _value.fhirParameter
-          : fhirParameter as Map<String, dynamic>,
-      operation: operation == freezed ? _value.operation : operation as String,
-      usePost: usePost == freezed ? _value.usePost : usePost as bool,
-      useFormData:
-          useFormData == freezed ? _value.useFormData : useFormData as bool,
-      client: client == freezed ? _value.client : client as Client,
+          : fhirParameter // ignore: cast_nullable_to_non_nullable
+              as Map<String, dynamic>,
+      operation: operation == freezed
+          ? _value.operation
+          : operation // ignore: cast_nullable_to_non_nullable
+              as String,
+      usePost: usePost == freezed
+          ? _value.usePost
+          : usePost // ignore: cast_nullable_to_non_nullable
+              as bool,
+      useFormData: useFormData == freezed
+          ? _value.useFormData
+          : useFormData // ignore: cast_nullable_to_non_nullable
+              as bool,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as Client?,
     ));
   }
 }
 
 /// @nodoc
+
 class _$_FhirOperationRequest extends _FhirOperationRequest {
   _$_FhirOperationRequest(
-      {@required this.base,
+      {required this.base,
       this.type,
       this.id,
       this.pretty = false,
@@ -9467,28 +12574,18 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.fhirParameter = const <String, dynamic>{},
-      @required this.operation,
+      required this.operation,
       this.usePost = false,
       this.useFormData = false,
       this.client})
-      : assert(base != null),
-        assert(pretty != null),
-        assert(summary != null),
-        assert(format != null),
-        assert(elements != null),
-        assert(parameters != null),
-        assert(fhirParameter != null),
-        assert(operation != null),
-        assert(usePost != null),
-        assert(useFormData != null),
-        super._();
+      : super._();
 
   @override
   final Uri base;
   @override
-  final R4ResourceType type;
+  final R4ResourceType? type;
   @override
-  final Id id;
+  final Id? id;
   @JsonKey(defaultValue: false)
   @override
   final bool pretty;
@@ -9516,7 +12613,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
   @override
   final bool useFormData;
   @override
-  final Client client;
+  final Client? client;
 
   @override
   String toString() {
@@ -9587,9 +12684,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult read(
+  TResult when<TResult extends Object?>({
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -9598,9 +12694,9 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult vRead(
+            Client? client)
+        read,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -9610,9 +12706,9 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult update(
+            Client? client)
+        vRead,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -9620,9 +12716,9 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult patch(
+            Client? client)
+        update,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -9630,9 +12726,9 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult delete(
+            Client? client)
+        patch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -9641,9 +12737,9 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult create(
+            Client? client)
+        delete,
+    required TResult Function(
             Uri base,
             Resource resource,
             bool pretty,
@@ -9651,9 +12747,9 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            Client client),
-    @required
-        TResult search(
+            Client? client)
+        create,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -9663,12 +12759,18 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            Client client),
-    @required
-        TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client client),
-    @required
-        TResult capabilities(
+            Client? client)
+        search,
+    required TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)
+        searchAll,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -9676,9 +12778,9 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            Client client),
-    @required
-        TResult transaction(
+            Client? client)
+        capabilities,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -9686,9 +12788,9 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult batch(
+            Client? client)
+        transaction,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
@@ -9696,9 +12798,9 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            Client client),
-    @required
-        TResult history(
+            Client? client)
+        batch,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             Id id,
@@ -9707,13 +12809,13 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyType(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        history,
+    required TResult Function(
             Uri base,
             R4ResourceType type,
             bool pretty,
@@ -9721,29 +12823,29 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult historyAll(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyType,
+    required TResult Function(
             Uri base,
             bool pretty,
             Summary summary,
             String format,
             List<String> elements,
             List<String> parameters,
-            int count,
-            Instant since,
-            FhirDateTime at,
-            String reference,
-            Client client),
-    @required
-        TResult operation(
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)
+        historyAll,
+    required TResult Function(
             Uri base,
-            R4ResourceType type,
-            Id id,
+            R4ResourceType? type,
+            Id? id,
             bool pretty,
             Summary summary,
             String format,
@@ -9753,23 +12855,9 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            Client client),
+            Client? client)
+        operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return operation(
         base,
         type,
@@ -9788,161 +12876,361 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult read(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult vRead(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        Id vid,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult update(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult patch(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult delete(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult create(
-        Uri base,
-        Resource resource,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Client client),
-    TResult search(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        bool usePost,
-        RestfulRequest restfulRequest,
-        Client client),
-    TResult searchAll(Uri base, bool pretty, Summary summary, String format,
-        List<String> elements, List<String> parameters, Client client),
-    TResult capabilities(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Mode mode,
-        Client client),
-    TResult transaction(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult batch(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Bundle bundle,
-        Client client),
-    TResult history(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyType(
-        Uri base,
-        R4ResourceType type,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult historyAll(
-        Uri base,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        int count,
-        Instant since,
-        FhirDateTime at,
-        String reference,
-        Client client),
-    TResult operation(
-        Uri base,
-        R4ResourceType type,
-        Id id,
-        bool pretty,
-        Summary summary,
-        String format,
-        List<String> elements,
-        List<String> parameters,
-        Map<String, dynamic> fhirParameter,
-        String operation,
-        bool usePost,
-        bool useFormData,
-        Client client),
-    @required TResult orElse(),
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
   }) {
-    assert(orElse != null);
+    return operation?.call(
+        base,
+        type,
+        id,
+        pretty,
+        summary,
+        format,
+        elements,
+        parameters,
+        fhirParameter,
+        this.operation,
+        usePost,
+        useFormData,
+        client);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        read,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            Id vid,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        vRead,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        update,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        patch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        delete,
+    TResult Function(
+            Uri base,
+            Resource resource,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Client? client)?
+        create,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            bool usePost,
+            RestfulRequest restfulRequest,
+            Client? client)?
+        search,
+    TResult Function(Uri base, bool pretty, Summary summary, String format,
+            List<String> elements, List<String> parameters, Client? client)?
+        searchAll,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Mode mode,
+            Client? client)?
+        capabilities,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        transaction,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Bundle bundle,
+            Client? client)?
+        batch,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            Id id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        history,
+    TResult Function(
+            Uri base,
+            R4ResourceType type,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyType,
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            int? count,
+            Instant? since,
+            FhirDateTime? at,
+            String? reference,
+            Client? client)?
+        historyAll,
+    TResult Function(
+            Uri base,
+            R4ResourceType? type,
+            Id? id,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            Map<String, dynamic> fhirParameter,
+            String operation,
+            bool usePost,
+            bool useFormData,
+            Client? client)?
+        operation,
+    required TResult orElse(),
+  }) {
     if (operation != null) {
       return operation(
           base,
@@ -9964,62 +13252,68 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult read(_FhirReadRequest value),
-    @required TResult vRead(_FhirVReadRequest value),
-    @required TResult update(_FhirUpdateRequest value),
-    @required TResult patch(_FhirPatchRequest value),
-    @required TResult delete(_FhirDeleteRequest value),
-    @required TResult create(_FhirCreateRequest value),
-    @required TResult search(_FhirSearchRequest value),
-    @required TResult searchAll(_FhirSearchAllRequest value),
-    @required TResult capabilities(_FhirCapabilitiesRequest value),
-    @required TResult transaction(_FhirTransactionRequest value),
-    @required TResult batch(_FhirBatchRequest value),
-    @required TResult history(_FhirHistoryRequest value),
-    @required TResult historyType(_FhirHistoryTypeRequest value),
-    @required TResult historyAll(_FhirHistoryAllRequest value),
-    @required TResult operation(_FhirOperationRequest value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_FhirReadRequest value) read,
+    required TResult Function(_FhirVReadRequest value) vRead,
+    required TResult Function(_FhirUpdateRequest value) update,
+    required TResult Function(_FhirPatchRequest value) patch,
+    required TResult Function(_FhirDeleteRequest value) delete,
+    required TResult Function(_FhirCreateRequest value) create,
+    required TResult Function(_FhirSearchRequest value) search,
+    required TResult Function(_FhirSearchAllRequest value) searchAll,
+    required TResult Function(_FhirCapabilitiesRequest value) capabilities,
+    required TResult Function(_FhirTransactionRequest value) transaction,
+    required TResult Function(_FhirBatchRequest value) batch,
+    required TResult Function(_FhirHistoryRequest value) history,
+    required TResult Function(_FhirHistoryTypeRequest value) historyType,
+    required TResult Function(_FhirHistoryAllRequest value) historyAll,
+    required TResult Function(_FhirOperationRequest value) operation,
   }) {
-    assert(read != null);
-    assert(vRead != null);
-    assert(update != null);
-    assert(patch != null);
-    assert(delete != null);
-    assert(create != null);
-    assert(search != null);
-    assert(searchAll != null);
-    assert(capabilities != null);
-    assert(transaction != null);
-    assert(batch != null);
-    assert(history != null);
-    assert(historyType != null);
-    assert(historyAll != null);
-    assert(operation != null);
     return operation(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult read(_FhirReadRequest value),
-    TResult vRead(_FhirVReadRequest value),
-    TResult update(_FhirUpdateRequest value),
-    TResult patch(_FhirPatchRequest value),
-    TResult delete(_FhirDeleteRequest value),
-    TResult create(_FhirCreateRequest value),
-    TResult search(_FhirSearchRequest value),
-    TResult searchAll(_FhirSearchAllRequest value),
-    TResult capabilities(_FhirCapabilitiesRequest value),
-    TResult transaction(_FhirTransactionRequest value),
-    TResult batch(_FhirBatchRequest value),
-    TResult history(_FhirHistoryRequest value),
-    TResult historyType(_FhirHistoryTypeRequest value),
-    TResult historyAll(_FhirHistoryAllRequest value),
-    TResult operation(_FhirOperationRequest value),
-    @required TResult orElse(),
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
   }) {
-    assert(orElse != null);
+    return operation?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_FhirReadRequest value)? read,
+    TResult Function(_FhirVReadRequest value)? vRead,
+    TResult Function(_FhirUpdateRequest value)? update,
+    TResult Function(_FhirPatchRequest value)? patch,
+    TResult Function(_FhirDeleteRequest value)? delete,
+    TResult Function(_FhirCreateRequest value)? create,
+    TResult Function(_FhirSearchRequest value)? search,
+    TResult Function(_FhirSearchAllRequest value)? searchAll,
+    TResult Function(_FhirCapabilitiesRequest value)? capabilities,
+    TResult Function(_FhirTransactionRequest value)? transaction,
+    TResult Function(_FhirBatchRequest value)? batch,
+    TResult Function(_FhirHistoryRequest value)? history,
+    TResult Function(_FhirHistoryTypeRequest value)? historyType,
+    TResult Function(_FhirHistoryAllRequest value)? historyAll,
+    TResult Function(_FhirOperationRequest value)? operation,
+    required TResult orElse(),
+  }) {
     if (operation != null) {
       return operation(this);
     }
@@ -10028,43 +13322,44 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
 }
 
 abstract class _FhirOperationRequest extends FhirRequest {
-  _FhirOperationRequest._() : super._();
   factory _FhirOperationRequest(
-      {@required Uri base,
-      R4ResourceType type,
-      Id id,
+      {required Uri base,
+      R4ResourceType? type,
+      Id? id,
       bool pretty,
       Summary summary,
       String format,
       List<String> elements,
       List<String> parameters,
       Map<String, dynamic> fhirParameter,
-      @required String operation,
+      required String operation,
       bool usePost,
       bool useFormData,
-      Client client}) = _$_FhirOperationRequest;
+      Client? client}) = _$_FhirOperationRequest;
+  _FhirOperationRequest._() : super._();
 
   @override
-  Uri get base;
-  R4ResourceType get type;
-  Id get id;
+  Uri get base => throw _privateConstructorUsedError;
+  R4ResourceType? get type => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  bool get pretty;
+  bool get pretty => throw _privateConstructorUsedError;
   @override
-  Summary get summary;
+  Summary get summary => throw _privateConstructorUsedError;
   @override
-  String get format;
+  String get format => throw _privateConstructorUsedError;
   @override
-  List<String> get elements;
+  List<String> get elements => throw _privateConstructorUsedError;
   @override
-  List<String> get parameters;
-  Map<String, dynamic> get fhirParameter;
-  String get operation;
-  bool get usePost;
-  bool get useFormData;
+  List<String> get parameters => throw _privateConstructorUsedError;
+  Map<String, dynamic> get fhirParameter => throw _privateConstructorUsedError;
+  String get operation => throw _privateConstructorUsedError;
+  bool get usePost => throw _privateConstructorUsedError;
+  bool get useFormData => throw _privateConstructorUsedError;
   @override
-  Client get client;
+  Client? get client => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$FhirOperationRequestCopyWith<_FhirOperationRequest> get copyWith;
+  _$FhirOperationRequestCopyWith<_FhirOperationRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }

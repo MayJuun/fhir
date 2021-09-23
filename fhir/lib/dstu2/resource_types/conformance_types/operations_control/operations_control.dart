@@ -12,60 +12,63 @@ part 'operations_control.freezed.dart';
 part 'operations_control.g.dart';
 
 @freezed
-abstract class Conformance with Resource implements _$Conformance {
+class Conformance with Resource, _$Conformance {
   Conformance._();
   factory Conformance({
     @Default(Dstu2ResourceType.Conformance)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Conformance)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
-    String version,
-    String name,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    Code? language,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    String? version,
+    String? name,
     @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-        ConformanceStatus status,
-    Boolean experimental,
-    String publisher,
-    List<ConformanceContact> contact,
-    @JsonKey(required: true) @required FhirDateTime date,
-    String description,
-    String requirements,
-    String copyright,
-    @JsonKey(required: true, unknownEnumValue: ConformanceKind.unknown)
-    @required
-        ConformanceKind kind,
-    ConformanceSoftware software,
-    ConformanceImplementation implementation,
-    @JsonKey(required: true) @required Id fhirVersion,
-    @JsonKey(name: '_fhirVersion') Element fhirVersionElement,
-    @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
-    @required
-        ConformanceAcceptUnknown acceptUnknown,
-    @JsonKey(name: '_acceptUnknown') Element acceptUnknownElement,
-    @JsonKey(required: true) @required List<ConformanceFormat> format,
-    List<Reference> profile,
-    List<ConformanceRest> rest,
-    List<ConformanceMessaging> messaging,
-    List<ConformanceDocument> document,
+        ConformanceStatus? status,
+    Boolean? experimental,
+    String? publisher,
+    List<ConformanceContact>? contact,
+    required FhirDateTime date,
+    String? description,
+    String? requirements,
+    String? copyright,
+    @JsonKey(unknownEnumValue: ConformanceKind.unknown)
+        required ConformanceKind kind,
+    ConformanceSoftware? software,
+    ConformanceImplementation? implementation,
+    required Id fhirVersion,
+    @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
+    @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
+        required ConformanceAcceptUnknown acceptUnknown,
+    @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
+    required List<ConformanceFormat> format,
+    List<Reference>? profile,
+    List<ConformanceRest>? rest,
+    List<ConformanceMessaging>? messaging,
+    List<ConformanceDocument>? document,
   }) = _Conformance;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Conformance.fromYaml(dynamic yaml) => yaml is String
-      ? Conformance.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Conformance.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Conformance.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? Conformance.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'Conformance cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Conformance.fromJson(Map<String, dynamic> json) =>
@@ -73,62 +76,63 @@ abstract class Conformance with Resource implements _$Conformance {
 }
 
 @freezed
-abstract class CapabilityStatement
-    with Resource
-    implements _$CapabilityStatement {
+class CapabilityStatement with Resource, _$CapabilityStatement {
   CapabilityStatement._();
   factory CapabilityStatement({
     @Default(Dstu2ResourceType.CapabilityStatement)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.CapabilityStatement)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
-    String version,
-    String name,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    Code? language,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    String? version,
+    String? name,
     @JsonKey(unknownEnumValue: ConformanceStatus.unknown)
-        ConformanceStatus status,
-    Boolean experimental,
-    String publisher,
-    List<ConformanceContact> contact,
-    @JsonKey(required: true) @required FhirDateTime date,
-    String description,
-    String requirements,
-    String copyright,
-    @JsonKey(required: true, unknownEnumValue: ConformanceKind.unknown)
-    @required
-        ConformanceKind kind,
-    ConformanceSoftware software,
-    ConformanceImplementation implementation,
-    @JsonKey(required: true) @required Id fhirVersion,
-    @JsonKey(name: '_fhirVersion') Element fhirVersionElement,
-    @JsonKey(required: true, unknownEnumValue: ConformanceAcceptUnknown.unknown)
-    @required
-        ConformanceAcceptUnknown acceptUnknown,
-    @JsonKey(name: '_acceptUnknown') Element acceptUnknownElement,
-    @JsonKey(required: true) @required List<ConformanceFormat> format,
-    List<Reference> profile,
-    List<ConformanceRest> rest,
-    List<ConformanceMessaging> messaging,
-    List<ConformanceDocument> document,
+        ConformanceStatus? status,
+    Boolean? experimental,
+    String? publisher,
+    List<ConformanceContact>? contact,
+    required FhirDateTime date,
+    String? description,
+    String? requirements,
+    String? copyright,
+    @JsonKey(unknownEnumValue: ConformanceKind.unknown)
+        required ConformanceKind kind,
+    ConformanceSoftware? software,
+    ConformanceImplementation? implementation,
+    required Id fhirVersion,
+    @JsonKey(name: '_fhirVersion') Element? fhirVersionElement,
+    @JsonKey(unknownEnumValue: ConformanceAcceptUnknown.unknown)
+        required ConformanceAcceptUnknown acceptUnknown,
+    @JsonKey(name: '_acceptUnknown') Element? acceptUnknownElement,
+    required List<ConformanceFormat> format,
+    List<Reference>? profile,
+    List<ConformanceRest>? rest,
+    List<ConformanceMessaging>? messaging,
+    List<ConformanceDocument>? document,
   }) = _CapabilityStatement;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory CapabilityStatement.fromYaml(dynamic yaml) => yaml is String
-      ? CapabilityStatement.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? CapabilityStatement.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CapabilityStatement.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CapabilityStatement.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CapabilityStatement cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CapabilityStatement.fromJson(Map<String, dynamic> json) =>
@@ -136,25 +140,29 @@ abstract class CapabilityStatement
 }
 
 @freezed
-abstract class ConformanceContact with _$ConformanceContact {
+class ConformanceContact with _$ConformanceContact {
   ConformanceContact._();
   factory ConformanceContact({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    List<ContactPoint> telecom,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    List<ContactPoint>? telecom,
   }) = _ConformanceContact;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ConformanceContact.fromYaml(dynamic yaml) => yaml is String
-      ? ConformanceContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ConformanceContact.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConformanceContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? ConformanceContact.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ConformanceContact cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceContact.fromJson(Map<String, dynamic> json) =>
@@ -162,26 +170,30 @@ abstract class ConformanceContact with _$ConformanceContact {
 }
 
 @freezed
-abstract class ConformanceSoftware with _$ConformanceSoftware {
+class ConformanceSoftware with _$ConformanceSoftware {
   ConformanceSoftware._();
   factory ConformanceSoftware({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required String name,
-    String version,
-    FhirDateTime releaseDate,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required String name,
+    String? version,
+    FhirDateTime? releaseDate,
   }) = _ConformanceSoftware;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ConformanceSoftware.fromYaml(dynamic yaml) => yaml is String
-      ? ConformanceSoftware.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ConformanceSoftware.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConformanceSoftware.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? ConformanceSoftware.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ConformanceSoftware cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceSoftware.fromJson(Map<String, dynamic> json) =>
@@ -189,26 +201,29 @@ abstract class ConformanceSoftware with _$ConformanceSoftware {
 }
 
 @freezed
-abstract class ConformanceImplementation with _$ConformanceImplementation {
+class ConformanceImplementation with _$ConformanceImplementation {
   ConformanceImplementation._();
   factory ConformanceImplementation({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required String description,
-    FhirUri url,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required String description,
+    FhirUri? url,
   }) = _ConformanceImplementation;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ConformanceImplementation.fromYaml(dynamic yaml) => yaml is String
       ? ConformanceImplementation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConformanceImplementation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? ConformanceImplementation.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ConformanceImplementation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceImplementation.fromJson(Map<String, dynamic> json) =>
@@ -216,37 +231,39 @@ abstract class ConformanceImplementation with _$ConformanceImplementation {
 }
 
 @freezed
-abstract class ConformanceRest with _$ConformanceRest {
+class ConformanceRest with _$ConformanceRest {
   ConformanceRest._();
   factory ConformanceRest({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-    @JsonKey(required: true, unknownEnumValue: RestMode.unknown)
-    @required
-        RestMode mode,
-    @JsonKey(name: '_mode') Element modeElement,
-    String documentation,
-    ConformanceRestSecurity security,
-    @JsonKey(required: true) @required List<ConformanceRestResource> resource,
-    List<ConformanceRestInteraction> interaction,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    @JsonKey(unknownEnumValue: RestMode.unknown) required RestMode mode,
+    @JsonKey(name: '_mode') Element? modeElement,
+    String? documentation,
+    ConformanceRestSecurity? security,
+    required List<ConformanceRestResource> resource,
+    List<ConformanceRestInteraction>? interaction,
     @JsonKey(unknownEnumValue: RestTransactionMode.unknown)
-        RestTransactionMode transactionMode,
-    List<ConformanceResourceSearchParam> searchParam,
-    List<ConformanceRestOperation> operation,
-    List<FhirUri> compartment,
+        RestTransactionMode? transactionMode,
+    List<ConformanceResourceSearchParam>? searchParam,
+    List<ConformanceRestOperation>? operation,
+    List<FhirUri>? compartment,
   }) = _ConformanceRest;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ConformanceRest.fromYaml(dynamic yaml) => yaml is String
-      ? ConformanceRest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ConformanceRest.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConformanceRest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? ConformanceRest.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ConformanceRest cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceRest.fromJson(Map<String, dynamic> json) =>
@@ -254,28 +271,32 @@ abstract class ConformanceRest with _$ConformanceRest {
 }
 
 @freezed
-abstract class ConformanceMessaging with _$ConformanceMessaging {
+class ConformanceMessaging with _$ConformanceMessaging {
   ConformanceMessaging._();
   factory ConformanceMessaging({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-    List<ConformanceMessagingEndpoint> endpoint,
-    UnsignedInt reliableCache,
-    String documentation,
-    @JsonKey(required: true) @required List<ConformanceMessagingEvent> event,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    List<ConformanceMessagingEndpoint>? endpoint,
+    UnsignedInt? reliableCache,
+    String? documentation,
+    required List<ConformanceMessagingEvent> event,
   }) = _ConformanceMessaging;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ConformanceMessaging.fromYaml(dynamic yaml) => yaml is String
-      ? ConformanceMessaging.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ConformanceMessaging.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConformanceMessaging.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? ConformanceMessaging.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ConformanceMessaging cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceMessaging.fromJson(Map<String, dynamic> json) =>
@@ -283,29 +304,31 @@ abstract class ConformanceMessaging with _$ConformanceMessaging {
 }
 
 @freezed
-abstract class ConformanceDocument with _$ConformanceDocument {
+class ConformanceDocument with _$ConformanceDocument {
   ConformanceDocument._();
   factory ConformanceDocument({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-    @JsonKey(required: true, unknownEnumValue: DocumentMode.unknown)
-    @required
-        DocumentMode mode,
-    String documentation,
-    @JsonKey(required: true) @required Reference profile,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    @JsonKey(unknownEnumValue: DocumentMode.unknown) required DocumentMode mode,
+    String? documentation,
+    required Reference profile,
   }) = _ConformanceDocument;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ConformanceDocument.fromYaml(dynamic yaml) => yaml is String
-      ? ConformanceDocument.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ConformanceDocument.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConformanceDocument.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? ConformanceDocument.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ConformanceDocument cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceDocument.fromJson(Map<String, dynamic> json) =>
@@ -313,28 +336,32 @@ abstract class ConformanceDocument with _$ConformanceDocument {
 }
 
 @freezed
-abstract class ConformanceRestSecurity with _$ConformanceRestSecurity {
+class ConformanceRestSecurity with _$ConformanceRestSecurity {
   ConformanceRestSecurity._();
   factory ConformanceRestSecurity({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Boolean cors,
-    @JsonKey(name: '_cors') Element corsElement,
-    List<CodeableConcept> service,
-    String description,
-    List<ConformanceSecurityCertificate> certificate,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Boolean? cors,
+    @JsonKey(name: '_cors') Element? corsElement,
+    List<CodeableConcept>? service,
+    String? description,
+    List<ConformanceSecurityCertificate>? certificate,
   }) = _ConformanceRestSecurity;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ConformanceRestSecurity.fromYaml(dynamic yaml) => yaml is String
-      ? ConformanceRestSecurity.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ConformanceRestSecurity.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConformanceRestSecurity.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? ConformanceRestSecurity.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ConformanceRestSecurity cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceRestSecurity.fromJson(Map<String, dynamic> json) =>
@@ -342,44 +369,47 @@ abstract class ConformanceRestSecurity with _$ConformanceRestSecurity {
 }
 
 @freezed
-abstract class ConformanceRestResource with _$ConformanceRestResource {
+class ConformanceRestResource with _$ConformanceRestResource {
   ConformanceRestResource._();
   factory ConformanceRestResource({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-    @JsonKey(required: true) @required Code type,
-    @JsonKey(name: '_type') Element typeElement,
-    Reference profile,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    required Code type,
+    @JsonKey(name: '_type') Element? typeElement,
+    Reference? profile,
     @JsonKey(required: true)
-    @required
-        List<ConformanceResourceInteraction> interaction,
+        required List<ConformanceResourceInteraction> interaction,
     @JsonKey(unknownEnumValue: ResourceVersioning.unknown)
-        ResourceVersioning versioning,
-    Boolean readHistory,
-    Boolean updateCreate,
-    @JsonKey(name: '_updateCreate') Element updateCreateElement,
-    Boolean conditionalCreate,
-    @JsonKey(name: '_conditionalCreate') Element conditionalCreateElement,
-    Boolean conditionalUpdate,
+        ResourceVersioning? versioning,
+    Boolean? readHistory,
+    Boolean? updateCreate,
+    @JsonKey(name: '_updateCreate') Element? updateCreateElement,
+    Boolean? conditionalCreate,
+    @JsonKey(name: '_conditionalCreate') Element? conditionalCreateElement,
+    Boolean? conditionalUpdate,
     @JsonKey(unknownEnumValue: ResourceConditionalDelete.unknown)
-        ResourceConditionalDelete conditionalDelete,
-    @JsonKey(name: '_conditionalDelete') Element conditionalDeleteElement,
-    List<String> searchInclude,
-    List<String> searchRevInclude,
-    List<ConformanceResourceSearchParam> searchParam,
+        ResourceConditionalDelete? conditionalDelete,
+    @JsonKey(name: '_conditionalDelete') Element? conditionalDeleteElement,
+    List<String>? searchInclude,
+    List<String>? searchRevInclude,
+    List<ConformanceResourceSearchParam>? searchParam,
   }) = _ConformanceRestResource;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ConformanceRestResource.fromYaml(dynamic yaml) => yaml is String
-      ? ConformanceRestResource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ConformanceRestResource.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConformanceRestResource.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? ConformanceRestResource.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ConformanceRestResource cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceRestResource.fromJson(Map<String, dynamic> json) =>
@@ -387,31 +417,31 @@ abstract class ConformanceRestResource with _$ConformanceRestResource {
 }
 
 @freezed
-abstract class ConformanceResourceInteraction
-    with _$ConformanceResourceInteraction {
+class ConformanceResourceInteraction with _$ConformanceResourceInteraction {
   ConformanceResourceInteraction._();
   factory ConformanceResourceInteraction({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true, unknownEnumValue: ResourceInteractionCode.unknown)
-    @required
-        ResourceInteractionCode code,
-    String documentation,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(unknownEnumValue: ResourceInteractionCode.unknown)
+        required ResourceInteractionCode code,
+    String? documentation,
   }) = _ConformanceResourceInteraction;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory ConformanceResourceInteraction.fromYaml(dynamic yaml) =>
-      yaml is String
+  /// Factory constructor, accepts a [String] in YAML format as an argument
+  factory ConformanceResourceInteraction.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ConformanceResourceInteraction.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
           ? ConformanceResourceInteraction.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ConformanceResourceInteraction.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ConformanceResourceInteraction cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceResourceInteraction.fromJson(Map<String, dynamic> json) =>
@@ -419,27 +449,30 @@ abstract class ConformanceResourceInteraction
 }
 
 @freezed
-abstract class ConformanceRestOperation with _$ConformanceRestOperation {
+class ConformanceRestOperation with _$ConformanceRestOperation {
   ConformanceRestOperation._();
   factory ConformanceRestOperation({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-    @JsonKey(required: true) @required String name,
-    @JsonKey(required: true) @required Reference definition,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    required String name,
+    required Reference definition,
   }) = _ConformanceRestOperation;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ConformanceRestOperation.fromYaml(dynamic yaml) => yaml is String
       ? ConformanceRestOperation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConformanceRestOperation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? ConformanceRestOperation.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ConformanceRestOperation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceRestOperation.fromJson(Map<String, dynamic> json) =>
@@ -447,28 +480,30 @@ abstract class ConformanceRestOperation with _$ConformanceRestOperation {
 }
 
 @freezed
-abstract class ConformanceMessagingEndpoint
-    with _$ConformanceMessagingEndpoint {
+class ConformanceMessagingEndpoint with _$ConformanceMessagingEndpoint {
   ConformanceMessagingEndpoint._();
   factory ConformanceMessagingEndpoint({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required Coding protocol,
-    @JsonKey(required: true) @required FhirUri address,
-    @JsonKey(name: '_address') Element addressElement,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Coding protocol,
+    required FhirUri address,
+    @JsonKey(name: '_address') Element? addressElement,
   }) = _ConformanceMessagingEndpoint;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ConformanceMessagingEndpoint.fromYaml(dynamic yaml) => yaml is String
       ? ConformanceMessagingEndpoint.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConformanceMessagingEndpoint.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? ConformanceMessagingEndpoint.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ConformanceMessagingEndpoint cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceMessagingEndpoint.fromJson(Map<String, dynamic> json) =>
@@ -476,34 +511,35 @@ abstract class ConformanceMessagingEndpoint
 }
 
 @freezed
-abstract class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
+class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
   ConformanceMessagingEvent._();
   factory ConformanceMessagingEvent({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required Coding code,
-    @JsonKey(unknownEnumValue: EventCategory.unknown) EventCategory category,
-    @JsonKey(required: true, unknownEnumValue: EventMode.unknown)
-    @required
-        EventMode mode,
-    @JsonKey(name: '_mode') Element modeElement,
-    @JsonKey(required: true) @required Code focus,
-    @JsonKey(required: true) @required Reference request,
-    @JsonKey(required: true) @required Reference response,
-    String documentation,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Coding code,
+    @JsonKey(unknownEnumValue: EventCategory.unknown) EventCategory? category,
+    @JsonKey(unknownEnumValue: EventMode.unknown) required EventMode mode,
+    @JsonKey(name: '_mode') Element? modeElement,
+    required Code focus,
+    required Reference request,
+    required Reference response,
+    String? documentation,
   }) = _ConformanceMessagingEvent;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ConformanceMessagingEvent.fromYaml(dynamic yaml) => yaml is String
       ? ConformanceMessagingEvent.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConformanceMessagingEvent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? ConformanceMessagingEvent.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ConformanceMessagingEvent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceMessagingEvent.fromJson(Map<String, dynamic> json) =>
@@ -511,30 +547,31 @@ abstract class ConformanceMessagingEvent with _$ConformanceMessagingEvent {
 }
 
 @freezed
-abstract class ConformanceSecurityCertificate
-    with _$ConformanceSecurityCertificate {
+class ConformanceSecurityCertificate with _$ConformanceSecurityCertificate {
   ConformanceSecurityCertificate._();
   factory ConformanceSecurityCertificate({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Code type,
-    Base64Binary blob,
-    @JsonKey(name: '_blob') Element blobElement,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Code? type,
+    Base64Binary? blob,
+    @JsonKey(name: '_blob') Element? blobElement,
   }) = _ConformanceSecurityCertificate;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory ConformanceSecurityCertificate.fromYaml(dynamic yaml) =>
-      yaml is String
+  /// Factory constructor, accepts a [String] in YAML format as an argument
+  factory ConformanceSecurityCertificate.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ConformanceSecurityCertificate.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
           ? ConformanceSecurityCertificate.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ConformanceSecurityCertificate.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ConformanceSecurityCertificate cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceSecurityCertificate.fromJson(Map<String, dynamic> json) =>
@@ -542,28 +579,30 @@ abstract class ConformanceSecurityCertificate
 }
 
 @freezed
-abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
+class ConformanceRestInteraction with _$ConformanceRestInteraction {
   ConformanceRestInteraction._();
   factory ConformanceRestInteraction({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true, unknownEnumValue: RestInteractionCode.unknown)
-    @required
-        RestInteractionCode code,
-    String documentation,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(unknownEnumValue: RestInteractionCode.unknown)
+        required RestInteractionCode code,
+    String? documentation,
   }) = _ConformanceRestInteraction;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory ConformanceRestInteraction.fromYaml(dynamic yaml) => yaml is String
       ? ConformanceRestInteraction.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConformanceRestInteraction.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? ConformanceRestInteraction.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ConformanceRestInteraction cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceRestInteraction.fromJson(Map<String, dynamic> json) =>
@@ -571,37 +610,37 @@ abstract class ConformanceRestInteraction with _$ConformanceRestInteraction {
 }
 
 @freezed
-abstract class ConformanceResourceSearchParam
-    with _$ConformanceResourceSearchParam {
+class ConformanceResourceSearchParam with _$ConformanceResourceSearchParam {
   ConformanceResourceSearchParam._();
   factory ConformanceResourceSearchParam({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-    @JsonKey(required: true) @required String name,
-    FhirUri definition,
-    @JsonKey(required: true, unknownEnumValue: SearchParamType.unknown)
-    @required
-        SearchParamType type,
-    String documentation,
-    List<Code> target,
-    List<SearchParamModifier> modifier,
-    List<String> chain,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    required String name,
+    FhirUri? definition,
+    @JsonKey(unknownEnumValue: SearchParamType.unknown)
+        required SearchParamType type,
+    String? documentation,
+    List<Code>? target,
+    List<SearchParamModifier>? modifier,
+    List<String>? chain,
   }) = _ConformanceResourceSearchParam;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory ConformanceResourceSearchParam.fromYaml(dynamic yaml) =>
-      yaml is String
+  /// Factory constructor, accepts a [String] in YAML format as an argument
+  factory ConformanceResourceSearchParam.fromYaml(dynamic yaml) => yaml
+          is String
+      ? ConformanceResourceSearchParam.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
           ? ConformanceResourceSearchParam.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? ConformanceResourceSearchParam.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ConformanceResourceSearchParam cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConformanceResourceSearchParam.fromJson(Map<String, dynamic> json) =>
@@ -609,57 +648,57 @@ abstract class ConformanceResourceSearchParam
 }
 
 @freezed
-abstract class OperationDefinition
-    with Resource
-    implements _$OperationDefinition {
+class OperationDefinition with Resource, _$OperationDefinition {
   OperationDefinition._();
   factory OperationDefinition({
     @Default(Dstu2ResourceType.OperationDefinition)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationDefinition)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    String version,
-    @JsonKey(required: true) @required String name,
-    @JsonKey(
-        required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
-    @required
-        OperationDefinitionStatus status,
-    @JsonKey(required: true, unknownEnumValue: OperationDefinitionKind.unknown)
-    @required
-        OperationDefinitionKind kind,
-    Boolean experimental,
-    String publisher,
-    List<OperationDefinitionContact> contact,
-    FhirDateTime date,
-    String description,
-    String requirements,
-    Boolean idempotent,
-    @JsonKey(required: true) @required Code code,
-    String notes,
-    Reference base,
-    @JsonKey(required: true) @required Boolean system,
-    List<Code> type,
-    @JsonKey(required: true) @required Boolean instance,
-    List<OperationDefinitionParameter> parameter,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    Code? language,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    String? version,
+    required String name,
+    @JsonKey(required: true, unknownEnumValue: OperationDefinitionStatus.unknown)
+        required OperationDefinitionStatus status,
+    @JsonKey(unknownEnumValue: OperationDefinitionKind.unknown)
+        required OperationDefinitionKind kind,
+    Boolean? experimental,
+    String? publisher,
+    List<OperationDefinitionContact>? contact,
+    FhirDateTime? date,
+    String? description,
+    String? requirements,
+    Boolean? idempotent,
+    required Code code,
+    String? notes,
+    Reference? base,
+    required Boolean system,
+    List<Code>? type,
+    required Boolean instance,
+    List<OperationDefinitionParameter>? parameter,
   }) = _OperationDefinition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory OperationDefinition.fromYaml(dynamic yaml) => yaml is String
-      ? OperationDefinition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? OperationDefinition.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? OperationDefinition.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? OperationDefinition.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'OperationDefinition cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationDefinition.fromJson(Map<String, dynamic> json) =>
@@ -667,26 +706,29 @@ abstract class OperationDefinition
 }
 
 @freezed
-abstract class OperationDefinitionContact with _$OperationDefinitionContact {
+class OperationDefinitionContact with _$OperationDefinitionContact {
   OperationDefinitionContact._();
   factory OperationDefinitionContact({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    List<ContactPoint> telecom,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    List<ContactPoint>? telecom,
   }) = _OperationDefinitionContact;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory OperationDefinitionContact.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinitionContact.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? OperationDefinitionContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? OperationDefinitionContact.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'OperationDefinitionContact cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationDefinitionContact.fromJson(Map<String, dynamic> json) =>
@@ -694,37 +736,37 @@ abstract class OperationDefinitionContact with _$OperationDefinitionContact {
 }
 
 @freezed
-abstract class OperationDefinitionParameter
-    with _$OperationDefinitionParameter {
+class OperationDefinitionParameter with _$OperationDefinitionParameter {
   OperationDefinitionParameter._();
   factory OperationDefinitionParameter({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-    @JsonKey(required: true) @required Code name,
-    @JsonKey(required: true, unknownEnumValue: ParameterUse.unknown)
-    @required
-        ParameterUse use,
-    @JsonKey(required: true) @required Integer min,
-    @JsonKey(required: true) @required String max,
-    String documentation,
-    Code type,
-    Reference profile,
-    OperationDefinitionParameterBinding binding,
-    @JsonKey(name: 'part') List<OperationDefinitionParameter> part_,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    required Code name,
+    @JsonKey(unknownEnumValue: ParameterUse.unknown) required ParameterUse use,
+    required Integer min,
+    required String max,
+    String? documentation,
+    Code? type,
+    Reference? profile,
+    OperationDefinitionParameterBinding? binding,
+    @JsonKey(name: 'part') List<OperationDefinitionParameter>? part_,
   }) = _OperationDefinitionParameter;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory OperationDefinitionParameter.fromYaml(dynamic yaml) => yaml is String
       ? OperationDefinitionParameter.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? OperationDefinitionParameter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? OperationDefinitionParameter.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'OperationDefinitionParameter cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationDefinitionParameter.fromJson(Map<String, dynamic> json) =>
@@ -732,35 +774,36 @@ abstract class OperationDefinitionParameter
 }
 
 @freezed
-abstract class OperationDefinitionParameterBinding
+class OperationDefinitionParameterBinding
     with _$OperationDefinitionParameterBinding {
   OperationDefinitionParameterBinding._();
   factory OperationDefinitionParameterBinding({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(
         required: true,
         unknownEnumValue: OperationDefinitionBindingStrength.unknown)
     @JsonKey(required: true)
-    @required
-        OperationDefinitionBindingStrength strength,
-    FhirUri valueSetUri,
-    Reference valueSetReference,
+        required OperationDefinitionBindingStrength strength,
+    FhirUri? valueSetUri,
+    Reference? valueSetReference,
   }) = _OperationDefinitionParameterBinding;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
-  factory OperationDefinitionParameterBinding.fromYaml(dynamic yaml) =>
-      yaml is String
+  /// Factory constructor, accepts a [String] in YAML format as an argument
+  factory OperationDefinitionParameterBinding.fromYaml(dynamic yaml) => yaml
+          is String
+      ? OperationDefinitionParameterBinding.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
           ? OperationDefinitionParameterBinding.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))))
-          : yaml is YamlMap
-              ? OperationDefinitionParameterBinding.fromJson(
-                  jsonDecode(jsonEncode(yaml)))
-              : null;
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'OperationDefinitionParameterBinding cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   factory OperationDefinitionParameterBinding.fromJson(
           Map<String, dynamic> json) =>
@@ -768,51 +811,55 @@ abstract class OperationDefinitionParameterBinding
 }
 
 @freezed
-abstract class SearchParameter with Resource implements _$SearchParameter {
+class SearchParameter with Resource, _$SearchParameter {
   SearchParameter._();
   factory SearchParameter({
     @Default(Dstu2ResourceType.SearchParameter)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.SearchParameter)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    Code language,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required FhirUri url,
-    @JsonKey(required: true) @required String name,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    Code? language,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required FhirUri url,
+    required String name,
     @JsonKey(unknownEnumValue: SearchParameterStatus.unknown)
-        SearchParameterStatus status,
-    Boolean experimental,
-    String publisher,
-    List<SearchParameterContact> contact,
-    FhirDateTime date,
-    String requirements,
-    @JsonKey(name: '_requirements') Element requirementsElement,
-    @JsonKey(required: true) @required Code code,
-    Code base,
-    @JsonKey(required: true, unknownEnumValue: SearchParameterType.unknown)
-    @required
-        SearchParameterType type,
-    String description,
-    String xpath,
+        SearchParameterStatus? status,
+    Boolean? experimental,
+    String? publisher,
+    List<SearchParameterContact>? contact,
+    FhirDateTime? date,
+    String? requirements,
+    @JsonKey(name: '_requirements') Element? requirementsElement,
+    required Code code,
+    Code? base,
+    @JsonKey(unknownEnumValue: SearchParameterType.unknown)
+        required SearchParameterType type,
+    String? description,
+    String? xpath,
     @JsonKey(unknownEnumValue: SearchParameterXpathUsage.unknown)
-        SearchParameterXpathUsage xpathUsage,
-    List<Code> target,
+        SearchParameterXpathUsage? xpathUsage,
+    List<Code>? target,
   }) = _SearchParameter;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory SearchParameter.fromYaml(dynamic yaml) => yaml is String
-      ? SearchParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? SearchParameter.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? SearchParameter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? SearchParameter.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'SearchParameter cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SearchParameter.fromJson(Map<String, dynamic> json) =>
@@ -820,25 +867,29 @@ abstract class SearchParameter with Resource implements _$SearchParameter {
 }
 
 @freezed
-abstract class SearchParameterContact with _$SearchParameterContact {
+class SearchParameterContact with _$SearchParameterContact {
   SearchParameterContact._();
   factory SearchParameterContact({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    List<ContactPoint> telecom,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    List<ContactPoint>? telecom,
   }) = _SearchParameterContact;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory SearchParameterContact.fromYaml(dynamic yaml) => yaml is String
-      ? SearchParameterContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? SearchParameterContact.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? SearchParameterContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? SearchParameterContact.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'SearchParameterContact cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SearchParameterContact.fromJson(Map<String, dynamic> json) =>

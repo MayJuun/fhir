@@ -3,7 +3,8 @@ part of 'resource.dart';
 /// Acts like a constructor, returns a [Resource], accepts a
 /// [Map<String, Dyamic] as an argument
 Resource _resourceFromJson(Map<String, dynamic> json) {
-  switch (json['resourceType']) {
+  final dynamic resourceType = json['resourceType'];
+  switch (resourceType) {
     case 'Account':
       return Account.fromJson(json);
     case 'ActivityDefinition':
@@ -42,6 +43,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return ChargeItem.fromJson(json);
     case 'ChargeItemDefinition':
       return ChargeItemDefinition.fromJson(json);
+    case 'Citation':
+      return Citation.fromJson(json);
     case 'Claim':
       return Claim.fromJson(json);
     case 'ClaimResponse':
@@ -86,8 +89,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return DeviceMetric.fromJson(json);
     case 'DeviceRequest':
       return DeviceRequest.fromJson(json);
-    case 'DeviceUseStatement':
-      return DeviceUseStatement.fromJson(json);
+    case 'DeviceUsage':
+      return DeviceUsage.fromJson(json);
     case 'DiagnosticReport':
       return DiagnosticReport.fromJson(json);
     case 'DocumentManifest':
@@ -108,6 +111,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return EventDefinition.fromJson(json);
     case 'Evidence':
       return Evidence.fromJson(json);
+    case 'EvidenceReport':
+      return EvidenceReport.fromJson(json);
     case 'EvidenceVariable':
       return EvidenceVariable.fromJson(json);
     case 'ExampleScenario':
@@ -140,6 +145,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return ImplementationGuide.fromJson(json);
     case 'InsurancePlan':
       return InsurancePlan.fromJson(json);
+    case 'InventoryReport':
+      return InventoryReport.fromJson(json);
     case 'Invoice':
       return Invoice.fromJson(json);
     case 'Library':
@@ -168,6 +175,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return MedicationUsage.fromJson(json);
     case 'MedicinalProductDefinition':
       return MedicinalProductDefinition.fromJson(json);
+    case 'NutritionProduct':
+      return NutritionProduct.fromJson(json);
     case 'RegulatedAuthorization':
       return RegulatedAuthorization.fromJson(json);
     case 'Ingredient':
@@ -258,6 +267,8 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return Subscription.fromJson(json);
     case 'SubscriptionStatus':
       return SubscriptionStatus.fromJson(json);
+    case 'SubscriptionTopic':
+      return SubscriptionTopic.fromJson(json);
     case 'Substance':
       return Substance.fromJson(json);
     case 'SubstanceDefinition':
@@ -291,5 +302,6 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
     case 'VisionPrescription':
       return VisionPrescription.fromJson(json);
   }
-  return null;
+
+  return _$ResourceFromJson(json);
 }

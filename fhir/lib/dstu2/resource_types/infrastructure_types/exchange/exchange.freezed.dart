@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'exchange.dart';
 
@@ -8,6 +9,10 @@ part of 'exchange.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 MessageHeader _$MessageHeaderFromJson(Map<String, dynamic> json) {
   return _MessageHeader.fromJson(json);
 }
@@ -16,40 +21,33 @@ MessageHeader _$MessageHeaderFromJson(Map<String, dynamic> json) {
 class _$MessageHeaderTearOff {
   const _$MessageHeaderTearOff();
 
-// ignore: unused_element
   _MessageHeader call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MessageHeader)
           Dstu2ResourceType resourceType = Dstu2ResourceType.MessageHeader,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required
-      @JsonKey(required: true)
-          Instant timestamp,
-      @required
-      @JsonKey(required: true)
-          Coding event,
-      MessageHeaderResponse response,
-      @required
-      @JsonKey(required: true)
-          MessageHeaderSource source,
-      List<MessageHeaderDestination> destination,
-      Reference enterer,
-      Reference author,
-      Reference receiver,
-      Reference responsible,
-      CodeableConcept reason,
-      List<Reference> data}) {
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required Instant timestamp,
+      required Coding event,
+      MessageHeaderResponse? response,
+      required MessageHeaderSource source,
+      List<MessageHeaderDestination>? destination,
+      Reference? enterer,
+      Reference? author,
+      Reference? receiver,
+      Reference? responsible,
+      CodeableConcept? reason,
+      List<Reference>? data}) {
     return _MessageHeader(
       resourceType: resourceType,
       id: id,
@@ -76,51 +74,49 @@ class _$MessageHeaderTearOff {
     );
   }
 
-// ignore: unused_element
   MessageHeader fromJson(Map<String, Object> json) {
     return MessageHeader.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $MessageHeader = _$MessageHeaderTearOff();
 
 /// @nodoc
 mixin _$MessageHeader {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MessageHeader)
-  Dstu2ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  @JsonKey(required: true)
-  Instant get timestamp;
-  @JsonKey(required: true)
-  Coding get event;
-  MessageHeaderResponse get response;
-  @JsonKey(required: true)
-  MessageHeaderSource get source;
-  List<MessageHeaderDestination> get destination;
-  Reference get enterer;
-  Reference get author;
-  Reference get receiver;
-  Reference get responsible;
-  CodeableConcept get reason;
-  List<Reference> get data;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Instant get timestamp => throw _privateConstructorUsedError;
+  Coding get event => throw _privateConstructorUsedError;
+  MessageHeaderResponse? get response => throw _privateConstructorUsedError;
+  MessageHeaderSource get source => throw _privateConstructorUsedError;
+  List<MessageHeaderDestination>? get destination =>
+      throw _privateConstructorUsedError;
+  Reference? get enterer => throw _privateConstructorUsedError;
+  Reference? get author => throw _privateConstructorUsedError;
+  Reference? get receiver => throw _privateConstructorUsedError;
+  Reference? get responsible => throw _privateConstructorUsedError;
+  CodeableConcept? get reason => throw _privateConstructorUsedError;
+  List<Reference>? get data => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MessageHeaderCopyWith<MessageHeader> get copyWith;
+  $MessageHeaderCopyWith<MessageHeader> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -131,46 +127,43 @@ abstract class $MessageHeaderCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MessageHeader)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @JsonKey(required: true)
-          Instant timestamp,
-      @JsonKey(required: true)
-          Coding event,
-      MessageHeaderResponse response,
-      @JsonKey(required: true)
-          MessageHeaderSource source,
-      List<MessageHeaderDestination> destination,
-      Reference enterer,
-      Reference author,
-      Reference receiver,
-      Reference responsible,
-      CodeableConcept reason,
-      List<Reference> data});
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Instant timestamp,
+      Coding event,
+      MessageHeaderResponse? response,
+      MessageHeaderSource source,
+      List<MessageHeaderDestination>? destination,
+      Reference? enterer,
+      Reference? author,
+      Reference? receiver,
+      Reference? responsible,
+      CodeableConcept? reason,
+      List<Reference>? data});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
   $CodingCopyWith<$Res> get event;
-  $MessageHeaderResponseCopyWith<$Res> get response;
+  $MessageHeaderResponseCopyWith<$Res>? get response;
   $MessageHeaderSourceCopyWith<$Res> get source;
-  $ReferenceCopyWith<$Res> get enterer;
-  $ReferenceCopyWith<$Res> get author;
-  $ReferenceCopyWith<$Res> get receiver;
-  $ReferenceCopyWith<$Res> get responsible;
-  $CodeableConceptCopyWith<$Res> get reason;
+  $ReferenceCopyWith<$Res>? get enterer;
+  $ReferenceCopyWith<$Res>? get author;
+  $ReferenceCopyWith<$Res>? get receiver;
+  $ReferenceCopyWith<$Res>? get responsible;
+  $CodeableConceptCopyWith<$Res>? get reason;
 }
 
 /// @nodoc
@@ -184,190 +177,241 @@ class _$MessageHeaderCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object timestamp = freezed,
-    Object event = freezed,
-    Object response = freezed,
-    Object source = freezed,
-    Object destination = freezed,
-    Object enterer = freezed,
-    Object author = freezed,
-    Object receiver = freezed,
-    Object responsible = freezed,
-    Object reason = freezed,
-    Object data = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? timestamp = freezed,
+    Object? event = freezed,
+    Object? response = freezed,
+    Object? source = freezed,
+    Object? destination = freezed,
+    Object? enterer = freezed,
+    Object? author = freezed,
+    Object? receiver = freezed,
+    Object? responsible = freezed,
+    Object? reason = freezed,
+    Object? data = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      timestamp: timestamp == freezed ? _value.timestamp : timestamp as Instant,
-      event: event == freezed ? _value.event : event as Coding,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      timestamp: timestamp == freezed
+          ? _value.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as Instant,
+      event: event == freezed
+          ? _value.event
+          : event // ignore: cast_nullable_to_non_nullable
+              as Coding,
       response: response == freezed
           ? _value.response
-          : response as MessageHeaderResponse,
-      source: source == freezed ? _value.source : source as MessageHeaderSource,
+          : response // ignore: cast_nullable_to_non_nullable
+              as MessageHeaderResponse?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as MessageHeaderSource,
       destination: destination == freezed
           ? _value.destination
-          : destination as List<MessageHeaderDestination>,
-      enterer: enterer == freezed ? _value.enterer : enterer as Reference,
-      author: author == freezed ? _value.author : author as Reference,
-      receiver: receiver == freezed ? _value.receiver : receiver as Reference,
+          : destination // ignore: cast_nullable_to_non_nullable
+              as List<MessageHeaderDestination>?,
+      enterer: enterer == freezed
+          ? _value.enterer
+          : enterer // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      author: author == freezed
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      receiver: receiver == freezed
+          ? _value.receiver
+          : receiver // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       responsible: responsible == freezed
           ? _value.responsible
-          : responsible as Reference,
-      reason: reason == freezed ? _value.reason : reason as CodeableConcept,
-      data: data == freezed ? _value.data : data as List<Reference>,
+          : responsible // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
   $CodingCopyWith<$Res> get event {
-    if (_value.event == null) {
-      return null;
-    }
     return $CodingCopyWith<$Res>(_value.event, (value) {
       return _then(_value.copyWith(event: value));
     });
   }
 
   @override
-  $MessageHeaderResponseCopyWith<$Res> get response {
+  $MessageHeaderResponseCopyWith<$Res>? get response {
     if (_value.response == null) {
       return null;
     }
-    return $MessageHeaderResponseCopyWith<$Res>(_value.response, (value) {
+
+    return $MessageHeaderResponseCopyWith<$Res>(_value.response!, (value) {
       return _then(_value.copyWith(response: value));
     });
   }
 
   @override
   $MessageHeaderSourceCopyWith<$Res> get source {
-    if (_value.source == null) {
-      return null;
-    }
     return $MessageHeaderSourceCopyWith<$Res>(_value.source, (value) {
       return _then(_value.copyWith(source: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get enterer {
+  $ReferenceCopyWith<$Res>? get enterer {
     if (_value.enterer == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.enterer, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.enterer!, (value) {
       return _then(_value.copyWith(enterer: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get author {
+  $ReferenceCopyWith<$Res>? get author {
     if (_value.author == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.author, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.author!, (value) {
       return _then(_value.copyWith(author: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get receiver {
+  $ReferenceCopyWith<$Res>? get receiver {
     if (_value.receiver == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.receiver, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.receiver!, (value) {
       return _then(_value.copyWith(receiver: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get responsible {
+  $ReferenceCopyWith<$Res>? get responsible {
     if (_value.responsible == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.responsible, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.responsible!, (value) {
       return _then(_value.copyWith(responsible: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get reason {
+  $CodeableConceptCopyWith<$Res>? get reason {
     if (_value.reason == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.reason, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.reason!, (value) {
       return _then(_value.copyWith(reason: value));
     });
   }
@@ -383,58 +427,55 @@ abstract class _$MessageHeaderCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MessageHeader)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @JsonKey(required: true)
-          Instant timestamp,
-      @JsonKey(required: true)
-          Coding event,
-      MessageHeaderResponse response,
-      @JsonKey(required: true)
-          MessageHeaderSource source,
-      List<MessageHeaderDestination> destination,
-      Reference enterer,
-      Reference author,
-      Reference receiver,
-      Reference responsible,
-      CodeableConcept reason,
-      List<Reference> data});
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Instant timestamp,
+      Coding event,
+      MessageHeaderResponse? response,
+      MessageHeaderSource source,
+      List<MessageHeaderDestination>? destination,
+      Reference? enterer,
+      Reference? author,
+      Reference? receiver,
+      Reference? responsible,
+      CodeableConcept? reason,
+      List<Reference>? data});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
   $CodingCopyWith<$Res> get event;
   @override
-  $MessageHeaderResponseCopyWith<$Res> get response;
+  $MessageHeaderResponseCopyWith<$Res>? get response;
   @override
   $MessageHeaderSourceCopyWith<$Res> get source;
   @override
-  $ReferenceCopyWith<$Res> get enterer;
+  $ReferenceCopyWith<$Res>? get enterer;
   @override
-  $ReferenceCopyWith<$Res> get author;
+  $ReferenceCopyWith<$Res>? get author;
   @override
-  $ReferenceCopyWith<$Res> get receiver;
+  $ReferenceCopyWith<$Res>? get receiver;
   @override
-  $ReferenceCopyWith<$Res> get responsible;
+  $ReferenceCopyWith<$Res>? get responsible;
   @override
-  $CodeableConceptCopyWith<$Res> get reason;
+  $CodeableConceptCopyWith<$Res>? get reason;
 }
 
 /// @nodoc
@@ -450,78 +491,124 @@ class __$MessageHeaderCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object timestamp = freezed,
-    Object event = freezed,
-    Object response = freezed,
-    Object source = freezed,
-    Object destination = freezed,
-    Object enterer = freezed,
-    Object author = freezed,
-    Object receiver = freezed,
-    Object responsible = freezed,
-    Object reason = freezed,
-    Object data = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? timestamp = freezed,
+    Object? event = freezed,
+    Object? response = freezed,
+    Object? source = freezed,
+    Object? destination = freezed,
+    Object? enterer = freezed,
+    Object? author = freezed,
+    Object? receiver = freezed,
+    Object? responsible = freezed,
+    Object? reason = freezed,
+    Object? data = freezed,
   }) {
     return _then(_MessageHeader(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      timestamp: timestamp == freezed ? _value.timestamp : timestamp as Instant,
-      event: event == freezed ? _value.event : event as Coding,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      timestamp: timestamp == freezed
+          ? _value.timestamp
+          : timestamp // ignore: cast_nullable_to_non_nullable
+              as Instant,
+      event: event == freezed
+          ? _value.event
+          : event // ignore: cast_nullable_to_non_nullable
+              as Coding,
       response: response == freezed
           ? _value.response
-          : response as MessageHeaderResponse,
-      source: source == freezed ? _value.source : source as MessageHeaderSource,
+          : response // ignore: cast_nullable_to_non_nullable
+              as MessageHeaderResponse?,
+      source: source == freezed
+          ? _value.source
+          : source // ignore: cast_nullable_to_non_nullable
+              as MessageHeaderSource,
       destination: destination == freezed
           ? _value.destination
-          : destination as List<MessageHeaderDestination>,
-      enterer: enterer == freezed ? _value.enterer : enterer as Reference,
-      author: author == freezed ? _value.author : author as Reference,
-      receiver: receiver == freezed ? _value.receiver : receiver as Reference,
+          : destination // ignore: cast_nullable_to_non_nullable
+              as List<MessageHeaderDestination>?,
+      enterer: enterer == freezed
+          ? _value.enterer
+          : enterer // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      author: author == freezed
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      receiver: receiver == freezed
+          ? _value.receiver
+          : receiver // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       responsible: responsible == freezed
           ? _value.responsible
-          : responsible as Reference,
-      reason: reason == freezed ? _value.reason : reason as CodeableConcept,
-      data: data == freezed ? _value.data : data as List<Reference>,
+          : responsible // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      data: data == freezed
+          ? _value.data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MessageHeader extends _MessageHeader {
   _$_MessageHeader(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MessageHeader)
@@ -539,16 +626,10 @@ class _$_MessageHeader extends _MessageHeader {
       @JsonKey(name: 'extension')
           this.extension_,
       this.modifierExtension,
-      @required
-      @JsonKey(required: true)
-          this.timestamp,
-      @required
-      @JsonKey(required: true)
-          this.event,
+      required this.timestamp,
+      required this.event,
       this.response,
-      @required
-      @JsonKey(required: true)
-          this.source,
+      required this.source,
       this.destination,
       this.enterer,
       this.author,
@@ -556,66 +637,59 @@ class _$_MessageHeader extends _MessageHeader {
       this.responsible,
       this.reason,
       this.data})
-      : assert(resourceType != null),
-        assert(timestamp != null),
-        assert(event != null),
-        assert(source != null),
-        super._();
+      : super._();
 
   factory _$_MessageHeader.fromJson(Map<String, dynamic> json) =>
-      _$_$_MessageHeaderFromJson(json);
+      _$$_MessageHeaderFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MessageHeader)
   final Dstu2ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  @JsonKey(required: true)
   final Instant timestamp;
   @override
-  @JsonKey(required: true)
   final Coding event;
   @override
-  final MessageHeaderResponse response;
+  final MessageHeaderResponse? response;
   @override
-  @JsonKey(required: true)
   final MessageHeaderSource source;
   @override
-  final List<MessageHeaderDestination> destination;
+  final List<MessageHeaderDestination>? destination;
   @override
-  final Reference enterer;
+  final Reference? enterer;
   @override
-  final Reference author;
+  final Reference? author;
   @override
-  final Reference receiver;
+  final Reference? receiver;
   @override
-  final Reference responsible;
+  final Reference? responsible;
   @override
-  final CodeableConcept reason;
+  final CodeableConcept? reason;
   @override
-  final List<Reference> data;
+  final List<Reference>? data;
 
   @override
   String toString() {
@@ -719,103 +793,97 @@ class _$_MessageHeader extends _MessageHeader {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MessageHeaderToJson(this);
+    return _$$_MessageHeaderToJson(this);
   }
 }
 
 abstract class _MessageHeader extends MessageHeader {
-  _MessageHeader._() : super._();
   factory _MessageHeader(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.MessageHeader)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required
-      @JsonKey(required: true)
-          Instant timestamp,
-      @required
-      @JsonKey(required: true)
-          Coding event,
-      MessageHeaderResponse response,
-      @required
-      @JsonKey(required: true)
-          MessageHeaderSource source,
-      List<MessageHeaderDestination> destination,
-      Reference enterer,
-      Reference author,
-      Reference receiver,
-      Reference responsible,
-      CodeableConcept reason,
-      List<Reference> data}) = _$_MessageHeader;
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required Instant timestamp,
+      required Coding event,
+      MessageHeaderResponse? response,
+      required MessageHeaderSource source,
+      List<MessageHeaderDestination>? destination,
+      Reference? enterer,
+      Reference? author,
+      Reference? receiver,
+      Reference? responsible,
+      CodeableConcept? reason,
+      List<Reference>? data}) = _$_MessageHeader;
+  _MessageHeader._() : super._();
 
   factory _MessageHeader.fromJson(Map<String, dynamic> json) =
       _$_MessageHeader.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MessageHeader)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  @JsonKey(required: true)
-  Instant get timestamp;
+  Instant get timestamp => throw _privateConstructorUsedError;
   @override
-  @JsonKey(required: true)
-  Coding get event;
+  Coding get event => throw _privateConstructorUsedError;
   @override
-  MessageHeaderResponse get response;
+  MessageHeaderResponse? get response => throw _privateConstructorUsedError;
   @override
-  @JsonKey(required: true)
-  MessageHeaderSource get source;
+  MessageHeaderSource get source => throw _privateConstructorUsedError;
   @override
-  List<MessageHeaderDestination> get destination;
+  List<MessageHeaderDestination>? get destination =>
+      throw _privateConstructorUsedError;
   @override
-  Reference get enterer;
+  Reference? get enterer => throw _privateConstructorUsedError;
   @override
-  Reference get author;
+  Reference? get author => throw _privateConstructorUsedError;
   @override
-  Reference get receiver;
+  Reference? get receiver => throw _privateConstructorUsedError;
   @override
-  Reference get responsible;
+  Reference? get responsible => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get reason;
+  CodeableConcept? get reason => throw _privateConstructorUsedError;
   @override
-  List<Reference> get data;
+  List<Reference>? get data => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MessageHeaderCopyWith<_MessageHeader> get copyWith;
+  _$MessageHeaderCopyWith<_MessageHeader> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 MessageHeaderResponse _$MessageHeaderResponseFromJson(
@@ -827,23 +895,19 @@ MessageHeaderResponse _$MessageHeaderResponseFromJson(
 class _$MessageHeaderResponseTearOff {
   const _$MessageHeaderResponseTearOff();
 
-// ignore: unused_element
   _MessageHeaderResponse call(
-      {Id id,
+      {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required
-      @JsonKey(required: true)
-          Id identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required Id identifier,
       @JsonKey(name: '_identifier')
-          Element identifierElement,
-      @required
-      @JsonKey(required: true, unknownEnumValue: ResponseCode.unknown)
-          ResponseCode code,
+          Element? identifierElement,
+      @JsonKey(unknownEnumValue: ResponseCode.unknown)
+          required ResponseCode code,
       @JsonKey(name: '_code')
-          Element codeElement,
-      Reference details}) {
+          Element? codeElement,
+      Reference? details}) {
     return _MessageHeaderResponse(
       id: id,
       extension_: extension_,
@@ -856,35 +920,34 @@ class _$MessageHeaderResponseTearOff {
     );
   }
 
-// ignore: unused_element
   MessageHeaderResponse fromJson(Map<String, Object> json) {
     return MessageHeaderResponse.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $MessageHeaderResponse = _$MessageHeaderResponseTearOff();
 
 /// @nodoc
 mixin _$MessageHeaderResponse {
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  @JsonKey(required: true)
-  Id get identifier;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Id get identifier => throw _privateConstructorUsedError;
   @JsonKey(name: '_identifier')
-  Element get identifierElement;
-  @JsonKey(required: true, unknownEnumValue: ResponseCode.unknown)
-  ResponseCode get code;
+  Element? get identifierElement => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ResponseCode.unknown)
+  ResponseCode get code => throw _privateConstructorUsedError;
   @JsonKey(name: '_code')
-  Element get codeElement;
-  Reference get details;
+  Element? get codeElement => throw _privateConstructorUsedError;
+  Reference? get details => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MessageHeaderResponseCopyWith<MessageHeaderResponse> get copyWith;
+  $MessageHeaderResponseCopyWith<MessageHeaderResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -893,23 +956,18 @@ abstract class $MessageHeaderResponseCopyWith<$Res> {
           $Res Function(MessageHeaderResponse) then) =
       _$MessageHeaderResponseCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @JsonKey(required: true)
-          Id identifier,
-      @JsonKey(name: '_identifier')
-          Element identifierElement,
-      @JsonKey(required: true, unknownEnumValue: ResponseCode.unknown)
-          ResponseCode code,
-      @JsonKey(name: '_code')
-          Element codeElement,
-      Reference details});
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Id identifier,
+      @JsonKey(name: '_identifier') Element? identifierElement,
+      @JsonKey(unknownEnumValue: ResponseCode.unknown) ResponseCode code,
+      @JsonKey(name: '_code') Element? codeElement,
+      Reference? details});
 
-  $ElementCopyWith<$Res> get identifierElement;
-  $ElementCopyWith<$Res> get codeElement;
-  $ReferenceCopyWith<$Res> get details;
+  $ElementCopyWith<$Res>? get identifierElement;
+  $ElementCopyWith<$Res>? get codeElement;
+  $ReferenceCopyWith<$Res>? get details;
 }
 
 /// @nodoc
@@ -923,60 +981,80 @@ class _$MessageHeaderResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object identifierElement = freezed,
-    Object code = freezed,
-    Object codeElement = freezed,
-    Object details = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? identifierElement = freezed,
+    Object? code = freezed,
+    Object? codeElement = freezed,
+    Object? details = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      identifier: identifier == freezed ? _value.identifier : identifier as Id,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Id,
       identifierElement: identifierElement == freezed
           ? _value.identifierElement
-          : identifierElement as Element,
-      code: code == freezed ? _value.code : code as ResponseCode,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element,
-      details: details == freezed ? _value.details : details as Reference,
+          : identifierElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as ResponseCode,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      details: details == freezed
+          ? _value.details
+          : details // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
   @override
-  $ElementCopyWith<$Res> get identifierElement {
+  $ElementCopyWith<$Res>? get identifierElement {
     if (_value.identifierElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.identifierElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.identifierElement!, (value) {
       return _then(_value.copyWith(identifierElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get codeElement {
+  $ElementCopyWith<$Res>? get codeElement {
     if (_value.codeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.codeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.codeElement!, (value) {
       return _then(_value.copyWith(codeElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get details {
+  $ReferenceCopyWith<$Res>? get details {
     if (_value.details == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.details, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.details!, (value) {
       return _then(_value.copyWith(details: value));
     });
   }
@@ -990,26 +1068,21 @@ abstract class _$MessageHeaderResponseCopyWith<$Res>
       __$MessageHeaderResponseCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @JsonKey(required: true)
-          Id identifier,
-      @JsonKey(name: '_identifier')
-          Element identifierElement,
-      @JsonKey(required: true, unknownEnumValue: ResponseCode.unknown)
-          ResponseCode code,
-      @JsonKey(name: '_code')
-          Element codeElement,
-      Reference details});
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Id identifier,
+      @JsonKey(name: '_identifier') Element? identifierElement,
+      @JsonKey(unknownEnumValue: ResponseCode.unknown) ResponseCode code,
+      @JsonKey(name: '_code') Element? codeElement,
+      Reference? details});
 
   @override
-  $ElementCopyWith<$Res> get identifierElement;
+  $ElementCopyWith<$Res>? get identifierElement;
   @override
-  $ElementCopyWith<$Res> get codeElement;
+  $ElementCopyWith<$Res>? get codeElement;
   @override
-  $ReferenceCopyWith<$Res> get details;
+  $ReferenceCopyWith<$Res>? get details;
 }
 
 /// @nodoc
@@ -1025,83 +1098,89 @@ class __$MessageHeaderResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object identifierElement = freezed,
-    Object code = freezed,
-    Object codeElement = freezed,
-    Object details = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? identifierElement = freezed,
+    Object? code = freezed,
+    Object? codeElement = freezed,
+    Object? details = freezed,
   }) {
     return _then(_MessageHeaderResponse(
-      id: id == freezed ? _value.id : id as Id,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      identifier: identifier == freezed ? _value.identifier : identifier as Id,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Id,
       identifierElement: identifierElement == freezed
           ? _value.identifierElement
-          : identifierElement as Element,
-      code: code == freezed ? _value.code : code as ResponseCode,
-      codeElement:
-          codeElement == freezed ? _value.codeElement : codeElement as Element,
-      details: details == freezed ? _value.details : details as Reference,
+          : identifierElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as ResponseCode,
+      codeElement: codeElement == freezed
+          ? _value.codeElement
+          : codeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      details: details == freezed
+          ? _value.details
+          : details // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MessageHeaderResponse extends _MessageHeaderResponse {
   _$_MessageHeaderResponse(
       {this.id,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required
-      @JsonKey(required: true)
-          this.identifier,
-      @JsonKey(name: '_identifier')
-          this.identifierElement,
-      @required
-      @JsonKey(required: true, unknownEnumValue: ResponseCode.unknown)
-          this.code,
-      @JsonKey(name: '_code')
-          this.codeElement,
+      required this.identifier,
+      @JsonKey(name: '_identifier') this.identifierElement,
+      @JsonKey(unknownEnumValue: ResponseCode.unknown) required this.code,
+      @JsonKey(name: '_code') this.codeElement,
       this.details})
-      : assert(identifier != null),
-        assert(code != null),
-        super._();
+      : super._();
 
   factory _$_MessageHeaderResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_MessageHeaderResponseFromJson(json);
+      _$$_MessageHeaderResponseFromJson(json);
 
   @override
-  final Id id;
+  final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  @JsonKey(required: true)
   final Id identifier;
   @override
   @JsonKey(name: '_identifier')
-  final Element identifierElement;
+  final Element? identifierElement;
   @override
-  @JsonKey(required: true, unknownEnumValue: ResponseCode.unknown)
+  @JsonKey(unknownEnumValue: ResponseCode.unknown)
   final ResponseCode code;
   @override
   @JsonKey(name: '_code')
-  final Element codeElement;
+  final Element? codeElement;
   @override
-  final Reference details;
+  final Reference? details;
 
   @override
   String toString() {
@@ -1155,56 +1234,54 @@ class _$_MessageHeaderResponse extends _MessageHeaderResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MessageHeaderResponseToJson(this);
+    return _$$_MessageHeaderResponseToJson(this);
   }
 }
 
 abstract class _MessageHeaderResponse extends MessageHeaderResponse {
-  _MessageHeaderResponse._() : super._();
   factory _MessageHeaderResponse(
-      {Id id,
+      {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required
-      @JsonKey(required: true)
-          Id identifier,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required Id identifier,
       @JsonKey(name: '_identifier')
-          Element identifierElement,
-      @required
-      @JsonKey(required: true, unknownEnumValue: ResponseCode.unknown)
-          ResponseCode code,
+          Element? identifierElement,
+      @JsonKey(unknownEnumValue: ResponseCode.unknown)
+          required ResponseCode code,
       @JsonKey(name: '_code')
-          Element codeElement,
-      Reference details}) = _$_MessageHeaderResponse;
+          Element? codeElement,
+      Reference? details}) = _$_MessageHeaderResponse;
+  _MessageHeaderResponse._() : super._();
 
   factory _MessageHeaderResponse.fromJson(Map<String, dynamic> json) =
       _$_MessageHeaderResponse.fromJson;
 
   @override
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  @JsonKey(required: true)
-  Id get identifier;
+  Id get identifier => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_identifier')
-  Element get identifierElement;
+  Element? get identifierElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(required: true, unknownEnumValue: ResponseCode.unknown)
-  ResponseCode get code;
+  @JsonKey(unknownEnumValue: ResponseCode.unknown)
+  ResponseCode get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_code')
-  Element get codeElement;
+  Element? get codeElement => throw _privateConstructorUsedError;
   @override
-  Reference get details;
+  Reference? get details => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MessageHeaderResponseCopyWith<_MessageHeaderResponse> get copyWith;
+  _$MessageHeaderResponseCopyWith<_MessageHeaderResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 MessageHeaderSource _$MessageHeaderSourceFromJson(Map<String, dynamic> json) {
@@ -1215,20 +1292,19 @@ MessageHeaderSource _$MessageHeaderSourceFromJson(Map<String, dynamic> json) {
 class _$MessageHeaderSourceTearOff {
   const _$MessageHeaderSourceTearOff();
 
-// ignore: unused_element
   _MessageHeaderSource call(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String name,
-      @JsonKey(name: '_name') Element nameElement,
-      String software,
-      @JsonKey(name: '_software') Element softwareElement,
-      String version,
-      @JsonKey(name: '_version') Element versionElement,
-      ContactPoint contact,
-      @required @JsonKey(required: true) FhirUri endpoint,
-      @JsonKey(name: '_endpoint') Element endpointElement}) {
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      String? software,
+      @JsonKey(name: '_software') Element? softwareElement,
+      String? version,
+      @JsonKey(name: '_version') Element? versionElement,
+      ContactPoint? contact,
+      required FhirUri endpoint,
+      @JsonKey(name: '_endpoint') Element? endpointElement}) {
     return _MessageHeaderSource(
       id: id,
       extension_: extension_,
@@ -1245,40 +1321,39 @@ class _$MessageHeaderSourceTearOff {
     );
   }
 
-// ignore: unused_element
   MessageHeaderSource fromJson(Map<String, Object> json) {
     return MessageHeaderSource.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $MessageHeaderSource = _$MessageHeaderSourceTearOff();
 
 /// @nodoc
 mixin _$MessageHeaderSource {
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  String get name;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element get nameElement;
-  String get software;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  String? get software => throw _privateConstructorUsedError;
   @JsonKey(name: '_software')
-  Element get softwareElement;
-  String get version;
+  Element? get softwareElement => throw _privateConstructorUsedError;
+  String? get version => throw _privateConstructorUsedError;
   @JsonKey(name: '_version')
-  Element get versionElement;
-  ContactPoint get contact;
-  @JsonKey(required: true)
-  FhirUri get endpoint;
+  Element? get versionElement => throw _privateConstructorUsedError;
+  ContactPoint? get contact => throw _privateConstructorUsedError;
+  FhirUri get endpoint => throw _privateConstructorUsedError;
   @JsonKey(name: '_endpoint')
-  Element get endpointElement;
+  Element? get endpointElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MessageHeaderSourceCopyWith<MessageHeaderSource> get copyWith;
+  $MessageHeaderSourceCopyWith<MessageHeaderSource> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1287,24 +1362,24 @@ abstract class $MessageHeaderSourceCopyWith<$Res> {
           MessageHeaderSource value, $Res Function(MessageHeaderSource) then) =
       _$MessageHeaderSourceCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String name,
-      @JsonKey(name: '_name') Element nameElement,
-      String software,
-      @JsonKey(name: '_software') Element softwareElement,
-      String version,
-      @JsonKey(name: '_version') Element versionElement,
-      ContactPoint contact,
-      @JsonKey(required: true) FhirUri endpoint,
-      @JsonKey(name: '_endpoint') Element endpointElement});
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      String? software,
+      @JsonKey(name: '_software') Element? softwareElement,
+      String? version,
+      @JsonKey(name: '_version') Element? versionElement,
+      ContactPoint? contact,
+      FhirUri endpoint,
+      @JsonKey(name: '_endpoint') Element? endpointElement});
 
-  $ElementCopyWith<$Res> get nameElement;
-  $ElementCopyWith<$Res> get softwareElement;
-  $ElementCopyWith<$Res> get versionElement;
-  $ContactPointCopyWith<$Res> get contact;
-  $ElementCopyWith<$Res> get endpointElement;
+  $ElementCopyWith<$Res>? get nameElement;
+  $ElementCopyWith<$Res>? get softwareElement;
+  $ElementCopyWith<$Res>? get versionElement;
+  $ContactPointCopyWith<$Res>? get contact;
+  $ElementCopyWith<$Res>? get endpointElement;
 }
 
 /// @nodoc
@@ -1318,92 +1393,122 @@ class _$MessageHeaderSourceCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object name = freezed,
-    Object nameElement = freezed,
-    Object software = freezed,
-    Object softwareElement = freezed,
-    Object version = freezed,
-    Object versionElement = freezed,
-    Object contact = freezed,
-    Object endpoint = freezed,
-    Object endpointElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? software = freezed,
+    Object? softwareElement = freezed,
+    Object? version = freezed,
+    Object? versionElement = freezed,
+    Object? contact = freezed,
+    Object? endpoint = freezed,
+    Object? endpointElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      name: name == freezed ? _value.name : name as String,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      software: software == freezed ? _value.software : software as String,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      software: software == freezed
+          ? _value.software
+          : software // ignore: cast_nullable_to_non_nullable
+              as String?,
       softwareElement: softwareElement == freezed
           ? _value.softwareElement
-          : softwareElement as Element,
-      version: version == freezed ? _value.version : version as String,
+          : softwareElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element,
-      contact: contact == freezed ? _value.contact : contact as ContactPoint,
-      endpoint: endpoint == freezed ? _value.endpoint : endpoint as FhirUri,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as ContactPoint?,
+      endpoint: endpoint == freezed
+          ? _value.endpoint
+          : endpoint // ignore: cast_nullable_to_non_nullable
+              as FhirUri,
       endpointElement: endpointElement == freezed
           ? _value.endpointElement
-          : endpointElement as Element,
+          : endpointElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
   @override
-  $ElementCopyWith<$Res> get nameElement {
+  $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
       return _then(_value.copyWith(nameElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get softwareElement {
+  $ElementCopyWith<$Res>? get softwareElement {
     if (_value.softwareElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.softwareElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.softwareElement!, (value) {
       return _then(_value.copyWith(softwareElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get versionElement {
+  $ElementCopyWith<$Res>? get versionElement {
     if (_value.versionElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.versionElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.versionElement!, (value) {
       return _then(_value.copyWith(versionElement: value));
     });
   }
 
   @override
-  $ContactPointCopyWith<$Res> get contact {
+  $ContactPointCopyWith<$Res>? get contact {
     if (_value.contact == null) {
       return null;
     }
-    return $ContactPointCopyWith<$Res>(_value.contact, (value) {
+
+    return $ContactPointCopyWith<$Res>(_value.contact!, (value) {
       return _then(_value.copyWith(contact: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get endpointElement {
+  $ElementCopyWith<$Res>? get endpointElement {
     if (_value.endpointElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.endpointElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.endpointElement!, (value) {
       return _then(_value.copyWith(endpointElement: value));
     });
   }
@@ -1417,29 +1522,29 @@ abstract class _$MessageHeaderSourceCopyWith<$Res>
       __$MessageHeaderSourceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String name,
-      @JsonKey(name: '_name') Element nameElement,
-      String software,
-      @JsonKey(name: '_software') Element softwareElement,
-      String version,
-      @JsonKey(name: '_version') Element versionElement,
-      ContactPoint contact,
-      @JsonKey(required: true) FhirUri endpoint,
-      @JsonKey(name: '_endpoint') Element endpointElement});
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      String? software,
+      @JsonKey(name: '_software') Element? softwareElement,
+      String? version,
+      @JsonKey(name: '_version') Element? versionElement,
+      ContactPoint? contact,
+      FhirUri endpoint,
+      @JsonKey(name: '_endpoint') Element? endpointElement});
 
   @override
-  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res>? get nameElement;
   @override
-  $ElementCopyWith<$Res> get softwareElement;
+  $ElementCopyWith<$Res>? get softwareElement;
   @override
-  $ElementCopyWith<$Res> get versionElement;
+  $ElementCopyWith<$Res>? get versionElement;
   @override
-  $ContactPointCopyWith<$Res> get contact;
+  $ContactPointCopyWith<$Res>? get contact;
   @override
-  $ElementCopyWith<$Res> get endpointElement;
+  $ElementCopyWith<$Res>? get endpointElement;
 }
 
 /// @nodoc
@@ -1455,50 +1560,74 @@ class __$MessageHeaderSourceCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object name = freezed,
-    Object nameElement = freezed,
-    Object software = freezed,
-    Object softwareElement = freezed,
-    Object version = freezed,
-    Object versionElement = freezed,
-    Object contact = freezed,
-    Object endpoint = freezed,
-    Object endpointElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? software = freezed,
+    Object? softwareElement = freezed,
+    Object? version = freezed,
+    Object? versionElement = freezed,
+    Object? contact = freezed,
+    Object? endpoint = freezed,
+    Object? endpointElement = freezed,
   }) {
     return _then(_MessageHeaderSource(
-      id: id == freezed ? _value.id : id as Id,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      name: name == freezed ? _value.name : name as String,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      software: software == freezed ? _value.software : software as String,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      software: software == freezed
+          ? _value.software
+          : software // ignore: cast_nullable_to_non_nullable
+              as String?,
       softwareElement: softwareElement == freezed
           ? _value.softwareElement
-          : softwareElement as Element,
-      version: version == freezed ? _value.version : version as String,
+          : softwareElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      version: version == freezed
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as String?,
       versionElement: versionElement == freezed
           ? _value.versionElement
-          : versionElement as Element,
-      contact: contact == freezed ? _value.contact : contact as ContactPoint,
-      endpoint: endpoint == freezed ? _value.endpoint : endpoint as FhirUri,
+          : versionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as ContactPoint?,
+      endpoint: endpoint == freezed
+          ? _value.endpoint
+          : endpoint // ignore: cast_nullable_to_non_nullable
+              as FhirUri,
       endpointElement: endpointElement == freezed
           ? _value.endpointElement
-          : endpointElement as Element,
+          : endpointElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MessageHeaderSource extends _MessageHeaderSource {
   _$_MessageHeaderSource(
       {this.id,
@@ -1511,44 +1640,42 @@ class _$_MessageHeaderSource extends _MessageHeaderSource {
       this.version,
       @JsonKey(name: '_version') this.versionElement,
       this.contact,
-      @required @JsonKey(required: true) this.endpoint,
+      required this.endpoint,
       @JsonKey(name: '_endpoint') this.endpointElement})
-      : assert(endpoint != null),
-        super._();
+      : super._();
 
   factory _$_MessageHeaderSource.fromJson(Map<String, dynamic> json) =>
-      _$_$_MessageHeaderSourceFromJson(json);
+      _$$_MessageHeaderSourceFromJson(json);
 
   @override
-  final Id id;
+  final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final String name;
+  final String? name;
   @override
   @JsonKey(name: '_name')
-  final Element nameElement;
+  final Element? nameElement;
   @override
-  final String software;
+  final String? software;
   @override
   @JsonKey(name: '_software')
-  final Element softwareElement;
+  final Element? softwareElement;
   @override
-  final String version;
+  final String? version;
   @override
   @JsonKey(name: '_version')
-  final Element versionElement;
+  final Element? versionElement;
   @override
-  final ContactPoint contact;
+  final ContactPoint? contact;
   @override
-  @JsonKey(required: true)
   final FhirUri endpoint;
   @override
   @JsonKey(name: '_endpoint')
-  final Element endpointElement;
+  final Element? endpointElement;
 
   @override
   String toString() {
@@ -1619,63 +1746,64 @@ class _$_MessageHeaderSource extends _MessageHeaderSource {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MessageHeaderSourceToJson(this);
+    return _$$_MessageHeaderSourceToJson(this);
   }
 }
 
 abstract class _MessageHeaderSource extends MessageHeaderSource {
-  _MessageHeaderSource._() : super._();
   factory _MessageHeaderSource(
-          {Id id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          String name,
-          @JsonKey(name: '_name') Element nameElement,
-          String software,
-          @JsonKey(name: '_software') Element softwareElement,
-          String version,
-          @JsonKey(name: '_version') Element versionElement,
-          ContactPoint contact,
-          @required @JsonKey(required: true) FhirUri endpoint,
-          @JsonKey(name: '_endpoint') Element endpointElement}) =
+          {Id? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          String? name,
+          @JsonKey(name: '_name') Element? nameElement,
+          String? software,
+          @JsonKey(name: '_software') Element? softwareElement,
+          String? version,
+          @JsonKey(name: '_version') Element? versionElement,
+          ContactPoint? contact,
+          required FhirUri endpoint,
+          @JsonKey(name: '_endpoint') Element? endpointElement}) =
       _$_MessageHeaderSource;
+  _MessageHeaderSource._() : super._();
 
   factory _MessageHeaderSource.fromJson(Map<String, dynamic> json) =
       _$_MessageHeaderSource.fromJson;
 
   @override
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String get software;
+  String? get software => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_software')
-  Element get softwareElement;
+  Element? get softwareElement => throw _privateConstructorUsedError;
   @override
-  String get version;
+  String? get version => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_version')
-  Element get versionElement;
+  Element? get versionElement => throw _privateConstructorUsedError;
   @override
-  ContactPoint get contact;
+  ContactPoint? get contact => throw _privateConstructorUsedError;
   @override
-  @JsonKey(required: true)
-  FhirUri get endpoint;
+  FhirUri get endpoint => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_endpoint')
-  Element get endpointElement;
+  Element? get endpointElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MessageHeaderSourceCopyWith<_MessageHeaderSource> get copyWith;
+  _$MessageHeaderSourceCopyWith<_MessageHeaderSource> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 MessageHeaderDestination _$MessageHeaderDestinationFromJson(
@@ -1687,16 +1815,15 @@ MessageHeaderDestination _$MessageHeaderDestinationFromJson(
 class _$MessageHeaderDestinationTearOff {
   const _$MessageHeaderDestinationTearOff();
 
-// ignore: unused_element
   _MessageHeaderDestination call(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String name,
-      @JsonKey(name: '_name') Element nameElement,
-      Reference target,
-      @required @JsonKey(required: true) FhirUri endpoint,
-      @JsonKey(name: '_endpoint') Element endpointElement}) {
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      Reference? target,
+      required FhirUri endpoint,
+      @JsonKey(name: '_endpoint') Element? endpointElement}) {
     return _MessageHeaderDestination(
       id: id,
       extension_: extension_,
@@ -1709,34 +1836,33 @@ class _$MessageHeaderDestinationTearOff {
     );
   }
 
-// ignore: unused_element
   MessageHeaderDestination fromJson(Map<String, Object> json) {
     return MessageHeaderDestination.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $MessageHeaderDestination = _$MessageHeaderDestinationTearOff();
 
 /// @nodoc
 mixin _$MessageHeaderDestination {
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  String get name;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element get nameElement;
-  Reference get target;
-  @JsonKey(required: true)
-  FhirUri get endpoint;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  Reference? get target => throw _privateConstructorUsedError;
+  FhirUri get endpoint => throw _privateConstructorUsedError;
   @JsonKey(name: '_endpoint')
-  Element get endpointElement;
+  Element? get endpointElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $MessageHeaderDestinationCopyWith<MessageHeaderDestination> get copyWith;
+  $MessageHeaderDestinationCopyWith<MessageHeaderDestination> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1745,18 +1871,18 @@ abstract class $MessageHeaderDestinationCopyWith<$Res> {
           $Res Function(MessageHeaderDestination) then) =
       _$MessageHeaderDestinationCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String name,
-      @JsonKey(name: '_name') Element nameElement,
-      Reference target,
-      @JsonKey(required: true) FhirUri endpoint,
-      @JsonKey(name: '_endpoint') Element endpointElement});
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      Reference? target,
+      FhirUri endpoint,
+      @JsonKey(name: '_endpoint') Element? endpointElement});
 
-  $ElementCopyWith<$Res> get nameElement;
-  $ReferenceCopyWith<$Res> get target;
-  $ElementCopyWith<$Res> get endpointElement;
+  $ElementCopyWith<$Res>? get nameElement;
+  $ReferenceCopyWith<$Res>? get target;
+  $ElementCopyWith<$Res>? get endpointElement;
 }
 
 /// @nodoc
@@ -1770,60 +1896,80 @@ class _$MessageHeaderDestinationCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object name = freezed,
-    Object nameElement = freezed,
-    Object target = freezed,
-    Object endpoint = freezed,
-    Object endpointElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? target = freezed,
+    Object? endpoint = freezed,
+    Object? endpointElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      name: name == freezed ? _value.name : name as String,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      target: target == freezed ? _value.target : target as Reference,
-      endpoint: endpoint == freezed ? _value.endpoint : endpoint as FhirUri,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      target: target == freezed
+          ? _value.target
+          : target // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      endpoint: endpoint == freezed
+          ? _value.endpoint
+          : endpoint // ignore: cast_nullable_to_non_nullable
+              as FhirUri,
       endpointElement: endpointElement == freezed
           ? _value.endpointElement
-          : endpointElement as Element,
+          : endpointElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
   @override
-  $ElementCopyWith<$Res> get nameElement {
+  $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
       return _then(_value.copyWith(nameElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get target {
+  $ReferenceCopyWith<$Res>? get target {
     if (_value.target == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.target, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.target!, (value) {
       return _then(_value.copyWith(target: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get endpointElement {
+  $ElementCopyWith<$Res>? get endpointElement {
     if (_value.endpointElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.endpointElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.endpointElement!, (value) {
       return _then(_value.copyWith(endpointElement: value));
     });
   }
@@ -1837,21 +1983,21 @@ abstract class _$MessageHeaderDestinationCopyWith<$Res>
       __$MessageHeaderDestinationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      String name,
-      @JsonKey(name: '_name') Element nameElement,
-      Reference target,
-      @JsonKey(required: true) FhirUri endpoint,
-      @JsonKey(name: '_endpoint') Element endpointElement});
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement,
+      Reference? target,
+      FhirUri endpoint,
+      @JsonKey(name: '_endpoint') Element? endpointElement});
 
   @override
-  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res>? get nameElement;
   @override
-  $ReferenceCopyWith<$Res> get target;
+  $ReferenceCopyWith<$Res>? get target;
   @override
-  $ElementCopyWith<$Res> get endpointElement;
+  $ElementCopyWith<$Res>? get endpointElement;
 }
 
 /// @nodoc
@@ -1868,38 +2014,54 @@ class __$MessageHeaderDestinationCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object name = freezed,
-    Object nameElement = freezed,
-    Object target = freezed,
-    Object endpoint = freezed,
-    Object endpointElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? target = freezed,
+    Object? endpoint = freezed,
+    Object? endpointElement = freezed,
   }) {
     return _then(_MessageHeaderDestination(
-      id: id == freezed ? _value.id : id as Id,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      name: name == freezed ? _value.name : name as String,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      target: target == freezed ? _value.target : target as Reference,
-      endpoint: endpoint == freezed ? _value.endpoint : endpoint as FhirUri,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      target: target == freezed
+          ? _value.target
+          : target // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      endpoint: endpoint == freezed
+          ? _value.endpoint
+          : endpoint // ignore: cast_nullable_to_non_nullable
+              as FhirUri,
       endpointElement: endpointElement == freezed
           ? _value.endpointElement
-          : endpointElement as Element,
+          : endpointElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_MessageHeaderDestination extends _MessageHeaderDestination {
   _$_MessageHeaderDestination(
       {this.id,
@@ -1908,34 +2070,32 @@ class _$_MessageHeaderDestination extends _MessageHeaderDestination {
       this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.target,
-      @required @JsonKey(required: true) this.endpoint,
+      required this.endpoint,
       @JsonKey(name: '_endpoint') this.endpointElement})
-      : assert(endpoint != null),
-        super._();
+      : super._();
 
   factory _$_MessageHeaderDestination.fromJson(Map<String, dynamic> json) =>
-      _$_$_MessageHeaderDestinationFromJson(json);
+      _$$_MessageHeaderDestinationFromJson(json);
 
   @override
-  final Id id;
+  final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final String name;
+  final String? name;
   @override
   @JsonKey(name: '_name')
-  final Element nameElement;
+  final Element? nameElement;
   @override
-  final Reference target;
+  final Reference? target;
   @override
-  @JsonKey(required: true)
   final FhirUri endpoint;
   @override
   @JsonKey(name: '_endpoint')
-  final Element endpointElement;
+  final Element? endpointElement;
 
   @override
   String toString() {
@@ -1989,49 +2149,50 @@ class _$_MessageHeaderDestination extends _MessageHeaderDestination {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MessageHeaderDestinationToJson(this);
+    return _$$_MessageHeaderDestinationToJson(this);
   }
 }
 
 abstract class _MessageHeaderDestination extends MessageHeaderDestination {
-  _MessageHeaderDestination._() : super._();
   factory _MessageHeaderDestination(
-          {Id id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          String name,
-          @JsonKey(name: '_name') Element nameElement,
-          Reference target,
-          @required @JsonKey(required: true) FhirUri endpoint,
-          @JsonKey(name: '_endpoint') Element endpointElement}) =
+          {Id? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          String? name,
+          @JsonKey(name: '_name') Element? nameElement,
+          Reference? target,
+          required FhirUri endpoint,
+          @JsonKey(name: '_endpoint') Element? endpointElement}) =
       _$_MessageHeaderDestination;
+  _MessageHeaderDestination._() : super._();
 
   factory _MessageHeaderDestination.fromJson(Map<String, dynamic> json) =
       _$_MessageHeaderDestination.fromJson;
 
   @override
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  String get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  Reference get target;
+  Reference? get target => throw _privateConstructorUsedError;
   @override
-  @JsonKey(required: true)
-  FhirUri get endpoint;
+  FhirUri get endpoint => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_endpoint')
-  Element get endpointElement;
+  Element? get endpointElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$MessageHeaderDestinationCopyWith<_MessageHeaderDestination> get copyWith;
+  _$MessageHeaderDestinationCopyWith<_MessageHeaderDestination> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 OperationOutcome _$OperationOutcomeFromJson(Map<String, dynamic> json) {
@@ -2042,28 +2203,25 @@ OperationOutcome _$OperationOutcomeFromJson(Map<String, dynamic> json) {
 class _$OperationOutcomeTearOff {
   const _$OperationOutcomeTearOff();
 
-// ignore: unused_element
   _OperationOutcome call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationOutcome)
           Dstu2ResourceType resourceType = Dstu2ResourceType.OperationOutcome,
-      Id id,
+      Id? id,
       @JsonKey(name: '_id')
-          Element idElement,
-      Meta meta,
-      FhirUri implicitRules,
+          Element? idElement,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required
-      @JsonKey(required: true)
-          List<OperationOutcomeIssue> issue}) {
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required List<OperationOutcomeIssue> issue}) {
     return _OperationOutcome(
       resourceType: resourceType,
       id: id,
@@ -2081,41 +2239,40 @@ class _$OperationOutcomeTearOff {
     );
   }
 
-// ignore: unused_element
   OperationOutcome fromJson(Map<String, Object> json) {
     return OperationOutcome.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $OperationOutcome = _$OperationOutcomeTearOff();
 
 /// @nodoc
 mixin _$OperationOutcome {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationOutcome)
-  Dstu2ResourceType get resourceType;
-  Id get id;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: '_id')
-  Element get idElement;
-  Meta get meta;
-  FhirUri get implicitRules;
+  Element? get idElement => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  @JsonKey(required: true)
-  List<OperationOutcomeIssue> get issue;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<OperationOutcomeIssue> get issue => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $OperationOutcomeCopyWith<OperationOutcome> get copyWith;
+  $OperationOutcomeCopyWith<OperationOutcome> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2126,29 +2283,28 @@ abstract class $OperationOutcomeCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationOutcome)
           Dstu2ResourceType resourceType,
-      Id id,
+      Id? id,
       @JsonKey(name: '_id')
-          Element idElement,
-      Meta meta,
-      FhirUri implicitRules,
+          Element? idElement,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @JsonKey(required: true)
-          List<OperationOutcomeIssue> issue});
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<OperationOutcomeIssue> issue});
 
-  $ElementCopyWith<$Res> get idElement;
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
+  $ElementCopyWith<$Res>? get idElement;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
 }
 
 /// @nodoc
@@ -2162,98 +2318,127 @@ class _$OperationOutcomeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object idElement = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object issue = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? idElement = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? issue = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      idElement: idElement == freezed ? _value.idElement : idElement as Element,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      idElement: idElement == freezed
+          ? _value.idElement
+          : idElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       issue: issue == freezed
           ? _value.issue
-          : issue as List<OperationOutcomeIssue>,
+          : issue // ignore: cast_nullable_to_non_nullable
+              as List<OperationOutcomeIssue>,
     ));
   }
 
   @override
-  $ElementCopyWith<$Res> get idElement {
+  $ElementCopyWith<$Res>? get idElement {
     if (_value.idElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.idElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.idElement!, (value) {
       return _then(_value.copyWith(idElement: value));
     });
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
@@ -2269,34 +2454,33 @@ abstract class _$OperationOutcomeCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationOutcome)
           Dstu2ResourceType resourceType,
-      Id id,
+      Id? id,
       @JsonKey(name: '_id')
-          Element idElement,
-      Meta meta,
-      FhirUri implicitRules,
+          Element? idElement,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @JsonKey(required: true)
-          List<OperationOutcomeIssue> issue});
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<OperationOutcomeIssue> issue});
 
   @override
-  $ElementCopyWith<$Res> get idElement;
+  $ElementCopyWith<$Res>? get idElement;
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
 }
 
 /// @nodoc
@@ -2312,56 +2496,79 @@ class __$OperationOutcomeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object idElement = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object issue = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? idElement = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? issue = freezed,
   }) {
     return _then(_OperationOutcome(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      idElement: idElement == freezed ? _value.idElement : idElement as Element,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      idElement: idElement == freezed
+          ? _value.idElement
+          : idElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       issue: issue == freezed
           ? _value.issue
-          : issue as List<OperationOutcomeIssue>,
+          : issue // ignore: cast_nullable_to_non_nullable
+              as List<OperationOutcomeIssue>,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OperationOutcome extends _OperationOutcome {
   _$_OperationOutcome(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationOutcome)
@@ -2381,47 +2588,42 @@ class _$_OperationOutcome extends _OperationOutcome {
       @JsonKey(name: 'extension')
           this.extension_,
       this.modifierExtension,
-      @required
-      @JsonKey(required: true)
-          this.issue})
-      : assert(resourceType != null),
-        assert(issue != null),
-        super._();
+      required this.issue})
+      : super._();
 
   factory _$_OperationOutcome.fromJson(Map<String, dynamic> json) =>
-      _$_$_OperationOutcomeFromJson(json);
+      _$$_OperationOutcomeFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationOutcome)
   final Dstu2ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
   @JsonKey(name: '_id')
-  final Element idElement;
+  final Element? idElement;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  @JsonKey(required: true)
   final List<OperationOutcomeIssue> issue;
 
   @override
@@ -2494,72 +2696,71 @@ class _$_OperationOutcome extends _OperationOutcome {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OperationOutcomeToJson(this);
+    return _$$_OperationOutcomeToJson(this);
   }
 }
 
 abstract class _OperationOutcome extends OperationOutcome {
-  _OperationOutcome._() : super._();
   factory _OperationOutcome(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.OperationOutcome)
           Dstu2ResourceType resourceType,
-      Id id,
+      Id? id,
       @JsonKey(name: '_id')
-          Element idElement,
-      Meta meta,
-      FhirUri implicitRules,
+          Element? idElement,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required
-      @JsonKey(required: true)
-          List<OperationOutcomeIssue> issue}) = _$_OperationOutcome;
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required List<OperationOutcomeIssue> issue}) = _$_OperationOutcome;
+  _OperationOutcome._() : super._();
 
   factory _OperationOutcome.fromJson(Map<String, dynamic> json) =
       _$_OperationOutcome.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.OperationOutcome)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_id')
-  Element get idElement;
+  Element? get idElement => throw _privateConstructorUsedError;
   @override
-  Meta get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  @JsonKey(required: true)
-  List<OperationOutcomeIssue> get issue;
+  List<OperationOutcomeIssue> get issue => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$OperationOutcomeCopyWith<_OperationOutcome> get copyWith;
+  _$OperationOutcomeCopyWith<_OperationOutcome> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 OperationOutcomeIssue _$OperationOutcomeIssueFromJson(
@@ -2571,21 +2772,17 @@ OperationOutcomeIssue _$OperationOutcomeIssueFromJson(
 class _$OperationOutcomeIssueTearOff {
   const _$OperationOutcomeIssueTearOff();
 
-// ignore: unused_element
   _OperationOutcomeIssue call(
-      {Id id,
+      {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required
-      @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
-          IssueSeverity severity,
-      @required
-      @JsonKey(required: true)
-          Code code,
-      CodeableConcept details,
-      String diagnostics,
-      List<String> location}) {
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(unknownEnumValue: IssueSeverity.unknown)
+          required IssueSeverity severity,
+      required Code code,
+      CodeableConcept? details,
+      String? diagnostics,
+      List<String>? location}) {
     return _OperationOutcomeIssue(
       id: id,
       extension_: extension_,
@@ -2598,33 +2795,32 @@ class _$OperationOutcomeIssueTearOff {
     );
   }
 
-// ignore: unused_element
   OperationOutcomeIssue fromJson(Map<String, Object> json) {
     return OperationOutcomeIssue.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $OperationOutcomeIssue = _$OperationOutcomeIssueTearOff();
 
 /// @nodoc
 mixin _$OperationOutcomeIssue {
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
-  IssueSeverity get severity;
-  @JsonKey(required: true)
-  Code get code;
-  CodeableConcept get details;
-  String get diagnostics;
-  List<String> get location;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: IssueSeverity.unknown)
+  IssueSeverity get severity => throw _privateConstructorUsedError;
+  Code get code => throw _privateConstructorUsedError;
+  CodeableConcept? get details => throw _privateConstructorUsedError;
+  String? get diagnostics => throw _privateConstructorUsedError;
+  List<String>? get location => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $OperationOutcomeIssueCopyWith<OperationOutcomeIssue> get copyWith;
+  $OperationOutcomeIssueCopyWith<OperationOutcomeIssue> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2633,19 +2829,16 @@ abstract class $OperationOutcomeIssueCopyWith<$Res> {
           $Res Function(OperationOutcomeIssue) then) =
       _$OperationOutcomeIssueCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
-          IssueSeverity severity,
-      @JsonKey(required: true)
-          Code code,
-      CodeableConcept details,
-      String diagnostics,
-      List<String> location});
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(unknownEnumValue: IssueSeverity.unknown) IssueSeverity severity,
+      Code code,
+      CodeableConcept? details,
+      String? diagnostics,
+      List<String>? location});
 
-  $CodeableConceptCopyWith<$Res> get details;
+  $CodeableConceptCopyWith<$Res>? get details;
 }
 
 /// @nodoc
@@ -2659,40 +2852,58 @@ class _$OperationOutcomeIssueCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object severity = freezed,
-    Object code = freezed,
-    Object details = freezed,
-    Object diagnostics = freezed,
-    Object location = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? severity = freezed,
+    Object? code = freezed,
+    Object? details = freezed,
+    Object? diagnostics = freezed,
+    Object? location = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      severity:
-          severity == freezed ? _value.severity : severity as IssueSeverity,
-      code: code == freezed ? _value.code : code as Code,
-      details: details == freezed ? _value.details : details as CodeableConcept,
-      diagnostics:
-          diagnostics == freezed ? _value.diagnostics : diagnostics as String,
-      location:
-          location == freezed ? _value.location : location as List<String>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      severity: severity == freezed
+          ? _value.severity
+          : severity // ignore: cast_nullable_to_non_nullable
+              as IssueSeverity,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code,
+      details: details == freezed
+          ? _value.details
+          : details // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      diagnostics: diagnostics == freezed
+          ? _value.diagnostics
+          : diagnostics // ignore: cast_nullable_to_non_nullable
+              as String?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get details {
+  $CodeableConceptCopyWith<$Res>? get details {
     if (_value.details == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.details, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.details!, (value) {
       return _then(_value.copyWith(details: value));
     });
   }
@@ -2706,20 +2917,17 @@ abstract class _$OperationOutcomeIssueCopyWith<$Res>
       __$OperationOutcomeIssueCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
-          IssueSeverity severity,
-      @JsonKey(required: true)
-          Code code,
-      CodeableConcept details,
-      String diagnostics,
-      List<String> location});
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(unknownEnumValue: IssueSeverity.unknown) IssueSeverity severity,
+      Code code,
+      CodeableConcept? details,
+      String? diagnostics,
+      List<String>? location});
 
   @override
-  $CodeableConceptCopyWith<$Res> get details;
+  $CodeableConceptCopyWith<$Res>? get details;
 }
 
 /// @nodoc
@@ -2735,79 +2943,87 @@ class __$OperationOutcomeIssueCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object severity = freezed,
-    Object code = freezed,
-    Object details = freezed,
-    Object diagnostics = freezed,
-    Object location = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? severity = freezed,
+    Object? code = freezed,
+    Object? details = freezed,
+    Object? diagnostics = freezed,
+    Object? location = freezed,
   }) {
     return _then(_OperationOutcomeIssue(
-      id: id == freezed ? _value.id : id as Id,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      severity:
-          severity == freezed ? _value.severity : severity as IssueSeverity,
-      code: code == freezed ? _value.code : code as Code,
-      details: details == freezed ? _value.details : details as CodeableConcept,
-      diagnostics:
-          diagnostics == freezed ? _value.diagnostics : diagnostics as String,
-      location:
-          location == freezed ? _value.location : location as List<String>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      severity: severity == freezed
+          ? _value.severity
+          : severity // ignore: cast_nullable_to_non_nullable
+              as IssueSeverity,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as Code,
+      details: details == freezed
+          ? _value.details
+          : details // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      diagnostics: diagnostics == freezed
+          ? _value.diagnostics
+          : diagnostics // ignore: cast_nullable_to_non_nullable
+              as String?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
   _$_OperationOutcomeIssue(
       {this.id,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required
-      @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
-          this.severity,
-      @required
-      @JsonKey(required: true)
-          this.code,
+      @JsonKey(unknownEnumValue: IssueSeverity.unknown) required this.severity,
+      required this.code,
       this.details,
       this.diagnostics,
       this.location})
-      : assert(severity != null),
-        assert(code != null),
-        super._();
+      : super._();
 
   factory _$_OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
-      _$_$_OperationOutcomeIssueFromJson(json);
+      _$$_OperationOutcomeIssueFromJson(json);
 
   @override
-  final Id id;
+  final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
+  @JsonKey(unknownEnumValue: IssueSeverity.unknown)
   final IssueSeverity severity;
   @override
-  @JsonKey(required: true)
   final Code code;
   @override
-  final CodeableConcept details;
+  final CodeableConcept? details;
   @override
-  final String diagnostics;
+  final String? diagnostics;
   @override
-  final List<String> location;
+  final List<String>? location;
 
   @override
   String toString() {
@@ -2862,52 +3078,50 @@ class _$_OperationOutcomeIssue extends _OperationOutcomeIssue {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_OperationOutcomeIssueToJson(this);
+    return _$$_OperationOutcomeIssueToJson(this);
   }
 }
 
 abstract class _OperationOutcomeIssue extends OperationOutcomeIssue {
-  _OperationOutcomeIssue._() : super._();
   factory _OperationOutcomeIssue(
-      {Id id,
+      {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required
-      @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
-          IssueSeverity severity,
-      @required
-      @JsonKey(required: true)
-          Code code,
-      CodeableConcept details,
-      String diagnostics,
-      List<String> location}) = _$_OperationOutcomeIssue;
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(unknownEnumValue: IssueSeverity.unknown)
+          required IssueSeverity severity,
+      required Code code,
+      CodeableConcept? details,
+      String? diagnostics,
+      List<String>? location}) = _$_OperationOutcomeIssue;
+  _OperationOutcomeIssue._() : super._();
 
   factory _OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =
       _$_OperationOutcomeIssue.fromJson;
 
   @override
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  @JsonKey(required: true, unknownEnumValue: IssueSeverity.unknown)
-  IssueSeverity get severity;
+  @JsonKey(unknownEnumValue: IssueSeverity.unknown)
+  IssueSeverity get severity => throw _privateConstructorUsedError;
   @override
-  @JsonKey(required: true)
-  Code get code;
+  Code get code => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get details;
+  CodeableConcept? get details => throw _privateConstructorUsedError;
   @override
-  String get diagnostics;
+  String? get diagnostics => throw _privateConstructorUsedError;
   @override
-  List<String> get location;
+  List<String>? get location => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$OperationOutcomeIssueCopyWith<_OperationOutcomeIssue> get copyWith;
+  _$OperationOutcomeIssueCopyWith<_OperationOutcomeIssue> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Parameters _$ParametersFromJson(Map<String, dynamic> json) {
@@ -2918,19 +3132,18 @@ Parameters _$ParametersFromJson(Map<String, dynamic> json) {
 class _$ParametersTearOff {
   const _$ParametersTearOff();
 
-// ignore: unused_element
   _Parameters call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Parameters)
           Dstu2ResourceType resourceType = Dstu2ResourceType.Parameters,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      List<ParametersParameter> parameter}) {
+          Element? languageElement,
+      List<ParametersParameter>? parameter}) {
     return _Parameters(
       resourceType: resourceType,
       id: id,
@@ -2943,33 +3156,33 @@ class _$ParametersTearOff {
     );
   }
 
-// ignore: unused_element
   Parameters fromJson(Map<String, Object> json) {
     return Parameters.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Parameters = _$ParametersTearOff();
 
 /// @nodoc
 mixin _$Parameters {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Parameters)
-  Dstu2ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  List<ParametersParameter> get parameter;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  List<ParametersParameter>? get parameter =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ParametersCopyWith<Parameters> get copyWith;
+  $ParametersCopyWith<Parameters> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2980,19 +3193,19 @@ abstract class $ParametersCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Parameters)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      List<ParametersParameter> parameter});
+          Element? languageElement,
+      List<ParametersParameter>? parameter});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
 }
 
 /// @nodoc
@@ -3005,63 +3218,80 @@ class _$ParametersCopyWithImpl<$Res> implements $ParametersCopyWith<$Res> {
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object parameter = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? parameter = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       parameter: parameter == freezed
           ? _value.parameter
-          : parameter as List<ParametersParameter>,
+          : parameter // ignore: cast_nullable_to_non_nullable
+              as List<ParametersParameter>?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
@@ -3076,22 +3306,22 @@ abstract class _$ParametersCopyWith<$Res> implements $ParametersCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Parameters)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      List<ParametersParameter> parameter});
+          Element? languageElement,
+      List<ParametersParameter>? parameter});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
 }
 
 /// @nodoc
@@ -3106,41 +3336,54 @@ class __$ParametersCopyWithImpl<$Res> extends _$ParametersCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object parameter = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? parameter = freezed,
   }) {
     return _then(_Parameters(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       parameter: parameter == freezed
           ? _value.parameter
-          : parameter as List<ParametersParameter>,
+          : parameter // ignore: cast_nullable_to_non_nullable
+              as List<ParametersParameter>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Parameters extends _Parameters {
   _$_Parameters(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Parameters)
@@ -3154,31 +3397,30 @@ class _$_Parameters extends _Parameters {
       @JsonKey(name: '_language')
           this.languageElement,
       this.parameter})
-      : assert(resourceType != null),
-        super._();
+      : super._();
 
   factory _$_Parameters.fromJson(Map<String, dynamic> json) =>
-      _$_$_ParametersFromJson(json);
+      _$$_ParametersFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Parameters)
   final Dstu2ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final List<ParametersParameter> parameter;
+  final List<ParametersParameter>? parameter;
 
   @override
   String toString() {
@@ -3232,50 +3474,52 @@ class _$_Parameters extends _Parameters {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ParametersToJson(this);
+    return _$$_ParametersToJson(this);
   }
 }
 
 abstract class _Parameters extends Parameters {
-  _Parameters._() : super._();
   factory _Parameters(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Parameters)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      List<ParametersParameter> parameter}) = _$_Parameters;
+          Element? languageElement,
+      List<ParametersParameter>? parameter}) = _$_Parameters;
+  _Parameters._() : super._();
 
   factory _Parameters.fromJson(Map<String, dynamic> json) =
       _$_Parameters.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Parameters)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  List<ParametersParameter> get parameter;
+  List<ParametersParameter>? get parameter =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ParametersCopyWith<_Parameters> get copyWith;
+  _$ParametersCopyWith<_Parameters> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 ParametersParameter _$ParametersParameterFromJson(Map<String, dynamic> json) {
@@ -3286,48 +3530,47 @@ ParametersParameter _$ParametersParameterFromJson(Map<String, dynamic> json) {
 class _$ParametersParameterTearOff {
   const _$ParametersParameterTearOff();
 
-// ignore: unused_element
   _ParametersParameter call(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required @JsonKey(required: true) String name,
-      @JsonKey(name: '_name') Element nameElement,
-      Integer valueInteger,
-      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Decimal valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-      FhirDateTime valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-      Date valueDate,
-      @JsonKey(name: '_valueDate') Element valueDateElement,
-      Instant valueInstant,
-      @JsonKey(name: '_valueInstant') Element valueInstantElement,
-      String valueString,
-      @JsonKey(name: '_valueString') Element valueStringElement,
-      FhirUri valueUri,
-      @JsonKey(name: '_valueUri') Element valueUriElement,
-      Boolean valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-      Code valueCode,
-      @JsonKey(name: '_valueCode') Element valueCodeElement,
-      Base64Binary valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-      Coding valueCoding,
-      CodeableConcept valueCodeableConcept,
-      Attachment valueAttachment,
-      Identifier valueIdentifier,
-      Quantity valueQuantity,
-      Range valueRange,
-      Period valuePeriod,
-      Ratio valueRatio,
-      HumanName valueHumanName,
-      Address valueAddresss,
-      ContactPoint valueContactPoint,
-      Schedule valueSchedule,
-      Reference valueReference,
-      Resource resource,
-      @JsonKey(name: 'part') List<ParametersParameter> part_}) {
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required String name,
+      @JsonKey(name: '_name') Element? nameElement,
+      Integer? valueInteger,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Date? valueDate,
+      @JsonKey(name: '_valueDate') Element? valueDateElement,
+      Instant? valueInstant,
+      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+      String? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Code? valueCode,
+      @JsonKey(name: '_valueCode') Element? valueCodeElement,
+      Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+      Coding? valueCoding,
+      CodeableConcept? valueCodeableConcept,
+      Attachment? valueAttachment,
+      Identifier? valueIdentifier,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Period? valuePeriod,
+      Ratio? valueRatio,
+      HumanName? valueHumanName,
+      Address? valueAddresss,
+      ContactPoint? valueContactPoint,
+      Schedule? valueSchedule,
+      Reference? valueReference,
+      Resource? resource,
+      @JsonKey(name: 'part') List<ParametersParameter>? part_}) {
     return _ParametersParameter(
       id: id,
       extension_: extension_,
@@ -3372,76 +3615,76 @@ class _$ParametersParameterTearOff {
     );
   }
 
-// ignore: unused_element
   ParametersParameter fromJson(Map<String, Object> json) {
     return ParametersParameter.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ParametersParameter = _$ParametersParameterTearOff();
 
 /// @nodoc
 mixin _$ParametersParameter {
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  @JsonKey(required: true)
-  String get name;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element get nameElement;
-  Integer get valueInteger;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  Integer? get valueInteger => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueInteger')
-  Element get valueIntegerElement;
-  Decimal get valueDecimal;
+  Element? get valueIntegerElement => throw _privateConstructorUsedError;
+  Decimal? get valueDecimal => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDecimal')
-  Element get valueDecimalElement;
-  FhirDateTime get valueDateTime;
+  Element? get valueDecimalElement => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDateTime')
-  Element get valueDateTimeElement;
-  Date get valueDate;
+  Element? get valueDateTimeElement => throw _privateConstructorUsedError;
+  Date? get valueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueDate')
-  Element get valueDateElement;
-  Instant get valueInstant;
+  Element? get valueDateElement => throw _privateConstructorUsedError;
+  Instant? get valueInstant => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueInstant')
-  Element get valueInstantElement;
-  String get valueString;
+  Element? get valueInstantElement => throw _privateConstructorUsedError;
+  String? get valueString => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueString')
-  Element get valueStringElement;
-  FhirUri get valueUri;
+  Element? get valueStringElement => throw _privateConstructorUsedError;
+  FhirUri? get valueUri => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueUri')
-  Element get valueUriElement;
-  Boolean get valueBoolean;
+  Element? get valueUriElement => throw _privateConstructorUsedError;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueBoolean')
-  Element get valueBooleanElement;
-  Code get valueCode;
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
+  Code? get valueCode => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueCode')
-  Element get valueCodeElement;
-  Base64Binary get valueBase64Binary;
+  Element? get valueCodeElement => throw _privateConstructorUsedError;
+  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
   @JsonKey(name: '_valueBase64Binary')
-  Element get valueBase64BinaryElement;
-  Coding get valueCoding;
-  CodeableConcept get valueCodeableConcept;
-  Attachment get valueAttachment;
-  Identifier get valueIdentifier;
-  Quantity get valueQuantity;
-  Range get valueRange;
-  Period get valuePeriod;
-  Ratio get valueRatio;
-  HumanName get valueHumanName;
-  Address get valueAddresss;
-  ContactPoint get valueContactPoint;
-  Schedule get valueSchedule;
-  Reference get valueReference;
-  Resource get resource;
+  Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
+  Coding? get valueCoding => throw _privateConstructorUsedError;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+  Attachment? get valueAttachment => throw _privateConstructorUsedError;
+  Identifier? get valueIdentifier => throw _privateConstructorUsedError;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  Range? get valueRange => throw _privateConstructorUsedError;
+  Period? get valuePeriod => throw _privateConstructorUsedError;
+  Ratio? get valueRatio => throw _privateConstructorUsedError;
+  HumanName? get valueHumanName => throw _privateConstructorUsedError;
+  Address? get valueAddresss => throw _privateConstructorUsedError;
+  ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
+  Schedule? get valueSchedule => throw _privateConstructorUsedError;
+  Reference? get valueReference => throw _privateConstructorUsedError;
+  Resource? get resource => throw _privateConstructorUsedError;
   @JsonKey(name: 'part')
-  List<ParametersParameter> get part_;
+  List<ParametersParameter>? get part_ => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ParametersParameterCopyWith<ParametersParameter> get copyWith;
+  $ParametersParameterCopyWith<ParametersParameter> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3450,71 +3693,71 @@ abstract class $ParametersParameterCopyWith<$Res> {
           ParametersParameter value, $Res Function(ParametersParameter) then) =
       _$ParametersParameterCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @JsonKey(required: true) String name,
-      @JsonKey(name: '_name') Element nameElement,
-      Integer valueInteger,
-      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Decimal valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-      FhirDateTime valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-      Date valueDate,
-      @JsonKey(name: '_valueDate') Element valueDateElement,
-      Instant valueInstant,
-      @JsonKey(name: '_valueInstant') Element valueInstantElement,
-      String valueString,
-      @JsonKey(name: '_valueString') Element valueStringElement,
-      FhirUri valueUri,
-      @JsonKey(name: '_valueUri') Element valueUriElement,
-      Boolean valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-      Code valueCode,
-      @JsonKey(name: '_valueCode') Element valueCodeElement,
-      Base64Binary valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-      Coding valueCoding,
-      CodeableConcept valueCodeableConcept,
-      Attachment valueAttachment,
-      Identifier valueIdentifier,
-      Quantity valueQuantity,
-      Range valueRange,
-      Period valuePeriod,
-      Ratio valueRatio,
-      HumanName valueHumanName,
-      Address valueAddresss,
-      ContactPoint valueContactPoint,
-      Schedule valueSchedule,
-      Reference valueReference,
-      Resource resource,
-      @JsonKey(name: 'part') List<ParametersParameter> part_});
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String name,
+      @JsonKey(name: '_name') Element? nameElement,
+      Integer? valueInteger,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Date? valueDate,
+      @JsonKey(name: '_valueDate') Element? valueDateElement,
+      Instant? valueInstant,
+      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+      String? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Code? valueCode,
+      @JsonKey(name: '_valueCode') Element? valueCodeElement,
+      Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+      Coding? valueCoding,
+      CodeableConcept? valueCodeableConcept,
+      Attachment? valueAttachment,
+      Identifier? valueIdentifier,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Period? valuePeriod,
+      Ratio? valueRatio,
+      HumanName? valueHumanName,
+      Address? valueAddresss,
+      ContactPoint? valueContactPoint,
+      Schedule? valueSchedule,
+      Reference? valueReference,
+      Resource? resource,
+      @JsonKey(name: 'part') List<ParametersParameter>? part_});
 
-  $ElementCopyWith<$Res> get nameElement;
-  $ElementCopyWith<$Res> get valueIntegerElement;
-  $ElementCopyWith<$Res> get valueDecimalElement;
-  $ElementCopyWith<$Res> get valueDateTimeElement;
-  $ElementCopyWith<$Res> get valueDateElement;
-  $ElementCopyWith<$Res> get valueInstantElement;
-  $ElementCopyWith<$Res> get valueStringElement;
-  $ElementCopyWith<$Res> get valueUriElement;
-  $ElementCopyWith<$Res> get valueBooleanElement;
-  $ElementCopyWith<$Res> get valueCodeElement;
-  $ElementCopyWith<$Res> get valueBase64BinaryElement;
-  $CodingCopyWith<$Res> get valueCoding;
-  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
-  $AttachmentCopyWith<$Res> get valueAttachment;
-  $IdentifierCopyWith<$Res> get valueIdentifier;
-  $QuantityCopyWith<$Res> get valueQuantity;
-  $RangeCopyWith<$Res> get valueRange;
-  $PeriodCopyWith<$Res> get valuePeriod;
-  $RatioCopyWith<$Res> get valueRatio;
-  $HumanNameCopyWith<$Res> get valueHumanName;
-  $AddressCopyWith<$Res> get valueAddresss;
-  $ContactPointCopyWith<$Res> get valueContactPoint;
-  $ScheduleCopyWith<$Res> get valueSchedule;
-  $ReferenceCopyWith<$Res> get valueReference;
+  $ElementCopyWith<$Res>? get nameElement;
+  $ElementCopyWith<$Res>? get valueIntegerElement;
+  $ElementCopyWith<$Res>? get valueDecimalElement;
+  $ElementCopyWith<$Res>? get valueDateTimeElement;
+  $ElementCopyWith<$Res>? get valueDateElement;
+  $ElementCopyWith<$Res>? get valueInstantElement;
+  $ElementCopyWith<$Res>? get valueStringElement;
+  $ElementCopyWith<$Res>? get valueUriElement;
+  $ElementCopyWith<$Res>? get valueBooleanElement;
+  $ElementCopyWith<$Res>? get valueCodeElement;
+  $ElementCopyWith<$Res>? get valueBase64BinaryElement;
+  $CodingCopyWith<$Res>? get valueCoding;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  $AttachmentCopyWith<$Res>? get valueAttachment;
+  $IdentifierCopyWith<$Res>? get valueIdentifier;
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  $RangeCopyWith<$Res>? get valueRange;
+  $PeriodCopyWith<$Res>? get valuePeriod;
+  $RatioCopyWith<$Res>? get valueRatio;
+  $HumanNameCopyWith<$Res>? get valueHumanName;
+  $AddressCopyWith<$Res>? get valueAddresss;
+  $ContactPointCopyWith<$Res>? get valueContactPoint;
+  $ScheduleCopyWith<$Res>? get valueSchedule;
+  $ReferenceCopyWith<$Res>? get valueReference;
 }
 
 /// @nodoc
@@ -3528,388 +3771,472 @@ class _$ParametersParameterCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object name = freezed,
-    Object nameElement = freezed,
-    Object valueInteger = freezed,
-    Object valueIntegerElement = freezed,
-    Object valueDecimal = freezed,
-    Object valueDecimalElement = freezed,
-    Object valueDateTime = freezed,
-    Object valueDateTimeElement = freezed,
-    Object valueDate = freezed,
-    Object valueDateElement = freezed,
-    Object valueInstant = freezed,
-    Object valueInstantElement = freezed,
-    Object valueString = freezed,
-    Object valueStringElement = freezed,
-    Object valueUri = freezed,
-    Object valueUriElement = freezed,
-    Object valueBoolean = freezed,
-    Object valueBooleanElement = freezed,
-    Object valueCode = freezed,
-    Object valueCodeElement = freezed,
-    Object valueBase64Binary = freezed,
-    Object valueBase64BinaryElement = freezed,
-    Object valueCoding = freezed,
-    Object valueCodeableConcept = freezed,
-    Object valueAttachment = freezed,
-    Object valueIdentifier = freezed,
-    Object valueQuantity = freezed,
-    Object valueRange = freezed,
-    Object valuePeriod = freezed,
-    Object valueRatio = freezed,
-    Object valueHumanName = freezed,
-    Object valueAddresss = freezed,
-    Object valueContactPoint = freezed,
-    Object valueSchedule = freezed,
-    Object valueReference = freezed,
-    Object resource = freezed,
-    Object part_ = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? valueInteger = freezed,
+    Object? valueIntegerElement = freezed,
+    Object? valueDecimal = freezed,
+    Object? valueDecimalElement = freezed,
+    Object? valueDateTime = freezed,
+    Object? valueDateTimeElement = freezed,
+    Object? valueDate = freezed,
+    Object? valueDateElement = freezed,
+    Object? valueInstant = freezed,
+    Object? valueInstantElement = freezed,
+    Object? valueString = freezed,
+    Object? valueStringElement = freezed,
+    Object? valueUri = freezed,
+    Object? valueUriElement = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueCode = freezed,
+    Object? valueCodeElement = freezed,
+    Object? valueBase64Binary = freezed,
+    Object? valueBase64BinaryElement = freezed,
+    Object? valueCoding = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueAttachment = freezed,
+    Object? valueIdentifier = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valuePeriod = freezed,
+    Object? valueRatio = freezed,
+    Object? valueHumanName = freezed,
+    Object? valueAddresss = freezed,
+    Object? valueContactPoint = freezed,
+    Object? valueSchedule = freezed,
+    Object? valueReference = freezed,
+    Object? resource = freezed,
+    Object? part_ = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      name: name == freezed ? _value.name : name as String,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
-          : valueInteger as Integer,
+          : valueInteger // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
-          : valueIntegerElement as Element,
+          : valueIntegerElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       valueDecimal: valueDecimal == freezed
           ? _value.valueDecimal
-          : valueDecimal as Decimal,
+          : valueDecimal // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
-          : valueDecimalElement as Element,
+          : valueDecimalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as FhirDateTime,
+          : valueDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
-          : valueDateTimeElement as Element,
-      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
+          : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDate: valueDate == freezed
+          ? _value.valueDate
+          : valueDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
-          : valueDateElement as Element,
+          : valueDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       valueInstant: valueInstant == freezed
           ? _value.valueInstant
-          : valueInstant as Instant,
+          : valueInstant // ignore: cast_nullable_to_non_nullable
+              as Instant?,
       valueInstantElement: valueInstantElement == freezed
           ? _value.valueInstantElement
-          : valueInstantElement as Element,
-      valueString:
-          valueString == freezed ? _value.valueString : valueString as String,
+          : valueInstantElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueString: valueString == freezed
+          ? _value.valueString
+          : valueString // ignore: cast_nullable_to_non_nullable
+              as String?,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
-          : valueStringElement as Element,
-      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
+          : valueStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUri: valueUri == freezed
+          ? _value.valueUri
+          : valueUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
-          : valueUriElement as Element,
+          : valueUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       valueBoolean: valueBoolean == freezed
           ? _value.valueBoolean
-          : valueBoolean as Boolean,
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
-          : valueBooleanElement as Element,
-      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
+          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCode: valueCode == freezed
+          ? _value.valueCode
+          : valueCode // ignore: cast_nullable_to_non_nullable
+              as Code?,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
-          : valueCodeElement as Element,
+          : valueCodeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       valueBase64Binary: valueBase64Binary == freezed
           ? _value.valueBase64Binary
-          : valueBase64Binary as Base64Binary,
+          : valueBase64Binary // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
       valueBase64BinaryElement: valueBase64BinaryElement == freezed
           ? _value.valueBase64BinaryElement
-          : valueBase64BinaryElement as Element,
-      valueCoding:
-          valueCoding == freezed ? _value.valueCoding : valueCoding as Coding,
+          : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCoding: valueCoding == freezed
+          ? _value.valueCoding
+          : valueCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
-          : valueCodeableConcept as CodeableConcept,
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       valueAttachment: valueAttachment == freezed
           ? _value.valueAttachment
-          : valueAttachment as Attachment,
+          : valueAttachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
       valueIdentifier: valueIdentifier == freezed
           ? _value.valueIdentifier
-          : valueIdentifier as Identifier,
+          : valueIdentifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as Quantity,
-      valueRange:
-          valueRange == freezed ? _value.valueRange : valueRange as Range,
-      valuePeriod:
-          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period,
-      valueRatio:
-          valueRatio == freezed ? _value.valueRatio : valueRatio as Ratio,
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valuePeriod: valuePeriod == freezed
+          ? _value.valuePeriod
+          : valuePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      valueRatio: valueRatio == freezed
+          ? _value.valueRatio
+          : valueRatio // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
-          : valueHumanName as HumanName,
+          : valueHumanName // ignore: cast_nullable_to_non_nullable
+              as HumanName?,
       valueAddresss: valueAddresss == freezed
           ? _value.valueAddresss
-          : valueAddresss as Address,
+          : valueAddresss // ignore: cast_nullable_to_non_nullable
+              as Address?,
       valueContactPoint: valueContactPoint == freezed
           ? _value.valueContactPoint
-          : valueContactPoint as ContactPoint,
+          : valueContactPoint // ignore: cast_nullable_to_non_nullable
+              as ContactPoint?,
       valueSchedule: valueSchedule == freezed
           ? _value.valueSchedule
-          : valueSchedule as Schedule,
+          : valueSchedule // ignore: cast_nullable_to_non_nullable
+              as Schedule?,
       valueReference: valueReference == freezed
           ? _value.valueReference
-          : valueReference as Reference,
-      resource: resource == freezed ? _value.resource : resource as Resource,
-      part_:
-          part_ == freezed ? _value.part_ : part_ as List<ParametersParameter>,
+          : valueReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as Resource?,
+      part_: part_ == freezed
+          ? _value.part_
+          : part_ // ignore: cast_nullable_to_non_nullable
+              as List<ParametersParameter>?,
     ));
   }
 
   @override
-  $ElementCopyWith<$Res> get nameElement {
+  $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
       return _then(_value.copyWith(nameElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueIntegerElement {
+  $ElementCopyWith<$Res>? get valueIntegerElement {
     if (_value.valueIntegerElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueIntegerElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueIntegerElement!, (value) {
       return _then(_value.copyWith(valueIntegerElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueDecimalElement {
+  $ElementCopyWith<$Res>? get valueDecimalElement {
     if (_value.valueDecimalElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueDecimalElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueDecimalElement!, (value) {
       return _then(_value.copyWith(valueDecimalElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueDateTimeElement {
+  $ElementCopyWith<$Res>? get valueDateTimeElement {
     if (_value.valueDateTimeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueDateTimeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueDateTimeElement!, (value) {
       return _then(_value.copyWith(valueDateTimeElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueDateElement {
+  $ElementCopyWith<$Res>? get valueDateElement {
     if (_value.valueDateElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueDateElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueDateElement!, (value) {
       return _then(_value.copyWith(valueDateElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueInstantElement {
+  $ElementCopyWith<$Res>? get valueInstantElement {
     if (_value.valueInstantElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueInstantElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueInstantElement!, (value) {
       return _then(_value.copyWith(valueInstantElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueStringElement {
+  $ElementCopyWith<$Res>? get valueStringElement {
     if (_value.valueStringElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueStringElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueStringElement!, (value) {
       return _then(_value.copyWith(valueStringElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueUriElement {
+  $ElementCopyWith<$Res>? get valueUriElement {
     if (_value.valueUriElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueUriElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueUriElement!, (value) {
       return _then(_value.copyWith(valueUriElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueBooleanElement {
+  $ElementCopyWith<$Res>? get valueBooleanElement {
     if (_value.valueBooleanElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueBooleanElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueBooleanElement!, (value) {
       return _then(_value.copyWith(valueBooleanElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueCodeElement {
+  $ElementCopyWith<$Res>? get valueCodeElement {
     if (_value.valueCodeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueCodeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueCodeElement!, (value) {
       return _then(_value.copyWith(valueCodeElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueBase64BinaryElement {
+  $ElementCopyWith<$Res>? get valueBase64BinaryElement {
     if (_value.valueBase64BinaryElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueBase64BinaryElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueBase64BinaryElement!, (value) {
       return _then(_value.copyWith(valueBase64BinaryElement: value));
     });
   }
 
   @override
-  $CodingCopyWith<$Res> get valueCoding {
+  $CodingCopyWith<$Res>? get valueCoding {
     if (_value.valueCoding == null) {
       return null;
     }
-    return $CodingCopyWith<$Res>(_value.valueCoding, (value) {
+
+    return $CodingCopyWith<$Res>(_value.valueCoding!, (value) {
       return _then(_value.copyWith(valueCoding: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get valueCodeableConcept {
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
     if (_value.valueCodeableConcept == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
+        (value) {
       return _then(_value.copyWith(valueCodeableConcept: value));
     });
   }
 
   @override
-  $AttachmentCopyWith<$Res> get valueAttachment {
+  $AttachmentCopyWith<$Res>? get valueAttachment {
     if (_value.valueAttachment == null) {
       return null;
     }
-    return $AttachmentCopyWith<$Res>(_value.valueAttachment, (value) {
+
+    return $AttachmentCopyWith<$Res>(_value.valueAttachment!, (value) {
       return _then(_value.copyWith(valueAttachment: value));
     });
   }
 
   @override
-  $IdentifierCopyWith<$Res> get valueIdentifier {
+  $IdentifierCopyWith<$Res>? get valueIdentifier {
     if (_value.valueIdentifier == null) {
       return null;
     }
-    return $IdentifierCopyWith<$Res>(_value.valueIdentifier, (value) {
+
+    return $IdentifierCopyWith<$Res>(_value.valueIdentifier!, (value) {
       return _then(_value.copyWith(valueIdentifier: value));
     });
   }
 
   @override
-  $QuantityCopyWith<$Res> get valueQuantity {
+  $QuantityCopyWith<$Res>? get valueQuantity {
     if (_value.valueQuantity == null) {
       return null;
     }
-    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+
+    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
       return _then(_value.copyWith(valueQuantity: value));
     });
   }
 
   @override
-  $RangeCopyWith<$Res> get valueRange {
+  $RangeCopyWith<$Res>? get valueRange {
     if (_value.valueRange == null) {
       return null;
     }
-    return $RangeCopyWith<$Res>(_value.valueRange, (value) {
+
+    return $RangeCopyWith<$Res>(_value.valueRange!, (value) {
       return _then(_value.copyWith(valueRange: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get valuePeriod {
+  $PeriodCopyWith<$Res>? get valuePeriod {
     if (_value.valuePeriod == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.valuePeriod, (value) {
+
+    return $PeriodCopyWith<$Res>(_value.valuePeriod!, (value) {
       return _then(_value.copyWith(valuePeriod: value));
     });
   }
 
   @override
-  $RatioCopyWith<$Res> get valueRatio {
+  $RatioCopyWith<$Res>? get valueRatio {
     if (_value.valueRatio == null) {
       return null;
     }
-    return $RatioCopyWith<$Res>(_value.valueRatio, (value) {
+
+    return $RatioCopyWith<$Res>(_value.valueRatio!, (value) {
       return _then(_value.copyWith(valueRatio: value));
     });
   }
 
   @override
-  $HumanNameCopyWith<$Res> get valueHumanName {
+  $HumanNameCopyWith<$Res>? get valueHumanName {
     if (_value.valueHumanName == null) {
       return null;
     }
-    return $HumanNameCopyWith<$Res>(_value.valueHumanName, (value) {
+
+    return $HumanNameCopyWith<$Res>(_value.valueHumanName!, (value) {
       return _then(_value.copyWith(valueHumanName: value));
     });
   }
 
   @override
-  $AddressCopyWith<$Res> get valueAddresss {
+  $AddressCopyWith<$Res>? get valueAddresss {
     if (_value.valueAddresss == null) {
       return null;
     }
-    return $AddressCopyWith<$Res>(_value.valueAddresss, (value) {
+
+    return $AddressCopyWith<$Res>(_value.valueAddresss!, (value) {
       return _then(_value.copyWith(valueAddresss: value));
     });
   }
 
   @override
-  $ContactPointCopyWith<$Res> get valueContactPoint {
+  $ContactPointCopyWith<$Res>? get valueContactPoint {
     if (_value.valueContactPoint == null) {
       return null;
     }
-    return $ContactPointCopyWith<$Res>(_value.valueContactPoint, (value) {
+
+    return $ContactPointCopyWith<$Res>(_value.valueContactPoint!, (value) {
       return _then(_value.copyWith(valueContactPoint: value));
     });
   }
 
   @override
-  $ScheduleCopyWith<$Res> get valueSchedule {
+  $ScheduleCopyWith<$Res>? get valueSchedule {
     if (_value.valueSchedule == null) {
       return null;
     }
-    return $ScheduleCopyWith<$Res>(_value.valueSchedule, (value) {
+
+    return $ScheduleCopyWith<$Res>(_value.valueSchedule!, (value) {
       return _then(_value.copyWith(valueSchedule: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get valueReference {
+  $ReferenceCopyWith<$Res>? get valueReference {
     if (_value.valueReference == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.valueReference, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.valueReference!, (value) {
       return _then(_value.copyWith(valueReference: value));
     });
   }
@@ -3923,95 +4250,95 @@ abstract class _$ParametersParameterCopyWith<$Res>
       __$ParametersParameterCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @JsonKey(required: true) String name,
-      @JsonKey(name: '_name') Element nameElement,
-      Integer valueInteger,
-      @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-      Decimal valueDecimal,
-      @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-      FhirDateTime valueDateTime,
-      @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-      Date valueDate,
-      @JsonKey(name: '_valueDate') Element valueDateElement,
-      Instant valueInstant,
-      @JsonKey(name: '_valueInstant') Element valueInstantElement,
-      String valueString,
-      @JsonKey(name: '_valueString') Element valueStringElement,
-      FhirUri valueUri,
-      @JsonKey(name: '_valueUri') Element valueUriElement,
-      Boolean valueBoolean,
-      @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-      Code valueCode,
-      @JsonKey(name: '_valueCode') Element valueCodeElement,
-      Base64Binary valueBase64Binary,
-      @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-      Coding valueCoding,
-      CodeableConcept valueCodeableConcept,
-      Attachment valueAttachment,
-      Identifier valueIdentifier,
-      Quantity valueQuantity,
-      Range valueRange,
-      Period valuePeriod,
-      Ratio valueRatio,
-      HumanName valueHumanName,
-      Address valueAddresss,
-      ContactPoint valueContactPoint,
-      Schedule valueSchedule,
-      Reference valueReference,
-      Resource resource,
-      @JsonKey(name: 'part') List<ParametersParameter> part_});
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String name,
+      @JsonKey(name: '_name') Element? nameElement,
+      Integer? valueInteger,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Date? valueDate,
+      @JsonKey(name: '_valueDate') Element? valueDateElement,
+      Instant? valueInstant,
+      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+      String? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Code? valueCode,
+      @JsonKey(name: '_valueCode') Element? valueCodeElement,
+      Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+      Coding? valueCoding,
+      CodeableConcept? valueCodeableConcept,
+      Attachment? valueAttachment,
+      Identifier? valueIdentifier,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Period? valuePeriod,
+      Ratio? valueRatio,
+      HumanName? valueHumanName,
+      Address? valueAddresss,
+      ContactPoint? valueContactPoint,
+      Schedule? valueSchedule,
+      Reference? valueReference,
+      Resource? resource,
+      @JsonKey(name: 'part') List<ParametersParameter>? part_});
 
   @override
-  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res>? get nameElement;
   @override
-  $ElementCopyWith<$Res> get valueIntegerElement;
+  $ElementCopyWith<$Res>? get valueIntegerElement;
   @override
-  $ElementCopyWith<$Res> get valueDecimalElement;
+  $ElementCopyWith<$Res>? get valueDecimalElement;
   @override
-  $ElementCopyWith<$Res> get valueDateTimeElement;
+  $ElementCopyWith<$Res>? get valueDateTimeElement;
   @override
-  $ElementCopyWith<$Res> get valueDateElement;
+  $ElementCopyWith<$Res>? get valueDateElement;
   @override
-  $ElementCopyWith<$Res> get valueInstantElement;
+  $ElementCopyWith<$Res>? get valueInstantElement;
   @override
-  $ElementCopyWith<$Res> get valueStringElement;
+  $ElementCopyWith<$Res>? get valueStringElement;
   @override
-  $ElementCopyWith<$Res> get valueUriElement;
+  $ElementCopyWith<$Res>? get valueUriElement;
   @override
-  $ElementCopyWith<$Res> get valueBooleanElement;
+  $ElementCopyWith<$Res>? get valueBooleanElement;
   @override
-  $ElementCopyWith<$Res> get valueCodeElement;
+  $ElementCopyWith<$Res>? get valueCodeElement;
   @override
-  $ElementCopyWith<$Res> get valueBase64BinaryElement;
+  $ElementCopyWith<$Res>? get valueBase64BinaryElement;
   @override
-  $CodingCopyWith<$Res> get valueCoding;
+  $CodingCopyWith<$Res>? get valueCoding;
   @override
-  $CodeableConceptCopyWith<$Res> get valueCodeableConcept;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   @override
-  $AttachmentCopyWith<$Res> get valueAttachment;
+  $AttachmentCopyWith<$Res>? get valueAttachment;
   @override
-  $IdentifierCopyWith<$Res> get valueIdentifier;
+  $IdentifierCopyWith<$Res>? get valueIdentifier;
   @override
-  $QuantityCopyWith<$Res> get valueQuantity;
+  $QuantityCopyWith<$Res>? get valueQuantity;
   @override
-  $RangeCopyWith<$Res> get valueRange;
+  $RangeCopyWith<$Res>? get valueRange;
   @override
-  $PeriodCopyWith<$Res> get valuePeriod;
+  $PeriodCopyWith<$Res>? get valuePeriod;
   @override
-  $RatioCopyWith<$Res> get valueRatio;
+  $RatioCopyWith<$Res>? get valueRatio;
   @override
-  $HumanNameCopyWith<$Res> get valueHumanName;
+  $HumanNameCopyWith<$Res>? get valueHumanName;
   @override
-  $AddressCopyWith<$Res> get valueAddresss;
+  $AddressCopyWith<$Res>? get valueAddresss;
   @override
-  $ContactPointCopyWith<$Res> get valueContactPoint;
+  $ContactPointCopyWith<$Res>? get valueContactPoint;
   @override
-  $ScheduleCopyWith<$Res> get valueSchedule;
+  $ScheduleCopyWith<$Res>? get valueSchedule;
   @override
-  $ReferenceCopyWith<$Res> get valueReference;
+  $ReferenceCopyWith<$Res>? get valueReference;
 }
 
 /// @nodoc
@@ -4027,162 +4354,220 @@ class __$ParametersParameterCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object name = freezed,
-    Object nameElement = freezed,
-    Object valueInteger = freezed,
-    Object valueIntegerElement = freezed,
-    Object valueDecimal = freezed,
-    Object valueDecimalElement = freezed,
-    Object valueDateTime = freezed,
-    Object valueDateTimeElement = freezed,
-    Object valueDate = freezed,
-    Object valueDateElement = freezed,
-    Object valueInstant = freezed,
-    Object valueInstantElement = freezed,
-    Object valueString = freezed,
-    Object valueStringElement = freezed,
-    Object valueUri = freezed,
-    Object valueUriElement = freezed,
-    Object valueBoolean = freezed,
-    Object valueBooleanElement = freezed,
-    Object valueCode = freezed,
-    Object valueCodeElement = freezed,
-    Object valueBase64Binary = freezed,
-    Object valueBase64BinaryElement = freezed,
-    Object valueCoding = freezed,
-    Object valueCodeableConcept = freezed,
-    Object valueAttachment = freezed,
-    Object valueIdentifier = freezed,
-    Object valueQuantity = freezed,
-    Object valueRange = freezed,
-    Object valuePeriod = freezed,
-    Object valueRatio = freezed,
-    Object valueHumanName = freezed,
-    Object valueAddresss = freezed,
-    Object valueContactPoint = freezed,
-    Object valueSchedule = freezed,
-    Object valueReference = freezed,
-    Object resource = freezed,
-    Object part_ = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? valueInteger = freezed,
+    Object? valueIntegerElement = freezed,
+    Object? valueDecimal = freezed,
+    Object? valueDecimalElement = freezed,
+    Object? valueDateTime = freezed,
+    Object? valueDateTimeElement = freezed,
+    Object? valueDate = freezed,
+    Object? valueDateElement = freezed,
+    Object? valueInstant = freezed,
+    Object? valueInstantElement = freezed,
+    Object? valueString = freezed,
+    Object? valueStringElement = freezed,
+    Object? valueUri = freezed,
+    Object? valueUriElement = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueCode = freezed,
+    Object? valueCodeElement = freezed,
+    Object? valueBase64Binary = freezed,
+    Object? valueBase64BinaryElement = freezed,
+    Object? valueCoding = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueAttachment = freezed,
+    Object? valueIdentifier = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valuePeriod = freezed,
+    Object? valueRatio = freezed,
+    Object? valueHumanName = freezed,
+    Object? valueAddresss = freezed,
+    Object? valueContactPoint = freezed,
+    Object? valueSchedule = freezed,
+    Object? valueReference = freezed,
+    Object? resource = freezed,
+    Object? part_ = freezed,
   }) {
     return _then(_ParametersParameter(
-      id: id == freezed ? _value.id : id as Id,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      name: name == freezed ? _value.name : name as String,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       valueInteger: valueInteger == freezed
           ? _value.valueInteger
-          : valueInteger as Integer,
+          : valueInteger // ignore: cast_nullable_to_non_nullable
+              as Integer?,
       valueIntegerElement: valueIntegerElement == freezed
           ? _value.valueIntegerElement
-          : valueIntegerElement as Element,
+          : valueIntegerElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       valueDecimal: valueDecimal == freezed
           ? _value.valueDecimal
-          : valueDecimal as Decimal,
+          : valueDecimal // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
       valueDecimalElement: valueDecimalElement == freezed
           ? _value.valueDecimalElement
-          : valueDecimalElement as Element,
+          : valueDecimalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       valueDateTime: valueDateTime == freezed
           ? _value.valueDateTime
-          : valueDateTime as FhirDateTime,
+          : valueDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       valueDateTimeElement: valueDateTimeElement == freezed
           ? _value.valueDateTimeElement
-          : valueDateTimeElement as Element,
-      valueDate: valueDate == freezed ? _value.valueDate : valueDate as Date,
+          : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDate: valueDate == freezed
+          ? _value.valueDate
+          : valueDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
       valueDateElement: valueDateElement == freezed
           ? _value.valueDateElement
-          : valueDateElement as Element,
+          : valueDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       valueInstant: valueInstant == freezed
           ? _value.valueInstant
-          : valueInstant as Instant,
+          : valueInstant // ignore: cast_nullable_to_non_nullable
+              as Instant?,
       valueInstantElement: valueInstantElement == freezed
           ? _value.valueInstantElement
-          : valueInstantElement as Element,
-      valueString:
-          valueString == freezed ? _value.valueString : valueString as String,
+          : valueInstantElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueString: valueString == freezed
+          ? _value.valueString
+          : valueString // ignore: cast_nullable_to_non_nullable
+              as String?,
       valueStringElement: valueStringElement == freezed
           ? _value.valueStringElement
-          : valueStringElement as Element,
-      valueUri: valueUri == freezed ? _value.valueUri : valueUri as FhirUri,
+          : valueStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUri: valueUri == freezed
+          ? _value.valueUri
+          : valueUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       valueUriElement: valueUriElement == freezed
           ? _value.valueUriElement
-          : valueUriElement as Element,
+          : valueUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       valueBoolean: valueBoolean == freezed
           ? _value.valueBoolean
-          : valueBoolean as Boolean,
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       valueBooleanElement: valueBooleanElement == freezed
           ? _value.valueBooleanElement
-          : valueBooleanElement as Element,
-      valueCode: valueCode == freezed ? _value.valueCode : valueCode as Code,
+          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCode: valueCode == freezed
+          ? _value.valueCode
+          : valueCode // ignore: cast_nullable_to_non_nullable
+              as Code?,
       valueCodeElement: valueCodeElement == freezed
           ? _value.valueCodeElement
-          : valueCodeElement as Element,
+          : valueCodeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       valueBase64Binary: valueBase64Binary == freezed
           ? _value.valueBase64Binary
-          : valueBase64Binary as Base64Binary,
+          : valueBase64Binary // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
       valueBase64BinaryElement: valueBase64BinaryElement == freezed
           ? _value.valueBase64BinaryElement
-          : valueBase64BinaryElement as Element,
-      valueCoding:
-          valueCoding == freezed ? _value.valueCoding : valueCoding as Coding,
+          : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCoding: valueCoding == freezed
+          ? _value.valueCoding
+          : valueCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
       valueCodeableConcept: valueCodeableConcept == freezed
           ? _value.valueCodeableConcept
-          : valueCodeableConcept as CodeableConcept,
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       valueAttachment: valueAttachment == freezed
           ? _value.valueAttachment
-          : valueAttachment as Attachment,
+          : valueAttachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
       valueIdentifier: valueIdentifier == freezed
           ? _value.valueIdentifier
-          : valueIdentifier as Identifier,
+          : valueIdentifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as Quantity,
-      valueRange:
-          valueRange == freezed ? _value.valueRange : valueRange as Range,
-      valuePeriod:
-          valuePeriod == freezed ? _value.valuePeriod : valuePeriod as Period,
-      valueRatio:
-          valueRatio == freezed ? _value.valueRatio : valueRatio as Ratio,
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valuePeriod: valuePeriod == freezed
+          ? _value.valuePeriod
+          : valuePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      valueRatio: valueRatio == freezed
+          ? _value.valueRatio
+          : valueRatio // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
-          : valueHumanName as HumanName,
+          : valueHumanName // ignore: cast_nullable_to_non_nullable
+              as HumanName?,
       valueAddresss: valueAddresss == freezed
           ? _value.valueAddresss
-          : valueAddresss as Address,
+          : valueAddresss // ignore: cast_nullable_to_non_nullable
+              as Address?,
       valueContactPoint: valueContactPoint == freezed
           ? _value.valueContactPoint
-          : valueContactPoint as ContactPoint,
+          : valueContactPoint // ignore: cast_nullable_to_non_nullable
+              as ContactPoint?,
       valueSchedule: valueSchedule == freezed
           ? _value.valueSchedule
-          : valueSchedule as Schedule,
+          : valueSchedule // ignore: cast_nullable_to_non_nullable
+              as Schedule?,
       valueReference: valueReference == freezed
           ? _value.valueReference
-          : valueReference as Reference,
-      resource: resource == freezed ? _value.resource : resource as Resource,
-      part_:
-          part_ == freezed ? _value.part_ : part_ as List<ParametersParameter>,
+          : valueReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      resource: resource == freezed
+          ? _value.resource
+          : resource // ignore: cast_nullable_to_non_nullable
+              as Resource?,
+      part_: part_ == freezed
+          ? _value.part_
+          : part_ // ignore: cast_nullable_to_non_nullable
+              as List<ParametersParameter>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_ParametersParameter extends _ParametersParameter {
   _$_ParametersParameter(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required @JsonKey(required: true) this.name,
+      required this.name,
       @JsonKey(name: '_name') this.nameElement,
       this.valueInteger,
       @JsonKey(name: '_valueInteger') this.valueIntegerElement,
@@ -4219,106 +4604,104 @@ class _$_ParametersParameter extends _ParametersParameter {
       this.valueReference,
       this.resource,
       @JsonKey(name: 'part') this.part_})
-      : assert(name != null),
-        super._();
+      : super._();
 
   factory _$_ParametersParameter.fromJson(Map<String, dynamic> json) =>
-      _$_$_ParametersParameterFromJson(json);
+      _$$_ParametersParameterFromJson(json);
 
   @override
-  final Id id;
+  final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  @JsonKey(required: true)
   final String name;
   @override
   @JsonKey(name: '_name')
-  final Element nameElement;
+  final Element? nameElement;
   @override
-  final Integer valueInteger;
+  final Integer? valueInteger;
   @override
   @JsonKey(name: '_valueInteger')
-  final Element valueIntegerElement;
+  final Element? valueIntegerElement;
   @override
-  final Decimal valueDecimal;
+  final Decimal? valueDecimal;
   @override
   @JsonKey(name: '_valueDecimal')
-  final Element valueDecimalElement;
+  final Element? valueDecimalElement;
   @override
-  final FhirDateTime valueDateTime;
+  final FhirDateTime? valueDateTime;
   @override
   @JsonKey(name: '_valueDateTime')
-  final Element valueDateTimeElement;
+  final Element? valueDateTimeElement;
   @override
-  final Date valueDate;
+  final Date? valueDate;
   @override
   @JsonKey(name: '_valueDate')
-  final Element valueDateElement;
+  final Element? valueDateElement;
   @override
-  final Instant valueInstant;
+  final Instant? valueInstant;
   @override
   @JsonKey(name: '_valueInstant')
-  final Element valueInstantElement;
+  final Element? valueInstantElement;
   @override
-  final String valueString;
+  final String? valueString;
   @override
   @JsonKey(name: '_valueString')
-  final Element valueStringElement;
+  final Element? valueStringElement;
   @override
-  final FhirUri valueUri;
+  final FhirUri? valueUri;
   @override
   @JsonKey(name: '_valueUri')
-  final Element valueUriElement;
+  final Element? valueUriElement;
   @override
-  final Boolean valueBoolean;
+  final Boolean? valueBoolean;
   @override
   @JsonKey(name: '_valueBoolean')
-  final Element valueBooleanElement;
+  final Element? valueBooleanElement;
   @override
-  final Code valueCode;
+  final Code? valueCode;
   @override
   @JsonKey(name: '_valueCode')
-  final Element valueCodeElement;
+  final Element? valueCodeElement;
   @override
-  final Base64Binary valueBase64Binary;
+  final Base64Binary? valueBase64Binary;
   @override
   @JsonKey(name: '_valueBase64Binary')
-  final Element valueBase64BinaryElement;
+  final Element? valueBase64BinaryElement;
   @override
-  final Coding valueCoding;
+  final Coding? valueCoding;
   @override
-  final CodeableConcept valueCodeableConcept;
+  final CodeableConcept? valueCodeableConcept;
   @override
-  final Attachment valueAttachment;
+  final Attachment? valueAttachment;
   @override
-  final Identifier valueIdentifier;
+  final Identifier? valueIdentifier;
   @override
-  final Quantity valueQuantity;
+  final Quantity? valueQuantity;
   @override
-  final Range valueRange;
+  final Range? valueRange;
   @override
-  final Period valuePeriod;
+  final Period? valuePeriod;
   @override
-  final Ratio valueRatio;
+  final Ratio? valueRatio;
   @override
-  final HumanName valueHumanName;
+  final HumanName? valueHumanName;
   @override
-  final Address valueAddresss;
+  final Address? valueAddresss;
   @override
-  final ContactPoint valueContactPoint;
+  final ContactPoint? valueContactPoint;
   @override
-  final Schedule valueSchedule;
+  final Schedule? valueSchedule;
   @override
-  final Reference valueReference;
+  final Reference? valueReference;
   @override
-  final Resource resource;
+  final Resource? resource;
   @override
   @JsonKey(name: 'part')
-  final List<ParametersParameter> part_;
+  final List<ParametersParameter>? part_;
 
   @override
   String toString() {
@@ -4466,155 +4849,169 @@ class _$_ParametersParameter extends _ParametersParameter {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ParametersParameterToJson(this);
+    return _$$_ParametersParameterToJson(this);
   }
 }
 
 abstract class _ParametersParameter extends ParametersParameter {
-  _ParametersParameter._() : super._();
   factory _ParametersParameter(
-          {Id id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          @required @JsonKey(required: true) String name,
-          @JsonKey(name: '_name') Element nameElement,
-          Integer valueInteger,
-          @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-          Decimal valueDecimal,
-          @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-          FhirDateTime valueDateTime,
-          @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-          Date valueDate,
-          @JsonKey(name: '_valueDate') Element valueDateElement,
-          Instant valueInstant,
-          @JsonKey(name: '_valueInstant') Element valueInstantElement,
-          String valueString,
-          @JsonKey(name: '_valueString') Element valueStringElement,
-          FhirUri valueUri,
-          @JsonKey(name: '_valueUri') Element valueUriElement,
-          Boolean valueBoolean,
-          @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-          Code valueCode,
-          @JsonKey(name: '_valueCode') Element valueCodeElement,
-          Base64Binary valueBase64Binary,
-          @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-          Coding valueCoding,
-          CodeableConcept valueCodeableConcept,
-          Attachment valueAttachment,
-          Identifier valueIdentifier,
-          Quantity valueQuantity,
-          Range valueRange,
-          Period valuePeriod,
-          Ratio valueRatio,
-          HumanName valueHumanName,
-          Address valueAddresss,
-          ContactPoint valueContactPoint,
-          Schedule valueSchedule,
-          Reference valueReference,
-          Resource resource,
-          @JsonKey(name: 'part') List<ParametersParameter> part_}) =
-      _$_ParametersParameter;
+      {Id? id,
+      @JsonKey(name: 'extension')
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required String name,
+      @JsonKey(name: '_name')
+          Element? nameElement,
+      Integer? valueInteger,
+      @JsonKey(name: '_valueInteger')
+          Element? valueIntegerElement,
+      Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal')
+          Element? valueDecimalElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime')
+          Element? valueDateTimeElement,
+      Date? valueDate,
+      @JsonKey(name: '_valueDate')
+          Element? valueDateElement,
+      Instant? valueInstant,
+      @JsonKey(name: '_valueInstant')
+          Element? valueInstantElement,
+      String? valueString,
+      @JsonKey(name: '_valueString')
+          Element? valueStringElement,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri')
+          Element? valueUriElement,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean')
+          Element? valueBooleanElement,
+      Code? valueCode,
+      @JsonKey(name: '_valueCode')
+          Element? valueCodeElement,
+      Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary')
+          Element? valueBase64BinaryElement,
+      Coding? valueCoding,
+      CodeableConcept? valueCodeableConcept,
+      Attachment? valueAttachment,
+      Identifier? valueIdentifier,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Period? valuePeriod,
+      Ratio? valueRatio,
+      HumanName? valueHumanName,
+      Address? valueAddresss,
+      ContactPoint? valueContactPoint,
+      Schedule? valueSchedule,
+      Reference? valueReference,
+      Resource? resource,
+      @JsonKey(name: 'part')
+          List<ParametersParameter>? part_}) = _$_ParametersParameter;
+  _ParametersParameter._() : super._();
 
   factory _ParametersParameter.fromJson(Map<String, dynamic> json) =
       _$_ParametersParameter.fromJson;
 
   @override
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  @JsonKey(required: true)
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  Integer get valueInteger;
+  Integer? get valueInteger => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueInteger')
-  Element get valueIntegerElement;
+  Element? get valueIntegerElement => throw _privateConstructorUsedError;
   @override
-  Decimal get valueDecimal;
+  Decimal? get valueDecimal => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDecimal')
-  Element get valueDecimalElement;
+  Element? get valueDecimalElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime get valueDateTime;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDateTime')
-  Element get valueDateTimeElement;
+  Element? get valueDateTimeElement => throw _privateConstructorUsedError;
   @override
-  Date get valueDate;
+  Date? get valueDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueDate')
-  Element get valueDateElement;
+  Element? get valueDateElement => throw _privateConstructorUsedError;
   @override
-  Instant get valueInstant;
+  Instant? get valueInstant => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueInstant')
-  Element get valueInstantElement;
+  Element? get valueInstantElement => throw _privateConstructorUsedError;
   @override
-  String get valueString;
+  String? get valueString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueString')
-  Element get valueStringElement;
+  Element? get valueStringElement => throw _privateConstructorUsedError;
   @override
-  FhirUri get valueUri;
+  FhirUri? get valueUri => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueUri')
-  Element get valueUriElement;
+  Element? get valueUriElement => throw _privateConstructorUsedError;
   @override
-  Boolean get valueBoolean;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueBoolean')
-  Element get valueBooleanElement;
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
   @override
-  Code get valueCode;
+  Code? get valueCode => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueCode')
-  Element get valueCodeElement;
+  Element? get valueCodeElement => throw _privateConstructorUsedError;
   @override
-  Base64Binary get valueBase64Binary;
+  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_valueBase64Binary')
-  Element get valueBase64BinaryElement;
+  Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
   @override
-  Coding get valueCoding;
+  Coding? get valueCoding => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get valueCodeableConcept;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Attachment get valueAttachment;
+  Attachment? get valueAttachment => throw _privateConstructorUsedError;
   @override
-  Identifier get valueIdentifier;
+  Identifier? get valueIdentifier => throw _privateConstructorUsedError;
   @override
-  Quantity get valueQuantity;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
   @override
-  Range get valueRange;
+  Range? get valueRange => throw _privateConstructorUsedError;
   @override
-  Period get valuePeriod;
+  Period? get valuePeriod => throw _privateConstructorUsedError;
   @override
-  Ratio get valueRatio;
+  Ratio? get valueRatio => throw _privateConstructorUsedError;
   @override
-  HumanName get valueHumanName;
+  HumanName? get valueHumanName => throw _privateConstructorUsedError;
   @override
-  Address get valueAddresss;
+  Address? get valueAddresss => throw _privateConstructorUsedError;
   @override
-  ContactPoint get valueContactPoint;
+  ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
   @override
-  Schedule get valueSchedule;
+  Schedule? get valueSchedule => throw _privateConstructorUsedError;
   @override
-  Reference get valueReference;
+  Reference? get valueReference => throw _privateConstructorUsedError;
   @override
-  Resource get resource;
+  Resource? get resource => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'part')
-  List<ParametersParameter> get part_;
+  List<ParametersParameter>? get part_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ParametersParameterCopyWith<_ParametersParameter> get copyWith;
+  _$ParametersParameterCopyWith<_ParametersParameter> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Subscription _$SubscriptionFromJson(Map<String, dynamic> json) {
@@ -4625,49 +5022,41 @@ Subscription _$SubscriptionFromJson(Map<String, dynamic> json) {
 class _$SubscriptionTearOff {
   const _$SubscriptionTearOff();
 
-// ignore: unused_element
   _Subscription call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Subscription)
           Dstu2ResourceType resourceType = Dstu2ResourceType.Subscription,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required
-      @JsonKey(required: true)
-          String criteria,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required String criteria,
       @JsonKey(name: '_criteria')
-          Element criteriaElement,
-      List<ContactPoint> contact,
-      @required
-      @JsonKey(required: true)
-          String reason,
+          Element? criteriaElement,
+      List<ContactPoint>? contact,
+      required String reason,
       @JsonKey(name: '_reason')
-          Element reasonElement,
-      @required
-      @JsonKey(required: true, unknownEnumValue: SubscriptionStatus.unknown)
-          SubscriptionStatus status,
+          Element? reasonElement,
+      @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
+          required SubscriptionStatus status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      String error,
+          Element? statusElement,
+      String? error,
       @JsonKey(name: '_error')
-          Element errorElement,
-      @required
-      @JsonKey(required: true)
-          SubscriptionChannel channel,
-      Instant end,
+          Element? errorElement,
+      required SubscriptionChannel channel,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      List<Coding> tag}) {
+          Element? endElement,
+      List<Coding>? tag}) {
     return _Subscription(
       resourceType: resourceType,
       id: id,
@@ -4696,59 +5085,56 @@ class _$SubscriptionTearOff {
     );
   }
 
-// ignore: unused_element
   Subscription fromJson(Map<String, Object> json) {
     return Subscription.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Subscription = _$SubscriptionTearOff();
 
 /// @nodoc
 mixin _$Subscription {
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Subscription)
-  Dstu2ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  @JsonKey(required: true)
-  String get criteria;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  String get criteria => throw _privateConstructorUsedError;
   @JsonKey(name: '_criteria')
-  Element get criteriaElement;
-  List<ContactPoint> get contact;
-  @JsonKey(required: true)
-  String get reason;
+  Element? get criteriaElement => throw _privateConstructorUsedError;
+  List<ContactPoint>? get contact => throw _privateConstructorUsedError;
+  String get reason => throw _privateConstructorUsedError;
   @JsonKey(name: '_reason')
-  Element get reasonElement;
-  @JsonKey(required: true, unknownEnumValue: SubscriptionStatus.unknown)
-  SubscriptionStatus get status;
+  Element? get reasonElement => throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
+  SubscriptionStatus get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
-  Element get statusElement;
-  String get error;
+  Element? get statusElement => throw _privateConstructorUsedError;
+  String? get error => throw _privateConstructorUsedError;
   @JsonKey(name: '_error')
-  Element get errorElement;
-  @JsonKey(required: true)
-  SubscriptionChannel get channel;
-  Instant get end;
+  Element? get errorElement => throw _privateConstructorUsedError;
+  SubscriptionChannel get channel => throw _privateConstructorUsedError;
+  Instant? get end => throw _privateConstructorUsedError;
   @JsonKey(name: '_end')
-  Element get endElement;
-  List<Coding> get tag;
+  Element? get endElement => throw _privateConstructorUsedError;
+  List<Coding>? get tag => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SubscriptionCopyWith<Subscription> get copyWith;
+  $SubscriptionCopyWith<Subscription> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4759,52 +5145,49 @@ abstract class $SubscriptionCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Subscription)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @JsonKey(required: true)
-          String criteria,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String criteria,
       @JsonKey(name: '_criteria')
-          Element criteriaElement,
-      List<ContactPoint> contact,
-      @JsonKey(required: true)
-          String reason,
+          Element? criteriaElement,
+      List<ContactPoint>? contact,
+      String reason,
       @JsonKey(name: '_reason')
-          Element reasonElement,
-      @JsonKey(required: true, unknownEnumValue: SubscriptionStatus.unknown)
+          Element? reasonElement,
+      @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
           SubscriptionStatus status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      String error,
+          Element? statusElement,
+      String? error,
       @JsonKey(name: '_error')
-          Element errorElement,
-      @JsonKey(required: true)
-          SubscriptionChannel channel,
-      Instant end,
+          Element? errorElement,
+      SubscriptionChannel channel,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      List<Coding> tag});
+          Element? endElement,
+      List<Coding>? tag});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get criteriaElement;
-  $ElementCopyWith<$Res> get reasonElement;
-  $ElementCopyWith<$Res> get statusElement;
-  $ElementCopyWith<$Res> get errorElement;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get criteriaElement;
+  $ElementCopyWith<$Res>? get reasonElement;
+  $ElementCopyWith<$Res>? get statusElement;
+  $ElementCopyWith<$Res>? get errorElement;
   $SubscriptionChannelCopyWith<$Res> get channel;
-  $ElementCopyWith<$Res> get endElement;
+  $ElementCopyWith<$Res>? get endElement;
 }
 
 /// @nodoc
@@ -4817,179 +5200,233 @@ class _$SubscriptionCopyWithImpl<$Res> implements $SubscriptionCopyWith<$Res> {
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object criteria = freezed,
-    Object criteriaElement = freezed,
-    Object contact = freezed,
-    Object reason = freezed,
-    Object reasonElement = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object error = freezed,
-    Object errorElement = freezed,
-    Object channel = freezed,
-    Object end = freezed,
-    Object endElement = freezed,
-    Object tag = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? criteria = freezed,
+    Object? criteriaElement = freezed,
+    Object? contact = freezed,
+    Object? reason = freezed,
+    Object? reasonElement = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? error = freezed,
+    Object? errorElement = freezed,
+    Object? channel = freezed,
+    Object? end = freezed,
+    Object? endElement = freezed,
+    Object? tag = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      criteria: criteria == freezed ? _value.criteria : criteria as String,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      criteria: criteria == freezed
+          ? _value.criteria
+          : criteria // ignore: cast_nullable_to_non_nullable
+              as String,
       criteriaElement: criteriaElement == freezed
           ? _value.criteriaElement
-          : criteriaElement as Element,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactPoint>,
-      reason: reason == freezed ? _value.reason : reason as String,
+          : criteriaElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String,
       reasonElement: reasonElement == freezed
           ? _value.reasonElement
-          : reasonElement as Element,
-      status: status == freezed ? _value.status : status as SubscriptionStatus,
+          : reasonElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as SubscriptionStatus,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      error: error == freezed ? _value.error : error as String,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      error: error == freezed
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String?,
       errorElement: errorElement == freezed
           ? _value.errorElement
-          : errorElement as Element,
-      channel:
-          channel == freezed ? _value.channel : channel as SubscriptionChannel,
-      end: end == freezed ? _value.end : end as Instant,
-      endElement:
-          endElement == freezed ? _value.endElement : endElement as Element,
-      tag: tag == freezed ? _value.tag : tag as List<Coding>,
+          : errorElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      channel: channel == freezed
+          ? _value.channel
+          : channel // ignore: cast_nullable_to_non_nullable
+              as SubscriptionChannel,
+      end: end == freezed
+          ? _value.end
+          : end // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      endElement: endElement == freezed
+          ? _value.endElement
+          : endElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      tag: tag == freezed
+          ? _value.tag
+          : tag // ignore: cast_nullable_to_non_nullable
+              as List<Coding>?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get criteriaElement {
+  $ElementCopyWith<$Res>? get criteriaElement {
     if (_value.criteriaElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.criteriaElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.criteriaElement!, (value) {
       return _then(_value.copyWith(criteriaElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get reasonElement {
+  $ElementCopyWith<$Res>? get reasonElement {
     if (_value.reasonElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.reasonElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.reasonElement!, (value) {
       return _then(_value.copyWith(reasonElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get statusElement {
+  $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
       return _then(_value.copyWith(statusElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get errorElement {
+  $ElementCopyWith<$Res>? get errorElement {
     if (_value.errorElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.errorElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.errorElement!, (value) {
       return _then(_value.copyWith(errorElement: value));
     });
   }
 
   @override
   $SubscriptionChannelCopyWith<$Res> get channel {
-    if (_value.channel == null) {
-      return null;
-    }
     return $SubscriptionChannelCopyWith<$Res>(_value.channel, (value) {
       return _then(_value.copyWith(channel: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get endElement {
+  $ElementCopyWith<$Res>? get endElement {
     if (_value.endElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.endElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.endElement!, (value) {
       return _then(_value.copyWith(endElement: value));
     });
   }
@@ -5005,62 +5442,59 @@ abstract class _$SubscriptionCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Subscription)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @JsonKey(required: true)
-          String criteria,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      String criteria,
       @JsonKey(name: '_criteria')
-          Element criteriaElement,
-      List<ContactPoint> contact,
-      @JsonKey(required: true)
-          String reason,
+          Element? criteriaElement,
+      List<ContactPoint>? contact,
+      String reason,
       @JsonKey(name: '_reason')
-          Element reasonElement,
-      @JsonKey(required: true, unknownEnumValue: SubscriptionStatus.unknown)
+          Element? reasonElement,
+      @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
           SubscriptionStatus status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      String error,
+          Element? statusElement,
+      String? error,
       @JsonKey(name: '_error')
-          Element errorElement,
-      @JsonKey(required: true)
-          SubscriptionChannel channel,
-      Instant end,
+          Element? errorElement,
+      SubscriptionChannel channel,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      List<Coding> tag});
+          Element? endElement,
+      List<Coding>? tag});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
-  $ElementCopyWith<$Res> get criteriaElement;
+  $ElementCopyWith<$Res>? get criteriaElement;
   @override
-  $ElementCopyWith<$Res> get reasonElement;
+  $ElementCopyWith<$Res>? get reasonElement;
   @override
-  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res>? get statusElement;
   @override
-  $ElementCopyWith<$Res> get errorElement;
+  $ElementCopyWith<$Res>? get errorElement;
   @override
   $SubscriptionChannelCopyWith<$Res> get channel;
   @override
-  $ElementCopyWith<$Res> get endElement;
+  $ElementCopyWith<$Res>? get endElement;
 }
 
 /// @nodoc
@@ -5075,87 +5509,134 @@ class __$SubscriptionCopyWithImpl<$Res> extends _$SubscriptionCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object criteria = freezed,
-    Object criteriaElement = freezed,
-    Object contact = freezed,
-    Object reason = freezed,
-    Object reasonElement = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object error = freezed,
-    Object errorElement = freezed,
-    Object channel = freezed,
-    Object end = freezed,
-    Object endElement = freezed,
-    Object tag = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? criteria = freezed,
+    Object? criteriaElement = freezed,
+    Object? contact = freezed,
+    Object? reason = freezed,
+    Object? reasonElement = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? error = freezed,
+    Object? errorElement = freezed,
+    Object? channel = freezed,
+    Object? end = freezed,
+    Object? endElement = freezed,
+    Object? tag = freezed,
   }) {
     return _then(_Subscription(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as Dstu2ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as Dstu2ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      criteria: criteria == freezed ? _value.criteria : criteria as String,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      criteria: criteria == freezed
+          ? _value.criteria
+          : criteria // ignore: cast_nullable_to_non_nullable
+              as String,
       criteriaElement: criteriaElement == freezed
           ? _value.criteriaElement
-          : criteriaElement as Element,
-      contact:
-          contact == freezed ? _value.contact : contact as List<ContactPoint>,
-      reason: reason == freezed ? _value.reason : reason as String,
+          : criteriaElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
+      reason: reason == freezed
+          ? _value.reason
+          : reason // ignore: cast_nullable_to_non_nullable
+              as String,
       reasonElement: reasonElement == freezed
           ? _value.reasonElement
-          : reasonElement as Element,
-      status: status == freezed ? _value.status : status as SubscriptionStatus,
+          : reasonElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as SubscriptionStatus,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      error: error == freezed ? _value.error : error as String,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      error: error == freezed
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String?,
       errorElement: errorElement == freezed
           ? _value.errorElement
-          : errorElement as Element,
-      channel:
-          channel == freezed ? _value.channel : channel as SubscriptionChannel,
-      end: end == freezed ? _value.end : end as Instant,
-      endElement:
-          endElement == freezed ? _value.endElement : endElement as Element,
-      tag: tag == freezed ? _value.tag : tag as List<Coding>,
+          : errorElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      channel: channel == freezed
+          ? _value.channel
+          : channel // ignore: cast_nullable_to_non_nullable
+              as SubscriptionChannel,
+      end: end == freezed
+          ? _value.end
+          : end // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      endElement: endElement == freezed
+          ? _value.endElement
+          : endElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      tag: tag == freezed
+          ? _value.tag
+          : tag // ignore: cast_nullable_to_non_nullable
+              as List<Coding>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Subscription extends _Subscription {
   _$_Subscription(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Subscription)
@@ -5173,103 +5654,88 @@ class _$_Subscription extends _Subscription {
       @JsonKey(name: 'extension')
           this.extension_,
       this.modifierExtension,
-      @required
-      @JsonKey(required: true)
-          this.criteria,
+      required this.criteria,
       @JsonKey(name: '_criteria')
           this.criteriaElement,
       this.contact,
-      @required
-      @JsonKey(required: true)
-          this.reason,
+      required this.reason,
       @JsonKey(name: '_reason')
           this.reasonElement,
-      @required
-      @JsonKey(required: true, unknownEnumValue: SubscriptionStatus.unknown)
-          this.status,
+      @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
+          required this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.error,
       @JsonKey(name: '_error')
           this.errorElement,
-      @required
-      @JsonKey(required: true)
-          this.channel,
+      required this.channel,
       this.end,
       @JsonKey(name: '_end')
           this.endElement,
       this.tag})
-      : assert(resourceType != null),
-        assert(criteria != null),
-        assert(reason != null),
-        assert(status != null),
-        assert(channel != null),
-        super._();
+      : super._();
 
   factory _$_Subscription.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubscriptionFromJson(json);
+      _$$_SubscriptionFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Subscription)
   final Dstu2ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  @JsonKey(required: true)
   final String criteria;
   @override
   @JsonKey(name: '_criteria')
-  final Element criteriaElement;
+  final Element? criteriaElement;
   @override
-  final List<ContactPoint> contact;
+  final List<ContactPoint>? contact;
   @override
-  @JsonKey(required: true)
   final String reason;
   @override
   @JsonKey(name: '_reason')
-  final Element reasonElement;
+  final Element? reasonElement;
   @override
-  @JsonKey(required: true, unknownEnumValue: SubscriptionStatus.unknown)
+  @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
   final SubscriptionStatus status;
   @override
   @JsonKey(name: '_status')
-  final Element statusElement;
+  final Element? statusElement;
   @override
-  final String error;
+  final String? error;
   @override
   @JsonKey(name: '_error')
-  final Element errorElement;
+  final Element? errorElement;
   @override
-  @JsonKey(required: true)
   final SubscriptionChannel channel;
   @override
-  final Instant end;
+  final Instant? end;
   @override
   @JsonKey(name: '_end')
-  final Element endElement;
+  final Element? endElement;
   @override
-  final List<Coding> tag;
+  final List<Coding>? tag;
 
   @override
   String toString() {
@@ -5381,122 +5847,114 @@ class _$_Subscription extends _Subscription {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubscriptionToJson(this);
+    return _$$_SubscriptionToJson(this);
   }
 }
 
 abstract class _Subscription extends Subscription {
-  _Subscription._() : super._();
   factory _Subscription(
       {@JsonKey(unknownEnumValue: Dstu2ResourceType.Subscription)
           Dstu2ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required
-      @JsonKey(required: true)
-          String criteria,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required String criteria,
       @JsonKey(name: '_criteria')
-          Element criteriaElement,
-      List<ContactPoint> contact,
-      @required
-      @JsonKey(required: true)
-          String reason,
+          Element? criteriaElement,
+      List<ContactPoint>? contact,
+      required String reason,
       @JsonKey(name: '_reason')
-          Element reasonElement,
-      @required
-      @JsonKey(required: true, unknownEnumValue: SubscriptionStatus.unknown)
-          SubscriptionStatus status,
+          Element? reasonElement,
+      @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
+          required SubscriptionStatus status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      String error,
+          Element? statusElement,
+      String? error,
       @JsonKey(name: '_error')
-          Element errorElement,
-      @required
-      @JsonKey(required: true)
-          SubscriptionChannel channel,
-      Instant end,
+          Element? errorElement,
+      required SubscriptionChannel channel,
+      Instant? end,
       @JsonKey(name: '_end')
-          Element endElement,
-      List<Coding> tag}) = _$_Subscription;
+          Element? endElement,
+      List<Coding>? tag}) = _$_Subscription;
+  _Subscription._() : super._();
 
   factory _Subscription.fromJson(Map<String, dynamic> json) =
       _$_Subscription.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Subscription)
-  Dstu2ResourceType get resourceType;
+  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  @JsonKey(required: true)
-  String get criteria;
+  String get criteria => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_criteria')
-  Element get criteriaElement;
+  Element? get criteriaElement => throw _privateConstructorUsedError;
   @override
-  List<ContactPoint> get contact;
+  List<ContactPoint>? get contact => throw _privateConstructorUsedError;
   @override
-  @JsonKey(required: true)
-  String get reason;
+  String get reason => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_reason')
-  Element get reasonElement;
+  Element? get reasonElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(required: true, unknownEnumValue: SubscriptionStatus.unknown)
-  SubscriptionStatus get status;
+  @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
+  SubscriptionStatus get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  String get error;
+  String? get error => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_error')
-  Element get errorElement;
+  Element? get errorElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(required: true)
-  SubscriptionChannel get channel;
+  SubscriptionChannel get channel => throw _privateConstructorUsedError;
   @override
-  Instant get end;
+  Instant? get end => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_end')
-  Element get endElement;
+  Element? get endElement => throw _privateConstructorUsedError;
   @override
-  List<Coding> get tag;
+  List<Coding>? get tag => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubscriptionCopyWith<_Subscription> get copyWith;
+  _$SubscriptionCopyWith<_Subscription> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 SubscriptionChannel _$SubscriptionChannelFromJson(Map<String, dynamic> json) {
@@ -5507,28 +5965,18 @@ SubscriptionChannel _$SubscriptionChannelFromJson(Map<String, dynamic> json) {
 class _$SubscriptionChannelTearOff {
   const _$SubscriptionChannelTearOff();
 
-// ignore: unused_element
   _SubscriptionChannel call(
-      {Id id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required
-      @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
-          ChannelType type,
-      @JsonKey(name: '_type')
-          Element typeElement,
-      FhirUri endpoint,
-      @JsonKey(name: '_endpoint')
-          Element endpointElement,
-      @required
-      @JsonKey(required: true)
-          String payload,
-      @JsonKey(name: '_payload')
-          Element payloadElement,
-      String header,
-      @JsonKey(name: '_header')
-          List<Element> headerElement}) {
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(unknownEnumValue: ChannelType.unknown) required ChannelType type,
+      @JsonKey(name: '_type') Element? typeElement,
+      FhirUri? endpoint,
+      @JsonKey(name: '_endpoint') Element? endpointElement,
+      required String payload,
+      @JsonKey(name: '_payload') Element? payloadElement,
+      String? header,
+      @JsonKey(name: '_header') List<Element?>? headerElement}) {
     return _SubscriptionChannel(
       id: id,
       extension_: extension_,
@@ -5544,40 +5992,39 @@ class _$SubscriptionChannelTearOff {
     );
   }
 
-// ignore: unused_element
   SubscriptionChannel fromJson(Map<String, Object> json) {
     return SubscriptionChannel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $SubscriptionChannel = _$SubscriptionChannelTearOff();
 
 /// @nodoc
 mixin _$SubscriptionChannel {
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
-  ChannelType get type;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @JsonKey(unknownEnumValue: ChannelType.unknown)
+  ChannelType get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
-  Element get typeElement;
-  FhirUri get endpoint;
+  Element? get typeElement => throw _privateConstructorUsedError;
+  FhirUri? get endpoint => throw _privateConstructorUsedError;
   @JsonKey(name: '_endpoint')
-  Element get endpointElement;
-  @JsonKey(required: true)
-  String get payload;
+  Element? get endpointElement => throw _privateConstructorUsedError;
+  String get payload => throw _privateConstructorUsedError;
   @JsonKey(name: '_payload')
-  Element get payloadElement;
-  String get header;
+  Element? get payloadElement => throw _privateConstructorUsedError;
+  String? get header => throw _privateConstructorUsedError;
   @JsonKey(name: '_header')
-  List<Element> get headerElement;
+  List<Element?>? get headerElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $SubscriptionChannelCopyWith<SubscriptionChannel> get copyWith;
+  $SubscriptionChannelCopyWith<SubscriptionChannel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5586,28 +6033,21 @@ abstract class $SubscriptionChannelCopyWith<$Res> {
           SubscriptionChannel value, $Res Function(SubscriptionChannel) then) =
       _$SubscriptionChannelCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
-          ChannelType type,
-      @JsonKey(name: '_type')
-          Element typeElement,
-      FhirUri endpoint,
-      @JsonKey(name: '_endpoint')
-          Element endpointElement,
-      @JsonKey(required: true)
-          String payload,
-      @JsonKey(name: '_payload')
-          Element payloadElement,
-      String header,
-      @JsonKey(name: '_header')
-          List<Element> headerElement});
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(unknownEnumValue: ChannelType.unknown) ChannelType type,
+      @JsonKey(name: '_type') Element? typeElement,
+      FhirUri? endpoint,
+      @JsonKey(name: '_endpoint') Element? endpointElement,
+      String payload,
+      @JsonKey(name: '_payload') Element? payloadElement,
+      String? header,
+      @JsonKey(name: '_header') List<Element?>? headerElement});
 
-  $ElementCopyWith<$Res> get typeElement;
-  $ElementCopyWith<$Res> get endpointElement;
-  $ElementCopyWith<$Res> get payloadElement;
+  $ElementCopyWith<$Res>? get typeElement;
+  $ElementCopyWith<$Res>? get endpointElement;
+  $ElementCopyWith<$Res>? get payloadElement;
 }
 
 /// @nodoc
@@ -5621,70 +6061,95 @@ class _$SubscriptionChannelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object typeElement = freezed,
-    Object endpoint = freezed,
-    Object endpointElement = freezed,
-    Object payload = freezed,
-    Object payloadElement = freezed,
-    Object header = freezed,
-    Object headerElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? typeElement = freezed,
+    Object? endpoint = freezed,
+    Object? endpointElement = freezed,
+    Object? payload = freezed,
+    Object? payloadElement = freezed,
+    Object? header = freezed,
+    Object? headerElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as ChannelType,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element,
-      endpoint: endpoint == freezed ? _value.endpoint : endpoint as FhirUri,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as ChannelType,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      endpoint: endpoint == freezed
+          ? _value.endpoint
+          : endpoint // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       endpointElement: endpointElement == freezed
           ? _value.endpointElement
-          : endpointElement as Element,
-      payload: payload == freezed ? _value.payload : payload as String,
+          : endpointElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      payload: payload == freezed
+          ? _value.payload
+          : payload // ignore: cast_nullable_to_non_nullable
+              as String,
       payloadElement: payloadElement == freezed
           ? _value.payloadElement
-          : payloadElement as Element,
-      header: header == freezed ? _value.header : header as String,
+          : payloadElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      header: header == freezed
+          ? _value.header
+          : header // ignore: cast_nullable_to_non_nullable
+              as String?,
       headerElement: headerElement == freezed
           ? _value.headerElement
-          : headerElement as List<Element>,
+          : headerElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
     ));
   }
 
   @override
-  $ElementCopyWith<$Res> get typeElement {
+  $ElementCopyWith<$Res>? get typeElement {
     if (_value.typeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.typeElement!, (value) {
       return _then(_value.copyWith(typeElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get endpointElement {
+  $ElementCopyWith<$Res>? get endpointElement {
     if (_value.endpointElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.endpointElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.endpointElement!, (value) {
       return _then(_value.copyWith(endpointElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get payloadElement {
+  $ElementCopyWith<$Res>? get payloadElement {
     if (_value.payloadElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.payloadElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.payloadElement!, (value) {
       return _then(_value.copyWith(payloadElement: value));
     });
   }
@@ -5698,31 +6163,24 @@ abstract class _$SubscriptionChannelCopyWith<$Res>
       __$SubscriptionChannelCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
-          ChannelType type,
-      @JsonKey(name: '_type')
-          Element typeElement,
-      FhirUri endpoint,
-      @JsonKey(name: '_endpoint')
-          Element endpointElement,
-      @JsonKey(required: true)
-          String payload,
-      @JsonKey(name: '_payload')
-          Element payloadElement,
-      String header,
-      @JsonKey(name: '_header')
-          List<Element> headerElement});
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(unknownEnumValue: ChannelType.unknown) ChannelType type,
+      @JsonKey(name: '_type') Element? typeElement,
+      FhirUri? endpoint,
+      @JsonKey(name: '_endpoint') Element? endpointElement,
+      String payload,
+      @JsonKey(name: '_payload') Element? payloadElement,
+      String? header,
+      @JsonKey(name: '_header') List<Element?>? headerElement});
 
   @override
-  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res>? get typeElement;
   @override
-  $ElementCopyWith<$Res> get endpointElement;
+  $ElementCopyWith<$Res>? get endpointElement;
   @override
-  $ElementCopyWith<$Res> get payloadElement;
+  $ElementCopyWith<$Res>? get payloadElement;
 }
 
 /// @nodoc
@@ -5738,106 +6196,115 @@ class __$SubscriptionChannelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object typeElement = freezed,
-    Object endpoint = freezed,
-    Object endpointElement = freezed,
-    Object payload = freezed,
-    Object payloadElement = freezed,
-    Object header = freezed,
-    Object headerElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? typeElement = freezed,
+    Object? endpoint = freezed,
+    Object? endpointElement = freezed,
+    Object? payload = freezed,
+    Object? payloadElement = freezed,
+    Object? header = freezed,
+    Object? headerElement = freezed,
   }) {
     return _then(_SubscriptionChannel(
-      id: id == freezed ? _value.id : id as Id,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as ChannelType,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element,
-      endpoint: endpoint == freezed ? _value.endpoint : endpoint as FhirUri,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as ChannelType,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      endpoint: endpoint == freezed
+          ? _value.endpoint
+          : endpoint // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       endpointElement: endpointElement == freezed
           ? _value.endpointElement
-          : endpointElement as Element,
-      payload: payload == freezed ? _value.payload : payload as String,
+          : endpointElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      payload: payload == freezed
+          ? _value.payload
+          : payload // ignore: cast_nullable_to_non_nullable
+              as String,
       payloadElement: payloadElement == freezed
           ? _value.payloadElement
-          : payloadElement as Element,
-      header: header == freezed ? _value.header : header as String,
+          : payloadElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      header: header == freezed
+          ? _value.header
+          : header // ignore: cast_nullable_to_non_nullable
+              as String?,
       headerElement: headerElement == freezed
           ? _value.headerElement
-          : headerElement as List<Element>,
+          : headerElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_SubscriptionChannel extends _SubscriptionChannel {
   _$_SubscriptionChannel(
       {this.id,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required
-      @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
-          this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      @JsonKey(unknownEnumValue: ChannelType.unknown) required this.type,
+      @JsonKey(name: '_type') this.typeElement,
       this.endpoint,
-      @JsonKey(name: '_endpoint')
-          this.endpointElement,
-      @required
-      @JsonKey(required: true)
-          this.payload,
-      @JsonKey(name: '_payload')
-          this.payloadElement,
+      @JsonKey(name: '_endpoint') this.endpointElement,
+      required this.payload,
+      @JsonKey(name: '_payload') this.payloadElement,
       this.header,
-      @JsonKey(name: '_header')
-          this.headerElement})
-      : assert(type != null),
-        assert(payload != null),
-        super._();
+      @JsonKey(name: '_header') this.headerElement})
+      : super._();
 
   factory _$_SubscriptionChannel.fromJson(Map<String, dynamic> json) =>
-      _$_$_SubscriptionChannelFromJson(json);
+      _$$_SubscriptionChannelFromJson(json);
 
   @override
-  final Id id;
+  final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
+  @JsonKey(unknownEnumValue: ChannelType.unknown)
   final ChannelType type;
   @override
   @JsonKey(name: '_type')
-  final Element typeElement;
+  final Element? typeElement;
   @override
-  final FhirUri endpoint;
+  final FhirUri? endpoint;
   @override
   @JsonKey(name: '_endpoint')
-  final Element endpointElement;
+  final Element? endpointElement;
   @override
-  @JsonKey(required: true)
   final String payload;
   @override
   @JsonKey(name: '_payload')
-  final Element payloadElement;
+  final Element? payloadElement;
   @override
-  final String header;
+  final String? header;
   @override
   @JsonKey(name: '_header')
-  final List<Element> headerElement;
+  final List<Element?>? headerElement;
 
   @override
   String toString() {
@@ -5903,67 +6370,65 @@ class _$_SubscriptionChannel extends _SubscriptionChannel {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_SubscriptionChannelToJson(this);
+    return _$$_SubscriptionChannelToJson(this);
   }
 }
 
 abstract class _SubscriptionChannel extends SubscriptionChannel {
-  _SubscriptionChannel._() : super._();
   factory _SubscriptionChannel(
-      {Id id,
+      {Id? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required
-      @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
-          ChannelType type,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      @JsonKey(unknownEnumValue: ChannelType.unknown)
+          required ChannelType type,
       @JsonKey(name: '_type')
-          Element typeElement,
-      FhirUri endpoint,
+          Element? typeElement,
+      FhirUri? endpoint,
       @JsonKey(name: '_endpoint')
-          Element endpointElement,
-      @required
-      @JsonKey(required: true)
-          String payload,
+          Element? endpointElement,
+      required String payload,
       @JsonKey(name: '_payload')
-          Element payloadElement,
-      String header,
+          Element? payloadElement,
+      String? header,
       @JsonKey(name: '_header')
-          List<Element> headerElement}) = _$_SubscriptionChannel;
+          List<Element?>? headerElement}) = _$_SubscriptionChannel;
+  _SubscriptionChannel._() : super._();
 
   factory _SubscriptionChannel.fromJson(Map<String, dynamic> json) =
       _$_SubscriptionChannel.fromJson;
 
   @override
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  @JsonKey(required: true, unknownEnumValue: ChannelType.unknown)
-  ChannelType get type;
+  @JsonKey(unknownEnumValue: ChannelType.unknown)
+  ChannelType get type => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  FhirUri get endpoint;
+  FhirUri? get endpoint => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_endpoint')
-  Element get endpointElement;
+  Element? get endpointElement => throw _privateConstructorUsedError;
   @override
-  @JsonKey(required: true)
-  String get payload;
+  String get payload => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_payload')
-  Element get payloadElement;
+  Element? get payloadElement => throw _privateConstructorUsedError;
   @override
-  String get header;
+  String? get header => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_header')
-  List<Element> get headerElement;
+  List<Element?>? get headerElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$SubscriptionChannelCopyWith<_SubscriptionChannel> get copyWith;
+  _$SubscriptionChannelCopyWith<_SubscriptionChannel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

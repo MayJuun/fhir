@@ -12,94 +12,99 @@ part 'quality_reporting.freezed.dart';
 part 'quality_reporting.g.dart';
 
 @freezed
-abstract class Measure with Resource implements _$Measure {
+class Measure with Resource, _$Measure {
   Measure._();
   factory Measure({
     @Default(Stu3ResourceType.Measure)
     @JsonKey(unknownEnumValue: Stu3ResourceType.Measure)
         Stu3ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String url,
-    @JsonKey(name: '_url') Element urlElement,
-    List<Identifier> identifier,
-    String version,
-    @JsonKey(name: '_version') Element versionElement,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    String title,
-    @JsonKey(name: '_title') Element titleElement,
-    MeasureStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Boolean experimental,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    Date date,
-    @JsonKey(name: '_date') Element dateElement,
-    String publisher,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    String purpose,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    String usage,
-    @JsonKey(name: '_usage') Element usageElement,
-    Date approvalDate,
-    @JsonKey(name: '_approvalDate') Element approvalDateElement,
-    Date lastReviewDate,
-    @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
-    Period effectivePeriod,
-    List<UsageContext> useContext,
-    List<CodeableConcept> jurisdiction,
-    List<CodeableConcept> topic,
-    List<Contributor> contributor,
-    List<ContactDetail> contact,
-    String copyright,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    List<RelatedArtifact> relatedArtifact,
-    @JsonKey(name: 'library') List<Reference> library_,
-    String disclaimer,
-    @JsonKey(name: '_disclaimer') Element disclaimerElement,
-    CodeableConcept scoring,
-    CodeableConcept compositeScoring,
-    List<CodeableConcept> type,
-    String riskAdjustment,
-    @JsonKey(name: '_riskAdjustment') Element riskAdjustmentElement,
-    String rateAggregation,
-    @JsonKey(name: '_rateAggregation') Element rateAggregationElement,
-    String rationale,
-    @JsonKey(name: '_rationale') Element rationaleElement,
-    String clinicalRecommendationStatement,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    List<Identifier>? identifier,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    MeasureStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Boolean? experimental,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
+    Date? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    String? purpose,
+    @JsonKey(name: '_purpose') Element? purposeElement,
+    String? usage,
+    @JsonKey(name: '_usage') Element? usageElement,
+    Date? approvalDate,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+    Date? lastReviewDate,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+    Period? effectivePeriod,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
+    List<CodeableConcept>? topic,
+    List<Contributor>? contributor,
+    List<ContactDetail>? contact,
+    String? copyright,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
+    List<RelatedArtifact>? relatedArtifact,
+    @JsonKey(name: 'library') List<Reference>? library_,
+    String? disclaimer,
+    @JsonKey(name: '_disclaimer') Element? disclaimerElement,
+    CodeableConcept? scoring,
+    CodeableConcept? compositeScoring,
+    List<CodeableConcept>? type,
+    String? riskAdjustment,
+    @JsonKey(name: '_riskAdjustment') Element? riskAdjustmentElement,
+    String? rateAggregation,
+    @JsonKey(name: '_rateAggregation') Element? rateAggregationElement,
+    String? rationale,
+    @JsonKey(name: '_rationale') Element? rationaleElement,
+    String? clinicalRecommendationStatement,
     @JsonKey(name: '_clinicalRecommendationStatement')
-        Element clinicalRecommendationStatementElement,
-    String improvementNotation,
-    @JsonKey(name: '_improvementNotation') Element improvementNotationElement,
-    List<String> definition,
-    @JsonKey(name: '_definition') List<Element> definitionElement,
-    String guidance,
-    @JsonKey(name: '_guidance') Element guidanceElement,
-    @JsonKey(name: 'set') String set_,
-    @JsonKey(name: '_set') Element setElement,
-    List<MeasureGroup> group,
-    List<MeasureSupplementalData> supplementalData,
+        Element? clinicalRecommendationStatementElement,
+    String? improvementNotation,
+    @JsonKey(name: '_improvementNotation') Element? improvementNotationElement,
+    List<String>? definition,
+    @JsonKey(name: '_definition') List<Element?>? definitionElement,
+    String? guidance,
+    @JsonKey(name: '_guidance') Element? guidanceElement,
+    @JsonKey(name: 'set') String? set_,
+    @JsonKey(name: '_set') Element? setElement,
+    List<MeasureGroup>? group,
+    List<MeasureSupplementalData>? supplementalData,
   }) = _Measure;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Measure.fromYaml(dynamic yaml) => yaml is String
-      ? Measure.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Measure.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Measure.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? Measure.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'Measure cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Measure.fromJson(Map<String, dynamic> json) =>
@@ -107,27 +112,31 @@ abstract class Measure with Resource implements _$Measure {
 }
 
 @freezed
-abstract class MeasureGroup implements _$MeasureGroup {
+class MeasureGroup with _$MeasureGroup {
   MeasureGroup._();
   factory MeasureGroup({
-    @required Identifier identifier,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<MeasurePopulation> population,
-    List<MeasureStratifier> stratifier,
+    required Identifier identifier,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<MeasurePopulation>? population,
+    List<MeasureStratifier>? stratifier,
   }) = _MeasureGroup;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureGroup.fromYaml(dynamic yaml) => yaml is String
-      ? MeasureGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MeasureGroup.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasureGroup.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? MeasureGroup.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MeasureGroup cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureGroup.fromJson(Map<String, dynamic> json) =>
@@ -135,28 +144,32 @@ abstract class MeasureGroup implements _$MeasureGroup {
 }
 
 @freezed
-abstract class MeasurePopulation implements _$MeasurePopulation {
+class MeasurePopulation with _$MeasurePopulation {
   MeasurePopulation._();
   factory MeasurePopulation({
-    Identifier identifier,
-    CodeableConcept code,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    String criteria,
-    @JsonKey(name: '_criteria') Element criteriaElement,
+    Identifier? identifier,
+    CodeableConcept? code,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    String? criteria,
+    @JsonKey(name: '_criteria') Element? criteriaElement,
   }) = _MeasurePopulation;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasurePopulation.fromYaml(dynamic yaml) => yaml is String
-      ? MeasurePopulation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MeasurePopulation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasurePopulation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? MeasurePopulation.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MeasurePopulation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasurePopulation.fromJson(Map<String, dynamic> json) =>
@@ -164,25 +177,29 @@ abstract class MeasurePopulation implements _$MeasurePopulation {
 }
 
 @freezed
-abstract class MeasureStratifier implements _$MeasureStratifier {
+class MeasureStratifier with _$MeasureStratifier {
   MeasureStratifier._();
   factory MeasureStratifier({
-    Identifier identifier,
-    String criteria,
-    @JsonKey(name: '_criteria') Element criteriaElement,
-    String path,
-    @JsonKey(name: '_path') Element pathElement,
+    Identifier? identifier,
+    String? criteria,
+    @JsonKey(name: '_criteria') Element? criteriaElement,
+    String? path,
+    @JsonKey(name: '_path') Element? pathElement,
   }) = _MeasureStratifier;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureStratifier.fromYaml(dynamic yaml) => yaml is String
-      ? MeasureStratifier.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MeasureStratifier.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasureStratifier.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? MeasureStratifier.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MeasureStratifier cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureStratifier.fromJson(Map<String, dynamic> json) =>
@@ -190,26 +207,30 @@ abstract class MeasureStratifier implements _$MeasureStratifier {
 }
 
 @freezed
-abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
+class MeasureSupplementalData with _$MeasureSupplementalData {
   MeasureSupplementalData._();
   factory MeasureSupplementalData({
-    Identifier identifier,
-    List<CodeableConcept> usage,
-    String criteria,
-    @JsonKey(name: '_criteria') Element criteriaElement,
-    String path,
-    @JsonKey(name: '_path') Element pathElement,
+    Identifier? identifier,
+    List<CodeableConcept>? usage,
+    String? criteria,
+    @JsonKey(name: '_criteria') Element? criteriaElement,
+    String? path,
+    @JsonKey(name: '_path') Element? pathElement,
   }) = _MeasureSupplementalData;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureSupplementalData.fromYaml(dynamic yaml) => yaml is String
-      ? MeasureSupplementalData.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MeasureSupplementalData.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasureSupplementalData.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? MeasureSupplementalData.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MeasureSupplementalData cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureSupplementalData.fromJson(Map<String, dynamic> json) =>
@@ -217,46 +238,51 @@ abstract class MeasureSupplementalData implements _$MeasureSupplementalData {
 }
 
 @freezed
-abstract class MeasureReport with Resource implements _$MeasureReport {
+class MeasureReport with Resource, _$MeasureReport {
   MeasureReport._();
   factory MeasureReport({
     @Default(Stu3ResourceType.MeasureReport)
     @JsonKey(unknownEnumValue: Stu3ResourceType.MeasureReport)
         Stu3ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier identifier,
-    MeasureReportStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    MeasureReportType type,
-    @JsonKey(name: '_type') Element typeElement,
-    @required Reference measure,
-    Reference patient,
-    Date date,
-    @JsonKey(name: '_date') Element dateElement,
-    Reference reportingOrganization,
-    @required Period period,
-    List<MeasureReportGroup> group,
-    Reference evaluatedResources,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? identifier,
+    MeasureReportStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    MeasureReportType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    required Reference measure,
+    Reference? patient,
+    Date? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    Reference? reportingOrganization,
+    required Period period,
+    List<MeasureReportGroup>? group,
+    Reference? evaluatedResources,
   }) = _MeasureReport;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureReport.fromYaml(dynamic yaml) => yaml is String
-      ? MeasureReport.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MeasureReport.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasureReport.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? MeasureReport.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MeasureReport cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReport.fromJson(Map<String, dynamic> json) =>
@@ -264,25 +290,29 @@ abstract class MeasureReport with Resource implements _$MeasureReport {
 }
 
 @freezed
-abstract class MeasureReportGroup implements _$MeasureReportGroup {
+class MeasureReportGroup with _$MeasureReportGroup {
   MeasureReportGroup._();
   factory MeasureReportGroup({
-    @required Identifier identifier,
-    List<MeasureReportPopulation> population,
-    Decimal measureScore,
-    @JsonKey(name: '_measureScore') Element measureScoreElement,
-    List<MeasureReportStratifier> stratifier,
+    required Identifier identifier,
+    List<MeasureReportPopulation>? population,
+    Decimal? measureScore,
+    @JsonKey(name: '_measureScore') Element? measureScoreElement,
+    List<MeasureReportStratifier>? stratifier,
   }) = _MeasureReportGroup;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureReportGroup.fromYaml(dynamic yaml) => yaml is String
-      ? MeasureReportGroup.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MeasureReportGroup.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasureReportGroup.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? MeasureReportGroup.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MeasureReportGroup cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportGroup.fromJson(Map<String, dynamic> json) =>
@@ -290,25 +320,29 @@ abstract class MeasureReportGroup implements _$MeasureReportGroup {
 }
 
 @freezed
-abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
+class MeasureReportPopulation with _$MeasureReportPopulation {
   MeasureReportPopulation._();
   factory MeasureReportPopulation({
-    Identifier identifier,
-    CodeableConcept code,
-    Decimal count,
-    @JsonKey(name: '_count') Element countElement,
-    Reference patients,
+    Identifier? identifier,
+    CodeableConcept? code,
+    Decimal? count,
+    @JsonKey(name: '_count') Element? countElement,
+    Reference? patients,
   }) = _MeasureReportPopulation;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureReportPopulation.fromYaml(dynamic yaml) => yaml is String
-      ? MeasureReportPopulation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MeasureReportPopulation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasureReportPopulation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? MeasureReportPopulation.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MeasureReportPopulation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportPopulation.fromJson(Map<String, dynamic> json) =>
@@ -316,22 +350,26 @@ abstract class MeasureReportPopulation implements _$MeasureReportPopulation {
 }
 
 @freezed
-abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
+class MeasureReportStratifier with _$MeasureReportStratifier {
   MeasureReportStratifier._();
   factory MeasureReportStratifier({
-    Identifier identifier,
-    List<MeasureReportStratum> stratum,
+    Identifier? identifier,
+    List<MeasureReportStratum>? stratum,
   }) = _MeasureReportStratifier;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureReportStratifier.fromYaml(dynamic yaml) => yaml is String
-      ? MeasureReportStratifier.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MeasureReportStratifier.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasureReportStratifier.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? MeasureReportStratifier.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MeasureReportStratifier cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportStratifier.fromJson(Map<String, dynamic> json) =>
@@ -339,25 +377,29 @@ abstract class MeasureReportStratifier implements _$MeasureReportStratifier {
 }
 
 @freezed
-abstract class MeasureReportStratum implements _$MeasureReportStratum {
+class MeasureReportStratum with _$MeasureReportStratum {
   MeasureReportStratum._();
   factory MeasureReportStratum({
-    String value,
-    @JsonKey(name: '_value') Element valueElement,
-    List<MeasureReportPopulation1> population,
-    Decimal measureScore,
-    @JsonKey(name: '_measureScore') Element measureScoreElement,
+    String? value,
+    @JsonKey(name: '_value') Element? valueElement,
+    List<MeasureReportPopulation1>? population,
+    Decimal? measureScore,
+    @JsonKey(name: '_measureScore') Element? measureScoreElement,
   }) = _MeasureReportStratum;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureReportStratum.fromYaml(dynamic yaml) => yaml is String
-      ? MeasureReportStratum.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MeasureReportStratum.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasureReportStratum.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? MeasureReportStratum.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MeasureReportStratum cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
@@ -365,26 +407,29 @@ abstract class MeasureReportStratum implements _$MeasureReportStratum {
 }
 
 @freezed
-abstract class MeasureReportPopulation1 implements _$MeasureReportPopulation1 {
+class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   MeasureReportPopulation1._();
   factory MeasureReportPopulation1({
-    Identifier identifier,
-    CodeableConcept code,
-    Decimal count,
-    @JsonKey(name: '_count') Element countElement,
-    Reference patients,
+    Identifier? identifier,
+    CodeableConcept? code,
+    Decimal? count,
+    @JsonKey(name: '_count') Element? countElement,
+    Reference? patients,
   }) = _MeasureReportPopulation1;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory MeasureReportPopulation1.fromYaml(dynamic yaml) => yaml is String
       ? MeasureReportPopulation1.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MeasureReportPopulation1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? MeasureReportPopulation1.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MeasureReportPopulation1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =>

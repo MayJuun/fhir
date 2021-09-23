@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'payment.dart';
 
@@ -8,6 +9,10 @@ part of 'payment.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 PaymentNotice _$PaymentNoticeFromJson(Map<String, dynamic> json) {
   return _PaymentNotice.fromJson(json);
 }
@@ -16,44 +21,40 @@ PaymentNotice _$PaymentNoticeFromJson(Map<String, dynamic> json) {
 class _$PaymentNoticeTearOff {
   const _$PaymentNoticeTearOff();
 
-// ignore: unused_element
   _PaymentNotice call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
           R4ResourceType resourceType = R4ResourceType.PaymentNotice,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      Reference request,
-      Reference response,
-      FhirDateTime created,
+          Element? statusElement,
+      Reference? request,
+      Reference? response,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference provider,
-      @required
-          Reference payment,
-      Date paymentDate,
+          Element? createdElement,
+      Reference? provider,
+      required Reference payment,
+      Date? paymentDate,
       @JsonKey(name: '_paymentDate')
-          Element paymentDateElement,
-      Reference payee,
-      @required
-          Reference recipient,
-      @required
-          Money amount,
-      CodeableConcept paymentStatus}) {
+          Element? paymentDateElement,
+      Reference? payee,
+      required Reference recipient,
+      required Money amount,
+      CodeableConcept? paymentStatus}) {
     return _PaymentNotice(
       resourceType: resourceType,
       id: id,
@@ -84,55 +85,55 @@ class _$PaymentNoticeTearOff {
     );
   }
 
-// ignore: unused_element
   PaymentNotice fromJson(Map<String, Object> json) {
     return PaymentNotice.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PaymentNotice = _$PaymentNoticeTearOff();
 
 /// @nodoc
 mixin _$PaymentNotice {
   @JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
-  R4ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
-  Code get status;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
-  Element get statusElement;
-  Reference get request;
-  Reference get response;
-  FhirDateTime get created;
+  Element? get statusElement => throw _privateConstructorUsedError;
+  Reference? get request => throw _privateConstructorUsedError;
+  Reference? get response => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
-  Element get createdElement;
-  Reference get provider;
-  Reference get payment;
-  Date get paymentDate;
+  Element? get createdElement => throw _privateConstructorUsedError;
+  Reference? get provider => throw _privateConstructorUsedError;
+  Reference get payment => throw _privateConstructorUsedError;
+  Date? get paymentDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_paymentDate')
-  Element get paymentDateElement;
-  Reference get payee;
-  Reference get recipient;
-  Money get amount;
-  CodeableConcept get paymentStatus;
+  Element? get paymentDateElement => throw _privateConstructorUsedError;
+  Reference? get payee => throw _privateConstructorUsedError;
+  Reference get recipient => throw _privateConstructorUsedError;
+  Money get amount => throw _privateConstructorUsedError;
+  CodeableConcept? get paymentStatus => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PaymentNoticeCopyWith<PaymentNotice> get copyWith;
+  $PaymentNoticeCopyWith<PaymentNotice> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -143,53 +144,53 @@ abstract class $PaymentNoticeCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      Reference request,
-      Reference response,
-      FhirDateTime created,
+          Element? statusElement,
+      Reference? request,
+      Reference? response,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference provider,
+          Element? createdElement,
+      Reference? provider,
       Reference payment,
-      Date paymentDate,
+      Date? paymentDate,
       @JsonKey(name: '_paymentDate')
-          Element paymentDateElement,
-      Reference payee,
+          Element? paymentDateElement,
+      Reference? payee,
       Reference recipient,
       Money amount,
-      CodeableConcept paymentStatus});
+      CodeableConcept? paymentStatus});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get statusElement;
-  $ReferenceCopyWith<$Res> get request;
-  $ReferenceCopyWith<$Res> get response;
-  $ElementCopyWith<$Res> get createdElement;
-  $ReferenceCopyWith<$Res> get provider;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get statusElement;
+  $ReferenceCopyWith<$Res>? get request;
+  $ReferenceCopyWith<$Res>? get response;
+  $ElementCopyWith<$Res>? get createdElement;
+  $ReferenceCopyWith<$Res>? get provider;
   $ReferenceCopyWith<$Res> get payment;
-  $ElementCopyWith<$Res> get paymentDateElement;
-  $ReferenceCopyWith<$Res> get payee;
+  $ElementCopyWith<$Res>? get paymentDateElement;
+  $ReferenceCopyWith<$Res>? get payee;
   $ReferenceCopyWith<$Res> get recipient;
   $MoneyCopyWith<$Res> get amount;
-  $CodeableConceptCopyWith<$Res> get paymentStatus;
+  $CodeableConceptCopyWith<$Res>? get paymentStatus;
 }
 
 /// @nodoc
@@ -203,213 +204,271 @@ class _$PaymentNoticeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object request = freezed,
-    Object response = freezed,
-    Object created = freezed,
-    Object createdElement = freezed,
-    Object provider = freezed,
-    Object payment = freezed,
-    Object paymentDate = freezed,
-    Object paymentDateElement = freezed,
-    Object payee = freezed,
-    Object recipient = freezed,
-    Object amount = freezed,
-    Object paymentStatus = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? request = freezed,
+    Object? response = freezed,
+    Object? created = freezed,
+    Object? createdElement = freezed,
+    Object? provider = freezed,
+    Object? payment = freezed,
+    Object? paymentDate = freezed,
+    Object? paymentDateElement = freezed,
+    Object? payee = freezed,
+    Object? recipient = freezed,
+    Object? amount = freezed,
+    Object? paymentStatus = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      request: request == freezed ? _value.request : request as Reference,
-      response: response == freezed ? _value.response : response as Reference,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      request: request == freezed
+          ? _value.request
+          : request // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      response: response == freezed
+          ? _value.response
+          : response // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      created: created == freezed
+          ? _value.created
+          : created // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
-          : createdElement as Element,
-      provider: provider == freezed ? _value.provider : provider as Reference,
-      payment: payment == freezed ? _value.payment : payment as Reference,
-      paymentDate:
-          paymentDate == freezed ? _value.paymentDate : paymentDate as Date,
+          : createdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      provider: provider == freezed
+          ? _value.provider
+          : provider // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      payment: payment == freezed
+          ? _value.payment
+          : payment // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      paymentDate: paymentDate == freezed
+          ? _value.paymentDate
+          : paymentDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
       paymentDateElement: paymentDateElement == freezed
           ? _value.paymentDateElement
-          : paymentDateElement as Element,
-      payee: payee == freezed ? _value.payee : payee as Reference,
-      recipient:
-          recipient == freezed ? _value.recipient : recipient as Reference,
-      amount: amount == freezed ? _value.amount : amount as Money,
+          : paymentDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      payee: payee == freezed
+          ? _value.payee
+          : payee // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as Money,
       paymentStatus: paymentStatus == freezed
           ? _value.paymentStatus
-          : paymentStatus as CodeableConcept,
+          : paymentStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get statusElement {
+  $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
       return _then(_value.copyWith(statusElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get request {
+  $ReferenceCopyWith<$Res>? get request {
     if (_value.request == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.request, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.request!, (value) {
       return _then(_value.copyWith(request: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get response {
+  $ReferenceCopyWith<$Res>? get response {
     if (_value.response == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.response, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.response!, (value) {
       return _then(_value.copyWith(response: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get createdElement {
+  $ElementCopyWith<$Res>? get createdElement {
     if (_value.createdElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.createdElement!, (value) {
       return _then(_value.copyWith(createdElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get provider {
+  $ReferenceCopyWith<$Res>? get provider {
     if (_value.provider == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.provider, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.provider!, (value) {
       return _then(_value.copyWith(provider: value));
     });
   }
 
   @override
   $ReferenceCopyWith<$Res> get payment {
-    if (_value.payment == null) {
-      return null;
-    }
     return $ReferenceCopyWith<$Res>(_value.payment, (value) {
       return _then(_value.copyWith(payment: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get paymentDateElement {
+  $ElementCopyWith<$Res>? get paymentDateElement {
     if (_value.paymentDateElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.paymentDateElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.paymentDateElement!, (value) {
       return _then(_value.copyWith(paymentDateElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get payee {
+  $ReferenceCopyWith<$Res>? get payee {
     if (_value.payee == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.payee, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.payee!, (value) {
       return _then(_value.copyWith(payee: value));
     });
   }
 
   @override
   $ReferenceCopyWith<$Res> get recipient {
-    if (_value.recipient == null) {
-      return null;
-    }
     return $ReferenceCopyWith<$Res>(_value.recipient, (value) {
       return _then(_value.copyWith(recipient: value));
     });
@@ -417,20 +476,18 @@ class _$PaymentNoticeCopyWithImpl<$Res>
 
   @override
   $MoneyCopyWith<$Res> get amount {
-    if (_value.amount == null) {
-      return null;
-    }
     return $MoneyCopyWith<$Res>(_value.amount, (value) {
       return _then(_value.copyWith(amount: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get paymentStatus {
+  $CodeableConceptCopyWith<$Res>? get paymentStatus {
     if (_value.paymentStatus == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.paymentStatus, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.paymentStatus!, (value) {
       return _then(_value.copyWith(paymentStatus: value));
     });
   }
@@ -446,68 +503,68 @@ abstract class _$PaymentNoticeCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      Reference request,
-      Reference response,
-      FhirDateTime created,
+          Element? statusElement,
+      Reference? request,
+      Reference? response,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference provider,
+          Element? createdElement,
+      Reference? provider,
       Reference payment,
-      Date paymentDate,
+      Date? paymentDate,
       @JsonKey(name: '_paymentDate')
-          Element paymentDateElement,
-      Reference payee,
+          Element? paymentDateElement,
+      Reference? payee,
       Reference recipient,
       Money amount,
-      CodeableConcept paymentStatus});
+      CodeableConcept? paymentStatus});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
-  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res>? get statusElement;
   @override
-  $ReferenceCopyWith<$Res> get request;
+  $ReferenceCopyWith<$Res>? get request;
   @override
-  $ReferenceCopyWith<$Res> get response;
+  $ReferenceCopyWith<$Res>? get response;
   @override
-  $ElementCopyWith<$Res> get createdElement;
+  $ElementCopyWith<$Res>? get createdElement;
   @override
-  $ReferenceCopyWith<$Res> get provider;
+  $ReferenceCopyWith<$Res>? get provider;
   @override
   $ReferenceCopyWith<$Res> get payment;
   @override
-  $ElementCopyWith<$Res> get paymentDateElement;
+  $ElementCopyWith<$Res>? get paymentDateElement;
   @override
-  $ReferenceCopyWith<$Res> get payee;
+  $ReferenceCopyWith<$Res>? get payee;
   @override
   $ReferenceCopyWith<$Res> get recipient;
   @override
   $MoneyCopyWith<$Res> get amount;
   @override
-  $CodeableConceptCopyWith<$Res> get paymentStatus;
+  $CodeableConceptCopyWith<$Res>? get paymentStatus;
 }
 
 /// @nodoc
@@ -523,92 +580,144 @@ class __$PaymentNoticeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object request = freezed,
-    Object response = freezed,
-    Object created = freezed,
-    Object createdElement = freezed,
-    Object provider = freezed,
-    Object payment = freezed,
-    Object paymentDate = freezed,
-    Object paymentDateElement = freezed,
-    Object payee = freezed,
-    Object recipient = freezed,
-    Object amount = freezed,
-    Object paymentStatus = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? request = freezed,
+    Object? response = freezed,
+    Object? created = freezed,
+    Object? createdElement = freezed,
+    Object? provider = freezed,
+    Object? payment = freezed,
+    Object? paymentDate = freezed,
+    Object? paymentDateElement = freezed,
+    Object? payee = freezed,
+    Object? recipient = freezed,
+    Object? amount = freezed,
+    Object? paymentStatus = freezed,
   }) {
     return _then(_PaymentNotice(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      request: request == freezed ? _value.request : request as Reference,
-      response: response == freezed ? _value.response : response as Reference,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      request: request == freezed
+          ? _value.request
+          : request // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      response: response == freezed
+          ? _value.response
+          : response // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      created: created == freezed
+          ? _value.created
+          : created // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
-          : createdElement as Element,
-      provider: provider == freezed ? _value.provider : provider as Reference,
-      payment: payment == freezed ? _value.payment : payment as Reference,
-      paymentDate:
-          paymentDate == freezed ? _value.paymentDate : paymentDate as Date,
+          : createdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      provider: provider == freezed
+          ? _value.provider
+          : provider // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      payment: payment == freezed
+          ? _value.payment
+          : payment // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      paymentDate: paymentDate == freezed
+          ? _value.paymentDate
+          : paymentDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
       paymentDateElement: paymentDateElement == freezed
           ? _value.paymentDateElement
-          : paymentDateElement as Element,
-      payee: payee == freezed ? _value.payee : payee as Reference,
-      recipient:
-          recipient == freezed ? _value.recipient : recipient as Reference,
-      amount: amount == freezed ? _value.amount : amount as Money,
+          : paymentDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      payee: payee == freezed
+          ? _value.payee
+          : payee // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as Money,
       paymentStatus: paymentStatus == freezed
           ? _value.paymentStatus
-          : paymentStatus as CodeableConcept,
+          : paymentStatus // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PaymentNotice extends _PaymentNotice {
   _$_PaymentNotice(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
@@ -636,85 +745,78 @@ class _$_PaymentNotice extends _PaymentNotice {
       @JsonKey(name: '_created')
           this.createdElement,
       this.provider,
-      @required
-          this.payment,
+      required this.payment,
       this.paymentDate,
       @JsonKey(name: '_paymentDate')
           this.paymentDateElement,
       this.payee,
-      @required
-          this.recipient,
-      @required
-          this.amount,
+      required this.recipient,
+      required this.amount,
       this.paymentStatus})
-      : assert(resourceType != null),
-        assert(payment != null),
-        assert(recipient != null),
-        assert(amount != null),
-        super._();
+      : super._();
 
   factory _$_PaymentNotice.fromJson(Map<String, dynamic> json) =>
-      _$_$_PaymentNoticeFromJson(json);
+      _$$_PaymentNoticeFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
   final R4ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<Identifier>? identifier;
   @override
-  final Code status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
-  final Element statusElement;
+  final Element? statusElement;
   @override
-  final Reference request;
+  final Reference? request;
   @override
-  final Reference response;
+  final Reference? response;
   @override
-  final FhirDateTime created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
-  final Element createdElement;
+  final Element? createdElement;
   @override
-  final Reference provider;
+  final Reference? provider;
   @override
   final Reference payment;
   @override
-  final Date paymentDate;
+  final Date? paymentDate;
   @override
   @JsonKey(name: '_paymentDate')
-  final Element paymentDateElement;
+  final Element? paymentDateElement;
   @override
-  final Reference payee;
+  final Reference? payee;
   @override
   final Reference recipient;
   @override
   final Money amount;
   @override
-  final CodeableConcept paymentStatus;
+  final CodeableConcept? paymentStatus;
 
   @override
   String toString() {
@@ -833,115 +935,114 @@ class _$_PaymentNotice extends _PaymentNotice {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PaymentNoticeToJson(this);
+    return _$$_PaymentNoticeToJson(this);
   }
 }
 
 abstract class _PaymentNotice extends PaymentNotice {
-  _PaymentNotice._() : super._();
   factory _PaymentNotice(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      Reference request,
-      Reference response,
-      FhirDateTime created,
+          Element? statusElement,
+      Reference? request,
+      Reference? response,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference provider,
-      @required
-          Reference payment,
-      Date paymentDate,
+          Element? createdElement,
+      Reference? provider,
+      required Reference payment,
+      Date? paymentDate,
       @JsonKey(name: '_paymentDate')
-          Element paymentDateElement,
-      Reference payee,
-      @required
-          Reference recipient,
-      @required
-          Money amount,
-      CodeableConcept paymentStatus}) = _$_PaymentNotice;
+          Element? paymentDateElement,
+      Reference? payee,
+      required Reference recipient,
+      required Money amount,
+      CodeableConcept? paymentStatus}) = _$_PaymentNotice;
+  _PaymentNotice._() : super._();
 
   factory _PaymentNotice.fromJson(Map<String, dynamic> json) =
       _$_PaymentNotice.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.PaymentNotice)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier> get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Code get status;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Reference get request;
+  Reference? get request => throw _privateConstructorUsedError;
   @override
-  Reference get response;
+  Reference? get response => throw _privateConstructorUsedError;
   @override
-  FhirDateTime get created;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
-  Element get createdElement;
+  Element? get createdElement => throw _privateConstructorUsedError;
   @override
-  Reference get provider;
+  Reference? get provider => throw _privateConstructorUsedError;
   @override
-  Reference get payment;
+  Reference get payment => throw _privateConstructorUsedError;
   @override
-  Date get paymentDate;
+  Date? get paymentDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_paymentDate')
-  Element get paymentDateElement;
+  Element? get paymentDateElement => throw _privateConstructorUsedError;
   @override
-  Reference get payee;
+  Reference? get payee => throw _privateConstructorUsedError;
   @override
-  Reference get recipient;
+  Reference get recipient => throw _privateConstructorUsedError;
   @override
-  Money get amount;
+  Money get amount => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get paymentStatus;
+  CodeableConcept? get paymentStatus => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PaymentNoticeCopyWith<_PaymentNotice> get copyWith;
+  _$PaymentNoticeCopyWith<_PaymentNotice> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PaymentReconciliation _$PaymentReconciliationFromJson(
@@ -953,50 +1054,48 @@ PaymentReconciliation _$PaymentReconciliationFromJson(
 class _$PaymentReconciliationTearOff {
   const _$PaymentReconciliationTearOff();
 
-// ignore: unused_element
   _PaymentReconciliation call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
           R4ResourceType resourceType = R4ResourceType.PaymentReconciliation,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      Period period,
-      FhirDateTime created,
+          Element? statusElement,
+      Period? period,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference paymentIssuer,
-      Reference request,
-      Reference requestor,
+          Element? createdElement,
+      Reference? paymentIssuer,
+      Reference? request,
+      Reference? requestor,
       @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
-          PaymentReconciliationOutcome outcome,
+          PaymentReconciliationOutcome? outcome,
       @JsonKey(name: '_outcome')
-          Element outcomeElement,
-      String disposition,
+          Element? outcomeElement,
+      String? disposition,
       @JsonKey(name: '_disposition')
-          Element dispositionElement,
-      Date paymentDate,
+          Element? dispositionElement,
+      Date? paymentDate,
       @JsonKey(name: '_paymentDate')
-          Element paymentDateElement,
-      @required
-          Money paymentAmount,
-      Identifier paymentIdentifier,
-      List<PaymentReconciliationDetail> detail,
-      CodeableConcept formCode,
-      List<PaymentReconciliationProcessNote> processNote}) {
+          Element? paymentDateElement,
+      required Money paymentAmount,
+      Identifier? paymentIdentifier,
+      List<PaymentReconciliationDetail>? detail,
+      CodeableConcept? formCode,
+      List<PaymentReconciliationProcessNote>? processNote}) {
     return _PaymentReconciliation(
       resourceType: resourceType,
       id: id,
@@ -1032,63 +1131,66 @@ class _$PaymentReconciliationTearOff {
     );
   }
 
-// ignore: unused_element
   PaymentReconciliation fromJson(Map<String, Object> json) {
     return PaymentReconciliation.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PaymentReconciliation = _$PaymentReconciliationTearOff();
 
 /// @nodoc
 mixin _$PaymentReconciliation {
   @JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
-  R4ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
-  Code get status;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
-  Element get statusElement;
-  Period get period;
-  FhirDateTime get created;
+  Element? get statusElement => throw _privateConstructorUsedError;
+  Period? get period => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
-  Element get createdElement;
-  Reference get paymentIssuer;
-  Reference get request;
-  Reference get requestor;
+  Element? get createdElement => throw _privateConstructorUsedError;
+  Reference? get paymentIssuer => throw _privateConstructorUsedError;
+  Reference? get request => throw _privateConstructorUsedError;
+  Reference? get requestor => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
-  PaymentReconciliationOutcome get outcome;
+  PaymentReconciliationOutcome? get outcome =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_outcome')
-  Element get outcomeElement;
-  String get disposition;
+  Element? get outcomeElement => throw _privateConstructorUsedError;
+  String? get disposition => throw _privateConstructorUsedError;
   @JsonKey(name: '_disposition')
-  Element get dispositionElement;
-  Date get paymentDate;
+  Element? get dispositionElement => throw _privateConstructorUsedError;
+  Date? get paymentDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_paymentDate')
-  Element get paymentDateElement;
-  Money get paymentAmount;
-  Identifier get paymentIdentifier;
-  List<PaymentReconciliationDetail> get detail;
-  CodeableConcept get formCode;
-  List<PaymentReconciliationProcessNote> get processNote;
+  Element? get paymentDateElement => throw _privateConstructorUsedError;
+  Money get paymentAmount => throw _privateConstructorUsedError;
+  Identifier? get paymentIdentifier => throw _privateConstructorUsedError;
+  List<PaymentReconciliationDetail>? get detail =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get formCode => throw _privateConstructorUsedError;
+  List<PaymentReconciliationProcessNote>? get processNote =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PaymentReconciliationCopyWith<PaymentReconciliation> get copyWith;
+  $PaymentReconciliationCopyWith<PaymentReconciliation> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1099,62 +1201,62 @@ abstract class $PaymentReconciliationCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      Period period,
-      FhirDateTime created,
+          Element? statusElement,
+      Period? period,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference paymentIssuer,
-      Reference request,
-      Reference requestor,
+          Element? createdElement,
+      Reference? paymentIssuer,
+      Reference? request,
+      Reference? requestor,
       @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
-          PaymentReconciliationOutcome outcome,
+          PaymentReconciliationOutcome? outcome,
       @JsonKey(name: '_outcome')
-          Element outcomeElement,
-      String disposition,
+          Element? outcomeElement,
+      String? disposition,
       @JsonKey(name: '_disposition')
-          Element dispositionElement,
-      Date paymentDate,
+          Element? dispositionElement,
+      Date? paymentDate,
       @JsonKey(name: '_paymentDate')
-          Element paymentDateElement,
+          Element? paymentDateElement,
       Money paymentAmount,
-      Identifier paymentIdentifier,
-      List<PaymentReconciliationDetail> detail,
-      CodeableConcept formCode,
-      List<PaymentReconciliationProcessNote> processNote});
+      Identifier? paymentIdentifier,
+      List<PaymentReconciliationDetail>? detail,
+      CodeableConcept? formCode,
+      List<PaymentReconciliationProcessNote>? processNote});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get statusElement;
-  $PeriodCopyWith<$Res> get period;
-  $ElementCopyWith<$Res> get createdElement;
-  $ReferenceCopyWith<$Res> get paymentIssuer;
-  $ReferenceCopyWith<$Res> get request;
-  $ReferenceCopyWith<$Res> get requestor;
-  $ElementCopyWith<$Res> get outcomeElement;
-  $ElementCopyWith<$Res> get dispositionElement;
-  $ElementCopyWith<$Res> get paymentDateElement;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get statusElement;
+  $PeriodCopyWith<$Res>? get period;
+  $ElementCopyWith<$Res>? get createdElement;
+  $ReferenceCopyWith<$Res>? get paymentIssuer;
+  $ReferenceCopyWith<$Res>? get request;
+  $ReferenceCopyWith<$Res>? get requestor;
+  $ElementCopyWith<$Res>? get outcomeElement;
+  $ElementCopyWith<$Res>? get dispositionElement;
+  $ElementCopyWith<$Res>? get paymentDateElement;
   $MoneyCopyWith<$Res> get paymentAmount;
-  $IdentifierCopyWith<$Res> get paymentIdentifier;
-  $CodeableConceptCopyWith<$Res> get formCode;
+  $IdentifierCopyWith<$Res>? get paymentIdentifier;
+  $CodeableConceptCopyWith<$Res>? get formCode;
 }
 
 /// @nodoc
@@ -1168,270 +1270,334 @@ class _$PaymentReconciliationCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object period = freezed,
-    Object created = freezed,
-    Object createdElement = freezed,
-    Object paymentIssuer = freezed,
-    Object request = freezed,
-    Object requestor = freezed,
-    Object outcome = freezed,
-    Object outcomeElement = freezed,
-    Object disposition = freezed,
-    Object dispositionElement = freezed,
-    Object paymentDate = freezed,
-    Object paymentDateElement = freezed,
-    Object paymentAmount = freezed,
-    Object paymentIdentifier = freezed,
-    Object detail = freezed,
-    Object formCode = freezed,
-    Object processNote = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? period = freezed,
+    Object? created = freezed,
+    Object? createdElement = freezed,
+    Object? paymentIssuer = freezed,
+    Object? request = freezed,
+    Object? requestor = freezed,
+    Object? outcome = freezed,
+    Object? outcomeElement = freezed,
+    Object? disposition = freezed,
+    Object? dispositionElement = freezed,
+    Object? paymentDate = freezed,
+    Object? paymentDateElement = freezed,
+    Object? paymentAmount = freezed,
+    Object? paymentIdentifier = freezed,
+    Object? detail = freezed,
+    Object? formCode = freezed,
+    Object? processNote = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      period: period == freezed ? _value.period : period as Period,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      created: created == freezed
+          ? _value.created
+          : created // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
-          : createdElement as Element,
+          : createdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       paymentIssuer: paymentIssuer == freezed
           ? _value.paymentIssuer
-          : paymentIssuer as Reference,
-      request: request == freezed ? _value.request : request as Reference,
-      requestor:
-          requestor == freezed ? _value.requestor : requestor as Reference,
+          : paymentIssuer // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      request: request == freezed
+          ? _value.request
+          : request // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      requestor: requestor == freezed
+          ? _value.requestor
+          : requestor // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       outcome: outcome == freezed
           ? _value.outcome
-          : outcome as PaymentReconciliationOutcome,
+          : outcome // ignore: cast_nullable_to_non_nullable
+              as PaymentReconciliationOutcome?,
       outcomeElement: outcomeElement == freezed
           ? _value.outcomeElement
-          : outcomeElement as Element,
-      disposition:
-          disposition == freezed ? _value.disposition : disposition as String,
+          : outcomeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      disposition: disposition == freezed
+          ? _value.disposition
+          : disposition // ignore: cast_nullable_to_non_nullable
+              as String?,
       dispositionElement: dispositionElement == freezed
           ? _value.dispositionElement
-          : dispositionElement as Element,
-      paymentDate:
-          paymentDate == freezed ? _value.paymentDate : paymentDate as Date,
+          : dispositionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      paymentDate: paymentDate == freezed
+          ? _value.paymentDate
+          : paymentDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
       paymentDateElement: paymentDateElement == freezed
           ? _value.paymentDateElement
-          : paymentDateElement as Element,
+          : paymentDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       paymentAmount: paymentAmount == freezed
           ? _value.paymentAmount
-          : paymentAmount as Money,
+          : paymentAmount // ignore: cast_nullable_to_non_nullable
+              as Money,
       paymentIdentifier: paymentIdentifier == freezed
           ? _value.paymentIdentifier
-          : paymentIdentifier as Identifier,
+          : paymentIdentifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
       detail: detail == freezed
           ? _value.detail
-          : detail as List<PaymentReconciliationDetail>,
-      formCode:
-          formCode == freezed ? _value.formCode : formCode as CodeableConcept,
+          : detail // ignore: cast_nullable_to_non_nullable
+              as List<PaymentReconciliationDetail>?,
+      formCode: formCode == freezed
+          ? _value.formCode
+          : formCode // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       processNote: processNote == freezed
           ? _value.processNote
-          : processNote as List<PaymentReconciliationProcessNote>,
+          : processNote // ignore: cast_nullable_to_non_nullable
+              as List<PaymentReconciliationProcessNote>?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get statusElement {
+  $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
       return _then(_value.copyWith(statusElement: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get period {
+  $PeriodCopyWith<$Res>? get period {
     if (_value.period == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.period, (value) {
+
+    return $PeriodCopyWith<$Res>(_value.period!, (value) {
       return _then(_value.copyWith(period: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get createdElement {
+  $ElementCopyWith<$Res>? get createdElement {
     if (_value.createdElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.createdElement!, (value) {
       return _then(_value.copyWith(createdElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get paymentIssuer {
+  $ReferenceCopyWith<$Res>? get paymentIssuer {
     if (_value.paymentIssuer == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.paymentIssuer, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.paymentIssuer!, (value) {
       return _then(_value.copyWith(paymentIssuer: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get request {
+  $ReferenceCopyWith<$Res>? get request {
     if (_value.request == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.request, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.request!, (value) {
       return _then(_value.copyWith(request: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get requestor {
+  $ReferenceCopyWith<$Res>? get requestor {
     if (_value.requestor == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.requestor, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.requestor!, (value) {
       return _then(_value.copyWith(requestor: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get outcomeElement {
+  $ElementCopyWith<$Res>? get outcomeElement {
     if (_value.outcomeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.outcomeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.outcomeElement!, (value) {
       return _then(_value.copyWith(outcomeElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get dispositionElement {
+  $ElementCopyWith<$Res>? get dispositionElement {
     if (_value.dispositionElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.dispositionElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.dispositionElement!, (value) {
       return _then(_value.copyWith(dispositionElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get paymentDateElement {
+  $ElementCopyWith<$Res>? get paymentDateElement {
     if (_value.paymentDateElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.paymentDateElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.paymentDateElement!, (value) {
       return _then(_value.copyWith(paymentDateElement: value));
     });
   }
 
   @override
   $MoneyCopyWith<$Res> get paymentAmount {
-    if (_value.paymentAmount == null) {
-      return null;
-    }
     return $MoneyCopyWith<$Res>(_value.paymentAmount, (value) {
       return _then(_value.copyWith(paymentAmount: value));
     });
   }
 
   @override
-  $IdentifierCopyWith<$Res> get paymentIdentifier {
+  $IdentifierCopyWith<$Res>? get paymentIdentifier {
     if (_value.paymentIdentifier == null) {
       return null;
     }
-    return $IdentifierCopyWith<$Res>(_value.paymentIdentifier, (value) {
+
+    return $IdentifierCopyWith<$Res>(_value.paymentIdentifier!, (value) {
       return _then(_value.copyWith(paymentIdentifier: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get formCode {
+  $CodeableConceptCopyWith<$Res>? get formCode {
     if (_value.formCode == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.formCode, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.formCode!, (value) {
       return _then(_value.copyWith(formCode: value));
     });
   }
@@ -1447,78 +1613,78 @@ abstract class _$PaymentReconciliationCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      Period period,
-      FhirDateTime created,
+          Element? statusElement,
+      Period? period,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference paymentIssuer,
-      Reference request,
-      Reference requestor,
+          Element? createdElement,
+      Reference? paymentIssuer,
+      Reference? request,
+      Reference? requestor,
       @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
-          PaymentReconciliationOutcome outcome,
+          PaymentReconciliationOutcome? outcome,
       @JsonKey(name: '_outcome')
-          Element outcomeElement,
-      String disposition,
+          Element? outcomeElement,
+      String? disposition,
       @JsonKey(name: '_disposition')
-          Element dispositionElement,
-      Date paymentDate,
+          Element? dispositionElement,
+      Date? paymentDate,
       @JsonKey(name: '_paymentDate')
-          Element paymentDateElement,
+          Element? paymentDateElement,
       Money paymentAmount,
-      Identifier paymentIdentifier,
-      List<PaymentReconciliationDetail> detail,
-      CodeableConcept formCode,
-      List<PaymentReconciliationProcessNote> processNote});
+      Identifier? paymentIdentifier,
+      List<PaymentReconciliationDetail>? detail,
+      CodeableConcept? formCode,
+      List<PaymentReconciliationProcessNote>? processNote});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
-  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res>? get statusElement;
   @override
-  $PeriodCopyWith<$Res> get period;
+  $PeriodCopyWith<$Res>? get period;
   @override
-  $ElementCopyWith<$Res> get createdElement;
+  $ElementCopyWith<$Res>? get createdElement;
   @override
-  $ReferenceCopyWith<$Res> get paymentIssuer;
+  $ReferenceCopyWith<$Res>? get paymentIssuer;
   @override
-  $ReferenceCopyWith<$Res> get request;
+  $ReferenceCopyWith<$Res>? get request;
   @override
-  $ReferenceCopyWith<$Res> get requestor;
+  $ReferenceCopyWith<$Res>? get requestor;
   @override
-  $ElementCopyWith<$Res> get outcomeElement;
+  $ElementCopyWith<$Res>? get outcomeElement;
   @override
-  $ElementCopyWith<$Res> get dispositionElement;
+  $ElementCopyWith<$Res>? get dispositionElement;
   @override
-  $ElementCopyWith<$Res> get paymentDateElement;
+  $ElementCopyWith<$Res>? get paymentDateElement;
   @override
   $MoneyCopyWith<$Res> get paymentAmount;
   @override
-  $IdentifierCopyWith<$Res> get paymentIdentifier;
+  $IdentifierCopyWith<$Res>? get paymentIdentifier;
   @override
-  $CodeableConceptCopyWith<$Res> get formCode;
+  $CodeableConceptCopyWith<$Res>? get formCode;
 }
 
 /// @nodoc
@@ -1534,118 +1700,169 @@ class __$PaymentReconciliationCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object period = freezed,
-    Object created = freezed,
-    Object createdElement = freezed,
-    Object paymentIssuer = freezed,
-    Object request = freezed,
-    Object requestor = freezed,
-    Object outcome = freezed,
-    Object outcomeElement = freezed,
-    Object disposition = freezed,
-    Object dispositionElement = freezed,
-    Object paymentDate = freezed,
-    Object paymentDateElement = freezed,
-    Object paymentAmount = freezed,
-    Object paymentIdentifier = freezed,
-    Object detail = freezed,
-    Object formCode = freezed,
-    Object processNote = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? period = freezed,
+    Object? created = freezed,
+    Object? createdElement = freezed,
+    Object? paymentIssuer = freezed,
+    Object? request = freezed,
+    Object? requestor = freezed,
+    Object? outcome = freezed,
+    Object? outcomeElement = freezed,
+    Object? disposition = freezed,
+    Object? dispositionElement = freezed,
+    Object? paymentDate = freezed,
+    Object? paymentDateElement = freezed,
+    Object? paymentAmount = freezed,
+    Object? paymentIdentifier = freezed,
+    Object? detail = freezed,
+    Object? formCode = freezed,
+    Object? processNote = freezed,
   }) {
     return _then(_PaymentReconciliation(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      period: period == freezed ? _value.period : period as Period,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      created: created == freezed
+          ? _value.created
+          : created // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
-          : createdElement as Element,
+          : createdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       paymentIssuer: paymentIssuer == freezed
           ? _value.paymentIssuer
-          : paymentIssuer as Reference,
-      request: request == freezed ? _value.request : request as Reference,
-      requestor:
-          requestor == freezed ? _value.requestor : requestor as Reference,
+          : paymentIssuer // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      request: request == freezed
+          ? _value.request
+          : request // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      requestor: requestor == freezed
+          ? _value.requestor
+          : requestor // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       outcome: outcome == freezed
           ? _value.outcome
-          : outcome as PaymentReconciliationOutcome,
+          : outcome // ignore: cast_nullable_to_non_nullable
+              as PaymentReconciliationOutcome?,
       outcomeElement: outcomeElement == freezed
           ? _value.outcomeElement
-          : outcomeElement as Element,
-      disposition:
-          disposition == freezed ? _value.disposition : disposition as String,
+          : outcomeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      disposition: disposition == freezed
+          ? _value.disposition
+          : disposition // ignore: cast_nullable_to_non_nullable
+              as String?,
       dispositionElement: dispositionElement == freezed
           ? _value.dispositionElement
-          : dispositionElement as Element,
-      paymentDate:
-          paymentDate == freezed ? _value.paymentDate : paymentDate as Date,
+          : dispositionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      paymentDate: paymentDate == freezed
+          ? _value.paymentDate
+          : paymentDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
       paymentDateElement: paymentDateElement == freezed
           ? _value.paymentDateElement
-          : paymentDateElement as Element,
+          : paymentDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       paymentAmount: paymentAmount == freezed
           ? _value.paymentAmount
-          : paymentAmount as Money,
+          : paymentAmount // ignore: cast_nullable_to_non_nullable
+              as Money,
       paymentIdentifier: paymentIdentifier == freezed
           ? _value.paymentIdentifier
-          : paymentIdentifier as Identifier,
+          : paymentIdentifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
       detail: detail == freezed
           ? _value.detail
-          : detail as List<PaymentReconciliationDetail>,
-      formCode:
-          formCode == freezed ? _value.formCode : formCode as CodeableConcept,
+          : detail // ignore: cast_nullable_to_non_nullable
+              as List<PaymentReconciliationDetail>?,
+      formCode: formCode == freezed
+          ? _value.formCode
+          : formCode // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       processNote: processNote == freezed
           ? _value.processNote
-          : processNote as List<PaymentReconciliationProcessNote>,
+          : processNote // ignore: cast_nullable_to_non_nullable
+              as List<PaymentReconciliationProcessNote>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PaymentReconciliation extends _PaymentReconciliation {
   _$_PaymentReconciliation(
       {@JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
@@ -1684,91 +1901,88 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
       this.paymentDate,
       @JsonKey(name: '_paymentDate')
           this.paymentDateElement,
-      @required
-          this.paymentAmount,
+      required this.paymentAmount,
       this.paymentIdentifier,
       this.detail,
       this.formCode,
       this.processNote})
-      : assert(resourceType != null),
-        assert(paymentAmount != null),
-        super._();
+      : super._();
 
   factory _$_PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
-      _$_$_PaymentReconciliationFromJson(json);
+      _$$_PaymentReconciliationFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
   final R4ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<Identifier>? identifier;
   @override
-  final Code status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
-  final Element statusElement;
+  final Element? statusElement;
   @override
-  final Period period;
+  final Period? period;
   @override
-  final FhirDateTime created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
-  final Element createdElement;
+  final Element? createdElement;
   @override
-  final Reference paymentIssuer;
+  final Reference? paymentIssuer;
   @override
-  final Reference request;
+  final Reference? request;
   @override
-  final Reference requestor;
+  final Reference? requestor;
   @override
   @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
-  final PaymentReconciliationOutcome outcome;
+  final PaymentReconciliationOutcome? outcome;
   @override
   @JsonKey(name: '_outcome')
-  final Element outcomeElement;
+  final Element? outcomeElement;
   @override
-  final String disposition;
+  final String? disposition;
   @override
   @JsonKey(name: '_disposition')
-  final Element dispositionElement;
+  final Element? dispositionElement;
   @override
-  final Date paymentDate;
+  final Date? paymentDate;
   @override
   @JsonKey(name: '_paymentDate')
-  final Element paymentDateElement;
+  final Element? paymentDateElement;
   @override
   final Money paymentAmount;
   @override
-  final Identifier paymentIdentifier;
+  final Identifier? paymentIdentifier;
   @override
-  final List<PaymentReconciliationDetail> detail;
+  final List<PaymentReconciliationDetail>? detail;
   @override
-  final CodeableConcept formCode;
+  final CodeableConcept? formCode;
   @override
-  final List<PaymentReconciliationProcessNote> processNote;
+  final List<PaymentReconciliationProcessNote>? processNote;
 
   @override
   String toString() {
@@ -1898,135 +2112,139 @@ class _$_PaymentReconciliation extends _PaymentReconciliation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PaymentReconciliationToJson(this);
+    return _$$_PaymentReconciliationToJson(this);
   }
 }
 
 abstract class _PaymentReconciliation extends PaymentReconciliation {
-  _PaymentReconciliation._() : super._();
   factory _PaymentReconciliation(
           {@JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
               R4ResourceType resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
+          Id? id,
+          Meta? meta,
+          FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
-              Element implicitRulesElement,
-          Code language,
+              Element? implicitRulesElement,
+          Code? language,
           @JsonKey(name: '_language')
-              Element languageElement,
-          Narrative text,
-          List<Resource> contained,
+              Element? languageElement,
+          Narrative? text,
+          List<Resource>? contained,
           @JsonKey(name: 'extension')
-              List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          List<Identifier> identifier,
-          Code status,
+              List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          List<Identifier>? identifier,
+          Code? status,
           @JsonKey(name: '_status')
-              Element statusElement,
-          Period period,
-          FhirDateTime created,
+              Element? statusElement,
+          Period? period,
+          FhirDateTime? created,
           @JsonKey(name: '_created')
-              Element createdElement,
-          Reference paymentIssuer,
-          Reference request,
-          Reference requestor,
+              Element? createdElement,
+          Reference? paymentIssuer,
+          Reference? request,
+          Reference? requestor,
           @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
-              PaymentReconciliationOutcome outcome,
+              PaymentReconciliationOutcome? outcome,
           @JsonKey(name: '_outcome')
-              Element outcomeElement,
-          String disposition,
+              Element? outcomeElement,
+          String? disposition,
           @JsonKey(name: '_disposition')
-              Element dispositionElement,
-          Date paymentDate,
+              Element? dispositionElement,
+          Date? paymentDate,
           @JsonKey(name: '_paymentDate')
-              Element paymentDateElement,
-          @required
-              Money paymentAmount,
-          Identifier paymentIdentifier,
-          List<PaymentReconciliationDetail> detail,
-          CodeableConcept formCode,
-          List<PaymentReconciliationProcessNote> processNote}) =
+              Element? paymentDateElement,
+          required Money paymentAmount,
+          Identifier? paymentIdentifier,
+          List<PaymentReconciliationDetail>? detail,
+          CodeableConcept? formCode,
+          List<PaymentReconciliationProcessNote>? processNote}) =
       _$_PaymentReconciliation;
+  _PaymentReconciliation._() : super._();
 
   factory _PaymentReconciliation.fromJson(Map<String, dynamic> json) =
       _$_PaymentReconciliation.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.PaymentReconciliation)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier> get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Code get status;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Period get period;
+  Period? get period => throw _privateConstructorUsedError;
   @override
-  FhirDateTime get created;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
-  Element get createdElement;
+  Element? get createdElement => throw _privateConstructorUsedError;
   @override
-  Reference get paymentIssuer;
+  Reference? get paymentIssuer => throw _privateConstructorUsedError;
   @override
-  Reference get request;
+  Reference? get request => throw _privateConstructorUsedError;
   @override
-  Reference get requestor;
+  Reference? get requestor => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: PaymentReconciliationOutcome.unknown)
-  PaymentReconciliationOutcome get outcome;
+  PaymentReconciliationOutcome? get outcome =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_outcome')
-  Element get outcomeElement;
+  Element? get outcomeElement => throw _privateConstructorUsedError;
   @override
-  String get disposition;
+  String? get disposition => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_disposition')
-  Element get dispositionElement;
+  Element? get dispositionElement => throw _privateConstructorUsedError;
   @override
-  Date get paymentDate;
+  Date? get paymentDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_paymentDate')
-  Element get paymentDateElement;
+  Element? get paymentDateElement => throw _privateConstructorUsedError;
   @override
-  Money get paymentAmount;
+  Money get paymentAmount => throw _privateConstructorUsedError;
   @override
-  Identifier get paymentIdentifier;
+  Identifier? get paymentIdentifier => throw _privateConstructorUsedError;
   @override
-  List<PaymentReconciliationDetail> get detail;
+  List<PaymentReconciliationDetail>? get detail =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get formCode;
+  CodeableConcept? get formCode => throw _privateConstructorUsedError;
   @override
-  List<PaymentReconciliationProcessNote> get processNote;
+  List<PaymentReconciliationProcessNote>? get processNote =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PaymentReconciliationCopyWith<_PaymentReconciliation> get copyWith;
+  _$PaymentReconciliationCopyWith<_PaymentReconciliation> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PaymentReconciliationDetail _$PaymentReconciliationDetailFromJson(
@@ -2038,22 +2256,21 @@ PaymentReconciliationDetail _$PaymentReconciliationDetailFromJson(
 class _$PaymentReconciliationDetailTearOff {
   const _$PaymentReconciliationDetailTearOff();
 
-// ignore: unused_element
   _PaymentReconciliationDetail call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Identifier identifier,
-      Identifier predecessor,
-      @required CodeableConcept type,
-      Reference request,
-      Reference submitter,
-      Reference response,
-      Date date,
-      @JsonKey(name: '_date') Element dateElement,
-      Reference responsible,
-      Reference payee,
-      Money amount}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Identifier? identifier,
+      Identifier? predecessor,
+      required CodeableConcept type,
+      Reference? request,
+      Reference? submitter,
+      Reference? response,
+      Date? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      Reference? responsible,
+      Reference? payee,
+      Money? amount}) {
     return _PaymentReconciliationDetail(
       id: id,
       extension_: extension_,
@@ -2072,39 +2289,38 @@ class _$PaymentReconciliationDetailTearOff {
     );
   }
 
-// ignore: unused_element
   PaymentReconciliationDetail fromJson(Map<String, Object> json) {
     return PaymentReconciliationDetail.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PaymentReconciliationDetail = _$PaymentReconciliationDetailTearOff();
 
 /// @nodoc
 mixin _$PaymentReconciliationDetail {
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  Identifier get identifier;
-  Identifier get predecessor;
-  CodeableConcept get type;
-  Reference get request;
-  Reference get submitter;
-  Reference get response;
-  Date get date;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Identifier? get identifier => throw _privateConstructorUsedError;
+  Identifier? get predecessor => throw _privateConstructorUsedError;
+  CodeableConcept get type => throw _privateConstructorUsedError;
+  Reference? get request => throw _privateConstructorUsedError;
+  Reference? get submitter => throw _privateConstructorUsedError;
+  Reference? get response => throw _privateConstructorUsedError;
+  Date? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
-  Element get dateElement;
-  Reference get responsible;
-  Reference get payee;
-  Money get amount;
+  Element? get dateElement => throw _privateConstructorUsedError;
+  Reference? get responsible => throw _privateConstructorUsedError;
+  Reference? get payee => throw _privateConstructorUsedError;
+  Money? get amount => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $PaymentReconciliationDetailCopyWith<PaymentReconciliationDetail>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2114,31 +2330,31 @@ abstract class $PaymentReconciliationDetailCopyWith<$Res> {
           $Res Function(PaymentReconciliationDetail) then) =
       _$PaymentReconciliationDetailCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Identifier identifier,
-      Identifier predecessor,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Identifier? identifier,
+      Identifier? predecessor,
       CodeableConcept type,
-      Reference request,
-      Reference submitter,
-      Reference response,
-      Date date,
-      @JsonKey(name: '_date') Element dateElement,
-      Reference responsible,
-      Reference payee,
-      Money amount});
+      Reference? request,
+      Reference? submitter,
+      Reference? response,
+      Date? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      Reference? responsible,
+      Reference? payee,
+      Money? amount});
 
-  $IdentifierCopyWith<$Res> get identifier;
-  $IdentifierCopyWith<$Res> get predecessor;
+  $IdentifierCopyWith<$Res>? get identifier;
+  $IdentifierCopyWith<$Res>? get predecessor;
   $CodeableConceptCopyWith<$Res> get type;
-  $ReferenceCopyWith<$Res> get request;
-  $ReferenceCopyWith<$Res> get submitter;
-  $ReferenceCopyWith<$Res> get response;
-  $ElementCopyWith<$Res> get dateElement;
-  $ReferenceCopyWith<$Res> get responsible;
-  $ReferenceCopyWith<$Res> get payee;
-  $MoneyCopyWith<$Res> get amount;
+  $ReferenceCopyWith<$Res>? get request;
+  $ReferenceCopyWith<$Res>? get submitter;
+  $ReferenceCopyWith<$Res>? get response;
+  $ElementCopyWith<$Res>? get dateElement;
+  $ReferenceCopyWith<$Res>? get responsible;
+  $ReferenceCopyWith<$Res>? get payee;
+  $MoneyCopyWith<$Res>? get amount;
 }
 
 /// @nodoc
@@ -2152,146 +2368,183 @@ class _$PaymentReconciliationDetailCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object predecessor = freezed,
-    Object type = freezed,
-    Object request = freezed,
-    Object submitter = freezed,
-    Object response = freezed,
-    Object date = freezed,
-    Object dateElement = freezed,
-    Object responsible = freezed,
-    Object payee = freezed,
-    Object amount = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? predecessor = freezed,
+    Object? type = freezed,
+    Object? request = freezed,
+    Object? submitter = freezed,
+    Object? response = freezed,
+    Object? date = freezed,
+    Object? dateElement = freezed,
+    Object? responsible = freezed,
+    Object? payee = freezed,
+    Object? amount = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
       predecessor: predecessor == freezed
           ? _value.predecessor
-          : predecessor as Identifier,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      request: request == freezed ? _value.request : request as Reference,
-      submitter:
-          submitter == freezed ? _value.submitter : submitter as Reference,
-      response: response == freezed ? _value.response : response as Reference,
-      date: date == freezed ? _value.date : date as Date,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
+          : predecessor // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      request: request == freezed
+          ? _value.request
+          : request // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      submitter: submitter == freezed
+          ? _value.submitter
+          : submitter // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      response: response == freezed
+          ? _value.response
+          : response // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       responsible: responsible == freezed
           ? _value.responsible
-          : responsible as Reference,
-      payee: payee == freezed ? _value.payee : payee as Reference,
-      amount: amount == freezed ? _value.amount : amount as Money,
+          : responsible // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      payee: payee == freezed
+          ? _value.payee
+          : payee // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as Money?,
     ));
   }
 
   @override
-  $IdentifierCopyWith<$Res> get identifier {
+  $IdentifierCopyWith<$Res>? get identifier {
     if (_value.identifier == null) {
       return null;
     }
-    return $IdentifierCopyWith<$Res>(_value.identifier, (value) {
+
+    return $IdentifierCopyWith<$Res>(_value.identifier!, (value) {
       return _then(_value.copyWith(identifier: value));
     });
   }
 
   @override
-  $IdentifierCopyWith<$Res> get predecessor {
+  $IdentifierCopyWith<$Res>? get predecessor {
     if (_value.predecessor == null) {
       return null;
     }
-    return $IdentifierCopyWith<$Res>(_value.predecessor, (value) {
+
+    return $IdentifierCopyWith<$Res>(_value.predecessor!, (value) {
       return _then(_value.copyWith(predecessor: value));
     });
   }
 
   @override
   $CodeableConceptCopyWith<$Res> get type {
-    if (_value.type == null) {
-      return null;
-    }
     return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get request {
+  $ReferenceCopyWith<$Res>? get request {
     if (_value.request == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.request, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.request!, (value) {
       return _then(_value.copyWith(request: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get submitter {
+  $ReferenceCopyWith<$Res>? get submitter {
     if (_value.submitter == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.submitter, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.submitter!, (value) {
       return _then(_value.copyWith(submitter: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get response {
+  $ReferenceCopyWith<$Res>? get response {
     if (_value.response == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.response, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.response!, (value) {
       return _then(_value.copyWith(response: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get dateElement {
+  $ElementCopyWith<$Res>? get dateElement {
     if (_value.dateElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.dateElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.dateElement!, (value) {
       return _then(_value.copyWith(dateElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get responsible {
+  $ReferenceCopyWith<$Res>? get responsible {
     if (_value.responsible == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.responsible, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.responsible!, (value) {
       return _then(_value.copyWith(responsible: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get payee {
+  $ReferenceCopyWith<$Res>? get payee {
     if (_value.payee == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.payee, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.payee!, (value) {
       return _then(_value.copyWith(payee: value));
     });
   }
 
   @override
-  $MoneyCopyWith<$Res> get amount {
+  $MoneyCopyWith<$Res>? get amount {
     if (_value.amount == null) {
       return null;
     }
-    return $MoneyCopyWith<$Res>(_value.amount, (value) {
+
+    return $MoneyCopyWith<$Res>(_value.amount!, (value) {
       return _then(_value.copyWith(amount: value));
     });
   }
@@ -2306,41 +2559,41 @@ abstract class _$PaymentReconciliationDetailCopyWith<$Res>
       __$PaymentReconciliationDetailCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Identifier identifier,
-      Identifier predecessor,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Identifier? identifier,
+      Identifier? predecessor,
       CodeableConcept type,
-      Reference request,
-      Reference submitter,
-      Reference response,
-      Date date,
-      @JsonKey(name: '_date') Element dateElement,
-      Reference responsible,
-      Reference payee,
-      Money amount});
+      Reference? request,
+      Reference? submitter,
+      Reference? response,
+      Date? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      Reference? responsible,
+      Reference? payee,
+      Money? amount});
 
   @override
-  $IdentifierCopyWith<$Res> get identifier;
+  $IdentifierCopyWith<$Res>? get identifier;
   @override
-  $IdentifierCopyWith<$Res> get predecessor;
+  $IdentifierCopyWith<$Res>? get predecessor;
   @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
-  $ReferenceCopyWith<$Res> get request;
+  $ReferenceCopyWith<$Res>? get request;
   @override
-  $ReferenceCopyWith<$Res> get submitter;
+  $ReferenceCopyWith<$Res>? get submitter;
   @override
-  $ReferenceCopyWith<$Res> get response;
+  $ReferenceCopyWith<$Res>? get response;
   @override
-  $ElementCopyWith<$Res> get dateElement;
+  $ElementCopyWith<$Res>? get dateElement;
   @override
-  $ReferenceCopyWith<$Res> get responsible;
+  $ReferenceCopyWith<$Res>? get responsible;
   @override
-  $ReferenceCopyWith<$Res> get payee;
+  $ReferenceCopyWith<$Res>? get payee;
   @override
-  $MoneyCopyWith<$Res> get amount;
+  $MoneyCopyWith<$Res>? get amount;
 }
 
 /// @nodoc
@@ -2358,54 +2611,84 @@ class __$PaymentReconciliationDetailCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object predecessor = freezed,
-    Object type = freezed,
-    Object request = freezed,
-    Object submitter = freezed,
-    Object response = freezed,
-    Object date = freezed,
-    Object dateElement = freezed,
-    Object responsible = freezed,
-    Object payee = freezed,
-    Object amount = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? predecessor = freezed,
+    Object? type = freezed,
+    Object? request = freezed,
+    Object? submitter = freezed,
+    Object? response = freezed,
+    Object? date = freezed,
+    Object? dateElement = freezed,
+    Object? responsible = freezed,
+    Object? payee = freezed,
+    Object? amount = freezed,
   }) {
     return _then(_PaymentReconciliationDetail(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      identifier:
-          identifier == freezed ? _value.identifier : identifier as Identifier,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
       predecessor: predecessor == freezed
           ? _value.predecessor
-          : predecessor as Identifier,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      request: request == freezed ? _value.request : request as Reference,
-      submitter:
-          submitter == freezed ? _value.submitter : submitter as Reference,
-      response: response == freezed ? _value.response : response as Reference,
-      date: date == freezed ? _value.date : date as Date,
-      dateElement:
-          dateElement == freezed ? _value.dateElement : dateElement as Element,
+          : predecessor // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      request: request == freezed
+          ? _value.request
+          : request // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      submitter: submitter == freezed
+          ? _value.submitter
+          : submitter // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      response: response == freezed
+          ? _value.response
+          : response // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      dateElement: dateElement == freezed
+          ? _value.dateElement
+          : dateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       responsible: responsible == freezed
           ? _value.responsible
-          : responsible as Reference,
-      payee: payee == freezed ? _value.payee : payee as Reference,
-      amount: amount == freezed ? _value.amount : amount as Money,
+          : responsible // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      payee: payee == freezed
+          ? _value.payee
+          : payee // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      amount: amount == freezed
+          ? _value.amount
+          : amount // ignore: cast_nullable_to_non_nullable
+              as Money?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
   _$_PaymentReconciliationDetail(
       {this.id,
@@ -2413,7 +2696,7 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
       this.modifierExtension,
       this.identifier,
       this.predecessor,
-      @required this.type,
+      required this.type,
       this.request,
       this.submitter,
       this.response,
@@ -2422,42 +2705,41 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
       this.responsible,
       this.payee,
       this.amount})
-      : assert(type != null),
-        super._();
+      : super._();
 
   factory _$_PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
-      _$_$_PaymentReconciliationDetailFromJson(json);
+      _$$_PaymentReconciliationDetailFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final Identifier identifier;
+  final Identifier? identifier;
   @override
-  final Identifier predecessor;
+  final Identifier? predecessor;
   @override
   final CodeableConcept type;
   @override
-  final Reference request;
+  final Reference? request;
   @override
-  final Reference submitter;
+  final Reference? submitter;
   @override
-  final Reference response;
+  final Reference? response;
   @override
-  final Date date;
+  final Date? date;
   @override
   @JsonKey(name: '_date')
-  final Element dateElement;
+  final Element? dateElement;
   @override
-  final Reference responsible;
+  final Reference? responsible;
   @override
-  final Reference payee;
+  final Reference? payee;
   @override
-  final Money amount;
+  final Money? amount;
 
   @override
   String toString() {
@@ -2533,66 +2815,67 @@ class _$_PaymentReconciliationDetail extends _PaymentReconciliationDetail {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PaymentReconciliationDetailToJson(this);
+    return _$$_PaymentReconciliationDetailToJson(this);
   }
 }
 
 abstract class _PaymentReconciliationDetail
     extends PaymentReconciliationDetail {
-  _PaymentReconciliationDetail._() : super._();
   factory _PaymentReconciliationDetail(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Identifier identifier,
-      Identifier predecessor,
-      @required CodeableConcept type,
-      Reference request,
-      Reference submitter,
-      Reference response,
-      Date date,
-      @JsonKey(name: '_date') Element dateElement,
-      Reference responsible,
-      Reference payee,
-      Money amount}) = _$_PaymentReconciliationDetail;
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Identifier? identifier,
+      Identifier? predecessor,
+      required CodeableConcept type,
+      Reference? request,
+      Reference? submitter,
+      Reference? response,
+      Date? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      Reference? responsible,
+      Reference? payee,
+      Money? amount}) = _$_PaymentReconciliationDetail;
+  _PaymentReconciliationDetail._() : super._();
 
   factory _PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =
       _$_PaymentReconciliationDetail.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Identifier get identifier;
+  Identifier? get identifier => throw _privateConstructorUsedError;
   @override
-  Identifier get predecessor;
+  Identifier? get predecessor => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  Reference get request;
+  Reference? get request => throw _privateConstructorUsedError;
   @override
-  Reference get submitter;
+  Reference? get submitter => throw _privateConstructorUsedError;
   @override
-  Reference get response;
+  Reference? get response => throw _privateConstructorUsedError;
   @override
-  Date get date;
+  Date? get date => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_date')
-  Element get dateElement;
+  Element? get dateElement => throw _privateConstructorUsedError;
   @override
-  Reference get responsible;
+  Reference? get responsible => throw _privateConstructorUsedError;
   @override
-  Reference get payee;
+  Reference? get payee => throw _privateConstructorUsedError;
   @override
-  Money get amount;
+  Money? get amount => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PaymentReconciliationDetailCopyWith<_PaymentReconciliationDetail>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 PaymentReconciliationProcessNote _$PaymentReconciliationProcessNoteFromJson(
@@ -2604,19 +2887,18 @@ PaymentReconciliationProcessNote _$PaymentReconciliationProcessNoteFromJson(
 class _$PaymentReconciliationProcessNoteTearOff {
   const _$PaymentReconciliationProcessNoteTearOff();
 
-// ignore: unused_element
   _PaymentReconciliationProcessNote call(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
-          PaymentReconciliationProcessNoteType type,
+          PaymentReconciliationProcessNoteType? type,
       @JsonKey(name: '_type')
-          Element typeElement,
-      String text,
+          Element? typeElement,
+      String? text,
       @JsonKey(name: '_text')
-          Element textElement}) {
+          Element? textElement}) {
     return _PaymentReconciliationProcessNote(
       id: id,
       extension_: extension_,
@@ -2628,35 +2910,35 @@ class _$PaymentReconciliationProcessNoteTearOff {
     );
   }
 
-// ignore: unused_element
   PaymentReconciliationProcessNote fromJson(Map<String, Object> json) {
     return PaymentReconciliationProcessNote.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PaymentReconciliationProcessNote =
     _$PaymentReconciliationProcessNoteTearOff();
 
 /// @nodoc
 mixin _$PaymentReconciliationProcessNote {
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
-  PaymentReconciliationProcessNoteType get type;
+  PaymentReconciliationProcessNoteType? get type =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
-  Element get typeElement;
-  String get text;
+  Element? get typeElement => throw _privateConstructorUsedError;
+  String? get text => throw _privateConstructorUsedError;
   @JsonKey(name: '_text')
-  Element get textElement;
+  Element? get textElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $PaymentReconciliationProcessNoteCopyWith<PaymentReconciliationProcessNote>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2666,20 +2948,20 @@ abstract class $PaymentReconciliationProcessNoteCopyWith<$Res> {
           $Res Function(PaymentReconciliationProcessNote) then) =
       _$PaymentReconciliationProcessNoteCopyWithImpl<$Res>;
   $Res call(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
-          PaymentReconciliationProcessNoteType type,
+          PaymentReconciliationProcessNoteType? type,
       @JsonKey(name: '_type')
-          Element typeElement,
-      String text,
+          Element? typeElement,
+      String? text,
       @JsonKey(name: '_text')
-          Element textElement});
+          Element? textElement});
 
-  $ElementCopyWith<$Res> get typeElement;
-  $ElementCopyWith<$Res> get textElement;
+  $ElementCopyWith<$Res>? get typeElement;
+  $ElementCopyWith<$Res>? get textElement;
 }
 
 /// @nodoc
@@ -2693,49 +2975,64 @@ class _$PaymentReconciliationProcessNoteCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object typeElement = freezed,
-    Object text = freezed,
-    Object textElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? typeElement = freezed,
+    Object? text = freezed,
+    Object? textElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       type: type == freezed
           ? _value.type
-          : type as PaymentReconciliationProcessNoteType,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element,
-      text: text == freezed ? _value.text : text as String,
-      textElement:
-          textElement == freezed ? _value.textElement : textElement as Element,
+          : type // ignore: cast_nullable_to_non_nullable
+              as PaymentReconciliationProcessNoteType?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String?,
+      textElement: textElement == freezed
+          ? _value.textElement
+          : textElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
   @override
-  $ElementCopyWith<$Res> get typeElement {
+  $ElementCopyWith<$Res>? get typeElement {
     if (_value.typeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.typeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.typeElement!, (value) {
       return _then(_value.copyWith(typeElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get textElement {
+  $ElementCopyWith<$Res>? get textElement {
     if (_value.textElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.textElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.textElement!, (value) {
       return _then(_value.copyWith(textElement: value));
     });
   }
@@ -2750,22 +3047,22 @@ abstract class _$PaymentReconciliationProcessNoteCopyWith<$Res>
       __$PaymentReconciliationProcessNoteCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
-          PaymentReconciliationProcessNoteType type,
+          PaymentReconciliationProcessNoteType? type,
       @JsonKey(name: '_type')
-          Element typeElement,
-      String text,
+          Element? typeElement,
+      String? text,
       @JsonKey(name: '_text')
-          Element textElement});
+          Element? textElement});
 
   @override
-  $ElementCopyWith<$Res> get typeElement;
+  $ElementCopyWith<$Res>? get typeElement;
   @override
-  $ElementCopyWith<$Res> get textElement;
+  $ElementCopyWith<$Res>? get textElement;
 }
 
 /// @nodoc
@@ -2783,37 +3080,49 @@ class __$PaymentReconciliationProcessNoteCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object typeElement = freezed,
-    Object text = freezed,
-    Object textElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? typeElement = freezed,
+    Object? text = freezed,
+    Object? textElement = freezed,
   }) {
     return _then(_PaymentReconciliationProcessNote(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       type: type == freezed
           ? _value.type
-          : type as PaymentReconciliationProcessNoteType,
-      typeElement:
-          typeElement == freezed ? _value.typeElement : typeElement as Element,
-      text: text == freezed ? _value.text : text as String,
-      textElement:
-          textElement == freezed ? _value.textElement : textElement as Element,
+          : type // ignore: cast_nullable_to_non_nullable
+              as PaymentReconciliationProcessNoteType?,
+      typeElement: typeElement == freezed
+          ? _value.typeElement
+          : typeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String?,
+      textElement: textElement == freezed
+          ? _value.textElement
+          : textElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_PaymentReconciliationProcessNote
     extends _PaymentReconciliationProcessNote {
   _$_PaymentReconciliationProcessNote(
@@ -2832,26 +3141,26 @@ class _$_PaymentReconciliationProcessNote
 
   factory _$_PaymentReconciliationProcessNote.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_PaymentReconciliationProcessNoteFromJson(json);
+      _$$_PaymentReconciliationProcessNoteFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
-  final PaymentReconciliationProcessNoteType type;
+  final PaymentReconciliationProcessNoteType? type;
   @override
   @JsonKey(name: '_type')
-  final Element typeElement;
+  final Element? typeElement;
   @override
-  final String text;
+  final String? text;
   @override
   @JsonKey(name: '_text')
-  final Element textElement;
+  final Element? textElement;
 
   @override
   String toString() {
@@ -2901,49 +3210,51 @@ class _$_PaymentReconciliationProcessNote
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PaymentReconciliationProcessNoteToJson(this);
+    return _$$_PaymentReconciliationProcessNoteToJson(this);
   }
 }
 
 abstract class _PaymentReconciliationProcessNote
     extends PaymentReconciliationProcessNote {
-  _PaymentReconciliationProcessNote._() : super._();
   factory _PaymentReconciliationProcessNote(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
-          PaymentReconciliationProcessNoteType type,
+          PaymentReconciliationProcessNoteType? type,
       @JsonKey(name: '_type')
-          Element typeElement,
-      String text,
+          Element? typeElement,
+      String? text,
       @JsonKey(name: '_text')
-          Element textElement}) = _$_PaymentReconciliationProcessNote;
+          Element? textElement}) = _$_PaymentReconciliationProcessNote;
+  _PaymentReconciliationProcessNote._() : super._();
 
   factory _PaymentReconciliationProcessNote.fromJson(
       Map<String, dynamic> json) = _$_PaymentReconciliationProcessNote.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: PaymentReconciliationProcessNoteType.unknown)
-  PaymentReconciliationProcessNoteType get type;
+  PaymentReconciliationProcessNoteType? get type =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_type')
-  Element get typeElement;
+  Element? get typeElement => throw _privateConstructorUsedError;
   @override
-  String get text;
+  String? get text => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_text')
-  Element get textElement;
+  Element? get textElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PaymentReconciliationProcessNoteCopyWith<_PaymentReconciliationProcessNote>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }

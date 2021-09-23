@@ -12,60 +12,67 @@ part 'individuals.freezed.dart';
 part 'individuals.g.dart';
 
 @freezed
-abstract class Patient with Resource implements _$Patient {
+class Patient with Resource, _$Patient {
   Patient._();
   factory Patient({
     @Default(Dstu2ResourceType.Patient)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Patient)
         Dstu2ResourceType resourceType,
-    Id id,
-    @JsonKey(name: '_id') Element idElement,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Boolean active,
-    @JsonKey(name: '_active') Element activeElement,
-    List<HumanName> name,
-    List<ContactPoint> telecom,
-    @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender gender,
-    @JsonKey(name: '_gender') Element genderElement,
-    Date birthDate,
-    @JsonKey(name: '_birthDate') Element birthDateElement,
-    Boolean deceasedBoolean,
-    @JsonKey(name: '_deceasedBoolean') Element deceasedBooleanElement,
-    FhirDateTime deceasedDateTime,
-    @JsonKey(name: '_deceasedDateTime') Element deceasedDateTimeElement,
-    List<Address> address,
-    CodeableConcept maritalStatus,
-    Boolean multipleBirthBoolean,
-    @JsonKey(name: '_multipleBirthBoolean') Element multipleBirthBooleanElement,
-    Integer multipleBirthInteger,
-    @JsonKey(name: '_multipleBirthInteger') Element multipleBirthIntegerElement,
-    List<Attachment> photo,
-    List<PatientContact> contact,
-    PatientAnimal animal,
-    List<PatientCommunication> communication,
-    List<Reference> careProvider,
-    Reference managingOrganization,
-    List<PatientLink> link,
+    Id? id,
+    @JsonKey(name: '_id') Element? idElement,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Boolean? active,
+    @JsonKey(name: '_active') Element? activeElement,
+    List<HumanName>? name,
+    List<ContactPoint>? telecom,
+    @JsonKey(unknownEnumValue: PatientGender.unknown) PatientGender? gender,
+    @JsonKey(name: '_gender') Element? genderElement,
+    Date? birthDate,
+    @JsonKey(name: '_birthDate') Element? birthDateElement,
+    Boolean? deceasedBoolean,
+    @JsonKey(name: '_deceasedBoolean') Element? deceasedBooleanElement,
+    FhirDateTime? deceasedDateTime,
+    @JsonKey(name: '_deceasedDateTime') Element? deceasedDateTimeElement,
+    List<Address>? address,
+    CodeableConcept? maritalStatus,
+    Boolean? multipleBirthBoolean,
+    @JsonKey(name: '_multipleBirthBoolean')
+        Element? multipleBirthBooleanElement,
+    Integer? multipleBirthInteger,
+    @JsonKey(name: '_multipleBirthInteger')
+        Element? multipleBirthIntegerElement,
+    List<Attachment>? photo,
+    List<PatientContact>? contact,
+    PatientAnimal? animal,
+    List<PatientCommunication>? communication,
+    List<Reference>? careProvider,
+    Reference? managingOrganization,
+    List<PatientLink>? link,
   }) = _Patient;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Patient.fromYaml(dynamic yaml) => yaml is String
-      ? Patient.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Patient.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Patient.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? Patient.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'Patient cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Patient.fromJson(Map<String, dynamic> json) =>
@@ -73,31 +80,35 @@ abstract class Patient with Resource implements _$Patient {
 }
 
 @freezed
-abstract class PatientContact with _$PatientContact {
+class PatientContact with _$PatientContact {
   PatientContact._();
   factory PatientContact({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<CodeableConcept> relationship,
-    HumanName name,
-    List<ContactPoint> telecom,
-    Address address,
-    @JsonKey(unknownEnumValue: ContactGender.unknown) ContactGender gender,
-    @JsonKey(name: '_gender') Element genderElement,
-    Reference organization,
-    Period period,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<CodeableConcept>? relationship,
+    HumanName? name,
+    List<ContactPoint>? telecom,
+    Address? address,
+    @JsonKey(unknownEnumValue: ContactGender.unknown) ContactGender? gender,
+    @JsonKey(name: '_gender') Element? genderElement,
+    Reference? organization,
+    Period? period,
   }) = _PatientContact;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory PatientContact.fromYaml(dynamic yaml) => yaml is String
-      ? PatientContact.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? PatientContact.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? PatientContact.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? PatientContact.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'PatientContact cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PatientContact.fromJson(Map<String, dynamic> json) =>
@@ -105,26 +116,30 @@ abstract class PatientContact with _$PatientContact {
 }
 
 @freezed
-abstract class PatientAnimal with _$PatientAnimal {
+class PatientAnimal with _$PatientAnimal {
   PatientAnimal._();
   factory PatientAnimal({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required CodeableConcept species,
-    CodeableConcept breed,
-    CodeableConcept genderStatus,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept species,
+    CodeableConcept? breed,
+    CodeableConcept? genderStatus,
   }) = _PatientAnimal;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory PatientAnimal.fromYaml(dynamic yaml) => yaml is String
-      ? PatientAnimal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? PatientAnimal.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? PatientAnimal.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? PatientAnimal.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'PatientAnimal cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PatientAnimal.fromJson(Map<String, dynamic> json) =>
@@ -132,26 +147,30 @@ abstract class PatientAnimal with _$PatientAnimal {
 }
 
 @freezed
-abstract class PatientCommunication with _$PatientCommunication {
+class PatientCommunication with _$PatientCommunication {
   PatientCommunication._();
   factory PatientCommunication({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required CodeableConcept language,
-    Boolean preferred,
-    @JsonKey(name: '_preferred') Element preferredElement,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept language,
+    Boolean? preferred,
+    @JsonKey(name: '_preferred') Element? preferredElement,
   }) = _PatientCommunication;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory PatientCommunication.fromYaml(dynamic yaml) => yaml is String
-      ? PatientCommunication.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? PatientCommunication.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? PatientCommunication.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? PatientCommunication.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'PatientCommunication cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PatientCommunication.fromJson(Map<String, dynamic> json) =>
@@ -159,28 +178,30 @@ abstract class PatientCommunication with _$PatientCommunication {
 }
 
 @freezed
-abstract class PatientLink with _$PatientLink {
+class PatientLink with _$PatientLink {
   PatientLink._();
   factory PatientLink({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(required: true) @required Reference other,
-    @JsonKey(required: true, unknownEnumValue: LinkType.unknown)
-    @required
-        LinkType type,
-    @JsonKey(name: '_type') Element typeElement,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Reference other,
+    @JsonKey(unknownEnumValue: LinkType.unknown) required LinkType type,
+    @JsonKey(name: '_type') Element? typeElement,
   }) = _PatientLink;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory PatientLink.fromYaml(dynamic yaml) => yaml is String
-      ? PatientLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? PatientLink.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? PatientLink.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? PatientLink.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'PatientLink cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PatientLink.fromJson(Map<String, dynamic> json) =>
@@ -188,48 +209,53 @@ abstract class PatientLink with _$PatientLink {
 }
 
 @freezed
-abstract class Practitioner with Resource implements _$Practitioner {
+class Practitioner with Resource, _$Practitioner {
   Practitioner._();
   factory Practitioner({
     @Default(Dstu2ResourceType.Practitioner)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.Practitioner)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    Boolean active,
-    @JsonKey(name: '_active') Element activeElement,
-    HumanName name,
-    List<ContactPoint> telecom,
-    List<Address> address,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    Boolean? active,
+    @JsonKey(name: '_active') Element? activeElement,
+    HumanName? name,
+    List<ContactPoint>? telecom,
+    List<Address>? address,
     @JsonKey(unknownEnumValue: PractitionerGender.unknown)
-        PractitionerGender gender,
-    @JsonKey(name: '_gender') Element genderElement,
-    Date birthDate,
-    @JsonKey(name: '_birthDate') Element birthDateElement,
-    List<Attachment> photo,
-    List<PractitionerPractitionerRole> practitionerRole,
-    List<PractitionerQualification> qualification,
-    List<CodeableConcept> communication,
+        PractitionerGender? gender,
+    @JsonKey(name: '_gender') Element? genderElement,
+    Date? birthDate,
+    @JsonKey(name: '_birthDate') Element? birthDateElement,
+    List<Attachment>? photo,
+    List<PractitionerPractitionerRole>? practitionerRole,
+    List<PractitionerQualification>? qualification,
+    List<CodeableConcept>? communication,
   }) = _Practitioner;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory Practitioner.fromYaml(dynamic yaml) => yaml is String
-      ? Practitioner.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Practitioner.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Practitioner.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? Practitioner.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'Practitioner cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Practitioner.fromJson(Map<String, dynamic> json) =>
@@ -237,32 +263,34 @@ abstract class Practitioner with Resource implements _$Practitioner {
 }
 
 @freezed
-abstract class PractitionerPractitionerRole
-    with _$PractitionerPractitionerRole {
+class PractitionerPractitionerRole with _$PractitionerPractitionerRole {
   PractitionerPractitionerRole._();
   factory PractitionerPractitionerRole({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    @JsonKey(name: 'fhir_comments') List<String> fhirComments,
-    List<FhirExtension> modifierExtension,
-    Reference managingOrganization,
-    CodeableConcept role,
-    List<CodeableConcept> specialty,
-    Period period,
-    List<Reference> location,
-    List<Reference> healthcareService,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    @JsonKey(name: 'fhir_comments') List<String>? fhirComments,
+    List<FhirExtension>? modifierExtension,
+    Reference? managingOrganization,
+    CodeableConcept? role,
+    List<CodeableConcept>? specialty,
+    Period? period,
+    List<Reference>? location,
+    List<Reference>? healthcareService,
   }) = _PractitionerPractitionerRole;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory PractitionerPractitionerRole.fromYaml(dynamic yaml) => yaml is String
       ? PractitionerPractitionerRole.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? PractitionerPractitionerRole.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? PractitionerPractitionerRole.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'PractitionerPractitionerRole cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PractitionerPractitionerRole.fromJson(Map<String, dynamic> json) =>
@@ -270,28 +298,31 @@ abstract class PractitionerPractitionerRole
 }
 
 @freezed
-abstract class PractitionerQualification with _$PractitionerQualification {
+class PractitionerQualification with _$PractitionerQualification {
   PractitionerQualification._();
   factory PractitionerQualification({
-    Id id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @JsonKey(required: true) @required CodeableConcept code,
-    Period period,
-    Reference issuer,
+    Id? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    required CodeableConcept code,
+    Period? period,
+    Reference? issuer,
   }) = _PractitionerQualification;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory PractitionerQualification.fromYaml(dynamic yaml) => yaml is String
       ? PractitionerQualification.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? PractitionerQualification.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? PractitionerQualification.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'PractitionerQualification cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PractitionerQualification.fromJson(Map<String, dynamic> json) =>
@@ -299,48 +330,53 @@ abstract class PractitionerQualification with _$PractitionerQualification {
 }
 
 @freezed
-abstract class RelatedPerson with Resource implements _$RelatedPerson {
+class RelatedPerson with Resource, _$RelatedPerson {
   RelatedPerson._();
   factory RelatedPerson({
     @Default(Dstu2ResourceType.RelatedPerson)
     @JsonKey(unknownEnumValue: Dstu2ResourceType.RelatedPerson)
         Dstu2ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @JsonKey(required: true) @required Reference patient,
-    CodeableConcept relationship,
-    HumanName name,
-    List<ContactPoint> telecom,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    required Reference patient,
+    CodeableConcept? relationship,
+    HumanName? name,
+    List<ContactPoint>? telecom,
     @JsonKey(unknownEnumValue: RelatedPersonGender.unknown)
-        RelatedPersonGender gender,
-    @JsonKey(name: '_gender') Element genderElement,
-    Date birthDate,
-    @JsonKey(name: '_birthDate') Element birthDateElement,
-    List<Address> address,
-    List<Attachment> photo,
-    Period period,
+        RelatedPersonGender? gender,
+    @JsonKey(name: '_gender') Element? genderElement,
+    Date? birthDate,
+    @JsonKey(name: '_birthDate') Element? birthDateElement,
+    List<Address>? address,
+    List<Attachment>? photo,
+    Period? period,
 
-    // @JsonKey(name: '_active') Element activeElement,
+    // @JsonKey(name: '_active') Element? activeElement,
   }) = _RelatedPerson;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor, accepts [Yaml formatted String] as an argument
+  /// Factory constructor, accepts a [String] in YAML format as an argument
   factory RelatedPerson.fromYaml(dynamic yaml) => yaml is String
-      ? RelatedPerson.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? RelatedPerson.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? RelatedPerson.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? RelatedPerson.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'RelatedPerson cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RelatedPerson.fromJson(Map<String, dynamic> json) =>

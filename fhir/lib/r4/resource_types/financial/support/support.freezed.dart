@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'support.dart';
 
@@ -8,6 +9,10 @@ part of 'support.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Coverage _$CoverageFromJson(Map<String, dynamic> json) {
   return _Coverage.fromJson(json);
 }
@@ -16,55 +21,52 @@ Coverage _$CoverageFromJson(Map<String, dynamic> json) {
 class _$CoverageTearOff {
   const _$CoverageTearOff();
 
-// ignore: unused_element
   _Coverage call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Coverage)
           R4ResourceType resourceType = R4ResourceType.Coverage,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      CodeableConcept type,
-      Reference policyHolder,
-      Reference subscriber,
-      String subscriberId,
+          Element? statusElement,
+      CodeableConcept? type,
+      Reference? policyHolder,
+      Reference? subscriber,
+      String? subscriberId,
       @JsonKey(name: '_subscriberId')
-          Element subscriberIdElement,
-      @required
-          Reference beneficiary,
-      String dependent,
+          Element? subscriberIdElement,
+      required Reference beneficiary,
+      String? dependent,
       @JsonKey(name: '_dependent')
-          Element dependentElement,
-      CodeableConcept relationship,
-      Period period,
-      @required
-          List<Reference> payor,
+          Element? dependentElement,
+      CodeableConcept? relationship,
+      Period? period,
+      required List<Reference> payor,
       @JsonKey(name: 'class')
-          List<CoverageClass> class_,
-      PositiveInt order,
+          List<CoverageClass>? class_,
+      PositiveInt? order,
       @JsonKey(name: '_order')
-          Element orderElement,
-      String network,
+          Element? orderElement,
+      String? network,
       @JsonKey(name: '_network')
-          Element networkElement,
-      List<CoverageCostToBeneficiary> costToBeneficiary,
-      Boolean subrogation,
+          Element? networkElement,
+      List<CoverageCostToBeneficiary>? costToBeneficiary,
+      Boolean? subrogation,
       @JsonKey(name: '_subrogation')
-          Element subrogationElement,
-      List<Reference> contract}) {
+          Element? subrogationElement,
+      List<Reference>? contract}) {
     return _Coverage(
       resourceType: resourceType,
       id: id,
@@ -103,67 +105,68 @@ class _$CoverageTearOff {
     );
   }
 
-// ignore: unused_element
   Coverage fromJson(Map<String, Object> json) {
     return Coverage.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Coverage = _$CoverageTearOff();
 
 /// @nodoc
 mixin _$Coverage {
   @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
-  R4ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
-  Code get status;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
-  Element get statusElement;
-  CodeableConcept get type;
-  Reference get policyHolder;
-  Reference get subscriber;
-  String get subscriberId;
+  Element? get statusElement => throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  Reference? get policyHolder => throw _privateConstructorUsedError;
+  Reference? get subscriber => throw _privateConstructorUsedError;
+  String? get subscriberId => throw _privateConstructorUsedError;
   @JsonKey(name: '_subscriberId')
-  Element get subscriberIdElement;
-  Reference get beneficiary;
-  String get dependent;
+  Element? get subscriberIdElement => throw _privateConstructorUsedError;
+  Reference get beneficiary => throw _privateConstructorUsedError;
+  String? get dependent => throw _privateConstructorUsedError;
   @JsonKey(name: '_dependent')
-  Element get dependentElement;
-  CodeableConcept get relationship;
-  Period get period;
-  List<Reference> get payor;
+  Element? get dependentElement => throw _privateConstructorUsedError;
+  CodeableConcept? get relationship => throw _privateConstructorUsedError;
+  Period? get period => throw _privateConstructorUsedError;
+  List<Reference> get payor => throw _privateConstructorUsedError;
   @JsonKey(name: 'class')
-  List<CoverageClass> get class_;
-  PositiveInt get order;
+  List<CoverageClass>? get class_ => throw _privateConstructorUsedError;
+  PositiveInt? get order => throw _privateConstructorUsedError;
   @JsonKey(name: '_order')
-  Element get orderElement;
-  String get network;
+  Element? get orderElement => throw _privateConstructorUsedError;
+  String? get network => throw _privateConstructorUsedError;
   @JsonKey(name: '_network')
-  Element get networkElement;
-  List<CoverageCostToBeneficiary> get costToBeneficiary;
-  Boolean get subrogation;
+  Element? get networkElement => throw _privateConstructorUsedError;
+  List<CoverageCostToBeneficiary>? get costToBeneficiary =>
+      throw _privateConstructorUsedError;
+  Boolean? get subrogation => throw _privateConstructorUsedError;
   @JsonKey(name: '_subrogation')
-  Element get subrogationElement;
-  List<Reference> get contract;
+  Element? get subrogationElement => throw _privateConstructorUsedError;
+  List<Reference>? get contract => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CoverageCopyWith<Coverage> get copyWith;
+  $CoverageCopyWith<Coverage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -173,66 +176,66 @@ abstract class $CoverageCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Coverage)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      CodeableConcept type,
-      Reference policyHolder,
-      Reference subscriber,
-      String subscriberId,
+          Element? statusElement,
+      CodeableConcept? type,
+      Reference? policyHolder,
+      Reference? subscriber,
+      String? subscriberId,
       @JsonKey(name: '_subscriberId')
-          Element subscriberIdElement,
+          Element? subscriberIdElement,
       Reference beneficiary,
-      String dependent,
+      String? dependent,
       @JsonKey(name: '_dependent')
-          Element dependentElement,
-      CodeableConcept relationship,
-      Period period,
+          Element? dependentElement,
+      CodeableConcept? relationship,
+      Period? period,
       List<Reference> payor,
       @JsonKey(name: 'class')
-          List<CoverageClass> class_,
-      PositiveInt order,
+          List<CoverageClass>? class_,
+      PositiveInt? order,
       @JsonKey(name: '_order')
-          Element orderElement,
-      String network,
+          Element? orderElement,
+      String? network,
       @JsonKey(name: '_network')
-          Element networkElement,
-      List<CoverageCostToBeneficiary> costToBeneficiary,
-      Boolean subrogation,
+          Element? networkElement,
+      List<CoverageCostToBeneficiary>? costToBeneficiary,
+      Boolean? subrogation,
       @JsonKey(name: '_subrogation')
-          Element subrogationElement,
-      List<Reference> contract});
+          Element? subrogationElement,
+      List<Reference>? contract});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get statusElement;
-  $CodeableConceptCopyWith<$Res> get type;
-  $ReferenceCopyWith<$Res> get policyHolder;
-  $ReferenceCopyWith<$Res> get subscriber;
-  $ElementCopyWith<$Res> get subscriberIdElement;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get statusElement;
+  $CodeableConceptCopyWith<$Res>? get type;
+  $ReferenceCopyWith<$Res>? get policyHolder;
+  $ReferenceCopyWith<$Res>? get subscriber;
+  $ElementCopyWith<$Res>? get subscriberIdElement;
   $ReferenceCopyWith<$Res> get beneficiary;
-  $ElementCopyWith<$Res> get dependentElement;
-  $CodeableConceptCopyWith<$Res> get relationship;
-  $PeriodCopyWith<$Res> get period;
-  $ElementCopyWith<$Res> get orderElement;
-  $ElementCopyWith<$Res> get networkElement;
-  $ElementCopyWith<$Res> get subrogationElement;
+  $ElementCopyWith<$Res>? get dependentElement;
+  $CodeableConceptCopyWith<$Res>? get relationship;
+  $PeriodCopyWith<$Res>? get period;
+  $ElementCopyWith<$Res>? get orderElement;
+  $ElementCopyWith<$Res>? get networkElement;
+  $ElementCopyWith<$Res>? get subrogationElement;
 }
 
 /// @nodoc
@@ -245,275 +248,349 @@ class _$CoverageCopyWithImpl<$Res> implements $CoverageCopyWith<$Res> {
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object type = freezed,
-    Object policyHolder = freezed,
-    Object subscriber = freezed,
-    Object subscriberId = freezed,
-    Object subscriberIdElement = freezed,
-    Object beneficiary = freezed,
-    Object dependent = freezed,
-    Object dependentElement = freezed,
-    Object relationship = freezed,
-    Object period = freezed,
-    Object payor = freezed,
-    Object class_ = freezed,
-    Object order = freezed,
-    Object orderElement = freezed,
-    Object network = freezed,
-    Object networkElement = freezed,
-    Object costToBeneficiary = freezed,
-    Object subrogation = freezed,
-    Object subrogationElement = freezed,
-    Object contract = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? type = freezed,
+    Object? policyHolder = freezed,
+    Object? subscriber = freezed,
+    Object? subscriberId = freezed,
+    Object? subscriberIdElement = freezed,
+    Object? beneficiary = freezed,
+    Object? dependent = freezed,
+    Object? dependentElement = freezed,
+    Object? relationship = freezed,
+    Object? period = freezed,
+    Object? payor = freezed,
+    Object? class_ = freezed,
+    Object? order = freezed,
+    Object? orderElement = freezed,
+    Object? network = freezed,
+    Object? networkElement = freezed,
+    Object? costToBeneficiary = freezed,
+    Object? subrogation = freezed,
+    Object? subrogationElement = freezed,
+    Object? contract = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      type: type == freezed ? _value.type : type as CodeableConcept,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       policyHolder: policyHolder == freezed
           ? _value.policyHolder
-          : policyHolder as Reference,
-      subscriber:
-          subscriber == freezed ? _value.subscriber : subscriber as Reference,
+          : policyHolder // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      subscriber: subscriber == freezed
+          ? _value.subscriber
+          : subscriber // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       subscriberId: subscriberId == freezed
           ? _value.subscriberId
-          : subscriberId as String,
+          : subscriberId // ignore: cast_nullable_to_non_nullable
+              as String?,
       subscriberIdElement: subscriberIdElement == freezed
           ? _value.subscriberIdElement
-          : subscriberIdElement as Element,
+          : subscriberIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       beneficiary: beneficiary == freezed
           ? _value.beneficiary
-          : beneficiary as Reference,
-      dependent: dependent == freezed ? _value.dependent : dependent as String,
+          : beneficiary // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      dependent: dependent == freezed
+          ? _value.dependent
+          : dependent // ignore: cast_nullable_to_non_nullable
+              as String?,
       dependentElement: dependentElement == freezed
           ? _value.dependentElement
-          : dependentElement as Element,
+          : dependentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       relationship: relationship == freezed
           ? _value.relationship
-          : relationship as CodeableConcept,
-      period: period == freezed ? _value.period : period as Period,
-      payor: payor == freezed ? _value.payor : payor as List<Reference>,
-      class_: class_ == freezed ? _value.class_ : class_ as List<CoverageClass>,
-      order: order == freezed ? _value.order : order as PositiveInt,
+          : relationship // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      payor: payor == freezed
+          ? _value.payor
+          : payor // ignore: cast_nullable_to_non_nullable
+              as List<Reference>,
+      class_: class_ == freezed
+          ? _value.class_
+          : class_ // ignore: cast_nullable_to_non_nullable
+              as List<CoverageClass>?,
+      order: order == freezed
+          ? _value.order
+          : order // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
       orderElement: orderElement == freezed
           ? _value.orderElement
-          : orderElement as Element,
-      network: network == freezed ? _value.network : network as String,
+          : orderElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      network: network == freezed
+          ? _value.network
+          : network // ignore: cast_nullable_to_non_nullable
+              as String?,
       networkElement: networkElement == freezed
           ? _value.networkElement
-          : networkElement as Element,
+          : networkElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       costToBeneficiary: costToBeneficiary == freezed
           ? _value.costToBeneficiary
-          : costToBeneficiary as List<CoverageCostToBeneficiary>,
-      subrogation:
-          subrogation == freezed ? _value.subrogation : subrogation as Boolean,
+          : costToBeneficiary // ignore: cast_nullable_to_non_nullable
+              as List<CoverageCostToBeneficiary>?,
+      subrogation: subrogation == freezed
+          ? _value.subrogation
+          : subrogation // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       subrogationElement: subrogationElement == freezed
           ? _value.subrogationElement
-          : subrogationElement as Element,
-      contract:
-          contract == freezed ? _value.contract : contract as List<Reference>,
+          : subrogationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contract: contract == freezed
+          ? _value.contract
+          : contract // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get statusElement {
+  $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
       return _then(_value.copyWith(statusElement: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get type {
+  $CodeableConceptCopyWith<$Res>? get type {
     if (_value.type == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get policyHolder {
+  $ReferenceCopyWith<$Res>? get policyHolder {
     if (_value.policyHolder == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.policyHolder, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.policyHolder!, (value) {
       return _then(_value.copyWith(policyHolder: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get subscriber {
+  $ReferenceCopyWith<$Res>? get subscriber {
     if (_value.subscriber == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.subscriber, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.subscriber!, (value) {
       return _then(_value.copyWith(subscriber: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get subscriberIdElement {
+  $ElementCopyWith<$Res>? get subscriberIdElement {
     if (_value.subscriberIdElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.subscriberIdElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.subscriberIdElement!, (value) {
       return _then(_value.copyWith(subscriberIdElement: value));
     });
   }
 
   @override
   $ReferenceCopyWith<$Res> get beneficiary {
-    if (_value.beneficiary == null) {
-      return null;
-    }
     return $ReferenceCopyWith<$Res>(_value.beneficiary, (value) {
       return _then(_value.copyWith(beneficiary: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get dependentElement {
+  $ElementCopyWith<$Res>? get dependentElement {
     if (_value.dependentElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.dependentElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.dependentElement!, (value) {
       return _then(_value.copyWith(dependentElement: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get relationship {
+  $CodeableConceptCopyWith<$Res>? get relationship {
     if (_value.relationship == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.relationship, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.relationship!, (value) {
       return _then(_value.copyWith(relationship: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get period {
+  $PeriodCopyWith<$Res>? get period {
     if (_value.period == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.period, (value) {
+
+    return $PeriodCopyWith<$Res>(_value.period!, (value) {
       return _then(_value.copyWith(period: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get orderElement {
+  $ElementCopyWith<$Res>? get orderElement {
     if (_value.orderElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.orderElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.orderElement!, (value) {
       return _then(_value.copyWith(orderElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get networkElement {
+  $ElementCopyWith<$Res>? get networkElement {
     if (_value.networkElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.networkElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.networkElement!, (value) {
       return _then(_value.copyWith(networkElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get subrogationElement {
+  $ElementCopyWith<$Res>? get subrogationElement {
     if (_value.subrogationElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.subrogationElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.subrogationElement!, (value) {
       return _then(_value.copyWith(subrogationElement: value));
     });
   }
@@ -527,82 +604,82 @@ abstract class _$CoverageCopyWith<$Res> implements $CoverageCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.Coverage)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      CodeableConcept type,
-      Reference policyHolder,
-      Reference subscriber,
-      String subscriberId,
+          Element? statusElement,
+      CodeableConcept? type,
+      Reference? policyHolder,
+      Reference? subscriber,
+      String? subscriberId,
       @JsonKey(name: '_subscriberId')
-          Element subscriberIdElement,
+          Element? subscriberIdElement,
       Reference beneficiary,
-      String dependent,
+      String? dependent,
       @JsonKey(name: '_dependent')
-          Element dependentElement,
-      CodeableConcept relationship,
-      Period period,
+          Element? dependentElement,
+      CodeableConcept? relationship,
+      Period? period,
       List<Reference> payor,
       @JsonKey(name: 'class')
-          List<CoverageClass> class_,
-      PositiveInt order,
+          List<CoverageClass>? class_,
+      PositiveInt? order,
       @JsonKey(name: '_order')
-          Element orderElement,
-      String network,
+          Element? orderElement,
+      String? network,
       @JsonKey(name: '_network')
-          Element networkElement,
-      List<CoverageCostToBeneficiary> costToBeneficiary,
-      Boolean subrogation,
+          Element? networkElement,
+      List<CoverageCostToBeneficiary>? costToBeneficiary,
+      Boolean? subrogation,
       @JsonKey(name: '_subrogation')
-          Element subrogationElement,
-      List<Reference> contract});
+          Element? subrogationElement,
+      List<Reference>? contract});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
-  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res>? get statusElement;
   @override
-  $CodeableConceptCopyWith<$Res> get type;
+  $CodeableConceptCopyWith<$Res>? get type;
   @override
-  $ReferenceCopyWith<$Res> get policyHolder;
+  $ReferenceCopyWith<$Res>? get policyHolder;
   @override
-  $ReferenceCopyWith<$Res> get subscriber;
+  $ReferenceCopyWith<$Res>? get subscriber;
   @override
-  $ElementCopyWith<$Res> get subscriberIdElement;
+  $ElementCopyWith<$Res>? get subscriberIdElement;
   @override
   $ReferenceCopyWith<$Res> get beneficiary;
   @override
-  $ElementCopyWith<$Res> get dependentElement;
+  $ElementCopyWith<$Res>? get dependentElement;
   @override
-  $CodeableConceptCopyWith<$Res> get relationship;
+  $CodeableConceptCopyWith<$Res>? get relationship;
   @override
-  $PeriodCopyWith<$Res> get period;
+  $PeriodCopyWith<$Res>? get period;
   @override
-  $ElementCopyWith<$Res> get orderElement;
+  $ElementCopyWith<$Res>? get orderElement;
   @override
-  $ElementCopyWith<$Res> get networkElement;
+  $ElementCopyWith<$Res>? get networkElement;
   @override
-  $ElementCopyWith<$Res> get subrogationElement;
+  $ElementCopyWith<$Res>? get subrogationElement;
 }
 
 /// @nodoc
@@ -616,123 +693,184 @@ class __$CoverageCopyWithImpl<$Res> extends _$CoverageCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object type = freezed,
-    Object policyHolder = freezed,
-    Object subscriber = freezed,
-    Object subscriberId = freezed,
-    Object subscriberIdElement = freezed,
-    Object beneficiary = freezed,
-    Object dependent = freezed,
-    Object dependentElement = freezed,
-    Object relationship = freezed,
-    Object period = freezed,
-    Object payor = freezed,
-    Object class_ = freezed,
-    Object order = freezed,
-    Object orderElement = freezed,
-    Object network = freezed,
-    Object networkElement = freezed,
-    Object costToBeneficiary = freezed,
-    Object subrogation = freezed,
-    Object subrogationElement = freezed,
-    Object contract = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? type = freezed,
+    Object? policyHolder = freezed,
+    Object? subscriber = freezed,
+    Object? subscriberId = freezed,
+    Object? subscriberIdElement = freezed,
+    Object? beneficiary = freezed,
+    Object? dependent = freezed,
+    Object? dependentElement = freezed,
+    Object? relationship = freezed,
+    Object? period = freezed,
+    Object? payor = freezed,
+    Object? class_ = freezed,
+    Object? order = freezed,
+    Object? orderElement = freezed,
+    Object? network = freezed,
+    Object? networkElement = freezed,
+    Object? costToBeneficiary = freezed,
+    Object? subrogation = freezed,
+    Object? subrogationElement = freezed,
+    Object? contract = freezed,
   }) {
     return _then(_Coverage(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      type: type == freezed ? _value.type : type as CodeableConcept,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       policyHolder: policyHolder == freezed
           ? _value.policyHolder
-          : policyHolder as Reference,
-      subscriber:
-          subscriber == freezed ? _value.subscriber : subscriber as Reference,
+          : policyHolder // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      subscriber: subscriber == freezed
+          ? _value.subscriber
+          : subscriber // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       subscriberId: subscriberId == freezed
           ? _value.subscriberId
-          : subscriberId as String,
+          : subscriberId // ignore: cast_nullable_to_non_nullable
+              as String?,
       subscriberIdElement: subscriberIdElement == freezed
           ? _value.subscriberIdElement
-          : subscriberIdElement as Element,
+          : subscriberIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       beneficiary: beneficiary == freezed
           ? _value.beneficiary
-          : beneficiary as Reference,
-      dependent: dependent == freezed ? _value.dependent : dependent as String,
+          : beneficiary // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      dependent: dependent == freezed
+          ? _value.dependent
+          : dependent // ignore: cast_nullable_to_non_nullable
+              as String?,
       dependentElement: dependentElement == freezed
           ? _value.dependentElement
-          : dependentElement as Element,
+          : dependentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       relationship: relationship == freezed
           ? _value.relationship
-          : relationship as CodeableConcept,
-      period: period == freezed ? _value.period : period as Period,
-      payor: payor == freezed ? _value.payor : payor as List<Reference>,
-      class_: class_ == freezed ? _value.class_ : class_ as List<CoverageClass>,
-      order: order == freezed ? _value.order : order as PositiveInt,
+          : relationship // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      payor: payor == freezed
+          ? _value.payor
+          : payor // ignore: cast_nullable_to_non_nullable
+              as List<Reference>,
+      class_: class_ == freezed
+          ? _value.class_
+          : class_ // ignore: cast_nullable_to_non_nullable
+              as List<CoverageClass>?,
+      order: order == freezed
+          ? _value.order
+          : order // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
       orderElement: orderElement == freezed
           ? _value.orderElement
-          : orderElement as Element,
-      network: network == freezed ? _value.network : network as String,
+          : orderElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      network: network == freezed
+          ? _value.network
+          : network // ignore: cast_nullable_to_non_nullable
+              as String?,
       networkElement: networkElement == freezed
           ? _value.networkElement
-          : networkElement as Element,
+          : networkElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       costToBeneficiary: costToBeneficiary == freezed
           ? _value.costToBeneficiary
-          : costToBeneficiary as List<CoverageCostToBeneficiary>,
-      subrogation:
-          subrogation == freezed ? _value.subrogation : subrogation as Boolean,
+          : costToBeneficiary // ignore: cast_nullable_to_non_nullable
+              as List<CoverageCostToBeneficiary>?,
+      subrogation: subrogation == freezed
+          ? _value.subrogation
+          : subrogation // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       subrogationElement: subrogationElement == freezed
           ? _value.subrogationElement
-          : subrogationElement as Element,
-      contract:
-          contract == freezed ? _value.contract : contract as List<Reference>,
+          : subrogationElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contract: contract == freezed
+          ? _value.contract
+          : contract // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Coverage extends _Coverage {
   _$_Coverage(
       {@JsonKey(unknownEnumValue: R4ResourceType.Coverage)
@@ -760,15 +898,13 @@ class _$_Coverage extends _Coverage {
       this.subscriberId,
       @JsonKey(name: '_subscriberId')
           this.subscriberIdElement,
-      @required
-          this.beneficiary,
+      required this.beneficiary,
       this.dependent,
       @JsonKey(name: '_dependent')
           this.dependentElement,
       this.relationship,
       this.period,
-      @required
-          this.payor,
+      required this.payor,
       @JsonKey(name: 'class')
           this.class_,
       this.order,
@@ -782,93 +918,90 @@ class _$_Coverage extends _Coverage {
       @JsonKey(name: '_subrogation')
           this.subrogationElement,
       this.contract})
-      : assert(resourceType != null),
-        assert(beneficiary != null),
-        assert(payor != null),
-        super._();
+      : super._();
 
   factory _$_Coverage.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageFromJson(json);
+      _$$_CoverageFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
   final R4ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<Identifier>? identifier;
   @override
-  final Code status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
-  final Element statusElement;
+  final Element? statusElement;
   @override
-  final CodeableConcept type;
+  final CodeableConcept? type;
   @override
-  final Reference policyHolder;
+  final Reference? policyHolder;
   @override
-  final Reference subscriber;
+  final Reference? subscriber;
   @override
-  final String subscriberId;
+  final String? subscriberId;
   @override
   @JsonKey(name: '_subscriberId')
-  final Element subscriberIdElement;
+  final Element? subscriberIdElement;
   @override
   final Reference beneficiary;
   @override
-  final String dependent;
+  final String? dependent;
   @override
   @JsonKey(name: '_dependent')
-  final Element dependentElement;
+  final Element? dependentElement;
   @override
-  final CodeableConcept relationship;
+  final CodeableConcept? relationship;
   @override
-  final Period period;
+  final Period? period;
   @override
   final List<Reference> payor;
   @override
   @JsonKey(name: 'class')
-  final List<CoverageClass> class_;
+  final List<CoverageClass>? class_;
   @override
-  final PositiveInt order;
+  final PositiveInt? order;
   @override
   @JsonKey(name: '_order')
-  final Element orderElement;
+  final Element? orderElement;
   @override
-  final String network;
+  final String? network;
   @override
   @JsonKey(name: '_network')
-  final Element networkElement;
+  final Element? networkElement;
   @override
-  final List<CoverageCostToBeneficiary> costToBeneficiary;
+  final List<CoverageCostToBeneficiary>? costToBeneficiary;
   @override
-  final Boolean subrogation;
+  final Boolean? subrogation;
   @override
   @JsonKey(name: '_subrogation')
-  final Element subrogationElement;
+  final Element? subrogationElement;
   @override
-  final List<Reference> contract;
+  final List<Reference>? contract;
 
   @override
   String toString() {
@@ -1003,145 +1136,146 @@ class _$_Coverage extends _Coverage {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageToJson(this);
+    return _$$_CoverageToJson(this);
   }
 }
 
 abstract class _Coverage extends Coverage {
-  _Coverage._() : super._();
   factory _Coverage(
       {@JsonKey(unknownEnumValue: R4ResourceType.Coverage)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      CodeableConcept type,
-      Reference policyHolder,
-      Reference subscriber,
-      String subscriberId,
+          Element? statusElement,
+      CodeableConcept? type,
+      Reference? policyHolder,
+      Reference? subscriber,
+      String? subscriberId,
       @JsonKey(name: '_subscriberId')
-          Element subscriberIdElement,
-      @required
-          Reference beneficiary,
-      String dependent,
+          Element? subscriberIdElement,
+      required Reference beneficiary,
+      String? dependent,
       @JsonKey(name: '_dependent')
-          Element dependentElement,
-      CodeableConcept relationship,
-      Period period,
-      @required
-          List<Reference> payor,
+          Element? dependentElement,
+      CodeableConcept? relationship,
+      Period? period,
+      required List<Reference> payor,
       @JsonKey(name: 'class')
-          List<CoverageClass> class_,
-      PositiveInt order,
+          List<CoverageClass>? class_,
+      PositiveInt? order,
       @JsonKey(name: '_order')
-          Element orderElement,
-      String network,
+          Element? orderElement,
+      String? network,
       @JsonKey(name: '_network')
-          Element networkElement,
-      List<CoverageCostToBeneficiary> costToBeneficiary,
-      Boolean subrogation,
+          Element? networkElement,
+      List<CoverageCostToBeneficiary>? costToBeneficiary,
+      Boolean? subrogation,
       @JsonKey(name: '_subrogation')
-          Element subrogationElement,
-      List<Reference> contract}) = _$_Coverage;
+          Element? subrogationElement,
+      List<Reference>? contract}) = _$_Coverage;
+  _Coverage._() : super._();
 
   factory _Coverage.fromJson(Map<String, dynamic> json) = _$_Coverage.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.Coverage)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier> get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Code get status;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  Reference get policyHolder;
+  Reference? get policyHolder => throw _privateConstructorUsedError;
   @override
-  Reference get subscriber;
+  Reference? get subscriber => throw _privateConstructorUsedError;
   @override
-  String get subscriberId;
+  String? get subscriberId => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_subscriberId')
-  Element get subscriberIdElement;
+  Element? get subscriberIdElement => throw _privateConstructorUsedError;
   @override
-  Reference get beneficiary;
+  Reference get beneficiary => throw _privateConstructorUsedError;
   @override
-  String get dependent;
+  String? get dependent => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_dependent')
-  Element get dependentElement;
+  Element? get dependentElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get relationship;
+  CodeableConcept? get relationship => throw _privateConstructorUsedError;
   @override
-  Period get period;
+  Period? get period => throw _privateConstructorUsedError;
   @override
-  List<Reference> get payor;
+  List<Reference> get payor => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'class')
-  List<CoverageClass> get class_;
+  List<CoverageClass>? get class_ => throw _privateConstructorUsedError;
   @override
-  PositiveInt get order;
+  PositiveInt? get order => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_order')
-  Element get orderElement;
+  Element? get orderElement => throw _privateConstructorUsedError;
   @override
-  String get network;
+  String? get network => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_network')
-  Element get networkElement;
+  Element? get networkElement => throw _privateConstructorUsedError;
   @override
-  List<CoverageCostToBeneficiary> get costToBeneficiary;
+  List<CoverageCostToBeneficiary>? get costToBeneficiary =>
+      throw _privateConstructorUsedError;
   @override
-  Boolean get subrogation;
+  Boolean? get subrogation => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_subrogation')
-  Element get subrogationElement;
+  Element? get subrogationElement => throw _privateConstructorUsedError;
   @override
-  List<Reference> get contract;
+  List<Reference>? get contract => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CoverageCopyWith<_Coverage> get copyWith;
+  _$CoverageCopyWith<_Coverage> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CoverageClass _$CoverageClassFromJson(Map<String, dynamic> json) {
@@ -1152,16 +1286,15 @@ CoverageClass _$CoverageClassFromJson(Map<String, dynamic> json) {
 class _$CoverageClassTearOff {
   const _$CoverageClassTearOff();
 
-// ignore: unused_element
   _CoverageClass call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required CodeableConcept type,
-      String value,
-      @JsonKey(name: '_value') Element valueElement,
-      String name,
-      @JsonKey(name: '_name') Element nameElement}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required CodeableConcept type,
+      String? value,
+      @JsonKey(name: '_value') Element? valueElement,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement}) {
     return _CoverageClass(
       id: id,
       extension_: extension_,
@@ -1174,33 +1307,33 @@ class _$CoverageClassTearOff {
     );
   }
 
-// ignore: unused_element
   CoverageClass fromJson(Map<String, Object> json) {
     return CoverageClass.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CoverageClass = _$CoverageClassTearOff();
 
 /// @nodoc
 mixin _$CoverageClass {
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  CodeableConcept get type;
-  String get value;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get type => throw _privateConstructorUsedError;
+  String? get value => throw _privateConstructorUsedError;
   @JsonKey(name: '_value')
-  Element get valueElement;
-  String get name;
+  Element? get valueElement => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CoverageClassCopyWith<CoverageClass> get copyWith;
+  $CoverageClassCopyWith<CoverageClass> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1209,18 +1342,18 @@ abstract class $CoverageClassCopyWith<$Res> {
           CoverageClass value, $Res Function(CoverageClass) then) =
       _$CoverageClassCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      String value,
-      @JsonKey(name: '_value') Element valueElement,
-      String name,
-      @JsonKey(name: '_name') Element nameElement});
+      String? value,
+      @JsonKey(name: '_value') Element? valueElement,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement});
 
   $CodeableConceptCopyWith<$Res> get type;
-  $ElementCopyWith<$Res> get valueElement;
-  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res>? get valueElement;
+  $ElementCopyWith<$Res>? get nameElement;
 }
 
 /// @nodoc
@@ -1234,60 +1367,76 @@ class _$CoverageClassCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object value = freezed,
-    Object valueElement = freezed,
-    Object name = freezed,
-    Object nameElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? value = freezed,
+    Object? valueElement = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      value: value == freezed ? _value.value : value as String,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String?,
       valueElement: valueElement == freezed
           ? _value.valueElement
-          : valueElement as Element,
-      name: name == freezed ? _value.name : name as String,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
+          : valueElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
   @override
   $CodeableConceptCopyWith<$Res> get type {
-    if (_value.type == null) {
-      return null;
-    }
     return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get valueElement {
+  $ElementCopyWith<$Res>? get valueElement {
     if (_value.valueElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.valueElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.valueElement!, (value) {
       return _then(_value.copyWith(valueElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get nameElement {
+  $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
       return _then(_value.copyWith(nameElement: value));
     });
   }
@@ -1301,21 +1450,21 @@ abstract class _$CoverageClassCopyWith<$Res>
       __$CoverageClassCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      String value,
-      @JsonKey(name: '_value') Element valueElement,
-      String name,
-      @JsonKey(name: '_name') Element nameElement});
+      String? value,
+      @JsonKey(name: '_value') Element? valueElement,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
-  $ElementCopyWith<$Res> get valueElement;
+  $ElementCopyWith<$Res>? get valueElement;
   @override
-  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res>? get nameElement;
 }
 
 /// @nodoc
@@ -1331,73 +1480,88 @@ class __$CoverageClassCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object value = freezed,
-    Object valueElement = freezed,
-    Object name = freezed,
-    Object nameElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? value = freezed,
+    Object? valueElement = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
   }) {
     return _then(_CoverageClass(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      value: value == freezed ? _value.value : value as String,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as String?,
       valueElement: valueElement == freezed
           ? _value.valueElement
-          : valueElement as Element,
-      name: name == freezed ? _value.name : name as String,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
+          : valueElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageClass extends _CoverageClass {
   _$_CoverageClass(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required this.type,
+      required this.type,
       this.value,
       @JsonKey(name: '_value') this.valueElement,
       this.name,
       @JsonKey(name: '_name') this.nameElement})
-      : assert(type != null),
-        super._();
+      : super._();
 
   factory _$_CoverageClass.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageClassFromJson(json);
+      _$$_CoverageClassFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept type;
   @override
-  final String value;
+  final String? value;
   @override
   @JsonKey(name: '_value')
-  final Element valueElement;
+  final Element? valueElement;
   @override
-  final String name;
+  final String? name;
   @override
   @JsonKey(name: '_name')
-  final Element nameElement;
+  final Element? nameElement;
 
   @override
   String toString() {
@@ -1449,47 +1613,49 @@ class _$_CoverageClass extends _CoverageClass {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageClassToJson(this);
+    return _$$_CoverageClassToJson(this);
   }
 }
 
 abstract class _CoverageClass extends CoverageClass {
-  _CoverageClass._() : super._();
   factory _CoverageClass(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required CodeableConcept type,
-      String value,
-      @JsonKey(name: '_value') Element valueElement,
-      String name,
-      @JsonKey(name: '_name') Element nameElement}) = _$_CoverageClass;
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required CodeableConcept type,
+      String? value,
+      @JsonKey(name: '_value') Element? valueElement,
+      String? name,
+      @JsonKey(name: '_name') Element? nameElement}) = _$_CoverageClass;
+  _CoverageClass._() : super._();
 
   factory _CoverageClass.fromJson(Map<String, dynamic> json) =
       _$_CoverageClass.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  String get value;
+  String? get value => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_value')
-  Element get valueElement;
+  Element? get valueElement => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CoverageClassCopyWith<_CoverageClass> get copyWith;
+  _$CoverageClassCopyWith<_CoverageClass> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CoverageCostToBeneficiary _$CoverageCostToBeneficiaryFromJson(
@@ -1501,15 +1667,14 @@ CoverageCostToBeneficiary _$CoverageCostToBeneficiaryFromJson(
 class _$CoverageCostToBeneficiaryTearOff {
   const _$CoverageCostToBeneficiaryTearOff();
 
-// ignore: unused_element
   _CoverageCostToBeneficiary call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      CodeableConcept type,
-      Quantity valueQuantity,
-      Money valueMoney,
-      List<CoverageException> exception}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      Quantity? valueQuantity,
+      Money? valueMoney,
+      List<CoverageException>? exception}) {
     return _CoverageCostToBeneficiary(
       id: id,
       extension_: extension_,
@@ -1521,30 +1686,30 @@ class _$CoverageCostToBeneficiaryTearOff {
     );
   }
 
-// ignore: unused_element
   CoverageCostToBeneficiary fromJson(Map<String, Object> json) {
     return CoverageCostToBeneficiary.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CoverageCostToBeneficiary = _$CoverageCostToBeneficiaryTearOff();
 
 /// @nodoc
 mixin _$CoverageCostToBeneficiary {
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  CodeableConcept get type;
-  Quantity get valueQuantity;
-  Money get valueMoney;
-  List<CoverageException> get exception;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  Money? get valueMoney => throw _privateConstructorUsedError;
+  List<CoverageException>? get exception => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CoverageCostToBeneficiaryCopyWith<CoverageCostToBeneficiary> get copyWith;
+  $CoverageCostToBeneficiaryCopyWith<CoverageCostToBeneficiary> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1553,17 +1718,17 @@ abstract class $CoverageCostToBeneficiaryCopyWith<$Res> {
           $Res Function(CoverageCostToBeneficiary) then) =
       _$CoverageCostToBeneficiaryCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      CodeableConcept type,
-      Quantity valueQuantity,
-      Money valueMoney,
-      List<CoverageException> exception});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      Quantity? valueQuantity,
+      Money? valueMoney,
+      List<CoverageException>? exception});
 
-  $CodeableConceptCopyWith<$Res> get type;
-  $QuantityCopyWith<$Res> get valueQuantity;
-  $MoneyCopyWith<$Res> get valueMoney;
+  $CodeableConceptCopyWith<$Res>? get type;
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  $MoneyCopyWith<$Res>? get valueMoney;
 }
 
 /// @nodoc
@@ -1577,60 +1742,75 @@ class _$CoverageCostToBeneficiaryCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object valueQuantity = freezed,
-    Object valueMoney = freezed,
-    Object exception = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueMoney = freezed,
+    Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as Quantity,
-      valueMoney:
-          valueMoney == freezed ? _value.valueMoney : valueMoney as Money,
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueMoney: valueMoney == freezed
+          ? _value.valueMoney
+          : valueMoney // ignore: cast_nullable_to_non_nullable
+              as Money?,
       exception: exception == freezed
           ? _value.exception
-          : exception as List<CoverageException>,
+          : exception // ignore: cast_nullable_to_non_nullable
+              as List<CoverageException>?,
     ));
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get type {
+  $CodeableConceptCopyWith<$Res>? get type {
     if (_value.type == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
 
   @override
-  $QuantityCopyWith<$Res> get valueQuantity {
+  $QuantityCopyWith<$Res>? get valueQuantity {
     if (_value.valueQuantity == null) {
       return null;
     }
-    return $QuantityCopyWith<$Res>(_value.valueQuantity, (value) {
+
+    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
       return _then(_value.copyWith(valueQuantity: value));
     });
   }
 
   @override
-  $MoneyCopyWith<$Res> get valueMoney {
+  $MoneyCopyWith<$Res>? get valueMoney {
     if (_value.valueMoney == null) {
       return null;
     }
-    return $MoneyCopyWith<$Res>(_value.valueMoney, (value) {
+
+    return $MoneyCopyWith<$Res>(_value.valueMoney!, (value) {
       return _then(_value.copyWith(valueMoney: value));
     });
   }
@@ -1644,20 +1824,20 @@ abstract class _$CoverageCostToBeneficiaryCopyWith<$Res>
       __$CoverageCostToBeneficiaryCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      CodeableConcept type,
-      Quantity valueQuantity,
-      Money valueMoney,
-      List<CoverageException> exception});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      Quantity? valueQuantity,
+      Money? valueMoney,
+      List<CoverageException>? exception});
 
   @override
-  $CodeableConceptCopyWith<$Res> get type;
+  $CodeableConceptCopyWith<$Res>? get type;
   @override
-  $QuantityCopyWith<$Res> get valueQuantity;
+  $QuantityCopyWith<$Res>? get valueQuantity;
   @override
-  $MoneyCopyWith<$Res> get valueMoney;
+  $MoneyCopyWith<$Res>? get valueMoney;
 }
 
 /// @nodoc
@@ -1674,38 +1854,49 @@ class __$CoverageCostToBeneficiaryCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object valueQuantity = freezed,
-    Object valueMoney = freezed,
-    Object exception = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueMoney = freezed,
+    Object? exception = freezed,
   }) {
     return _then(_CoverageCostToBeneficiary(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       valueQuantity: valueQuantity == freezed
           ? _value.valueQuantity
-          : valueQuantity as Quantity,
-      valueMoney:
-          valueMoney == freezed ? _value.valueMoney : valueMoney as Money,
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueMoney: valueMoney == freezed
+          ? _value.valueMoney
+          : valueMoney // ignore: cast_nullable_to_non_nullable
+              as Money?,
       exception: exception == freezed
           ? _value.exception
-          : exception as List<CoverageException>,
+          : exception // ignore: cast_nullable_to_non_nullable
+              as List<CoverageException>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
   _$_CoverageCostToBeneficiary(
       {this.id,
@@ -1718,23 +1909,23 @@ class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
       : super._();
 
   factory _$_CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageCostToBeneficiaryFromJson(json);
+      _$$_CoverageCostToBeneficiaryFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final CodeableConcept type;
+  final CodeableConcept? type;
   @override
-  final Quantity valueQuantity;
+  final Quantity? valueQuantity;
   @override
-  final Money valueMoney;
+  final Money? valueMoney;
   @override
-  final List<CoverageException> exception;
+  final List<CoverageException>? exception;
 
   @override
   String toString() {
@@ -1786,42 +1977,44 @@ class _$_CoverageCostToBeneficiary extends _CoverageCostToBeneficiary {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageCostToBeneficiaryToJson(this);
+    return _$$_CoverageCostToBeneficiaryToJson(this);
   }
 }
 
 abstract class _CoverageCostToBeneficiary extends CoverageCostToBeneficiary {
-  _CoverageCostToBeneficiary._() : super._();
   factory _CoverageCostToBeneficiary(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      CodeableConcept type,
-      Quantity valueQuantity,
-      Money valueMoney,
-      List<CoverageException> exception}) = _$_CoverageCostToBeneficiary;
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? type,
+      Quantity? valueQuantity,
+      Money? valueMoney,
+      List<CoverageException>? exception}) = _$_CoverageCostToBeneficiary;
+  _CoverageCostToBeneficiary._() : super._();
 
   factory _CoverageCostToBeneficiary.fromJson(Map<String, dynamic> json) =
       _$_CoverageCostToBeneficiary.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  Quantity get valueQuantity;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
   @override
-  Money get valueMoney;
+  Money? get valueMoney => throw _privateConstructorUsedError;
   @override
-  List<CoverageException> get exception;
+  List<CoverageException>? get exception => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CoverageCostToBeneficiaryCopyWith<_CoverageCostToBeneficiary> get copyWith;
+  _$CoverageCostToBeneficiaryCopyWith<_CoverageCostToBeneficiary>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CoverageException _$CoverageExceptionFromJson(Map<String, dynamic> json) {
@@ -1832,13 +2025,12 @@ CoverageException _$CoverageExceptionFromJson(Map<String, dynamic> json) {
 class _$CoverageExceptionTearOff {
   const _$CoverageExceptionTearOff();
 
-// ignore: unused_element
   _CoverageException call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required CodeableConcept type,
-      Period period}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required CodeableConcept type,
+      Period? period}) {
     return _CoverageException(
       id: id,
       extension_: extension_,
@@ -1848,28 +2040,28 @@ class _$CoverageExceptionTearOff {
     );
   }
 
-// ignore: unused_element
   CoverageException fromJson(Map<String, Object> json) {
     return CoverageException.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CoverageException = _$CoverageExceptionTearOff();
 
 /// @nodoc
 mixin _$CoverageException {
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  CodeableConcept get type;
-  Period get period;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get type => throw _privateConstructorUsedError;
+  Period? get period => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CoverageExceptionCopyWith<CoverageException> get copyWith;
+  $CoverageExceptionCopyWith<CoverageException> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1878,14 +2070,14 @@ abstract class $CoverageExceptionCopyWith<$Res> {
           CoverageException value, $Res Function(CoverageException) then) =
       _$CoverageExceptionCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Period period});
+      Period? period});
 
   $CodeableConceptCopyWith<$Res> get type;
-  $PeriodCopyWith<$Res> get period;
+  $PeriodCopyWith<$Res>? get period;
 }
 
 /// @nodoc
@@ -1899,41 +2091,50 @@ class _$CoverageExceptionCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object period = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? period = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      period: period == freezed ? _value.period : period as Period,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
     ));
   }
 
   @override
   $CodeableConceptCopyWith<$Res> get type {
-    if (_value.type == null) {
-      return null;
-    }
     return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get period {
+  $PeriodCopyWith<$Res>? get period {
     if (_value.period == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.period, (value) {
+
+    return $PeriodCopyWith<$Res>(_value.period!, (value) {
       return _then(_value.copyWith(period: value));
     });
   }
@@ -1947,16 +2148,16 @@ abstract class _$CoverageExceptionCopyWith<$Res>
       __$CoverageExceptionCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      Period period});
+      Period? period});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
-  $PeriodCopyWith<$Res> get period;
+  $PeriodCopyWith<$Res>? get period;
 }
 
 /// @nodoc
@@ -1972,53 +2173,62 @@ class __$CoverageExceptionCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object period = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? period = freezed,
   }) {
     return _then(_CoverageException(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as CodeableConcept,
-      period: period == freezed ? _value.period : period as Period,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageException extends _CoverageException {
   _$_CoverageException(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required this.type,
+      required this.type,
       this.period})
-      : assert(type != null),
-        super._();
+      : super._();
 
   factory _$_CoverageException.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageExceptionFromJson(json);
+      _$$_CoverageExceptionFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept type;
   @override
-  final Period period;
+  final Period? period;
 
   @override
   String toString() {
@@ -2059,36 +2269,38 @@ class _$_CoverageException extends _CoverageException {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageExceptionToJson(this);
+    return _$$_CoverageExceptionToJson(this);
   }
 }
 
 abstract class _CoverageException extends CoverageException {
-  _CoverageException._() : super._();
   factory _CoverageException(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required CodeableConcept type,
-      Period period}) = _$_CoverageException;
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required CodeableConcept type,
+      Period? period}) = _$_CoverageException;
+  _CoverageException._() : super._();
 
   factory _CoverageException.fromJson(Map<String, dynamic> json) =
       _$_CoverageException.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  Period get period;
+  Period? get period => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$CoverageExceptionCopyWith<_CoverageException> get copyWith;
+  _$CoverageExceptionCopyWith<_CoverageException> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 CoverageEligibilityRequest _$CoverageEligibilityRequestFromJson(
@@ -2100,49 +2312,46 @@ CoverageEligibilityRequest _$CoverageEligibilityRequestFromJson(
 class _$CoverageEligibilityRequestTearOff {
   const _$CoverageEligibilityRequestTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityRequest call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
           R4ResourceType
               resourceType = R4ResourceType.CoverageEligibilityRequest,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      CodeableConcept priority,
-      List<CoverageEligibilityRequestPurpose> purpose,
+          Element? statusElement,
+      CodeableConcept? priority,
+      List<CoverageEligibilityRequestPurpose>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element> purposeElement,
-      @required
-          Reference patient,
-      Date servicedDate,
+          List<Element?>? purposeElement,
+      required Reference patient,
+      Date? servicedDate,
       @JsonKey(name: '_servicedDate')
-          Element servicedDateElement,
-      Period servicedPeriod,
-      FhirDateTime created,
+          Element? servicedDateElement,
+      Period? servicedPeriod,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference enterer,
-      Reference provider,
-      @required
-          Reference insurer,
-      Reference facility,
-      List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
-      List<CoverageEligibilityRequestInsurance> insurance,
-      List<CoverageEligibilityRequestItem> item}) {
+          Element? createdElement,
+      Reference? enterer,
+      Reference? provider,
+      required Reference insurer,
+      Reference? facility,
+      List<CoverageEligibilityRequestSupportingInfo>? supportingInfo,
+      List<CoverageEligibilityRequestInsurance>? insurance,
+      List<CoverageEligibilityRequestItem>? item}) {
     return _CoverageEligibilityRequest(
       resourceType: resourceType,
       id: id,
@@ -2177,60 +2386,64 @@ class _$CoverageEligibilityRequestTearOff {
     );
   }
 
-// ignore: unused_element
   CoverageEligibilityRequest fromJson(Map<String, Object> json) {
     return CoverageEligibilityRequest.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CoverageEligibilityRequest = _$CoverageEligibilityRequestTearOff();
 
 /// @nodoc
 mixin _$CoverageEligibilityRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
-  R4ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
-  Code get status;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
-  Element get statusElement;
-  CodeableConcept get priority;
-  List<CoverageEligibilityRequestPurpose> get purpose;
+  Element? get statusElement => throw _privateConstructorUsedError;
+  CodeableConcept? get priority => throw _privateConstructorUsedError;
+  List<CoverageEligibilityRequestPurpose>? get purpose =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_purpose')
-  List<Element> get purposeElement;
-  Reference get patient;
-  Date get servicedDate;
+  List<Element?>? get purposeElement => throw _privateConstructorUsedError;
+  Reference get patient => throw _privateConstructorUsedError;
+  Date? get servicedDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_servicedDate')
-  Element get servicedDateElement;
-  Period get servicedPeriod;
-  FhirDateTime get created;
+  Element? get servicedDateElement => throw _privateConstructorUsedError;
+  Period? get servicedPeriod => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
-  Element get createdElement;
-  Reference get enterer;
-  Reference get provider;
-  Reference get insurer;
-  Reference get facility;
-  List<CoverageEligibilityRequestSupportingInfo> get supportingInfo;
-  List<CoverageEligibilityRequestInsurance> get insurance;
-  List<CoverageEligibilityRequestItem> get item;
+  Element? get createdElement => throw _privateConstructorUsedError;
+  Reference? get enterer => throw _privateConstructorUsedError;
+  Reference? get provider => throw _privateConstructorUsedError;
+  Reference get insurer => throw _privateConstructorUsedError;
+  Reference? get facility => throw _privateConstructorUsedError;
+  List<CoverageEligibilityRequestSupportingInfo>? get supportingInfo =>
+      throw _privateConstructorUsedError;
+  List<CoverageEligibilityRequestInsurance>? get insurance =>
+      throw _privateConstructorUsedError;
+  List<CoverageEligibilityRequestItem>? get item =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $CoverageEligibilityRequestCopyWith<CoverageEligibilityRequest> get copyWith;
+  $CoverageEligibilityRequestCopyWith<CoverageEligibilityRequest>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -2241,57 +2454,57 @@ abstract class $CoverageEligibilityRequestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      CodeableConcept priority,
-      List<CoverageEligibilityRequestPurpose> purpose,
+          Element? statusElement,
+      CodeableConcept? priority,
+      List<CoverageEligibilityRequestPurpose>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element> purposeElement,
+          List<Element?>? purposeElement,
       Reference patient,
-      Date servicedDate,
+      Date? servicedDate,
       @JsonKey(name: '_servicedDate')
-          Element servicedDateElement,
-      Period servicedPeriod,
-      FhirDateTime created,
+          Element? servicedDateElement,
+      Period? servicedPeriod,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference enterer,
-      Reference provider,
+          Element? createdElement,
+      Reference? enterer,
+      Reference? provider,
       Reference insurer,
-      Reference facility,
-      List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
-      List<CoverageEligibilityRequestInsurance> insurance,
-      List<CoverageEligibilityRequestItem> item});
+      Reference? facility,
+      List<CoverageEligibilityRequestSupportingInfo>? supportingInfo,
+      List<CoverageEligibilityRequestInsurance>? insurance,
+      List<CoverageEligibilityRequestItem>? item});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get statusElement;
-  $CodeableConceptCopyWith<$Res> get priority;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get statusElement;
+  $CodeableConceptCopyWith<$Res>? get priority;
   $ReferenceCopyWith<$Res> get patient;
-  $ElementCopyWith<$Res> get servicedDateElement;
-  $PeriodCopyWith<$Res> get servicedPeriod;
-  $ElementCopyWith<$Res> get createdElement;
-  $ReferenceCopyWith<$Res> get enterer;
-  $ReferenceCopyWith<$Res> get provider;
+  $ElementCopyWith<$Res>? get servicedDateElement;
+  $PeriodCopyWith<$Res>? get servicedPeriod;
+  $ElementCopyWith<$Res>? get createdElement;
+  $ReferenceCopyWith<$Res>? get enterer;
+  $ReferenceCopyWith<$Res>? get provider;
   $ReferenceCopyWith<$Res> get insurer;
-  $ReferenceCopyWith<$Res> get facility;
+  $ReferenceCopyWith<$Res>? get facility;
 }
 
 /// @nodoc
@@ -2305,242 +2518,303 @@ class _$CoverageEligibilityRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object priority = freezed,
-    Object purpose = freezed,
-    Object purposeElement = freezed,
-    Object patient = freezed,
-    Object servicedDate = freezed,
-    Object servicedDateElement = freezed,
-    Object servicedPeriod = freezed,
-    Object created = freezed,
-    Object createdElement = freezed,
-    Object enterer = freezed,
-    Object provider = freezed,
-    Object insurer = freezed,
-    Object facility = freezed,
-    Object supportingInfo = freezed,
-    Object insurance = freezed,
-    Object item = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? priority = freezed,
+    Object? purpose = freezed,
+    Object? purposeElement = freezed,
+    Object? patient = freezed,
+    Object? servicedDate = freezed,
+    Object? servicedDateElement = freezed,
+    Object? servicedPeriod = freezed,
+    Object? created = freezed,
+    Object? createdElement = freezed,
+    Object? enterer = freezed,
+    Object? provider = freezed,
+    Object? insurer = freezed,
+    Object? facility = freezed,
+    Object? supportingInfo = freezed,
+    Object? insurance = freezed,
+    Object? item = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      priority:
-          priority == freezed ? _value.priority : priority as CodeableConcept,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      priority: priority == freezed
+          ? _value.priority
+          : priority // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       purpose: purpose == freezed
           ? _value.purpose
-          : purpose as List<CoverageEligibilityRequestPurpose>,
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityRequestPurpose>?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as List<Element>,
-      patient: patient == freezed ? _value.patient : patient as Reference,
-      servicedDate:
-          servicedDate == freezed ? _value.servicedDate : servicedDate as Date,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      patient: patient == freezed
+          ? _value.patient
+          : patient // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      servicedDate: servicedDate == freezed
+          ? _value.servicedDate
+          : servicedDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
       servicedDateElement: servicedDateElement == freezed
           ? _value.servicedDateElement
-          : servicedDateElement as Element,
+          : servicedDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       servicedPeriod: servicedPeriod == freezed
           ? _value.servicedPeriod
-          : servicedPeriod as Period,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+          : servicedPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      created: created == freezed
+          ? _value.created
+          : created // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
-          : createdElement as Element,
-      enterer: enterer == freezed ? _value.enterer : enterer as Reference,
-      provider: provider == freezed ? _value.provider : provider as Reference,
-      insurer: insurer == freezed ? _value.insurer : insurer as Reference,
-      facility: facility == freezed ? _value.facility : facility as Reference,
+          : createdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      enterer: enterer == freezed
+          ? _value.enterer
+          : enterer // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      provider: provider == freezed
+          ? _value.provider
+          : provider // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      insurer: insurer == freezed
+          ? _value.insurer
+          : insurer // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      facility: facility == freezed
+          ? _value.facility
+          : facility // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       supportingInfo: supportingInfo == freezed
           ? _value.supportingInfo
-          : supportingInfo as List<CoverageEligibilityRequestSupportingInfo>,
+          : supportingInfo // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityRequestSupportingInfo>?,
       insurance: insurance == freezed
           ? _value.insurance
-          : insurance as List<CoverageEligibilityRequestInsurance>,
+          : insurance // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityRequestInsurance>?,
       item: item == freezed
           ? _value.item
-          : item as List<CoverageEligibilityRequestItem>,
+          : item // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityRequestItem>?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get statusElement {
+  $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
       return _then(_value.copyWith(statusElement: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get priority {
+  $CodeableConceptCopyWith<$Res>? get priority {
     if (_value.priority == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.priority, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.priority!, (value) {
       return _then(_value.copyWith(priority: value));
     });
   }
 
   @override
   $ReferenceCopyWith<$Res> get patient {
-    if (_value.patient == null) {
-      return null;
-    }
     return $ReferenceCopyWith<$Res>(_value.patient, (value) {
       return _then(_value.copyWith(patient: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get servicedDateElement {
+  $ElementCopyWith<$Res>? get servicedDateElement {
     if (_value.servicedDateElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.servicedDateElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.servicedDateElement!, (value) {
       return _then(_value.copyWith(servicedDateElement: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get servicedPeriod {
+  $PeriodCopyWith<$Res>? get servicedPeriod {
     if (_value.servicedPeriod == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.servicedPeriod, (value) {
+
+    return $PeriodCopyWith<$Res>(_value.servicedPeriod!, (value) {
       return _then(_value.copyWith(servicedPeriod: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get createdElement {
+  $ElementCopyWith<$Res>? get createdElement {
     if (_value.createdElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.createdElement!, (value) {
       return _then(_value.copyWith(createdElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get enterer {
+  $ReferenceCopyWith<$Res>? get enterer {
     if (_value.enterer == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.enterer, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.enterer!, (value) {
       return _then(_value.copyWith(enterer: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get provider {
+  $ReferenceCopyWith<$Res>? get provider {
     if (_value.provider == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.provider, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.provider!, (value) {
       return _then(_value.copyWith(provider: value));
     });
   }
 
   @override
   $ReferenceCopyWith<$Res> get insurer {
-    if (_value.insurer == null) {
-      return null;
-    }
     return $ReferenceCopyWith<$Res>(_value.insurer, (value) {
       return _then(_value.copyWith(insurer: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get facility {
+  $ReferenceCopyWith<$Res>? get facility {
     if (_value.facility == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.facility, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.facility!, (value) {
       return _then(_value.copyWith(facility: value));
     });
   }
@@ -2557,71 +2831,71 @@ abstract class _$CoverageEligibilityRequestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      CodeableConcept priority,
-      List<CoverageEligibilityRequestPurpose> purpose,
+          Element? statusElement,
+      CodeableConcept? priority,
+      List<CoverageEligibilityRequestPurpose>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element> purposeElement,
+          List<Element?>? purposeElement,
       Reference patient,
-      Date servicedDate,
+      Date? servicedDate,
       @JsonKey(name: '_servicedDate')
-          Element servicedDateElement,
-      Period servicedPeriod,
-      FhirDateTime created,
+          Element? servicedDateElement,
+      Period? servicedPeriod,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference enterer,
-      Reference provider,
+          Element? createdElement,
+      Reference? enterer,
+      Reference? provider,
       Reference insurer,
-      Reference facility,
-      List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
-      List<CoverageEligibilityRequestInsurance> insurance,
-      List<CoverageEligibilityRequestItem> item});
+      Reference? facility,
+      List<CoverageEligibilityRequestSupportingInfo>? supportingInfo,
+      List<CoverageEligibilityRequestInsurance>? insurance,
+      List<CoverageEligibilityRequestItem>? item});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
-  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res>? get statusElement;
   @override
-  $CodeableConceptCopyWith<$Res> get priority;
+  $CodeableConceptCopyWith<$Res>? get priority;
   @override
   $ReferenceCopyWith<$Res> get patient;
   @override
-  $ElementCopyWith<$Res> get servicedDateElement;
+  $ElementCopyWith<$Res>? get servicedDateElement;
   @override
-  $PeriodCopyWith<$Res> get servicedPeriod;
+  $PeriodCopyWith<$Res>? get servicedPeriod;
   @override
-  $ElementCopyWith<$Res> get createdElement;
+  $ElementCopyWith<$Res>? get createdElement;
   @override
-  $ReferenceCopyWith<$Res> get enterer;
+  $ReferenceCopyWith<$Res>? get enterer;
   @override
-  $ReferenceCopyWith<$Res> get provider;
+  $ReferenceCopyWith<$Res>? get provider;
   @override
   $ReferenceCopyWith<$Res> get insurer;
   @override
-  $ReferenceCopyWith<$Res> get facility;
+  $ReferenceCopyWith<$Res>? get facility;
 }
 
 /// @nodoc
@@ -2638,110 +2912,164 @@ class __$CoverageEligibilityRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object priority = freezed,
-    Object purpose = freezed,
-    Object purposeElement = freezed,
-    Object patient = freezed,
-    Object servicedDate = freezed,
-    Object servicedDateElement = freezed,
-    Object servicedPeriod = freezed,
-    Object created = freezed,
-    Object createdElement = freezed,
-    Object enterer = freezed,
-    Object provider = freezed,
-    Object insurer = freezed,
-    Object facility = freezed,
-    Object supportingInfo = freezed,
-    Object insurance = freezed,
-    Object item = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? priority = freezed,
+    Object? purpose = freezed,
+    Object? purposeElement = freezed,
+    Object? patient = freezed,
+    Object? servicedDate = freezed,
+    Object? servicedDateElement = freezed,
+    Object? servicedPeriod = freezed,
+    Object? created = freezed,
+    Object? createdElement = freezed,
+    Object? enterer = freezed,
+    Object? provider = freezed,
+    Object? insurer = freezed,
+    Object? facility = freezed,
+    Object? supportingInfo = freezed,
+    Object? insurance = freezed,
+    Object? item = freezed,
   }) {
     return _then(_CoverageEligibilityRequest(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      priority:
-          priority == freezed ? _value.priority : priority as CodeableConcept,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      priority: priority == freezed
+          ? _value.priority
+          : priority // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       purpose: purpose == freezed
           ? _value.purpose
-          : purpose as List<CoverageEligibilityRequestPurpose>,
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityRequestPurpose>?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as List<Element>,
-      patient: patient == freezed ? _value.patient : patient as Reference,
-      servicedDate:
-          servicedDate == freezed ? _value.servicedDate : servicedDate as Date,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      patient: patient == freezed
+          ? _value.patient
+          : patient // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      servicedDate: servicedDate == freezed
+          ? _value.servicedDate
+          : servicedDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
       servicedDateElement: servicedDateElement == freezed
           ? _value.servicedDateElement
-          : servicedDateElement as Element,
+          : servicedDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       servicedPeriod: servicedPeriod == freezed
           ? _value.servicedPeriod
-          : servicedPeriod as Period,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+          : servicedPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      created: created == freezed
+          ? _value.created
+          : created // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
-          : createdElement as Element,
-      enterer: enterer == freezed ? _value.enterer : enterer as Reference,
-      provider: provider == freezed ? _value.provider : provider as Reference,
-      insurer: insurer == freezed ? _value.insurer : insurer as Reference,
-      facility: facility == freezed ? _value.facility : facility as Reference,
+          : createdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      enterer: enterer == freezed
+          ? _value.enterer
+          : enterer // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      provider: provider == freezed
+          ? _value.provider
+          : provider // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      insurer: insurer == freezed
+          ? _value.insurer
+          : insurer // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      facility: facility == freezed
+          ? _value.facility
+          : facility // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       supportingInfo: supportingInfo == freezed
           ? _value.supportingInfo
-          : supportingInfo as List<CoverageEligibilityRequestSupportingInfo>,
+          : supportingInfo // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityRequestSupportingInfo>?,
       insurance: insurance == freezed
           ? _value.insurance
-          : insurance as List<CoverageEligibilityRequestInsurance>,
+          : insurance // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityRequestInsurance>?,
       item: item == freezed
           ? _value.item
-          : item as List<CoverageEligibilityRequestItem>,
+          : item // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityRequestItem>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
   _$_CoverageEligibilityRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
@@ -2767,8 +3095,7 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
       this.purpose,
       @JsonKey(name: '_purpose')
           this.purposeElement,
-      @required
-          this.patient,
+      required this.patient,
       this.servicedDate,
       @JsonKey(name: '_servicedDate')
           this.servicedDateElement,
@@ -2778,88 +3105,84 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
           this.createdElement,
       this.enterer,
       this.provider,
-      @required
-          this.insurer,
+      required this.insurer,
       this.facility,
       this.supportingInfo,
       this.insurance,
       this.item})
-      : assert(resourceType != null),
-        assert(patient != null),
-        assert(insurer != null),
-        super._();
+      : super._();
 
   factory _$_CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityRequestFromJson(json);
+      _$$_CoverageEligibilityRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
   final R4ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<Identifier>? identifier;
   @override
-  final Code status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
-  final Element statusElement;
+  final Element? statusElement;
   @override
-  final CodeableConcept priority;
+  final CodeableConcept? priority;
   @override
-  final List<CoverageEligibilityRequestPurpose> purpose;
+  final List<CoverageEligibilityRequestPurpose>? purpose;
   @override
   @JsonKey(name: '_purpose')
-  final List<Element> purposeElement;
+  final List<Element?>? purposeElement;
   @override
   final Reference patient;
   @override
-  final Date servicedDate;
+  final Date? servicedDate;
   @override
   @JsonKey(name: '_servicedDate')
-  final Element servicedDateElement;
+  final Element? servicedDateElement;
   @override
-  final Period servicedPeriod;
+  final Period? servicedPeriod;
   @override
-  final FhirDateTime created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
-  final Element createdElement;
+  final Element? createdElement;
   @override
-  final Reference enterer;
+  final Reference? enterer;
   @override
-  final Reference provider;
+  final Reference? provider;
   @override
   final Reference insurer;
   @override
-  final Reference facility;
+  final Reference? facility;
   @override
-  final List<CoverageEligibilityRequestSupportingInfo> supportingInfo;
+  final List<CoverageEligibilityRequestSupportingInfo>? supportingInfo;
   @override
-  final List<CoverageEligibilityRequestInsurance> insurance;
+  final List<CoverageEligibilityRequestInsurance>? insurance;
   @override
-  final List<CoverageEligibilityRequestItem> item;
+  final List<CoverageEligibilityRequestItem>? item;
 
   @override
   String toString() {
@@ -2987,130 +3310,133 @@ class _$_CoverageEligibilityRequest extends _CoverageEligibilityRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityRequestToJson(this);
+    return _$$_CoverageEligibilityRequestToJson(this);
   }
 }
 
 abstract class _CoverageEligibilityRequest extends CoverageEligibilityRequest {
-  _CoverageEligibilityRequest._() : super._();
   factory _CoverageEligibilityRequest(
           {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
               R4ResourceType resourceType,
-          Id id,
-          Meta meta,
-          FhirUri implicitRules,
+          Id? id,
+          Meta? meta,
+          FhirUri? implicitRules,
           @JsonKey(name: '_implicitRules')
-              Element implicitRulesElement,
-          Code language,
+              Element? implicitRulesElement,
+          Code? language,
           @JsonKey(name: '_language')
-              Element languageElement,
-          Narrative text,
-          List<Resource> contained,
+              Element? languageElement,
+          Narrative? text,
+          List<Resource>? contained,
           @JsonKey(name: 'extension')
-              List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          List<Identifier> identifier,
-          Code status,
+              List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          List<Identifier>? identifier,
+          Code? status,
           @JsonKey(name: '_status')
-              Element statusElement,
-          CodeableConcept priority,
-          List<CoverageEligibilityRequestPurpose> purpose,
+              Element? statusElement,
+          CodeableConcept? priority,
+          List<CoverageEligibilityRequestPurpose>? purpose,
           @JsonKey(name: '_purpose')
-              List<Element> purposeElement,
-          @required
-              Reference patient,
-          Date servicedDate,
+              List<Element?>? purposeElement,
+          required Reference patient,
+          Date? servicedDate,
           @JsonKey(name: '_servicedDate')
-              Element servicedDateElement,
-          Period servicedPeriod,
-          FhirDateTime created,
+              Element? servicedDateElement,
+          Period? servicedPeriod,
+          FhirDateTime? created,
           @JsonKey(name: '_created')
-              Element createdElement,
-          Reference enterer,
-          Reference provider,
-          @required
-              Reference insurer,
-          Reference facility,
-          List<CoverageEligibilityRequestSupportingInfo> supportingInfo,
-          List<CoverageEligibilityRequestInsurance> insurance,
-          List<CoverageEligibilityRequestItem> item}) =
+              Element? createdElement,
+          Reference? enterer,
+          Reference? provider,
+          required Reference insurer,
+          Reference? facility,
+          List<CoverageEligibilityRequestSupportingInfo>? supportingInfo,
+          List<CoverageEligibilityRequestInsurance>? insurance,
+          List<CoverageEligibilityRequestItem>? item}) =
       _$_CoverageEligibilityRequest;
+  _CoverageEligibilityRequest._() : super._();
 
   factory _CoverageEligibilityRequest.fromJson(Map<String, dynamic> json) =
       _$_CoverageEligibilityRequest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityRequest)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier> get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Code get status;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get priority;
+  CodeableConcept? get priority => throw _privateConstructorUsedError;
   @override
-  List<CoverageEligibilityRequestPurpose> get purpose;
+  List<CoverageEligibilityRequestPurpose>? get purpose =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_purpose')
-  List<Element> get purposeElement;
+  List<Element?>? get purposeElement => throw _privateConstructorUsedError;
   @override
-  Reference get patient;
+  Reference get patient => throw _privateConstructorUsedError;
   @override
-  Date get servicedDate;
+  Date? get servicedDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_servicedDate')
-  Element get servicedDateElement;
+  Element? get servicedDateElement => throw _privateConstructorUsedError;
   @override
-  Period get servicedPeriod;
+  Period? get servicedPeriod => throw _privateConstructorUsedError;
   @override
-  FhirDateTime get created;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
-  Element get createdElement;
+  Element? get createdElement => throw _privateConstructorUsedError;
   @override
-  Reference get enterer;
+  Reference? get enterer => throw _privateConstructorUsedError;
   @override
-  Reference get provider;
+  Reference? get provider => throw _privateConstructorUsedError;
   @override
-  Reference get insurer;
+  Reference get insurer => throw _privateConstructorUsedError;
   @override
-  Reference get facility;
+  Reference? get facility => throw _privateConstructorUsedError;
   @override
-  List<CoverageEligibilityRequestSupportingInfo> get supportingInfo;
+  List<CoverageEligibilityRequestSupportingInfo>? get supportingInfo =>
+      throw _privateConstructorUsedError;
   @override
-  List<CoverageEligibilityRequestInsurance> get insurance;
+  List<CoverageEligibilityRequestInsurance>? get insurance =>
+      throw _privateConstructorUsedError;
   @override
-  List<CoverageEligibilityRequestItem> get item;
+  List<CoverageEligibilityRequestItem>? get item =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CoverageEligibilityRequestCopyWith<_CoverageEligibilityRequest>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CoverageEligibilityRequestSupportingInfo
@@ -3123,16 +3449,15 @@ CoverageEligibilityRequestSupportingInfo
 class _$CoverageEligibilityRequestSupportingInfoTearOff {
   const _$CoverageEligibilityRequestSupportingInfoTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityRequestSupportingInfo call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      PositiveInt sequence,
-      @JsonKey(name: '_sequence') Element sequenceElement,
-      @required Reference information,
-      Boolean appliesToAll,
-      @JsonKey(name: '_appliesToAll') Element appliesToAllElement}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      PositiveInt? sequence,
+      @JsonKey(name: '_sequence') Element? sequenceElement,
+      required Reference information,
+      Boolean? appliesToAll,
+      @JsonKey(name: '_appliesToAll') Element? appliesToAllElement}) {
     return _CoverageEligibilityRequestSupportingInfo(
       id: id,
       extension_: extension_,
@@ -3145,35 +3470,35 @@ class _$CoverageEligibilityRequestSupportingInfoTearOff {
     );
   }
 
-// ignore: unused_element
   CoverageEligibilityRequestSupportingInfo fromJson(Map<String, Object> json) {
     return CoverageEligibilityRequestSupportingInfo.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CoverageEligibilityRequestSupportingInfo =
     _$CoverageEligibilityRequestSupportingInfoTearOff();
 
 /// @nodoc
 mixin _$CoverageEligibilityRequestSupportingInfo {
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  PositiveInt get sequence;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  PositiveInt? get sequence => throw _privateConstructorUsedError;
   @JsonKey(name: '_sequence')
-  Element get sequenceElement;
-  Reference get information;
-  Boolean get appliesToAll;
+  Element? get sequenceElement => throw _privateConstructorUsedError;
+  Reference get information => throw _privateConstructorUsedError;
+  Boolean? get appliesToAll => throw _privateConstructorUsedError;
   @JsonKey(name: '_appliesToAll')
-  Element get appliesToAllElement;
+  Element? get appliesToAllElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CoverageEligibilityRequestSupportingInfoCopyWith<
-      CoverageEligibilityRequestSupportingInfo> get copyWith;
+          CoverageEligibilityRequestSupportingInfo>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3183,18 +3508,18 @@ abstract class $CoverageEligibilityRequestSupportingInfoCopyWith<$Res> {
           $Res Function(CoverageEligibilityRequestSupportingInfo) then) =
       _$CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      PositiveInt sequence,
-      @JsonKey(name: '_sequence') Element sequenceElement,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      PositiveInt? sequence,
+      @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference information,
-      Boolean appliesToAll,
-      @JsonKey(name: '_appliesToAll') Element appliesToAllElement});
+      Boolean? appliesToAll,
+      @JsonKey(name: '_appliesToAll') Element? appliesToAllElement});
 
-  $ElementCopyWith<$Res> get sequenceElement;
+  $ElementCopyWith<$Res>? get sequenceElement;
   $ReferenceCopyWith<$Res> get information;
-  $ElementCopyWith<$Res> get appliesToAllElement;
+  $ElementCopyWith<$Res>? get appliesToAllElement;
 }
 
 /// @nodoc
@@ -3209,65 +3534,76 @@ class _$CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object sequence = freezed,
-    Object sequenceElement = freezed,
-    Object information = freezed,
-    Object appliesToAll = freezed,
-    Object appliesToAllElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? sequence = freezed,
+    Object? sequenceElement = freezed,
+    Object? information = freezed,
+    Object? appliesToAll = freezed,
+    Object? appliesToAllElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      sequence: sequence == freezed
+          ? _value.sequence
+          : sequence // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
       sequenceElement: sequenceElement == freezed
           ? _value.sequenceElement
-          : sequenceElement as Element,
+          : sequenceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       information: information == freezed
           ? _value.information
-          : information as Reference,
+          : information // ignore: cast_nullable_to_non_nullable
+              as Reference,
       appliesToAll: appliesToAll == freezed
           ? _value.appliesToAll
-          : appliesToAll as Boolean,
+          : appliesToAll // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       appliesToAllElement: appliesToAllElement == freezed
           ? _value.appliesToAllElement
-          : appliesToAllElement as Element,
+          : appliesToAllElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
   @override
-  $ElementCopyWith<$Res> get sequenceElement {
+  $ElementCopyWith<$Res>? get sequenceElement {
     if (_value.sequenceElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.sequenceElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.sequenceElement!, (value) {
       return _then(_value.copyWith(sequenceElement: value));
     });
   }
 
   @override
   $ReferenceCopyWith<$Res> get information {
-    if (_value.information == null) {
-      return null;
-    }
     return $ReferenceCopyWith<$Res>(_value.information, (value) {
       return _then(_value.copyWith(information: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get appliesToAllElement {
+  $ElementCopyWith<$Res>? get appliesToAllElement {
     if (_value.appliesToAllElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.appliesToAllElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.appliesToAllElement!, (value) {
       return _then(_value.copyWith(appliesToAllElement: value));
     });
   }
@@ -3282,21 +3618,21 @@ abstract class _$CoverageEligibilityRequestSupportingInfoCopyWith<$Res>
       __$CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      PositiveInt sequence,
-      @JsonKey(name: '_sequence') Element sequenceElement,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      PositiveInt? sequence,
+      @JsonKey(name: '_sequence') Element? sequenceElement,
       Reference information,
-      Boolean appliesToAll,
-      @JsonKey(name: '_appliesToAll') Element appliesToAllElement});
+      Boolean? appliesToAll,
+      @JsonKey(name: '_appliesToAll') Element? appliesToAllElement});
 
   @override
-  $ElementCopyWith<$Res> get sequenceElement;
+  $ElementCopyWith<$Res>? get sequenceElement;
   @override
   $ReferenceCopyWith<$Res> get information;
   @override
-  $ElementCopyWith<$Res> get appliesToAllElement;
+  $ElementCopyWith<$Res>? get appliesToAllElement;
 }
 
 /// @nodoc
@@ -3315,43 +3651,54 @@ class __$CoverageEligibilityRequestSupportingInfoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object sequence = freezed,
-    Object sequenceElement = freezed,
-    Object information = freezed,
-    Object appliesToAll = freezed,
-    Object appliesToAllElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? sequence = freezed,
+    Object? sequenceElement = freezed,
+    Object? information = freezed,
+    Object? appliesToAll = freezed,
+    Object? appliesToAllElement = freezed,
   }) {
     return _then(_CoverageEligibilityRequestSupportingInfo(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      sequence: sequence == freezed ? _value.sequence : sequence as PositiveInt,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      sequence: sequence == freezed
+          ? _value.sequence
+          : sequence // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
       sequenceElement: sequenceElement == freezed
           ? _value.sequenceElement
-          : sequenceElement as Element,
+          : sequenceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       information: information == freezed
           ? _value.information
-          : information as Reference,
+          : information // ignore: cast_nullable_to_non_nullable
+              as Reference,
       appliesToAll: appliesToAll == freezed
           ? _value.appliesToAll
-          : appliesToAll as Boolean,
+          : appliesToAll // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       appliesToAllElement: appliesToAllElement == freezed
           ? _value.appliesToAllElement
-          : appliesToAllElement as Element,
+          : appliesToAllElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityRequestSupportingInfo
     extends _CoverageEligibilityRequestSupportingInfo {
   _$_CoverageEligibilityRequestSupportingInfo(
@@ -3360,35 +3707,34 @@ class _$_CoverageEligibilityRequestSupportingInfo
       this.modifierExtension,
       this.sequence,
       @JsonKey(name: '_sequence') this.sequenceElement,
-      @required this.information,
+      required this.information,
       this.appliesToAll,
       @JsonKey(name: '_appliesToAll') this.appliesToAllElement})
-      : assert(information != null),
-        super._();
+      : super._();
 
   factory _$_CoverageEligibilityRequestSupportingInfo.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityRequestSupportingInfoFromJson(json);
+      _$$_CoverageEligibilityRequestSupportingInfoFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final PositiveInt sequence;
+  final PositiveInt? sequence;
   @override
   @JsonKey(name: '_sequence')
-  final Element sequenceElement;
+  final Element? sequenceElement;
   @override
   final Reference information;
   @override
-  final Boolean appliesToAll;
+  final Boolean? appliesToAll;
   @override
   @JsonKey(name: '_appliesToAll')
-  final Element appliesToAllElement;
+  final Element? appliesToAllElement;
 
   @override
   String toString() {
@@ -3445,51 +3791,53 @@ class _$_CoverageEligibilityRequestSupportingInfo
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityRequestSupportingInfoToJson(this);
+    return _$$_CoverageEligibilityRequestSupportingInfoToJson(this);
   }
 }
 
 abstract class _CoverageEligibilityRequestSupportingInfo
     extends CoverageEligibilityRequestSupportingInfo {
-  _CoverageEligibilityRequestSupportingInfo._() : super._();
   factory _CoverageEligibilityRequestSupportingInfo(
-          {String id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          PositiveInt sequence,
-          @JsonKey(name: '_sequence') Element sequenceElement,
-          @required Reference information,
-          Boolean appliesToAll,
-          @JsonKey(name: '_appliesToAll') Element appliesToAllElement}) =
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          PositiveInt? sequence,
+          @JsonKey(name: '_sequence') Element? sequenceElement,
+          required Reference information,
+          Boolean? appliesToAll,
+          @JsonKey(name: '_appliesToAll') Element? appliesToAllElement}) =
       _$_CoverageEligibilityRequestSupportingInfo;
+  _CoverageEligibilityRequestSupportingInfo._() : super._();
 
   factory _CoverageEligibilityRequestSupportingInfo.fromJson(
           Map<String, dynamic> json) =
       _$_CoverageEligibilityRequestSupportingInfo.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  PositiveInt get sequence;
+  PositiveInt? get sequence => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_sequence')
-  Element get sequenceElement;
+  Element? get sequenceElement => throw _privateConstructorUsedError;
   @override
-  Reference get information;
+  Reference get information => throw _privateConstructorUsedError;
   @override
-  Boolean get appliesToAll;
+  Boolean? get appliesToAll => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_appliesToAll')
-  Element get appliesToAllElement;
+  Element? get appliesToAllElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CoverageEligibilityRequestSupportingInfoCopyWith<
-      _CoverageEligibilityRequestSupportingInfo> get copyWith;
+          _CoverageEligibilityRequestSupportingInfo>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CoverageEligibilityRequestInsurance
@@ -3501,20 +3849,18 @@ CoverageEligibilityRequestInsurance
 class _$CoverageEligibilityRequestInsuranceTearOff {
   const _$CoverageEligibilityRequestInsuranceTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityRequestInsurance call(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Boolean focal,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Boolean? focal,
       @JsonKey(name: '_focal')
-          Element focalElement,
-      @required
-          Reference coverage,
-      String businessArrangement,
+          Element? focalElement,
+      required Reference coverage,
+      String? businessArrangement,
       @JsonKey(name: '_businessArrangement')
-          Element businessArrangementElement}) {
+          Element? businessArrangementElement}) {
     return _CoverageEligibilityRequestInsurance(
       id: id,
       extension_: extension_,
@@ -3527,35 +3873,35 @@ class _$CoverageEligibilityRequestInsuranceTearOff {
     );
   }
 
-// ignore: unused_element
   CoverageEligibilityRequestInsurance fromJson(Map<String, Object> json) {
     return CoverageEligibilityRequestInsurance.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CoverageEligibilityRequestInsurance =
     _$CoverageEligibilityRequestInsuranceTearOff();
 
 /// @nodoc
 mixin _$CoverageEligibilityRequestInsurance {
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  Boolean get focal;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Boolean? get focal => throw _privateConstructorUsedError;
   @JsonKey(name: '_focal')
-  Element get focalElement;
-  Reference get coverage;
-  String get businessArrangement;
+  Element? get focalElement => throw _privateConstructorUsedError;
+  Reference get coverage => throw _privateConstructorUsedError;
+  String? get businessArrangement => throw _privateConstructorUsedError;
   @JsonKey(name: '_businessArrangement')
-  Element get businessArrangementElement;
+  Element? get businessArrangementElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CoverageEligibilityRequestInsuranceCopyWith<
-      CoverageEligibilityRequestInsurance> get copyWith;
+          CoverageEligibilityRequestInsurance>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3565,21 +3911,21 @@ abstract class $CoverageEligibilityRequestInsuranceCopyWith<$Res> {
           $Res Function(CoverageEligibilityRequestInsurance) then) =
       _$CoverageEligibilityRequestInsuranceCopyWithImpl<$Res>;
   $Res call(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Boolean focal,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Boolean? focal,
       @JsonKey(name: '_focal')
-          Element focalElement,
+          Element? focalElement,
       Reference coverage,
-      String businessArrangement,
+      String? businessArrangement,
       @JsonKey(name: '_businessArrangement')
-          Element businessArrangementElement});
+          Element? businessArrangementElement});
 
-  $ElementCopyWith<$Res> get focalElement;
+  $ElementCopyWith<$Res>? get focalElement;
   $ReferenceCopyWith<$Res> get coverage;
-  $ElementCopyWith<$Res> get businessArrangementElement;
+  $ElementCopyWith<$Res>? get businessArrangementElement;
 }
 
 /// @nodoc
@@ -3593,63 +3939,76 @@ class _$CoverageEligibilityRequestInsuranceCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object focal = freezed,
-    Object focalElement = freezed,
-    Object coverage = freezed,
-    Object businessArrangement = freezed,
-    Object businessArrangementElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? focal = freezed,
+    Object? focalElement = freezed,
+    Object? coverage = freezed,
+    Object? businessArrangement = freezed,
+    Object? businessArrangementElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      focal: focal == freezed ? _value.focal : focal as Boolean,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      focal: focal == freezed
+          ? _value.focal
+          : focal // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       focalElement: focalElement == freezed
           ? _value.focalElement
-          : focalElement as Element,
-      coverage: coverage == freezed ? _value.coverage : coverage as Reference,
+          : focalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      coverage: coverage == freezed
+          ? _value.coverage
+          : coverage // ignore: cast_nullable_to_non_nullable
+              as Reference,
       businessArrangement: businessArrangement == freezed
           ? _value.businessArrangement
-          : businessArrangement as String,
+          : businessArrangement // ignore: cast_nullable_to_non_nullable
+              as String?,
       businessArrangementElement: businessArrangementElement == freezed
           ? _value.businessArrangementElement
-          : businessArrangementElement as Element,
+          : businessArrangementElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
   @override
-  $ElementCopyWith<$Res> get focalElement {
+  $ElementCopyWith<$Res>? get focalElement {
     if (_value.focalElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.focalElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.focalElement!, (value) {
       return _then(_value.copyWith(focalElement: value));
     });
   }
 
   @override
   $ReferenceCopyWith<$Res> get coverage {
-    if (_value.coverage == null) {
-      return null;
-    }
     return $ReferenceCopyWith<$Res>(_value.coverage, (value) {
       return _then(_value.copyWith(coverage: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get businessArrangementElement {
+  $ElementCopyWith<$Res>? get businessArrangementElement {
     if (_value.businessArrangementElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.businessArrangementElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.businessArrangementElement!, (value) {
       return _then(_value.copyWith(businessArrangementElement: value));
     });
   }
@@ -3664,24 +4023,24 @@ abstract class _$CoverageEligibilityRequestInsuranceCopyWith<$Res>
       __$CoverageEligibilityRequestInsuranceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      Boolean focal,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      Boolean? focal,
       @JsonKey(name: '_focal')
-          Element focalElement,
+          Element? focalElement,
       Reference coverage,
-      String businessArrangement,
+      String? businessArrangement,
       @JsonKey(name: '_businessArrangement')
-          Element businessArrangementElement});
+          Element? businessArrangementElement});
 
   @override
-  $ElementCopyWith<$Res> get focalElement;
+  $ElementCopyWith<$Res>? get focalElement;
   @override
   $ReferenceCopyWith<$Res> get coverage;
   @override
-  $ElementCopyWith<$Res> get businessArrangementElement;
+  $ElementCopyWith<$Res>? get businessArrangementElement;
 }
 
 /// @nodoc
@@ -3699,41 +4058,54 @@ class __$CoverageEligibilityRequestInsuranceCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object focal = freezed,
-    Object focalElement = freezed,
-    Object coverage = freezed,
-    Object businessArrangement = freezed,
-    Object businessArrangementElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? focal = freezed,
+    Object? focalElement = freezed,
+    Object? coverage = freezed,
+    Object? businessArrangement = freezed,
+    Object? businessArrangementElement = freezed,
   }) {
     return _then(_CoverageEligibilityRequestInsurance(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      focal: focal == freezed ? _value.focal : focal as Boolean,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      focal: focal == freezed
+          ? _value.focal
+          : focal // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       focalElement: focalElement == freezed
           ? _value.focalElement
-          : focalElement as Element,
-      coverage: coverage == freezed ? _value.coverage : coverage as Reference,
+          : focalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      coverage: coverage == freezed
+          ? _value.coverage
+          : coverage // ignore: cast_nullable_to_non_nullable
+              as Reference,
       businessArrangement: businessArrangement == freezed
           ? _value.businessArrangement
-          : businessArrangement as String,
+          : businessArrangement // ignore: cast_nullable_to_non_nullable
+              as String?,
       businessArrangementElement: businessArrangementElement == freezed
           ? _value.businessArrangementElement
-          : businessArrangementElement as Element,
+          : businessArrangementElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityRequestInsurance
     extends _CoverageEligibilityRequestInsurance {
   _$_CoverageEligibilityRequestInsurance(
@@ -3742,35 +4114,34 @@ class _$_CoverageEligibilityRequestInsurance
       this.modifierExtension,
       this.focal,
       @JsonKey(name: '_focal') this.focalElement,
-      @required this.coverage,
+      required this.coverage,
       this.businessArrangement,
       @JsonKey(name: '_businessArrangement') this.businessArrangementElement})
-      : assert(coverage != null),
-        super._();
+      : super._();
 
   factory _$_CoverageEligibilityRequestInsurance.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityRequestInsuranceFromJson(json);
+      _$$_CoverageEligibilityRequestInsuranceFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final Boolean focal;
+  final Boolean? focal;
   @override
   @JsonKey(name: '_focal')
-  final Element focalElement;
+  final Element? focalElement;
   @override
   final Reference coverage;
   @override
-  final String businessArrangement;
+  final String? businessArrangement;
   @override
   @JsonKey(name: '_businessArrangement')
-  final Element businessArrangementElement;
+  final Element? businessArrangementElement;
 
   @override
   String toString() {
@@ -3828,55 +4199,56 @@ class _$_CoverageEligibilityRequestInsurance
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityRequestInsuranceToJson(this);
+    return _$$_CoverageEligibilityRequestInsuranceToJson(this);
   }
 }
 
 abstract class _CoverageEligibilityRequestInsurance
     extends CoverageEligibilityRequestInsurance {
-  _CoverageEligibilityRequestInsurance._() : super._();
   factory _CoverageEligibilityRequestInsurance(
-          {String id,
+          {String? id,
           @JsonKey(name: 'extension')
-              List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          Boolean focal,
+              List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          Boolean? focal,
           @JsonKey(name: '_focal')
-              Element focalElement,
-          @required
-              Reference coverage,
-          String businessArrangement,
+              Element? focalElement,
+          required Reference coverage,
+          String? businessArrangement,
           @JsonKey(name: '_businessArrangement')
-              Element businessArrangementElement}) =
+              Element? businessArrangementElement}) =
       _$_CoverageEligibilityRequestInsurance;
+  _CoverageEligibilityRequestInsurance._() : super._();
 
   factory _CoverageEligibilityRequestInsurance.fromJson(
           Map<String, dynamic> json) =
       _$_CoverageEligibilityRequestInsurance.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Boolean get focal;
+  Boolean? get focal => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_focal')
-  Element get focalElement;
+  Element? get focalElement => throw _privateConstructorUsedError;
   @override
-  Reference get coverage;
+  Reference get coverage => throw _privateConstructorUsedError;
   @override
-  String get businessArrangement;
+  String? get businessArrangement => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_businessArrangement')
-  Element get businessArrangementElement;
+  Element? get businessArrangementElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CoverageEligibilityRequestInsuranceCopyWith<
-      _CoverageEligibilityRequestInsurance> get copyWith;
+          _CoverageEligibilityRequestInsurance>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CoverageEligibilityRequestItem _$CoverageEligibilityRequestItemFromJson(
@@ -3888,24 +4260,23 @@ CoverageEligibilityRequestItem _$CoverageEligibilityRequestItemFromJson(
 class _$CoverageEligibilityRequestItemTearOff {
   const _$CoverageEligibilityRequestItemTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityRequestItem call(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<PositiveInt> supportingInfoSequence,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<PositiveInt>? supportingInfoSequence,
       @JsonKey(name: '_supportingInfoSequence')
-          List<Element> supportingInfoSequenceElement,
-      CodeableConcept category,
-      CodeableConcept productOrService,
-      List<CodeableConcept> modifier,
-      Reference provider,
-      Quantity quantity,
-      Money unitPrice,
-      Reference facility,
-      List<CoverageEligibilityRequestDiagnosis> diagnosis,
-      List<Reference> detail}) {
+          List<Element>? supportingInfoSequenceElement,
+      CodeableConcept? category,
+      CodeableConcept? productOrService,
+      List<CodeableConcept>? modifier,
+      Reference? provider,
+      Quantity? quantity,
+      Money? unitPrice,
+      Reference? facility,
+      List<CoverageEligibilityRequestDiagnosis>? diagnosis,
+      List<Reference>? detail}) {
     return _CoverageEligibilityRequestItem(
       id: id,
       extension_: extension_,
@@ -3924,40 +4295,42 @@ class _$CoverageEligibilityRequestItemTearOff {
     );
   }
 
-// ignore: unused_element
   CoverageEligibilityRequestItem fromJson(Map<String, Object> json) {
     return CoverageEligibilityRequestItem.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CoverageEligibilityRequestItem =
     _$CoverageEligibilityRequestItemTearOff();
 
 /// @nodoc
 mixin _$CoverageEligibilityRequestItem {
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<PositiveInt> get supportingInfoSequence;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<PositiveInt>? get supportingInfoSequence =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_supportingInfoSequence')
-  List<Element> get supportingInfoSequenceElement;
-  CodeableConcept get category;
-  CodeableConcept get productOrService;
-  List<CodeableConcept> get modifier;
-  Reference get provider;
-  Quantity get quantity;
-  Money get unitPrice;
-  Reference get facility;
-  List<CoverageEligibilityRequestDiagnosis> get diagnosis;
-  List<Reference> get detail;
+  List<Element>? get supportingInfoSequenceElement =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get category => throw _privateConstructorUsedError;
+  CodeableConcept? get productOrService => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get modifier => throw _privateConstructorUsedError;
+  Reference? get provider => throw _privateConstructorUsedError;
+  Quantity? get quantity => throw _privateConstructorUsedError;
+  Money? get unitPrice => throw _privateConstructorUsedError;
+  Reference? get facility => throw _privateConstructorUsedError;
+  List<CoverageEligibilityRequestDiagnosis>? get diagnosis =>
+      throw _privateConstructorUsedError;
+  List<Reference>? get detail => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CoverageEligibilityRequestItemCopyWith<CoverageEligibilityRequestItem>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -3967,29 +4340,29 @@ abstract class $CoverageEligibilityRequestItemCopyWith<$Res> {
           $Res Function(CoverageEligibilityRequestItem) then) =
       _$CoverageEligibilityRequestItemCopyWithImpl<$Res>;
   $Res call(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<PositiveInt> supportingInfoSequence,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<PositiveInt>? supportingInfoSequence,
       @JsonKey(name: '_supportingInfoSequence')
-          List<Element> supportingInfoSequenceElement,
-      CodeableConcept category,
-      CodeableConcept productOrService,
-      List<CodeableConcept> modifier,
-      Reference provider,
-      Quantity quantity,
-      Money unitPrice,
-      Reference facility,
-      List<CoverageEligibilityRequestDiagnosis> diagnosis,
-      List<Reference> detail});
+          List<Element>? supportingInfoSequenceElement,
+      CodeableConcept? category,
+      CodeableConcept? productOrService,
+      List<CodeableConcept>? modifier,
+      Reference? provider,
+      Quantity? quantity,
+      Money? unitPrice,
+      Reference? facility,
+      List<CoverageEligibilityRequestDiagnosis>? diagnosis,
+      List<Reference>? detail});
 
-  $CodeableConceptCopyWith<$Res> get category;
-  $CodeableConceptCopyWith<$Res> get productOrService;
-  $ReferenceCopyWith<$Res> get provider;
-  $QuantityCopyWith<$Res> get quantity;
-  $MoneyCopyWith<$Res> get unitPrice;
-  $ReferenceCopyWith<$Res> get facility;
+  $CodeableConceptCopyWith<$Res>? get category;
+  $CodeableConceptCopyWith<$Res>? get productOrService;
+  $ReferenceCopyWith<$Res>? get provider;
+  $QuantityCopyWith<$Res>? get quantity;
+  $MoneyCopyWith<$Res>? get unitPrice;
+  $ReferenceCopyWith<$Res>? get facility;
 }
 
 /// @nodoc
@@ -4003,110 +4376,143 @@ class _$CoverageEligibilityRequestItemCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object supportingInfoSequence = freezed,
-    Object supportingInfoSequenceElement = freezed,
-    Object category = freezed,
-    Object productOrService = freezed,
-    Object modifier = freezed,
-    Object provider = freezed,
-    Object quantity = freezed,
-    Object unitPrice = freezed,
-    Object facility = freezed,
-    Object diagnosis = freezed,
-    Object detail = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? supportingInfoSequence = freezed,
+    Object? supportingInfoSequenceElement = freezed,
+    Object? category = freezed,
+    Object? productOrService = freezed,
+    Object? modifier = freezed,
+    Object? provider = freezed,
+    Object? quantity = freezed,
+    Object? unitPrice = freezed,
+    Object? facility = freezed,
+    Object? diagnosis = freezed,
+    Object? detail = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       supportingInfoSequence: supportingInfoSequence == freezed
           ? _value.supportingInfoSequence
-          : supportingInfoSequence as List<PositiveInt>,
+          : supportingInfoSequence // ignore: cast_nullable_to_non_nullable
+              as List<PositiveInt>?,
       supportingInfoSequenceElement: supportingInfoSequenceElement == freezed
           ? _value.supportingInfoSequenceElement
-          : supportingInfoSequenceElement as List<Element>,
-      category:
-          category == freezed ? _value.category : category as CodeableConcept,
+          : supportingInfoSequenceElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
+      category: category == freezed
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       productOrService: productOrService == freezed
           ? _value.productOrService
-          : productOrService as CodeableConcept,
+          : productOrService // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<CodeableConcept>,
-      provider: provider == freezed ? _value.provider : provider as Reference,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
-      unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money,
-      facility: facility == freezed ? _value.facility : facility as Reference,
+          : modifier // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      provider: provider == freezed
+          ? _value.provider
+          : provider // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      quantity: quantity == freezed
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      unitPrice: unitPrice == freezed
+          ? _value.unitPrice
+          : unitPrice // ignore: cast_nullable_to_non_nullable
+              as Money?,
+      facility: facility == freezed
+          ? _value.facility
+          : facility // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       diagnosis: diagnosis == freezed
           ? _value.diagnosis
-          : diagnosis as List<CoverageEligibilityRequestDiagnosis>,
-      detail: detail == freezed ? _value.detail : detail as List<Reference>,
+          : diagnosis // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityRequestDiagnosis>?,
+      detail: detail == freezed
+          ? _value.detail
+          : detail // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get category {
+  $CodeableConceptCopyWith<$Res>? get category {
     if (_value.category == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.category!, (value) {
       return _then(_value.copyWith(category: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get productOrService {
+  $CodeableConceptCopyWith<$Res>? get productOrService {
     if (_value.productOrService == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.productOrService, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.productOrService!, (value) {
       return _then(_value.copyWith(productOrService: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get provider {
+  $ReferenceCopyWith<$Res>? get provider {
     if (_value.provider == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.provider, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.provider!, (value) {
       return _then(_value.copyWith(provider: value));
     });
   }
 
   @override
-  $QuantityCopyWith<$Res> get quantity {
+  $QuantityCopyWith<$Res>? get quantity {
     if (_value.quantity == null) {
       return null;
     }
-    return $QuantityCopyWith<$Res>(_value.quantity, (value) {
+
+    return $QuantityCopyWith<$Res>(_value.quantity!, (value) {
       return _then(_value.copyWith(quantity: value));
     });
   }
 
   @override
-  $MoneyCopyWith<$Res> get unitPrice {
+  $MoneyCopyWith<$Res>? get unitPrice {
     if (_value.unitPrice == null) {
       return null;
     }
-    return $MoneyCopyWith<$Res>(_value.unitPrice, (value) {
+
+    return $MoneyCopyWith<$Res>(_value.unitPrice!, (value) {
       return _then(_value.copyWith(unitPrice: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get facility {
+  $ReferenceCopyWith<$Res>? get facility {
     if (_value.facility == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.facility, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.facility!, (value) {
       return _then(_value.copyWith(facility: value));
     });
   }
@@ -4121,35 +4527,35 @@ abstract class _$CoverageEligibilityRequestItemCopyWith<$Res>
       __$CoverageEligibilityRequestItemCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<PositiveInt> supportingInfoSequence,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<PositiveInt>? supportingInfoSequence,
       @JsonKey(name: '_supportingInfoSequence')
-          List<Element> supportingInfoSequenceElement,
-      CodeableConcept category,
-      CodeableConcept productOrService,
-      List<CodeableConcept> modifier,
-      Reference provider,
-      Quantity quantity,
-      Money unitPrice,
-      Reference facility,
-      List<CoverageEligibilityRequestDiagnosis> diagnosis,
-      List<Reference> detail});
+          List<Element>? supportingInfoSequenceElement,
+      CodeableConcept? category,
+      CodeableConcept? productOrService,
+      List<CodeableConcept>? modifier,
+      Reference? provider,
+      Quantity? quantity,
+      Money? unitPrice,
+      Reference? facility,
+      List<CoverageEligibilityRequestDiagnosis>? diagnosis,
+      List<Reference>? detail});
 
   @override
-  $CodeableConceptCopyWith<$Res> get category;
+  $CodeableConceptCopyWith<$Res>? get category;
   @override
-  $CodeableConceptCopyWith<$Res> get productOrService;
+  $CodeableConceptCopyWith<$Res>? get productOrService;
   @override
-  $ReferenceCopyWith<$Res> get provider;
+  $ReferenceCopyWith<$Res>? get provider;
   @override
-  $QuantityCopyWith<$Res> get quantity;
+  $QuantityCopyWith<$Res>? get quantity;
   @override
-  $MoneyCopyWith<$Res> get unitPrice;
+  $MoneyCopyWith<$Res>? get unitPrice;
   @override
-  $ReferenceCopyWith<$Res> get facility;
+  $ReferenceCopyWith<$Res>? get facility;
 }
 
 /// @nodoc
@@ -4167,58 +4573,84 @@ class __$CoverageEligibilityRequestItemCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object supportingInfoSequence = freezed,
-    Object supportingInfoSequenceElement = freezed,
-    Object category = freezed,
-    Object productOrService = freezed,
-    Object modifier = freezed,
-    Object provider = freezed,
-    Object quantity = freezed,
-    Object unitPrice = freezed,
-    Object facility = freezed,
-    Object diagnosis = freezed,
-    Object detail = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? supportingInfoSequence = freezed,
+    Object? supportingInfoSequenceElement = freezed,
+    Object? category = freezed,
+    Object? productOrService = freezed,
+    Object? modifier = freezed,
+    Object? provider = freezed,
+    Object? quantity = freezed,
+    Object? unitPrice = freezed,
+    Object? facility = freezed,
+    Object? diagnosis = freezed,
+    Object? detail = freezed,
   }) {
     return _then(_CoverageEligibilityRequestItem(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       supportingInfoSequence: supportingInfoSequence == freezed
           ? _value.supportingInfoSequence
-          : supportingInfoSequence as List<PositiveInt>,
+          : supportingInfoSequence // ignore: cast_nullable_to_non_nullable
+              as List<PositiveInt>?,
       supportingInfoSequenceElement: supportingInfoSequenceElement == freezed
           ? _value.supportingInfoSequenceElement
-          : supportingInfoSequenceElement as List<Element>,
-      category:
-          category == freezed ? _value.category : category as CodeableConcept,
+          : supportingInfoSequenceElement // ignore: cast_nullable_to_non_nullable
+              as List<Element>?,
+      category: category == freezed
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       productOrService: productOrService == freezed
           ? _value.productOrService
-          : productOrService as CodeableConcept,
+          : productOrService // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<CodeableConcept>,
-      provider: provider == freezed ? _value.provider : provider as Reference,
-      quantity: quantity == freezed ? _value.quantity : quantity as Quantity,
-      unitPrice: unitPrice == freezed ? _value.unitPrice : unitPrice as Money,
-      facility: facility == freezed ? _value.facility : facility as Reference,
+          : modifier // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      provider: provider == freezed
+          ? _value.provider
+          : provider // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      quantity: quantity == freezed
+          ? _value.quantity
+          : quantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      unitPrice: unitPrice == freezed
+          ? _value.unitPrice
+          : unitPrice // ignore: cast_nullable_to_non_nullable
+              as Money?,
+      facility: facility == freezed
+          ? _value.facility
+          : facility // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       diagnosis: diagnosis == freezed
           ? _value.diagnosis
-          : diagnosis as List<CoverageEligibilityRequestDiagnosis>,
-      detail: detail == freezed ? _value.detail : detail as List<Reference>,
+          : diagnosis // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityRequestDiagnosis>?,
+      detail: detail == freezed
+          ? _value.detail
+          : detail // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityRequestItem
     extends _CoverageEligibilityRequestItem {
   _$_CoverageEligibilityRequestItem(
@@ -4242,38 +4674,38 @@ class _$_CoverageEligibilityRequestItem
 
   factory _$_CoverageEligibilityRequestItem.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityRequestItemFromJson(json);
+      _$$_CoverageEligibilityRequestItemFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<PositiveInt> supportingInfoSequence;
+  final List<PositiveInt>? supportingInfoSequence;
   @override
   @JsonKey(name: '_supportingInfoSequence')
-  final List<Element> supportingInfoSequenceElement;
+  final List<Element>? supportingInfoSequenceElement;
   @override
-  final CodeableConcept category;
+  final CodeableConcept? category;
   @override
-  final CodeableConcept productOrService;
+  final CodeableConcept? productOrService;
   @override
-  final List<CodeableConcept> modifier;
+  final List<CodeableConcept>? modifier;
   @override
-  final Reference provider;
+  final Reference? provider;
   @override
-  final Quantity quantity;
+  final Quantity? quantity;
   @override
-  final Money unitPrice;
+  final Money? unitPrice;
   @override
-  final Reference facility;
+  final Reference? facility;
   @override
-  final List<CoverageEligibilityRequestDiagnosis> diagnosis;
+  final List<CoverageEligibilityRequestDiagnosis>? diagnosis;
   @override
-  final List<Reference> detail;
+  final List<Reference>? detail;
 
   @override
   String toString() {
@@ -4354,68 +4786,72 @@ class _$_CoverageEligibilityRequestItem
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityRequestItemToJson(this);
+    return _$$_CoverageEligibilityRequestItemToJson(this);
   }
 }
 
 abstract class _CoverageEligibilityRequestItem
     extends CoverageEligibilityRequestItem {
-  _CoverageEligibilityRequestItem._() : super._();
   factory _CoverageEligibilityRequestItem(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<PositiveInt> supportingInfoSequence,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<PositiveInt>? supportingInfoSequence,
       @JsonKey(name: '_supportingInfoSequence')
-          List<Element> supportingInfoSequenceElement,
-      CodeableConcept category,
-      CodeableConcept productOrService,
-      List<CodeableConcept> modifier,
-      Reference provider,
-      Quantity quantity,
-      Money unitPrice,
-      Reference facility,
-      List<CoverageEligibilityRequestDiagnosis> diagnosis,
-      List<Reference> detail}) = _$_CoverageEligibilityRequestItem;
+          List<Element>? supportingInfoSequenceElement,
+      CodeableConcept? category,
+      CodeableConcept? productOrService,
+      List<CodeableConcept>? modifier,
+      Reference? provider,
+      Quantity? quantity,
+      Money? unitPrice,
+      Reference? facility,
+      List<CoverageEligibilityRequestDiagnosis>? diagnosis,
+      List<Reference>? detail}) = _$_CoverageEligibilityRequestItem;
+  _CoverageEligibilityRequestItem._() : super._();
 
   factory _CoverageEligibilityRequestItem.fromJson(Map<String, dynamic> json) =
       _$_CoverageEligibilityRequestItem.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<PositiveInt> get supportingInfoSequence;
+  List<PositiveInt>? get supportingInfoSequence =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_supportingInfoSequence')
-  List<Element> get supportingInfoSequenceElement;
+  List<Element>? get supportingInfoSequenceElement =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get category;
+  CodeableConcept? get category => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get productOrService;
+  CodeableConcept? get productOrService => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept> get modifier;
+  List<CodeableConcept>? get modifier => throw _privateConstructorUsedError;
   @override
-  Reference get provider;
+  Reference? get provider => throw _privateConstructorUsedError;
   @override
-  Quantity get quantity;
+  Quantity? get quantity => throw _privateConstructorUsedError;
   @override
-  Money get unitPrice;
+  Money? get unitPrice => throw _privateConstructorUsedError;
   @override
-  Reference get facility;
+  Reference? get facility => throw _privateConstructorUsedError;
   @override
-  List<CoverageEligibilityRequestDiagnosis> get diagnosis;
+  List<CoverageEligibilityRequestDiagnosis>? get diagnosis =>
+      throw _privateConstructorUsedError;
   @override
-  List<Reference> get detail;
+  List<Reference>? get detail => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CoverageEligibilityRequestItemCopyWith<_CoverageEligibilityRequestItem>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CoverageEligibilityRequestDiagnosis
@@ -4427,13 +4863,12 @@ CoverageEligibilityRequestDiagnosis
 class _$CoverageEligibilityRequestDiagnosisTearOff {
   const _$CoverageEligibilityRequestDiagnosisTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityRequestDiagnosis call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      CodeableConcept diagnosisCodeableConcept,
-      Reference diagnosisReference}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? diagnosisCodeableConcept,
+      Reference? diagnosisReference}) {
     return _CoverageEligibilityRequestDiagnosis(
       id: id,
       extension_: extension_,
@@ -4443,30 +4878,31 @@ class _$CoverageEligibilityRequestDiagnosisTearOff {
     );
   }
 
-// ignore: unused_element
   CoverageEligibilityRequestDiagnosis fromJson(Map<String, Object> json) {
     return CoverageEligibilityRequestDiagnosis.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CoverageEligibilityRequestDiagnosis =
     _$CoverageEligibilityRequestDiagnosisTearOff();
 
 /// @nodoc
 mixin _$CoverageEligibilityRequestDiagnosis {
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  CodeableConcept get diagnosisCodeableConcept;
-  Reference get diagnosisReference;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get diagnosisCodeableConcept =>
+      throw _privateConstructorUsedError;
+  Reference? get diagnosisReference => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CoverageEligibilityRequestDiagnosisCopyWith<
-      CoverageEligibilityRequestDiagnosis> get copyWith;
+          CoverageEligibilityRequestDiagnosis>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4476,14 +4912,14 @@ abstract class $CoverageEligibilityRequestDiagnosisCopyWith<$Res> {
           $Res Function(CoverageEligibilityRequestDiagnosis) then) =
       _$CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      CodeableConcept diagnosisCodeableConcept,
-      Reference diagnosisReference});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? diagnosisCodeableConcept,
+      Reference? diagnosisReference});
 
-  $CodeableConceptCopyWith<$Res> get diagnosisCodeableConcept;
-  $ReferenceCopyWith<$Res> get diagnosisReference;
+  $CodeableConceptCopyWith<$Res>? get diagnosisCodeableConcept;
+  $ReferenceCopyWith<$Res>? get diagnosisReference;
 }
 
 /// @nodoc
@@ -4497,46 +4933,55 @@ class _$CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object diagnosisCodeableConcept = freezed,
-    Object diagnosisReference = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? diagnosisCodeableConcept = freezed,
+    Object? diagnosisReference = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       diagnosisCodeableConcept: diagnosisCodeableConcept == freezed
           ? _value.diagnosisCodeableConcept
-          : diagnosisCodeableConcept as CodeableConcept,
+          : diagnosisCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       diagnosisReference: diagnosisReference == freezed
           ? _value.diagnosisReference
-          : diagnosisReference as Reference,
+          : diagnosisReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get diagnosisCodeableConcept {
+  $CodeableConceptCopyWith<$Res>? get diagnosisCodeableConcept {
     if (_value.diagnosisCodeableConcept == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.diagnosisCodeableConcept,
+
+    return $CodeableConceptCopyWith<$Res>(_value.diagnosisCodeableConcept!,
         (value) {
       return _then(_value.copyWith(diagnosisCodeableConcept: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get diagnosisReference {
+  $ReferenceCopyWith<$Res>? get diagnosisReference {
     if (_value.diagnosisReference == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.diagnosisReference, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.diagnosisReference!, (value) {
       return _then(_value.copyWith(diagnosisReference: value));
     });
   }
@@ -4551,16 +4996,16 @@ abstract class _$CoverageEligibilityRequestDiagnosisCopyWith<$Res>
       __$CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      CodeableConcept diagnosisCodeableConcept,
-      Reference diagnosisReference});
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? diagnosisCodeableConcept,
+      Reference? diagnosisReference});
 
   @override
-  $CodeableConceptCopyWith<$Res> get diagnosisCodeableConcept;
+  $CodeableConceptCopyWith<$Res>? get diagnosisCodeableConcept;
   @override
-  $ReferenceCopyWith<$Res> get diagnosisReference;
+  $ReferenceCopyWith<$Res>? get diagnosisReference;
 }
 
 /// @nodoc
@@ -4578,33 +5023,39 @@ class __$CoverageEligibilityRequestDiagnosisCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object diagnosisCodeableConcept = freezed,
-    Object diagnosisReference = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? diagnosisCodeableConcept = freezed,
+    Object? diagnosisReference = freezed,
   }) {
     return _then(_CoverageEligibilityRequestDiagnosis(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       diagnosisCodeableConcept: diagnosisCodeableConcept == freezed
           ? _value.diagnosisCodeableConcept
-          : diagnosisCodeableConcept as CodeableConcept,
+          : diagnosisCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       diagnosisReference: diagnosisReference == freezed
           ? _value.diagnosisReference
-          : diagnosisReference as Reference,
+          : diagnosisReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityRequestDiagnosis
     extends _CoverageEligibilityRequestDiagnosis {
   _$_CoverageEligibilityRequestDiagnosis(
@@ -4617,19 +5068,19 @@ class _$_CoverageEligibilityRequestDiagnosis
 
   factory _$_CoverageEligibilityRequestDiagnosis.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityRequestDiagnosisFromJson(json);
+      _$$_CoverageEligibilityRequestDiagnosisFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final CodeableConcept diagnosisCodeableConcept;
+  final CodeableConcept? diagnosisCodeableConcept;
   @override
-  final Reference diagnosisReference;
+  final Reference? diagnosisReference;
 
   @override
   String toString() {
@@ -4676,39 +5127,42 @@ class _$_CoverageEligibilityRequestDiagnosis
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityRequestDiagnosisToJson(this);
+    return _$$_CoverageEligibilityRequestDiagnosisToJson(this);
   }
 }
 
 abstract class _CoverageEligibilityRequestDiagnosis
     extends CoverageEligibilityRequestDiagnosis {
-  _CoverageEligibilityRequestDiagnosis._() : super._();
   factory _CoverageEligibilityRequestDiagnosis(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      CodeableConcept diagnosisCodeableConcept,
-      Reference diagnosisReference}) = _$_CoverageEligibilityRequestDiagnosis;
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? diagnosisCodeableConcept,
+      Reference? diagnosisReference}) = _$_CoverageEligibilityRequestDiagnosis;
+  _CoverageEligibilityRequestDiagnosis._() : super._();
 
   factory _CoverageEligibilityRequestDiagnosis.fromJson(
           Map<String, dynamic> json) =
       _$_CoverageEligibilityRequestDiagnosis.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get diagnosisCodeableConcept;
+  CodeableConcept? get diagnosisCodeableConcept =>
+      throw _privateConstructorUsedError;
   @override
-  Reference get diagnosisReference;
+  Reference? get diagnosisReference => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CoverageEligibilityRequestDiagnosisCopyWith<
-      _CoverageEligibilityRequestDiagnosis> get copyWith;
+          _CoverageEligibilityRequestDiagnosis>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CoverageEligibilityResponse _$CoverageEligibilityResponseFromJson(
@@ -4720,58 +5174,54 @@ CoverageEligibilityResponse _$CoverageEligibilityResponseFromJson(
 class _$CoverageEligibilityResponseTearOff {
   const _$CoverageEligibilityResponseTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityResponse call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
           R4ResourceType
               resourceType = R4ResourceType.CoverageEligibilityResponse,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      List<CoverageEligibilityResponsePurpose> purpose,
+          Element? statusElement,
+      List<CoverageEligibilityResponsePurpose>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element> purposeElement,
-      @required
-          Reference patient,
-      Date servicedDate,
+          List<Element?>? purposeElement,
+      required Reference patient,
+      Date? servicedDate,
       @JsonKey(name: '_servicedDate')
-          Element servicedDateElement,
-      Period servicedPeriod,
-      FhirDateTime created,
+          Element? servicedDateElement,
+      Period? servicedPeriod,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference requestor,
-      @required
-          Reference request,
+          Element? createdElement,
+      Reference? requestor,
+      required Reference request,
       @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
-          CoverageEligibilityResponseOutcome outcome,
+          CoverageEligibilityResponseOutcome? outcome,
       @JsonKey(name: '_outcome')
-          Element outcomeElement,
-      String disposition,
+          Element? outcomeElement,
+      String? disposition,
       @JsonKey(name: '_disposition')
-          Element dispositionElement,
-      @required
-          Reference insurer,
-      List<CoverageEligibilityResponseInsurance> insurance,
-      String preAuthRef,
+          Element? dispositionElement,
+      required Reference insurer,
+      List<CoverageEligibilityResponseInsurance>? insurance,
+      String? preAuthRef,
       @JsonKey(name: '_preAuthRef')
-          Element preAuthRefElement,
-      CodeableConcept form,
-      List<CoverageEligibilityResponseError> error}) {
+          Element? preAuthRefElement,
+      CodeableConcept? form,
+      List<CoverageEligibilityResponseError>? error}) {
     return _CoverageEligibilityResponse(
       resourceType: resourceType,
       id: id,
@@ -4810,69 +5260,72 @@ class _$CoverageEligibilityResponseTearOff {
     );
   }
 
-// ignore: unused_element
   CoverageEligibilityResponse fromJson(Map<String, Object> json) {
     return CoverageEligibilityResponse.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CoverageEligibilityResponse = _$CoverageEligibilityResponseTearOff();
 
 /// @nodoc
 mixin _$CoverageEligibilityResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
-  R4ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
-  Code get status;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
-  Element get statusElement;
-  List<CoverageEligibilityResponsePurpose> get purpose;
+  Element? get statusElement => throw _privateConstructorUsedError;
+  List<CoverageEligibilityResponsePurpose>? get purpose =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_purpose')
-  List<Element> get purposeElement;
-  Reference get patient;
-  Date get servicedDate;
+  List<Element?>? get purposeElement => throw _privateConstructorUsedError;
+  Reference get patient => throw _privateConstructorUsedError;
+  Date? get servicedDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_servicedDate')
-  Element get servicedDateElement;
-  Period get servicedPeriod;
-  FhirDateTime get created;
+  Element? get servicedDateElement => throw _privateConstructorUsedError;
+  Period? get servicedPeriod => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
-  Element get createdElement;
-  Reference get requestor;
-  Reference get request;
+  Element? get createdElement => throw _privateConstructorUsedError;
+  Reference? get requestor => throw _privateConstructorUsedError;
+  Reference get request => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
-  CoverageEligibilityResponseOutcome get outcome;
+  CoverageEligibilityResponseOutcome? get outcome =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: '_outcome')
-  Element get outcomeElement;
-  String get disposition;
+  Element? get outcomeElement => throw _privateConstructorUsedError;
+  String? get disposition => throw _privateConstructorUsedError;
   @JsonKey(name: '_disposition')
-  Element get dispositionElement;
-  Reference get insurer;
-  List<CoverageEligibilityResponseInsurance> get insurance;
-  String get preAuthRef;
+  Element? get dispositionElement => throw _privateConstructorUsedError;
+  Reference get insurer => throw _privateConstructorUsedError;
+  List<CoverageEligibilityResponseInsurance>? get insurance =>
+      throw _privateConstructorUsedError;
+  String? get preAuthRef => throw _privateConstructorUsedError;
   @JsonKey(name: '_preAuthRef')
-  Element get preAuthRefElement;
-  CodeableConcept get form;
-  List<CoverageEligibilityResponseError> get error;
+  Element? get preAuthRefElement => throw _privateConstructorUsedError;
+  CodeableConcept? get form => throw _privateConstructorUsedError;
+  List<CoverageEligibilityResponseError>? get error =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CoverageEligibilityResponseCopyWith<CoverageEligibilityResponse>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4884,67 +5337,67 @@ abstract class $CoverageEligibilityResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      List<CoverageEligibilityResponsePurpose> purpose,
+          Element? statusElement,
+      List<CoverageEligibilityResponsePurpose>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element> purposeElement,
+          List<Element?>? purposeElement,
       Reference patient,
-      Date servicedDate,
+      Date? servicedDate,
       @JsonKey(name: '_servicedDate')
-          Element servicedDateElement,
-      Period servicedPeriod,
-      FhirDateTime created,
+          Element? servicedDateElement,
+      Period? servicedPeriod,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference requestor,
+          Element? createdElement,
+      Reference? requestor,
       Reference request,
       @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
-          CoverageEligibilityResponseOutcome outcome,
+          CoverageEligibilityResponseOutcome? outcome,
       @JsonKey(name: '_outcome')
-          Element outcomeElement,
-      String disposition,
+          Element? outcomeElement,
+      String? disposition,
       @JsonKey(name: '_disposition')
-          Element dispositionElement,
+          Element? dispositionElement,
       Reference insurer,
-      List<CoverageEligibilityResponseInsurance> insurance,
-      String preAuthRef,
+      List<CoverageEligibilityResponseInsurance>? insurance,
+      String? preAuthRef,
       @JsonKey(name: '_preAuthRef')
-          Element preAuthRefElement,
-      CodeableConcept form,
-      List<CoverageEligibilityResponseError> error});
+          Element? preAuthRefElement,
+      CodeableConcept? form,
+      List<CoverageEligibilityResponseError>? error});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get statusElement;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get statusElement;
   $ReferenceCopyWith<$Res> get patient;
-  $ElementCopyWith<$Res> get servicedDateElement;
-  $PeriodCopyWith<$Res> get servicedPeriod;
-  $ElementCopyWith<$Res> get createdElement;
-  $ReferenceCopyWith<$Res> get requestor;
+  $ElementCopyWith<$Res>? get servicedDateElement;
+  $PeriodCopyWith<$Res>? get servicedPeriod;
+  $ElementCopyWith<$Res>? get createdElement;
+  $ReferenceCopyWith<$Res>? get requestor;
   $ReferenceCopyWith<$Res> get request;
-  $ElementCopyWith<$Res> get outcomeElement;
-  $ElementCopyWith<$Res> get dispositionElement;
+  $ElementCopyWith<$Res>? get outcomeElement;
+  $ElementCopyWith<$Res>? get dispositionElement;
   $ReferenceCopyWith<$Res> get insurer;
-  $ElementCopyWith<$Res> get preAuthRefElement;
-  $CodeableConceptCopyWith<$Res> get form;
+  $ElementCopyWith<$Res>? get preAuthRefElement;
+  $CodeableConceptCopyWith<$Res>? get form;
 }
 
 /// @nodoc
@@ -4958,278 +5411,341 @@ class _$CoverageEligibilityResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object purpose = freezed,
-    Object purposeElement = freezed,
-    Object patient = freezed,
-    Object servicedDate = freezed,
-    Object servicedDateElement = freezed,
-    Object servicedPeriod = freezed,
-    Object created = freezed,
-    Object createdElement = freezed,
-    Object requestor = freezed,
-    Object request = freezed,
-    Object outcome = freezed,
-    Object outcomeElement = freezed,
-    Object disposition = freezed,
-    Object dispositionElement = freezed,
-    Object insurer = freezed,
-    Object insurance = freezed,
-    Object preAuthRef = freezed,
-    Object preAuthRefElement = freezed,
-    Object form = freezed,
-    Object error = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? purpose = freezed,
+    Object? purposeElement = freezed,
+    Object? patient = freezed,
+    Object? servicedDate = freezed,
+    Object? servicedDateElement = freezed,
+    Object? servicedPeriod = freezed,
+    Object? created = freezed,
+    Object? createdElement = freezed,
+    Object? requestor = freezed,
+    Object? request = freezed,
+    Object? outcome = freezed,
+    Object? outcomeElement = freezed,
+    Object? disposition = freezed,
+    Object? dispositionElement = freezed,
+    Object? insurer = freezed,
+    Object? insurance = freezed,
+    Object? preAuthRef = freezed,
+    Object? preAuthRefElement = freezed,
+    Object? form = freezed,
+    Object? error = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       purpose: purpose == freezed
           ? _value.purpose
-          : purpose as List<CoverageEligibilityResponsePurpose>,
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityResponsePurpose>?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as List<Element>,
-      patient: patient == freezed ? _value.patient : patient as Reference,
-      servicedDate:
-          servicedDate == freezed ? _value.servicedDate : servicedDate as Date,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      patient: patient == freezed
+          ? _value.patient
+          : patient // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      servicedDate: servicedDate == freezed
+          ? _value.servicedDate
+          : servicedDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
       servicedDateElement: servicedDateElement == freezed
           ? _value.servicedDateElement
-          : servicedDateElement as Element,
+          : servicedDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       servicedPeriod: servicedPeriod == freezed
           ? _value.servicedPeriod
-          : servicedPeriod as Period,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+          : servicedPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      created: created == freezed
+          ? _value.created
+          : created // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
-          : createdElement as Element,
-      requestor:
-          requestor == freezed ? _value.requestor : requestor as Reference,
-      request: request == freezed ? _value.request : request as Reference,
+          : createdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      requestor: requestor == freezed
+          ? _value.requestor
+          : requestor // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      request: request == freezed
+          ? _value.request
+          : request // ignore: cast_nullable_to_non_nullable
+              as Reference,
       outcome: outcome == freezed
           ? _value.outcome
-          : outcome as CoverageEligibilityResponseOutcome,
+          : outcome // ignore: cast_nullable_to_non_nullable
+              as CoverageEligibilityResponseOutcome?,
       outcomeElement: outcomeElement == freezed
           ? _value.outcomeElement
-          : outcomeElement as Element,
-      disposition:
-          disposition == freezed ? _value.disposition : disposition as String,
+          : outcomeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      disposition: disposition == freezed
+          ? _value.disposition
+          : disposition // ignore: cast_nullable_to_non_nullable
+              as String?,
       dispositionElement: dispositionElement == freezed
           ? _value.dispositionElement
-          : dispositionElement as Element,
-      insurer: insurer == freezed ? _value.insurer : insurer as Reference,
+          : dispositionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      insurer: insurer == freezed
+          ? _value.insurer
+          : insurer // ignore: cast_nullable_to_non_nullable
+              as Reference,
       insurance: insurance == freezed
           ? _value.insurance
-          : insurance as List<CoverageEligibilityResponseInsurance>,
-      preAuthRef:
-          preAuthRef == freezed ? _value.preAuthRef : preAuthRef as String,
+          : insurance // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityResponseInsurance>?,
+      preAuthRef: preAuthRef == freezed
+          ? _value.preAuthRef
+          : preAuthRef // ignore: cast_nullable_to_non_nullable
+              as String?,
       preAuthRefElement: preAuthRefElement == freezed
           ? _value.preAuthRefElement
-          : preAuthRefElement as Element,
-      form: form == freezed ? _value.form : form as CodeableConcept,
+          : preAuthRefElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      form: form == freezed
+          ? _value.form
+          : form // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       error: error == freezed
           ? _value.error
-          : error as List<CoverageEligibilityResponseError>,
+          : error // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityResponseError>?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get statusElement {
+  $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
       return _then(_value.copyWith(statusElement: value));
     });
   }
 
   @override
   $ReferenceCopyWith<$Res> get patient {
-    if (_value.patient == null) {
-      return null;
-    }
     return $ReferenceCopyWith<$Res>(_value.patient, (value) {
       return _then(_value.copyWith(patient: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get servicedDateElement {
+  $ElementCopyWith<$Res>? get servicedDateElement {
     if (_value.servicedDateElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.servicedDateElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.servicedDateElement!, (value) {
       return _then(_value.copyWith(servicedDateElement: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get servicedPeriod {
+  $PeriodCopyWith<$Res>? get servicedPeriod {
     if (_value.servicedPeriod == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.servicedPeriod, (value) {
+
+    return $PeriodCopyWith<$Res>(_value.servicedPeriod!, (value) {
       return _then(_value.copyWith(servicedPeriod: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get createdElement {
+  $ElementCopyWith<$Res>? get createdElement {
     if (_value.createdElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.createdElement!, (value) {
       return _then(_value.copyWith(createdElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get requestor {
+  $ReferenceCopyWith<$Res>? get requestor {
     if (_value.requestor == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.requestor, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.requestor!, (value) {
       return _then(_value.copyWith(requestor: value));
     });
   }
 
   @override
   $ReferenceCopyWith<$Res> get request {
-    if (_value.request == null) {
-      return null;
-    }
     return $ReferenceCopyWith<$Res>(_value.request, (value) {
       return _then(_value.copyWith(request: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get outcomeElement {
+  $ElementCopyWith<$Res>? get outcomeElement {
     if (_value.outcomeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.outcomeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.outcomeElement!, (value) {
       return _then(_value.copyWith(outcomeElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get dispositionElement {
+  $ElementCopyWith<$Res>? get dispositionElement {
     if (_value.dispositionElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.dispositionElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.dispositionElement!, (value) {
       return _then(_value.copyWith(dispositionElement: value));
     });
   }
 
   @override
   $ReferenceCopyWith<$Res> get insurer {
-    if (_value.insurer == null) {
-      return null;
-    }
     return $ReferenceCopyWith<$Res>(_value.insurer, (value) {
       return _then(_value.copyWith(insurer: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get preAuthRefElement {
+  $ElementCopyWith<$Res>? get preAuthRefElement {
     if (_value.preAuthRefElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.preAuthRefElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.preAuthRefElement!, (value) {
       return _then(_value.copyWith(preAuthRefElement: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get form {
+  $CodeableConceptCopyWith<$Res>? get form {
     if (_value.form == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.form, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.form!, (value) {
       return _then(_value.copyWith(form: value));
     });
   }
@@ -5246,83 +5762,83 @@ abstract class _$CoverageEligibilityResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      List<CoverageEligibilityResponsePurpose> purpose,
+          Element? statusElement,
+      List<CoverageEligibilityResponsePurpose>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element> purposeElement,
+          List<Element?>? purposeElement,
       Reference patient,
-      Date servicedDate,
+      Date? servicedDate,
       @JsonKey(name: '_servicedDate')
-          Element servicedDateElement,
-      Period servicedPeriod,
-      FhirDateTime created,
+          Element? servicedDateElement,
+      Period? servicedPeriod,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference requestor,
+          Element? createdElement,
+      Reference? requestor,
       Reference request,
       @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
-          CoverageEligibilityResponseOutcome outcome,
+          CoverageEligibilityResponseOutcome? outcome,
       @JsonKey(name: '_outcome')
-          Element outcomeElement,
-      String disposition,
+          Element? outcomeElement,
+      String? disposition,
       @JsonKey(name: '_disposition')
-          Element dispositionElement,
+          Element? dispositionElement,
       Reference insurer,
-      List<CoverageEligibilityResponseInsurance> insurance,
-      String preAuthRef,
+      List<CoverageEligibilityResponseInsurance>? insurance,
+      String? preAuthRef,
       @JsonKey(name: '_preAuthRef')
-          Element preAuthRefElement,
-      CodeableConcept form,
-      List<CoverageEligibilityResponseError> error});
+          Element? preAuthRefElement,
+      CodeableConcept? form,
+      List<CoverageEligibilityResponseError>? error});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
-  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res>? get statusElement;
   @override
   $ReferenceCopyWith<$Res> get patient;
   @override
-  $ElementCopyWith<$Res> get servicedDateElement;
+  $ElementCopyWith<$Res>? get servicedDateElement;
   @override
-  $PeriodCopyWith<$Res> get servicedPeriod;
+  $PeriodCopyWith<$Res>? get servicedPeriod;
   @override
-  $ElementCopyWith<$Res> get createdElement;
+  $ElementCopyWith<$Res>? get createdElement;
   @override
-  $ReferenceCopyWith<$Res> get requestor;
+  $ReferenceCopyWith<$Res>? get requestor;
   @override
   $ReferenceCopyWith<$Res> get request;
   @override
-  $ElementCopyWith<$Res> get outcomeElement;
+  $ElementCopyWith<$Res>? get outcomeElement;
   @override
-  $ElementCopyWith<$Res> get dispositionElement;
+  $ElementCopyWith<$Res>? get dispositionElement;
   @override
   $ReferenceCopyWith<$Res> get insurer;
   @override
-  $ElementCopyWith<$Res> get preAuthRefElement;
+  $ElementCopyWith<$Res>? get preAuthRefElement;
   @override
-  $CodeableConceptCopyWith<$Res> get form;
+  $CodeableConceptCopyWith<$Res>? get form;
 }
 
 /// @nodoc
@@ -5340,126 +5856,184 @@ class __$CoverageEligibilityResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object purpose = freezed,
-    Object purposeElement = freezed,
-    Object patient = freezed,
-    Object servicedDate = freezed,
-    Object servicedDateElement = freezed,
-    Object servicedPeriod = freezed,
-    Object created = freezed,
-    Object createdElement = freezed,
-    Object requestor = freezed,
-    Object request = freezed,
-    Object outcome = freezed,
-    Object outcomeElement = freezed,
-    Object disposition = freezed,
-    Object dispositionElement = freezed,
-    Object insurer = freezed,
-    Object insurance = freezed,
-    Object preAuthRef = freezed,
-    Object preAuthRefElement = freezed,
-    Object form = freezed,
-    Object error = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? purpose = freezed,
+    Object? purposeElement = freezed,
+    Object? patient = freezed,
+    Object? servicedDate = freezed,
+    Object? servicedDateElement = freezed,
+    Object? servicedPeriod = freezed,
+    Object? created = freezed,
+    Object? createdElement = freezed,
+    Object? requestor = freezed,
+    Object? request = freezed,
+    Object? outcome = freezed,
+    Object? outcomeElement = freezed,
+    Object? disposition = freezed,
+    Object? dispositionElement = freezed,
+    Object? insurer = freezed,
+    Object? insurance = freezed,
+    Object? preAuthRef = freezed,
+    Object? preAuthRefElement = freezed,
+    Object? form = freezed,
+    Object? error = freezed,
   }) {
     return _then(_CoverageEligibilityResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       purpose: purpose == freezed
           ? _value.purpose
-          : purpose as List<CoverageEligibilityResponsePurpose>,
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityResponsePurpose>?,
       purposeElement: purposeElement == freezed
           ? _value.purposeElement
-          : purposeElement as List<Element>,
-      patient: patient == freezed ? _value.patient : patient as Reference,
-      servicedDate:
-          servicedDate == freezed ? _value.servicedDate : servicedDate as Date,
+          : purposeElement // ignore: cast_nullable_to_non_nullable
+              as List<Element?>?,
+      patient: patient == freezed
+          ? _value.patient
+          : patient // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      servicedDate: servicedDate == freezed
+          ? _value.servicedDate
+          : servicedDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
       servicedDateElement: servicedDateElement == freezed
           ? _value.servicedDateElement
-          : servicedDateElement as Element,
+          : servicedDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       servicedPeriod: servicedPeriod == freezed
           ? _value.servicedPeriod
-          : servicedPeriod as Period,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+          : servicedPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      created: created == freezed
+          ? _value.created
+          : created // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
-          : createdElement as Element,
-      requestor:
-          requestor == freezed ? _value.requestor : requestor as Reference,
-      request: request == freezed ? _value.request : request as Reference,
+          : createdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      requestor: requestor == freezed
+          ? _value.requestor
+          : requestor // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      request: request == freezed
+          ? _value.request
+          : request // ignore: cast_nullable_to_non_nullable
+              as Reference,
       outcome: outcome == freezed
           ? _value.outcome
-          : outcome as CoverageEligibilityResponseOutcome,
+          : outcome // ignore: cast_nullable_to_non_nullable
+              as CoverageEligibilityResponseOutcome?,
       outcomeElement: outcomeElement == freezed
           ? _value.outcomeElement
-          : outcomeElement as Element,
-      disposition:
-          disposition == freezed ? _value.disposition : disposition as String,
+          : outcomeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      disposition: disposition == freezed
+          ? _value.disposition
+          : disposition // ignore: cast_nullable_to_non_nullable
+              as String?,
       dispositionElement: dispositionElement == freezed
           ? _value.dispositionElement
-          : dispositionElement as Element,
-      insurer: insurer == freezed ? _value.insurer : insurer as Reference,
+          : dispositionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      insurer: insurer == freezed
+          ? _value.insurer
+          : insurer // ignore: cast_nullable_to_non_nullable
+              as Reference,
       insurance: insurance == freezed
           ? _value.insurance
-          : insurance as List<CoverageEligibilityResponseInsurance>,
-      preAuthRef:
-          preAuthRef == freezed ? _value.preAuthRef : preAuthRef as String,
+          : insurance // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityResponseInsurance>?,
+      preAuthRef: preAuthRef == freezed
+          ? _value.preAuthRef
+          : preAuthRef // ignore: cast_nullable_to_non_nullable
+              as String?,
       preAuthRefElement: preAuthRefElement == freezed
           ? _value.preAuthRefElement
-          : preAuthRefElement as Element,
-      form: form == freezed ? _value.form : form as CodeableConcept,
+          : preAuthRefElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      form: form == freezed
+          ? _value.form
+          : form // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       error: error == freezed
           ? _value.error
-          : error as List<CoverageEligibilityResponseError>,
+          : error // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityResponseError>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
   _$_CoverageEligibilityResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
@@ -5484,8 +6058,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
       this.purpose,
       @JsonKey(name: '_purpose')
           this.purposeElement,
-      @required
-          this.patient,
+      required this.patient,
       this.servicedDate,
       @JsonKey(name: '_servicedDate')
           this.servicedDateElement,
@@ -5494,8 +6067,7 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
       @JsonKey(name: '_created')
           this.createdElement,
       this.requestor,
-      @required
-          this.request,
+      required this.request,
       @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
           this.outcome,
       @JsonKey(name: '_outcome')
@@ -5503,103 +6075,98 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
       this.disposition,
       @JsonKey(name: '_disposition')
           this.dispositionElement,
-      @required
-          this.insurer,
+      required this.insurer,
       this.insurance,
       this.preAuthRef,
       @JsonKey(name: '_preAuthRef')
           this.preAuthRefElement,
       this.form,
       this.error})
-      : assert(resourceType != null),
-        assert(patient != null),
-        assert(request != null),
-        assert(insurer != null),
-        super._();
+      : super._();
 
   factory _$_CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityResponseFromJson(json);
+      _$$_CoverageEligibilityResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
   final R4ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<Identifier>? identifier;
   @override
-  final Code status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
-  final Element statusElement;
+  final Element? statusElement;
   @override
-  final List<CoverageEligibilityResponsePurpose> purpose;
+  final List<CoverageEligibilityResponsePurpose>? purpose;
   @override
   @JsonKey(name: '_purpose')
-  final List<Element> purposeElement;
+  final List<Element?>? purposeElement;
   @override
   final Reference patient;
   @override
-  final Date servicedDate;
+  final Date? servicedDate;
   @override
   @JsonKey(name: '_servicedDate')
-  final Element servicedDateElement;
+  final Element? servicedDateElement;
   @override
-  final Period servicedPeriod;
+  final Period? servicedPeriod;
   @override
-  final FhirDateTime created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
-  final Element createdElement;
+  final Element? createdElement;
   @override
-  final Reference requestor;
+  final Reference? requestor;
   @override
   final Reference request;
   @override
   @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
-  final CoverageEligibilityResponseOutcome outcome;
+  final CoverageEligibilityResponseOutcome? outcome;
   @override
   @JsonKey(name: '_outcome')
-  final Element outcomeElement;
+  final Element? outcomeElement;
   @override
-  final String disposition;
+  final String? disposition;
   @override
   @JsonKey(name: '_disposition')
-  final Element dispositionElement;
+  final Element? dispositionElement;
   @override
   final Reference insurer;
   @override
-  final List<CoverageEligibilityResponseInsurance> insurance;
+  final List<CoverageEligibilityResponseInsurance>? insurance;
   @override
-  final String preAuthRef;
+  final String? preAuthRef;
   @override
   @JsonKey(name: '_preAuthRef')
-  final Element preAuthRefElement;
+  final Element? preAuthRefElement;
   @override
-  final CodeableConcept form;
+  final CodeableConcept? form;
   @override
-  final List<CoverageEligibilityResponseError> error;
+  final List<CoverageEligibilityResponseError>? error;
 
   @override
   String toString() {
@@ -5735,152 +6302,154 @@ class _$_CoverageEligibilityResponse extends _CoverageEligibilityResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityResponseToJson(this);
+    return _$$_CoverageEligibilityResponseToJson(this);
   }
 }
 
 abstract class _CoverageEligibilityResponse
     extends CoverageEligibilityResponse {
-  _CoverageEligibilityResponse._() : super._();
   factory _CoverageEligibilityResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      List<CoverageEligibilityResponsePurpose> purpose,
+          Element? statusElement,
+      List<CoverageEligibilityResponsePurpose>? purpose,
       @JsonKey(name: '_purpose')
-          List<Element> purposeElement,
-      @required
-          Reference patient,
-      Date servicedDate,
+          List<Element?>? purposeElement,
+      required Reference patient,
+      Date? servicedDate,
       @JsonKey(name: '_servicedDate')
-          Element servicedDateElement,
-      Period servicedPeriod,
-      FhirDateTime created,
+          Element? servicedDateElement,
+      Period? servicedPeriod,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference requestor,
-      @required
-          Reference request,
+          Element? createdElement,
+      Reference? requestor,
+      required Reference request,
       @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
-          CoverageEligibilityResponseOutcome outcome,
+          CoverageEligibilityResponseOutcome? outcome,
       @JsonKey(name: '_outcome')
-          Element outcomeElement,
-      String disposition,
+          Element? outcomeElement,
+      String? disposition,
       @JsonKey(name: '_disposition')
-          Element dispositionElement,
-      @required
-          Reference insurer,
-      List<CoverageEligibilityResponseInsurance> insurance,
-      String preAuthRef,
+          Element? dispositionElement,
+      required Reference insurer,
+      List<CoverageEligibilityResponseInsurance>? insurance,
+      String? preAuthRef,
       @JsonKey(name: '_preAuthRef')
-          Element preAuthRefElement,
-      CodeableConcept form,
-      List<CoverageEligibilityResponseError>
+          Element? preAuthRefElement,
+      CodeableConcept? form,
+      List<CoverageEligibilityResponseError>?
           error}) = _$_CoverageEligibilityResponse;
+  _CoverageEligibilityResponse._() : super._();
 
   factory _CoverageEligibilityResponse.fromJson(Map<String, dynamic> json) =
       _$_CoverageEligibilityResponse.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.CoverageEligibilityResponse)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier> get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Code get status;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  List<CoverageEligibilityResponsePurpose> get purpose;
+  List<CoverageEligibilityResponsePurpose>? get purpose =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_purpose')
-  List<Element> get purposeElement;
+  List<Element?>? get purposeElement => throw _privateConstructorUsedError;
   @override
-  Reference get patient;
+  Reference get patient => throw _privateConstructorUsedError;
   @override
-  Date get servicedDate;
+  Date? get servicedDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_servicedDate')
-  Element get servicedDateElement;
+  Element? get servicedDateElement => throw _privateConstructorUsedError;
   @override
-  Period get servicedPeriod;
+  Period? get servicedPeriod => throw _privateConstructorUsedError;
   @override
-  FhirDateTime get created;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
-  Element get createdElement;
+  Element? get createdElement => throw _privateConstructorUsedError;
   @override
-  Reference get requestor;
+  Reference? get requestor => throw _privateConstructorUsedError;
   @override
-  Reference get request;
+  Reference get request => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: CoverageEligibilityResponseOutcome.unknown)
-  CoverageEligibilityResponseOutcome get outcome;
+  CoverageEligibilityResponseOutcome? get outcome =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_outcome')
-  Element get outcomeElement;
+  Element? get outcomeElement => throw _privateConstructorUsedError;
   @override
-  String get disposition;
+  String? get disposition => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_disposition')
-  Element get dispositionElement;
+  Element? get dispositionElement => throw _privateConstructorUsedError;
   @override
-  Reference get insurer;
+  Reference get insurer => throw _privateConstructorUsedError;
   @override
-  List<CoverageEligibilityResponseInsurance> get insurance;
+  List<CoverageEligibilityResponseInsurance>? get insurance =>
+      throw _privateConstructorUsedError;
   @override
-  String get preAuthRef;
+  String? get preAuthRef => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_preAuthRef')
-  Element get preAuthRefElement;
+  Element? get preAuthRefElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get form;
+  CodeableConcept? get form => throw _privateConstructorUsedError;
   @override
-  List<CoverageEligibilityResponseError> get error;
+  List<CoverageEligibilityResponseError>? get error =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CoverageEligibilityResponseCopyWith<_CoverageEligibilityResponse>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CoverageEligibilityResponseInsurance
@@ -5892,16 +6461,15 @@ CoverageEligibilityResponseInsurance
 class _$CoverageEligibilityResponseInsuranceTearOff {
   const _$CoverageEligibilityResponseInsuranceTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityResponseInsurance call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required Reference coverage,
-      Boolean inforce,
-      @JsonKey(name: '_inforce') Element inforceElement,
-      Period benefitPeriod,
-      List<CoverageEligibilityResponseItem> item}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required Reference coverage,
+      Boolean? inforce,
+      @JsonKey(name: '_inforce') Element? inforceElement,
+      Period? benefitPeriod,
+      List<CoverageEligibilityResponseItem>? item}) {
     return _CoverageEligibilityResponseInsurance(
       id: id,
       extension_: extension_,
@@ -5914,34 +6482,35 @@ class _$CoverageEligibilityResponseInsuranceTearOff {
     );
   }
 
-// ignore: unused_element
   CoverageEligibilityResponseInsurance fromJson(Map<String, Object> json) {
     return CoverageEligibilityResponseInsurance.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CoverageEligibilityResponseInsurance =
     _$CoverageEligibilityResponseInsuranceTearOff();
 
 /// @nodoc
 mixin _$CoverageEligibilityResponseInsurance {
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  Reference get coverage;
-  Boolean get inforce;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  Reference get coverage => throw _privateConstructorUsedError;
+  Boolean? get inforce => throw _privateConstructorUsedError;
   @JsonKey(name: '_inforce')
-  Element get inforceElement;
-  Period get benefitPeriod;
-  List<CoverageEligibilityResponseItem> get item;
+  Element? get inforceElement => throw _privateConstructorUsedError;
+  Period? get benefitPeriod => throw _privateConstructorUsedError;
+  List<CoverageEligibilityResponseItem>? get item =>
+      throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CoverageEligibilityResponseInsuranceCopyWith<
-      CoverageEligibilityResponseInsurance> get copyWith;
+          CoverageEligibilityResponseInsurance>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -5951,18 +6520,18 @@ abstract class $CoverageEligibilityResponseInsuranceCopyWith<$Res> {
           $Res Function(CoverageEligibilityResponseInsurance) then) =
       _$CoverageEligibilityResponseInsuranceCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Reference coverage,
-      Boolean inforce,
-      @JsonKey(name: '_inforce') Element inforceElement,
-      Period benefitPeriod,
-      List<CoverageEligibilityResponseItem> item});
+      Boolean? inforce,
+      @JsonKey(name: '_inforce') Element? inforceElement,
+      Period? benefitPeriod,
+      List<CoverageEligibilityResponseItem>? item});
 
   $ReferenceCopyWith<$Res> get coverage;
-  $ElementCopyWith<$Res> get inforceElement;
-  $PeriodCopyWith<$Res> get benefitPeriod;
+  $ElementCopyWith<$Res>? get inforceElement;
+  $PeriodCopyWith<$Res>? get benefitPeriod;
 }
 
 /// @nodoc
@@ -5976,63 +6545,76 @@ class _$CoverageEligibilityResponseInsuranceCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object coverage = freezed,
-    Object inforce = freezed,
-    Object inforceElement = freezed,
-    Object benefitPeriod = freezed,
-    Object item = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? coverage = freezed,
+    Object? inforce = freezed,
+    Object? inforceElement = freezed,
+    Object? benefitPeriod = freezed,
+    Object? item = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      coverage: coverage == freezed ? _value.coverage : coverage as Reference,
-      inforce: inforce == freezed ? _value.inforce : inforce as Boolean,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      coverage: coverage == freezed
+          ? _value.coverage
+          : coverage // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      inforce: inforce == freezed
+          ? _value.inforce
+          : inforce // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       inforceElement: inforceElement == freezed
           ? _value.inforceElement
-          : inforceElement as Element,
+          : inforceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       benefitPeriod: benefitPeriod == freezed
           ? _value.benefitPeriod
-          : benefitPeriod as Period,
+          : benefitPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       item: item == freezed
           ? _value.item
-          : item as List<CoverageEligibilityResponseItem>,
+          : item // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityResponseItem>?,
     ));
   }
 
   @override
   $ReferenceCopyWith<$Res> get coverage {
-    if (_value.coverage == null) {
-      return null;
-    }
     return $ReferenceCopyWith<$Res>(_value.coverage, (value) {
       return _then(_value.copyWith(coverage: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get inforceElement {
+  $ElementCopyWith<$Res>? get inforceElement {
     if (_value.inforceElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.inforceElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.inforceElement!, (value) {
       return _then(_value.copyWith(inforceElement: value));
     });
   }
 
   @override
-  $PeriodCopyWith<$Res> get benefitPeriod {
+  $PeriodCopyWith<$Res>? get benefitPeriod {
     if (_value.benefitPeriod == null) {
       return null;
     }
-    return $PeriodCopyWith<$Res>(_value.benefitPeriod, (value) {
+
+    return $PeriodCopyWith<$Res>(_value.benefitPeriod!, (value) {
       return _then(_value.copyWith(benefitPeriod: value));
     });
   }
@@ -6047,21 +6629,21 @@ abstract class _$CoverageEligibilityResponseInsuranceCopyWith<$Res>
       __$CoverageEligibilityResponseInsuranceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       Reference coverage,
-      Boolean inforce,
-      @JsonKey(name: '_inforce') Element inforceElement,
-      Period benefitPeriod,
-      List<CoverageEligibilityResponseItem> item});
+      Boolean? inforce,
+      @JsonKey(name: '_inforce') Element? inforceElement,
+      Period? benefitPeriod,
+      List<CoverageEligibilityResponseItem>? item});
 
   @override
   $ReferenceCopyWith<$Res> get coverage;
   @override
-  $ElementCopyWith<$Res> get inforceElement;
+  $ElementCopyWith<$Res>? get inforceElement;
   @override
-  $PeriodCopyWith<$Res> get benefitPeriod;
+  $PeriodCopyWith<$Res>? get benefitPeriod;
 }
 
 /// @nodoc
@@ -6079,77 +6661,89 @@ class __$CoverageEligibilityResponseInsuranceCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object coverage = freezed,
-    Object inforce = freezed,
-    Object inforceElement = freezed,
-    Object benefitPeriod = freezed,
-    Object item = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? coverage = freezed,
+    Object? inforce = freezed,
+    Object? inforceElement = freezed,
+    Object? benefitPeriod = freezed,
+    Object? item = freezed,
   }) {
     return _then(_CoverageEligibilityResponseInsurance(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      coverage: coverage == freezed ? _value.coverage : coverage as Reference,
-      inforce: inforce == freezed ? _value.inforce : inforce as Boolean,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      coverage: coverage == freezed
+          ? _value.coverage
+          : coverage // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      inforce: inforce == freezed
+          ? _value.inforce
+          : inforce // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       inforceElement: inforceElement == freezed
           ? _value.inforceElement
-          : inforceElement as Element,
+          : inforceElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       benefitPeriod: benefitPeriod == freezed
           ? _value.benefitPeriod
-          : benefitPeriod as Period,
+          : benefitPeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
       item: item == freezed
           ? _value.item
-          : item as List<CoverageEligibilityResponseItem>,
+          : item // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityResponseItem>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityResponseInsurance
     extends _CoverageEligibilityResponseInsurance {
   _$_CoverageEligibilityResponseInsurance(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required this.coverage,
+      required this.coverage,
       this.inforce,
       @JsonKey(name: '_inforce') this.inforceElement,
       this.benefitPeriod,
       this.item})
-      : assert(coverage != null),
-        super._();
+      : super._();
 
   factory _$_CoverageEligibilityResponseInsurance.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityResponseInsuranceFromJson(json);
+      _$$_CoverageEligibilityResponseInsuranceFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final Reference coverage;
   @override
-  final Boolean inforce;
+  final Boolean? inforce;
   @override
   @JsonKey(name: '_inforce')
-  final Element inforceElement;
+  final Element? inforceElement;
   @override
-  final Period benefitPeriod;
+  final Period? benefitPeriod;
   @override
-  final List<CoverageEligibilityResponseItem> item;
+  final List<CoverageEligibilityResponseItem>? item;
 
   @override
   String toString() {
@@ -6205,50 +6799,53 @@ class _$_CoverageEligibilityResponseInsurance
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityResponseInsuranceToJson(this);
+    return _$$_CoverageEligibilityResponseInsuranceToJson(this);
   }
 }
 
 abstract class _CoverageEligibilityResponseInsurance
     extends CoverageEligibilityResponseInsurance {
-  _CoverageEligibilityResponseInsurance._() : super._();
   factory _CoverageEligibilityResponseInsurance(
-          {String id,
-          @JsonKey(name: 'extension') List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          @required Reference coverage,
-          Boolean inforce,
-          @JsonKey(name: '_inforce') Element inforceElement,
-          Period benefitPeriod,
-          List<CoverageEligibilityResponseItem> item}) =
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          required Reference coverage,
+          Boolean? inforce,
+          @JsonKey(name: '_inforce') Element? inforceElement,
+          Period? benefitPeriod,
+          List<CoverageEligibilityResponseItem>? item}) =
       _$_CoverageEligibilityResponseInsurance;
+  _CoverageEligibilityResponseInsurance._() : super._();
 
   factory _CoverageEligibilityResponseInsurance.fromJson(
           Map<String, dynamic> json) =
       _$_CoverageEligibilityResponseInsurance.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  Reference get coverage;
+  Reference get coverage => throw _privateConstructorUsedError;
   @override
-  Boolean get inforce;
+  Boolean? get inforce => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_inforce')
-  Element get inforceElement;
+  Element? get inforceElement => throw _privateConstructorUsedError;
   @override
-  Period get benefitPeriod;
+  Period? get benefitPeriod => throw _privateConstructorUsedError;
   @override
-  List<CoverageEligibilityResponseItem> get item;
+  List<CoverageEligibilityResponseItem>? get item =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CoverageEligibilityResponseInsuranceCopyWith<
-      _CoverageEligibilityResponseInsurance> get copyWith;
+          _CoverageEligibilityResponseInsurance>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CoverageEligibilityResponseItem _$CoverageEligibilityResponseItemFromJson(
@@ -6260,36 +6857,35 @@ CoverageEligibilityResponseItem _$CoverageEligibilityResponseItemFromJson(
 class _$CoverageEligibilityResponseItemTearOff {
   const _$CoverageEligibilityResponseItemTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityResponseItem call(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      CodeableConcept category,
-      CodeableConcept productOrService,
-      List<CodeableConcept> modifier,
-      Reference provider,
-      Boolean excluded,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? category,
+      CodeableConcept? productOrService,
+      List<CodeableConcept>? modifier,
+      Reference? provider,
+      Boolean? excluded,
       @JsonKey(name: '_excluded')
-          Element excludedElement,
-      String name,
+          Element? excludedElement,
+      String? name,
       @JsonKey(name: '_name')
-          Element nameElement,
-      String description,
+          Element? nameElement,
+      String? description,
       @JsonKey(name: '_description')
-          Element descriptionElement,
-      CodeableConcept network,
-      CodeableConcept unit,
-      CodeableConcept term,
-      List<CoverageEligibilityResponseBenefit> benefit,
-      Boolean authorizationRequired,
+          Element? descriptionElement,
+      CodeableConcept? network,
+      CodeableConcept? unit,
+      CodeableConcept? term,
+      List<CoverageEligibilityResponseBenefit>? benefit,
+      Boolean? authorizationRequired,
       @JsonKey(name: '_authorizationRequired')
-          Element authorizationRequiredElement,
-      List<CodeableConcept> authorizationSupporting,
-      FhirUri authorizationUrl,
+          Element? authorizationRequiredElement,
+      List<CodeableConcept>? authorizationSupporting,
+      FhirUri? authorizationUrl,
       @JsonKey(name: '_authorizationUrl')
-          Element authorizationUrlElement}) {
+          Element? authorizationUrlElement}) {
     return _CoverageEligibilityResponseItem(
       id: id,
       extension_: extension_,
@@ -6316,52 +6912,54 @@ class _$CoverageEligibilityResponseItemTearOff {
     );
   }
 
-// ignore: unused_element
   CoverageEligibilityResponseItem fromJson(Map<String, Object> json) {
     return CoverageEligibilityResponseItem.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CoverageEligibilityResponseItem =
     _$CoverageEligibilityResponseItemTearOff();
 
 /// @nodoc
 mixin _$CoverageEligibilityResponseItem {
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  CodeableConcept get category;
-  CodeableConcept get productOrService;
-  List<CodeableConcept> get modifier;
-  Reference get provider;
-  Boolean get excluded;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept? get category => throw _privateConstructorUsedError;
+  CodeableConcept? get productOrService => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get modifier => throw _privateConstructorUsedError;
+  Reference? get provider => throw _privateConstructorUsedError;
+  Boolean? get excluded => throw _privateConstructorUsedError;
   @JsonKey(name: '_excluded')
-  Element get excludedElement;
-  String get name;
+  Element? get excludedElement => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
-  Element get nameElement;
-  String get description;
+  Element? get nameElement => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
-  Element get descriptionElement;
-  CodeableConcept get network;
-  CodeableConcept get unit;
-  CodeableConcept get term;
-  List<CoverageEligibilityResponseBenefit> get benefit;
-  Boolean get authorizationRequired;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  CodeableConcept? get network => throw _privateConstructorUsedError;
+  CodeableConcept? get unit => throw _privateConstructorUsedError;
+  CodeableConcept? get term => throw _privateConstructorUsedError;
+  List<CoverageEligibilityResponseBenefit>? get benefit =>
+      throw _privateConstructorUsedError;
+  Boolean? get authorizationRequired => throw _privateConstructorUsedError;
   @JsonKey(name: '_authorizationRequired')
-  Element get authorizationRequiredElement;
-  List<CodeableConcept> get authorizationSupporting;
-  FhirUri get authorizationUrl;
+  Element? get authorizationRequiredElement =>
+      throw _privateConstructorUsedError;
+  List<CodeableConcept>? get authorizationSupporting =>
+      throw _privateConstructorUsedError;
+  FhirUri? get authorizationUrl => throw _privateConstructorUsedError;
   @JsonKey(name: '_authorizationUrl')
-  Element get authorizationUrlElement;
+  Element? get authorizationUrlElement => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CoverageEligibilityResponseItemCopyWith<CoverageEligibilityResponseItem>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -6371,46 +6969,46 @@ abstract class $CoverageEligibilityResponseItemCopyWith<$Res> {
           $Res Function(CoverageEligibilityResponseItem) then) =
       _$CoverageEligibilityResponseItemCopyWithImpl<$Res>;
   $Res call(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      CodeableConcept category,
-      CodeableConcept productOrService,
-      List<CodeableConcept> modifier,
-      Reference provider,
-      Boolean excluded,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? category,
+      CodeableConcept? productOrService,
+      List<CodeableConcept>? modifier,
+      Reference? provider,
+      Boolean? excluded,
       @JsonKey(name: '_excluded')
-          Element excludedElement,
-      String name,
+          Element? excludedElement,
+      String? name,
       @JsonKey(name: '_name')
-          Element nameElement,
-      String description,
+          Element? nameElement,
+      String? description,
       @JsonKey(name: '_description')
-          Element descriptionElement,
-      CodeableConcept network,
-      CodeableConcept unit,
-      CodeableConcept term,
-      List<CoverageEligibilityResponseBenefit> benefit,
-      Boolean authorizationRequired,
+          Element? descriptionElement,
+      CodeableConcept? network,
+      CodeableConcept? unit,
+      CodeableConcept? term,
+      List<CoverageEligibilityResponseBenefit>? benefit,
+      Boolean? authorizationRequired,
       @JsonKey(name: '_authorizationRequired')
-          Element authorizationRequiredElement,
-      List<CodeableConcept> authorizationSupporting,
-      FhirUri authorizationUrl,
+          Element? authorizationRequiredElement,
+      List<CodeableConcept>? authorizationSupporting,
+      FhirUri? authorizationUrl,
       @JsonKey(name: '_authorizationUrl')
-          Element authorizationUrlElement});
+          Element? authorizationUrlElement});
 
-  $CodeableConceptCopyWith<$Res> get category;
-  $CodeableConceptCopyWith<$Res> get productOrService;
-  $ReferenceCopyWith<$Res> get provider;
-  $ElementCopyWith<$Res> get excludedElement;
-  $ElementCopyWith<$Res> get nameElement;
-  $ElementCopyWith<$Res> get descriptionElement;
-  $CodeableConceptCopyWith<$Res> get network;
-  $CodeableConceptCopyWith<$Res> get unit;
-  $CodeableConceptCopyWith<$Res> get term;
-  $ElementCopyWith<$Res> get authorizationRequiredElement;
-  $ElementCopyWith<$Res> get authorizationUrlElement;
+  $CodeableConceptCopyWith<$Res>? get category;
+  $CodeableConceptCopyWith<$Res>? get productOrService;
+  $ReferenceCopyWith<$Res>? get provider;
+  $ElementCopyWith<$Res>? get excludedElement;
+  $ElementCopyWith<$Res>? get nameElement;
+  $ElementCopyWith<$Res>? get descriptionElement;
+  $CodeableConceptCopyWith<$Res>? get network;
+  $CodeableConceptCopyWith<$Res>? get unit;
+  $CodeableConceptCopyWith<$Res>? get term;
+  $ElementCopyWith<$Res>? get authorizationRequiredElement;
+  $ElementCopyWith<$Res>? get authorizationUrlElement;
 }
 
 /// @nodoc
@@ -6424,188 +7022,239 @@ class _$CoverageEligibilityResponseItemCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object category = freezed,
-    Object productOrService = freezed,
-    Object modifier = freezed,
-    Object provider = freezed,
-    Object excluded = freezed,
-    Object excludedElement = freezed,
-    Object name = freezed,
-    Object nameElement = freezed,
-    Object description = freezed,
-    Object descriptionElement = freezed,
-    Object network = freezed,
-    Object unit = freezed,
-    Object term = freezed,
-    Object benefit = freezed,
-    Object authorizationRequired = freezed,
-    Object authorizationRequiredElement = freezed,
-    Object authorizationSupporting = freezed,
-    Object authorizationUrl = freezed,
-    Object authorizationUrlElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? category = freezed,
+    Object? productOrService = freezed,
+    Object? modifier = freezed,
+    Object? provider = freezed,
+    Object? excluded = freezed,
+    Object? excludedElement = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? network = freezed,
+    Object? unit = freezed,
+    Object? term = freezed,
+    Object? benefit = freezed,
+    Object? authorizationRequired = freezed,
+    Object? authorizationRequiredElement = freezed,
+    Object? authorizationSupporting = freezed,
+    Object? authorizationUrl = freezed,
+    Object? authorizationUrlElement = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      category:
-          category == freezed ? _value.category : category as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      category: category == freezed
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       productOrService: productOrService == freezed
           ? _value.productOrService
-          : productOrService as CodeableConcept,
+          : productOrService // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<CodeableConcept>,
-      provider: provider == freezed ? _value.provider : provider as Reference,
-      excluded: excluded == freezed ? _value.excluded : excluded as Boolean,
+          : modifier // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      provider: provider == freezed
+          ? _value.provider
+          : provider // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      excluded: excluded == freezed
+          ? _value.excluded
+          : excluded // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       excludedElement: excludedElement == freezed
           ? _value.excludedElement
-          : excludedElement as Element,
-      name: name == freezed ? _value.name : name as String,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      description:
-          description == freezed ? _value.description : description as String,
+          : excludedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element,
-      network: network == freezed ? _value.network : network as CodeableConcept,
-      unit: unit == freezed ? _value.unit : unit as CodeableConcept,
-      term: term == freezed ? _value.term : term as CodeableConcept,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      network: network == freezed
+          ? _value.network
+          : network // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      unit: unit == freezed
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      term: term == freezed
+          ? _value.term
+          : term // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       benefit: benefit == freezed
           ? _value.benefit
-          : benefit as List<CoverageEligibilityResponseBenefit>,
+          : benefit // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityResponseBenefit>?,
       authorizationRequired: authorizationRequired == freezed
           ? _value.authorizationRequired
-          : authorizationRequired as Boolean,
+          : authorizationRequired // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       authorizationRequiredElement: authorizationRequiredElement == freezed
           ? _value.authorizationRequiredElement
-          : authorizationRequiredElement as Element,
+          : authorizationRequiredElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       authorizationSupporting: authorizationSupporting == freezed
           ? _value.authorizationSupporting
-          : authorizationSupporting as List<CodeableConcept>,
+          : authorizationSupporting // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       authorizationUrl: authorizationUrl == freezed
           ? _value.authorizationUrl
-          : authorizationUrl as FhirUri,
+          : authorizationUrl // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       authorizationUrlElement: authorizationUrlElement == freezed
           ? _value.authorizationUrlElement
-          : authorizationUrlElement as Element,
+          : authorizationUrlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get category {
+  $CodeableConceptCopyWith<$Res>? get category {
     if (_value.category == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.category, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.category!, (value) {
       return _then(_value.copyWith(category: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get productOrService {
+  $CodeableConceptCopyWith<$Res>? get productOrService {
     if (_value.productOrService == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.productOrService, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.productOrService!, (value) {
       return _then(_value.copyWith(productOrService: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get provider {
+  $ReferenceCopyWith<$Res>? get provider {
     if (_value.provider == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.provider, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.provider!, (value) {
       return _then(_value.copyWith(provider: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get excludedElement {
+  $ElementCopyWith<$Res>? get excludedElement {
     if (_value.excludedElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.excludedElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.excludedElement!, (value) {
       return _then(_value.copyWith(excludedElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get nameElement {
+  $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.nameElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.nameElement!, (value) {
       return _then(_value.copyWith(nameElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get descriptionElement {
+  $ElementCopyWith<$Res>? get descriptionElement {
     if (_value.descriptionElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.descriptionElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
       return _then(_value.copyWith(descriptionElement: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get network {
+  $CodeableConceptCopyWith<$Res>? get network {
     if (_value.network == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.network, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.network!, (value) {
       return _then(_value.copyWith(network: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get unit {
+  $CodeableConceptCopyWith<$Res>? get unit {
     if (_value.unit == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.unit, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.unit!, (value) {
       return _then(_value.copyWith(unit: value));
     });
   }
 
   @override
-  $CodeableConceptCopyWith<$Res> get term {
+  $CodeableConceptCopyWith<$Res>? get term {
     if (_value.term == null) {
       return null;
     }
-    return $CodeableConceptCopyWith<$Res>(_value.term, (value) {
+
+    return $CodeableConceptCopyWith<$Res>(_value.term!, (value) {
       return _then(_value.copyWith(term: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get authorizationRequiredElement {
+  $ElementCopyWith<$Res>? get authorizationRequiredElement {
     if (_value.authorizationRequiredElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.authorizationRequiredElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.authorizationRequiredElement!,
+        (value) {
       return _then(_value.copyWith(authorizationRequiredElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get authorizationUrlElement {
+  $ElementCopyWith<$Res>? get authorizationUrlElement {
     if (_value.authorizationUrlElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.authorizationUrlElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.authorizationUrlElement!, (value) {
       return _then(_value.copyWith(authorizationUrlElement: value));
     });
   }
@@ -6620,57 +7269,57 @@ abstract class _$CoverageEligibilityResponseItemCopyWith<$Res>
       __$CoverageEligibilityResponseItemCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
+      {String? id,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      CodeableConcept category,
-      CodeableConcept productOrService,
-      List<CodeableConcept> modifier,
-      Reference provider,
-      Boolean excluded,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept? category,
+      CodeableConcept? productOrService,
+      List<CodeableConcept>? modifier,
+      Reference? provider,
+      Boolean? excluded,
       @JsonKey(name: '_excluded')
-          Element excludedElement,
-      String name,
+          Element? excludedElement,
+      String? name,
       @JsonKey(name: '_name')
-          Element nameElement,
-      String description,
+          Element? nameElement,
+      String? description,
       @JsonKey(name: '_description')
-          Element descriptionElement,
-      CodeableConcept network,
-      CodeableConcept unit,
-      CodeableConcept term,
-      List<CoverageEligibilityResponseBenefit> benefit,
-      Boolean authorizationRequired,
+          Element? descriptionElement,
+      CodeableConcept? network,
+      CodeableConcept? unit,
+      CodeableConcept? term,
+      List<CoverageEligibilityResponseBenefit>? benefit,
+      Boolean? authorizationRequired,
       @JsonKey(name: '_authorizationRequired')
-          Element authorizationRequiredElement,
-      List<CodeableConcept> authorizationSupporting,
-      FhirUri authorizationUrl,
+          Element? authorizationRequiredElement,
+      List<CodeableConcept>? authorizationSupporting,
+      FhirUri? authorizationUrl,
       @JsonKey(name: '_authorizationUrl')
-          Element authorizationUrlElement});
+          Element? authorizationUrlElement});
 
   @override
-  $CodeableConceptCopyWith<$Res> get category;
+  $CodeableConceptCopyWith<$Res>? get category;
   @override
-  $CodeableConceptCopyWith<$Res> get productOrService;
+  $CodeableConceptCopyWith<$Res>? get productOrService;
   @override
-  $ReferenceCopyWith<$Res> get provider;
+  $ReferenceCopyWith<$Res>? get provider;
   @override
-  $ElementCopyWith<$Res> get excludedElement;
+  $ElementCopyWith<$Res>? get excludedElement;
   @override
-  $ElementCopyWith<$Res> get nameElement;
+  $ElementCopyWith<$Res>? get nameElement;
   @override
-  $ElementCopyWith<$Res> get descriptionElement;
+  $ElementCopyWith<$Res>? get descriptionElement;
   @override
-  $CodeableConceptCopyWith<$Res> get network;
+  $CodeableConceptCopyWith<$Res>? get network;
   @override
-  $CodeableConceptCopyWith<$Res> get unit;
+  $CodeableConceptCopyWith<$Res>? get unit;
   @override
-  $CodeableConceptCopyWith<$Res> get term;
+  $CodeableConceptCopyWith<$Res>? get term;
   @override
-  $ElementCopyWith<$Res> get authorizationRequiredElement;
+  $ElementCopyWith<$Res>? get authorizationRequiredElement;
   @override
-  $ElementCopyWith<$Res> get authorizationUrlElement;
+  $ElementCopyWith<$Res>? get authorizationUrlElement;
 }
 
 /// @nodoc
@@ -6688,86 +7337,124 @@ class __$CoverageEligibilityResponseItemCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object category = freezed,
-    Object productOrService = freezed,
-    Object modifier = freezed,
-    Object provider = freezed,
-    Object excluded = freezed,
-    Object excludedElement = freezed,
-    Object name = freezed,
-    Object nameElement = freezed,
-    Object description = freezed,
-    Object descriptionElement = freezed,
-    Object network = freezed,
-    Object unit = freezed,
-    Object term = freezed,
-    Object benefit = freezed,
-    Object authorizationRequired = freezed,
-    Object authorizationRequiredElement = freezed,
-    Object authorizationSupporting = freezed,
-    Object authorizationUrl = freezed,
-    Object authorizationUrlElement = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? category = freezed,
+    Object? productOrService = freezed,
+    Object? modifier = freezed,
+    Object? provider = freezed,
+    Object? excluded = freezed,
+    Object? excludedElement = freezed,
+    Object? name = freezed,
+    Object? nameElement = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? network = freezed,
+    Object? unit = freezed,
+    Object? term = freezed,
+    Object? benefit = freezed,
+    Object? authorizationRequired = freezed,
+    Object? authorizationRequiredElement = freezed,
+    Object? authorizationSupporting = freezed,
+    Object? authorizationUrl = freezed,
+    Object? authorizationUrlElement = freezed,
   }) {
     return _then(_CoverageEligibilityResponseItem(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      category:
-          category == freezed ? _value.category : category as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      category: category == freezed
+          ? _value.category
+          : category // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       productOrService: productOrService == freezed
           ? _value.productOrService
-          : productOrService as CodeableConcept,
+          : productOrService // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       modifier: modifier == freezed
           ? _value.modifier
-          : modifier as List<CodeableConcept>,
-      provider: provider == freezed ? _value.provider : provider as Reference,
-      excluded: excluded == freezed ? _value.excluded : excluded as Boolean,
+          : modifier // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      provider: provider == freezed
+          ? _value.provider
+          : provider // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      excluded: excluded == freezed
+          ? _value.excluded
+          : excluded // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       excludedElement: excludedElement == freezed
           ? _value.excludedElement
-          : excludedElement as Element,
-      name: name == freezed ? _value.name : name as String,
-      nameElement:
-          nameElement == freezed ? _value.nameElement : nameElement as Element,
-      description:
-          description == freezed ? _value.description : description as String,
+          : excludedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String?,
+      nameElement: nameElement == freezed
+          ? _value.nameElement
+          : nameElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
       descriptionElement: descriptionElement == freezed
           ? _value.descriptionElement
-          : descriptionElement as Element,
-      network: network == freezed ? _value.network : network as CodeableConcept,
-      unit: unit == freezed ? _value.unit : unit as CodeableConcept,
-      term: term == freezed ? _value.term : term as CodeableConcept,
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      network: network == freezed
+          ? _value.network
+          : network // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      unit: unit == freezed
+          ? _value.unit
+          : unit // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      term: term == freezed
+          ? _value.term
+          : term // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
       benefit: benefit == freezed
           ? _value.benefit
-          : benefit as List<CoverageEligibilityResponseBenefit>,
+          : benefit // ignore: cast_nullable_to_non_nullable
+              as List<CoverageEligibilityResponseBenefit>?,
       authorizationRequired: authorizationRequired == freezed
           ? _value.authorizationRequired
-          : authorizationRequired as Boolean,
+          : authorizationRequired // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
       authorizationRequiredElement: authorizationRequiredElement == freezed
           ? _value.authorizationRequiredElement
-          : authorizationRequiredElement as Element,
+          : authorizationRequiredElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       authorizationSupporting: authorizationSupporting == freezed
           ? _value.authorizationSupporting
-          : authorizationSupporting as List<CodeableConcept>,
+          : authorizationSupporting // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
       authorizationUrl: authorizationUrl == freezed
           ? _value.authorizationUrl
-          : authorizationUrl as FhirUri,
+          : authorizationUrl // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       authorizationUrlElement: authorizationUrlElement == freezed
           ? _value.authorizationUrlElement
-          : authorizationUrlElement as Element,
+          : authorizationUrlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityResponseItem
     extends _CoverageEligibilityResponseItem {
   _$_CoverageEligibilityResponseItem(
@@ -6803,58 +7490,58 @@ class _$_CoverageEligibilityResponseItem
 
   factory _$_CoverageEligibilityResponseItem.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityResponseItemFromJson(json);
+      _$$_CoverageEligibilityResponseItemFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final CodeableConcept category;
+  final CodeableConcept? category;
   @override
-  final CodeableConcept productOrService;
+  final CodeableConcept? productOrService;
   @override
-  final List<CodeableConcept> modifier;
+  final List<CodeableConcept>? modifier;
   @override
-  final Reference provider;
+  final Reference? provider;
   @override
-  final Boolean excluded;
+  final Boolean? excluded;
   @override
   @JsonKey(name: '_excluded')
-  final Element excludedElement;
+  final Element? excludedElement;
   @override
-  final String name;
+  final String? name;
   @override
   @JsonKey(name: '_name')
-  final Element nameElement;
+  final Element? nameElement;
   @override
-  final String description;
+  final String? description;
   @override
   @JsonKey(name: '_description')
-  final Element descriptionElement;
+  final Element? descriptionElement;
   @override
-  final CodeableConcept network;
+  final CodeableConcept? network;
   @override
-  final CodeableConcept unit;
+  final CodeableConcept? unit;
   @override
-  final CodeableConcept term;
+  final CodeableConcept? term;
   @override
-  final List<CoverageEligibilityResponseBenefit> benefit;
+  final List<CoverageEligibilityResponseBenefit>? benefit;
   @override
-  final Boolean authorizationRequired;
+  final Boolean? authorizationRequired;
   @override
   @JsonKey(name: '_authorizationRequired')
-  final Element authorizationRequiredElement;
+  final Element? authorizationRequiredElement;
   @override
-  final List<CodeableConcept> authorizationSupporting;
+  final List<CodeableConcept>? authorizationSupporting;
   @override
-  final FhirUri authorizationUrl;
+  final FhirUri? authorizationUrl;
   @override
   @JsonKey(name: '_authorizationUrl')
-  final Element authorizationUrlElement;
+  final Element? authorizationUrlElement;
 
   @override
   String toString() {
@@ -6964,101 +7651,105 @@ class _$_CoverageEligibilityResponseItem
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityResponseItemToJson(this);
+    return _$$_CoverageEligibilityResponseItemToJson(this);
   }
 }
 
 abstract class _CoverageEligibilityResponseItem
     extends CoverageEligibilityResponseItem {
-  _CoverageEligibilityResponseItem._() : super._();
   factory _CoverageEligibilityResponseItem(
-          {String id,
+          {String? id,
           @JsonKey(name: 'extension')
-              List<FhirExtension> extension_,
-          List<FhirExtension> modifierExtension,
-          CodeableConcept category,
-          CodeableConcept productOrService,
-          List<CodeableConcept> modifier,
-          Reference provider,
-          Boolean excluded,
+              List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          CodeableConcept? category,
+          CodeableConcept? productOrService,
+          List<CodeableConcept>? modifier,
+          Reference? provider,
+          Boolean? excluded,
           @JsonKey(name: '_excluded')
-              Element excludedElement,
-          String name,
+              Element? excludedElement,
+          String? name,
           @JsonKey(name: '_name')
-              Element nameElement,
-          String description,
+              Element? nameElement,
+          String? description,
           @JsonKey(name: '_description')
-              Element descriptionElement,
-          CodeableConcept network,
-          CodeableConcept unit,
-          CodeableConcept term,
-          List<CoverageEligibilityResponseBenefit> benefit,
-          Boolean authorizationRequired,
+              Element? descriptionElement,
+          CodeableConcept? network,
+          CodeableConcept? unit,
+          CodeableConcept? term,
+          List<CoverageEligibilityResponseBenefit>? benefit,
+          Boolean? authorizationRequired,
           @JsonKey(name: '_authorizationRequired')
-              Element authorizationRequiredElement,
-          List<CodeableConcept> authorizationSupporting,
-          FhirUri authorizationUrl,
+              Element? authorizationRequiredElement,
+          List<CodeableConcept>? authorizationSupporting,
+          FhirUri? authorizationUrl,
           @JsonKey(name: '_authorizationUrl')
-              Element authorizationUrlElement}) =
+              Element? authorizationUrlElement}) =
       _$_CoverageEligibilityResponseItem;
+  _CoverageEligibilityResponseItem._() : super._();
 
   factory _CoverageEligibilityResponseItem.fromJson(Map<String, dynamic> json) =
       _$_CoverageEligibilityResponseItem.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get category;
+  CodeableConcept? get category => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get productOrService;
+  CodeableConcept? get productOrService => throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept> get modifier;
+  List<CodeableConcept>? get modifier => throw _privateConstructorUsedError;
   @override
-  Reference get provider;
+  Reference? get provider => throw _privateConstructorUsedError;
   @override
-  Boolean get excluded;
+  Boolean? get excluded => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_excluded')
-  Element get excludedElement;
+  Element? get excludedElement => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String? get name => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_name')
-  Element get nameElement;
+  Element? get nameElement => throw _privateConstructorUsedError;
   @override
-  String get description;
+  String? get description => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_description')
-  Element get descriptionElement;
+  Element? get descriptionElement => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get network;
+  CodeableConcept? get network => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get unit;
+  CodeableConcept? get unit => throw _privateConstructorUsedError;
   @override
-  CodeableConcept get term;
+  CodeableConcept? get term => throw _privateConstructorUsedError;
   @override
-  List<CoverageEligibilityResponseBenefit> get benefit;
+  List<CoverageEligibilityResponseBenefit>? get benefit =>
+      throw _privateConstructorUsedError;
   @override
-  Boolean get authorizationRequired;
+  Boolean? get authorizationRequired => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_authorizationRequired')
-  Element get authorizationRequiredElement;
+  Element? get authorizationRequiredElement =>
+      throw _privateConstructorUsedError;
   @override
-  List<CodeableConcept> get authorizationSupporting;
+  List<CodeableConcept>? get authorizationSupporting =>
+      throw _privateConstructorUsedError;
   @override
-  FhirUri get authorizationUrl;
+  FhirUri? get authorizationUrl => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_authorizationUrl')
-  Element get authorizationUrlElement;
+  Element? get authorizationUrlElement => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CoverageEligibilityResponseItemCopyWith<_CoverageEligibilityResponseItem>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CoverageEligibilityResponseBenefit _$CoverageEligibilityResponseBenefitFromJson(
@@ -7070,22 +7761,21 @@ CoverageEligibilityResponseBenefit _$CoverageEligibilityResponseBenefitFromJson(
 class _$CoverageEligibilityResponseBenefitTearOff {
   const _$CoverageEligibilityResponseBenefitTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityResponseBenefit call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required CodeableConcept type,
-      UnsignedInt allowedUnsignedInt,
-      @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
-      String allowedString,
-      @JsonKey(name: '_allowedString') Element allowedStringElement,
-      Money allowedMoney,
-      UnsignedInt usedUnsignedInt,
-      @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
-      String usedString,
-      @JsonKey(name: '_usedString') Element usedStringElement,
-      Money usedMoney}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required CodeableConcept type,
+      UnsignedInt? allowedUnsignedInt,
+      @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
+      String? allowedString,
+      @JsonKey(name: '_allowedString') Element? allowedStringElement,
+      Money? allowedMoney,
+      UnsignedInt? usedUnsignedInt,
+      @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
+      String? usedString,
+      @JsonKey(name: '_usedString') Element? usedStringElement,
+      Money? usedMoney}) {
     return _CoverageEligibilityResponseBenefit(
       id: id,
       extension_: extension_,
@@ -7104,43 +7794,43 @@ class _$CoverageEligibilityResponseBenefitTearOff {
     );
   }
 
-// ignore: unused_element
   CoverageEligibilityResponseBenefit fromJson(Map<String, Object> json) {
     return CoverageEligibilityResponseBenefit.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CoverageEligibilityResponseBenefit =
     _$CoverageEligibilityResponseBenefitTearOff();
 
 /// @nodoc
 mixin _$CoverageEligibilityResponseBenefit {
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  CodeableConcept get type;
-  UnsignedInt get allowedUnsignedInt;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get type => throw _privateConstructorUsedError;
+  UnsignedInt? get allowedUnsignedInt => throw _privateConstructorUsedError;
   @JsonKey(name: '_allowedUnsignedInt')
-  Element get allowedUnsignedIntElement;
-  String get allowedString;
+  Element? get allowedUnsignedIntElement => throw _privateConstructorUsedError;
+  String? get allowedString => throw _privateConstructorUsedError;
   @JsonKey(name: '_allowedString')
-  Element get allowedStringElement;
-  Money get allowedMoney;
-  UnsignedInt get usedUnsignedInt;
+  Element? get allowedStringElement => throw _privateConstructorUsedError;
+  Money? get allowedMoney => throw _privateConstructorUsedError;
+  UnsignedInt? get usedUnsignedInt => throw _privateConstructorUsedError;
   @JsonKey(name: '_usedUnsignedInt')
-  Element get usedUnsignedIntElement;
-  String get usedString;
+  Element? get usedUnsignedIntElement => throw _privateConstructorUsedError;
+  String? get usedString => throw _privateConstructorUsedError;
   @JsonKey(name: '_usedString')
-  Element get usedStringElement;
-  Money get usedMoney;
+  Element? get usedStringElement => throw _privateConstructorUsedError;
+  Money? get usedMoney => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CoverageEligibilityResponseBenefitCopyWith<
-      CoverageEligibilityResponseBenefit> get copyWith;
+          CoverageEligibilityResponseBenefit>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -7150,28 +7840,28 @@ abstract class $CoverageEligibilityResponseBenefitCopyWith<$Res> {
           $Res Function(CoverageEligibilityResponseBenefit) then) =
       _$CoverageEligibilityResponseBenefitCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      UnsignedInt allowedUnsignedInt,
-      @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
-      String allowedString,
-      @JsonKey(name: '_allowedString') Element allowedStringElement,
-      Money allowedMoney,
-      UnsignedInt usedUnsignedInt,
-      @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
-      String usedString,
-      @JsonKey(name: '_usedString') Element usedStringElement,
-      Money usedMoney});
+      UnsignedInt? allowedUnsignedInt,
+      @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
+      String? allowedString,
+      @JsonKey(name: '_allowedString') Element? allowedStringElement,
+      Money? allowedMoney,
+      UnsignedInt? usedUnsignedInt,
+      @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
+      String? usedString,
+      @JsonKey(name: '_usedString') Element? usedStringElement,
+      Money? usedMoney});
 
   $CodeableConceptCopyWith<$Res> get type;
-  $ElementCopyWith<$Res> get allowedUnsignedIntElement;
-  $ElementCopyWith<$Res> get allowedStringElement;
-  $MoneyCopyWith<$Res> get allowedMoney;
-  $ElementCopyWith<$Res> get usedUnsignedIntElement;
-  $ElementCopyWith<$Res> get usedStringElement;
-  $MoneyCopyWith<$Res> get usedMoney;
+  $ElementCopyWith<$Res>? get allowedUnsignedIntElement;
+  $ElementCopyWith<$Res>? get allowedStringElement;
+  $MoneyCopyWith<$Res>? get allowedMoney;
+  $ElementCopyWith<$Res>? get usedUnsignedIntElement;
+  $ElementCopyWith<$Res>? get usedStringElement;
+  $MoneyCopyWith<$Res>? get usedMoney;
 }
 
 /// @nodoc
@@ -7185,125 +7875,150 @@ class _$CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object allowedUnsignedInt = freezed,
-    Object allowedUnsignedIntElement = freezed,
-    Object allowedString = freezed,
-    Object allowedStringElement = freezed,
-    Object allowedMoney = freezed,
-    Object usedUnsignedInt = freezed,
-    Object usedUnsignedIntElement = freezed,
-    Object usedString = freezed,
-    Object usedStringElement = freezed,
-    Object usedMoney = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? allowedUnsignedInt = freezed,
+    Object? allowedUnsignedIntElement = freezed,
+    Object? allowedString = freezed,
+    Object? allowedStringElement = freezed,
+    Object? allowedMoney = freezed,
+    Object? usedUnsignedInt = freezed,
+    Object? usedUnsignedIntElement = freezed,
+    Object? usedString = freezed,
+    Object? usedStringElement = freezed,
+    Object? usedMoney = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       allowedUnsignedInt: allowedUnsignedInt == freezed
           ? _value.allowedUnsignedInt
-          : allowedUnsignedInt as UnsignedInt,
+          : allowedUnsignedInt // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
       allowedUnsignedIntElement: allowedUnsignedIntElement == freezed
           ? _value.allowedUnsignedIntElement
-          : allowedUnsignedIntElement as Element,
+          : allowedUnsignedIntElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       allowedString: allowedString == freezed
           ? _value.allowedString
-          : allowedString as String,
+          : allowedString // ignore: cast_nullable_to_non_nullable
+              as String?,
       allowedStringElement: allowedStringElement == freezed
           ? _value.allowedStringElement
-          : allowedStringElement as Element,
-      allowedMoney:
-          allowedMoney == freezed ? _value.allowedMoney : allowedMoney as Money,
+          : allowedStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      allowedMoney: allowedMoney == freezed
+          ? _value.allowedMoney
+          : allowedMoney // ignore: cast_nullable_to_non_nullable
+              as Money?,
       usedUnsignedInt: usedUnsignedInt == freezed
           ? _value.usedUnsignedInt
-          : usedUnsignedInt as UnsignedInt,
+          : usedUnsignedInt // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
       usedUnsignedIntElement: usedUnsignedIntElement == freezed
           ? _value.usedUnsignedIntElement
-          : usedUnsignedIntElement as Element,
-      usedString:
-          usedString == freezed ? _value.usedString : usedString as String,
+          : usedUnsignedIntElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      usedString: usedString == freezed
+          ? _value.usedString
+          : usedString // ignore: cast_nullable_to_non_nullable
+              as String?,
       usedStringElement: usedStringElement == freezed
           ? _value.usedStringElement
-          : usedStringElement as Element,
-      usedMoney: usedMoney == freezed ? _value.usedMoney : usedMoney as Money,
+          : usedStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      usedMoney: usedMoney == freezed
+          ? _value.usedMoney
+          : usedMoney // ignore: cast_nullable_to_non_nullable
+              as Money?,
     ));
   }
 
   @override
   $CodeableConceptCopyWith<$Res> get type {
-    if (_value.type == null) {
-      return null;
-    }
     return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
       return _then(_value.copyWith(type: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get allowedUnsignedIntElement {
+  $ElementCopyWith<$Res>? get allowedUnsignedIntElement {
     if (_value.allowedUnsignedIntElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.allowedUnsignedIntElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.allowedUnsignedIntElement!, (value) {
       return _then(_value.copyWith(allowedUnsignedIntElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get allowedStringElement {
+  $ElementCopyWith<$Res>? get allowedStringElement {
     if (_value.allowedStringElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.allowedStringElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.allowedStringElement!, (value) {
       return _then(_value.copyWith(allowedStringElement: value));
     });
   }
 
   @override
-  $MoneyCopyWith<$Res> get allowedMoney {
+  $MoneyCopyWith<$Res>? get allowedMoney {
     if (_value.allowedMoney == null) {
       return null;
     }
-    return $MoneyCopyWith<$Res>(_value.allowedMoney, (value) {
+
+    return $MoneyCopyWith<$Res>(_value.allowedMoney!, (value) {
       return _then(_value.copyWith(allowedMoney: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get usedUnsignedIntElement {
+  $ElementCopyWith<$Res>? get usedUnsignedIntElement {
     if (_value.usedUnsignedIntElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.usedUnsignedIntElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.usedUnsignedIntElement!, (value) {
       return _then(_value.copyWith(usedUnsignedIntElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get usedStringElement {
+  $ElementCopyWith<$Res>? get usedStringElement {
     if (_value.usedStringElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.usedStringElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.usedStringElement!, (value) {
       return _then(_value.copyWith(usedStringElement: value));
     });
   }
 
   @override
-  $MoneyCopyWith<$Res> get usedMoney {
+  $MoneyCopyWith<$Res>? get usedMoney {
     if (_value.usedMoney == null) {
       return null;
     }
-    return $MoneyCopyWith<$Res>(_value.usedMoney, (value) {
+
+    return $MoneyCopyWith<$Res>(_value.usedMoney!, (value) {
       return _then(_value.copyWith(usedMoney: value));
     });
   }
@@ -7318,35 +8033,35 @@ abstract class _$CoverageEligibilityResponseBenefitCopyWith<$Res>
       __$CoverageEligibilityResponseBenefitCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept type,
-      UnsignedInt allowedUnsignedInt,
-      @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
-      String allowedString,
-      @JsonKey(name: '_allowedString') Element allowedStringElement,
-      Money allowedMoney,
-      UnsignedInt usedUnsignedInt,
-      @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
-      String usedString,
-      @JsonKey(name: '_usedString') Element usedStringElement,
-      Money usedMoney});
+      UnsignedInt? allowedUnsignedInt,
+      @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
+      String? allowedString,
+      @JsonKey(name: '_allowedString') Element? allowedStringElement,
+      Money? allowedMoney,
+      UnsignedInt? usedUnsignedInt,
+      @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
+      String? usedString,
+      @JsonKey(name: '_usedString') Element? usedStringElement,
+      Money? usedMoney});
 
   @override
   $CodeableConceptCopyWith<$Res> get type;
   @override
-  $ElementCopyWith<$Res> get allowedUnsignedIntElement;
+  $ElementCopyWith<$Res>? get allowedUnsignedIntElement;
   @override
-  $ElementCopyWith<$Res> get allowedStringElement;
+  $ElementCopyWith<$Res>? get allowedStringElement;
   @override
-  $MoneyCopyWith<$Res> get allowedMoney;
+  $MoneyCopyWith<$Res>? get allowedMoney;
   @override
-  $ElementCopyWith<$Res> get usedUnsignedIntElement;
+  $ElementCopyWith<$Res>? get usedUnsignedIntElement;
   @override
-  $ElementCopyWith<$Res> get usedStringElement;
+  $ElementCopyWith<$Res>? get usedStringElement;
   @override
-  $MoneyCopyWith<$Res> get usedMoney;
+  $MoneyCopyWith<$Res>? get usedMoney;
 }
 
 /// @nodoc
@@ -7364,70 +8079,91 @@ class __$CoverageEligibilityResponseBenefitCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object type = freezed,
-    Object allowedUnsignedInt = freezed,
-    Object allowedUnsignedIntElement = freezed,
-    Object allowedString = freezed,
-    Object allowedStringElement = freezed,
-    Object allowedMoney = freezed,
-    Object usedUnsignedInt = freezed,
-    Object usedUnsignedIntElement = freezed,
-    Object usedString = freezed,
-    Object usedStringElement = freezed,
-    Object usedMoney = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? allowedUnsignedInt = freezed,
+    Object? allowedUnsignedIntElement = freezed,
+    Object? allowedString = freezed,
+    Object? allowedStringElement = freezed,
+    Object? allowedMoney = freezed,
+    Object? usedUnsignedInt = freezed,
+    Object? usedUnsignedIntElement = freezed,
+    Object? usedString = freezed,
+    Object? usedStringElement = freezed,
+    Object? usedMoney = freezed,
   }) {
     return _then(_CoverageEligibilityResponseBenefit(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      type: type == freezed ? _value.type : type as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
       allowedUnsignedInt: allowedUnsignedInt == freezed
           ? _value.allowedUnsignedInt
-          : allowedUnsignedInt as UnsignedInt,
+          : allowedUnsignedInt // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
       allowedUnsignedIntElement: allowedUnsignedIntElement == freezed
           ? _value.allowedUnsignedIntElement
-          : allowedUnsignedIntElement as Element,
+          : allowedUnsignedIntElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       allowedString: allowedString == freezed
           ? _value.allowedString
-          : allowedString as String,
+          : allowedString // ignore: cast_nullable_to_non_nullable
+              as String?,
       allowedStringElement: allowedStringElement == freezed
           ? _value.allowedStringElement
-          : allowedStringElement as Element,
-      allowedMoney:
-          allowedMoney == freezed ? _value.allowedMoney : allowedMoney as Money,
+          : allowedStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      allowedMoney: allowedMoney == freezed
+          ? _value.allowedMoney
+          : allowedMoney // ignore: cast_nullable_to_non_nullable
+              as Money?,
       usedUnsignedInt: usedUnsignedInt == freezed
           ? _value.usedUnsignedInt
-          : usedUnsignedInt as UnsignedInt,
+          : usedUnsignedInt // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
       usedUnsignedIntElement: usedUnsignedIntElement == freezed
           ? _value.usedUnsignedIntElement
-          : usedUnsignedIntElement as Element,
-      usedString:
-          usedString == freezed ? _value.usedString : usedString as String,
+          : usedUnsignedIntElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      usedString: usedString == freezed
+          ? _value.usedString
+          : usedString // ignore: cast_nullable_to_non_nullable
+              as String?,
       usedStringElement: usedStringElement == freezed
           ? _value.usedStringElement
-          : usedStringElement as Element,
-      usedMoney: usedMoney == freezed ? _value.usedMoney : usedMoney as Money,
+          : usedStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      usedMoney: usedMoney == freezed
+          ? _value.usedMoney
+          : usedMoney // ignore: cast_nullable_to_non_nullable
+              as Money?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityResponseBenefit
     extends _CoverageEligibilityResponseBenefit {
   _$_CoverageEligibilityResponseBenefit(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required this.type,
+      required this.type,
       this.allowedUnsignedInt,
       @JsonKey(name: '_allowedUnsignedInt') this.allowedUnsignedIntElement,
       this.allowedString,
@@ -7438,46 +8174,45 @@ class _$_CoverageEligibilityResponseBenefit
       this.usedString,
       @JsonKey(name: '_usedString') this.usedStringElement,
       this.usedMoney})
-      : assert(type != null),
-        super._();
+      : super._();
 
   factory _$_CoverageEligibilityResponseBenefit.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityResponseBenefitFromJson(json);
+      _$$_CoverageEligibilityResponseBenefitFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept type;
   @override
-  final UnsignedInt allowedUnsignedInt;
+  final UnsignedInt? allowedUnsignedInt;
   @override
   @JsonKey(name: '_allowedUnsignedInt')
-  final Element allowedUnsignedIntElement;
+  final Element? allowedUnsignedIntElement;
   @override
-  final String allowedString;
+  final String? allowedString;
   @override
   @JsonKey(name: '_allowedString')
-  final Element allowedStringElement;
+  final Element? allowedStringElement;
   @override
-  final Money allowedMoney;
+  final Money? allowedMoney;
   @override
-  final UnsignedInt usedUnsignedInt;
+  final UnsignedInt? usedUnsignedInt;
   @override
   @JsonKey(name: '_usedUnsignedInt')
-  final Element usedUnsignedIntElement;
+  final Element? usedUnsignedIntElement;
   @override
-  final String usedString;
+  final String? usedString;
   @override
   @JsonKey(name: '_usedString')
-  final Element usedStringElement;
+  final Element? usedStringElement;
   @override
-  final Money usedMoney;
+  final Money? usedMoney;
 
   @override
   String toString() {
@@ -7559,70 +8294,72 @@ class _$_CoverageEligibilityResponseBenefit
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityResponseBenefitToJson(this);
+    return _$$_CoverageEligibilityResponseBenefitToJson(this);
   }
 }
 
 abstract class _CoverageEligibilityResponseBenefit
     extends CoverageEligibilityResponseBenefit {
-  _CoverageEligibilityResponseBenefit._() : super._();
   factory _CoverageEligibilityResponseBenefit(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required CodeableConcept type,
-      UnsignedInt allowedUnsignedInt,
-      @JsonKey(name: '_allowedUnsignedInt') Element allowedUnsignedIntElement,
-      String allowedString,
-      @JsonKey(name: '_allowedString') Element allowedStringElement,
-      Money allowedMoney,
-      UnsignedInt usedUnsignedInt,
-      @JsonKey(name: '_usedUnsignedInt') Element usedUnsignedIntElement,
-      String usedString,
-      @JsonKey(name: '_usedString') Element usedStringElement,
-      Money usedMoney}) = _$_CoverageEligibilityResponseBenefit;
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required CodeableConcept type,
+      UnsignedInt? allowedUnsignedInt,
+      @JsonKey(name: '_allowedUnsignedInt') Element? allowedUnsignedIntElement,
+      String? allowedString,
+      @JsonKey(name: '_allowedString') Element? allowedStringElement,
+      Money? allowedMoney,
+      UnsignedInt? usedUnsignedInt,
+      @JsonKey(name: '_usedUnsignedInt') Element? usedUnsignedIntElement,
+      String? usedString,
+      @JsonKey(name: '_usedString') Element? usedStringElement,
+      Money? usedMoney}) = _$_CoverageEligibilityResponseBenefit;
+  _CoverageEligibilityResponseBenefit._() : super._();
 
   factory _CoverageEligibilityResponseBenefit.fromJson(
           Map<String, dynamic> json) =
       _$_CoverageEligibilityResponseBenefit.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get type;
+  CodeableConcept get type => throw _privateConstructorUsedError;
   @override
-  UnsignedInt get allowedUnsignedInt;
+  UnsignedInt? get allowedUnsignedInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_allowedUnsignedInt')
-  Element get allowedUnsignedIntElement;
+  Element? get allowedUnsignedIntElement => throw _privateConstructorUsedError;
   @override
-  String get allowedString;
+  String? get allowedString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_allowedString')
-  Element get allowedStringElement;
+  Element? get allowedStringElement => throw _privateConstructorUsedError;
   @override
-  Money get allowedMoney;
+  Money? get allowedMoney => throw _privateConstructorUsedError;
   @override
-  UnsignedInt get usedUnsignedInt;
+  UnsignedInt? get usedUnsignedInt => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_usedUnsignedInt')
-  Element get usedUnsignedIntElement;
+  Element? get usedUnsignedIntElement => throw _privateConstructorUsedError;
   @override
-  String get usedString;
+  String? get usedString => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_usedString')
-  Element get usedStringElement;
+  Element? get usedStringElement => throw _privateConstructorUsedError;
   @override
-  Money get usedMoney;
+  Money? get usedMoney => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CoverageEligibilityResponseBenefitCopyWith<
-      _CoverageEligibilityResponseBenefit> get copyWith;
+          _CoverageEligibilityResponseBenefit>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 CoverageEligibilityResponseError _$CoverageEligibilityResponseErrorFromJson(
@@ -7634,12 +8371,11 @@ CoverageEligibilityResponseError _$CoverageEligibilityResponseErrorFromJson(
 class _$CoverageEligibilityResponseErrorTearOff {
   const _$CoverageEligibilityResponseErrorTearOff();
 
-// ignore: unused_element
   _CoverageEligibilityResponseError call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required CodeableConcept code}) {
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required CodeableConcept code}) {
     return _CoverageEligibilityResponseError(
       id: id,
       extension_: extension_,
@@ -7648,29 +8384,28 @@ class _$CoverageEligibilityResponseErrorTearOff {
     );
   }
 
-// ignore: unused_element
   CoverageEligibilityResponseError fromJson(Map<String, Object> json) {
     return CoverageEligibilityResponseError.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $CoverageEligibilityResponseError =
     _$CoverageEligibilityResponseErrorTearOff();
 
 /// @nodoc
 mixin _$CoverageEligibilityResponseError {
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  CodeableConcept get code;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get code => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $CoverageEligibilityResponseErrorCopyWith<CoverageEligibilityResponseError>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -7680,9 +8415,9 @@ abstract class $CoverageEligibilityResponseErrorCopyWith<$Res> {
           $Res Function(CoverageEligibilityResponseError) then) =
       _$CoverageEligibilityResponseErrorCopyWithImpl<$Res>;
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept code});
 
   $CodeableConceptCopyWith<$Res> get code;
@@ -7699,28 +8434,33 @@ class _$CoverageEligibilityResponseErrorCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object code = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? code = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      code: code == freezed ? _value.code : code as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
     ));
   }
 
   @override
   $CodeableConceptCopyWith<$Res> get code {
-    if (_value.code == null) {
-      return null;
-    }
     return $CodeableConceptCopyWith<$Res>(_value.code, (value) {
       return _then(_value.copyWith(code: value));
     });
@@ -7736,9 +8476,9 @@ abstract class _$CoverageEligibilityResponseErrorCopyWith<$Res>
       __$CoverageEligibilityResponseErrorCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
       CodeableConcept code});
 
   @override
@@ -7760,48 +8500,54 @@ class __$CoverageEligibilityResponseErrorCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object code = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? code = freezed,
   }) {
     return _then(_CoverageEligibilityResponseError(
-      id: id == freezed ? _value.id : id as String,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
-      code: code == freezed ? _value.code : code as CodeableConcept,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_CoverageEligibilityResponseError
     extends _CoverageEligibilityResponseError {
   _$_CoverageEligibilityResponseError(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @required this.code})
-      : assert(code != null),
-        super._();
+      required this.code})
+      : super._();
 
   factory _$_CoverageEligibilityResponseError.fromJson(
           Map<String, dynamic> json) =>
-      _$_$_CoverageEligibilityResponseErrorFromJson(json);
+      _$$_CoverageEligibilityResponseErrorFromJson(json);
 
   @override
-  final String id;
+  final String? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
   final CodeableConcept code;
 
@@ -7842,35 +8588,36 @@ class _$_CoverageEligibilityResponseError
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_CoverageEligibilityResponseErrorToJson(this);
+    return _$$_CoverageEligibilityResponseErrorToJson(this);
   }
 }
 
 abstract class _CoverageEligibilityResponseError
     extends CoverageEligibilityResponseError {
-  _CoverageEligibilityResponseError._() : super._();
   factory _CoverageEligibilityResponseError(
-      {String id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      @required CodeableConcept code}) = _$_CoverageEligibilityResponseError;
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      required CodeableConcept code}) = _$_CoverageEligibilityResponseError;
+  _CoverageEligibilityResponseError._() : super._();
 
   factory _CoverageEligibilityResponseError.fromJson(
       Map<String, dynamic> json) = _$_CoverageEligibilityResponseError.fromJson;
 
   @override
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  CodeableConcept get code;
+  CodeableConcept get code => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CoverageEligibilityResponseErrorCopyWith<_CoverageEligibilityResponseError>
-      get copyWith;
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 EnrollmentRequest _$EnrollmentRequestFromJson(Map<String, dynamic> json) {
@@ -7881,34 +8628,33 @@ EnrollmentRequest _$EnrollmentRequestFromJson(Map<String, dynamic> json) {
 class _$EnrollmentRequestTearOff {
   const _$EnrollmentRequestTearOff();
 
-// ignore: unused_element
   _EnrollmentRequest call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
           R4ResourceType resourceType = R4ResourceType.EnrollmentRequest,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      FhirDateTime created,
+          Element? statusElement,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference insurer,
-      Reference provider,
-      Reference candidate,
-      Reference coverage}) {
+          Element? createdElement,
+      Reference? insurer,
+      Reference? provider,
+      Reference? candidate,
+      Reference? coverage}) {
     return _EnrollmentRequest(
       resourceType: resourceType,
       id: id,
@@ -7933,48 +8679,48 @@ class _$EnrollmentRequestTearOff {
     );
   }
 
-// ignore: unused_element
   EnrollmentRequest fromJson(Map<String, Object> json) {
     return EnrollmentRequest.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $EnrollmentRequest = _$EnrollmentRequestTearOff();
 
 /// @nodoc
 mixin _$EnrollmentRequest {
   @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
-  R4ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
-  Code get status;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
-  Element get statusElement;
-  FhirDateTime get created;
+  Element? get statusElement => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
-  Element get createdElement;
-  Reference get insurer;
-  Reference get provider;
-  Reference get candidate;
-  Reference get coverage;
+  Element? get createdElement => throw _privateConstructorUsedError;
+  Reference? get insurer => throw _privateConstructorUsedError;
+  Reference? get provider => throw _privateConstructorUsedError;
+  Reference? get candidate => throw _privateConstructorUsedError;
+  Reference? get coverage => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EnrollmentRequestCopyWith<EnrollmentRequest> get copyWith;
+  $EnrollmentRequestCopyWith<EnrollmentRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -7985,41 +8731,41 @@ abstract class $EnrollmentRequestCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      FhirDateTime created,
+          Element? statusElement,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference insurer,
-      Reference provider,
-      Reference candidate,
-      Reference coverage});
+          Element? createdElement,
+      Reference? insurer,
+      Reference? provider,
+      Reference? candidate,
+      Reference? coverage});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get statusElement;
-  $ElementCopyWith<$Res> get createdElement;
-  $ReferenceCopyWith<$Res> get insurer;
-  $ReferenceCopyWith<$Res> get provider;
-  $ReferenceCopyWith<$Res> get candidate;
-  $ReferenceCopyWith<$Res> get coverage;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get statusElement;
+  $ElementCopyWith<$Res>? get createdElement;
+  $ReferenceCopyWith<$Res>? get insurer;
+  $ReferenceCopyWith<$Res>? get provider;
+  $ReferenceCopyWith<$Res>? get candidate;
+  $ReferenceCopyWith<$Res>? get coverage;
 }
 
 /// @nodoc
@@ -8033,167 +8779,217 @@ class _$EnrollmentRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object created = freezed,
-    Object createdElement = freezed,
-    Object insurer = freezed,
-    Object provider = freezed,
-    Object candidate = freezed,
-    Object coverage = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? created = freezed,
+    Object? createdElement = freezed,
+    Object? insurer = freezed,
+    Object? provider = freezed,
+    Object? candidate = freezed,
+    Object? coverage = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      created: created == freezed
+          ? _value.created
+          : created // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
-          : createdElement as Element,
-      insurer: insurer == freezed ? _value.insurer : insurer as Reference,
-      provider: provider == freezed ? _value.provider : provider as Reference,
-      candidate:
-          candidate == freezed ? _value.candidate : candidate as Reference,
-      coverage: coverage == freezed ? _value.coverage : coverage as Reference,
+          : createdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      insurer: insurer == freezed
+          ? _value.insurer
+          : insurer // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      provider: provider == freezed
+          ? _value.provider
+          : provider // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      candidate: candidate == freezed
+          ? _value.candidate
+          : candidate // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      coverage: coverage == freezed
+          ? _value.coverage
+          : coverage // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get statusElement {
+  $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
       return _then(_value.copyWith(statusElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get createdElement {
+  $ElementCopyWith<$Res>? get createdElement {
     if (_value.createdElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.createdElement!, (value) {
       return _then(_value.copyWith(createdElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get insurer {
+  $ReferenceCopyWith<$Res>? get insurer {
     if (_value.insurer == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.insurer, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.insurer!, (value) {
       return _then(_value.copyWith(insurer: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get provider {
+  $ReferenceCopyWith<$Res>? get provider {
     if (_value.provider == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.provider, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.provider!, (value) {
       return _then(_value.copyWith(provider: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get candidate {
+  $ReferenceCopyWith<$Res>? get candidate {
     if (_value.candidate == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.candidate, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.candidate!, (value) {
       return _then(_value.copyWith(candidate: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get coverage {
+  $ReferenceCopyWith<$Res>? get coverage {
     if (_value.coverage == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.coverage, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.coverage!, (value) {
       return _then(_value.copyWith(coverage: value));
     });
   }
@@ -8209,51 +9005,51 @@ abstract class _$EnrollmentRequestCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      FhirDateTime created,
+          Element? statusElement,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference insurer,
-      Reference provider,
-      Reference candidate,
-      Reference coverage});
+          Element? createdElement,
+      Reference? insurer,
+      Reference? provider,
+      Reference? candidate,
+      Reference? coverage});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
-  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res>? get statusElement;
   @override
-  $ElementCopyWith<$Res> get createdElement;
+  $ElementCopyWith<$Res>? get createdElement;
   @override
-  $ReferenceCopyWith<$Res> get insurer;
+  $ReferenceCopyWith<$Res>? get insurer;
   @override
-  $ReferenceCopyWith<$Res> get provider;
+  $ReferenceCopyWith<$Res>? get provider;
   @override
-  $ReferenceCopyWith<$Res> get candidate;
+  $ReferenceCopyWith<$Res>? get candidate;
   @override
-  $ReferenceCopyWith<$Res> get coverage;
+  $ReferenceCopyWith<$Res>? get coverage;
 }
 
 /// @nodoc
@@ -8269,75 +9065,114 @@ class __$EnrollmentRequestCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object created = freezed,
-    Object createdElement = freezed,
-    Object insurer = freezed,
-    Object provider = freezed,
-    Object candidate = freezed,
-    Object coverage = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? created = freezed,
+    Object? createdElement = freezed,
+    Object? insurer = freezed,
+    Object? provider = freezed,
+    Object? candidate = freezed,
+    Object? coverage = freezed,
   }) {
     return _then(_EnrollmentRequest(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      created: created == freezed
+          ? _value.created
+          : created // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
-          : createdElement as Element,
-      insurer: insurer == freezed ? _value.insurer : insurer as Reference,
-      provider: provider == freezed ? _value.provider : provider as Reference,
-      candidate:
-          candidate == freezed ? _value.candidate : candidate as Reference,
-      coverage: coverage == freezed ? _value.coverage : coverage as Reference,
+          : createdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      insurer: insurer == freezed
+          ? _value.insurer
+          : insurer // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      provider: provider == freezed
+          ? _value.provider
+          : provider // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      candidate: candidate == freezed
+          ? _value.candidate
+          : candidate // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      coverage: coverage == freezed
+          ? _value.coverage
+          : coverage // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EnrollmentRequest extends _EnrollmentRequest {
   _$_EnrollmentRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
@@ -8366,58 +9201,57 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
       this.provider,
       this.candidate,
       this.coverage})
-      : assert(resourceType != null),
-        super._();
+      : super._();
 
   factory _$_EnrollmentRequest.fromJson(Map<String, dynamic> json) =>
-      _$_$_EnrollmentRequestFromJson(json);
+      _$$_EnrollmentRequestFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
   final R4ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<Identifier>? identifier;
   @override
-  final Code status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
-  final Element statusElement;
+  final Element? statusElement;
   @override
-  final FhirDateTime created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
-  final Element createdElement;
+  final Element? createdElement;
   @override
-  final Reference insurer;
+  final Reference? insurer;
   @override
-  final Reference provider;
+  final Reference? provider;
   @override
-  final Reference candidate;
+  final Reference? candidate;
   @override
-  final Reference coverage;
+  final Reference? coverage;
 
   @override
   String toString() {
@@ -8517,92 +9351,94 @@ class _$_EnrollmentRequest extends _EnrollmentRequest {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EnrollmentRequestToJson(this);
+    return _$$_EnrollmentRequestToJson(this);
   }
 }
 
 abstract class _EnrollmentRequest extends EnrollmentRequest {
-  _EnrollmentRequest._() : super._();
   factory _EnrollmentRequest(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      FhirDateTime created,
+          Element? statusElement,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference insurer,
-      Reference provider,
-      Reference candidate,
-      Reference coverage}) = _$_EnrollmentRequest;
+          Element? createdElement,
+      Reference? insurer,
+      Reference? provider,
+      Reference? candidate,
+      Reference? coverage}) = _$_EnrollmentRequest;
+  _EnrollmentRequest._() : super._();
 
   factory _EnrollmentRequest.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentRequest.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentRequest)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier> get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Code get status;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime get created;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
-  Element get createdElement;
+  Element? get createdElement => throw _privateConstructorUsedError;
   @override
-  Reference get insurer;
+  Reference? get insurer => throw _privateConstructorUsedError;
   @override
-  Reference get provider;
+  Reference? get provider => throw _privateConstructorUsedError;
   @override
-  Reference get candidate;
+  Reference? get candidate => throw _privateConstructorUsedError;
   @override
-  Reference get coverage;
+  Reference? get coverage => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$EnrollmentRequestCopyWith<_EnrollmentRequest> get copyWith;
+  _$EnrollmentRequestCopyWith<_EnrollmentRequest> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 EnrollmentResponse _$EnrollmentResponseFromJson(Map<String, dynamic> json) {
@@ -8613,40 +9449,39 @@ EnrollmentResponse _$EnrollmentResponseFromJson(Map<String, dynamic> json) {
 class _$EnrollmentResponseTearOff {
   const _$EnrollmentResponseTearOff();
 
-// ignore: unused_element
   _EnrollmentResponse call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
           R4ResourceType resourceType = R4ResourceType.EnrollmentResponse,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      Reference request,
+          Element? statusElement,
+      Reference? request,
       @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-          EnrollmentResponseOutcome outcome,
+          EnrollmentResponseOutcome? outcome,
       @JsonKey(name: '_outcome')
-          Element outcomeElement,
-      String disposition,
+          Element? outcomeElement,
+      String? disposition,
       @JsonKey(name: '_disposition')
-          Element dispositionElement,
-      FhirDateTime created,
+          Element? dispositionElement,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference organization,
-      Reference requestProvider}) {
+          Element? createdElement,
+      Reference? organization,
+      Reference? requestProvider}) {
     return _EnrollmentResponse(
       resourceType: resourceType,
       id: id,
@@ -8674,54 +9509,54 @@ class _$EnrollmentResponseTearOff {
     );
   }
 
-// ignore: unused_element
   EnrollmentResponse fromJson(Map<String, Object> json) {
     return EnrollmentResponse.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $EnrollmentResponse = _$EnrollmentResponseTearOff();
 
 /// @nodoc
 mixin _$EnrollmentResponse {
   @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
-  R4ResourceType get resourceType;
-  Id get id;
-  Meta get meta;
-  FhirUri get implicitRules;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
-  Code get language;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
   @JsonKey(name: '_language')
-  Element get languageElement;
-  Narrative get text;
-  List<Resource> get contained;
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
-  List<FhirExtension> get modifierExtension;
-  List<Identifier> get identifier;
-  Code get status;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
-  Element get statusElement;
-  Reference get request;
+  Element? get statusElement => throw _privateConstructorUsedError;
+  Reference? get request => throw _privateConstructorUsedError;
   @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-  EnrollmentResponseOutcome get outcome;
+  EnrollmentResponseOutcome? get outcome => throw _privateConstructorUsedError;
   @JsonKey(name: '_outcome')
-  Element get outcomeElement;
-  String get disposition;
+  Element? get outcomeElement => throw _privateConstructorUsedError;
+  String? get disposition => throw _privateConstructorUsedError;
   @JsonKey(name: '_disposition')
-  Element get dispositionElement;
-  FhirDateTime get created;
+  Element? get dispositionElement => throw _privateConstructorUsedError;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @JsonKey(name: '_created')
-  Element get createdElement;
-  Reference get organization;
-  Reference get requestProvider;
+  Element? get createdElement => throw _privateConstructorUsedError;
+  Reference? get organization => throw _privateConstructorUsedError;
+  Reference? get requestProvider => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EnrollmentResponseCopyWith<EnrollmentResponse> get copyWith;
+  $EnrollmentResponseCopyWith<EnrollmentResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -8732,48 +9567,48 @@ abstract class $EnrollmentResponseCopyWith<$Res> {
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      Reference request,
+          Element? statusElement,
+      Reference? request,
       @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-          EnrollmentResponseOutcome outcome,
+          EnrollmentResponseOutcome? outcome,
       @JsonKey(name: '_outcome')
-          Element outcomeElement,
-      String disposition,
+          Element? outcomeElement,
+      String? disposition,
       @JsonKey(name: '_disposition')
-          Element dispositionElement,
-      FhirDateTime created,
+          Element? dispositionElement,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference organization,
-      Reference requestProvider});
+          Element? createdElement,
+      Reference? organization,
+      Reference? requestProvider});
 
-  $MetaCopyWith<$Res> get meta;
-  $ElementCopyWith<$Res> get implicitRulesElement;
-  $ElementCopyWith<$Res> get languageElement;
-  $NarrativeCopyWith<$Res> get text;
-  $ElementCopyWith<$Res> get statusElement;
-  $ReferenceCopyWith<$Res> get request;
-  $ElementCopyWith<$Res> get outcomeElement;
-  $ElementCopyWith<$Res> get dispositionElement;
-  $ElementCopyWith<$Res> get createdElement;
-  $ReferenceCopyWith<$Res> get organization;
-  $ReferenceCopyWith<$Res> get requestProvider;
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get statusElement;
+  $ReferenceCopyWith<$Res>? get request;
+  $ElementCopyWith<$Res>? get outcomeElement;
+  $ElementCopyWith<$Res>? get dispositionElement;
+  $ElementCopyWith<$Res>? get createdElement;
+  $ReferenceCopyWith<$Res>? get organization;
+  $ReferenceCopyWith<$Res>? get requestProvider;
 }
 
 /// @nodoc
@@ -8787,193 +9622,243 @@ class _$EnrollmentResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object request = freezed,
-    Object outcome = freezed,
-    Object outcomeElement = freezed,
-    Object disposition = freezed,
-    Object dispositionElement = freezed,
-    Object created = freezed,
-    Object createdElement = freezed,
-    Object organization = freezed,
-    Object requestProvider = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? request = freezed,
+    Object? outcome = freezed,
+    Object? outcomeElement = freezed,
+    Object? disposition = freezed,
+    Object? dispositionElement = freezed,
+    Object? created = freezed,
+    Object? createdElement = freezed,
+    Object? organization = freezed,
+    Object? requestProvider = freezed,
   }) {
     return _then(_value.copyWith(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      request: request == freezed ? _value.request : request as Reference,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      request: request == freezed
+          ? _value.request
+          : request // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       outcome: outcome == freezed
           ? _value.outcome
-          : outcome as EnrollmentResponseOutcome,
+          : outcome // ignore: cast_nullable_to_non_nullable
+              as EnrollmentResponseOutcome?,
       outcomeElement: outcomeElement == freezed
           ? _value.outcomeElement
-          : outcomeElement as Element,
-      disposition:
-          disposition == freezed ? _value.disposition : disposition as String,
+          : outcomeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      disposition: disposition == freezed
+          ? _value.disposition
+          : disposition // ignore: cast_nullable_to_non_nullable
+              as String?,
       dispositionElement: dispositionElement == freezed
           ? _value.dispositionElement
-          : dispositionElement as Element,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+          : dispositionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      created: created == freezed
+          ? _value.created
+          : created // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
-          : createdElement as Element,
+          : createdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       organization: organization == freezed
           ? _value.organization
-          : organization as Reference,
+          : organization // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       requestProvider: requestProvider == freezed
           ? _value.requestProvider
-          : requestProvider as Reference,
+          : requestProvider // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 
   @override
-  $MetaCopyWith<$Res> get meta {
+  $MetaCopyWith<$Res>? get meta {
     if (_value.meta == null) {
       return null;
     }
-    return $MetaCopyWith<$Res>(_value.meta, (value) {
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
       return _then(_value.copyWith(meta: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement {
+  $ElementCopyWith<$Res>? get implicitRulesElement {
     if (_value.implicitRulesElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.implicitRulesElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
       return _then(_value.copyWith(implicitRulesElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get languageElement {
+  $ElementCopyWith<$Res>? get languageElement {
     if (_value.languageElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.languageElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
       return _then(_value.copyWith(languageElement: value));
     });
   }
 
   @override
-  $NarrativeCopyWith<$Res> get text {
+  $NarrativeCopyWith<$Res>? get text {
     if (_value.text == null) {
       return null;
     }
-    return $NarrativeCopyWith<$Res>(_value.text, (value) {
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
       return _then(_value.copyWith(text: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get statusElement {
+  $ElementCopyWith<$Res>? get statusElement {
     if (_value.statusElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.statusElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
       return _then(_value.copyWith(statusElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get request {
+  $ReferenceCopyWith<$Res>? get request {
     if (_value.request == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.request, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.request!, (value) {
       return _then(_value.copyWith(request: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get outcomeElement {
+  $ElementCopyWith<$Res>? get outcomeElement {
     if (_value.outcomeElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.outcomeElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.outcomeElement!, (value) {
       return _then(_value.copyWith(outcomeElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get dispositionElement {
+  $ElementCopyWith<$Res>? get dispositionElement {
     if (_value.dispositionElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.dispositionElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.dispositionElement!, (value) {
       return _then(_value.copyWith(dispositionElement: value));
     });
   }
 
   @override
-  $ElementCopyWith<$Res> get createdElement {
+  $ElementCopyWith<$Res>? get createdElement {
     if (_value.createdElement == null) {
       return null;
     }
-    return $ElementCopyWith<$Res>(_value.createdElement, (value) {
+
+    return $ElementCopyWith<$Res>(_value.createdElement!, (value) {
       return _then(_value.copyWith(createdElement: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get organization {
+  $ReferenceCopyWith<$Res>? get organization {
     if (_value.organization == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.organization, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.organization!, (value) {
       return _then(_value.copyWith(organization: value));
     });
   }
 
   @override
-  $ReferenceCopyWith<$Res> get requestProvider {
+  $ReferenceCopyWith<$Res>? get requestProvider {
     if (_value.requestProvider == null) {
       return null;
     }
-    return $ReferenceCopyWith<$Res>(_value.requestProvider, (value) {
+
+    return $ReferenceCopyWith<$Res>(_value.requestProvider!, (value) {
       return _then(_value.copyWith(requestProvider: value));
     });
   }
@@ -8989,59 +9874,59 @@ abstract class _$EnrollmentResponseCopyWith<$Res>
   $Res call(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      Reference request,
+          Element? statusElement,
+      Reference? request,
       @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-          EnrollmentResponseOutcome outcome,
+          EnrollmentResponseOutcome? outcome,
       @JsonKey(name: '_outcome')
-          Element outcomeElement,
-      String disposition,
+          Element? outcomeElement,
+      String? disposition,
       @JsonKey(name: '_disposition')
-          Element dispositionElement,
-      FhirDateTime created,
+          Element? dispositionElement,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference organization,
-      Reference requestProvider});
+          Element? createdElement,
+      Reference? organization,
+      Reference? requestProvider});
 
   @override
-  $MetaCopyWith<$Res> get meta;
+  $MetaCopyWith<$Res>? get meta;
   @override
-  $ElementCopyWith<$Res> get implicitRulesElement;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
   @override
-  $ElementCopyWith<$Res> get languageElement;
+  $ElementCopyWith<$Res>? get languageElement;
   @override
-  $NarrativeCopyWith<$Res> get text;
+  $NarrativeCopyWith<$Res>? get text;
   @override
-  $ElementCopyWith<$Res> get statusElement;
+  $ElementCopyWith<$Res>? get statusElement;
   @override
-  $ReferenceCopyWith<$Res> get request;
+  $ReferenceCopyWith<$Res>? get request;
   @override
-  $ElementCopyWith<$Res> get outcomeElement;
+  $ElementCopyWith<$Res>? get outcomeElement;
   @override
-  $ElementCopyWith<$Res> get dispositionElement;
+  $ElementCopyWith<$Res>? get dispositionElement;
   @override
-  $ElementCopyWith<$Res> get createdElement;
+  $ElementCopyWith<$Res>? get createdElement;
   @override
-  $ReferenceCopyWith<$Res> get organization;
+  $ReferenceCopyWith<$Res>? get organization;
   @override
-  $ReferenceCopyWith<$Res> get requestProvider;
+  $ReferenceCopyWith<$Res>? get requestProvider;
 }
 
 /// @nodoc
@@ -9057,91 +9942,129 @@ class __$EnrollmentResponseCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object resourceType = freezed,
-    Object id = freezed,
-    Object meta = freezed,
-    Object implicitRules = freezed,
-    Object implicitRulesElement = freezed,
-    Object language = freezed,
-    Object languageElement = freezed,
-    Object text = freezed,
-    Object contained = freezed,
-    Object extension_ = freezed,
-    Object modifierExtension = freezed,
-    Object identifier = freezed,
-    Object status = freezed,
-    Object statusElement = freezed,
-    Object request = freezed,
-    Object outcome = freezed,
-    Object outcomeElement = freezed,
-    Object disposition = freezed,
-    Object dispositionElement = freezed,
-    Object created = freezed,
-    Object createdElement = freezed,
-    Object organization = freezed,
-    Object requestProvider = freezed,
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? request = freezed,
+    Object? outcome = freezed,
+    Object? outcomeElement = freezed,
+    Object? disposition = freezed,
+    Object? dispositionElement = freezed,
+    Object? created = freezed,
+    Object? createdElement = freezed,
+    Object? organization = freezed,
+    Object? requestProvider = freezed,
   }) {
     return _then(_EnrollmentResponse(
       resourceType: resourceType == freezed
           ? _value.resourceType
-          : resourceType as R4ResourceType,
-      id: id == freezed ? _value.id : id as Id,
-      meta: meta == freezed ? _value.meta : meta as Meta,
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R4ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
       implicitRules: implicitRules == freezed
           ? _value.implicitRules
-          : implicitRules as FhirUri,
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
       implicitRulesElement: implicitRulesElement == freezed
           ? _value.implicitRulesElement
-          : implicitRulesElement as Element,
-      language: language == freezed ? _value.language : language as Code,
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
       languageElement: languageElement == freezed
           ? _value.languageElement
-          : languageElement as Element,
-      text: text == freezed ? _value.text : text as Narrative,
-      contained:
-          contained == freezed ? _value.contained : contained as List<Resource>,
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       modifierExtension: modifierExtension == freezed
           ? _value.modifierExtension
-          : modifierExtension as List<FhirExtension>,
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       identifier: identifier == freezed
           ? _value.identifier
-          : identifier as List<Identifier>,
-      status: status == freezed ? _value.status : status as Code,
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
-          : statusElement as Element,
-      request: request == freezed ? _value.request : request as Reference,
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      request: request == freezed
+          ? _value.request
+          : request // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       outcome: outcome == freezed
           ? _value.outcome
-          : outcome as EnrollmentResponseOutcome,
+          : outcome // ignore: cast_nullable_to_non_nullable
+              as EnrollmentResponseOutcome?,
       outcomeElement: outcomeElement == freezed
           ? _value.outcomeElement
-          : outcomeElement as Element,
-      disposition:
-          disposition == freezed ? _value.disposition : disposition as String,
+          : outcomeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      disposition: disposition == freezed
+          ? _value.disposition
+          : disposition // ignore: cast_nullable_to_non_nullable
+              as String?,
       dispositionElement: dispositionElement == freezed
           ? _value.dispositionElement
-          : dispositionElement as Element,
-      created: created == freezed ? _value.created : created as FhirDateTime,
+          : dispositionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      created: created == freezed
+          ? _value.created
+          : created // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
       createdElement: createdElement == freezed
           ? _value.createdElement
-          : createdElement as Element,
+          : createdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
       organization: organization == freezed
           ? _value.organization
-          : organization as Reference,
+          : organization // ignore: cast_nullable_to_non_nullable
+              as Reference?,
       requestProvider: requestProvider == freezed
           ? _value.requestProvider
-          : requestProvider as Reference,
+          : requestProvider // ignore: cast_nullable_to_non_nullable
+              as Reference?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_EnrollmentResponse extends _EnrollmentResponse {
   _$_EnrollmentResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
@@ -9176,67 +10099,66 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
           this.createdElement,
       this.organization,
       this.requestProvider})
-      : assert(resourceType != null),
-        super._();
+      : super._();
 
   factory _$_EnrollmentResponse.fromJson(Map<String, dynamic> json) =>
-      _$_$_EnrollmentResponseFromJson(json);
+      _$$_EnrollmentResponseFromJson(json);
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
   final R4ResourceType resourceType;
   @override
-  final Id id;
+  final Id? id;
   @override
-  final Meta meta;
+  final Meta? meta;
   @override
-  final FhirUri implicitRules;
+  final FhirUri? implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  final Element implicitRulesElement;
+  final Element? implicitRulesElement;
   @override
-  final Code language;
+  final Code? language;
   @override
   @JsonKey(name: '_language')
-  final Element languageElement;
+  final Element? languageElement;
   @override
-  final Narrative text;
+  final Narrative? text;
   @override
-  final List<Resource> contained;
+  final List<Resource>? contained;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
-  final List<FhirExtension> modifierExtension;
+  final List<FhirExtension>? modifierExtension;
   @override
-  final List<Identifier> identifier;
+  final List<Identifier>? identifier;
   @override
-  final Code status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
-  final Element statusElement;
+  final Element? statusElement;
   @override
-  final Reference request;
+  final Reference? request;
   @override
   @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-  final EnrollmentResponseOutcome outcome;
+  final EnrollmentResponseOutcome? outcome;
   @override
   @JsonKey(name: '_outcome')
-  final Element outcomeElement;
+  final Element? outcomeElement;
   @override
-  final String disposition;
+  final String? disposition;
   @override
   @JsonKey(name: '_disposition')
-  final Element dispositionElement;
+  final Element? dispositionElement;
   @override
-  final FhirDateTime created;
+  final FhirDateTime? created;
   @override
   @JsonKey(name: '_created')
-  final Element createdElement;
+  final Element? createdElement;
   @override
-  final Reference organization;
+  final Reference? organization;
   @override
-  final Reference requestProvider;
+  final Reference? requestProvider;
 
   @override
   String toString() {
@@ -9348,105 +10270,107 @@ class _$_EnrollmentResponse extends _EnrollmentResponse {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EnrollmentResponseToJson(this);
+    return _$$_EnrollmentResponseToJson(this);
   }
 }
 
 abstract class _EnrollmentResponse extends EnrollmentResponse {
-  _EnrollmentResponse._() : super._();
   factory _EnrollmentResponse(
       {@JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
           R4ResourceType resourceType,
-      Id id,
-      Meta meta,
-      FhirUri implicitRules,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
       @JsonKey(name: '_implicitRules')
-          Element implicitRulesElement,
-      Code language,
+          Element? implicitRulesElement,
+      Code? language,
       @JsonKey(name: '_language')
-          Element languageElement,
-      Narrative text,
-      List<Resource> contained,
+          Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
       @JsonKey(name: 'extension')
-          List<FhirExtension> extension_,
-      List<FhirExtension> modifierExtension,
-      List<Identifier> identifier,
-      Code status,
+          List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Code? status,
       @JsonKey(name: '_status')
-          Element statusElement,
-      Reference request,
+          Element? statusElement,
+      Reference? request,
       @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-          EnrollmentResponseOutcome outcome,
+          EnrollmentResponseOutcome? outcome,
       @JsonKey(name: '_outcome')
-          Element outcomeElement,
-      String disposition,
+          Element? outcomeElement,
+      String? disposition,
       @JsonKey(name: '_disposition')
-          Element dispositionElement,
-      FhirDateTime created,
+          Element? dispositionElement,
+      FhirDateTime? created,
       @JsonKey(name: '_created')
-          Element createdElement,
-      Reference organization,
-      Reference requestProvider}) = _$_EnrollmentResponse;
+          Element? createdElement,
+      Reference? organization,
+      Reference? requestProvider}) = _$_EnrollmentResponse;
+  _EnrollmentResponse._() : super._();
 
   factory _EnrollmentResponse.fromJson(Map<String, dynamic> json) =
       _$_EnrollmentResponse.fromJson;
 
   @override
   @JsonKey(unknownEnumValue: R4ResourceType.EnrollmentResponse)
-  R4ResourceType get resourceType;
+  R4ResourceType get resourceType => throw _privateConstructorUsedError;
   @override
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
-  Meta get meta;
+  Meta? get meta => throw _privateConstructorUsedError;
   @override
-  FhirUri get implicitRules;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_implicitRules')
-  Element get implicitRulesElement;
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
   @override
-  Code get language;
+  Code? get language => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_language')
-  Element get languageElement;
+  Element? get languageElement => throw _privateConstructorUsedError;
   @override
-  Narrative get text;
+  Narrative? get text => throw _privateConstructorUsedError;
   @override
-  List<Resource> get contained;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
-  List<FhirExtension> get modifierExtension;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
   @override
-  List<Identifier> get identifier;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
   @override
-  Code get status;
+  Code? get status => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_status')
-  Element get statusElement;
+  Element? get statusElement => throw _privateConstructorUsedError;
   @override
-  Reference get request;
+  Reference? get request => throw _privateConstructorUsedError;
   @override
   @JsonKey(unknownEnumValue: EnrollmentResponseOutcome.unknown)
-  EnrollmentResponseOutcome get outcome;
+  EnrollmentResponseOutcome? get outcome => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_outcome')
-  Element get outcomeElement;
+  Element? get outcomeElement => throw _privateConstructorUsedError;
   @override
-  String get disposition;
+  String? get disposition => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_disposition')
-  Element get dispositionElement;
+  Element? get dispositionElement => throw _privateConstructorUsedError;
   @override
-  FhirDateTime get created;
+  FhirDateTime? get created => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: '_created')
-  Element get createdElement;
+  Element? get createdElement => throw _privateConstructorUsedError;
   @override
-  Reference get organization;
+  Reference? get organization => throw _privateConstructorUsedError;
   @override
-  Reference get requestProvider;
+  Reference? get requestProvider => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$EnrollmentResponseCopyWith<_EnrollmentResponse> get copyWith;
+  _$EnrollmentResponseCopyWith<_EnrollmentResponse> get copyWith =>
+      throw _privateConstructorUsedError;
 }

@@ -1,17 +1,16 @@
+//ignore_for_file: avoid_equals_and_hash_code_on_mutable_classes, avoid_renaming_method_parameters, avoid_bool_literals_in_conditional_expressions
+
 import 'dart:convert';
-import 'package:dartz/dartz.dart';
+
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
 class Markdown {
-  const Markdown._(this._value);
+  const Markdown._(this._valueString, this._valueMarkdown, this._isValid);
 
-  factory Markdown(String value) {
-    assert(value != null);
-    return Markdown._(
-      _validateMarkdown(value),
-    );
-  }
+  factory Markdown(dynamic inValue) =>
+      inValue is String && RegExp(r'[ \r\n\t\S]+').hasMatch(inValue)
+          ? Markdown._(inValue, inValue, true)
+          : Markdown._(inValue.toString(), null, false);
 
   factory Markdown.fromJson(dynamic json) => Markdown(json);
 
@@ -19,27 +18,29 @@ class Markdown {
       ? Markdown.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Markdown.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw FormatException(
+              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final Either<String, String> _value;
-  String get value => _value.fold((l) => l, (r) => r);
-  bool get isValid => _value.isRight();
+  final String _valueString;
+  final String? _valueMarkdown;
+  final bool _isValid;
 
-  String toString() => value;
-  String toJson() => value;
-  String toYaml() => value;
+  bool get isValid => _isValid;
+  @override
+  int get hashCode => _valueString.hashCode;
+  String? get value => _valueMarkdown;
 
+  @override
+  String toString() => _valueString;
+  String toJson() => _valueString;
+  String toYaml() => _valueString;
+
+  @override
   bool operator ==(Object o) => identical(this, o)
       ? true
-      : o is Markdown || o is String
-          ? o == value
-          : false;
-
-  int get hashCode => value.hashCode;
+      : o is Markdown
+          ? o.value == _valueMarkdown
+          : o is String
+              ? o == _valueString
+              : false;
 }
-
-Either<String, String> _validateMarkdown(String value) =>
-    RegExp(r'[ \r\n\t\S]+').hasMatch(value)
-        ? right(value)
-        : left('FormatError: "$value" is not a Markdown, as defined by: '
-            'https://www.hl7.org/fhir/datatypes.html#markdown');

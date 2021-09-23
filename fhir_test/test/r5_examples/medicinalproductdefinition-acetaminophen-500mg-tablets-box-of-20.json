@@ -1,0 +1,118 @@
+{
+  "resourceType": "MedicinalProductDefinition",
+  "id": "Acetamin-500-20-generic",
+  "text": {
+    "status": "generated",
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: id: 12345\u003c/p\u003e\u003ch3\u003eNames\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eProductName\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003eAcetaminophen 500 mg tablets [generic]\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003ch3\u003ePackages\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003ePackage\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003e\u003ca\u003e \u003c/a\u003e\u003cblockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003epackage\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003etype\u003c/b\u003e: \u003cspan\u003ecardboard box\u003c/span\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003econtainedItem\u003c/b\u003e\u003c/p\u003e\u003ch3\u003eItems\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cp\u003e\u003cb\u003eamount\u003c/b\u003e: 20\u003c/p\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
+  },
+  "contained": [
+    {
+      "resourceType": "PackagedProductDefinition",
+      "id": "Acetamin-pack-20",
+      "package": {
+        "type": {
+          "coding": [
+            {
+              "code": "cardboard box"
+            }
+          ]
+        },
+        "containedItem": [
+          {
+            "item": [
+              {
+                "reference": {
+                  "reference": "#Acetamin-tab-500"
+                }
+              }
+            ],
+            "amountInteger": 20
+          }
+        ]
+      }
+    },
+    {
+      "resourceType": "ManufacturedItemDefinition",
+      "id": "Acetamin-tab-500",
+      "manufacturedDoseForm": {
+        "coding": [
+          {
+            "code": "tablet"
+          }
+        ]
+      },
+      "ingredient": [
+        {
+          "reference": {
+            "reference": "#Acetamin-ing-500"
+          }
+        }
+      ]
+    },
+    {
+      "resourceType": "Ingredient",
+      "id": "Acetamin-ing-500",
+      "role": {
+        "coding": [
+          {
+            "code": "active"
+          }
+        ]
+      },
+      "substance": {
+        "code": {
+          "concept": {
+            "coding": [
+              {
+                "system": "http://snomed.info/sct",
+                "code": "387517004",
+                "display": "Acetaminophen"
+              }
+            ]
+          }
+        },
+        "strength": [
+          {
+            "presentationRatio": {
+              "numerator": {
+                "value": 500,
+                "unit": "mg"
+              },
+              "denominator": {
+                "value": 1,
+                "unit": "tablet"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://example.nation.org/drugs",
+      "value": "12345"
+    }
+  ],
+  "name": [
+    {
+      "productName": "Acetaminophen 500 mg tablets [generic]"
+    }
+  ],
+  "package": [
+    {
+      "package": {
+        "reference": "#Acetamin-pack-20"
+      }
+    }
+  ],
+  "meta": {
+    "tag": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActReason",
+        "code": "HTEST",
+        "display": "test health data"
+      }
+    ]
+  }
+}

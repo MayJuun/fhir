@@ -12,7 +12,7 @@ part 'other.freezed.dart';
 part 'other.g.dart';
 
 @freezed
-abstract class Basic with Resource implements _$Basic {
+class Basic with Resource, _$Basic {
   Basic._();
 
   /// [Basic]: Basic is used for handling concepts not yet defined in FHIR,
@@ -33,11 +33,11 @@ abstract class Basic with Resource implements _$Basic {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -51,7 +51,7 @@ abstract class Basic with Resource implements _$Basic {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -83,7 +83,7 @@ abstract class Basic with Resource implements _$Basic {
   ///
   /// [created]: Identifies when the resource was first created.
   ///
-  /// [_created]: Extensions for created
+  /// [createdElement]: Extensions for created
   ///
   /// [author]: Indicates who was responsible for creating the resource
   ///  instance.
@@ -91,40 +91,44 @@ abstract class Basic with Resource implements _$Basic {
     @Default(R4ResourceType.Basic)
     @JsonKey(unknownEnumValue: R4ResourceType.Basic)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @required CodeableConcept code,
-    Reference subject,
-    Date created,
-    @JsonKey(name: '_created') Element createdElement,
-    Reference author,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    required CodeableConcept code,
+    Reference? subject,
+    Date? created,
+    @JsonKey(name: '_created') Element? createdElement,
+    Reference? author,
   }) = _Basic;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Basic.fromYaml(dynamic yaml) => yaml is String
-      ? Basic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Basic.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Basic.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? Basic.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'Basic cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Basic.fromJson(Map<String, dynamic> json) => _$BasicFromJson(json);
 }
 
 @freezed
-abstract class Binary with Resource implements _$Binary {
+class Binary with Resource, _$Binary {
   Binary._();
 
   /// [Binary]: A resource that represents the data of a single raw artifact as
@@ -145,16 +149,16 @@ abstract class Binary with Resource implements _$Binary {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [contentType]: MimeType of the binary content represented as a standard
   ///  MimeType (BCP 13).
   ///
-  /// [_contentType]: Extensions for contentType
+  /// [contentTypeElement]: Extensions for contentType
   ///
   /// [securityContext]: This element identifies another resource that can be
   /// used as a proxy of the security sensitivity to use when deciding and
@@ -170,40 +174,45 @@ abstract class Binary with Resource implements _$Binary {
   ///
   /// [data]: The actual content, base64 encoded.
   ///
-  /// [_data]: Extensions for data
+  /// [dataElement]: Extensions for data
   factory Binary({
     @Default(R4ResourceType.Binary)
     @JsonKey(unknownEnumValue: R4ResourceType.Binary)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Code contentType,
-    @JsonKey(name: '_contentType') Element contentTypeElement,
-    Reference securityContext,
-    Base64Binary data,
-    @JsonKey(name: '_data') Element dataElement,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Code? contentType,
+    @JsonKey(name: '_contentType') Element? contentTypeElement,
+    Reference? securityContext,
+    Base64Binary? data,
+    @JsonKey(name: '_data') Element? dataElement,
   }) = _Binary;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Binary.fromYaml(dynamic yaml) => yaml is String
-      ? Binary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Binary.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Binary.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? Binary.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'Binary cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Binary.fromJson(Map<String, dynamic> json) => _$BinaryFromJson(json);
 }
 
 @freezed
-abstract class Bundle with Resource implements _$Bundle {
+class Bundle with Resource, _$Bundle {
   Bundle._();
 
   /// [Bundle]: A container for a collection of resources.
@@ -222,11 +231,11 @@ abstract class Bundle with Resource implements _$Bundle {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [identifier]: A persistent identifier for the bundle that won't change as
   ///  a bundle is copied from server to server.
@@ -234,19 +243,19 @@ abstract class Bundle with Resource implements _$Bundle {
   /// [type]: Indicates the purpose of this bundle - how it is intended to be
   ///  used.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [timestamp]: The date/time that the bundle was assembled - i.e. when the
   ///  resources were placed in the bundle.
   ///
-  /// [_timestamp]: Extensions for timestamp
+  /// [timestampElement]: Extensions for timestamp
   ///
   /// [total]: If a set of search matches, this is the total number of entries
   /// of type 'match' across all pages in the search.  It does not include
   /// search.mode = 'include' or 'outcome' entries and it does not provide a
   ///  count of the number of entries in the Bundle.
   ///
-  /// [_total]: Extensions for total
+  /// [totalElement]: Extensions for total
   ///
   /// [link]: A series of links that provide context to this bundle.
   ///
@@ -258,48 +267,53 @@ abstract class Bundle with Resource implements _$Bundle {
     @Default(R4ResourceType.Bundle)
     @JsonKey(unknownEnumValue: R4ResourceType.Bundle)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Identifier identifier,
-    @JsonKey(unknownEnumValue: BundleType.unknown) BundleType type,
-    @JsonKey(name: '_type') Element typeElement,
-    Instant timestamp,
-    @JsonKey(name: '_timestamp') Element timestampElement,
-    UnsignedInt total,
-    @JsonKey(name: '_total') Element totalElement,
-    List<BundleLink> link,
-    List<BundleEntry> entry,
-    Signature signature,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Identifier? identifier,
+    @JsonKey(unknownEnumValue: BundleType.unknown) BundleType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    Instant? timestamp,
+    @JsonKey(name: '_timestamp') Element? timestampElement,
+    UnsignedInt? total,
+    @JsonKey(name: '_total') Element? totalElement,
+    List<BundleLink>? link,
+    List<BundleEntry>? entry,
+    Signature? signature,
   }) = _Bundle;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Bundle.fromYaml(dynamic yaml) => yaml is String
-      ? Bundle.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Bundle.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Bundle.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? Bundle.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'Bundle cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Bundle.fromJson(Map<String, dynamic> json) => _$BundleFromJson(json);
 }
 
 @freezed
-abstract class BundleLink implements _$BundleLink {
+class BundleLink with _$BundleLink {
   BundleLink._();
 
-  /// [Bundle_Link]: A container for a collection of resources.
+  /// [BundleLink]: A container for a collection of resources.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -323,30 +337,34 @@ abstract class BundleLink implements _$BundleLink {
   /// [relation]: A name which details the functional use for this link - see
   /// [http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1](http://www.iana.org/assignments/link-relations/link-relations.xhtml#link-relations-1).
   ///
-  /// [_relation]: Extensions for relation
+  /// [relationElement]: Extensions for relation
   ///
   /// [url]: The reference details for the link.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   factory BundleLink({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String relation,
-    @JsonKey(name: '_relation') Element relationElement,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? relation,
+    @JsonKey(name: '_relation') Element? relationElement,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
   }) = _BundleLink;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BundleLink.fromYaml(dynamic yaml) => yaml is String
-      ? BundleLink.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? BundleLink.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? BundleLink.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? BundleLink.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'BundleLink cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleLink.fromJson(Map<String, dynamic> json) =>
@@ -354,15 +372,15 @@ abstract class BundleLink implements _$BundleLink {
 }
 
 @freezed
-abstract class BundleEntry implements _$BundleEntry {
+class BundleEntry with _$BundleEntry {
   BundleEntry._();
 
-  /// [Bundle_Entry]: A container for a collection of resources.
+  /// [BundleEntry]: A container for a collection of resources.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -394,7 +412,7 @@ abstract class BundleEntry implements _$BundleEntry {
   ///  specifying a temporary id for reference in the bundle)
   /// * Results from operations might involve resources that are not identified.
   ///
-  /// [_fullUrl]: Extensions for fullUrl
+  /// [fullUrlElement]: Extensions for fullUrl
   ///
   /// [resource]: The Resource for the entry. The purpose/meaning of the
   ///  resource is determined by the Bundle.type.
@@ -410,27 +428,31 @@ abstract class BundleEntry implements _$BundleEntry {
   /// 'request' entry in the batch or transaction being responded to or what the
   ///  results of an operation where when returning history.
   factory BundleEntry({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<BundleLink> link,
-    FhirUri fullUrl,
-    @JsonKey(name: '_fullUrl') Element fullUrlElement,
-    Resource resource,
-    BundleSearch search,
-    BundleRequest request,
-    BundleResponse response,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<BundleLink>? link,
+    FhirUri? fullUrl,
+    @JsonKey(name: '_fullUrl') Element? fullUrlElement,
+    Resource? resource,
+    BundleSearch? search,
+    BundleRequest? request,
+    BundleResponse? response,
   }) = _BundleEntry;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BundleEntry.fromYaml(dynamic yaml) => yaml is String
-      ? BundleEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? BundleEntry.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? BundleEntry.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? BundleEntry.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'BundleEntry cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleEntry.fromJson(Map<String, dynamic> json) =>
@@ -438,15 +460,15 @@ abstract class BundleEntry implements _$BundleEntry {
 }
 
 @freezed
-abstract class BundleSearch implements _$BundleSearch {
+class BundleSearch with _$BundleSearch {
   BundleSearch._();
 
-  /// [Bundle_Search]: A container for a collection of resources.
+  /// [BundleSearch]: A container for a collection of resources.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -471,30 +493,34 @@ abstract class BundleSearch implements _$BundleSearch {
   /// match or because of an _include requirement, or to convey information or
   ///  warning information about the search process.
   ///
-  /// [_mode]: Extensions for mode
+  /// [modeElement]: Extensions for mode
   ///
   /// [score]: When searching, the server's search ranking score for the entry.
   ///
-  /// [_score]: Extensions for score
+  /// [scoreElement]: Extensions for score
   factory BundleSearch({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(unknownEnumValue: BundleSearchMode.unknown) BundleSearchMode mode,
-    @JsonKey(name: '_mode') Element modeElement,
-    Decimal score,
-    @JsonKey(name: '_score') Element scoreElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(unknownEnumValue: BundleSearchMode.unknown) BundleSearchMode? mode,
+    @JsonKey(name: '_mode') Element? modeElement,
+    Decimal? score,
+    @JsonKey(name: '_score') Element? scoreElement,
   }) = _BundleSearch;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BundleSearch.fromYaml(dynamic yaml) => yaml is String
-      ? BundleSearch.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? BundleSearch.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? BundleSearch.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? BundleSearch.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'BundleSearch cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleSearch.fromJson(Map<String, dynamic> json) =>
@@ -502,15 +528,15 @@ abstract class BundleSearch implements _$BundleSearch {
 }
 
 @freezed
-abstract class BundleRequest implements _$BundleRequest {
+class BundleRequest with _$BundleRequest {
   BundleRequest._();
 
-  /// [Bundle_Request]: A container for a collection of resources.
+  /// [BundleRequest]: A container for a collection of resources.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -535,29 +561,29 @@ abstract class BundleRequest implements _$BundleRequest {
   /// executed for this entry. In a history bundle, this indicates the HTTP
   ///  action that occurred.
   ///
-  /// [_method]: Extensions for method
+  /// [methodElement]: Extensions for method
   ///
   /// [url]: The URL for this entry, relative to the root (the address to which
   ///  the request is posted).
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [ifNoneMatch]: If the ETag values match, return a 304 Not Modified status.
   ///  See the API documentation for ["Conditional Read"](http.html#cread).
   ///
-  /// [_ifNoneMatch]: Extensions for ifNoneMatch
+  /// [ifNoneMatchElement]: Extensions for ifNoneMatch
   ///
   /// [ifModifiedSince]: Only perform the operation if the last updated date
   /// matches. See the API documentation for ["Conditional
   ///  Read"](http.html#cread).
   ///
-  /// [_ifModifiedSince]: Extensions for ifModifiedSince
+  /// [ifModifiedSinceElement]: Extensions for ifModifiedSince
   ///
   /// [ifMatch]: Only perform the operation if the Etag value matches. For more
   /// information, see the API section ["Managing Resource
   ///  Contention"](http.html#concurrency).
   ///
-  /// [_ifMatch]: Extensions for ifMatch
+  /// [ifMatchElement]: Extensions for ifMatch
   ///
   /// [ifNoneExist]: Instruct the server not to perform the create if a
   /// specified resource already exists. For further information, see the API
@@ -565,35 +591,39 @@ abstract class BundleRequest implements _$BundleRequest {
   /// the query portion of the URL - what follows the "?" (not including the
   ///  "?").
   ///
-  /// [_ifNoneExist]: Extensions for ifNoneExist
+  /// [ifNoneExistElement]: Extensions for ifNoneExist
   factory BundleRequest({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: BundleRequestMethod.unknown)
-        BundleRequestMethod method,
-    @JsonKey(name: '_method') Element methodElement,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
-    String ifNoneMatch,
-    @JsonKey(name: '_ifNoneMatch') Element ifNoneMatchElement,
-    Instant ifModifiedSince,
-    @JsonKey(name: '_ifModifiedSince') Element ifModifiedSinceElement,
-    String ifMatch,
-    @JsonKey(name: '_ifMatch') Element ifMatchElement,
-    String ifNoneExist,
-    @JsonKey(name: '_ifNoneExist') Element ifNoneExistElement,
+        BundleRequestMethod? method,
+    @JsonKey(name: '_method') Element? methodElement,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    String? ifNoneMatch,
+    @JsonKey(name: '_ifNoneMatch') Element? ifNoneMatchElement,
+    Instant? ifModifiedSince,
+    @JsonKey(name: '_ifModifiedSince') Element? ifModifiedSinceElement,
+    String? ifMatch,
+    @JsonKey(name: '_ifMatch') Element? ifMatchElement,
+    String? ifNoneExist,
+    @JsonKey(name: '_ifNoneExist') Element? ifNoneExistElement,
   }) = _BundleRequest;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BundleRequest.fromYaml(dynamic yaml) => yaml is String
-      ? BundleRequest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? BundleRequest.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? BundleRequest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? BundleRequest.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'BundleRequest cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleRequest.fromJson(Map<String, dynamic> json) =>
@@ -601,15 +631,15 @@ abstract class BundleRequest implements _$BundleRequest {
 }
 
 @freezed
-abstract class BundleResponse implements _$BundleResponse {
+class BundleResponse with _$BundleResponse {
   BundleResponse._();
 
-  /// [Bundle_Response]: A container for a collection of resources.
+  /// [BundleResponse]: A container for a collection of resources.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -634,51 +664,55 @@ abstract class BundleResponse implements _$BundleResponse {
   /// SHALL start with a 3 digit HTTP code (e.g. 404) and may contain the
   ///  standard HTTP description associated with the status code.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [location]: The location header created by processing this operation,
   ///  populated if the operation returns a location.
   ///
-  /// [_location]: Extensions for location
+  /// [locationElement]: Extensions for location
   ///
   /// [etag]: The Etag for the resource, if the operation for the entry produced
   /// a versioned resource (see [Resource Metadata and
   /// Versioning](http.html#versioning) and [Managing Resource
   ///  Contention](http.html#concurrency)).
   ///
-  /// [_etag]: Extensions for etag
+  /// [etagElement]: Extensions for etag
   ///
   /// [lastModified]: The date/time that the resource was modified on the
   ///  server.
   ///
-  /// [_lastModified]: Extensions for lastModified
+  /// [lastModifiedElement]: Extensions for lastModified
   ///
   /// [outcome]: An OperationOutcome containing hints and warnings produced as
   ///  part of processing this entry in a batch or transaction.
   factory BundleResponse({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String status,
-    @JsonKey(name: '_status') Element statusElement,
-    FhirUri location,
-    @JsonKey(name: '_location') Element locationElement,
-    String etag,
-    @JsonKey(name: '_etag') Element etagElement,
-    Instant lastModified,
-    @JsonKey(name: '_lastModified') Element lastModifiedElement,
-    Resource outcome,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    FhirUri? location,
+    @JsonKey(name: '_location') Element? locationElement,
+    String? etag,
+    @JsonKey(name: '_etag') Element? etagElement,
+    Instant? lastModified,
+    @JsonKey(name: '_lastModified') Element? lastModifiedElement,
+    Resource? outcome,
   }) = _BundleResponse;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory BundleResponse.fromYaml(dynamic yaml) => yaml is String
-      ? BundleResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? BundleResponse.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? BundleResponse.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? BundleResponse.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'BundleResponse cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleResponse.fromJson(Map<String, dynamic> json) =>
@@ -686,7 +720,7 @@ abstract class BundleResponse implements _$BundleResponse {
 }
 
 @freezed
-abstract class Linkage with Resource implements _$Linkage {
+class Linkage with Resource, _$Linkage {
   Linkage._();
 
   /// [Linkage]: Identifies two or more records (resource instances) that refer
@@ -706,11 +740,11 @@ abstract class Linkage with Resource implements _$Linkage {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -724,7 +758,7 @@ abstract class Linkage with Resource implements _$Linkage {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -748,7 +782,7 @@ abstract class Linkage with Resource implements _$Linkage {
   /// [active]: Indicates whether the asserted set of linkages are considered to
   ///  be "in effect".
   ///
-  /// [_active]: Extensions for active
+  /// [activeElement]: Extensions for active
   ///
   /// [author]: Identifies the user or organization responsible for asserting
   /// the linkages as well as the user or organization who establishes the
@@ -761,31 +795,36 @@ abstract class Linkage with Resource implements _$Linkage {
     @Default(R4ResourceType.Linkage)
     @JsonKey(unknownEnumValue: R4ResourceType.Linkage)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Boolean active,
-    @JsonKey(name: '_active') Element activeElement,
-    Reference author,
-    @required List<LinkageItem> item,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Boolean? active,
+    @JsonKey(name: '_active') Element? activeElement,
+    Reference? author,
+    required List<LinkageItem> item,
   }) = _Linkage;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Linkage.fromYaml(dynamic yaml) => yaml is String
-      ? Linkage.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Linkage.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Linkage.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? Linkage.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'Linkage cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Linkage.fromJson(Map<String, dynamic> json) =>
@@ -793,16 +832,16 @@ abstract class Linkage with Resource implements _$Linkage {
 }
 
 @freezed
-abstract class LinkageItem implements _$LinkageItem {
+class LinkageItem with _$LinkageItem {
   LinkageItem._();
 
-  /// [Linkage_Item]: Identifies two or more records (resource instances) that
+  /// [LinkageItem]: Identifies two or more records (resource instances) that
   ///  refer to the same real-world "occurrence".
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -826,27 +865,31 @@ abstract class LinkageItem implements _$LinkageItem {
   /// [type]: Distinguishes which item is "source of truth" (if any) and which
   ///  items are no longer considered to be current representations.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [resource]: The resource instance being linked as part of the group.
   factory LinkageItem({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType type,
-    @JsonKey(name: '_type') Element typeElement,
-    @required Reference resource,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(unknownEnumValue: LinkageItemType.unknown) LinkageItemType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    required Reference resource,
   }) = _LinkageItem;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory LinkageItem.fromYaml(dynamic yaml) => yaml is String
-      ? LinkageItem.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? LinkageItem.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? LinkageItem.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? LinkageItem.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'LinkageItem cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory LinkageItem.fromJson(Map<String, dynamic> json) =>
@@ -854,7 +897,7 @@ abstract class LinkageItem implements _$LinkageItem {
 }
 
 @freezed
-abstract class MessageHeader with Resource implements _$MessageHeader {
+class MessageHeader with Resource, _$MessageHeader {
   MessageHeader._();
 
   /// [MessageHeader]: The header for a message exchange that is either
@@ -877,11 +920,11 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -895,7 +938,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -928,7 +971,7 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
   /// "http://terminology.hl7.org/CodeSystem/message-events".  Alternatively uri
   ///  to the EventDefinition.
   ///
-  /// [_eventUri]: Extensions for eventUri
+  /// [eventUriElement]: Extensions for eventUri
   ///
   /// [destination]: The destination application which the message is intended
   ///  for.
@@ -965,40 +1008,45 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
     @Default(R4ResourceType.MessageHeader)
     @JsonKey(unknownEnumValue: R4ResourceType.MessageHeader)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Coding eventCoding,
-    FhirUri eventUri,
-    @JsonKey(name: '_eventUri') Element eventUriElement,
-    List<MessageHeaderDestination> destination,
-    Reference sender,
-    Reference enterer,
-    Reference author,
-    @required MessageHeaderSource source,
-    Reference responsible,
-    CodeableConcept reason,
-    MessageHeaderResponse response,
-    List<Reference> focus,
-    Canonical definition,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Coding? eventCoding,
+    FhirUri? eventUri,
+    @JsonKey(name: '_eventUri') Element? eventUriElement,
+    List<MessageHeaderDestination>? destination,
+    Reference? sender,
+    Reference? enterer,
+    Reference? author,
+    required MessageHeaderSource source,
+    Reference? responsible,
+    CodeableConcept? reason,
+    MessageHeaderResponse? response,
+    List<Reference>? focus,
+    Canonical? definition,
   }) = _MessageHeader;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageHeader.fromYaml(dynamic yaml) => yaml is String
-      ? MessageHeader.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MessageHeader.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MessageHeader.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? MessageHeader.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MessageHeader cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageHeader.fromJson(Map<String, dynamic> json) =>
@@ -1006,10 +1054,10 @@ abstract class MessageHeader with Resource implements _$MessageHeader {
 }
 
 @freezed
-abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
+class MessageHeaderDestination with _$MessageHeaderDestination {
   MessageHeaderDestination._();
 
-  /// [MessageHeader_Destination]: The header for a message exchange that is
+  /// [MessageHeaderDestination]: The header for a message exchange that is
   /// either requesting or responding to an action.  The reference(s) that are
   /// the subject of the action as well as other information related to the
   /// action are typically transmitted in a bundle in which the MessageHeader
@@ -1018,7 +1066,7 @@ abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1041,40 +1089,43 @@ abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
   ///
   /// [name]: Human-readable name for the target system.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [target]: Identifies the target end system in situations where the initial
   ///  message transmission is to an intermediary system.
   ///
   /// [endpoint]: Indicates where the message should be routed to.
   ///
-  /// [_endpoint]: Extensions for endpoint
+  /// [endpointElement]: Extensions for endpoint
   ///
   /// [receiver]: Allows data conveyed by a message to be addressed to a
   /// particular person or department when routing to a specific application
   ///  isn't sufficient.
   factory MessageHeaderDestination({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    Reference target,
-    FhirUrl endpoint,
-    @JsonKey(name: '_endpoint') Element endpointElement,
-    Reference receiver,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    Reference? target,
+    FhirUrl? endpoint,
+    @JsonKey(name: '_endpoint') Element? endpointElement,
+    Reference? receiver,
   }) = _MessageHeaderDestination;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageHeaderDestination.fromYaml(dynamic yaml) => yaml is String
       ? MessageHeaderDestination.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MessageHeaderDestination.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? MessageHeaderDestination.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MessageHeaderDestination cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageHeaderDestination.fromJson(Map<String, dynamic> json) =>
@@ -1082,10 +1133,10 @@ abstract class MessageHeaderDestination implements _$MessageHeaderDestination {
 }
 
 @freezed
-abstract class MessageHeaderSource implements _$MessageHeaderSource {
+class MessageHeaderSource with _$MessageHeaderSource {
   MessageHeaderSource._();
 
-  /// [MessageHeader_Source]: The header for a message exchange that is either
+  /// [MessageHeaderSource]: The header for a message exchange that is either
   /// requesting or responding to an action.  The reference(s) that are the
   /// subject of the action as well as other information related to the action
   /// are typically transmitted in a bundle in which the MessageHeader resource
@@ -1094,7 +1145,7 @@ abstract class MessageHeaderSource implements _$MessageHeaderSource {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1117,48 +1168,52 @@ abstract class MessageHeaderSource implements _$MessageHeaderSource {
   ///
   /// [name]: Human-readable name for the source system.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [software]: May include configuration or other information useful in
   ///  debugging.
   ///
-  /// [_software]: Extensions for software
+  /// [softwareElement]: Extensions for software
   ///
   /// [version]: Can convey versions of multiple systems in situations where a
   ///  message passes through multiple hands.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [contact]: An e-mail, phone, website or other contact point to use to
   ///  resolve issues with message communications.
   ///
   /// [endpoint]: Identifies the routing target to send acknowledgements to.
   ///
-  /// [_endpoint]: Extensions for endpoint
+  /// [endpointElement]: Extensions for endpoint
   factory MessageHeaderSource({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    String software,
-    @JsonKey(name: '_software') Element softwareElement,
-    String version,
-    @JsonKey(name: '_version') Element versionElement,
-    ContactPoint contact,
-    FhirUrl endpoint,
-    @JsonKey(name: '_endpoint') Element endpointElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? software,
+    @JsonKey(name: '_software') Element? softwareElement,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    ContactPoint? contact,
+    FhirUrl? endpoint,
+    @JsonKey(name: '_endpoint') Element? endpointElement,
   }) = _MessageHeaderSource;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageHeaderSource.fromYaml(dynamic yaml) => yaml is String
-      ? MessageHeaderSource.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MessageHeaderSource.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MessageHeaderSource.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? MessageHeaderSource.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MessageHeaderSource cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageHeaderSource.fromJson(Map<String, dynamic> json) =>
@@ -1166,10 +1221,10 @@ abstract class MessageHeaderSource implements _$MessageHeaderSource {
 }
 
 @freezed
-abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
+class MessageHeaderResponse with _$MessageHeaderResponse {
   MessageHeaderResponse._();
 
-  /// [MessageHeader_Response]: The header for a message exchange that is either
+  /// [MessageHeaderResponse]: The header for a message exchange that is either
   /// requesting or responding to an action.  The reference(s) that are the
   /// subject of the action as well as other information related to the action
   /// are typically transmitted in a bundle in which the MessageHeader resource
@@ -1178,7 +1233,7 @@ abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1202,35 +1257,39 @@ abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
   /// [identifier]: The MessageHeader.id of the message to which this message is
   ///  a response.
   ///
-  /// [_identifier]: Extensions for identifier
+  /// [identifierElement]: Extensions for identifier
   ///
   /// [code]: Code that identifies the type of response to the message - whether
   ///  it was successful or not, and whether it should be resent or not.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [details]: Full details of any issues found in the message.
   factory MessageHeaderResponse({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Id identifier,
-    @JsonKey(name: '_identifier') Element identifierElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Id? identifier,
+    @JsonKey(name: '_identifier') Element? identifierElement,
     @JsonKey(unknownEnumValue: MessageHeaderResponseCode.unknown)
-        MessageHeaderResponseCode code,
-    @JsonKey(name: '_code') Element codeElement,
-    Reference details,
+        MessageHeaderResponseCode? code,
+    @JsonKey(name: '_code') Element? codeElement,
+    Reference? details,
   }) = _MessageHeaderResponse;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MessageHeaderResponse.fromYaml(dynamic yaml) => yaml is String
-      ? MessageHeaderResponse.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MessageHeaderResponse.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MessageHeaderResponse.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? MessageHeaderResponse.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MessageHeaderResponse cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MessageHeaderResponse.fromJson(Map<String, dynamic> json) =>
@@ -1238,7 +1297,7 @@ abstract class MessageHeaderResponse implements _$MessageHeaderResponse {
 }
 
 @freezed
-abstract class OperationOutcome with Resource implements _$OperationOutcome {
+class OperationOutcome with Resource, _$OperationOutcome {
   OperationOutcome._();
 
   /// [OperationOutcome]: A collection of error, warning, or information
@@ -1258,11 +1317,11 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1276,7 +1335,7 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1303,28 +1362,33 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
     @Default(R4ResourceType.OperationOutcome)
     @JsonKey(unknownEnumValue: R4ResourceType.OperationOutcome)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required List<OperationOutcomeIssue> issue,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required List<OperationOutcomeIssue> issue,
   }) = _OperationOutcome;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationOutcome.fromYaml(dynamic yaml) => yaml is String
-      ? OperationOutcome.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? OperationOutcome.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? OperationOutcome.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? OperationOutcome.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'OperationOutcome cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationOutcome.fromJson(Map<String, dynamic> json) =>
@@ -1332,16 +1396,16 @@ abstract class OperationOutcome with Resource implements _$OperationOutcome {
 }
 
 @freezed
-abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
+class OperationOutcomeIssue with _$OperationOutcomeIssue {
   OperationOutcomeIssue._();
 
-  /// [OperationOutcome_Issue]: A collection of error, warning, or information
+  /// [OperationOutcomeIssue]: A collection of error, warning, or information
   ///  messages that result from a system action.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1365,21 +1429,21 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
   /// [severity]: Indicates whether the issue indicates a variation from
   ///  successful processing.
   ///
-  /// [_severity]: Extensions for severity
+  /// [severityElement]: Extensions for severity
   ///
   /// [code]: Describes the type of the issue. The system that creates an
   /// OperationOutcome SHALL choose the most applicable code from the IssueType
   /// value set, and may additional provide its own code for the error in the
   ///  details element.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [details]: Additional details about the error. This may be a text
   ///  description of the error or a system code that identifies the error.
   ///
   /// [diagnostics]: Additional diagnostic information about the issue.
   ///
-  /// [_diagnostics]: Extensions for diagnostics
+  /// [diagnosticsElement]: Extensions for diagnostics
   ///
   /// [location]: This element is deprecated because it is XML specific. It is
   /// replaced by issue.expression, which is format independent, and simpler to
@@ -1389,42 +1453,46 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
   /// of the elements in the resource that caused this issue to be raised.  For
   ///  HTTP errors, will be "http." + the parameter name.
   ///
-  /// [_location]: Extensions for location
+  /// [locationElement]: Extensions for location
   ///
   /// [expression]: A [simple subset of FHIRPath](fhirpath.html#simple) limited
   /// to element names, repetition indicators and the default child accessor
   /// that identifies one of the elements in the resource that caused this issue
   ///  to be raised.
   ///
-  /// [_expression]: Extensions for expression
+  /// [expressionElement]: Extensions for expression
   factory OperationOutcomeIssue({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: OperationOutcomeIssueSeverity.unknown)
-        OperationOutcomeIssueSeverity severity,
-    @JsonKey(name: '_severity') Element severityElement,
+        OperationOutcomeIssueSeverity? severity,
+    @JsonKey(name: '_severity') Element? severityElement,
     @JsonKey(unknownEnumValue: OperationOutcomeIssueCode.unknown)
-        OperationOutcomeIssueCode code,
-    @JsonKey(name: '_code') Element codeElement,
-    CodeableConcept details,
-    String diagnostics,
-    @JsonKey(name: '_diagnostics') Element diagnosticsElement,
-    List<String> location,
-    @JsonKey(name: '_location') List<Element> locationElement,
-    List<String> expression,
-    @JsonKey(name: '_expression') List<Element> expressionElement,
+        OperationOutcomeIssueCode? code,
+    @JsonKey(name: '_code') Element? codeElement,
+    CodeableConcept? details,
+    String? diagnostics,
+    @JsonKey(name: '_diagnostics') Element? diagnosticsElement,
+    List<String>? location,
+    @JsonKey(name: '_location') List<Element?>? locationElement,
+    List<String>? expression,
+    @JsonKey(name: '_expression') List<Element?>? expressionElement,
   }) = _OperationOutcomeIssue;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory OperationOutcomeIssue.fromYaml(dynamic yaml) => yaml is String
-      ? OperationOutcomeIssue.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? OperationOutcomeIssue.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? OperationOutcomeIssue.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? OperationOutcomeIssue.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'OperationOutcomeIssue cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OperationOutcomeIssue.fromJson(Map<String, dynamic> json) =>
@@ -1432,7 +1500,7 @@ abstract class OperationOutcomeIssue implements _$OperationOutcomeIssue {
 }
 
 @freezed
-abstract class Parameters with Resource implements _$Parameters {
+class Parameters with Resource, _$Parameters {
   Parameters._();
 
   /// [Parameters]: This resource is a non-persisted resource used to pass
@@ -1453,35 +1521,40 @@ abstract class Parameters with Resource implements _$Parameters {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [parameter]: A parameter passed to or received from the operation.
   factory Parameters({
     @Default(R4ResourceType.Parameters)
     @JsonKey(unknownEnumValue: R4ResourceType.Parameters)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    List<ParametersParameter> parameter,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    List<ParametersParameter>? parameter,
   }) = _Parameters;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Parameters.fromYaml(dynamic yaml) => yaml is String
-      ? Parameters.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Parameters.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Parameters.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? Parameters.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'Parameters cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Parameters.fromJson(Map<String, dynamic> json) =>
@@ -1489,17 +1562,17 @@ abstract class Parameters with Resource implements _$Parameters {
 }
 
 @freezed
-abstract class ParametersParameter implements _$ParametersParameter {
+class ParametersParameter with _$ParametersParameter {
   ParametersParameter._();
 
-  /// [Parameters_Parameter]: This resource is a non-persisted resource used to
+  /// [ParametersParameter]: This resource is a non-persisted resource used to
   /// pass information into and back from an [operation](operations.html). It
   ///  has no other use, and there is no RESTful endpoint associated with it.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1522,83 +1595,83 @@ abstract class ParametersParameter implements _$ParametersParameter {
   ///
   /// [name]: The name of the parameter (reference to the operation definition).
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [valueBase64Binary]: If the parameter is a data type.
   ///
-  /// [_valueBase64Binary]: Extensions for valueBase64Binary
+  /// [valueBase64BinaryElement]: Extensions for valueBase64Binary
   ///
   /// [valueBoolean]: If the parameter is a data type.
   ///
-  /// [_valueBoolean]: Extensions for valueBoolean
+  /// [valueBooleanElement]: Extensions for valueBoolean
   ///
   /// [valueCanonical]: If the parameter is a data type.
   ///
-  /// [_valueCanonical]: Extensions for valueCanonical
+  /// [valueCanonicalElement]: Extensions for valueCanonical
   ///
   /// [valueCode]: If the parameter is a data type.
   ///
-  /// [_valueCode]: Extensions for valueCode
+  /// [valueCodeElement]: Extensions for valueCode
   ///
   /// [valueDate]: If the parameter is a data type.
   ///
-  /// [_valueDate]: Extensions for valueDate
+  /// [valueDateElement]: Extensions for valueDate
   ///
   /// [valueDateTime]: If the parameter is a data type.
   ///
-  /// [_valueDateTime]: Extensions for valueDateTime
+  /// [valueDateTimeElement]: Extensions for valueDateTime
   ///
   /// [valueDecimal]: If the parameter is a data type.
   ///
-  /// [_valueDecimal]: Extensions for valueDecimal
+  /// [valueDecimalElement]: Extensions for valueDecimal
   ///
   /// [valueId]: If the parameter is a data type.
   ///
-  /// [_valueId]: Extensions for valueId
+  /// [valueIdElement]: Extensions for valueId
   ///
   /// [valueInstant]: If the parameter is a data type.
   ///
-  /// [_valueInstant]: Extensions for valueInstant
+  /// [valueInstantElement]: Extensions for valueInstant
   ///
   /// [valueInteger]: If the parameter is a data type.
   ///
-  /// [_valueInteger]: Extensions for valueInteger
+  /// [valueIntegerElement]: Extensions for valueInteger
   ///
   /// [valueMarkdown]: If the parameter is a data type.
   ///
-  /// [_valueMarkdown]: Extensions for valueMarkdown
+  /// [valueMarkdownElement]: Extensions for valueMarkdown
   ///
   /// [valueOid]: If the parameter is a data type.
   ///
-  /// [_valueOid]: Extensions for valueOid
+  /// [valueOidElement]: Extensions for valueOid
   ///
   /// [valuePositiveInt]: If the parameter is a data type.
   ///
-  /// [_valuePositiveInt]: Extensions for valuePositiveInt
+  /// [valuePositiveIntElement]: Extensions for valuePositiveInt
   ///
   /// [valueString]: If the parameter is a data type.
   ///
-  /// [_valueString]: Extensions for valueString
+  /// [valueStringElement]: Extensions for valueString
   ///
   /// [valueTime]: If the parameter is a data type.
   ///
-  /// [_valueTime]: Extensions for valueTime
+  /// [valueTimeElement]: Extensions for valueTime
   ///
   /// [valueUnsignedInt]: If the parameter is a data type.
   ///
-  /// [_valueUnsignedInt]: Extensions for valueUnsignedInt
+  /// [valueUnsignedIntElement]: Extensions for valueUnsignedInt
   ///
   /// [valueUri]: If the parameter is a data type.
   ///
-  /// [_valueUri]: Extensions for valueUri
+  /// [valueUriElement]: Extensions for valueUri
   ///
   /// [valueUrl]: If the parameter is a data type.
   ///
-  /// [_valueUrl]: Extensions for valueUrl
+  /// [valueUrlElement]: Extensions for valueUrl
   ///
   /// [valueUuid]: If the parameter is a data type.
   ///
-  /// [_valueUuid]: Extensions for valueUuid
+  /// [valueUuidElement]: Extensions for valueUuid
   ///
   /// [valueAddress]: If the parameter is a data type.
   ///
@@ -1664,95 +1737,99 @@ abstract class ParametersParameter implements _$ParametersParameter {
   ///
   /// [resource]: If the parameter is a whole resource.
   ///
-  /// [part]: A named part of a multi-part parameter.
+  /// [part_]: A named part of a multi-part parameter.
   factory ParametersParameter({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    Base64Binary valueBase64Binary,
-    @JsonKey(name: '_valueBase64Binary') Element valueBase64BinaryElement,
-    Boolean valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-    Canonical valueCanonical,
-    @JsonKey(name: '_valueCanonical') Element valueCanonicalElement,
-    Code valueCode,
-    @JsonKey(name: '_valueCode') Element valueCodeElement,
-    Date valueDate,
-    @JsonKey(name: '_valueDate') Element valueDateElement,
-    FhirDateTime valueDateTime,
-    @JsonKey(name: '_valueDateTime') Element valueDateTimeElement,
-    Decimal valueDecimal,
-    @JsonKey(name: '_valueDecimal') Element valueDecimalElement,
-    Id valueId,
-    @JsonKey(name: '_valueId') Element valueIdElement,
-    Instant valueInstant,
-    @JsonKey(name: '_valueInstant') Element valueInstantElement,
-    Integer valueInteger,
-    @JsonKey(name: '_valueInteger') Element valueIntegerElement,
-    Markdown valueMarkdown,
-    @JsonKey(name: '_valueMarkdown') Element valueMarkdownElement,
-    Oid valueOid,
-    @JsonKey(name: '_valueOid') Element valueOidElement,
-    PositiveInt valuePositiveInt,
-    @JsonKey(name: '_valuePositiveInt') Element valuePositiveIntElement,
-    String valueString,
-    @JsonKey(name: '_valueString') Element valueStringElement,
-    Time valueTime,
-    @JsonKey(name: '_valueTime') Element valueTimeElement,
-    UnsignedInt valueUnsignedInt,
-    @JsonKey(name: '_valueUnsignedInt') Element valueUnsignedIntElement,
-    FhirUri valueUri,
-    @JsonKey(name: '_valueUri') Element valueUriElement,
-    FhirUrl valueUrl,
-    @JsonKey(name: '_valueUrl') Element valueUrlElement,
-    Uuid valueUuid,
-    @JsonKey(name: '_valueUuid') Element valueUuidElement,
-    Address valueAddress,
-    Age valueAge,
-    Annotation valueAnnotation,
-    Attachment valueAttachment,
-    CodeableConcept valueCodeableConcept,
-    Coding valueCoding,
-    ContactPoint valueContactPoint,
-    Count valueCount,
-    Distance valueDistance,
-    FhirDuration valueDuration,
-    HumanName valueHumanName,
-    Identifier valueIdentifier,
-    Money valueMoney,
-    Period valuePeriod,
-    Quantity valueQuantity,
-    Range valueRange,
-    Ratio valueRatio,
-    Reference valueReference,
-    SampledData valueSampledData,
-    Signature valueSignature,
-    Timing valueTiming,
-    ContactDetail valueContactDetail,
-    Contributor valueContributor,
-    DataRequirement valueDataRequirement,
-    Expression valueExpression,
-    ParameterDefinition valueParameterDefinition,
-    RelatedArtifact valueRelatedArtifact,
-    TriggerDefinition valueTriggerDefinition,
-    UsageContext valueUsageContext,
-    Dosage valueDosage,
-    Meta valueMeta,
-    Resource resource,
-    @JsonKey(name: 'part') List<ParametersParameter> part_,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    Base64Binary? valueBase64Binary,
+    @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+    Boolean? valueBoolean,
+    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+    Canonical? valueCanonical,
+    @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
+    Code? valueCode,
+    @JsonKey(name: '_valueCode') Element? valueCodeElement,
+    Date? valueDate,
+    @JsonKey(name: '_valueDate') Element? valueDateElement,
+    FhirDateTime? valueDateTime,
+    @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+    Decimal? valueDecimal,
+    @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+    Id? valueId,
+    @JsonKey(name: '_valueId') Element? valueIdElement,
+    Instant? valueInstant,
+    @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+    Integer? valueInteger,
+    @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+    Markdown? valueMarkdown,
+    @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
+    Oid? valueOid,
+    @JsonKey(name: '_valueOid') Element? valueOidElement,
+    PositiveInt? valuePositiveInt,
+    @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
+    String? valueString,
+    @JsonKey(name: '_valueString') Element? valueStringElement,
+    Time? valueTime,
+    @JsonKey(name: '_valueTime') Element? valueTimeElement,
+    UnsignedInt? valueUnsignedInt,
+    @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
+    FhirUri? valueUri,
+    @JsonKey(name: '_valueUri') Element? valueUriElement,
+    FhirUrl? valueUrl,
+    @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+    Uuid? valueUuid,
+    @JsonKey(name: '_valueUuid') Element? valueUuidElement,
+    Address? valueAddress,
+    Age? valueAge,
+    Annotation? valueAnnotation,
+    Attachment? valueAttachment,
+    CodeableConcept? valueCodeableConcept,
+    Coding? valueCoding,
+    ContactPoint? valueContactPoint,
+    Count? valueCount,
+    Distance? valueDistance,
+    FhirDuration? valueDuration,
+    HumanName? valueHumanName,
+    Identifier? valueIdentifier,
+    Money? valueMoney,
+    Period? valuePeriod,
+    Quantity? valueQuantity,
+    Range? valueRange,
+    Ratio? valueRatio,
+    Reference? valueReference,
+    SampledData? valueSampledData,
+    Signature? valueSignature,
+    Timing? valueTiming,
+    ContactDetail? valueContactDetail,
+    Contributor? valueContributor,
+    DataRequirement? valueDataRequirement,
+    Expression? valueExpression,
+    ParameterDefinition? valueParameterDefinition,
+    RelatedArtifact? valueRelatedArtifact,
+    TriggerDefinition? valueTriggerDefinition,
+    UsageContext? valueUsageContext,
+    Dosage? valueDosage,
+    Meta? valueMeta,
+    Resource? resource,
+    @JsonKey(name: 'part') List<ParametersParameter>? part_,
   }) = _ParametersParameter;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ParametersParameter.fromYaml(dynamic yaml) => yaml is String
-      ? ParametersParameter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ParametersParameter.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ParametersParameter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? ParametersParameter.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ParametersParameter cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ParametersParameter.fromJson(Map<String, dynamic> json) =>
@@ -1760,7 +1837,7 @@ abstract class ParametersParameter implements _$ParametersParameter {
 }
 
 @freezed
-abstract class Subscription with Resource implements _$Subscription {
+class Subscription with Resource, _$Subscription {
   Subscription._();
 
   /// [Subscription]: The subscription resource is used to define a push-based
@@ -1784,11 +1861,11 @@ abstract class Subscription with Resource implements _$Subscription {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1802,7 +1879,7 @@ abstract class Subscription with Resource implements _$Subscription {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1826,28 +1903,28 @@ abstract class Subscription with Resource implements _$Subscription {
   /// [status]: The status of the subscription, which marks the server state for
   ///  managing the subscription.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [contact]: Contact details for a human to contact about the subscription.
   ///  The primary use of this for system administrator troubleshooting.
   ///
   /// [end]: The time for the server to turn the subscription off.
   ///
-  /// [_end]: Extensions for end
+  /// [endElement]: Extensions for end
   ///
   /// [reason]: A description of why this subscription is defined.
   ///
-  /// [_reason]: Extensions for reason
+  /// [reasonElement]: Extensions for reason
   ///
   /// [criteria]: The rules that the server should use to determine when to
   ///  generate notifications for this subscription.
   ///
-  /// [_criteria]: Extensions for criteria
+  /// [criteriaElement]: Extensions for criteria
   ///
   /// [error]: A record of the last error that occurred when the server
   ///  processed a notification.
   ///
-  /// [_error]: Extensions for error
+  /// [errorElement]: Extensions for error
   ///
   /// [channel]: Details where to send notifications when resources are received
   ///  that meet the criteria.
@@ -1855,40 +1932,45 @@ abstract class Subscription with Resource implements _$Subscription {
     @Default(R4ResourceType.Subscription)
     @JsonKey(unknownEnumValue: R4ResourceType.Subscription)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: SubscriptionStatus.unknown)
-        SubscriptionStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    List<ContactPoint> contact,
-    Instant end,
-    @JsonKey(name: '_end') Element endElement,
-    String reason,
-    @JsonKey(name: '_reason') Element reasonElement,
-    String criteria,
-    @JsonKey(name: '_criteria') Element criteriaElement,
-    String error,
-    @JsonKey(name: '_error') Element errorElement,
-    @required SubscriptionChannel channel,
+        SubscriptionStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<ContactPoint>? contact,
+    Instant? end,
+    @JsonKey(name: '_end') Element? endElement,
+    String? reason,
+    @JsonKey(name: '_reason') Element? reasonElement,
+    String? criteria,
+    @JsonKey(name: '_criteria') Element? criteriaElement,
+    String? error,
+    @JsonKey(name: '_error') Element? errorElement,
+    required SubscriptionChannel channel,
   }) = _Subscription;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Subscription.fromYaml(dynamic yaml) => yaml is String
-      ? Subscription.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Subscription.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Subscription.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? Subscription.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'Subscription cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Subscription.fromJson(Map<String, dynamic> json) =>
@@ -1896,10 +1978,10 @@ abstract class Subscription with Resource implements _$Subscription {
 }
 
 @freezed
-abstract class SubscriptionChannel implements _$SubscriptionChannel {
+class SubscriptionChannel with _$SubscriptionChannel {
   SubscriptionChannel._();
 
-  /// [Subscription_Channel]: The subscription resource is used to define a
+  /// [SubscriptionChannel]: The subscription resource is used to define a
   /// push-based subscription from a server to another system. Once a
   /// subscription is registered with the server, the server checks every
   /// resource that is created or updated, and if the resource matches the given
@@ -1909,7 +1991,7 @@ abstract class SubscriptionChannel implements _$SubscriptionChannel {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1932,12 +2014,12 @@ abstract class SubscriptionChannel implements _$SubscriptionChannel {
   ///
   /// [type]: The type of channel to send notifications on.
   ///
-  /// [_type]: Extensions for type
+  /// [typeElement]: Extensions for type
   ///
   /// [endpoint]: The url that describes the actual end-point to send messages
   ///  to.
   ///
-  /// [_endpoint]: Extensions for endpoint
+  /// [endpointElement]: Extensions for endpoint
   ///
   /// [payload]: The mime type to send the payload in - either
   /// application/fhir+xml, or application/fhir+json. If the payload is not
@@ -1945,36 +2027,40 @@ abstract class SubscriptionChannel implements _$SubscriptionChannel {
   /// notification. The mime type "text/plain" may also be used for Email and
   ///  SMS subscriptions.
   ///
-  /// [_payload]: Extensions for payload
+  /// [payloadElement]: Extensions for payload
   ///
   /// [header]: Additional headers / information to send as part of the
   ///  notification.
   ///
-  /// [_header]: Extensions for header
+  /// [headerElement]: Extensions for header
   factory SubscriptionChannel({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: SubscriptionChannelType.unknown)
-        SubscriptionChannelType type,
-    @JsonKey(name: '_type') Element typeElement,
-    FhirUrl endpoint,
-    @JsonKey(name: '_endpoint') Element endpointElement,
-    Code payload,
-    @JsonKey(name: '_payload') Element payloadElement,
-    List<String> header,
-    @JsonKey(name: '_header') List<Element> headerElement,
+        SubscriptionChannelType? type,
+    @JsonKey(name: '_type') Element? typeElement,
+    FhirUrl? endpoint,
+    @JsonKey(name: '_endpoint') Element? endpointElement,
+    Code? payload,
+    @JsonKey(name: '_payload') Element? payloadElement,
+    List<String>? header,
+    @JsonKey(name: '_header') List<Element?>? headerElement,
   }) = _SubscriptionChannel;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory SubscriptionChannel.fromYaml(dynamic yaml) => yaml is String
-      ? SubscriptionChannel.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? SubscriptionChannel.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? SubscriptionChannel.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? SubscriptionChannel.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'SubscriptionChannel cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubscriptionChannel.fromJson(Map<String, dynamic> json) =>

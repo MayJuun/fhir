@@ -12,28 +12,32 @@ part 'draft_types.freezed.dart';
 part 'draft_types.g.dart';
 
 @freezed
-abstract class Population implements _$Population {
+class Population with _$Population {
   Population._();
   factory Population({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Range ageRange,
-    CodeableConcept ageCodeableConcept,
-    CodeableConcept gender,
-    CodeableConcept race,
-    CodeableConcept physiologicalCondition,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Range? ageRange,
+    CodeableConcept? ageCodeableConcept,
+    CodeableConcept? gender,
+    CodeableConcept? race,
+    CodeableConcept? physiologicalCondition,
   }) = _Population;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Population.fromYaml(dynamic yaml) => yaml is String
-      ? Population.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Population.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Population.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? Population.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'Population cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Population.fromJson(Map<String, dynamic> json) =>
@@ -41,28 +45,32 @@ abstract class Population implements _$Population {
 }
 
 @freezed
-abstract class ProductShelfLife implements _$ProductShelfLife {
+class ProductShelfLife with _$ProductShelfLife {
   ProductShelfLife._();
   factory ProductShelfLife({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept type,
-    Quantity periodQuantity,
-    String periodString,
-    @JsonKey(name: '_periodString') Element periodStringElement,
-    List<CodeableConcept> specialPrecautionsForStorage,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? type,
+    Quantity? periodQuantity,
+    String? periodString,
+    @JsonKey(name: '_periodString') Element? periodStringElement,
+    List<CodeableConcept>? specialPrecautionsForStorage,
   }) = _ProductShelfLife;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ProductShelfLife.fromYaml(dynamic yaml) => yaml is String
-      ? ProductShelfLife.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ProductShelfLife.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ProductShelfLife.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? ProductShelfLife.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ProductShelfLife cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProductShelfLife.fromJson(Map<String, dynamic> json) =>
@@ -70,37 +78,41 @@ abstract class ProductShelfLife implements _$ProductShelfLife {
 }
 
 @freezed
-abstract class ProdCharacteristic implements _$ProdCharacteristic {
+class ProdCharacteristic with _$ProdCharacteristic {
   ProdCharacteristic._();
   factory ProdCharacteristic({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Quantity height,
-    Quantity width,
-    Quantity depth,
-    Quantity weight,
-    Quantity nominalVolume,
-    Quantity externalDiameter,
-    String shape,
-    @JsonKey(name: '_shape') Element shapeElement,
-    List<String> color,
-    @JsonKey(name: '_color') List<Element> colorElement,
-    List<String> imprint,
-    @JsonKey(name: '_imprint') List<Element> imprintElement,
-    List<Attachment> image,
-    CodeableConcept scoring,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Quantity? height,
+    Quantity? width,
+    Quantity? depth,
+    Quantity? weight,
+    Quantity? nominalVolume,
+    Quantity? externalDiameter,
+    String? shape,
+    @JsonKey(name: '_shape') Element? shapeElement,
+    List<String>? color,
+    @JsonKey(name: '_color') List<Element>? colorElement,
+    List<String>? imprint,
+    @JsonKey(name: '_imprint') List<Element>? imprintElement,
+    List<Attachment>? image,
+    CodeableConcept? scoring,
   }) = _ProdCharacteristic;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ProdCharacteristic.fromYaml(dynamic yaml) => yaml is String
-      ? ProdCharacteristic.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ProdCharacteristic.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ProdCharacteristic.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? ProdCharacteristic.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ProdCharacteristic cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProdCharacteristic.fromJson(Map<String, dynamic> json) =>
@@ -108,29 +120,33 @@ abstract class ProdCharacteristic implements _$ProdCharacteristic {
 }
 
 @freezed
-abstract class MarketingStatus implements _$MarketingStatus {
+class MarketingStatus with _$MarketingStatus {
   MarketingStatus._();
   factory MarketingStatus({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept country,
-    CodeableConcept jurisdiction,
-    @required CodeableConcept status,
-    Period dateRange,
-    FhirDateTime restoreDate,
-    @JsonKey(name: '_restoreDate') Element restoreDateElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? country,
+    CodeableConcept? jurisdiction,
+    required CodeableConcept status,
+    Period? dateRange,
+    FhirDateTime? restoreDate,
+    @JsonKey(name: '_restoreDate') Element? restoreDateElement,
   }) = _MarketingStatus;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory MarketingStatus.fromYaml(dynamic yaml) => yaml is String
-      ? MarketingStatus.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? MarketingStatus.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? MarketingStatus.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? MarketingStatus.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'MarketingStatus cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MarketingStatus.fromJson(Map<String, dynamic> json) =>
@@ -138,88 +154,82 @@ abstract class MarketingStatus implements _$MarketingStatus {
 }
 
 @freezed
-abstract class Citation implements _$Citation {
+class Citation with Resource, _$Citation {
   Citation._();
   factory Citation({
-    @Default('Citation') String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
-    List<Identifier> identifier,
-    String version,
-    @JsonKey(name: '_version') Element versionElement,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    String title,
-    @JsonKey(name: '_title') Element titleElement,
-    @JsonKey(unknownEnumValue: CitationStatus.unknown) CitationStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Boolean experimental,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-    String publisher,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    List<ContactDetail> contact,
-    Markdown description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<UsageContext> useContext,
-    List<CodeableConcept> jurisdiction,
-    Markdown purpose,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    Markdown copyright,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    Date approvalDate,
-    @JsonKey(name: '_approvalDate') Element approvalDateElement,
-    Date lastReviewDate,
-    @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
-    Period effectivePeriod,
-    List<Identifier> relatedIdentifier,
-    List<CitationSummary> summary,
-    FhirDateTime dateCited,
-    @JsonKey(name: '_dateCited') Element dateCitedElement,
-    CitationVariantCitation variantCitation,
-    CodeableConcept publishingModel,
-    CitationJournal journal,
-    CitationPublicationInfo publicationInfo,
-    Markdown articleTitle,
-    @JsonKey(name: '_articleTitle') Element articleTitleElement,
-    List<CitationAlternativeTitle> alternativeTitle,
-    CitationPagination pagination,
-    List<CitationArticleUrl> articleUrl,
-    @JsonKey(name: 'abstract') Markdown abstract_,
-    @JsonKey(name: '_abstract') Element abstractElement,
-    Markdown abstractCopyright,
-    @JsonKey(name: '_abstractCopyright') Element abstractCopyrightElement,
-    List<CitationAlternativeAbstract> alternativeAbstract,
-    CitationContributorship contributorship,
-    CodeableConcept articleLanguage,
-    List<CitationAlternativeForm> alternativeForm,
-    List<CodeableConcept> classifier,
-    List<CitationKeywordList> keywordList,
-    List<RelatedArtifact> relatedArtifact,
-    List<Annotation> note,
-    CitationMedlinePubMed medlinePubMed,
+    @Default(R5ResourceType.Citation)
+    @JsonKey(unknownEnumValue: R5ResourceType.Citation)
+        R5ResourceType resourceType,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    List<Identifier>? identifier,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    @JsonKey(unknownEnumValue: CitationStatus.unknown) CitationStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Boolean? experimental,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    List<ContactDetail>? contact,
+    Markdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
+    Markdown? purpose,
+    @JsonKey(name: '_purpose') Element? purposeElement,
+    Markdown? copyright,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
+    Date? approvalDate,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+    Date? lastReviewDate,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+    Period? effectivePeriod,
+    List<CodeableConcept>? topic,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
+    List<ContactDetail>? summary,
+    List<CitationClassification>? classification,
+    List<Annotation>? note,
+    List<CodeableConcept>? currentState,
+    List<CitationStatusDate>? statusDate,
+    List<CitationRelatesTo>? relatesTo,
+    CitationCitedArtifact? citedArtifact,
   }) = _Citation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Citation.fromYaml(dynamic yaml) => yaml is String
-      ? Citation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Citation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Citation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? Citation.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'Citation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Citation.fromJson(Map<String, dynamic> json) =>
@@ -227,214 +237,418 @@ abstract class Citation implements _$Citation {
 }
 
 @freezed
-abstract class CitationSummary implements _$CitationSummary {
-  CitationSummary._();
-  factory CitationSummary({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept style,
-    Markdown text,
-    @JsonKey(name: '_text') Element textElement,
-  }) = _CitationSummary;
+class CitationClassification with _$CitationClassification {
+  CitationClassification._();
+  factory CitationClassification({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? type,
+    List<CodeableConcept>? classifier,
+  }) = _CitationClassification;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationSummary.fromYaml(dynamic yaml) => yaml is String
-      ? CitationSummary.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationClassification.fromYaml(dynamic yaml) => yaml is String
+      ? CitationClassification.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CitationSummary.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CitationClassification.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationClassification cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationSummary.fromJson(Map<String, dynamic> json) =>
-      _$CitationSummaryFromJson(json);
+  factory CitationClassification.fromJson(Map<String, dynamic> json) =>
+      _$CitationClassificationFromJson(json);
 }
 
 @freezed
-abstract class CitationVariantCitation implements _$CitationVariantCitation {
-  CitationVariantCitation._();
-  factory CitationVariantCitation({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept type,
-    String value,
-    @JsonKey(name: '_value') Element valueElement,
-    Reference baseCitation,
-  }) = _CitationVariantCitation;
+class CitationStatusDate with _$CitationStatusDate {
+  CitationStatusDate._();
+  factory CitationStatusDate({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept activity,
+    Boolean? actual,
+    @JsonKey(name: '_actual') Element? actualElement,
+    required Period period,
+  }) = _CitationStatusDate;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationVariantCitation.fromYaml(dynamic yaml) => yaml is String
-      ? CitationVariantCitation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationStatusDate.fromYaml(dynamic yaml) => yaml is String
+      ? CitationStatusDate.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CitationVariantCitation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CitationStatusDate.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationStatusDate cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationVariantCitation.fromJson(Map<String, dynamic> json) =>
-      _$CitationVariantCitationFromJson(json);
+  factory CitationStatusDate.fromJson(Map<String, dynamic> json) =>
+      _$CitationStatusDateFromJson(json);
 }
 
 @freezed
-abstract class CitationJournal implements _$CitationJournal {
-  CitationJournal._();
-  factory CitationJournal({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    String country,
-    @JsonKey(name: '_country') Element countryElement,
-    CitationJournalIssue journalIssue,
-    String title,
-    @JsonKey(name: '_title') Element titleElement,
-  }) = _CitationJournal;
+class CitationRelatesTo with _$CitationRelatesTo {
+  CitationRelatesTo._();
+  factory CitationRelatesTo({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept relationshipType,
+    List<CodeableConcept>? targetClassifier,
+    FhirUri? targetUri,
+    @JsonKey(name: '_targetUri') Element? targetUriElement,
+    Identifier? targetIdentifier,
+    Reference? targetReference,
+    Attachment? targetAttachment,
+  }) = _CitationRelatesTo;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationJournal.fromYaml(dynamic yaml) => yaml is String
-      ? CitationJournal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationRelatesTo.fromYaml(dynamic yaml) => yaml is String
+      ? CitationRelatesTo.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CitationJournal.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CitationRelatesTo.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationRelatesTo cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationJournal.fromJson(Map<String, dynamic> json) =>
-      _$CitationJournalFromJson(json);
+  factory CitationRelatesTo.fromJson(Map<String, dynamic> json) =>
+      _$CitationRelatesToFromJson(json);
 }
 
 @freezed
-abstract class CitationJournalIssue implements _$CitationJournalIssue {
-  CitationJournalIssue._();
-  factory CitationJournalIssue({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept citedMedium,
-    String volume,
-    @JsonKey(name: '_volume') Element volumeElement,
-    String issue,
-    @JsonKey(name: '_issue') Element issueElement,
-    CitationPublicationDate publicationDate,
-  }) = _CitationJournalIssue;
+class CitationCitedArtifact with _$CitationCitedArtifact {
+  CitationCitedArtifact._();
+  factory CitationCitedArtifact({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    List<Identifier>? relatedIdentifier,
+    FhirDateTime? dateAccessed,
+    @JsonKey(name: '_dateAccessed') Element? dateAccessedElement,
+    CitationVersion? version,
+    List<CodeableConcept>? currentState,
+    List<CitationStatusDate1>? statusDate,
+    List<CitationTitle>? title,
+    @JsonKey(name: 'abstract') List<CitationAbstract>? abstract_,
+    CitationPart? part,
+    List<CitationRelatesTo1>? relatesTo,
+    List<CitationPublicationForm>? publicationForm,
+    List<CitationWebLocation>? webLocation,
+    List<CitationClassification1>? classification,
+    CitationContributorship? contributorship,
+    List<Annotation>? note,
+  }) = _CitationCitedArtifact;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationJournalIssue.fromYaml(dynamic yaml) => yaml is String
-      ? CitationJournalIssue.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationCitedArtifact.fromYaml(dynamic yaml) => yaml is String
+      ? CitationCitedArtifact.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CitationJournalIssue.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CitationCitedArtifact.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationCitedArtifact cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationJournalIssue.fromJson(Map<String, dynamic> json) =>
-      _$CitationJournalIssueFromJson(json);
+  factory CitationCitedArtifact.fromJson(Map<String, dynamic> json) =>
+      _$CitationCitedArtifactFromJson(json);
 }
 
 @freezed
-abstract class CitationPublicationDate implements _$CitationPublicationDate {
-  CitationPublicationDate._();
-  factory CitationPublicationDate({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Date date,
-    @JsonKey(name: '_date') Element dateElement,
-    String year,
-    @JsonKey(name: '_year') Element yearElement,
-    String month,
-    @JsonKey(name: '_month') Element monthElement,
-    String day,
-    @JsonKey(name: '_day') Element dayElement,
-    String season,
-    @JsonKey(name: '_season') Element seasonElement,
-    String text,
-    @JsonKey(name: '_text') Element textElement,
-  }) = _CitationPublicationDate;
+class CitationVersion with _$CitationVersion {
+  CitationVersion._();
+  factory CitationVersion({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? value,
+    @JsonKey(name: '_value') Element? valueElement,
+    Reference? baseCitation,
+  }) = _CitationVersion;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationPublicationDate.fromYaml(dynamic yaml) => yaml is String
-      ? CitationPublicationDate.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationVersion.fromYaml(dynamic yaml) => yaml is String
+      ? CitationVersion.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CitationPublicationDate.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CitationVersion.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationVersion cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationPublicationDate.fromJson(Map<String, dynamic> json) =>
-      _$CitationPublicationDateFromJson(json);
+  factory CitationVersion.fromJson(Map<String, dynamic> json) =>
+      _$CitationVersionFromJson(json);
 }
 
 @freezed
-abstract class CitationPublicationInfo implements _$CitationPublicationInfo {
-  CitationPublicationInfo._();
-  factory CitationPublicationInfo({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CitationPublishedIn publishedIn,
-    FhirDateTime entryDate,
-    @JsonKey(name: '_entryDate') Element entryDateElement,
-    FhirDateTime revisionDate,
-    @JsonKey(name: '_revisionDate') Element revisionDateElement,
-    String pageCount,
-    @JsonKey(name: '_pageCount') Element pageCountElement,
-  }) = _CitationPublicationInfo;
+class CitationStatusDate1 with _$CitationStatusDate1 {
+  CitationStatusDate1._();
+  factory CitationStatusDate1({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept activity,
+    Boolean? actual,
+    @JsonKey(name: '_actual') Element? actualElement,
+    required Period period,
+  }) = _CitationStatusDate1;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationPublicationInfo.fromYaml(dynamic yaml) => yaml is String
-      ? CitationPublicationInfo.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationStatusDate1.fromYaml(dynamic yaml) => yaml is String
+      ? CitationStatusDate1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CitationPublicationInfo.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CitationStatusDate1.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationStatusDate1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationPublicationInfo.fromJson(Map<String, dynamic> json) =>
-      _$CitationPublicationInfoFromJson(json);
+  factory CitationStatusDate1.fromJson(Map<String, dynamic> json) =>
+      _$CitationStatusDate1FromJson(json);
 }
 
 @freezed
-abstract class CitationPublishedIn implements _$CitationPublishedIn {
+class CitationTitle with _$CitationTitle {
+  CitationTitle._();
+  factory CitationTitle({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? type,
+    CodeableConcept? language,
+    Markdown? text,
+    @JsonKey(name: '_text') Element? textElement,
+  }) = _CitationTitle;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationTitle.fromYaml(dynamic yaml) => yaml is String
+      ? CitationTitle.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? CitationTitle.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationTitle cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory CitationTitle.fromJson(Map<String, dynamic> json) =>
+      _$CitationTitleFromJson(json);
+}
+
+@freezed
+class CitationAbstract with _$CitationAbstract {
+  CitationAbstract._();
+  factory CitationAbstract({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? type,
+    CodeableConcept? language,
+    Markdown? text,
+    @JsonKey(name: '_text') Element? textElement,
+    Markdown? copyright,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
+  }) = _CitationAbstract;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationAbstract.fromYaml(dynamic yaml) => yaml is String
+      ? CitationAbstract.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? CitationAbstract.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationAbstract cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory CitationAbstract.fromJson(Map<String, dynamic> json) =>
+      _$CitationAbstractFromJson(json);
+}
+
+@freezed
+class CitationPart with _$CitationPart {
+  CitationPart._();
+  factory CitationPart({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? type,
+    String? value,
+    @JsonKey(name: '_value') Element? valueElement,
+    Reference? baseCitation,
+  }) = _CitationPart;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationPart.fromYaml(dynamic yaml) => yaml is String
+      ? CitationPart.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? CitationPart.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationPart cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory CitationPart.fromJson(Map<String, dynamic> json) =>
+      _$CitationPartFromJson(json);
+}
+
+@freezed
+class CitationRelatesTo1 with _$CitationRelatesTo1 {
+  CitationRelatesTo1._();
+  factory CitationRelatesTo1({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept relationshipType,
+    List<CodeableConcept>? targetClassifier,
+    FhirUri? targetUri,
+    @JsonKey(name: '_targetUri') Element? targetUriElement,
+    Identifier? targetIdentifier,
+    Reference? targetReference,
+    Attachment? targetAttachment,
+  }) = _CitationRelatesTo1;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationRelatesTo1.fromYaml(dynamic yaml) => yaml is String
+      ? CitationRelatesTo1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? CitationRelatesTo1.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationRelatesTo1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory CitationRelatesTo1.fromJson(Map<String, dynamic> json) =>
+      _$CitationRelatesTo1FromJson(json);
+}
+
+@freezed
+class CitationPublicationForm with _$CitationPublicationForm {
+  CitationPublicationForm._();
+  factory CitationPublicationForm({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CitationPublishedIn? publishedIn,
+    CitationPeriodicRelease? periodicRelease,
+    FhirDateTime? articleDate,
+    @JsonKey(name: '_articleDate') Element? articleDateElement,
+    FhirDateTime? lastRevisionDate,
+    @JsonKey(name: '_lastRevisionDate') Element? lastRevisionDateElement,
+    List<CodeableConcept>? language,
+    String? accessionNumber,
+    @JsonKey(name: '_accessionNumber') Element? accessionNumberElement,
+    String? pageString,
+    @JsonKey(name: '_pageString') Element? pageStringElement,
+    String? firstPage,
+    @JsonKey(name: '_firstPage') Element? firstPageElement,
+    String? lastPage,
+    @JsonKey(name: '_lastPage') Element? lastPageElement,
+    String? pageCount,
+    @JsonKey(name: '_pageCount') Element? pageCountElement,
+    Markdown? copyright,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
+  }) = _CitationPublicationForm;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationPublicationForm.fromYaml(dynamic yaml) => yaml is String
+      ? CitationPublicationForm.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? CitationPublicationForm.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationPublicationForm cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory CitationPublicationForm.fromJson(Map<String, dynamic> json) =>
+      _$CitationPublicationFormFromJson(json);
+}
+
+@freezed
+class CitationPublishedIn with _$CitationPublishedIn {
   CitationPublishedIn._();
   factory CitationPublishedIn({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept type,
-    List<Identifier> identifier,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    Reference publisher,
-    String publisherLocation,
-    @JsonKey(name: '_publisherLocation') Element publisherLocationElement,
-    Date startDate,
-    @JsonKey(name: '_startDate') Element startDateElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? type,
+    List<Identifier>? identifier,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    Reference? publisher,
+    String? publisherLocation,
+    @JsonKey(name: '_publisherLocation') Element? publisherLocationElement,
   }) = _CitationPublishedIn;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CitationPublishedIn.fromYaml(dynamic yaml) => yaml is String
-      ? CitationPublishedIn.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? CitationPublishedIn.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CitationPublishedIn.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CitationPublishedIn.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationPublishedIn cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationPublishedIn.fromJson(Map<String, dynamic> json) =>
@@ -442,145 +656,202 @@ abstract class CitationPublishedIn implements _$CitationPublishedIn {
 }
 
 @freezed
-abstract class CitationAlternativeTitle implements _$CitationAlternativeTitle {
-  CitationAlternativeTitle._();
-  factory CitationAlternativeTitle({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept type,
-    CodeableConcept language,
-    Markdown title,
-    @JsonKey(name: '_title') Element titleElement,
-  }) = _CitationAlternativeTitle;
+class CitationPeriodicRelease with _$CitationPeriodicRelease {
+  CitationPeriodicRelease._();
+  factory CitationPeriodicRelease({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? citedMedium,
+    String? volume,
+    @JsonKey(name: '_volume') Element? volumeElement,
+    String? issue,
+    @JsonKey(name: '_issue') Element? issueElement,
+    CitationDateOfPublication? dateOfPublication,
+  }) = _CitationPeriodicRelease;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationAlternativeTitle.fromYaml(dynamic yaml) => yaml is String
-      ? CitationAlternativeTitle.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationPeriodicRelease.fromYaml(dynamic yaml) => yaml is String
+      ? CitationPeriodicRelease.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CitationAlternativeTitle.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CitationPeriodicRelease.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationPeriodicRelease cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationAlternativeTitle.fromJson(Map<String, dynamic> json) =>
-      _$CitationAlternativeTitleFromJson(json);
+  factory CitationPeriodicRelease.fromJson(Map<String, dynamic> json) =>
+      _$CitationPeriodicReleaseFromJson(json);
 }
 
 @freezed
-abstract class CitationPagination implements _$CitationPagination {
-  CitationPagination._();
-  factory CitationPagination({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String pageString,
-    @JsonKey(name: '_pageString') Element pageStringElement,
-    String firstPage,
-    @JsonKey(name: '_firstPage') Element firstPageElement,
-    String lastPage,
-    @JsonKey(name: '_lastPage') Element lastPageElement,
-  }) = _CitationPagination;
+class CitationDateOfPublication with _$CitationDateOfPublication {
+  CitationDateOfPublication._();
+  factory CitationDateOfPublication({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Date? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    String? year,
+    @JsonKey(name: '_year') Element? yearElement,
+    String? month,
+    @JsonKey(name: '_month') Element? monthElement,
+    String? day,
+    @JsonKey(name: '_day') Element? dayElement,
+    String? season,
+    @JsonKey(name: '_season') Element? seasonElement,
+    String? text,
+    @JsonKey(name: '_text') Element? textElement,
+  }) = _CitationDateOfPublication;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationPagination.fromYaml(dynamic yaml) => yaml is String
-      ? CitationPagination.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationDateOfPublication.fromYaml(dynamic yaml) => yaml is String
+      ? CitationDateOfPublication.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CitationPagination.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CitationDateOfPublication.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationDateOfPublication cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationPagination.fromJson(Map<String, dynamic> json) =>
-      _$CitationPaginationFromJson(json);
+  factory CitationDateOfPublication.fromJson(Map<String, dynamic> json) =>
+      _$CitationDateOfPublicationFromJson(json);
 }
 
 @freezed
-abstract class CitationArticleUrl implements _$CitationArticleUrl {
-  CitationArticleUrl._();
-  factory CitationArticleUrl({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept type,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
-  }) = _CitationArticleUrl;
+class CitationWebLocation with _$CitationWebLocation {
+  CitationWebLocation._();
+  factory CitationWebLocation({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? type,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+  }) = _CitationWebLocation;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationArticleUrl.fromYaml(dynamic yaml) => yaml is String
-      ? CitationArticleUrl.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationWebLocation.fromYaml(dynamic yaml) => yaml is String
+      ? CitationWebLocation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CitationArticleUrl.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CitationWebLocation.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationWebLocation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationArticleUrl.fromJson(Map<String, dynamic> json) =>
-      _$CitationArticleUrlFromJson(json);
+  factory CitationWebLocation.fromJson(Map<String, dynamic> json) =>
+      _$CitationWebLocationFromJson(json);
 }
 
 @freezed
-abstract class CitationAlternativeAbstract
-    implements _$CitationAlternativeAbstract {
-  CitationAlternativeAbstract._();
-  factory CitationAlternativeAbstract({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept type,
-    CodeableConcept language,
-    @JsonKey(name: 'abstract') Markdown abstract_,
-    @JsonKey(name: '_abstract') Element abstractElement,
-    Markdown abstractCopyright,
-    @JsonKey(name: '_abstractCopyright') Element abstractCopyrightElement,
-  }) = _CitationAlternativeAbstract;
+class CitationClassification1 with _$CitationClassification1 {
+  CitationClassification1._();
+  factory CitationClassification1({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? type,
+    List<CodeableConcept>? classifier,
+    CitationWhoClassified? whoClassified,
+  }) = _CitationClassification1;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationAlternativeAbstract.fromYaml(dynamic yaml) => yaml is String
-      ? CitationAlternativeAbstract.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationClassification1.fromYaml(dynamic yaml) => yaml is String
+      ? CitationClassification1.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CitationAlternativeAbstract.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CitationClassification1.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationClassification1 cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationAlternativeAbstract.fromJson(Map<String, dynamic> json) =>
-      _$CitationAlternativeAbstractFromJson(json);
+  factory CitationClassification1.fromJson(Map<String, dynamic> json) =>
+      _$CitationClassification1FromJson(json);
 }
 
 @freezed
-abstract class CitationContributorship implements _$CitationContributorship {
+class CitationWhoClassified with _$CitationWhoClassified {
+  CitationWhoClassified._();
+  factory CitationWhoClassified({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Reference? person,
+    Reference? organization,
+    Reference? publisher,
+    String? classifierCopyright,
+    @JsonKey(name: '_classifierCopyright') Element? classifierCopyrightElement,
+    Boolean? freeToShare,
+    @JsonKey(name: '_freeToShare') Element? freeToShareElement,
+  }) = _CitationWhoClassified;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationWhoClassified.fromYaml(dynamic yaml) => yaml is String
+      ? CitationWhoClassified.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? CitationWhoClassified.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationWhoClassified cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory CitationWhoClassified.fromJson(Map<String, dynamic> json) =>
+      _$CitationWhoClassifiedFromJson(json);
+}
+
+@freezed
+class CitationContributorship with _$CitationContributorship {
   CitationContributorship._();
   factory CitationContributorship({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Boolean complete,
-    @JsonKey(name: '_complete') Element completeElement,
-    List<CitationEntry> entry,
-    List<CitationSummary1> summary,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Boolean? complete,
+    @JsonKey(name: '_complete') Element? completeElement,
+    List<CitationEntry>? entry,
+    List<CitationSummary>? summary,
   }) = _CitationContributorship;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CitationContributorship.fromYaml(dynamic yaml) => yaml is String
-      ? CitationContributorship.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? CitationContributorship.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CitationContributorship.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CitationContributorship.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationContributorship cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationContributorship.fromJson(Map<String, dynamic> json) =>
@@ -588,39 +859,44 @@ abstract class CitationContributorship implements _$CitationContributorship {
 }
 
 @freezed
-abstract class CitationEntry implements _$CitationEntry {
+class CitationEntry with _$CitationEntry {
   CitationEntry._();
   factory CitationEntry({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    HumanName name,
-    String initials,
-    @JsonKey(name: '_initials') Element initialsElement,
-    String collectiveName,
-    @JsonKey(name: '_collectiveName') Element collectiveNameElement,
-    List<Identifier> identifier,
-    List<CitationAffiliationInfo> affiliationInfo,
-    List<Address> address,
-    List<ContactPoint> telecom,
-    List<CodeableConcept> contribution,
-    Boolean notAnAuthor,
-    @JsonKey(name: '_notAnAuthor') Element notAnAuthorElement,
-    Boolean correspondingAuthor,
-    @JsonKey(name: '_correspondingAuthor') Element correspondingAuthorElement,
-    PositiveInt listOrder,
-    @JsonKey(name: '_listOrder') Element listOrderElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    HumanName? name,
+    String? initials,
+    @JsonKey(name: '_initials') Element? initialsElement,
+    String? collectiveName,
+    @JsonKey(name: '_collectiveName') Element? collectiveNameElement,
+    List<Identifier>? identifier,
+    List<CitationAffiliationInfo>? affiliationInfo,
+    List<Address>? address,
+    List<ContactPoint>? telecom,
+    List<CodeableConcept>? contributionType,
+    CodeableConcept? role,
+    List<CitationContributionInstance>? contributionInstance,
+    Boolean? correspondingContact,
+    @JsonKey(name: '_correspondingContact')
+        Element? correspondingContactElement,
+    PositiveInt? listOrder,
+    @JsonKey(name: '_listOrder') Element? listOrderElement,
   }) = _CitationEntry;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CitationEntry.fromYaml(dynamic yaml) => yaml is String
-      ? CitationEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? CitationEntry.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CitationEntry.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CitationEntry.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationEntry cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationEntry.fromJson(Map<String, dynamic> json) =>
@@ -628,28 +904,32 @@ abstract class CitationEntry implements _$CitationEntry {
 }
 
 @freezed
-abstract class CitationAffiliationInfo implements _$CitationAffiliationInfo {
+class CitationAffiliationInfo with _$CitationAffiliationInfo {
   CitationAffiliationInfo._();
   factory CitationAffiliationInfo({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String affiliation,
-    @JsonKey(name: '_affiliation') Element affiliationElement,
-    String role,
-    @JsonKey(name: '_role') Element roleElement,
-    List<Identifier> identifier,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? affiliation,
+    @JsonKey(name: '_affiliation') Element? affiliationElement,
+    String? role,
+    @JsonKey(name: '_role') Element? roleElement,
+    List<Identifier>? identifier,
   }) = _CitationAffiliationInfo;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CitationAffiliationInfo.fromYaml(dynamic yaml) => yaml is String
-      ? CitationAffiliationInfo.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? CitationAffiliationInfo.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CitationAffiliationInfo.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CitationAffiliationInfo.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationAffiliationInfo cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CitationAffiliationInfo.fromJson(Map<String, dynamic> json) =>
@@ -657,443 +937,149 @@ abstract class CitationAffiliationInfo implements _$CitationAffiliationInfo {
 }
 
 @freezed
-abstract class CitationSummary1 implements _$CitationSummary1 {
-  CitationSummary1._();
-  factory CitationSummary1({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept type,
-    CodeableConcept style,
-    CodeableConcept source,
-    Markdown value,
-    @JsonKey(name: '_value') Element valueElement,
-  }) = _CitationSummary1;
+class CitationContributionInstance with _$CitationContributionInstance {
+  CitationContributionInstance._();
+  factory CitationContributionInstance({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept type,
+    FhirDateTime? time,
+    @JsonKey(name: '_time') Element? timeElement,
+  }) = _CitationContributionInstance;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationSummary1.fromYaml(dynamic yaml) => yaml is String
-      ? CitationSummary1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationContributionInstance.fromYaml(dynamic yaml) => yaml is String
+      ? CitationContributionInstance.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CitationSummary1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CitationContributionInstance.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationContributionInstance cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationSummary1.fromJson(Map<String, dynamic> json) =>
-      _$CitationSummary1FromJson(json);
+  factory CitationContributionInstance.fromJson(Map<String, dynamic> json) =>
+      _$CitationContributionInstanceFromJson(json);
 }
 
 @freezed
-abstract class CitationAlternativeForm implements _$CitationAlternativeForm {
-  CitationAlternativeForm._();
-  factory CitationAlternativeForm({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept publishingModel,
-    CodeableConcept language,
-    CitationJournalIssue1 journalIssue,
-    CitationPagination1 pagination,
-    CitationPublicationInfo1 publicationInfo,
-  }) = _CitationAlternativeForm;
+class CitationSummary with _$CitationSummary {
+  CitationSummary._();
+  factory CitationSummary({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? type,
+    CodeableConcept? style,
+    CodeableConcept? source,
+    Markdown? value,
+    @JsonKey(name: '_value') Element? valueElement,
+  }) = _CitationSummary;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationAlternativeForm.fromYaml(dynamic yaml) => yaml is String
-      ? CitationAlternativeForm.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory CitationSummary.fromYaml(dynamic yaml) => yaml is String
+      ? CitationSummary.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CitationAlternativeForm.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CitationSummary.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CitationSummary cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationAlternativeForm.fromJson(Map<String, dynamic> json) =>
-      _$CitationAlternativeFormFromJson(json);
+  factory CitationSummary.fromJson(Map<String, dynamic> json) =>
+      _$CitationSummaryFromJson(json);
 }
 
 @freezed
-abstract class CitationJournalIssue1 implements _$CitationJournalIssue1 {
-  CitationJournalIssue1._();
-  factory CitationJournalIssue1({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept citedMedium,
-    String volume,
-    @JsonKey(name: '_volume') Element volumeElement,
-    String issue,
-    @JsonKey(name: '_issue') Element issueElement,
-    CitationPublicationDate1 publicationDate,
-  }) = _CitationJournalIssue1;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationJournalIssue1.fromYaml(dynamic yaml) => yaml is String
-      ? CitationJournalIssue1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? CitationJournalIssue1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationJournalIssue1.fromJson(Map<String, dynamic> json) =>
-      _$CitationJournalIssue1FromJson(json);
-}
-
-@freezed
-abstract class CitationPublicationDate1 implements _$CitationPublicationDate1 {
-  CitationPublicationDate1._();
-  factory CitationPublicationDate1({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Date date,
-    @JsonKey(name: '_date') Element dateElement,
-    String year,
-    @JsonKey(name: '_year') Element yearElement,
-    String month,
-    @JsonKey(name: '_month') Element monthElement,
-    String day,
-    @JsonKey(name: '_day') Element dayElement,
-    String season,
-    @JsonKey(name: '_season') Element seasonElement,
-    String text,
-    @JsonKey(name: '_text') Element textElement,
-  }) = _CitationPublicationDate1;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationPublicationDate1.fromYaml(dynamic yaml) => yaml is String
-      ? CitationPublicationDate1.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? CitationPublicationDate1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationPublicationDate1.fromJson(Map<String, dynamic> json) =>
-      _$CitationPublicationDate1FromJson(json);
-}
-
-@freezed
-abstract class CitationPagination1 implements _$CitationPagination1 {
-  CitationPagination1._();
-  factory CitationPagination1({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String pageString,
-    @JsonKey(name: '_pageString') Element pageStringElement,
-    String firstPage,
-    @JsonKey(name: '_firstPage') Element firstPageElement,
-    String lastPage,
-    @JsonKey(name: '_lastPage') Element lastPageElement,
-  }) = _CitationPagination1;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationPagination1.fromYaml(dynamic yaml) => yaml is String
-      ? CitationPagination1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? CitationPagination1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationPagination1.fromJson(Map<String, dynamic> json) =>
-      _$CitationPagination1FromJson(json);
-}
-
-@freezed
-abstract class CitationPublicationInfo1 implements _$CitationPublicationInfo1 {
-  CitationPublicationInfo1._();
-  factory CitationPublicationInfo1({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CitationPublishedIn1 publishedIn,
-    FhirDateTime entryDate,
-    @JsonKey(name: '_entryDate') Element entryDateElement,
-    FhirDateTime revisionDate,
-    @JsonKey(name: '_revisionDate') Element revisionDateElement,
-    String pageCount,
-    @JsonKey(name: '_pageCount') Element pageCountElement,
-  }) = _CitationPublicationInfo1;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationPublicationInfo1.fromYaml(dynamic yaml) => yaml is String
-      ? CitationPublicationInfo1.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? CitationPublicationInfo1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationPublicationInfo1.fromJson(Map<String, dynamic> json) =>
-      _$CitationPublicationInfo1FromJson(json);
-}
-
-@freezed
-abstract class CitationPublishedIn1 implements _$CitationPublishedIn1 {
-  CitationPublishedIn1._();
-  factory CitationPublishedIn1({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept type,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    Reference publisher,
-    String publisherLocation,
-    @JsonKey(name: '_publisherLocation') Element publisherLocationElement,
-    Date startDate,
-    @JsonKey(name: '_startDate') Element startDateElement,
-  }) = _CitationPublishedIn1;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationPublishedIn1.fromYaml(dynamic yaml) => yaml is String
-      ? CitationPublishedIn1.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? CitationPublishedIn1.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationPublishedIn1.fromJson(Map<String, dynamic> json) =>
-      _$CitationPublishedIn1FromJson(json);
-}
-
-@freezed
-abstract class CitationKeywordList implements _$CitationKeywordList {
-  CitationKeywordList._();
-  factory CitationKeywordList({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String owner,
-    @JsonKey(name: '_owner') Element ownerElement,
-    @required List<CitationKeyword> keyword,
-  }) = _CitationKeywordList;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationKeywordList.fromYaml(dynamic yaml) => yaml is String
-      ? CitationKeywordList.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? CitationKeywordList.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationKeywordList.fromJson(Map<String, dynamic> json) =>
-      _$CitationKeywordListFromJson(json);
-}
-
-@freezed
-abstract class CitationKeyword implements _$CitationKeyword {
-  CitationKeyword._();
-  factory CitationKeyword({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Boolean majorTopic,
-    @JsonKey(name: '_majorTopic') Element majorTopicElement,
-    String value,
-    @JsonKey(name: '_value') Element valueElement,
-  }) = _CitationKeyword;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationKeyword.fromYaml(dynamic yaml) => yaml is String
-      ? CitationKeyword.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? CitationKeyword.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationKeyword.fromJson(Map<String, dynamic> json) =>
-      _$CitationKeywordFromJson(json);
-}
-
-@freezed
-abstract class CitationMedlinePubMed implements _$CitationMedlinePubMed {
-  CitationMedlinePubMed._();
-  factory CitationMedlinePubMed({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept medlineState,
-    CodeableConcept owner,
-    PositiveInt pmid,
-    @JsonKey(name: '_pmid') Element pmidElement,
-    PositiveInt pmidVersion,
-    @JsonKey(name: '_pmidVersion') Element pmidVersionElement,
-    Date dateCreated,
-    @JsonKey(name: '_dateCreated') Element dateCreatedElement,
-    Date dateCompleted,
-    @JsonKey(name: '_dateCompleted') Element dateCompletedElement,
-    Date dateRevised,
-    @JsonKey(name: '_dateRevised') Element dateRevisedElement,
-    List<CitationPubMedPubDate> pubMedPubDate,
-    CodeableConcept publicationState,
-    List<CitationRelatedArticle> relatedArticle,
-  }) = _CitationMedlinePubMed;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationMedlinePubMed.fromYaml(dynamic yaml) => yaml is String
-      ? CitationMedlinePubMed.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? CitationMedlinePubMed.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationMedlinePubMed.fromJson(Map<String, dynamic> json) =>
-      _$CitationMedlinePubMedFromJson(json);
-}
-
-@freezed
-abstract class CitationPubMedPubDate implements _$CitationPubMedPubDate {
-  CitationPubMedPubDate._();
-  factory CitationPubMedPubDate({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept publicationState,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-  }) = _CitationPubMedPubDate;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationPubMedPubDate.fromYaml(dynamic yaml) => yaml is String
-      ? CitationPubMedPubDate.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? CitationPubMedPubDate.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationPubMedPubDate.fromJson(Map<String, dynamic> json) =>
-      _$CitationPubMedPubDateFromJson(json);
-}
-
-@freezed
-abstract class CitationRelatedArticle implements _$CitationRelatedArticle {
-  CitationRelatedArticle._();
-  factory CitationRelatedArticle({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Reference citationReference,
-    Markdown citationMarkdown,
-    @JsonKey(name: '_citationMarkdown') Element citationMarkdownElement,
-    List<Identifier> identifier,
-  }) = _CitationRelatedArticle;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts [Yaml String] as an argument
-  factory CitationRelatedArticle.fromYaml(dynamic yaml) => yaml is String
-      ? CitationRelatedArticle.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
-      : yaml is YamlMap
-          ? CitationRelatedArticle.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CitationRelatedArticle.fromJson(Map<String, dynamic> json) =>
-      _$CitationRelatedArticleFromJson(json);
-}
-
-@freezed
-abstract class EvidenceReport implements _$EvidenceReport {
+class EvidenceReport with Resource, _$EvidenceReport {
   EvidenceReport._();
   factory EvidenceReport({
-    @Default('EvidenceReport') String resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
-    List<Identifier> identifier,
-    String version,
-    @JsonKey(name: '_version') Element versionElement,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    String title,
-    @JsonKey(name: '_title') Element titleElement,
+    @Default(R5ResourceType.EvidenceReport)
+    @JsonKey(unknownEnumValue: R5ResourceType.EvidenceReport)
+        R5ResourceType resourceType,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    List<Identifier>? identifier,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
     @JsonKey(unknownEnumValue: EvidenceReportStatus.unknown)
-        EvidenceReportStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Boolean experimental,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-    String publisher,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    List<ContactDetail> contact,
-    Markdown description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<UsageContext> useContext,
-    List<CodeableConcept> jurisdiction,
-    Markdown purpose,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    Markdown copyright,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    Date approvalDate,
-    @JsonKey(name: '_approvalDate') Element approvalDateElement,
-    Date lastReviewDate,
-    @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
-    Period effectivePeriod,
-    List<Identifier> relatedIdentifier,
-    Reference citeAs,
-    CodeableConcept type,
-    List<Annotation> note,
-    List<RelatedArtifact> relatedArtifact,
-    @required EvidenceReportSubject subject,
-    List<ContactDetail> author,
-    List<ContactDetail> editor,
-    List<ContactDetail> reviewer,
-    List<ContactDetail> endorser,
-    List<EvidenceReportRelatesTo> relatesTo,
-    List<EvidenceReportSection> section,
+        EvidenceReportStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Boolean? experimental,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    List<ContactDetail>? contact,
+    Markdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
+    Markdown? purpose,
+    @JsonKey(name: '_purpose') Element? purposeElement,
+    Markdown? copyright,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
+    Date? approvalDate,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+    Date? lastReviewDate,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+    Period? effectivePeriod,
+    List<CodeableConcept>? topic,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
+    List<Identifier>? relatedIdentifier,
+    Reference? citeAsReference,
+    Markdown? citeAsMarkdown,
+    @JsonKey(name: '_citeAsMarkdown') Element? citeAsMarkdownElement,
+    CodeableConcept? type,
+    List<Annotation>? note,
+    required EvidenceReportSubject subject,
+    List<EvidenceReportRelatesTo>? relatesTo,
+    List<EvidenceReportSection>? section,
   }) = _EvidenceReport;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EvidenceReport.fromYaml(dynamic yaml) => yaml is String
-      ? EvidenceReport.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? EvidenceReport.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EvidenceReport.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? EvidenceReport.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EvidenceReport cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceReport.fromJson(Map<String, dynamic> json) =>
@@ -1101,25 +1087,29 @@ abstract class EvidenceReport implements _$EvidenceReport {
 }
 
 @freezed
-abstract class EvidenceReportSubject implements _$EvidenceReportSubject {
+class EvidenceReportSubject with _$EvidenceReportSubject {
   EvidenceReportSubject._();
   factory EvidenceReportSubject({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<EvidenceReportCharacteristic> characteristic,
-    List<Annotation> note,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<EvidenceReportCharacteristic>? characteristic,
+    List<Annotation>? note,
   }) = _EvidenceReportSubject;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EvidenceReportSubject.fromYaml(dynamic yaml) => yaml is String
-      ? EvidenceReportSubject.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? EvidenceReportSubject.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EvidenceReportSubject.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? EvidenceReportSubject.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EvidenceReportSubject cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceReportSubject.fromJson(Map<String, dynamic> json) =>
@@ -1127,35 +1117,37 @@ abstract class EvidenceReportSubject implements _$EvidenceReportSubject {
 }
 
 @freezed
-abstract class EvidenceReportCharacteristic
-    implements _$EvidenceReportCharacteristic {
+class EvidenceReportCharacteristic with _$EvidenceReportCharacteristic {
   EvidenceReportCharacteristic._();
   factory EvidenceReportCharacteristic({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required CodeableConcept code,
-    Reference valueReference,
-    CodeableConcept valueCodeableConcept,
-    Boolean valueBoolean,
-    @JsonKey(name: '_valueBoolean') Element valueBooleanElement,
-    Quantity valueQuantity,
-    Range valueRange,
-    Boolean exclude,
-    @JsonKey(name: '_exclude') Element excludeElement,
-    Period period,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required CodeableConcept code,
+    Reference? valueReference,
+    CodeableConcept? valueCodeableConcept,
+    Boolean? valueBoolean,
+    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+    Quantity? valueQuantity,
+    Range? valueRange,
+    Boolean? exclude,
+    @JsonKey(name: '_exclude') Element? excludeElement,
+    Period? period,
   }) = _EvidenceReportCharacteristic;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EvidenceReportCharacteristic.fromYaml(dynamic yaml) => yaml is String
       ? EvidenceReportCharacteristic.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EvidenceReportCharacteristic.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? EvidenceReportCharacteristic.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EvidenceReportCharacteristic cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceReportCharacteristic.fromJson(Map<String, dynamic> json) =>
@@ -1163,28 +1155,32 @@ abstract class EvidenceReportCharacteristic
 }
 
 @freezed
-abstract class EvidenceReportRelatesTo implements _$EvidenceReportRelatesTo {
+class EvidenceReportRelatesTo with _$EvidenceReportRelatesTo {
   EvidenceReportRelatesTo._();
   factory EvidenceReportRelatesTo({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: EvidenceReportRelatesToCode.unknown)
-        EvidenceReportRelatesToCode code,
-    @JsonKey(name: '_code') Element codeElement,
-    Identifier targetIdentifier,
-    Reference targetReference,
+        EvidenceReportRelatesToCode? code,
+    @JsonKey(name: '_code') Element? codeElement,
+    Identifier? targetIdentifier,
+    Reference? targetReference,
   }) = _EvidenceReportRelatesTo;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EvidenceReportRelatesTo.fromYaml(dynamic yaml) => yaml is String
-      ? EvidenceReportRelatesTo.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? EvidenceReportRelatesTo.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EvidenceReportRelatesTo.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? EvidenceReportRelatesTo.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EvidenceReportRelatesTo cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceReportRelatesTo.fromJson(Map<String, dynamic> json) =>
@@ -1192,36 +1188,41 @@ abstract class EvidenceReportRelatesTo implements _$EvidenceReportRelatesTo {
 }
 
 @freezed
-abstract class EvidenceReportSection implements _$EvidenceReportSection {
+class EvidenceReportSection with _$EvidenceReportSection {
   EvidenceReportSection._();
   factory EvidenceReportSection({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String title,
-    @JsonKey(name: '_title') Element titleElement,
-    CodeableConcept focus,
-    Reference focusReference,
-    List<Reference> author,
-    Narrative text,
-    Code mode,
-    @JsonKey(name: '_mode') Element modeElement,
-    CodeableConcept orderedBy,
-    List<CodeableConcept> entryClassifier,
-    List<Reference> entryReference,
-    CodeableConcept emptyReason,
-    List<EvidenceReportSection> section,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    CodeableConcept? focus,
+    Reference? focusReference,
+    List<Reference>? author,
+    Narrative? text,
+    Code? mode,
+    @JsonKey(name: '_mode') Element? modeElement,
+    CodeableConcept? orderedBy,
+    List<CodeableConcept>? entryClassifier,
+    List<Reference>? entryReference,
+    List<Quantity>? entryQuantity,
+    CodeableConcept? emptyReason,
+    List<EvidenceReportSection>? section,
   }) = _EvidenceReportSection;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EvidenceReportSection.fromYaml(dynamic yaml) => yaml is String
-      ? EvidenceReportSection.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? EvidenceReportSection.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EvidenceReportSection.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? EvidenceReportSection.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EvidenceReportSection cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceReportSection.fromJson(Map<String, dynamic> json) =>

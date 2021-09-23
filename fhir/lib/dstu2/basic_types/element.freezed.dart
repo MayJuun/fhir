@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'element.dart';
 
@@ -8,6 +9,10 @@ part of 'element.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Element _$ElementFromJson(Map<String, dynamic> json) {
   return _Element.fromJson(json);
 }
@@ -16,11 +21,10 @@ Element _$ElementFromJson(Map<String, dynamic> json) {
 class _$ElementTearOff {
   const _$ElementTearOff();
 
-// ignore: unused_element
   _Element call(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @JsonKey(name: 'fhir_comments') List<String> fhirComments}) {
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments}) {
     return _Element(
       id: id,
       extension_: extension_,
@@ -28,27 +32,25 @@ class _$ElementTearOff {
     );
   }
 
-// ignore: unused_element
   Element fromJson(Map<String, Object> json) {
     return Element.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Element = _$ElementTearOff();
 
 /// @nodoc
 mixin _$Element {
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @JsonKey(name: 'fhir_comments')
-  List<String> get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ElementCopyWith<Element> get copyWith;
+  $ElementCopyWith<Element> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -56,9 +58,9 @@ abstract class $ElementCopyWith<$Res> {
   factory $ElementCopyWith(Element value, $Res Function(Element) then) =
       _$ElementCopyWithImpl<$Res>;
   $Res call(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @JsonKey(name: 'fhir_comments') List<String> fhirComments});
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments});
 }
 
 /// @nodoc
@@ -71,18 +73,23 @@ class _$ElementCopyWithImpl<$Res> implements $ElementCopyWith<$Res> {
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object fhirComments = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? fhirComments = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as Id,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }
@@ -93,9 +100,9 @@ abstract class _$ElementCopyWith<$Res> implements $ElementCopyWith<$Res> {
       __$ElementCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @JsonKey(name: 'fhir_comments') List<String> fhirComments});
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments});
 }
 
 /// @nodoc
@@ -109,25 +116,29 @@ class __$ElementCopyWithImpl<$Res> extends _$ElementCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object extension_ = freezed,
-    Object fhirComments = freezed,
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? fhirComments = freezed,
   }) {
     return _then(_Element(
-      id: id == freezed ? _value.id : id as Id,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
       extension_: extension_ == freezed
           ? _value.extension_
-          : extension_ as List<FhirExtension>,
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
       fhirComments: fhirComments == freezed
           ? _value.fhirComments
-          : fhirComments as List<String>,
+          : fhirComments // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
     ));
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_Element extends _Element {
   _$_Element(
       {this.id,
@@ -136,16 +147,16 @@ class _$_Element extends _Element {
       : super._();
 
   factory _$_Element.fromJson(Map<String, dynamic> json) =>
-      _$_$_ElementFromJson(json);
+      _$$_ElementFromJson(json);
 
   @override
-  final Id id;
+  final Id? id;
   @override
   @JsonKey(name: 'extension')
-  final List<FhirExtension> extension_;
+  final List<FhirExtension>? extension_;
   @override
   @JsonKey(name: 'fhir_comments')
-  final List<String> fhirComments;
+  final List<String>? fhirComments;
 
   @override
   String toString() {
@@ -180,28 +191,29 @@ class _$_Element extends _Element {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_ElementToJson(this);
+    return _$$_ElementToJson(this);
   }
 }
 
 abstract class _Element extends Element {
-  _Element._() : super._();
   factory _Element(
-      {Id id,
-      @JsonKey(name: 'extension') List<FhirExtension> extension_,
-      @JsonKey(name: 'fhir_comments') List<String> fhirComments}) = _$_Element;
+      {Id? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      @JsonKey(name: 'fhir_comments') List<String>? fhirComments}) = _$_Element;
+  _Element._() : super._();
 
   factory _Element.fromJson(Map<String, dynamic> json) = _$_Element.fromJson;
 
   @override
-  Id get id;
+  Id? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension> get extension_;
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String> get fhirComments;
+  List<String>? get fhirComments => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$ElementCopyWith<_Element> get copyWith;
+  _$ElementCopyWith<_Element> get copyWith =>
+      throw _privateConstructorUsedError;
 }

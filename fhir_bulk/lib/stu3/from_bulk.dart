@@ -1,9 +1,9 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:fhir/stu3.dart';
 import 'package:mime/mime.dart';
 import 'package:archive/archive.dart';
+import 'package:universal_io/io.dart';
 
 abstract class FhirBulk {
   static String toNdJson(List<Resource> resources) {
@@ -15,9 +15,9 @@ abstract class FhirBulk {
     return stringList;
   }
 
-  static List<Resource> fromData(String content) {
+  static List<Resource?> fromData(String content) {
     final resourceStrings = content.split('\n');
-    final resourceList = <Resource>[];
+    final resourceList = <Resource?>[];
     for (final resource in resourceStrings) {
       if (resource.isNotEmpty) {
         resourceList.add(Resource.fromJson(jsonDecode(resource)));
@@ -26,19 +26,14 @@ abstract class FhirBulk {
     return resourceList;
   }
 
-  static Future<List<Resource>> fromFile(String path) async {
-    final resourceList = <Resource>[];
-    if (path == null) {
-      return resourceList;
-    } else {
-      final file = await File(path).readAsString();
-      return fromData(file);
-    }
+  static Future<List<Resource?>> fromFile(String path) async {
+    final file = await File(path).readAsString();
+    return fromData(file);
   }
 
-  static Future<List<Resource>> fromCompressedData(
+  static Future<List<Resource?>> fromCompressedData(
       String contentType, dynamic content) async {
-    final resourceList = <Resource>[];
+    final resourceList = <Resource?>[];
     if (contentType == 'application/zip' ||
         contentType == 'application/x-zip-compressed') {
       final archive = ZipDecoder().decodeBytes(content);
@@ -63,7 +58,7 @@ abstract class FhirBulk {
     return resourceList;
   }
 
-  static Future<List<Resource>> fromCompressedFile(String path) async {
+  static Future<List<Resource?>> fromCompressedFile(String path) async {
     final data = await File(path).readAsBytes();
     if (lookupMimeType(path) == 'application/zip' ||
         lookupMimeType(path) == 'application/x-zip-compressed' ||

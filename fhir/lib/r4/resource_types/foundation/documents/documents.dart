@@ -8,12 +8,11 @@ import 'package:yaml/yaml.dart';
 import '../../../../r4.dart';
 
 part 'documents.enums.dart';
-part 'documents.uscore.dart';
 part 'documents.freezed.dart';
 part 'documents.g.dart';
 
 @freezed
-abstract class CatalogEntry with Resource implements _$CatalogEntry {
+class CatalogEntry with Resource, _$CatalogEntry {
   CatalogEntry._();
 
   /// [CatalogEntry]: Catalog entries are wrappers that contextualize items
@@ -33,11 +32,11 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -51,7 +50,7 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -79,7 +78,7 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
   ///
   /// [orderable]: Whether the entry represents an orderable item.
   ///
-  /// [_orderable]: Extensions for orderable
+  /// [orderableElement]: Extensions for orderable
   ///
   /// [referencedItem]: The item in a catalog or definition.
   ///
@@ -91,7 +90,7 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
   /// [status]: Used to support catalog exchange even for unsupported products,
   ///  e.g. getting list of medications even if not prescribable.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [validityPeriod]: The time period in which this catalog entry is expected
   ///  to be active.
@@ -99,12 +98,12 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
   /// [validTo]: The date until which this catalog entry is expected to be
   ///  active.
   ///
-  /// [_validTo]: Extensions for validTo
+  /// [validToElement]: Extensions for validTo
   ///
   /// [lastUpdated]: Typically date of issue is different from the beginning of
   ///  the validity. This can be used to see when an item was last updated.
   ///
-  /// [_lastUpdated]: Extensions for lastUpdated
+  /// [lastUpdatedElement]: Extensions for lastUpdated
   ///
   /// [additionalCharacteristic]: Used for examplefor Out of Formulary, or any
   ///  specifics.
@@ -117,45 +116,50 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
     @Default(R4ResourceType.CatalogEntry)
     @JsonKey(unknownEnumValue: R4ResourceType.CatalogEntry)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    CodeableConcept type,
-    Boolean orderable,
-    @JsonKey(name: '_orderable') Element orderableElement,
-    @required Reference referencedItem,
-    List<Identifier> additionalIdentifier,
-    List<CodeableConcept> classification,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    CodeableConcept? type,
+    Boolean? orderable,
+    @JsonKey(name: '_orderable') Element? orderableElement,
+    required Reference referencedItem,
+    List<Identifier>? additionalIdentifier,
+    List<CodeableConcept>? classification,
     @JsonKey(unknownEnumValue: CatalogEntryStatus.unknown)
-        CatalogEntryStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Period validityPeriod,
-    FhirDateTime validTo,
-    @JsonKey(name: '_validTo') Element validToElement,
-    FhirDateTime lastUpdated,
-    @JsonKey(name: '_lastUpdated') Element lastUpdatedElement,
-    List<CodeableConcept> additionalCharacteristic,
-    List<CodeableConcept> additionalClassification,
-    List<CatalogEntryRelatedEntry> relatedEntry,
+        CatalogEntryStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Period? validityPeriod,
+    FhirDateTime? validTo,
+    @JsonKey(name: '_validTo') Element? validToElement,
+    FhirDateTime? lastUpdated,
+    @JsonKey(name: '_lastUpdated') Element? lastUpdatedElement,
+    List<CodeableConcept>? additionalCharacteristic,
+    List<CodeableConcept>? additionalClassification,
+    List<CatalogEntryRelatedEntry>? relatedEntry,
   }) = _CatalogEntry;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CatalogEntry.fromYaml(dynamic yaml) => yaml is String
-      ? CatalogEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? CatalogEntry.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CatalogEntry.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CatalogEntry.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CatalogEntry cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CatalogEntry.fromJson(Map<String, dynamic> json) =>
@@ -163,16 +167,16 @@ abstract class CatalogEntry with Resource implements _$CatalogEntry {
 }
 
 @freezed
-abstract class CatalogEntryRelatedEntry implements _$CatalogEntryRelatedEntry {
+class CatalogEntryRelatedEntry with _$CatalogEntryRelatedEntry {
   CatalogEntryRelatedEntry._();
 
-  /// [CatalogEntry_RelatedEntry]: Catalog entries are wrappers that
+  /// [CatalogEntryRelatedEntry]: Catalog entries are wrappers that
   ///  contextualize items included in a catalog.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -196,29 +200,32 @@ abstract class CatalogEntryRelatedEntry implements _$CatalogEntryRelatedEntry {
   /// [relationtype]: The type of relation to the related item: child, parent,
   ///  packageContent, containerPackage, usedIn, uses, requires, etc.
   ///
-  /// [_relationtype]: Extensions for relationtype
+  /// [relationtypeElement]: Extensions for relationtype
   ///
   /// [item]: The reference to the related item.
   factory CatalogEntryRelatedEntry({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CatalogEntryRelatedEntryRelationtype.unknown)
-        CatalogEntryRelatedEntryRelationtype relationtype,
-    @JsonKey(name: '_relationtype') Element relationtypeElement,
-    @required Reference item,
+        CatalogEntryRelatedEntryRelationtype? relationtype,
+    @JsonKey(name: '_relationtype') Element? relationtypeElement,
+    required Reference item,
   }) = _CatalogEntryRelatedEntry;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CatalogEntryRelatedEntry.fromYaml(dynamic yaml) => yaml is String
       ? CatalogEntryRelatedEntry.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CatalogEntryRelatedEntry.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CatalogEntryRelatedEntry.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CatalogEntryRelatedEntry cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CatalogEntryRelatedEntry.fromJson(Map<String, dynamic> json) =>
@@ -226,7 +233,7 @@ abstract class CatalogEntryRelatedEntry implements _$CatalogEntryRelatedEntry {
 }
 
 @freezed
-abstract class Composition with Resource implements _$Composition {
+class Composition with Resource, _$Composition {
   Composition._();
 
   /// [Composition]: A set of healthcare-related information that is assembled
@@ -254,11 +261,11 @@ abstract class Composition with Resource implements _$Composition {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -272,7 +279,7 @@ abstract class Composition with Resource implements _$Composition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -299,7 +306,7 @@ abstract class Composition with Resource implements _$Composition {
   /// [status]: The workflow/clinical status of this composition. The status is
   ///  a marker for the clinical standing of the document.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [type]: Specifies the particular kind of composition (e.g. History and
   /// Physical, Discharge Summary, Progress Note). This usually equates to the
@@ -320,19 +327,19 @@ abstract class Composition with Resource implements _$Composition {
   /// [date]: The composition editing time, when the composition was last
   ///  logically changed by the author.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [author]: Identifies who is responsible for the information in the
   ///  composition, not necessarily who typed it in.
   ///
   /// [title]: Official human-readable label for the composition.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [confidentiality]: The code specifying the level of confidentiality of the
   ///  Composition.
   ///
-  /// [_confidentiality]: Extensions for confidentiality
+  /// [confidentialityElement]: Extensions for confidentiality
   ///
   /// [attester]: A participant who has attested to the accuracy of the
   ///  composition/document.
@@ -352,47 +359,52 @@ abstract class Composition with Resource implements _$Composition {
     @Default(R4ResourceType.Composition)
     @JsonKey(unknownEnumValue: R4ResourceType.Composition)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier identifier,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? identifier,
     @JsonKey(unknownEnumValue: CompositionStatus.unknown)
-        CompositionStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    @required CodeableConcept type,
-    List<CodeableConcept> category,
-    Reference subject,
-    Reference encounter,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-    @required List<Reference> author,
-    String title,
-    @JsonKey(name: '_title') Element titleElement,
-    Code confidentiality,
-    @JsonKey(name: '_confidentiality') Element confidentialityElement,
-    List<CompositionAttester> attester,
-    Reference custodian,
-    List<CompositionRelatesTo> relatesTo,
-    List<CompositionEvent> event,
-    List<CompositionSection> section,
+        CompositionStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    required CodeableConcept type,
+    List<CodeableConcept>? category,
+    Reference? subject,
+    Reference? encounter,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    required List<Reference> author,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    Code? confidentiality,
+    @JsonKey(name: '_confidentiality') Element? confidentialityElement,
+    List<CompositionAttester>? attester,
+    Reference? custodian,
+    List<CompositionRelatesTo>? relatesTo,
+    List<CompositionEvent>? event,
+    List<CompositionSection>? section,
   }) = _Composition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Composition.fromYaml(dynamic yaml) => yaml is String
-      ? Composition.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Composition.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Composition.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? Composition.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'Composition cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Composition.fromJson(Map<String, dynamic> json) =>
@@ -400,10 +412,10 @@ abstract class Composition with Resource implements _$Composition {
 }
 
 @freezed
-abstract class CompositionAttester implements _$CompositionAttester {
+class CompositionAttester with _$CompositionAttester {
   CompositionAttester._();
 
-  /// [Composition_Attester]: A set of healthcare-related information that is
+  /// [CompositionAttester]: A set of healthcare-related information that is
   /// assembled together into a single logical package that provides a single
   /// coherent statement of meaning, establishes its own context and that has
   /// clinical attestation with regard to who is making the statement. A
@@ -417,7 +429,7 @@ abstract class CompositionAttester implements _$CompositionAttester {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -440,34 +452,38 @@ abstract class CompositionAttester implements _$CompositionAttester {
   ///
   /// [mode]: The type of attestation the authenticator offers.
   ///
-  /// [_mode]: Extensions for mode
+  /// [modeElement]: Extensions for mode
   ///
   /// [time]: When the composition was attested by the party.
   ///
-  /// [_time]: Extensions for time
+  /// [timeElement]: Extensions for time
   ///
   /// [party]: Who attested the composition in the specified way.
   factory CompositionAttester({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: CompositionAttesterMode.unknown)
-        CompositionAttesterMode mode,
-    @JsonKey(name: '_mode') Element modeElement,
-    FhirDateTime time,
-    @JsonKey(name: '_time') Element timeElement,
-    Reference party,
+        CompositionAttesterMode? mode,
+    @JsonKey(name: '_mode') Element? modeElement,
+    FhirDateTime? time,
+    @JsonKey(name: '_time') Element? timeElement,
+    Reference? party,
   }) = _CompositionAttester;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CompositionAttester.fromYaml(dynamic yaml) => yaml is String
-      ? CompositionAttester.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? CompositionAttester.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CompositionAttester.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CompositionAttester.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CompositionAttester cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
@@ -475,10 +491,10 @@ abstract class CompositionAttester implements _$CompositionAttester {
 }
 
 @freezed
-abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
+class CompositionRelatesTo with _$CompositionRelatesTo {
   CompositionRelatesTo._();
 
-  /// [Composition_RelatesTo]: A set of healthcare-related information that is
+  /// [CompositionRelatesTo]: A set of healthcare-related information that is
   /// assembled together into a single logical package that provides a single
   /// coherent statement of meaning, establishes its own context and that has
   /// clinical attestation with regard to who is making the statement. A
@@ -492,7 +508,7 @@ abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -516,30 +532,34 @@ abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
   /// [code]: The type of relationship that this composition has with anther
   ///  composition or document.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [targetIdentifier]: The target composition/document of this relationship.
   ///
   /// [targetReference]: The target composition/document of this relationship.
   factory CompositionRelatesTo({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Code code,
-    @JsonKey(name: '_code') Element codeElement,
-    Identifier targetIdentifier,
-    Reference targetReference,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Code? code,
+    @JsonKey(name: '_code') Element? codeElement,
+    Identifier? targetIdentifier,
+    Reference? targetReference,
   }) = _CompositionRelatesTo;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CompositionRelatesTo.fromYaml(dynamic yaml) => yaml is String
-      ? CompositionRelatesTo.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? CompositionRelatesTo.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CompositionRelatesTo.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CompositionRelatesTo.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CompositionRelatesTo cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CompositionRelatesTo.fromJson(Map<String, dynamic> json) =>
@@ -547,10 +567,10 @@ abstract class CompositionRelatesTo implements _$CompositionRelatesTo {
 }
 
 @freezed
-abstract class CompositionEvent implements _$CompositionEvent {
+class CompositionEvent with _$CompositionEvent {
   CompositionEvent._();
 
-  /// [Composition_Event]: A set of healthcare-related information that is
+  /// [CompositionEvent]: A set of healthcare-related information that is
   /// assembled together into a single logical package that provides a single
   /// coherent statement of meaning, establishes its own context and that has
   /// clinical attestation with regard to who is making the statement. A
@@ -564,7 +584,7 @@ abstract class CompositionEvent implements _$CompositionEvent {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -599,23 +619,27 @@ abstract class CompositionEvent implements _$CompositionEvent {
   /// documented. For example, this could be used to document such a colonoscopy
   ///  or an appendectomy.
   factory CompositionEvent({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<CodeableConcept> code,
-    Period period,
-    List<Reference> detail,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<CodeableConcept>? code,
+    Period? period,
+    List<Reference>? detail,
   }) = _CompositionEvent;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CompositionEvent.fromYaml(dynamic yaml) => yaml is String
-      ? CompositionEvent.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? CompositionEvent.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CompositionEvent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CompositionEvent.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CompositionEvent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CompositionEvent.fromJson(Map<String, dynamic> json) =>
@@ -623,10 +647,10 @@ abstract class CompositionEvent implements _$CompositionEvent {
 }
 
 @freezed
-abstract class CompositionSection implements _$CompositionSection {
+class CompositionSection with _$CompositionSection {
   CompositionSection._();
 
-  /// [Composition_Section]: A set of healthcare-related information that is
+  /// [CompositionSection]: A set of healthcare-related information that is
   /// assembled together into a single logical package that provides a single
   /// coherent statement of meaning, establishes its own context and that has
   /// clinical attestation with regard to who is making the statement. A
@@ -640,7 +664,7 @@ abstract class CompositionSection implements _$CompositionSection {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -665,7 +689,7 @@ abstract class CompositionSection implements _$CompositionSection {
   /// rendered content for the document, and is often used to build a table of
   ///  contents.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [code]: A code identifying the kind of content contained within the
   ///  section. This must be consistent with the section title.
@@ -694,7 +718,7 @@ abstract class CompositionSection implements _$CompositionSection {
   /// it is a prepared list where items may be marked as added, modified or
   ///  deleted.
   ///
-  /// [_mode]: Extensions for mode
+  /// [modeElement]: Extensions for mode
   ///
   /// [orderedBy]: Specifies the order applied to the items in the section
   ///  entries.
@@ -707,32 +731,36 @@ abstract class CompositionSection implements _$CompositionSection {
   ///
   /// [section]: A nested sub-section within this section.
   factory CompositionSection({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    String title,
-    @JsonKey(name: '_title') Element titleElement,
-    CodeableConcept code,
-    List<Reference> author,
-    Reference focus,
-    Narrative text,
-    Code mode,
-    @JsonKey(name: '_mode') Element modeElement,
-    CodeableConcept orderedBy,
-    List<Reference> entry,
-    CodeableConcept emptyReason,
-    List<CompositionSection> section,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    CodeableConcept? code,
+    List<Reference>? author,
+    Reference? focus,
+    Narrative? text,
+    Code? mode,
+    @JsonKey(name: '_mode') Element? modeElement,
+    CodeableConcept? orderedBy,
+    List<Reference>? entry,
+    CodeableConcept? emptyReason,
+    List<CompositionSection>? section,
   }) = _CompositionSection;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory CompositionSection.fromYaml(dynamic yaml) => yaml is String
-      ? CompositionSection.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? CompositionSection.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CompositionSection.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? CompositionSection.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'CompositionSection cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CompositionSection.fromJson(Map<String, dynamic> json) =>
@@ -740,7 +768,7 @@ abstract class CompositionSection implements _$CompositionSection {
 }
 
 @freezed
-abstract class DocumentManifest with Resource implements _$DocumentManifest {
+class DocumentManifest with Resource, _$DocumentManifest {
   DocumentManifest._();
 
   /// [DocumentManifest]: A collection of documents compiled for a purpose
@@ -760,11 +788,11 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -778,7 +806,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -807,7 +835,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
   ///
   /// [status]: The status of this document manifest.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [type]: The code specifying the type of clinical activity that resulted in
   ///  placing the associated content into the DocumentManifest.
@@ -823,7 +851,7 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
   /// server (not necessarily the same thing as the actual resource last
   ///  modified time, since it may be modified, replicated, etc.).
   ///
-  /// [_created]: Extensions for created
+  /// [createdElement]: Extensions for created
   ///
   /// [author]: Identifies who is the author of the manifest. Manifest author is
   ///  not necessarly the author of the references included.
@@ -834,12 +862,12 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
   /// [source]: Identifies the source system, application, or software that
   ///  produced the document manifest.
   ///
-  /// [_source]: Extensions for source
+  /// [sourceElement]: Extensions for source
   ///
   /// [description]: Human-readable description of the source document. This is
   ///  sometimes known as the "title".
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [content]: The list of Resources that consist of the parts of this
   ///  manifest.
@@ -850,44 +878,49 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
     @Default(R4ResourceType.DocumentManifest)
     @JsonKey(unknownEnumValue: R4ResourceType.DocumentManifest)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier masterIdentifier,
-    List<Identifier> identifier,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? masterIdentifier,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: DocumentManifestStatus.unknown)
-        DocumentManifestStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    CodeableConcept type,
-    Reference subject,
-    FhirDateTime created,
-    @JsonKey(name: '_created') Element createdElement,
-    List<Reference> author,
-    List<Reference> recipient,
-    FhirUri source,
-    @JsonKey(name: '_source') Element sourceElement,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    @required List<Reference> content,
-    List<DocumentManifestRelated> related,
+        DocumentManifestStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? type,
+    Reference? subject,
+    FhirDateTime? created,
+    @JsonKey(name: '_created') Element? createdElement,
+    List<Reference>? author,
+    List<Reference>? recipient,
+    FhirUri? source,
+    @JsonKey(name: '_source') Element? sourceElement,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    required List<Reference> content,
+    List<DocumentManifestRelated>? related,
   }) = _DocumentManifest;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DocumentManifest.fromYaml(dynamic yaml) => yaml is String
-      ? DocumentManifest.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? DocumentManifest.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DocumentManifest.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? DocumentManifest.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'DocumentManifest cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
@@ -895,16 +928,16 @@ abstract class DocumentManifest with Resource implements _$DocumentManifest {
 }
 
 @freezed
-abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
+class DocumentManifestRelated with _$DocumentManifestRelated {
   DocumentManifestRelated._();
 
-  /// [DocumentManifest_Related]: A collection of documents compiled for a
+  /// [DocumentManifestRelated]: A collection of documents compiled for a
   ///  purpose together with metadata that applies to the collection.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -931,22 +964,26 @@ abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
   /// [ref]: Related Resource to this DocumentManifest. For example, Order,
   ///  ServiceRequest,  Procedure, EligibilityRequest, etc.
   factory DocumentManifestRelated({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier identifier,
-    Reference ref,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? identifier,
+    Reference? ref,
   }) = _DocumentManifestRelated;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DocumentManifestRelated.fromYaml(dynamic yaml) => yaml is String
-      ? DocumentManifestRelated.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? DocumentManifestRelated.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DocumentManifestRelated.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? DocumentManifestRelated.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'DocumentManifestRelated cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
@@ -954,7 +991,7 @@ abstract class DocumentManifestRelated implements _$DocumentManifestRelated {
 }
 
 @freezed
-abstract class DocumentReference with Resource implements _$DocumentReference {
+class DocumentReference with Resource, _$DocumentReference {
   DocumentReference._();
 
   /// [DocumentReference]: A reference to a document of any kind for any
@@ -978,11 +1015,11 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -996,7 +1033,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1027,11 +1064,11 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
   ///
   /// [status]: The status of this document reference.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [docStatus]: The status of the underlying document.
   ///
-  /// [_docStatus]: Extensions for docStatus
+  /// [docStatusElement]: Extensions for docStatus
   ///
   /// [type]: Specifies the particular kind of document referenced  (e.g.
   /// History and Physical, Discharge Summary, Progress Note). This usually
@@ -1048,7 +1085,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
   ///
   /// [date]: When the document reference was created.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [author]: Identifies who is responsible for adding the information to the
   ///  document.
@@ -1064,7 +1101,7 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
   ///
   /// [description]: Human-readable description of the source document.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [securityLabel]: A set of Security-Tag codes specifying the level of
   /// privacy/security of the Document. Note that
@@ -1081,103 +1118,53 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
     @Default(R4ResourceType.DocumentReference)
     @JsonKey(unknownEnumValue: R4ResourceType.DocumentReference)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier masterIdentifier,
-    List<Identifier> identifier,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? masterIdentifier,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: DocumentReferenceStatus.unknown)
-        DocumentReferenceStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Code docStatus,
-    @JsonKey(name: '_docStatus') Element docStatusElement,
-    CodeableConcept type,
-    List<CodeableConcept> category,
-    Reference subject,
-    Instant date,
-    @JsonKey(name: '_date') Element dateElement,
-    List<Reference> author,
-    Reference authenticator,
-    Reference custodian,
-    List<DocumentReferenceRelatesTo> relatesTo,
-    String description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<CodeableConcept> securityLabel,
-    @required List<DocumentReferenceContent> content,
-    DocumentReferenceContext context,
+        DocumentReferenceStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Code? docStatus,
+    @JsonKey(name: '_docStatus') Element? docStatusElement,
+    CodeableConcept? type,
+    List<CodeableConcept>? category,
+    Reference? subject,
+    Instant? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    List<Reference>? author,
+    Reference? authenticator,
+    Reference? custodian,
+    List<DocumentReferenceRelatesTo>? relatesTo,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<CodeableConcept>? securityLabel,
+    required List<DocumentReferenceContent> content,
+    DocumentReferenceContext? context,
   }) = _DocumentReference;
 
-  factory DocumentReference.usCore({
-    List<Identifier> identifier,
-    @required DocumentReferenceStatus status,
-    @required CodeableConcept type,
-    @required List<CodeableConcept> category,
-    @required Reference subject,
-    Instant date,
-    List<Reference> author,
-    Reference custodian,
-    @required List<DocumentReferenceContent> content,
-    DocumentReferenceContext context,
-  }) =>
-      DocumentReference(
-        identifier: identifier,
-        status: status,
-        type: type,
-        category: category,
-        subject: subject,
-        date: date,
-        author: author,
-        custodian: custodian,
-        content: content,
-        context: context,
-      );
-
-  factory DocumentReference.usCoreMinimum({
-    @required DocumentReferenceStatus status,
-    @required DocumentReferenceType documentReferenceType,
-    List<CodeableConcept> category,
-    @required Reference subject,
-    @required List<DocumentReferenceContent> content,
-  }) {
-    category ??= <CodeableConcept>[];
-    category.add(
-      CodeableConcept(
-        coding: [
-          Coding(
-            system: FhirUri(
-                'http://hl7.org/fhir/us/core/CodeSystem/us-core-documentreference-category'),
-            code: Code('clinical-note'),
-            display: 'Clinical Note',
-          ),
-        ],
-        text: 'Clinical Note',
-      ),
-    );
-    return DocumentReference.usCore(
-      status: status,
-      type: codeableConceptFromDocumentReferenceType[documentReferenceType],
-      category: category,
-      subject: subject,
-      content: content,
-    );
-  }
-
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DocumentReference.fromYaml(dynamic yaml) => yaml is String
-      ? DocumentReference.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? DocumentReference.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DocumentReference.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? DocumentReference.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'DocumentReference cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReference.fromJson(Map<String, dynamic> json) =>
@@ -1185,11 +1172,10 @@ abstract class DocumentReference with Resource implements _$DocumentReference {
 }
 
 @freezed
-abstract class DocumentReferenceRelatesTo
-    implements _$DocumentReferenceRelatesTo {
+class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   DocumentReferenceRelatesTo._();
 
-  /// [DocumentReference_RelatesTo]: A reference to a document of any kind for
+  /// [DocumentReferenceRelatesTo]: A reference to a document of any kind for
   /// any purpose. Provides metadata about the document so that the document can
   /// be discovered and managed. The scope of a document is any seralized object
   /// with a mime-type, so includes formal patient centric documents (CDA),
@@ -1199,7 +1185,7 @@ abstract class DocumentReferenceRelatesTo
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1223,29 +1209,32 @@ abstract class DocumentReferenceRelatesTo
   /// [code]: The type of relationship that this document has with anther
   ///  document.
   ///
-  /// [_code]: Extensions for code
+  /// [codeElement]: Extensions for code
   ///
   /// [target]: The target document of this relationship.
   factory DocumentReferenceRelatesTo({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: DocumentReferenceRelatesToCode.unknown)
-        DocumentReferenceRelatesToCode code,
-    @JsonKey(name: '_code') Element codeElement,
-    @required Reference target,
+        DocumentReferenceRelatesToCode? code,
+    @JsonKey(name: '_code') Element? codeElement,
+    required Reference target,
   }) = _DocumentReferenceRelatesTo;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DocumentReferenceRelatesTo.fromYaml(dynamic yaml) => yaml is String
       ? DocumentReferenceRelatesTo.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DocumentReferenceRelatesTo.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? DocumentReferenceRelatesTo.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'DocumentReferenceRelatesTo cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
@@ -1253,10 +1242,10 @@ abstract class DocumentReferenceRelatesTo
 }
 
 @freezed
-abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
+class DocumentReferenceContent with _$DocumentReferenceContent {
   DocumentReferenceContent._();
 
-  /// [DocumentReference_Content]: A reference to a document of any kind for any
+  /// [DocumentReferenceContent]: A reference to a document of any kind for any
   /// purpose. Provides metadata about the document so that the document can be
   /// discovered and managed. The scope of a document is any seralized object
   /// with a mime-type, so includes formal patient centric documents (CDA),
@@ -1266,7 +1255,7 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1294,23 +1283,26 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
   /// that the document conforms to beyond the base format indicated in the
   ///  mimeType.
   factory DocumentReferenceContent({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required Attachment attachment,
-    Coding format,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Attachment attachment,
+    Coding? format,
   }) = _DocumentReferenceContent;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DocumentReferenceContent.fromYaml(dynamic yaml) => yaml is String
       ? DocumentReferenceContent.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DocumentReferenceContent.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? DocumentReferenceContent.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'DocumentReferenceContent cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
@@ -1318,10 +1310,10 @@ abstract class DocumentReferenceContent implements _$DocumentReferenceContent {
 }
 
 @freezed
-abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
+class DocumentReferenceContext with _$DocumentReferenceContext {
   DocumentReferenceContext._();
 
-  /// [DocumentReference_Context]: A reference to a document of any kind for any
+  /// [DocumentReferenceContext]: A reference to a document of any kind for any
   /// purpose. Provides metadata about the document so that the document can be
   /// discovered and managed. The scope of a document is any seralized object
   /// with a mime-type, so includes formal patient centric documents (CDA),
@@ -1331,7 +1323,7 @@ abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1376,28 +1368,31 @@ abstract class DocumentReferenceContext implements _$DocumentReferenceContext {
   /// [related]: Related identifiers or resources associated with the
   ///  DocumentReference.
   factory DocumentReferenceContext({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Reference> encounter,
-    List<CodeableConcept> event,
-    Period period,
-    CodeableConcept facilityType,
-    CodeableConcept practiceSetting,
-    Reference sourcePatientInfo,
-    List<Reference> related,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Reference>? encounter,
+    List<CodeableConcept>? event,
+    Period? period,
+    CodeableConcept? facilityType,
+    CodeableConcept? practiceSetting,
+    Reference? sourcePatientInfo,
+    List<Reference>? related,
   }) = _DocumentReferenceContext;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory DocumentReferenceContext.fromYaml(dynamic yaml) => yaml is String
       ? DocumentReferenceContext.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DocumentReferenceContext.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? DocumentReferenceContext.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'DocumentReferenceContext cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>

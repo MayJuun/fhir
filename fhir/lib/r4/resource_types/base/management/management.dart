@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'dart:convert';
 
 import 'package:fhir_yaml/fhir_yaml.dart';
@@ -8,12 +10,11 @@ import 'package:yaml/yaml.dart';
 import '../../../../r4.dart';
 
 part 'management.enums.dart';
-part 'management.uscore.dart';
 part 'management.freezed.dart';
 part 'management.g.dart';
 
 @freezed
-abstract class Encounter with Resource implements _$Encounter {
+class Encounter with Resource, _$Encounter {
   Encounter._();
 
   /// [Encounter]: An interaction between a patient and healthcare provider(s)
@@ -34,11 +35,11 @@ abstract class Encounter with Resource implements _$Encounter {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -52,7 +53,7 @@ abstract class Encounter with Resource implements _$Encounter {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -78,13 +79,13 @@ abstract class Encounter with Resource implements _$Encounter {
   /// [status]: planned | arrived | triaged | in-progress | onleave | finished |
   ///  cancelled +.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [statusHistory]: The status history permits the encounter resource to
   /// contain the status history without needing to read through the historical
   ///  versions of the resource, or even have the server store them.
   ///
-  /// [class]: Concepts representing classification of patient encounter such as
+  /// [class_]: Concepts representing classification of patient encounter such as
   /// ambulatory (outpatient), inpatient, emergency, home health or others due
   ///  to local variations.
   ///
@@ -156,93 +157,56 @@ abstract class Encounter with Resource implements _$Encounter {
     @Default(R4ResourceType.Encounter)
     @JsonKey(unknownEnumValue: R4ResourceType.Encounter)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: EncounterStatus.unknown) EncounterStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    List<EncounterStatusHistory> statusHistory,
-    @JsonKey(name: 'class') @required Coding class_,
-    List<EncounterClassHistory> classHistory,
-    List<CodeableConcept> type,
-    CodeableConcept serviceType,
-    CodeableConcept priority,
-    Reference subject,
-    List<Reference> episodeOfCare,
-    List<Reference> basedOn,
-    List<EncounterParticipant> participant,
-    List<Reference> appointment,
-    Period period,
-    FhirDuration length,
-    List<CodeableConcept> reasonCode,
-    List<Reference> reasonReference,
-    List<EncounterDiagnosis> diagnosis,
-    List<Reference> account,
-    EncounterHospitalization hospitalization,
-    List<EncounterLocation> location,
-    Reference serviceProvider,
-    Reference partOf,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    @JsonKey(unknownEnumValue: EncounterStatus.unknown) EncounterStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<EncounterStatusHistory>? statusHistory,
+    @JsonKey(name: 'class') required Coding class_,
+    List<EncounterClassHistory>? classHistory,
+    List<CodeableConcept>? type,
+    CodeableConcept? serviceType,
+    CodeableConcept? priority,
+    Reference? subject,
+    List<Reference>? episodeOfCare,
+    List<Reference>? basedOn,
+    List<EncounterParticipant>? participant,
+    List<Reference>? appointment,
+    Period? period,
+    FhirDuration? length,
+    List<CodeableConcept>? reasonCode,
+    List<Reference>? reasonReference,
+    List<EncounterDiagnosis>? diagnosis,
+    List<Reference>? account,
+    EncounterHospitalization? hospitalization,
+    List<EncounterLocation>? location,
+    Reference? serviceProvider,
+    Reference? partOf,
   }) = _Encounter;
 
-  factory Encounter.usCore({
-    List<Identifier> identifier,
-    @required EncounterStatus status,
-    @required Coding class_,
-    @required EncounterType encounterType,
-    List<CodeableConcept> type,
-    @required Reference subject,
-    List<EncounterParticipant> participant,
-    Period period,
-    List<CodeableConcept> reasonCode,
-    EncounterHospitalization hospitalization,
-    List<EncounterLocation> location,
-  }) {
-    type ??= <CodeableConcept>[];
-    type.add(codeableConceptFromEncounterType[encounterType]);
-    return Encounter(
-      identifier: identifier,
-      status: status,
-      class_: class_,
-      type: type,
-      subject: subject,
-      participant: participant,
-      period: period,
-      reasonCode: reasonCode,
-      hospitalization: hospitalization,
-      location: location,
-    );
-  }
-
-  factory Encounter.usCoreMinimum({
-    @required EncounterStatus status,
-    @required Coding class_,
-    @required EncounterType encounterType,
-    @required Reference subject,
-  }) =>
-      Encounter.usCore(
-        status: status,
-        class_: class_,
-        encounterType: encounterType,
-        subject: subject,
-      );
-
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Encounter.fromYaml(dynamic yaml) => yaml is String
-      ? Encounter.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Encounter.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Encounter.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? Encounter.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'Encounter cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Encounter.fromJson(Map<String, dynamic> json) =>
@@ -250,17 +214,17 @@ abstract class Encounter with Resource implements _$Encounter {
 }
 
 @freezed
-abstract class EncounterStatusHistory implements _$EncounterStatusHistory {
+class EncounterStatusHistory with _$EncounterStatusHistory {
   EncounterStatusHistory._();
 
-  /// [Encounter_StatusHistory]: An interaction between a patient and healthcare
+  /// [EncounterStatusHistory]: An interaction between a patient and healthcare
   /// provider(s) for the purpose of providing healthcare service(s) or
   ///  assessing the health status of a patient.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -284,28 +248,32 @@ abstract class EncounterStatusHistory implements _$EncounterStatusHistory {
   /// [status]: planned | arrived | triaged | in-progress | onleave | finished |
   ///  cancelled +.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [period]: The time that the episode was in the specified status.
   factory EncounterStatusHistory({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: EncounterStatusHistoryStatus.unknown)
-        EncounterStatusHistoryStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    @required Period period,
+        EncounterStatusHistoryStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    required Period period,
   }) = _EncounterStatusHistory;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EncounterStatusHistory.fromYaml(dynamic yaml) => yaml is String
-      ? EncounterStatusHistory.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? EncounterStatusHistory.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EncounterStatusHistory.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? EncounterStatusHistory.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EncounterStatusHistory cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EncounterStatusHistory.fromJson(Map<String, dynamic> json) =>
@@ -313,17 +281,17 @@ abstract class EncounterStatusHistory implements _$EncounterStatusHistory {
 }
 
 @freezed
-abstract class EncounterClassHistory implements _$EncounterClassHistory {
+class EncounterClassHistory with _$EncounterClassHistory {
   EncounterClassHistory._();
 
-  /// [Encounter_ClassHistory]: An interaction between a patient and healthcare
+  /// [EncounterClassHistory]: An interaction between a patient and healthcare
   /// provider(s) for the purpose of providing healthcare service(s) or
   ///  assessing the health status of a patient.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -344,26 +312,30 @@ abstract class EncounterClassHistory implements _$EncounterClassHistory {
   /// Resource or DomainResource (including cannot change the meaning of
   ///  modifierExtension itself).
   ///
-  /// [class]: inpatient | outpatient | ambulatory | emergency +.
+  /// [class_]: inpatient | outpatient | ambulatory | emergency +.
   ///
   /// [period]: The time that the episode was in the specified class.
   factory EncounterClassHistory({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @JsonKey(name: 'class') @required Coding class_,
-    @required Period period,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    @JsonKey(name: 'class') required Coding class_,
+    required Period period,
   }) = _EncounterClassHistory;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EncounterClassHistory.fromYaml(dynamic yaml) => yaml is String
-      ? EncounterClassHistory.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? EncounterClassHistory.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EncounterClassHistory.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? EncounterClassHistory.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EncounterClassHistory cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EncounterClassHistory.fromJson(Map<String, dynamic> json) =>
@@ -371,17 +343,17 @@ abstract class EncounterClassHistory implements _$EncounterClassHistory {
 }
 
 @freezed
-abstract class EncounterParticipant implements _$EncounterParticipant {
+class EncounterParticipant with _$EncounterParticipant {
   EncounterParticipant._();
 
-  /// [Encounter_Participant]: An interaction between a patient and healthcare
+  /// [EncounterParticipant]: An interaction between a patient and healthcare
   /// provider(s) for the purpose of providing healthcare service(s) or
   ///  assessing the health status of a patient.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -410,23 +382,27 @@ abstract class EncounterParticipant implements _$EncounterParticipant {
   ///
   /// [individual]: Persons involved in the encounter other than the patient.
   factory EncounterParticipant({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<CodeableConcept> type,
-    Period period,
-    Reference individual,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<CodeableConcept>? type,
+    Period? period,
+    Reference? individual,
   }) = _EncounterParticipant;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EncounterParticipant.fromYaml(dynamic yaml) => yaml is String
-      ? EncounterParticipant.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? EncounterParticipant.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EncounterParticipant.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? EncounterParticipant.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EncounterParticipant cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EncounterParticipant.fromJson(Map<String, dynamic> json) =>
@@ -434,17 +410,17 @@ abstract class EncounterParticipant implements _$EncounterParticipant {
 }
 
 @freezed
-abstract class EncounterDiagnosis implements _$EncounterDiagnosis {
+class EncounterDiagnosis with _$EncounterDiagnosis {
   EncounterDiagnosis._();
 
-  /// [Encounter_Diagnosis]: An interaction between a patient and healthcare
+  /// [EncounterDiagnosis]: An interaction between a patient and healthcare
   /// provider(s) for the purpose of providing healthcare service(s) or
   ///  assessing the health status of a patient.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -475,26 +451,30 @@ abstract class EncounterDiagnosis implements _$EncounterDiagnosis {
   ///
   /// [rank]: Ranking of the diagnosis (for each role type).
   ///
-  /// [_rank]: Extensions for rank
+  /// [rankElement]: Extensions for rank
   factory EncounterDiagnosis({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required Reference condition,
-    CodeableConcept use,
-    PositiveInt rank,
-    @JsonKey(name: '_rank') Element rankElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Reference condition,
+    CodeableConcept? use,
+    PositiveInt? rank,
+    @JsonKey(name: '_rank') Element? rankElement,
   }) = _EncounterDiagnosis;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EncounterDiagnosis.fromYaml(dynamic yaml) => yaml is String
-      ? EncounterDiagnosis.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? EncounterDiagnosis.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EncounterDiagnosis.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? EncounterDiagnosis.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EncounterDiagnosis cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EncounterDiagnosis.fromJson(Map<String, dynamic> json) =>
@@ -502,17 +482,17 @@ abstract class EncounterDiagnosis implements _$EncounterDiagnosis {
 }
 
 @freezed
-abstract class EncounterHospitalization implements _$EncounterHospitalization {
+class EncounterHospitalization with _$EncounterHospitalization {
   EncounterHospitalization._();
 
-  /// [Encounter_Hospitalization]: An interaction between a patient and
+  /// [EncounterHospitalization]: An interaction between a patient and
   /// healthcare provider(s) for the purpose of providing healthcare service(s)
   ///  or assessing the health status of a patient.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -556,30 +536,33 @@ abstract class EncounterHospitalization implements _$EncounterHospitalization {
   ///
   /// [dischargeDisposition]: Category or kind of location after discharge.
   factory EncounterHospitalization({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    Identifier preAdmissionIdentifier,
-    Reference origin,
-    CodeableConcept admitSource,
-    CodeableConcept reAdmission,
-    List<CodeableConcept> dietPreference,
-    List<CodeableConcept> specialCourtesy,
-    List<CodeableConcept> specialArrangement,
-    Reference destination,
-    CodeableConcept dischargeDisposition,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    Identifier? preAdmissionIdentifier,
+    Reference? origin,
+    CodeableConcept? admitSource,
+    CodeableConcept? reAdmission,
+    List<CodeableConcept>? dietPreference,
+    List<CodeableConcept>? specialCourtesy,
+    List<CodeableConcept>? specialArrangement,
+    Reference? destination,
+    CodeableConcept? dischargeDisposition,
   }) = _EncounterHospitalization;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EncounterHospitalization.fromYaml(dynamic yaml) => yaml is String
       ? EncounterHospitalization.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EncounterHospitalization.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? EncounterHospitalization.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EncounterHospitalization cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EncounterHospitalization.fromJson(Map<String, dynamic> json) =>
@@ -587,17 +570,17 @@ abstract class EncounterHospitalization implements _$EncounterHospitalization {
 }
 
 @freezed
-abstract class EncounterLocation implements _$EncounterLocation {
+class EncounterLocation with _$EncounterLocation {
   EncounterLocation._();
 
-  /// [Encounter_Location]: An interaction between a patient and healthcare
+  /// [EncounterLocation]: An interaction between a patient and healthcare
   /// provider(s) for the purpose of providing healthcare service(s) or
   ///  assessing the health status of a patient.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -624,7 +607,7 @@ abstract class EncounterLocation implements _$EncounterLocation {
   /// location during the period specified. If the participant is no longer at
   ///  the location, then the period will have an end date/time.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [physicalType]: This will be used to specify the required levels
   /// (bed/ward/room/etc.) desired to be recorded to simplify either messaging
@@ -633,26 +616,30 @@ abstract class EncounterLocation implements _$EncounterLocation {
   /// [period]: Time period during which the patient was present at the
   ///  location.
   factory EncounterLocation({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required Reference location,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Reference location,
     @JsonKey(unknownEnumValue: EncounterLocationStatus.unknown)
-        EncounterLocationStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    CodeableConcept physicalType,
-    Period period,
+        EncounterLocationStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    CodeableConcept? physicalType,
+    Period? period,
   }) = _EncounterLocation;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EncounterLocation.fromYaml(dynamic yaml) => yaml is String
-      ? EncounterLocation.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? EncounterLocation.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EncounterLocation.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? EncounterLocation.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EncounterLocation cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EncounterLocation.fromJson(Map<String, dynamic> json) =>
@@ -660,7 +647,7 @@ abstract class EncounterLocation implements _$EncounterLocation {
 }
 
 @freezed
-abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
+class EpisodeOfCare with Resource, _$EpisodeOfCare {
   EpisodeOfCare._();
 
   /// [EpisodeOfCare]: An association between a patient and an organization /
@@ -682,11 +669,11 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -700,7 +687,7 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -727,7 +714,7 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
   ///
   /// [status]: planned | waitlist | active | onhold | finished | cancelled.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [statusHistory]: The history of statuses that the EpisodeOfCare has been
   ///  through (without requiring processing the history of the resource).
@@ -760,41 +747,46 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
     @Default(R4ResourceType.EpisodeOfCare)
     @JsonKey(unknownEnumValue: R4ResourceType.EpisodeOfCare)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
     @JsonKey(unknownEnumValue: EpisodeOfCareStatus.unknown)
-        EpisodeOfCareStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    List<EpisodeOfCareStatusHistory> statusHistory,
-    List<CodeableConcept> type,
-    List<EpisodeOfCareDiagnosis> diagnosis,
-    @required Reference patient,
-    Reference managingOrganization,
-    Period period,
-    List<Reference> referralRequest,
-    Reference careManager,
-    List<Reference> team,
-    List<Reference> account,
+        EpisodeOfCareStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<EpisodeOfCareStatusHistory>? statusHistory,
+    List<CodeableConcept>? type,
+    List<EpisodeOfCareDiagnosis>? diagnosis,
+    required Reference patient,
+    Reference? managingOrganization,
+    Period? period,
+    List<Reference>? referralRequest,
+    Reference? careManager,
+    List<Reference>? team,
+    List<Reference>? account,
   }) = _EpisodeOfCare;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EpisodeOfCare.fromYaml(dynamic yaml) => yaml is String
-      ? EpisodeOfCare.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? EpisodeOfCare.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EpisodeOfCare.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? EpisodeOfCare.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EpisodeOfCare cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EpisodeOfCare.fromJson(Map<String, dynamic> json) =>
@@ -802,11 +794,10 @@ abstract class EpisodeOfCare with Resource implements _$EpisodeOfCare {
 }
 
 @freezed
-abstract class EpisodeOfCareStatusHistory
-    implements _$EpisodeOfCareStatusHistory {
+class EpisodeOfCareStatusHistory with _$EpisodeOfCareStatusHistory {
   EpisodeOfCareStatusHistory._();
 
-  /// [EpisodeOfCare_StatusHistory]: An association between a patient and an
+  /// [EpisodeOfCareStatusHistory]: An association between a patient and an
   /// organization / healthcare provider(s) during which time encounters may
   /// occur. The managing organization assumes a level of responsibility for the
   ///  patient during this time.
@@ -814,7 +805,7 @@ abstract class EpisodeOfCareStatusHistory
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -837,30 +828,33 @@ abstract class EpisodeOfCareStatusHistory
   ///
   /// [status]: planned | waitlist | active | onhold | finished | cancelled.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [period]: The period during this EpisodeOfCare that the specific status
   ///  applied.
   factory EpisodeOfCareStatusHistory({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
     @JsonKey(unknownEnumValue: EpisodeOfCareStatusHistoryStatus.unknown)
-        EpisodeOfCareStatusHistoryStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    @required Period period,
+        EpisodeOfCareStatusHistoryStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    required Period period,
   }) = _EpisodeOfCareStatusHistory;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EpisodeOfCareStatusHistory.fromYaml(dynamic yaml) => yaml is String
       ? EpisodeOfCareStatusHistory.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))))
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EpisodeOfCareStatusHistory.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? EpisodeOfCareStatusHistory.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EpisodeOfCareStatusHistory cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EpisodeOfCareStatusHistory.fromJson(Map<String, dynamic> json) =>
@@ -868,10 +862,10 @@ abstract class EpisodeOfCareStatusHistory
 }
 
 @freezed
-abstract class EpisodeOfCareDiagnosis implements _$EpisodeOfCareDiagnosis {
+class EpisodeOfCareDiagnosis with _$EpisodeOfCareDiagnosis {
   EpisodeOfCareDiagnosis._();
 
-  /// [EpisodeOfCare_Diagnosis]: An association between a patient and an
+  /// [EpisodeOfCareDiagnosis]: An association between a patient and an
   /// organization / healthcare provider(s) during which time encounters may
   /// occur. The managing organization assumes a level of responsibility for the
   ///  patient during this time.
@@ -879,7 +873,7 @@ abstract class EpisodeOfCareDiagnosis implements _$EpisodeOfCareDiagnosis {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -908,26 +902,30 @@ abstract class EpisodeOfCareDiagnosis implements _$EpisodeOfCareDiagnosis {
   ///
   /// [rank]: Ranking of the diagnosis (for each role type).
   ///
-  /// [_rank]: Extensions for rank
+  /// [rankElement]: Extensions for rank
   factory EpisodeOfCareDiagnosis({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    @required Reference condition,
-    CodeableConcept role,
-    PositiveInt rank,
-    @JsonKey(name: '_rank') Element rankElement,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    required Reference condition,
+    CodeableConcept? role,
+    PositiveInt? rank,
+    @JsonKey(name: '_rank') Element? rankElement,
   }) = _EpisodeOfCareDiagnosis;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory EpisodeOfCareDiagnosis.fromYaml(dynamic yaml) => yaml is String
-      ? EpisodeOfCareDiagnosis.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? EpisodeOfCareDiagnosis.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? EpisodeOfCareDiagnosis.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? EpisodeOfCareDiagnosis.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'EpisodeOfCareDiagnosis cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EpisodeOfCareDiagnosis.fromJson(Map<String, dynamic> json) =>
@@ -935,7 +933,7 @@ abstract class EpisodeOfCareDiagnosis implements _$EpisodeOfCareDiagnosis {
 }
 
 @freezed
-abstract class Flag with Resource implements _$Flag {
+class Flag with Resource, _$Flag {
   Flag._();
 
   /// [Flag]: Prospective warnings of potential issues when providing care to
@@ -955,11 +953,11 @@ abstract class Flag with Resource implements _$Flag {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -973,7 +971,7 @@ abstract class Flag with Resource implements _$Flag {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1000,7 +998,7 @@ abstract class Flag with Resource implements _$Flag {
   ///
   /// [status]: Supports basic workflow.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [category]: Allows a flag to be divided into different categories like
   /// clinical, administrative etc. Intended to be used as a means of filtering
@@ -1023,46 +1021,50 @@ abstract class Flag with Resource implements _$Flag {
     @Default(R4ResourceType.Flag)
     @JsonKey(unknownEnumValue: R4ResourceType.Flag)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: FlagStatus.unknown) FlagStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    List<CodeableConcept> category,
-    @required CodeableConcept code,
-    @required Reference subject,
-    Period period,
-    Reference encounter,
-    Reference author,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    @JsonKey(unknownEnumValue: FlagStatus.unknown) FlagStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    List<CodeableConcept>? category,
+    required CodeableConcept code,
+    required Reference subject,
+    Period? period,
+    Reference? encounter,
+    Reference? author,
   }) = _Flag;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Flag.fromYaml(dynamic yaml) => yaml is String
-      ? Flag.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Flag.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Flag.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? Flag.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'Flag cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
 }
 
 @freezed
-abstract class Library with Resource implements _$Library {
+class Library with Resource, _$Library {
   Library._();
 
-  /// [Library]: The Library resource is a general-purpose container for
+  /// [library_]: The Library resource is a general-purpose container for
   /// knowledge asset definitions. It can be used to describe and expose
   /// existing knowledge assets such as logic libraries and information model
   ///  descriptions, as well as to describe a collection of knowledge assets.
@@ -1081,11 +1083,11 @@ abstract class Library with Resource implements _$Library {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1099,7 +1101,7 @@ abstract class Library with Resource implements _$Library {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1128,7 +1130,7 @@ abstract class Library with Resource implements _$Library {
   /// canonical reference. It SHALL remain the same when the library is stored
   ///  on different servers.
   ///
-  /// [_url]: Extensions for url
+  /// [urlElement]: Extensions for url
   ///
   /// [identifier]: A formal identifier that is used to identify this library
   /// when it is represented in other formats, or referenced in a specification,
@@ -1148,33 +1150,33 @@ abstract class Library with Resource implements _$Library {
   /// Service specification. Note that a version is required for
   ///  non-experimental active artifacts.
   ///
-  /// [_version]: Extensions for version
+  /// [versionElement]: Extensions for version
   ///
   /// [name]: A natural language name identifying the library. This name should
   /// be usable as an identifier for the module by machine processing
   ///  applications such as code generation.
   ///
-  /// [_name]: Extensions for name
+  /// [nameElement]: Extensions for name
   ///
   /// [title]: A short, descriptive, user-friendly title for the library.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [subtitle]: An explanatory or alternate title for the library giving
   ///  additional information about its content.
   ///
-  /// [_subtitle]: Extensions for subtitle
+  /// [subtitleElement]: Extensions for subtitle
   ///
   /// [status]: The status of this library. Enables tracking the life-cycle of
   ///  the content.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [experimental]: A Boolean value to indicate that this library is authored
   /// for testing purposes (or education/evaluation/marketing) and is not
   ///  intended to be used for genuine usage.
   ///
-  /// [_experimental]: Extensions for experimental
+  /// [experimentalElement]: Extensions for experimental
   ///
   /// [type]: Identifies the type of library such as a Logic Library, Model
   ///  Definition, Asset Collection, or Module Definition.
@@ -1190,12 +1192,12 @@ abstract class Library with Resource implements _$Library {
   /// if the status code changes. In addition, it should change when the
   ///  substantive content of the library changes.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [publisher]: The name of the organization or individual that published the
   ///  library.
   ///
-  /// [_publisher]: Extensions for publisher
+  /// [publisherElement]: Extensions for publisher
   ///
   /// [contact]: Contact details to assist a user in finding and communicating
   ///  with the publisher.
@@ -1203,7 +1205,7 @@ abstract class Library with Resource implements _$Library {
   /// [description]: A free text natural language description of the library
   ///  from a consumer's perspective.
   ///
-  /// [_description]: Extensions for description
+  /// [descriptionElement]: Extensions for description
   ///
   /// [useContext]: The content was developed with a focus and intent of
   /// supporting the contexts that are listed. These contexts may be general
@@ -1217,30 +1219,30 @@ abstract class Library with Resource implements _$Library {
   /// [purpose]: Explanation of why this library is needed and why it has been
   ///  designed as it has.
   ///
-  /// [_purpose]: Extensions for purpose
+  /// [purposeElement]: Extensions for purpose
   ///
   /// [usage]: A detailed description of how the library is used from a clinical
   ///  perspective.
   ///
-  /// [_usage]: Extensions for usage
+  /// [usageElement]: Extensions for usage
   ///
   /// [copyright]: A copyright statement relating to the library and/or its
   /// contents. Copyright statements are generally legal restrictions on the use
   ///  and publishing of the library.
   ///
-  /// [_copyright]: Extensions for copyright
+  /// [copyrightElement]: Extensions for copyright
   ///
   /// [approvalDate]: The date on which the resource content was approved by the
   /// publisher. Approval happens once when the content is officially approved
   ///  for usage.
   ///
-  /// [_approvalDate]: Extensions for approvalDate
+  /// [approvalDateElement]: Extensions for approvalDate
   ///
   /// [lastReviewDate]: The date on which the resource content was last
   /// reviewed. Review happens periodically after approval but does not change
   ///  the original approval date.
   ///
-  /// [_lastReviewDate]: Extensions for lastReviewDate
+  /// [lastReviewDateElement]: Extensions for lastReviewDate
   ///
   /// [effectivePeriod]: The period during which the library content was or is
   ///  planned to be in active use.
@@ -1278,74 +1280,79 @@ abstract class Library with Resource implements _$Library {
     @Default(R4ResourceType.Library)
     @JsonKey(unknownEnumValue: R4ResourceType.Library)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    FhirUri url,
-    @JsonKey(name: '_url') Element urlElement,
-    List<Identifier> identifier,
-    String version,
-    @JsonKey(name: '_version') Element versionElement,
-    String name,
-    @JsonKey(name: '_name') Element nameElement,
-    String title,
-    @JsonKey(name: '_title') Element titleElement,
-    String subtitle,
-    @JsonKey(name: '_subtitle') Element subtitleElement,
-    @JsonKey(unknownEnumValue: LibraryStatus.unknown) LibraryStatus status,
-    @JsonKey(name: '_status') Element statusElement,
-    Boolean experimental,
-    @JsonKey(name: '_experimental') Element experimentalElement,
-    @required CodeableConcept type,
-    CodeableConcept subjectCodeableConcept,
-    Reference subjectReference,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-    String publisher,
-    @JsonKey(name: '_publisher') Element publisherElement,
-    List<ContactDetail> contact,
-    Markdown description,
-    @JsonKey(name: '_description') Element descriptionElement,
-    List<UsageContext> useContext,
-    List<CodeableConcept> jurisdiction,
-    Markdown purpose,
-    @JsonKey(name: '_purpose') Element purposeElement,
-    String usage,
-    @JsonKey(name: '_usage') Element usageElement,
-    Markdown copyright,
-    @JsonKey(name: '_copyright') Element copyrightElement,
-    Date approvalDate,
-    @JsonKey(name: '_approvalDate') Element approvalDateElement,
-    Date lastReviewDate,
-    @JsonKey(name: '_lastReviewDate') Element lastReviewDateElement,
-    Period effectivePeriod,
-    List<CodeableConcept> topic,
-    List<ContactDetail> author,
-    List<ContactDetail> editor,
-    List<ContactDetail> reviewer,
-    List<ContactDetail> endorser,
-    List<RelatedArtifact> relatedArtifact,
-    List<ParameterDefinition> parameter,
-    List<DataRequirement> dataRequirement,
-    List<Attachment> content,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    FhirUri? url,
+    @JsonKey(name: '_url') Element? urlElement,
+    List<Identifier>? identifier,
+    String? version,
+    @JsonKey(name: '_version') Element? versionElement,
+    String? name,
+    @JsonKey(name: '_name') Element? nameElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    String? subtitle,
+    @JsonKey(name: '_subtitle') Element? subtitleElement,
+    @JsonKey(unknownEnumValue: LibraryStatus.unknown) LibraryStatus? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    Boolean? experimental,
+    @JsonKey(name: '_experimental') Element? experimentalElement,
+    required CodeableConcept type,
+    CodeableConcept? subjectCodeableConcept,
+    Reference? subjectReference,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    String? publisher,
+    @JsonKey(name: '_publisher') Element? publisherElement,
+    List<ContactDetail>? contact,
+    Markdown? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<UsageContext>? useContext,
+    List<CodeableConcept>? jurisdiction,
+    Markdown? purpose,
+    @JsonKey(name: '_purpose') Element? purposeElement,
+    String? usage,
+    @JsonKey(name: '_usage') Element? usageElement,
+    Markdown? copyright,
+    @JsonKey(name: '_copyright') Element? copyrightElement,
+    Date? approvalDate,
+    @JsonKey(name: '_approvalDate') Element? approvalDateElement,
+    Date? lastReviewDate,
+    @JsonKey(name: '_lastReviewDate') Element? lastReviewDateElement,
+    Period? effectivePeriod,
+    List<CodeableConcept>? topic,
+    List<ContactDetail>? author,
+    List<ContactDetail>? editor,
+    List<ContactDetail>? reviewer,
+    List<ContactDetail>? endorser,
+    List<RelatedArtifact>? relatedArtifact,
+    List<ParameterDefinition>? parameter,
+    List<DataRequirement>? dataRequirement,
+    List<Attachment>? content,
   }) = _Library;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory Library.fromYaml(dynamic yaml) => yaml is String
-      ? Library.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? Library.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Library.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? Library.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'Library cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Library.fromJson(Map<String, dynamic> json) =>
@@ -1353,7 +1360,7 @@ abstract class Library with Resource implements _$Library {
 }
 
 @freezed
-abstract class List_ with Resource implements _$List_ {
+class List_ with Resource, _$List_ {
   List_._();
 
   /// [List]: A list is a curated collection of resources.
@@ -1372,11 +1379,11 @@ abstract class List_ with Resource implements _$List_ {
   /// content. Often, this is a reference to an implementation guide that
   ///  defines the special rules along with other profiles etc.
   ///
-  /// [_implicitRules]: Extensions for implicitRules
+  /// [implicitRulesElement]: Extensions for implicitRules
   ///
   /// [language]: The base language in which the resource is written.
   ///
-  /// [_language]: Extensions for language
+  /// [languageElement]: Extensions for language
   ///
   /// [text]: A human-readable narrative that contains a summary of the resource
   /// and can be used to represent the content of the resource to a human. The
@@ -1390,7 +1397,7 @@ abstract class List_ with Resource implements _$List_ {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1416,18 +1423,18 @@ abstract class List_ with Resource implements _$List_ {
   ///
   /// [status]: Indicates the current state of this list.
   ///
-  /// [_status]: Extensions for status
+  /// [statusElement]: Extensions for status
   ///
   /// [mode]: How this list was prepared - whether it is a working list that is
   /// suitable for being maintained on an ongoing basis, or if it represents a
   /// snapshot of a list of items from another source, or whether it is a
   ///  prepared list where items may be marked as added, modified or deleted.
   ///
-  /// [_mode]: Extensions for mode
+  /// [modeElement]: Extensions for mode
   ///
   /// [title]: A label for the list assigned by the author.
   ///
-  /// [_title]: Extensions for title
+  /// [titleElement]: Extensions for title
   ///
   /// [code]: This code defines the purpose of the list - why it was created.
   ///
@@ -1439,7 +1446,7 @@ abstract class List_ with Resource implements _$List_ {
   ///
   /// [date]: The date that the list was prepared.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [source]: The entity responsible for deciding what the contents of the
   /// list were. Where the list was created by a human, this is the same as the
@@ -1456,59 +1463,63 @@ abstract class List_ with Resource implements _$List_ {
     @Default(R4ResourceType.List_)
     @JsonKey(unknownEnumValue: R4ResourceType.List_)
         R4ResourceType resourceType,
-    Id id,
-    Meta meta,
-    FhirUri implicitRules,
-    @JsonKey(name: '_implicitRules') Element implicitRulesElement,
-    Code language,
-    @JsonKey(name: '_language') Element languageElement,
-    Narrative text,
-    List<Resource> contained,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    List<Identifier> identifier,
-    @JsonKey(unknownEnumValue: List_Status.unknown) List_Status status,
-    @JsonKey(name: '_status') Element statusElement,
-    @JsonKey(unknownEnumValue: List_Mode.unknown) List_Mode mode,
-    @JsonKey(name: '_mode') Element modeElement,
-    String title,
-    @JsonKey(name: '_title') Element titleElement,
-    CodeableConcept code,
-    Reference subject,
-    Reference encounter,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-    Reference source,
-    CodeableConcept orderedBy,
-    List<Annotation> note,
-    List<ListEntry> entry,
-    CodeableConcept emptyReason,
+    Id? id,
+    Meta? meta,
+    FhirUri? implicitRules,
+    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+    Code? language,
+    @JsonKey(name: '_language') Element? languageElement,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    List<Identifier>? identifier,
+    @JsonKey(unknownEnumValue: List_Status.unknown) List_Status? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    @JsonKey(unknownEnumValue: List_Mode.unknown) List_Mode? mode,
+    @JsonKey(name: '_mode') Element? modeElement,
+    String? title,
+    @JsonKey(name: '_title') Element? titleElement,
+    CodeableConcept? code,
+    Reference? subject,
+    Reference? encounter,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    Reference? source,
+    CodeableConcept? orderedBy,
+    List<Annotation>? note,
+    List<ListEntry>? entry,
+    CodeableConcept? emptyReason,
   }) = _List_;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory List_.fromYaml(dynamic yaml) => yaml is String
-      ? List_.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? List_.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? List_.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? List_.fromJson(jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'List_ cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory List_.fromJson(Map<String, dynamic> json) => _$List_FromJson(json);
 }
 
 @freezed
-abstract class ListEntry implements _$ListEntry {
+class ListEntry with _$ListEntry {
   ListEntry._();
 
-  /// [List_Entry]: A list is a curated collection of resources.
+  /// [ListEntry]: A list is a curated collection of resources.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension]: May be used to represent additional information that is not
+  /// [extension_]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1534,34 +1545,38 @@ abstract class ListEntry implements _$ListEntry {
   ///
   /// [deleted]: True if this item is marked as deleted in the list.
   ///
-  /// [_deleted]: Extensions for deleted
+  /// [deletedElement]: Extensions for deleted
   ///
   /// [date]: When this item was added to the list.
   ///
-  /// [_date]: Extensions for date
+  /// [dateElement]: Extensions for date
   ///
   /// [item]: A reference to the actual resource from which data was derived.
   factory ListEntry({
-    String id,
-    @JsonKey(name: 'extension') List<FhirExtension> extension_,
-    List<FhirExtension> modifierExtension,
-    CodeableConcept flag,
-    Boolean deleted,
-    @JsonKey(name: '_deleted') Element deletedElement,
-    FhirDateTime date,
-    @JsonKey(name: '_date') Element dateElement,
-    @required Reference item,
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? flag,
+    Boolean? deleted,
+    @JsonKey(name: '_deleted') Element? deletedElement,
+    FhirDateTime? date,
+    @JsonKey(name: '_date') Element? dateElement,
+    required Reference item,
   }) = _ListEntry;
 
   /// Produces a Yaml formatted String version of the object
   String toYaml() => json2yaml(toJson());
 
-  /// Factory constructor that accepts [Yaml String] as an argument
+  /// Factory constructor that accepts a [String] in YAML format as an argument
   factory ListEntry.fromYaml(dynamic yaml) => yaml is String
-      ? ListEntry.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
+      ? ListEntry.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ListEntry.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          ? ListEntry.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ListEntry cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ListEntry.fromJson(Map<String, dynamic> json) =>

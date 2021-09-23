@@ -97,18 +97,7 @@ enum ObservationDefinitionPermittedDataType {
   unknown,
 }
 
-enum ObservationDefinitionQualifiedIntervalCategory {
-  @JsonValue('reference')
-  reference,
-  @JsonValue('critical')
-  critical,
-  @JsonValue('absolute')
-  absolute,
-  @JsonValue('unknown')
-  unknown,
-}
-
-enum ObservationDefinitionQualifiedIntervalGender {
+enum ObservationDefinitionQualifiedValueGender {
   @JsonValue('male')
   male,
   @JsonValue('female')
@@ -301,6 +290,8 @@ enum QuestionnaireItemType {
   choice,
   @JsonValue('open-choice')
   open_choice,
+  @JsonValue('coding')
+  coding,
   @JsonValue('attachment')
   attachment,
   @JsonValue('reference')

@@ -1,14 +1,29 @@
 import 'dart:convert';
-import 'package:dartz/dartz.dart';
+
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
-class Decimal {
-  const Decimal._(this._value, this._isInt);
+import 'fhir_number.dart';
 
-  factory Decimal(dynamic value) {
-    assert(value != null);
-    return Decimal._(_validateDecimal(value), _checkIfInt(value));
+class Decimal extends FhirNumber {
+  const Decimal._(String valueString, double? valueNumber, bool isValid,
+      this.isInt, bool isString)
+      : super(valueString, valueNumber, isValid, isString);
+
+  factory Decimal(dynamic inValue) {
+    if (inValue is num) {
+      return Decimal._(
+        inValue.toString(),
+        inValue.toDouble(),
+        true,
+        int.tryParse(inValue.toString()) != null,
+        false,
+      );
+    } else if (inValue is String) {
+      return double.tryParse(inValue) != null
+          ? Decimal._(inValue, double.parse(inValue), true, false, true)
+          : Decimal._(inValue, null, false, false, true);
+    }
+    throw ArgumentError('Decimal cannot be constructed from $inValue.');
   }
 
   factory Decimal.fromJson(dynamic json) => Decimal(json);
@@ -17,33 +32,23 @@ class Decimal {
       ? Decimal.fromJson(jsonDecode(jsonEncode(loadYaml(yaml))))
       : yaml is YamlMap
           ? Decimal.fromJson(jsonDecode(jsonEncode(yaml)))
-          : null;
+          : throw FormatException(
+              'FormatException: "$json" is not a valid Yaml string or YamlMap.');
 
-  final Either<String, double> _value;
-  final bool _isInt;
-  dynamic get value => _value.fold((l) => l, (r) => r);
-  bool get isValid => _value.isRight();
+  final bool isInt;
+  double? get value => valueNumber as double?;
 
-  String toString() =>
-      _isInt && (value is double) ? value.toInt().toString() : value.toString();
-  dynamic toJson() => _isInt && (value is double) ? value.toInt() : value;
-  dynamic toYaml() => _isInt && (value is double) ? value.toInt() : value;
+  @override
+  dynamic toJson() => isInt
+      ? valueNumber?.toInt()
+      : isValid && !isString
+          ? valueNumber
+          : valueString;
 
-  bool operator ==(Object o) => identical(this, o)
-      ? true
-      : o is Decimal || o is double
-          ? o == value
-          : o is String
-              ? o == value.toString()
-              : false;
-
-  int get hashCode => value.hashCode;
+  @override
+  dynamic toYaml() => isInt
+      ? valueNumber?.toInt()
+      : isValid && !isString
+          ? valueNumber
+          : valueString;
 }
-
-bool _checkIfInt(dynamic value) => int.tryParse(value.toString()) != null;
-
-Either<String, double> _validateDecimal(dynamic value) =>
-    double.tryParse(value.toString()) != null
-        ? right(double.parse(value.toString()))
-        : left('FormatError: "$value" is not a Decimal, as defined by: '
-            'https://www.hl7.org/fhir/datatypes.html#decimal');
