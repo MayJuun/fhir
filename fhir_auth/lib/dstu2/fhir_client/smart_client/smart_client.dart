@@ -1,6 +1,5 @@
-import 'package:flutter/foundation.dart' show kIsWeb;
-
 import 'package:fhir/dstu2.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 import '../../../dstu2.dart';
 
