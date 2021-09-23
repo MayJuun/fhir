@@ -7,8 +7,8 @@ import 'package:fhir/stu3.dart' as stu3;
 import '../../utils/deep_comparison_lists.dart';
 import '../../fhir_path.dart';
 
-class WhereParser extends FunctionParser {
-  WhereParser();
+class FpWhereParser extends FunctionParser {
+  FpWhereParser();
   late ParserList value;
   List execute(List results, Map passed) {
     final returnList = [];

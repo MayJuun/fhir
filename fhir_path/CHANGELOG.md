@@ -1,3 +1,6 @@
+## [0.5.0-7]
+* Updated to Dart 2.14.0
+
 ## [0.5.0-6]
 * Easier ability to create simple server for testing
 * Iif now included (previously included too, but now removed from the Readme ToDo list)

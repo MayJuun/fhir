@@ -24,6 +24,8 @@ You can email me at <grey@fhirfli.dev>. Or, feel free to [join our Slack!](https
 ### 3. [fhir_auth](fhir_auth/README.md) - authentication package (SMART on FHIR, Google)
 ### 4. [fhir_bulk](fhir_bulk/README.md) - dealing with bulk FHIR & ndjson
 ### 5. [fhir_db](fhir_db/README.md) - local, embedded, encrypted database
+### 6. [fhir_path](fhir_path/README.md) - library for FHIRPath written entirely in dart
+### 7. [fhir_profiles](fhir_profiles/README.md) - will eventually house multiple profiles, for now only USCore
 ### 6. [fhir_yaml](fhir_yaml/README.md) - convenience package for converting to Yaml
 
 
@@ -34,3 +36,8 @@ You can email me at <grey@fhirfli.dev>. Or, feel free to [join our Slack!](https
 
 
 FHIR® is a registered trademark of Health Level Seven International (HL7) and its use does not constitute an endorsement of products by HL7®
+
+ToDo: 
+1. Update fhir_db (Hive?)
+2. Update fhir_auth
+3. Update fhir_profiles

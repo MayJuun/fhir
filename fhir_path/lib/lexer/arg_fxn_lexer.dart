@@ -37,8 +37,8 @@ final Parser<SupersetOfParser> supersetOfLexer =
     (string('supersetOf(') | string('.supersetOf('))
         .map((_) => SupersetOfParser());
 
-final Parser<WhereParser> whereLexer =
-    (string('where(') | string('.where(')).map((_) => WhereParser());
+final Parser<FpWhereParser> whereLexer =
+    (string('where(') | string('.where(')).map((_) => FpWhereParser());
 
 final Parser<SelectParser> selectLexer =
     (string('select(') | string('.select(')).map((_) => SelectParser());

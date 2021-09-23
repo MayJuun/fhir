@@ -2,7 +2,7 @@ name: fhir_path
 description: FHIRPath navigation and extraction language implemented in pure Dart to be used with base FHIR packages.
 version: 0.5.0-7
 homepage: https://www.fhirfli.dev/
-repository: https://github.com/MayJuun/fhir/tree/main/fhir
+repository: https://github.com/MayJuun/fhir/tree/main/fhir_path
 
 environment:
   sdk: '>=2.14.0 <3.0.0'
