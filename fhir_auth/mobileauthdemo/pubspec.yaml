@@ -10,6 +10,8 @@ dependencies:
     path: ../../fhir_auth
   flutter:
     sdk: flutter
+  openid_client: ^0.4.1
+  url_launcher: ^6.0.10
   
 dev_dependencies:
   flutter_test:
