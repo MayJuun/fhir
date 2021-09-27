@@ -18,16 +18,16 @@ List<dynamic> walkFhirPath(
   FhirVersion version = FhirVersion.r4,
 ]) {
   try {
-    passed ??= {};
-    passed['%resource'] = resource ?? [];
-    passed['version'] = version;
+    final passedValue = passed ?? {};
+    passedValue['%resource'] = resource ?? [];
+    passedValue['version'] = version;
     final FhirPathParser ast = lexer().parse(pathExpression).value;
     return (ast is ParserList && ast.isEmpty)
         ? []
-        : ast.execute(resource == null ? [] : [resource], passed);
+        : ast.execute([resource], passedValue);
   } catch (error) {
     final String errorMessage =
-        'fhirPath error: unable to parse\nerror: $error\npathExpression: $pathExpression';
+        'fhirPath: unable to parse\n **error** $error\n **pathExpression** $pathExpression';
     print(errorMessage);
     return [errorMessage];
   }
