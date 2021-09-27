@@ -11,43 +11,50 @@ import 'fhir_path.dart';
 /// placed as a list into the value field of a ParserList
 /// It then checks if the first node in the AST is the same as the ResourceType
 /// of the Resource, if so, it is removed.
-List walkFhirPath(
+List<dynamic> walkFhirPath(
   Map<String, dynamic>? resource,
   String pathExpression, [
   Map<String, dynamic>? passed,
   FhirVersion version = FhirVersion.r4,
 ]) {
-  passed ??= {};
-  passed['%resource'] = resource ?? [];
-  passed['version'] = version;
-  final ast = lexer().parse(pathExpression).value;
-  return (ast is ParserList && ast.isEmpty)
-      ? []
-      : ast.execute(resource == null ? [] : [resource], passed);
+  try {
+    final passedValue = passed ?? {};
+    passedValue['%resource'] = resource ?? [];
+    passedValue['version'] = version;
+    final FhirPathParser ast = lexer().parse(pathExpression).value;
+    return (ast is ParserList && ast.isEmpty)
+        ? []
+        : ast.execute([resource], passedValue);
+  } catch (error) {
+    final String errorMessage =
+        'fhirPath: unable to parse\n **error** $error\n **pathExpression** $pathExpression';
+    print(errorMessage);
+    return [errorMessage];
+  }
 }
 
-List r4WalkFhirPath(
+List<dynamic> r4WalkFhirPath(
   r4.Resource? resource,
   String pathExpression, [
   Map<String, dynamic>? passed,
 ]) =>
     walkFhirPath(resource?.toJson(), pathExpression, passed, FhirVersion.r4);
 
-List r5WalkFhirPath(
+List<dynamic> r5WalkFhirPath(
   r5.Resource? resource,
   String pathExpression, [
   Map<String, dynamic>? passed,
 ]) =>
     walkFhirPath(resource?.toJson(), pathExpression, passed, FhirVersion.r5);
 
-List dstu2WalkFhirPath(
+List<dynamic> dstu2WalkFhirPath(
   dstu2.Resource? resource,
   String pathExpression, [
   Map<String, dynamic>? passed,
 ]) =>
     walkFhirPath(resource?.toJson(), pathExpression, passed, FhirVersion.dstu2);
 
-List stu3WalkFhirPath(
+List<dynamic> stu3WalkFhirPath(
   stu3.Resource? resource,
   String pathExpression, [
   Map<String, dynamic>? passed,
