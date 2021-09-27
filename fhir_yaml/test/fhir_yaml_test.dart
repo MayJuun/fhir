@@ -112,7 +112,7 @@ void main() {
   });
 }
 
-dynamic loadAsJson(String result) => json.decode(json.encode(loadYaml(result)));
+dynamic loadAsJson(String result) => jsonDecode(jsonEncode(loadYaml(result)));
 
 const basicStringJson = {'basic_string': 'basic string'};
 const basicStringYaml = 'basic_string: basic string';

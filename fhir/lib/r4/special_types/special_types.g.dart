@@ -355,7 +355,8 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
               (e) => _$enumDecode(_$ElementDefinitionRepresentationEnumMap, e))
           .toList(),
       representationElement: (json['_representation'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       sliceName: json['sliceName'] as String?,
       sliceNameElement: json['_sliceName'] == null
@@ -403,7 +404,8 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
       alias:
           (json['alias'] as List<dynamic>?)?.map((e) => e as String).toList(),
       aliasElement: (json['_alias'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       min: json['min'] == null ? null : UnsignedInt.fromJson(json['min']),
       minElement: json['_min'] == null
@@ -1234,7 +1236,8 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Id.fromJson(e))
           .toList(),
       conditionElement: (json['_condition'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       constraint: (json['constraint'] as List<dynamic>?)
           ?.map((e) =>
@@ -1832,7 +1835,8 @@ _$_ElementDefinitionType _$$_ElementDefinitionTypeFromJson(
           ?.map((e) => Canonical.fromJson(e))
           .toList(),
       profileElement: (json['_profile'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       targetProfile: (json['targetProfile'] as List<dynamic>?)
           ?.map((e) => Canonical.fromJson(e))
@@ -1842,7 +1846,8 @@ _$_ElementDefinitionType _$$_ElementDefinitionTypeFromJson(
               (e) => _$enumDecode(_$ElementDefinitionTypeAggregationEnumMap, e))
           .toList(),
       aggregationElement: (json['_aggregation'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       versioning: _$enumDecodeNullable(
           _$ElementDefinitionTypeVersioningEnumMap, json['versioning'],

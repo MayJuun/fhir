@@ -1,3 +1,7 @@
+## [0.5.0-2]
+* Updating to Dart 2.14.0
+* Removed api files from repository
+
 ## [0.5.0-1]
 * Updating dependencies
 * I think [Luca](https://github.com/lucaspal) added some changes too, but I can't remember what they are now (it's what happens when I wait too long to commit)

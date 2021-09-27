@@ -210,13 +210,15 @@ _$_DataRequirement _$$_DataRequirementFromJson(Map<String, dynamic> json) =>
       profile:
           (json['profile'] as List<dynamic>?)?.map((e) => e as String).toList(),
       profileElement: (json['_profile'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       mustSupport: (json['mustSupport'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
       mustSupportElement: (json['_mustSupport'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       codeFilter: (json['codeFilter'] as List<dynamic>?)
           ?.map((e) =>
@@ -271,7 +273,8 @@ _$_DataRequirementCodeFilter _$$_DataRequirementCodeFilterFromJson(
           ?.map((e) => Code.fromJson(e))
           .toList(),
       valueCodeElement: (json['_valueCode'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       valueCoding: (json['valueCoding'] as List<dynamic>?)
           ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))

@@ -1,16 +1,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="dev.fhirfli.mobileauthdemo">
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.APP_BROWSER" />
+            <data android:scheme="https" />
+        </intent>
+    </queries>
    <application
         android:label="mobileauthdemo"
         android:icon="@mipmap/ic_launcher">
-        <activity android:name="com.linusu.flutter_web_auth.CallbackActivity" >
-	          <intent-filter android:label="flutter_web_auth">
-                <action android:name="android.intent.action.VIEW" />
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-                <data android:scheme="dev.fhirfli.mobileauthdemo" />
-	          </intent-filter>
-        </activity>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

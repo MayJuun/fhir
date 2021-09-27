@@ -784,12 +784,14 @@ _$_HumanName _$$_HumanNameFromJson(Map<String, dynamic> json) => _$_HumanName(
       family:
           (json['family'] as List<dynamic>?)?.map((e) => e as String).toList(),
       familyElement: (json['_family'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       given:
           (json['given'] as List<dynamic>?)?.map((e) => e as String).toList(),
       givenElement: (json['_given'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       prefix:
           (json['prefix'] as List<dynamic>?)?.map((e) => e as String).toList(),

@@ -589,12 +589,14 @@ _$_ProcessRequest _$$_ProcessRequestFromJson(Map<String, dynamic> json) =>
       include:
           (json['include'] as List<dynamic>?)?.map((e) => e as String).toList(),
       includeElement: (json['_include'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       exclude:
           (json['exclude'] as List<dynamic>?)?.map((e) => e as String).toList(),
       excludeElement: (json['_exclude'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       period: json['period'] == null
           ? null

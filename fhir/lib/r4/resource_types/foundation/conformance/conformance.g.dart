@@ -131,13 +131,15 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
           ?.map((e) => Code.fromJson(e))
           .toList(),
       formatElement: (json['_format'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       patchFormat: (json['patchFormat'] as List<dynamic>?)
           ?.map((e) => Code.fromJson(e))
           .toList(),
       patchFormatElement: (json['_patchFormat'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       implementationGuide: (json['implementationGuide'] as List<dynamic>?)
           ?.map((e) => Canonical.fromJson(e))
@@ -773,19 +775,22 @@ _$_CapabilityStatementResource _$$_CapabilityStatementResourceFromJson(
               _$CapabilityStatementResourceReferencePolicyEnumMap, e))
           .toList(),
       referencePolicyElement: (json['_referencePolicy'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       searchInclude: (json['searchInclude'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
       searchIncludeElement: (json['_searchInclude'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       searchRevInclude: (json['searchRevInclude'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
       searchRevIncludeElement: (json['_searchRevInclude'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       searchParam: (json['searchParam'] as List<dynamic>?)
           ?.map((e) => CapabilityStatementSearchParam.fromJson(
@@ -1511,7 +1516,8 @@ _$_CompartmentDefinitionResource _$$_CompartmentDefinitionResourceFromJson(
       param:
           (json['param'] as List<dynamic>?)?.map((e) => e as String).toList(),
       paramElement: (json['_param'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       documentation: json['documentation'] as String?,
       documentationElement: json['_documentation'] == null
@@ -2649,7 +2655,8 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
           ?.map((e) => _$enumDecode(_$ImplementationGuideFhirVersionEnumMap, e))
           .toList(),
       fhirVersionElement: (json['_fhirVersion'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       dependsOn: (json['dependsOn'] as List<dynamic>?)
           ?.map((e) =>
@@ -3325,7 +3332,8 @@ _$_ImplementationGuideResource _$$_ImplementationGuideResourceFromJson(
               _$enumDecode(_$ImplementationGuideResourceFhirVersionEnumMap, e))
           .toList(),
       fhirVersionElement: (json['_fhirVersion'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       name: json['name'] as String?,
       nameElement: json['_name'] == null
@@ -3619,12 +3627,14 @@ _$_ImplementationGuideManifest _$$_ImplementationGuideManifestFromJson(
       image:
           (json['image'] as List<dynamic>?)?.map((e) => e as String).toList(),
       imageElement: (json['_image'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       other:
           (json['other'] as List<dynamic>?)?.map((e) => e as String).toList(),
       otherElement: (json['_other'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -3733,7 +3743,8 @@ _$_ImplementationGuidePage1 _$$_ImplementationGuidePage1FromJson(
       anchor:
           (json['anchor'] as List<dynamic>?)?.map((e) => e as String).toList(),
       anchorElement: (json['_anchor'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -4201,7 +4212,8 @@ _$_OperationDefinition _$$_OperationDefinitionFromJson(
           ?.map((e) => Code.fromJson(e))
           .toList(),
       resourceElement: (json['_resource'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       system: json['system'] == null ? null : Boolean.fromJson(json['system']),
       systemElement: json['_system'] == null
@@ -4543,7 +4555,8 @@ _$_OperationDefinitionOverload _$$_OperationDefinitionOverloadFromJson(
           ?.map((e) => e as String)
           .toList(),
       parameterNameElement: (json['_parameterName'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       comment: json['comment'] as String?,
       commentElement: json['_comment'] == null
@@ -4670,7 +4683,8 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Code.fromJson(e))
           .toList(),
       baseElement: (json['_base'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       type: _$enumDecodeNullable(_$SearchParameterTypeEnumMap, json['type'],
           unknownValue: SearchParameterType.unknown),
@@ -4695,7 +4709,8 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Code.fromJson(e))
           .toList(),
       targetElement: (json['_target'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       multipleOr: json['multipleOr'] == null
           ? null
@@ -4713,18 +4728,21 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
           ?.map((e) => _$enumDecode(_$SearchParameterComparatorEnumMap, e))
           .toList(),
       comparatorElement: (json['_comparator'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       modifier: (json['modifier'] as List<dynamic>?)
           ?.map((e) => _$enumDecode(_$SearchParameterModifierEnumMap, e))
           .toList(),
       modifierElement: (json['_modifier'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       chain:
           (json['chain'] as List<dynamic>?)?.map((e) => e as String).toList(),
       chainElement: (json['_chain'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       component: (json['component'] as List<dynamic>?)
           ?.map((e) =>
@@ -5048,7 +5066,8 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
           ?.map((e) => e as String)
           .toList(),
       contextInvariantElement: (json['_contextInvariant'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       type: json['type'] == null ? null : FhirUri.fromJson(json['type']),
       typeElement: json['_type'] == null
@@ -6275,7 +6294,8 @@ _$_StructureMapTarget _$$_StructureMapTargetFromJson(
           ?.map((e) => _$enumDecode(_$StructureMapTargetListModeEnumMap, e))
           .toList(),
       listModeElement: (json['_listMode'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       listRuleId:
           json['listRuleId'] == null ? null : Id.fromJson(json['listRuleId']),
@@ -6454,7 +6474,8 @@ _$_StructureMapDependent _$$_StructureMapDependentFromJson(
           ?.map((e) => e as String)
           .toList(),
       variableElement: (json['_variable'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

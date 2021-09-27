@@ -514,7 +514,8 @@ _$_CoverageEligibilityRequest _$$_CoverageEligibilityRequestFromJson(
               _$enumDecode(_$CoverageEligibilityRequestPurposeEnumMap, e))
           .toList(),
       purposeElement: (json['_purpose'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
       servicedDate: json['servicedDate'] == null
@@ -885,7 +886,8 @@ _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
               _$enumDecode(_$CoverageEligibilityResponsePurposeEnumMap, e))
           .toList(),
       purposeElement: (json['_purpose'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
       servicedDate: json['servicedDate'] == null

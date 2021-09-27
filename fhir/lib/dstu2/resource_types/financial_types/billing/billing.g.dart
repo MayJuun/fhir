@@ -1113,7 +1113,8 @@ _$_ClaimResponseItem _$$_ClaimResponseItemFromJson(Map<String, dynamic> json) =>
           ?.map((e) => PositiveInt.fromJson(e))
           .toList(),
       noteNumberElement: (json['_noteNumber'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       adjudication: (json['adjudication'] as List<dynamic>?)
           ?.map((e) =>

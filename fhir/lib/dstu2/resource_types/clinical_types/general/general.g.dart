@@ -1015,7 +1015,8 @@ _$_ClinicalImpression _$$_ClinicalImpressionFromJson(
       protocol:
           json['protocol'] == null ? null : FhirUri.fromJson(json['protocol']),
       protocolElement: (json['_protocol'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       summary: json['summary'] as String?,
       summaryElement: json['_summary'] == null

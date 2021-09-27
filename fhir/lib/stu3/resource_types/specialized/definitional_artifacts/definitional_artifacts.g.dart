@@ -841,7 +841,8 @@ _$_PlanDefinitionAction _$$_PlanDefinitionActionFromJson(
           ?.map((e) => Id.fromJson(e))
           .toList(),
       goalIdElement: (json['_goalId'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       triggerDefinition: (json['triggerDefinition'] as List<dynamic>?)
           ?.map((e) => TriggerDefinition.fromJson(e as Map<String, dynamic>))
@@ -1340,7 +1341,8 @@ _$_Questionnaire _$$_QuestionnaireFromJson(Map<String, dynamic> json) =>
           ?.map((e) => e as String)
           .toList(),
       subjectTypeElement: (json['_subjectType'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       item: (json['item'] as List<dynamic>?)
           ?.map((e) => QuestionnaireItem.fromJson(e as Map<String, dynamic>))

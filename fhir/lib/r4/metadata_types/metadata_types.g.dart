@@ -149,7 +149,8 @@ _$_DataRequirement _$$_DataRequirementFromJson(Map<String, dynamic> json) =>
           ?.map((e) => e as String)
           .toList(),
       mustSupportElement: (json['_mustSupport'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       codeFilter: (json['codeFilter'] as List<dynamic>?)
           ?.map((e) =>

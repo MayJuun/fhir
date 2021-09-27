@@ -9,7 +9,7 @@ abstract class FhirBulk {
   static String toNdJson(List<Resource> resources) {
     String stringList = '';
     for (final resource in resources) {
-      stringList += '\n${json.encode(resource.toJson())}';
+      stringList += '\n${jsonEncode(resource.toJson())}';
     }
     stringList = stringList.replaceFirst('\n', '');
     return stringList;

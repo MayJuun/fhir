@@ -1,3 +1,11 @@
+## [0.5.0-8]
+* Fix: Add ability to escape `"` characters
+* Fix: Add error handling, which directly displays the issue if a FHIRPath is unable to be parsed
+* Note that smart quotes such as `“` and `”` behave differently on iOS (PWA) than they do the following platforms: iOS (native), Android (native/pwa), and desktop web formats (including PC, Chromebook, iOS). This has not been tested on native Linux, iOS, or Windows yet. Specifically, including either `“` or `”` in your FHIRPath may cause the iOS PWA to inadvertenly include that text into its logic, potentially resulting in a `Stack Overflow` error.
+
+## [0.5.0-7]
+* Updated to Dart 2.14.0
+
 ## [0.5.0-6]
 * Easier ability to create simple server for testing
 * Iif now included (previously included too, but now removed from the Readme ToDo list)

@@ -69,7 +69,8 @@ _$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
           ?.map((e) => Code.fromJson(e))
           .toList(),
       payloadMimeTypeElement: (json['_payloadMimeType'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       address:
           json['address'] == null ? null : FhirUrl.fromJson(json['address']),
@@ -79,7 +80,8 @@ _$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
       header:
           (json['header'] as List<dynamic>?)?.map((e) => e as String).toList(),
       headerElement: (json['_header'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -577,7 +579,8 @@ _$_HealthcareServiceAvailableTime _$$_HealthcareServiceAvailableTimeFromJson(
               _$HealthcareServiceAvailableTimeDaysOfWeekEnumMap, e))
           .toList(),
       daysOfWeekElement: (json['_daysOfWeek'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       allDay: json['allDay'] == null ? null : Boolean.fromJson(json['allDay']),
       allDayElement: json['_allDay'] == null
@@ -731,7 +734,8 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
       alias:
           (json['alias'] as List<dynamic>?)?.map((e) => e as String).toList(),
       aliasElement: (json['_alias'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       description: json['description'] as String?,
       descriptionElement: json['_description'] == null
@@ -910,7 +914,8 @@ _$_LocationHoursOfOperation _$$_LocationHoursOfOperationFromJson(
           ?.map((e) => Code.fromJson(e))
           .toList(),
       daysOfWeekElement: (json['_daysOfWeek'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       allDay: json['allDay'] == null ? null : Boolean.fromJson(json['allDay']),
       allDayElement: json['_allDay'] == null
@@ -1008,7 +1013,8 @@ _$_Organization _$$_OrganizationFromJson(Map<String, dynamic> json) =>
       alias:
           (json['alias'] as List<dynamic>?)?.map((e) => e as String).toList(),
       aliasElement: (json['_alias'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       telecom: (json['telecom'] as List<dynamic>?)
           ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))

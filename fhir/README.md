@@ -65,7 +65,7 @@ Future main() async {
   var headers = {'Content-type': 'application/json'};
   var desiredResource = 'Patient';
   var response = await get('$server/$desiredResource', headers: headers);
-  var searchSetBundle = Bundle.fromJson(json.decode(response.body));
+  var searchSetBundle = Bundle.fromJson(jsonDecode(response.body));
   print(searchSetBundle.toJson());
 }
 ```

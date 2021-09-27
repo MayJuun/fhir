@@ -75,6 +75,7 @@ final Parser<DelimitedIdentifierParser> delimitedIdentifierLexer =
 final escLexer = (char(r'\') &
         (char('`') |
             char("'") |
+            char('"') |
             char(r'\') |
             char('/') |
             char('f') |

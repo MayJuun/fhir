@@ -461,7 +461,8 @@ _$_CodeSystemFilter _$$_CodeSystemFilterFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Code.fromJson(e))
           .toList(),
       operatorElement: (json['_operator'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       value: json['value'] as String?,
       valueElement: json['_value'] == null
@@ -1851,7 +1852,8 @@ _$_TerminologyCapabilitiesVersion _$$_TerminologyCapabilitiesVersionFromJson(
           ?.map((e) => Code.fromJson(e))
           .toList(),
       languageElement: (json['_language'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       filter: (json['filter'] as List<dynamic>?)
           ?.map((e) =>
@@ -1861,7 +1863,8 @@ _$_TerminologyCapabilitiesVersion _$$_TerminologyCapabilitiesVersionFromJson(
           ?.map((e) => Code.fromJson(e))
           .toList(),
       propertyElement: (json['_property'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -1912,7 +1915,8 @@ _$_TerminologyCapabilitiesFilter _$$_TerminologyCapabilitiesFilterFromJson(
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
       op: (json['op'] as List<dynamic>?)?.map((e) => Code.fromJson(e)).toList(),
       opElement: (json['_op'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 

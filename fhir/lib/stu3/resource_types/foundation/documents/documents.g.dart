@@ -307,7 +307,8 @@ _$_CompositionAttester _$$_CompositionAttesterFromJson(
           ?.map((e) => _$enumDecode(_$CompositionAttesterModeEnumMap, e))
           .toList(),
       modeElement: (json['_mode'] as List<dynamic>?)
-          ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
+          ?.map((e) =>
+              e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       time: json['time'] == null ? null : Time.fromJson(json['time']),
       timeElement: json['_time'] == null

@@ -75,7 +75,7 @@ class _EncryptEncoder extends Converter<dynamic, String> {
 
     /// Encode the input value
     final encoded =
-        Encrypter(encrypter).encrypt(json.encode(input), iv: IV(iv)).base64;
+        Encrypter(encrypter).encrypt(jsonEncode(input), iv: IV(iv)).base64;
 
     /// Prepend the initial value
     return '$ivEncoded$encoded';
@@ -98,8 +98,7 @@ class _EncryptDecoder extends Converter<String, dynamic> {
     input = input.substring(24);
 
     /// Decode the input
-    var decoded =
-        json.decode(Encrypter(encrypter).decrypt64(input, iv: IV(iv)));
+    var decoded = jsonDecode(Encrypter(encrypter).decrypt64(input, iv: IV(iv)));
     if (decoded is Map) {
       return decoded.cast<String, dynamic>();
     }

@@ -841,7 +841,7 @@ class FhirRequest with _$FhirRequest {
         )
       ]);
     }
-    return Resource.fromJson(json.decode(result.body));
+    return Resource.fromJson(jsonDecode(result.body));
   }
 
   /// Allows us to return an error as a FHIR resource, whether the problem
