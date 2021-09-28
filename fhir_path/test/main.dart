@@ -3,15 +3,11 @@ import 'package:fhir_path/fhir_path.dart';
 import 'package:fhir_path/run_fhir_path.dart';
 
 void main() {
-  print((((lexer().parse("'PARENT: I,'").value as ParserList).first
-          as StringParser)
-      .value));
-  print(
-    walkFhirPath(
-        {},
-        r"'PARENT: I,' + %relatedPerson.name.first().given.aggregate($total + ' ' + $this, '') + ' ' + %relatedPerson.name.first().family + ' (“Parent”), hereby agree to the following:'",
-        {'%relatedPerson': relatedPerson.toJson()}),
-  );
+  print(walkFhirPath(null, "'PARENT: I,'", {
+    '%relatedPerson': relatedPerson.toJson(),
+    '%patient': null,
+    '%practitioner': null,
+  }));
 }
 
 final bundle = Bundle.fromJson({

@@ -23,7 +23,7 @@ List<dynamic> walkFhirPath(
     passedValue['version'] = version;
     // final FhirPathParser ast = lexer().parse(pathExpression).value;
     final ast = runLexer(pathExpression);
-    if (ast != FhirPathParser) {
+    if (ast is! ParserList) {
       return ast;
     }
     return ast is ParserList
