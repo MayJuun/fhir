@@ -1,5 +1,8 @@
 # fhir
 
+## [0.5.0-3]
+* Default ID creation now uses UUID V4
+
 ## [0.5.0-2]
 * Updated to Dart 2.14.0
 

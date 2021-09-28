@@ -3,11 +3,14 @@ import 'package:fhir_path/fhir_path.dart';
 import 'package:fhir_path/run_fhir_path.dart';
 
 void main() {
+  print((((lexer().parse("'PARENT: I,'").value as ParserList).first
+          as StringParser)
+      .value));
   print(
     walkFhirPath(
-      bundle.toJson(),
-      "entry.resource.ofType(QuestionnaireResponse).item.where(linkId.contains('/posi/')).answer.valueCoding.extension.value.aggregate(\$this + \$total, 0)",
-    ),
+        {},
+        r"'PARENT: I,' + %relatedPerson.name.first().given.aggregate($total + ' ' + $this, '') + ' ' + %relatedPerson.name.first().family + ' (“Parent”), hereby agree to the following:'",
+        {'%relatedPerson': relatedPerson.toJson()}),
   );
 }
 

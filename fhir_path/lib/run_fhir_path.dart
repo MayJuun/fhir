@@ -19,15 +19,33 @@ List<dynamic> walkFhirPath(
 ]) {
   try {
     final passedValue = passed ?? {};
-    passedValue['%resource'] = resource ?? [];
+    passedValue['%resource'] = resource ?? {};
     passedValue['version'] = version;
-    final FhirPathParser ast = lexer().parse(pathExpression).value;
-    return (ast is ParserList && ast.isEmpty)
-        ? []
-        : ast.execute([resource], passedValue);
-  } catch (error) {
+    // final FhirPathParser ast = lexer().parse(pathExpression).value;
+    final ast = runLexer(pathExpression);
+    if (ast != FhirPathParser) {
+      return ast;
+    }
+    return ast is ParserList
+        ? ast.isEmpty
+            ? []
+            : ast.execute([resource], passedValue)
+        : [];
+  } catch (error, stack) {
     final String errorMessage =
-        'fhirPath: unable to parse\n **error** $error\n **pathExpression** $pathExpression';
+        'fhirPath: unable to execute\n **error** $error\n **pathExpression** $pathExpression\n $stack';
+    print(errorMessage);
+    return [errorMessage];
+  }
+}
+
+dynamic runLexer(String pathExpression) {
+  try {
+    final FhirPathParser ast = lexer().parse(pathExpression).value;
+    return ast;
+  } catch (error, stack) {
+    final String errorMessage =
+        'fhirPath: unable to run lexer\n **error** $error\n **pathExpression** $pathExpression\n $stack';
     print(errorMessage);
     return [errorMessage];
   }

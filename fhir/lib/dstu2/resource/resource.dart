@@ -4,6 +4,7 @@ import 'dart:convert';
 
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:uuid/uuid.dart' as uuid;
 import 'package:yaml/yaml.dart';
 
 // import 'package:flutter/foundation.dart';

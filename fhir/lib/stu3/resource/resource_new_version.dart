@@ -1,8 +1,7 @@
 part of 'resource.dart';
 
 /// Returns an [Id] if one is passed, otherwise generates a new one
-Id _getId(int resourcehashCode, Id? id) =>
-    id ?? Id('fhirfli-$resourcehashCode-${DateTime.now().hashCode}');
+Id _getId(int resourcehashCode, Id? id) => id ?? Id(const uuid.Uuid().v4());
 
 /// Returns a [Meta] object, creates a new one if none is passed, otherwise
 /// updates the [lastUpdated] and increases the [version] by 1
