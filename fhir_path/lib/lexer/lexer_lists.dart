@@ -74,13 +74,13 @@ final functionLexer = unionFunctionLexer |
 
 final wsLexer = whiteSpaceLexer | lineCommentLexer | multiLineCommentLexer;
 
-final literalLexer = quantityLexer |
-    booleanLexer |
+final literalLexer = stringLexer |
     envVariableLexer |
-    numberLexer |
-    stringLexer |
-    identifierLexer |
     delimitedIdentifierLexer |
+    booleanLexer |
+    identifierLexer |
+    // quantityLexer |
+    numberLexer |
     dateTimeLexer |
     dateLexer |
     timeLexer;
