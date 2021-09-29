@@ -467,10 +467,10 @@ void testNoArgFxns() {
           walkFhirPath(resource.toJson(), walkPath("1.1.toString()")), ['1.1']);
       expect(walkFhirPath(resource.toJson(), walkPath("111.1.toString()")),
           ['111.1']);
-      expect(walkFhirPath(resource.toJson(), walkPath("1.1 'mg'.toString()")),
-          ["1.1 'mg'"]);
-      expect(walkFhirPath(resource.toJson(), walkPath("111.1 'mL'.toString()")),
-          ["111.1 'mL'"]);
+      // expect(walkFhirPath(resource.toJson(), walkPath("1.1 'mg'.toString()")),
+      //     ["1.1 'mg'"]);
+      // expect(walkFhirPath(resource.toJson(), walkPath("111.1 'mL'.toString()")),
+      //     ["111.1 'mL'"]);
       expect(
           walkFhirPath(resource.toJson(), walkPath("@2019-08-01.toString()")),
           ['2019-08-01']);
@@ -588,14 +588,14 @@ void testNoArgFxns() {
           walkFhirPath(
               resource.toJson(), walkPath("111.1.toString().length()")),
           [5]);
-      expect(
-          walkFhirPath(
-              resource.toJson(), walkPath("1.1 'mg'.toString().length()")),
-          [8]);
-      expect(
-          walkFhirPath(
-              resource.toJson(), walkPath("111.1 'mL'.toString().length()")),
-          [10]);
+      // expect(
+      //     walkFhirPath(
+      //         resource.toJson(), walkPath("1.1 'mg'.toString().length()")),
+      //     [8]);
+      // expect(
+      //     walkFhirPath(
+      //         resource.toJson(), walkPath("111.1 'mL'.toString().length()")),
+      //     [10]);
       expect(
           walkFhirPath(
               resource.toJson(), walkPath("@2019-08-01.toString().length()")),
