@@ -8,14 +8,18 @@ class IifParser extends FunctionParser {
   List execute(List results, Map passed) {
     var executedValue = value.first.execute(results.toList(), passed);
     if (executedValue.length < 2 || executedValue.length > 3) {
-      throw Exception(
+      throw FhirPathEvaluationException(
           'The function iif must evaluate to a criterion expression '
           ' a true-result collection, and an optional other-wise-result'
-          ' but instead evaluated to: $executedValue');
+          ' but instead evaluated to: $executedValue',
+          operation: 'iif',
+          collection: results);
     } else if (executedValue.first is! bool) {
-      throw Exception(
+      throw FhirPathEvaluationException(
           'The function iif requires that its criterion expression evaluates '
-          'to a boolean value, instead it evaluated to: ${executedValue.first}');
+          'to a boolean value, instead it evaluated to: ${executedValue.first}',
+          operation: 'iif',
+          collection: results);
     } else if (executedValue.first) {
       if (executedValue[1] is List) {
         return executedValue[1];
@@ -275,6 +279,8 @@ bool _isAllTypes(List results) =>
     results.first is! DateTime &&
     results.first is! FhirPathQuantity;
 
-Exception _conversionException(String function, List results) => Exception(
-    'The function $function only accepts lists with 0 or 1 item, this was the '
-    'list passed: $results');
+Exception _conversionException(String function, List results) =>
+    FhirPathEvaluationException(
+        'The function $function only accepts lists with 0 or 1 items.',
+        operation: function,
+        collection: results);

@@ -10,20 +10,26 @@ class StarParser extends OperatorParser {
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
       return [];
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
-      throw Exception('Math Operators require each operand to result in a '
+      throw FhirPathEvaluationException(
+          'Math Operators require each operand to result in a '
           'single object. The "*" operator was passed the following:\n'
           'Operand 1: $executedBefore\n'
-          'Operand 2: $executedAfter');
+          'Operand 2: $executedAfter',
+          operation: '*',
+          collection: results);
     } else if (executedBefore.first is num && executedAfter.first is num) {
       return [executedBefore.first * executedAfter.first];
     } else if (executedBefore.first is FhirPathQuantity &&
         executedAfter.first is FhirPathQuantity) {
       return [executedBefore.first * executedAfter.first];
     } else {
-      throw Exception('The "*" operator only accepts Integers, Decimals and '
+      throw FhirPathEvaluationException(
+          'The "*" operator only accepts Integers, Decimals and '
           'Quantities, but was passed the following:\n'
           'Operand 1: ${executedBefore.first} (${executedBefore.first.runtimeType})\n'
-          'Operand 2: ${executedAfter.first} (${executedAfter.first.runtimeType})');
+          'Operand 2: ${executedAfter.first} (${executedAfter.first.runtimeType})',
+          operation: '*',
+          collection: results);
     }
   }
 }
@@ -38,10 +44,13 @@ class DivSignParser extends OperatorParser {
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
       return [];
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
-      throw Exception('Math Operators require each operand to result in a '
+      throw FhirPathEvaluationException(
+          'Math Operators require each operand to result in a '
           'single object. The "/" operator was passed the following:\n'
           'Operand 1: $executedBefore\n'
-          'Operand 2: $executedAfter');
+          'Operand 2: $executedAfter',
+          operation: '/',
+          collection: results);
     } else if (executedBefore.first is num && executedAfter.first is num) {
       return [executedBefore.first / executedAfter.first];
     } else if (executedBefore.first is FhirPathQuantity &&
@@ -51,10 +60,13 @@ class DivSignParser extends OperatorParser {
             (executedAfter.first as FhirPathQuantity)
       ];
     } else {
-      throw Exception('The "/" operator only accepts Integers, Decimals and '
+      throw FhirPathEvaluationException(
+          'The "/" operator only accepts Integers, Decimals and '
           'Quantities, but was passed the following:\n'
           'Operand 1: ${executedBefore.first} (${executedBefore.first.runtimeType})\n'
-          'Operand 2: ${executedAfter.first} (${executedAfter.first.runtimeType})');
+          'Operand 2: ${executedAfter.first} (${executedAfter.first.runtimeType})',
+          operation: '/',
+          collection: results);
     }
   }
 }
@@ -69,10 +81,13 @@ class DivStringParser extends OperatorParser {
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
       return [];
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
-      throw Exception('Math Operators require each operand to result in a '
+      throw FhirPathEvaluationException(
+          'Math Operators require each operand to result in a '
           'single object. The "div" operator was passed the following:\n'
           'Operand 1: $executedBefore\n'
-          'Operand 2: $executedAfter');
+          'Operand 2: $executedAfter',
+          operation: 'div',
+          collection: results);
     } else if (executedBefore.first is num && executedAfter.first is num) {
       return [executedBefore.first ~/ executedAfter.first];
     } else if (executedBefore.first is FhirPathQuantity &&
@@ -82,10 +97,13 @@ class DivStringParser extends OperatorParser {
             (executedAfter.first as FhirPathQuantity)
       ];
     } else {
-      throw Exception('The "div" operator only accepts Integers, Decimals and '
+      throw FhirPathEvaluationException(
+          'The "div" operator only accepts Integers, Decimals and '
           'Quantities, but was passed the following:\n'
           'Operand 1: ${executedBefore.first} (${executedBefore.first.runtimeType})\n'
-          'Operand 2: ${executedAfter.first} (${executedAfter.first.runtimeType})');
+          'Operand 2: ${executedAfter.first} (${executedAfter.first.runtimeType})',
+          operation: 'div',
+          collection: results);
     }
   }
 }
@@ -100,10 +118,13 @@ class DivModParser extends OperatorParser {
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
       return [];
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
-      throw Exception('Math Operators require each operand to result in a '
+      throw FhirPathEvaluationException(
+          'Math Operators require each operand to result in a '
           'single object. The "mod" operator was passed the following:\n'
           'Operand 1: $executedBefore\n'
-          'Operand 2: $executedAfter');
+          'Operand 2: $executedAfter',
+          operation: 'mod',
+          collection: results);
     } else if (executedBefore.first is num && executedAfter.first is num) {
       return [executedBefore.first % executedAfter.first];
     } else if (executedBefore.first is FhirPathQuantity &&
@@ -113,10 +134,13 @@ class DivModParser extends OperatorParser {
             (executedAfter.first as FhirPathQuantity)
       ];
     } else {
-      throw Exception('The "mod" operator only accepts Integers, Decimals and '
+      throw FhirPathEvaluationException(
+          'The "mod" operator only accepts Integers, Decimals and '
           'Quantities, but was passed the following:\n'
           'Operand 1: ${executedBefore.first} (${executedBefore.first.runtimeType})\n'
-          'Operand 2: ${executedAfter.first} (${executedAfter.first.runtimeType})');
+          'Operand 2: ${executedAfter.first} (${executedAfter.first.runtimeType})',
+          operation: 'mod',
+          collection: results);
     }
   }
 }
@@ -137,10 +161,13 @@ class PlusParser extends OperatorParser {
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
       return [];
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
-      throw Exception('Math Operators require each operand to result in a '
+      throw FhirPathEvaluationException(
+          'Math Operators require each operand to result in a '
           'single object. The "+" operator was passed the following:\n'
           'Operand 1: $executedBefore\n'
-          'Operand 2: $executedAfter');
+          'Operand 2: $executedAfter',
+          operation: '+',
+          collection: results);
     } else
       switch (executedBefore.first.runtimeType) {
         case int:
@@ -177,11 +204,14 @@ class PlusParser extends OperatorParser {
         default:
           break;
       }
-    throw Exception('The "+" operator only accepts (FHIR) Integers, '
+    throw FhirPathEvaluationException(
+        'The "+" operator only accepts (FHIR) Integers, '
         'Decimals, Quantities, String or (Dart) int, double, num, '
         'or Strings, but was passed the following:\n'
         'Operand 1: ${executedBefore.first} (${executedBefore.first.runtimeType})\n'
-        'Operand 2: ${executedAfter.first} (${executedAfter.first.runtimeType})');
+        'Operand 2: ${executedAfter.first} (${executedAfter.first.runtimeType})',
+        operation: '+',
+        collection: results);
   }
 }
 
@@ -201,10 +231,13 @@ class MinusParser extends OperatorParser {
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
       return [];
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
-      throw Exception('Math Operators require each operand to result in a '
+      throw FhirPathEvaluationException(
+          'Math Operators require each operand to result in a '
           'single object. The "-" operator was passed the following:\n'
           'Operand 1: $executedBefore\n'
-          'Operand 2: $executedAfter');
+          'Operand 2: $executedAfter',
+          operation: '-',
+          collection: results);
     } else if (executedBefore.first is num && executedAfter.first is num) {
       return [executedBefore.first - executedAfter.first];
     } else if (executedBefore.first is FhirPathQuantity &&
@@ -214,10 +247,13 @@ class MinusParser extends OperatorParser {
             (executedAfter.first as FhirPathQuantity)
       ];
     } else {
-      throw Exception('The "-" operator only accepts Integers, Decimals and '
+      throw FhirPathEvaluationException(
+          'The "-" operator only accepts Integers, Decimals and '
           'Quantities, but was passed the following:\n'
           'Operand 1: ${executedBefore.first} (${executedBefore.first.runtimeType})\n'
-          'Operand 2: ${executedAfter.first} (${executedAfter.first.runtimeType})');
+          'Operand 2: ${executedAfter.first} (${executedAfter.first.runtimeType})',
+          operation: '-',
+          collection: results);
     }
   }
 }
@@ -232,20 +268,26 @@ class AndSignParser extends OperatorParser {
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
       return [];
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
-      throw Exception('Math Operators require each operand to result in a '
+      throw FhirPathEvaluationException(
+          'Math Operators require each operand to result in a '
           'single object. The "&" operator was passed the following:\n'
           'Operand 1: $executedBefore\n'
-          'Operand 2: $executedAfter');
+          'Operand 2: $executedAfter',
+          operation: '&',
+          collection: results);
     } else if (executedBefore.first is String &&
         executedAfter.first is String) {
       return [
         (executedBefore.first as String) + (executedAfter.first as String)
       ];
     } else {
-      throw Exception('The "&" operator only accepts Strings, but was passed '
+      throw FhirPathEvaluationException(
+          'The "&" operator only accepts Strings, but was passed '
           'the following:\n'
           'Operand 1: ${executedBefore.first} (${executedBefore.first.runtimeType})\n'
-          'Operand 2: ${executedAfter.first} (${executedAfter.first.runtimeType})');
+          'Operand 2: ${executedAfter.first} (${executedAfter.first.runtimeType})',
+          operation: '&',
+          collection: results);
     }
   }
 }
