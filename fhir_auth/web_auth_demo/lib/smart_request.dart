@@ -19,6 +19,8 @@ Future<void> smartRequest(Uri fhirCallback) async {
     print(e);
   }
 
+  print(client.fhirUri?.value);
+
   if (client.fhirUri?.value != null) {
     final _newPatient = newPatient();
     print('Patient to be uploaded:\n${_newPatient.toJson()}');

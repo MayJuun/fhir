@@ -63,6 +63,7 @@ class SmartWebClient extends SmartClient {
           '?response_type=code'
           '&client_id=$clientId'
           '&redirect_uri=${redirectUri!.value}'
+          '${(fhirUri?.isValid ?? false) ? "&aud=${fhirUri!.value}" : ""}'
           '&scope=${scopes.join(" ")}';
       final _popupWin = html.window.open(authorizationUrl, 'Auth');
       String? authorizationCode;
