@@ -1,3 +1,11 @@
+## [0.5.0-9]
+* More robust error-handling 
+    * Define two exception types to indicate errors in the expression and 
+errors at evaluation time.
+    * Added check for non-existent variables
+    * Added check for undefined functions
+    * Added check for running substring on a non-string
+
 ## [0.5.0-8]
 * Fix: Add ability to escape `"` characters
 * Fix: Add error handling, which directly displays the issue if a FHIRPath is unable to be parsed

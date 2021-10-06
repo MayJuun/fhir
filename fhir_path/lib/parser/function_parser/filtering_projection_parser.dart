@@ -1,11 +1,11 @@
+import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart' as r4;
 import 'package:fhir/r5.dart' as r5;
-import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/stu3.dart' as stu3;
 
-import '../../utils/deep_comparison_lists.dart';
 import '../../fhir_path.dart';
+import '../../utils/deep_comparison_lists.dart';
 
 class FpWhereParser extends FunctionParser {
   FpWhereParser();
@@ -70,9 +70,13 @@ class OfTypeParser extends ValueParser<ParserList> {
         ? [value.first]
         : value.execute(results.toList(), passed);
     if (executedValue.length != 1) {
-      throw Exception('The "ofType" function requires an argument that '
-          'resolves to 1 item but was passed the following:\n'
-          'Argument 1: $executedValue\n');
+      throw FhirPathEvaluationException(
+        'The "ofType" function requires an argument that '
+        'resolves to 1 item but was passed the following:',
+        operation: 'ofType',
+        arguments: executedValue,
+        collection: results,
+      );
     }
     final finalResults = [];
     results.forEach((e) {

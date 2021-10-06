@@ -1,3 +1,5 @@
+import 'package:fhir_path/fhir_path.dart';
+
 class FhirPathQuantity {
   FhirPathQuantity(this.amount, this.unit);
   num amount;
@@ -41,10 +43,11 @@ class FhirPathQuantity {
 
   bool operator >(FhirPathQuantity o) {
     if (!stringEquality(o.unit)) {
-      throw Exception('The units on these to quantities are not the same and'
+      throw FhirPathEvaluationException(
+          'The units on these two quantities are not the same and'
           ' this version of FHIRPath does not currently support unit conversion'
           'Quantity1: ${toString()}]\n'
-          'Quantity1: ${o.toString()}]');
+          'Quantity2: ${o.toString()}]');
     }
     return amount > o.amount;
   }
@@ -53,10 +56,11 @@ class FhirPathQuantity {
 
   bool operator <(FhirPathQuantity o) {
     if (!stringEquality(o.unit)) {
-      throw Exception('The units on these to quantities are not the same and'
+      throw FhirPathEvaluationException(
+          'The units on these two quantities are not the same and'
           ' this version of FHIRPath does not currently support unit conversion'
           'Quantity1: ${toString()}]\n'
-          'Quantity1: ${o.toString()}]');
+          'Quantity2: ${o.toString()}]');
     }
     return amount < o.amount;
   }

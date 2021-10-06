@@ -27,7 +27,8 @@ class EnvVariableParser extends ValueParser<String> {
   EnvVariableParser(this.value);
   String value;
   List execute(List results, Map passed) => passed[value] == null
-      ? []
+      ? throw FhirPathEvaluationException('Variable $value does not exist.',
+          variables: passed)
       : passed[value] is List
           ? passed[value]
           : [passed[value]];
@@ -127,8 +128,8 @@ class DateTimeParser extends BaseDateTimeParser<List> {
     if (split.length == 2 && split.last != '') {
       final formattedDateTime = FhirDateTime(removeAt).value;
       if (formattedDateTime == null) {
-        throw Exception(
-            'The DateTime provided was not properly formatted: $stringValue');
+        throw FormatException(
+            'The DateTime provided was not properly formatted', stringValue);
       }
       String? timeString;
       final timeLength = removeAt.split('T').last.split(':').length;
@@ -148,8 +149,8 @@ class DateTimeParser extends BaseDateTimeParser<List> {
     } else {
       final formattedDateTime = FhirDateTime(removeAt.split('T').first).value;
       if (formattedDateTime == null) {
-        throw Exception(
-            'The DateTime provided was not properly formatted: $stringValue');
+        throw FormatException(
+            'The DateTime provided was not properly formatted', stringValue);
       }
       value = [Date(removeAt.split('T').first)];
     }

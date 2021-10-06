@@ -26,30 +26,38 @@ class SubstringParser extends ValueParser<ParserList> {
         ? []
         : results.length > 1
             ? throw _requiresList('.substring()', results)
-            : executedValue.length >= 1 &&
-                    executedValue.first is int &&
-                    executedValue.first >= results.first.length
-                ? []
-                : executedValue.length == 1 && executedValue.first is int
-                    ? [results.first.toString().substring(executedValue.first)]
-                    : executedValue.length == 2 &&
-                            executedValue.first is int &&
-                            executedValue.last is int
+            : (results.first is! String)
+                ? throw _requiresString('.substring()', results)
+                : executedValue.length >= 1 &&
+                        executedValue.first is int &&
+                        executedValue.first >= results.first.length
+                    ? []
+                    : executedValue.length == 1 && executedValue.first is int
                         ? [
-                            results.first.toString().substring(
-                                  executedValue.first,
-                                  (executedValue.first + executedValue.last) >
-                                          results.first.toString().length
-                                      ? results.first.toString().length
-                                      : (executedValue.first +
-                                          executedValue.last),
-                                )
+                            results.first
+                                .toString()
+                                .substring(executedValue.first)
                           ]
-                        : throw Exception(
-                            'The function .substring() was not provided the '
-                            ' proper parameters.\n'
-                            'Results: $results\n'
-                            'Value: $executedValue');
+                        : executedValue.length == 2 &&
+                                executedValue.first is int &&
+                                executedValue.last is int
+                            ? [
+                                results.first.toString().substring(
+                                      executedValue.first,
+                                      (executedValue.first +
+                                                  executedValue.last) >
+                                              results.first.toString().length
+                                          ? results.first.toString().length
+                                          : (executedValue.first +
+                                              executedValue.last),
+                                    )
+                              ]
+                            : throw FhirPathEvaluationException(
+                                'The function .substring() was not provided the '
+                                ' proper parameters.',
+                                operation: '.substring()',
+                                collection: results,
+                                arguments: executedValue);
   }
 }
 
@@ -180,11 +188,12 @@ class ReplaceMatchesParser extends ValueParser<ParserList> {
                     results.first.toString().replaceAll(
                         RegExp('${executedValue.first}'), executedValue.last)
                   ]
-                : throw Exception(
+                : throw FhirPathEvaluationException(
                     'The function .replace() was not provided the '
-                    ' proper parameters.\n'
-                    'Results: $results\n'
-                    'Value: $value');
+                    ' proper parameters.',
+                    operation: '.replace()',
+                    collection: results,
+                    arguments: value);
   }
 }
 
@@ -215,9 +224,16 @@ class ToCharsParser extends FhirPathParser {
 }
 
 Exception _requiresList(String function, List results) =>
-    Exception('The function $function only accepts lists'
-        ' with 0 or 1 item, this was the list passed: $results');
+    FhirPathEvaluationException(
+      'The function $function only accepts lists'
+      ' with 0 or 1 item, this was the list passed: $results',
+      operation: function,
+      collection: results,
+    );
 
 Exception _requiresString(String function, List results) =>
-    Exception('The function $function was not passed a string'
-        ' which is required, it was passed: $results');
+    FhirPathEvaluationException(
+      'The function $function was not applied to a string.',
+      operation: function,
+      collection: results,
+    );

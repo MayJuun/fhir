@@ -8,10 +8,14 @@ class AndStringParser extends OperatorParser {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
     if (executedBefore.length > 1 || executedAfter.length > 1) {
-      throw Exception('The "and" operator can only work with lists of 0 or 1 '
+      throw FhirPathEvaluationException(
+          'The "and" operator can only work with lists of 0 or 1 '
           'but was passed the following:\n'
           'Collection1: $executedBefore\n'
-          'Collection2: $executedAfter');
+          'Collection2: $executedAfter',
+          operation: 'and',
+          arguments: [executedBefore, executedAfter],
+          collection: results);
     } else if (executedBefore.isEmpty) {
       return executedAfter.isEmpty || executedAfter.first == true
           ? []

@@ -8,8 +8,11 @@ class SingleParser extends FhirPathParser {
       ? results
       : results.length == 0
           ? []
-          : throw Exception('The List $results is only allowed to contain one '
-              'item if evaluated using the .single() function');
+          : throw FhirPathEvaluationException(
+              'The List $results is only allowed to contain one '
+              'item if evaluated using the .single() function',
+              operation: '.single()',
+              collection: results);
 }
 
 class FirstParser extends FhirPathParser {
@@ -42,12 +45,15 @@ class SkipParser extends FunctionParser {
   List execute(List results, Map passed) {
     final executedValue = value.execute(results.toList(), passed);
     return executedValue.length != 1 || executedValue.first is! int
-        ? throw Exception(
-            'The argument passed to the .skip() function was not valid:\n'
-            'Argument: $value')
+        ? throw FhirPathEvaluationException(
+            'The argument passed to the .skip() function was not valid.',
+            operation: '.skip()',
+            arguments: value)
         : executedValue.first == null
-            ? throw Exception(
-                'The value for Skip was not a number: ${executedValue.first}')
+            ? throw FhirPathEvaluationException(
+                'The value for .skip() was not a number: ${executedValue.first}',
+                operation: '.skip()',
+                arguments: executedValue.first)
             : executedValue.first <= 0
                 ? results
                 : results.isEmpty || executedValue.first >= results.length
@@ -62,11 +68,15 @@ class TakeParser extends FunctionParser {
   List execute(List results, Map passed) {
     final executedValue = value.execute(results.toList(), passed);
     return value.length != 1 || value.first is! IntegerParser
-        ? throw Exception(
-            'The argument passed to the .take() function was not valid:\n'
-            'Argument: $value')
+        ? throw FhirPathEvaluationException(
+            'The argument passed to the .take() function was not valid:',
+            operation: '.take()',
+            arguments: value)
         : executedValue.first is! int
-            ? throw Exception('The value for Take was not a number: $value')
+            ? throw FhirPathEvaluationException(
+                'The value for .take() was not a number: $value',
+                operation: '.take()',
+                arguments: value)
             : executedValue.first <= 0 ||
                     results.isEmpty ||
                     executedValue.first >= results.length

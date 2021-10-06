@@ -148,17 +148,21 @@ class TruncateParser extends ValueParser {
 }
 
 Exception _wrongLength(String functionName, List results) =>
-    Exception('The function $functionName can only work on a collection'
-        ' with 0 or 1 item, however, this was the list passed:\n'
-        'Collection (length: ${results.length}): $results');
+    FhirPathEvaluationException(
+        'The function $functionName can only work on a collection'
+        ' with 0 or 1 item.',
+        collection: results);
 
 Exception _wrongArgLength(String functionName, List value) =>
-    Exception('The function $functionName must have an argument that '
-        'evaluations to 0 or 1 item, however, it was passed:\n'
-        'Argument (length: ${value.length}): $value');
+    FhirPathEvaluationException(
+        'The function $functionName must have an argument that '
+        'evaluates to 0 or 1 item.',
+        operation: functionName,
+        arguments: value);
 
 Exception _wrongTypes(String functionName, List results, dynamic value) =>
-    Exception('The function $functionName cannot work with the types '
-        'passed.\n'
-        'Collection: $results\n'
-        'Arguments: $value');
+    FhirPathEvaluationException(
+        'The function $functionName cannot work with the types '
+        'passed.',
+        collection: results,
+        arguments: value);

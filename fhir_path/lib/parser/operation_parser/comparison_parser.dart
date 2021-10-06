@@ -42,8 +42,11 @@ List executeComparisons(List results, ParserList before, ParserList after,
     {bool where = false}) {
   bool stringGt(dynamic param1, dynamic param2) {
     if (param1 is! String || param2 is! String) {
-      throw Exception(
-          'Can only check equality on Strings compared to other Strings');
+      throw FhirPathEvaluationException(
+          'Can only check equality on Strings compared to other Strings',
+          operation: '==',
+          arguments: [param1, param2],
+          collection: results);
     } else if (param1 == param2) {
       return false;
     }
@@ -97,10 +100,13 @@ List executeComparisons(List results, ParserList before, ParserList after,
               : comparator == Comparator.lt
                   ? '<'
                   : '<=';
-      throw Exception('The function $functionName cannot work with the types '
+      throw FhirPathEvaluationException(
+          'The function $functionName cannot work with the types '
           'passed.\n'
           'Before: $before\n'
-          'After: $after');
+          'After: $after',
+          operation: functionName,
+          arguments: [before, after]);
     } else {
       if (where) {
         results.retainWhere((element) =>
