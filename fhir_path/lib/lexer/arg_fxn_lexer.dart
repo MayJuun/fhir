@@ -14,8 +14,6 @@ final Parser<UnionFunctionParser> unionFunctionLexer =
 final Parser<CombineParser> combineLexer =
     (string('combine(') | string('.combine(')).map((_) => CombineParser());
 
-/// ToDo: iff
-
 final Parser<ToQuantityParser> toQuantityLexer =
     (string('toQuantity(') | string('.toQuantity('))
         .map((_) => ToQuantityParser());

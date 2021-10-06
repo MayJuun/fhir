@@ -1,7 +1,8 @@
+import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/r4.dart' as r4;
 import 'package:fhir/r5.dart' as r5;
-import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/stu3.dart' as stu3;
+import 'package:petitparser/core.dart';
 
 import 'fhir_path.dart';
 
@@ -17,37 +18,57 @@ List<dynamic> walkFhirPath(
   Map<String, dynamic>? passed,
   FhirVersion version = FhirVersion.r4,
 ]) {
-  try {
-    final passedValue = passed ?? {};
-    passedValue['%resource'] = resource ?? {};
-    passedValue['version'] = version;
-    // final FhirPathParser ast = lexer().parse(pathExpression).value;
-    final ast = runLexer(pathExpression);
-    if (ast is! ParserList) {
-      return ast;
-    }
-    return ast is ParserList
-        ? ast.isEmpty
-            ? []
-            : ast.execute([resource], passedValue)
-        : [];
-  } catch (error, stack) {
-    final String errorMessage =
-        'fhirPath: unable to execute\n **error** $error\n **pathExpression** $pathExpression\n $stack';
-    print(errorMessage);
-    return [errorMessage];
-  }
-}
+  final passedValue = passed ?? {};
+  passedValue['%resource'] = resource ?? [];
+  passedValue['version'] = version;
 
-dynamic runLexer(String pathExpression) {
   try {
     final FhirPathParser ast = lexer().parse(pathExpression).value;
-    return ast;
-  } catch (error, stack) {
-    final String errorMessage =
-        'fhirPath: unable to run lexer\n **error** $error\n **pathExpression** $pathExpression\n $stack';
-    print(errorMessage);
-    return [errorMessage];
+    if (ast is ParserList) {
+      if (ast.isEmpty) {
+        return [];
+      } else {
+        // Check for combination of IdentifierParser followed by ParenthesisParser
+        // This indicates invalid function name
+        if (ast.value.length > 1) {
+          for (int i = 0; i < ast.value.length - 1; i++) {
+            if ((ast.value[i] is IdentifierParser) &&
+                (ast.value[i + 1] is ParenthesesParser)) {
+              final String functionName =
+                  (ast.value[i] as IdentifierParser).value;
+              throw FhirPathInvalidExpressionException(
+                  'Unknown function: $functionName',
+                  pathExpression: pathExpression);
+            }
+          }
+        }
+
+        return ast.execute([resource], passedValue);
+      }
+    } else {
+      throw FhirPathInvalidExpressionException(
+          'Parsing did not result in ParserList',
+          pathExpression: pathExpression);
+    }
+  } catch (error) {
+    if (error is FhirPathException) {
+      throw error;
+    } else if (error is ParserException) {
+      throw FhirPathInvalidExpressionException(
+        'Expression could not be parsed: ${error.message}',
+        pathExpression: pathExpression,
+        offset: error.offset,
+        cause: error,
+      );
+    } else {
+      throw FhirPathException(
+        'Unable to execute FHIRPath expression',
+        pathExpression: pathExpression,
+        cause: error,
+        resource: resource,
+        variables: passedValue,
+      );
+    }
   }
 }
 

@@ -1,7 +1,7 @@
+import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart' as r4;
 import 'package:fhir/r5.dart' as r5;
-import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/stu3.dart' as stu3;
 
 import '../../fhir_path.dart';
@@ -19,10 +19,12 @@ class IsParser extends OperatorParser {
             executedBefore.length != 1 ||
             executedAfter.isEmpty ||
             executedAfter.length != 1
-        ? throw Exception('the "is" operation requires two operands, this was '
+        ? throw FhirPathEvaluationException(
+            'the "is" operation requires two operands, this was '
             'passed the following\n'
             'Operand1: $executedBefore\n'
-            'Operand2: $executedAfter')
+            'Operand2: $executedAfter',
+            collection: results)
         : (passed['version'] == FhirVersion.r4
                     ? r4.ResourceUtils.resourceTypeFromStringMap.keys
                         .contains(executedAfter.first)
@@ -79,13 +81,21 @@ class AsParser extends OperatorParser {
   List execute(List results, Map passed) {
     final executedBefore = before.execute(results.toList(), passed);
     if (executedBefore.length != 1) {
-      throw Exception('The "as" operation requires a left operand with 1 item, '
+      throw FhirPathEvaluationException(
+          'The "as" operation requires a left operand with 1 item, '
           'but was passed the following\n'
-          'Operand 1: $before\n');
+          'Operand 1: $before',
+          operation: 'as',
+          arguments: before,
+          collection: results);
     } else if (after.length != 1 || after.first is! IdentifierParser) {
-      throw Exception('The "as" operation requires a right operand that '
+      throw FhirPathEvaluationException(
+          'The "as" operation requires a right operand that '
           'has a single item that resolves to an identifier, but was passed:\n'
-          'Operand 2: $after\n');
+          'Operand 2: $after',
+          operation: 'as',
+          arguments: after,
+          collection: results);
     }
     final identifierValue = (after.first as IdentifierParser).value;
     if (((passed['version'] == FhirVersion.r4

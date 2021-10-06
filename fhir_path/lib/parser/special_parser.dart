@@ -21,7 +21,7 @@ class ThisParser extends FhirPathParser {
 class TotalParser extends ValueParser<String> {
   TotalParser();
   List execute(List results, Map passed) => passed[r'$total'] == null
-      ? throw Exception(
+      ? throw FhirPathInvalidExpressionException(
           'The \$total parser was not specified (this should happen'
           ' in the aggregate function')
       : passed[r'$total'];
