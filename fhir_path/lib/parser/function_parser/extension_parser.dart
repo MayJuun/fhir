@@ -34,6 +34,69 @@ class AnswersParser extends FhirPathParser {
 
 class OrdinalParser extends FhirPathParser {
   OrdinalParser();
-  List execute(List results, Map passed) =>
-      results.map((e) => e is num ? e : throw Exception).toList();
+  List execute(List results, Map passed) {
+    final newResults = [];
+
+    List checkForOrdinalValues(List list) {
+      final tempResults = [];
+
+      /// check each result
+      for (var val in list) {
+        /// if it's a Map (if it's not, then we can't use it with Ordinal)
+        if (val is Map) {
+          /// First we check the element for extensions
+          if (val.keys.contains('extension')) {
+            /// get those extensions
+            var extension = val['extension'];
+
+            /// generally we expect the extension to be a list
+            if (extension is List) {
+              /// for each extension in the list
+              for (var ext in extension) {
+                /// if it is defined as an ordinalValue
+                if (ext['url'] ==
+                    'http://hl7.org/fhir/StructureDefinition/ordinalValue') {
+                  /// Safety check just to ensure there is a value
+                  if (ext['valueDecimal'] != null) {
+                    /// add that value to the results to return
+                    tempResults.add(ext['valueDecimal']);
+                  }
+                }
+              }
+            } else
+
+            /// just in case it's a Map and not a list
+            if (extension is Map) {
+              /// if it is defined as an ordinalValue
+              if (extension['url'] ==
+                  'http://hl7.org/fhir/StructureDefinition/ordinalValue') {
+                /// Safety check just to ensure there is a value
+                if (extension['valueDecimal'] != null) {
+                  /// add that value to the results to return
+                  tempResults.add(extension['valueDecimal']);
+                }
+              }
+            }
+          }
+        }
+      }
+      return tempResults;
+    }
+
+    newResults.addAll(checkForOrdinalValues(results));
+
+    for (var result in results) {
+      polymorphicPrefixes.forEach((element) {
+        if (result['${element}Coding'] != null) {
+          newResults
+              .addAll(checkForOrdinalValues([result['${element}Coding']]));
+        }
+        if (result['${element}Code'] != null) {
+          newResults.addAll(checkForOrdinalValues([result['${element}Code']]));
+        }
+      });
+    }
+
+    return newResults;
+  }
 }
