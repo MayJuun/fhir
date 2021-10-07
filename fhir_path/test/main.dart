@@ -3,11 +3,19 @@ import 'package:fhir_path/fhir_path.dart';
 import 'package:fhir_path/run_fhir_path.dart';
 
 void main() {
-  print(walkFhirPath(null, "'PARENT: I,'", {
-    '%relatedPerson': relatedPerson.toJson(),
-    '%patient': null,
-    '%practitioner': null,
-  }));
+  final response = QuestionnaireResponse.fromJson(questionnaireResponse);
+
+  print(walkFhirPath(response.toJson(),
+      r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"));
+
+  print(walkFhirPath(response.toJson(),
+      r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.sum()"));
+
+  // print(walkFhirPath(null, "'PARENT: I,'", {
+  //   '%relatedPerson': relatedPerson.toJson(),
+  //   '%patient': null,
+  //   '%practitioner': null,
+  // }));
 }
 
 final bundle = Bundle.fromJson({

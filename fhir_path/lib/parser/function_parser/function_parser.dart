@@ -1,6 +1,7 @@
 export 'combining_parser.dart';
 export 'conversions_parser.dart';
 export 'existence_parser.dart';
+export 'extension_parser.dart';
 export 'filtering_projection_parser.dart';
 export 'math_parser.dart';
 export 'string_manipulation_parser.dart';

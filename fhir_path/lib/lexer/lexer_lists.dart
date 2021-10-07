@@ -1,6 +1,7 @@
 import 'package:petitparser/petitparser.dart';
 
 import 'arg_fxn_lexer.dart';
+import 'extension_lexer.dart';
 import 'literal_lexer.dart';
 import 'no_arg_fxn_lexer.dart';
 import 'operator_lexer.dart';
@@ -127,7 +128,13 @@ final simpleLexer = symbolLexer |
     descendantsLexer |
     nowLexer |
     timeOfDayLexer |
-    todayLexer;
+    todayLexer |
+    sumLexer |
+    minLexer |
+    maxLexer |
+    avgLexer |
+    answersLexer |
+    ordinalLexer;
 
 final symbolLexer = millisecondLexer |
     secondLexer |
