@@ -5,7 +5,7 @@ import 'package:fhir_auth/r4.dart';
 import 'api.dart';
 import 'new_patient.dart';
 
-Future smartRequest() async {
+Future interopRequest() async {
   final client = SmartClient.getSmartClient(
     fhirUri: FhirUri(Api.interopUrl),
     clientId: Api.interopClientId,

@@ -67,38 +67,40 @@ class SmartWebClient extends SmartClient {
           '&scope=${scopes.join(" ")}';
       final _popupWin = html.window.open(authorizationUrl, 'Auth');
       String? authorizationCode;
-      html.window.onMessage.listen((event) async {
-        if (event.data.toString().contains('code=') &&
-            event.data.toString().contains('redirect.html')) {
-          authorizationCode = event.data
-              .toString()
-              .split('code=')[1]
-              .split('?')[0]
-              .split('&')[0];
-          if (authorizationCode != null) {
-            _popupWin?.close();
-            if (tokenUrl!.isValid) {
-              final response = await http.post(
-                tokenUrl!.value!,
-                headers: {
-                  'Content-Type': 'application/x-www-form-urlencoded',
-                  'grant_type': 'authorization_code',
-                },
-                body: jsonEncode(
-                  {
+      html.window.onMessage.listen(
+        (event) async {
+          if (event.data.toString().contains('code=') &&
+              event.data.toString().contains('redirect.html')) {
+            authorizationCode = event.data
+                .toString()
+                .split('code=')[1]
+                .split('?')[0]
+                .split('&')[0];
+            if (authorizationCode != null) {
+              _popupWin.close();
+              if (tokenUrl!.isValid) {
+                final response = await http.post(
+                  tokenUrl!.value!,
+                  headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
                     'grant_type': 'authorization_code',
-                    'client_id': '$clientId',
-                    'redirect_uri': '${redirectUri!.value}',
-                    'code': '$authorizationCode',
                   },
-                ),
-              );
-              print(response.headers);
-              print(response.body);
+                  body: jsonEncode(
+                    {
+                      'grant_type': 'authorization_code',
+                      'client_id': '$clientId',
+                      'redirect_uri': '${redirectUri!.value}',
+                      'code': '$authorizationCode',
+                    },
+                  ),
+                );
+                print(response.headers);
+                print(response.body);
+              }
             }
           }
-        }
-      });
+        },
+      );
     } catch (e, stack) {
       throw PlatformException(
         code: e.toString(),
@@ -170,6 +172,7 @@ class SmartWebClient extends SmartClient {
     //       stacktrace: stack.toString(),
     //     );
     //   }
+    // }
   }
 
   /// Request for the CapabilityStatement (or Conformance) and then identifying

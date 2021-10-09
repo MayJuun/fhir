@@ -5,7 +5,7 @@ import 'package:fhir_auth/r4.dart';
 import 'api.dart';
 import 'new_patient.dart';
 
-Future<void> smartRequest(Uri fhirCallback) async {
+Future<void> interopRequest(Uri fhirCallback) async {
   final client = SmartClient.getSmartClient(
     fhirUri: FhirUri(Api.interopUrl),
     clientId: Api.interopClientId,
@@ -13,11 +13,7 @@ Future<void> smartRequest(Uri fhirCallback) async {
     scopes: Api.scopes.scopesList(),
   );
 
-  try {
-    await client.initialize();
-  } catch (e) {
-    print(e);
-  }
+  await client.initialize();
 
   print(client.fhirUri?.value);
 

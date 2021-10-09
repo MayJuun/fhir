@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'aidbox_request.dart';
 import 'gcs_request.dart';
 import 'hapi_request.dart';
-import 'smart_request.dart';
+import 'interop_request.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -39,9 +40,14 @@ class DemoPage extends StatelessWidget {
                     await hapiRequest();
                   }),
               ElevatedButton(
+                  child: const Text('Aidbox', style: TextStyle(fontSize: 44)),
+                  onPressed: () async {
+                    await aidboxRequest(fhirCallback);
+                  }),
+              ElevatedButton(
                   child: const Text('Interop', style: TextStyle(fontSize: 44)),
                   onPressed: () async {
-                    await smartRequest(fhirCallback);
+                    await interopRequest(fhirCallback);
                   }),
               ElevatedButton(
                   child:

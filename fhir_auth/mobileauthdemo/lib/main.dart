@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
+import 'aidbox_request.dart';
 import 'gcs_request.dart';
 import 'hapi_request.dart';
-import 'smart_request.dart';
+import 'interop_request.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,8 +23,11 @@ class MyApp extends StatelessWidget {
                   child: const Text('Hapi', style: TextStyle(fontSize: 44)),
                   onPressed: () async => await hapiRequest()),
               ElevatedButton(
+                  child: const Text('Aidbox', style: TextStyle(fontSize: 44)),
+                  onPressed: () async => await gcsRequest()),
+              ElevatedButton(
                   child: const Text('Interop', style: TextStyle(fontSize: 44)),
-                  onPressed: () async => await smartRequest()),
+                  onPressed: () async => await interopRequest()),
               ElevatedButton(
                   child:
                       const Text('GCP Health', style: TextStyle(fontSize: 44)),
