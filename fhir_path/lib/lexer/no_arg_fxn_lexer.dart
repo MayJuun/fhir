@@ -58,6 +58,9 @@ final Parser<ConvertsToTimeParser> convertsToTimeLexer =
     (string('convertsToTime()') | string('.convertsToTime()'))
         .map((_) => ConvertsToTimeParser());
 
+final Parser<HasValueParser> hasValueLexer =
+    (string('hasValue()') | string('.hasValue()')).map((_) => HasValueParser());
+
 final Parser<EmptyParser> emptyLexer =
     (string('empty()') | string('.empty()')).map((_) => EmptyParser());
 

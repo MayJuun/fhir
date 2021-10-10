@@ -6,6 +6,8 @@ errors at evaluation time.
     * Added check for undefined functions
     * Added check for running substring on a non-string
 
+* Support for hasValue()
+
 ## [0.5.0-8]
 * Fix: Add ability to escape `"` characters
 * Fix: Add error handling, which directly displays the issue if a FHIRPath is unable to be parsed

@@ -1,10 +1,41 @@
-import '../../utils/deep_comparison_lists.dart';
 import '../../fhir_path.dart';
+import '../../utils/deep_comparison_lists.dart';
 
 /// Returns true if the input collection is empty ({ }) and false otherwise.
 class EmptyParser extends FhirPathParser {
   EmptyParser();
   List execute(List results, Map passed) => results.isEmpty ? [true] : [false];
+}
+
+class HasValueParser extends FhirPathParser {
+  HasValueParser();
+  late ParserList value;
+  List execute(List results, Map passed) {
+    // Returns true if the input collection contains a single value which is a FHIR primitive,...
+    if (results.length != 1) {
+      return [false];
+    }
+
+    final element = results.first;
+
+    if (element == null) {
+      return [false];
+    }
+
+    // ...and it has a primitive value
+    // (e.g. as opposed to not having a value and just having extensions).
+
+    if (element is Map<String, dynamic>) {
+      // element is a Map, most likely an answer. Introspect further...
+      return [
+        element.entries.any((mapEntry) =>
+            mapEntry.key.startsWith('value') && mapEntry.value != null)
+      ];
+    } else {
+      // element is a Dart primitive
+      return [true];
+    }
+  }
 }
 
 /// Returns true if the collection has any elements, and false otherwise.
