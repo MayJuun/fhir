@@ -1,10 +1,11 @@
 import 'dart:convert';
 
-import 'package:url_launcher/link.dart';
 import 'package:example/resource.dart';
 import 'package:fhir/r4.dart';
 import 'package:fhir_path/fhir_path.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:url_launcher/link.dart';
 
 void main() => runApp(MyApp());
 
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
         ),
         home: MyHomePage(title: 'FHIRPath Demo in Dart/Flutter'),
+        debugShowCheckedModeBanner: false,
       );
 }
 
@@ -28,11 +30,11 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final TextEditingController path =
-      TextEditingController(text: "Patient.name.where(use = 'official')");
+      TextEditingController(text: patientSampleFhirPath);
   final TextEditingController resource =
-      TextEditingController(text: openingResource);
+      TextEditingController(text: patientSampleResource);
   var displayString = '';
-  var numLines = 30;
+  var dropdownValue = 'Patient';
 
   void _runPath() {
     setState(() {
@@ -52,7 +54,22 @@ class _MyHomePageState extends State<MyHomePage> {
     _runPath();
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: Column(children: [
+          Text(widget.title),
+          Link(
+            uri: Uri.parse('https://hl7.github.io/fhirpath.js/'),
+            target: LinkTarget.blank,
+            builder: (ctx, openLink) {
+              return TextButton.icon(
+                onPressed: openLink,
+                label: Text(
+                    'Completely Inspired By: https://hl7.github.io/fhirpath.js/',
+                    style: TextStyle(color: Colors.white)),
+                icon: Icon(Icons.read_more, color: Colors.white),
+              );
+            },
+          ),
+        ]),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -61,7 +78,37 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(
               width: MediaQuery.of(context).size.width * 0.5,
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  Row(
+                    children: [
+                      Text('Samples',
+                          style: TextStyle(fontWeight: FontWeight.bold)),
+                      SizedBox(width: 8.0),
+                      DropdownButton<String>(
+                        value: dropdownValue,
+                        onChanged: (String? newValue) {
+                          setState(() {
+                            dropdownValue = newValue!;
+                            if (dropdownValue == 'Patient') {
+                              path.text = patientSampleFhirPath;
+                              resource.text = patientSampleResource;
+                            } else {
+                              path.text = questionnaireSampleFhirPath;
+                              resource.text = questionnaireSampleResource;
+                            }
+                          });
+                        },
+                        items: <String>['Patient', 'Questionnaire']
+                            .map<DropdownMenuItem<String>>((String value) {
+                          return DropdownMenuItem<String>(
+                            value: value,
+                            child: Text(value),
+                          );
+                        }).toList(),
+                      ),
+                    ],
+                  ),
                   TextFormField(
                     controller: path,
                     decoration: InputDecoration(
@@ -69,50 +116,47 @@ class _MyHomePageState extends State<MyHomePage> {
                         hintText: 'Enter FHIRPath expression'),
                     onChanged: (_) => _runPath(),
                   ),
-                  TextFormField(
-                    maxLines: numLines,
-                    controller: resource,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      hintText:
-                          'Enter JSON FHIR Resource Here' + ('\n' * numLines),
+                  Expanded(
+                    child: TextFormField(
+                      expands: true,
+                      maxLines: null,
+                      textAlignVertical: TextAlignVertical.top,
+                      style: TextStyle(fontSize: 12),
+                      controller: resource,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        hintText: 'Enter JSON FHIR Resource Here',
+                      ),
+                      onChanged: (_) => _runPath(),
                     ),
-                    onChanged: (_) => _runPath(),
                   ),
                 ],
               ),
             ),
             SizedBox(width: 20),
-            Column(
-              children: [
-                Link(
-                  uri: Uri.parse('https://hl7.github.io/fhirpath.js/'),
-                  target: LinkTarget.blank,
-                  builder: (ctx, openLink) {
-                    return TextButton.icon(
-                      onPressed: openLink,
-                      label: Text(
-                          'Completely Inspired By: https://hl7.github.io/fhirpath.js/'),
-                      icon: Icon(Icons.read_more),
-                    );
-                  },
-                ),
-                SizedBox(height: 10),
-                Text('Results', style: TextStyle(fontSize: 22)),
-                SizedBox(height: 10),
-                Expanded(
-                  child: SingleChildScrollView(
-                    child: SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.3,
-                      child: Text(
-                        displayString,
-                        textAlign: TextAlign.start,
-                        style: TextStyle(fontSize: 17),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 10),
+                  Text('Results',
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                  SizedBox(height: 10),
+                  Expanded(
+                    child: SingleChildScrollView(
+                      child: SizedBox(
+                        width: MediaQuery.of(context).size.width * 0.3,
+                        child: Text(
+                          displayString,
+                          textAlign: TextAlign.start,
+                          style: TextStyle(fontSize: 12),
+                        ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ],
         ),
