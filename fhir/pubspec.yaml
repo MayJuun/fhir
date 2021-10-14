@@ -11,6 +11,7 @@ dependencies:
   fhir_yaml: ^0.5.1
   freezed_annotation: ^0.14.3
   json_annotation: ^4.1.0
+  uuid: ^3.0.5
   yaml: ^3.1.0
 
 dev_dependencies:
