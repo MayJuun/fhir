@@ -4,8 +4,10 @@ import 'package:example/resource.dart';
 import 'package:fhir/r4.dart';
 import 'package:fhir_path/fhir_path.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:url_launcher/link.dart';
+import 'package:yaml_writer/yaml_writer.dart';
 
 void main() => runApp(MyApp());
 
@@ -36,13 +38,22 @@ class _MyHomePageState extends State<MyHomePage> {
   var displayString = '';
   var dropdownValue = 'Patient';
 
+  static const jsonCode = 'json';
+  static const yamlCode = 'yaml';
+
+  String? outputFormat = jsonCode;
+
   void _runPath() {
     setState(() {
       try {
         final newResource = Resource.fromJson(jsonDecode(resource.text));
-        JsonEncoder encoder = new JsonEncoder.withIndent('  ');
-        displayString = encoder.convert(jsonDecode(
-            jsonEncode(walkFhirPath(newResource.toJson(), path.text))));
+        final pathResult = walkFhirPath(newResource.toJson(), path.text);
+        if (jsonCode == outputFormat) {
+          JsonEncoder encoder = new JsonEncoder.withIndent('  ');
+          displayString = encoder.convert(jsonDecode(jsonEncode(pathResult)));
+        } else {
+          displayString = YAMLWriter().write(pathResult);
+        }
       } catch (e) {
         displayString = e.toString();
       }
@@ -121,7 +132,8 @@ class _MyHomePageState extends State<MyHomePage> {
                       expands: true,
                       maxLines: null,
                       textAlignVertical: TextAlignVertical.top,
-                      style: TextStyle(fontSize: 12),
+                      style:
+                          TextStyle(fontFamily: 'SourceCodePro', fontSize: 12),
                       controller: resource,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
@@ -139,9 +151,46 @@ class _MyHomePageState extends State<MyHomePage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   SizedBox(height: 10),
-                  Text('Results',
+                  Row(children: [
+                    IconButton(
+                      icon: const Icon(Icons.copy),
+                      onPressed: () {
+                        Clipboard.setData(
+                          ClipboardData(text: displayString),
+                        ).then((_) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: const Text(
+                                'Result copied to clipboard',
+                              ),
+                            ),
+                          );
+                        });
+                      },
+                    ),
+                    Text(
+                      'Results',
                       style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                    ),
+                    Expanded(child: Container()),
+                    const Text('JSON'),
+                    Radio<String>(
+                        value: jsonCode,
+                        groupValue: outputFormat,
+                        onChanged: (String? value) {
+                          outputFormat = value;
+                          _runPath();
+                        }),
+                    const Text('YAML'),
+                    Radio<String>(
+                        value: yamlCode,
+                        groupValue: outputFormat,
+                        onChanged: (String? value) {
+                          outputFormat = value;
+                          _runPath();
+                        }),
+                  ]),
                   SizedBox(height: 10),
                   Expanded(
                     child: SingleChildScrollView(
@@ -150,7 +199,8 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Text(
                           displayString,
                           textAlign: TextAlign.start,
-                          style: TextStyle(fontSize: 12),
+                          style: TextStyle(
+                              fontFamily: 'SourceCodePro', fontSize: 12),
                         ),
                       ),
                     ),
