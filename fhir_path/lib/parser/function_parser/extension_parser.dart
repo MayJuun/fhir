@@ -28,8 +28,16 @@ class AvgParser extends FhirPathParser {
 
 class AnswersParser extends FhirPathParser {
   AnswersParser();
-  List execute(List results, Map passed) =>
-      results.map((e) => e is num ? e : throw Exception).toList();
+  List execute(List results, Map passed) {
+    final descendants = DescendantsParser().execute(results, passed);
+    final answerMaps = descendants.where((element) =>
+        (element is Map<String, dynamic>) && element.containsKey('answer'));
+    final answers = <dynamic>[];
+    answerMaps.forEach((element) {
+      answers.addAll((element as Map<String, dynamic>)['answer']);
+    });
+    return answers;
+  }
 }
 
 class OrdinalParser extends FhirPathParser {
@@ -86,6 +94,10 @@ class OrdinalParser extends FhirPathParser {
     newResults.addAll(checkForOrdinalValues(results));
 
     for (var result in results) {
+      if (result is! Map) {
+        break;
+      }
+
       polymorphicPrefixes.forEach((element) {
         if (result['${element}Coding'] != null) {
           newResults
