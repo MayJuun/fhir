@@ -4,26 +4,62 @@ import '../../fhir_path.dart';
 
 class SumParser extends FhirPathParser {
   SumParser();
-  List execute(List results, Map passed) =>
-      [results.map((e) => e is num ? e : throw Exception).sum];
+  List execute(List results, Map passed) => [
+        results
+            .map((e) => e is num
+                ? e
+                : throw FhirPathEvaluationException(
+                    'sum() can only add numbers.',
+                    operation: 'sum',
+                    arguments: e,
+                    collection: results))
+            .sum
+      ];
 }
 
 class MinParser extends FhirPathParser {
   MinParser();
-  List execute(List results, Map passed) =>
-      [results.map((e) => e is num ? e : throw Exception).min];
+  List execute(List results, Map passed) => [
+        results
+            .map((e) => e is num
+                ? e
+                : throw FhirPathEvaluationException(
+                    'min() can only operate on numbers.',
+                    operation: 'min',
+                    arguments: e,
+                    collection: results))
+            .min
+      ];
 }
 
 class MaxParser extends FhirPathParser {
   MaxParser();
-  List execute(List results, Map passed) =>
-      [results.map((e) => e is num ? e : throw Exception).max];
+  List execute(List results, Map passed) => [
+        results
+            .map((e) => e is num
+                ? e
+                : throw FhirPathEvaluationException(
+                    'max() can only operate on numbers.',
+                    operation: 'max',
+                    arguments: e,
+                    collection: results))
+            .max
+      ];
 }
 
 class AvgParser extends FhirPathParser {
   AvgParser();
-  List execute(List results, Map passed) =>
-      [results.map((e) => e is num ? e : throw Exception).average];
+  List execute(List results, Map passed) => [
+        results
+            .map((e) => e is num
+                ? e
+                : throw FhirPathEvaluationException(
+                    'avg() can only operate on numbers.',
+                    operation: 'avg',
+                    arguments: e,
+                    collection: results))
+            .average
+      ];
 }
 
 class AnswersParser extends FhirPathParser {
