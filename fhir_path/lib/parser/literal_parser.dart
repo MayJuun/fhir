@@ -83,7 +83,8 @@ class IdentifierParser extends ValueParser<String> {
             // a key that starts with the same word, e.g. 'value' identifier will
             // match 'valueDateTime' key.
             r.forEach((k, v) {
-              if (polymorphicPrefixes.contains(value) &&
+              if (k.toString().startsWith(value) &&
+                  polymorphicPrefixes.contains(value) &&
                   startsWithAPolymorphicPrefix(k.toString())) {
                 rValue = v;
               }
@@ -100,6 +101,7 @@ class IdentifierParser extends ValueParser<String> {
         }
       });
     }
+
     return finalResults;
   }
 }
