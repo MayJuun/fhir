@@ -138,8 +138,8 @@ final Parser<DescendantsParser> descendantsLexer =
     (string('descendants()') | string('.descendants()'))
         .map((_) => DescendantsParser());
 
-final Parser<NotCollectionParser> notLexer =
-    (string('not()') | string('.not()')).map((_) => NotCollectionParser());
+final Parser<FpNotParser> notLexer =
+    (string('not()') | string('.not()')).map((_) => FpNotParser());
 
 final Parser<NowParser> nowLexer =
     (string('now()') | string('.now()')).map((_) => NowParser());
