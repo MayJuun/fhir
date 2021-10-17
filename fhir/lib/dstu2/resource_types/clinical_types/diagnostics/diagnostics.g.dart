@@ -8,7 +8,7 @@ part of 'diagnostics.dart';
 
 _$_Observation _$$_ObservationFromJson(Map<String, dynamic> json) =>
     _$_Observation(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Observation) ??
           Dstu2ResourceType.Observation,
@@ -45,7 +45,7 @@ _$_Observation _$$_ObservationFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecode(_$ObservationStatusEnumMap, json['status'],
+      status: $enumDecode(_$ObservationStatusEnumMap, json['status'],
           unknownValue: ObservationStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -216,43 +216,6 @@ Map<String, dynamic> _$$_ObservationToJson(_$_Observation instance) {
   writeNotNull(
       'component', instance.component?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -432,7 +395,7 @@ _$_ObservationRelated _$$_ObservationRelatedFromJson(
       fhirComments: (json['fhir_comments'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      type: _$enumDecodeNullable(_$RelatedTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$RelatedTypeEnumMap, json['type'],
           unknownValue: RelatedType.unknown),
       target: Reference.fromJson(json['target'] as Map<String, dynamic>),
     );
@@ -569,7 +532,7 @@ Map<String, dynamic> _$$_ObservationComponentToJson(
 
 _$_DiagnosticReport _$$_DiagnosticReportFromJson(Map<String, dynamic> json) =>
     _$_DiagnosticReport(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DiagnosticReport) ??
           Dstu2ResourceType.DiagnosticReport,
@@ -603,7 +566,7 @@ _$_DiagnosticReport _$$_DiagnosticReportFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecode(_$DiagnosticReportStatusEnumMap, json['status'],
+      status: $enumDecode(_$DiagnosticReportStatusEnumMap, json['status'],
           unknownValue: DiagnosticReportStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -764,7 +727,7 @@ Map<String, dynamic> _$$_DiagnosticReportImageToJson(
 
 _$_DiagnosticOrder _$$_DiagnosticOrderFromJson(Map<String, dynamic> json) =>
     _$_DiagnosticOrder(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DiagnosticOrder) ??
           Dstu2ResourceType.DiagnosticOrder,
@@ -808,10 +771,10 @@ _$_DiagnosticOrder _$$_DiagnosticOrderFromJson(Map<String, dynamic> json) =>
       specimen: (json['specimen'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$DiagnosticOrderStatusEnumMap, json['status'],
           unknownValue: DiagnosticOrderStatus.unknown),
-      priority: _$enumDecodeNullable(
+      priority: $enumDecodeNullable(
           _$DiagnosticOrderPriorityEnumMap, json['priority'],
           unknownValue: DiagnosticOrderPriority.unknown),
       event: (json['event'] as List<dynamic>?)
@@ -899,7 +862,7 @@ _$_DiagnosticOrderEvent _$$_DiagnosticOrderEventFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecode(_$EventStatusEnumMap, json['status'],
+      status: $enumDecode(_$EventStatusEnumMap, json['status'],
           unknownValue: EventStatus.unknown),
       description: json['description'] == null
           ? null
@@ -967,7 +930,7 @@ _$_DiagnosticOrderItem _$$_DiagnosticOrderItemFromJson(
       bodySite: json['bodySite'] == null
           ? null
           : CodeableConcept.fromJson(json['bodySite'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$ItemStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$ItemStatusEnumMap, json['status'],
           unknownValue: ItemStatus.unknown),
       event: (json['event'] as List<dynamic>?)
           ?.map((e) => DiagnosticOrderEvent.fromJson(e as Map<String, dynamic>))
@@ -1015,7 +978,7 @@ const _$ItemStatusEnumMap = {
 };
 
 _$_Specimen _$$_SpecimenFromJson(Map<String, dynamic> json) => _$_Specimen(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Specimen) ??
           Dstu2ResourceType.Specimen,
@@ -1049,7 +1012,7 @@ _$_Specimen _$$_SpecimenFromJson(Map<String, dynamic> json) => _$_Specimen(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$SpecimenStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$SpecimenStatusEnumMap, json['status'],
           unknownValue: SpecimenStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -1303,7 +1266,7 @@ Map<String, dynamic> _$$_SpecimenContainerToJson(
 }
 
 _$_BodySite _$$_BodySiteFromJson(Map<String, dynamic> json) => _$_BodySite(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.BodySite) ??
           Dstu2ResourceType.BodySite,
@@ -1378,7 +1341,7 @@ Map<String, dynamic> _$$_BodySiteToJson(_$_BodySite instance) {
 
 _$_ImagingStudy _$$_ImagingStudyFromJson(Map<String, dynamic> json) =>
     _$_ImagingStudy(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ImagingStudy) ??
           Dstu2ResourceType.ImagingStudy,
@@ -1432,7 +1395,7 @@ _$_ImagingStudy _$$_ImagingStudyFromJson(Map<String, dynamic> json) =>
       referrer: json['referrer'] == null
           ? null
           : Reference.fromJson(json['referrer'] as Map<String, dynamic>),
-      availability: _$enumDecodeNullable(
+      availability: $enumDecodeNullable(
           _$ImagingStudyAvailabilityEnumMap, json['availability'],
           unknownValue: ImagingStudyAvailability.unknown),
       url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
@@ -1549,7 +1512,7 @@ _$_ImagingStudySeries _$$_ImagingStudySeriesFromJson(
           ? null
           : Element.fromJson(
               json['_numberOfInstances'] as Map<String, dynamic>),
-      availability: _$enumDecodeNullable(
+      availability: $enumDecodeNullable(
           _$SeriesAvailabilityEnumMap, json['availability'],
           unknownValue: SeriesAvailability.unknown),
       url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
@@ -1675,7 +1638,7 @@ Map<String, dynamic> _$$_ImagingStudySeriesInstanceToJson(
 _$_ImagingObjectSelection _$$_ImagingObjectSelectionFromJson(
         Map<String, dynamic> json) =>
     _$_ImagingObjectSelection(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ImagingObjectSelection) ??
           Dstu2ResourceType.ImagingObjectSelection,

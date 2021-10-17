@@ -8,7 +8,7 @@ part of 'workflow.dart';
 
 _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
     _$_Appointment(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Appointment) ??
           Stu3ResourceType.Appointment,
@@ -42,7 +42,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$AppointmentStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$AppointmentStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -175,43 +175,6 @@ Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
   writeNotNull('requestedPeriod',
       instance.requestedPeriod?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Stu3ResourceTypeEnumMap = {
@@ -355,12 +318,12 @@ _$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
       actor: json['actor'] == null
           ? null
           : Reference.fromJson(json['actor'] as Map<String, dynamic>),
-      required_: _$enumDecodeNullable(
+      required_: $enumDecodeNullable(
           _$AppointmentParticipantRequiredEnumMap, json['required']),
       requiredElement: json['_required'] == null
           ? null
           : Element.fromJson(json['_required'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$AppointmentParticipantStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
@@ -406,7 +369,7 @@ const _$AppointmentParticipantStatusEnumMap = {
 _$_AppointmentResponse _$$_AppointmentResponseFromJson(
         Map<String, dynamic> json) =>
     _$_AppointmentResponse(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.AppointmentResponse) ??
           Stu3ResourceType.AppointmentResponse,
@@ -512,7 +475,7 @@ Map<String, dynamic> _$$_AppointmentResponseToJson(
 
 _$_ProcessRequest _$$_ProcessRequestFromJson(Map<String, dynamic> json) =>
     _$_ProcessRequest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ProcessRequest) ??
           Stu3ResourceType.ProcessRequest,
@@ -551,7 +514,7 @@ _$_ProcessRequest _$$_ProcessRequestFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       action:
-          _$enumDecodeNullable(_$ProcessRequestActionEnumMap, json['action']),
+          $enumDecodeNullable(_$ProcessRequestActionEnumMap, json['action']),
       actionElement: json['_action'] == null
           ? null
           : Element.fromJson(json['_action'] as Map<String, dynamic>),
@@ -691,7 +654,7 @@ Map<String, dynamic> _$$_ProcessRequestItemToJson(
 
 _$_ProcessResponse _$$_ProcessResponseFromJson(Map<String, dynamic> json) =>
     _$_ProcessResponse(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ProcessResponse) ??
           Stu3ResourceType.ProcessResponse,
@@ -844,7 +807,7 @@ Map<String, dynamic> _$$_ProcessResponseProcessNoteToJson(
 
 _$_RequestGroup _$$_RequestGroupFromJson(Map<String, dynamic> json) =>
     _$_RequestGroup(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.RequestGroup) ??
           Stu3ResourceType.RequestGroup,
@@ -1202,7 +1165,7 @@ Map<String, dynamic> _$$_RequestGroupRelatedActionToJson(
 }
 
 _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Schedule) ??
           Stu3ResourceType.Schedule,
@@ -1303,7 +1266,7 @@ Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) {
 }
 
 _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Slot) ??
           Stu3ResourceType.Slot,
@@ -1352,7 +1315,7 @@ _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
           : CodeableConcept.fromJson(
               json['appointmentType'] as Map<String, dynamic>),
       schedule: Reference.fromJson(json['schedule'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$SlotStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$SlotStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1432,7 +1395,7 @@ const _$SlotStatusEnumMap = {
 };
 
 _$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Task) ??
           Stu3ResourceType.Task,
@@ -1484,7 +1447,7 @@ _$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
       partOf: (json['partOf'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$TaskStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$TaskStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),

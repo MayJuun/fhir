@@ -7,7 +7,7 @@ part of 'evidence_based_medicine.dart';
 // **************************************************************************
 
 _$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Evidence) ??
           R5ResourceType.Evidence,
@@ -57,7 +57,7 @@ _$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$EvidenceStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$EvidenceStatusEnumMap, json['status'],
           unknownValue: EvidenceStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -257,43 +257,6 @@ Map<String, dynamic> _$$_EvidenceToJson(_$_Evidence instance) {
   writeNotNull(
       'certainty', instance.certainty?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R5ResourceTypeEnumMap = {
@@ -573,7 +536,7 @@ Map<String, dynamic> _$$_EvidenceCertaintyToJson(
 
 _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
     _$_EvidenceVariable(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.EvidenceVariable) ??
           R5ResourceType.EvidenceVariable,
@@ -623,7 +586,7 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$EvidenceVariableStatusEnumMap, json['status'],
           unknownValue: EvidenceVariableStatus.unknown),
       statusElement: json['_status'] == null
@@ -717,7 +680,7 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
       actualElement: json['_actual'] == null
           ? null
           : Element.fromJson(json['_actual'] as Map<String, dynamic>),
-      characteristicCombination: _$enumDecodeNullable(
+      characteristicCombination: $enumDecodeNullable(
           _$EvidenceVariableCharacteristicCombinationEnumMap,
           json['characteristicCombination'],
           unknownValue: EvidenceVariableCharacteristicCombination.unknown),
@@ -730,7 +693,7 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
           ?.map((e) => EvidenceVariableCharacteristic.fromJson(
               e as Map<String, dynamic>))
           .toList(),
-      handling: _$enumDecodeNullable(
+      handling: $enumDecodeNullable(
           _$EvidenceVariableHandlingEnumMap, json['handling'],
           unknownValue: EvidenceVariableHandling.unknown),
       handlingElement: json['_handling'] == null
@@ -898,7 +861,7 @@ _$_EvidenceVariableCharacteristic _$$_EvidenceVariableCharacteristicFromJson(
           ? null
           : EvidenceVariableTimeFromStart.fromJson(
               json['timeFromStart'] as Map<String, dynamic>),
-      groupMeasure: _$enumDecodeNullable(
+      groupMeasure: $enumDecodeNullable(
           _$EvidenceVariableCharacteristicGroupMeasureEnumMap,
           json['groupMeasure'],
           unknownValue: EvidenceVariableCharacteristicGroupMeasure.unknown),

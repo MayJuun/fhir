@@ -7,7 +7,7 @@ part of 'quality_reporting_and_testing.dart';
 // **************************************************************************
 
 _$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Measure) ??
           R5ResourceType.Measure,
@@ -57,7 +57,7 @@ _$_Measure _$$_MeasureFromJson(Map<String, dynamic> json) => _$_Measure(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$MeasureStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$MeasureStatusEnumMap, json['status'],
           unknownValue: MeasureStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -327,43 +327,6 @@ Map<String, dynamic> _$$_MeasureToJson(_$_Measure instance) {
   writeNotNull('supplementalData',
       instance.supplementalData?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R5ResourceTypeEnumMap = {
@@ -787,7 +750,7 @@ Map<String, dynamic> _$$_MeasureSupplementalDataToJson(
 
 _$_MeasureReport _$$_MeasureReportFromJson(Map<String, dynamic> json) =>
     _$_MeasureReport(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.MeasureReport) ??
           R5ResourceType.MeasureReport,
@@ -821,12 +784,12 @@ _$_MeasureReport _$$_MeasureReportFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$MeasureReportStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$MeasureReportStatusEnumMap, json['status'],
           unknownValue: MeasureReportStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      type: _$enumDecodeNullable(_$MeasureReportTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$MeasureReportTypeEnumMap, json['type'],
           unknownValue: MeasureReportType.unknown),
       typeElement: json['_type'] == null
           ? null
@@ -1295,7 +1258,7 @@ Map<String, dynamic> _$$_MeasureReportPopulation1ToJson(
 
 _$_TestReport _$$_TestReportFromJson(Map<String, dynamic> json) =>
     _$_TestReport(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.TestReport) ??
           R5ResourceType.TestReport,
@@ -1333,14 +1296,14 @@ _$_TestReport _$$_TestReportFromJson(Map<String, dynamic> json) =>
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$TestReportStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$TestReportStatusEnumMap, json['status'],
           unknownValue: TestReportStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       testScript:
           Reference.fromJson(json['testScript'] as Map<String, dynamic>),
-      result: _$enumDecodeNullable(_$TestReportResultEnumMap, json['result'],
+      result: $enumDecodeNullable(_$TestReportResultEnumMap, json['result'],
           unknownValue: TestReportResult.unknown),
       resultElement: json['_result'] == null
           ? null
@@ -1446,7 +1409,7 @@ _$_TestReportParticipant _$$_TestReportParticipantFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecodeNullable(
+      type: $enumDecodeNullable(
           _$TestReportParticipantTypeEnumMap, json['type'],
           unknownValue: TestReportParticipantType.unknown),
       typeElement: json['_type'] == null
@@ -1572,7 +1535,7 @@ _$_TestReportOperation _$$_TestReportOperationFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      result: _$enumDecodeNullable(
+      result: $enumDecodeNullable(
           _$TestReportOperationResultEnumMap, json['result'],
           unknownValue: TestReportOperationResult.unknown),
       resultElement: json['_result'] == null
@@ -1631,7 +1594,7 @@ _$_TestReportAssert _$$_TestReportAssertFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      result: _$enumDecodeNullable(
+      result: $enumDecodeNullable(
           _$TestReportAssertResultEnumMap, json['result'],
           unknownValue: TestReportAssertResult.unknown),
       resultElement: json['_result'] == null
@@ -1830,7 +1793,7 @@ Map<String, dynamic> _$$_TestReportAction2ToJson(
 
 _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
     _$_TestScript(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.TestScript) ??
           R5ResourceType.TestScript,
@@ -1880,7 +1843,7 @@ _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$TestScriptStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$TestScriptStatusEnumMap, json['status'],
           unknownValue: TestScriptStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -2546,7 +2509,7 @@ _$_TestScriptOperation _$$_TestScriptOperationFromJson(
       encodeRequestUrlElement: json['_encodeRequestUrl'] == null
           ? null
           : Element.fromJson(json['_encodeRequestUrl'] as Map<String, dynamic>),
-      method: _$enumDecodeNullable(
+      method: $enumDecodeNullable(
           _$TestScriptOperationMethodEnumMap, json['method'],
           unknownValue: TestScriptOperationMethod.unknown),
       methodElement: json['_method'] == null
@@ -2709,7 +2672,7 @@ _$_TestScriptAssert _$$_TestScriptAssertFromJson(Map<String, dynamic> json) =>
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      direction: _$enumDecodeNullable(
+      direction: $enumDecodeNullable(
           _$TestScriptAssertDirectionEnumMap, json['direction'],
           unknownValue: TestScriptAssertDirection.unknown),
       directionElement: json['_direction'] == null
@@ -2755,7 +2718,7 @@ _$_TestScriptAssert _$$_TestScriptAssertFromJson(Map<String, dynamic> json) =>
       navigationLinksElement: json['_navigationLinks'] == null
           ? null
           : Element.fromJson(json['_navigationLinks'] as Map<String, dynamic>),
-      operator_: _$enumDecodeNullable(
+      operator_: $enumDecodeNullable(
           _$TestScriptAssertOperatorEnumMap, json['operator'],
           unknownValue: TestScriptAssertOperator.unknown),
       operatorElement: json['_operator'] == null
@@ -2765,7 +2728,7 @@ _$_TestScriptAssert _$$_TestScriptAssertFromJson(Map<String, dynamic> json) =>
       pathElement: json['_path'] == null
           ? null
           : Element.fromJson(json['_path'] as Map<String, dynamic>),
-      requestMethod: _$enumDecodeNullable(
+      requestMethod: $enumDecodeNullable(
           _$TestScriptAssertRequestMethodEnumMap, json['requestMethod'],
           unknownValue: TestScriptAssertRequestMethod.unknown),
       requestMethodElement: json['_requestMethod'] == null
@@ -2780,7 +2743,7 @@ _$_TestScriptAssert _$$_TestScriptAssertFromJson(Map<String, dynamic> json) =>
       resourceElement: json['_resource'] == null
           ? null
           : Element.fromJson(json['_resource'] as Map<String, dynamic>),
-      response: _$enumDecodeNullable(
+      response: $enumDecodeNullable(
           _$TestScriptAssertResponseEnumMap, json['response'],
           unknownValue: TestScriptAssertResponse.unknown),
       responseElement: json['_response'] == null

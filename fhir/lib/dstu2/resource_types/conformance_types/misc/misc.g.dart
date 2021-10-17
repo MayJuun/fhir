@@ -13,7 +13,7 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
     requiredKeys: const ['status'],
   );
   return _$_ImplementationGuide(
-    resourceType: _$enumDecodeNullable(
+    resourceType: $enumDecodeNullable(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.ImplementationGuide) ??
         Dstu2ResourceType.ImplementationGuide,
@@ -55,7 +55,7 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
     nameElement: json['_name'] == null
         ? null
         : Element.fromJson(json['_name'] as Map<String, dynamic>),
-    status: _$enumDecode(_$ImplementationGuideStatusEnumMap, json['status'],
+    status: $enumDecode(_$ImplementationGuideStatusEnumMap, json['status'],
         unknownValue: ImplementationGuideStatus.unknown),
     statusElement: json['_status'] == null
         ? null
@@ -171,43 +171,6 @@ Map<String, dynamic> _$$_ImplementationGuideToJson(
   writeNotNull('binary', instance.binary?.map((e) => e.toJson()).toList());
   val['page'] = instance.page.toJson();
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -361,7 +324,7 @@ _$_ImplementationGuideDependency _$$_ImplementationGuideDependencyFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecode(_$DependencyTypeEnumMap, json['type'],
+      type: $enumDecode(_$DependencyTypeEnumMap, json['type'],
           unknownValue: DependencyType.unknown),
       uri: FhirUri.fromJson(json['uri']),
       uriElement: json['_uri'] == null
@@ -490,7 +453,7 @@ _$_ImplementationGuidePage _$$_ImplementationGuidePageFromJson(
           .toList(),
       source: FhirUri.fromJson(json['source']),
       name: json['name'] as String,
-      kind: _$enumDecode(_$PageKindEnumMap, json['kind'],
+      kind: $enumDecode(_$PageKindEnumMap, json['kind'],
           unknownValue: PageKind.unknown),
       type: (json['type'] as List<dynamic>?)
           ?.map((e) => Code.fromJson(e))
@@ -551,7 +514,7 @@ _$_ImplementationGuidePackageResource
           modifierExtension: (json['modifierExtension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
-          purpose: _$enumDecode(_$ResourcePurposeEnumMap, json['purpose'],
+          purpose: $enumDecode(_$ResourcePurposeEnumMap, json['purpose'],
               unknownValue: ResourcePurpose.unknown),
           name: json['name'] as String?,
           description: json['description'] as String?,
@@ -609,7 +572,7 @@ const _$ResourcePurposeEnumMap = {
 
 _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
     _$_TestScript(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.TestScript) ??
           Dstu2ResourceType.TestScript,
@@ -649,7 +612,7 @@ _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      status: _$enumDecode(_$TestScriptStatusEnumMap, json['status'],
+      status: $enumDecode(_$TestScriptStatusEnumMap, json['status'],
           unknownValue: TestScriptStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -1183,12 +1146,12 @@ _$_TestScriptActionOperation _$$_TestScriptActionOperationFromJson(
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      accept: _$enumDecodeNullable(_$OperationAcceptEnumMap, json['accept'],
+      accept: $enumDecodeNullable(_$OperationAcceptEnumMap, json['accept'],
           unknownValue: OperationAccept.unknown),
       acceptElement: json['_accept'] == null
           ? null
           : Element.fromJson(json['_accept'] as Map<String, dynamic>),
-      contentType: _$enumDecodeNullable(
+      contentType: $enumDecodeNullable(
           _$OperationContentTypeEnumMap, json['contentType'],
           unknownValue: OperationContentType.unknown),
       contentTypeElement: json['_contentType'] == null
@@ -1349,7 +1312,7 @@ _$_TestScriptActionAssert _$$_TestScriptActionAssertFromJson(
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      direction: _$enumDecodeNullable(
+      direction: $enumDecodeNullable(
           _$AssertDirectionEnumMap, json['direction'],
           unknownValue: AssertDirection.unknown),
       directionElement: json['_direction'] == null
@@ -1365,7 +1328,7 @@ _$_TestScriptActionAssert _$$_TestScriptActionAssertFromJson(
           ? null
           : Element.fromJson(
               json['_compareToSourcePath'] as Map<String, dynamic>),
-      contentType: _$enumDecodeNullable(
+      contentType: $enumDecodeNullable(
           _$AssertContentTypeEnumMap, json['contentType'],
           unknownValue: AssertContentType.unknown),
       contentTypeElement: json['_contentType'] == null
@@ -1385,7 +1348,7 @@ _$_TestScriptActionAssert _$$_TestScriptActionAssertFromJson(
       navigationLinksElement: json['_navigationLinks'] == null
           ? null
           : Element.fromJson(json['_navigationLinks'] as Map<String, dynamic>),
-      operator_: _$enumDecodeNullable(_$AssertOperatorEnumMap, json['operator'],
+      operator_: $enumDecodeNullable(_$AssertOperatorEnumMap, json['operator'],
           unknownValue: AssertOperator.unknown),
       operatorElement: json['_operator'] == null
           ? null
@@ -1399,7 +1362,7 @@ _$_TestScriptActionAssert _$$_TestScriptActionAssertFromJson(
       resourceElement: json['_resource'] == null
           ? null
           : Element.fromJson(json['_resource'] as Map<String, dynamic>),
-      response: _$enumDecodeNullable(_$AssertResponseEnumMap, json['response'],
+      response: $enumDecodeNullable(_$AssertResponseEnumMap, json['response'],
           unknownValue: AssertResponse.unknown),
       responseElement: json['_response'] == null
           ? null

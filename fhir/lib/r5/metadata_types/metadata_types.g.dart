@@ -45,7 +45,7 @@ _$_Contributor _$$_ContributorFromJson(Map<String, dynamic> json) =>
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecodeNullable(_$ContributorTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$ContributorTypeEnumMap, json['type'],
           unknownValue: ContributorType.unknown),
       typeElement: json['_type'] == null
           ? null
@@ -77,43 +77,6 @@ Map<String, dynamic> _$$_ContributorToJson(_$_Contributor instance) {
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$ContributorTypeEnumMap = {
@@ -322,7 +285,7 @@ _$_DataRequirementSort _$$_DataRequirementSortFromJson(
       pathElement: json['_path'] == null
           ? null
           : Element.fromJson(json['_path'] as Map<String, dynamic>),
-      direction: _$enumDecodeNullable(
+      direction: $enumDecodeNullable(
           _$DataRequirementSortDirectionEnumMap, json['direction'],
           unknownValue: DataRequirementSortDirection.unknown),
       directionElement: json['_direction'] == null
@@ -429,7 +392,7 @@ _$_RelatedArtifact _$$_RelatedArtifactFromJson(Map<String, dynamic> json) =>
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecodeNullable(_$RelatedArtifactTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$RelatedArtifactTypeEnumMap, json['type'],
           unknownValue: RelatedArtifactType.unknown),
       typeElement: json['_type'] == null
           ? null
@@ -504,7 +467,7 @@ _$_TriggerDefinition _$$_TriggerDefinitionFromJson(Map<String, dynamic> json) =>
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecodeNullable(_$TriggerDefinitionTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$TriggerDefinitionTypeEnumMap, json['type'],
           unknownValue: TriggerDefinitionType.unknown),
       typeElement: json['_type'] == null
           ? null

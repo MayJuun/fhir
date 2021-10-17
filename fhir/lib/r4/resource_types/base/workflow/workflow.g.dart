@@ -8,7 +8,7 @@ part of 'workflow.dart';
 
 _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
     _$_Appointment(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Appointment) ??
           R4ResourceType.Appointment,
@@ -42,7 +42,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$AppointmentStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$AppointmentStatusEnumMap, json['status'],
           unknownValue: AppointmentStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -192,43 +192,6 @@ Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
   writeNotNull('requestedPeriod',
       instance.requestedPeriod?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R4ResourceTypeEnumMap = {
@@ -413,13 +376,13 @@ _$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
       actor: json['actor'] == null
           ? null
           : Reference.fromJson(json['actor'] as Map<String, dynamic>),
-      required_: _$enumDecodeNullable(
+      required_: $enumDecodeNullable(
           _$AppointmentParticipantRequiredEnumMap, json['required'],
           unknownValue: AppointmentParticipantRequired.unknown),
       requiredElement: json['_required'] == null
           ? null
           : Element.fromJson(json['_required'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$AppointmentParticipantStatusEnumMap, json['status'],
           unknownValue: AppointmentParticipantStatus.unknown),
       statusElement: json['_status'] == null
@@ -475,7 +438,7 @@ const _$AppointmentParticipantStatusEnumMap = {
 _$_AppointmentResponse _$$_AppointmentResponseFromJson(
         Map<String, dynamic> json) =>
     _$_AppointmentResponse(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.AppointmentResponse) ??
           R4ResourceType.AppointmentResponse,
@@ -582,7 +545,7 @@ Map<String, dynamic> _$$_AppointmentResponseToJson(
 }
 
 _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Schedule) ??
           R4ResourceType.Schedule,
@@ -683,7 +646,7 @@ Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) {
 }
 
 _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Slot) ??
           R4ResourceType.Slot,
@@ -731,7 +694,7 @@ _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
           : CodeableConcept.fromJson(
               json['appointmentType'] as Map<String, dynamic>),
       schedule: Reference.fromJson(json['schedule'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$SlotStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$SlotStatusEnumMap, json['status'],
           unknownValue: SlotStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -813,7 +776,7 @@ const _$SlotStatusEnumMap = {
 };
 
 _$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Task) ??
           R4ResourceType.Task,
@@ -866,7 +829,7 @@ _$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
       partOf: (json['partOf'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$TaskStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$TaskStatusEnumMap, json['status'],
           unknownValue: TaskStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -879,7 +842,7 @@ _$_Task _$$_TaskFromJson(Map<String, dynamic> json) => _$_Task(
           ? null
           : CodeableConcept.fromJson(
               json['businessStatus'] as Map<String, dynamic>),
-      intent: _$enumDecodeNullable(_$TaskIntentEnumMap, json['intent'],
+      intent: $enumDecodeNullable(_$TaskIntentEnumMap, json['intent'],
           unknownValue: TaskIntent.unknown),
       intentElement: json['_intent'] == null
           ? null
@@ -1733,7 +1696,7 @@ Map<String, dynamic> _$$_TaskOutputToJson(_$_TaskOutput instance) {
 _$_VerificationResult _$$_VerificationResultFromJson(
         Map<String, dynamic> json) =>
     _$_VerificationResult(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.VerificationResult) ??
           R4ResourceType.VerificationResult,

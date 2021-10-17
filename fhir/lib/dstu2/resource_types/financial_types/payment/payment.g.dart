@@ -8,7 +8,7 @@ part of 'payment.dart';
 
 _$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
     _$_PaymentNotice(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.PaymentNotice) ??
           Dstu2ResourceType.PaymentNotice,
@@ -112,43 +112,6 @@ Map<String, dynamic> _$$_PaymentNoticeToJson(_$_PaymentNotice instance) {
   return val;
 }
 
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
-
 const _$Dstu2ResourceTypeEnumMap = {
   Dstu2ResourceType.Account: 'Account',
   Dstu2ResourceType.AllergyIntolerance: 'AllergyIntolerance',
@@ -250,7 +213,7 @@ const _$Dstu2ResourceTypeEnumMap = {
 _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
         Map<String, dynamic> json) =>
     _$_PaymentReconciliation(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.PaymentReconciliation) ??
           Dstu2ResourceType.PaymentReconciliation,
@@ -287,7 +250,7 @@ _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
       request: json['request'] == null
           ? null
           : Reference.fromJson(json['request'] as Map<String, dynamic>),
-      outcome: _$enumDecodeNullable(
+      outcome: $enumDecodeNullable(
           _$PaymentReconciliationOutcomeEnumMap, json['outcome'],
           unknownValue: PaymentReconciliationOutcome.unknown),
       outcomeElement: json['_outcome'] == null

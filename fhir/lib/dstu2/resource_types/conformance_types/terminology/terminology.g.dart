@@ -7,7 +7,7 @@ part of 'terminology.dart';
 // **************************************************************************
 
 _$_ValueSet _$$_ValueSetFromJson(Map<String, dynamic> json) => _$_ValueSet(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ValueSet) ??
           Dstu2ResourceType.ValueSet,
@@ -56,7 +56,7 @@ _$_ValueSet _$$_ValueSetFromJson(Map<String, dynamic> json) => _$_ValueSet(
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      status: _$enumDecode(_$ValueSetStatusEnumMap, json['status'],
+      status: $enumDecode(_$ValueSetStatusEnumMap, json['status'],
           unknownValue: ValueSetStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -174,43 +174,6 @@ Map<String, dynamic> _$$_ValueSetToJson(_$_ValueSet instance) {
   writeNotNull('compose', instance.compose?.toJson());
   writeNotNull('expansion', instance.expansion?.toJson());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -695,7 +658,7 @@ _$_ValueSetIncludeFilter _$$_ValueSetIncludeFilterFromJson(
       propertyElement: json['_property'] == null
           ? null
           : Element.fromJson(json['_property'] as Map<String, dynamic>),
-      op: _$enumDecode(_$FilterOpEnumMap, json['op'],
+      op: $enumDecode(_$FilterOpEnumMap, json['op'],
           unknownValue: FilterOp.unknown),
       opElement: json['_op'] == null
           ? null
@@ -965,7 +928,7 @@ Map<String, dynamic> _$$_ValueSetExpansionContainsToJson(
 
 _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
     _$_ConceptMap(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ConceptMap) ??
           Dstu2ResourceType.ConceptMap,
@@ -1011,7 +974,7 @@ _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      status: _$enumDecode(_$ConceptMapStatusEnumMap, json['status'],
+      status: $enumDecode(_$ConceptMapStatusEnumMap, json['status'],
           unknownValue: ConceptMapStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -1228,7 +1191,7 @@ _$_ConceptMapElementTarget _$$_ConceptMapElementTargetFromJson(
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
-      equivalence: _$enumDecode(_$TargetEquivalenceEnumMap, json['equivalence'],
+      equivalence: $enumDecode(_$TargetEquivalenceEnumMap, json['equivalence'],
           unknownValue: TargetEquivalence.unknown),
       equivalenceElement: json['_equivalence'] == null
           ? null
@@ -1326,7 +1289,7 @@ Map<String, dynamic> _$$_ConceptMapTargetDependsOnToJson(
 
 _$_NamingSystem _$$_NamingSystemFromJson(Map<String, dynamic> json) =>
     _$_NamingSystem(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.NamingSystem) ??
           Dstu2ResourceType.NamingSystem,
@@ -1361,12 +1324,12 @@ _$_NamingSystem _$$_NamingSystemFromJson(Map<String, dynamic> json) =>
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      status: _$enumDecode(_$NamingSystemStatusEnumMap, json['status'],
+      status: $enumDecode(_$NamingSystemStatusEnumMap, json['status'],
           unknownValue: NamingSystemStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      kind: _$enumDecode(_$NamingSystemKindEnumMap, json['kind'],
+      kind: $enumDecode(_$NamingSystemKindEnumMap, json['kind'],
           unknownValue: NamingSystemKind.unknown),
       kindElement: json['_kind'] == null
           ? null
@@ -1517,7 +1480,7 @@ _$_NamingSystemUniqueId _$$_NamingSystemUniqueIdFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecode(_$UniqueIdTypeEnumMap, json['type'],
+      type: $enumDecode(_$UniqueIdTypeEnumMap, json['type'],
           unknownValue: UniqueIdType.unknown),
       typeElement: json['_type'] == null
           ? null

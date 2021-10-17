@@ -8,7 +8,7 @@ part of 'public_health_and_research.dart';
 
 _$_ResearchStudy _$$_ResearchStudyFromJson(Map<String, dynamic> json) =>
     _$_ResearchStudy(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ResearchStudy) ??
           Stu3ResourceType.ResearchStudy,
@@ -52,8 +52,7 @@ _$_ResearchStudy _$$_ResearchStudyFromJson(Map<String, dynamic> json) =>
       partOf: (json['partOf'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status:
-          _$enumDecodeNullable(_$ResearchStudyStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$ResearchStudyStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -160,43 +159,6 @@ Map<String, dynamic> _$$_ResearchStudyToJson(_$_ResearchStudy instance) {
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   writeNotNull('arm', instance.arm?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Stu3ResourceTypeEnumMap = {
@@ -363,7 +325,7 @@ Map<String, dynamic> _$$_ResearchStudyArmToJson(_$_ResearchStudyArm instance) {
 
 _$_ResearchSubject _$$_ResearchSubjectFromJson(Map<String, dynamic> json) =>
     _$_ResearchSubject(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ResearchSubject) ??
           Stu3ResourceType.ResearchSubject,
@@ -398,7 +360,7 @@ _$_ResearchSubject _$$_ResearchSubjectFromJson(Map<String, dynamic> json) =>
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
       status:
-          _$enumDecodeNullable(_$ResearchSubjectStatusEnumMap, json['status']),
+          $enumDecodeNullable(_$ResearchSubjectStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),

@@ -8,7 +8,7 @@ part of 'request_and_response.dart';
 
 _$_Communication _$$_CommunicationFromJson(Map<String, dynamic> json) =>
     _$_Communication(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Communication) ??
           R5ResourceType.Communication,
@@ -176,43 +176,6 @@ Map<String, dynamic> _$$_CommunicationToJson(_$_Communication instance) {
   writeNotNull('payload', instance.payload?.map((e) => e.toJson()).toList());
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R5ResourceTypeEnumMap = {
@@ -416,7 +379,7 @@ Map<String, dynamic> _$$_CommunicationPayloadToJson(
 _$_CommunicationRequest _$$_CommunicationRequestFromJson(
         Map<String, dynamic> json) =>
     _$_CommunicationRequest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.CommunicationRequest) ??
           R5ResourceType.CommunicationRequest,
@@ -644,7 +607,7 @@ Map<String, dynamic> _$$_CommunicationRequestPayloadToJson(
 
 _$_DeviceRequest _$$_DeviceRequestFromJson(Map<String, dynamic> json) =>
     _$_DeviceRequest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.DeviceRequest) ??
           R5ResourceType.DeviceRequest,
@@ -907,7 +870,7 @@ Map<String, dynamic> _$$_DeviceRequestParameterToJson(
 
 _$_DeviceUsage _$$_DeviceUsageFromJson(Map<String, dynamic> json) =>
     _$_DeviceUsage(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.DeviceUsage) ??
           R5ResourceType.DeviceUsage,
@@ -944,7 +907,7 @@ _$_DeviceUsage _$$_DeviceUsageFromJson(Map<String, dynamic> json) =>
       basedOn: (json['basedOn'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$DeviceUsageStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$DeviceUsageStatusEnumMap, json['status'],
           unknownValue: DeviceUsageStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -1066,7 +1029,7 @@ const _$DeviceUsageStatusEnumMap = {
 
 _$_GuidanceResponse _$$_GuidanceResponseFromJson(Map<String, dynamic> json) =>
     _$_GuidanceResponse(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.GuidanceResponse) ??
           R5ResourceType.GuidanceResponse,
@@ -1215,7 +1178,7 @@ Map<String, dynamic> _$$_GuidanceResponseToJson(_$_GuidanceResponse instance) {
 
 _$_SupplyDelivery _$$_SupplyDeliveryFromJson(Map<String, dynamic> json) =>
     _$_SupplyDelivery(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.SupplyDelivery) ??
           R5ResourceType.SupplyDelivery,
@@ -1382,7 +1345,7 @@ Map<String, dynamic> _$$_SupplyDeliverySuppliedItemToJson(
 
 _$_SupplyRequest _$$_SupplyRequestFromJson(Map<String, dynamic> json) =>
     _$_SupplyRequest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.SupplyRequest) ??
           R5ResourceType.SupplyRequest,
@@ -1579,7 +1542,7 @@ Map<String, dynamic> _$$_SupplyRequestParameterToJson(
 
 _$_InventoryReport _$$_InventoryReportFromJson(Map<String, dynamic> json) =>
     _$_InventoryReport(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.InventoryReport) ??
           R5ResourceType.InventoryReport,
@@ -1613,13 +1576,13 @@ _$_InventoryReport _$$_InventoryReportFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$InventoryReportStatusEnumMap, json['status'],
           unknownValue: InventoryReportStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      countType: _$enumDecodeNullable(
+      countType: $enumDecodeNullable(
           _$InventoryReportCountyTypeEnumMap, json['countType'],
           unknownValue: InventoryReportCountyType.unknown),
       countTypeElement: json['_countType'] == null

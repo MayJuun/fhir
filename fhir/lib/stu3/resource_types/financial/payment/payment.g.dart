@@ -8,7 +8,7 @@ part of 'payment.dart';
 
 _$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
     _$_PaymentNotice(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.PaymentNotice) ??
           Stu3ResourceType.PaymentNotice,
@@ -115,43 +115,6 @@ Map<String, dynamic> _$$_PaymentNoticeToJson(_$_PaymentNotice instance) {
   writeNotNull('organization', instance.organization?.toJson());
   writeNotNull('paymentStatus', instance.paymentStatus?.toJson());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Stu3ResourceTypeEnumMap = {
@@ -277,7 +240,7 @@ const _$Stu3ResourceTypeEnumMap = {
 _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
         Map<String, dynamic> json) =>
     _$_PaymentReconciliation(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.PaymentReconciliation) ??
           Stu3ResourceType.PaymentReconciliation,

@@ -7,7 +7,7 @@ part of 'care_provision.dart';
 // **************************************************************************
 
 _$_CarePlan _$$_CarePlanFromJson(Map<String, dynamic> json) => _$_CarePlan(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.CarePlan) ??
           R4ResourceType.CarePlan,
@@ -179,43 +179,6 @@ Map<String, dynamic> _$$_CarePlanToJson(_$_CarePlan instance) {
   writeNotNull('activity', instance.activity?.map((e) => e.toJson()).toList());
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R4ResourceTypeEnumMap = {
@@ -455,8 +418,7 @@ _$_CarePlanDetail _$$_CarePlanDetailFromJson(Map<String, dynamic> json) =>
       goal: (json['goal'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(
-          _$CarePlanDetailStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$CarePlanDetailStatusEnumMap, json['status'],
           unknownValue: CarePlanDetailStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -570,7 +532,7 @@ const _$CarePlanDetailStatusEnumMap = {
 };
 
 _$_CareTeam _$$_CareTeamFromJson(Map<String, dynamic> json) => _$_CareTeam(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.CareTeam) ??
           R4ResourceType.CareTeam,
@@ -604,7 +566,7 @@ _$_CareTeam _$$_CareTeamFromJson(Map<String, dynamic> json) => _$_CareTeam(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$CareTeamStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$CareTeamStatusEnumMap, json['status'],
           unknownValue: CareTeamStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -748,7 +710,7 @@ Map<String, dynamic> _$$_CareTeamParticipantToJson(
 }
 
 _$_Goal _$$_GoalFromJson(Map<String, dynamic> json) => _$_Goal(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Goal) ??
           R4ResourceType.Goal,
@@ -782,7 +744,7 @@ _$_Goal _$$_GoalFromJson(Map<String, dynamic> json) => _$_Goal(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      lifecycleStatus: _$enumDecodeNullable(
+      lifecycleStatus: $enumDecodeNullable(
           _$GoalLifecycleStatusEnumMap, json['lifecycleStatus'],
           unknownValue: GoalLifecycleStatus.unknown),
       lifecycleStatusElement: json['_lifecycleStatus'] == null
@@ -989,7 +951,7 @@ Map<String, dynamic> _$$_GoalTargetToJson(_$_GoalTarget instance) {
 
 _$_NutritionOrder _$$_NutritionOrderFromJson(Map<String, dynamic> json) =>
     _$_NutritionOrder(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.NutritionOrder) ??
           R4ResourceType.NutritionOrder,
@@ -1469,7 +1431,7 @@ Map<String, dynamic> _$$_NutritionOrderAdministrationToJson(
 
 _$_RequestGroup _$$_RequestGroupFromJson(Map<String, dynamic> json) =>
     _$_RequestGroup(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.RequestGroup) ??
           R4ResourceType.RequestGroup,
@@ -1897,7 +1859,7 @@ Map<String, dynamic> _$$_RequestGroupRelatedActionToJson(
 
 _$_RiskAssessment _$$_RiskAssessmentFromJson(Map<String, dynamic> json) =>
     _$_RiskAssessment(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.RiskAssessment) ??
           R4ResourceType.RiskAssessment,
@@ -2119,7 +2081,7 @@ Map<String, dynamic> _$$_RiskAssessmentPredictionToJson(
 
 _$_ServiceRequest _$$_ServiceRequestFromJson(Map<String, dynamic> json) =>
     _$_ServiceRequest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ServiceRequest) ??
           R4ResourceType.ServiceRequest,
@@ -2382,7 +2344,7 @@ Map<String, dynamic> _$$_ServiceRequestToJson(_$_ServiceRequest instance) {
 _$_VisionPrescription _$$_VisionPrescriptionFromJson(
         Map<String, dynamic> json) =>
     _$_VisionPrescription(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.VisionPrescription) ??
           R4ResourceType.VisionPrescription,
@@ -2498,7 +2460,7 @@ _$_VisionPrescriptionLensSpecification
               .toList(),
           product:
               CodeableConcept.fromJson(json['product'] as Map<String, dynamic>),
-          eye: _$enumDecodeNullable(
+          eye: $enumDecodeNullable(
               _$VisionPrescriptionLensSpecificationEyeEnumMap, json['eye'],
               unknownValue: VisionPrescriptionLensSpecificationEye.unknown),
           eyeElement: json['_eye'] == null
@@ -2622,7 +2584,7 @@ _$_VisionPrescriptionPrism _$$_VisionPrescriptionPrismFromJson(
       amountElement: json['_amount'] == null
           ? null
           : Element.fromJson(json['_amount'] as Map<String, dynamic>),
-      base: _$enumDecodeNullable(
+      base: $enumDecodeNullable(
           _$VisionPrescriptionPrismBaseEnumMap, json['base'],
           unknownValue: VisionPrescriptionPrismBase.unknown),
       baseElement: json['_base'] == null

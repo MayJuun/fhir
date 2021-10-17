@@ -1,3 +1,6 @@
+## [0.5.0-3]
+* Updated dependencies
+
 ## [0.5.0-2]
 * Updating to Dart 2.14.0
 * Removed api files from repository

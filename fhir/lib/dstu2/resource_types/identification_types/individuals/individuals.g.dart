@@ -7,7 +7,7 @@ part of 'individuals.dart';
 // **************************************************************************
 
 _$_Patient _$$_PatientFromJson(Map<String, dynamic> json) => _$_Patient(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Patient) ??
           Dstu2ResourceType.Patient,
@@ -54,7 +54,7 @@ _$_Patient _$$_PatientFromJson(Map<String, dynamic> json) => _$_Patient(
       telecom: (json['telecom'] as List<dynamic>?)
           ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
           .toList(),
-      gender: _$enumDecodeNullable(_$PatientGenderEnumMap, json['gender'],
+      gender: $enumDecodeNullable(_$PatientGenderEnumMap, json['gender'],
           unknownValue: PatientGender.unknown),
       genderElement: json['_gender'] == null
           ? null
@@ -178,43 +178,6 @@ Map<String, dynamic> _$$_PatientToJson(_$_Patient instance) {
   writeNotNull('managingOrganization', instance.managingOrganization?.toJson());
   writeNotNull('link', instance.link?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -343,7 +306,7 @@ _$_PatientContact _$$_PatientContactFromJson(Map<String, dynamic> json) =>
       address: json['address'] == null
           ? null
           : Address.fromJson(json['address'] as Map<String, dynamic>),
-      gender: _$enumDecodeNullable(_$ContactGenderEnumMap, json['gender'],
+      gender: $enumDecodeNullable(_$ContactGenderEnumMap, json['gender'],
           unknownValue: ContactGender.unknown),
       genderElement: json['_gender'] == null
           ? null
@@ -480,7 +443,7 @@ _$_PatientLink _$$_PatientLinkFromJson(Map<String, dynamic> json) =>
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       other: Reference.fromJson(json['other'] as Map<String, dynamic>),
-      type: _$enumDecode(_$LinkTypeEnumMap, json['type'],
+      type: $enumDecode(_$LinkTypeEnumMap, json['type'],
           unknownValue: LinkType.unknown),
       typeElement: json['_type'] == null
           ? null
@@ -516,7 +479,7 @@ const _$LinkTypeEnumMap = {
 
 _$_Practitioner _$$_PractitionerFromJson(Map<String, dynamic> json) =>
     _$_Practitioner(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Practitioner) ??
           Dstu2ResourceType.Practitioner,
@@ -563,7 +526,7 @@ _$_Practitioner _$$_PractitionerFromJson(Map<String, dynamic> json) =>
       address: (json['address'] as List<dynamic>?)
           ?.map((e) => Address.fromJson(e as Map<String, dynamic>))
           .toList(),
-      gender: _$enumDecodeNullable(_$PractitionerGenderEnumMap, json['gender'],
+      gender: $enumDecodeNullable(_$PractitionerGenderEnumMap, json['gender'],
           unknownValue: PractitionerGender.unknown),
       genderElement: json['_gender'] == null
           ? null
@@ -749,7 +712,7 @@ Map<String, dynamic> _$$_PractitionerQualificationToJson(
 
 _$_RelatedPerson _$$_RelatedPersonFromJson(Map<String, dynamic> json) =>
     _$_RelatedPerson(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.RelatedPerson) ??
           Dstu2ResourceType.RelatedPerson,
@@ -794,7 +757,7 @@ _$_RelatedPerson _$$_RelatedPersonFromJson(Map<String, dynamic> json) =>
       telecom: (json['telecom'] as List<dynamic>?)
           ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
           .toList(),
-      gender: _$enumDecodeNullable(_$RelatedPersonGenderEnumMap, json['gender'],
+      gender: $enumDecodeNullable(_$RelatedPersonGenderEnumMap, json['gender'],
           unknownValue: RelatedPersonGender.unknown),
       genderElement: json['_gender'] == null
           ? null

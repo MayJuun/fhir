@@ -8,7 +8,7 @@ part of 'documents.dart';
 
 _$_CatalogEntry _$$_CatalogEntryFromJson(Map<String, dynamic> json) =>
     _$_CatalogEntry(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.CatalogEntry) ??
           R5ResourceType.CatalogEntry,
@@ -46,12 +46,12 @@ _$_CatalogEntry _$$_CatalogEntryFromJson(Map<String, dynamic> json) =>
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      type: _$enumDecodeNullable(_$CatalogEntryTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$CatalogEntryTypeEnumMap, json['type'],
           unknownValue: CatalogEntryType.unknown),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$CatalogEntryStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$CatalogEntryStatusEnumMap, json['status'],
           unknownValue: CatalogEntryStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -158,43 +158,6 @@ Map<String, dynamic> _$$_CatalogEntryToJson(_$_CatalogEntry instance) {
   writeNotNull(
       '_regulatorySummary', instance.regulatorySummaryElement?.toJson());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R5ResourceTypeEnumMap = {
@@ -383,7 +346,7 @@ _$_CatalogEntryRelatedEntry _$$_CatalogEntryRelatedEntryFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      relationship: _$enumDecodeNullable(
+      relationship: $enumDecodeNullable(
           _$CatalogEntryRelatedEntryRelationshipEnumMap, json['relationship'],
           unknownValue: CatalogEntryRelatedEntryRelationship.unknown),
       relationshipElement: json['_relationship'] == null
@@ -424,7 +387,7 @@ const _$CatalogEntryRelatedEntryRelationshipEnumMap = {
 
 _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
     _$_Composition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Composition) ??
           R5ResourceType.Composition,
@@ -458,7 +421,7 @@ _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$CompositionStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$CompositionStatusEnumMap, json['status'],
           unknownValue: CompositionStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -572,7 +535,7 @@ _$_CompositionAttester _$$_CompositionAttesterFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      mode: _$enumDecodeNullable(_$CompositionAttesterModeEnumMap, json['mode'],
+      mode: $enumDecodeNullable(_$CompositionAttesterModeEnumMap, json['mode'],
           unknownValue: CompositionAttesterMode.unknown),
       modeElement: json['_mode'] == null
           ? null
@@ -779,7 +742,7 @@ Map<String, dynamic> _$$_CompositionSectionToJson(
 
 _$_DocumentManifest _$$_DocumentManifestFromJson(Map<String, dynamic> json) =>
     _$_DocumentManifest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.DocumentManifest) ??
           R5ResourceType.DocumentManifest,
@@ -817,7 +780,7 @@ _$_DocumentManifest _$$_DocumentManifestFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$DocumentManifestStatusEnumMap, json['status'],
           unknownValue: DocumentManifestStatus.unknown),
       statusElement: json['_status'] == null
@@ -950,7 +913,7 @@ Map<String, dynamic> _$$_DocumentManifestRelatedToJson(
 
 _$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
     _$_DocumentReference(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.DocumentReference) ??
           R5ResourceType.DocumentReference,
@@ -987,7 +950,7 @@ _$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
       basedOn: (json['basedOn'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$DocumentReferenceStatusEnumMap, json['status'],
           unknownValue: DocumentReferenceStatus.unknown),
       statusElement: json['_status'] == null
@@ -1139,7 +1102,7 @@ _$_DocumentReferenceAttester _$$_DocumentReferenceAttesterFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      mode: _$enumDecodeNullable(
+      mode: $enumDecodeNullable(
           _$DocumentReferenceAttesterModeEnumMap, json['mode'],
           unknownValue: DocumentReferenceAttesterMode.unknown),
       modeElement: json['_mode'] == null
@@ -1195,7 +1158,7 @@ _$_DocumentReferenceRelatesTo _$$_DocumentReferenceRelatesToFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: _$enumDecodeNullable(
+      code: $enumDecodeNullable(
           _$DocumentReferenceRelatesToCodeEnumMap, json['code'],
           unknownValue: DocumentReferenceRelatesToCode.unknown),
       codeElement: json['_code'] == null

@@ -8,7 +8,7 @@ part of 'groups.dart';
 
 _$_Organization _$$_OrganizationFromJson(Map<String, dynamic> json) =>
     _$_Organization(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Organization) ??
           Dstu2ResourceType.Organization,
@@ -103,43 +103,6 @@ Map<String, dynamic> _$$_OrganizationToJson(_$_Organization instance) {
   writeNotNull('partOf', instance.partOf?.toJson());
   writeNotNull('contact', instance.contact?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -292,7 +255,7 @@ Map<String, dynamic> _$$_OrganizationContactToJson(
 
 _$_HealthcareService _$$_HealthcareServiceFromJson(Map<String, dynamic> json) =>
     _$_HealthcareService(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.HealthcareService) ??
           Dstu2ResourceType.HealthcareService,
@@ -508,7 +471,7 @@ _$_HealthcareServiceAvailableTime _$$_HealthcareServiceAvailableTimeFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       daysOfWeek: (json['daysOfWeek'] as List<dynamic>?)
-          ?.map((e) => _$enumDecode(_$AvailableTimeDaysOfWeekEnumMap, e))
+          ?.map((e) => $enumDecode(_$AvailableTimeDaysOfWeekEnumMap, e))
           .toList(),
       daysOfWeekElement: json['_daysOfWeek'] == null
           ? null
@@ -615,7 +578,7 @@ Map<String, dynamic> _$$_HealthcareServiceNotAvailableToJson(
 }
 
 _$_Group _$$_GroupFromJson(Map<String, dynamic> json) => _$_Group(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Group) ??
           Dstu2ResourceType.Group,
@@ -649,7 +612,7 @@ _$_Group _$$_GroupFromJson(Map<String, dynamic> json) => _$_Group(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecode(_$GroupTypeEnumMap, json['type'],
+      type: $enumDecode(_$GroupTypeEnumMap, json['type'],
           unknownValue: GroupType.unknown),
       typeElement: json['_type'] == null
           ? null

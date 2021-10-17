@@ -9,7 +9,7 @@ part of 'definitional_artifacts.dart';
 _$_ActivityDefinition _$$_ActivityDefinitionFromJson(
         Map<String, dynamic> json) =>
     _$_ActivityDefinition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ActivityDefinition) ??
           Stu3ResourceType.ActivityDefinition,
@@ -59,7 +59,7 @@ _$_ActivityDefinition _$$_ActivityDefinitionFromJson(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$ActivityDefinitionStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
@@ -275,43 +275,6 @@ Map<String, dynamic> _$$_ActivityDefinitionToJson(
   return val;
 }
 
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
-
 const _$Stu3ResourceTypeEnumMap = {
   Stu3ResourceType.Account: 'Account',
   Stu3ResourceType.ActivityDefinition: 'ActivityDefinition',
@@ -511,7 +474,7 @@ Map<String, dynamic> _$$_ActivityDefinitionDynamicValueToJson(
 
 _$_PlanDefinition _$$_PlanDefinitionFromJson(Map<String, dynamic> json) =>
     _$_PlanDefinition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.PlanDefinition) ??
           Stu3ResourceType.PlanDefinition,
@@ -565,7 +528,7 @@ _$_PlanDefinition _$$_PlanDefinitionFromJson(Map<String, dynamic> json) =>
           ? null
           : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
       status:
-          _$enumDecodeNullable(_$PlanDefinitionStatusEnumMap, json['status']),
+          $enumDecodeNullable(_$PlanDefinitionStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -887,32 +850,32 @@ _$_PlanDefinitionAction _$$_PlanDefinitionActionFromJson(
       type: json['type'] == null
           ? null
           : Coding.fromJson(json['type'] as Map<String, dynamic>),
-      groupingBehavior: _$enumDecodeNullable(
+      groupingBehavior: $enumDecodeNullable(
           _$PlanDefinitionActionGroupingBehaviorEnumMap,
           json['groupingBehavior']),
       groupingBehaviorElement: json['_groupingBehavior'] == null
           ? null
           : Element.fromJson(json['_groupingBehavior'] as Map<String, dynamic>),
-      selectionBehavior: _$enumDecodeNullable(
+      selectionBehavior: $enumDecodeNullable(
           _$PlanDefinitionActionSelectionBehaviorEnumMap,
           json['selectionBehavior']),
       selectionBehaviorElement: json['_selectionBehavior'] == null
           ? null
           : Element.fromJson(
               json['_selectionBehavior'] as Map<String, dynamic>),
-      requiredBehavior: _$enumDecodeNullable(
+      requiredBehavior: $enumDecodeNullable(
           _$PlanDefinitionActionRequiredBehaviorEnumMap,
           json['requiredBehavior']),
       requiredBehaviorElement: json['_requiredBehavior'] == null
           ? null
           : Element.fromJson(json['_requiredBehavior'] as Map<String, dynamic>),
-      precheckBehavior: _$enumDecodeNullable(
+      precheckBehavior: $enumDecodeNullable(
           _$PlanDefinitionActionPrecheckBehaviorEnumMap,
           json['precheckBehavior']),
       precheckBehaviorElement: json['_precheckBehavior'] == null
           ? null
           : Element.fromJson(json['_precheckBehavior'] as Map<String, dynamic>),
-      cardinalityBehavior: _$enumDecodeNullable(
+      cardinalityBehavior: $enumDecodeNullable(
           _$PlanDefinitionActionCardinalityBehaviorEnumMap,
           json['cardinalityBehavior']),
       cardinalityBehaviorElement: json['_cardinalityBehavior'] == null
@@ -1045,7 +1008,7 @@ const _$PlanDefinitionActionCardinalityBehaviorEnumMap = {
 _$_PlanDefinitionCondition _$$_PlanDefinitionConditionFromJson(
         Map<String, dynamic> json) =>
     _$_PlanDefinitionCondition(
-      kind: _$enumDecodeNullable(
+      kind: $enumDecodeNullable(
           _$PlanDefinitionConditionKindEnumMap, json['kind']),
       kindElement: json['_kind'] == null
           ? null
@@ -1099,7 +1062,7 @@ _$_PlanDefinitionRelatedAction _$$_PlanDefinitionRelatedActionFromJson(
       actionIdElement: json['_actionId'] == null
           ? null
           : Element.fromJson(json['_actionId'] as Map<String, dynamic>),
-      relationship: _$enumDecodeNullable(
+      relationship: $enumDecodeNullable(
           _$PlanDefinitionRelatedActionRelationshipEnumMap,
           json['relationship']),
       relationshipElement: json['_relationship'] == null
@@ -1152,7 +1115,7 @@ const _$PlanDefinitionRelatedActionRelationshipEnumMap = {
 _$_PlanDefinitionParticipant _$$_PlanDefinitionParticipantFromJson(
         Map<String, dynamic> json) =>
     _$_PlanDefinitionParticipant(
-      type: _$enumDecodeNullable(
+      type: $enumDecodeNullable(
           _$PlanDefinitionParticipantTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
@@ -1229,7 +1192,7 @@ Map<String, dynamic> _$$_PlanDefinitionDynamicValueToJson(
 
 _$_Questionnaire _$$_QuestionnaireFromJson(Map<String, dynamic> json) =>
     _$_Questionnaire(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Questionnaire) ??
           Stu3ResourceType.Questionnaire,
@@ -1279,8 +1242,7 @@ _$_Questionnaire _$$_QuestionnaireFromJson(Map<String, dynamic> json) =>
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status:
-          _$enumDecodeNullable(_$QuestionnaireStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$QuestionnaireStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1446,7 +1408,7 @@ _$_QuestionnaireItem _$$_QuestionnaireItemFromJson(Map<String, dynamic> json) =>
       textElement: json['_text'] == null
           ? null
           : Element.fromJson(json['_text'] as Map<String, dynamic>),
-      type: _$enumDecodeNullable(_$QuestionnaireItemTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$QuestionnaireItemTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -1782,7 +1744,7 @@ Map<String, dynamic> _$$_QuestionnaireOptionToJson(
 
 _$_ServiceDefinition _$$_ServiceDefinitionFromJson(Map<String, dynamic> json) =>
     _$_ServiceDefinition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ServiceDefinition) ??
           Stu3ResourceType.ServiceDefinition,
@@ -1832,8 +1794,8 @@ _$_ServiceDefinition _$$_ServiceDefinitionFromJson(Map<String, dynamic> json) =>
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
-          _$ServiceDefinitionStatusEnumMap, json['status']),
+      status:
+          $enumDecodeNullable(_$ServiceDefinitionStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),

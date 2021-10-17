@@ -164,6 +164,35 @@ final request2 = FhirRequest.read(
 final response2 = await request2.request(headers: await client.authHeaders);
 ```
 
+# Api.dart
+In order to keep private things private, I haven't uploaded my API.dart file for public consumption. However, it looks something like the following for those playing along at home:
+```dart
+mixin Api {
+  /// redirect url for oauth2 authentication
+  static final fhirCallback = FhirUri('com.myshiny.newapp://callback');
+  /// because google apparently requires/prefers one slash at times
+  static final googleFhirCallback = FhirUri('com.myshiny.newapp:/callback');
+
+  /// Aidbox
+  static const aidboxUrl = 'https://demo.aidbox.app/fhir';
+  static const aidboxClientId = 'e67063f5-1234-8558-9fc4-137g1mnod93b';
+
+  /// GCS
+  static const gcsUrl = 'https://healthcare.googleapis.com/v1/projects/'
+      'brandnewdemo/locations/us-central1/'
+      'datasets/demo/fhirStores/demo/fhir';
+  static const gcsClientId =
+      '411278748873-7l8946m31373be4889mnoii9w5y6a5gm.apps.googleusercontent.com';
+
+  /// HAPI Server
+  static const hapiUrl = 'https://hapi.fhir.org/baseR4';
+
+  /// Interop
+  static const interopClientId = 'e77063f5-1234-1234-9de4-137e1abcd83c';
+  static const interopUrl = 'https://api.interop.community/Demo/data';
+}
+```
+
 # Beta Version
 
 As is the case for all of the FHIR packages published so far, they are not yet ready for production (although some are very close). This one is a little further away for a number of reasons. The first is that I'd like to add the capability to use Azure AD and AWS Cognito. In addition, just because authentication/authorization is complicated but important enough that I want need to add more tests to ensure it works the way it's supposed to. As always, suggestions, complaints and PR are welcome. Contact me at grey@fhirfli.dev.

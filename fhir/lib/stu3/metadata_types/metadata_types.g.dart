@@ -34,7 +34,7 @@ Map<String, dynamic> _$$_ContactDetailToJson(_$_ContactDetail instance) {
 
 _$_Contributor _$$_ContributorFromJson(Map<String, dynamic> json) =>
     _$_Contributor(
-      type: _$enumDecodeNullable(_$ContributorTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$ContributorTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -64,43 +64,6 @@ Map<String, dynamic> _$$_ContributorToJson(_$_Contributor instance) {
   return val;
 }
 
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
-
 const _$ContributorTypeEnumMap = {
   ContributorType.author: 'author',
   ContributorType.editor: 'editor',
@@ -111,7 +74,7 @@ const _$ContributorTypeEnumMap = {
 
 _$_RelatedArtifact _$$_RelatedArtifactFromJson(Map<String, dynamic> json) =>
     _$_RelatedArtifact(
-      type: _$enumDecodeNullable(_$RelatedArtifactTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$RelatedArtifactTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -411,7 +374,7 @@ Map<String, dynamic> _$$_ParameterDefinitionToJson(
 
 _$_TriggerDefinition _$$_TriggerDefinitionFromJson(Map<String, dynamic> json) =>
     _$_TriggerDefinition(
-      type: _$enumDecodeNullable(_$TriggerDefinitionTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$TriggerDefinitionTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),

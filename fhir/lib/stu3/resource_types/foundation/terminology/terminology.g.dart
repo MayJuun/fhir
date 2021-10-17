@@ -8,7 +8,7 @@ part of 'terminology.dart';
 
 _$_CodeSystem _$$_CodeSystemFromJson(Map<String, dynamic> json) =>
     _$_CodeSystem(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.CodeSystem) ??
           Stu3ResourceType.CodeSystem,
@@ -58,7 +58,7 @@ _$_CodeSystem _$$_CodeSystemFromJson(Map<String, dynamic> json) =>
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$CodeSystemStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$CodeSystemStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -107,7 +107,7 @@ _$_CodeSystem _$$_CodeSystemFromJson(Map<String, dynamic> json) =>
       valueSetElement: json['_valueSet'] == null
           ? null
           : Element.fromJson(json['_valueSet'] as Map<String, dynamic>),
-      hierarchyMeaning: _$enumDecodeNullable(
+      hierarchyMeaning: $enumDecodeNullable(
           _$CodeSystemHierarchyMeaningEnumMap, json['hierarchyMeaning']),
       hierarchyMeaningElement: json['_hierarchyMeaning'] == null
           ? null
@@ -124,8 +124,7 @@ _$_CodeSystem _$$_CodeSystemFromJson(Map<String, dynamic> json) =>
       versionNeededElement: json['_versionNeeded'] == null
           ? null
           : Element.fromJson(json['_versionNeeded'] as Map<String, dynamic>),
-      content:
-          _$enumDecodeNullable(_$CodeSystemContentEnumMap, json['content']),
+      content: $enumDecodeNullable(_$CodeSystemContentEnumMap, json['content']),
       contentElement: json['_content'] == null
           ? null
           : Element.fromJson(json['_content'] as Map<String, dynamic>),
@@ -215,43 +214,6 @@ Map<String, dynamic> _$$_CodeSystemToJson(_$_CodeSystem instance) {
   writeNotNull('property', instance.property?.map((e) => e.toJson()).toList());
   writeNotNull('concept', instance.concept?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Stu3ResourceTypeEnumMap = {
@@ -456,7 +418,7 @@ _$_CodeSystemProperty _$$_CodeSystemPropertyFromJson(
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      type: _$enumDecodeNullable(_$CodeSystemPropertyTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$CodeSystemPropertyTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -648,7 +610,7 @@ Map<String, dynamic> _$$_CodeSystemProperty1ToJson(
 
 _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
     _$_ConceptMap(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ConceptMap) ??
           Stu3ResourceType.ConceptMap,
@@ -698,7 +660,7 @@ _$_ConceptMap _$$_ConceptMapFromJson(Map<String, dynamic> json) =>
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$ConceptMapStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$ConceptMapStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -917,7 +879,7 @@ _$_ConceptMapTarget _$$_ConceptMapTargetFromJson(Map<String, dynamic> json) =>
       displayElement: json['_display'] == null
           ? null
           : Element.fromJson(json['_display'] as Map<String, dynamic>),
-      equivalence: _$enumDecodeNullable(
+      equivalence: $enumDecodeNullable(
           _$ConceptMapTargetEquivalenceEnumMap, json['equivalence']),
       equivalenceElement: json['_equivalence'] == null
           ? null
@@ -1017,7 +979,7 @@ Map<String, dynamic> _$$_ConceptMapDependsOnToJson(
 _$_ConceptMapUnmapped _$$_ConceptMapUnmappedFromJson(
         Map<String, dynamic> json) =>
     _$_ConceptMapUnmapped(
-      mode: _$enumDecodeNullable(_$ConceptMapUnmappedModeEnumMap, json['mode']),
+      mode: $enumDecodeNullable(_$ConceptMapUnmappedModeEnumMap, json['mode']),
       modeElement: json['_mode'] == null
           ? null
           : Element.fromJson(json['_mode'] as Map<String, dynamic>),
@@ -1065,7 +1027,7 @@ const _$ConceptMapUnmappedModeEnumMap = {
 
 _$_ExpansionProfile _$$_ExpansionProfileFromJson(Map<String, dynamic> json) =>
     _$_ExpansionProfile(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ExpansionProfile) ??
           Stu3ResourceType.ExpansionProfile,
@@ -1112,7 +1074,7 @@ _$_ExpansionProfile _$$_ExpansionProfileFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
       status:
-          _$enumDecodeNullable(_$ExpansionProfileStatusEnumMap, json['status']),
+          $enumDecodeNullable(_$ExpansionProfileStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1297,7 +1259,7 @@ _$_ExpansionProfileFixedVersion _$$_ExpansionProfileFixedVersionFromJson(
       versionElement: json['_version'] == null
           ? null
           : Element.fromJson(json['_version'] as Map<String, dynamic>),
-      mode: _$enumDecodeNullable(
+      mode: $enumDecodeNullable(
           _$ExpansionProfileFixedVersionModeEnumMap, json['mode']),
       modeElement: json['_mode'] == null
           ? null
@@ -1495,7 +1457,7 @@ Map<String, dynamic> _$$_ExpansionProfileDesignation2ToJson(
 
 _$_NamingSystem _$$_NamingSystemFromJson(Map<String, dynamic> json) =>
     _$_NamingSystem(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.NamingSystem) ??
           Stu3ResourceType.NamingSystem,
@@ -1530,11 +1492,11 @@ _$_NamingSystem _$$_NamingSystemFromJson(Map<String, dynamic> json) =>
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$NamingSystemStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$NamingSystemStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      kind: _$enumDecodeNullable(_$NamingSystemKindEnumMap, json['kind']),
+      kind: $enumDecodeNullable(_$NamingSystemKindEnumMap, json['kind']),
       kindElement: json['_kind'] == null
           ? null
           : Element.fromJson(json['_kind'] as Map<String, dynamic>),
@@ -1647,7 +1609,7 @@ _$_NamingSystemUniqueId _$$_NamingSystemUniqueIdFromJson(
         Map<String, dynamic> json) =>
     _$_NamingSystemUniqueId(
       type:
-          _$enumDecodeNullable(_$NamingSystemUniqueIdTypeEnumMap, json['type']),
+          $enumDecodeNullable(_$NamingSystemUniqueIdTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -1701,7 +1663,7 @@ const _$NamingSystemUniqueIdTypeEnumMap = {
 };
 
 _$_ValueSet _$$_ValueSetFromJson(Map<String, dynamic> json) => _$_ValueSet(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ValueSet) ??
           Stu3ResourceType.ValueSet,
@@ -1751,7 +1713,7 @@ _$_ValueSet _$$_ValueSetFromJson(Map<String, dynamic> json) => _$_ValueSet(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$ValueSetStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$ValueSetStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -2047,7 +2009,7 @@ _$_ValueSetFilter _$$_ValueSetFilterFromJson(Map<String, dynamic> json) =>
       propertyElement: json['_property'] == null
           ? null
           : Element.fromJson(json['_property'] as Map<String, dynamic>),
-      op: _$enumDecodeNullable(_$ValueSetFilterOpEnumMap, json['op']),
+      op: $enumDecodeNullable(_$ValueSetFilterOpEnumMap, json['op']),
       opElement: json['_op'] == null
           ? null
           : Element.fromJson(json['_op'] as Map<String, dynamic>),

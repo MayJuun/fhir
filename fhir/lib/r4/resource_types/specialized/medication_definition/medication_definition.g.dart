@@ -8,7 +8,7 @@ part of 'medication_definition.dart';
 
 _$_MedicinalProduct _$$_MedicinalProductFromJson(Map<String, dynamic> json) =>
     _$_MedicinalProduct(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MedicinalProduct) ??
           R4ResourceType.MedicinalProduct,
@@ -176,43 +176,6 @@ Map<String, dynamic> _$$_MedicinalProductToJson(_$_MedicinalProduct instance) {
   writeNotNull('specialDesignation',
       instance.specialDesignation?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R4ResourceTypeEnumMap = {
@@ -635,7 +598,7 @@ Map<String, dynamic> _$$_MedicinalProductSpecialDesignationToJson(
 _$_MedicinalProductAuthorization _$$_MedicinalProductAuthorizationFromJson(
         Map<String, dynamic> json) =>
     _$_MedicinalProductAuthorization(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MedicinalProductAuthorization) ??
           R4ResourceType.MedicinalProductAuthorization,
@@ -906,7 +869,7 @@ Map<String, dynamic> _$$_MedicinalProductAuthorizationProcedureToJson(
 _$_MedicinalProductContraindication
     _$$_MedicinalProductContraindicationFromJson(Map<String, dynamic> json) =>
         _$_MedicinalProductContraindication(
-          resourceType: _$enumDecodeNullable(
+          resourceType: $enumDecodeNullable(
                   _$R4ResourceTypeEnumMap, json['resourceType'],
                   unknownValue:
                       R4ResourceType.MedicinalProductContraindication) ??
@@ -1054,7 +1017,7 @@ Map<String, dynamic> _$$_MedicinalProductContraindicationOtherTherapyToJson(
 _$_MedicinalProductIndication _$$_MedicinalProductIndicationFromJson(
         Map<String, dynamic> json) =>
     _$_MedicinalProductIndication(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MedicinalProductIndication) ??
           R4ResourceType.MedicinalProductIndication,
@@ -1208,7 +1171,7 @@ Map<String, dynamic> _$$_MedicinalProductIndicationOtherTherapyToJson(
 _$_MedicinalProductIngredient _$$_MedicinalProductIngredientFromJson(
         Map<String, dynamic> json) =>
     _$_MedicinalProductIngredient(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MedicinalProductIngredient) ??
           R4ResourceType.MedicinalProductIngredient,
@@ -1507,7 +1470,7 @@ Map<String, dynamic> _$$_MedicinalProductIngredientSubstanceToJson(
 _$_MedicinalProductInteraction _$$_MedicinalProductInteractionFromJson(
         Map<String, dynamic> json) =>
     _$_MedicinalProductInteraction(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MedicinalProductInteraction) ??
           R4ResourceType.MedicinalProductInteraction,
@@ -1645,7 +1608,7 @@ Map<String, dynamic> _$$_MedicinalProductInteractionInteractantToJson(
 _$_MedicinalProductManufactured _$$_MedicinalProductManufacturedFromJson(
         Map<String, dynamic> json) =>
     _$_MedicinalProductManufactured(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MedicinalProductManufactured) ??
           R4ResourceType.MedicinalProductManufactured,
@@ -1740,7 +1703,7 @@ Map<String, dynamic> _$$_MedicinalProductManufacturedToJson(
 _$_MedicinalProductPackaged _$$_MedicinalProductPackagedFromJson(
         Map<String, dynamic> json) =>
     _$_MedicinalProductPackaged(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MedicinalProductPackaged) ??
           R4ResourceType.MedicinalProductPackaged,
@@ -1975,7 +1938,7 @@ Map<String, dynamic> _$$_MedicinalProductPackagedPackageItemToJson(
 _$_MedicinalProductPharmaceutical _$$_MedicinalProductPharmaceuticalFromJson(
         Map<String, dynamic> json) =>
     _$_MedicinalProductPharmaceutical(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MedicinalProductPharmaceutical) ??
           R4ResourceType.MedicinalProductPharmaceutical,
@@ -2261,7 +2224,7 @@ Map<String, dynamic> _$$_MedicinalProductPharmaceuticalWithdrawalPeriodToJson(
 _$_MedicinalProductUndesirableEffect
     _$$_MedicinalProductUndesirableEffectFromJson(Map<String, dynamic> json) =>
         _$_MedicinalProductUndesirableEffect(
-          resourceType: _$enumDecodeNullable(
+          resourceType: $enumDecodeNullable(
                   _$R4ResourceTypeEnumMap, json['resourceType'],
                   unknownValue:
                       R4ResourceType.MedicinalProductUndesirableEffect) ??
@@ -2353,7 +2316,7 @@ Map<String, dynamic> _$$_MedicinalProductUndesirableEffectToJson(
 _$_SubstanceNucleicAcid _$$_SubstanceNucleicAcidFromJson(
         Map<String, dynamic> json) =>
     _$_SubstanceNucleicAcid(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.SubstanceNucleicAcid) ??
           R4ResourceType.SubstanceNucleicAcid,
@@ -2618,7 +2581,7 @@ Map<String, dynamic> _$$_SubstanceNucleicAcidSugarToJson(
 
 _$_SubstancePolymer _$$_SubstancePolymerFromJson(Map<String, dynamic> json) =>
     _$_SubstancePolymer(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.SubstancePolymer) ??
           R4ResourceType.SubstancePolymer,
@@ -3009,7 +2972,7 @@ Map<String, dynamic> _$$_SubstancePolymerStructuralRepresentationToJson(
 
 _$_SubstanceProtein _$$_SubstanceProteinFromJson(Map<String, dynamic> json) =>
     _$_SubstanceProtein(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.SubstanceProtein) ??
           R4ResourceType.SubstanceProtein,
@@ -3182,7 +3145,7 @@ Map<String, dynamic> _$$_SubstanceProteinSubunitToJson(
 _$_SubstanceReferenceInformation _$$_SubstanceReferenceInformationFromJson(
         Map<String, dynamic> json) =>
     _$_SubstanceReferenceInformation(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.SubstanceReferenceInformation) ??
           R4ResourceType.SubstanceReferenceInformation,
@@ -3487,7 +3450,7 @@ Map<String, dynamic> _$$_SubstanceReferenceInformationTargetToJson(
 _$_SubstanceSourceMaterial _$$_SubstanceSourceMaterialFromJson(
         Map<String, dynamic> json) =>
     _$_SubstanceSourceMaterial(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.SubstanceSourceMaterial) ??
           R4ResourceType.SubstanceSourceMaterial,
@@ -3939,7 +3902,7 @@ Map<String, dynamic> _$$_SubstanceSourceMaterialPartDescriptionToJson(
 _$_SubstanceSpecification _$$_SubstanceSpecificationFromJson(
         Map<String, dynamic> json) =>
     _$_SubstanceSpecification(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.SubstanceSpecification) ??
           R4ResourceType.SubstanceSpecification,

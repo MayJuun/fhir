@@ -1,5 +1,4 @@
 import 'package:fhir/r4.dart';
-
 import 'package:fhir_auth/r4.dart';
 
 import 'api.dart';

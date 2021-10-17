@@ -7,7 +7,7 @@ part of 'devices.dart';
 // **************************************************************************
 
 _$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Device) ??
           Dstu2ResourceType.Device,
@@ -45,7 +45,7 @@ _$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
       note: (json['note'] as List<dynamic>?)
           ?.map((e) => Annotation.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$DeviceStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$DeviceStatusEnumMap, json['status'],
           unknownValue: DeviceStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -138,43 +138,6 @@ Map<String, dynamic> _$$_DeviceToJson(_$_Device instance) {
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('_url', instance.urlElement?.toJson());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -284,7 +247,7 @@ const _$DeviceStatusEnumMap = {
 
 _$_DeviceComponent _$$_DeviceComponentFromJson(Map<String, dynamic> json) =>
     _$_DeviceComponent(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DeviceComponent) ??
           Dstu2ResourceType.DeviceComponent,
@@ -329,7 +292,7 @@ _$_DeviceComponent _$$_DeviceComponentFromJson(Map<String, dynamic> json) =>
           ? null
           : CodeableConcept.fromJson(
               json['parameterGroup'] as Map<String, dynamic>),
-      measurementPrinciple: _$enumDecodeNullable(
+      measurementPrinciple: $enumDecodeNullable(
           _$DeviceComponentMeasurementPrincipleEnumMap,
           json['measurementPrinciple'],
           unknownValue: DeviceComponentMeasurementPrinciple.unknown),
@@ -445,7 +408,7 @@ Map<String, dynamic> _$$_DeviceComponentProductionSpecificationToJson(
 
 _$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
     _$_DeviceMetric(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DeviceMetric) ??
           Dstu2ResourceType.DeviceMetric,
@@ -488,19 +451,19 @@ _$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
       parent: json['parent'] == null
           ? null
           : Reference.fromJson(json['parent'] as Map<String, dynamic>),
-      operationalStatus: _$enumDecodeNullable(
+      operationalStatus: $enumDecodeNullable(
           _$DeviceMetricOperationalStatusEnumMap, json['operationalStatus'],
           unknownValue: DeviceMetricOperationalStatus.unknown),
       operationalStatusElement: json['_operationalStatus'] == null
           ? null
           : Element.fromJson(
               json['_operationalStatus'] as Map<String, dynamic>),
-      color: _$enumDecodeNullable(_$DeviceMetricColorEnumMap, json['color'],
+      color: $enumDecodeNullable(_$DeviceMetricColorEnumMap, json['color'],
           unknownValue: DeviceMetricColor.unknown),
       colorElement: json['_color'] == null
           ? null
           : Element.fromJson(json['_color'] as Map<String, dynamic>),
-      category: _$enumDecode(_$DeviceMetricCategoryEnumMap, json['category'],
+      category: $enumDecode(_$DeviceMetricCategoryEnumMap, json['category'],
           unknownValue: DeviceMetricCategory.unknown),
       categoryElement: json['_category'] == null
           ? null
@@ -594,12 +557,12 @@ _$_DeviceMetricCalibration _$$_DeviceMetricCalibrationFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecodeNullable(_$CalibrationTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$CalibrationTypeEnumMap, json['type'],
           unknownValue: CalibrationType.unknown),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      state: _$enumDecodeNullable(_$CalibrationStateEnumMap, json['state'],
+      state: $enumDecodeNullable(_$CalibrationStateEnumMap, json['state'],
           unknownValue: CalibrationState.unknown),
       stateElement: json['_state'] == null
           ? null

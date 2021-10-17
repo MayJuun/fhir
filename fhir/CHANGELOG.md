@@ -1,5 +1,8 @@
 # fhir
 
+## [0.5.0-4]
+* Update dependencies
+
 ## [0.5.0-3]
 * Default ID creation now uses UUID V4
 

@@ -1,6 +1,6 @@
 name: fhir
 description: FHIR library of versions R4, STU3, DSTU2, and R5 (draft) for Dart & Flutter.
-version: 0.5.0-3
+version: 0.5.0-4
 homepage: https://www.fhirfli.dev/
 repository: https://github.com/MayJuun/fhir/tree/main/fhir
 
@@ -9,13 +9,13 @@ environment:
 
 dependencies:
   fhir_yaml: ^0.5.1
-  freezed_annotation: ^0.14.3
-  json_annotation: ^4.1.0
-  uuid: ^3.0.4
+  freezed_annotation: ^0.15.0
+  json_annotation: ^4.3.0
+  uuid: ^3.0.5
   yaml: ^3.1.0
 
 dev_dependencies:
-  json_serializable: ^5.0.2
-  build_runner: ^2.1.2
-  freezed: ^0.14.5
-  test: ^1.17.12
+  json_serializable: ^6.0.0
+  build_runner: ^2.1.4
+  freezed: ^0.15.0+1
+  test: ^1.18.2

@@ -241,7 +241,7 @@ Map<String, dynamic> _$$_MarketingStatusToJson(_$_MarketingStatus instance) {
 }
 
 _$_Citation _$$_CitationFromJson(Map<String, dynamic> json) => _$_Citation(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Citation) ??
           R5ResourceType.Citation,
@@ -291,7 +291,7 @@ _$_Citation _$$_CitationFromJson(Map<String, dynamic> json) => _$_Citation(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$CitationStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$CitationStatusEnumMap, json['status'],
           unknownValue: CitationStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -471,43 +471,6 @@ Map<String, dynamic> _$$_CitationToJson(_$_Citation instance) {
       'relatesTo', instance.relatesTo?.map((e) => e.toJson()).toList());
   writeNotNull('citedArtifact', instance.citedArtifact?.toJson());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R5ResourceTypeEnumMap = {
@@ -1875,7 +1838,7 @@ Map<String, dynamic> _$$_CitationSummaryToJson(_$_CitationSummary instance) {
 
 _$_EvidenceReport _$$_EvidenceReportFromJson(Map<String, dynamic> json) =>
     _$_EvidenceReport(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.EvidenceReport) ??
           R5ResourceType.EvidenceReport,
@@ -1925,8 +1888,7 @@ _$_EvidenceReport _$$_EvidenceReportFromJson(Map<String, dynamic> json) =>
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
-          _$EvidenceReportStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$EvidenceReportStatusEnumMap, json['status'],
           unknownValue: EvidenceReportStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -2238,7 +2200,7 @@ _$_EvidenceReportRelatesTo _$$_EvidenceReportRelatesToFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: _$enumDecodeNullable(
+      code: $enumDecodeNullable(
           _$EvidenceReportRelatesToCodeEnumMap, json['code'],
           unknownValue: EvidenceReportRelatesToCode.unknown),
       codeElement: json['_code'] == null

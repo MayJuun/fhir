@@ -7,7 +7,7 @@ part of 'entities.dart';
 // **************************************************************************
 
 _$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Device) ??
           Stu3ResourceType.Device,
@@ -44,7 +44,7 @@ _$_Device _$$_DeviceFromJson(Map<String, dynamic> json) => _$_Device(
       udi: json['udi'] == null
           ? null
           : DeviceUdi.fromJson(json['udi'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$DeviceStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$DeviceStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -154,43 +154,6 @@ Map<String, dynamic> _$$_DeviceToJson(_$_Device instance) {
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   writeNotNull('safety', instance.safety?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Stu3ResourceTypeEnumMap = {
@@ -346,7 +309,7 @@ _$_DeviceUdi _$$_DeviceUdiFromJson(Map<String, dynamic> json) => _$_DeviceUdi(
           ? null
           : Element.fromJson(json['_issuer'] as Map<String, dynamic>),
       entryType:
-          _$enumDecodeNullable(_$DeviceUdiEntryTypeEnumMap, json['entryType']),
+          $enumDecodeNullable(_$DeviceUdiEntryTypeEnumMap, json['entryType']),
       entryTypeElement: json['_entryType'] == null
           ? null
           : Element.fromJson(json['_entryType'] as Map<String, dynamic>),
@@ -389,7 +352,7 @@ const _$DeviceUdiEntryTypeEnumMap = {
 
 _$_DeviceComponent _$$_DeviceComponentFromJson(Map<String, dynamic> json) =>
     _$_DeviceComponent(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.DeviceComponent) ??
           Stu3ResourceType.DeviceComponent,
@@ -440,7 +403,7 @@ _$_DeviceComponent _$$_DeviceComponentFromJson(Map<String, dynamic> json) =>
           ? null
           : CodeableConcept.fromJson(
               json['parameterGroup'] as Map<String, dynamic>),
-      measurementPrinciple: _$enumDecodeNullable(
+      measurementPrinciple: $enumDecodeNullable(
           _$DeviceComponentMeasurementPrincipleEnumMap,
           json['measurementPrinciple']),
       measurementPrincipleElement: json['_measurementPrinciple'] == null
@@ -556,7 +519,7 @@ Map<String, dynamic> _$$_DeviceComponentProductionSpecificationToJson(
 
 _$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
     _$_DeviceMetric(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.DeviceMetric) ??
           Stu3ResourceType.DeviceMetric,
@@ -599,18 +562,18 @@ _$_DeviceMetric _$$_DeviceMetricFromJson(Map<String, dynamic> json) =>
       parent: json['parent'] == null
           ? null
           : Reference.fromJson(json['parent'] as Map<String, dynamic>),
-      operationalStatus: _$enumDecodeNullable(
+      operationalStatus: $enumDecodeNullable(
           _$DeviceMetricOperationalStatusEnumMap, json['operationalStatus']),
       operationalStatusElement: json['_operationalStatus'] == null
           ? null
           : Element.fromJson(
               json['_operationalStatus'] as Map<String, dynamic>),
-      color: _$enumDecodeNullable(_$DeviceMetricColorEnumMap, json['color']),
+      color: $enumDecodeNullable(_$DeviceMetricColorEnumMap, json['color']),
       colorElement: json['_color'] == null
           ? null
           : Element.fromJson(json['_color'] as Map<String, dynamic>),
       category:
-          _$enumDecodeNullable(_$DeviceMetricCategoryEnumMap, json['category']),
+          $enumDecodeNullable(_$DeviceMetricCategoryEnumMap, json['category']),
       categoryElement: json['_category'] == null
           ? null
           : Element.fromJson(json['_category'] as Map<String, dynamic>),
@@ -697,12 +660,12 @@ const _$DeviceMetricCategoryEnumMap = {
 _$_DeviceMetricCalibration _$$_DeviceMetricCalibrationFromJson(
         Map<String, dynamic> json) =>
     _$_DeviceMetricCalibration(
-      type: _$enumDecodeNullable(
+      type: $enumDecodeNullable(
           _$DeviceMetricCalibrationTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      state: _$enumDecodeNullable(
+      state: $enumDecodeNullable(
           _$DeviceMetricCalibrationStateEnumMap, json['state']),
       stateElement: json['_state'] == null
           ? null
@@ -749,7 +712,7 @@ const _$DeviceMetricCalibrationStateEnumMap = {
 };
 
 _$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Endpoint) ??
           Stu3ResourceType.Endpoint,
@@ -783,7 +746,7 @@ _$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$EndpointStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$EndpointStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -883,7 +846,7 @@ const _$EndpointStatusEnumMap = {
 
 _$_HealthcareService _$$_HealthcareServiceFromJson(Map<String, dynamic> json) =>
     _$_HealthcareService(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.HealthcareService) ??
           Stu3ResourceType.HealthcareService,
@@ -1081,8 +1044,8 @@ _$_HealthcareServiceAvailableTime _$$_HealthcareServiceAvailableTimeFromJson(
         Map<String, dynamic> json) =>
     _$_HealthcareServiceAvailableTime(
       daysOfWeek: (json['daysOfWeek'] as List<dynamic>?)
-          ?.map((e) => _$enumDecode(
-              _$HealthcareServiceAvailableTimeDaysOfWeekEnumMap, e))
+          ?.map((e) =>
+              $enumDecode(_$HealthcareServiceAvailableTimeDaysOfWeekEnumMap, e))
           .toList(),
       daysOfWeekElement: (json['_daysOfWeek'] as List<dynamic>?)
           ?.map((e) =>
@@ -1174,7 +1137,7 @@ Map<String, dynamic> _$$_HealthcareServiceNotAvailableToJson(
 }
 
 _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Location) ??
           Stu3ResourceType.Location,
@@ -1208,7 +1171,7 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$LocationStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$LocationStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1229,7 +1192,7 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      mode: _$enumDecodeNullable(_$LocationModeEnumMap, json['mode']),
+      mode: $enumDecodeNullable(_$LocationModeEnumMap, json['mode']),
       modeElement: json['_mode'] == null
           ? null
           : Element.fromJson(json['_mode'] as Map<String, dynamic>),
@@ -1363,7 +1326,7 @@ Map<String, dynamic> _$$_LocationPositionToJson(_$_LocationPosition instance) {
 
 _$_Organization _$$_OrganizationFromJson(Map<String, dynamic> json) =>
     _$_Organization(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Organization) ??
           Stu3ResourceType.Organization,
@@ -1508,7 +1471,7 @@ Map<String, dynamic> _$$_OrganizationContactToJson(
 }
 
 _$_Substance _$$_SubstanceFromJson(Map<String, dynamic> json) => _$_Substance(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Substance) ??
           Stu3ResourceType.Substance,
@@ -1542,7 +1505,7 @@ _$_Substance _$$_SubstanceFromJson(Map<String, dynamic> json) => _$_Substance(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$SubstanceStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$SubstanceStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),

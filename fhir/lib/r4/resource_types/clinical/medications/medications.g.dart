@@ -8,7 +8,7 @@ part of 'medications.dart';
 
 _$_Immunization _$$_ImmunizationFromJson(Map<String, dynamic> json) =>
     _$_Immunization(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Immunization) ??
           R4ResourceType.Immunization,
@@ -221,43 +221,6 @@ Map<String, dynamic> _$$_ImmunizationToJson(_$_Immunization instance) {
   writeNotNull('protocolApplied',
       instance.protocolApplied?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R4ResourceTypeEnumMap = {
@@ -639,7 +602,7 @@ Map<String, dynamic> _$$_ImmunizationProtocolAppliedToJson(
 _$_ImmunizationEvaluation _$$_ImmunizationEvaluationFromJson(
         Map<String, dynamic> json) =>
     _$_ImmunizationEvaluation(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ImmunizationEvaluation) ??
           R4ResourceType.ImmunizationEvaluation,
@@ -788,7 +751,7 @@ Map<String, dynamic> _$$_ImmunizationEvaluationToJson(
 _$_ImmunizationRecommendation _$$_ImmunizationRecommendationFromJson(
         Map<String, dynamic> json) =>
     _$_ImmunizationRecommendation(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ImmunizationRecommendation) ??
           R4ResourceType.ImmunizationRecommendation,
@@ -1037,7 +1000,7 @@ Map<String, dynamic> _$$_ImmunizationRecommendationDateCriterionToJson(
 
 _$_Medication _$$_MedicationFromJson(Map<String, dynamic> json) =>
     _$_Medication(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Medication) ??
           R4ResourceType.Medication,
@@ -1228,7 +1191,7 @@ Map<String, dynamic> _$$_MedicationBatchToJson(_$_MedicationBatch instance) {
 _$_MedicationAdministration _$$_MedicationAdministrationFromJson(
         Map<String, dynamic> json) =>
     _$_MedicationAdministration(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MedicationAdministration) ??
           R4ResourceType.MedicationAdministration,
@@ -1498,7 +1461,7 @@ Map<String, dynamic> _$$_MedicationAdministrationDosageToJson(
 _$_MedicationDispense _$$_MedicationDispenseFromJson(
         Map<String, dynamic> json) =>
     _$_MedicationDispense(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MedicationDispense) ??
           R4ResourceType.MedicationDispense,
@@ -1780,7 +1743,7 @@ Map<String, dynamic> _$$_MedicationDispenseSubstitutionToJson(
 _$_MedicationKnowledge _$$_MedicationKnowledgeFromJson(
         Map<String, dynamic> json) =>
     _$_MedicationKnowledge(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MedicationKnowledge) ??
           R4ResourceType.MedicationKnowledge,
@@ -2661,7 +2624,7 @@ Map<String, dynamic> _$$_MedicationKnowledgeKineticsToJson(
 
 _$_MedicationRequest _$$_MedicationRequestFromJson(Map<String, dynamic> json) =>
     _$_MedicationRequest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MedicationRequest) ??
           R4ResourceType.MedicationRequest,
@@ -3066,7 +3029,7 @@ Map<String, dynamic> _$$_MedicationRequestSubstitutionToJson(
 _$_MedicationStatement _$$_MedicationStatementFromJson(
         Map<String, dynamic> json) =>
     _$_MedicationStatement(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MedicationStatement) ??
           R4ResourceType.MedicationStatement,

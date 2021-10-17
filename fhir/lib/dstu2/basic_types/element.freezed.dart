@@ -32,7 +32,7 @@ class _$ElementTearOff {
     );
   }
 
-  Element fromJson(Map<String, Object> json) {
+  Element fromJson(Map<String, Object?> json) {
     return Element.fromJson(json);
   }
 }
@@ -166,23 +166,21 @@ class _$_Element extends _Element {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Element &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.fhirComments, fhirComments) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirComments, fhirComments)));
+        (other.runtimeType == runtimeType &&
+            other is _Element &&
+            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.fhirComments, fhirComments));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(fhirComments);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(fhirComments));
 
   @JsonKey(ignore: true)
   @override
@@ -205,13 +203,13 @@ abstract class _Element extends Element {
   factory _Element.fromJson(Map<String, dynamic> json) = _$_Element.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
   @JsonKey(ignore: true)
   _$ElementCopyWith<_Element> get copyWith =>
