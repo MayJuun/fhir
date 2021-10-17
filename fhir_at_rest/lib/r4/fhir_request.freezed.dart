@@ -1167,42 +1167,32 @@ class _$_FhirReadRequest extends _FhirReadRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirReadRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+        (other.runtimeType == runtimeType &&
+            other is _FhirReadRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      id,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -1826,21 +1816,21 @@ abstract class _FhirReadRequest extends FhirRequest {
   _FhirReadRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType get type => throw _privateConstructorUsedError;
-  Id get id => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType get type;
+  Id get id;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$FhirReadRequestCopyWith<_FhirReadRequest> get copyWith =>
@@ -1986,45 +1976,34 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirVReadRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.vid, vid) ||
-                const DeepCollectionEquality().equals(other.vid, vid)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+        (other.runtimeType == runtimeType &&
+            other is _FhirVReadRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.vid, vid) || other.vid == vid) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(vid) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      id,
+      vid,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -2649,22 +2628,22 @@ abstract class _FhirVReadRequest extends FhirRequest {
   _FhirVReadRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType get type => throw _privateConstructorUsedError;
-  Id get id => throw _privateConstructorUsedError;
-  Id get vid => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType get type;
+  Id get id;
+  Id get vid;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$FhirVReadRequestCopyWith<_FhirVReadRequest> get copyWith =>
@@ -2792,40 +2771,31 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirUpdateRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
+        (other.runtimeType == runtimeType &&
+            other is _FhirUpdateRequest &&
+            (identical(other.base, base) || other.base == base) &&
             (identical(other.resource, resource) ||
-                const DeepCollectionEquality()
-                    .equals(other.resource, resource)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+                other.resource == resource) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(resource) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      resource,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -3448,20 +3418,20 @@ abstract class _FhirUpdateRequest extends FhirRequest {
   _FhirUpdateRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  Resource get resource => throw _privateConstructorUsedError;
+  Uri get base;
+  Resource get resource;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$FhirUpdateRequestCopyWith<_FhirUpdateRequest> get copyWith =>
@@ -3589,40 +3559,31 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirPatchRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
+        (other.runtimeType == runtimeType &&
+            other is _FhirPatchRequest &&
+            (identical(other.base, base) || other.base == base) &&
             (identical(other.resource, resource) ||
-                const DeepCollectionEquality()
-                    .equals(other.resource, resource)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+                other.resource == resource) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(resource) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      resource,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -4245,20 +4206,20 @@ abstract class _FhirPatchRequest extends FhirRequest {
   _FhirPatchRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  Resource get resource => throw _privateConstructorUsedError;
+  Uri get base;
+  Resource get resource;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$FhirPatchRequestCopyWith<_FhirPatchRequest> get copyWith =>
@@ -4395,42 +4356,32 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirDeleteRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+        (other.runtimeType == runtimeType &&
+            other is _FhirDeleteRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      id,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -5054,21 +5005,21 @@ abstract class _FhirDeleteRequest extends FhirRequest {
   _FhirDeleteRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType get type => throw _privateConstructorUsedError;
-  Id get id => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType get type;
+  Id get id;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$FhirDeleteRequestCopyWith<_FhirDeleteRequest> get copyWith =>
@@ -5196,40 +5147,31 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirCreateRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
+        (other.runtimeType == runtimeType &&
+            other is _FhirCreateRequest &&
+            (identical(other.base, base) || other.base == base) &&
             (identical(other.resource, resource) ||
-                const DeepCollectionEquality()
-                    .equals(other.resource, resource)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+                other.resource == resource) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(resource) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      resource,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -5852,20 +5794,20 @@ abstract class _FhirCreateRequest extends FhirRequest {
   _FhirCreateRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  Resource get resource => throw _privateConstructorUsedError;
+  Uri get base;
+  Resource get resource;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$FhirCreateRequestCopyWith<_FhirCreateRequest> get copyWith =>
@@ -6013,47 +5955,35 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirSearchRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.usePost, usePost) ||
-                const DeepCollectionEquality()
-                    .equals(other.usePost, usePost)) &&
+        (other.runtimeType == runtimeType &&
+            other is _FhirSearchRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.usePost, usePost) || other.usePost == usePost) &&
             (identical(other.restfulRequest, restfulRequest) ||
-                const DeepCollectionEquality()
-                    .equals(other.restfulRequest, restfulRequest)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+                other.restfulRequest == restfulRequest) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(usePost) ^
-      const DeepCollectionEquality().hash(restfulRequest) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      usePost,
+      restfulRequest,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -6678,22 +6608,22 @@ abstract class _FhirSearchRequest extends FhirRequest {
   _FhirSearchRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType get type => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType get type;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  bool get usePost => throw _privateConstructorUsedError;
-  RestfulRequest get restfulRequest => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  bool get usePost;
+  RestfulRequest get restfulRequest;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$FhirSearchRequestCopyWith<_FhirSearchRequest> get copyWith =>
@@ -6812,36 +6742,28 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirSearchAllRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+        (other.runtimeType == runtimeType &&
+            other is _FhirSearchAllRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -7464,19 +7386,19 @@ abstract class _FhirSearchAllRequest extends FhirRequest {
   _FhirSearchAllRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$FhirSearchAllRequestCopyWith<_FhirSearchAllRequest> get copyWith =>
@@ -7606,39 +7528,30 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirCapabilitiesRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.mode, mode) ||
-                const DeepCollectionEquality().equals(other.mode, mode)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+        (other.runtimeType == runtimeType &&
+            other is _FhirCapabilitiesRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.mode, mode) || other.mode == mode) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(mode) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      mode,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -8262,20 +8175,20 @@ abstract class _FhirCapabilitiesRequest extends FhirRequest {
   _FhirCapabilitiesRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  Mode get mode => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  Mode get mode;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$FhirCapabilitiesRequestCopyWith<_FhirCapabilitiesRequest> get copyWith =>
@@ -8412,39 +8325,30 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirTransactionRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.bundle, bundle) ||
-                const DeepCollectionEquality().equals(other.bundle, bundle)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+        (other.runtimeType == runtimeType &&
+            other is _FhirTransactionRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.bundle, bundle) || other.bundle == bundle) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(bundle) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      bundle,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -9068,20 +8972,20 @@ abstract class _FhirTransactionRequest extends FhirRequest {
   _FhirTransactionRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  Bundle get bundle => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  Bundle get bundle;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$FhirTransactionRequestCopyWith<_FhirTransactionRequest> get copyWith =>
@@ -9218,39 +9122,30 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirBatchRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.bundle, bundle) ||
-                const DeepCollectionEquality().equals(other.bundle, bundle)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+        (other.runtimeType == runtimeType &&
+            other is _FhirBatchRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.bundle, bundle) || other.bundle == bundle) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(bundle) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      bundle,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -9873,20 +9768,20 @@ abstract class _FhirBatchRequest extends FhirRequest {
   _FhirBatchRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  Bundle get bundle => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  Bundle get bundle;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$FhirBatchRequestCopyWith<_FhirBatchRequest> get copyWith =>
@@ -10059,55 +9954,41 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirHistoryRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.count, count) ||
-                const DeepCollectionEquality().equals(other.count, count)) &&
-            (identical(other.since, since) ||
-                const DeepCollectionEquality().equals(other.since, since)) &&
-            (identical(other.at, at) ||
-                const DeepCollectionEquality().equals(other.at, at)) &&
+        (other.runtimeType == runtimeType &&
+            other is _FhirHistoryRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.count, count) || other.count == count) &&
+            (identical(other.since, since) || other.since == since) &&
+            (identical(other.at, at) || other.at == at) &&
             (identical(other.reference, reference) ||
-                const DeepCollectionEquality()
-                    .equals(other.reference, reference)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+                other.reference == reference) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(count) ^
-      const DeepCollectionEquality().hash(since) ^
-      const DeepCollectionEquality().hash(at) ^
-      const DeepCollectionEquality().hash(reference) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      id,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      count,
+      since,
+      at,
+      reference,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -10735,25 +10616,25 @@ abstract class _FhirHistoryRequest extends FhirRequest {
   _FhirHistoryRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType get type => throw _privateConstructorUsedError;
-  Id get id => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType get type;
+  Id get id;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  int? get count => throw _privateConstructorUsedError;
-  Instant? get since => throw _privateConstructorUsedError;
-  FhirDateTime? get at => throw _privateConstructorUsedError;
-  String? get reference => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  int? get count;
+  Instant? get since;
+  FhirDateTime? get at;
+  String? get reference;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$FhirHistoryRequestCopyWith<_FhirHistoryRequest> get copyWith =>
@@ -10917,52 +10798,39 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirHistoryTypeRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.count, count) ||
-                const DeepCollectionEquality().equals(other.count, count)) &&
-            (identical(other.since, since) ||
-                const DeepCollectionEquality().equals(other.since, since)) &&
-            (identical(other.at, at) ||
-                const DeepCollectionEquality().equals(other.at, at)) &&
+        (other.runtimeType == runtimeType &&
+            other is _FhirHistoryTypeRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.count, count) || other.count == count) &&
+            (identical(other.since, since) || other.since == since) &&
+            (identical(other.at, at) || other.at == at) &&
             (identical(other.reference, reference) ||
-                const DeepCollectionEquality()
-                    .equals(other.reference, reference)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+                other.reference == reference) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(count) ^
-      const DeepCollectionEquality().hash(since) ^
-      const DeepCollectionEquality().hash(at) ^
-      const DeepCollectionEquality().hash(reference) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      count,
+      since,
+      at,
+      reference,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -11590,24 +11458,24 @@ abstract class _FhirHistoryTypeRequest extends FhirRequest {
   _FhirHistoryTypeRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType get type => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType get type;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  int? get count => throw _privateConstructorUsedError;
-  Instant? get since => throw _privateConstructorUsedError;
-  FhirDateTime? get at => throw _privateConstructorUsedError;
-  String? get reference => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  int? get count;
+  Instant? get since;
+  FhirDateTime? get at;
+  String? get reference;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$FhirHistoryTypeRequestCopyWith<_FhirHistoryTypeRequest> get copyWith =>
@@ -11762,49 +11630,37 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirHistoryAllRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.count, count) ||
-                const DeepCollectionEquality().equals(other.count, count)) &&
-            (identical(other.since, since) ||
-                const DeepCollectionEquality().equals(other.since, since)) &&
-            (identical(other.at, at) ||
-                const DeepCollectionEquality().equals(other.at, at)) &&
+        (other.runtimeType == runtimeType &&
+            other is _FhirHistoryAllRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.count, count) || other.count == count) &&
+            (identical(other.since, since) || other.since == since) &&
+            (identical(other.at, at) || other.at == at) &&
             (identical(other.reference, reference) ||
-                const DeepCollectionEquality()
-                    .equals(other.reference, reference)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+                other.reference == reference) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(count) ^
-      const DeepCollectionEquality().hash(since) ^
-      const DeepCollectionEquality().hash(at) ^
-      const DeepCollectionEquality().hash(reference) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      count,
+      since,
+      at,
+      reference,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -12431,23 +12287,23 @@ abstract class _FhirHistoryAllRequest extends FhirRequest {
   _FhirHistoryAllRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  int? get count => throw _privateConstructorUsedError;
-  Instant? get since => throw _privateConstructorUsedError;
-  FhirDateTime? get at => throw _privateConstructorUsedError;
-  String? get reference => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  int? get count;
+  Instant? get since;
+  FhirDateTime? get at;
+  String? get reference;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$FhirHistoryAllRequestCopyWith<_FhirHistoryAllRequest> get copyWith =>
@@ -12623,58 +12479,43 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirOperationRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.fhirParameter, fhirParameter) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirParameter, fhirParameter)) &&
+        (other.runtimeType == runtimeType &&
+            other is _FhirOperationRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            const DeepCollectionEquality()
+                .equals(other.fhirParameter, fhirParameter) &&
             (identical(other.operation, operation) ||
-                const DeepCollectionEquality()
-                    .equals(other.operation, operation)) &&
-            (identical(other.usePost, usePost) ||
-                const DeepCollectionEquality()
-                    .equals(other.usePost, usePost)) &&
+                other.operation == operation) &&
+            (identical(other.usePost, usePost) || other.usePost == usePost) &&
             (identical(other.useFormData, useFormData) ||
-                const DeepCollectionEquality()
-                    .equals(other.useFormData, useFormData)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+                other.useFormData == useFormData) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(fhirParameter) ^
-      const DeepCollectionEquality().hash(operation) ^
-      const DeepCollectionEquality().hash(usePost) ^
-      const DeepCollectionEquality().hash(useFormData) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      id,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      const DeepCollectionEquality().hash(fhirParameter),
+      operation,
+      usePost,
+      useFormData,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -13339,25 +13180,25 @@ abstract class _FhirOperationRequest extends FhirRequest {
   _FhirOperationRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType? get type => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType? get type;
+  Id? get id;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  Map<String, dynamic> get fhirParameter => throw _privateConstructorUsedError;
-  String get operation => throw _privateConstructorUsedError;
-  bool get usePost => throw _privateConstructorUsedError;
-  bool get useFormData => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  Map<String, dynamic> get fhirParameter;
+  String get operation;
+  bool get usePost;
+  bool get useFormData;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$FhirOperationRequestCopyWith<_FhirOperationRequest> get copyWith =>

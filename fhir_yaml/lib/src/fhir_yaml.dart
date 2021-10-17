@@ -97,10 +97,8 @@ String _formatValue(
       }
     }
 
-    if (value is String) {
-      if (value.isEmpty) {
-        return " ''";
-      }
+    if (value.isEmpty) {
+      return " ''";
     }
 
     /// checks if it is an integer or a double
