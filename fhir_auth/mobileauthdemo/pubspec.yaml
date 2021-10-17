@@ -10,7 +10,7 @@ dependencies:
     path: ../../fhir_auth
   flutter:
     sdk: flutter
-    google_sign_in: ^5.1.0
+  google_sign_in: ^5.1.0
   openid_client: ^0.4.1
   url_launcher: ^6.0.10
 

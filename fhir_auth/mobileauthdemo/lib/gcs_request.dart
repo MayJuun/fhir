@@ -6,7 +6,7 @@ import 'new_patient.dart';
 
 Future gcsRequest() async {
   final client = GcsClient(
-    redirectUri: Api.fhirCallback,
+    redirectUri: Api.googleFhirCallback,
     fhirUri: FhirUri(Api.gcsUrl),
     clientId: Api.gcsClientId,
   );
