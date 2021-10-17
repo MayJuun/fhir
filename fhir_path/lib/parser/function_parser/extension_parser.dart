@@ -4,32 +4,76 @@ import '../../fhir_path.dart';
 
 class SumParser extends FhirPathParser {
   SumParser();
-  List execute(List results, Map passed) =>
-      [results.map((e) => e is num ? e : throw Exception).sum];
+  List execute(List results, Map passed) => [
+        results
+            .map((e) => e is num
+                ? e
+                : throw FhirPathEvaluationException(
+                    'sum() can only add numbers.',
+                    operation: 'sum',
+                    arguments: e,
+                    collection: results))
+            .sum
+      ];
 }
 
 class MinParser extends FhirPathParser {
   MinParser();
-  List execute(List results, Map passed) =>
-      [results.map((e) => e is num ? e : throw Exception).min];
+  List execute(List results, Map passed) => [
+        results
+            .map((e) => e is num
+                ? e
+                : throw FhirPathEvaluationException(
+                    'min() can only operate on numbers.',
+                    operation: 'min',
+                    arguments: e,
+                    collection: results))
+            .min
+      ];
 }
 
 class MaxParser extends FhirPathParser {
   MaxParser();
-  List execute(List results, Map passed) =>
-      [results.map((e) => e is num ? e : throw Exception).max];
+  List execute(List results, Map passed) => [
+        results
+            .map((e) => e is num
+                ? e
+                : throw FhirPathEvaluationException(
+                    'max() can only operate on numbers.',
+                    operation: 'max',
+                    arguments: e,
+                    collection: results))
+            .max
+      ];
 }
 
 class AvgParser extends FhirPathParser {
   AvgParser();
-  List execute(List results, Map passed) =>
-      [results.map((e) => e is num ? e : throw Exception).average];
+  List execute(List results, Map passed) => [
+        results
+            .map((e) => e is num
+                ? e
+                : throw FhirPathEvaluationException(
+                    'avg() can only operate on numbers.',
+                    operation: 'avg',
+                    arguments: e,
+                    collection: results))
+            .average
+      ];
 }
 
 class AnswersParser extends FhirPathParser {
   AnswersParser();
-  List execute(List results, Map passed) =>
-      results.map((e) => e is num ? e : throw Exception).toList();
+  List execute(List results, Map passed) {
+    final descendants = DescendantsParser().execute(results, passed);
+    final answerMaps = descendants.where((element) =>
+        (element is Map<String, dynamic>) && element.containsKey('answer'));
+    final answers = <dynamic>[];
+    answerMaps.forEach((element) {
+      answers.addAll((element as Map<String, dynamic>)['answer']);
+    });
+    return answers;
+  }
 }
 
 class OrdinalParser extends FhirPathParser {
@@ -86,6 +130,10 @@ class OrdinalParser extends FhirPathParser {
     newResults.addAll(checkForOrdinalValues(results));
 
     for (var result in results) {
+      if (result is! Map) {
+        break;
+      }
+
       polymorphicPrefixes.forEach((element) {
         if (result['${element}Coding'] != null) {
           newResults

@@ -2,10 +2,25 @@ import 'package:fhir/primitive_types/primitive_types.dart';
 
 import '../../fhir_path.dart';
 
-class NotCollectionParser extends ValueParser {
-  NotCollectionParser();
-  dynamic value;
-  List execute(List results, Map passed) => [];
+class FpNotParser extends FhirPathParser {
+  FpNotParser();
+  List execute(List results, Map passed) {
+    if (results.isEmpty) {
+      return [];
+    }
+
+    if (results.length != 1) {
+      throw FhirPathEvaluationException('not() requires a single input',
+          collection: results, operation: 'not');
+    }
+
+    if (results.first is! bool) {
+      throw FhirPathEvaluationException('not() requires an input of type bool.',
+          collection: results, operation: 'not');
+    }
+
+    return [!(results.first as bool)];
+  }
 }
 
 class NowParser extends FhirPathParser {

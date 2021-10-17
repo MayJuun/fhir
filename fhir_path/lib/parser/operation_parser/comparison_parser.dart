@@ -116,7 +116,6 @@ List executeComparisons(List results, ParserList before, ParserList after,
         try {
           return [compare(executedBefore.first, executedAfter.first)];
         } catch (e) {
-          print(e);
           return [];
         }
       }

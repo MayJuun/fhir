@@ -1,4 +1,3 @@
-import '../../utils/deep_comparison_lists.dart';
 import '../../fhir_path.dart';
 
 class ChildrenParser extends FhirPathParser {
@@ -23,38 +22,10 @@ class ChildrenParser extends FhirPathParser {
 class DescendantsParser extends FhirPathParser {
   DescendantsParser();
 
-  List getDescendants(dynamic value) {
-    final descendants = [];
-    if (value is List) {
-      value.forEach((e) {
-        if (notFoundInList(descendants, e)) {
-          descendants.add(e);
-        }
-      });
-      value.forEach((element) => descendants.addAll(getDescendants(element)));
-    } else {
-      if (notFoundInList(descendants, value)) {
-        descendants.add(value);
-      }
-      if (value is Map) {
-        value.forEach((k, v) => descendants.addAll(getDescendants(v)));
-      }
-    }
-    return descendants;
-  }
-
   List execute(List results, Map passed) {
-    final finalResults = [];
-    for (var value in results) {
-      if (value is List) {
-        value
-            .forEach((element) => finalResults.addAll(getDescendants(element)));
-      } else if (value is Map) {
-        value.forEach((k, v) => finalResults.addAll(getDescendants(v)));
-      } else {
-        finalResults.add(value);
-      }
-    }
-    return finalResults;
+    // According to spec, `descendants()` is shorthand for `repeat(children())`
+    final repeatParser = RepeatParser();
+    repeatParser.value = ParserList([ChildrenParser()]);
+    return repeatParser.execute(results, passed);
   }
 }

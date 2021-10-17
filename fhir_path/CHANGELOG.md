@@ -6,6 +6,15 @@ errors at evaluation time.
     * Added check for undefined functions
     * Added check for running substring on a non-string
 
+* Support for hasValue()
+* Support for answers()
+* Support for not()
+* Fix: identifier matching could return arbitrary results
+* Better UI 
+    * Monospace font
+    * Choose output format: JSON or YAML
+    * Copy results to clipboard
+
 ## [0.5.0-8]
 * Fix: Add ability to escape `"` characters
 * Fix: Add error handling, which directly displays the issue if a FHIRPath is unable to be parsed

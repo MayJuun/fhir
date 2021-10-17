@@ -58,6 +58,9 @@ final Parser<ConvertsToTimeParser> convertsToTimeLexer =
     (string('convertsToTime()') | string('.convertsToTime()'))
         .map((_) => ConvertsToTimeParser());
 
+final Parser<HasValueParser> hasValueLexer =
+    (string('hasValue()') | string('.hasValue()')).map((_) => HasValueParser());
+
 final Parser<EmptyParser> emptyLexer =
     (string('empty()') | string('.empty()')).map((_) => EmptyParser());
 
@@ -135,8 +138,8 @@ final Parser<DescendantsParser> descendantsLexer =
     (string('descendants()') | string('.descendants()'))
         .map((_) => DescendantsParser());
 
-final Parser<NotCollectionParser> notLexer =
-    (string('not()') | string('.not()')).map((_) => NotCollectionParser());
+final Parser<FpNotParser> notLexer =
+    (string('not()') | string('.not()')).map((_) => FpNotParser());
 
 final Parser<NowParser> nowLexer =
     (string('now()') | string('.now()')).map((_) => NowParser());

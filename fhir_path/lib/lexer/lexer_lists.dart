@@ -102,6 +102,8 @@ final simpleLexer = symbolLexer |
     toTimeLexer |
     convertsToTimeLexer |
     emptyLexer |
+    notLexer |
+    hasValueLexer |
     allTrueLexer |
     anyTrueLexer |
     allFalseLexer |
