@@ -1,5 +1,3 @@
-import '../../utils/deep_comparison_lists.dart';
-
 import '../../fhir_path.dart';
 
 class UnionFunctionParser extends FunctionParser {

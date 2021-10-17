@@ -1,5 +1,4 @@
 import '../../fhir_path.dart';
-import '../../utils/deep_comparison_lists.dart';
 
 /// Returns true if the input collection is empty ({ }) and false otherwise.
 class EmptyParser extends FhirPathParser {

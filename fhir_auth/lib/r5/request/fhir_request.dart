@@ -4,7 +4,6 @@ import 'package:fhir/r5.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart';
 
-import '../../enums/enums.dart';
 import '../../globals.dart' as globals;
 import '../../r5.dart';
 

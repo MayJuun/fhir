@@ -5,7 +5,6 @@ import 'package:fhir/r4.dart';
 import 'package:fhir_path/fhir_path.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 import 'package:url_launcher/link.dart';
 import 'package:yaml_writer/yaml_writer.dart';
 

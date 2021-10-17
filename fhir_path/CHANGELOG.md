@@ -14,6 +14,7 @@ errors at evaluation time.
     * Monospace font
     * Choose output format: JSON or YAML
     * Copy results to clipboard
+* Updated dependencies
 
 ## [0.5.0-8]
 * Fix: Add ability to escape `"` characters

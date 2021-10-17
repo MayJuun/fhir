@@ -5,7 +5,6 @@ import 'package:fhir/r5.dart' as r5;
 import 'package:fhir/stu3.dart' as stu3;
 
 import '../../fhir_path.dart';
-import '../../utils/deep_comparison_lists.dart';
 
 class FpWhereParser extends FunctionParser {
   FpWhereParser();

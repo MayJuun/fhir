@@ -2,7 +2,6 @@ import 'dart:convert';
 // import 'dart:math';
 
 import 'package:collection/collection.dart';
-import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart';
 import 'package:http/http.dart' as http;
 import 'package:oauth2_client/oauth2_client.dart';
