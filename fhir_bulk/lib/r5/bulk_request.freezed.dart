@@ -262,24 +262,17 @@ class _$_BulkPatientRequest extends _BulkPatientRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _BulkPatientRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.since, since) ||
-                const DeepCollectionEquality().equals(other.since, since)) &&
-            (identical(other.types, types) ||
-                const DeepCollectionEquality().equals(other.types, types)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+        (other.runtimeType == runtimeType &&
+            other is _BulkPatientRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.since, since) || other.since == since) &&
+            const DeepCollectionEquality().equals(other.types, types) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(since) ^
-      const DeepCollectionEquality().hash(types) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(runtimeType, base, since,
+      const DeepCollectionEquality().hash(types), client);
 
   @JsonKey(ignore: true)
   @override
@@ -382,13 +375,13 @@ abstract class _BulkPatientRequest extends BulkRequest {
   _BulkPatientRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  FhirDateTime? get since => throw _privateConstructorUsedError;
+  FhirDateTime? get since;
   @override
-  List<WhichResource>? get types => throw _privateConstructorUsedError;
+  List<WhichResource>? get types;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$BulkPatientRequestCopyWith<_BulkPatientRequest> get copyWith =>
@@ -484,27 +477,18 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _BulkGroupRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.since, since) ||
-                const DeepCollectionEquality().equals(other.since, since)) &&
-            (identical(other.types, types) ||
-                const DeepCollectionEquality().equals(other.types, types)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+        (other.runtimeType == runtimeType &&
+            other is _BulkGroupRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.since, since) || other.since == since) &&
+            const DeepCollectionEquality().equals(other.types, types) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(since) ^
-      const DeepCollectionEquality().hash(types) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(runtimeType, base, id, since,
+      const DeepCollectionEquality().hash(types), client);
 
   @JsonKey(ignore: true)
   @override
@@ -608,14 +592,14 @@ abstract class _BulkGroupRequest extends BulkRequest {
   _BulkGroupRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  Id get id => throw _privateConstructorUsedError;
+  Uri get base;
+  Id get id;
   @override
-  FhirDateTime? get since => throw _privateConstructorUsedError;
+  FhirDateTime? get since;
   @override
-  List<WhichResource>? get types => throw _privateConstructorUsedError;
+  List<WhichResource>? get types;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$BulkGroupRequestCopyWith<_BulkGroupRequest> get copyWith =>
@@ -699,24 +683,17 @@ class _$_BulkSystemRequest extends _BulkSystemRequest {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _BulkSystemRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.since, since) ||
-                const DeepCollectionEquality().equals(other.since, since)) &&
-            (identical(other.types, types) ||
-                const DeepCollectionEquality().equals(other.types, types)) &&
-            (identical(other.client, client) ||
-                const DeepCollectionEquality().equals(other.client, client)));
+        (other.runtimeType == runtimeType &&
+            other is _BulkSystemRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.since, since) || other.since == since) &&
+            const DeepCollectionEquality().equals(other.types, types) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(since) ^
-      const DeepCollectionEquality().hash(types) ^
-      const DeepCollectionEquality().hash(client);
+  int get hashCode => Object.hash(runtimeType, base, since,
+      const DeepCollectionEquality().hash(types), client);
 
   @JsonKey(ignore: true)
   @override
@@ -819,13 +796,13 @@ abstract class _BulkSystemRequest extends BulkRequest {
   _BulkSystemRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  FhirDateTime? get since => throw _privateConstructorUsedError;
+  FhirDateTime? get since;
   @override
-  List<WhichResource>? get types => throw _privateConstructorUsedError;
+  List<WhichResource>? get types;
   @override
-  Client? get client => throw _privateConstructorUsedError;
+  Client? get client;
   @override
   @JsonKey(ignore: true)
   _$BulkSystemRequestCopyWith<_BulkSystemRequest> get copyWith =>
