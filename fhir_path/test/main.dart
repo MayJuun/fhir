@@ -17,6 +17,7 @@ void main() {
   print(walkFhirPath(response.toJson(), r"today()"));
   print(walkFhirPath(response.toJson(), r"6 months"));
   print(walkFhirPath(response.toJson(), r"today() + 6 months"));
+  print(walkFhirPath(response.toJson(), r"today() - 6 months"));
 
   // print(walkFhirPath(null, "'PARENT: I,'", {
   //   '%relatedPerson': relatedPerson.toJson(),

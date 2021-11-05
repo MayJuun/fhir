@@ -78,8 +78,8 @@ final literalLexer = stringLexer |
     envVariableLexer |
     delimitedIdentifierLexer |
     booleanLexer |
-    identifierLexer |
     quantityLexer |
+    identifierLexer |
     numberLexer |
     dateTimeLexer |
     dateLexer |

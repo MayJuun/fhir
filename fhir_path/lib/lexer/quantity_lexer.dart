@@ -5,19 +5,22 @@ import 'package:petitparser/petitparser.dart';
  * specification (which has not yet been fully implemented)
  * ***************************************************************************/
 
-final durationLexer = (string('millisecond') |
-    string('second') |
+final durationLexer = (string('milliseconds') |
     string('seconds') |
     string('minutes') |
-    string('hour') |
     string('hours') |
-    string('day') |
     string('days') |
     string('weeks') |
-    string('month') |
     string('months') |
-    string('year') |
-    string('years'));
+    string('years') |
+    string('millisecond') |
+    string('second') |
+    string('minute') |
+    string('hour') |
+    string('day') |
+    string('week') |
+    string('month') |
+    string('year'));
 
 final unitLexer = (string("'m'") |
     string("'s'") |
