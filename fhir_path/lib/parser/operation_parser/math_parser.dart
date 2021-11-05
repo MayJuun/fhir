@@ -1,3 +1,5 @@
+import 'package:fhir/primitive_types/primitive_types.dart';
+
 import '../../fhir_path.dart';
 
 class StarParser extends OperatorParser {
@@ -190,6 +192,36 @@ class PlusParser extends OperatorParser {
               return [
                 (executedBefore.first as FhirPathQuantity) +
                     (executedAfter.first as FhirPathQuantity)
+              ];
+            }
+            break;
+          }
+        case FhirDateTime:
+          {
+            if (executedAfter.first is FhirPathQuantity) {
+              return [
+                (executedAfter.first as FhirPathQuantity)
+                    .add(executedBefore.first)
+              ];
+            }
+            break;
+          }
+        case Date:
+          {
+            if (executedAfter.first is FhirPathQuantity) {
+              return [
+                (executedAfter.first as FhirPathQuantity)
+                    .add(executedBefore.first)
+              ];
+            }
+            break;
+          }
+        case Time:
+          {
+            if (executedAfter.first is FhirPathQuantity) {
+              return [
+                (executedAfter.first as FhirPathQuantity)
+                    .add(executedBefore.first)
               ];
             }
             break;

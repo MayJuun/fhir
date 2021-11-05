@@ -455,7 +455,7 @@ void testNoArgFxns() {
       expect(walkFhirPath(resource.toJson(), "(-5) // -5"), [-5]);
       expect(walkFhirPath(resource.toJson(), "(-5).abs() // 5"), [5]);
       expect(walkFhirPath(resource.toJson(), "(-5.5).abs() // 5.5"), [5.5]);
-      // print(walkFhirPath(resource.toJson(), "-5.5 'mg'"));
+      print(walkFhirPath(resource.toJson(), "today() + 5.5 'mg'"));
       // expect(
       //     walkFhirPath(
       //         resource.toJson(), "(-5.5 'mg').abs() // 5.5 'mg'"),

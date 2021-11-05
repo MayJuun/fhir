@@ -7,10 +7,13 @@ class FhirPathQuantity {
 
   String get value => toString();
   bool get isNaN => amount.isNaN;
+  bool get isDateTime => durationCode.contains(unit);
   String toString() => '$amount '
-      '${durationCode.contains(unit) ? "" : "'"}'
+      '${isDateTime ? "" : "'"}'
       '$unit'
-      '${durationCode.contains(unit) ? "" : "'"}';
+      '${isDateTime ? "" : "'"}';
+
+  dynamic add(dynamic executedBefore) {}
 
   FhirPathQuantity abs() {
     amount = amount.abs();
