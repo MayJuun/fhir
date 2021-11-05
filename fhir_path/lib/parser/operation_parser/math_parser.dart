@@ -270,15 +270,65 @@ class MinusParser extends OperatorParser {
           'Operand 2: $executedAfter',
           operation: '-',
           collection: results);
-    } else if (executedBefore.first is num && executedAfter.first is num) {
-      return [executedBefore.first - executedAfter.first];
-    } else if (executedBefore.first is FhirPathQuantity &&
-        executedAfter.first is FhirPathQuantity) {
-      return [
-        (executedBefore.first as FhirPathQuantity) -
-            (executedAfter.first as FhirPathQuantity)
-      ];
     } else {
+      switch (executedBefore.first.runtimeType) {
+        case int:
+          {
+            if (executedAfter.first is num) {
+              return [executedBefore.first - executedAfter.first];
+            }
+            break;
+          }
+        case double:
+          {
+            if (executedAfter.first is num) {
+              return [executedBefore.first - executedAfter.first];
+            }
+            break;
+          }
+        case FhirPathQuantity:
+          {
+            if (executedAfter.first is FhirPathQuantity) {
+              return [
+                (executedBefore.first as FhirPathQuantity) -
+                    (executedAfter.first as FhirPathQuantity)
+              ];
+            }
+            break;
+          }
+        case FhirDateTime:
+          {
+            if (executedAfter.first is FhirPathQuantity) {
+              return [
+                (executedAfter.first as FhirPathQuantity)
+                    .subtract(executedBefore.first)
+              ];
+            }
+            break;
+          }
+        case Date:
+          {
+            if (executedAfter.first is FhirPathQuantity) {
+              return [
+                (executedAfter.first as FhirPathQuantity)
+                    .subtract(executedBefore.first)
+              ];
+            }
+            break;
+          }
+        case Time:
+          {
+            if (executedAfter.first is FhirPathQuantity) {
+              return [
+                (executedAfter.first as FhirPathQuantity)
+                    .subtract(executedBefore.first)
+              ];
+            }
+            break;
+          }
+        default:
+          break;
+      }
       throw FhirPathEvaluationException(
           'The "-" operator only accepts Integers, Decimals and '
           'Quantities, but was passed the following:\n'

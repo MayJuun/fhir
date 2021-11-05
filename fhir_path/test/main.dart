@@ -3,13 +3,20 @@ import 'package:fhir_path/fhir_path.dart';
 import 'package:fhir_path/run_fhir_path.dart';
 
 void main() {
+  // print(11.remainder(12));
+  // print(23.remainder(12));
+  // print(Duration(days: 12, hours: 12));
+
+  // final dateTime = DateTime(2020, 1, 1);
+  // print(DateTime(dateTime.year + 12, dateTime.month + 27, dateTime.day + 1065));
   final response = QuestionnaireResponse.fromJson(questionnaireResponse);
 
-  print(walkFhirPath(response.toJson(),
-      r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"));
-
-  print(walkFhirPath(response.toJson(),
-      r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.sum()"));
+  // print(walkFhirPath(response.toJson(),
+  //     r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"));
+  print(lexer().parse(r'6 months'));
+  print(walkFhirPath(response.toJson(), r"today()"));
+  print(walkFhirPath(response.toJson(), r"6 months"));
+  print(walkFhirPath(response.toJson(), r"today() + 6 months"));
 
   // print(walkFhirPath(null, "'PARENT: I,'", {
   //   '%relatedPerson': relatedPerson.toJson(),

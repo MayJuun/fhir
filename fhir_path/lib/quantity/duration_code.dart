@@ -1,0 +1,15 @@
+const durationCode = [
+  'millisecond',
+  'second',
+  'seconds',
+  'minutes',
+  'hour',
+  'hours',
+  'day',
+  'days',
+  'weeks',
+  'month',
+  'months',
+  'year',
+  'years',
+];
