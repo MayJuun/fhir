@@ -184,19 +184,19 @@ void testBasicTypes() {
           (((parseResult('@T06:54') as ParserList)).first as ValueParser).value,
           (ParserList([TimeParser('@06:54')]).first as ValueParser).value);
     });
-    // test('Quantity', () {
-    //   expect(
-    //       (((parseResult("4.5 'mg'") as ParserList)).first as ValueParser)
-    //           .value,
-    //       (ParserList([QuantityParser("4.5 'mg'")]).first as ValueParser)
-    //           .value);
-    //   expect(
-    //     ((parseResult("100 '[degF]'") as ParserList).first as ValueParser)
-    //         .value,
-    //     (ParserList([QuantityParser("100 '[degF]'")]).first as ValueParser)
-    //         .value,
-    //   );
-    // });
+    test('Quantity', () {
+      expect(
+          (((parseResult("4.5 'mg'") as ParserList)).first as ValueParser)
+              .value,
+          (ParserList([QuantityParser("4.5 'mg'")]).first as ValueParser)
+              .value);
+      expect(
+        ((parseResult("100 '[degF]'") as ParserList).first as ValueParser)
+            .value,
+        (ParserList([QuantityParser("100 '[degF]'")]).first as ValueParser)
+            .value,
+      );
+    });
     test('Non-Escape Sequences', () {
       /// ToDo: figure out escape sequences
       // expect(

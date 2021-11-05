@@ -10,13 +10,6 @@ abstract class BaseDateTimeParser<T> extends ValueParser<T> {
   bool isComparable(Object o) => o is BaseDateTimeParser;
 }
 
-/// UnitParser: for UCUM values
-class UnitParser extends ValueParser {
-  UnitParser(this.value);
-  dynamic value;
-  List execute(List results, Map passed) => [];
-}
-
 /// ParenthesesParser: ()
 class ParenthesesParser extends ValueParser<ParserList> {
   ParenthesesParser(this.value);

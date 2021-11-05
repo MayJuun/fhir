@@ -106,7 +106,7 @@ void testBasicOperators() {
       // expect(
       //     walkPath(
       //         "4 'm' > 4 'cm' // true (or { } if the implementation does not support unit conversion)"),
-      //     [], {});
+      //     [true]);
       expect(walkPath('@2018-03-01 > @2018-01-01 // true'), [true]);
       expect(walkPath('@2018-03 > @2018-03-01 // empty ({ })'), []);
       expect(walkPath('@2018-03-01T10:30:00 > @2018-03-01T10:00:00 // true'),
@@ -132,7 +132,7 @@ void testBasicOperators() {
       // expect(
       //     walkPath(
       //         "4 'm' > 4 'cm' // true (or { } if the implementation does not support unit conversion)"),
-      //     [], {});
+      //     [true]);
       expect(walkPath('@2018-03-01 < @2018-01-01 // false'), [false]);
       expect(walkPath('@2018-03 < @2018-03-01 // empty ({ })'), []);
       expect(walkPath('@2018-03-01T10:30:00 < @2018-03-01T10:00:00 // false'),
@@ -158,7 +158,7 @@ void testBasicOperators() {
       // expect(
       //     walkPath(
       //         "4 'm' > 4 'cm' // true (or { } if the implementation does not support unit conversion)"),
-      //     []);
+      //     [true]);
       expect(walkPath('@2018-03-01 <= @2018-01-01 // false'), [false]);
       expect(walkPath('@2018-03 <= @2018-03-01 // empty ({ })'), []);
       expect(walkPath('@2018-03-01T10:30:00 <= @2018-03-01T10:00:00 // false'),

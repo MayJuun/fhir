@@ -6,7 +6,6 @@ import 'literal_lexer.dart';
 import 'no_arg_fxn_lexer.dart';
 import 'operator_lexer.dart';
 import 'special_lexer.dart';
-import 'symbol_lexer.dart';
 
 final specialLexer = bracketsIndexLexer |
     indexLexer |
@@ -80,14 +79,13 @@ final literalLexer = stringLexer |
     delimitedIdentifierLexer |
     booleanLexer |
     identifierLexer |
-    // quantityLexer |
+    quantityLexer |
     numberLexer |
     dateTimeLexer |
     dateLexer |
     timeLexer;
 
-final simpleLexer = symbolLexer |
-    toBooleanLexer |
+final simpleLexer = toBooleanLexer |
     convertsToBooleanLexer |
     toIntegerLexer |
     convertsToIntegerLexer |
@@ -137,17 +135,3 @@ final simpleLexer = symbolLexer |
     avgLexer |
     answersLexer |
     ordinalLexer;
-
-final symbolLexer = millisecondLexer |
-    secondLexer |
-    secondsLexer |
-    minutesLexer |
-    hourLexer |
-    hoursLexer |
-    dayLexer |
-    daysLexer |
-    weeksLexer |
-    monthLexer |
-    monthsLexer |
-    yearLexer |
-    yearsLexer;

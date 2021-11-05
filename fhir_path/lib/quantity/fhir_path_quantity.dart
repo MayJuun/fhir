@@ -7,7 +7,10 @@ class FhirPathQuantity {
 
   String get value => toString();
   bool get isNaN => amount.isNaN;
-  String toString() => '$amount $unit';
+  String toString() => '$amount '
+      '${durationCode.contains(unit) ? "" : "'"}'
+      '$unit'
+      '${durationCode.contains(unit) ? "" : "'"}';
 
   FhirPathQuantity abs() {
     amount = amount.abs();
@@ -86,7 +89,36 @@ class FhirPathQuantity {
       FhirPathQuantity(amount % o.amount, unit);
 }
 
+const durationCode = [
+  'millisecond',
+  'second',
+  'seconds',
+  'minutes',
+  'hour',
+  'hours',
+  'day',
+  'days',
+  'weeks',
+  'month',
+  'months',
+  'year',
+  'years',
+];
+
 const unitCode = [
+  'millisecond',
+  'second',
+  'seconds',
+  'minutes',
+  'hour',
+  'hours',
+  'day',
+  'days',
+  'weeks',
+  'month',
+  'months',
+  'year',
+  'years',
   'm',
   's',
   'g',

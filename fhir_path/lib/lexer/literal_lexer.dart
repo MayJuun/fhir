@@ -1,8 +1,7 @@
 import 'package:petitparser/petitparser.dart';
 
 import '../../fhir_path.dart';
-import 'lexer_lists.dart';
-import 'unit_lexer.dart';
+import 'quantity_lexer.dart';
 
 /******************************************************************************
  *  Most of these Lexers specify basic literals as defined in the FHIRPath
@@ -39,7 +38,7 @@ final Parser<EnvVariableParser> envVariableLexer =
         .map((value) => EnvVariableParser(value));
 
 final Parser<QuantityParser> quantityLexer =
-    (numberLexer & whiteSpaceLexer & (symbolLexer | unitLexer))
+    (numberLexer & char(' ') & (durationLexer | unitLexer))
         .flatten()
         .map((value) => QuantityParser(value));
 

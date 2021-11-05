@@ -11,11 +11,11 @@ class AbsParser extends FhirPathParser {
           : results.first is num
               ? results.first.abs().isNaN
                   ? []
-                  : [results.first.abs()]
+                  : [(results.first as num).abs()]
               : results.first is FhirPathQuantity
                   ? results.first.abs().isNaN
                       ? []
-                      : [results.first.abs()]
+                      : [(results.first as FhirPathQuantity).abs().toString()]
                   : throw _wrongTypes('.abs()', results, 'none');
 }
 

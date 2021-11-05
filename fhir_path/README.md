@@ -47,7 +47,7 @@ The passed resource WILL be added to this map as `'%resource'`, so you don't nee
 ### ToDo (functionality not supported yet)
 
 - Non-escape sequences
-- Quantities, toQuantity, convertsToQuantity
+- Quantities, toQuantity, convertsToQuantity, unary operators for Quantities
 - trace
 - date/time arithmetic
 - Reflection

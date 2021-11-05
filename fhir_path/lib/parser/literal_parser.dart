@@ -36,7 +36,7 @@ class EnvVariableParser extends ValueParser<String> {
 
 class QuantityParser extends ValueParser<FhirPathQuantity> {
   QuantityParser(String stringValue) {
-    final stringList = stringValue.split(' ');
+    final stringList = stringValue.replaceAll("'", '').split(' ');
     value = FhirPathQuantity(num.parse(stringList.first), stringList.last);
   }
   late FhirPathQuantity value;
