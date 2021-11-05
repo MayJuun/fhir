@@ -38,7 +38,9 @@ class FhirPathQuantity {
         .toInt();
     final hourAmount = (unit.contains('hour') ? amount : 0).toInt();
     final minuteAmount = (unit.contains('minut') ? amount : 0).toInt();
-    final secondAmount = (unit.contains('second') ? amount : 0).toInt();
+    final secondAmount =
+        (unit.contains('second') && !unit.contains('millisecond') ? amount : 0)
+            .toInt();
     final millisecondAmount =
         (unit.contains('millisecond') ? amount : 0).toInt();
     if ((executedBefore is Date &&
@@ -64,11 +66,11 @@ class FhirPathQuantity {
           executedBefore.value!.month + monthAmount,
           executedBefore.value!.day + dayAmount);
       if (executedBefore.precision == DatePrecision.YYYY) {
-        return Date('${newDate.year}');
+        return Date(newDate.toString().substring(0, 4));
       } else if (executedBefore.precision == DatePrecision.YYYYMM) {
-        return Date('${newDate.year}-${newDate.month}');
+        return Date(newDate.toString().substring(0, 7));
       } else {
-        return Date('${newDate.year}-${newDate.month}-${newDate.day}');
+        return Date(newDate.toString().substring(0, 10));
       }
     } else if (executedBefore is Time &&
         executedBefore.isValid &&
@@ -105,12 +107,11 @@ class FhirPathQuantity {
         oldDateTime.millisecond + millisecondAmount,
       );
       if (executedBefore.precision == DateTimePrecision.YYYY) {
-        return FhirDateTime('${newDateTime.year}');
+        return FhirDateTime(newDateTime.toString().substring(0, 4));
       } else if (executedBefore.precision == DateTimePrecision.YYYYMM) {
-        return FhirDateTime('${newDateTime.year}-${newDateTime.month}');
+        return FhirDateTime(newDateTime.toString().substring(0, 7));
       } else if (executedBefore.precision == DateTimePrecision.YYYYMMDD) {
-        return FhirDateTime(
-            '${newDateTime.year}-${newDateTime.month}-${newDateTime.day}');
+        return FhirDateTime(newDateTime.toString().substring(0, 10));
       } else {
         return FhirDateTime(newDateTime);
       }

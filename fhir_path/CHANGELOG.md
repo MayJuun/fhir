@@ -1,3 +1,7 @@
+## [0.5.0-10]
+* Added Calendar/Duration Quantities
+* Added basic DateTime arithmetic
+
 ## [0.5.0-9]
 * More robust error-handling 
     * Define two exception types to indicate errors in the expression and 

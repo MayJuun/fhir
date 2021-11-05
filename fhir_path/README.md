@@ -49,7 +49,6 @@ The passed resource WILL be added to this map as `'%resource'`, so you don't nee
 - Non-escape sequences
 - Quantities, toQuantity, convertsToQuantity, unary operators for Quantities
 - trace
-- date/time arithmetic
 - Reflection
 - Complicated, nested tests
 
@@ -63,5 +62,4 @@ The passed resource WILL be added to this map as `'%resource'`, so you don't nee
 - I personally found PetitParser more convenient to use than ANTLR for this library
 - However, the actual parsing is done separately from the tokenization (lexing), so if at some point someone wanted to change it to use ANTLR instead, they could swap out the lexer and the library should still function
 
-## https://hl7.org/fhirpath/fhirpath.g4
-- Official FHIRPath grammar
+## [Official FHIRPath grammar](https://hl7.org/fhirpath/fhirpath.g4)

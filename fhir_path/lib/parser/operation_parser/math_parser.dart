@@ -202,6 +202,7 @@ class PlusParser extends OperatorParser {
               return [
                 (executedAfter.first as FhirPathQuantity)
                     .add(executedBefore.first)
+                    .toString()
               ];
             }
             break;
@@ -212,6 +213,7 @@ class PlusParser extends OperatorParser {
               return [
                 (executedAfter.first as FhirPathQuantity)
                     .add(executedBefore.first)
+                    .toString()
               ];
             }
             break;
@@ -222,6 +224,7 @@ class PlusParser extends OperatorParser {
               return [
                 (executedAfter.first as FhirPathQuantity)
                     .add(executedBefore.first)
+                    .toString()
               ];
             }
             break;
@@ -230,6 +233,20 @@ class PlusParser extends OperatorParser {
           {
             if (executedAfter.first is String) {
               return [executedBefore.first + executedAfter.first];
+            } else if (executedAfter.first is FhirPathQuantity) {
+              if (FhirDateTime(executedBefore.first).isValid) {
+                return [
+                  (executedAfter.first as FhirPathQuantity)
+                      .add(FhirDateTime(executedBefore.first))
+                      .toString()
+                ];
+              } else if (Time(executedBefore.first).isValid) {
+                return [
+                  (executedAfter.first as FhirPathQuantity)
+                      .add(Time(executedBefore.first))
+                      .toString()
+                ];
+              }
             }
             break;
           }
@@ -302,6 +319,7 @@ class MinusParser extends OperatorParser {
               return [
                 (executedAfter.first as FhirPathQuantity)
                     .subtract(executedBefore.first)
+                    .toString()
               ];
             }
             break;
@@ -312,6 +330,7 @@ class MinusParser extends OperatorParser {
               return [
                 (executedAfter.first as FhirPathQuantity)
                     .subtract(executedBefore.first)
+                    .toString()
               ];
             }
             break;
@@ -322,7 +341,27 @@ class MinusParser extends OperatorParser {
               return [
                 (executedAfter.first as FhirPathQuantity)
                     .subtract(executedBefore.first)
+                    .toString()
               ];
+            }
+            break;
+          }
+        case String:
+          {
+            if (executedAfter.first is FhirPathQuantity) {
+              if (FhirDateTime(executedBefore.first).isValid) {
+                return [
+                  (executedAfter.first as FhirPathQuantity)
+                      .subtract(FhirDateTime(executedBefore.first))
+                      .toString()
+                ];
+              } else if (Time(executedBefore.first).isValid) {
+                return [
+                  (executedAfter.first as FhirPathQuantity)
+                      .subtract(Time(executedBefore.first))
+                      .toString()
+                ];
+              }
             }
             break;
           }
