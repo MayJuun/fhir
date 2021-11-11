@@ -113,7 +113,7 @@ class Resource {
   Resource newId() => copyWith(id: Id(const uuid.Uuid().v4()));
 
   /// Updates the [meta] field of this Resource, updates the [lastUpdated], adds
-  /// 1 to the version number and adds an [Id] if there is not already one
+  /// 1 to the version number
   Resource updateMeta({Meta? oldMeta}) =>
       _updateMeta(this, meta: oldMeta);
 }
