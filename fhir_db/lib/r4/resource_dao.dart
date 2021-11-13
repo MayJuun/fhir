@@ -84,7 +84,7 @@ class ResourceDao {
 
   /// function used to save a new resource in the db
   Future<Resource> _insert(String? password, Resource resource) async {
-    final _newResource = resource.newVersion();
+    final _newResource = resource.updateVersion().newIdIfNoId();
     await _resourceStore
         .record(_newResource.id.toString())
         .put(await _db(password), _newResource.toJson());
@@ -113,10 +113,12 @@ class ResourceDao {
       switch (databaseMode) {
         case mode.DatabaseMode.PERSISTENCE_DB:
           _newResource = oldResource.meta == null
-              ? resource.newVersion()
+              ? resource.updateVersion().newIdIfNoId()
               : oldResource.meta == null
-                  ? resource.newVersion()
-                  : resource.newVersion(oldMeta: oldResource.meta);
+                  ? resource.updateVersion().newIdIfNoId()
+                  : resource
+                      .updateVersion(oldMeta: oldResource.meta)
+                      .newIdIfNoId();
           break;
         case mode.DatabaseMode.CACHE_DB:
           _newResource = resource;

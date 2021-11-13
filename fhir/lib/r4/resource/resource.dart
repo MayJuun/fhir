@@ -117,5 +117,5 @@ class Resource {
 
   /// Updates the [meta] field of this Resource, updates the [lastUpdated], adds
   /// 1 to the version number
-  Resource updateMeta({Meta? oldMeta}) => _updateMeta(this, meta: oldMeta);
+  Resource updateVersion({Meta? oldMeta}) => _updateMeta(this, meta: oldMeta);
 }

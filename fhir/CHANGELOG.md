@@ -1,5 +1,9 @@
 # fhir
 
+## [0.5.0-6]
+
+* Messed up updateVersion, changed updateMeta to updateVersion
+
 ## [0.5.0-5]
 
 * Added newIdIfNoID, newId and updateMeta to resources (in addition to newVersion which I assume no one was actually using)

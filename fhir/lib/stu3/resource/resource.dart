@@ -117,11 +117,5 @@ class Resource {
 
   /// Updates the [meta] field of this Resource, updates the [lastUpdated], adds
   /// 1 to the version number
-  Resource updateMeta({Meta? oldMeta}) => _updateMeta(this, meta: oldMeta);
-
-  /// Updates the [meta] field of this Resource, updates the [lastUpdated], adds
-  /// 1 to the version number and adds an [Id] if there is not already one. I'm mostly keeping this here
-  /// on the off chance that anyone was using it
-  Resource newVersion({Meta? oldMeta}) =>
-      updateMeta(oldMeta: oldMeta).newIdIfNoId();
+  Resource updateVersion({Meta? oldMeta}) => _updateMeta(this, meta: oldMeta);
 }

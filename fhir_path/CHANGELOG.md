@@ -1,3 +1,7 @@
+## [0.5.0-11]
+
+* Updated dependencies
+
 ## [0.5.0-10]
 * Added Calendar/Duration Quantities
 * Added basic DateTime arithmetic

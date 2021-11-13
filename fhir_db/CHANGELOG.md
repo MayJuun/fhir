@@ -1,5 +1,12 @@
+## [0.5.0-4]
+
+* I forgot to update something in the fhir package
+
 ## [0.5.0-3]
+
 * Updated dependencies
+
+* Change the functions for new versions & new IDs
 
 ## [0.5.0-2]
 * Updating to Dart 2.14.0

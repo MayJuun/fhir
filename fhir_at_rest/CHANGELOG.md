@@ -1,3 +1,13 @@
+## [0.5.0-6]
+
+* Forgot to update something from fhir repository
+
+## [0.5.0-5]
+
+* Added MimeType which allows you to declare the type for the header [Content-Type]
+
+* Updated dependencies
+
 ## [0.5.0-4]
 
 * Updated dependencies
