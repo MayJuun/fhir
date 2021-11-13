@@ -24,6 +24,8 @@ class FhirRequest with _$FhirRequest {
   ///   work with XML)
   /// [elements] - elements you need to pass in
   /// [parameters] - any extra parameters
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.read({
     required Uri base,
@@ -34,6 +36,7 @@ class FhirRequest with _$FhirRequest {
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
+    MimeType? mimeType,
     Client? client,
   }) = _FhirReadRequest;
 
@@ -49,6 +52,8 @@ class FhirRequest with _$FhirRequest {
   ///   work with XML)
   /// [elements] - elements you need to pass in
   /// [parameters] - any extra parameters
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.vRead({
     required Uri base,
@@ -60,6 +65,7 @@ class FhirRequest with _$FhirRequest {
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
+    MimeType? mimeType,
     Client? client,
   }) = _FhirVReadRequest;
 
@@ -72,6 +78,8 @@ class FhirRequest with _$FhirRequest {
   ///   work with XML)
   /// [elements] - elements you need to pass in
   /// [parameters] - any extra parameters
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.update({
     required Uri base,
@@ -81,6 +89,7 @@ class FhirRequest with _$FhirRequest {
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
+    MimeType? mimeType,
     Client? client,
   }) = _FhirUpdateRequest;
 
@@ -93,6 +102,8 @@ class FhirRequest with _$FhirRequest {
   ///   work with XML)
   /// [elements] - elements you need to pass in
   /// [parameters] - any extra parameters
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.patch({
     required Uri base,
@@ -102,6 +113,7 @@ class FhirRequest with _$FhirRequest {
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
+    MimeType? mimeType,
     Client? client,
   }) = _FhirPatchRequest;
 
@@ -116,6 +128,8 @@ class FhirRequest with _$FhirRequest {
   ///   work with XML)
   /// [elements] - elements you need to pass in
   /// [parameters] - any extra parameters
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.delete({
     required Uri base,
@@ -126,6 +140,7 @@ class FhirRequest with _$FhirRequest {
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
+    MimeType? mimeType,
     Client? client,
   }) = _FhirDeleteRequest;
 
@@ -138,6 +153,8 @@ class FhirRequest with _$FhirRequest {
   ///   work with XML)
   /// [elements] - elements you need to pass in
   /// [parameters] - any extra parameters
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.create({
     required Uri base,
@@ -147,6 +164,7 @@ class FhirRequest with _$FhirRequest {
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
+    MimeType? mimeType,
     Client? client,
   }) = _FhirCreateRequest;
 
@@ -162,6 +180,8 @@ class FhirRequest with _$FhirRequest {
   /// [parameters] - any extra parameters
   /// [usePost] - defines if you would prefer to use a post request instead of
   ///   a get request for this search
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.search({
     required Uri base,
@@ -173,6 +193,7 @@ class FhirRequest with _$FhirRequest {
     @Default(<String>[]) List<String> parameters,
     @Default(false) bool usePost,
     @Default(RestfulRequest.get_) RestfulRequest restfulRequest,
+    MimeType? mimeType,
     Client? client,
   }) = _FhirSearchRequest;
 
@@ -185,6 +206,8 @@ class FhirRequest with _$FhirRequest {
   ///   work with XML)
   /// [elements] - elements you need to pass in
   /// [parameters] - any extra parameters
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.searchAll({
     required Uri base,
@@ -193,6 +216,7 @@ class FhirRequest with _$FhirRequest {
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
+    MimeType? mimeType,
     Client? client,
   }) = _FhirSearchAllRequest;
 
@@ -206,6 +230,8 @@ class FhirRequest with _$FhirRequest {
   /// [elements] - elements you need to pass in
   /// [parameters] - any extra parameters
   /// [mode] - defines the mode as defined https://www.hl7.org/fhir/http.html#capabilities
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.capabilities({
     required Uri base,
@@ -215,6 +241,7 @@ class FhirRequest with _$FhirRequest {
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     @Default(Mode.full) Mode mode,
+    MimeType? mimeType,
     Client? client,
   }) = _FhirCapabilitiesRequest;
 
@@ -228,6 +255,8 @@ class FhirRequest with _$FhirRequest {
   /// [elements] - elements you need to pass in
   /// [parameters] - any extra parameters
   /// [bundle] - the bundle to be uploaded
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.transaction({
     required Uri base,
@@ -237,6 +266,7 @@ class FhirRequest with _$FhirRequest {
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     required Bundle bundle,
+    MimeType? mimeType,
     Client? client,
   }) = _FhirTransactionRequest;
 
@@ -250,6 +280,8 @@ class FhirRequest with _$FhirRequest {
   /// [elements] - elements you need to pass in
   /// [parameters] - any extra parameters
   /// [bundle] - the bundle to be uploaded
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.batch({
     required Uri base,
@@ -259,6 +291,7 @@ class FhirRequest with _$FhirRequest {
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     required Bundle bundle,
+    MimeType? mimeType,
     Client? client,
   }) = _FhirBatchRequest;
 
@@ -282,6 +315,8 @@ class FhirRequest with _$FhirRequest {
   ///   during the time period specified in the date time value
   /// [reference] - Only include resource versions that are referenced in
   ///   the specified list
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.history({
     required Uri base,
@@ -296,6 +331,7 @@ class FhirRequest with _$FhirRequest {
     Instant? since,
     FhirDateTime? at,
     String? reference,
+    MimeType? mimeType,
     Client? client,
   }) = _FhirHistoryRequest;
 
@@ -318,6 +354,8 @@ class FhirRequest with _$FhirRequest {
   ///   during the time period specified in the date time value
   /// [reference] - Only include resource versions that are referenced in
   ///   the specified list
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.historyType({
     required Uri base,
@@ -331,6 +369,7 @@ class FhirRequest with _$FhirRequest {
     Instant? since,
     FhirDateTime? at,
     String? reference,
+    MimeType? mimeType,
     Client? client,
   }) = _FhirHistoryTypeRequest;
 
@@ -352,6 +391,8 @@ class FhirRequest with _$FhirRequest {
   ///   during the time period specified in the date time value
   /// [reference] - Only include resource versions that are referenced in
   ///   the specified list
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.historyAll({
     required Uri base,
@@ -364,6 +405,7 @@ class FhirRequest with _$FhirRequest {
     Instant? since,
     FhirDateTime? at,
     String? reference,
+    MimeType? mimeType,
     Client? client,
   }) = _FhirHistoryAllRequest;
 
@@ -381,6 +423,8 @@ class FhirRequest with _$FhirRequest {
   /// [fhirParameters] - any extra fhirParameters
   ///   ToDo: why did I include this?
   /// [usePost] - defines if you would prefer to use a post request instead of
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
   /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.operation({
     required Uri base,
@@ -395,6 +439,7 @@ class FhirRequest with _$FhirRequest {
     required String operation,
     @Default(false) bool usePost,
     @Default(false) bool useFormData,
+    MimeType? mimeType,
     Client? client,
   }) = _FhirOperationRequest;
 
@@ -411,12 +456,14 @@ class FhirRequest with _$FhirRequest {
         uri(parameters: m.parameters),
         headers,
         'Read',
+        mimeType: m.mimeType,
       ),
       vRead: (m) async => await _request(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
         headers,
         'Vread',
+        mimeType: m.mimeType,
       ),
       update: (m) async => await _request(
         RestfulRequest.put_,
@@ -424,6 +471,7 @@ class FhirRequest with _$FhirRequest {
         headers,
         'Update',
         resource: m.resource,
+        mimeType: m.mimeType,
       ),
       patch: (m) async => await _request(
         RestfulRequest.patch_,
@@ -431,12 +479,14 @@ class FhirRequest with _$FhirRequest {
         headers,
         'Patch',
         resource: m.resource,
+        mimeType: m.mimeType,
       ),
       delete: (m) async => await _request(
         RestfulRequest.delete_,
         uri(parameters: m.parameters),
         headers,
         'Delete',
+        mimeType: m.mimeType,
       ),
       create: (m) async => await _request(
         RestfulRequest.post_,
@@ -444,6 +494,7 @@ class FhirRequest with _$FhirRequest {
         headers,
         'Create',
         resource: m.resource,
+        mimeType: m.mimeType,
       ),
       search: (m) async => await _request(
         m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
@@ -451,18 +502,21 @@ class FhirRequest with _$FhirRequest {
         headers,
         'Search',
         formData: m.usePost ? m.formData(parameters: m.parameters) : null,
+        mimeType: m.mimeType,
       ),
       searchAll: (m) async => await _request(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
         headers,
         'Search All',
+        mimeType: m.mimeType,
       ),
       capabilities: (m) async => await _request(
         RestfulRequest.get_,
         uri(parameters: m.parameters),
         headers,
         'Capabilities',
+        mimeType: m.mimeType,
       ),
       transaction: (m) async {
         if (m.bundle.type != BundleType.transaction) {
@@ -488,6 +542,7 @@ class FhirRequest with _$FhirRequest {
           headers,
           'Transaction',
           resource: m.bundle,
+          mimeType: m.mimeType,
         );
       },
       batch: (m) async {
@@ -515,6 +570,7 @@ class FhirRequest with _$FhirRequest {
           headers,
           'Batch',
           resource: m.bundle,
+          mimeType: m.mimeType,
         );
       },
       history: (m) async {
@@ -533,6 +589,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           headers,
           'History',
+          mimeType: m.mimeType,
         );
       },
       historyType: (m) async {
@@ -551,6 +608,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           headers,
           'History Type',
+          mimeType: m.mimeType,
         );
       },
       historyAll: (m) async {
@@ -569,6 +627,7 @@ class FhirRequest with _$FhirRequest {
           uri(parameters: parameterList),
           headers,
           'History all',
+          mimeType: m.mimeType,
         );
       },
       operation: (m) async => await _request(
@@ -582,6 +641,7 @@ class FhirRequest with _$FhirRequest {
         formData: m.usePost && m.useFormData
             ? m.formData(parameters: parameters)
             : null,
+        mimeType: m.mimeType,
       ),
     );
   }
@@ -622,14 +682,17 @@ class FhirRequest with _$FhirRequest {
     String requestType, {
     Resource? resource,
     String? formData,
+    MimeType? mimeType,
   }) async {
     try {
       final result = await _makeRequest(
-          type: type,
-          thisRequest: uri,
-          client: client,
-          headers: headers,
-          resource: resource == null ? null : resource.toJson());
+        type: type,
+        thisRequest: uri,
+        client: client,
+        headers: headers,
+        resource: resource == null ? null : resource.toJson(),
+        mimeType: mimeType,
+      );
       return result;
     } catch (e) {
       return _operationOutcome('Failed to complete a $requestType request, ',
@@ -760,6 +823,7 @@ class FhirRequest with _$FhirRequest {
     Map<String, dynamic>? resource,
     String? formData,
     Encoding? encoding,
+    MimeType? mimeType,
     Client? client,
   }) async {
     Response result;
@@ -781,7 +845,10 @@ class FhirRequest with _$FhirRequest {
           }
         case RestfulRequest.put_:
           {
-            headers['Content-Type'] = 'application/fhir+json';
+            headers['Content-Type'] =
+                mimeType == null || MimeTypeEnumMap[mimeType] == null
+                    ? 'application/fhir+json'
+                    : MimeTypeEnumMap[mimeType]!;
             result = await client.put(
               Uri.parse(thisRequest),
               headers: headers,
@@ -800,7 +867,10 @@ class FhirRequest with _$FhirRequest {
           }
         case RestfulRequest.patch_:
           {
-            headers['Content-Type'] = 'application/fhir+json';
+            headers['Content-Type'] =
+                mimeType == null || MimeTypeEnumMap[mimeType] == null
+                    ? 'application/fhir+json'
+                    : MimeTypeEnumMap[mimeType]!;
             result = await client.patch(
               Uri.parse(thisRequest),
               headers: headers,
@@ -813,7 +883,9 @@ class FhirRequest with _$FhirRequest {
           {
             headers['Content-Type'] = formData != null
                 ? 'application/x-www-form-urlencoded'
-                : 'application/fhir+json';
+                : mimeType == null || MimeTypeEnumMap[mimeType] == null
+                    ? 'application/fhir+json'
+                    : MimeTypeEnumMap[mimeType]!;
             result = await client.post(
               Uri.parse(thisRequest),
               headers: headers,

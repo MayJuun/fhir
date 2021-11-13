@@ -4,6 +4,8 @@
 
 * Added newIdIfNoID, newId and updateMeta to resources (in addition to newVersion which I assume no one was actually using)
 
+* Added convenience method to get path to Resource, formed as: ResourceType/Id
+
 ## [0.5.0-4]
 
 * Update dependencies

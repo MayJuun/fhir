@@ -26,6 +26,7 @@ class _$FhirRequestTearOff {
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
+      MimeType? mimeType,
       Client? client}) {
     return _FhirReadRequest(
       base: base,
@@ -36,6 +37,7 @@ class _$FhirRequestTearOff {
       format: format,
       elements: elements,
       parameters: parameters,
+      mimeType: mimeType,
       client: client,
     );
   }
@@ -50,6 +52,7 @@ class _$FhirRequestTearOff {
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
+      MimeType? mimeType,
       Client? client}) {
     return _FhirVReadRequest(
       base: base,
@@ -61,6 +64,7 @@ class _$FhirRequestTearOff {
       format: format,
       elements: elements,
       parameters: parameters,
+      mimeType: mimeType,
       client: client,
     );
   }
@@ -73,6 +77,7 @@ class _$FhirRequestTearOff {
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
+      MimeType? mimeType,
       Client? client}) {
     return _FhirUpdateRequest(
       base: base,
@@ -82,6 +87,7 @@ class _$FhirRequestTearOff {
       format: format,
       elements: elements,
       parameters: parameters,
+      mimeType: mimeType,
       client: client,
     );
   }
@@ -94,6 +100,7 @@ class _$FhirRequestTearOff {
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
+      MimeType? mimeType,
       Client? client}) {
     return _FhirPatchRequest(
       base: base,
@@ -103,6 +110,7 @@ class _$FhirRequestTearOff {
       format: format,
       elements: elements,
       parameters: parameters,
+      mimeType: mimeType,
       client: client,
     );
   }
@@ -116,6 +124,7 @@ class _$FhirRequestTearOff {
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
+      MimeType? mimeType,
       Client? client}) {
     return _FhirDeleteRequest(
       base: base,
@@ -126,6 +135,7 @@ class _$FhirRequestTearOff {
       format: format,
       elements: elements,
       parameters: parameters,
+      mimeType: mimeType,
       client: client,
     );
   }
@@ -138,6 +148,7 @@ class _$FhirRequestTearOff {
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
+      MimeType? mimeType,
       Client? client}) {
     return _FhirCreateRequest(
       base: base,
@@ -147,6 +158,7 @@ class _$FhirRequestTearOff {
       format: format,
       elements: elements,
       parameters: parameters,
+      mimeType: mimeType,
       client: client,
     );
   }
@@ -161,6 +173,7 @@ class _$FhirRequestTearOff {
       List<String> parameters = const <String>[],
       bool usePost = false,
       RestfulRequest restfulRequest = RestfulRequest.get_,
+      MimeType? mimeType,
       Client? client}) {
     return _FhirSearchRequest(
       base: base,
@@ -172,6 +185,7 @@ class _$FhirRequestTearOff {
       parameters: parameters,
       usePost: usePost,
       restfulRequest: restfulRequest,
+      mimeType: mimeType,
       client: client,
     );
   }
@@ -183,6 +197,7 @@ class _$FhirRequestTearOff {
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
+      MimeType? mimeType,
       Client? client}) {
     return _FhirSearchAllRequest(
       base: base,
@@ -191,6 +206,7 @@ class _$FhirRequestTearOff {
       format: format,
       elements: elements,
       parameters: parameters,
+      mimeType: mimeType,
       client: client,
     );
   }
@@ -203,6 +219,7 @@ class _$FhirRequestTearOff {
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       Mode mode = Mode.full,
+      MimeType? mimeType,
       Client? client}) {
     return _FhirCapabilitiesRequest(
       base: base,
@@ -212,6 +229,7 @@ class _$FhirRequestTearOff {
       elements: elements,
       parameters: parameters,
       mode: mode,
+      mimeType: mimeType,
       client: client,
     );
   }
@@ -224,6 +242,7 @@ class _$FhirRequestTearOff {
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       required Bundle bundle,
+      MimeType? mimeType,
       Client? client}) {
     return _FhirTransactionRequest(
       base: base,
@@ -233,6 +252,7 @@ class _$FhirRequestTearOff {
       elements: elements,
       parameters: parameters,
       bundle: bundle,
+      mimeType: mimeType,
       client: client,
     );
   }
@@ -245,6 +265,7 @@ class _$FhirRequestTearOff {
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       required Bundle bundle,
+      MimeType? mimeType,
       Client? client}) {
     return _FhirBatchRequest(
       base: base,
@@ -254,6 +275,7 @@ class _$FhirRequestTearOff {
       elements: elements,
       parameters: parameters,
       bundle: bundle,
+      mimeType: mimeType,
       client: client,
     );
   }
@@ -271,6 +293,7 @@ class _$FhirRequestTearOff {
       Instant? since,
       FhirDateTime? at,
       String? reference,
+      MimeType? mimeType,
       Client? client}) {
     return _FhirHistoryRequest(
       base: base,
@@ -285,6 +308,7 @@ class _$FhirRequestTearOff {
       since: since,
       at: at,
       reference: reference,
+      mimeType: mimeType,
       client: client,
     );
   }
@@ -301,6 +325,7 @@ class _$FhirRequestTearOff {
       Instant? since,
       FhirDateTime? at,
       String? reference,
+      MimeType? mimeType,
       Client? client}) {
     return _FhirHistoryTypeRequest(
       base: base,
@@ -314,6 +339,7 @@ class _$FhirRequestTearOff {
       since: since,
       at: at,
       reference: reference,
+      mimeType: mimeType,
       client: client,
     );
   }
@@ -329,6 +355,7 @@ class _$FhirRequestTearOff {
       Instant? since,
       FhirDateTime? at,
       String? reference,
+      MimeType? mimeType,
       Client? client}) {
     return _FhirHistoryAllRequest(
       base: base,
@@ -341,6 +368,7 @@ class _$FhirRequestTearOff {
       since: since,
       at: at,
       reference: reference,
+      mimeType: mimeType,
       client: client,
     );
   }
@@ -358,6 +386,7 @@ class _$FhirRequestTearOff {
       required String operation,
       bool usePost = false,
       bool useFormData = false,
+      MimeType? mimeType,
       Client? client}) {
     return _FhirOperationRequest(
       base: base,
@@ -372,6 +401,7 @@ class _$FhirRequestTearOff {
       operation: operation,
       usePost: usePost,
       useFormData: useFormData,
+      mimeType: mimeType,
       client: client,
     );
   }
@@ -388,6 +418,7 @@ mixin _$FhirRequest {
   String get format => throw _privateConstructorUsedError;
   List<String> get elements => throw _privateConstructorUsedError;
   List<String> get parameters => throw _privateConstructorUsedError;
+  MimeType? get mimeType => throw _privateConstructorUsedError;
   Client? get client => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
@@ -401,6 +432,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         read,
     required TResult Function(
@@ -413,6 +445,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         vRead,
     required TResult Function(
@@ -423,6 +456,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         update,
     required TResult Function(
@@ -433,6 +467,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         patch,
     required TResult Function(
@@ -444,6 +479,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         delete,
     required TResult Function(
@@ -454,6 +490,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         create,
     required TResult Function(
@@ -466,6 +503,7 @@ mixin _$FhirRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)
         search,
     required TResult Function(
@@ -475,6 +513,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         searchAll,
     required TResult Function(
@@ -485,6 +524,7 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)
         capabilities,
     required TResult Function(
@@ -495,6 +535,7 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         transaction,
     required TResult Function(
@@ -505,6 +546,7 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         batch,
     required TResult Function(
@@ -520,6 +562,7 @@ mixin _$FhirRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         history,
     required TResult Function(
@@ -534,6 +577,7 @@ mixin _$FhirRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyType,
     required TResult Function(
@@ -547,6 +591,7 @@ mixin _$FhirRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyAll,
     required TResult Function(
@@ -562,6 +607,7 @@ mixin _$FhirRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)
         operation,
   }) =>
@@ -577,6 +623,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -589,6 +636,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -599,6 +647,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -609,6 +658,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -620,6 +670,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -630,6 +681,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -642,10 +694,18 @@ mixin _$FhirRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -655,6 +715,7 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -665,6 +726,7 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -675,6 +737,7 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -690,6 +753,7 @@ mixin _$FhirRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -704,6 +768,7 @@ mixin _$FhirRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -717,6 +782,7 @@ mixin _$FhirRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -732,6 +798,7 @@ mixin _$FhirRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
   }) =>
@@ -747,6 +814,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -759,6 +827,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -769,6 +838,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -779,6 +849,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -790,6 +861,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -800,6 +872,7 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -812,10 +885,18 @@ mixin _$FhirRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -825,6 +906,7 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -835,6 +917,7 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -845,6 +928,7 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -860,6 +944,7 @@ mixin _$FhirRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -874,6 +959,7 @@ mixin _$FhirRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -887,6 +973,7 @@ mixin _$FhirRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -902,6 +989,7 @@ mixin _$FhirRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
     required TResult orElse(),
@@ -983,6 +1071,7 @@ abstract class $FhirRequestCopyWith<$Res> {
       String format,
       List<String> elements,
       List<String> parameters,
+      MimeType? mimeType,
       Client? client});
 }
 
@@ -1002,6 +1091,7 @@ class _$FhirRequestCopyWithImpl<$Res> implements $FhirRequestCopyWith<$Res> {
     Object? format = freezed,
     Object? elements = freezed,
     Object? parameters = freezed,
+    Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1029,6 +1119,10 @@ class _$FhirRequestCopyWithImpl<$Res> implements $FhirRequestCopyWith<$Res> {
           ? _value.parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -1053,6 +1147,7 @@ abstract class _$FhirReadRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
+      MimeType? mimeType,
       Client? client});
 }
 
@@ -1077,6 +1172,7 @@ class __$FhirReadRequestCopyWithImpl<$Res>
     Object? format = freezed,
     Object? elements = freezed,
     Object? parameters = freezed,
+    Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_FhirReadRequest(
@@ -1112,6 +1208,10 @@ class __$FhirReadRequestCopyWithImpl<$Res>
           ? _value.parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -1132,6 +1232,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
+      this.mimeType,
       this.client})
       : super._();
 
@@ -1157,11 +1258,13 @@ class _$_FhirReadRequest extends _FhirReadRequest {
   @override
   final List<String> parameters;
   @override
+  final MimeType? mimeType;
+  @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.read(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, client: $client)';
+    return 'FhirRequest.read(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
   }
 
   @override
@@ -1178,6 +1281,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -1192,6 +1297,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
       format,
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
+      mimeType,
       client);
 
   @JsonKey(ignore: true)
@@ -1211,6 +1317,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         read,
     required TResult Function(
@@ -1223,6 +1330,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         vRead,
     required TResult Function(
@@ -1233,6 +1341,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         update,
     required TResult Function(
@@ -1243,6 +1352,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         patch,
     required TResult Function(
@@ -1254,6 +1364,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         delete,
     required TResult Function(
@@ -1264,6 +1375,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         create,
     required TResult Function(
@@ -1276,6 +1388,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)
         search,
     required TResult Function(
@@ -1285,6 +1398,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         searchAll,
     required TResult Function(
@@ -1295,6 +1409,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)
         capabilities,
     required TResult Function(
@@ -1305,6 +1420,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         transaction,
     required TResult Function(
@@ -1315,6 +1431,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         batch,
     required TResult Function(
@@ -1330,6 +1447,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         history,
     required TResult Function(
@@ -1344,6 +1462,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyType,
     required TResult Function(
@@ -1357,6 +1476,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyAll,
     required TResult Function(
@@ -1372,11 +1492,12 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)
         operation,
   }) {
-    return read(
-        base, type, id, pretty, summary, format, elements, parameters, client);
+    return read(base, type, id, pretty, summary, format, elements, parameters,
+        mimeType, client);
   }
 
   @override
@@ -1391,6 +1512,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -1403,6 +1525,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -1413,6 +1536,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -1423,6 +1547,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -1434,6 +1559,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -1444,6 +1570,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -1456,10 +1583,18 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -1469,6 +1604,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -1479,6 +1615,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -1489,6 +1626,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -1504,6 +1642,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -1518,6 +1657,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -1531,6 +1671,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -1546,11 +1687,12 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
   }) {
-    return read?.call(
-        base, type, id, pretty, summary, format, elements, parameters, client);
+    return read?.call(base, type, id, pretty, summary, format, elements,
+        parameters, mimeType, client);
   }
 
   @override
@@ -1565,6 +1707,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -1577,6 +1720,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -1587,6 +1731,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -1597,6 +1742,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -1608,6 +1754,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -1618,6 +1765,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -1630,10 +1778,18 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -1643,6 +1799,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -1653,6 +1810,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -1663,6 +1821,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -1678,6 +1837,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -1692,6 +1852,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -1705,6 +1866,7 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -1720,13 +1882,14 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
     required TResult orElse(),
   }) {
     if (read != null) {
       return read(base, type, id, pretty, summary, format, elements, parameters,
-          client);
+          mimeType, client);
     }
     return orElse();
   }
@@ -1812,6 +1975,7 @@ abstract class _FhirReadRequest extends FhirRequest {
       String format,
       List<String> elements,
       List<String> parameters,
+      MimeType? mimeType,
       Client? client}) = _$_FhirReadRequest;
   _FhirReadRequest._() : super._();
 
@@ -1829,6 +1993,8 @@ abstract class _FhirReadRequest extends FhirRequest {
   List<String> get elements;
   @override
   List<String> get parameters;
+  @override
+  MimeType? get mimeType;
   @override
   Client? get client;
   @override
@@ -1854,6 +2020,7 @@ abstract class _$FhirVReadRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
+      MimeType? mimeType,
       Client? client});
 }
 
@@ -1879,6 +2046,7 @@ class __$FhirVReadRequestCopyWithImpl<$Res>
     Object? format = freezed,
     Object? elements = freezed,
     Object? parameters = freezed,
+    Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_FhirVReadRequest(
@@ -1918,6 +2086,10 @@ class __$FhirVReadRequestCopyWithImpl<$Res>
           ? _value.parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -1939,6 +2111,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
+      this.mimeType,
       this.client})
       : super._();
 
@@ -1966,11 +2139,13 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
   @override
   final List<String> parameters;
   @override
+  final MimeType? mimeType;
+  @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.vRead(base: $base, type: $type, id: $id, vid: $vid, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, client: $client)';
+    return 'FhirRequest.vRead(base: $base, type: $type, id: $id, vid: $vid, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
   }
 
   @override
@@ -1988,6 +2163,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -2003,6 +2180,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
       format,
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
+      mimeType,
       client);
 
   @JsonKey(ignore: true)
@@ -2022,6 +2200,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         read,
     required TResult Function(
@@ -2034,6 +2213,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         vRead,
     required TResult Function(
@@ -2044,6 +2224,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         update,
     required TResult Function(
@@ -2054,6 +2235,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         patch,
     required TResult Function(
@@ -2065,6 +2247,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         delete,
     required TResult Function(
@@ -2075,6 +2258,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         create,
     required TResult Function(
@@ -2087,6 +2271,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)
         search,
     required TResult Function(
@@ -2096,6 +2281,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         searchAll,
     required TResult Function(
@@ -2106,6 +2292,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)
         capabilities,
     required TResult Function(
@@ -2116,6 +2303,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         transaction,
     required TResult Function(
@@ -2126,6 +2314,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         batch,
     required TResult Function(
@@ -2141,6 +2330,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         history,
     required TResult Function(
@@ -2155,6 +2345,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyType,
     required TResult Function(
@@ -2168,6 +2359,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyAll,
     required TResult Function(
@@ -2183,11 +2375,12 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)
         operation,
   }) {
     return vRead(base, type, id, vid, pretty, summary, format, elements,
-        parameters, client);
+        parameters, mimeType, client);
   }
 
   @override
@@ -2202,6 +2395,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -2214,6 +2408,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -2224,6 +2419,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -2234,6 +2430,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -2245,6 +2442,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -2255,6 +2453,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -2267,10 +2466,18 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -2280,6 +2487,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -2290,6 +2498,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -2300,6 +2509,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -2315,6 +2525,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -2329,6 +2540,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -2342,6 +2554,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -2357,11 +2570,12 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
   }) {
     return vRead?.call(base, type, id, vid, pretty, summary, format, elements,
-        parameters, client);
+        parameters, mimeType, client);
   }
 
   @override
@@ -2376,6 +2590,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -2388,6 +2603,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -2398,6 +2614,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -2408,6 +2625,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -2419,6 +2637,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -2429,6 +2648,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -2441,10 +2661,18 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -2454,6 +2682,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -2464,6 +2693,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -2474,6 +2704,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -2489,6 +2720,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -2503,6 +2735,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -2516,6 +2749,7 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -2531,13 +2765,14 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
     required TResult orElse(),
   }) {
     if (vRead != null) {
       return vRead(base, type, id, vid, pretty, summary, format, elements,
-          parameters, client);
+          parameters, mimeType, client);
     }
     return orElse();
   }
@@ -2624,6 +2859,7 @@ abstract class _FhirVReadRequest extends FhirRequest {
       String format,
       List<String> elements,
       List<String> parameters,
+      MimeType? mimeType,
       Client? client}) = _$_FhirVReadRequest;
   _FhirVReadRequest._() : super._();
 
@@ -2642,6 +2878,8 @@ abstract class _FhirVReadRequest extends FhirRequest {
   List<String> get elements;
   @override
   List<String> get parameters;
+  @override
+  MimeType? get mimeType;
   @override
   Client? get client;
   @override
@@ -2665,6 +2903,7 @@ abstract class _$FhirUpdateRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
+      MimeType? mimeType,
       Client? client});
 }
 
@@ -2688,6 +2927,7 @@ class __$FhirUpdateRequestCopyWithImpl<$Res>
     Object? format = freezed,
     Object? elements = freezed,
     Object? parameters = freezed,
+    Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_FhirUpdateRequest(
@@ -2719,6 +2959,10 @@ class __$FhirUpdateRequestCopyWithImpl<$Res>
           ? _value.parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -2738,6 +2982,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
+      this.mimeType,
       this.client})
       : super._();
 
@@ -2761,11 +3006,13 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
   @override
   final List<String> parameters;
   @override
+  final MimeType? mimeType;
+  @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.update(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, client: $client)';
+    return 'FhirRequest.update(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
   }
 
   @override
@@ -2782,6 +3029,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -2795,6 +3044,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
       format,
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
+      mimeType,
       client);
 
   @JsonKey(ignore: true)
@@ -2814,6 +3064,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         read,
     required TResult Function(
@@ -2826,6 +3077,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         vRead,
     required TResult Function(
@@ -2836,6 +3088,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         update,
     required TResult Function(
@@ -2846,6 +3099,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         patch,
     required TResult Function(
@@ -2857,6 +3111,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         delete,
     required TResult Function(
@@ -2867,6 +3122,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         create,
     required TResult Function(
@@ -2879,6 +3135,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)
         search,
     required TResult Function(
@@ -2888,6 +3145,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         searchAll,
     required TResult Function(
@@ -2898,6 +3156,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)
         capabilities,
     required TResult Function(
@@ -2908,6 +3167,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         transaction,
     required TResult Function(
@@ -2918,6 +3178,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         batch,
     required TResult Function(
@@ -2933,6 +3194,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         history,
     required TResult Function(
@@ -2947,6 +3209,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyType,
     required TResult Function(
@@ -2960,6 +3223,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyAll,
     required TResult Function(
@@ -2975,11 +3239,12 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)
         operation,
   }) {
-    return update(
-        base, resource, pretty, summary, format, elements, parameters, client);
+    return update(base, resource, pretty, summary, format, elements, parameters,
+        mimeType, client);
   }
 
   @override
@@ -2994,6 +3259,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -3006,6 +3272,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -3016,6 +3283,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -3026,6 +3294,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -3037,6 +3306,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -3047,6 +3317,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -3059,10 +3330,18 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -3072,6 +3351,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -3082,6 +3362,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -3092,6 +3373,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -3107,6 +3389,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -3121,6 +3404,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -3134,6 +3418,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -3149,11 +3434,12 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
   }) {
-    return update?.call(
-        base, resource, pretty, summary, format, elements, parameters, client);
+    return update?.call(base, resource, pretty, summary, format, elements,
+        parameters, mimeType, client);
   }
 
   @override
@@ -3168,6 +3454,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -3180,6 +3467,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -3190,6 +3478,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -3200,6 +3489,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -3211,6 +3501,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -3221,6 +3512,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -3233,10 +3525,18 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -3246,6 +3546,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -3256,6 +3557,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -3266,6 +3568,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -3281,6 +3584,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -3295,6 +3599,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -3308,6 +3613,7 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -3323,13 +3629,14 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
     required TResult orElse(),
   }) {
     if (update != null) {
       return update(base, resource, pretty, summary, format, elements,
-          parameters, client);
+          parameters, mimeType, client);
     }
     return orElse();
   }
@@ -3414,6 +3721,7 @@ abstract class _FhirUpdateRequest extends FhirRequest {
       String format,
       List<String> elements,
       List<String> parameters,
+      MimeType? mimeType,
       Client? client}) = _$_FhirUpdateRequest;
   _FhirUpdateRequest._() : super._();
 
@@ -3430,6 +3738,8 @@ abstract class _FhirUpdateRequest extends FhirRequest {
   List<String> get elements;
   @override
   List<String> get parameters;
+  @override
+  MimeType? get mimeType;
   @override
   Client? get client;
   @override
@@ -3453,6 +3763,7 @@ abstract class _$FhirPatchRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
+      MimeType? mimeType,
       Client? client});
 }
 
@@ -3476,6 +3787,7 @@ class __$FhirPatchRequestCopyWithImpl<$Res>
     Object? format = freezed,
     Object? elements = freezed,
     Object? parameters = freezed,
+    Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_FhirPatchRequest(
@@ -3507,6 +3819,10 @@ class __$FhirPatchRequestCopyWithImpl<$Res>
           ? _value.parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -3526,6 +3842,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
+      this.mimeType,
       this.client})
       : super._();
 
@@ -3549,11 +3866,13 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
   @override
   final List<String> parameters;
   @override
+  final MimeType? mimeType;
+  @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.patch(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, client: $client)';
+    return 'FhirRequest.patch(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
   }
 
   @override
@@ -3570,6 +3889,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -3583,6 +3904,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
       format,
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
+      mimeType,
       client);
 
   @JsonKey(ignore: true)
@@ -3602,6 +3924,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         read,
     required TResult Function(
@@ -3614,6 +3937,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         vRead,
     required TResult Function(
@@ -3624,6 +3948,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         update,
     required TResult Function(
@@ -3634,6 +3959,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         patch,
     required TResult Function(
@@ -3645,6 +3971,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         delete,
     required TResult Function(
@@ -3655,6 +3982,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         create,
     required TResult Function(
@@ -3667,6 +3995,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)
         search,
     required TResult Function(
@@ -3676,6 +4005,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         searchAll,
     required TResult Function(
@@ -3686,6 +4016,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)
         capabilities,
     required TResult Function(
@@ -3696,6 +4027,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         transaction,
     required TResult Function(
@@ -3706,6 +4038,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         batch,
     required TResult Function(
@@ -3721,6 +4054,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         history,
     required TResult Function(
@@ -3735,6 +4069,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyType,
     required TResult Function(
@@ -3748,6 +4083,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyAll,
     required TResult Function(
@@ -3763,11 +4099,12 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)
         operation,
   }) {
-    return patch(
-        base, resource, pretty, summary, format, elements, parameters, client);
+    return patch(base, resource, pretty, summary, format, elements, parameters,
+        mimeType, client);
   }
 
   @override
@@ -3782,6 +4119,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -3794,6 +4132,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -3804,6 +4143,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -3814,6 +4154,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -3825,6 +4166,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -3835,6 +4177,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -3847,10 +4190,18 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -3860,6 +4211,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -3870,6 +4222,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -3880,6 +4233,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -3895,6 +4249,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -3909,6 +4264,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -3922,6 +4278,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -3937,11 +4294,12 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
   }) {
-    return patch?.call(
-        base, resource, pretty, summary, format, elements, parameters, client);
+    return patch?.call(base, resource, pretty, summary, format, elements,
+        parameters, mimeType, client);
   }
 
   @override
@@ -3956,6 +4314,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -3968,6 +4327,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -3978,6 +4338,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -3988,6 +4349,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -3999,6 +4361,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -4009,6 +4372,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -4021,10 +4385,18 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -4034,6 +4406,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -4044,6 +4417,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -4054,6 +4428,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -4069,6 +4444,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -4083,6 +4459,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -4096,6 +4473,7 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -4111,13 +4489,14 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
     required TResult orElse(),
   }) {
     if (patch != null) {
       return patch(base, resource, pretty, summary, format, elements,
-          parameters, client);
+          parameters, mimeType, client);
     }
     return orElse();
   }
@@ -4202,6 +4581,7 @@ abstract class _FhirPatchRequest extends FhirRequest {
       String format,
       List<String> elements,
       List<String> parameters,
+      MimeType? mimeType,
       Client? client}) = _$_FhirPatchRequest;
   _FhirPatchRequest._() : super._();
 
@@ -4218,6 +4598,8 @@ abstract class _FhirPatchRequest extends FhirRequest {
   List<String> get elements;
   @override
   List<String> get parameters;
+  @override
+  MimeType? get mimeType;
   @override
   Client? get client;
   @override
@@ -4242,6 +4624,7 @@ abstract class _$FhirDeleteRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
+      MimeType? mimeType,
       Client? client});
 }
 
@@ -4266,6 +4649,7 @@ class __$FhirDeleteRequestCopyWithImpl<$Res>
     Object? format = freezed,
     Object? elements = freezed,
     Object? parameters = freezed,
+    Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_FhirDeleteRequest(
@@ -4301,6 +4685,10 @@ class __$FhirDeleteRequestCopyWithImpl<$Res>
           ? _value.parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -4321,6 +4709,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
+      this.mimeType,
       this.client})
       : super._();
 
@@ -4346,11 +4735,13 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   @override
   final List<String> parameters;
   @override
+  final MimeType? mimeType;
+  @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.delete(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, client: $client)';
+    return 'FhirRequest.delete(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
   }
 
   @override
@@ -4367,6 +4758,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -4381,6 +4774,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
       format,
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
+      mimeType,
       client);
 
   @JsonKey(ignore: true)
@@ -4400,6 +4794,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         read,
     required TResult Function(
@@ -4412,6 +4807,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         vRead,
     required TResult Function(
@@ -4422,6 +4818,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         update,
     required TResult Function(
@@ -4432,6 +4829,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         patch,
     required TResult Function(
@@ -4443,6 +4841,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         delete,
     required TResult Function(
@@ -4453,6 +4852,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         create,
     required TResult Function(
@@ -4465,6 +4865,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)
         search,
     required TResult Function(
@@ -4474,6 +4875,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         searchAll,
     required TResult Function(
@@ -4484,6 +4886,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)
         capabilities,
     required TResult Function(
@@ -4494,6 +4897,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         transaction,
     required TResult Function(
@@ -4504,6 +4908,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         batch,
     required TResult Function(
@@ -4519,6 +4924,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         history,
     required TResult Function(
@@ -4533,6 +4939,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyType,
     required TResult Function(
@@ -4546,6 +4953,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyAll,
     required TResult Function(
@@ -4561,11 +4969,12 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)
         operation,
   }) {
-    return delete(
-        base, type, id, pretty, summary, format, elements, parameters, client);
+    return delete(base, type, id, pretty, summary, format, elements, parameters,
+        mimeType, client);
   }
 
   @override
@@ -4580,6 +4989,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -4592,6 +5002,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -4602,6 +5013,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -4612,6 +5024,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -4623,6 +5036,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -4633,6 +5047,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -4645,10 +5060,18 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -4658,6 +5081,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -4668,6 +5092,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -4678,6 +5103,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -4693,6 +5119,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -4707,6 +5134,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -4720,6 +5148,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -4735,11 +5164,12 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
   }) {
-    return delete?.call(
-        base, type, id, pretty, summary, format, elements, parameters, client);
+    return delete?.call(base, type, id, pretty, summary, format, elements,
+        parameters, mimeType, client);
   }
 
   @override
@@ -4754,6 +5184,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -4766,6 +5197,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -4776,6 +5208,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -4786,6 +5219,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -4797,6 +5231,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -4807,6 +5242,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -4819,10 +5255,18 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -4832,6 +5276,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -4842,6 +5287,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -4852,6 +5298,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -4867,6 +5314,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -4881,6 +5329,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -4894,6 +5343,7 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -4909,13 +5359,14 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
     required TResult orElse(),
   }) {
     if (delete != null) {
       return delete(base, type, id, pretty, summary, format, elements,
-          parameters, client);
+          parameters, mimeType, client);
     }
     return orElse();
   }
@@ -5001,6 +5452,7 @@ abstract class _FhirDeleteRequest extends FhirRequest {
       String format,
       List<String> elements,
       List<String> parameters,
+      MimeType? mimeType,
       Client? client}) = _$_FhirDeleteRequest;
   _FhirDeleteRequest._() : super._();
 
@@ -5018,6 +5470,8 @@ abstract class _FhirDeleteRequest extends FhirRequest {
   List<String> get elements;
   @override
   List<String> get parameters;
+  @override
+  MimeType? get mimeType;
   @override
   Client? get client;
   @override
@@ -5041,6 +5495,7 @@ abstract class _$FhirCreateRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
+      MimeType? mimeType,
       Client? client});
 }
 
@@ -5064,6 +5519,7 @@ class __$FhirCreateRequestCopyWithImpl<$Res>
     Object? format = freezed,
     Object? elements = freezed,
     Object? parameters = freezed,
+    Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_FhirCreateRequest(
@@ -5095,6 +5551,10 @@ class __$FhirCreateRequestCopyWithImpl<$Res>
           ? _value.parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -5114,6 +5574,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
+      this.mimeType,
       this.client})
       : super._();
 
@@ -5137,11 +5598,13 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
   @override
   final List<String> parameters;
   @override
+  final MimeType? mimeType;
+  @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.create(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, client: $client)';
+    return 'FhirRequest.create(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
   }
 
   @override
@@ -5158,6 +5621,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -5171,6 +5636,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
       format,
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
+      mimeType,
       client);
 
   @JsonKey(ignore: true)
@@ -5190,6 +5656,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         read,
     required TResult Function(
@@ -5202,6 +5669,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         vRead,
     required TResult Function(
@@ -5212,6 +5680,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         update,
     required TResult Function(
@@ -5222,6 +5691,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         patch,
     required TResult Function(
@@ -5233,6 +5703,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         delete,
     required TResult Function(
@@ -5243,6 +5714,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         create,
     required TResult Function(
@@ -5255,6 +5727,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)
         search,
     required TResult Function(
@@ -5264,6 +5737,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         searchAll,
     required TResult Function(
@@ -5274,6 +5748,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)
         capabilities,
     required TResult Function(
@@ -5284,6 +5759,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         transaction,
     required TResult Function(
@@ -5294,6 +5770,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         batch,
     required TResult Function(
@@ -5309,6 +5786,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         history,
     required TResult Function(
@@ -5323,6 +5801,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyType,
     required TResult Function(
@@ -5336,6 +5815,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyAll,
     required TResult Function(
@@ -5351,11 +5831,12 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)
         operation,
   }) {
-    return create(
-        base, resource, pretty, summary, format, elements, parameters, client);
+    return create(base, resource, pretty, summary, format, elements, parameters,
+        mimeType, client);
   }
 
   @override
@@ -5370,6 +5851,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -5382,6 +5864,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -5392,6 +5875,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -5402,6 +5886,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -5413,6 +5898,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -5423,6 +5909,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -5435,10 +5922,18 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -5448,6 +5943,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -5458,6 +5954,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -5468,6 +5965,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -5483,6 +5981,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -5497,6 +5996,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -5510,6 +6010,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -5525,11 +6026,12 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
   }) {
-    return create?.call(
-        base, resource, pretty, summary, format, elements, parameters, client);
+    return create?.call(base, resource, pretty, summary, format, elements,
+        parameters, mimeType, client);
   }
 
   @override
@@ -5544,6 +6046,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -5556,6 +6059,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -5566,6 +6070,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -5576,6 +6081,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -5587,6 +6093,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -5597,6 +6104,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -5609,10 +6117,18 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -5622,6 +6138,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -5632,6 +6149,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -5642,6 +6160,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -5657,6 +6176,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -5671,6 +6191,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -5684,6 +6205,7 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -5699,13 +6221,14 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
     required TResult orElse(),
   }) {
     if (create != null) {
       return create(base, resource, pretty, summary, format, elements,
-          parameters, client);
+          parameters, mimeType, client);
     }
     return orElse();
   }
@@ -5790,6 +6313,7 @@ abstract class _FhirCreateRequest extends FhirRequest {
       String format,
       List<String> elements,
       List<String> parameters,
+      MimeType? mimeType,
       Client? client}) = _$_FhirCreateRequest;
   _FhirCreateRequest._() : super._();
 
@@ -5806,6 +6330,8 @@ abstract class _FhirCreateRequest extends FhirRequest {
   List<String> get elements;
   @override
   List<String> get parameters;
+  @override
+  MimeType? get mimeType;
   @override
   Client? get client;
   @override
@@ -5831,6 +6357,7 @@ abstract class _$FhirSearchRequestCopyWith<$Res>
       List<String> parameters,
       bool usePost,
       RestfulRequest restfulRequest,
+      MimeType? mimeType,
       Client? client});
 }
 
@@ -5856,6 +6383,7 @@ class __$FhirSearchRequestCopyWithImpl<$Res>
     Object? parameters = freezed,
     Object? usePost = freezed,
     Object? restfulRequest = freezed,
+    Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_FhirSearchRequest(
@@ -5895,6 +6423,10 @@ class __$FhirSearchRequestCopyWithImpl<$Res>
           ? _value.restfulRequest
           : restfulRequest // ignore: cast_nullable_to_non_nullable
               as RestfulRequest,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -5916,6 +6448,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
       this.parameters = const <String>[],
       this.usePost = false,
       this.restfulRequest = RestfulRequest.get_,
+      this.mimeType,
       this.client})
       : super._();
 
@@ -5945,11 +6478,13 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
   @override
   final RestfulRequest restfulRequest;
   @override
+  final MimeType? mimeType;
+  @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.search(base: $base, type: $type, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, usePost: $usePost, restfulRequest: $restfulRequest, client: $client)';
+    return 'FhirRequest.search(base: $base, type: $type, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, usePost: $usePost, restfulRequest: $restfulRequest, mimeType: $mimeType, client: $client)';
   }
 
   @override
@@ -5968,6 +6503,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             (identical(other.usePost, usePost) || other.usePost == usePost) &&
             (identical(other.restfulRequest, restfulRequest) ||
                 other.restfulRequest == restfulRequest) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -5983,6 +6520,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
       const DeepCollectionEquality().hash(parameters),
       usePost,
       restfulRequest,
+      mimeType,
       client);
 
   @JsonKey(ignore: true)
@@ -6002,6 +6540,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         read,
     required TResult Function(
@@ -6014,6 +6553,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         vRead,
     required TResult Function(
@@ -6024,6 +6564,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         update,
     required TResult Function(
@@ -6034,6 +6575,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         patch,
     required TResult Function(
@@ -6045,6 +6587,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         delete,
     required TResult Function(
@@ -6055,6 +6598,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         create,
     required TResult Function(
@@ -6067,6 +6611,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)
         search,
     required TResult Function(
@@ -6076,6 +6621,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         searchAll,
     required TResult Function(
@@ -6086,6 +6632,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)
         capabilities,
     required TResult Function(
@@ -6096,6 +6643,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         transaction,
     required TResult Function(
@@ -6106,6 +6654,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         batch,
     required TResult Function(
@@ -6121,6 +6670,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         history,
     required TResult Function(
@@ -6135,6 +6685,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyType,
     required TResult Function(
@@ -6148,6 +6699,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyAll,
     required TResult Function(
@@ -6163,11 +6715,12 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)
         operation,
   }) {
     return search(base, type, pretty, summary, format, elements, parameters,
-        usePost, restfulRequest, client);
+        usePost, restfulRequest, mimeType, client);
   }
 
   @override
@@ -6182,6 +6735,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -6194,6 +6748,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -6204,6 +6759,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -6214,6 +6770,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -6225,6 +6782,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -6235,6 +6793,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -6247,10 +6806,18 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -6260,6 +6827,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -6270,6 +6838,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -6280,6 +6849,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -6295,6 +6865,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -6309,6 +6880,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -6322,6 +6894,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -6337,11 +6910,12 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
   }) {
     return search?.call(base, type, pretty, summary, format, elements,
-        parameters, usePost, restfulRequest, client);
+        parameters, usePost, restfulRequest, mimeType, client);
   }
 
   @override
@@ -6356,6 +6930,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -6368,6 +6943,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -6378,6 +6954,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -6388,6 +6965,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -6399,6 +6977,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -6409,6 +6988,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -6421,10 +7001,18 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -6434,6 +7022,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -6444,6 +7033,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -6454,6 +7044,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -6469,6 +7060,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -6483,6 +7075,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -6496,6 +7089,7 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -6511,13 +7105,14 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
     required TResult orElse(),
   }) {
     if (search != null) {
       return search(base, type, pretty, summary, format, elements, parameters,
-          usePost, restfulRequest, client);
+          usePost, restfulRequest, mimeType, client);
     }
     return orElse();
   }
@@ -6604,6 +7199,7 @@ abstract class _FhirSearchRequest extends FhirRequest {
       List<String> parameters,
       bool usePost,
       RestfulRequest restfulRequest,
+      MimeType? mimeType,
       Client? client}) = _$_FhirSearchRequest;
   _FhirSearchRequest._() : super._();
 
@@ -6622,6 +7218,8 @@ abstract class _FhirSearchRequest extends FhirRequest {
   List<String> get parameters;
   bool get usePost;
   RestfulRequest get restfulRequest;
+  @override
+  MimeType? get mimeType;
   @override
   Client? get client;
   @override
@@ -6644,6 +7242,7 @@ abstract class _$FhirSearchAllRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
+      MimeType? mimeType,
       Client? client});
 }
 
@@ -6666,6 +7265,7 @@ class __$FhirSearchAllRequestCopyWithImpl<$Res>
     Object? format = freezed,
     Object? elements = freezed,
     Object? parameters = freezed,
+    Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_FhirSearchAllRequest(
@@ -6693,6 +7293,10 @@ class __$FhirSearchAllRequestCopyWithImpl<$Res>
           ? _value.parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -6711,6 +7315,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
+      this.mimeType,
       this.client})
       : super._();
 
@@ -6732,11 +7337,13 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
   @override
   final List<String> parameters;
   @override
+  final MimeType? mimeType;
+  @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.searchAll(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, client: $client)';
+    return 'FhirRequest.searchAll(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
   }
 
   @override
@@ -6751,6 +7358,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -6763,6 +7372,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
       format,
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
+      mimeType,
       client);
 
   @JsonKey(ignore: true)
@@ -6783,6 +7393,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         read,
     required TResult Function(
@@ -6795,6 +7406,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         vRead,
     required TResult Function(
@@ -6805,6 +7417,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         update,
     required TResult Function(
@@ -6815,6 +7428,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         patch,
     required TResult Function(
@@ -6826,6 +7440,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         delete,
     required TResult Function(
@@ -6836,6 +7451,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         create,
     required TResult Function(
@@ -6848,6 +7464,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)
         search,
     required TResult Function(
@@ -6857,6 +7474,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         searchAll,
     required TResult Function(
@@ -6867,6 +7485,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)
         capabilities,
     required TResult Function(
@@ -6877,6 +7496,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         transaction,
     required TResult Function(
@@ -6887,6 +7507,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         batch,
     required TResult Function(
@@ -6902,6 +7523,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         history,
     required TResult Function(
@@ -6916,6 +7538,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyType,
     required TResult Function(
@@ -6929,6 +7552,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyAll,
     required TResult Function(
@@ -6944,11 +7568,12 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)
         operation,
   }) {
     return searchAll(
-        base, pretty, summary, format, elements, parameters, client);
+        base, pretty, summary, format, elements, parameters, mimeType, client);
   }
 
   @override
@@ -6963,6 +7588,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -6975,6 +7601,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -6985,6 +7612,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -6995,6 +7623,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -7006,6 +7635,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -7016,6 +7646,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -7028,10 +7659,18 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -7041,6 +7680,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -7051,6 +7691,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -7061,6 +7702,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -7076,6 +7718,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -7090,6 +7733,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -7103,6 +7747,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -7118,11 +7763,12 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
   }) {
     return searchAll?.call(
-        base, pretty, summary, format, elements, parameters, client);
+        base, pretty, summary, format, elements, parameters, mimeType, client);
   }
 
   @override
@@ -7137,6 +7783,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -7149,6 +7796,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -7159,6 +7807,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -7169,6 +7818,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -7180,6 +7830,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -7190,6 +7841,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -7202,10 +7854,18 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -7215,6 +7875,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -7225,6 +7886,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -7235,6 +7897,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -7250,6 +7913,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -7264,6 +7928,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -7277,6 +7942,7 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -7292,13 +7958,14 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
     required TResult orElse(),
   }) {
     if (searchAll != null) {
-      return searchAll(
-          base, pretty, summary, format, elements, parameters, client);
+      return searchAll(base, pretty, summary, format, elements, parameters,
+          mimeType, client);
     }
     return orElse();
   }
@@ -7382,6 +8049,7 @@ abstract class _FhirSearchAllRequest extends FhirRequest {
       String format,
       List<String> elements,
       List<String> parameters,
+      MimeType? mimeType,
       Client? client}) = _$_FhirSearchAllRequest;
   _FhirSearchAllRequest._() : super._();
 
@@ -7397,6 +8065,8 @@ abstract class _FhirSearchAllRequest extends FhirRequest {
   List<String> get elements;
   @override
   List<String> get parameters;
+  @override
+  MimeType? get mimeType;
   @override
   Client? get client;
   @override
@@ -7420,6 +8090,7 @@ abstract class _$FhirCapabilitiesRequestCopyWith<$Res>
       List<String> elements,
       List<String> parameters,
       Mode mode,
+      MimeType? mimeType,
       Client? client});
 }
 
@@ -7444,6 +8115,7 @@ class __$FhirCapabilitiesRequestCopyWithImpl<$Res>
     Object? elements = freezed,
     Object? parameters = freezed,
     Object? mode = freezed,
+    Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_FhirCapabilitiesRequest(
@@ -7475,6 +8147,10 @@ class __$FhirCapabilitiesRequestCopyWithImpl<$Res>
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
               as Mode,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -7494,6 +8170,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.mode = Mode.full,
+      this.mimeType,
       this.client})
       : super._();
 
@@ -7518,11 +8195,13 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
   @override
   final Mode mode;
   @override
+  final MimeType? mimeType;
+  @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.capabilities(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mode: $mode, client: $client)';
+    return 'FhirRequest.capabilities(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mode: $mode, mimeType: $mimeType, client: $client)';
   }
 
   @override
@@ -7538,6 +8217,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
             (identical(other.mode, mode) || other.mode == mode) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -7551,6 +8232,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
       mode,
+      mimeType,
       client);
 
   @JsonKey(ignore: true)
@@ -7571,6 +8253,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         read,
     required TResult Function(
@@ -7583,6 +8266,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         vRead,
     required TResult Function(
@@ -7593,6 +8277,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         update,
     required TResult Function(
@@ -7603,6 +8288,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         patch,
     required TResult Function(
@@ -7614,6 +8300,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         delete,
     required TResult Function(
@@ -7624,6 +8311,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         create,
     required TResult Function(
@@ -7636,6 +8324,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)
         search,
     required TResult Function(
@@ -7645,6 +8334,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         searchAll,
     required TResult Function(
@@ -7655,6 +8345,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)
         capabilities,
     required TResult Function(
@@ -7665,6 +8356,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         transaction,
     required TResult Function(
@@ -7675,6 +8367,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         batch,
     required TResult Function(
@@ -7690,6 +8383,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         history,
     required TResult Function(
@@ -7704,6 +8398,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyType,
     required TResult Function(
@@ -7717,6 +8412,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyAll,
     required TResult Function(
@@ -7732,11 +8428,12 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)
         operation,
   }) {
-    return capabilities(
-        base, pretty, summary, format, elements, parameters, mode, client);
+    return capabilities(base, pretty, summary, format, elements, parameters,
+        mode, mimeType, client);
   }
 
   @override
@@ -7751,6 +8448,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -7763,6 +8461,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -7773,6 +8472,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -7783,6 +8483,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -7794,6 +8495,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -7804,6 +8506,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -7816,10 +8519,18 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -7829,6 +8540,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -7839,6 +8551,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -7849,6 +8562,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -7864,6 +8578,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -7878,6 +8593,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -7891,6 +8607,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -7906,11 +8623,12 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
   }) {
-    return capabilities?.call(
-        base, pretty, summary, format, elements, parameters, mode, client);
+    return capabilities?.call(base, pretty, summary, format, elements,
+        parameters, mode, mimeType, client);
   }
 
   @override
@@ -7925,6 +8643,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -7937,6 +8656,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -7947,6 +8667,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -7957,6 +8678,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -7968,6 +8690,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -7978,6 +8701,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -7990,10 +8714,18 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -8003,6 +8735,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -8013,6 +8746,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -8023,6 +8757,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -8038,6 +8773,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -8052,6 +8788,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -8065,6 +8802,7 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -8080,13 +8818,14 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
     required TResult orElse(),
   }) {
     if (capabilities != null) {
-      return capabilities(
-          base, pretty, summary, format, elements, parameters, mode, client);
+      return capabilities(base, pretty, summary, format, elements, parameters,
+          mode, mimeType, client);
     }
     return orElse();
   }
@@ -8171,6 +8910,7 @@ abstract class _FhirCapabilitiesRequest extends FhirRequest {
       List<String> elements,
       List<String> parameters,
       Mode mode,
+      MimeType? mimeType,
       Client? client}) = _$_FhirCapabilitiesRequest;
   _FhirCapabilitiesRequest._() : super._();
 
@@ -8187,6 +8927,8 @@ abstract class _FhirCapabilitiesRequest extends FhirRequest {
   @override
   List<String> get parameters;
   Mode get mode;
+  @override
+  MimeType? get mimeType;
   @override
   Client? get client;
   @override
@@ -8210,6 +8952,7 @@ abstract class _$FhirTransactionRequestCopyWith<$Res>
       List<String> elements,
       List<String> parameters,
       Bundle bundle,
+      MimeType? mimeType,
       Client? client});
 
   $BundleCopyWith<$Res> get bundle;
@@ -8235,6 +8978,7 @@ class __$FhirTransactionRequestCopyWithImpl<$Res>
     Object? elements = freezed,
     Object? parameters = freezed,
     Object? bundle = freezed,
+    Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_FhirTransactionRequest(
@@ -8266,6 +9010,10 @@ class __$FhirTransactionRequestCopyWithImpl<$Res>
           ? _value.bundle
           : bundle // ignore: cast_nullable_to_non_nullable
               as Bundle,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -8292,6 +9040,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
       this.elements = const <String>[],
       this.parameters = const <String>[],
       required this.bundle,
+      this.mimeType,
       this.client})
       : super._();
 
@@ -8315,11 +9064,13 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
   @override
   final Bundle bundle;
   @override
+  final MimeType? mimeType;
+  @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.transaction(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, bundle: $bundle, client: $client)';
+    return 'FhirRequest.transaction(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, bundle: $bundle, mimeType: $mimeType, client: $client)';
   }
 
   @override
@@ -8335,6 +9086,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
             (identical(other.bundle, bundle) || other.bundle == bundle) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -8348,6 +9101,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
       bundle,
+      mimeType,
       client);
 
   @JsonKey(ignore: true)
@@ -8368,6 +9122,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         read,
     required TResult Function(
@@ -8380,6 +9135,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         vRead,
     required TResult Function(
@@ -8390,6 +9146,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         update,
     required TResult Function(
@@ -8400,6 +9157,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         patch,
     required TResult Function(
@@ -8411,6 +9169,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         delete,
     required TResult Function(
@@ -8421,6 +9180,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         create,
     required TResult Function(
@@ -8433,6 +9193,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)
         search,
     required TResult Function(
@@ -8442,6 +9203,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         searchAll,
     required TResult Function(
@@ -8452,6 +9214,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)
         capabilities,
     required TResult Function(
@@ -8462,6 +9225,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         transaction,
     required TResult Function(
@@ -8472,6 +9236,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         batch,
     required TResult Function(
@@ -8487,6 +9252,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         history,
     required TResult Function(
@@ -8501,6 +9267,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyType,
     required TResult Function(
@@ -8514,6 +9281,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyAll,
     required TResult Function(
@@ -8529,11 +9297,12 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)
         operation,
   }) {
-    return transaction(
-        base, pretty, summary, format, elements, parameters, bundle, client);
+    return transaction(base, pretty, summary, format, elements, parameters,
+        bundle, mimeType, client);
   }
 
   @override
@@ -8548,6 +9317,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -8560,6 +9330,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -8570,6 +9341,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -8580,6 +9352,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -8591,6 +9364,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -8601,6 +9375,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -8613,10 +9388,18 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -8626,6 +9409,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -8636,6 +9420,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -8646,6 +9431,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -8661,6 +9447,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -8675,6 +9462,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -8688,6 +9476,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -8703,11 +9492,12 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
   }) {
-    return transaction?.call(
-        base, pretty, summary, format, elements, parameters, bundle, client);
+    return transaction?.call(base, pretty, summary, format, elements,
+        parameters, bundle, mimeType, client);
   }
 
   @override
@@ -8722,6 +9512,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -8734,6 +9525,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -8744,6 +9536,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -8754,6 +9547,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -8765,6 +9559,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -8775,6 +9570,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -8787,10 +9583,18 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -8800,6 +9604,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -8810,6 +9615,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -8820,6 +9626,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -8835,6 +9642,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -8849,6 +9657,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -8862,6 +9671,7 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -8877,13 +9687,14 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
     required TResult orElse(),
   }) {
     if (transaction != null) {
-      return transaction(
-          base, pretty, summary, format, elements, parameters, bundle, client);
+      return transaction(base, pretty, summary, format, elements, parameters,
+          bundle, mimeType, client);
     }
     return orElse();
   }
@@ -8968,6 +9779,7 @@ abstract class _FhirTransactionRequest extends FhirRequest {
       List<String> elements,
       List<String> parameters,
       required Bundle bundle,
+      MimeType? mimeType,
       Client? client}) = _$_FhirTransactionRequest;
   _FhirTransactionRequest._() : super._();
 
@@ -8984,6 +9796,8 @@ abstract class _FhirTransactionRequest extends FhirRequest {
   @override
   List<String> get parameters;
   Bundle get bundle;
+  @override
+  MimeType? get mimeType;
   @override
   Client? get client;
   @override
@@ -9007,6 +9821,7 @@ abstract class _$FhirBatchRequestCopyWith<$Res>
       List<String> elements,
       List<String> parameters,
       Bundle bundle,
+      MimeType? mimeType,
       Client? client});
 
   $BundleCopyWith<$Res> get bundle;
@@ -9032,6 +9847,7 @@ class __$FhirBatchRequestCopyWithImpl<$Res>
     Object? elements = freezed,
     Object? parameters = freezed,
     Object? bundle = freezed,
+    Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_FhirBatchRequest(
@@ -9063,6 +9879,10 @@ class __$FhirBatchRequestCopyWithImpl<$Res>
           ? _value.bundle
           : bundle // ignore: cast_nullable_to_non_nullable
               as Bundle,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -9089,6 +9909,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
       this.elements = const <String>[],
       this.parameters = const <String>[],
       required this.bundle,
+      this.mimeType,
       this.client})
       : super._();
 
@@ -9112,11 +9933,13 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
   @override
   final Bundle bundle;
   @override
+  final MimeType? mimeType;
+  @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.batch(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, bundle: $bundle, client: $client)';
+    return 'FhirRequest.batch(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, bundle: $bundle, mimeType: $mimeType, client: $client)';
   }
 
   @override
@@ -9132,6 +9955,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
             (identical(other.bundle, bundle) || other.bundle == bundle) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -9145,6 +9970,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
       bundle,
+      mimeType,
       client);
 
   @JsonKey(ignore: true)
@@ -9164,6 +9990,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         read,
     required TResult Function(
@@ -9176,6 +10003,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         vRead,
     required TResult Function(
@@ -9186,6 +10014,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         update,
     required TResult Function(
@@ -9196,6 +10025,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         patch,
     required TResult Function(
@@ -9207,6 +10037,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         delete,
     required TResult Function(
@@ -9217,6 +10048,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         create,
     required TResult Function(
@@ -9229,6 +10061,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)
         search,
     required TResult Function(
@@ -9238,6 +10071,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         searchAll,
     required TResult Function(
@@ -9248,6 +10082,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)
         capabilities,
     required TResult Function(
@@ -9258,6 +10093,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         transaction,
     required TResult Function(
@@ -9268,6 +10104,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         batch,
     required TResult Function(
@@ -9283,6 +10120,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         history,
     required TResult Function(
@@ -9297,6 +10135,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyType,
     required TResult Function(
@@ -9310,6 +10149,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyAll,
     required TResult Function(
@@ -9325,11 +10165,12 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)
         operation,
   }) {
-    return batch(
-        base, pretty, summary, format, elements, parameters, bundle, client);
+    return batch(base, pretty, summary, format, elements, parameters, bundle,
+        mimeType, client);
   }
 
   @override
@@ -9344,6 +10185,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -9356,6 +10198,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -9366,6 +10209,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -9376,6 +10220,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -9387,6 +10232,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -9397,6 +10243,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -9409,10 +10256,18 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -9422,6 +10277,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -9432,6 +10288,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -9442,6 +10299,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -9457,6 +10315,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -9471,6 +10330,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -9484,6 +10344,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -9499,11 +10360,12 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
   }) {
-    return batch?.call(
-        base, pretty, summary, format, elements, parameters, bundle, client);
+    return batch?.call(base, pretty, summary, format, elements, parameters,
+        bundle, mimeType, client);
   }
 
   @override
@@ -9518,6 +10380,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -9530,6 +10393,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -9540,6 +10404,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -9550,6 +10415,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -9561,6 +10427,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -9571,6 +10438,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -9583,10 +10451,18 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -9596,6 +10472,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -9606,6 +10483,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -9616,6 +10494,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -9631,6 +10510,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -9645,6 +10525,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -9658,6 +10539,7 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -9673,13 +10555,14 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
     required TResult orElse(),
   }) {
     if (batch != null) {
-      return batch(
-          base, pretty, summary, format, elements, parameters, bundle, client);
+      return batch(base, pretty, summary, format, elements, parameters, bundle,
+          mimeType, client);
     }
     return orElse();
   }
@@ -9764,6 +10647,7 @@ abstract class _FhirBatchRequest extends FhirRequest {
       List<String> elements,
       List<String> parameters,
       required Bundle bundle,
+      MimeType? mimeType,
       Client? client}) = _$_FhirBatchRequest;
   _FhirBatchRequest._() : super._();
 
@@ -9780,6 +10664,8 @@ abstract class _FhirBatchRequest extends FhirRequest {
   @override
   List<String> get parameters;
   Bundle get bundle;
+  @override
+  MimeType? get mimeType;
   @override
   Client? get client;
   @override
@@ -9808,6 +10694,7 @@ abstract class _$FhirHistoryRequestCopyWith<$Res>
       Instant? since,
       FhirDateTime? at,
       String? reference,
+      MimeType? mimeType,
       Client? client});
 }
 
@@ -9836,6 +10723,7 @@ class __$FhirHistoryRequestCopyWithImpl<$Res>
     Object? since = freezed,
     Object? at = freezed,
     Object? reference = freezed,
+    Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_FhirHistoryRequest(
@@ -9887,6 +10775,10 @@ class __$FhirHistoryRequestCopyWithImpl<$Res>
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
               as String?,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -9911,6 +10803,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
       this.since,
       this.at,
       this.reference,
+      this.mimeType,
       this.client})
       : super._();
 
@@ -9944,11 +10837,13 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   @override
   final String? reference;
   @override
+  final MimeType? mimeType;
+  @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.history(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, client: $client)';
+    return 'FhirRequest.history(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, mimeType: $mimeType, client: $client)';
   }
 
   @override
@@ -9970,6 +10865,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             (identical(other.at, at) || other.at == at) &&
             (identical(other.reference, reference) ||
                 other.reference == reference) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -9988,6 +10885,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
       since,
       at,
       reference,
+      mimeType,
       client);
 
   @JsonKey(ignore: true)
@@ -10007,6 +10905,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         read,
     required TResult Function(
@@ -10019,6 +10918,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         vRead,
     required TResult Function(
@@ -10029,6 +10929,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         update,
     required TResult Function(
@@ -10039,6 +10940,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         patch,
     required TResult Function(
@@ -10050,6 +10952,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         delete,
     required TResult Function(
@@ -10060,6 +10963,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         create,
     required TResult Function(
@@ -10072,6 +10976,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)
         search,
     required TResult Function(
@@ -10081,6 +10986,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         searchAll,
     required TResult Function(
@@ -10091,6 +10997,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)
         capabilities,
     required TResult Function(
@@ -10101,6 +11008,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         transaction,
     required TResult Function(
@@ -10111,6 +11019,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         batch,
     required TResult Function(
@@ -10126,6 +11035,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         history,
     required TResult Function(
@@ -10140,6 +11050,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyType,
     required TResult Function(
@@ -10153,6 +11064,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyAll,
     required TResult Function(
@@ -10168,11 +11080,12 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)
         operation,
   }) {
     return history(base, type, id, pretty, summary, format, elements,
-        parameters, count, since, at, reference, client);
+        parameters, count, since, at, reference, mimeType, client);
   }
 
   @override
@@ -10187,6 +11100,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -10199,6 +11113,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -10209,6 +11124,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -10219,6 +11135,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -10230,6 +11147,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -10240,6 +11158,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -10252,10 +11171,18 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -10265,6 +11192,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -10275,6 +11203,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -10285,6 +11214,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -10300,6 +11230,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -10314,6 +11245,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -10327,6 +11259,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -10342,11 +11275,12 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
   }) {
     return history?.call(base, type, id, pretty, summary, format, elements,
-        parameters, count, since, at, reference, client);
+        parameters, count, since, at, reference, mimeType, client);
   }
 
   @override
@@ -10361,6 +11295,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -10373,6 +11308,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -10383,6 +11319,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -10393,6 +11330,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -10404,6 +11342,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -10414,6 +11353,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -10426,10 +11366,18 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -10439,6 +11387,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -10449,6 +11398,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -10459,6 +11409,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -10474,6 +11425,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -10488,6 +11440,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -10501,6 +11454,7 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -10516,13 +11470,14 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
     required TResult orElse(),
   }) {
     if (history != null) {
       return history(base, type, id, pretty, summary, format, elements,
-          parameters, count, since, at, reference, client);
+          parameters, count, since, at, reference, mimeType, client);
     }
     return orElse();
   }
@@ -10612,6 +11567,7 @@ abstract class _FhirHistoryRequest extends FhirRequest {
       Instant? since,
       FhirDateTime? at,
       String? reference,
+      MimeType? mimeType,
       Client? client}) = _$_FhirHistoryRequest;
   _FhirHistoryRequest._() : super._();
 
@@ -10633,6 +11589,8 @@ abstract class _FhirHistoryRequest extends FhirRequest {
   Instant? get since;
   FhirDateTime? get at;
   String? get reference;
+  @override
+  MimeType? get mimeType;
   @override
   Client? get client;
   @override
@@ -10660,6 +11618,7 @@ abstract class _$FhirHistoryTypeRequestCopyWith<$Res>
       Instant? since,
       FhirDateTime? at,
       String? reference,
+      MimeType? mimeType,
       Client? client});
 }
 
@@ -10687,6 +11646,7 @@ class __$FhirHistoryTypeRequestCopyWithImpl<$Res>
     Object? since = freezed,
     Object? at = freezed,
     Object? reference = freezed,
+    Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_FhirHistoryTypeRequest(
@@ -10734,6 +11694,10 @@ class __$FhirHistoryTypeRequestCopyWithImpl<$Res>
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
               as String?,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -10757,6 +11721,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
       this.since,
       this.at,
       this.reference,
+      this.mimeType,
       this.client})
       : super._();
 
@@ -10788,11 +11753,13 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
   @override
   final String? reference;
   @override
+  final MimeType? mimeType;
+  @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.historyType(base: $base, type: $type, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, client: $client)';
+    return 'FhirRequest.historyType(base: $base, type: $type, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, mimeType: $mimeType, client: $client)';
   }
 
   @override
@@ -10813,6 +11780,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             (identical(other.at, at) || other.at == at) &&
             (identical(other.reference, reference) ||
                 other.reference == reference) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -10830,6 +11799,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
       since,
       at,
       reference,
+      mimeType,
       client);
 
   @JsonKey(ignore: true)
@@ -10850,6 +11820,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         read,
     required TResult Function(
@@ -10862,6 +11833,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         vRead,
     required TResult Function(
@@ -10872,6 +11844,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         update,
     required TResult Function(
@@ -10882,6 +11855,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         patch,
     required TResult Function(
@@ -10893,6 +11867,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         delete,
     required TResult Function(
@@ -10903,6 +11878,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         create,
     required TResult Function(
@@ -10915,6 +11891,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)
         search,
     required TResult Function(
@@ -10924,6 +11901,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         searchAll,
     required TResult Function(
@@ -10934,6 +11912,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)
         capabilities,
     required TResult Function(
@@ -10944,6 +11923,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         transaction,
     required TResult Function(
@@ -10954,6 +11934,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         batch,
     required TResult Function(
@@ -10969,6 +11950,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         history,
     required TResult Function(
@@ -10983,6 +11965,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyType,
     required TResult Function(
@@ -10996,6 +11979,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyAll,
     required TResult Function(
@@ -11011,11 +11995,12 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)
         operation,
   }) {
     return historyType(base, type, pretty, summary, format, elements,
-        parameters, count, since, at, reference, client);
+        parameters, count, since, at, reference, mimeType, client);
   }
 
   @override
@@ -11030,6 +12015,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -11042,6 +12028,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -11052,6 +12039,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -11062,6 +12050,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -11073,6 +12062,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -11083,6 +12073,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -11095,10 +12086,18 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -11108,6 +12107,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -11118,6 +12118,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -11128,6 +12129,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -11143,6 +12145,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -11157,6 +12160,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -11170,6 +12174,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -11185,11 +12190,12 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
   }) {
     return historyType?.call(base, type, pretty, summary, format, elements,
-        parameters, count, since, at, reference, client);
+        parameters, count, since, at, reference, mimeType, client);
   }
 
   @override
@@ -11204,6 +12210,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -11216,6 +12223,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -11226,6 +12234,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -11236,6 +12245,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -11247,6 +12257,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -11257,6 +12268,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -11269,10 +12281,18 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -11282,6 +12302,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -11292,6 +12313,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -11302,6 +12324,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -11317,6 +12340,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -11331,6 +12355,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -11344,6 +12369,7 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -11359,13 +12385,14 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
     required TResult orElse(),
   }) {
     if (historyType != null) {
       return historyType(base, type, pretty, summary, format, elements,
-          parameters, count, since, at, reference, client);
+          parameters, count, since, at, reference, mimeType, client);
     }
     return orElse();
   }
@@ -11454,6 +12481,7 @@ abstract class _FhirHistoryTypeRequest extends FhirRequest {
       Instant? since,
       FhirDateTime? at,
       String? reference,
+      MimeType? mimeType,
       Client? client}) = _$_FhirHistoryTypeRequest;
   _FhirHistoryTypeRequest._() : super._();
 
@@ -11474,6 +12502,8 @@ abstract class _FhirHistoryTypeRequest extends FhirRequest {
   Instant? get since;
   FhirDateTime? get at;
   String? get reference;
+  @override
+  MimeType? get mimeType;
   @override
   Client? get client;
   @override
@@ -11500,6 +12530,7 @@ abstract class _$FhirHistoryAllRequestCopyWith<$Res>
       Instant? since,
       FhirDateTime? at,
       String? reference,
+      MimeType? mimeType,
       Client? client});
 }
 
@@ -11526,6 +12557,7 @@ class __$FhirHistoryAllRequestCopyWithImpl<$Res>
     Object? since = freezed,
     Object? at = freezed,
     Object? reference = freezed,
+    Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_FhirHistoryAllRequest(
@@ -11569,6 +12601,10 @@ class __$FhirHistoryAllRequestCopyWithImpl<$Res>
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
               as String?,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -11591,6 +12627,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
       this.since,
       this.at,
       this.reference,
+      this.mimeType,
       this.client})
       : super._();
 
@@ -11620,11 +12657,13 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
   @override
   final String? reference;
   @override
+  final MimeType? mimeType;
+  @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.historyAll(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, client: $client)';
+    return 'FhirRequest.historyAll(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, mimeType: $mimeType, client: $client)';
   }
 
   @override
@@ -11644,6 +12683,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             (identical(other.at, at) || other.at == at) &&
             (identical(other.reference, reference) ||
                 other.reference == reference) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -11660,6 +12701,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
       since,
       at,
       reference,
+      mimeType,
       client);
 
   @JsonKey(ignore: true)
@@ -11680,6 +12722,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         read,
     required TResult Function(
@@ -11692,6 +12735,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         vRead,
     required TResult Function(
@@ -11702,6 +12746,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         update,
     required TResult Function(
@@ -11712,6 +12757,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         patch,
     required TResult Function(
@@ -11723,6 +12769,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         delete,
     required TResult Function(
@@ -11733,6 +12780,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         create,
     required TResult Function(
@@ -11745,6 +12793,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)
         search,
     required TResult Function(
@@ -11754,6 +12803,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         searchAll,
     required TResult Function(
@@ -11764,6 +12814,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)
         capabilities,
     required TResult Function(
@@ -11774,6 +12825,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         transaction,
     required TResult Function(
@@ -11784,6 +12836,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         batch,
     required TResult Function(
@@ -11799,6 +12852,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         history,
     required TResult Function(
@@ -11813,6 +12867,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyType,
     required TResult Function(
@@ -11826,6 +12881,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyAll,
     required TResult Function(
@@ -11841,11 +12897,12 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)
         operation,
   }) {
     return historyAll(base, pretty, summary, format, elements, parameters,
-        count, since, at, reference, client);
+        count, since, at, reference, mimeType, client);
   }
 
   @override
@@ -11860,6 +12917,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -11872,6 +12930,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -11882,6 +12941,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -11892,6 +12952,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -11903,6 +12964,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -11913,6 +12975,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -11925,10 +12988,18 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -11938,6 +13009,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -11948,6 +13020,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -11958,6 +13031,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -11973,6 +13047,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -11987,6 +13062,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -12000,6 +13076,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -12015,11 +13092,12 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
   }) {
     return historyAll?.call(base, pretty, summary, format, elements, parameters,
-        count, since, at, reference, client);
+        count, since, at, reference, mimeType, client);
   }
 
   @override
@@ -12034,6 +13112,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -12046,6 +13125,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -12056,6 +13136,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -12066,6 +13147,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -12077,6 +13159,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -12087,6 +13170,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -12099,10 +13183,18 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -12112,6 +13204,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -12122,6 +13215,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -12132,6 +13226,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -12147,6 +13242,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -12161,6 +13257,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -12174,6 +13271,7 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -12189,13 +13287,14 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
     required TResult orElse(),
   }) {
     if (historyAll != null) {
       return historyAll(base, pretty, summary, format, elements, parameters,
-          count, since, at, reference, client);
+          count, since, at, reference, mimeType, client);
     }
     return orElse();
   }
@@ -12283,6 +13382,7 @@ abstract class _FhirHistoryAllRequest extends FhirRequest {
       Instant? since,
       FhirDateTime? at,
       String? reference,
+      MimeType? mimeType,
       Client? client}) = _$_FhirHistoryAllRequest;
   _FhirHistoryAllRequest._() : super._();
 
@@ -12302,6 +13402,8 @@ abstract class _FhirHistoryAllRequest extends FhirRequest {
   Instant? get since;
   FhirDateTime? get at;
   String? get reference;
+  @override
+  MimeType? get mimeType;
   @override
   Client? get client;
   @override
@@ -12330,6 +13432,7 @@ abstract class _$FhirOperationRequestCopyWith<$Res>
       String operation,
       bool usePost,
       bool useFormData,
+      MimeType? mimeType,
       Client? client});
 }
 
@@ -12358,6 +13461,7 @@ class __$FhirOperationRequestCopyWithImpl<$Res>
     Object? operation = freezed,
     Object? usePost = freezed,
     Object? useFormData = freezed,
+    Object? mimeType = freezed,
     Object? client = freezed,
   }) {
     return _then(_FhirOperationRequest(
@@ -12409,6 +13513,10 @@ class __$FhirOperationRequestCopyWithImpl<$Res>
           ? _value.useFormData
           : useFormData // ignore: cast_nullable_to_non_nullable
               as bool,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
       client: client == freezed
           ? _value.client
           : client // ignore: cast_nullable_to_non_nullable
@@ -12433,6 +13541,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
       required this.operation,
       this.usePost = false,
       this.useFormData = false,
+      this.mimeType,
       this.client})
       : super._();
 
@@ -12469,11 +13578,13 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
   @override
   final bool useFormData;
   @override
+  final MimeType? mimeType;
+  @override
   final Client? client;
 
   @override
   String toString() {
-    return 'FhirRequest.operation(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, fhirParameter: $fhirParameter, operation: $operation, usePost: $usePost, useFormData: $useFormData, client: $client)';
+    return 'FhirRequest.operation(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, fhirParameter: $fhirParameter, operation: $operation, usePost: $usePost, useFormData: $useFormData, mimeType: $mimeType, client: $client)';
   }
 
   @override
@@ -12497,6 +13608,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             (identical(other.usePost, usePost) || other.usePost == usePost) &&
             (identical(other.useFormData, useFormData) ||
                 other.useFormData == useFormData) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
             (identical(other.client, client) || other.client == client));
   }
 
@@ -12515,6 +13628,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
       operation,
       usePost,
       useFormData,
+      mimeType,
       client);
 
   @JsonKey(ignore: true)
@@ -12535,6 +13649,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         read,
     required TResult Function(
@@ -12547,6 +13662,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         vRead,
     required TResult Function(
@@ -12557,6 +13673,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         update,
     required TResult Function(
@@ -12567,6 +13684,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         patch,
     required TResult Function(
@@ -12578,6 +13696,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         delete,
     required TResult Function(
@@ -12588,6 +13707,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         create,
     required TResult Function(
@@ -12600,6 +13720,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)
         search,
     required TResult Function(
@@ -12609,6 +13730,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)
         searchAll,
     required TResult Function(
@@ -12619,6 +13741,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)
         capabilities,
     required TResult Function(
@@ -12629,6 +13752,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         transaction,
     required TResult Function(
@@ -12639,6 +13763,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)
         batch,
     required TResult Function(
@@ -12654,6 +13779,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         history,
     required TResult Function(
@@ -12668,6 +13794,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyType,
     required TResult Function(
@@ -12681,6 +13808,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)
         historyAll,
     required TResult Function(
@@ -12696,6 +13824,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)
         operation,
   }) {
@@ -12712,6 +13841,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
         this.operation,
         usePost,
         useFormData,
+        mimeType,
         client);
   }
 
@@ -12727,6 +13857,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -12739,6 +13870,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -12749,6 +13881,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -12759,6 +13892,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -12770,6 +13904,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -12780,6 +13915,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -12792,10 +13928,18 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -12805,6 +13949,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -12815,6 +13960,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -12825,6 +13971,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -12840,6 +13987,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -12854,6 +14002,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -12867,6 +14016,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -12882,6 +14032,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
   }) {
@@ -12898,6 +14049,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
         this.operation,
         usePost,
         useFormData,
+        mimeType,
         client);
   }
 
@@ -12913,6 +14065,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         read,
     TResult Function(
@@ -12925,6 +14078,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         vRead,
     TResult Function(
@@ -12935,6 +14089,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         update,
     TResult Function(
@@ -12945,6 +14100,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         patch,
     TResult Function(
@@ -12956,6 +14112,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         delete,
     TResult Function(
@@ -12966,6 +14123,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
+            MimeType? mimeType,
             Client? client)?
         create,
     TResult Function(
@@ -12978,10 +14136,18 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
+            MimeType? mimeType,
             Client? client)?
         search,
-    TResult Function(Uri base, bool pretty, Summary summary, String format,
-            List<String> elements, List<String> parameters, Client? client)?
+    TResult Function(
+            Uri base,
+            bool pretty,
+            Summary summary,
+            String format,
+            List<String> elements,
+            List<String> parameters,
+            MimeType? mimeType,
+            Client? client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -12991,6 +14157,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
+            MimeType? mimeType,
             Client? client)?
         capabilities,
     TResult Function(
@@ -13001,6 +14168,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         transaction,
     TResult Function(
@@ -13011,6 +14179,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
+            MimeType? mimeType,
             Client? client)?
         batch,
     TResult Function(
@@ -13026,6 +14195,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         history,
     TResult Function(
@@ -13040,6 +14210,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyType,
     TResult Function(
@@ -13053,6 +14224,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
+            MimeType? mimeType,
             Client? client)?
         historyAll,
     TResult Function(
@@ -13068,6 +14240,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String operation,
             bool usePost,
             bool useFormData,
+            MimeType? mimeType,
             Client? client)?
         operation,
     required TResult orElse(),
@@ -13086,6 +14259,7 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
           this.operation,
           usePost,
           useFormData,
+          mimeType,
           client);
     }
     return orElse();
@@ -13176,6 +14350,7 @@ abstract class _FhirOperationRequest extends FhirRequest {
       required String operation,
       bool usePost,
       bool useFormData,
+      MimeType? mimeType,
       Client? client}) = _$_FhirOperationRequest;
   _FhirOperationRequest._() : super._();
 
@@ -13197,6 +14372,8 @@ abstract class _FhirOperationRequest extends FhirRequest {
   String get operation;
   bool get usePost;
   bool get useFormData;
+  @override
+  MimeType? get mimeType;
   @override
   Client? get client;
   @override

@@ -106,6 +106,9 @@ class Resource {
   /// Convenience method to return a [Reference] referring to that [Resource]
   Reference thisReference() => Reference(reference: '$resourceType/$id');
 
+  /// This returns the basic URI Path for a resource
+  String path() => '$resourceType/$id';
+
   /// returns the same resource with a new ID if there is no current ID
   Resource newIdIfNoId() => id != null ? this : newId();
 
