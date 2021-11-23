@@ -51,28 +51,6 @@ class Resource {
               'Resource cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
-  static Resource copyWith({
-    Id? id,
-    R5ResourceType? resourceType,
-    Meta? meta,
-    FhirUri? implicitRules,
-    Code? language,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-  }) =>
-      Resource.fromJson(<String, dynamic>{
-        'id': id?.toString(),
-        'resourceType': resourceType?.toString(),
-        'meta': meta?.toString(),
-        'implicitRules': implicitRules?.toString(),
-        'text': text?.toString(),
-        'contained': contained?.toString(),
-        'extension': extension_?.toString(),
-        'modifierExtension': modifierExtension?.toString(),
-      });
-
   /// Returns a [Map<String, dynamic>] of the [Resource]
   Map<String, dynamic> toJson() {
     final val = <String, dynamic>{};
@@ -104,16 +82,17 @@ class Resource {
       ResourceUtils.resourceTypeToStringMap[resourceType];
 
   /// Convenience method to return a [Reference] referring to that [Resource]
-  Reference thisReference() => Reference(reference: '$resourceType/$id');
+  Reference thisReference() =>
+      Reference(reference: '${resourceTypeString()}/$id');
 
-  /// This returns the basic URI Path for a resource
+  /// Local Reference for this Resource
   String path() => '$resourceType/$id';
 
   /// returns the same resource with a new ID if there is no current ID
-  Resource newIdIfNoId() => id != null ? this : newId();
+  Id newIdIfNoId() => id ?? newId();
 
   /// returns the same resource with a new ID (even if there is already an ID present)
-  Resource newId() => copyWith(id: Id(const uuid.Uuid().v4()));
+  Id newId() => Id(const uuid.Uuid().v4());
 
   /// Updates the [meta] field of this Resource, updates the [lastUpdated], adds
   /// 1 to the version number

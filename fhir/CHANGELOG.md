@@ -1,5 +1,15 @@
 # fhir
 
+## [0.5.0-7]
+
+* Removed copyWith from generic Resource
+
+* Fixed incorrect return value from thisReference()
+
+* Can't return any resource with new Id, so will just return an Id (will consider fixing this in later updates)
+
+* Fixed == in BaseDateTime class
+
 ## [0.5.0-6]
 
 * Messed up updateVersion, changed updateMeta to updateVersion
