@@ -86,7 +86,7 @@ class Resource {
       Reference(reference: '${resourceTypeString()}/$id');
 
   /// Local Reference for this Resource
-  String path() => '$resourceTypeString()/$id';
+  String path() => '${resourceTypeString()}/$id';
 
   /// returns the same resource with a new ID if there is no current ID
   Id newIdIfNoId() => id ?? newId();

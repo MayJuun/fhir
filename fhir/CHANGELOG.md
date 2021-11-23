@@ -1,5 +1,9 @@
 # fhir
 
+## [0.5.0-8]
+
+* Fixing dumb errors (path() again)
+
 ## [0.5.0-7]
 
 * Removed copyWith from generic Resource
