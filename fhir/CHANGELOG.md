@@ -6,6 +6,8 @@
 
 * Fixed incorrect return value from thisReference()
 
+* Fixed incorrect return value from path() (now returns only 'ResourceType/Id')
+
 * Can't return any resource with new Id, so will just return an Id (will consider fixing this in later updates)
 
 * Fixed == in BaseDateTime class
