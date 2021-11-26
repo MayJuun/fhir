@@ -13,6 +13,7 @@ import '../../stu3.dart';
 
 part 'resource.g.dart';
 part 'resource_from_json.dart';
+part 'resource_new_id.dart';
 part 'resource_new_version.dart';
 part 'resource_types_enum.dart';
 
@@ -89,10 +90,10 @@ class Resource {
   String path() => '${resourceTypeString()}/$id';
 
   /// returns the same resource with a new ID if there is no current ID
-  Id newIdIfNoId() => id ?? newId();
+  Resource newIdIfNoId() => id == null ? _newId(this) : this;
 
   /// returns the same resource with a new ID (even if there is already an ID present)
-  Id newId() => Id(const uuid.Uuid().v4());
+  Resource newId() => _newId(this);
 
   /// Updates the [meta] field of this Resource, updates the [lastUpdated], adds
   /// 1 to the version number

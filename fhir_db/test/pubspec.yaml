@@ -8,5 +8,6 @@ dependencies:
     sdk: flutter
   fhir_db:
     path: ../../fhir_db
+  get_storage: ^2.0.3
   fhir: ^0.5.0-6
   test: ^1.19.3

@@ -1,7 +1,7 @@
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:test/test.dart';
 
-void main() {
+void primitiveTest() {
   test('fdtyearstring', () {
     expect(FhirDateTime('2020').toString(), '2020');
     expect(FhirDateTime('2020').precision, DateTimePrecision.YYYY);

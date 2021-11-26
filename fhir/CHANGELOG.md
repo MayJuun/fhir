@@ -1,5 +1,11 @@
 # fhir
 
+## [0.5.0-9]
+
+* The ID thing was bothering me
+* Now the newId and newIdIfNoId functions return resources as they should, instead of just IDs
+* Also, freezed 1.0.0
+
 ## [0.5.0-8]
 
 * Fixing dumb errors (path() again)
@@ -7,13 +13,9 @@
 ## [0.5.0-7]
 
 * Removed copyWith from generic Resource
-
 * Fixed incorrect return value from thisReference()
-
 * Fixed incorrect return value from path() (now returns only 'ResourceType/Id')
-
 * Can't return any resource with new Id, so will just return an Id (will consider fixing this in later updates)
-
 * Fixed == in BaseDateTime class
 
 ## [0.5.0-6]
@@ -23,7 +25,6 @@
 ## [0.5.0-5]
 
 * Added newIdIfNoID, newId and updateMeta to resources (in addition to newVersion which I assume no one was actually using)
-
 * Added convenience method to get path to Resource, formed as: ResourceType/Id
 
 ## [0.5.0-4]
@@ -33,7 +34,6 @@
 ## [0.5.0-3]
 
 * Split updateVersion method into method for updating only meta or updating only ID
-
 * Generating ID now generates UUID V4
 
 ## [0.5.0-2]
