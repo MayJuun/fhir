@@ -137,7 +137,15 @@ class ResourceDao {
   }
 
   /// returns all historical versions of resources that have been saved
-  List<Resource> getAllHistorical(String? password) => _history.getValues();
+  List<Resource> getAllHistorical(String? password) {
+    final resourceList = <Resource>[];
+    for (var value in _history.getValues()) {
+      if (value is Map) {
+        resourceList.add(Resource.fromJson(Map<String, dynamic>.from(value)));
+      }
+    }
+    return resourceList;
+  }
 
   /// returns all versions of all Resources, current and past
   List<Resource> getAll(String? password) {
@@ -217,19 +225,20 @@ class ResourceDao {
     if (id == null) {
       returnedValues = resourceContainer.getValues();
     } else {
-      print(type);
-      print(id);
       returnedValues = resourceContainer.read('$type/${id.toString()}');
-      print(returnedValues);
     }
     if (returnedValues == null) {
       return [];
     } else if (returnedValues is Map) {
       return [Resource.fromJson(Map<String, dynamic>.from(returnedValues))];
-    } else if (returnedValues is List<Map>) {
-      return returnedValues
-          .map((e) => Resource.fromJson(Map<String, dynamic>.from(e)))
-          .toList();
+    } else if (returnedValues is Iterable) {
+      final resourceList = <Resource>[];
+      for (var value in returnedValues) {
+        if (value is Map) {
+          resourceList.add(Resource.fromJson(Map<String, dynamic>.from(value)));
+        }
+      }
+      return resourceList;
     }
     throw FormatException(
         'An invalid resource or resources were returned searching for'
