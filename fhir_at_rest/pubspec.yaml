@@ -1,7 +1,7 @@
 name: fhir_at_rest
 description: This package builds on the basic FHIR package. It allows easy
   creation of RESTful calls to a FHIR server or FHIR API.
-version: 0.5.0-8
+version: 0.5.0-9
 homepage: https://www.fhirfli.dev/
 repository: https://github.com/MayJuun/fhir/tree/main/fhir_at_rest
 
@@ -9,15 +9,15 @@ environment:
   sdk: '>=2.14.0 <3.0.0'
 
 dependencies:
-  fhir: ^0.5.0-8
-  freezed_annotation: ^0.15.0
+  fhir: ^0.5.0-9
+  freezed_annotation: ^1.0.0
   http: ^0.13.4
 
 dev_dependencies:
   analyzer: ^2.7.0
   build_runner: ^2.1.5
-  freezed: ^0.15.0+1
+  freezed: ^1.0.0
   pedantic: ^1.11.1
-  test: ^1.19.3
+  test: ^1.19.4
 
 

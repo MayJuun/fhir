@@ -1,0 +1,416 @@
+import 'package:fhir/r4.dart';
+import 'package:fhir_db/r4_get_storage/resource_dao.dart';
+import 'package:flutter/material.dart';
+import 'package:test/test.dart';
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  final resourceDao = ResourceDao();
+
+  // await resourceDao.updatePw('newPw', null);
+  await resourceDao.deleteAllResources(null);
+
+  group('Playing with passwords', () {
+    test('Playing with Passwords', () async {
+      final patient = Patient(id: Id('1'));
+
+      final saved = resourceDao.save(null, patient);
+
+      final search1 = resourceDao.find('newPw',
+          resourceType: R4ResourceType.Patient, id: Id('1'));
+      expect(saved, search1[0]);
+
+      final search2 = resourceDao.find('newerPw',
+          resourceType: R4ResourceType.Patient, id: Id('1'));
+      expect(saved, search2[0]);
+
+      final search3 = resourceDao.find(null,
+          resourceType: R4ResourceType.Patient, id: Id('1'));
+      expect(saved, search3[0]);
+
+      // await resourceDao.deleteAllResources(null);
+    });
+  });
+
+  final id = Id('12345');
+  group('Saving Things:', () {
+    test('Save Patient', () {
+      final humanName = HumanName(family: 'Atreides', given: ['Duke']);
+      final patient = Patient(id: id, name: [humanName]);
+      final saved = resourceDao.save(null, patient);
+
+      expect(saved.id, id);
+
+      expect((saved as Patient).name?[0], humanName);
+    });
+
+    test('Save Organization', () {
+      final organization = Organization(id: id, name: 'FhirFli');
+      final saved = resourceDao.save(null, organization);
+
+      expect(saved.id, id);
+
+      expect((saved as Organization).name, 'FhirFli');
+    });
+
+    test('Save Observation1', () {
+      final observation1 = Observation(
+        id: Id('obs1'),
+        code: CodeableConcept(text: 'Observation #1'),
+        effectiveDateTime: FhirDateTime(DateTime(1981, 09, 18)),
+      );
+      final saved = resourceDao.save(null, observation1);
+
+      expect(saved.id, Id('obs1'));
+
+      expect((saved as Observation).code.text, 'Observation #1');
+    });
+
+    test('Save Observation1 Again', () {
+      final observation1 = Observation(
+          id: Id('obs1'),
+          code: CodeableConcept(text: 'Observation #1 - Updated'));
+      final saved = resourceDao.save(null, observation1);
+
+      expect(saved.id, Id('obs1'));
+
+      expect((saved as Observation).code.text, 'Observation #1 - Updated');
+
+      expect(saved.meta?.versionId, Id('2'));
+    });
+
+    test('Save Observation2', () {
+      final observation2 = Observation(
+        id: Id('obs2'),
+        code: CodeableConcept(text: 'Observation #2'),
+        effectiveDateTime: FhirDateTime(DateTime(1981, 09, 18)),
+      );
+      final saved = resourceDao.save(null, observation2);
+
+      expect(saved.id, Id('obs2'));
+
+      expect((saved as Observation).code.text, 'Observation #2');
+    });
+
+    test('Save Observation3', () {
+      final observation3 = Observation(
+        id: Id('obs3'),
+        code: CodeableConcept(text: 'Observation #3'),
+        effectiveDateTime: FhirDateTime(DateTime(1981, 09, 18)),
+      );
+      final saved = resourceDao.save(null, observation3);
+
+      expect(saved.id, Id('obs3'));
+
+      expect((saved as Observation).code.text, 'Observation #3');
+    });
+  });
+
+  group('Finding Things:', () {
+    test('Find 1st Patient', () {
+      final search = resourceDao.find(null,
+          resourceType: R4ResourceType.Patient, id: id);
+      final humanName = HumanName(family: 'Atreides', given: ['Duke']);
+
+      expect(search.length, 1);
+
+      expect((search[0] as Patient).name?[0], humanName);
+    });
+
+    test('Find 3rd Observation', () {
+      final search = resourceDao.find(null,
+          resourceType: R4ResourceType.Observation, id: Id('obs3'));
+
+      expect(search.length, 1);
+
+      expect(search[0].id, Id('obs3'));
+
+      expect((search[0] as Observation).code.text, 'Observation #3');
+    });
+
+    test('Find All Observations', () {
+      final search = resourceDao.getResourceType(
+        null,
+        resourceTypes: [R4ResourceType.Observation],
+      );
+
+      expect(search.length, 3);
+
+      final idList = [];
+      for (final obs in search) {
+        idList.add(obs.id.toString());
+      }
+
+      expect(idList.contains('obs1'), true);
+
+      expect(idList.contains('obs2'), true);
+
+      expect(idList.contains('obs3'), true);
+    });
+
+    test('Find All (non-historical) Resources', () {
+      final search = resourceDao.getAll(null);
+
+      expect(search.length, 5);
+      final patList = search.toList();
+      final orgList = search.toList();
+      final obsList = search.toList();
+      patList.retainWhere(
+          (resource) => resource.resourceType == R4ResourceType.Patient);
+      orgList.retainWhere(
+          (resource) => resource.resourceType == R4ResourceType.Organization);
+      obsList.retainWhere(
+          (resource) => resource.resourceType == R4ResourceType.Observation);
+
+      expect(patList.length, 1);
+
+      expect(orgList.length, 1);
+
+      expect(obsList.length, 3);
+    });
+  });
+
+  group('Deleting Things:', () {
+    test('Delete 2nd Observation', () async {
+      await resourceDao.delete(
+          null, null, R4ResourceType.Observation, Id('obs2'));
+
+      final search = resourceDao.getResourceType(
+        null,
+        resourceTypes: [R4ResourceType.Observation],
+      );
+
+      expect(search.length, 2);
+
+      final idList = [];
+      for (final obs in search) {
+        idList.add(obs.id.toString());
+      }
+
+      expect(idList.contains('obs1'), true);
+
+      expect(idList.contains('obs2'), false);
+
+      expect(idList.contains('obs3'), true);
+    });
+
+    test('Delete All Observations', () async {
+      await resourceDao.deleteSingleType(null,
+          resourceType: R4ResourceType.Observation);
+
+      final search = resourceDao.getAll(null);
+
+      expect(search.length, 2);
+
+      final patList = search.toList();
+      final orgList = search.toList();
+      patList.retainWhere(
+          (resource) => resource.resourceType == R4ResourceType.Patient);
+      orgList.retainWhere(
+          (resource) => resource.resourceType == R4ResourceType.Organization);
+
+      expect(patList.length, 1);
+
+      expect(patList.length, 1);
+    });
+
+    test('Delete All Resources', () async {
+      await resourceDao.deleteAllResources(null);
+
+      final search = resourceDao.getAll(null);
+
+      expect(search.length, 0);
+    });
+  });
+
+  group('Password - Saving Things:', () {
+    test('Save Patient', (){
+      final humanName = HumanName(family: 'Atreides', given: ['Duke']);
+      final patient = Patient(id: id, name: [humanName]);
+      final saved = resourceDao.save('newPw', patient);
+
+      expect(saved.id, id);
+
+      expect((saved as Patient).name?[0], humanName);
+    });
+
+    test('Save Organization', () {
+      final organization = Organization(id: id, name: 'FhirFli');
+      final saved = resourceDao.save('newPw', organization);
+
+      expect(saved.id, id);
+
+      expect((saved as Organization).name, 'FhirFli');
+    });
+
+    test('Save Observation1', () {
+      final observation1 = Observation(
+        id: Id('obs1'),
+        code: CodeableConcept(text: 'Observation #1'),
+        effectiveDateTime: FhirDateTime(DateTime(1981, 09, 18)),
+      );
+      final saved = resourceDao.save('newPw', observation1);
+
+      expect(saved.id, Id('obs1'));
+
+      expect((saved as Observation).code.text, 'Observation #1');
+    });
+
+    test('Save Observation1 Again', () {
+      final observation1 = Observation(
+          id: Id('obs1'),
+          code: CodeableConcept(text: 'Observation #1 - Updated'));
+      final saved = resourceDao.save('newPw', observation1);
+
+      expect(saved.id, Id('obs1'));
+
+      expect((saved as Observation).code.text, 'Observation #1 - Updated');
+
+      expect(saved.meta?.versionId, Id('2'));
+    });
+
+    test('Save Observation2', () {
+      final observation2 = Observation(
+        id: Id('obs2'),
+        code: CodeableConcept(text: 'Observation #2'),
+        effectiveDateTime: FhirDateTime(DateTime(1981, 09, 18)),
+      );
+      final saved = resourceDao.save('newPw', observation2);
+
+      expect(saved.id, Id('obs2'));
+
+      expect((saved as Observation).code.text, 'Observation #2');
+    });
+
+    test('Save Observation3', () {
+      final observation3 = Observation(
+        id: Id('obs3'),
+        code: CodeableConcept(text: 'Observation #3'),
+        effectiveDateTime: FhirDateTime(DateTime(1981, 09, 18)),
+      );
+      final saved = resourceDao.save('newPw', observation3);
+
+      expect(saved.id, Id('obs3'));
+
+      expect((saved as Observation).code.text, 'Observation #3');
+    });
+  });
+
+  group('Password - Finding Things:', () {
+    test('Find 1st Patient', () {
+      final search = resourceDao.find('newPw',
+          resourceType: R4ResourceType.Patient, id: id);
+      final humanName = HumanName(family: 'Atreides', given: ['Duke']);
+
+      expect(search.length, 1);
+
+      expect((search[0] as Patient).name?[0], humanName);
+    });
+
+    test('Find 3rd Observation', () {
+      final search = resourceDao.find('newPw',
+          resourceType: R4ResourceType.Observation, id: Id('obs3'));
+
+      expect(search.length, 1);
+
+      expect(search[0].id, Id('obs3'));
+
+      expect((search[0] as Observation).code.text, 'Observation #3');
+    });
+
+    test('Find All Observations', () {
+      final search = resourceDao.getResourceType(
+        'newPw',
+        resourceTypes: [R4ResourceType.Observation],
+      );
+
+      expect(search.length, 3);
+
+      final idList = [];
+      for (final obs in search) {
+        idList.add(obs.id.toString());
+      }
+
+      expect(idList.contains('obs1'), true);
+
+      expect(idList.contains('obs2'), true);
+
+      expect(idList.contains('obs3'), true);
+    });
+
+    test('Find All (non-historical) Resources', () {
+      final search = resourceDao.getAll('newPw');
+
+      expect(search.length, 5);
+      final patList = search.toList();
+      final orgList = search.toList();
+      final obsList = search.toList();
+      patList.retainWhere(
+          (resource) => resource.resourceType == R4ResourceType.Patient);
+      orgList.retainWhere(
+          (resource) => resource.resourceType == R4ResourceType.Organization);
+      obsList.retainWhere(
+          (resource) => resource.resourceType == R4ResourceType.Observation);
+
+      expect(patList.length, 1);
+
+      expect(orgList.length, 1);
+
+      expect(obsList.length, 3);
+    });
+  });
+
+  group('Password - Deleting Things:', () {
+    test('Delete 2nd Observation', () async {
+      await resourceDao.delete(
+          'newPw', null, R4ResourceType.Observation, Id('obs2'));
+
+      final search = resourceDao.getResourceType(
+        'newPw',
+        resourceTypes: [R4ResourceType.Observation],
+      );
+
+      expect(search.length, 2);
+
+      final idList = [];
+      for (final obs in search) {
+        idList.add(obs.id.toString());
+      }
+
+      expect(idList.contains('obs1'), true);
+
+      expect(idList.contains('obs2'), false);
+
+      expect(idList.contains('obs3'), true);
+    });
+
+    test('Delete All Observations', () async {
+      await resourceDao.deleteSingleType('newPw',
+          resourceType: R4ResourceType.Observation);
+
+      final search = resourceDao.getAll('newPw');
+
+      expect(search.length, 2);
+
+      final patList = search.toList();
+      final orgList = search.toList();
+      patList.retainWhere(
+          (resource) => resource.resourceType == R4ResourceType.Patient);
+      orgList.retainWhere(
+          (resource) => resource.resourceType == R4ResourceType.Organization);
+
+      expect(patList.length, 1);
+
+      expect(patList.length, 1);
+    });
+
+    test('Delete All Resources', () async {
+      await resourceDao.deleteAllResources('newPw');
+
+      final search = resourceDao.getAll('newPw');
+
+      expect(search.length, 0);
+    });
+  });
+}
