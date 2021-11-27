@@ -1,3 +1,8 @@
+## [0.5.0-6]
+
+* FHIR package update
+* Freezed 1.0.0
+
 ## [0.5.0-5]
 
 * Forgot to update something from fhir

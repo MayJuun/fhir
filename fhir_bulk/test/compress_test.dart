@@ -8,7 +8,7 @@ import 'ndjson/MedicationRequest.dart';
 import 'ndjson/accountMedRequest.dart';
 import 'ndjson/medRequestAccount.dart';
 
-void main() {
+void compressTest() {
   group('FHIR Bulk From File/s:', () {
     test('From Accounts ndjson file', () async {
       final resources = await FhirBulk.fromFile('./test/ndjson/Account.ndjson');

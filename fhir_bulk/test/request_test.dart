@@ -6,7 +6,7 @@ import 'package:test/test.dart';
 
 import 'bulk_download.dart';
 
-void main() {
+void requestTest() {
   kTestMode = true;
 
   group('FHIR Bulk Request Patient:', () {
