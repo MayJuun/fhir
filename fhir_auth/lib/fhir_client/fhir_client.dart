@@ -5,6 +5,7 @@ abstract class FhirClient {
   FhirUri? redirectUri;
   late String clientId;
   FhirUri? fhirUri;
+  String? secret;
   List<String> scopes = ['openid', 'profile', 'email', 'user/*.*'];
 
   Future<void> initialize();

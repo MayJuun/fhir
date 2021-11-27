@@ -27,6 +27,9 @@ abstract class SmartClient extends FhirClient {
 
     /// the token Url from the Conformance/Capability Statement
     FhirUri? tokenUrl,
+
+    /// while not advised, there are some services which may require a secret
+    String? secret,
   }) {
     if (kIsWeb) {
       return SmartWebClient(
@@ -36,6 +39,7 @@ abstract class SmartClient extends FhirClient {
         scopes: scopes,
         authUrl: authUrl,
         tokenUrl: tokenUrl,
+        secret: secret,
       );
     } else {
       return SmartMobileClient(
@@ -45,6 +49,7 @@ abstract class SmartClient extends FhirClient {
         scopes: scopes,
         authUrl: authUrl,
         tokenUrl: tokenUrl,
+        secret: secret,
       );
     }
   }

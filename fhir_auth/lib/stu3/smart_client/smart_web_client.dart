@@ -18,6 +18,7 @@ class SmartWebClient extends SmartClient {
     List<String>? scopes,
     this.authUrl,
     this.tokenUrl,
+    this.secret,
   }) : scopes = scopes ?? ['openid', 'profile', 'email', 'user/*.*'];
 
   /// specify the fhirUrl of the Capability Statement (or conformance
@@ -43,12 +44,15 @@ class SmartWebClient extends SmartClient {
   /// the token Url from the Conformance/Capability Statement
   FhirUri? tokenUrl;
 
+  @override
+  String? secret;
+
   String? _$_$_accessToken;
 
   @override
   Future<void> initialize() async {
     try {
-      await _getEndpoints;
+      await _getEndpoints();
     } catch (e) {
       throw PlatformException(
           code: e.toString(), message: 'Failed to get Auth & Token Endpoints');
@@ -173,7 +177,7 @@ class SmartWebClient extends SmartClient {
 
   /// Request for the CapabilityStatement (or Conformance) and then identifying
   /// the authUrl endpoint & tokenurl endpoing
-  Future<void> get _getEndpoints async {
+  Future<void> _getEndpoints() async {
     if (authUrl != null && tokenUrl != null) {
       return;
     }

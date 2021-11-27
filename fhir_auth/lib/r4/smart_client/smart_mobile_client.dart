@@ -19,6 +19,7 @@ class SmartMobileClient extends SmartClient {
     List<String>? scopes,
     this.authUrl,
     this.tokenUrl,
+    this.secret,
   }) : scopes = scopes ?? ['openid', 'profile', 'email', 'user/*.*'];
 
   /// specify the fhirUrl of the Capability Statement (or conformance
@@ -50,6 +51,9 @@ class SmartMobileClient extends SmartClient {
   OAuth2Helper? helper;
 
   @override
+  String? secret;
+
+  @override
   Future<void> initialize() async {
     await _getEndpoints;
     if (redirectUri != null) {
@@ -62,11 +66,14 @@ class SmartMobileClient extends SmartClient {
       );
     }
     if (client != null) {
-      helper = OAuth2Helper(client!,
-          grantType: OAuth2Helper.AUTHORIZATION_CODE,
-          clientId: clientId,
-          scopes: scopes,
-          authCodeParams: {'aud': fhirUri?.value.toString()});
+      helper = OAuth2Helper(
+        client!,
+        grantType: OAuth2Helper.AUTHORIZATION_CODE,
+        clientId: clientId,
+        scopes: scopes,
+        authCodeParams: {'aud': fhirUri?.value.toString()},
+        clientSecret: secret,
+      );
     }
   }
 
@@ -103,12 +110,7 @@ class SmartMobileClient extends SmartClient {
     }
     var thisRequest = '$fhirUri/metadata?mode=full&_format=json';
 
-    print(thisRequest);
-
     var result = await http.get(Uri.parse(thisRequest));
-
-    print(result.body);
-    print(result.headers);
 
     if (_errorCodeMap.containsKey(result.statusCode)) {
       if (result.statusCode == 422) {
@@ -138,8 +140,6 @@ class SmartMobileClient extends SmartClient {
 
     tokenUrl = _getUri(capabilityStatement, 'token');
     authUrl = _getUri(capabilityStatement, 'authorize');
-    print(tokenUrl);
-    print(authUrl);
 
     /// if either authorize or token are still null, we return a failure
     if (authUrl == null) {
