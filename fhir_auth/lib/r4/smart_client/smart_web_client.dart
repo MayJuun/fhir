@@ -52,19 +52,18 @@ class SmartWebClient extends SmartClient {
   @override
   Future<void> initialize() async {
     try {
+      print('Get Endpoints');
       await _getEndpoints();
     } catch (e) {
       throw PlatformException(
           code: e.toString(), message: 'Failed to get Auth & Token Endpoints');
     }
-
-    print(authUrl);
-    print(tokenUrl);
+    print('authUrl: $authUrl');
+    print('tokenUrl: $tokenUrl');
     await authenticate();
   }
 
   Future<void> authenticate() async {
-    print('authenticate');
     try {
       final authorizationUrl = '$authUrl'
           '?response_type=code'
@@ -83,7 +82,7 @@ class SmartWebClient extends SmartClient {
               .split('&')[0];
           print('AuthCode: $authorizationCode');
           if (authorizationCode != null) {
-            _popupWin?.close();
+            // _popupWin?.close();
             if (tokenUrl!.isValid) {
               final response = await http.post(
                 tokenUrl!.value!,
@@ -125,7 +124,7 @@ class SmartWebClient extends SmartClient {
   @override
   Future<http.Response?> get(String url,
           {Map<String, String>? headers}) async =>
-      http.get(Uri.parse(url), headers: await authHeaders(headers));
+      await http.get(Uri.parse(url), headers: await authHeaders(headers));
 
   @override
   Future<http.Response?> put(
@@ -133,7 +132,8 @@ class SmartWebClient extends SmartClient {
     Map<String, String>? headers,
     dynamic body,
   }) async =>
-      http.put(Uri.parse(url), headers: await authHeaders(headers), body: body);
+      await http.put(Uri.parse(url),
+          headers: await authHeaders(headers), body: body);
 
   @override
   Future<http.Response?> post(
@@ -141,13 +141,13 @@ class SmartWebClient extends SmartClient {
     Map<String, String>? headers,
     dynamic body,
   }) async =>
-      http.post(Uri.parse(url),
+      await http.post(Uri.parse(url),
           headers: await authHeaders(headers), body: body);
 
   @override
   Future<http.Response?> delete(String url,
           {Map<String, String>? headers}) async =>
-      http.delete(Uri.parse(url), headers: await authHeaders(headers));
+      await http.delete(Uri.parse(url), headers: await authHeaders(headers));
 
   @override
   Future<http.Response?> patch(
@@ -155,7 +155,7 @@ class SmartWebClient extends SmartClient {
     Map<String, String>? headers,
     dynamic body,
   }) async =>
-      http.patch(Uri.parse(url),
+      await http.patch(Uri.parse(url),
           headers: await authHeaders(headers), body: body);
 
   Future<void> getTokenResponse() async {
@@ -177,6 +177,7 @@ class SmartWebClient extends SmartClient {
     //       stacktrace: stack.toString(),
     //     );
     //   }
+    // }
   }
 
   /// Request for the CapabilityStatement (or Conformance) and then identifying

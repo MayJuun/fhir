@@ -55,6 +55,9 @@ class DemoPage extends StatelessWidget {
                   onPressed: () async {
                     await gcsRequest(fhirCallback);
                   }),
+              ElevatedButton(
+                  child: const Text('Azure', style: TextStyle(fontSize: 44)),
+                  onPressed: () async {}),
             ],
           ),
         ),

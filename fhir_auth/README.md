@@ -130,7 +130,7 @@ mixin Api {
 
 ## Mobile Auth by Provider
 
-### Google's Healthcare API
+### Google's Healthcare API - ToDo
 
 I've included the ability to use Google sign-in, so if you'd like to connect to the Google Healthcare API. Follow [Part 1](https://www.fhirfli.dev/gcp-healthcare-api-part-1-creating-fhir-store) and [Part 2](https://www.fhirfli.dev/gcp-healthcare-api-part-2-attempting-authentication) for instructions for setting up your own GCP version (this may need to be updated).
 
@@ -239,7 +239,7 @@ resourceType: AccessPolicy
 6. You'll need to choose your own scopes, I've gone with: ```launch patient/Patient.* openid profile offline_access user/Patient.*```
 7. You'll also need to add some users (Settings -> USERS)
 
-### Azure API for FHIR (needs to be updated)
+### Azure API for FHIR (needs to be updated) - ToDo
 
 ```Dart
   static const azureClientId = 'myAzureClientId';
@@ -255,6 +255,67 @@ resourceType: AccessPolicy
 Notice that capability statement will not give the proper endpoints, but it will not attach the url to the resource parameter for the authURl, this is important, and it won't work without it.
 This is my [Azure tutorial](https://www.fhirfli.dev/azure-fhir-setup), it's not as complete as the one above, but it should be a reasonable start.
 
+## Web Auth by Provider
+
+### Redirect
+
+You'll most likely be distributing this as a PWA, so you should know what the redirect URL will be ahead of time. Just in case for test purposes, I've included a script you can use to make sure the it will run locally with the same port, and it will print out the redirect url that you can use. If you use this script, the redirect is: ```http://localhost:8888/redirect.html```
+
+The other piece to note is that we need a redirect file in the web folder. I use the one that was demonstrated [in this article](https://itnext.io/flutter-web-oauth-authentication-through-external-window-d890a7ff6463)
+
+```html
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Connexion Succeeded</title>
+    <meta name="description"
+        content="Simple, quick, standalone responsive placeholder without any additional resources">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+</body>
+<script>
+    window.opener.postMessage(window.location.href, '*');
+</script>
+
+</html>
+```
+### Google's Healthcare API
+
+1. Follow the instructions above to set everything up. 
+2. Ensure you put the Authorized Origins and Redirect URIs in the webauthdemo Oauth2 client
+3. For our demo, since we're running it on a localhost (don't ever do this in real life, and ESPECIALLY never in production), our origin is ```http://localhost:8888``` and our redirect is ```http://localhost:8888/redirect.html```
+
+### [Aidbox](https://docs.aidbox.app/) - ToDo
+
+### [Interopland](https://sandbox.interop.community/)
+
+1. This is a relatively typical HAPI server
+2. After you have the server setup, select Apps, then create a new App.
+3. App Name and description can be what you'd like, Client Type should generally be Public Client
+4. App Launch URI for this is unimportant, because we're not launching from within their portal
+5. App redirect (given above API): ```com.myshiny.newapp://callback```
+6. You'll need to choose your own scopes, I've gone with: ```launch patient/Patient.* openid profile offline_access user/Patient.*```
+7. You'll also need to add some users (Settings -> USERS)
+
+### Azure API for FHIR (needs to be updated)
+
+```Dart
+  static const azureClientId = 'myAzureClientId';
+  static const azureTenantId = 'myAzureTenantId';
+  static const azureSecret = 'myAzureSecret';
+  static const azureUrl = 'https://myfhirserver.azurehealthcareapis.com';
+  static const azureAuthUrl =
+      'https://login.microsoftonline.com/$azureTenantId/oauth2/authorize?resource=$azureUrl';
+  static const azureTokenUrl =
+      'https://login.microsoftonline.com/$azureTenantId/oauth2/token';
+```
+
+Notice that capability statement will not give the proper endpoints, but it will not attach the url to the resource parameter for the authURl, this is important, and it won't work without it.
+This is my [Azure tutorial](https://www.fhirfli.dev/azure-fhir-setup), it's not as complete as the one above, but it should be a reasonable start.
 ## Suggestions and Complaints
 
 As I mentioned above, this is the most difficult package I've tried to publish. Mostly because authentication is a huge pain in the ass. Anyone who has suggestions or wants to open a PR is welcome. If you would like to contact me directly, my email is grey@fhirfli.dev.

@@ -4,13 +4,14 @@ import 'package:fhir_auth/r4.dart';
 
 import 'api.dart';
 import 'new_patient.dart';
+import 'scopes.dart';
 
 Future<void> aidboxRequest(Uri fhirCallback) async {
   final client = SmartClient.getSmartClient(
     fhirUri: FhirUri(Api.aidboxUrl),
     clientId: Api.aidboxClientId,
     redirectUri: FhirUri(fhirCallback),
-    scopes: Api.scopes.scopesList(),
+    scopes: scopes.scopesList(),
   );
 
   await client.initialize();
