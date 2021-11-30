@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:collection/collection.dart';
-import 'package:fhir/r5.dart';
+import 'package:fhir/r4.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:oauth2_client/access_token_response.dart';
