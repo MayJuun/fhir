@@ -29,65 +29,80 @@ class DemoPage extends StatelessWidget {
       path: '/redirect.html',
     );
     print(fhirCallback);
+    final width = MediaQuery.of(context).size.height / 6;
     return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Container(
-            child: GridView.count(
-              shrinkWrap: true,
-              crossAxisCount: 2,
-              children: [
-                ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.white),
-                      side: MaterialStateProperty.all(
-                          const BorderSide(color: Colors.black)),
-                    ),
-                    child: Image.asset('assets/hapi.png'),
-                    onPressed: () async => await hapiRequest()),
-                ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.white),
-                      side: MaterialStateProperty.all(
-                          const BorderSide(color: Colors.black)),
-                    ),
-                    child: Image.asset('assets/aidbox.png'),
-                    onPressed: () async => await aidboxRequest(fhirCallback)),
-                ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.white),
-                      side: MaterialStateProperty.all(
-                          const BorderSide(color: Colors.black)),
-                    ),
-                    child: Image.asset('assets/interopland.png'),
-                    onPressed: () async => await interopRequest(fhirCallback)),
-                ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.white),
-                      side: MaterialStateProperty.all(
-                          const BorderSide(color: Colors.black)),
-                    ),
-                    child: Image.asset('assets/meld.png'),
-                    onPressed: () async => await meldRequest(fhirCallback)),
-                ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.white),
-                      side: MaterialStateProperty.all(
-                          const BorderSide(color: Colors.black)),
-                    ),
-                    child: Image.asset('assets/azure.png'),
-                    onPressed: () {}),
-                ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.white),
-                      side: MaterialStateProperty.all(
-                          const BorderSide(color: Colors.black)),
-                    ),
-                    child: Image.asset('assets/gcp.png'),
-                    onPressed: () async => await gcsRequest(fhirCallback)),
-              ],
+        body: GridView.count(
+          shrinkWrap: true,
+          crossAxisCount: 2,
+          children: [
+            Container(
+              width: width,
+              child: ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.white),
+                    side: MaterialStateProperty.all(
+                        const BorderSide(color: Colors.black)),
+                  ),
+                  child: Image.asset('assets/hapi.png'),
+                  onPressed: () async => await hapiRequest()),
             ),
-          ),
+            Container(
+              width: width,
+              child: ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.white),
+                    side: MaterialStateProperty.all(
+                        const BorderSide(color: Colors.black)),
+                  ),
+                  child: Image.asset('assets/aidbox.png'),
+                  onPressed: () async => await aidboxRequest(fhirCallback)),
+            ),
+            Container(
+              width: width,
+              child: ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.white),
+                    side: MaterialStateProperty.all(
+                        const BorderSide(color: Colors.black)),
+                  ),
+                  child: Image.asset('assets/interopland.png'),
+                  onPressed: () async => await interopRequest(fhirCallback)),
+            ),
+            Container(
+              width: width,
+              child: ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.white),
+                    side: MaterialStateProperty.all(
+                        const BorderSide(color: Colors.black)),
+                  ),
+                  child: Image.asset('assets/meld.png'),
+                  onPressed: () async => await meldRequest(fhirCallback)),
+            ),
+            Container(
+              width: width,
+              child: ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.white),
+                    side: MaterialStateProperty.all(
+                        const BorderSide(color: Colors.black)),
+                  ),
+                  child: Image.asset('assets/azure.png'),
+                  onPressed: () {}),
+            ),
+            Container(
+              width: width,
+              child: ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.white),
+                    side: MaterialStateProperty.all(
+                        const BorderSide(color: Colors.black)),
+                  ),
+                  child: Image.asset('assets/gcp.png'),
+                  onPressed: () async => await gcsRequest(fhirCallback)),
+            ),
+          ],
         ),
       ),
     );
