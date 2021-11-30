@@ -1,6 +1,6 @@
 # fhir_auth
 
-This package is supposed to allow easier authentication for FHIR applications (mostly using SMART on FHIR, although there's also support for general oauth2 and Google authentication). I will say, this continues to be the most frustrating package to try and develop/support. I continue to feel as though, even though each server that I work with *SAYS* that they support SMART on FHIR, and yet I still always struggle and fight with the process. That being said, with previous versions this package has successfully worked with HAPI, Aidbox, MIHIN, Interopland, GCP and Azure. I have not tested the most recent release against all of these (mostly because they cost too much money - both Azure and AWS cost me ~$100 for 2 weeks). If anyone has practice authenticating against any other servers, please let me know!
+This package is supposed to allow easier authentication for FHIR applications (mostly using SMART on FHIR, although there's also support for general oauth2 and Google authentication). I will say, this continues to be the most frustrating package to try and develop/support. I continue to feel as though, even though each server that I work with *SAYS* that they support SMART on FHIR, and yet I still always struggle and fight with the process. Currently I'm successfully able to authenticate against GCP, Aidbox, Interopland, and MELD, and hopefully Azure soon. I still haven't gotten to AWS. These all work for both mobile and web. If anyone has practice authenticating against any other servers, please let me know!
 
 FHIR® is the registered trademark of HL7 and is used with the permission of HL7. Use of the FHIR trademark does not constitute endorsement of this product by HL7.
 
@@ -125,6 +125,10 @@ mixin Api {
   /// Interop
   static const interopClientId = 'e77063f5-1234-1234-9de4-137e1abcd83c';
   static const interopUrl = 'https://api.interop.community/Demo/data';
+
+  /// MELD
+  static const meldClientId = 'e77063f5-1234-1234-9de4-137e1abcd83c';
+  static const meldUrl = 'https://meld.interop.community/Demo/data';
 }
 ```
 
@@ -229,7 +233,7 @@ resourceType: AccessPolicy
  
 6. The mobileauthdemo should now be ready to connect to Aidbox.
 
-### [Interopland](https://sandbox.interop.community/)
+### [Interopland](https://sandbox.interop.community/) and [MELD](https://meld.interop.community/)
 
 1. This is a relatively typical HAPI server
 2. After you have the server setup, select Apps, then create a new App.
@@ -283,25 +287,22 @@ The other piece to note is that we need a redirect file in the web folder. I use
 
 </html>
 ```
+
 ### Google's Healthcare API
 
-1. Follow the instructions above to set everything up. 
+1. Follow the instructions above to set everything up.
 2. Ensure you put the Authorized Origins and Redirect URIs in the webauthdemo Oauth2 client
 3. For our demo, since we're running it on a localhost (don't ever do this in real life, and ESPECIALLY never in production), our origin is ```http://localhost:8888``` and our redirect is ```http://localhost:8888/redirect.html```
 
-### [Aidbox](https://docs.aidbox.app/) - ToDo
+### [Aidbox](https://docs.aidbox.app/)
 
-### [Interopland](https://sandbox.interop.community/)
+1. Same setup as above actually, just remember to change your redirect.
 
-1. This is a relatively typical HAPI server
-2. After you have the server setup, select Apps, then create a new App.
-3. App Name and description can be what you'd like, Client Type should generally be Public Client
-4. App Launch URI for this is unimportant, because we're not launching from within their portal
-5. App redirect (given above API): ```com.myshiny.newapp://callback```
-6. You'll need to choose your own scopes, I've gone with: ```launch patient/Patient.* openid profile offline_access user/Patient.*```
-7. You'll also need to add some users (Settings -> USERS)
+### [Interopland](https://sandbox.interop.community/) and [MELD](https://meld.interop.community/)
 
-### Azure API for FHIR (needs to be updated)
+1. Same setup as above, but remember that for this one you probably do want to make sure you have the correct launch url (although we're still launching externally) and the new redirect URL
+
+### Azure API for FHIR - ToDo
 
 ```Dart
   static const azureClientId = 'myAzureClientId';
@@ -316,6 +317,7 @@ The other piece to note is that we need a redirect file in the web folder. I use
 
 Notice that capability statement will not give the proper endpoints, but it will not attach the url to the resource parameter for the authURl, this is important, and it won't work without it.
 This is my [Azure tutorial](https://www.fhirfli.dev/azure-fhir-setup), it's not as complete as the one above, but it should be a reasonable start.
+
 ## Suggestions and Complaints
 
 As I mentioned above, this is the most difficult package I've tried to publish. Mostly because authentication is a huge pain in the ass. Anyone who has suggestions or wants to open a PR is welcome. If you would like to contact me directly, my email is grey@fhirfli.dev.

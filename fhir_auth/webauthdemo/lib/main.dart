@@ -4,6 +4,7 @@ import 'aidbox_request.dart';
 import 'gcs_request.dart';
 import 'hapi_request.dart';
 import 'interop_request.dart';
+import 'meld_request.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -48,6 +49,11 @@ class DemoPage extends StatelessWidget {
                   child: const Text('Interop', style: TextStyle(fontSize: 44)),
                   onPressed: () async {
                     await interopRequest(fhirCallback);
+                  }),
+              ElevatedButton(
+                  child: const Text('Meld', style: TextStyle(fontSize: 44)),
+                  onPressed: () async {
+                    await meldRequest(fhirCallback);
                   }),
               ElevatedButton(
                   child:

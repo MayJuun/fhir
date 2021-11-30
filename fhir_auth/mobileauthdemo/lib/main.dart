@@ -4,6 +4,7 @@ import 'aidbox_request.dart';
 import 'gcs_request.dart';
 import 'hapi_request.dart';
 import 'interop_request.dart';
+import 'meld_request.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,6 +29,9 @@ class MyApp extends StatelessWidget {
               ElevatedButton(
                   child: const Text('Interop', style: TextStyle(fontSize: 44)),
                   onPressed: () async => await interopRequest()),
+              ElevatedButton(
+                  child: const Text('Meld', style: TextStyle(fontSize: 44)),
+                  onPressed: () async => await meldRequest()),
               ElevatedButton(
                   child: const Text('Azure', style: TextStyle(fontSize: 44)),
                   onPressed: () {}),

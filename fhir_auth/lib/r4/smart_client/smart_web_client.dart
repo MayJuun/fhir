@@ -4,7 +4,8 @@ import 'package:collection/collection.dart';
 import 'package:fhir/r5.dart';
 import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
-import 'package:universal_html/html.dart' as html;
+import 'package:oauth2_client/access_token_response.dart';
+import 'package:oauth2_client/oauth2_client.dart';
 
 import 'smart_client.dart';
 
@@ -44,67 +45,40 @@ class SmartWebClient extends SmartClient {
   /// the token Url from the Conformance/Capability Statement
   FhirUri? tokenUrl;
 
+  OAuth2Client? client;
+
+  AccessTokenResponse? _$_$_tokenResponse;
+
+  String? get _$_$_accessToken => _$_$_tokenResponse?.accessToken;
+
   @override
   String? secret;
-
-  String? _$_$_accessToken;
 
   @override
   Future<void> initialize() async {
     try {
-      print('Get Endpoints');
       await _getEndpoints();
     } catch (e) {
       throw PlatformException(
           code: e.toString(), message: 'Failed to get Auth & Token Endpoints');
     }
-    print('authUrl: $authUrl');
-    print('tokenUrl: $tokenUrl');
     await authenticate();
   }
 
   Future<void> authenticate() async {
     try {
-      final authorizationUrl = '$authUrl'
-          '?response_type=code'
-          '&client_id=$clientId'
-          '&redirect_uri=${redirectUri!.value}'
-          '&scope=${scopes.join(" ")}';
-      final _popupWin = html.window.open(authorizationUrl, 'Auth');
-      String? authorizationCode;
-      html.window.onMessage.listen((event) async {
-        if (event.data.toString().contains('code=') &&
-            event.data.toString().contains('redirect.html')) {
-          authorizationCode = event.data
-              .toString()
-              .split('code=')[1]
-              .split('?')[0]
-              .split('&')[0];
-          print('AuthCode: $authorizationCode');
-          if (authorizationCode != null) {
-            // _popupWin?.close();
-            if (tokenUrl!.isValid) {
-              final response = await http.post(
-                tokenUrl!.value!,
-                headers: {
-                  'Content-Type': 'application/x-www-form-urlencoded',
-                  'grant_type': 'authorization_code',
-                },
-                body: jsonEncode(
-                  {
-                    'grant_type': 'authorization_code',
-                    'client_id': '$clientId',
-                    'redirect_uri': '${redirectUri!.value}',
-                    'code': '$authorizationCode',
-                  },
-                ),
-              );
-              print(response.headers);
-              print(response.body);
-            }
-          }
-        }
-      });
+      client = OAuth2Client(
+        redirectUri: redirectUri.toString(),
+        customUriScheme: redirectUri!.value?.scheme ?? redirectUri.toString(),
+        authorizeUrl: authUrl.toString(),
+        tokenUrl: tokenUrl.toString(),
+      );
+
+      _$_$_tokenResponse = await client!.getTokenWithAuthCodeFlow(
+        clientId: clientId,
+        scopes: scopes,
+        authCodeParams: {'aud': fhirUri?.value.toString()},
+      );
     } catch (e, stack) {
       throw PlatformException(
         code: e.toString(),
@@ -116,7 +90,16 @@ class SmartWebClient extends SmartClient {
 
   Future<Map<String, String>> authHeaders(Map<String, String>? headers) async {
     headers ??= {};
-    await getTokenResponse();
+    if (_$_$_tokenResponse == null ||
+        _$_$_tokenResponse!.refreshToken == null) {
+      await authenticate();
+    }
+    if (_$_$_tokenResponse!.isExpired()) {
+      _$_$_tokenResponse = await client?.refreshToken(
+        _$_$_tokenResponse!.refreshToken!,
+        clientId: clientId,
+      );
+    }
     headers['Authorization'] = 'Bearer ${_$_$_accessToken}';
     return headers;
   }
@@ -157,28 +140,6 @@ class SmartWebClient extends SmartClient {
   }) async =>
       await http.patch(Uri.parse(url),
           headers: await authHeaders(headers), body: body);
-
-  Future<void> getTokenResponse() async {
-    // if (tokenIsExpired) {
-    //   refreshToken();
-    // }
-    // if (_tokenResponse?.isExpired() ?? true && client != null) {
-    //   try {
-    //     final authorizationResponse = await client!.requestAuthorization(
-    //         clientId: clientId,
-    //         scopes: scopes,
-    //         customParams: {'aud': fhirUri?.value.toString()});
-    //     _tokenResponse = await client?.requestAccessToken(
-    //         code: authorizationResponse.code ?? '', clientId: clientId);
-    //   } catch (e, stack) {
-    //     throw PlatformException(
-    //       code: e.toString(),
-    //       message: 'Failed to authenticate',
-    //       stacktrace: stack.toString(),
-    //     );
-    //   }
-    // }
-  }
 
   /// Request for the CapabilityStatement (or Conformance) and then identifying
   /// the authUrl endpoint & tokenurl endpoing
