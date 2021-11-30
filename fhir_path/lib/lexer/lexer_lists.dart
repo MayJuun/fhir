@@ -7,6 +7,7 @@ import 'no_arg_fxn_lexer.dart';
 import 'operator_lexer.dart';
 import 'special_lexer.dart';
 
+/// Lexers for identifying special items
 final specialLexer = bracketsIndexLexer |
     indexLexer |
     thisLexer |
@@ -14,6 +15,7 @@ final specialLexer = bracketsIndexLexer |
     emptySetLexer |
     dotLexer;
 
+/// Lexers for identifying key words
 final wordOperationLexer = impliesLexer |
     orStringLexer |
     xorLexer |
@@ -25,6 +27,7 @@ final wordOperationLexer = impliesLexer |
     divModLexer |
     divStringLexer;
 
+/// Lexers for identifying key symbols
 final symbolOperationLexer = notEquivalentLexer |
     notEqualsLexer |
     equivalentLexer |
@@ -41,6 +44,7 @@ final symbolOperationLexer = notEquivalentLexer |
     starLexer |
     commaLexer;
 
+/// All lexers for functions that accept arguments
 final functionLexer = unionFunctionLexer |
     combineLexer |
     toQuantityLexer |
@@ -72,8 +76,10 @@ final functionLexer = unionFunctionLexer |
     aggregateLexer |
     iifLexer;
 
+/// Lexer for all types of white space
 final wsLexer = whiteSpaceLexer | lineCommentLexer | multiLineCommentLexer;
 
+/// Lexers identifying special formatting of certain types of data
 final literalLexer = stringLexer |
     envVariableLexer |
     delimitedIdentifierLexer |
@@ -85,6 +91,7 @@ final literalLexer = stringLexer |
     dateLexer |
     timeLexer;
 
+/// All lexers for functions that don't accept arguments
 final simpleLexer = toBooleanLexer |
     convertsToBooleanLexer |
     toIntegerLexer |

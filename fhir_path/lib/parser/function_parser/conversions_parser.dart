@@ -2,6 +2,12 @@ import 'package:fhir/primitive_types/primitive_types.dart';
 
 import '../../fhir_path.dart';
 
+/// http://hl7.org/fhirpath/#iifcriterion-expression-true-result-collection-otherwise-result-collection-collection
+///The iif function in FHIRPath is an immediate if, also known as a conditional operator (such as C’s ? : operator).
+/// The criterion expression is expected to evaluate to a Boolean.
+/// If criterion is true, the function returns the value of the true-result argument.
+/// If criterion is false or an empty collection, the function returns otherwise-result, unless the optional otherwise-result is not given, in which case the function returns an empty collection.
+/// Note that short-circuit behavior is expected in this function. In other words, true-result should only be evaluated if the criterion evaluates to true, and otherwise-result should only be evaluated otherwise. For implementations, this means delaying evaluation of the arguments.
 class IifParser extends FunctionParser {
   IifParser();
   late ParserList value;
@@ -38,6 +44,13 @@ class IifParser extends FunctionParser {
   }
 }
 
+/// http://hl7.org/fhirpath/#toboolean-boolean
+/// If the input collection contains a single item, this function will return a single boolean if:
+/// the item is a Boolean
+/// the item is an Integer and is equal to one of the possible integer representations of Boolean values
+/// the item is a Decimal that is equal to one of the possible decimal representations of Boolean values
+/// the item is a String that is equal to one of the possible string representations of Boolean values
+/// If the item is not one the above types, or the item is a String, Integer, or Decimal, but is not equal to one of the possible values convertible to a Boolean, the result is empty.
 class ToBooleanParser extends FhirPathParser {
   ToBooleanParser();
   List execute(List results, Map passed) => results.length == 0
@@ -65,6 +78,12 @@ class ToBooleanParser extends FhirPathParser {
                       : [];
 }
 
+/// http://hl7.org/fhirpath/#convertstoboolean-boolean
+/// If the input collection contains a single item, this function will return true if:
+/// the item is a Boolean
+/// the item is an Integer that is equal to one of the possible integer representations of Boolean values
+/// the item is a Decimal that is equal to one of the possible decimal representations of Boolean values
+/// the item is a String that is equal to one of the possible string representations of Boolean values
 class ConvertsToBooleanParser extends FhirPathParser {
   ConvertsToBooleanParser();
   List execute(List results, Map passed) => results.length == 0
