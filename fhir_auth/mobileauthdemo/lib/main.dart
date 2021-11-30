@@ -17,29 +17,61 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              ElevatedButton(
-                  child: const Text('Hapi', style: TextStyle(fontSize: 44)),
-                  onPressed: () async => await hapiRequest()),
-              ElevatedButton(
-                  child: const Text('Aidbox', style: TextStyle(fontSize: 44)),
-                  onPressed: () async => await aidboxRequest()),
-              ElevatedButton(
-                  child: const Text('Interop', style: TextStyle(fontSize: 44)),
-                  onPressed: () async => await interopRequest()),
-              ElevatedButton(
-                  child: const Text('Meld', style: TextStyle(fontSize: 44)),
-                  onPressed: () async => await meldRequest()),
-              ElevatedButton(
-                  child: const Text('Azure', style: TextStyle(fontSize: 44)),
-                  onPressed: () {}),
-              ElevatedButton(
-                  child:
-                      const Text('GCP Health', style: TextStyle(fontSize: 44)),
-                  onPressed: () async => await gcsRequest()),
-            ],
+          child: Container(
+            child: GridView.count(
+              shrinkWrap: true,
+              crossAxisCount: 2,
+              children: [
+                ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white),
+                      side: MaterialStateProperty.all(
+                          const BorderSide(color: Colors.black)),
+                    ),
+                    child: Image.asset('assets/hapi.png'),
+                    onPressed: () async => await hapiRequest()),
+                ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white),
+                      side: MaterialStateProperty.all(
+                          const BorderSide(color: Colors.black)),
+                    ),
+                    child: Image.asset('assets/aidbox.png'),
+                    onPressed: () async => await aidboxRequest()),
+                ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white),
+                      side: MaterialStateProperty.all(
+                          const BorderSide(color: Colors.black)),
+                    ),
+                    child: Image.asset('assets/interopland.png'),
+                    onPressed: () async => await interopRequest()),
+                ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white),
+                      side: MaterialStateProperty.all(
+                          const BorderSide(color: Colors.black)),
+                    ),
+                    child: Image.asset('assets/meld.png'),
+                    onPressed: () async => await meldRequest()),
+                ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white),
+                      side: MaterialStateProperty.all(
+                          const BorderSide(color: Colors.black)),
+                    ),
+                    child: Image.asset('assets/azure.png'),
+                    onPressed: () {}),
+                ElevatedButton(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(Colors.white),
+                      side: MaterialStateProperty.all(
+                          const BorderSide(color: Colors.black)),
+                    ),
+                    child: Image.asset('assets/gcp.png'),
+                    onPressed: () async => await gcsRequest()),
+              ],
+            ),
           ),
         ),
       ),

@@ -11,3 +11,8 @@ dependencies:
     path: ../../fhir_auth
   flutter:
     sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+  - assets/
