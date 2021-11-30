@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'aidbox_request.dart';
 import 'gcs_request.dart';
 import 'hapi_request.dart';
 import 'interop_request.dart';
@@ -23,10 +24,13 @@ class MyApp extends StatelessWidget {
                   onPressed: () async => await hapiRequest()),
               ElevatedButton(
                   child: const Text('Aidbox', style: TextStyle(fontSize: 44)),
-                  onPressed: () async => await gcsRequest()),
+                  onPressed: () async => await aidboxRequest()),
               ElevatedButton(
                   child: const Text('Interop', style: TextStyle(fontSize: 44)),
                   onPressed: () async => await interopRequest()),
+              ElevatedButton(
+                  child: const Text('Azure', style: TextStyle(fontSize: 44)),
+                  onPressed: () {}),
               ElevatedButton(
                   child:
                       const Text('GCP Health', style: TextStyle(fontSize: 44)),

@@ -13,8 +13,6 @@ Future interopRequest() async {
     scopes: scopes.scopesList(),
   );
 
-  print(client.runtimeType);
-
   try {
     await client.initialize();
     if (client.fhirUri?.value != null) {

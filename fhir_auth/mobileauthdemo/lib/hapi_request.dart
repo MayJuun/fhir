@@ -4,7 +4,10 @@ import 'package:fhir_auth/r4.dart';
 import 'api.dart';
 import 'new_patient.dart';
 
+/// Example of how to create a patient, upload and then download the patient
+/// without any sort of authentication
 Future hapiRequest() async {
+  
   const hapiUrl = Api.hapiUrl;
   final _newPatient = newPatient();
   print('Patient to be uploaded:\n${_newPatient.toJson()}');
@@ -15,7 +18,7 @@ Future hapiRequest() async {
 
   Id? newId;
   try {
-    final response = await request1.request(headers: {});
+    final response = await request1.request();
     print('Response from upload:\n${response?.toJson()}');
     newId = response?.id;
   } catch (e) {
@@ -31,7 +34,7 @@ Future hapiRequest() async {
       id: newId,
     );
     try {
-      final response = await request2.request(headers: {});
+      final response = await request2.request();
       print('Response from read:\n${response?.toJson()}');
     } catch (e) {
       print(e);

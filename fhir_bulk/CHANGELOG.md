@@ -1,3 +1,5 @@
+# fhir_bulk
+
 ## [0.5.0-6]
 
 * FHIR package update
@@ -12,6 +14,7 @@
 * Updated dependencies
 
 * Fixed an issue with one of the tests
+
 ## [0.5.0-3]
 
 * Updated dependencies

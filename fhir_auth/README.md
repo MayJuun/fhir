@@ -1,134 +1,76 @@
 # fhir_auth
 
-I'm finally publishing this package. It's for authenticating and authorizing a user when accessing a FHIR server. It now works with SMART on FHIR, Google Signin for Google's Healthcare API and Azure's FHIR API. AWS, I'm coming for you next! (although probably not until their Healthlake AND Amplify are a little more developed).
+This package is supposed to allow easier authentication for FHIR applications (mostly using SMART on FHIR, although there's also support for general oauth2 and Google authentication). I will say, this continues to be the most frustrating package to try and develop/support. I continue to feel as though, even though each server that I work with *SAYS* that they support SMART on FHIR, and yet I still always struggle and fight with the process. That being said, with previous versions this package has successfully worked with HAPI, Aidbox, MIHIN, Interopland, GCP and Azure. I have not tested the most recent release against all of these (mostly because they cost too much money - both Azure and AWS cost me ~$100 for 2 weeks). If anyone has practice authenticating against any other servers, please let me know!
 
-A Dart/Flutter package for working with FHIR® resources. FHIR® is the registered trademark of HL7 and is used with the permission of HL7. Use of the FHIR trademark does not constitute endorsement of this product by HL7. 
+FHIR® is the registered trademark of HL7 and is used with the permission of HL7. Use of the FHIR trademark does not constitute endorsement of this product by HL7.
 
-# Full SMART on FHIR 
+## Full SMART on FHIR
 
-All SMART on FHIR capabilities defined, all scopes allowed, all FHIR versions (Dstu2, Stu3, R4 and preview R5 #3) defined.
+All SMART on FHIR capabilities defined, all scopes allowed, all FHIR versions (Dstu2, Stu3, R4 and preview R5 #3) defined. Currently it only allows external to EHR launches, but soon should also support EHR launches.
 
-Setting up your app, because it has to go deeper in Android and iOS than most, is a pain. I'm using [flutter_appauth](https://pub.dev/packages/flutter_appauth). And accordingly, I have followed their recommendations for setup.
+## Setup
+
+Setting up your app, because it has to go deeper in Android and iOS than most, is a pain. I'm using [oauth2_client](https://pub.dev/packages/oauth2_client). And accordingly, I have followed their recommendations for setup (note, these are not exactly the same as my previous setup).
+
+I've included examples in mobileauthdemo as well as webauthdemo.
+
+### Android Setup
 
 In your file ```android/app/build.gradle``` you should have a section entitled ```defaultConfig```, you need to change it so that it looks similar to the following:
 
-```
+```gradle
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "your.redirect.uri"
+        applicationId "your.application.id"
         minSdkVersion 21
         targetSdkVersion 29
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         manifestPlaceholders = [
-            'appAuthRedirectScheme': 'your.redirect.uri'
+            'appAuthRedirectScheme': 'your.application.id'
         ]
     }
 ```
 
-Note: for your actual redirect/callback uri, you need to have more than just this address. You'll need something like ```your.redirect.uri://callback```.
+A few notes.
 
-You will need to add the ```manifestPlaceholders```, and I update the minSdkVersion. Your applicationId, you will need to search for whatever was generated and change it wherever it occurs in your app.
+1. Your minSdkVersion needs at least 18, and preferably something like 21 or 23.
+2. "your.application.id" is usually a reverse of a typicaly url format, so could be something like: "dev.fhirfli.application". This is also going to be your callback, although it should be something like: ```dev.fhirfli.application://callback``` (or in the case of google, sometimes they only allow a single slash, i.e. ```dev.fhirfli.application:/callback```).
+3. While it may not be completely necessary, I add the ```manifestPlaceholders``` as formatted above.
 
-On the flutter_appauth page it says to add something to ```android/app/src/main/AndroidManifest.xml``` for Android 11 and higher. I haven't had an issue yet, so I'm not including it in these instructions.
+In the AndroidManifest.xml file (```android/app/src/main/AndroidManifest.xml```)
 
-Lastly, for iOS, you'll need to add to the following:
-```
-<key>CFBundleURLTypes</key>
-<array>
-    <dict>
-        <key>CFBundleTypeRole</key>
-        <string>Editor</string>
-        <key>CFBundleURLSchemes</key>
-        <array>
-            <string>your.redirect.uri</string>
-        </array>
-    </dict>
-</array>
+```xml
+<activity android:name="com.linusu.flutter_web_auth.CallbackActivity" >
+  <intent-filter android:label="flutter_web_auth">
+    <action android:name="android.intent.action.VIEW" />
+    <category android:name="android.intent.category.DEFAULT" />
+    <category android:name="android.intent.category.BROWSABLE" />
+    <data android:scheme="dev.fhirfli.mobileauthdemo" />
+  </intent-filter>
+</activity>
 ```
 
-To the file, ```ios/Runner/Info/plist```, this time I add it to the end so that it looks like the following:
-```
-...
-	<key>CFBundleURLTypes</key>
-	<array>
-		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
-			<key>CFBundleURLSchemes</key>
-			<array>
-				<string>your.redirect.uri</string>
-			</array>
-		</dict>
-	</array>
-	<key>UISupportedInterfaceOrientations~ipad</key>
-	<array>
-		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationPortraitUpsideDown</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
-	</array>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
-</dict>
-</plist>
+### iOS Setup
+
+You must set the platform in ios/Podfile
+
+```podfile
+platform :ios, '11.0'
 ```
 
+## Basic Example Setup
 
-# Google Sign-in
+### SmartClient
 
-I've also included the ability to use Google sign-in, so if you'd like to connect to the Google Healthcare API. Follow (Part 1)[https://www.fhirfli.dev/gcp-healthcare-api-part-1-creating-fhir-store] and (Part 2)[https://www.fhirfli.dev/gcp-healthcare-api-part-2-attempting-authentication] for instructions.
-
-# ```API file```
-
-I'm going to show here a copy (with numbers changed, obviously) of my API file that I use for these calls to test and ensure that it works the way I want it to. 
-
-```SMART on FHIR``` - this is the same flow for HAPI or Aidbox, zum beispiel.
-```
-  static const clientId = 'myClientId';
-  static const secret = 'donottellanyonemysupersecretsecret';
-  static const url = 'https://myfhirserver.myorg/fhir';
-  static const mihinAuthUrl = null;
-  static const mihinTokenUrl = null;
-```
-Note the url is the fhirUrl for your query, if you attache /metadata to the end, it should return a CapabilityStatement/Conformance. Pay attention to this, because different servers creat their urls differently.
-
-```Google Healthcare API```
-```
-  static const gcsClientId = 'alphanumericstring.apps.googleusercontent.com';
-  static const gcsUrl =
-      'https://healthcare.googleapis.com/v1/projects/myProjectName/locations/us-east4/datasets/myDataSet/fhirStores/myFhirStore/fhir';
-  static const gcsScopes = ['https://www.googleapis.com/auth/cloud-platform'];
-```
-I also have a tutorial for setting up your Google Healthcare API here: https://www.fhirfli.dev/gcp-healthcare-api-part-1-creating-fhir-store
-
-```Azure API for FHIR``` - this is similar to SMART on FHIR, with one exception
-```
-  static const azureClientId = 'myAzureClientId';
-  static const azureTenantId = 'myAzureTenantId';
-  static const azureSecret = 'myAzureSecret';
-  static const azureUrl = 'https://myfhirserver.azurehealthcareapis.com';
-  static const azureAuthUrl =
-      'https://login.microsoftonline.com/$azureTenantId/oauth2/authorize?resource=$azureUrl';
-  static const azureTokenUrl =
-      'https://login.microsoftonline.com/$azureTenantId/oauth2/token';
-```
-Notice that capability statement will not give the proper endpoints, but it will not attach the url to the resource parameter for the authURl, this is important, and it won't work without it. 
-This is my Azure tutorial, it's not as complete as the one above, but it should be a reasonable start: https://www.fhirfli.dev/azure-fhir-setup
-
-# Example
-
-I think the example shows the flow pretty well. I've also tried to make both the SmartClient and the GCS Client function as similarly as possible.
-
-So for the SmartClient, initialize as:
-```
-  final client = SmartClient(
+```Dart
+  final client = SmartClient.getSmartClient(
     fhirUrl: FhirUri(url),
     clientId: clientId,
     redirectUri: fhirCallback,
-    scopes: Scopes(
+    Scopes(
       clinicalScopes: [
-        const Tuple3(
+        ClinicalScope(
           Role.patient,
           R4ResourceType.Patient,
           Interaction.any,
@@ -137,35 +79,28 @@ So for the SmartClient, initialize as:
       openid: true,
       offlineAccess: true,
     ),
-    secret: secret,
+    secret: secret, /// should not be used
     authUrl: authUrl == null ? null : FhirUri(authUrl),
     tokenUrl: tokenUrl == null ? null : FhirUri(tokenUrl),
   );
 ```
-GCS Client requires fewer arguments (because you don't need to specify scopes for their Healthcare API)
-```
-  final client = GcsClient(
-    fhirUrl: FhirUri(url),
-    clientId: clientId,
-    scopes: scopes,
+
+### Workflow
+
+```dart
+  await client.initialize();
+  final request1 = FhirRequest.create(
+    base: client.fhirUri!.value!,
+    resource: _newPatient,
+    fhirClient: client,
   );
-```
-After this, the flow is the same for both:
-```
-await client.login();
-final newPatient = Patient(id: '123');
-final request1 = FhirRequest.create(base: client.fhirUrl.uri);
-final response1 = await request1.request(headers: await client.authHeaders);
-final request2 = FhirRequest.read(
-  base: client.fhirUrl.uri,
-  type: R4ResourceType.Patient,
-  id: newId,
-);
-final response2 = await request2.request(headers: await client.authHeaders);
+  final response = await request1.request();
 ```
 
-# Api.dart
-In order to keep private things private, I haven't uploaded my API.dart file for public consumption. However, it looks something like the following for those playing along at home:
+## Api.dart
+
+In my examples, I'm using an API file for all of the credentials. In order to keep private things private, I haven't uploaded my API.dart file for public consumption. However, it looks something like the following for those playing along at home:
+
 ```dart
 mixin Api {
   /// redirect url for oauth2 authentication
@@ -193,9 +128,135 @@ mixin Api {
 }
 ```
 
-# Beta Version
+## Mobile Auth by Provider
 
-As is the case for all of the FHIR packages published so far, they are not yet ready for production (although some are very close). This one is a little further away for a number of reasons. The first is that I'd like to add the capability to use Azure AD and AWS Cognito. In addition, just because authentication/authorization is complicated but important enough that I want need to add more tests to ensure it works the way it's supposed to. As always, suggestions, complaints and PR are welcome. Contact me at grey@fhirfli.dev.
+### Google's Healthcare API
 
+I've included the ability to use Google sign-in, so if you'd like to connect to the Google Healthcare API. Follow [Part 1](https://www.fhirfli.dev/gcp-healthcare-api-part-1-creating-fhir-store) and [Part 2](https://www.fhirfli.dev/gcp-healthcare-api-part-2-attempting-authentication) for instructions for setting up your own GCP version (this may need to be updated).
+
+To briefly setup your app (assuming you have your GCP setup completed).
+  
+1. Go through the APIs & Services -> OAuth consent screen (fill in everything, including support email, and your authorized domains as your GCP domain)
+2. Your sensitive scopes - Cloud Healthcare API
+3. APIs & Services -> Credentials -> Create OAuth client ID
+4. Package name should be (assuming API file above): ```com.myshiny.newapp```
+5. You do need the SHA-1 certificate for this
+6. From the same menu, Create an OAuth client ID but select web application
+7. Identity Platform -> Add a Provider -> Select Google
+8. Web Client ID (from the above web app) and Web Client Secret (from the above web app)
+9. In this same client, input Allowed client IDs, and include the mobile app client ID
+
+### [Aidbox](https://docs.aidbox.app/)
+
+I've liked Aidbox for a while. They have some nice features setup, so it's definitely worth taking a look. For us though, one of the really nice aspects is a free cloud demo.
+
+1. Start by going to [https://aidbox.app/](https://aidbox.app/)
+2. Create a new box called whatever you want, select your FHIR Version and Zone
+3. Create your client
+
+  ```yaml
+  PUT /Client/shinynewapp?_pretty=true
+  content-type: text/yaml
+  accept: text/yaml
+
+  secret: verysecret
+  grant_types:
+    - code
+  auth:
+    authorization_code:
+      redirect_uri: com.myshiny.newapp://callback
+  first_party: true
+  ```
+
+4. Create User (can be found more [detail here](https://docs.aidbox.app/security-and-access-control-1/security/access-policy#access-policies-for-users))
+
+```yaml
+data:
+  name: Grey Faulkenberry
+  roles:
+    - Administrator
+    - Doctor
+email: user@mail.com
+password: password
+id: user1
+resourceType: User
+```
+
+5. Create AccessPolicy for user (for true production apps, you will need to consider how you actually want this to be done, what kind of access you need, etc. For now, we are giving [all the permissions for the User](https://docs.aidbox.app/security-and-access-control-1/security/access-policy#full-access-for-administrator-role))
+
+```yaml
+engine: json-schema
+schema:
+  required:
+    - client
+    - user
+    - request-method
+  properties:
+    user:
+      required:
+        - data
+      properties:
+        data:
+          required:
+            - roles
+          properties:
+            roles:
+              not:
+                items:
+                  not:
+                    enum:
+                      - Administrator
+              type: array
+    client:
+      required:
+        - id
+      properties:
+        id:
+          const: shinynewapp
+    request-method:
+      enum:
+        - get
+        - post
+        - put
+        - delete
+        - option
+        - patch
+        - head
+description: Full access for users with role Administrator from client shinynewapp
+id: policy-for-shinynewapp-users-role-administrator
+resourceType: AccessPolicy
+```
+ 
+6. The mobileauthdemo should now be ready to connect to Aidbox.
+
+### [Interopland](https://sandbox.interop.community/)
+
+1. This is a relatively typical HAPI server
+2. After you have the server setup, select Apps, then create a new App.
+3. App Name and description can be what you'd like, Client Type should generally be Public Client
+4. App Launch URI for this is unimportant, because we're not launching from within their portal
+5. App redirect (given above API): ```com.myshiny.newapp://callback```
+6. You'll need to choose your own scopes, I've gone with: ```launch patient/Patient.* openid profile offline_access user/Patient.*```
+7. You'll also need to add some users (Settings -> USERS)
+
+### Azure API for FHIR (needs to be updated)
+
+```Dart
+  static const azureClientId = 'myAzureClientId';
+  static const azureTenantId = 'myAzureTenantId';
+  static const azureSecret = 'myAzureSecret';
+  static const azureUrl = 'https://myfhirserver.azurehealthcareapis.com';
+  static const azureAuthUrl =
+      'https://login.microsoftonline.com/$azureTenantId/oauth2/authorize?resource=$azureUrl';
+  static const azureTokenUrl =
+      'https://login.microsoftonline.com/$azureTenantId/oauth2/token';
+```
+
+Notice that capability statement will not give the proper endpoints, but it will not attach the url to the resource parameter for the authURl, this is important, and it won't work without it.
+This is my [Azure tutorial](https://www.fhirfli.dev/azure-fhir-setup), it's not as complete as the one above, but it should be a reasonable start.
+
+## Suggestions and Complaints
+
+As I mentioned above, this is the most difficult package I've tried to publish. Mostly because authentication is a huge pain in the ass. Anyone who has suggestions or wants to open a PR is welcome. If you would like to contact me directly, my email is grey@fhirfli.dev.
 
 FHIR® is a registered trademark of Health Level Seven International (HL7) and its use does not constitute an endorsement of products by HL7®
