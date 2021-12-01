@@ -447,7 +447,7 @@ class FhirRequest with _$FhirRequest {
   /// after creating a request with the above constructors, they can be called
   /// to interact with the server by using this method. If necessary,
   /// authorization or other headers can be passed in as well
-  Future<Resource?> request({
+  Future<Resource> request({
     required Map<String, String> headers,
   }) async {
     return await map(
@@ -675,7 +675,7 @@ class FhirRequest with _$FhirRequest {
   /// Private request method where we try to actually make the request, it's
   /// mostly to make it easier to catch any errors and still return them as
   /// a FHIR resource
-  Future<Resource?> _request(
+  Future<Resource> _request(
     RestfulRequest type,
     String uri,
     Map<String, String> headers,
@@ -816,7 +816,7 @@ class FhirRequest with _$FhirRequest {
 
   /// MAKE REQUEST
   /// where we finally and actually make the request to the outside server
-  Future<Resource?> _makeRequest({
+  Future<Resource> _makeRequest({
     required RestfulRequest type,
     required String thisRequest,
     required Map<String, String> headers,
@@ -912,8 +912,20 @@ class FhirRequest with _$FhirRequest {
               '\nResult body: ${result.body}',
         )
       ]);
+    } else {
+      final body = jsonDecode(result.body);
+      if (body?['response'] != null &&
+          body['response']['resourceType'] == 'OperationOutcome') {
+        final operationOutcome = OperationOutcome.fromJson(body['response']);
+        if (body?['status'] != null || body?['message'] != null)
+          operationOutcome.issue.add(OperationOutcomeIssue(
+              diagnostics:
+                  'Status: ${body?['status']}\nMessage: ${body?['message']}\n'));
+        return operationOutcome;
+      } else {
+        return Resource.fromJson(jsonDecode(result.body));
+      }
     }
-    return Resource.fromJson(jsonDecode(result.body));
   }
 
   /// Allows us to return an error as a FHIR resource, whether the problem

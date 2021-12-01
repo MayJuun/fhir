@@ -2,7 +2,7 @@ import 'package:fhir/r4.dart';
 import 'package:fhir_at_rest/r4.dart';
 import 'package:test/test.dart';
 
-void main() {
+Future<void> fhirUriTest() async {
   const String mimeType = 'json';
 
   group('FHIR URI - READ:', () {

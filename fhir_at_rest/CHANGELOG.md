@@ -1,5 +1,9 @@
 # fhir_at_rest
 
+## [0.5.0-10]
+
+* Improved error messaging
+
 ## [0.5.0-9]
 
 * most recent version of fhir package
