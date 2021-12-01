@@ -29,16 +29,16 @@ class DemoPage extends StatelessWidget {
       path: '/redirect.html',
     );
     print(fhirCallback);
-    final width = MediaQuery.of(context).size.height / 6;
+    final width = 20.0; //MediaQuery.of(context).size.height / 6;
     return MaterialApp(
       home: Scaffold(
-        body: GridView.count(
-          shrinkWrap: true,
-          crossAxisCount: 2,
-          children: [
-            Container(
-              width: width,
-              child: ElevatedButton(
+        body: Padding(
+          padding: const EdgeInsets.fromLTRB(16, 30, 16, 0),
+          child: GridView.count(
+            childAspectRatio: 2.0,
+            crossAxisCount: 2,
+            children: [
+              ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.white),
                     side: MaterialStateProperty.all(
@@ -46,10 +46,7 @@ class DemoPage extends StatelessWidget {
                   ),
                   child: Image.asset('assets/hapi.png'),
                   onPressed: () async => await hapiRequest()),
-            ),
-            Container(
-              width: width,
-              child: ElevatedButton(
+              ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.white),
                     side: MaterialStateProperty.all(
@@ -57,10 +54,7 @@ class DemoPage extends StatelessWidget {
                   ),
                   child: Image.asset('assets/aidbox.png'),
                   onPressed: () async => await aidboxRequest(fhirCallback)),
-            ),
-            Container(
-              width: width,
-              child: ElevatedButton(
+              ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.white),
                     side: MaterialStateProperty.all(
@@ -68,10 +62,7 @@ class DemoPage extends StatelessWidget {
                   ),
                   child: Image.asset('assets/interopland.png'),
                   onPressed: () async => await interopRequest(fhirCallback)),
-            ),
-            Container(
-              width: width,
-              child: ElevatedButton(
+              ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.white),
                     side: MaterialStateProperty.all(
@@ -79,10 +70,7 @@ class DemoPage extends StatelessWidget {
                   ),
                   child: Image.asset('assets/meld.png'),
                   onPressed: () async => await meldRequest(fhirCallback)),
-            ),
-            Container(
-              width: width,
-              child: ElevatedButton(
+              ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.white),
                     side: MaterialStateProperty.all(
@@ -90,10 +78,7 @@ class DemoPage extends StatelessWidget {
                   ),
                   child: Image.asset('assets/azure.png'),
                   onPressed: () {}),
-            ),
-            Container(
-              width: width,
-              child: ElevatedButton(
+              ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.white),
                     side: MaterialStateProperty.all(
@@ -101,8 +86,8 @@ class DemoPage extends StatelessWidget {
                   ),
                   child: Image.asset('assets/gcp.png'),
                   onPressed: () async => await gcsRequest(fhirCallback)),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
