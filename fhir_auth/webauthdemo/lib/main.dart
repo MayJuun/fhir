@@ -29,7 +29,6 @@ class DemoPage extends StatelessWidget {
       path: '/redirect.html',
     );
     print(fhirCallback);
-    final width = 20.0; //MediaQuery.of(context).size.height / 6;
     return MaterialApp(
       home: Scaffold(
         body: Padding(

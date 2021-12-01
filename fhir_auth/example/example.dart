@@ -1,12 +1,22 @@
 import 'package:fhir/r4.dart';
 import 'package:fhir_auth/r4.dart';
 
-Future interopRequest(
-  String url,
-  String clientId,
-  String fhirCallback,
-  Scopes scopes,
-) async {
+Future<void> main() async {
+  const String url = 'http://fhirurl';
+  const String clientId = 'myClienId';
+  const String fhirCallback = 'fhir_auth://callback';
+  final scopes = Scopes(
+    clinicalScopes: [
+      ClinicalScope(
+        Role.patient,
+        R4ResourceType.Patient,
+        Interaction.any,
+      ),
+    ],
+    openid: true,
+    offlineAccess: true,
+  );
+
   final client = SmartClient.getSmartClient(
     fhirUri: FhirUri(url),
     clientId: clientId,

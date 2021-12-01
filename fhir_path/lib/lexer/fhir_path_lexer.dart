@@ -58,10 +58,12 @@ ParserList operatorValues(List fullList) {
     /// If there are operators, we sort them by order of precedence
     parseList.sort((a, b) => (operatorOrderMap[b.runtimeType] ?? 99)
         .compareTo((operatorOrderMap[a.runtimeType] ?? 99)));
+
     /// We now have the proper order to apply the operators, so we identify the
     /// index of that operator in the overall list
     final splitIndex = fullList.indexOf(parseList.first);
-    /// We split the list into those that are before the operator 
+
+    /// We split the list into those that are before the operator
     /// and those that are after. We then recursively apply this same function
     /// to each of those groupings until we reach the end
     parseList.first.before = operatorValues(fullList.sublist(0, splitIndex));

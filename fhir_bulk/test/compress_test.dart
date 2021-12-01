@@ -102,7 +102,7 @@ void compressTest() {
 
   group('Creating Bulk FHIR String', () {
     test('To Accounts ndjson', () async {
-      final resources = await FhirBulk.fromData(account);
+      final resources = await FhirBulk.fromNdJson(account);
       final List<Resource> resourceList = <Resource>[];
       for (var resource in resources) {
         if (resource != null) {
@@ -114,7 +114,7 @@ void compressTest() {
     });
 
     test('To MedicationRequest ndjson', () async {
-      final resources = await FhirBulk.fromData(medicationRequest);
+      final resources = await FhirBulk.fromNdJson(medicationRequest);
       final List<Resource> resourceList = <Resource>[];
       for (var resource in resources) {
         if (resource != null) {

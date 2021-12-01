@@ -17,9 +17,9 @@ class UnionFunctionParser extends FunctionParser {
   }
 }
 
-/// Merge the input and other collections into a single collection 
-/// without eliminating duplicate values. Combining an empty collection 
-/// with a non-empty collection will return the non-empty collection. 
+/// Merge the input and other collections into a single collection
+/// without eliminating duplicate values. Combining an empty collection
+/// with a non-empty collection will return the non-empty collection.
 /// There is no expectation of order in the resulting collection.
 class CombineParser extends FunctionParser {
   CombineParser();

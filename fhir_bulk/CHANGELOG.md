@@ -1,5 +1,11 @@
 # fhir_bulk
 
+## [0.5.0-7]
+
+* Added lots of comments
+* changed function fromData to fromNdJson
+* Will probably add ability to compress data with next release (currently only accepts compressed data but not produces it)
+
 ## [0.5.0-6]
 
 * FHIR package update
