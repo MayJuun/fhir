@@ -19,6 +19,7 @@ class SmartWebClient extends SmartClient {
     List<String>? scopes,
     this.authUrl,
     this.tokenUrl,
+    this.launch,
     this.secret,
   }) : scopes = scopes ?? ['openid', 'profile', 'email', 'user/*.*'];
 
@@ -45,10 +46,17 @@ class SmartWebClient extends SmartClient {
   /// the token Url from the Conformance/Capability Statement
   FhirUri? tokenUrl;
 
+  /// The launch token that must be used when authenticating from an EHR
+  String? launch;
+
+  /// The OAuth2Client which we use to make all of our requests
   OAuth2Client? client;
 
+  /// The accessToken (should be relatively short lived in a web app since we
+  /// don't have a good way of keeping it a secret)
   AccessTokenResponse? _$_$_tokenResponse;
 
+  /// getter for getting the token string
   String? get _$_$_accessToken => _$_$_tokenResponse?.accessToken;
 
   @override
@@ -74,10 +82,15 @@ class SmartWebClient extends SmartClient {
         tokenUrl: tokenUrl.toString(),
       );
 
+      final authCodeParams = {'aud': fhirUri?.value.toString()};
+      if (launch != null) {
+        scopes.add('launch');
+        authCodeParams['launch'] = launch;
+      }
       _$_$_tokenResponse = await client!.getTokenWithAuthCodeFlow(
         clientId: clientId,
         scopes: scopes,
-        authCodeParams: {'aud': fhirUri?.value.toString()},
+        authCodeParams: authCodeParams,
       );
     } catch (e, stack) {
       throw PlatformException(

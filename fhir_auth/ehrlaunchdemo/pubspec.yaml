@@ -1,0 +1,18 @@
+name: ehrlaunchdemo
+description: A Dart/Flutter package for authorization & authentication, includes SMART on FHIR and Google sign-in
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+environment:
+  sdk: '>=2.14.0 <3.0.0'
+
+dependencies:
+  fhir: ^0.5.0-9
+  fhir_auth:
+    path: ../../fhir_auth
+  flutter:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+  - assets/

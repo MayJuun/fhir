@@ -28,6 +28,10 @@ abstract class SmartClient extends FhirClient {
     /// the token Url from the Conformance/Capability Statement
     FhirUri? tokenUrl,
 
+    /// the Launch token that is needed when doing an EHR launch 
+    /// (currently only used for PWAs)
+    String? launch,
+
     /// while not advised, there are some services which may require a secret
     String? secret,
   }) {
@@ -40,6 +44,7 @@ abstract class SmartClient extends FhirClient {
         authUrl: authUrl,
         tokenUrl: tokenUrl,
         secret: secret,
+        launch: launch,
       );
     } else {
       return SmartMobileClient(

@@ -1,5 +1,10 @@
 # fhir_auth
 
+## [0.5.0-5]
+
+* Added EHR Launch Example
+* 
+
 ## [0.5.0-4]
 
 * Added example
