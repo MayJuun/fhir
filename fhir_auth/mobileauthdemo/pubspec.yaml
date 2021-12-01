@@ -9,10 +9,6 @@ dependencies:
     path: ../../fhir_auth
   flutter:
     sdk: flutter
-  google_sign_in: ^5.2.1
-  oauth2_client: ^2.3.0
-  url_launcher: ^6.0.16
-
   
 dev_dependencies:
   flutter_test:
