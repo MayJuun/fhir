@@ -1,5 +1,8 @@
 # fhir_db
 
+## [0.5.0-5]
+
+* Added an example
 ## [0.5.0-4]
 
 * I forgot to update something in the fhir package
