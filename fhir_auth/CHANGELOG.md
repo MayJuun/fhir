@@ -1,5 +1,10 @@
 # fhir_auth
 
+## [0.5.0-4]
+
+* Added example
+* Ran formatter
+
 ## [0.5.0-3]
 
 * Fairly big changes this time around

@@ -141,7 +141,6 @@ class SmartWebClient extends SmartClient {
       await http.patch(Uri.parse(url),
           headers: await authHeaders(headers), body: body);
 
-
   /// Request for the CapabilityStatement (or Conformance) and then identifying
   /// the authUrl endpoint & tokenurl endpoing
   Future<void> _getEndpoints() async {

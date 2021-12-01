@@ -7,7 +7,6 @@ import 'new_patient.dart';
 /// Example of how to create a patient, upload and then download the patient
 /// without any sort of authentication
 Future hapiRequest() async {
-  
   const hapiUrl = Api.hapiUrl;
   final _newPatient = newPatient();
   print('Patient to be uploaded:\n${_newPatient.toJson()}');
