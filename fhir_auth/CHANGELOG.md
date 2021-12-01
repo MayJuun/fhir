@@ -3,7 +3,8 @@
 ## [0.5.0-5]
 
 * Added EHR Launch Example
-* 
+* Added ability to pass launch token
+* Automatically checks launch token, if not null, includes token as a parameter and launch as a scope
 
 ## [0.5.0-4]
 
