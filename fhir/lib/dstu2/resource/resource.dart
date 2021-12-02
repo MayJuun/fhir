@@ -51,6 +51,28 @@ class Resource {
               'Resource cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
+  static Resource copyWith({
+    Id? id,
+    Dstu2ResourceType? resourceType,
+    Meta? meta,
+    FhirUri? implicitRules,
+    Code? language,
+    Narrative? text,
+    List<Resource>? contained,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+  }) =>
+      Resource.fromJson(<String, dynamic>{
+        'id': id?.toString(),
+        'resourceType': resourceType?.toString(),
+        'meta': meta?.toString(),
+        'implicitRules': implicitRules?.toString(),
+        'text': text?.toString(),
+        'contained': contained?.toString(),
+        'extension': extension_?.toString(),
+        'modifierExtension': modifierExtension?.toString(),
+      });
+
   /// Returns a [Map<String, dynamic>] of the [Resource]
   Map<String, dynamic> toJson() {
     final val = <String, dynamic>{};

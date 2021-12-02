@@ -1,5 +1,9 @@
 # fhir
 
+## [0.5.0-10]
+
+* Not sure if copyWith was needed for Resource, but now it's there
+
 ## [0.5.0-9]
 
 * The ID thing was bothering me
