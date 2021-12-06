@@ -14,7 +14,7 @@ Future<void> meldRequest(Uri fhirCallback, String? launch) async {
     launch: launch,
   );
 
-  await client.initialize();
+  await client.login();
 
   print(client.fhirUri?.value);
 
@@ -25,14 +25,14 @@ Future<void> meldRequest(Uri fhirCallback, String? launch) async {
       base: client.fhirUri!.value!,
       //?? Uri.parse('127.0.0.1'),
       resource: _newPatient,
-      fhirClient: client,
+      client: client,
     );
 
     Id? newId;
     try {
       final response = await request1.request();
-      print('Response from upload:\n${response?.toJson()}');
-      newId = response?.id;
+      print('Response from upload:\n${response.toJson()}');
+      newId = response.id;
     } catch (e) {
       print(e);
     }
@@ -43,11 +43,11 @@ Future<void> meldRequest(Uri fhirCallback, String? launch) async {
         base: client.fhirUri?.value ?? Uri.parse('127.0.0.1'),
         type: R4ResourceType.Patient,
         id: newId,
-        fhirClient: client,
+        client: client,
       );
       try {
         final response = await request2.request();
-        print('Response from read:\n${response?.toJson()}');
+        print('Response from read:\n${response.toJson()}');
       } catch (e) {
         print(e);
       }

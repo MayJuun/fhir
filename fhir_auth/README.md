@@ -88,7 +88,7 @@ platform :ios, '11.0'
 ### Workflow
 
 ```dart
-  await client.initialize();
+  await client.login();
   final request1 = FhirRequest.create(
     base: client.fhirUri!.value!,
     resource: _newPatient,
