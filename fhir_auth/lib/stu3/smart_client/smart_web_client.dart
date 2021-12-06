@@ -63,7 +63,7 @@ class SmartWebClient extends SmartClient {
   String? secret;
 
   @override
-  Future<void> initialize() async {
+  Future<void> login() async {
     try {
       await _getEndpoints();
     } catch (e) {
@@ -71,6 +71,12 @@ class SmartWebClient extends SmartClient {
           code: e.toString(), message: 'Failed to get Auth & Token Endpoints');
     }
     await authenticate();
+  }
+
+  @override
+  Future<void> logout() async {
+    client = null;
+    _$_$_tokenResponse = null;
   }
 
   Future<void> authenticate() async {
@@ -118,41 +124,60 @@ class SmartWebClient extends SmartClient {
   }
 
   @override
-  Future<http.Response?> get(String url,
-          {Map<String, String>? headers}) async =>
-      await http.get(Uri.parse(url), headers: await authHeaders(headers));
+  Future<http.Response?> get(String url, {Map<String, String>? headers}) async {
+    if (client == null) {
+      await login();
+    }
+    await http.get(Uri.parse(url), headers: await authHeaders(headers));
+  }
 
   @override
   Future<http.Response?> put(
     String url, {
     Map<String, String>? headers,
     dynamic body,
-  }) async =>
-      await http.put(Uri.parse(url),
-          headers: await authHeaders(headers), body: body);
+  }) async {
+    if (client == null) {
+      await login();
+    }
+    await http.put(Uri.parse(url),
+        headers: await authHeaders(headers), body: body);
+  }
 
   @override
   Future<http.Response?> post(
     String url, {
     Map<String, String>? headers,
     dynamic body,
-  }) async =>
-      await http.post(Uri.parse(url),
-          headers: await authHeaders(headers), body: body);
+  }) async {
+    if (client == null) {
+      await login();
+    }
+    await http.post(Uri.parse(url),
+        headers: await authHeaders(headers), body: body);
+  }
 
   @override
   Future<http.Response?> delete(String url,
-          {Map<String, String>? headers}) async =>
-      await http.delete(Uri.parse(url), headers: await authHeaders(headers));
+      {Map<String, String>? headers}) async {
+    if (client == null) {
+      await login();
+    }
+    await http.delete(Uri.parse(url), headers: await authHeaders(headers));
+  }
 
   @override
   Future<http.Response?> patch(
     String url, {
     Map<String, String>? headers,
     dynamic body,
-  }) async =>
-      await http.patch(Uri.parse(url),
-          headers: await authHeaders(headers), body: body);
+  }) async {
+    if (client == null) {
+      await login();
+    }
+    await http.patch(Uri.parse(url),
+        headers: await authHeaders(headers), body: body);
+  }
 
   /// Request for the CapabilityStatement (or Conformance) and then identifying
   /// the authUrl endpoint & tokenurl endpoing

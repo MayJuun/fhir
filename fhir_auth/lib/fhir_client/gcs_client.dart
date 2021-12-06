@@ -32,7 +32,10 @@ class GcsClient extends FhirClient {
   List<String> scopes;
 
   @override
-  Future<void> initialize() async => await _googleSignIn.signIn();
+  Future<void> login() async => await _googleSignIn.signIn();
+
+  @override
+  Future<void> logout() async => await _googleSignIn.signOut();
 
   Future<bool> isSignedIn() async => await _googleSignIn.isSignedIn();
 

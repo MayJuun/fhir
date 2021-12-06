@@ -28,7 +28,7 @@ abstract class SmartClient extends FhirClient {
     /// the token Url from the Conformance/Capability Statement
     FhirUri? tokenUrl,
 
-    /// the Launch token that is needed when doing an EHR launch 
+    /// the Launch token that is needed when doing an EHR launch
     /// (currently only used for PWAs)
     String? launch,
 
@@ -58,7 +58,4 @@ abstract class SmartClient extends FhirClient {
       );
     }
   }
-
-  @override
-  Future<void> initialize() async {}
 }

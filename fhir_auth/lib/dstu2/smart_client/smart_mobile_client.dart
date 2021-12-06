@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:collection/collection.dart';
-import 'package:fhir/r4.dart';
+import 'package:fhir/dstu2.dart';
 import 'package:http/http.dart' as http;
 import 'package:oauth2_client/oauth2_client.dart';
 import 'package:oauth2_client/oauth2_helper.dart';
@@ -53,7 +53,7 @@ class SmartMobileClient extends SmartClient {
   String? secret;
 
   @override
-  Future<void> initialize() async {
+  Future<void> login() async {
     await _getEndpoints();
     if (redirectUri != null) {
       client = OAuth2Client(
@@ -77,29 +77,54 @@ class SmartMobileClient extends SmartClient {
   }
 
   @override
-  Future<http.Response?> get(String url,
-          {Map<String, String>? headers}) async =>
-      await helper?.get(url, headers: headers);
+  Future<void> logout() async {
+    client = null;
+    helper = null;
+  }
+
+  @override
+  Future<http.Response?> get(String url, {Map<String, String>? headers}) async {
+    if (helper == null) {
+      await login();
+    }
+    await helper?.get(url, headers: headers);
+  }
 
   @override
   Future<http.Response?> put(String url,
-          {Map<String, String>? headers, dynamic body}) async =>
-      await helper?.put(url, headers: headers, body: body);
+      {Map<String, String>? headers, dynamic body}) async {
+    if (helper == null) {
+      await login();
+    }
+    await helper?.put(url, headers: headers, body: body);
+  }
 
   @override
   Future<http.Response?> post(String url,
-          {Map<String, String>? headers, dynamic body}) async =>
-      await helper?.post(url, headers: headers, body: body);
+      {Map<String, String>? headers, dynamic body}) async {
+    if (helper == null) {
+      await login();
+    }
+    await helper?.post(url, headers: headers, body: body);
+  }
 
   @override
   Future<http.Response?> delete(String url,
-          {Map<String, String>? headers}) async =>
-      await helper?.delete(url, headers: headers);
+      {Map<String, String>? headers}) async {
+    if (helper == null) {
+      await login();
+    }
+    await helper?.delete(url, headers: headers);
+  }
 
   @override
   Future<http.Response?> patch(String url,
-          {Map<String, String>? headers, dynamic body}) async =>
-      await helper?.patch(url, headers: headers, body: body);
+      {Map<String, String>? headers, dynamic body}) async {
+    if (helper == null) {
+      await login();
+    }
+    await helper?.patch(url, headers: headers, body: body);
+  }
 
   /// Request for the CapabilityStatement (or Conformance) and then identifying
   /// the authUrl endpoint & tokenurl endpoing

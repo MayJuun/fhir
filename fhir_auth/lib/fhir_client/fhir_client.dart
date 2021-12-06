@@ -8,7 +8,9 @@ abstract class FhirClient {
   String? secret;
   List<String> scopes = ['openid', 'profile', 'email', 'user/*.*'];
 
-  Future<void> initialize();
+  Future<void> login();
+
+  Future<void> logout();
 
   Future<Response?> get(String url, {Map<String, String>? headers});
 
