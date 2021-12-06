@@ -448,7 +448,7 @@ class FhirRequest with _$FhirRequest {
   /// to interact with the server by using this method. If necessary,
   /// authorization or other headers can be passed in as well
   Future<Resource> request({
-    required Map<String, String> headers,
+    Map<String, String>? headers,
   }) async {
     return await map(
       read: (m) async => await _request(
