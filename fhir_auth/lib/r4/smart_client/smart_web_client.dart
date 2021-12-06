@@ -128,7 +128,7 @@ class SmartWebClient extends SmartClient {
     if (client == null) {
       await login();
     }
-    await http.get(Uri.parse(url), headers: await authHeaders(headers));
+    return await http.get(Uri.parse(url), headers: await authHeaders(headers));
   }
 
   @override
@@ -140,7 +140,7 @@ class SmartWebClient extends SmartClient {
     if (client == null) {
       await login();
     }
-    await http.put(Uri.parse(url),
+    return await http.put(Uri.parse(url),
         headers: await authHeaders(headers), body: body);
   }
 
@@ -153,7 +153,7 @@ class SmartWebClient extends SmartClient {
     if (client == null) {
       await login();
     }
-    await http.post(Uri.parse(url),
+    return await http.post(Uri.parse(url),
         headers: await authHeaders(headers), body: body);
   }
 
@@ -163,7 +163,8 @@ class SmartWebClient extends SmartClient {
     if (client == null) {
       await login();
     }
-    await http.delete(Uri.parse(url), headers: await authHeaders(headers));
+    return await http.delete(Uri.parse(url),
+        headers: await authHeaders(headers));
   }
 
   @override
@@ -175,7 +176,7 @@ class SmartWebClient extends SmartClient {
     if (client == null) {
       await login();
     }
-    await http.patch(Uri.parse(url),
+    return await http.patch(Uri.parse(url),
         headers: await authHeaders(headers), body: body);
   }
 

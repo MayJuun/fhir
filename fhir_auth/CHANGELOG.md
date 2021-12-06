@@ -1,5 +1,13 @@
 # fhir_auth
 
+## [0.5.0-6]
+
+* initialize() has been changed back to login()
+* logout() has been added
+* All restful calls now require a FhirClient
+* Restful calls check if client is logged in, automatically logs in if not
+* headers now optional as argument for request method in FhirRequest
+
 ## [0.5.0-5]
 
 * Added EHR Launch Example

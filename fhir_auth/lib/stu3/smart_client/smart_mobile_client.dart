@@ -87,7 +87,7 @@ class SmartMobileClient extends SmartClient {
     if (helper == null) {
       await login();
     }
-    await helper?.get(url, headers: headers);
+    return await helper?.get(url, headers: headers);
   }
 
   @override
@@ -96,7 +96,7 @@ class SmartMobileClient extends SmartClient {
     if (helper == null) {
       await login();
     }
-    await helper?.put(url, headers: headers, body: body);
+    return await helper?.put(url, headers: headers, body: body);
   }
 
   @override
@@ -105,7 +105,7 @@ class SmartMobileClient extends SmartClient {
     if (helper == null) {
       await login();
     }
-    await helper?.post(url, headers: headers, body: body);
+    return await helper?.post(url, headers: headers, body: body);
   }
 
   @override
@@ -114,7 +114,7 @@ class SmartMobileClient extends SmartClient {
     if (helper == null) {
       await login();
     }
-    await helper?.delete(url, headers: headers);
+    return await helper?.delete(url, headers: headers);
   }
 
   @override
@@ -123,7 +123,7 @@ class SmartMobileClient extends SmartClient {
     if (helper == null) {
       await login();
     }
-    await helper?.patch(url, headers: headers, body: body);
+    return await helper?.patch(url, headers: headers, body: body);
   }
 
   /// Request for the CapabilityStatement (or Conformance) and then identifying
