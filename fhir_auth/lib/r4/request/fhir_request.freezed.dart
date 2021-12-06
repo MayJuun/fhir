@@ -26,7 +26,8 @@ class _$FhirRequestTearOff {
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
-      FhirClient? fhirClient}) {
+      MimeType? mimeType,
+      required FhirClient client}) {
     return _FhirReadRequest(
       base: base,
       type: type,
@@ -36,7 +37,8 @@ class _$FhirRequestTearOff {
       format: format,
       elements: elements,
       parameters: parameters,
-      fhirClient: fhirClient,
+      mimeType: mimeType,
+      client: client,
     );
   }
 
@@ -50,7 +52,8 @@ class _$FhirRequestTearOff {
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
-      FhirClient? fhirClient}) {
+      MimeType? mimeType,
+      required FhirClient client}) {
     return _FhirVReadRequest(
       base: base,
       type: type,
@@ -61,7 +64,8 @@ class _$FhirRequestTearOff {
       format: format,
       elements: elements,
       parameters: parameters,
-      fhirClient: fhirClient,
+      mimeType: mimeType,
+      client: client,
     );
   }
 
@@ -73,7 +77,8 @@ class _$FhirRequestTearOff {
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
-      FhirClient? fhirClient}) {
+      MimeType? mimeType,
+      required FhirClient client}) {
     return _FhirUpdateRequest(
       base: base,
       resource: resource,
@@ -82,7 +87,8 @@ class _$FhirRequestTearOff {
       format: format,
       elements: elements,
       parameters: parameters,
-      fhirClient: fhirClient,
+      mimeType: mimeType,
+      client: client,
     );
   }
 
@@ -94,7 +100,8 @@ class _$FhirRequestTearOff {
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
-      FhirClient? fhirClient}) {
+      MimeType? mimeType,
+      required FhirClient client}) {
     return _FhirPatchRequest(
       base: base,
       resource: resource,
@@ -103,7 +110,8 @@ class _$FhirRequestTearOff {
       format: format,
       elements: elements,
       parameters: parameters,
-      fhirClient: fhirClient,
+      mimeType: mimeType,
+      client: client,
     );
   }
 
@@ -116,7 +124,8 @@ class _$FhirRequestTearOff {
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
-      FhirClient? fhirClient}) {
+      MimeType? mimeType,
+      required FhirClient client}) {
     return _FhirDeleteRequest(
       base: base,
       type: type,
@@ -126,7 +135,8 @@ class _$FhirRequestTearOff {
       format: format,
       elements: elements,
       parameters: parameters,
-      fhirClient: fhirClient,
+      mimeType: mimeType,
+      client: client,
     );
   }
 
@@ -138,7 +148,8 @@ class _$FhirRequestTearOff {
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
-      FhirClient? fhirClient}) {
+      MimeType? mimeType,
+      required FhirClient client}) {
     return _FhirCreateRequest(
       base: base,
       resource: resource,
@@ -147,7 +158,8 @@ class _$FhirRequestTearOff {
       format: format,
       elements: elements,
       parameters: parameters,
-      fhirClient: fhirClient,
+      mimeType: mimeType,
+      client: client,
     );
   }
 
@@ -161,7 +173,8 @@ class _$FhirRequestTearOff {
       List<String> parameters = const <String>[],
       bool usePost = false,
       RestfulRequest restfulRequest = RestfulRequest.get_,
-      FhirClient? fhirClient}) {
+      MimeType? mimeType,
+      required FhirClient client}) {
     return _FhirSearchRequest(
       base: base,
       type: type,
@@ -172,7 +185,8 @@ class _$FhirRequestTearOff {
       parameters: parameters,
       usePost: usePost,
       restfulRequest: restfulRequest,
-      fhirClient: fhirClient,
+      mimeType: mimeType,
+      client: client,
     );
   }
 
@@ -183,7 +197,8 @@ class _$FhirRequestTearOff {
       String format = 'json',
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
-      FhirClient? fhirClient}) {
+      MimeType? mimeType,
+      required FhirClient client}) {
     return _FhirSearchAllRequest(
       base: base,
       pretty: pretty,
@@ -191,7 +206,8 @@ class _$FhirRequestTearOff {
       format: format,
       elements: elements,
       parameters: parameters,
-      fhirClient: fhirClient,
+      mimeType: mimeType,
+      client: client,
     );
   }
 
@@ -203,7 +219,8 @@ class _$FhirRequestTearOff {
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       Mode mode = Mode.full,
-      FhirClient? fhirClient}) {
+      MimeType? mimeType,
+      required FhirClient client}) {
     return _FhirCapabilitiesRequest(
       base: base,
       pretty: pretty,
@@ -212,7 +229,8 @@ class _$FhirRequestTearOff {
       elements: elements,
       parameters: parameters,
       mode: mode,
-      fhirClient: fhirClient,
+      mimeType: mimeType,
+      client: client,
     );
   }
 
@@ -224,7 +242,8 @@ class _$FhirRequestTearOff {
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       required Bundle bundle,
-      FhirClient? fhirClient}) {
+      MimeType? mimeType,
+      required FhirClient client}) {
     return _FhirTransactionRequest(
       base: base,
       pretty: pretty,
@@ -233,7 +252,8 @@ class _$FhirRequestTearOff {
       elements: elements,
       parameters: parameters,
       bundle: bundle,
-      fhirClient: fhirClient,
+      mimeType: mimeType,
+      client: client,
     );
   }
 
@@ -245,7 +265,8 @@ class _$FhirRequestTearOff {
       List<String> elements = const <String>[],
       List<String> parameters = const <String>[],
       required Bundle bundle,
-      FhirClient? fhirClient}) {
+      MimeType? mimeType,
+      required FhirClient client}) {
     return _FhirBatchRequest(
       base: base,
       pretty: pretty,
@@ -254,7 +275,8 @@ class _$FhirRequestTearOff {
       elements: elements,
       parameters: parameters,
       bundle: bundle,
-      fhirClient: fhirClient,
+      mimeType: mimeType,
+      client: client,
     );
   }
 
@@ -271,7 +293,8 @@ class _$FhirRequestTearOff {
       Instant? since,
       FhirDateTime? at,
       String? reference,
-      FhirClient? fhirClient}) {
+      MimeType? mimeType,
+      required FhirClient client}) {
     return _FhirHistoryRequest(
       base: base,
       type: type,
@@ -285,7 +308,8 @@ class _$FhirRequestTearOff {
       since: since,
       at: at,
       reference: reference,
-      fhirClient: fhirClient,
+      mimeType: mimeType,
+      client: client,
     );
   }
 
@@ -301,7 +325,8 @@ class _$FhirRequestTearOff {
       Instant? since,
       FhirDateTime? at,
       String? reference,
-      FhirClient? fhirClient}) {
+      MimeType? mimeType,
+      required FhirClient client}) {
     return _FhirHistoryTypeRequest(
       base: base,
       type: type,
@@ -314,7 +339,8 @@ class _$FhirRequestTearOff {
       since: since,
       at: at,
       reference: reference,
-      fhirClient: fhirClient,
+      mimeType: mimeType,
+      client: client,
     );
   }
 
@@ -329,7 +355,8 @@ class _$FhirRequestTearOff {
       Instant? since,
       FhirDateTime? at,
       String? reference,
-      FhirClient? fhirClient}) {
+      MimeType? mimeType,
+      required FhirClient client}) {
     return _FhirHistoryAllRequest(
       base: base,
       pretty: pretty,
@@ -341,7 +368,8 @@ class _$FhirRequestTearOff {
       since: since,
       at: at,
       reference: reference,
-      fhirClient: fhirClient,
+      mimeType: mimeType,
+      client: client,
     );
   }
 
@@ -358,7 +386,8 @@ class _$FhirRequestTearOff {
       required String operation,
       bool usePost = false,
       bool useFormData = false,
-      FhirClient? fhirClient}) {
+      MimeType? mimeType,
+      required FhirClient client}) {
     return _FhirOperationRequest(
       base: base,
       type: type,
@@ -372,7 +401,8 @@ class _$FhirRequestTearOff {
       operation: operation,
       usePost: usePost,
       useFormData: useFormData,
-      fhirClient: fhirClient,
+      mimeType: mimeType,
+      client: client,
     );
   }
 }
@@ -388,7 +418,8 @@ mixin _$FhirRequest {
   String get format => throw _privateConstructorUsedError;
   List<String> get elements => throw _privateConstructorUsedError;
   List<String> get parameters => throw _privateConstructorUsedError;
-  FhirClient? get fhirClient => throw _privateConstructorUsedError;
+  MimeType? get mimeType => throw _privateConstructorUsedError;
+  FhirClient get client => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -401,7 +432,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         read,
     required TResult Function(
             Uri base,
@@ -413,7 +445,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         vRead,
     required TResult Function(
             Uri base,
@@ -423,7 +456,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         update,
     required TResult Function(
             Uri base,
@@ -433,7 +467,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         patch,
     required TResult Function(
             Uri base,
@@ -444,7 +479,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         delete,
     required TResult Function(
             Uri base,
@@ -454,7 +490,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         create,
     required TResult Function(
             Uri base,
@@ -466,7 +503,8 @@ mixin _$FhirRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         search,
     required TResult Function(
             Uri base,
@@ -475,7 +513,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         searchAll,
     required TResult Function(
             Uri base,
@@ -485,7 +524,8 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         capabilities,
     required TResult Function(
             Uri base,
@@ -495,7 +535,8 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         transaction,
     required TResult Function(
             Uri base,
@@ -505,7 +546,8 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         batch,
     required TResult Function(
             Uri base,
@@ -520,7 +562,8 @@ mixin _$FhirRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         history,
     required TResult Function(
             Uri base,
@@ -534,7 +577,8 @@ mixin _$FhirRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyType,
     required TResult Function(
             Uri base,
@@ -547,7 +591,8 @@ mixin _$FhirRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyAll,
     required TResult Function(
             Uri base,
@@ -562,7 +607,8 @@ mixin _$FhirRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         operation,
   }) =>
       throw _privateConstructorUsedError;
@@ -577,7 +623,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -589,7 +636,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -599,7 +647,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -609,7 +658,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -620,7 +670,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -630,7 +681,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -642,7 +694,8 @@ mixin _$FhirRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -651,7 +704,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -661,7 +715,8 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -671,7 +726,8 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -681,7 +737,8 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -696,7 +753,8 @@ mixin _$FhirRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -710,7 +768,8 @@ mixin _$FhirRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -723,7 +782,8 @@ mixin _$FhirRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -738,7 +798,8 @@ mixin _$FhirRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
   }) =>
       throw _privateConstructorUsedError;
@@ -753,7 +814,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -765,7 +827,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -775,7 +838,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -785,7 +849,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -796,7 +861,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -806,7 +872,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -818,7 +885,8 @@ mixin _$FhirRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -827,7 +895,8 @@ mixin _$FhirRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -837,7 +906,8 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -847,7 +917,8 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -857,7 +928,8 @@ mixin _$FhirRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -872,7 +944,8 @@ mixin _$FhirRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -886,7 +959,8 @@ mixin _$FhirRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -899,7 +973,8 @@ mixin _$FhirRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -914,7 +989,8 @@ mixin _$FhirRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
     required TResult orElse(),
   }) =>
@@ -995,7 +1071,8 @@ abstract class $FhirRequestCopyWith<$Res> {
       String format,
       List<String> elements,
       List<String> parameters,
-      FhirClient? fhirClient});
+      MimeType? mimeType,
+      FhirClient client});
 }
 
 /// @nodoc
@@ -1014,7 +1091,8 @@ class _$FhirRequestCopyWithImpl<$Res> implements $FhirRequestCopyWith<$Res> {
     Object? format = freezed,
     Object? elements = freezed,
     Object? parameters = freezed,
-    Object? fhirClient = freezed,
+    Object? mimeType = freezed,
+    Object? client = freezed,
   }) {
     return _then(_value.copyWith(
       base: base == freezed
@@ -1041,10 +1119,14 @@ class _$FhirRequestCopyWithImpl<$Res> implements $FhirRequestCopyWith<$Res> {
           ? _value.parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      fhirClient: fhirClient == freezed
-          ? _value.fhirClient
-          : fhirClient // ignore: cast_nullable_to_non_nullable
-              as FhirClient?,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as FhirClient,
     ));
   }
 }
@@ -1065,7 +1147,8 @@ abstract class _$FhirReadRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
-      FhirClient? fhirClient});
+      MimeType? mimeType,
+      FhirClient client});
 }
 
 /// @nodoc
@@ -1089,7 +1172,8 @@ class __$FhirReadRequestCopyWithImpl<$Res>
     Object? format = freezed,
     Object? elements = freezed,
     Object? parameters = freezed,
-    Object? fhirClient = freezed,
+    Object? mimeType = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirReadRequest(
       base: base == freezed
@@ -1124,10 +1208,14 @@ class __$FhirReadRequestCopyWithImpl<$Res>
           ? _value.parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      fhirClient: fhirClient == freezed
-          ? _value.fhirClient
-          : fhirClient // ignore: cast_nullable_to_non_nullable
-              as FhirClient?,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as FhirClient,
     ));
   }
 }
@@ -1144,7 +1232,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
-      this.fhirClient})
+      this.mimeType,
+      required this.client})
       : super._();
 
   @override
@@ -1169,53 +1258,47 @@ class _$_FhirReadRequest extends _FhirReadRequest {
   @override
   final List<String> parameters;
   @override
-  final FhirClient? fhirClient;
+  final MimeType? mimeType;
+  @override
+  final FhirClient client;
 
   @override
   String toString() {
-    return 'FhirRequest.read(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, fhirClient: $fhirClient)';
+    return 'FhirRequest.read(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirReadRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.fhirClient, fhirClient) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirClient, fhirClient)));
+        (other.runtimeType == runtimeType &&
+            other is _FhirReadRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(fhirClient);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      id,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -1234,7 +1317,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         read,
     required TResult Function(
             Uri base,
@@ -1246,7 +1330,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         vRead,
     required TResult Function(
             Uri base,
@@ -1256,7 +1341,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         update,
     required TResult Function(
             Uri base,
@@ -1266,7 +1352,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         patch,
     required TResult Function(
             Uri base,
@@ -1277,7 +1364,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         delete,
     required TResult Function(
             Uri base,
@@ -1287,7 +1375,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         create,
     required TResult Function(
             Uri base,
@@ -1299,7 +1388,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         search,
     required TResult Function(
             Uri base,
@@ -1308,7 +1398,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         searchAll,
     required TResult Function(
             Uri base,
@@ -1318,7 +1409,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         capabilities,
     required TResult Function(
             Uri base,
@@ -1328,7 +1420,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         transaction,
     required TResult Function(
             Uri base,
@@ -1338,7 +1431,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         batch,
     required TResult Function(
             Uri base,
@@ -1353,7 +1447,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         history,
     required TResult Function(
             Uri base,
@@ -1367,7 +1462,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyType,
     required TResult Function(
             Uri base,
@@ -1380,7 +1476,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyAll,
     required TResult Function(
             Uri base,
@@ -1395,11 +1492,12 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         operation,
   }) {
     return read(base, type, id, pretty, summary, format, elements, parameters,
-        fhirClient);
+        mimeType, client);
   }
 
   @override
@@ -1414,7 +1512,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -1426,7 +1525,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -1436,7 +1536,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -1446,7 +1547,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -1457,7 +1559,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -1467,7 +1570,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -1479,7 +1583,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -1488,7 +1593,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -1498,7 +1604,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -1508,7 +1615,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -1518,7 +1626,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -1533,7 +1642,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -1547,7 +1657,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -1560,7 +1671,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -1575,11 +1687,12 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
   }) {
     return read?.call(base, type, id, pretty, summary, format, elements,
-        parameters, fhirClient);
+        parameters, mimeType, client);
   }
 
   @override
@@ -1594,7 +1707,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -1606,7 +1720,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -1616,7 +1731,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -1626,7 +1742,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -1637,7 +1754,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -1647,7 +1765,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -1659,7 +1778,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -1668,7 +1788,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -1678,7 +1799,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -1688,7 +1810,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -1698,7 +1821,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -1713,7 +1837,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -1727,7 +1852,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -1740,7 +1866,8 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -1755,13 +1882,14 @@ class _$_FhirReadRequest extends _FhirReadRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
     required TResult orElse(),
   }) {
     if (read != null) {
       return read(base, type, id, pretty, summary, format, elements, parameters,
-          fhirClient);
+          mimeType, client);
     }
     return orElse();
   }
@@ -1847,25 +1975,28 @@ abstract class _FhirReadRequest extends FhirRequest {
       String format,
       List<String> elements,
       List<String> parameters,
-      FhirClient? fhirClient}) = _$_FhirReadRequest;
+      MimeType? mimeType,
+      required FhirClient client}) = _$_FhirReadRequest;
   _FhirReadRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType get type => throw _privateConstructorUsedError;
-  Id get id => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType get type;
+  Id get id;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  FhirClient? get fhirClient => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
+  @override
+  FhirClient get client;
   @override
   @JsonKey(ignore: true)
   _$FhirReadRequestCopyWith<_FhirReadRequest> get copyWith =>
@@ -1889,7 +2020,8 @@ abstract class _$FhirVReadRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
-      FhirClient? fhirClient});
+      MimeType? mimeType,
+      FhirClient client});
 }
 
 /// @nodoc
@@ -1914,7 +2046,8 @@ class __$FhirVReadRequestCopyWithImpl<$Res>
     Object? format = freezed,
     Object? elements = freezed,
     Object? parameters = freezed,
-    Object? fhirClient = freezed,
+    Object? mimeType = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirVReadRequest(
       base: base == freezed
@@ -1953,10 +2086,14 @@ class __$FhirVReadRequestCopyWithImpl<$Res>
           ? _value.parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      fhirClient: fhirClient == freezed
-          ? _value.fhirClient
-          : fhirClient // ignore: cast_nullable_to_non_nullable
-              as FhirClient?,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as FhirClient,
     ));
   }
 }
@@ -1974,7 +2111,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
-      this.fhirClient})
+      this.mimeType,
+      required this.client})
       : super._();
 
   @override
@@ -2001,56 +2139,49 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
   @override
   final List<String> parameters;
   @override
-  final FhirClient? fhirClient;
+  final MimeType? mimeType;
+  @override
+  final FhirClient client;
 
   @override
   String toString() {
-    return 'FhirRequest.vRead(base: $base, type: $type, id: $id, vid: $vid, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, fhirClient: $fhirClient)';
+    return 'FhirRequest.vRead(base: $base, type: $type, id: $id, vid: $vid, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirVReadRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.vid, vid) ||
-                const DeepCollectionEquality().equals(other.vid, vid)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.fhirClient, fhirClient) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirClient, fhirClient)));
+        (other.runtimeType == runtimeType &&
+            other is _FhirVReadRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.vid, vid) || other.vid == vid) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(vid) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(fhirClient);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      id,
+      vid,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -2069,7 +2200,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         read,
     required TResult Function(
             Uri base,
@@ -2081,7 +2213,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         vRead,
     required TResult Function(
             Uri base,
@@ -2091,7 +2224,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         update,
     required TResult Function(
             Uri base,
@@ -2101,7 +2235,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         patch,
     required TResult Function(
             Uri base,
@@ -2112,7 +2247,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         delete,
     required TResult Function(
             Uri base,
@@ -2122,7 +2258,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         create,
     required TResult Function(
             Uri base,
@@ -2134,7 +2271,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         search,
     required TResult Function(
             Uri base,
@@ -2143,7 +2281,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         searchAll,
     required TResult Function(
             Uri base,
@@ -2153,7 +2292,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         capabilities,
     required TResult Function(
             Uri base,
@@ -2163,7 +2303,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         transaction,
     required TResult Function(
             Uri base,
@@ -2173,7 +2314,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         batch,
     required TResult Function(
             Uri base,
@@ -2188,7 +2330,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         history,
     required TResult Function(
             Uri base,
@@ -2202,7 +2345,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyType,
     required TResult Function(
             Uri base,
@@ -2215,7 +2359,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyAll,
     required TResult Function(
             Uri base,
@@ -2230,11 +2375,12 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         operation,
   }) {
     return vRead(base, type, id, vid, pretty, summary, format, elements,
-        parameters, fhirClient);
+        parameters, mimeType, client);
   }
 
   @override
@@ -2249,7 +2395,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -2261,7 +2408,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -2271,7 +2419,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -2281,7 +2430,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -2292,7 +2442,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -2302,7 +2453,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -2314,7 +2466,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -2323,7 +2476,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -2333,7 +2487,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -2343,7 +2498,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -2353,7 +2509,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -2368,7 +2525,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -2382,7 +2540,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -2395,7 +2554,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -2410,11 +2570,12 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
   }) {
     return vRead?.call(base, type, id, vid, pretty, summary, format, elements,
-        parameters, fhirClient);
+        parameters, mimeType, client);
   }
 
   @override
@@ -2429,7 +2590,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -2441,7 +2603,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -2451,7 +2614,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -2461,7 +2625,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -2472,7 +2637,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -2482,7 +2648,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -2494,7 +2661,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -2503,7 +2671,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -2513,7 +2682,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -2523,7 +2693,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -2533,7 +2704,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -2548,7 +2720,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -2562,7 +2735,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -2575,7 +2749,8 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -2590,13 +2765,14 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
     required TResult orElse(),
   }) {
     if (vRead != null) {
       return vRead(base, type, id, vid, pretty, summary, format, elements,
-          parameters, fhirClient);
+          parameters, mimeType, client);
     }
     return orElse();
   }
@@ -2683,26 +2859,29 @@ abstract class _FhirVReadRequest extends FhirRequest {
       String format,
       List<String> elements,
       List<String> parameters,
-      FhirClient? fhirClient}) = _$_FhirVReadRequest;
+      MimeType? mimeType,
+      required FhirClient client}) = _$_FhirVReadRequest;
   _FhirVReadRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType get type => throw _privateConstructorUsedError;
-  Id get id => throw _privateConstructorUsedError;
-  Id get vid => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType get type;
+  Id get id;
+  Id get vid;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  FhirClient? get fhirClient => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
+  @override
+  FhirClient get client;
   @override
   @JsonKey(ignore: true)
   _$FhirVReadRequestCopyWith<_FhirVReadRequest> get copyWith =>
@@ -2724,7 +2903,8 @@ abstract class _$FhirUpdateRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
-      FhirClient? fhirClient});
+      MimeType? mimeType,
+      FhirClient client});
 }
 
 /// @nodoc
@@ -2747,7 +2927,8 @@ class __$FhirUpdateRequestCopyWithImpl<$Res>
     Object? format = freezed,
     Object? elements = freezed,
     Object? parameters = freezed,
-    Object? fhirClient = freezed,
+    Object? mimeType = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirUpdateRequest(
       base: base == freezed
@@ -2778,10 +2959,14 @@ class __$FhirUpdateRequestCopyWithImpl<$Res>
           ? _value.parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      fhirClient: fhirClient == freezed
-          ? _value.fhirClient
-          : fhirClient // ignore: cast_nullable_to_non_nullable
-              as FhirClient?,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as FhirClient,
     ));
   }
 }
@@ -2797,7 +2982,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
-      this.fhirClient})
+      this.mimeType,
+      required this.client})
       : super._();
 
   @override
@@ -2820,51 +3006,46 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
   @override
   final List<String> parameters;
   @override
-  final FhirClient? fhirClient;
+  final MimeType? mimeType;
+  @override
+  final FhirClient client;
 
   @override
   String toString() {
-    return 'FhirRequest.update(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, fhirClient: $fhirClient)';
+    return 'FhirRequest.update(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirUpdateRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
+        (other.runtimeType == runtimeType &&
+            other is _FhirUpdateRequest &&
+            (identical(other.base, base) || other.base == base) &&
             (identical(other.resource, resource) ||
-                const DeepCollectionEquality()
-                    .equals(other.resource, resource)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.fhirClient, fhirClient) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirClient, fhirClient)));
+                other.resource == resource) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(resource) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(fhirClient);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      resource,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -2883,7 +3064,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         read,
     required TResult Function(
             Uri base,
@@ -2895,7 +3077,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         vRead,
     required TResult Function(
             Uri base,
@@ -2905,7 +3088,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         update,
     required TResult Function(
             Uri base,
@@ -2915,7 +3099,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         patch,
     required TResult Function(
             Uri base,
@@ -2926,7 +3111,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         delete,
     required TResult Function(
             Uri base,
@@ -2936,7 +3122,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         create,
     required TResult Function(
             Uri base,
@@ -2948,7 +3135,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         search,
     required TResult Function(
             Uri base,
@@ -2957,7 +3145,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         searchAll,
     required TResult Function(
             Uri base,
@@ -2967,7 +3156,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         capabilities,
     required TResult Function(
             Uri base,
@@ -2977,7 +3167,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         transaction,
     required TResult Function(
             Uri base,
@@ -2987,7 +3178,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         batch,
     required TResult Function(
             Uri base,
@@ -3002,7 +3194,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         history,
     required TResult Function(
             Uri base,
@@ -3016,7 +3209,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyType,
     required TResult Function(
             Uri base,
@@ -3029,7 +3223,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyAll,
     required TResult Function(
             Uri base,
@@ -3044,11 +3239,12 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         operation,
   }) {
     return update(base, resource, pretty, summary, format, elements, parameters,
-        fhirClient);
+        mimeType, client);
   }
 
   @override
@@ -3063,7 +3259,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -3075,7 +3272,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -3085,7 +3283,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -3095,7 +3294,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -3106,7 +3306,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -3116,7 +3317,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -3128,7 +3330,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -3137,7 +3340,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -3147,7 +3351,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -3157,7 +3362,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -3167,7 +3373,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -3182,7 +3389,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -3196,7 +3404,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -3209,7 +3418,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -3224,11 +3434,12 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
   }) {
     return update?.call(base, resource, pretty, summary, format, elements,
-        parameters, fhirClient);
+        parameters, mimeType, client);
   }
 
   @override
@@ -3243,7 +3454,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -3255,7 +3467,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -3265,7 +3478,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -3275,7 +3489,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -3286,7 +3501,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -3296,7 +3512,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -3308,7 +3525,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -3317,7 +3535,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -3327,7 +3546,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -3337,7 +3557,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -3347,7 +3568,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -3362,7 +3584,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -3376,7 +3599,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -3389,7 +3613,8 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -3404,13 +3629,14 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
     required TResult orElse(),
   }) {
     if (update != null) {
       return update(base, resource, pretty, summary, format, elements,
-          parameters, fhirClient);
+          parameters, mimeType, client);
     }
     return orElse();
   }
@@ -3495,24 +3721,27 @@ abstract class _FhirUpdateRequest extends FhirRequest {
       String format,
       List<String> elements,
       List<String> parameters,
-      FhirClient? fhirClient}) = _$_FhirUpdateRequest;
+      MimeType? mimeType,
+      required FhirClient client}) = _$_FhirUpdateRequest;
   _FhirUpdateRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  Resource get resource => throw _privateConstructorUsedError;
+  Uri get base;
+  Resource get resource;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  FhirClient? get fhirClient => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
+  @override
+  FhirClient get client;
   @override
   @JsonKey(ignore: true)
   _$FhirUpdateRequestCopyWith<_FhirUpdateRequest> get copyWith =>
@@ -3534,7 +3763,8 @@ abstract class _$FhirPatchRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
-      FhirClient? fhirClient});
+      MimeType? mimeType,
+      FhirClient client});
 }
 
 /// @nodoc
@@ -3557,7 +3787,8 @@ class __$FhirPatchRequestCopyWithImpl<$Res>
     Object? format = freezed,
     Object? elements = freezed,
     Object? parameters = freezed,
-    Object? fhirClient = freezed,
+    Object? mimeType = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirPatchRequest(
       base: base == freezed
@@ -3588,10 +3819,14 @@ class __$FhirPatchRequestCopyWithImpl<$Res>
           ? _value.parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      fhirClient: fhirClient == freezed
-          ? _value.fhirClient
-          : fhirClient // ignore: cast_nullable_to_non_nullable
-              as FhirClient?,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as FhirClient,
     ));
   }
 }
@@ -3607,7 +3842,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
-      this.fhirClient})
+      this.mimeType,
+      required this.client})
       : super._();
 
   @override
@@ -3630,51 +3866,46 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
   @override
   final List<String> parameters;
   @override
-  final FhirClient? fhirClient;
+  final MimeType? mimeType;
+  @override
+  final FhirClient client;
 
   @override
   String toString() {
-    return 'FhirRequest.patch(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, fhirClient: $fhirClient)';
+    return 'FhirRequest.patch(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirPatchRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
+        (other.runtimeType == runtimeType &&
+            other is _FhirPatchRequest &&
+            (identical(other.base, base) || other.base == base) &&
             (identical(other.resource, resource) ||
-                const DeepCollectionEquality()
-                    .equals(other.resource, resource)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.fhirClient, fhirClient) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirClient, fhirClient)));
+                other.resource == resource) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(resource) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(fhirClient);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      resource,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -3693,7 +3924,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         read,
     required TResult Function(
             Uri base,
@@ -3705,7 +3937,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         vRead,
     required TResult Function(
             Uri base,
@@ -3715,7 +3948,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         update,
     required TResult Function(
             Uri base,
@@ -3725,7 +3959,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         patch,
     required TResult Function(
             Uri base,
@@ -3736,7 +3971,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         delete,
     required TResult Function(
             Uri base,
@@ -3746,7 +3982,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         create,
     required TResult Function(
             Uri base,
@@ -3758,7 +3995,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         search,
     required TResult Function(
             Uri base,
@@ -3767,7 +4005,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         searchAll,
     required TResult Function(
             Uri base,
@@ -3777,7 +4016,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         capabilities,
     required TResult Function(
             Uri base,
@@ -3787,7 +4027,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         transaction,
     required TResult Function(
             Uri base,
@@ -3797,7 +4038,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         batch,
     required TResult Function(
             Uri base,
@@ -3812,7 +4054,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         history,
     required TResult Function(
             Uri base,
@@ -3826,7 +4069,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyType,
     required TResult Function(
             Uri base,
@@ -3839,7 +4083,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyAll,
     required TResult Function(
             Uri base,
@@ -3854,11 +4099,12 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         operation,
   }) {
     return patch(base, resource, pretty, summary, format, elements, parameters,
-        fhirClient);
+        mimeType, client);
   }
 
   @override
@@ -3873,7 +4119,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -3885,7 +4132,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -3895,7 +4143,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -3905,7 +4154,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -3916,7 +4166,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -3926,7 +4177,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -3938,7 +4190,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -3947,7 +4200,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -3957,7 +4211,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -3967,7 +4222,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -3977,7 +4233,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -3992,7 +4249,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -4006,7 +4264,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -4019,7 +4278,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -4034,11 +4294,12 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
   }) {
     return patch?.call(base, resource, pretty, summary, format, elements,
-        parameters, fhirClient);
+        parameters, mimeType, client);
   }
 
   @override
@@ -4053,7 +4314,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -4065,7 +4327,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -4075,7 +4338,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -4085,7 +4349,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -4096,7 +4361,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -4106,7 +4372,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -4118,7 +4385,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -4127,7 +4395,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -4137,7 +4406,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -4147,7 +4417,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -4157,7 +4428,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -4172,7 +4444,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -4186,7 +4459,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -4199,7 +4473,8 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -4214,13 +4489,14 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
     required TResult orElse(),
   }) {
     if (patch != null) {
       return patch(base, resource, pretty, summary, format, elements,
-          parameters, fhirClient);
+          parameters, mimeType, client);
     }
     return orElse();
   }
@@ -4305,24 +4581,27 @@ abstract class _FhirPatchRequest extends FhirRequest {
       String format,
       List<String> elements,
       List<String> parameters,
-      FhirClient? fhirClient}) = _$_FhirPatchRequest;
+      MimeType? mimeType,
+      required FhirClient client}) = _$_FhirPatchRequest;
   _FhirPatchRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  Resource get resource => throw _privateConstructorUsedError;
+  Uri get base;
+  Resource get resource;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  FhirClient? get fhirClient => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
+  @override
+  FhirClient get client;
   @override
   @JsonKey(ignore: true)
   _$FhirPatchRequestCopyWith<_FhirPatchRequest> get copyWith =>
@@ -4345,7 +4624,8 @@ abstract class _$FhirDeleteRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
-      FhirClient? fhirClient});
+      MimeType? mimeType,
+      FhirClient client});
 }
 
 /// @nodoc
@@ -4369,7 +4649,8 @@ class __$FhirDeleteRequestCopyWithImpl<$Res>
     Object? format = freezed,
     Object? elements = freezed,
     Object? parameters = freezed,
-    Object? fhirClient = freezed,
+    Object? mimeType = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirDeleteRequest(
       base: base == freezed
@@ -4404,10 +4685,14 @@ class __$FhirDeleteRequestCopyWithImpl<$Res>
           ? _value.parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      fhirClient: fhirClient == freezed
-          ? _value.fhirClient
-          : fhirClient // ignore: cast_nullable_to_non_nullable
-              as FhirClient?,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as FhirClient,
     ));
   }
 }
@@ -4424,7 +4709,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
-      this.fhirClient})
+      this.mimeType,
+      required this.client})
       : super._();
 
   @override
@@ -4449,53 +4735,47 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   @override
   final List<String> parameters;
   @override
-  final FhirClient? fhirClient;
+  final MimeType? mimeType;
+  @override
+  final FhirClient client;
 
   @override
   String toString() {
-    return 'FhirRequest.delete(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, fhirClient: $fhirClient)';
+    return 'FhirRequest.delete(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirDeleteRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.fhirClient, fhirClient) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirClient, fhirClient)));
+        (other.runtimeType == runtimeType &&
+            other is _FhirDeleteRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(fhirClient);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      id,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -4514,7 +4794,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         read,
     required TResult Function(
             Uri base,
@@ -4526,7 +4807,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         vRead,
     required TResult Function(
             Uri base,
@@ -4536,7 +4818,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         update,
     required TResult Function(
             Uri base,
@@ -4546,7 +4829,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         patch,
     required TResult Function(
             Uri base,
@@ -4557,7 +4841,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         delete,
     required TResult Function(
             Uri base,
@@ -4567,7 +4852,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         create,
     required TResult Function(
             Uri base,
@@ -4579,7 +4865,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         search,
     required TResult Function(
             Uri base,
@@ -4588,7 +4875,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         searchAll,
     required TResult Function(
             Uri base,
@@ -4598,7 +4886,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         capabilities,
     required TResult Function(
             Uri base,
@@ -4608,7 +4897,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         transaction,
     required TResult Function(
             Uri base,
@@ -4618,7 +4908,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         batch,
     required TResult Function(
             Uri base,
@@ -4633,7 +4924,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         history,
     required TResult Function(
             Uri base,
@@ -4647,7 +4939,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyType,
     required TResult Function(
             Uri base,
@@ -4660,7 +4953,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyAll,
     required TResult Function(
             Uri base,
@@ -4675,11 +4969,12 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         operation,
   }) {
     return delete(base, type, id, pretty, summary, format, elements, parameters,
-        fhirClient);
+        mimeType, client);
   }
 
   @override
@@ -4694,7 +4989,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -4706,7 +5002,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -4716,7 +5013,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -4726,7 +5024,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -4737,7 +5036,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -4747,7 +5047,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -4759,7 +5060,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -4768,7 +5070,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -4778,7 +5081,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -4788,7 +5092,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -4798,7 +5103,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -4813,7 +5119,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -4827,7 +5134,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -4840,7 +5148,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -4855,11 +5164,12 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
   }) {
     return delete?.call(base, type, id, pretty, summary, format, elements,
-        parameters, fhirClient);
+        parameters, mimeType, client);
   }
 
   @override
@@ -4874,7 +5184,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -4886,7 +5197,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -4896,7 +5208,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -4906,7 +5219,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -4917,7 +5231,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -4927,7 +5242,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -4939,7 +5255,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -4948,7 +5265,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -4958,7 +5276,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -4968,7 +5287,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -4978,7 +5298,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -4993,7 +5314,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -5007,7 +5329,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -5020,7 +5343,8 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -5035,13 +5359,14 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
     required TResult orElse(),
   }) {
     if (delete != null) {
       return delete(base, type, id, pretty, summary, format, elements,
-          parameters, fhirClient);
+          parameters, mimeType, client);
     }
     return orElse();
   }
@@ -5127,25 +5452,28 @@ abstract class _FhirDeleteRequest extends FhirRequest {
       String format,
       List<String> elements,
       List<String> parameters,
-      FhirClient? fhirClient}) = _$_FhirDeleteRequest;
+      MimeType? mimeType,
+      required FhirClient client}) = _$_FhirDeleteRequest;
   _FhirDeleteRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType get type => throw _privateConstructorUsedError;
-  Id get id => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType get type;
+  Id get id;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  FhirClient? get fhirClient => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
+  @override
+  FhirClient get client;
   @override
   @JsonKey(ignore: true)
   _$FhirDeleteRequestCopyWith<_FhirDeleteRequest> get copyWith =>
@@ -5167,7 +5495,8 @@ abstract class _$FhirCreateRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
-      FhirClient? fhirClient});
+      MimeType? mimeType,
+      FhirClient client});
 }
 
 /// @nodoc
@@ -5190,7 +5519,8 @@ class __$FhirCreateRequestCopyWithImpl<$Res>
     Object? format = freezed,
     Object? elements = freezed,
     Object? parameters = freezed,
-    Object? fhirClient = freezed,
+    Object? mimeType = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirCreateRequest(
       base: base == freezed
@@ -5221,10 +5551,14 @@ class __$FhirCreateRequestCopyWithImpl<$Res>
           ? _value.parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      fhirClient: fhirClient == freezed
-          ? _value.fhirClient
-          : fhirClient // ignore: cast_nullable_to_non_nullable
-              as FhirClient?,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as FhirClient,
     ));
   }
 }
@@ -5240,7 +5574,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
-      this.fhirClient})
+      this.mimeType,
+      required this.client})
       : super._();
 
   @override
@@ -5263,51 +5598,46 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
   @override
   final List<String> parameters;
   @override
-  final FhirClient? fhirClient;
+  final MimeType? mimeType;
+  @override
+  final FhirClient client;
 
   @override
   String toString() {
-    return 'FhirRequest.create(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, fhirClient: $fhirClient)';
+    return 'FhirRequest.create(base: $base, resource: $resource, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirCreateRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
+        (other.runtimeType == runtimeType &&
+            other is _FhirCreateRequest &&
+            (identical(other.base, base) || other.base == base) &&
             (identical(other.resource, resource) ||
-                const DeepCollectionEquality()
-                    .equals(other.resource, resource)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.fhirClient, fhirClient) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirClient, fhirClient)));
+                other.resource == resource) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(resource) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(fhirClient);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      resource,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -5326,7 +5656,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         read,
     required TResult Function(
             Uri base,
@@ -5338,7 +5669,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         vRead,
     required TResult Function(
             Uri base,
@@ -5348,7 +5680,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         update,
     required TResult Function(
             Uri base,
@@ -5358,7 +5691,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         patch,
     required TResult Function(
             Uri base,
@@ -5369,7 +5703,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         delete,
     required TResult Function(
             Uri base,
@@ -5379,7 +5714,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         create,
     required TResult Function(
             Uri base,
@@ -5391,7 +5727,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         search,
     required TResult Function(
             Uri base,
@@ -5400,7 +5737,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         searchAll,
     required TResult Function(
             Uri base,
@@ -5410,7 +5748,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         capabilities,
     required TResult Function(
             Uri base,
@@ -5420,7 +5759,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         transaction,
     required TResult Function(
             Uri base,
@@ -5430,7 +5770,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         batch,
     required TResult Function(
             Uri base,
@@ -5445,7 +5786,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         history,
     required TResult Function(
             Uri base,
@@ -5459,7 +5801,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyType,
     required TResult Function(
             Uri base,
@@ -5472,7 +5815,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyAll,
     required TResult Function(
             Uri base,
@@ -5487,11 +5831,12 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         operation,
   }) {
     return create(base, resource, pretty, summary, format, elements, parameters,
-        fhirClient);
+        mimeType, client);
   }
 
   @override
@@ -5506,7 +5851,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -5518,7 +5864,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -5528,7 +5875,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -5538,7 +5886,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -5549,7 +5898,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -5559,7 +5909,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -5571,7 +5922,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -5580,7 +5932,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -5590,7 +5943,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -5600,7 +5954,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -5610,7 +5965,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -5625,7 +5981,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -5639,7 +5996,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -5652,7 +6010,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -5667,11 +6026,12 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
   }) {
     return create?.call(base, resource, pretty, summary, format, elements,
-        parameters, fhirClient);
+        parameters, mimeType, client);
   }
 
   @override
@@ -5686,7 +6046,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -5698,7 +6059,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -5708,7 +6070,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -5718,7 +6081,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -5729,7 +6093,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -5739,7 +6104,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -5751,7 +6117,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -5760,7 +6127,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -5770,7 +6138,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -5780,7 +6149,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -5790,7 +6160,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -5805,7 +6176,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -5819,7 +6191,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -5832,7 +6205,8 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -5847,13 +6221,14 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
     required TResult orElse(),
   }) {
     if (create != null) {
       return create(base, resource, pretty, summary, format, elements,
-          parameters, fhirClient);
+          parameters, mimeType, client);
     }
     return orElse();
   }
@@ -5938,24 +6313,27 @@ abstract class _FhirCreateRequest extends FhirRequest {
       String format,
       List<String> elements,
       List<String> parameters,
-      FhirClient? fhirClient}) = _$_FhirCreateRequest;
+      MimeType? mimeType,
+      required FhirClient client}) = _$_FhirCreateRequest;
   _FhirCreateRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  Resource get resource => throw _privateConstructorUsedError;
+  Uri get base;
+  Resource get resource;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  FhirClient? get fhirClient => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
+  @override
+  FhirClient get client;
   @override
   @JsonKey(ignore: true)
   _$FhirCreateRequestCopyWith<_FhirCreateRequest> get copyWith =>
@@ -5979,7 +6357,8 @@ abstract class _$FhirSearchRequestCopyWith<$Res>
       List<String> parameters,
       bool usePost,
       RestfulRequest restfulRequest,
-      FhirClient? fhirClient});
+      MimeType? mimeType,
+      FhirClient client});
 }
 
 /// @nodoc
@@ -6004,7 +6383,8 @@ class __$FhirSearchRequestCopyWithImpl<$Res>
     Object? parameters = freezed,
     Object? usePost = freezed,
     Object? restfulRequest = freezed,
-    Object? fhirClient = freezed,
+    Object? mimeType = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirSearchRequest(
       base: base == freezed
@@ -6043,10 +6423,14 @@ class __$FhirSearchRequestCopyWithImpl<$Res>
           ? _value.restfulRequest
           : restfulRequest // ignore: cast_nullable_to_non_nullable
               as RestfulRequest,
-      fhirClient: fhirClient == freezed
-          ? _value.fhirClient
-          : fhirClient // ignore: cast_nullable_to_non_nullable
-              as FhirClient?,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as FhirClient,
     ));
   }
 }
@@ -6064,7 +6448,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
       this.parameters = const <String>[],
       this.usePost = false,
       this.restfulRequest = RestfulRequest.get_,
-      this.fhirClient})
+      this.mimeType,
+      required this.client})
       : super._();
 
   @override
@@ -6093,58 +6478,50 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
   @override
   final RestfulRequest restfulRequest;
   @override
-  final FhirClient? fhirClient;
+  final MimeType? mimeType;
+  @override
+  final FhirClient client;
 
   @override
   String toString() {
-    return 'FhirRequest.search(base: $base, type: $type, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, usePost: $usePost, restfulRequest: $restfulRequest, fhirClient: $fhirClient)';
+    return 'FhirRequest.search(base: $base, type: $type, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, usePost: $usePost, restfulRequest: $restfulRequest, mimeType: $mimeType, client: $client)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirSearchRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.usePost, usePost) ||
-                const DeepCollectionEquality()
-                    .equals(other.usePost, usePost)) &&
+        (other.runtimeType == runtimeType &&
+            other is _FhirSearchRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.usePost, usePost) || other.usePost == usePost) &&
             (identical(other.restfulRequest, restfulRequest) ||
-                const DeepCollectionEquality()
-                    .equals(other.restfulRequest, restfulRequest)) &&
-            (identical(other.fhirClient, fhirClient) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirClient, fhirClient)));
+                other.restfulRequest == restfulRequest) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(usePost) ^
-      const DeepCollectionEquality().hash(restfulRequest) ^
-      const DeepCollectionEquality().hash(fhirClient);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      usePost,
+      restfulRequest,
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -6163,7 +6540,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         read,
     required TResult Function(
             Uri base,
@@ -6175,7 +6553,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         vRead,
     required TResult Function(
             Uri base,
@@ -6185,7 +6564,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         update,
     required TResult Function(
             Uri base,
@@ -6195,7 +6575,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         patch,
     required TResult Function(
             Uri base,
@@ -6206,7 +6587,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         delete,
     required TResult Function(
             Uri base,
@@ -6216,7 +6598,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         create,
     required TResult Function(
             Uri base,
@@ -6228,7 +6611,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         search,
     required TResult Function(
             Uri base,
@@ -6237,7 +6621,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         searchAll,
     required TResult Function(
             Uri base,
@@ -6247,7 +6632,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         capabilities,
     required TResult Function(
             Uri base,
@@ -6257,7 +6643,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         transaction,
     required TResult Function(
             Uri base,
@@ -6267,7 +6654,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         batch,
     required TResult Function(
             Uri base,
@@ -6282,7 +6670,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         history,
     required TResult Function(
             Uri base,
@@ -6296,7 +6685,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyType,
     required TResult Function(
             Uri base,
@@ -6309,7 +6699,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyAll,
     required TResult Function(
             Uri base,
@@ -6324,11 +6715,12 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         operation,
   }) {
     return search(base, type, pretty, summary, format, elements, parameters,
-        usePost, restfulRequest, fhirClient);
+        usePost, restfulRequest, mimeType, client);
   }
 
   @override
@@ -6343,7 +6735,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -6355,7 +6748,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -6365,7 +6759,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -6375,7 +6770,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -6386,7 +6782,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -6396,7 +6793,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -6408,7 +6806,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -6417,7 +6816,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -6427,7 +6827,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -6437,7 +6838,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -6447,7 +6849,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -6462,7 +6865,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -6476,7 +6880,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -6489,7 +6894,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -6504,11 +6910,12 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
   }) {
     return search?.call(base, type, pretty, summary, format, elements,
-        parameters, usePost, restfulRequest, fhirClient);
+        parameters, usePost, restfulRequest, mimeType, client);
   }
 
   @override
@@ -6523,7 +6930,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -6535,7 +6943,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -6545,7 +6954,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -6555,7 +6965,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -6566,7 +6977,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -6576,7 +6988,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -6588,7 +7001,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -6597,7 +7011,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -6607,7 +7022,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -6617,7 +7033,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -6627,7 +7044,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -6642,7 +7060,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -6656,7 +7075,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -6669,7 +7089,8 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -6684,13 +7105,14 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
     required TResult orElse(),
   }) {
     if (search != null) {
       return search(base, type, pretty, summary, format, elements, parameters,
-          usePost, restfulRequest, fhirClient);
+          usePost, restfulRequest, mimeType, client);
     }
     return orElse();
   }
@@ -6777,26 +7199,29 @@ abstract class _FhirSearchRequest extends FhirRequest {
       List<String> parameters,
       bool usePost,
       RestfulRequest restfulRequest,
-      FhirClient? fhirClient}) = _$_FhirSearchRequest;
+      MimeType? mimeType,
+      required FhirClient client}) = _$_FhirSearchRequest;
   _FhirSearchRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType get type => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType get type;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  bool get usePost => throw _privateConstructorUsedError;
-  RestfulRequest get restfulRequest => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  bool get usePost;
+  RestfulRequest get restfulRequest;
   @override
-  FhirClient? get fhirClient => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
+  @override
+  FhirClient get client;
   @override
   @JsonKey(ignore: true)
   _$FhirSearchRequestCopyWith<_FhirSearchRequest> get copyWith =>
@@ -6817,7 +7242,8 @@ abstract class _$FhirSearchAllRequestCopyWith<$Res>
       String format,
       List<String> elements,
       List<String> parameters,
-      FhirClient? fhirClient});
+      MimeType? mimeType,
+      FhirClient client});
 }
 
 /// @nodoc
@@ -6839,7 +7265,8 @@ class __$FhirSearchAllRequestCopyWithImpl<$Res>
     Object? format = freezed,
     Object? elements = freezed,
     Object? parameters = freezed,
-    Object? fhirClient = freezed,
+    Object? mimeType = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirSearchAllRequest(
       base: base == freezed
@@ -6866,10 +7293,14 @@ class __$FhirSearchAllRequestCopyWithImpl<$Res>
           ? _value.parameters
           : parameters // ignore: cast_nullable_to_non_nullable
               as List<String>,
-      fhirClient: fhirClient == freezed
-          ? _value.fhirClient
-          : fhirClient // ignore: cast_nullable_to_non_nullable
-              as FhirClient?,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as FhirClient,
     ));
   }
 }
@@ -6884,7 +7315,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
       this.format = 'json',
       this.elements = const <String>[],
       this.parameters = const <String>[],
-      this.fhirClient})
+      this.mimeType,
+      required this.client})
       : super._();
 
   @override
@@ -6905,47 +7337,43 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
   @override
   final List<String> parameters;
   @override
-  final FhirClient? fhirClient;
+  final MimeType? mimeType;
+  @override
+  final FhirClient client;
 
   @override
   String toString() {
-    return 'FhirRequest.searchAll(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, fhirClient: $fhirClient)';
+    return 'FhirRequest.searchAll(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mimeType: $mimeType, client: $client)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirSearchAllRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.fhirClient, fhirClient) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirClient, fhirClient)));
+        (other.runtimeType == runtimeType &&
+            other is _FhirSearchAllRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(fhirClient);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -6965,7 +7393,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         read,
     required TResult Function(
             Uri base,
@@ -6977,7 +7406,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         vRead,
     required TResult Function(
             Uri base,
@@ -6987,7 +7417,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         update,
     required TResult Function(
             Uri base,
@@ -6997,7 +7428,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         patch,
     required TResult Function(
             Uri base,
@@ -7008,7 +7440,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         delete,
     required TResult Function(
             Uri base,
@@ -7018,7 +7451,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         create,
     required TResult Function(
             Uri base,
@@ -7030,7 +7464,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         search,
     required TResult Function(
             Uri base,
@@ -7039,7 +7474,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         searchAll,
     required TResult Function(
             Uri base,
@@ -7049,7 +7485,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         capabilities,
     required TResult Function(
             Uri base,
@@ -7059,7 +7496,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         transaction,
     required TResult Function(
             Uri base,
@@ -7069,7 +7507,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         batch,
     required TResult Function(
             Uri base,
@@ -7084,7 +7523,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         history,
     required TResult Function(
             Uri base,
@@ -7098,7 +7538,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyType,
     required TResult Function(
             Uri base,
@@ -7111,7 +7552,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyAll,
     required TResult Function(
             Uri base,
@@ -7126,11 +7568,12 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         operation,
   }) {
     return searchAll(
-        base, pretty, summary, format, elements, parameters, fhirClient);
+        base, pretty, summary, format, elements, parameters, mimeType, client);
   }
 
   @override
@@ -7145,7 +7588,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -7157,7 +7601,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -7167,7 +7612,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -7177,7 +7623,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -7188,7 +7635,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -7198,7 +7646,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -7210,7 +7659,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -7219,7 +7669,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -7229,7 +7680,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -7239,7 +7691,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -7249,7 +7702,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -7264,7 +7718,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -7278,7 +7733,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -7291,7 +7747,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -7306,11 +7763,12 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
   }) {
     return searchAll?.call(
-        base, pretty, summary, format, elements, parameters, fhirClient);
+        base, pretty, summary, format, elements, parameters, mimeType, client);
   }
 
   @override
@@ -7325,7 +7783,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -7337,7 +7796,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -7347,7 +7807,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -7357,7 +7818,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -7368,7 +7830,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -7378,7 +7841,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -7390,7 +7854,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -7399,7 +7864,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -7409,7 +7875,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -7419,7 +7886,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -7429,7 +7897,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -7444,7 +7913,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -7458,7 +7928,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -7471,7 +7942,8 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -7486,13 +7958,14 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
     required TResult orElse(),
   }) {
     if (searchAll != null) {
-      return searchAll(
-          base, pretty, summary, format, elements, parameters, fhirClient);
+      return searchAll(base, pretty, summary, format, elements, parameters,
+          mimeType, client);
     }
     return orElse();
   }
@@ -7576,23 +8049,26 @@ abstract class _FhirSearchAllRequest extends FhirRequest {
       String format,
       List<String> elements,
       List<String> parameters,
-      FhirClient? fhirClient}) = _$_FhirSearchAllRequest;
+      MimeType? mimeType,
+      required FhirClient client}) = _$_FhirSearchAllRequest;
   _FhirSearchAllRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
+  List<String> get parameters;
   @override
-  FhirClient? get fhirClient => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
+  @override
+  FhirClient get client;
   @override
   @JsonKey(ignore: true)
   _$FhirSearchAllRequestCopyWith<_FhirSearchAllRequest> get copyWith =>
@@ -7614,7 +8090,8 @@ abstract class _$FhirCapabilitiesRequestCopyWith<$Res>
       List<String> elements,
       List<String> parameters,
       Mode mode,
-      FhirClient? fhirClient});
+      MimeType? mimeType,
+      FhirClient client});
 }
 
 /// @nodoc
@@ -7638,7 +8115,8 @@ class __$FhirCapabilitiesRequestCopyWithImpl<$Res>
     Object? elements = freezed,
     Object? parameters = freezed,
     Object? mode = freezed,
-    Object? fhirClient = freezed,
+    Object? mimeType = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirCapabilitiesRequest(
       base: base == freezed
@@ -7669,10 +8147,14 @@ class __$FhirCapabilitiesRequestCopyWithImpl<$Res>
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
               as Mode,
-      fhirClient: fhirClient == freezed
-          ? _value.fhirClient
-          : fhirClient // ignore: cast_nullable_to_non_nullable
-              as FhirClient?,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as FhirClient,
     ));
   }
 }
@@ -7688,7 +8170,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
       this.elements = const <String>[],
       this.parameters = const <String>[],
       this.mode = Mode.full,
-      this.fhirClient})
+      this.mimeType,
+      required this.client})
       : super._();
 
   @override
@@ -7712,50 +8195,45 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
   @override
   final Mode mode;
   @override
-  final FhirClient? fhirClient;
+  final MimeType? mimeType;
+  @override
+  final FhirClient client;
 
   @override
   String toString() {
-    return 'FhirRequest.capabilities(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mode: $mode, fhirClient: $fhirClient)';
+    return 'FhirRequest.capabilities(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, mode: $mode, mimeType: $mimeType, client: $client)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirCapabilitiesRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.mode, mode) ||
-                const DeepCollectionEquality().equals(other.mode, mode)) &&
-            (identical(other.fhirClient, fhirClient) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirClient, fhirClient)));
+        (other.runtimeType == runtimeType &&
+            other is _FhirCapabilitiesRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.mode, mode) || other.mode == mode) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(mode) ^
-      const DeepCollectionEquality().hash(fhirClient);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      mode,
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -7775,7 +8253,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         read,
     required TResult Function(
             Uri base,
@@ -7787,7 +8266,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         vRead,
     required TResult Function(
             Uri base,
@@ -7797,7 +8277,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         update,
     required TResult Function(
             Uri base,
@@ -7807,7 +8288,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         patch,
     required TResult Function(
             Uri base,
@@ -7818,7 +8300,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         delete,
     required TResult Function(
             Uri base,
@@ -7828,7 +8311,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         create,
     required TResult Function(
             Uri base,
@@ -7840,7 +8324,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         search,
     required TResult Function(
             Uri base,
@@ -7849,7 +8334,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         searchAll,
     required TResult Function(
             Uri base,
@@ -7859,7 +8345,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         capabilities,
     required TResult Function(
             Uri base,
@@ -7869,7 +8356,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         transaction,
     required TResult Function(
             Uri base,
@@ -7879,7 +8367,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         batch,
     required TResult Function(
             Uri base,
@@ -7894,7 +8383,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         history,
     required TResult Function(
             Uri base,
@@ -7908,7 +8398,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyType,
     required TResult Function(
             Uri base,
@@ -7921,7 +8412,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyAll,
     required TResult Function(
             Uri base,
@@ -7936,11 +8428,12 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         operation,
   }) {
-    return capabilities(
-        base, pretty, summary, format, elements, parameters, mode, fhirClient);
+    return capabilities(base, pretty, summary, format, elements, parameters,
+        mode, mimeType, client);
   }
 
   @override
@@ -7955,7 +8448,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -7967,7 +8461,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -7977,7 +8472,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -7987,7 +8483,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -7998,7 +8495,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -8008,7 +8506,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -8020,7 +8519,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -8029,7 +8529,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -8039,7 +8540,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -8049,7 +8551,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -8059,7 +8562,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -8074,7 +8578,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -8088,7 +8593,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -8101,7 +8607,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -8116,11 +8623,12 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
   }) {
-    return capabilities?.call(
-        base, pretty, summary, format, elements, parameters, mode, fhirClient);
+    return capabilities?.call(base, pretty, summary, format, elements,
+        parameters, mode, mimeType, client);
   }
 
   @override
@@ -8135,7 +8643,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -8147,7 +8656,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -8157,7 +8667,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -8167,7 +8678,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -8178,7 +8690,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -8188,7 +8701,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -8200,7 +8714,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -8209,7 +8724,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -8219,7 +8735,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -8229,7 +8746,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -8239,7 +8757,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -8254,7 +8773,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -8268,7 +8788,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -8281,7 +8802,8 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -8296,13 +8818,14 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
     required TResult orElse(),
   }) {
     if (capabilities != null) {
       return capabilities(base, pretty, summary, format, elements, parameters,
-          mode, fhirClient);
+          mode, mimeType, client);
     }
     return orElse();
   }
@@ -8387,24 +8910,27 @@ abstract class _FhirCapabilitiesRequest extends FhirRequest {
       List<String> elements,
       List<String> parameters,
       Mode mode,
-      FhirClient? fhirClient}) = _$_FhirCapabilitiesRequest;
+      MimeType? mimeType,
+      required FhirClient client}) = _$_FhirCapabilitiesRequest;
   _FhirCapabilitiesRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  Mode get mode => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  Mode get mode;
   @override
-  FhirClient? get fhirClient => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
+  @override
+  FhirClient get client;
   @override
   @JsonKey(ignore: true)
   _$FhirCapabilitiesRequestCopyWith<_FhirCapabilitiesRequest> get copyWith =>
@@ -8426,7 +8952,8 @@ abstract class _$FhirTransactionRequestCopyWith<$Res>
       List<String> elements,
       List<String> parameters,
       Bundle bundle,
-      FhirClient? fhirClient});
+      MimeType? mimeType,
+      FhirClient client});
 
   $BundleCopyWith<$Res> get bundle;
 }
@@ -8451,7 +8978,8 @@ class __$FhirTransactionRequestCopyWithImpl<$Res>
     Object? elements = freezed,
     Object? parameters = freezed,
     Object? bundle = freezed,
-    Object? fhirClient = freezed,
+    Object? mimeType = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirTransactionRequest(
       base: base == freezed
@@ -8482,10 +9010,14 @@ class __$FhirTransactionRequestCopyWithImpl<$Res>
           ? _value.bundle
           : bundle // ignore: cast_nullable_to_non_nullable
               as Bundle,
-      fhirClient: fhirClient == freezed
-          ? _value.fhirClient
-          : fhirClient // ignore: cast_nullable_to_non_nullable
-              as FhirClient?,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as FhirClient,
     ));
   }
 
@@ -8508,7 +9040,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
       this.elements = const <String>[],
       this.parameters = const <String>[],
       required this.bundle,
-      this.fhirClient})
+      this.mimeType,
+      required this.client})
       : super._();
 
   @override
@@ -8531,50 +9064,45 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
   @override
   final Bundle bundle;
   @override
-  final FhirClient? fhirClient;
+  final MimeType? mimeType;
+  @override
+  final FhirClient client;
 
   @override
   String toString() {
-    return 'FhirRequest.transaction(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, bundle: $bundle, fhirClient: $fhirClient)';
+    return 'FhirRequest.transaction(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, bundle: $bundle, mimeType: $mimeType, client: $client)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirTransactionRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.bundle, bundle) ||
-                const DeepCollectionEquality().equals(other.bundle, bundle)) &&
-            (identical(other.fhirClient, fhirClient) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirClient, fhirClient)));
+        (other.runtimeType == runtimeType &&
+            other is _FhirTransactionRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.bundle, bundle) || other.bundle == bundle) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(bundle) ^
-      const DeepCollectionEquality().hash(fhirClient);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      bundle,
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -8594,7 +9122,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         read,
     required TResult Function(
             Uri base,
@@ -8606,7 +9135,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         vRead,
     required TResult Function(
             Uri base,
@@ -8616,7 +9146,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         update,
     required TResult Function(
             Uri base,
@@ -8626,7 +9157,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         patch,
     required TResult Function(
             Uri base,
@@ -8637,7 +9169,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         delete,
     required TResult Function(
             Uri base,
@@ -8647,7 +9180,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         create,
     required TResult Function(
             Uri base,
@@ -8659,7 +9193,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         search,
     required TResult Function(
             Uri base,
@@ -8668,7 +9203,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         searchAll,
     required TResult Function(
             Uri base,
@@ -8678,7 +9214,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         capabilities,
     required TResult Function(
             Uri base,
@@ -8688,7 +9225,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         transaction,
     required TResult Function(
             Uri base,
@@ -8698,7 +9236,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         batch,
     required TResult Function(
             Uri base,
@@ -8713,7 +9252,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         history,
     required TResult Function(
             Uri base,
@@ -8727,7 +9267,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyType,
     required TResult Function(
             Uri base,
@@ -8740,7 +9281,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyAll,
     required TResult Function(
             Uri base,
@@ -8755,11 +9297,12 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         operation,
   }) {
     return transaction(base, pretty, summary, format, elements, parameters,
-        bundle, fhirClient);
+        bundle, mimeType, client);
   }
 
   @override
@@ -8774,7 +9317,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -8786,7 +9330,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -8796,7 +9341,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -8806,7 +9352,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -8817,7 +9364,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -8827,7 +9375,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -8839,7 +9388,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -8848,7 +9398,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -8858,7 +9409,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -8868,7 +9420,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -8878,7 +9431,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -8893,7 +9447,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -8907,7 +9462,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -8920,7 +9476,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -8935,11 +9492,12 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
   }) {
     return transaction?.call(base, pretty, summary, format, elements,
-        parameters, bundle, fhirClient);
+        parameters, bundle, mimeType, client);
   }
 
   @override
@@ -8954,7 +9512,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -8966,7 +9525,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -8976,7 +9536,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -8986,7 +9547,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -8997,7 +9559,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -9007,7 +9570,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -9019,7 +9583,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -9028,7 +9593,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -9038,7 +9604,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -9048,7 +9615,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -9058,7 +9626,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -9073,7 +9642,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -9087,7 +9657,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -9100,7 +9671,8 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -9115,13 +9687,14 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
     required TResult orElse(),
   }) {
     if (transaction != null) {
       return transaction(base, pretty, summary, format, elements, parameters,
-          bundle, fhirClient);
+          bundle, mimeType, client);
     }
     return orElse();
   }
@@ -9206,24 +9779,27 @@ abstract class _FhirTransactionRequest extends FhirRequest {
       List<String> elements,
       List<String> parameters,
       required Bundle bundle,
-      FhirClient? fhirClient}) = _$_FhirTransactionRequest;
+      MimeType? mimeType,
+      required FhirClient client}) = _$_FhirTransactionRequest;
   _FhirTransactionRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  Bundle get bundle => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  Bundle get bundle;
   @override
-  FhirClient? get fhirClient => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
+  @override
+  FhirClient get client;
   @override
   @JsonKey(ignore: true)
   _$FhirTransactionRequestCopyWith<_FhirTransactionRequest> get copyWith =>
@@ -9245,7 +9821,8 @@ abstract class _$FhirBatchRequestCopyWith<$Res>
       List<String> elements,
       List<String> parameters,
       Bundle bundle,
-      FhirClient? fhirClient});
+      MimeType? mimeType,
+      FhirClient client});
 
   $BundleCopyWith<$Res> get bundle;
 }
@@ -9270,7 +9847,8 @@ class __$FhirBatchRequestCopyWithImpl<$Res>
     Object? elements = freezed,
     Object? parameters = freezed,
     Object? bundle = freezed,
-    Object? fhirClient = freezed,
+    Object? mimeType = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirBatchRequest(
       base: base == freezed
@@ -9301,10 +9879,14 @@ class __$FhirBatchRequestCopyWithImpl<$Res>
           ? _value.bundle
           : bundle // ignore: cast_nullable_to_non_nullable
               as Bundle,
-      fhirClient: fhirClient == freezed
-          ? _value.fhirClient
-          : fhirClient // ignore: cast_nullable_to_non_nullable
-              as FhirClient?,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as FhirClient,
     ));
   }
 
@@ -9327,7 +9909,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
       this.elements = const <String>[],
       this.parameters = const <String>[],
       required this.bundle,
-      this.fhirClient})
+      this.mimeType,
+      required this.client})
       : super._();
 
   @override
@@ -9350,50 +9933,45 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
   @override
   final Bundle bundle;
   @override
-  final FhirClient? fhirClient;
+  final MimeType? mimeType;
+  @override
+  final FhirClient client;
 
   @override
   String toString() {
-    return 'FhirRequest.batch(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, bundle: $bundle, fhirClient: $fhirClient)';
+    return 'FhirRequest.batch(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, bundle: $bundle, mimeType: $mimeType, client: $client)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirBatchRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.bundle, bundle) ||
-                const DeepCollectionEquality().equals(other.bundle, bundle)) &&
-            (identical(other.fhirClient, fhirClient) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirClient, fhirClient)));
+        (other.runtimeType == runtimeType &&
+            other is _FhirBatchRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.bundle, bundle) || other.bundle == bundle) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(bundle) ^
-      const DeepCollectionEquality().hash(fhirClient);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      bundle,
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -9412,7 +9990,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         read,
     required TResult Function(
             Uri base,
@@ -9424,7 +10003,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         vRead,
     required TResult Function(
             Uri base,
@@ -9434,7 +10014,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         update,
     required TResult Function(
             Uri base,
@@ -9444,7 +10025,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         patch,
     required TResult Function(
             Uri base,
@@ -9455,7 +10037,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         delete,
     required TResult Function(
             Uri base,
@@ -9465,7 +10048,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         create,
     required TResult Function(
             Uri base,
@@ -9477,7 +10061,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         search,
     required TResult Function(
             Uri base,
@@ -9486,7 +10071,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         searchAll,
     required TResult Function(
             Uri base,
@@ -9496,7 +10082,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         capabilities,
     required TResult Function(
             Uri base,
@@ -9506,7 +10093,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         transaction,
     required TResult Function(
             Uri base,
@@ -9516,7 +10104,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         batch,
     required TResult Function(
             Uri base,
@@ -9531,7 +10120,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         history,
     required TResult Function(
             Uri base,
@@ -9545,7 +10135,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyType,
     required TResult Function(
             Uri base,
@@ -9558,7 +10149,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyAll,
     required TResult Function(
             Uri base,
@@ -9573,11 +10165,12 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         operation,
   }) {
     return batch(base, pretty, summary, format, elements, parameters, bundle,
-        fhirClient);
+        mimeType, client);
   }
 
   @override
@@ -9592,7 +10185,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -9604,7 +10198,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -9614,7 +10209,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -9624,7 +10220,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -9635,7 +10232,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -9645,7 +10243,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -9657,7 +10256,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -9666,7 +10266,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -9676,7 +10277,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -9686,7 +10288,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -9696,7 +10299,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -9711,7 +10315,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -9725,7 +10330,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -9738,7 +10344,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -9753,11 +10360,12 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
   }) {
     return batch?.call(base, pretty, summary, format, elements, parameters,
-        bundle, fhirClient);
+        bundle, mimeType, client);
   }
 
   @override
@@ -9772,7 +10380,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -9784,7 +10393,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -9794,7 +10404,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -9804,7 +10415,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -9815,7 +10427,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -9825,7 +10438,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -9837,7 +10451,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -9846,7 +10461,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -9856,7 +10472,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -9866,7 +10483,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -9876,7 +10494,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -9891,7 +10510,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -9905,7 +10525,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -9918,7 +10539,8 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -9933,13 +10555,14 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
     required TResult orElse(),
   }) {
     if (batch != null) {
       return batch(base, pretty, summary, format, elements, parameters, bundle,
-          fhirClient);
+          mimeType, client);
     }
     return orElse();
   }
@@ -10024,24 +10647,27 @@ abstract class _FhirBatchRequest extends FhirRequest {
       List<String> elements,
       List<String> parameters,
       required Bundle bundle,
-      FhirClient? fhirClient}) = _$_FhirBatchRequest;
+      MimeType? mimeType,
+      required FhirClient client}) = _$_FhirBatchRequest;
   _FhirBatchRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  Bundle get bundle => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  Bundle get bundle;
   @override
-  FhirClient? get fhirClient => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
+  @override
+  FhirClient get client;
   @override
   @JsonKey(ignore: true)
   _$FhirBatchRequestCopyWith<_FhirBatchRequest> get copyWith =>
@@ -10068,7 +10694,8 @@ abstract class _$FhirHistoryRequestCopyWith<$Res>
       Instant? since,
       FhirDateTime? at,
       String? reference,
-      FhirClient? fhirClient});
+      MimeType? mimeType,
+      FhirClient client});
 }
 
 /// @nodoc
@@ -10096,7 +10723,8 @@ class __$FhirHistoryRequestCopyWithImpl<$Res>
     Object? since = freezed,
     Object? at = freezed,
     Object? reference = freezed,
-    Object? fhirClient = freezed,
+    Object? mimeType = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirHistoryRequest(
       base: base == freezed
@@ -10147,10 +10775,14 @@ class __$FhirHistoryRequestCopyWithImpl<$Res>
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
               as String?,
-      fhirClient: fhirClient == freezed
-          ? _value.fhirClient
-          : fhirClient // ignore: cast_nullable_to_non_nullable
-              as FhirClient?,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as FhirClient,
     ));
   }
 }
@@ -10171,7 +10803,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
       this.since,
       this.at,
       this.reference,
-      this.fhirClient})
+      this.mimeType,
+      required this.client})
       : super._();
 
   @override
@@ -10204,66 +10837,56 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   @override
   final String? reference;
   @override
-  final FhirClient? fhirClient;
+  final MimeType? mimeType;
+  @override
+  final FhirClient client;
 
   @override
   String toString() {
-    return 'FhirRequest.history(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, fhirClient: $fhirClient)';
+    return 'FhirRequest.history(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, mimeType: $mimeType, client: $client)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirHistoryRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.count, count) ||
-                const DeepCollectionEquality().equals(other.count, count)) &&
-            (identical(other.since, since) ||
-                const DeepCollectionEquality().equals(other.since, since)) &&
-            (identical(other.at, at) ||
-                const DeepCollectionEquality().equals(other.at, at)) &&
+        (other.runtimeType == runtimeType &&
+            other is _FhirHistoryRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.count, count) || other.count == count) &&
+            (identical(other.since, since) || other.since == since) &&
+            (identical(other.at, at) || other.at == at) &&
             (identical(other.reference, reference) ||
-                const DeepCollectionEquality()
-                    .equals(other.reference, reference)) &&
-            (identical(other.fhirClient, fhirClient) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirClient, fhirClient)));
+                other.reference == reference) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(count) ^
-      const DeepCollectionEquality().hash(since) ^
-      const DeepCollectionEquality().hash(at) ^
-      const DeepCollectionEquality().hash(reference) ^
-      const DeepCollectionEquality().hash(fhirClient);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      id,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      count,
+      since,
+      at,
+      reference,
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -10282,7 +10905,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         read,
     required TResult Function(
             Uri base,
@@ -10294,7 +10918,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         vRead,
     required TResult Function(
             Uri base,
@@ -10304,7 +10929,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         update,
     required TResult Function(
             Uri base,
@@ -10314,7 +10940,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         patch,
     required TResult Function(
             Uri base,
@@ -10325,7 +10952,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         delete,
     required TResult Function(
             Uri base,
@@ -10335,7 +10963,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         create,
     required TResult Function(
             Uri base,
@@ -10347,7 +10976,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         search,
     required TResult Function(
             Uri base,
@@ -10356,7 +10986,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         searchAll,
     required TResult Function(
             Uri base,
@@ -10366,7 +10997,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         capabilities,
     required TResult Function(
             Uri base,
@@ -10376,7 +11008,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         transaction,
     required TResult Function(
             Uri base,
@@ -10386,7 +11019,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         batch,
     required TResult Function(
             Uri base,
@@ -10401,7 +11035,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         history,
     required TResult Function(
             Uri base,
@@ -10415,7 +11050,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyType,
     required TResult Function(
             Uri base,
@@ -10428,7 +11064,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyAll,
     required TResult Function(
             Uri base,
@@ -10443,11 +11080,12 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         operation,
   }) {
     return history(base, type, id, pretty, summary, format, elements,
-        parameters, count, since, at, reference, fhirClient);
+        parameters, count, since, at, reference, mimeType, client);
   }
 
   @override
@@ -10462,7 +11100,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -10474,7 +11113,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -10484,7 +11124,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -10494,7 +11135,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -10505,7 +11147,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -10515,7 +11158,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -10527,7 +11171,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -10536,7 +11181,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -10546,7 +11192,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -10556,7 +11203,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -10566,7 +11214,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -10581,7 +11230,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -10595,7 +11245,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -10608,7 +11259,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -10623,11 +11275,12 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
   }) {
     return history?.call(base, type, id, pretty, summary, format, elements,
-        parameters, count, since, at, reference, fhirClient);
+        parameters, count, since, at, reference, mimeType, client);
   }
 
   @override
@@ -10642,7 +11295,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -10654,7 +11308,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -10664,7 +11319,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -10674,7 +11330,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -10685,7 +11342,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -10695,7 +11353,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -10707,7 +11366,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -10716,7 +11376,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -10726,7 +11387,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -10736,7 +11398,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -10746,7 +11409,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -10761,7 +11425,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -10775,7 +11440,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -10788,7 +11454,8 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -10803,13 +11470,14 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
     required TResult orElse(),
   }) {
     if (history != null) {
       return history(base, type, id, pretty, summary, format, elements,
-          parameters, count, since, at, reference, fhirClient);
+          parameters, count, since, at, reference, mimeType, client);
     }
     return orElse();
   }
@@ -10899,29 +11567,32 @@ abstract class _FhirHistoryRequest extends FhirRequest {
       Instant? since,
       FhirDateTime? at,
       String? reference,
-      FhirClient? fhirClient}) = _$_FhirHistoryRequest;
+      MimeType? mimeType,
+      required FhirClient client}) = _$_FhirHistoryRequest;
   _FhirHistoryRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType get type => throw _privateConstructorUsedError;
-  Id get id => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType get type;
+  Id get id;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  int? get count => throw _privateConstructorUsedError;
-  Instant? get since => throw _privateConstructorUsedError;
-  FhirDateTime? get at => throw _privateConstructorUsedError;
-  String? get reference => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  int? get count;
+  Instant? get since;
+  FhirDateTime? get at;
+  String? get reference;
   @override
-  FhirClient? get fhirClient => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
+  @override
+  FhirClient get client;
   @override
   @JsonKey(ignore: true)
   _$FhirHistoryRequestCopyWith<_FhirHistoryRequest> get copyWith =>
@@ -10947,7 +11618,8 @@ abstract class _$FhirHistoryTypeRequestCopyWith<$Res>
       Instant? since,
       FhirDateTime? at,
       String? reference,
-      FhirClient? fhirClient});
+      MimeType? mimeType,
+      FhirClient client});
 }
 
 /// @nodoc
@@ -10974,7 +11646,8 @@ class __$FhirHistoryTypeRequestCopyWithImpl<$Res>
     Object? since = freezed,
     Object? at = freezed,
     Object? reference = freezed,
-    Object? fhirClient = freezed,
+    Object? mimeType = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirHistoryTypeRequest(
       base: base == freezed
@@ -11021,10 +11694,14 @@ class __$FhirHistoryTypeRequestCopyWithImpl<$Res>
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
               as String?,
-      fhirClient: fhirClient == freezed
-          ? _value.fhirClient
-          : fhirClient // ignore: cast_nullable_to_non_nullable
-              as FhirClient?,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as FhirClient,
     ));
   }
 }
@@ -11044,7 +11721,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
       this.since,
       this.at,
       this.reference,
-      this.fhirClient})
+      this.mimeType,
+      required this.client})
       : super._();
 
   @override
@@ -11075,63 +11753,54 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
   @override
   final String? reference;
   @override
-  final FhirClient? fhirClient;
+  final MimeType? mimeType;
+  @override
+  final FhirClient client;
 
   @override
   String toString() {
-    return 'FhirRequest.historyType(base: $base, type: $type, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, fhirClient: $fhirClient)';
+    return 'FhirRequest.historyType(base: $base, type: $type, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, mimeType: $mimeType, client: $client)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirHistoryTypeRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.count, count) ||
-                const DeepCollectionEquality().equals(other.count, count)) &&
-            (identical(other.since, since) ||
-                const DeepCollectionEquality().equals(other.since, since)) &&
-            (identical(other.at, at) ||
-                const DeepCollectionEquality().equals(other.at, at)) &&
+        (other.runtimeType == runtimeType &&
+            other is _FhirHistoryTypeRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.count, count) || other.count == count) &&
+            (identical(other.since, since) || other.since == since) &&
+            (identical(other.at, at) || other.at == at) &&
             (identical(other.reference, reference) ||
-                const DeepCollectionEquality()
-                    .equals(other.reference, reference)) &&
-            (identical(other.fhirClient, fhirClient) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirClient, fhirClient)));
+                other.reference == reference) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(count) ^
-      const DeepCollectionEquality().hash(since) ^
-      const DeepCollectionEquality().hash(at) ^
-      const DeepCollectionEquality().hash(reference) ^
-      const DeepCollectionEquality().hash(fhirClient);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      count,
+      since,
+      at,
+      reference,
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -11151,7 +11820,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         read,
     required TResult Function(
             Uri base,
@@ -11163,7 +11833,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         vRead,
     required TResult Function(
             Uri base,
@@ -11173,7 +11844,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         update,
     required TResult Function(
             Uri base,
@@ -11183,7 +11855,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         patch,
     required TResult Function(
             Uri base,
@@ -11194,7 +11867,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         delete,
     required TResult Function(
             Uri base,
@@ -11204,7 +11878,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         create,
     required TResult Function(
             Uri base,
@@ -11216,7 +11891,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         search,
     required TResult Function(
             Uri base,
@@ -11225,7 +11901,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         searchAll,
     required TResult Function(
             Uri base,
@@ -11235,7 +11912,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         capabilities,
     required TResult Function(
             Uri base,
@@ -11245,7 +11923,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         transaction,
     required TResult Function(
             Uri base,
@@ -11255,7 +11934,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         batch,
     required TResult Function(
             Uri base,
@@ -11270,7 +11950,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         history,
     required TResult Function(
             Uri base,
@@ -11284,7 +11965,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyType,
     required TResult Function(
             Uri base,
@@ -11297,7 +11979,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyAll,
     required TResult Function(
             Uri base,
@@ -11312,11 +11995,12 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         operation,
   }) {
     return historyType(base, type, pretty, summary, format, elements,
-        parameters, count, since, at, reference, fhirClient);
+        parameters, count, since, at, reference, mimeType, client);
   }
 
   @override
@@ -11331,7 +12015,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -11343,7 +12028,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -11353,7 +12039,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -11363,7 +12050,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -11374,7 +12062,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -11384,7 +12073,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -11396,7 +12086,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -11405,7 +12096,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -11415,7 +12107,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -11425,7 +12118,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -11435,7 +12129,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -11450,7 +12145,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -11464,7 +12160,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -11477,7 +12174,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -11492,11 +12190,12 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
   }) {
     return historyType?.call(base, type, pretty, summary, format, elements,
-        parameters, count, since, at, reference, fhirClient);
+        parameters, count, since, at, reference, mimeType, client);
   }
 
   @override
@@ -11511,7 +12210,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -11523,7 +12223,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -11533,7 +12234,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -11543,7 +12245,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -11554,7 +12257,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -11564,7 +12268,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -11576,7 +12281,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -11585,7 +12291,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -11595,7 +12302,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -11605,7 +12313,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -11615,7 +12324,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -11630,7 +12340,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -11644,7 +12355,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -11657,7 +12369,8 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -11672,13 +12385,14 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
     required TResult orElse(),
   }) {
     if (historyType != null) {
       return historyType(base, type, pretty, summary, format, elements,
-          parameters, count, since, at, reference, fhirClient);
+          parameters, count, since, at, reference, mimeType, client);
     }
     return orElse();
   }
@@ -11767,28 +12481,31 @@ abstract class _FhirHistoryTypeRequest extends FhirRequest {
       Instant? since,
       FhirDateTime? at,
       String? reference,
-      FhirClient? fhirClient}) = _$_FhirHistoryTypeRequest;
+      MimeType? mimeType,
+      required FhirClient client}) = _$_FhirHistoryTypeRequest;
   _FhirHistoryTypeRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType get type => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType get type;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  int? get count => throw _privateConstructorUsedError;
-  Instant? get since => throw _privateConstructorUsedError;
-  FhirDateTime? get at => throw _privateConstructorUsedError;
-  String? get reference => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  int? get count;
+  Instant? get since;
+  FhirDateTime? get at;
+  String? get reference;
   @override
-  FhirClient? get fhirClient => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
+  @override
+  FhirClient get client;
   @override
   @JsonKey(ignore: true)
   _$FhirHistoryTypeRequestCopyWith<_FhirHistoryTypeRequest> get copyWith =>
@@ -11813,7 +12530,8 @@ abstract class _$FhirHistoryAllRequestCopyWith<$Res>
       Instant? since,
       FhirDateTime? at,
       String? reference,
-      FhirClient? fhirClient});
+      MimeType? mimeType,
+      FhirClient client});
 }
 
 /// @nodoc
@@ -11839,7 +12557,8 @@ class __$FhirHistoryAllRequestCopyWithImpl<$Res>
     Object? since = freezed,
     Object? at = freezed,
     Object? reference = freezed,
-    Object? fhirClient = freezed,
+    Object? mimeType = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirHistoryAllRequest(
       base: base == freezed
@@ -11882,10 +12601,14 @@ class __$FhirHistoryAllRequestCopyWithImpl<$Res>
           ? _value.reference
           : reference // ignore: cast_nullable_to_non_nullable
               as String?,
-      fhirClient: fhirClient == freezed
-          ? _value.fhirClient
-          : fhirClient // ignore: cast_nullable_to_non_nullable
-              as FhirClient?,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as FhirClient,
     ));
   }
 }
@@ -11904,7 +12627,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
       this.since,
       this.at,
       this.reference,
-      this.fhirClient})
+      this.mimeType,
+      required this.client})
       : super._();
 
   @override
@@ -11933,60 +12657,52 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
   @override
   final String? reference;
   @override
-  final FhirClient? fhirClient;
+  final MimeType? mimeType;
+  @override
+  final FhirClient client;
 
   @override
   String toString() {
-    return 'FhirRequest.historyAll(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, fhirClient: $fhirClient)';
+    return 'FhirRequest.historyAll(base: $base, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, count: $count, since: $since, at: $at, reference: $reference, mimeType: $mimeType, client: $client)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirHistoryAllRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.count, count) ||
-                const DeepCollectionEquality().equals(other.count, count)) &&
-            (identical(other.since, since) ||
-                const DeepCollectionEquality().equals(other.since, since)) &&
-            (identical(other.at, at) ||
-                const DeepCollectionEquality().equals(other.at, at)) &&
+        (other.runtimeType == runtimeType &&
+            other is _FhirHistoryAllRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            (identical(other.count, count) || other.count == count) &&
+            (identical(other.since, since) || other.since == since) &&
+            (identical(other.at, at) || other.at == at) &&
             (identical(other.reference, reference) ||
-                const DeepCollectionEquality()
-                    .equals(other.reference, reference)) &&
-            (identical(other.fhirClient, fhirClient) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirClient, fhirClient)));
+                other.reference == reference) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(count) ^
-      const DeepCollectionEquality().hash(since) ^
-      const DeepCollectionEquality().hash(at) ^
-      const DeepCollectionEquality().hash(reference) ^
-      const DeepCollectionEquality().hash(fhirClient);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      count,
+      since,
+      at,
+      reference,
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -12006,7 +12722,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         read,
     required TResult Function(
             Uri base,
@@ -12018,7 +12735,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         vRead,
     required TResult Function(
             Uri base,
@@ -12028,7 +12746,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         update,
     required TResult Function(
             Uri base,
@@ -12038,7 +12757,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         patch,
     required TResult Function(
             Uri base,
@@ -12049,7 +12769,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         delete,
     required TResult Function(
             Uri base,
@@ -12059,7 +12780,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         create,
     required TResult Function(
             Uri base,
@@ -12071,7 +12793,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         search,
     required TResult Function(
             Uri base,
@@ -12080,7 +12803,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         searchAll,
     required TResult Function(
             Uri base,
@@ -12090,7 +12814,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         capabilities,
     required TResult Function(
             Uri base,
@@ -12100,7 +12825,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         transaction,
     required TResult Function(
             Uri base,
@@ -12110,7 +12836,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         batch,
     required TResult Function(
             Uri base,
@@ -12125,7 +12852,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         history,
     required TResult Function(
             Uri base,
@@ -12139,7 +12867,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyType,
     required TResult Function(
             Uri base,
@@ -12152,7 +12881,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyAll,
     required TResult Function(
             Uri base,
@@ -12167,11 +12897,12 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         operation,
   }) {
     return historyAll(base, pretty, summary, format, elements, parameters,
-        count, since, at, reference, fhirClient);
+        count, since, at, reference, mimeType, client);
   }
 
   @override
@@ -12186,7 +12917,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -12198,7 +12930,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -12208,7 +12941,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -12218,7 +12952,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -12229,7 +12964,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -12239,7 +12975,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -12251,7 +12988,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -12260,7 +12998,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -12270,7 +13009,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -12280,7 +13020,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -12290,7 +13031,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -12305,7 +13047,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -12319,7 +13062,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -12332,7 +13076,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -12347,11 +13092,12 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
   }) {
     return historyAll?.call(base, pretty, summary, format, elements, parameters,
-        count, since, at, reference, fhirClient);
+        count, since, at, reference, mimeType, client);
   }
 
   @override
@@ -12366,7 +13112,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -12378,7 +13125,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -12388,7 +13136,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -12398,7 +13147,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -12409,7 +13159,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -12419,7 +13170,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -12431,7 +13183,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -12440,7 +13193,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -12450,7 +13204,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -12460,7 +13215,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -12470,7 +13226,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -12485,7 +13242,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -12499,7 +13257,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -12512,7 +13271,8 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -12527,13 +13287,14 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
     required TResult orElse(),
   }) {
     if (historyAll != null) {
       return historyAll(base, pretty, summary, format, elements, parameters,
-          count, since, at, reference, fhirClient);
+          count, since, at, reference, mimeType, client);
     }
     return orElse();
   }
@@ -12621,27 +13382,30 @@ abstract class _FhirHistoryAllRequest extends FhirRequest {
       Instant? since,
       FhirDateTime? at,
       String? reference,
-      FhirClient? fhirClient}) = _$_FhirHistoryAllRequest;
+      MimeType? mimeType,
+      required FhirClient client}) = _$_FhirHistoryAllRequest;
   _FhirHistoryAllRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
+  Uri get base;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  int? get count => throw _privateConstructorUsedError;
-  Instant? get since => throw _privateConstructorUsedError;
-  FhirDateTime? get at => throw _privateConstructorUsedError;
-  String? get reference => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  int? get count;
+  Instant? get since;
+  FhirDateTime? get at;
+  String? get reference;
   @override
-  FhirClient? get fhirClient => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
+  @override
+  FhirClient get client;
   @override
   @JsonKey(ignore: true)
   _$FhirHistoryAllRequestCopyWith<_FhirHistoryAllRequest> get copyWith =>
@@ -12668,7 +13432,8 @@ abstract class _$FhirOperationRequestCopyWith<$Res>
       String operation,
       bool usePost,
       bool useFormData,
-      FhirClient? fhirClient});
+      MimeType? mimeType,
+      FhirClient client});
 }
 
 /// @nodoc
@@ -12696,7 +13461,8 @@ class __$FhirOperationRequestCopyWithImpl<$Res>
     Object? operation = freezed,
     Object? usePost = freezed,
     Object? useFormData = freezed,
-    Object? fhirClient = freezed,
+    Object? mimeType = freezed,
+    Object? client = freezed,
   }) {
     return _then(_FhirOperationRequest(
       base: base == freezed
@@ -12747,10 +13513,14 @@ class __$FhirOperationRequestCopyWithImpl<$Res>
           ? _value.useFormData
           : useFormData // ignore: cast_nullable_to_non_nullable
               as bool,
-      fhirClient: fhirClient == freezed
-          ? _value.fhirClient
-          : fhirClient // ignore: cast_nullable_to_non_nullable
-              as FhirClient?,
+      mimeType: mimeType == freezed
+          ? _value.mimeType
+          : mimeType // ignore: cast_nullable_to_non_nullable
+              as MimeType?,
+      client: client == freezed
+          ? _value.client
+          : client // ignore: cast_nullable_to_non_nullable
+              as FhirClient,
     ));
   }
 }
@@ -12771,7 +13541,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
       required this.operation,
       this.usePost = false,
       this.useFormData = false,
-      this.fhirClient})
+      this.mimeType,
+      required this.client})
       : super._();
 
   @override
@@ -12807,69 +13578,58 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
   @override
   final bool useFormData;
   @override
-  final FhirClient? fhirClient;
+  final MimeType? mimeType;
+  @override
+  final FhirClient client;
 
   @override
   String toString() {
-    return 'FhirRequest.operation(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, fhirParameter: $fhirParameter, operation: $operation, usePost: $usePost, useFormData: $useFormData, fhirClient: $fhirClient)';
+    return 'FhirRequest.operation(base: $base, type: $type, id: $id, pretty: $pretty, summary: $summary, format: $format, elements: $elements, parameters: $parameters, fhirParameter: $fhirParameter, operation: $operation, usePost: $usePost, useFormData: $useFormData, mimeType: $mimeType, client: $client)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _FhirOperationRequest &&
-            (identical(other.base, base) ||
-                const DeepCollectionEquality().equals(other.base, base)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.pretty, pretty) ||
-                const DeepCollectionEquality().equals(other.pretty, pretty)) &&
-            (identical(other.summary, summary) ||
-                const DeepCollectionEquality()
-                    .equals(other.summary, summary)) &&
-            (identical(other.format, format) ||
-                const DeepCollectionEquality().equals(other.format, format)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.parameters, parameters) ||
-                const DeepCollectionEquality()
-                    .equals(other.parameters, parameters)) &&
-            (identical(other.fhirParameter, fhirParameter) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirParameter, fhirParameter)) &&
+        (other.runtimeType == runtimeType &&
+            other is _FhirOperationRequest &&
+            (identical(other.base, base) || other.base == base) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.pretty, pretty) || other.pretty == pretty) &&
+            (identical(other.summary, summary) || other.summary == summary) &&
+            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality()
+                .equals(other.parameters, parameters) &&
+            const DeepCollectionEquality()
+                .equals(other.fhirParameter, fhirParameter) &&
             (identical(other.operation, operation) ||
-                const DeepCollectionEquality()
-                    .equals(other.operation, operation)) &&
-            (identical(other.usePost, usePost) ||
-                const DeepCollectionEquality()
-                    .equals(other.usePost, usePost)) &&
+                other.operation == operation) &&
+            (identical(other.usePost, usePost) || other.usePost == usePost) &&
             (identical(other.useFormData, useFormData) ||
-                const DeepCollectionEquality()
-                    .equals(other.useFormData, useFormData)) &&
-            (identical(other.fhirClient, fhirClient) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirClient, fhirClient)));
+                other.useFormData == useFormData) &&
+            (identical(other.mimeType, mimeType) ||
+                other.mimeType == mimeType) &&
+            (identical(other.client, client) || other.client == client));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(base) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(pretty) ^
-      const DeepCollectionEquality().hash(summary) ^
-      const DeepCollectionEquality().hash(format) ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(parameters) ^
-      const DeepCollectionEquality().hash(fhirParameter) ^
-      const DeepCollectionEquality().hash(operation) ^
-      const DeepCollectionEquality().hash(usePost) ^
-      const DeepCollectionEquality().hash(useFormData) ^
-      const DeepCollectionEquality().hash(fhirClient);
+  int get hashCode => Object.hash(
+      runtimeType,
+      base,
+      type,
+      id,
+      pretty,
+      summary,
+      format,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(parameters),
+      const DeepCollectionEquality().hash(fhirParameter),
+      operation,
+      usePost,
+      useFormData,
+      mimeType,
+      client);
 
   @JsonKey(ignore: true)
   @override
@@ -12889,7 +13649,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         read,
     required TResult Function(
             Uri base,
@@ -12901,7 +13662,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         vRead,
     required TResult Function(
             Uri base,
@@ -12911,7 +13673,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         update,
     required TResult Function(
             Uri base,
@@ -12921,7 +13684,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         patch,
     required TResult Function(
             Uri base,
@@ -12932,7 +13696,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         delete,
     required TResult Function(
             Uri base,
@@ -12942,7 +13707,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         create,
     required TResult Function(
             Uri base,
@@ -12954,7 +13720,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         search,
     required TResult Function(
             Uri base,
@@ -12963,7 +13730,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         searchAll,
     required TResult Function(
             Uri base,
@@ -12973,7 +13741,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         capabilities,
     required TResult Function(
             Uri base,
@@ -12983,7 +13752,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         transaction,
     required TResult Function(
             Uri base,
@@ -12993,7 +13763,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         batch,
     required TResult Function(
             Uri base,
@@ -13008,7 +13779,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         history,
     required TResult Function(
             Uri base,
@@ -13022,7 +13794,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyType,
     required TResult Function(
             Uri base,
@@ -13035,7 +13808,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         historyAll,
     required TResult Function(
             Uri base,
@@ -13050,7 +13824,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)
+            MimeType? mimeType,
+            FhirClient client)
         operation,
   }) {
     return operation(
@@ -13066,7 +13841,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
         this.operation,
         usePost,
         useFormData,
-        fhirClient);
+        mimeType,
+        client);
   }
 
   @override
@@ -13081,7 +13857,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -13093,7 +13870,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -13103,7 +13881,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -13113,7 +13892,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -13124,7 +13904,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -13134,7 +13915,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -13146,7 +13928,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -13155,7 +13938,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -13165,7 +13949,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -13175,7 +13960,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -13185,7 +13971,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -13200,7 +13987,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -13214,7 +14002,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -13227,7 +14016,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -13242,7 +14032,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
   }) {
     return operation?.call(
@@ -13258,7 +14049,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
         this.operation,
         usePost,
         useFormData,
-        fhirClient);
+        mimeType,
+        client);
   }
 
   @override
@@ -13273,7 +14065,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         read,
     TResult Function(
             Uri base,
@@ -13285,7 +14078,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         vRead,
     TResult Function(
             Uri base,
@@ -13295,7 +14089,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         update,
     TResult Function(
             Uri base,
@@ -13305,7 +14100,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         patch,
     TResult Function(
             Uri base,
@@ -13316,7 +14112,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         delete,
     TResult Function(
             Uri base,
@@ -13326,7 +14123,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         create,
     TResult Function(
             Uri base,
@@ -13338,7 +14136,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> parameters,
             bool usePost,
             RestfulRequest restfulRequest,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         search,
     TResult Function(
             Uri base,
@@ -13347,7 +14146,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String format,
             List<String> elements,
             List<String> parameters,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         searchAll,
     TResult Function(
             Uri base,
@@ -13357,7 +14157,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Mode mode,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         capabilities,
     TResult Function(
             Uri base,
@@ -13367,7 +14168,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         transaction,
     TResult Function(
             Uri base,
@@ -13377,7 +14179,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             List<String> elements,
             List<String> parameters,
             Bundle bundle,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         batch,
     TResult Function(
             Uri base,
@@ -13392,7 +14195,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         history,
     TResult Function(
             Uri base,
@@ -13406,7 +14210,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyType,
     TResult Function(
             Uri base,
@@ -13419,7 +14224,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             Instant? since,
             FhirDateTime? at,
             String? reference,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         historyAll,
     TResult Function(
             Uri base,
@@ -13434,7 +14240,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
             String operation,
             bool usePost,
             bool useFormData,
-            FhirClient? fhirClient)?
+            MimeType? mimeType,
+            FhirClient client)?
         operation,
     required TResult orElse(),
   }) {
@@ -13452,7 +14259,8 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
           this.operation,
           usePost,
           useFormData,
-          fhirClient);
+          mimeType,
+          client);
     }
     return orElse();
   }
@@ -13542,29 +14350,32 @@ abstract class _FhirOperationRequest extends FhirRequest {
       required String operation,
       bool usePost,
       bool useFormData,
-      FhirClient? fhirClient}) = _$_FhirOperationRequest;
+      MimeType? mimeType,
+      required FhirClient client}) = _$_FhirOperationRequest;
   _FhirOperationRequest._() : super._();
 
   @override
-  Uri get base => throw _privateConstructorUsedError;
-  R4ResourceType? get type => throw _privateConstructorUsedError;
-  Id? get id => throw _privateConstructorUsedError;
+  Uri get base;
+  R4ResourceType? get type;
+  Id? get id;
   @override
-  bool get pretty => throw _privateConstructorUsedError;
+  bool get pretty;
   @override
-  Summary get summary => throw _privateConstructorUsedError;
+  Summary get summary;
   @override
-  String get format => throw _privateConstructorUsedError;
+  String get format;
   @override
-  List<String> get elements => throw _privateConstructorUsedError;
+  List<String> get elements;
   @override
-  List<String> get parameters => throw _privateConstructorUsedError;
-  Map<String, dynamic> get fhirParameter => throw _privateConstructorUsedError;
-  String get operation => throw _privateConstructorUsedError;
-  bool get usePost => throw _privateConstructorUsedError;
-  bool get useFormData => throw _privateConstructorUsedError;
+  List<String> get parameters;
+  Map<String, dynamic> get fhirParameter;
+  String get operation;
+  bool get usePost;
+  bool get useFormData;
   @override
-  FhirClient? get fhirClient => throw _privateConstructorUsedError;
+  MimeType? get mimeType;
+  @override
+  FhirClient get client;
   @override
   @JsonKey(ignore: true)
   _$FhirOperationRequestCopyWith<_FhirOperationRequest> get copyWith =>
