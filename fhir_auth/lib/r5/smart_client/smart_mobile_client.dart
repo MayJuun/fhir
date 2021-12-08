@@ -49,12 +49,16 @@ class SmartMobileClient extends SmartClient {
   /// Oauth2Helper
   OAuth2Helper? helper;
 
+  /// For testing purposes, or in those cases where it's unavoidable,
+  /// but not recommended if on a mobile device
   @override
   String? secret;
 
+  ///Patient launch context not supported on mobile devices yet
   @override
   String? get patientId => null;
 
+  ///Encounter launch context not supported on mobile devices yet
   @override
   String? get encounterId => null;
 

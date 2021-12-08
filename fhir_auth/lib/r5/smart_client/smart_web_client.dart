@@ -59,9 +59,13 @@ class SmartWebClient extends SmartClient {
   /// getter for getting the token string
   String? get _$_$_accessToken => _$_$_tokenResponse?.accessToken;
 
+  /// If a patient launch context is requested, it's returned as part of the
+  /// access token Response, this getter requests it
   @override
   String? get patientId => _$_$_tokenResponse?.toMap()['patient'];
 
+  /// If an encounter launch context is requested, it's returned as part of the
+  /// access token Response, this getter requests it
   @override
   String? get encounterId => _$_$_tokenResponse?.toMap()['encounter'];
 
