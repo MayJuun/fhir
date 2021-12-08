@@ -45,24 +45,45 @@ class DemoPage extends StatelessWidget {
       scopes: scopes.scopesList(),
       launch: launch,
     );
+
+    final result = request(client);
     return MaterialApp(
       home: Scaffold(
         body: Padding(
           padding: const EdgeInsets.fromLTRB(16, 30, 16, 0),
-          child: GridView.count(
-            childAspectRatio: 2.0,
-            crossAxisCount: 2,
-            children: [
-              ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.white),
-                    side: MaterialStateProperty.all(
-                        const BorderSide(color: Colors.black)),
-                  ),
-                  child: Image.asset('assets/interopland.png'),
-                  onPressed: () async =>
-                      await request(client)),
-            ],
+          child: FutureBuilder<Resource?>(
+            future: result,
+            builder: (BuildContext context, AsyncSnapshot<Resource?> snapshot) {
+              List<Widget> children;
+              if (snapshot.hasData && snapshot.data is Patient) {
+                children = <Widget>[
+                  const Text('Request was successful'),
+                  Text(
+                      'Last Name: ${(snapshot.data as Patient).name?[0].family}'),
+                  Text(
+                      'Given Names: ${(snapshot.data as Patient).name?[0].given?.join(" ")}'),
+                  Text('ID: ${(snapshot.data as Patient).id}'),
+                  Text('Server: ${isMeld ? "Meld" : "Interopland"}'),
+                  Text('ISS: $iss'),
+                ];
+              } else if (iss == null) {
+                children = [
+                  const Text('App Was Not Launched from an EHR'),
+                ];
+              } else {
+                children = [
+                  const Text('Please Login'),
+                  const CircularProgressIndicator(),
+                ];
+              }
+              return Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: children,
+                ),
+              );
+            },
           ),
         ),
       ),

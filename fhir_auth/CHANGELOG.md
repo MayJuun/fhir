@@ -1,5 +1,12 @@
 # fhir_auth
 
+## [0.5.0-7]
+
+* Simplified ehrlaunchdemo to more closely mirror actual ehr launch workflow
+* Added new clinical scopes to correspond to SMART on FHIR 2.0 (note that while these are an option for the enum Interaction, they're not supported yet - baby steps people)
+* SMART Client now has getters for patientId and encounterId (as these are the two contexts that are sometimes passed with an EHR launch)
+* They are fully supported in Web client NOT in mobile client (again, for now)
+
 ## [0.5.0-6]
 
 * initialize() has been changed back to login()

@@ -76,6 +76,8 @@ class SmartWebClient extends SmartClient {
   Future<void> login() async {
     try {
       await _getEndpoints();
+      print(tokenUrl);
+      print(authUrl);
     } catch (e) {
       throw PlatformException(
           code: e.toString(), message: 'Failed to get Auth & Token Endpoints');
