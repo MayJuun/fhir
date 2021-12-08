@@ -63,8 +63,13 @@ class SmartMobileClient extends SmartClient {
   String? get encounterId => null;
 
   @override
+  Future<bool> isLoggedIn() async => client != null && helper != null;
+
+  @override
   Future<void> login() async {
-    await _getEndpoints();
+    if (authUrl == null || tokenUrl == null) {
+      await _getEndpoints();
+    }
     if (redirectUri != null) {
       client = OAuth2Client(
         /// Just one slash, required by Google specs

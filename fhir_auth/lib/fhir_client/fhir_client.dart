@@ -10,6 +10,8 @@ abstract class FhirClient {
 
   Future<void> login();
 
+  Future<void> isLoggedIn();
+
   Future<void> logout();
 
   Future<Response?> get(String url, {Map<String, String>? headers});

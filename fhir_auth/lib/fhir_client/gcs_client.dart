@@ -39,6 +39,7 @@ class GcsClient extends FhirClient {
 
   Future<bool> isSignedIn() async => await _googleSignIn.isSignedIn();
 
+  @override
   Future<bool> isLoggedIn() async => await _googleSignIn.isSignedIn();
 
   Future<Map<String, String>> newHeaders(Map<String, String>? headers) async {

@@ -73,12 +73,19 @@ class SmartWebClient extends SmartClient {
   String? secret;
 
   @override
+  Future<bool> isLoggedIn() async =>
+      client != null && _$_$_tokenResponse != null;
+
+  @override
   Future<void> login() async {
-    try {
-      await _getEndpoints();
-    } catch (e) {
-      throw PlatformException(
-          code: e.toString(), message: 'Failed to get Auth & Token Endpoints');
+    if (authUrl == null || tokenUrl == null) {
+      try {
+        await _getEndpoints();
+      } catch (e) {
+        throw PlatformException(
+            code: e.toString(),
+            message: 'Failed to get Auth & Token Endpoints');
+      }
     }
     await authenticate();
   }
