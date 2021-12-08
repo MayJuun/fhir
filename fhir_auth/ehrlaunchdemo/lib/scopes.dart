@@ -5,11 +5,12 @@ import 'package:fhir_auth/r4.dart';
 final scopes = Scopes(
   clinicalScopes: [
     ClinicalScope(
-      Role.patient,
+      Role.user,
       R4ResourceType.Patient,
       Interaction.any,
     ),
   ],
   openid: true,
   offlineAccess: true,
+  ehrLaunch: true,
 );

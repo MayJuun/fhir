@@ -1,7 +1,10 @@
+import 'package:fhir/r4.dart';
+import 'package:fhir_auth/r4.dart';
 import 'package:flutter/material.dart';
 
-import 'interop_request.dart';
-import 'meld_request.dart';
+import 'api.dart';
+import 'request.dart';
+import 'scopes.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,6 +24,8 @@ class DemoPage extends StatelessWidget {
   final Map<String, String> queryParameters;
   @override
   Widget build(BuildContext context) {
+    final iss = queryParameters['iss'];
+    print('Iss: $iss');
     final launch = queryParameters['launch'];
     print('Launch: $launch');
     final currentUri = Uri.base;
@@ -31,6 +36,15 @@ class DemoPage extends StatelessWidget {
       path: '/redirect.html',
     );
     print('Redirect: $fhirCallback');
+    final isMeld = iss == 'https://gw.interop.community/MayJuun/data';
+
+    final client = SmartClient.getSmartClient(
+      fhirUri: FhirUri(isMeld ? Api.meldUrl : Api.interopUrl),
+      clientId: isMeld ? Api.meldClientId : Api.interopClientId,
+      redirectUri: FhirUri(fhirCallback),
+      scopes: scopes.scopesList(),
+      launch: launch,
+    );
     return MaterialApp(
       home: Scaffold(
         body: Padding(
@@ -47,16 +61,7 @@ class DemoPage extends StatelessWidget {
                   ),
                   child: Image.asset('assets/interopland.png'),
                   onPressed: () async =>
-                      await interopRequest(fhirCallback, launch)),
-              ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.white),
-                    side: MaterialStateProperty.all(
-                        const BorderSide(color: Colors.black)),
-                  ),
-                  child: Image.asset('assets/meld.png'),
-                  onPressed: () async =>
-                      await meldRequest(fhirCallback, launch)),
+                      await request(client)),
             ],
           ),
         ),
