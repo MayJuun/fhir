@@ -53,6 +53,12 @@ class SmartMobileClient extends SmartClient {
   String? secret;
 
   @override
+  String? get patientId => null;
+
+  @override
+  String? get encounterId => null;
+
+  @override
   Future<void> login() async {
     await _getEndpoints();
     if (redirectUri != null) {

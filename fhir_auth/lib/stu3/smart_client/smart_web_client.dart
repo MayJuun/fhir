@@ -60,6 +60,12 @@ class SmartWebClient extends SmartClient {
   String? get _$_$_accessToken => _$_$_tokenResponse?.accessToken;
 
   @override
+  String? get patientId => _$_$_tokenResponse?.toMap()['patient'];
+
+  @override
+  String? get encounterId => _$_$_tokenResponse?.toMap()['encounter'];
+
+  @override
   String? secret;
 
   @override

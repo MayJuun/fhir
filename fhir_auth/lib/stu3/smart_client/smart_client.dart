@@ -58,4 +58,14 @@ abstract class SmartClient extends FhirClient {
       );
     }
   }
+
+  /// SMART on FHIR launches, primarily form an EHR, allow the passing of context
+  /// information (either for a patient or an encounter), this allows easy access
+  /// to the resource ID for the context
+  String? get patientId;
+
+  /// SMART on FHIR launches, primarily form an EHR, allow the passing of context
+  /// information (either for a patient or an encounter), this allows easy access
+  /// to the resource ID for the context
+  String? get encounterId;
 }
