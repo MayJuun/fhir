@@ -4,7 +4,7 @@ import '../../fhir_path.dart';
 
 class SingleParser extends FhirPathParser {
   SingleParser();
-  List execute(List results, Map passed) => results.length == 1
+  List execute(List results, Map<String, dynamic> passed) => results.length == 1
       ? results
       : results.length == 0
           ? []
@@ -17,19 +17,19 @@ class SingleParser extends FhirPathParser {
 
 class FirstParser extends FhirPathParser {
   FirstParser();
-  List execute(List results, Map passed) =>
+  List execute(List results, Map<String, dynamic> passed) =>
       results.isEmpty ? [] : [results.first];
 }
 
 class LastParser extends FhirPathParser {
   LastParser();
-  List execute(List results, Map passed) =>
+  List execute(List results, Map<String, dynamic> passed) =>
       results.isEmpty ? [] : [results.last];
 }
 
 class TailParser extends FhirPathParser {
   TailParser();
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     if (results.length < 2) {
       return [];
     } else {
@@ -42,7 +42,7 @@ class TailParser extends FhirPathParser {
 class SkipParser extends FunctionParser {
   SkipParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
     return executedValue.length != 1 || executedValue.first is! int
         ? throw FhirPathEvaluationException(
@@ -65,7 +65,7 @@ class SkipParser extends FunctionParser {
 class TakeParser extends FunctionParser {
   TakeParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
     return value.length != 1 || value.first is! IntegerParser
         ? throw FhirPathEvaluationException(
@@ -88,7 +88,7 @@ class TakeParser extends FunctionParser {
 class IntersectParser extends ValueParser<ParserList> {
   IntersectParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
     results.removeWhere((e) =>
         executedValue.indexWhere(
@@ -101,7 +101,7 @@ class IntersectParser extends ValueParser<ParserList> {
 class ExcludeParser extends ValueParser<ParserList> {
   ExcludeParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
     results.removeWhere((e) =>
         executedValue.indexWhere(

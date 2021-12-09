@@ -224,4 +224,4 @@ const questionnaireSampleResource = '''{
 }''';
 
 const questionnaireSampleFhirPath =
-    "%resource.repeat(item).where(linkId='4.3.b').item.answer.ordinal().aggregate(\$this + \$total, 0)";
+    "repeat(item).where(linkId='4.3.b').item.answer.ordinal().aggregate(\$this + \$total, 0)";

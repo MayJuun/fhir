@@ -6,7 +6,7 @@ class GreaterParser extends OperatorParser {
   GreaterParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) =>
+  List execute(List results, Map<String, dynamic> passed) =>
       executeComparisons(results, before, after, passed, Comparator.gt);
 }
 
@@ -14,7 +14,7 @@ class LessParser extends OperatorParser {
   LessParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) =>
+  List execute(List results, Map<String, dynamic> passed) =>
       executeComparisons(results, before, after, passed, Comparator.lt);
 }
 
@@ -22,7 +22,7 @@ class GreaterEqualParser extends OperatorParser {
   GreaterEqualParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     return executeComparisons(results, before, after, passed, Comparator.gte);
   }
 }
@@ -31,14 +31,14 @@ class LessEqualParser extends OperatorParser {
   LessEqualParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) =>
+  List execute(List results, Map<String, dynamic> passed) =>
       executeComparisons(results, before, after, passed, Comparator.lte);
 }
 
 enum Comparator { gt, gte, lt, lte }
 
 List executeComparisons(List results, ParserList before, ParserList after,
-    Map passed, Comparator comparator,
+    Map<String, dynamic> passed, Comparator comparator,
     {bool where = false}) {
   bool stringGt(dynamic param1, dynamic param2) {
     if (param1 is! String || param2 is! String) {

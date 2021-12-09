@@ -4,7 +4,7 @@ import 'fhir_path_parser.dart';
 abstract class BaseDateTimeParser<T> extends ValueParser<T> {
   BaseDateTimeParser();
   late T value;
-  List execute(List results, Map passed) => [value];
+  List execute(List results, Map<String, dynamic> passed) => [value];
   String toString() => value.toString();
   int get length => (value as List).length;
   bool isComparable(Object o) => o is BaseDateTimeParser;
@@ -14,7 +14,8 @@ abstract class BaseDateTimeParser<T> extends ValueParser<T> {
 class ParenthesesParser extends ValueParser<ParserList> {
   ParenthesesParser(this.value);
   ParserList value;
-  List execute(List results, Map passed) => value.execute(results, passed);
+  List execute(List results, Map<String, dynamic> passed) =>
+      value.execute(results, passed);
 }
 
 /// FunctionParser: functions

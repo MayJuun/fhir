@@ -2,7 +2,7 @@ import '../../fhir_path.dart';
 
 class ChildrenParser extends FhirPathParser {
   ChildrenParser();
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final finalResults = [];
     for (var r in results) {
       if (r is Map) {
@@ -22,7 +22,7 @@ class ChildrenParser extends FhirPathParser {
 class DescendantsParser extends FhirPathParser {
   DescendantsParser();
 
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     // According to spec, `descendants()` is shorthand for `repeat(children())`
     final repeatParser = RepeatParser();
     repeatParser.value = ParserList([ChildrenParser()]);

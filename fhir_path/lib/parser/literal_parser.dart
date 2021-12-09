@@ -11,14 +11,14 @@ import '../fhir_path.dart';
 class WhiteSpaceParser extends ValueParser<String> {
   WhiteSpaceParser(this.value);
   String value;
-  List execute(List results, Map passed) => results;
+  List execute(List results, Map<String, dynamic> passed) => results;
 }
 
 /// Boolean Parser, it returns a FHIR Boolean value
 class BooleanParser extends ValueParser<bool> {
   BooleanParser(String newValue) : value = newValue == 'true';
   bool value;
-  List execute(List results, Map passed) => [value];
+  List execute(List results, Map<String, dynamic> passed) => [value];
 }
 
 /// This allows the passing of a variable from the environment into the
@@ -26,12 +26,13 @@ class BooleanParser extends ValueParser<bool> {
 class EnvVariableParser extends ValueParser<String> {
   EnvVariableParser(this.value);
   String value;
-  List execute(List results, Map passed) => passed[value] == null
-      ? throw FhirPathEvaluationException('Variable $value does not exist.',
-          variables: passed)
-      : passed[value] is List
-          ? passed[value]
-          : [passed[value]];
+  List execute(List results, Map<String, dynamic> passed) =>
+      passed[value] == null
+          ? throw FhirPathEvaluationException('Variable $value does not exist.',
+              variables: passed)
+          : passed[value] is List
+              ? passed[value]
+              : [passed[value]];
 }
 
 class QuantityParser extends ValueParser<FhirPathQuantity> {
@@ -40,39 +41,39 @@ class QuantityParser extends ValueParser<FhirPathQuantity> {
     value = FhirPathQuantity(num.parse(stringList.first), stringList.last);
   }
   late FhirPathQuantity value;
-  List execute(List results, Map passed) => [value];
+  List execute(List results, Map<String, dynamic> passed) => [value];
 }
 
 class IntegerParser extends ValueParser<int> {
   IntegerParser(String newValue) : value = int.parse(newValue);
   int value;
-  List execute(List results, Map passed) => [value];
+  List execute(List results, Map<String, dynamic> passed) => [value];
 }
 
 class DecimalParser extends ValueParser<double> {
   DecimalParser(String newValue) : value = double.parse(newValue);
   double value;
-  List execute(List results, Map passed) => [value];
+  List execute(List results, Map<String, dynamic> passed) => [value];
 }
 
 class IdentifierParser extends ValueParser<String> {
   IdentifierParser(this.value);
   String value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final finalResults = [];
-    if (passed['version'] == FhirVersion.r4
+    if (passed.isVersion(FhirVersion.r4)
         ? r4.ResourceUtils.resourceTypeFromStringMap.keys.contains(value)
-        : passed['version'] == FhirVersion.r5
+        : passed.isVersion(FhirVersion.r5)
             ? r5.ResourceUtils.resourceTypeFromStringMap.keys.contains(value)
-            : passed['version'] == FhirVersion.dstu2
+            : passed.isVersion(FhirVersion.dstu2)
                 ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
                     .contains(value)
                 : stu3.ResourceUtils.resourceTypeFromStringMap.keys
                         .contains(value) &&
-                    (passed['%resource'] == null
+                    (passed.hasNoResource
                         ? false
-                        : passed['%resource']['resourceType'] == value)) {
-      finalResults.add(passed['%resource']);
+                        : passed.resource?['resourceType'] == value)) {
+      finalResults.add(passed.resource);
     } else {
       results.forEach((r) {
         if (r is Map) {
@@ -110,7 +111,7 @@ class DelimitedIdentifierParser extends ValueParser<String> {
   DelimitedIdentifierParser(String newValue)
       : value = newValue.substring(1, newValue.length - 1);
   String value;
-  List execute(List results, Map passed) => [value];
+  List execute(List results, Map<String, dynamic> passed) => [value];
 }
 
 class StringParser extends ValueParser<String> {
@@ -119,7 +120,7 @@ class StringParser extends ValueParser<String> {
             ? ''
             : newValue.substring(1, newValue.length - 1);
   String value;
-  List execute(List results, Map passed) => [value];
+  List execute(List results, Map<String, dynamic> passed) => [value];
 }
 
 class DateTimeParser extends BaseDateTimeParser<List> {
@@ -158,7 +159,7 @@ class DateTimeParser extends BaseDateTimeParser<List> {
     }
   }
   late List value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     if (value.length == 0) {
       return [];
     } else if (value.length == 1) {
@@ -184,7 +185,7 @@ class DateParser extends BaseDateTimeParser<Date> {
     value = Date(valueString.replaceFirst('@', ''));
   }
   late Date value;
-  List execute(List results, Map passed) => [value];
+  List execute(List results, Map<String, dynamic> passed) => [value];
 
   String toString() => value.toString();
 }
@@ -195,7 +196,7 @@ class TimeParser extends BaseDateTimeParser<Time> {
     value = Time(removeAt.replaceFirst('T', ''));
   }
   late Time value;
-  List execute(List results, Map passed) => [value];
+  List execute(List results, Map<String, dynamic> passed) => [value];
 
   String toString() => value.toString();
 }

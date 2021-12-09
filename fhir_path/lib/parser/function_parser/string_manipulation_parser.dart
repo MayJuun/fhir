@@ -3,7 +3,7 @@ import '../../fhir_path.dart';
 class IndexOfParser extends ValueParser<ParserList> {
   IndexOfParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
     return results.length == 0
         ? []
@@ -20,7 +20,7 @@ class IndexOfParser extends ValueParser<ParserList> {
 class SubstringParser extends ValueParser<ParserList> {
   SubstringParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
     return results.length == 0
         ? []
@@ -64,7 +64,7 @@ class SubstringParser extends ValueParser<ParserList> {
 class StartsWithParser extends ValueParser<ParserList> {
   StartsWithParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
     return results.length == 0
         ? []
@@ -83,7 +83,7 @@ class StartsWithParser extends ValueParser<ParserList> {
 class EndsWithParser extends ValueParser<ParserList> {
   EndsWithParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
     return results.length == 0
         ? []
@@ -100,7 +100,7 @@ class EndsWithParser extends ValueParser<ParserList> {
 class ContainsParser extends ValueParser<ParserList> {
   ContainsParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
     return results.length == 0
         ? []
@@ -119,7 +119,7 @@ class ContainsParser extends ValueParser<ParserList> {
 
 class UpperParser extends FhirPathParser {
   UpperParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _requiresList('.upper()', results)
@@ -128,7 +128,7 @@ class UpperParser extends FhirPathParser {
 
 class LowerParser extends FhirPathParser {
   LowerParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _requiresList('.lower()', results)
@@ -138,7 +138,7 @@ class LowerParser extends FhirPathParser {
 class ReplaceParser extends ValueParser<ParserList> {
   ReplaceParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
     return results.length == 0
         ? []
@@ -157,7 +157,7 @@ class ReplaceParser extends ValueParser<ParserList> {
 class FpMatchesParser extends ValueParser<ParserList> {
   FpMatchesParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
     return results.length == 0 || value.length == 0
         ? []
@@ -175,7 +175,7 @@ class FpMatchesParser extends ValueParser<ParserList> {
 class ReplaceMatchesParser extends ValueParser<ParserList> {
   ReplaceMatchesParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
     return results.length == 0 || value.length == 0
         ? []
@@ -199,7 +199,7 @@ class ReplaceMatchesParser extends ValueParser<ParserList> {
 
 class LengthParser extends FhirPathParser {
   LengthParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _requiresList('.length()', results)
@@ -212,7 +212,7 @@ class LengthParser extends FhirPathParser {
 
 class ToCharsParser extends FhirPathParser {
   ToCharsParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _requiresList('.toChars()', results)

@@ -4,7 +4,7 @@ class EqualsParser extends OperatorParser {
   EqualsParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
@@ -28,7 +28,7 @@ class EquivalentParser extends OperatorParser {
   EquivalentParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     return [];
   }
 }
@@ -39,7 +39,7 @@ class EquivalentParser extends OperatorParser {
 class NotEqualsParser extends OperatorParser {
   NotEqualsParser();
 
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final equalsParser = EqualsParser();
     equalsParser.before = this.before;
     equalsParser.after = this.after;
@@ -52,7 +52,7 @@ class NotEquivalentParser extends OperatorParser {
   NotEquivalentParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedBefore =
         before.length == 1 && before.first is IdentifierParser
             ? [(before.first as IdentifierParser).value]

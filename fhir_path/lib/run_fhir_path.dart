@@ -18,9 +18,9 @@ List<dynamic> walkFhirPath(
   Map<String, dynamic>? passed,
   FhirVersion version = FhirVersion.r4,
 ]) {
-  final passedValue = passed ?? {};
-  passedValue['%resource'] = resource ?? [];
-  passedValue['version'] = version;
+  final passedValue = Map<String, dynamic>.from(passed ?? {});
+  passedValue.resource = resource ?? {};
+  passedValue.version = version;
 
   try {
     final FhirPathParser ast = lexer().parse(pathExpression).value;
@@ -99,3 +99,12 @@ List<dynamic> stu3WalkFhirPath(
   Map<String, dynamic>? passed,
 ]) =>
     walkFhirPath(resource?.toJson(), pathExpression, passed, FhirVersion.stu3);
+
+extension FhirPathResourceExtension on Map<String, dynamic> {
+  static const resourceKey = '_resource';
+
+  Map<String, dynamic>? get resource => this[resourceKey];
+  void set resource(Map<String, dynamic>? resource) =>
+      this[resourceKey] = resource;
+  bool get hasNoResource => resource == null;
+}

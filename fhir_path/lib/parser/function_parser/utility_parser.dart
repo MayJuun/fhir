@@ -4,7 +4,7 @@ import '../../fhir_path.dart';
 
 class FpNotParser extends FhirPathParser {
   FpNotParser();
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
       return [];
     }
@@ -25,23 +25,24 @@ class FpNotParser extends FhirPathParser {
 
 class NowParser extends FhirPathParser {
   NowParser();
-  List execute(List results, Map passed) => [FhirDateTime(DateTime.now())];
+  List execute(List results, Map<String, dynamic> passed) =>
+      [FhirDateTime(DateTime.now())];
 }
 
 class TimeOfDayParser extends FhirPathParser {
   TimeOfDayParser();
-  List execute(List results, Map passed) =>
+  List execute(List results, Map<String, dynamic> passed) =>
       [Time(DateTime.now().toIso8601String().split('T').last.substring(0, 12))];
 }
 
 class TodayParser extends FhirPathParser {
   TodayParser();
-  List execute(List results, Map passed) =>
+  List execute(List results, Map<String, dynamic> passed) =>
       [Date(DateTime.now().toIso8601String().split('T').first)];
 }
 
 class TraceParser extends ValueParser {
   TraceParser();
   dynamic value;
-  List execute(List results, Map passed) => [];
+  List execute(List results, Map<String, dynamic> passed) => [];
 }
