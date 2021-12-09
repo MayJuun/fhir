@@ -24,8 +24,8 @@ class FhirPathException implements Exception {
   /// Exception which was the root cause
   final Object? cause;
 
-  /// Main FHIR resource
-  final Object? resource;
+  /// The original node that was passed to the evaluation engine before starting evaluation
+  final Object? context;
 
   /// Variables which were present
   final Map? variables;
@@ -38,7 +38,7 @@ class FhirPathException implements Exception {
       this.operation,
       this.arguments,
       this.collection,
-      this.resource,
+      this.context,
       this.variables});
 
   FhirPathException copyWith({
@@ -54,7 +54,7 @@ class FhirPathException implements Exception {
       operation: operation,
       arguments: arguments,
       collection: collection,
-      resource: resource ?? this.resource,
+      context: resource ?? this.context,
       variables: variables ?? this.variables,
     );
   }
@@ -103,8 +103,8 @@ class FhirPathException implements Exception {
       result.writeln('Collection (length: ${collection?.length}): $collection');
     }
 
-    if (!short && resource != null) {
-      result.writeln('Resources: $resource');
+    if (!short && context != null) {
+      result.writeln('Resources: $context');
     }
     if (!short && variables != null) {
       result.writeln('Variables: $variables');

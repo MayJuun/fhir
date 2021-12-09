@@ -70,10 +70,10 @@ class IdentifierParser extends ValueParser<String> {
                     .contains(value)
                 : stu3.ResourceUtils.resourceTypeFromStringMap.keys
                         .contains(value) &&
-                    (passed.hasNoResource
+                    (passed.hasNoContext
                         ? false
-                        : passed.resource?['resourceType'] == value)) {
-      finalResults.add(passed.resource);
+                        : passed.context?['resourceType'] == value)) {
+      finalResults.add(passed.context);
     } else {
       results.forEach((r) {
         if (r is Map) {
