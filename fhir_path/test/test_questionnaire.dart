@@ -63,7 +63,7 @@ void testQuestionnaire() {
               " %resource.repeat(item).where(linkId='4.2.b.5').answer.valueDate.toString().substring(0, 4).toInteger() "
               ">="
               " 40",
-              {'%resource': faiadashuResponse.toJson()}),
+              resource: faiadashuResponse.toJson()),
           [false]);
     });
     test('EnableWhen using generic value polymorphic type', () {
@@ -79,7 +79,7 @@ void testQuestionnaire() {
               " %resource.repeat(item).where(linkId='4.2.b.5').answer.value.toString().substring(0, 4).toInteger() "
               ">="
               " 40",
-              {'%resource': faiadashuResponse.toJson()}),
+              resource: faiadashuResponse.toJson()),
           [false]);
     });
     test('EnableWhen using a defined polymorphic type', () {
@@ -95,7 +95,7 @@ void testQuestionnaire() {
               " %resource.repeat(item).where(linkId='4.2.b.5').answer.(value as Date).toString().substring(0, 4).toInteger() "
               ">="
               " 40",
-              {'%resource': faiadashuResponse.toJson()}),
+              resource: faiadashuResponse.toJson()),
           [false]);
     });
   });

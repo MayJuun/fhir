@@ -1,5 +1,11 @@
 # fhir_path
 
+## [0.5.0-17]
+* **[Breaking]** Decoupled %context from %resource.
+  * Important for item-level expressions on QuestionnaireResponse, where `%context` is the item, 
+  but `%resource` is the overall QuestionnaireResponse
+* Enable the UI to accept arbitrary JSON, rather than only FHIR Resources
+
 ## [0.5.0-16]
 
 * Update fhir version
