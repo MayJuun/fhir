@@ -44,8 +44,14 @@ class _MyHomePageState extends State<MyHomePage> {
   void _runPath() {
     setState(() {
       try {
-        final inputJson = jsonDecode(resource.text);
-        final pathResult = walkFhirPath(inputJson, path.text);
+        final inputJson = jsonDecode(resource.text) as Map<String, dynamic>;
+
+        final environment = inputJson.containsKey('resourceType')
+            ? {'%resource': inputJson}
+            : null;
+
+        final pathResult =
+            walkFhirPath(inputJson, path.text, environment: environment);
         if (jsonCode == outputFormat) {
           JsonEncoder encoder = new JsonEncoder.withIndent('  ');
           displayString = encoder.convert(jsonDecode(jsonEncode(pathResult)));
