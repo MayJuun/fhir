@@ -4,7 +4,7 @@ import '../../fhir_path.dart';
 
 class SumParser extends FhirPathParser {
   SumParser();
-  List execute(List results, Map passed) => [
+  List execute(List results, Map<String, dynamic> passed) => [
         results
             .map((e) => e is num
                 ? e
@@ -19,7 +19,7 @@ class SumParser extends FhirPathParser {
 
 class MinParser extends FhirPathParser {
   MinParser();
-  List execute(List results, Map passed) => [
+  List execute(List results, Map<String, dynamic> passed) => [
         results
             .map((e) => e is num
                 ? e
@@ -34,7 +34,7 @@ class MinParser extends FhirPathParser {
 
 class MaxParser extends FhirPathParser {
   MaxParser();
-  List execute(List results, Map passed) => [
+  List execute(List results, Map<String, dynamic> passed) => [
         results
             .map((e) => e is num
                 ? e
@@ -49,7 +49,7 @@ class MaxParser extends FhirPathParser {
 
 class AvgParser extends FhirPathParser {
   AvgParser();
-  List execute(List results, Map passed) => [
+  List execute(List results, Map<String, dynamic> passed) => [
         results
             .map((e) => e is num
                 ? e
@@ -64,7 +64,7 @@ class AvgParser extends FhirPathParser {
 
 class AnswersParser extends FhirPathParser {
   AnswersParser();
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final descendants = DescendantsParser().execute(results, passed);
     final answerMaps = descendants.where((element) =>
         (element is Map<String, dynamic>) && element.containsKey('answer'));
@@ -78,7 +78,7 @@ class AnswersParser extends FhirPathParser {
 
 class OrdinalParser extends FhirPathParser {
   OrdinalParser();
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final newResults = [];
 
     List checkForOrdinalValues(List list) {

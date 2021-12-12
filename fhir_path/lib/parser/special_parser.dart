@@ -4,33 +4,34 @@ class BracketsIndexParser extends ValueParser<int> {
   BracketsIndexParser(String thisValue)
       : value = int.parse(thisValue.substring(1, thisValue.length - 1));
   int value;
-  List execute(List results, Map passed) =>
+  List execute(List results, Map<String, dynamic> passed) =>
       results.isEmpty || value > results.length - 1 ? [] : [results[value]];
 }
 
 class IndexParser extends FhirPathParser {
   IndexParser();
-  List execute(List results, Map passed) => results;
+  List execute(List results, Map<String, dynamic> passed) => results;
 }
 
 class ThisParser extends FhirPathParser {
   ThisParser();
-  List execute(List results, Map passed) => results;
+  List execute(List results, Map<String, dynamic> passed) => results;
 }
 
 class TotalParser extends ValueParser<String> {
   TotalParser();
-  List execute(List results, Map passed) => passed[r'$total'] == null
-      ? throw FhirPathInvalidExpressionException(
-          'The \$total parser was not specified (this should happen'
-          ' in the aggregate function')
-      : passed[r'$total'];
+  List execute(List results, Map<String, dynamic> passed) =>
+      passed[r'$total'] == null
+          ? throw FhirPathInvalidExpressionException(
+              'The \$total parser was not specified (this should happen'
+              ' in the aggregate function')
+          : passed[r'$total'];
 }
 
 class AggregateParser extends ValueParser<ParserList> {
   AggregateParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     List total = [];
     FhirPathParser expression = value;
     if (value.value.first is CommaParser) {
@@ -51,10 +52,10 @@ class AggregateParser extends ValueParser<ParserList> {
 
 class EmptySetParser extends FhirPathParser {
   EmptySetParser();
-  List execute(List results, Map passed) => results;
+  List execute(List results, Map<String, dynamic> passed) => results;
 }
 
 class DotParser extends FhirPathParser {
   DotParser();
-  List execute(List results, Map passed) => results;
+  List execute(List results, Map<String, dynamic> passed) => results;
 }

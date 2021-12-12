@@ -7,7 +7,7 @@ import '../../fhir_path.dart';
 class UnionFunctionParser extends FunctionParser {
   UnionFunctionParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     var executedValue = value.execute(results.toList(), passed);
     final finalResults = [];
     finalResults
@@ -24,7 +24,7 @@ class UnionFunctionParser extends FunctionParser {
 class CombineParser extends FunctionParser {
   CombineParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     if (value.length == 0) {
       return results;
     } else {

@@ -10,7 +10,7 @@ class IsParser extends OperatorParser {
   IsParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.length == 1 && after.first is IdentifierParser
         ? [(after.first as IdentifierParser).value]
@@ -25,13 +25,13 @@ class IsParser extends OperatorParser {
             'Operand1: $executedBefore\n'
             'Operand2: $executedAfter',
             collection: results)
-        : (passed['version'] == FhirVersion.r4
+        : (passed.isVersion(FhirVersion.r4)
                     ? r4.ResourceUtils.resourceTypeFromStringMap.keys
                         .contains(executedAfter.first)
-                    : passed['version'] == FhirVersion.r5
+                    : passed.isVersion(FhirVersion.r5)
                         ? r5.ResourceUtils.resourceTypeFromStringMap.keys
                             .contains(executedAfter.first)
-                        : passed['version'] == FhirVersion.dstu2
+                        : passed.isVersion(FhirVersion.dstu2)
                             ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
                                 .contains(executedAfter.first)
                             : stu3.ResourceUtils.resourceTypeFromStringMap.keys
@@ -78,7 +78,7 @@ class AsParser extends OperatorParser {
   AsParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     if (executedBefore.length != 1) {
       throw FhirPathEvaluationException(
@@ -98,13 +98,13 @@ class AsParser extends OperatorParser {
           collection: results);
     }
     final identifierValue = (after.first as IdentifierParser).value;
-    if (((passed['version'] == FhirVersion.r4
+    if (((passed.isVersion(FhirVersion.r4)
                 ? r4.ResourceUtils.resourceTypeFromStringMap.keys
                     .contains(identifierValue)
-                : passed['version'] == FhirVersion.r5
+                : passed.isVersion(FhirVersion.r5)
                     ? r5.ResourceUtils.resourceTypeFromStringMap.keys
                         .contains(identifierValue)
-                    : passed['version'] == FhirVersion.dstu2
+                    : passed.isVersion(FhirVersion.dstu2)
                         ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
                             .contains(identifierValue)
                         : stu3.ResourceUtils.resourceTypeFromStringMap.keys

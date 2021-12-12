@@ -9,7 +9,7 @@ import '../../fhir_path.dart';
 class FpWhereParser extends FunctionParser {
   FpWhereParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final returnList = [];
     results.forEach((element) {
       final newResult = value.execute([element], passed);
@@ -26,7 +26,7 @@ class FpWhereParser extends FunctionParser {
 class SelectParser extends ValueParser<ParserList> {
   SelectParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final finalResults = [];
     results.forEach((e) => finalResults.addAll(value.execute([e], passed)));
     return finalResults;
@@ -36,7 +36,7 @@ class SelectParser extends ValueParser<ParserList> {
 class RepeatParser extends ValueParser<ParserList> {
   RepeatParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     var finalResults = [];
     results.forEach((r) {
       value.execute([r], passed).forEach((e) {
@@ -64,7 +64,7 @@ class RepeatParser extends ValueParser<ParserList> {
 class OfTypeParser extends ValueParser<ParserList> {
   OfTypeParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.length == 1 && value.first is IdentifierParser
         ? [value.first]
         : value.execute(results.toList(), passed);
@@ -79,14 +79,14 @@ class OfTypeParser extends ValueParser<ParserList> {
     }
     final finalResults = [];
     results.forEach((e) {
-      if (((passed['version'] == FhirVersion.r4
+      if (((passed.isVersion(FhirVersion.r4)
                   ? r4.ResourceUtils.resourceTypeFromStringMap.keys
                       .contains((executedValue.first as IdentifierParser).value)
-                  : passed['version'] == FhirVersion.r5
+                  : passed.isVersion(FhirVersion.r5)
                       ? r5.ResourceUtils.resourceTypeFromStringMap.keys
                           .contains(
                               (executedValue.first as IdentifierParser).value)
-                      : passed['version'] == FhirVersion.dstu2
+                      : passed.isVersion(FhirVersion.dstu2)
                           ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
                               .contains(
                                   (executedValue.first as IdentifierParser)

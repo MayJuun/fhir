@@ -11,7 +11,7 @@ import '../../fhir_path.dart';
 class IifParser extends FunctionParser {
   IifParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     var executedValue = value.first.execute(results.toList(), passed);
     if (executedValue.length < 2 || executedValue.length > 3) {
       throw FhirPathEvaluationException(
@@ -53,7 +53,7 @@ class IifParser extends FunctionParser {
 /// If the item is not one the above types, or the item is a String, Integer, or Decimal, but is not equal to one of the possible values convertible to a Boolean, the result is empty.
 class ToBooleanParser extends FhirPathParser {
   ToBooleanParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _conversionException('.toBoolean()', results)
@@ -86,7 +86,7 @@ class ToBooleanParser extends FhirPathParser {
 /// the item is a String that is equal to one of the possible string representations of Boolean values
 class ConvertsToBooleanParser extends FhirPathParser {
   ConvertsToBooleanParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToBoolean()', results)
@@ -118,7 +118,7 @@ class ConvertsToBooleanParser extends FhirPathParser {
 
 class ToIntegerParser extends FhirPathParser {
   ToIntegerParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _conversionException('.toInteger()', results)
@@ -135,7 +135,7 @@ class ToIntegerParser extends FhirPathParser {
 
 class ConvertsToIntegerParser extends FhirPathParser {
   ConvertsToIntegerParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToInteger()', results)
@@ -152,7 +152,7 @@ class ConvertsToIntegerParser extends FhirPathParser {
 
 class ToDateParser extends FhirPathParser {
   ToDateParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _conversionException('.toDate()', results)
@@ -163,7 +163,7 @@ class ToDateParser extends FhirPathParser {
 
 class ConvertsToDateParser extends FhirPathParser {
   ConvertsToDateParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToDate()', results)
@@ -172,7 +172,7 @@ class ConvertsToDateParser extends FhirPathParser {
 
 class ToDateTimeParser extends FhirPathParser {
   ToDateTimeParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _conversionException('.toDateTime()', results)
@@ -183,7 +183,7 @@ class ToDateTimeParser extends FhirPathParser {
 
 class ConvertsToDateTimeParser extends FhirPathParser {
   ConvertsToDateTimeParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToDateTime()', results)
@@ -194,7 +194,7 @@ class ConvertsToDateTimeParser extends FhirPathParser {
 
 class ToDecimalParser extends FhirPathParser {
   ToDecimalParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _conversionException('.toDecimal()', results)
@@ -211,7 +211,7 @@ class ToDecimalParser extends FhirPathParser {
 
 class ConvertsToDecimalParser extends FhirPathParser {
   ConvertsToDecimalParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToDecimal()', results)
@@ -228,7 +228,7 @@ class ConvertsToDecimalParser extends FhirPathParser {
 
 class ToStringParser extends FhirPathParser {
   ToStringParser();
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     return results.length == 0
         ? []
         : results.length > 1
@@ -241,7 +241,7 @@ class ToStringParser extends FhirPathParser {
 
 class ConvertsToStringParser extends FhirPathParser {
   ConvertsToStringParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToString()', results)
@@ -252,7 +252,7 @@ class ConvertsToStringParser extends FhirPathParser {
 
 class ToTimeParser extends FhirPathParser {
   ToTimeParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _conversionException('.toTime()', results)
@@ -265,7 +265,7 @@ class ToTimeParser extends FhirPathParser {
 
 class ConvertsToTimeParser extends FhirPathParser {
   ConvertsToTimeParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToTime()', results)
@@ -277,12 +277,12 @@ class ConvertsToTimeParser extends FhirPathParser {
 
 class ToQuantityParser extends FhirPathParser {
   ToQuantityParser();
-  List execute(List results, Map passed) => [];
+  List execute(List results, Map<String, dynamic> passed) => [];
 }
 
 class ConvertsToQuantityParser extends FhirPathParser {
   ConvertsToQuantityParser();
-  List execute(List results, Map passed) => [];
+  List execute(List results, Map<String, dynamic> passed) => [];
 }
 
 bool _isNotAcceptedType(List results) =>

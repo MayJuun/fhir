@@ -1,7 +1,6 @@
 import 'dart:convert';
 
 import 'package:example/resource.dart';
-import 'package:fhir/r4.dart';
 import 'package:fhir_path/fhir_path.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -45,8 +44,13 @@ class _MyHomePageState extends State<MyHomePage> {
   void _runPath() {
     setState(() {
       try {
-        final newResource = Resource.fromJson(jsonDecode(resource.text));
-        final pathResult = walkFhirPath(newResource.toJson(), path.text);
+        final inputJson = jsonDecode(resource.text) as Map<String, dynamic>;
+
+        final resourceJson =
+            inputJson.containsKey('resourceType') ? inputJson : null;
+
+        final pathResult =
+            walkFhirPath(inputJson, path.text, resource: resourceJson);
         if (jsonCode == outputFormat) {
           JsonEncoder encoder = new JsonEncoder.withIndent('  ');
           displayString = encoder.convert(jsonDecode(jsonEncode(pathResult)));

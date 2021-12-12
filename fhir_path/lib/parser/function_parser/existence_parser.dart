@@ -3,13 +3,14 @@ import '../../fhir_path.dart';
 /// Returns true if the input collection is empty ({ }) and false otherwise.
 class EmptyParser extends FhirPathParser {
   EmptyParser();
-  List execute(List results, Map passed) => results.isEmpty ? [true] : [false];
+  List execute(List results, Map<String, dynamic> passed) =>
+      results.isEmpty ? [true] : [false];
 }
 
 class HasValueParser extends FhirPathParser {
   HasValueParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     // Returns true if the input collection contains a single value which is a FHIR primitive,...
     if (results.length != 1) {
       return [false];
@@ -47,7 +48,7 @@ class HasValueParser extends FhirPathParser {
 class ExistsParser extends FunctionParser {
   ExistsParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final returnList = [];
     results.forEach((element) {
       final newResult = value.execute([element], passed);
@@ -64,7 +65,7 @@ class ExistsParser extends FunctionParser {
 class AllParser extends ValueParser<ParserList> {
   AllParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
       return [true];
     }
@@ -82,7 +83,7 @@ class AllParser extends ValueParser<ParserList> {
 /// If any items are false, the result is false. If the input is empty ({ }), the result is true.
 class AllTrueParser extends FhirPathParser {
   AllTrueParser();
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
       return [true];
     }
@@ -95,7 +96,7 @@ class AllTrueParser extends FhirPathParser {
 /// If all the items are false, or if the input is empty ({ }), the result is false.
 class AnyTrueParser extends FhirPathParser {
   AnyTrueParser();
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
       return [false];
     }
@@ -108,7 +109,7 @@ class AnyTrueParser extends FhirPathParser {
 /// If any items are true, the result is false. If the input is empty ({ }), the result is true.
 class AllFalseParser extends FhirPathParser {
   AllFalseParser();
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
       return [true];
     }
@@ -121,7 +122,7 @@ class AllFalseParser extends FhirPathParser {
 /// If all the items are true, or if the input is empty ({ }), the result is false.
 class AnyFalseParser extends FhirPathParser {
   AnyFalseParser();
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
       return [false];
     }
@@ -133,7 +134,7 @@ class AnyFalseParser extends FhirPathParser {
 class SubsetOfParser extends ValueParser<ParserList> {
   SubsetOfParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
       return [true];
     } else {
@@ -151,7 +152,7 @@ class SubsetOfParser extends ValueParser<ParserList> {
 class SupersetOfParser extends FhirPathParser {
   SupersetOfParser();
   dynamic value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     if (results.isEmpty) {
       return [false];
     } else {
@@ -168,12 +169,12 @@ class SupersetOfParser extends FhirPathParser {
 
 class CountParser extends FhirPathParser {
   CountParser();
-  List execute(List results, Map passed) => [results.length];
+  List execute(List results, Map<String, dynamic> passed) => [results.length];
 }
 
 class DistinctParser extends FhirPathParser {
   DistinctParser();
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final resultsList = [];
     for (var r in results) {
       if (notFoundInList(resultsList, r)) {
@@ -186,7 +187,7 @@ class DistinctParser extends FhirPathParser {
 
 class IsDistinctParser extends FhirPathParser {
   IsDistinctParser();
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final resultsList = [];
     for (var r in results) {
       if (notFoundInList(resultsList, r)) {

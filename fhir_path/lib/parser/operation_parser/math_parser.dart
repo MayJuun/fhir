@@ -6,7 +6,7 @@ class StarParser extends OperatorParser {
   StarParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
@@ -40,7 +40,7 @@ class DivSignParser extends OperatorParser {
   DivSignParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
@@ -77,7 +77,7 @@ class DivStringParser extends OperatorParser {
   DivStringParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
@@ -114,7 +114,7 @@ class DivModParser extends OperatorParser {
   DivModParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
@@ -151,7 +151,7 @@ class PlusParser extends OperatorParser {
   PlusParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
     if (before.isEmpty &&
@@ -268,7 +268,7 @@ class MinusParser extends OperatorParser {
   MinusParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
     if (before.isEmpty &&
@@ -383,7 +383,7 @@ class AndSignParser extends OperatorParser {
   AndSignParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
     if (executedBefore.isEmpty || executedAfter.isEmpty) {

@@ -1,6 +1,6 @@
 import 'package:fhir/r4.dart';
-import 'package:test/test.dart';
 import 'package:fhir_path/fhir_path.dart';
+import 'package:test/test.dart';
 
 dynamic walkPath(dynamic arg) => arg;
 
@@ -340,27 +340,29 @@ void testArgFxns() {
     test('intersect', () {
       expect(
           walkFhirPath(
-              resource.toJson(),
-              "Patient.name.given.intersect(%nameList)",
-              {'%nameList': 'Jason'}),
+              resource.toJson(), "Patient.name.given.intersect(%nameList)",
+              environment: {'%nameList': 'Jason'}),
           ['Jason', 'Jason']);
       expect(
           walkFhirPath(
-              resource.toJson(), "Patient.name.given.intersect(%nameList)", {
-            '%nameList': ['Jason', 'Kristin']
-          }),
+              resource.toJson(), "Patient.name.given.intersect(%nameList)",
+              environment: {
+                '%nameList': ['Jason', 'Kristin']
+              }),
           ['Jason', 'Jason', 'Kristin']);
       expect(
           walkFhirPath(
-              resource.toJson(), "Patient.name.given.intersect(%nameList)", {
-            '%nameList': ['Jason', 'Fnuts']
-          }),
+              resource.toJson(), "Patient.name.given.intersect(%nameList)",
+              environment: {
+                '%nameList': ['Jason', 'Fnuts']
+              }),
           ['Jason', 'Jason']);
     });
     test('exclude', () {
       expect(
-          walkFhirPath(resource.toJson(),
-              "Patient.name.given.exclude(%nameList)", {'%nameList': 'Jason'}),
+          walkFhirPath(
+              resource.toJson(), "Patient.name.given.exclude(%nameList)",
+              environment: {'%nameList': 'Jason'}),
           [
             'Grey',
             'Grey',
@@ -372,9 +374,10 @@ void testArgFxns() {
 
       expect(
           walkFhirPath(
-              resource.toJson(), "Patient.name.given.exclude(%nameList)", {
-            '%nameList': ['Jason', 'Kristin']
-          }),
+              resource.toJson(), "Patient.name.given.exclude(%nameList)",
+              environment: {
+                '%nameList': ['Jason', 'Kristin']
+              }),
           [
             'Grey',
             'Grey',
@@ -384,9 +387,10 @@ void testArgFxns() {
           ]);
       expect(
           walkFhirPath(
-              resource.toJson(), "Patient.name.given.exclude(%nameList)", {
-            '%nameList': ['Jason', 'Fnuts']
-          }),
+              resource.toJson(), "Patient.name.given.exclude(%nameList)",
+              environment: {
+                '%nameList': ['Jason', 'Fnuts']
+              }),
           [
             'Grey',
             'Grey',
@@ -398,28 +402,31 @@ void testArgFxns() {
     });
     test('union', () {
       expect(
-          walkFhirPath(resource.toJson(), walkPath("%a.union(%b)"), {
-            '%a': [1, 1, 2, 3],
-            '%b': [2, 3]
-          }),
+          walkFhirPath(resource.toJson(), walkPath("%a.union(%b)"),
+              environment: {
+                '%a': [1, 1, 2, 3],
+                '%b': [2, 3]
+              }),
           [1, 2, 3]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("%a.union()"), {
+          walkFhirPath(resource.toJson(), walkPath("%a.union()"), environment: {
             '%a': [1, 1, 2, 3],
           }),
           [1, 2, 3]);
     });
     test('combine', () {
       expect(
-          walkFhirPath(resource.toJson(), walkPath("%a.combine(%b)"), {
-            '%a': [1, 1, 2, 3],
-            '%b': [2, 3]
-          }),
+          walkFhirPath(resource.toJson(), walkPath("%a.combine(%b)"),
+              environment: {
+                '%a': [1, 1, 2, 3],
+                '%b': [2, 3]
+              }),
           [2, 3, 1, 1, 2, 3]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("%a.combine()"), {
-            '%a': [1, 1, 2, 3],
-          }),
+          walkFhirPath(resource.toJson(), walkPath("%a.combine()"),
+              environment: {
+                '%a': [1, 1, 2, 3],
+              }),
           [1, 1, 2, 3]);
     });
     test('indexOf', () {

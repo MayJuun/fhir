@@ -24,11 +24,11 @@ class FhirPathException implements Exception {
   /// Exception which was the root cause
   final Object? cause;
 
-  /// Main FHIR resource
-  final Object? resource;
+  /// The original node that was passed to the evaluation engine before starting evaluation
+  final Object? context;
 
-  /// Variables which were present
-  final Map? variables;
+  /// Environment which was present
+  final Map? environment;
 
   FhirPathException(this.message,
       {this.pathExpression,
@@ -38,11 +38,11 @@ class FhirPathException implements Exception {
       this.operation,
       this.arguments,
       this.collection,
-      this.resource,
-      this.variables});
+      this.context,
+      this.environment});
 
   FhirPathException copyWith({
-    Object? resource,
+    Object? context,
     Map? variables,
   }) {
     return FhirPathException(
@@ -54,8 +54,8 @@ class FhirPathException implements Exception {
       operation: operation,
       arguments: arguments,
       collection: collection,
-      resource: resource ?? this.resource,
-      variables: variables ?? this.variables,
+      context: context ?? this.context,
+      environment: variables ?? this.environment,
     );
   }
 
@@ -103,11 +103,11 @@ class FhirPathException implements Exception {
       result.writeln('Collection (length: ${collection?.length}): $collection');
     }
 
-    if (!short && resource != null) {
-      result.writeln('Resources: $resource');
+    if (!short && context != null) {
+      result.writeln('Context: $context');
     }
-    if (!short && variables != null) {
-      result.writeln('Variables: $variables');
+    if (!short && environment != null) {
+      result.writeln('Environment: $environment');
     }
     result.write(']');
 
@@ -149,6 +149,6 @@ class FhirPathEvaluationException extends FhirPathException {
           arguments: arguments,
           collection: collection,
           cause: cause,
-          variables: variables,
+          environment: variables,
         );
 }

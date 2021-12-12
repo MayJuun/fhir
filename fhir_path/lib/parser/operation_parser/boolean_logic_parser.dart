@@ -4,7 +4,7 @@ class AndStringParser extends OperatorParser {
   AndStringParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
     if (executedBefore.length > 1 || executedAfter.length > 1) {
@@ -36,7 +36,7 @@ class XorParser extends OperatorParser {
   XorParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     return [];
   }
 }
@@ -45,7 +45,7 @@ class OrStringParser extends OperatorParser {
   OrStringParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     return [];
   }
 }
@@ -54,7 +54,7 @@ class ImpliesParser extends OperatorParser {
   ImpliesParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     return [];
   }
 }
