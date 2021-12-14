@@ -134,7 +134,7 @@ mixin Api {
 
 ## Mobile Auth by Provider
 
-### Google's Healthcare API - ToDo
+### Google's Healthcare API
 
 I've included the ability to use Google sign-in, so if you'd like to connect to the Google Healthcare API. Follow [Part 1](https://www.fhirfli.dev/gcp-healthcare-api-part-1-creating-fhir-store) and [Part 2](https://www.fhirfli.dev/gcp-healthcare-api-part-2-attempting-authentication) for instructions for setting up your own GCP version (this may need to be updated).
 
@@ -148,7 +148,7 @@ To briefly setup your app (assuming you have your GCP setup completed).
 6. From the same menu, Create an OAuth client ID but select web application
 7. Identity Platform -> Add a Provider -> Select Google
 8. Web Client ID (from the above web app) and Web Client Secret (from the above web app)
-9. In this same client, input Allowed client IDs, and include the mobile app client ID
+9. It does not appear that you need to include the ClientId as part of the mobile Client. But you DO need to have registered the mobile client.
 
 ### [Aidbox](https://docs.aidbox.app/)
 
@@ -320,7 +320,7 @@ This is my [Azure tutorial](https://www.fhirfli.dev/azure-fhir-setup), it's not 
 
 ## EHR Launch
 
-While I can't say I've done much with this, I wanted to ensure we have the capability. Luckily, it's actually SUPER easy to accomplish if you already have a Web App that works. You'll need to setup your web client just like it says above, but this time make sure you really take note of the launch URI (and obviously the redirect URI). Take a look at the ehrlaunchdemo if you get confused. The only difference is that when your app launches (at the launch URI you provided and registered with the EHR), it's going to send you along a launch token. You'll need to pass this to the Smart client you create. The client will check if there's a launch token. If there is, it will include launch as a scope, and the token as a parameter. And that's it!
+While I can't say I've done much with this, I wanted to ensure we have the capability. Luckily, it's actually SUPER easy to accomplish if you already have a Web App that works. You'll need to setup your web client just like it says above, but this time make sure you really take note of the launch URI (and obviously the redirect URI). Take a look at the ehrlaunchdemo if you get confused. One of the things I changed recently is I removed the need to include the ClientID as part of the code itself (it's not a secret, but one less thing to hard code). It now passes in the iss and the clientId as part of the launchUrl, which also makes it more flexible. In the launch url, you'll need to specify it to include the ClientId, it will automatically include the iss, and the launch token. You'll need to pass this to the Smart client you create. The client will check if there's a launch token. If there is, it will include launch as a scope, and the token as a parameter. And that's it!
 
 ## Suggestions and Complaints
 

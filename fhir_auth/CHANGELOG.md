@@ -1,5 +1,10 @@
 # fhir_auth
 
+## [0.5.0-8]
+
+* ClientId is optional for Google Mobile
+* EHR Launch example without ClientID (passed as URL argument) to make it more flexible
+
 ## [0.5.0-7]
 
 * Simplified ehrlaunchdemo to more closely mirror actual ehr launch workflow

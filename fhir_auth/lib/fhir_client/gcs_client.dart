@@ -7,8 +7,8 @@ import 'fhir_client.dart';
 class GcsClient extends FhirClient {
   GcsClient(
       {this.redirectUri,
-      required this.clientId,
       required this.fhirUri,
+      this.clientId = '',
       this.scopes = const [
         'openid',
         'profile',
@@ -17,7 +17,7 @@ class GcsClient extends FhirClient {
       ]}) {
     _googleSignIn = GoogleSignIn(
       scopes: scopes,
-      clientId: clientId,
+      clientId: clientId == '' ? null : clientId,
     );
   }
 

@@ -2,7 +2,6 @@ import 'package:fhir/r4.dart';
 import 'package:fhir_auth/r4.dart';
 import 'package:flutter/material.dart';
 
-import 'api.dart';
 import 'request.dart';
 import 'scopes.dart';
 
@@ -28,6 +27,7 @@ class DemoPage extends StatelessWidget {
     print('Iss: $iss');
     final launch = queryParameters['launch'];
     print('Launch: $launch');
+    final clientId = queryParameters['clientId'];
     final currentUri = Uri.base;
     final fhirCallback = Uri(
       host: currentUri.host,
@@ -36,11 +36,17 @@ class DemoPage extends StatelessWidget {
       path: '/redirect.html',
     );
     print('Redirect: $fhirCallback');
-    final isMeld = iss == 'https://gw.interop.community/MayJuun/data';
 
+    if (clientId == null) {
+      return const MaterialApp(
+          home: Scaffold(
+              body: Padding(
+                  padding: EdgeInsets.fromLTRB(16, 30, 16, 0),
+                  child: Text('No Client ID was supplied'))));
+    }
     final client = SmartClient.getSmartClient(
-      fhirUri: FhirUri(isMeld ? Api.meldUrl : Api.interopUrl),
-      clientId: isMeld ? Api.meldClientId : Api.interopClientId,
+      fhirUri: FhirUri(iss),
+      clientId: clientId,
       redirectUri: FhirUri(fhirCallback),
       scopes: scopes.scopesList(),
       launch: launch,
@@ -63,7 +69,6 @@ class DemoPage extends StatelessWidget {
                   Text(
                       'Given Names: ${(snapshot.data as Patient).name?[0].given?.join(" ")}'),
                   Text('ID: ${(snapshot.data as Patient).id}'),
-                  Text('Server: ${isMeld ? "Meld" : "Interopland"}'),
                   Text('ISS: $iss'),
                 ];
               } else if (iss == null) {

@@ -8,7 +8,6 @@ Future gcsRequest() async {
   final client = GcsClient(
     redirectUri: Api.fhirCallback,
     fhirUri: FhirUri(Api.gcsUrl),
-    clientId: Api.gcsClientId,
   );
 
   await client.login();
