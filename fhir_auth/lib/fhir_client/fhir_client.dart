@@ -10,7 +10,7 @@ abstract class FhirClient {
 
   Future<void> login();
 
-  Future<void> isLoggedIn();
+  Future<bool> isLoggedIn();
 
   Future<void> logout();
 
