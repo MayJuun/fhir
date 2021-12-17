@@ -88,6 +88,8 @@ class SmartMobileClient extends SmartClient {
         authCodeParams: {'aud': fhirUri?.value.toString()},
         clientSecret: secret,
       );
+
+      await helper?.getToken();
     }
   }
 
