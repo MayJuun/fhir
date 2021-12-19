@@ -913,19 +913,18 @@ class _$_Appointment extends _Appointment {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Appointment &&
-            (identical(other.resourceType, resourceType) ||
-                other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.meta, meta) || other.meta == meta) &&
-            (identical(other.implicitRules, implicitRules) ||
-                other.implicitRules == implicitRules) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                other.implicitRulesElement == implicitRulesElement) &&
-            (identical(other.language, language) ||
-                other.language == language) &&
-            (identical(other.languageElement, languageElement) ||
-                other.languageElement == languageElement) &&
-            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
             const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -933,33 +932,32 @@ class _$_Appointment extends _Appointment {
                 .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.statusElement, statusElement) ||
-                other.statusElement == statusElement) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.reason, reason) || other.reason == reason) &&
-            (identical(other.priority, priority) ||
-                other.priority == priority) &&
-            (identical(other.priorityElement, priorityElement) ||
-                other.priorityElement == priorityElement) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.descriptionElement, descriptionElement) ||
-                other.descriptionElement == descriptionElement) &&
-            (identical(other.start, start) || other.start == start) &&
-            (identical(other.startElement, startElement) ||
-                other.startElement == startElement) &&
-            (identical(other.end, end) || other.end == end) &&
-            (identical(other.endElement, endElement) ||
-                other.endElement == endElement) &&
-            (identical(other.minutesDuration, minutesDuration) ||
-                other.minutesDuration == minutesDuration) &&
-            (identical(other.minutesDurationElement, minutesDurationElement) ||
-                other.minutesDurationElement == minutesDurationElement) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality()
+                .equals(other.statusElement, statusElement) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.reason, reason) &&
+            const DeepCollectionEquality().equals(other.priority, priority) &&
+            const DeepCollectionEquality()
+                .equals(other.priorityElement, priorityElement) &&
+            const DeepCollectionEquality()
+                .equals(other.description, description) &&
+            const DeepCollectionEquality()
+                .equals(other.descriptionElement, descriptionElement) &&
+            const DeepCollectionEquality().equals(other.start, start) &&
+            const DeepCollectionEquality()
+                .equals(other.startElement, startElement) &&
+            const DeepCollectionEquality().equals(other.end, end) &&
+            const DeepCollectionEquality()
+                .equals(other.endElement, endElement) &&
+            const DeepCollectionEquality()
+                .equals(other.minutesDuration, minutesDuration) &&
+            const DeepCollectionEquality()
+                .equals(other.minutesDurationElement, minutesDurationElement) &&
             const DeepCollectionEquality().equals(other.slot, slot) &&
-            (identical(other.comment, comment) || other.comment == comment) &&
-            (identical(other.commentElement, commentElement) ||
-                other.commentElement == commentElement) &&
+            const DeepCollectionEquality().equals(other.comment, comment) &&
+            const DeepCollectionEquality()
+                .equals(other.commentElement, commentElement) &&
             const DeepCollectionEquality()
                 .equals(other.participant, participant));
   }
@@ -967,35 +965,35 @@ class _$_Appointment extends _Appointment {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        resourceType,
-        id,
-        meta,
-        implicitRules,
-        implicitRulesElement,
-        language,
-        languageElement,
-        text,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
         const DeepCollectionEquality().hash(contained),
         const DeepCollectionEquality().hash(extension_),
         const DeepCollectionEquality().hash(modifierExtension),
         const DeepCollectionEquality().hash(identifier),
-        status,
-        statusElement,
-        type,
-        reason,
-        priority,
-        priorityElement,
-        description,
-        descriptionElement,
-        start,
-        startElement,
-        end,
-        endElement,
-        minutesDuration,
-        minutesDurationElement,
+        const DeepCollectionEquality().hash(status),
+        const DeepCollectionEquality().hash(statusElement),
+        const DeepCollectionEquality().hash(type),
+        const DeepCollectionEquality().hash(reason),
+        const DeepCollectionEquality().hash(priority),
+        const DeepCollectionEquality().hash(priorityElement),
+        const DeepCollectionEquality().hash(description),
+        const DeepCollectionEquality().hash(descriptionElement),
+        const DeepCollectionEquality().hash(start),
+        const DeepCollectionEquality().hash(startElement),
+        const DeepCollectionEquality().hash(end),
+        const DeepCollectionEquality().hash(endElement),
+        const DeepCollectionEquality().hash(minutesDuration),
+        const DeepCollectionEquality().hash(minutesDurationElement),
         const DeepCollectionEquality().hash(slot),
-        comment,
-        commentElement,
+        const DeepCollectionEquality().hash(comment),
+        const DeepCollectionEquality().hash(commentElement),
         const DeepCollectionEquality().hash(participant)
       ]);
 
@@ -1479,34 +1477,33 @@ class _$_AppointmentParticipant extends _AppointmentParticipant {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _AppointmentParticipant &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality().equals(other.type, type) &&
-            (identical(other.actor, actor) || other.actor == actor) &&
-            (identical(other.required_, required_) ||
-                other.required_ == required_) &&
-            (identical(other.requiredElement, requiredElement) ||
-                other.requiredElement == requiredElement) &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.statusElement, statusElement) ||
-                other.statusElement == statusElement));
+            const DeepCollectionEquality().equals(other.actor, actor) &&
+            const DeepCollectionEquality().equals(other.required_, required_) &&
+            const DeepCollectionEquality()
+                .equals(other.requiredElement, requiredElement) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality()
+                .equals(other.statusElement, statusElement));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
       const DeepCollectionEquality().hash(type),
-      actor,
-      required_,
-      requiredElement,
-      status,
-      statusElement);
+      const DeepCollectionEquality().hash(actor),
+      const DeepCollectionEquality().hash(required_),
+      const DeepCollectionEquality().hash(requiredElement),
+      const DeepCollectionEquality().hash(status),
+      const DeepCollectionEquality().hash(statusElement));
 
   @JsonKey(ignore: true)
   @override
@@ -2288,19 +2285,18 @@ class _$_AppointmentResponse extends _AppointmentResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _AppointmentResponse &&
-            (identical(other.resourceType, resourceType) ||
-                other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.meta, meta) || other.meta == meta) &&
-            (identical(other.implicitRules, implicitRules) ||
-                other.implicitRules == implicitRules) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                other.implicitRulesElement == implicitRulesElement) &&
-            (identical(other.language, language) ||
-                other.language == language) &&
-            (identical(other.languageElement, languageElement) ||
-                other.languageElement == languageElement) &&
-            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
             const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -2308,53 +2304,52 @@ class _$_AppointmentResponse extends _AppointmentResponse {
                 .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
-            (identical(other.appointment, appointment) ||
-                other.appointment == appointment) &&
-            (identical(other.start, start) || other.start == start) &&
-            (identical(other.startElement, startElement) ||
-                other.startElement == startElement) &&
-            (identical(other.end, end) || other.end == end) &&
-            (identical(other.endElement, endElement) ||
-                other.endElement == endElement) &&
+            const DeepCollectionEquality()
+                .equals(other.appointment, appointment) &&
+            const DeepCollectionEquality().equals(other.start, start) &&
+            const DeepCollectionEquality()
+                .equals(other.startElement, startElement) &&
+            const DeepCollectionEquality().equals(other.end, end) &&
+            const DeepCollectionEquality()
+                .equals(other.endElement, endElement) &&
             const DeepCollectionEquality()
                 .equals(other.participantType, participantType) &&
-            (identical(other.actor, actor) || other.actor == actor) &&
-            (identical(other.participantStatus, participantStatus) ||
-                other.participantStatus == participantStatus) &&
-            (identical(
-                    other.participantStatusElement, participantStatusElement) ||
-                other.participantStatusElement == participantStatusElement) &&
-            (identical(other.comment, comment) || other.comment == comment) &&
-            (identical(other.commentElement, commentElement) ||
-                other.commentElement == commentElement));
+            const DeepCollectionEquality().equals(other.actor, actor) &&
+            const DeepCollectionEquality()
+                .equals(other.participantStatus, participantStatus) &&
+            const DeepCollectionEquality().equals(
+                other.participantStatusElement, participantStatusElement) &&
+            const DeepCollectionEquality().equals(other.comment, comment) &&
+            const DeepCollectionEquality()
+                .equals(other.commentElement, commentElement));
   }
 
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        resourceType,
-        id,
-        meta,
-        implicitRules,
-        implicitRulesElement,
-        language,
-        languageElement,
-        text,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
         const DeepCollectionEquality().hash(contained),
         const DeepCollectionEquality().hash(extension_),
         const DeepCollectionEquality().hash(modifierExtension),
         const DeepCollectionEquality().hash(identifier),
-        appointment,
-        start,
-        startElement,
-        end,
-        endElement,
+        const DeepCollectionEquality().hash(appointment),
+        const DeepCollectionEquality().hash(start),
+        const DeepCollectionEquality().hash(startElement),
+        const DeepCollectionEquality().hash(end),
+        const DeepCollectionEquality().hash(endElement),
         const DeepCollectionEquality().hash(participantType),
-        actor,
-        participantStatus,
-        participantStatusElement,
-        comment,
-        commentElement
+        const DeepCollectionEquality().hash(actor),
+        const DeepCollectionEquality().hash(participantStatus),
+        const DeepCollectionEquality().hash(participantStatusElement),
+        const DeepCollectionEquality().hash(comment),
+        const DeepCollectionEquality().hash(commentElement)
       ]);
 
   @JsonKey(ignore: true)
@@ -3002,19 +2997,18 @@ class _$_Schedule extends _Schedule {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Schedule &&
-            (identical(other.resourceType, resourceType) ||
-                other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.meta, meta) || other.meta == meta) &&
-            (identical(other.implicitRules, implicitRules) ||
-                other.implicitRules == implicitRules) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                other.implicitRulesElement == implicitRulesElement) &&
-            (identical(other.language, language) ||
-                other.language == language) &&
-            (identical(other.languageElement, languageElement) ||
-                other.languageElement == languageElement) &&
-            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
             const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -3023,34 +3017,34 @@ class _$_Schedule extends _Schedule {
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
             const DeepCollectionEquality().equals(other.type, type) &&
-            (identical(other.actor, actor) || other.actor == actor) &&
-            (identical(other.planningHorizon, planningHorizon) ||
-                other.planningHorizon == planningHorizon) &&
-            (identical(other.comment, comment) || other.comment == comment) &&
-            (identical(other.commentElement, commentElement) ||
-                other.commentElement == commentElement));
+            const DeepCollectionEquality().equals(other.actor, actor) &&
+            const DeepCollectionEquality()
+                .equals(other.planningHorizon, planningHorizon) &&
+            const DeepCollectionEquality().equals(other.comment, comment) &&
+            const DeepCollectionEquality()
+                .equals(other.commentElement, commentElement));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      resourceType,
-      id,
-      meta,
-      implicitRules,
-      implicitRulesElement,
-      language,
-      languageElement,
-      text,
+      const DeepCollectionEquality().hash(resourceType),
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(meta),
+      const DeepCollectionEquality().hash(implicitRules),
+      const DeepCollectionEquality().hash(implicitRulesElement),
+      const DeepCollectionEquality().hash(language),
+      const DeepCollectionEquality().hash(languageElement),
+      const DeepCollectionEquality().hash(text),
       const DeepCollectionEquality().hash(contained),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
       const DeepCollectionEquality().hash(identifier),
       const DeepCollectionEquality().hash(type),
-      actor,
-      planningHorizon,
-      comment,
-      commentElement);
+      const DeepCollectionEquality().hash(actor),
+      const DeepCollectionEquality().hash(planningHorizon),
+      const DeepCollectionEquality().hash(comment),
+      const DeepCollectionEquality().hash(commentElement));
 
   @JsonKey(ignore: true)
   @override
@@ -3839,19 +3833,18 @@ class _$_Slot extends _Slot {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Slot &&
-            (identical(other.resourceType, resourceType) ||
-                other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.meta, meta) || other.meta == meta) &&
-            (identical(other.implicitRules, implicitRules) ||
-                other.implicitRules == implicitRules) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                other.implicitRulesElement == implicitRulesElement) &&
-            (identical(other.language, language) ||
-                other.language == language) &&
-            (identical(other.languageElement, languageElement) ||
-                other.languageElement == languageElement) &&
-            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
             const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -3859,52 +3852,51 @@ class _$_Slot extends _Slot {
                 .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.schedule, schedule) ||
-                other.schedule == schedule) &&
-            (identical(other.freeBusyType, freeBusyType) ||
-                other.freeBusyType == freeBusyType) &&
-            (identical(other.start, start) || other.start == start) &&
-            (identical(other.startElement, startElement) ||
-                other.startElement == startElement) &&
-            (identical(other.end, end) || other.end == end) &&
-            (identical(other.endElement, endElement) ||
-                other.endElement == endElement) &&
-            (identical(other.overbooked, overbooked) ||
-                other.overbooked == overbooked) &&
-            (identical(other.overbookedElement, overbookedElement) ||
-                other.overbookedElement == overbookedElement) &&
-            (identical(other.comment, comment) || other.comment == comment) &&
-            (identical(other.commentElement, commentElement) ||
-                other.commentElement == commentElement));
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.schedule, schedule) &&
+            const DeepCollectionEquality()
+                .equals(other.freeBusyType, freeBusyType) &&
+            const DeepCollectionEquality().equals(other.start, start) &&
+            const DeepCollectionEquality()
+                .equals(other.startElement, startElement) &&
+            const DeepCollectionEquality().equals(other.end, end) &&
+            const DeepCollectionEquality()
+                .equals(other.endElement, endElement) &&
+            const DeepCollectionEquality()
+                .equals(other.overbooked, overbooked) &&
+            const DeepCollectionEquality()
+                .equals(other.overbookedElement, overbookedElement) &&
+            const DeepCollectionEquality().equals(other.comment, comment) &&
+            const DeepCollectionEquality()
+                .equals(other.commentElement, commentElement));
   }
 
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        resourceType,
-        id,
-        meta,
-        implicitRules,
-        implicitRulesElement,
-        language,
-        languageElement,
-        text,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
         const DeepCollectionEquality().hash(contained),
         const DeepCollectionEquality().hash(extension_),
         const DeepCollectionEquality().hash(modifierExtension),
         const DeepCollectionEquality().hash(identifier),
-        type,
-        schedule,
-        freeBusyType,
-        start,
-        startElement,
-        end,
-        endElement,
-        overbooked,
-        overbookedElement,
-        comment,
-        commentElement
+        const DeepCollectionEquality().hash(type),
+        const DeepCollectionEquality().hash(schedule),
+        const DeepCollectionEquality().hash(freeBusyType),
+        const DeepCollectionEquality().hash(start),
+        const DeepCollectionEquality().hash(startElement),
+        const DeepCollectionEquality().hash(end),
+        const DeepCollectionEquality().hash(endElement),
+        const DeepCollectionEquality().hash(overbooked),
+        const DeepCollectionEquality().hash(overbookedElement),
+        const DeepCollectionEquality().hash(comment),
+        const DeepCollectionEquality().hash(commentElement)
       ]);
 
   @JsonKey(ignore: true)

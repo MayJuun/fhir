@@ -728,72 +728,68 @@ class _$_ProcessRequest extends _ProcessRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ProcessRequest &&
-            (identical(other.resourceType, resourceType) ||
-                other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.meta, meta) || other.meta == meta) &&
-            (identical(other.implicitRules, implicitRules) ||
-                other.implicitRules == implicitRules) &&
-            (identical(other.language, language) ||
-                other.language == language) &&
-            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
             const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.action, action) || other.action == action) &&
+            const DeepCollectionEquality().equals(other.action, action) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
-            (identical(other.ruleset, ruleset) || other.ruleset == ruleset) &&
-            (identical(other.originalRuleset, originalRuleset) ||
-                other.originalRuleset == originalRuleset) &&
-            (identical(other.created, created) || other.created == created) &&
-            (identical(other.target, target) || other.target == target) &&
-            (identical(other.provider, provider) ||
-                other.provider == provider) &&
-            (identical(other.organization, organization) ||
-                other.organization == organization) &&
-            (identical(other.request, request) || other.request == request) &&
-            (identical(other.response, response) ||
-                other.response == response) &&
-            (identical(other.nullify, nullify) || other.nullify == nullify) &&
-            (identical(other.reference, reference) ||
-                other.reference == reference) &&
+            const DeepCollectionEquality().equals(other.ruleset, ruleset) &&
+            const DeepCollectionEquality()
+                .equals(other.originalRuleset, originalRuleset) &&
+            const DeepCollectionEquality().equals(other.created, created) &&
+            const DeepCollectionEquality().equals(other.target, target) &&
+            const DeepCollectionEquality().equals(other.provider, provider) &&
+            const DeepCollectionEquality()
+                .equals(other.organization, organization) &&
+            const DeepCollectionEquality().equals(other.request, request) &&
+            const DeepCollectionEquality().equals(other.response, response) &&
+            const DeepCollectionEquality().equals(other.nullify, nullify) &&
+            const DeepCollectionEquality().equals(other.reference, reference) &&
             const DeepCollectionEquality().equals(other.item, item) &&
             const DeepCollectionEquality().equals(other.include, include) &&
             const DeepCollectionEquality().equals(other.exclude, exclude) &&
-            (identical(other.period, period) || other.period == period));
+            const DeepCollectionEquality().equals(other.period, period));
   }
 
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        resourceType,
-        id,
-        meta,
-        implicitRules,
-        language,
-        text,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(text),
         const DeepCollectionEquality().hash(contained),
         const DeepCollectionEquality().hash(extension_),
         const DeepCollectionEquality().hash(modifierExtension),
-        action,
+        const DeepCollectionEquality().hash(action),
         const DeepCollectionEquality().hash(identifier),
-        ruleset,
-        originalRuleset,
-        created,
-        target,
-        provider,
-        organization,
-        request,
-        response,
-        nullify,
-        reference,
+        const DeepCollectionEquality().hash(ruleset),
+        const DeepCollectionEquality().hash(originalRuleset),
+        const DeepCollectionEquality().hash(created),
+        const DeepCollectionEquality().hash(target),
+        const DeepCollectionEquality().hash(provider),
+        const DeepCollectionEquality().hash(organization),
+        const DeepCollectionEquality().hash(request),
+        const DeepCollectionEquality().hash(response),
+        const DeepCollectionEquality().hash(nullify),
+        const DeepCollectionEquality().hash(reference),
         const DeepCollectionEquality().hash(item),
         const DeepCollectionEquality().hash(include),
         const DeepCollectionEquality().hash(exclude),
-        period
+        const DeepCollectionEquality().hash(period)
       ]);
 
   @JsonKey(ignore: true)
@@ -1080,22 +1076,22 @@ class _$_ProcessRequestItem extends _ProcessRequestItem {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ProcessRequestItem &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.sequenceLinkId, sequenceLinkId) ||
-                other.sequenceLinkId == sequenceLinkId));
+            const DeepCollectionEquality()
+                .equals(other.sequenceLinkId, sequenceLinkId));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      sequenceLinkId);
+      const DeepCollectionEquality().hash(sequenceLinkId));
 
   @JsonKey(ignore: true)
   @override
@@ -1789,15 +1785,14 @@ class _$_ProcessResponse extends _ProcessResponse {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ProcessResponse &&
-            (identical(other.resourceType, resourceType) ||
-                other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.meta, meta) || other.meta == meta) &&
-            (identical(other.implicitRules, implicitRules) ||
-                other.implicitRules == implicitRules) &&
-            (identical(other.language, language) ||
-                other.language == language) &&
-            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
             const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -1805,21 +1800,21 @@ class _$_ProcessResponse extends _ProcessResponse {
                 .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
-            (identical(other.request, request) || other.request == request) &&
-            (identical(other.outcome, outcome) || other.outcome == outcome) &&
-            (identical(other.disposition, disposition) ||
-                other.disposition == disposition) &&
-            (identical(other.ruleset, ruleset) || other.ruleset == ruleset) &&
-            (identical(other.originalRuleset, originalRuleset) ||
-                other.originalRuleset == originalRuleset) &&
-            (identical(other.created, created) || other.created == created) &&
-            (identical(other.organization, organization) ||
-                other.organization == organization) &&
-            (identical(other.requestProvider, requestProvider) ||
-                other.requestProvider == requestProvider) &&
-            (identical(other.requestOrganization, requestOrganization) ||
-                other.requestOrganization == requestOrganization) &&
-            (identical(other.form, form) || other.form == form) &&
+            const DeepCollectionEquality().equals(other.request, request) &&
+            const DeepCollectionEquality().equals(other.outcome, outcome) &&
+            const DeepCollectionEquality()
+                .equals(other.disposition, disposition) &&
+            const DeepCollectionEquality().equals(other.ruleset, ruleset) &&
+            const DeepCollectionEquality()
+                .equals(other.originalRuleset, originalRuleset) &&
+            const DeepCollectionEquality().equals(other.created, created) &&
+            const DeepCollectionEquality()
+                .equals(other.organization, organization) &&
+            const DeepCollectionEquality()
+                .equals(other.requestProvider, requestProvider) &&
+            const DeepCollectionEquality()
+                .equals(other.requestOrganization, requestOrganization) &&
+            const DeepCollectionEquality().equals(other.form, form) &&
             const DeepCollectionEquality().equals(other.notes, notes) &&
             const DeepCollectionEquality().equals(other.error, error));
   }
@@ -1827,26 +1822,26 @@ class _$_ProcessResponse extends _ProcessResponse {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        resourceType,
-        id,
-        meta,
-        implicitRules,
-        language,
-        text,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(text),
         const DeepCollectionEquality().hash(contained),
         const DeepCollectionEquality().hash(extension_),
         const DeepCollectionEquality().hash(modifierExtension),
         const DeepCollectionEquality().hash(identifier),
-        request,
-        outcome,
-        disposition,
-        ruleset,
-        originalRuleset,
-        created,
-        organization,
-        requestProvider,
-        requestOrganization,
-        form,
+        const DeepCollectionEquality().hash(request),
+        const DeepCollectionEquality().hash(outcome),
+        const DeepCollectionEquality().hash(disposition),
+        const DeepCollectionEquality().hash(ruleset),
+        const DeepCollectionEquality().hash(originalRuleset),
+        const DeepCollectionEquality().hash(created),
+        const DeepCollectionEquality().hash(organization),
+        const DeepCollectionEquality().hash(requestProvider),
+        const DeepCollectionEquality().hash(requestOrganization),
+        const DeepCollectionEquality().hash(form),
         const DeepCollectionEquality().hash(notes),
         const DeepCollectionEquality().hash(error)
       ]);
@@ -2158,23 +2153,23 @@ class _$_ProcessResponseNotes extends _ProcessResponseNotes {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ProcessResponseNotes &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.text, text) || other.text == text));
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.text, text));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      type,
-      text);
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(text));
 
   @JsonKey(ignore: true)
   @override
@@ -2958,69 +2953,68 @@ class _$_SupplyRequest extends _SupplyRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _SupplyRequest &&
-            (identical(other.resourceType, resourceType) ||
-                other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.meta, meta) || other.meta == meta) &&
-            (identical(other.implicitRules, implicitRules) ||
-                other.implicitRules == implicitRules) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                other.implicitRulesElement == implicitRulesElement) &&
-            (identical(other.language, language) ||
-                other.language == language) &&
-            (identical(other.languageElement, languageElement) ||
-                other.languageElement == languageElement) &&
-            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
             const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.patient, patient) || other.patient == patient) &&
-            (identical(other.source, source) || other.source == source) &&
-            (identical(other.date, date) || other.date == date) &&
-            (identical(other.identifier, identifier) ||
-                other.identifier == identifier) &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.statusElement, statusElement) ||
-                other.statusElement == statusElement) &&
-            (identical(other.kind, kind) || other.kind == kind) &&
-            (identical(other.orderedItem, orderedItem) ||
-                other.orderedItem == orderedItem) &&
+            const DeepCollectionEquality().equals(other.patient, patient) &&
+            const DeepCollectionEquality().equals(other.source, source) &&
+            const DeepCollectionEquality().equals(other.date, date) &&
+            const DeepCollectionEquality()
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality()
+                .equals(other.statusElement, statusElement) &&
+            const DeepCollectionEquality().equals(other.kind, kind) &&
+            const DeepCollectionEquality()
+                .equals(other.orderedItem, orderedItem) &&
             const DeepCollectionEquality().equals(other.supplier, supplier) &&
-            (identical(other.reasonCodeableConcept, reasonCodeableConcept) ||
-                other.reasonCodeableConcept == reasonCodeableConcept) &&
-            (identical(other.reasonReference, reasonReference) ||
-                other.reasonReference == reasonReference) &&
-            (identical(other.when, when) || other.when == when));
+            const DeepCollectionEquality()
+                .equals(other.reasonCodeableConcept, reasonCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.reasonReference, reasonReference) &&
+            const DeepCollectionEquality().equals(other.when, when));
   }
 
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        resourceType,
-        id,
-        meta,
-        implicitRules,
-        implicitRulesElement,
-        language,
-        languageElement,
-        text,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
         const DeepCollectionEquality().hash(contained),
         const DeepCollectionEquality().hash(extension_),
         const DeepCollectionEquality().hash(modifierExtension),
-        patient,
-        source,
-        date,
-        identifier,
-        status,
-        statusElement,
-        kind,
-        orderedItem,
+        const DeepCollectionEquality().hash(patient),
+        const DeepCollectionEquality().hash(source),
+        const DeepCollectionEquality().hash(date),
+        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(status),
+        const DeepCollectionEquality().hash(statusElement),
+        const DeepCollectionEquality().hash(kind),
+        const DeepCollectionEquality().hash(orderedItem),
         const DeepCollectionEquality().hash(supplier),
-        reasonCodeableConcept,
-        reasonReference,
-        when
+        const DeepCollectionEquality().hash(reasonCodeableConcept),
+        const DeepCollectionEquality().hash(reasonReference),
+        const DeepCollectionEquality().hash(when)
       ]);
 
   @JsonKey(ignore: true)
@@ -3355,24 +3349,23 @@ class _$_SupplyRequestWhen extends _SupplyRequestWhen {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _SupplyRequestWhen &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.code, code) || other.code == code) &&
-            (identical(other.schedule, schedule) ||
-                other.schedule == schedule));
+            const DeepCollectionEquality().equals(other.code, code) &&
+            const DeepCollectionEquality().equals(other.schedule, schedule));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      code,
-      schedule);
+      const DeepCollectionEquality().hash(code),
+      const DeepCollectionEquality().hash(schedule));
 
   @JsonKey(ignore: true)
   @override
@@ -4153,70 +4146,67 @@ class _$_SupplyDelivery extends _SupplyDelivery {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _SupplyDelivery &&
-            (identical(other.resourceType, resourceType) ||
-                other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.meta, meta) || other.meta == meta) &&
-            (identical(other.implicitRules, implicitRules) ||
-                other.implicitRules == implicitRules) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                other.implicitRulesElement == implicitRulesElement) &&
-            (identical(other.language, language) ||
-                other.language == language) &&
-            (identical(other.languageElement, languageElement) ||
-                other.languageElement == languageElement) &&
-            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
             const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.identifier, identifier) ||
-                other.identifier == identifier) &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.statusElement, statusElement) ||
-                other.statusElement == statusElement) &&
-            (identical(other.patient, patient) || other.patient == patient) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.quantity, quantity) ||
-                other.quantity == quantity) &&
-            (identical(other.suppliedItem, suppliedItem) ||
-                other.suppliedItem == suppliedItem) &&
-            (identical(other.supplier, supplier) ||
-                other.supplier == supplier) &&
-            (identical(other.whenPrepared, whenPrepared) ||
-                other.whenPrepared == whenPrepared) &&
-            (identical(other.time, time) || other.time == time) &&
-            (identical(other.destination, destination) ||
-                other.destination == destination) &&
+            const DeepCollectionEquality()
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality()
+                .equals(other.statusElement, statusElement) &&
+            const DeepCollectionEquality().equals(other.patient, patient) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.quantity, quantity) &&
+            const DeepCollectionEquality()
+                .equals(other.suppliedItem, suppliedItem) &&
+            const DeepCollectionEquality().equals(other.supplier, supplier) &&
+            const DeepCollectionEquality()
+                .equals(other.whenPrepared, whenPrepared) &&
+            const DeepCollectionEquality().equals(other.time, time) &&
+            const DeepCollectionEquality()
+                .equals(other.destination, destination) &&
             const DeepCollectionEquality().equals(other.receiver, receiver));
   }
 
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        resourceType,
-        id,
-        meta,
-        implicitRules,
-        implicitRulesElement,
-        language,
-        languageElement,
-        text,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
         const DeepCollectionEquality().hash(contained),
         const DeepCollectionEquality().hash(extension_),
         const DeepCollectionEquality().hash(modifierExtension),
-        identifier,
-        status,
-        statusElement,
-        patient,
-        type,
-        quantity,
-        suppliedItem,
-        supplier,
-        whenPrepared,
-        time,
-        destination,
+        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(status),
+        const DeepCollectionEquality().hash(statusElement),
+        const DeepCollectionEquality().hash(patient),
+        const DeepCollectionEquality().hash(type),
+        const DeepCollectionEquality().hash(quantity),
+        const DeepCollectionEquality().hash(suppliedItem),
+        const DeepCollectionEquality().hash(supplier),
+        const DeepCollectionEquality().hash(whenPrepared),
+        const DeepCollectionEquality().hash(time),
+        const DeepCollectionEquality().hash(destination),
         const DeepCollectionEquality().hash(receiver)
       ]);
 

@@ -168,7 +168,7 @@ class _$_Element extends _Element {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Element &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
@@ -178,7 +178,7 @@ class _$_Element extends _Element {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(fhirComments));
 

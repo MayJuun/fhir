@@ -1,4 +1,8 @@
 # fhir
+## [0.5.0-11]
+
+* Updated to Dart 2.15.0
+* Update other dependencies
 
 ## [0.5.0-10]
 

@@ -785,19 +785,18 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _BiologicallyDerivedProduct &&
-            (identical(other.resourceType, resourceType) ||
-                other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.meta, meta) || other.meta == meta) &&
-            (identical(other.implicitRules, implicitRules) ||
-                other.implicitRules == implicitRules) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                other.implicitRulesElement == implicitRulesElement) &&
-            (identical(other.language, language) ||
-                other.language == language) &&
-            (identical(other.languageElement, languageElement) ||
-                other.languageElement == languageElement) &&
-            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
             const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -805,57 +804,56 @@ class _$_BiologicallyDerivedProduct extends _BiologicallyDerivedProduct {
                 .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
-            (identical(other.productCategory, productCategory) ||
-                other.productCategory == productCategory) &&
-            (identical(other.productCategoryElement, productCategoryElement) ||
-                other.productCategoryElement == productCategoryElement) &&
-            (identical(other.productCode, productCode) ||
-                other.productCode == productCode) &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.statusElement, statusElement) ||
-                other.statusElement == statusElement) &&
+            const DeepCollectionEquality()
+                .equals(other.productCategory, productCategory) &&
+            const DeepCollectionEquality()
+                .equals(other.productCategoryElement, productCategoryElement) &&
+            const DeepCollectionEquality()
+                .equals(other.productCode, productCode) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality()
+                .equals(other.statusElement, statusElement) &&
             const DeepCollectionEquality().equals(other.request, request) &&
-            (identical(other.quantity, quantity) ||
-                other.quantity == quantity) &&
-            (identical(other.quantityElement, quantityElement) ||
-                other.quantityElement == quantityElement) &&
+            const DeepCollectionEquality().equals(other.quantity, quantity) &&
+            const DeepCollectionEquality()
+                .equals(other.quantityElement, quantityElement) &&
             const DeepCollectionEquality().equals(other.parent, parent) &&
-            (identical(other.collection, collection) ||
-                other.collection == collection) &&
+            const DeepCollectionEquality()
+                .equals(other.collection, collection) &&
             const DeepCollectionEquality()
                 .equals(other.processing, processing) &&
-            (identical(other.manipulation, manipulation) ||
-                other.manipulation == manipulation) &&
+            const DeepCollectionEquality()
+                .equals(other.manipulation, manipulation) &&
             const DeepCollectionEquality().equals(other.storage, storage));
   }
 
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        resourceType,
-        id,
-        meta,
-        implicitRules,
-        implicitRulesElement,
-        language,
-        languageElement,
-        text,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
         const DeepCollectionEquality().hash(contained),
         const DeepCollectionEquality().hash(extension_),
         const DeepCollectionEquality().hash(modifierExtension),
         const DeepCollectionEquality().hash(identifier),
-        productCategory,
-        productCategoryElement,
-        productCode,
-        status,
-        statusElement,
+        const DeepCollectionEquality().hash(productCategory),
+        const DeepCollectionEquality().hash(productCategoryElement),
+        const DeepCollectionEquality().hash(productCode),
+        const DeepCollectionEquality().hash(status),
+        const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(request),
-        quantity,
-        quantityElement,
+        const DeepCollectionEquality().hash(quantity),
+        const DeepCollectionEquality().hash(quantityElement),
         const DeepCollectionEquality().hash(parent),
-        collection,
+        const DeepCollectionEquality().hash(collection),
         const DeepCollectionEquality().hash(processing),
-        manipulation,
+        const DeepCollectionEquality().hash(manipulation),
         const DeepCollectionEquality().hash(storage)
       ]);
 
@@ -1297,34 +1295,32 @@ class _$_BiologicallyDerivedProductCollection
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _BiologicallyDerivedProductCollection &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.collector, collector) ||
-                other.collector == collector) &&
-            (identical(other.source, source) || other.source == source) &&
-            (identical(other.collectedDateTime, collectedDateTime) ||
-                other.collectedDateTime == collectedDateTime) &&
-            (identical(
-                    other.collectedDateTimeElement, collectedDateTimeElement) ||
-                other.collectedDateTimeElement == collectedDateTimeElement) &&
-            (identical(other.collectedPeriod, collectedPeriod) ||
-                other.collectedPeriod == collectedPeriod));
+            const DeepCollectionEquality().equals(other.collector, collector) &&
+            const DeepCollectionEquality().equals(other.source, source) &&
+            const DeepCollectionEquality()
+                .equals(other.collectedDateTime, collectedDateTime) &&
+            const DeepCollectionEquality().equals(
+                other.collectedDateTimeElement, collectedDateTimeElement) &&
+            const DeepCollectionEquality()
+                .equals(other.collectedPeriod, collectedPeriod));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      collector,
-      source,
-      collectedDateTime,
-      collectedDateTimeElement,
-      collectedPeriod);
+      const DeepCollectionEquality().hash(collector),
+      const DeepCollectionEquality().hash(source),
+      const DeepCollectionEquality().hash(collectedDateTime),
+      const DeepCollectionEquality().hash(collectedDateTimeElement),
+      const DeepCollectionEquality().hash(collectedPeriod));
 
   @JsonKey(ignore: true)
   @override
@@ -1753,40 +1749,38 @@ class _$_BiologicallyDerivedProductProcessing
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _BiologicallyDerivedProductProcessing &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.descriptionElement, descriptionElement) ||
-                other.descriptionElement == descriptionElement) &&
-            (identical(other.procedure, procedure) ||
-                other.procedure == procedure) &&
-            (identical(other.additive, additive) ||
-                other.additive == additive) &&
-            (identical(other.timeDateTime, timeDateTime) ||
-                other.timeDateTime == timeDateTime) &&
-            (identical(other.timeDateTimeElement, timeDateTimeElement) ||
-                other.timeDateTimeElement == timeDateTimeElement) &&
-            (identical(other.timePeriod, timePeriod) ||
-                other.timePeriod == timePeriod));
+            const DeepCollectionEquality()
+                .equals(other.description, description) &&
+            const DeepCollectionEquality()
+                .equals(other.descriptionElement, descriptionElement) &&
+            const DeepCollectionEquality().equals(other.procedure, procedure) &&
+            const DeepCollectionEquality().equals(other.additive, additive) &&
+            const DeepCollectionEquality()
+                .equals(other.timeDateTime, timeDateTime) &&
+            const DeepCollectionEquality()
+                .equals(other.timeDateTimeElement, timeDateTimeElement) &&
+            const DeepCollectionEquality()
+                .equals(other.timePeriod, timePeriod));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      description,
-      descriptionElement,
-      procedure,
-      additive,
-      timeDateTime,
-      timeDateTimeElement,
-      timePeriod);
+      const DeepCollectionEquality().hash(description),
+      const DeepCollectionEquality().hash(descriptionElement),
+      const DeepCollectionEquality().hash(procedure),
+      const DeepCollectionEquality().hash(additive),
+      const DeepCollectionEquality().hash(timeDateTime),
+      const DeepCollectionEquality().hash(timeDateTimeElement),
+      const DeepCollectionEquality().hash(timePeriod));
 
   @JsonKey(ignore: true)
   @override
@@ -2160,34 +2154,34 @@ class _$_BiologicallyDerivedProductManipulation
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _BiologicallyDerivedProductManipulation &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.descriptionElement, descriptionElement) ||
-                other.descriptionElement == descriptionElement) &&
-            (identical(other.timeDateTime, timeDateTime) ||
-                other.timeDateTime == timeDateTime) &&
-            (identical(other.timeDateTimeElement, timeDateTimeElement) ||
-                other.timeDateTimeElement == timeDateTimeElement) &&
-            (identical(other.timePeriod, timePeriod) ||
-                other.timePeriod == timePeriod));
+            const DeepCollectionEquality()
+                .equals(other.description, description) &&
+            const DeepCollectionEquality()
+                .equals(other.descriptionElement, descriptionElement) &&
+            const DeepCollectionEquality()
+                .equals(other.timeDateTime, timeDateTime) &&
+            const DeepCollectionEquality()
+                .equals(other.timeDateTimeElement, timeDateTimeElement) &&
+            const DeepCollectionEquality()
+                .equals(other.timePeriod, timePeriod));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      description,
-      descriptionElement,
-      timeDateTime,
-      timeDateTimeElement,
-      timePeriod);
+      const DeepCollectionEquality().hash(description),
+      const DeepCollectionEquality().hash(descriptionElement),
+      const DeepCollectionEquality().hash(timeDateTime),
+      const DeepCollectionEquality().hash(timeDateTimeElement),
+      const DeepCollectionEquality().hash(timePeriod));
 
   @JsonKey(ignore: true)
   @override
@@ -2627,39 +2621,38 @@ class _$_BiologicallyDerivedProductStorage
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _BiologicallyDerivedProductStorage &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.descriptionElement, descriptionElement) ||
-                other.descriptionElement == descriptionElement) &&
-            (identical(other.temperature, temperature) ||
-                other.temperature == temperature) &&
-            (identical(other.temperatureElement, temperatureElement) ||
-                other.temperatureElement == temperatureElement) &&
-            (identical(other.scale, scale) || other.scale == scale) &&
-            (identical(other.scaleElement, scaleElement) ||
-                other.scaleElement == scaleElement) &&
-            (identical(other.duration, duration) ||
-                other.duration == duration));
+            const DeepCollectionEquality()
+                .equals(other.description, description) &&
+            const DeepCollectionEquality()
+                .equals(other.descriptionElement, descriptionElement) &&
+            const DeepCollectionEquality()
+                .equals(other.temperature, temperature) &&
+            const DeepCollectionEquality()
+                .equals(other.temperatureElement, temperatureElement) &&
+            const DeepCollectionEquality().equals(other.scale, scale) &&
+            const DeepCollectionEquality()
+                .equals(other.scaleElement, scaleElement) &&
+            const DeepCollectionEquality().equals(other.duration, duration));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      description,
-      descriptionElement,
-      temperature,
-      temperatureElement,
-      scale,
-      scaleElement,
-      duration);
+      const DeepCollectionEquality().hash(description),
+      const DeepCollectionEquality().hash(descriptionElement),
+      const DeepCollectionEquality().hash(temperature),
+      const DeepCollectionEquality().hash(temperatureElement),
+      const DeepCollectionEquality().hash(scale),
+      const DeepCollectionEquality().hash(scaleElement),
+      const DeepCollectionEquality().hash(duration));
 
   @JsonKey(ignore: true)
   @override
@@ -4157,19 +4150,18 @@ class _$_Device extends _Device {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Device &&
-            (identical(other.resourceType, resourceType) ||
-                other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.meta, meta) || other.meta == meta) &&
-            (identical(other.implicitRules, implicitRules) ||
-                other.implicitRules == implicitRules) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                other.implicitRulesElement == implicitRulesElement) &&
-            (identical(other.language, language) ||
-                other.language == language) &&
-            (identical(other.languageElement, languageElement) ||
-                other.languageElement == languageElement) &&
-            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
             const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -4177,129 +4169,127 @@ class _$_Device extends _Device {
                 .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
-            (identical(other.displayName, displayName) ||
-                other.displayName == displayName) &&
-            (identical(other.displayNameElement, displayNameElement) ||
-                other.displayNameElement == displayNameElement) &&
-            (identical(other.definition, definition) ||
-                other.definition == definition) &&
+            const DeepCollectionEquality()
+                .equals(other.displayName, displayName) &&
+            const DeepCollectionEquality()
+                .equals(other.displayNameElement, displayNameElement) &&
+            const DeepCollectionEquality()
+                .equals(other.definition, definition) &&
             const DeepCollectionEquality()
                 .equals(other.udiCarrier, udiCarrier) &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.statusElement, statusElement) ||
-                other.statusElement == statusElement) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality()
+                .equals(other.statusElement, statusElement) &&
             const DeepCollectionEquality()
                 .equals(other.statusReason, statusReason) &&
-            (identical(other.distinctIdentifier, distinctIdentifier) ||
-                other.distinctIdentifier == distinctIdentifier) &&
-            (identical(other.distinctIdentifierElement, distinctIdentifierElement) ||
-                other.distinctIdentifierElement == distinctIdentifierElement) &&
-            (identical(other.manufacturer, manufacturer) ||
-                other.manufacturer == manufacturer) &&
-            (identical(other.manufacturerElement, manufacturerElement) ||
-                other.manufacturerElement == manufacturerElement) &&
-            (identical(other.manufactureDate, manufactureDate) ||
-                other.manufactureDate == manufactureDate) &&
-            (identical(other.manufactureDateElement, manufactureDateElement) ||
-                other.manufactureDateElement == manufactureDateElement) &&
-            (identical(other.expirationDate, expirationDate) ||
-                other.expirationDate == expirationDate) &&
-            (identical(other.expirationDateElement, expirationDateElement) ||
-                other.expirationDateElement == expirationDateElement) &&
-            (identical(other.lotNumber, lotNumber) ||
-                other.lotNumber == lotNumber) &&
-            (identical(other.lotNumberElement, lotNumberElement) ||
-                other.lotNumberElement == lotNumberElement) &&
-            (identical(other.serialNumber, serialNumber) ||
-                other.serialNumber == serialNumber) &&
-            (identical(other.serialNumberElement, serialNumberElement) ||
-                other.serialNumberElement == serialNumberElement) &&
+            const DeepCollectionEquality()
+                .equals(other.distinctIdentifier, distinctIdentifier) &&
+            const DeepCollectionEquality().equals(
+                other.distinctIdentifierElement, distinctIdentifierElement) &&
+            const DeepCollectionEquality()
+                .equals(other.manufacturer, manufacturer) &&
+            const DeepCollectionEquality()
+                .equals(other.manufacturerElement, manufacturerElement) &&
+            const DeepCollectionEquality()
+                .equals(other.manufactureDate, manufactureDate) &&
+            const DeepCollectionEquality()
+                .equals(other.manufactureDateElement, manufactureDateElement) &&
+            const DeepCollectionEquality()
+                .equals(other.expirationDate, expirationDate) &&
+            const DeepCollectionEquality()
+                .equals(other.expirationDateElement, expirationDateElement) &&
+            const DeepCollectionEquality().equals(other.lotNumber, lotNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.lotNumberElement, lotNumberElement) &&
+            const DeepCollectionEquality()
+                .equals(other.serialNumber, serialNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.serialNumberElement, serialNumberElement) &&
             const DeepCollectionEquality()
                 .equals(other.deviceName, deviceName) &&
-            (identical(other.modelNumber, modelNumber) ||
-                other.modelNumber == modelNumber) &&
-            (identical(other.modelNumberElement, modelNumberElement) ||
-                other.modelNumberElement == modelNumberElement) &&
-            (identical(other.partNumber, partNumber) ||
-                other.partNumber == partNumber) &&
-            (identical(other.partNumberElement, partNumberElement) ||
-                other.partNumberElement == partNumberElement) &&
+            const DeepCollectionEquality()
+                .equals(other.modelNumber, modelNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.modelNumberElement, modelNumberElement) &&
+            const DeepCollectionEquality()
+                .equals(other.partNumber, partNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.partNumberElement, partNumberElement) &&
             const DeepCollectionEquality().equals(other.type, type) &&
             const DeepCollectionEquality()
                 .equals(other.specialization, specialization) &&
             const DeepCollectionEquality().equals(other.version, version) &&
             const DeepCollectionEquality().equals(other.property, property) &&
-            (identical(other.patient, patient) || other.patient == patient) &&
-            (identical(other.operationalStatus, operationalStatus) ||
-                other.operationalStatus == operationalStatus) &&
-            (identical(other.associationStatus, associationStatus) ||
-                other.associationStatus == associationStatus) &&
-            (identical(other.owner, owner) || other.owner == owner) &&
+            const DeepCollectionEquality().equals(other.patient, patient) &&
+            const DeepCollectionEquality()
+                .equals(other.operationalStatus, operationalStatus) &&
+            const DeepCollectionEquality()
+                .equals(other.associationStatus, associationStatus) &&
+            const DeepCollectionEquality().equals(other.owner, owner) &&
             const DeepCollectionEquality().equals(other.contact, contact) &&
-            (identical(other.location, location) ||
-                other.location == location) &&
-            (identical(other.url, url) || other.url == url) &&
-            (identical(other.urlElement, urlElement) ||
-                other.urlElement == urlElement) &&
+            const DeepCollectionEquality().equals(other.location, location) &&
+            const DeepCollectionEquality().equals(other.url, url) &&
+            const DeepCollectionEquality()
+                .equals(other.urlElement, urlElement) &&
             const DeepCollectionEquality().equals(other.note, note) &&
             const DeepCollectionEquality().equals(other.safety, safety) &&
-            (identical(other.parent, parent) || other.parent == parent));
+            const DeepCollectionEquality().equals(other.parent, parent));
   }
 
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        resourceType,
-        id,
-        meta,
-        implicitRules,
-        implicitRulesElement,
-        language,
-        languageElement,
-        text,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
         const DeepCollectionEquality().hash(contained),
         const DeepCollectionEquality().hash(extension_),
         const DeepCollectionEquality().hash(modifierExtension),
         const DeepCollectionEquality().hash(identifier),
-        displayName,
-        displayNameElement,
-        definition,
+        const DeepCollectionEquality().hash(displayName),
+        const DeepCollectionEquality().hash(displayNameElement),
+        const DeepCollectionEquality().hash(definition),
         const DeepCollectionEquality().hash(udiCarrier),
-        status,
-        statusElement,
+        const DeepCollectionEquality().hash(status),
+        const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(statusReason),
-        distinctIdentifier,
-        distinctIdentifierElement,
-        manufacturer,
-        manufacturerElement,
-        manufactureDate,
-        manufactureDateElement,
-        expirationDate,
-        expirationDateElement,
-        lotNumber,
-        lotNumberElement,
-        serialNumber,
-        serialNumberElement,
+        const DeepCollectionEquality().hash(distinctIdentifier),
+        const DeepCollectionEquality().hash(distinctIdentifierElement),
+        const DeepCollectionEquality().hash(manufacturer),
+        const DeepCollectionEquality().hash(manufacturerElement),
+        const DeepCollectionEquality().hash(manufactureDate),
+        const DeepCollectionEquality().hash(manufactureDateElement),
+        const DeepCollectionEquality().hash(expirationDate),
+        const DeepCollectionEquality().hash(expirationDateElement),
+        const DeepCollectionEquality().hash(lotNumber),
+        const DeepCollectionEquality().hash(lotNumberElement),
+        const DeepCollectionEquality().hash(serialNumber),
+        const DeepCollectionEquality().hash(serialNumberElement),
         const DeepCollectionEquality().hash(deviceName),
-        modelNumber,
-        modelNumberElement,
-        partNumber,
-        partNumberElement,
+        const DeepCollectionEquality().hash(modelNumber),
+        const DeepCollectionEquality().hash(modelNumberElement),
+        const DeepCollectionEquality().hash(partNumber),
+        const DeepCollectionEquality().hash(partNumberElement),
         const DeepCollectionEquality().hash(type),
         const DeepCollectionEquality().hash(specialization),
         const DeepCollectionEquality().hash(version),
         const DeepCollectionEquality().hash(property),
-        patient,
-        operationalStatus,
-        associationStatus,
-        owner,
+        const DeepCollectionEquality().hash(patient),
+        const DeepCollectionEquality().hash(operationalStatus),
+        const DeepCollectionEquality().hash(associationStatus),
+        const DeepCollectionEquality().hash(owner),
         const DeepCollectionEquality().hash(contact),
-        location,
-        url,
-        urlElement,
+        const DeepCollectionEquality().hash(location),
+        const DeepCollectionEquality().hash(url),
+        const DeepCollectionEquality().hash(urlElement),
         const DeepCollectionEquality().hash(note),
         const DeepCollectionEquality().hash(safety),
-        parent
+        const DeepCollectionEquality().hash(parent)
       ]);
 
   @JsonKey(ignore: true)
@@ -5019,55 +5009,53 @@ class _$_DeviceUdiCarrier extends _DeviceUdiCarrier {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _DeviceUdiCarrier &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.deviceIdentifier, deviceIdentifier) ||
-                other.deviceIdentifier == deviceIdentifier) &&
-            (identical(
-                    other.deviceIdentifierElement, deviceIdentifierElement) ||
-                other.deviceIdentifierElement == deviceIdentifierElement) &&
-            (identical(other.issuer, issuer) || other.issuer == issuer) &&
-            (identical(other.issuerElement, issuerElement) ||
-                other.issuerElement == issuerElement) &&
-            (identical(other.jurisdiction, jurisdiction) ||
-                other.jurisdiction == jurisdiction) &&
-            (identical(other.jurisdictionElement, jurisdictionElement) ||
-                other.jurisdictionElement == jurisdictionElement) &&
-            (identical(other.carrierAIDC, carrierAIDC) ||
-                other.carrierAIDC == carrierAIDC) &&
-            (identical(other.carrierAIDCElement, carrierAIDCElement) ||
-                other.carrierAIDCElement == carrierAIDCElement) &&
-            (identical(other.carrierHRF, carrierHRF) ||
-                other.carrierHRF == carrierHRF) &&
-            (identical(other.carrierHRFElement, carrierHRFElement) ||
-                other.carrierHRFElement == carrierHRFElement) &&
-            (identical(other.entryType, entryType) ||
-                other.entryType == entryType) &&
-            (identical(other.entryTypeElement, entryTypeElement) ||
-                other.entryTypeElement == entryTypeElement));
+            const DeepCollectionEquality()
+                .equals(other.deviceIdentifier, deviceIdentifier) &&
+            const DeepCollectionEquality().equals(
+                other.deviceIdentifierElement, deviceIdentifierElement) &&
+            const DeepCollectionEquality().equals(other.issuer, issuer) &&
+            const DeepCollectionEquality()
+                .equals(other.issuerElement, issuerElement) &&
+            const DeepCollectionEquality()
+                .equals(other.jurisdiction, jurisdiction) &&
+            const DeepCollectionEquality()
+                .equals(other.jurisdictionElement, jurisdictionElement) &&
+            const DeepCollectionEquality()
+                .equals(other.carrierAIDC, carrierAIDC) &&
+            const DeepCollectionEquality()
+                .equals(other.carrierAIDCElement, carrierAIDCElement) &&
+            const DeepCollectionEquality()
+                .equals(other.carrierHRF, carrierHRF) &&
+            const DeepCollectionEquality()
+                .equals(other.carrierHRFElement, carrierHRFElement) &&
+            const DeepCollectionEquality().equals(other.entryType, entryType) &&
+            const DeepCollectionEquality()
+                .equals(other.entryTypeElement, entryTypeElement));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      deviceIdentifier,
-      deviceIdentifierElement,
-      issuer,
-      issuerElement,
-      jurisdiction,
-      jurisdictionElement,
-      carrierAIDC,
-      carrierAIDCElement,
-      carrierHRF,
-      carrierHRFElement,
-      entryType,
-      entryTypeElement);
+      const DeepCollectionEquality().hash(deviceIdentifier),
+      const DeepCollectionEquality().hash(deviceIdentifierElement),
+      const DeepCollectionEquality().hash(issuer),
+      const DeepCollectionEquality().hash(issuerElement),
+      const DeepCollectionEquality().hash(jurisdiction),
+      const DeepCollectionEquality().hash(jurisdictionElement),
+      const DeepCollectionEquality().hash(carrierAIDC),
+      const DeepCollectionEquality().hash(carrierAIDCElement),
+      const DeepCollectionEquality().hash(carrierHRF),
+      const DeepCollectionEquality().hash(carrierHRFElement),
+      const DeepCollectionEquality().hash(entryType),
+      const DeepCollectionEquality().hash(entryTypeElement));
 
   @JsonKey(ignore: true)
   @override
@@ -5435,29 +5423,29 @@ class _$_DeviceDeviceName extends _DeviceDeviceName {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _DeviceDeviceName &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.name, name) || other.name == name) &&
-            (identical(other.nameElement, nameElement) ||
-                other.nameElement == nameElement) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.typeElement, typeElement) ||
-                other.typeElement == typeElement));
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality()
+                .equals(other.nameElement, nameElement) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality()
+                .equals(other.typeElement, typeElement));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      name,
-      nameElement,
-      type,
-      typeElement);
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(nameElement),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(typeElement));
 
   @JsonKey(ignore: true)
   @override
@@ -5755,27 +5743,27 @@ class _$_DeviceSpecialization extends _DeviceSpecialization {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _DeviceSpecialization &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.systemType, systemType) ||
-                other.systemType == systemType) &&
-            (identical(other.version, version) || other.version == version) &&
-            (identical(other.versionElement, versionElement) ||
-                other.versionElement == versionElement));
+            const DeepCollectionEquality()
+                .equals(other.systemType, systemType) &&
+            const DeepCollectionEquality().equals(other.version, version) &&
+            const DeepCollectionEquality()
+                .equals(other.versionElement, versionElement));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      systemType,
-      version,
-      versionElement);
+      const DeepCollectionEquality().hash(systemType),
+      const DeepCollectionEquality().hash(version),
+      const DeepCollectionEquality().hash(versionElement));
 
   @JsonKey(ignore: true)
   @override
@@ -6102,29 +6090,28 @@ class _$_DeviceVersion extends _DeviceVersion {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _DeviceVersion &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.component, component) ||
-                other.component == component) &&
-            (identical(other.value, value) || other.value == value) &&
-            (identical(other.valueElement, valueElement) ||
-                other.valueElement == valueElement));
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.component, component) &&
+            const DeepCollectionEquality().equals(other.value, value) &&
+            const DeepCollectionEquality()
+                .equals(other.valueElement, valueElement));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      type,
-      component,
-      value,
-      valueElement);
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(component),
+      const DeepCollectionEquality().hash(value),
+      const DeepCollectionEquality().hash(valueElement));
 
   @JsonKey(ignore: true)
   @override
@@ -6430,27 +6417,27 @@ class _$_DeviceProperty extends _DeviceProperty {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _DeviceProperty &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.valueQuantity, valueQuantity) ||
-                other.valueQuantity == valueQuantity) &&
-            (identical(other.valueCodeableConcept, valueCodeableConcept) ||
-                other.valueCodeableConcept == valueCodeableConcept));
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality()
+                .equals(other.valueQuantity, valueQuantity) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCodeableConcept, valueCodeableConcept));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      type,
-      valueQuantity,
-      valueCodeableConcept);
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(valueQuantity),
+      const DeepCollectionEquality().hash(valueCodeableConcept));
 
   @JsonKey(ignore: true)
   @override
@@ -6710,22 +6697,22 @@ class _$_DeviceOperationalStatus extends _DeviceOperationalStatus {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _DeviceOperationalStatus &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.value, value) || other.value == value) &&
+            const DeepCollectionEquality().equals(other.value, value) &&
             const DeepCollectionEquality().equals(other.reason, reason));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      value,
+      const DeepCollectionEquality().hash(value),
       const DeepCollectionEquality().hash(reason));
 
   @JsonKey(ignore: true)
@@ -6984,22 +6971,22 @@ class _$_DeviceAssociationStatus extends _DeviceAssociationStatus {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _DeviceAssociationStatus &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.value, value) || other.value == value) &&
+            const DeepCollectionEquality().equals(other.value, value) &&
             const DeepCollectionEquality().equals(other.reason, reason));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      value,
+      const DeepCollectionEquality().hash(value),
       const DeepCollectionEquality().hash(reason));
 
   @JsonKey(ignore: true)
@@ -7806,19 +7793,18 @@ class _$_DeviceMetric extends _DeviceMetric {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _DeviceMetric &&
-            (identical(other.resourceType, resourceType) ||
-                other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.meta, meta) || other.meta == meta) &&
-            (identical(other.implicitRules, implicitRules) ||
-                other.implicitRules == implicitRules) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                other.implicitRulesElement == implicitRulesElement) &&
-            (identical(other.language, language) ||
-                other.language == language) &&
-            (identical(other.languageElement, languageElement) ||
-                other.languageElement == languageElement) &&
-            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
             const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -7826,24 +7812,22 @@ class _$_DeviceMetric extends _DeviceMetric {
                 .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.unit, unit) || other.unit == unit) &&
-            (identical(other.source, source) || other.source == source) &&
-            (identical(other.parent, parent) || other.parent == parent) &&
-            (identical(other.operationalStatus, operationalStatus) ||
-                other.operationalStatus == operationalStatus) &&
-            (identical(
-                    other.operationalStatusElement, operationalStatusElement) ||
-                other.operationalStatusElement == operationalStatusElement) &&
-            (identical(other.color, color) || other.color == color) &&
-            (identical(other.colorElement, colorElement) ||
-                other.colorElement == colorElement) &&
-            (identical(other.category, category) ||
-                other.category == category) &&
-            (identical(other.categoryElement, categoryElement) ||
-                other.categoryElement == categoryElement) &&
-            (identical(other.measurementPeriod, measurementPeriod) ||
-                other.measurementPeriod == measurementPeriod) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.unit, unit) &&
+            const DeepCollectionEquality().equals(other.source, source) &&
+            const DeepCollectionEquality().equals(other.parent, parent) &&
+            const DeepCollectionEquality()
+                .equals(other.operationalStatus, operationalStatus) &&
+            const DeepCollectionEquality().equals(
+                other.operationalStatusElement, operationalStatusElement) &&
+            const DeepCollectionEquality().equals(other.color, color) &&
+            const DeepCollectionEquality()
+                .equals(other.colorElement, colorElement) &&
+            const DeepCollectionEquality().equals(other.category, category) &&
+            const DeepCollectionEquality()
+                .equals(other.categoryElement, categoryElement) &&
+            const DeepCollectionEquality()
+                .equals(other.measurementPeriod, measurementPeriod) &&
             const DeepCollectionEquality()
                 .equals(other.calibration, calibration));
   }
@@ -7851,29 +7835,29 @@ class _$_DeviceMetric extends _DeviceMetric {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        resourceType,
-        id,
-        meta,
-        implicitRules,
-        implicitRulesElement,
-        language,
-        languageElement,
-        text,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
         const DeepCollectionEquality().hash(contained),
         const DeepCollectionEquality().hash(extension_),
         const DeepCollectionEquality().hash(modifierExtension),
         const DeepCollectionEquality().hash(identifier),
-        type,
-        unit,
-        source,
-        parent,
-        operationalStatus,
-        operationalStatusElement,
-        color,
-        colorElement,
-        category,
-        categoryElement,
-        measurementPeriod,
+        const DeepCollectionEquality().hash(type),
+        const DeepCollectionEquality().hash(unit),
+        const DeepCollectionEquality().hash(source),
+        const DeepCollectionEquality().hash(parent),
+        const DeepCollectionEquality().hash(operationalStatus),
+        const DeepCollectionEquality().hash(operationalStatusElement),
+        const DeepCollectionEquality().hash(color),
+        const DeepCollectionEquality().hash(colorElement),
+        const DeepCollectionEquality().hash(category),
+        const DeepCollectionEquality().hash(categoryElement),
+        const DeepCollectionEquality().hash(measurementPeriod),
         const DeepCollectionEquality().hash(calibration)
       ]);
 
@@ -8342,34 +8326,34 @@ class _$_DeviceMetricCalibration extends _DeviceMetricCalibration {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _DeviceMetricCalibration &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.typeElement, typeElement) ||
-                other.typeElement == typeElement) &&
-            (identical(other.state, state) || other.state == state) &&
-            (identical(other.stateElement, stateElement) ||
-                other.stateElement == stateElement) &&
-            (identical(other.time, time) || other.time == time) &&
-            (identical(other.timeElement, timeElement) ||
-                other.timeElement == timeElement));
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality()
+                .equals(other.typeElement, typeElement) &&
+            const DeepCollectionEquality().equals(other.state, state) &&
+            const DeepCollectionEquality()
+                .equals(other.stateElement, stateElement) &&
+            const DeepCollectionEquality().equals(other.time, time) &&
+            const DeepCollectionEquality()
+                .equals(other.timeElement, timeElement));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      type,
-      typeElement,
-      state,
-      stateElement,
-      time,
-      timeElement);
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(typeElement),
+      const DeepCollectionEquality().hash(state),
+      const DeepCollectionEquality().hash(stateElement),
+      const DeepCollectionEquality().hash(time),
+      const DeepCollectionEquality().hash(timeElement));
 
   @JsonKey(ignore: true)
   @override
@@ -9076,29 +9060,28 @@ class _$_NutritionProduct extends _NutritionProduct {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _NutritionProduct &&
-            (identical(other.resourceType, resourceType) ||
-                other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.meta, meta) || other.meta == meta) &&
-            (identical(other.implicitRules, implicitRules) ||
-                other.implicitRules == implicitRules) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                other.implicitRulesElement == implicitRulesElement) &&
-            (identical(other.language, language) ||
-                other.language == language) &&
-            (identical(other.languageElement, languageElement) ||
-                other.languageElement == languageElement) &&
-            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
             const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.statusElement, statusElement) ||
-                other.statusElement == statusElement) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality()
+                .equals(other.statusElement, statusElement) &&
             const DeepCollectionEquality().equals(other.category, category) &&
-            (identical(other.code, code) || other.code == code) &&
+            const DeepCollectionEquality().equals(other.code, code) &&
             const DeepCollectionEquality()
                 .equals(other.manufacturer, manufacturer) &&
             const DeepCollectionEquality().equals(other.nutrient, nutrient) &&
@@ -9108,35 +9091,34 @@ class _$_NutritionProduct extends _NutritionProduct {
                 .equals(other.knownAllergen, knownAllergen) &&
             const DeepCollectionEquality()
                 .equals(other.productCharacteristic, productCharacteristic) &&
-            (identical(other.instance, instance) ||
-                other.instance == instance) &&
+            const DeepCollectionEquality().equals(other.instance, instance) &&
             const DeepCollectionEquality().equals(other.note, note));
   }
 
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        resourceType,
-        id,
-        meta,
-        implicitRules,
-        implicitRulesElement,
-        language,
-        languageElement,
-        text,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
         const DeepCollectionEquality().hash(contained),
         const DeepCollectionEquality().hash(extension_),
         const DeepCollectionEquality().hash(modifierExtension),
-        status,
-        statusElement,
+        const DeepCollectionEquality().hash(status),
+        const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(category),
-        code,
+        const DeepCollectionEquality().hash(code),
         const DeepCollectionEquality().hash(manufacturer),
         const DeepCollectionEquality().hash(nutrient),
         const DeepCollectionEquality().hash(ingredient),
         const DeepCollectionEquality().hash(knownAllergen),
         const DeepCollectionEquality().hash(productCharacteristic),
-        instance,
+        const DeepCollectionEquality().hash(instance),
         const DeepCollectionEquality().hash(note)
       ]);
 
@@ -9457,22 +9439,22 @@ class _$_NutritionProductNutrient extends _NutritionProductNutrient {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _NutritionProductNutrient &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.item, item) || other.item == item) &&
+            const DeepCollectionEquality().equals(other.item, item) &&
             const DeepCollectionEquality().equals(other.amount, amount));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      item,
+      const DeepCollectionEquality().hash(item),
       const DeepCollectionEquality().hash(amount));
 
   @JsonKey(ignore: true)
@@ -9732,22 +9714,22 @@ class _$_NutritionProductIngredient extends _NutritionProductIngredient {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _NutritionProductIngredient &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.item, item) || other.item == item) &&
+            const DeepCollectionEquality().equals(other.item, item) &&
             const DeepCollectionEquality().equals(other.amount, amount));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      item,
+      const DeepCollectionEquality().hash(item),
       const DeepCollectionEquality().hash(amount));
 
   @JsonKey(ignore: true)
@@ -10246,49 +10228,48 @@ class _$_NutritionProductProductCharacteristic
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _NutritionProductProductCharacteristic &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.valueCodeableConcept, valueCodeableConcept) ||
-                other.valueCodeableConcept == valueCodeableConcept) &&
-            (identical(other.valueString, valueString) ||
-                other.valueString == valueString) &&
-            (identical(other.valueStringElement, valueStringElement) ||
-                other.valueStringElement == valueStringElement) &&
-            (identical(other.valueQuantity, valueQuantity) ||
-                other.valueQuantity == valueQuantity) &&
-            (identical(other.valueBase64Binary, valueBase64Binary) ||
-                other.valueBase64Binary == valueBase64Binary) &&
-            (identical(
-                    other.valueBase64BinaryElement, valueBase64BinaryElement) ||
-                other.valueBase64BinaryElement == valueBase64BinaryElement) &&
-            (identical(other.valueAttachment, valueAttachment) ||
-                other.valueAttachment == valueAttachment) &&
-            (identical(other.valueBoolean, valueBoolean) ||
-                other.valueBoolean == valueBoolean) &&
-            (identical(other.valueBooleanElement, valueBooleanElement) ||
-                other.valueBooleanElement == valueBooleanElement));
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCodeableConcept, valueCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.valueString, valueString) &&
+            const DeepCollectionEquality()
+                .equals(other.valueStringElement, valueStringElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueQuantity, valueQuantity) &&
+            const DeepCollectionEquality()
+                .equals(other.valueBase64Binary, valueBase64Binary) &&
+            const DeepCollectionEquality().equals(
+                other.valueBase64BinaryElement, valueBase64BinaryElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueAttachment, valueAttachment) &&
+            const DeepCollectionEquality()
+                .equals(other.valueBoolean, valueBoolean) &&
+            const DeepCollectionEquality()
+                .equals(other.valueBooleanElement, valueBooleanElement));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      type,
-      valueCodeableConcept,
-      valueString,
-      valueStringElement,
-      valueQuantity,
-      valueBase64Binary,
-      valueBase64BinaryElement,
-      valueAttachment,
-      valueBoolean,
-      valueBooleanElement);
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(valueCodeableConcept),
+      const DeepCollectionEquality().hash(valueString),
+      const DeepCollectionEquality().hash(valueStringElement),
+      const DeepCollectionEquality().hash(valueQuantity),
+      const DeepCollectionEquality().hash(valueBase64Binary),
+      const DeepCollectionEquality().hash(valueBase64BinaryElement),
+      const DeepCollectionEquality().hash(valueAttachment),
+      const DeepCollectionEquality().hash(valueBoolean),
+      const DeepCollectionEquality().hash(valueBooleanElement));
 
   @JsonKey(ignore: true)
   @override
@@ -10738,41 +10719,39 @@ class _$_NutritionProductInstance extends _NutritionProductInstance {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _NutritionProductInstance &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.quantity, quantity) ||
-                other.quantity == quantity) &&
+            const DeepCollectionEquality().equals(other.quantity, quantity) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
-            (identical(other.lotNumber, lotNumber) ||
-                other.lotNumber == lotNumber) &&
-            (identical(other.lotNumberElement, lotNumberElement) ||
-                other.lotNumberElement == lotNumberElement) &&
-            (identical(other.expiry, expiry) || other.expiry == expiry) &&
-            (identical(other.expiryElement, expiryElement) ||
-                other.expiryElement == expiryElement) &&
-            (identical(other.useBy, useBy) || other.useBy == useBy) &&
-            (identical(other.useByElement, useByElement) ||
-                other.useByElement == useByElement));
+            const DeepCollectionEquality().equals(other.lotNumber, lotNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.lotNumberElement, lotNumberElement) &&
+            const DeepCollectionEquality().equals(other.expiry, expiry) &&
+            const DeepCollectionEquality()
+                .equals(other.expiryElement, expiryElement) &&
+            const DeepCollectionEquality().equals(other.useBy, useBy) &&
+            const DeepCollectionEquality()
+                .equals(other.useByElement, useByElement));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      quantity,
+      const DeepCollectionEquality().hash(quantity),
       const DeepCollectionEquality().hash(identifier),
-      lotNumber,
-      lotNumberElement,
-      expiry,
-      expiryElement,
-      useBy,
-      useByElement);
+      const DeepCollectionEquality().hash(lotNumber),
+      const DeepCollectionEquality().hash(lotNumberElement),
+      const DeepCollectionEquality().hash(expiry),
+      const DeepCollectionEquality().hash(expiryElement),
+      const DeepCollectionEquality().hash(useBy),
+      const DeepCollectionEquality().hash(useByElement));
 
   @JsonKey(ignore: true)
   @override
@@ -11566,19 +11545,18 @@ class _$_Substance extends _Substance {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _Substance &&
-            (identical(other.resourceType, resourceType) ||
-                other.resourceType == resourceType) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.meta, meta) || other.meta == meta) &&
-            (identical(other.implicitRules, implicitRules) ||
-                other.implicitRules == implicitRules) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                other.implicitRulesElement == implicitRulesElement) &&
-            (identical(other.language, language) ||
-                other.language == language) &&
-            (identical(other.languageElement, languageElement) ||
-                other.languageElement == languageElement) &&
-            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
             const DeepCollectionEquality().equals(other.contained, contained) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
@@ -11586,24 +11564,22 @@ class _$_Substance extends _Substance {
                 .equals(other.modifierExtension, modifierExtension) &&
             const DeepCollectionEquality()
                 .equals(other.identifier, identifier) &&
-            (identical(other.instance, instance) ||
-                other.instance == instance) &&
-            (identical(other.instanceElement, instanceElement) ||
-                other.instanceElement == instanceElement) &&
-            (identical(other.status, status) || other.status == status) &&
-            (identical(other.statusElement, statusElement) ||
-                other.statusElement == statusElement) &&
+            const DeepCollectionEquality().equals(other.instance, instance) &&
+            const DeepCollectionEquality()
+                .equals(other.instanceElement, instanceElement) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality()
+                .equals(other.statusElement, statusElement) &&
             const DeepCollectionEquality().equals(other.category, category) &&
-            (identical(other.code, code) || other.code == code) &&
-            (identical(other.description, description) ||
-                other.description == description) &&
-            (identical(other.descriptionElement, descriptionElement) ||
-                other.descriptionElement == descriptionElement) &&
-            (identical(other.expiry, expiry) || other.expiry == expiry) &&
-            (identical(other.expiryElement, expiryElement) ||
-                other.expiryElement == expiryElement) &&
-            (identical(other.quantity, quantity) ||
-                other.quantity == quantity) &&
+            const DeepCollectionEquality().equals(other.code, code) &&
+            const DeepCollectionEquality()
+                .equals(other.description, description) &&
+            const DeepCollectionEquality()
+                .equals(other.descriptionElement, descriptionElement) &&
+            const DeepCollectionEquality().equals(other.expiry, expiry) &&
+            const DeepCollectionEquality()
+                .equals(other.expiryElement, expiryElement) &&
+            const DeepCollectionEquality().equals(other.quantity, quantity) &&
             const DeepCollectionEquality()
                 .equals(other.ingredient, ingredient));
   }
@@ -11611,29 +11587,29 @@ class _$_Substance extends _Substance {
   @override
   int get hashCode => Object.hashAll([
         runtimeType,
-        resourceType,
-        id,
-        meta,
-        implicitRules,
-        implicitRulesElement,
-        language,
-        languageElement,
-        text,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
         const DeepCollectionEquality().hash(contained),
         const DeepCollectionEquality().hash(extension_),
         const DeepCollectionEquality().hash(modifierExtension),
         const DeepCollectionEquality().hash(identifier),
-        instance,
-        instanceElement,
-        status,
-        statusElement,
+        const DeepCollectionEquality().hash(instance),
+        const DeepCollectionEquality().hash(instanceElement),
+        const DeepCollectionEquality().hash(status),
+        const DeepCollectionEquality().hash(statusElement),
         const DeepCollectionEquality().hash(category),
-        code,
-        description,
-        descriptionElement,
-        expiry,
-        expiryElement,
-        quantity,
+        const DeepCollectionEquality().hash(code),
+        const DeepCollectionEquality().hash(description),
+        const DeepCollectionEquality().hash(descriptionElement),
+        const DeepCollectionEquality().hash(expiry),
+        const DeepCollectionEquality().hash(expiryElement),
+        const DeepCollectionEquality().hash(quantity),
         const DeepCollectionEquality().hash(ingredient)
       ]);
 
@@ -12012,29 +11988,27 @@ class _$_SubstanceIngredient extends _SubstanceIngredient {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _SubstanceIngredient &&
-            (identical(other.id, id) || other.id == id) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
             const DeepCollectionEquality()
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            (identical(other.quantity, quantity) ||
-                other.quantity == quantity) &&
-            (identical(
-                    other.substanceCodeableConcept, substanceCodeableConcept) ||
-                other.substanceCodeableConcept == substanceCodeableConcept) &&
-            (identical(other.substanceReference, substanceReference) ||
-                other.substanceReference == substanceReference));
+            const DeepCollectionEquality().equals(other.quantity, quantity) &&
+            const DeepCollectionEquality().equals(
+                other.substanceCodeableConcept, substanceCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.substanceReference, substanceReference));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      id,
+      const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      quantity,
-      substanceCodeableConcept,
-      substanceReference);
+      const DeepCollectionEquality().hash(quantity),
+      const DeepCollectionEquality().hash(substanceCodeableConcept),
+      const DeepCollectionEquality().hash(substanceReference));
 
   @JsonKey(ignore: true)
   @override
