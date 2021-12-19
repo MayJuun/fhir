@@ -1,10 +1,10 @@
 name: mobileauthdemo
 
 environment:
-  sdk: '>=2.14.0 <3.0.0'
+  sdk: '>=2.15.0 <3.0.0'
 
 dependencies:
-  fhir: ^0.5.0-9
+  fhir: ^0.5.0-11
   fhir_auth:
     path: ../../fhir_auth
   flutter:

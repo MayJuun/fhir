@@ -389,25 +389,23 @@ class _$_Scopes extends _Scopes {
             other is _Scopes &&
             const DeepCollectionEquality()
                 .equals(other.clinicalScopes, clinicalScopes) &&
-            (identical(other.openid, openid) || other.openid == openid) &&
-            (identical(other.fhirUser, fhirUser) ||
-                other.fhirUser == fhirUser) &&
-            (identical(other.profile, profile) || other.profile == profile) &&
-            (identical(other.offlineAccess, offlineAccess) ||
-                other.offlineAccess == offlineAccess) &&
-            (identical(other.onlineAccess, onlineAccess) ||
-                other.onlineAccess == onlineAccess) &&
-            (identical(other.ehrLaunch, ehrLaunch) ||
-                other.ehrLaunch == ehrLaunch) &&
-            (identical(other.patientLaunch, patientLaunch) ||
-                other.patientLaunch == patientLaunch) &&
-            (identical(other.encounterLaunch, encounterLaunch) ||
-                other.encounterLaunch == encounterLaunch) &&
-            (identical(other.needPatientBanner, needPatientBanner) ||
-                other.needPatientBanner == needPatientBanner) &&
-            (identical(other.smartOrchestrateLaunch, smartOrchestrateLaunch) ||
-                other.smartOrchestrateLaunch == smartOrchestrateLaunch) &&
-            (identical(other.intent, intent) || other.intent == intent) &&
+            const DeepCollectionEquality().equals(other.openid, openid) &&
+            const DeepCollectionEquality().equals(other.fhirUser, fhirUser) &&
+            const DeepCollectionEquality().equals(other.profile, profile) &&
+            const DeepCollectionEquality()
+                .equals(other.offlineAccess, offlineAccess) &&
+            const DeepCollectionEquality()
+                .equals(other.onlineAccess, onlineAccess) &&
+            const DeepCollectionEquality().equals(other.ehrLaunch, ehrLaunch) &&
+            const DeepCollectionEquality()
+                .equals(other.patientLaunch, patientLaunch) &&
+            const DeepCollectionEquality()
+                .equals(other.encounterLaunch, encounterLaunch) &&
+            const DeepCollectionEquality()
+                .equals(other.needPatientBanner, needPatientBanner) &&
+            const DeepCollectionEquality()
+                .equals(other.smartOrchestrateLaunch, smartOrchestrateLaunch) &&
+            const DeepCollectionEquality().equals(other.intent, intent) &&
             const DeepCollectionEquality()
                 .equals(other.additional, additional));
   }
@@ -416,17 +414,17 @@ class _$_Scopes extends _Scopes {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(clinicalScopes),
-      openid,
-      fhirUser,
-      profile,
-      offlineAccess,
-      onlineAccess,
-      ehrLaunch,
-      patientLaunch,
-      encounterLaunch,
-      needPatientBanner,
-      smartOrchestrateLaunch,
-      intent,
+      const DeepCollectionEquality().hash(openid),
+      const DeepCollectionEquality().hash(fhirUser),
+      const DeepCollectionEquality().hash(profile),
+      const DeepCollectionEquality().hash(offlineAccess),
+      const DeepCollectionEquality().hash(onlineAccess),
+      const DeepCollectionEquality().hash(ehrLaunch),
+      const DeepCollectionEquality().hash(patientLaunch),
+      const DeepCollectionEquality().hash(encounterLaunch),
+      const DeepCollectionEquality().hash(needPatientBanner),
+      const DeepCollectionEquality().hash(smartOrchestrateLaunch),
+      const DeepCollectionEquality().hash(intent),
       const DeepCollectionEquality().hash(additional));
 
   @JsonKey(ignore: true)

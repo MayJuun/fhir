@@ -89,6 +89,8 @@ class SmartMobileClient extends SmartClient {
         clientSecret: secret,
       );
     }
+
+    await helper?.getToken();
   }
 
   @override

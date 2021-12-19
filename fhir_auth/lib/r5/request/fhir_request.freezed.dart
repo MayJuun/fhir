@@ -1242,19 +1242,19 @@ class _$_FhirReadRequest extends _FhirReadRequest {
   final R5ResourceType type;
   @override
   final Id id;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
+  @JsonKey()
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
+  @JsonKey()
   @override
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> parameters;
   @override
@@ -1272,33 +1272,32 @@ class _$_FhirReadRequest extends _FhirReadRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FhirReadRequest &&
-            (identical(other.base, base) || other.base == base) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.pretty, pretty) || other.pretty == pretty) &&
-            (identical(other.summary, summary) || other.summary == summary) &&
-            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.base, base) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.pretty, pretty) &&
+            const DeepCollectionEquality().equals(other.summary, summary) &&
+            const DeepCollectionEquality().equals(other.format, format) &&
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
-            (identical(other.mimeType, mimeType) ||
-                other.mimeType == mimeType) &&
-            (identical(other.client, client) || other.client == client));
+            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
+            const DeepCollectionEquality().equals(other.client, client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      base,
-      type,
-      id,
-      pretty,
-      summary,
-      format,
+      const DeepCollectionEquality().hash(base),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(pretty),
+      const DeepCollectionEquality().hash(summary),
+      const DeepCollectionEquality().hash(format),
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
-      mimeType,
-      client);
+      const DeepCollectionEquality().hash(mimeType),
+      const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
@@ -2123,19 +2122,19 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
   final Id id;
   @override
   final Id vid;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
+  @JsonKey()
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
+  @JsonKey()
   @override
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> parameters;
   @override
@@ -2153,35 +2152,34 @@ class _$_FhirVReadRequest extends _FhirVReadRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FhirVReadRequest &&
-            (identical(other.base, base) || other.base == base) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.vid, vid) || other.vid == vid) &&
-            (identical(other.pretty, pretty) || other.pretty == pretty) &&
-            (identical(other.summary, summary) || other.summary == summary) &&
-            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.base, base) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.vid, vid) &&
+            const DeepCollectionEquality().equals(other.pretty, pretty) &&
+            const DeepCollectionEquality().equals(other.summary, summary) &&
+            const DeepCollectionEquality().equals(other.format, format) &&
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
-            (identical(other.mimeType, mimeType) ||
-                other.mimeType == mimeType) &&
-            (identical(other.client, client) || other.client == client));
+            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
+            const DeepCollectionEquality().equals(other.client, client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      base,
-      type,
-      id,
-      vid,
-      pretty,
-      summary,
-      format,
+      const DeepCollectionEquality().hash(base),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(vid),
+      const DeepCollectionEquality().hash(pretty),
+      const DeepCollectionEquality().hash(summary),
+      const DeepCollectionEquality().hash(format),
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
-      mimeType,
-      client);
+      const DeepCollectionEquality().hash(mimeType),
+      const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
@@ -2990,19 +2988,19 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
   final Uri base;
   @override
   final Resource resource;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
+  @JsonKey()
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
+  @JsonKey()
   @override
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> parameters;
   @override
@@ -3020,32 +3018,30 @@ class _$_FhirUpdateRequest extends _FhirUpdateRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FhirUpdateRequest &&
-            (identical(other.base, base) || other.base == base) &&
-            (identical(other.resource, resource) ||
-                other.resource == resource) &&
-            (identical(other.pretty, pretty) || other.pretty == pretty) &&
-            (identical(other.summary, summary) || other.summary == summary) &&
-            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.base, base) &&
+            const DeepCollectionEquality().equals(other.resource, resource) &&
+            const DeepCollectionEquality().equals(other.pretty, pretty) &&
+            const DeepCollectionEquality().equals(other.summary, summary) &&
+            const DeepCollectionEquality().equals(other.format, format) &&
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
-            (identical(other.mimeType, mimeType) ||
-                other.mimeType == mimeType) &&
-            (identical(other.client, client) || other.client == client));
+            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
+            const DeepCollectionEquality().equals(other.client, client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      base,
-      resource,
-      pretty,
-      summary,
-      format,
+      const DeepCollectionEquality().hash(base),
+      const DeepCollectionEquality().hash(resource),
+      const DeepCollectionEquality().hash(pretty),
+      const DeepCollectionEquality().hash(summary),
+      const DeepCollectionEquality().hash(format),
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
-      mimeType,
-      client);
+      const DeepCollectionEquality().hash(mimeType),
+      const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
@@ -3850,19 +3846,19 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
   final Uri base;
   @override
   final Resource resource;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
+  @JsonKey()
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
+  @JsonKey()
   @override
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> parameters;
   @override
@@ -3880,32 +3876,30 @@ class _$_FhirPatchRequest extends _FhirPatchRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FhirPatchRequest &&
-            (identical(other.base, base) || other.base == base) &&
-            (identical(other.resource, resource) ||
-                other.resource == resource) &&
-            (identical(other.pretty, pretty) || other.pretty == pretty) &&
-            (identical(other.summary, summary) || other.summary == summary) &&
-            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.base, base) &&
+            const DeepCollectionEquality().equals(other.resource, resource) &&
+            const DeepCollectionEquality().equals(other.pretty, pretty) &&
+            const DeepCollectionEquality().equals(other.summary, summary) &&
+            const DeepCollectionEquality().equals(other.format, format) &&
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
-            (identical(other.mimeType, mimeType) ||
-                other.mimeType == mimeType) &&
-            (identical(other.client, client) || other.client == client));
+            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
+            const DeepCollectionEquality().equals(other.client, client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      base,
-      resource,
-      pretty,
-      summary,
-      format,
+      const DeepCollectionEquality().hash(base),
+      const DeepCollectionEquality().hash(resource),
+      const DeepCollectionEquality().hash(pretty),
+      const DeepCollectionEquality().hash(summary),
+      const DeepCollectionEquality().hash(format),
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
-      mimeType,
-      client);
+      const DeepCollectionEquality().hash(mimeType),
+      const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
@@ -4719,19 +4713,19 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
   final R5ResourceType type;
   @override
   final Id id;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
+  @JsonKey()
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
+  @JsonKey()
   @override
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> parameters;
   @override
@@ -4749,33 +4743,32 @@ class _$_FhirDeleteRequest extends _FhirDeleteRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FhirDeleteRequest &&
-            (identical(other.base, base) || other.base == base) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.pretty, pretty) || other.pretty == pretty) &&
-            (identical(other.summary, summary) || other.summary == summary) &&
-            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.base, base) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.pretty, pretty) &&
+            const DeepCollectionEquality().equals(other.summary, summary) &&
+            const DeepCollectionEquality().equals(other.format, format) &&
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
-            (identical(other.mimeType, mimeType) ||
-                other.mimeType == mimeType) &&
-            (identical(other.client, client) || other.client == client));
+            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
+            const DeepCollectionEquality().equals(other.client, client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      base,
-      type,
-      id,
-      pretty,
-      summary,
-      format,
+      const DeepCollectionEquality().hash(base),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(pretty),
+      const DeepCollectionEquality().hash(summary),
+      const DeepCollectionEquality().hash(format),
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
-      mimeType,
-      client);
+      const DeepCollectionEquality().hash(mimeType),
+      const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
@@ -5582,19 +5575,19 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
   final Uri base;
   @override
   final Resource resource;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
+  @JsonKey()
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
+  @JsonKey()
   @override
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> parameters;
   @override
@@ -5612,32 +5605,30 @@ class _$_FhirCreateRequest extends _FhirCreateRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FhirCreateRequest &&
-            (identical(other.base, base) || other.base == base) &&
-            (identical(other.resource, resource) ||
-                other.resource == resource) &&
-            (identical(other.pretty, pretty) || other.pretty == pretty) &&
-            (identical(other.summary, summary) || other.summary == summary) &&
-            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.base, base) &&
+            const DeepCollectionEquality().equals(other.resource, resource) &&
+            const DeepCollectionEquality().equals(other.pretty, pretty) &&
+            const DeepCollectionEquality().equals(other.summary, summary) &&
+            const DeepCollectionEquality().equals(other.format, format) &&
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
-            (identical(other.mimeType, mimeType) ||
-                other.mimeType == mimeType) &&
-            (identical(other.client, client) || other.client == client));
+            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
+            const DeepCollectionEquality().equals(other.client, client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      base,
-      resource,
-      pretty,
-      summary,
-      format,
+      const DeepCollectionEquality().hash(base),
+      const DeepCollectionEquality().hash(resource),
+      const DeepCollectionEquality().hash(pretty),
+      const DeepCollectionEquality().hash(summary),
+      const DeepCollectionEquality().hash(format),
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
-      mimeType,
-      client);
+      const DeepCollectionEquality().hash(mimeType),
+      const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
@@ -6456,25 +6447,25 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
   final Uri base;
   @override
   final R5ResourceType type;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
+  @JsonKey()
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
+  @JsonKey()
   @override
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> parameters;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool usePost;
-  @JsonKey(defaultValue: RestfulRequest.get_)
+  @JsonKey()
   @override
   final RestfulRequest restfulRequest;
   @override
@@ -6492,36 +6483,35 @@ class _$_FhirSearchRequest extends _FhirSearchRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FhirSearchRequest &&
-            (identical(other.base, base) || other.base == base) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.pretty, pretty) || other.pretty == pretty) &&
-            (identical(other.summary, summary) || other.summary == summary) &&
-            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.base, base) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.pretty, pretty) &&
+            const DeepCollectionEquality().equals(other.summary, summary) &&
+            const DeepCollectionEquality().equals(other.format, format) &&
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
-            (identical(other.usePost, usePost) || other.usePost == usePost) &&
-            (identical(other.restfulRequest, restfulRequest) ||
-                other.restfulRequest == restfulRequest) &&
-            (identical(other.mimeType, mimeType) ||
-                other.mimeType == mimeType) &&
-            (identical(other.client, client) || other.client == client));
+            const DeepCollectionEquality().equals(other.usePost, usePost) &&
+            const DeepCollectionEquality()
+                .equals(other.restfulRequest, restfulRequest) &&
+            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
+            const DeepCollectionEquality().equals(other.client, client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      base,
-      type,
-      pretty,
-      summary,
-      format,
+      const DeepCollectionEquality().hash(base),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(pretty),
+      const DeepCollectionEquality().hash(summary),
+      const DeepCollectionEquality().hash(format),
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
-      usePost,
-      restfulRequest,
-      mimeType,
-      client);
+      const DeepCollectionEquality().hash(usePost),
+      const DeepCollectionEquality().hash(restfulRequest),
+      const DeepCollectionEquality().hash(mimeType),
+      const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
@@ -7321,19 +7311,19 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
 
   @override
   final Uri base;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
+  @JsonKey()
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
+  @JsonKey()
   @override
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> parameters;
   @override
@@ -7351,29 +7341,28 @@ class _$_FhirSearchAllRequest extends _FhirSearchAllRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FhirSearchAllRequest &&
-            (identical(other.base, base) || other.base == base) &&
-            (identical(other.pretty, pretty) || other.pretty == pretty) &&
-            (identical(other.summary, summary) || other.summary == summary) &&
-            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.base, base) &&
+            const DeepCollectionEquality().equals(other.pretty, pretty) &&
+            const DeepCollectionEquality().equals(other.summary, summary) &&
+            const DeepCollectionEquality().equals(other.format, format) &&
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
-            (identical(other.mimeType, mimeType) ||
-                other.mimeType == mimeType) &&
-            (identical(other.client, client) || other.client == client));
+            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
+            const DeepCollectionEquality().equals(other.client, client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      base,
-      pretty,
-      summary,
-      format,
+      const DeepCollectionEquality().hash(base),
+      const DeepCollectionEquality().hash(pretty),
+      const DeepCollectionEquality().hash(summary),
+      const DeepCollectionEquality().hash(format),
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
-      mimeType,
-      client);
+      const DeepCollectionEquality().hash(mimeType),
+      const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
@@ -8176,22 +8165,22 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
 
   @override
   final Uri base;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
+  @JsonKey()
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
+  @JsonKey()
   @override
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> parameters;
-  @JsonKey(defaultValue: Mode.full)
+  @JsonKey()
   @override
   final Mode mode;
   @override
@@ -8209,31 +8198,30 @@ class _$_FhirCapabilitiesRequest extends _FhirCapabilitiesRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FhirCapabilitiesRequest &&
-            (identical(other.base, base) || other.base == base) &&
-            (identical(other.pretty, pretty) || other.pretty == pretty) &&
-            (identical(other.summary, summary) || other.summary == summary) &&
-            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.base, base) &&
+            const DeepCollectionEquality().equals(other.pretty, pretty) &&
+            const DeepCollectionEquality().equals(other.summary, summary) &&
+            const DeepCollectionEquality().equals(other.format, format) &&
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
-            (identical(other.mode, mode) || other.mode == mode) &&
-            (identical(other.mimeType, mimeType) ||
-                other.mimeType == mimeType) &&
-            (identical(other.client, client) || other.client == client));
+            const DeepCollectionEquality().equals(other.mode, mode) &&
+            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
+            const DeepCollectionEquality().equals(other.client, client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      base,
-      pretty,
-      summary,
-      format,
+      const DeepCollectionEquality().hash(base),
+      const DeepCollectionEquality().hash(pretty),
+      const DeepCollectionEquality().hash(summary),
+      const DeepCollectionEquality().hash(format),
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
-      mode,
-      mimeType,
-      client);
+      const DeepCollectionEquality().hash(mode),
+      const DeepCollectionEquality().hash(mimeType),
+      const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
@@ -9046,19 +9034,19 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
 
   @override
   final Uri base;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
+  @JsonKey()
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
+  @JsonKey()
   @override
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> parameters;
   @override
@@ -9078,31 +9066,30 @@ class _$_FhirTransactionRequest extends _FhirTransactionRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FhirTransactionRequest &&
-            (identical(other.base, base) || other.base == base) &&
-            (identical(other.pretty, pretty) || other.pretty == pretty) &&
-            (identical(other.summary, summary) || other.summary == summary) &&
-            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.base, base) &&
+            const DeepCollectionEquality().equals(other.pretty, pretty) &&
+            const DeepCollectionEquality().equals(other.summary, summary) &&
+            const DeepCollectionEquality().equals(other.format, format) &&
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
-            (identical(other.bundle, bundle) || other.bundle == bundle) &&
-            (identical(other.mimeType, mimeType) ||
-                other.mimeType == mimeType) &&
-            (identical(other.client, client) || other.client == client));
+            const DeepCollectionEquality().equals(other.bundle, bundle) &&
+            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
+            const DeepCollectionEquality().equals(other.client, client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      base,
-      pretty,
-      summary,
-      format,
+      const DeepCollectionEquality().hash(base),
+      const DeepCollectionEquality().hash(pretty),
+      const DeepCollectionEquality().hash(summary),
+      const DeepCollectionEquality().hash(format),
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
-      bundle,
-      mimeType,
-      client);
+      const DeepCollectionEquality().hash(bundle),
+      const DeepCollectionEquality().hash(mimeType),
+      const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
@@ -9915,19 +9902,19 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
 
   @override
   final Uri base;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
+  @JsonKey()
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
+  @JsonKey()
   @override
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> parameters;
   @override
@@ -9947,31 +9934,30 @@ class _$_FhirBatchRequest extends _FhirBatchRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FhirBatchRequest &&
-            (identical(other.base, base) || other.base == base) &&
-            (identical(other.pretty, pretty) || other.pretty == pretty) &&
-            (identical(other.summary, summary) || other.summary == summary) &&
-            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.base, base) &&
+            const DeepCollectionEquality().equals(other.pretty, pretty) &&
+            const DeepCollectionEquality().equals(other.summary, summary) &&
+            const DeepCollectionEquality().equals(other.format, format) &&
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
-            (identical(other.bundle, bundle) || other.bundle == bundle) &&
-            (identical(other.mimeType, mimeType) ||
-                other.mimeType == mimeType) &&
-            (identical(other.client, client) || other.client == client));
+            const DeepCollectionEquality().equals(other.bundle, bundle) &&
+            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
+            const DeepCollectionEquality().equals(other.client, client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      base,
-      pretty,
-      summary,
-      format,
+      const DeepCollectionEquality().hash(base),
+      const DeepCollectionEquality().hash(pretty),
+      const DeepCollectionEquality().hash(summary),
+      const DeepCollectionEquality().hash(format),
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
-      bundle,
-      mimeType,
-      client);
+      const DeepCollectionEquality().hash(bundle),
+      const DeepCollectionEquality().hash(mimeType),
+      const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
@@ -10813,19 +10799,19 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
   final R5ResourceType type;
   @override
   final Id id;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
+  @JsonKey()
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
+  @JsonKey()
   @override
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> parameters;
   @override
@@ -10851,42 +10837,40 @@ class _$_FhirHistoryRequest extends _FhirHistoryRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FhirHistoryRequest &&
-            (identical(other.base, base) || other.base == base) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.pretty, pretty) || other.pretty == pretty) &&
-            (identical(other.summary, summary) || other.summary == summary) &&
-            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.base, base) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.pretty, pretty) &&
+            const DeepCollectionEquality().equals(other.summary, summary) &&
+            const DeepCollectionEquality().equals(other.format, format) &&
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
-            (identical(other.count, count) || other.count == count) &&
-            (identical(other.since, since) || other.since == since) &&
-            (identical(other.at, at) || other.at == at) &&
-            (identical(other.reference, reference) ||
-                other.reference == reference) &&
-            (identical(other.mimeType, mimeType) ||
-                other.mimeType == mimeType) &&
-            (identical(other.client, client) || other.client == client));
+            const DeepCollectionEquality().equals(other.count, count) &&
+            const DeepCollectionEquality().equals(other.since, since) &&
+            const DeepCollectionEquality().equals(other.at, at) &&
+            const DeepCollectionEquality().equals(other.reference, reference) &&
+            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
+            const DeepCollectionEquality().equals(other.client, client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      base,
-      type,
-      id,
-      pretty,
-      summary,
-      format,
+      const DeepCollectionEquality().hash(base),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(pretty),
+      const DeepCollectionEquality().hash(summary),
+      const DeepCollectionEquality().hash(format),
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
-      count,
-      since,
-      at,
-      reference,
-      mimeType,
-      client);
+      const DeepCollectionEquality().hash(count),
+      const DeepCollectionEquality().hash(since),
+      const DeepCollectionEquality().hash(at),
+      const DeepCollectionEquality().hash(reference),
+      const DeepCollectionEquality().hash(mimeType),
+      const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
@@ -11729,19 +11713,19 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
   final Uri base;
   @override
   final R5ResourceType type;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
+  @JsonKey()
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
+  @JsonKey()
   @override
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> parameters;
   @override
@@ -11767,40 +11751,38 @@ class _$_FhirHistoryTypeRequest extends _FhirHistoryTypeRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FhirHistoryTypeRequest &&
-            (identical(other.base, base) || other.base == base) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.pretty, pretty) || other.pretty == pretty) &&
-            (identical(other.summary, summary) || other.summary == summary) &&
-            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.base, base) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.pretty, pretty) &&
+            const DeepCollectionEquality().equals(other.summary, summary) &&
+            const DeepCollectionEquality().equals(other.format, format) &&
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
-            (identical(other.count, count) || other.count == count) &&
-            (identical(other.since, since) || other.since == since) &&
-            (identical(other.at, at) || other.at == at) &&
-            (identical(other.reference, reference) ||
-                other.reference == reference) &&
-            (identical(other.mimeType, mimeType) ||
-                other.mimeType == mimeType) &&
-            (identical(other.client, client) || other.client == client));
+            const DeepCollectionEquality().equals(other.count, count) &&
+            const DeepCollectionEquality().equals(other.since, since) &&
+            const DeepCollectionEquality().equals(other.at, at) &&
+            const DeepCollectionEquality().equals(other.reference, reference) &&
+            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
+            const DeepCollectionEquality().equals(other.client, client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      base,
-      type,
-      pretty,
-      summary,
-      format,
+      const DeepCollectionEquality().hash(base),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(pretty),
+      const DeepCollectionEquality().hash(summary),
+      const DeepCollectionEquality().hash(format),
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
-      count,
-      since,
-      at,
-      reference,
-      mimeType,
-      client);
+      const DeepCollectionEquality().hash(count),
+      const DeepCollectionEquality().hash(since),
+      const DeepCollectionEquality().hash(at),
+      const DeepCollectionEquality().hash(reference),
+      const DeepCollectionEquality().hash(mimeType),
+      const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
@@ -12633,19 +12615,19 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
 
   @override
   final Uri base;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
+  @JsonKey()
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
+  @JsonKey()
   @override
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> parameters;
   @override
@@ -12671,38 +12653,36 @@ class _$_FhirHistoryAllRequest extends _FhirHistoryAllRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FhirHistoryAllRequest &&
-            (identical(other.base, base) || other.base == base) &&
-            (identical(other.pretty, pretty) || other.pretty == pretty) &&
-            (identical(other.summary, summary) || other.summary == summary) &&
-            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.base, base) &&
+            const DeepCollectionEquality().equals(other.pretty, pretty) &&
+            const DeepCollectionEquality().equals(other.summary, summary) &&
+            const DeepCollectionEquality().equals(other.format, format) &&
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
-            (identical(other.count, count) || other.count == count) &&
-            (identical(other.since, since) || other.since == since) &&
-            (identical(other.at, at) || other.at == at) &&
-            (identical(other.reference, reference) ||
-                other.reference == reference) &&
-            (identical(other.mimeType, mimeType) ||
-                other.mimeType == mimeType) &&
-            (identical(other.client, client) || other.client == client));
+            const DeepCollectionEquality().equals(other.count, count) &&
+            const DeepCollectionEquality().equals(other.since, since) &&
+            const DeepCollectionEquality().equals(other.at, at) &&
+            const DeepCollectionEquality().equals(other.reference, reference) &&
+            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
+            const DeepCollectionEquality().equals(other.client, client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      base,
-      pretty,
-      summary,
-      format,
+      const DeepCollectionEquality().hash(base),
+      const DeepCollectionEquality().hash(pretty),
+      const DeepCollectionEquality().hash(summary),
+      const DeepCollectionEquality().hash(format),
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
-      count,
-      since,
-      at,
-      reference,
-      mimeType,
-      client);
+      const DeepCollectionEquality().hash(count),
+      const DeepCollectionEquality().hash(since),
+      const DeepCollectionEquality().hash(at),
+      const DeepCollectionEquality().hash(reference),
+      const DeepCollectionEquality().hash(mimeType),
+      const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
@@ -13551,30 +13531,30 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
   final R5ResourceType? type;
   @override
   final Id? id;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool pretty;
-  @JsonKey(defaultValue: Summary.none)
+  @JsonKey()
   @override
   final Summary summary;
-  @JsonKey(defaultValue: 'json')
+  @JsonKey()
   @override
   final String format;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> elements;
-  @JsonKey(defaultValue: const <String>[])
+  @JsonKey()
   @override
   final List<String> parameters;
-  @JsonKey(defaultValue: const <String, dynamic>{})
+  @JsonKey()
   @override
   final Map<String, dynamic> fhirParameter;
   @override
   final String operation;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool usePost;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool useFormData;
   @override
@@ -13592,44 +13572,42 @@ class _$_FhirOperationRequest extends _FhirOperationRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _FhirOperationRequest &&
-            (identical(other.base, base) || other.base == base) &&
-            (identical(other.type, type) || other.type == type) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.pretty, pretty) || other.pretty == pretty) &&
-            (identical(other.summary, summary) || other.summary == summary) &&
-            (identical(other.format, format) || other.format == format) &&
+            const DeepCollectionEquality().equals(other.base, base) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.pretty, pretty) &&
+            const DeepCollectionEquality().equals(other.summary, summary) &&
+            const DeepCollectionEquality().equals(other.format, format) &&
             const DeepCollectionEquality().equals(other.elements, elements) &&
             const DeepCollectionEquality()
                 .equals(other.parameters, parameters) &&
             const DeepCollectionEquality()
                 .equals(other.fhirParameter, fhirParameter) &&
-            (identical(other.operation, operation) ||
-                other.operation == operation) &&
-            (identical(other.usePost, usePost) || other.usePost == usePost) &&
-            (identical(other.useFormData, useFormData) ||
-                other.useFormData == useFormData) &&
-            (identical(other.mimeType, mimeType) ||
-                other.mimeType == mimeType) &&
-            (identical(other.client, client) || other.client == client));
+            const DeepCollectionEquality().equals(other.operation, operation) &&
+            const DeepCollectionEquality().equals(other.usePost, usePost) &&
+            const DeepCollectionEquality()
+                .equals(other.useFormData, useFormData) &&
+            const DeepCollectionEquality().equals(other.mimeType, mimeType) &&
+            const DeepCollectionEquality().equals(other.client, client));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      base,
-      type,
-      id,
-      pretty,
-      summary,
-      format,
+      const DeepCollectionEquality().hash(base),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(pretty),
+      const DeepCollectionEquality().hash(summary),
+      const DeepCollectionEquality().hash(format),
       const DeepCollectionEquality().hash(elements),
       const DeepCollectionEquality().hash(parameters),
       const DeepCollectionEquality().hash(fhirParameter),
-      operation,
-      usePost,
-      useFormData,
-      mimeType,
-      client);
+      const DeepCollectionEquality().hash(operation),
+      const DeepCollectionEquality().hash(usePost),
+      const DeepCollectionEquality().hash(useFormData),
+      const DeepCollectionEquality().hash(mimeType),
+      const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override

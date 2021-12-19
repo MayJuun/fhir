@@ -4,6 +4,8 @@
 
 * Base FhirClient was still returning void from isLoggedIn (but should return a boolean)
 * Let `.login()` immediately ask for a token 
+* Updated dependencies
+* Dart 2.15.0
 
 ## [0.5.0-8]
 
