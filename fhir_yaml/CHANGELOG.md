@@ -1,3 +1,7 @@
+## [0.5.2]
+* Updated to Dart 2.15.0
+* Updated other dependencies
+
 ## [0.5.1]
 * Updated to Dart 2.14.0
 
