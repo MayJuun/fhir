@@ -117,7 +117,7 @@ mixin Api {
       'brandnewdemo/locations/us-central1/'
       'datasets/demo/fhirStores/demo/fhir';
   static const gcsClientId =
-      '411278748873-7l8946m31373be4889mnoii9w5y6a5gm.apps.googleusercontent.com';
+      '1234567890-abcdefghijklmnopqrstuvwxyz.apps.googleusercontent.com';
 
   /// HAPI Server
   static const hapiUrl = 'https://hapi.fhir.org/baseR4';
@@ -148,7 +148,7 @@ To briefly setup your app (assuming you have your GCP setup completed).
 6. From the same menu, Create an OAuth client ID but select web application
 7. Identity Platform -> Add a Provider -> Select Google
 8. Web Client ID (from the above web app) and Web Client Secret (from the above web app)
-9. It does not appear that you need to include the ClientId as part of the mobile Client. But you DO need to have registered the mobile client.
+9. Alright, I can't tell if you need to include the ClientId or not for this. Sometimes it seems to work without it and sometimes it doesn't. You may need to try it both ways. Either way, you DO need to have registered the mobile client.
 
 ### [Aidbox](https://docs.aidbox.app/)
 
