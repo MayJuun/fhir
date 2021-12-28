@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:yaml/yaml.dart';
 
 import 'fhir_number.dart';
+import 'integer.dart';
 
 class Decimal extends FhirNumber {
   const Decimal._(String valueString, double? valueNumber, bool isValid,
@@ -10,7 +11,12 @@ class Decimal extends FhirNumber {
       : super(valueString, valueNumber, isValid, isString);
 
   factory Decimal(dynamic inValue) {
-    if (inValue is num) {
+    if (inValue is Decimal) {
+      return inValue;
+    } else if (inValue is Integer) {
+      return Decimal._(inValue.toString(), inValue.value?.toDouble(),
+          inValue.isValid, inValue.isValid, inValue.isString);
+    } else if (inValue is num) {
       return Decimal._(
         inValue.toString(),
         inValue.toDouble(),
