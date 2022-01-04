@@ -52,7 +52,7 @@ class AggregateParser extends ValueParser<ParserList> {
 
 class EmptySetParser extends FhirPathParser {
   EmptySetParser();
-  List execute(List results, Map<String, dynamic> passed) => results;
+  List execute(List results, Map<String, dynamic> passed) => [];
 }
 
 class DotParser extends FhirPathParser {

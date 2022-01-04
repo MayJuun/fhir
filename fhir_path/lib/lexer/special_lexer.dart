@@ -27,7 +27,9 @@ final Parser<TotalParser> totalLexer =
 
 /// identifies emptySets
 final Parser<EmptySetParser> emptySetLexer =
-    string('{}').flatten().map((_) => EmptySetParser());
+    (char('{') & whitespace().optional() & char('}'))
+        .flatten()
+        .map((_) => EmptySetParser());
 
 /// identifies dots
 final Parser<DotParser> dotLexer = char('.').flatten().map((_) => DotParser());
