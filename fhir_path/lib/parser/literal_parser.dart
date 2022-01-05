@@ -48,6 +48,11 @@ class IntegerParser extends ValueParser<int> {
   IntegerParser(String newValue) : value = int.parse(newValue);
   int value;
   List execute(List results, Map<String, dynamic> passed) => [value];
+
+  @override
+  String toString() {
+    return 'IntegerParser: $value';
+  }
 }
 
 class DecimalParser extends ValueParser<double> {

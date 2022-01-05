@@ -19,16 +19,25 @@ List<dynamic> walkFhirPath(
   FhirVersion version = FhirVersion.r4,
   Map<String, dynamic>? resource,
 }) {
-  final passedEnvironment = Map<String, dynamic>.from(environment ?? {});
-  passedEnvironment.context = context ?? {};
-  passedEnvironment.resource = resource;
-  passedEnvironment.version = version;
+  final ast = parseFhirPath(pathExpression);
 
+  return executeFhirPath(
+    context,
+    ast,
+    pathExpression,
+    environment: environment,
+    version: version,
+    resource: resource,
+  );
+}
+
+/// Parse a FHIRPath for repeated use with different inputs later.
+ParserList parseFhirPath(String pathExpression) {
   try {
-    final FhirPathParser ast = lexer().parse(pathExpression).value;
+    final ast = lexer().parse(pathExpression).value;
     if (ast is ParserList) {
       if (ast.isEmpty) {
-        return [];
+        return ast;
       } else {
         // Check for combination of IdentifierParser followed by ParenthesisParser
         // This indicates invalid function name
@@ -45,7 +54,7 @@ List<dynamic> walkFhirPath(
           }
         }
 
-        return ast.execute([context], passedEnvironment);
+        return ast;
       }
     } else {
       throw FhirPathInvalidExpressionException(
@@ -53,15 +62,45 @@ List<dynamic> walkFhirPath(
           pathExpression: pathExpression);
     }
   } catch (error) {
-    if (error is FhirPathException) {
-      throw error;
-    } else if (error is ParserException) {
+    if (error is ParserException) {
       throw FhirPathInvalidExpressionException(
         'Expression could not be parsed: ${error.message}',
         pathExpression: pathExpression,
         offset: error.offset,
         cause: error,
       );
+    } else {
+      throw error;
+    }
+  }
+}
+
+/// Execute the FHIRPath as pre-parsed by [parseFhirPath].
+///
+/// May be invoked repeatedly on the same parsed FHIRPath,
+/// resulting in a performance gain over [walkFhirPath].
+List<dynamic> executeFhirPath(
+  Map<String, dynamic>? context,
+  ParserList parsedFhirPath,
+  String pathExpression, {
+  Map<String, dynamic>? environment,
+  FhirVersion version = FhirVersion.r4,
+  Map<String, dynamic>? resource,
+}) {
+  final passedEnvironment = Map<String, dynamic>.from(environment ?? {});
+  passedEnvironment.context = context ?? {};
+  passedEnvironment.resource = resource;
+  passedEnvironment.version = version;
+
+  try {
+    if (parsedFhirPath.isEmpty) {
+      return [];
+    } else {
+      return parsedFhirPath.execute([context], passedEnvironment);
+    }
+  } catch (error) {
+    if (error is FhirPathException) {
+      throw error;
     } else {
       throw FhirPathException(
         'Unable to execute FHIRPath expression',

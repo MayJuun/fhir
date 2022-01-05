@@ -41,6 +41,7 @@ void testArgFxns() {
         'Jingleheimer',
       ]);
     });
+    // TODO: This doesn't look like a test for exists?
     test('exists', () {
       final response = QuestionnaireResponse.fromJson(questionnaireResponse);
       expect(
@@ -67,6 +68,7 @@ void testArgFxns() {
           walkFhirPath(resource.toJson(),
               "telecom.exists(system = 'email' and use = 'any')"),
           [false]);
+      expect(walkFhirPath(resource.toJson(), '{}.exists()'), [false]);
     });
     test('all', () {
       expect(walkFhirPath(resource.toJson(), 'Patient.language.all()'), [true]);
@@ -566,6 +568,82 @@ void testArgFxns() {
           walkFhirPath(
               resource.toJson(), walkPath("3.14159.round(3) // 3.142")),
           [3.142]);
+    });
+
+    test('iif-basic', () {
+      expect(walkFhirPath(null, 'iif(true, 1, 0)'), [1]);
+      expect(walkFhirPath(null, 'iif(false, 1, 0)'), [0]);
+      expect(walkFhirPath(null, 'iif({}, 1, 0)'), [0]);
+      // non-empty, non-bool is true.
+      expect(walkFhirPath(null, 'iif(5, 1, 0)'), [1]);
+      expect(walkFhirPath(null, 'iif(true, 1)'), [1]);
+      expect(walkFhirPath(null, 'iif(false, 1)'), []);
+      expect(() => walkFhirPath(null, 'iif(false)'),
+          throwsA(TypeMatcher<FhirPathInvalidExpressionException>()));
+    });
+    test('iif-short-circuit', () {
+      // non-existent identifier should never be evaluated
+      expect(walkFhirPath(resource.toJson(), 'iif(true, 1, %resource.blurb)'),
+          [1]);
+      // non-existent identifier should throw
+      expect(
+          () =>
+              walkFhirPath(resource.toJson(), 'iif(false, 1, %resource.blurb)'),
+          throwsA(TypeMatcher<FhirPathEvaluationException>()));
+    });
+    test('iif-with-variables', () {
+      expect(
+          walkFhirPath(null, "iif(%smokesCode.exists(), 1, 0)",
+              environment: {'%smokesCode': []}),
+          [0]);
+      expect(
+          walkFhirPath(null, "iif(%smokesCode = 'Y', 1, 0)", environment: {
+            '%smokesCode': ['Y']
+          }),
+          [1]);
+      expect(
+          walkFhirPath(null, "iif(%smokesCode = 'Y', 1, 0)", environment: {
+            '%smokesCode': ['N']
+          }),
+          [0]);
+    });
+    test('iif-nested-fxns', () {
+      expect(
+          walkFhirPath(
+              null, "iif(%smokesCode.exists(), {}.empty(), {}.exists())",
+              environment: {'%smokesCode': []}),
+          [false]);
+    });
+    test('iif-nested-iif-empty-variable', () {
+      expect(
+          walkFhirPath(null,
+              "iif(%smokesCode.exists(), iif(%smokesCode = 'Y', 1, 0), {})",
+              environment: {'%smokesCode': []}),
+          []);
+    });
+    test('iif-nested-iif-empty-set', () {
+      expect(
+          walkFhirPath(
+            null,
+            "iif({}.exists(), iif({} = 'Y', 1, 0), {})",
+          ),
+          []);
+    });
+    test('iif-nested-iif-filled-variable', () {
+      expect(
+          walkFhirPath(null,
+              "iif(%smokesCode.exists(), iif(%smokesCode = 'Y', 1, 0), {})",
+              environment: {
+                '%smokesCode': ['Y']
+              }),
+          [1]);
+      expect(
+          walkFhirPath(null,
+              "iif(%smokesCode.exists(), iif(%smokesCode = 'Y', 1, 0), {})",
+              environment: {
+                '%smokesCode': ['N']
+              }),
+          [0]);
     });
 
     /// ToDo: trace

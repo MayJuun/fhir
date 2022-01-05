@@ -21,6 +21,11 @@ class EqualsParser extends OperatorParser {
       return [true];
     }
   }
+
+  @override
+  String toString() {
+    return 'EqualsParser: $before EQUALS $after';
+  }
 }
 
 /// ToDo: write test

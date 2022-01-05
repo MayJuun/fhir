@@ -36,6 +36,10 @@ class StarParser extends OperatorParser {
   }
 }
 
+/// Divides the left operand by the right operand (supported for Integer, Decimal, and Quantity).
+/// The result of a division is always Decimal, even if the inputs are both Integer. For integer division, use the div operator.
+
+/// If an attempt is made to divide by zero, the result is empty.
 class DivSignParser extends OperatorParser {
   DivSignParser();
   ParserList before = ParserList([]);
@@ -54,13 +58,17 @@ class DivSignParser extends OperatorParser {
           operation: '/',
           collection: results);
     } else if (executedBefore.first is num && executedAfter.first is num) {
-      return [executedBefore.first / executedAfter.first];
+      return (executedAfter.first != 0)
+          ? [executedBefore.first / executedAfter.first]
+          : [];
     } else if (executedBefore.first is FhirPathQuantity &&
         executedAfter.first is FhirPathQuantity) {
-      return [
-        (executedBefore.first as FhirPathQuantity) /
-            (executedAfter.first as FhirPathQuantity)
-      ];
+      return ((executedAfter.first as FhirPathQuantity).amount != 0)
+          ? [
+              (executedBefore.first as FhirPathQuantity) /
+                  (executedAfter.first as FhirPathQuantity)
+            ]
+          : [];
     } else {
       throw FhirPathEvaluationException(
           'The "/" operator only accepts Integers, Decimals and '
@@ -91,17 +99,13 @@ class DivStringParser extends OperatorParser {
           operation: 'div',
           collection: results);
     } else if (executedBefore.first is num && executedAfter.first is num) {
-      return [executedBefore.first ~/ executedAfter.first];
-    } else if (executedBefore.first is FhirPathQuantity &&
-        executedAfter.first is FhirPathQuantity) {
-      return [
-        (executedBefore.first as FhirPathQuantity) ~/
-            (executedAfter.first as FhirPathQuantity)
-      ];
+      return (executedAfter.first != 0)
+          ? [executedBefore.first ~/ executedAfter.first]
+          : [];
     } else {
       throw FhirPathEvaluationException(
-          'The "div" operator only accepts Integers, Decimals and '
-          'Quantities, but was passed the following:\n'
+          'The "div" operator only accepts Integers, and Decimals, '
+          'but was passed the following:\n'
           'Operand 1: ${executedBefore.first} (${executedBefore.first.runtimeType})\n'
           'Operand 2: ${executedAfter.first} (${executedAfter.first.runtimeType})',
           operation: 'div',
@@ -376,6 +380,11 @@ class MinusParser extends OperatorParser {
           operation: '-',
           collection: results);
     }
+  }
+
+  @override
+  String toString() {
+    return 'MinusParser: $before MINUS $after';
   }
 }
 

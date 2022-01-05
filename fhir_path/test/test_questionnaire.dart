@@ -119,6 +119,22 @@ void testQuestionnaire() {
               r"item.answer.valueCoding.extension.value.aggregate($this + $total, 0)"),
           [2]);
     });
+    test('Risk scoring', () {
+      expect(
+          walkFhirPath(null,
+              r"iif(%allQuestionsAnswered, iif(%gender = 'Male', iif(%age>70, 1 - (0.9402).power((52.00961  * (%age.ln() - 3.8926095) + 20.014077 * (%tChol.ln() - 5.3441475) - 0.905964  * (%hdl.ln() - 3.7731132) + 1.305784  * (%systolic.ln() - 4.8618212) + 0.241549  * (%antihypert - 0.1180474) + 12.096316 * (%smokes - 0.335602) - 4.605038  * (%age.ln() * %tChol.ln() - 20.8111562) - 2.84367   * (70.ln() * %smokes  - 1.2890301) - 2.93323   * (%age.ln() * %age.ln() - 15.2144965)).exp()), {}), {}), {})",
+              environment: {
+                '%allQuestionsAnswered': true,
+                '%gender': 'Male',
+                '%age': 75,
+                '%tChol': 8,
+                '%hdl': 0.2,
+                '%systolic': 180,
+                '%antihypert': 0,
+                '%smokes': 1
+              }),
+          [0.9999999999988963]);
+    });
   });
 }
 

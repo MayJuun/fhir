@@ -1,5 +1,8 @@
 # fhir_path
 
+## [0.5.0-18]
+* Allow pre-parsing of the AST for repeat use later. Boosts performance.
+
 ## [0.5.0-17]
 * **[Breaking]** Decoupled %context from %resource.
   * Important for item-level expressions on QuestionnaireResponse, where `%context` is the item, 

@@ -1,4 +1,8 @@
 # fhir
+## [0.5.0-12]
+* Allow construction of FhirDateTime from another FhirDateTime
+* Allow construction of Decimal from another Decimal or an Integer
+
 ## [0.5.0-11]
 
 * Updated to Dart 2.15.0
