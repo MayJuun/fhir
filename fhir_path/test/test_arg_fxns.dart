@@ -579,7 +579,7 @@ void testArgFxns() {
       expect(walkFhirPath(null, 'iif(true, 1)'), [1]);
       expect(walkFhirPath(null, 'iif(false, 1)'), []);
       expect(() => walkFhirPath(null, 'iif(false)'),
-          throwsA(TypeMatcher<FhirPathEvaluationException>()));
+          throwsA(TypeMatcher<FhirPathInvalidExpressionException>()));
     });
     test('iif-short-circuit', () {
       // non-existent identifier should never be evaluated

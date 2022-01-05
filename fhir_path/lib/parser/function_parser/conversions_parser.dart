@@ -18,12 +18,12 @@ class IifParser extends FunctionParser {
     // The regular .execute method on CommaParser does not implement the
     // short-circuit logic. Bespoke execution path required.
     if (value.first is! CommaParser) {
-      throw FhirPathEvaluationException(
-          'The function iif must have a criterion expression, followed by '
-          ' a true-result collection, and an optional other-wise-result. '
-          'Instead it has: ${value.first}',
-          operation: 'iif',
-          collection: results);
+      // While this happens at eval time, it is due to incorrect syntax
+      throw FhirPathInvalidExpressionException(
+        'The function iif must have a criterion expression, followed by '
+        ' a true-result collection, and an optional other-wise-result. '
+        'Instead it has: ${value.first}',
+      );
     }
 
     final criterionCommaResultParser = value.first as CommaParser;
