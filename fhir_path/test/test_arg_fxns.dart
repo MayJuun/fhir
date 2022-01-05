@@ -41,6 +41,7 @@ void testArgFxns() {
         'Jingleheimer',
       ]);
     });
+    // TODO: This doesn't look like a test for exists?
     test('exists', () {
       final response = QuestionnaireResponse.fromJson(questionnaireResponse);
       expect(
@@ -67,6 +68,7 @@ void testArgFxns() {
           walkFhirPath(resource.toJson(),
               "telecom.exists(system = 'email' and use = 'any')"),
           [false]);
+      expect(walkFhirPath(resource.toJson(), '{}.exists()'), [false]);
     });
     test('all', () {
       expect(walkFhirPath(resource.toJson(), 'Patient.language.all()'), [true]);
@@ -566,6 +568,59 @@ void testArgFxns() {
           walkFhirPath(
               resource.toJson(), walkPath("3.14159.round(3) // 3.142")),
           [3.142]);
+    });
+
+    test('iif-basic', () {
+      expect(walkFhirPath(resource.toJson(), 'iif(true, 1, 0)'), [1]);
+      expect(walkFhirPath(resource.toJson(), 'iif(false, 1, 0)'), [0]);
+    });
+    test('iif-with-variables', () {
+      expect(
+          walkFhirPath(resource.toJson(), "iif(%smokesCode.exists(), 1, 0)",
+              environment: {'%smokesCode': []}),
+          [0]);
+      expect(
+          walkFhirPath(resource.toJson(), "iif(%smokesCode = 'Y', 1, 0)",
+              environment: {
+                '%smokesCode': ['Y']
+              }),
+          [1]);
+      expect(
+          walkFhirPath(resource.toJson(), "iif(%smokesCode = 'Y', 1, 0)",
+              environment: {
+                '%smokesCode': ['N']
+              }),
+          [0]);
+    });
+    test('iif-nested-fxns', () {
+      expect(
+          walkFhirPath(resource.toJson(),
+              "iif(%smokesCode.exists(), {}.empty(), {}.exists())",
+              environment: {'%smokesCode': []}),
+          [false]);
+    });
+    test('iif-nested-iif-empty-variable', () {
+      expect(
+          walkFhirPath(resource.toJson(),
+              "iif(%smokesCode.exists(), iif(%smokesCode = 'Y', 1, 0), {})",
+              environment: {'%smokesCode': []}),
+          []);
+    });
+    test('iif-nested-iif', () {
+      expect(
+          walkFhirPath(resource.toJson(),
+              "iif(%smokesCode.exists(), iif(%smokesCode = 'Y', 1, 0), {})",
+              environment: {
+                '%smokesCode': ['Y']
+              }),
+          [1]);
+      expect(
+          walkFhirPath(resource.toJson(),
+              "iif(%smokesCode.exists(), iif(%smokesCode = 'Y', 1, 0), {})",
+              environment: {
+                '%smokesCode': ['N']
+              }),
+          [0]);
     });
 
     /// ToDo: trace
