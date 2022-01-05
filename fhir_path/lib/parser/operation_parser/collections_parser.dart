@@ -34,7 +34,25 @@ class CommaParser extends OperatorParser {
     final afterResults = results.toList();
     final beforeList = before.execute(beforeResults, passed);
     final afterList = after.execute(afterResults, passed);
-    beforeList.addAll(afterList);
-    return beforeList;
+
+    final outcome = [];
+    if (beforeList.isEmpty) {
+      outcome.add([]);
+    } else {
+      outcome.addAll(beforeList);
+    }
+
+    if (afterList.isEmpty) {
+      outcome.add([]);
+    } else {
+      outcome.addAll(afterList);
+    }
+
+    return outcome;
+  }
+
+  @override
+  String toString() {
+    return 'CommaParser - $before COMMA $after';
   }
 }

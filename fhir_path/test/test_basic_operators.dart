@@ -1,6 +1,5 @@
-import 'package:test/test.dart';
-
 import 'package:fhir_path/fhir_path.dart';
+import 'package:test/test.dart';
 
 dynamic walkPath(dynamic arg) => lexer().parse(arg).value.execute([], {});
 
@@ -205,4 +204,12 @@ void testBasicOperators() {
       expect(walkPath('12.5 is Decimal'), [true]);
     });
   });
+  group(
+    'Math Operators: ',
+    () {
+      test('/ : ', () {
+        expect(walkPath('1/0'), []);
+      });
+    },
+  );
 }

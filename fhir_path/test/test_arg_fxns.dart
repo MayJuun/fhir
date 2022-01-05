@@ -571,37 +571,52 @@ void testArgFxns() {
     });
 
     test('iif-basic', () {
-      expect(walkFhirPath(resource.toJson(), 'iif(true, 1, 0)'), [1]);
-      expect(walkFhirPath(resource.toJson(), 'iif(false, 1, 0)'), [0]);
+      expect(walkFhirPath(null, 'iif(true, 1, 0)'), [1]);
+      expect(walkFhirPath(null, 'iif(false, 1, 0)'), [0]);
+      expect(walkFhirPath(null, 'iif({}, 1, 0)'), [0]);
+      // non-empty, non-bool is true.
+      expect(walkFhirPath(null, 'iif(5, 1, 0)'), [1]);
+      expect(walkFhirPath(null, 'iif(true, 1)'), [1]);
+      expect(walkFhirPath(null, 'iif(false, 1)'), []);
+      expect(() => walkFhirPath(null, 'iif(false)'),
+          throwsA(TypeMatcher<FhirPathEvaluationException>()));
+    });
+    test('iif-short-circuit', () {
+      // non-existent identifier should never be evaluated
+      expect(walkFhirPath(resource.toJson(), 'iif(true, 1, %resource.blurb)'),
+          [1]);
+      // non-existent identifier should throw
+      expect(
+          () =>
+              walkFhirPath(resource.toJson(), 'iif(false, 1, %resource.blurb)'),
+          throwsA(TypeMatcher<FhirPathEvaluationException>()));
     });
     test('iif-with-variables', () {
       expect(
-          walkFhirPath(resource.toJson(), "iif(%smokesCode.exists(), 1, 0)",
+          walkFhirPath(null, "iif(%smokesCode.exists(), 1, 0)",
               environment: {'%smokesCode': []}),
           [0]);
       expect(
-          walkFhirPath(resource.toJson(), "iif(%smokesCode = 'Y', 1, 0)",
-              environment: {
-                '%smokesCode': ['Y']
-              }),
+          walkFhirPath(null, "iif(%smokesCode = 'Y', 1, 0)", environment: {
+            '%smokesCode': ['Y']
+          }),
           [1]);
       expect(
-          walkFhirPath(resource.toJson(), "iif(%smokesCode = 'Y', 1, 0)",
-              environment: {
-                '%smokesCode': ['N']
-              }),
+          walkFhirPath(null, "iif(%smokesCode = 'Y', 1, 0)", environment: {
+            '%smokesCode': ['N']
+          }),
           [0]);
     });
     test('iif-nested-fxns', () {
       expect(
-          walkFhirPath(resource.toJson(),
-              "iif(%smokesCode.exists(), {}.empty(), {}.exists())",
+          walkFhirPath(
+              null, "iif(%smokesCode.exists(), {}.empty(), {}.exists())",
               environment: {'%smokesCode': []}),
           [false]);
     });
     test('iif-nested-iif-empty-variable', () {
       expect(
-          walkFhirPath(resource.toJson(),
+          walkFhirPath(null,
               "iif(%smokesCode.exists(), iif(%smokesCode = 'Y', 1, 0), {})",
               environment: {'%smokesCode': []}),
           []);
@@ -609,21 +624,21 @@ void testArgFxns() {
     test('iif-nested-iif-empty-set', () {
       expect(
           walkFhirPath(
-            resource.toJson(),
+            null,
             "iif({}.exists(), iif({} = 'Y', 1, 0), {})",
           ),
           []);
     });
     test('iif-nested-iif-filled-variable', () {
       expect(
-          walkFhirPath(resource.toJson(),
+          walkFhirPath(null,
               "iif(%smokesCode.exists(), iif(%smokesCode = 'Y', 1, 0), {})",
               environment: {
                 '%smokesCode': ['Y']
               }),
           [1]);
       expect(
-          walkFhirPath(resource.toJson(),
+          walkFhirPath(null,
               "iif(%smokesCode.exists(), iif(%smokesCode = 'Y', 1, 0), {})",
               environment: {
                 '%smokesCode': ['N']
