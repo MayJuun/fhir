@@ -23,8 +23,8 @@ final Parser<DivStringParser> divStringLexer =
     string(' div ').map((_) => DivStringParser());
 
 /// identifies divMods
-final Parser<DivModParser> divModLexer =
-    string(' mod ').map((_) => DivModParser());
+final Parser<ModParser> modLexer =
+    string(' mod ').map((_) => ModParser());
 
 final plusLexer = char('+').map((_) => PlusParser());
 
@@ -96,31 +96,3 @@ final Parser<OrStringParser> orStringLexer =
 /// identifies impliess
 final Parser<ImpliesParser> impliesLexer =
     string(' implies ').map((_) => ImpliesParser());
-
-const operatorOrderMap = {
-  StarParser: 1,
-  DivSignParser: 2,
-  DivStringParser: 3,
-  DivModParser: 4,
-  PlusParser: 5,
-  MinusParser: 6,
-  AndSignParser: 7,
-  IsParser: 8,
-  AsParser: 9,
-  UnionOperatorParser: 10,
-  GreaterParser: 11,
-  LessParser: 12,
-  GreaterEqualParser: 13,
-  LessEqualParser: 14,
-  EqualsParser: 15,
-  EquivalentParser: 16,
-  NotEqualsParser: 17,
-  NotEquivalentParser: 18,
-  InParser: 19,
-  ContainsParser: 20,
-  AndStringParser: 21,
-  XorParser: 22,
-  OrStringParser: 23,
-  ImpliesParser: 24,
-  CommaParser: 25,
-};

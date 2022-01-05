@@ -12,11 +12,11 @@ void main() {
 
   // print(walkFhirPath(response.toJson(),
   //     r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"));
-  print(lexer().parse(r'6 months'));
-  print(walkFhirPath(response.toJson(), r"today()"));
-  print(walkFhirPath(response.toJson(), r"6 months"));
-  print(walkFhirPath(response.toJson(), r"today() + 6 months"));
-  print(walkFhirPath(response.toJson(), r"today() - 6 months"));
+  print(lexer().parse(r'75 - 70 - 75'));
+  print(walkFhirPath(response.toJson(), r"75 - 70 - 75"));
+  // print(walkFhirPath(response.toJson(), r"6 months"));
+  // print(walkFhirPath(response.toJson(), r"today() + 6 months"));
+  // print(walkFhirPath(response.toJson(), r"today() - 6 months"));
 
   // print(walkFhirPath(null, "'PARENT: I,'", {
   //   '%relatedPerson': relatedPerson.toJson(),

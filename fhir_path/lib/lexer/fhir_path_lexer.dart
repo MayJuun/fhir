@@ -1,9 +1,9 @@
 import 'package:collection/collection.dart';
+import 'package:fhir_path/lexer/precedence.dart';
 import 'package:petitparser/petitparser.dart';
 
 import '../../fhir_path.dart';
 import 'lexer_lists.dart';
-import 'operator_lexer.dart';
 
 /// Primary lexing function for this library
 Parser<FhirPathParser> lexer() {
@@ -61,6 +61,9 @@ ParserList operatorValues(List fullList) {
     insertionSort<OperatorParser>(parseList,
         compare: (a, b) => (operatorOrderMap[b.runtimeType] ?? 99)
             .compareTo((operatorOrderMap[a.runtimeType] ?? 99)));
+    parseList.forEach((element) {
+      print(element.toString());
+    });
 
     /// We now have the proper order to apply the operators, so we identify the
     /// index of that operator in the overall list

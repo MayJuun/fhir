@@ -114,8 +114,8 @@ class DivStringParser extends OperatorParser {
   }
 }
 
-class DivModParser extends OperatorParser {
-  DivModParser();
+class ModParser extends OperatorParser {
+  ModParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
   List execute(List results, Map<String, dynamic> passed) {
