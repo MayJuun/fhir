@@ -606,7 +606,15 @@ void testArgFxns() {
               environment: {'%smokesCode': []}),
           []);
     });
-    test('iif-nested-iif', () {
+    test('iif-nested-iif-empty-set', () {
+      expect(
+          walkFhirPath(
+            resource.toJson(),
+            "iif({}.exists(), iif({} = 'Y', 1, 0), {})",
+          ),
+          []);
+    });
+    test('iif-nested-iif-filled-variable', () {
       expect(
           walkFhirPath(resource.toJson(),
               "iif(%smokesCode.exists(), iif(%smokesCode = 'Y', 1, 0), {})",
