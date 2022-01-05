@@ -381,6 +381,11 @@ class MinusParser extends OperatorParser {
           collection: results);
     }
   }
+
+  @override
+  String toString() {
+    return 'MinusParser: $before MINUS $after';
+  }
 }
 
 class AndSignParser extends OperatorParser {

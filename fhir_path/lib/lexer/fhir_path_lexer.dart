@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:petitparser/petitparser.dart';
 
 import '../../fhir_path.dart';
@@ -55,9 +56,11 @@ ParserList operatorValues(List fullList) {
     /// If there are no Operators, we just return the current elements
     return ParserList(fullList.map((e) => e as FhirPathParser).toList());
   } else {
-    /// If there are operators, we sort them by order of precedence
-    parseList.sort((a, b) => (operatorOrderMap[b.runtimeType] ?? 99)
-        .compareTo((operatorOrderMap[a.runtimeType] ?? 99)));
+    // If there are operators, we sort them by order of precedence
+    // Use a stable sorting algorithm
+    insertionSort<OperatorParser>(parseList,
+        compare: (a, b) => (operatorOrderMap[b.runtimeType] ?? 99)
+            .compareTo((operatorOrderMap[a.runtimeType] ?? 99)));
 
     /// We now have the proper order to apply the operators, so we identify the
     /// index of that operator in the overall list

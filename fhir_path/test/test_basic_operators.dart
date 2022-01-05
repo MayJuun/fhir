@@ -210,6 +210,13 @@ void testBasicOperators() {
       test('/ : ', () {
         expect(walkPath('1/0'), []);
       });
+      test('- : ', () {
+        expect(walkPath('75-70'), [5]);
+        expect(walkPath('75-70-75'), [-70]);
+      });
+      test('+/- : ', () {
+        expect(walkPath('75+70-75'), [70]);
+      });
     },
   );
 }
