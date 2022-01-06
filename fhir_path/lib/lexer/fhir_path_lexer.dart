@@ -51,8 +51,23 @@ ParserList operatorValues(List fullList) {
     /// If there are no Operators, we just return the current elements
     return ParserList(fullList.map((e) => e as FhirPathParser).toList());
   } else {
-    var highest = -1;
-    for (var entry in fullList) {
+    // Replace +/- with unary representation based on simple rules
+    fullList.forEachIndexed(
+      (i, entry) => {
+        if (entry is MinusParser || entry is PlusParser)
+          {
+            if (i == 0 || fullList[i - 1] is OperatorParser)
+              {
+                fullList[i] = entry is MinusParser
+                    ? UnaryNegateParser()
+                    : UnaryPlusParser()
+              }
+          }
+      },
+    );
+
+    int highest = -1;
+    for (final entry in fullList) {
       if ((operatorOrderMap[entry.runtimeType] ?? -1) > highest &&
           entry is OperatorParser) {
         highest = operatorOrderMap[entry.runtimeType] ?? -1;

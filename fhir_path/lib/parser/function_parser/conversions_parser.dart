@@ -333,20 +333,6 @@ class ConvertsToQuantityParser extends FhirPathParser {
   List execute(List results, Map<String, dynamic> passed) => [];
 }
 
-bool? _convertsToBoolean(dynamic value) => value == true ||
-        value == 1 ||
-        ['true', 't', 'yes', 'y', '1', '1.0'].indexWhere(
-                (element) => element == value.toString().toLowerCase()) !=
-            -1
-    ? true
-    : value == false ||
-            value == 0 ||
-            ['false', 'f', 'no', 'n', '0', '0.0'].indexWhere(
-                    (element) => element == value.toString().toLowerCase()) !=
-                -1
-        ? false
-        : null;
-
 bool _isNotAcceptedType(List results) =>
     results.first is! bool && results.first is! num && results.first is! String;
 
