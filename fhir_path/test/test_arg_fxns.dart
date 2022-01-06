@@ -6,6 +6,63 @@ dynamic walkPath(dynamic arg) => arg;
 
 void testArgFxns() {
   group('Functions with Arguments: ', () {
+    test('%variables', () {
+      expect(walkFhirPath(null, '%var', environment: {'%var': 5}), [5]);
+      expect(() => walkFhirPath(null, '%var', environment: {'%dummy': 5}),
+          throwsA(TypeMatcher<FhirPathEvaluationException>()));
+    });
+    test('Lazy %variables', () {
+      expect(
+          walkFhirPath(null, '%var', environment: {
+            '%var': () => [5]
+          }),
+          [5]);
+      expect(walkFhirPath(null, '%var', environment: {'%var': () => 5}), [5]);
+      expect(
+          () => walkFhirPath(null, '%var', environment: {
+                '%dummy': () => [6]
+              }),
+          throwsA(TypeMatcher<FhirPathEvaluationException>()));
+      expect(
+          walkFhirPath(null, '%var', environment: {
+            '%var': () => 5,
+            '%da_bomb': () {
+              throw Exception('BOOM!');
+            }
+          }),
+          [5]);
+      expect(
+          () => walkFhirPath(null, '%da_bomb', environment: {
+                '%var': () => 5,
+                '%da_bomb': () {
+                  throw Exception('BOOM!');
+                }
+              }),
+          throwsA(TypeMatcher<FhirPathEvaluationException>()));
+    });
+    test('%variables and math', () {
+      expect(
+          walkFhirPath(null, '%a + %b + %c > 5', environment: {
+            '%a': [],
+            '%b': [],
+            '%c': [2],
+          }),
+          []);
+      expect(
+          walkFhirPath(null, '%a + %b + %c > 5', environment: {
+            '%a': () => [],
+            '%b': () => [],
+            '%c': () => [2],
+          }),
+          []);
+      expect(
+          walkFhirPath(null, '%a + %b + %c > 5', environment: {
+            '%a': () => [1],
+            '%b': () => [2],
+            '%c': () => [3],
+          }),
+          [true]);
+    });
     test('\$this', () {
       expect(walkFhirPath(resource.toJson(), r'Patient.name.exists($this)'),
           [true]);

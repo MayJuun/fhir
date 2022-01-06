@@ -2,6 +2,9 @@
 
 ## [0.5.0-18]
 * Allow pre-parsing of the AST for repeat use later. Boosts performance.
+* Allow lazy evaluation of passed-in variables (by passing in a function, instead of an actual value)
+* Numerous bug-fixes to iif, operator precedence, unary operators
+* Beefed up the test-suite to show that it really works
 
 ## [0.5.0-17]
 * **[Breaking]** Decoupled %context from %resource.

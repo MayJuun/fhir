@@ -101,10 +101,10 @@ List executeComparisons(List results, ParserList before, ParserList after,
                   ? '<'
                   : '<=';
       throw FhirPathEvaluationException(
-          'The function $functionName cannot work with the types '
+          'The comparator $functionName cannot work with the types '
           'passed.\n'
-          'Before: $before\n'
-          'After: $after',
+          'Before: $executedBefore\n'
+          'After: $executedAfter',
           operation: functionName,
           arguments: [before, after]);
     } else {

@@ -197,12 +197,6 @@ class PlusParser extends OperatorParser {
   List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
-    if (before.isEmpty &&
-        executedAfter.isNotEmpty &&
-        executedAfter.length == 1 &&
-        executedAfter.first is num) {
-      return [(executedAfter.first as num)];
-    }
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
       return [];
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {
@@ -314,12 +308,6 @@ class MinusParser extends OperatorParser {
   List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
-    if (before.isEmpty &&
-        executedAfter.isNotEmpty &&
-        executedAfter.length == 1 &&
-        executedAfter.first is num) {
-      return [(executedAfter.first as num) * -1];
-    }
     if (executedBefore.isEmpty || executedAfter.isEmpty) {
       return [];
     } else if (executedBefore.length != 1 || executedAfter.length != 1) {

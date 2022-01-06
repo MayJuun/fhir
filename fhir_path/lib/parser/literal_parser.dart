@@ -25,14 +25,30 @@ class BooleanParser extends ValueParser<bool> {
 /// evaluation.
 class EnvVariableParser extends ValueParser<String> {
   EnvVariableParser(this.value);
+
   String value;
-  List execute(List results, Map<String, dynamic> passed) =>
-      passed[value] == null
-          ? throw FhirPathEvaluationException('Variable $value does not exist.',
-              variables: passed)
-          : passed[value] is List
-              ? passed[value]
-              : [passed[value]];
+
+  List execute(List results, Map<String, dynamic> passed) {
+    final passedValue = passed[value];
+    if (passedValue == null) {
+      throw FhirPathEvaluationException('Variable $value does not exist.',
+          variables: passed);
+    }
+
+    if (passedValue is! Function()) {
+      return passedValue is List ? passedValue : [passedValue];
+    } else {
+      try {
+        final result = passedValue();
+
+        return result is List ? result : [result];
+      } catch (ex) {
+        throw FhirPathEvaluationException(
+            'Variable $value could not be lazily evaluated.',
+            cause: ex);
+      }
+    }
+  }
 }
 
 class QuantityParser extends ValueParser<FhirPathQuantity> {
