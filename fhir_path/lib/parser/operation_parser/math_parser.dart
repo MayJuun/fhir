@@ -13,6 +13,10 @@ class UnaryNegateParser extends OperatorParser {
     if (executedAfter.isEmpty) {
       return [];
     }
+    if (executedAfter.length != 1) {
+      throw FhirPathInvalidExpressionException(
+          'Unary negate needs to be applied on a single item. Found instead: ${executedAfter}');
+    }
     if (executedAfter.first is num) {
       return [-(executedAfter.first as num)];
     }
