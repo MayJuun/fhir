@@ -10,10 +10,18 @@ void main() {
   // print(DateTime(dateTime.year + 12, dateTime.month + 27, dateTime.day + 1065));
   final response = QuestionnaireResponse.fromJson(questionnaireResponse);
 
+  print(walkFhirPath(null, 'iif(true, 1, 0)'));
+  //       expect(walkFhirPath(null, 'iif(true, 1, 0)'), [1]);
+  //     expect(walkFhirPath(null, 'iif(false, 1, 0)'), [0]);
+  //     expect(walkFhirPath(null, 'iif({}, 1, 0)'), [0]);
+  //     // non-empty, non-bool is true.
+  //     expect(walkFhirPath(null, 'iif(5, 1, 0)'), [1]);
+  //     expect(walkFhirPath(null, 'iif(true, 1)'), [1]);
+  //     expect(walkFhirPath(null, 'iif(false, 1)'), []);
   // print(walkFhirPath(response.toJson(),
   //     r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"));
-  print(lexer().parse(r'75 - 70 - 75'));
-  print(walkFhirPath(response.toJson(), r"75 - 70 - 75"));
+  // print(lexer().parse(r'75 - 70 - 75'));
+  // print(walkFhirPath(response.toJson(), r"75 - 70 - 75"));
   // print(walkFhirPath(response.toJson(), r"6 months"));
   // print(walkFhirPath(response.toJson(), r"today() + 6 months"));
   // print(walkFhirPath(response.toJson(), r"today() - 6 months"));
