@@ -50,6 +50,8 @@ const operatorOrderMap = {
   ModParser: 4,
 
   /// #03 unary + and -
+  UnaryPlusParser: 3,
+  UnaryNegateParser: 3,
 
   /// #02 [] (indexer)
   BracketsIndexParser: 2,

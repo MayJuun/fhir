@@ -2,6 +2,45 @@ import 'package:fhir/primitive_types/primitive_types.dart';
 
 import '../../fhir_path.dart';
 
+class UnaryNegateParser extends OperatorParser {
+  UnaryNegateParser();
+
+  ParserList before = ParserList([]);
+  ParserList after = ParserList([]);
+  List execute(List results, Map<String, dynamic> passed) {
+    final executedAfter = after.execute(results.toList(), passed);
+
+    if (executedAfter.isEmpty) {
+      return [];
+    }
+    if (executedAfter.first is num) {
+      return [-(executedAfter.first as num)];
+    }
+    if (executedAfter.first is QuantityParser) {
+      return [
+        FhirPathQuantity(-(executedAfter.first as QuantityParser).value.amount,
+            (executedAfter.first as QuantityParser).value.unit)
+      ];
+    } else {
+      throw FhirPathInvalidExpressionException(
+          'Unary negate needs to be followed by an integer, a decimal, or a quantity. Found instead: ${executedAfter.first}');
+    }
+  }
+}
+
+class UnaryPlusParser extends OperatorParser {
+  UnaryPlusParser();
+
+  ParserList before = ParserList([]);
+  ParserList after = ParserList([]);
+
+  List execute(List results, Map<String, dynamic> passed) {
+    final executedAfter = after.execute(results.toList(), passed);
+
+    return executedAfter;
+  }
+}
+
 class StarParser extends OperatorParser {
   StarParser();
   ParserList before = ParserList([]);

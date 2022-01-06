@@ -214,8 +214,13 @@ void testBasicOperators() {
         expect(walkPath('75-70'), [5]);
         expect(walkPath('75-70-75'), [-70]);
       });
-      test('+/- : ', () {
+      test('Precedence : ', () {
         expect(walkPath('75+70-75'), [70]);
+        expect(walkPath('1+2*3+4 = 11'), [true]);
+        expect(walkPath('1+2*-3+4 = -1'), [true]);
+        expect(walkPath('-1-2*3 = -7'), [true]);
+        expect(walkPath('1-2*3-4*5 = -25'), [true]);
+        expect(walkPath('1-2.ceiling()*3-4*5.ceiling() = -25'), [true]);
       });
     },
   );
