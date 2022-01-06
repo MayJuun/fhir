@@ -84,14 +84,14 @@ packages:
       name: fhir
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.5.0-10"
+    version: "0.5.0-11"
   fhir_yaml:
     dependency: transitive
     description:
       name: fhir_yaml
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.5.1"
+    version: "0.5.2"
   file:
     dependency: transitive
     description:
@@ -105,7 +105,7 @@ packages:
       name: freezed_annotation
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "1.1.0"
   frontend_server_client:
     dependency: transitive
     description:
@@ -154,7 +154,7 @@ packages:
       name: json_annotation
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.3.0"
+    version: "4.4.0"
   logging:
     dependency: transitive
     description:
@@ -315,21 +315,21 @@ packages:
       name: test
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.19.4"
+    version: "1.20.1"
   test_api:
     dependency: transitive
     description:
       name: test_api
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.8"
+    version: "0.4.9"
   test_core:
     dependency: transitive
     description:
       name: test_core
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.4.9"
+    version: "0.4.11"
   typed_data:
     dependency: transitive
     description:
@@ -380,4 +380,4 @@ packages:
     source: hosted
     version: "3.1.0"
 sdks:
-  dart: ">=2.14.0 <3.0.0"
+  dart: ">=2.15.0 <3.0.0"
