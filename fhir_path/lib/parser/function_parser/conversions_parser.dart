@@ -26,34 +26,47 @@ class IifParser extends FunctionParser {
       );
     }
 
-    final criterionCommaResultParser = value.first as CommaParser;
-    final criterionCollection =
-        criterionCommaResultParser.before.execute(results, passed);
+    final criterionResultParser = value.first as CommaParser;
+    List<dynamic> criterionCollection = [];
+    if (criterionResultParser.before.first is CommaParser) {
+      criterionCollection.addAll(
+          (criterionResultParser.before.first as CommaParser)
+              .before
+              .execute(results, passed));
+    } else {
+      criterionCollection
+          .addAll(criterionResultParser.before.execute(results, passed));
+    }
 
     final criterion = SingletonEvaluation.toBool(criterionCollection,
         name: 'criterion expression', operation: 'iif', collection: results);
 
     // Short-circuit: Only evaluate what matches the criterion.
     if (criterion) {
-      final trueResultParser =
-          (criterionCommaResultParser.after.first is CommaParser)
-              ? (criterionCommaResultParser.after.first as CommaParser).before
-              : criterionCommaResultParser.after.first;
+      final trueResultParser = criterionResultParser.before.first is CommaParser
+          ? (criterionResultParser.before.first as CommaParser).after
+          : (criterionResultParser.after.first is CommaParser)
+              ? (criterionResultParser.after.first as CommaParser).before
+              : criterionResultParser.after.first;
 
       final trueResult = trueResultParser.execute(results, passed);
 
       return trueResult;
     } else {
       final otherwiseResultParser =
-          (criterionCommaResultParser.after.first is CommaParser)
-              ? (criterionCommaResultParser.after.first as CommaParser).after
-              : EmptySetParser();
+          (criterionResultParser.after.first is CommaParser)
+              ? (criterionResultParser.after.first as CommaParser).after
+              : criterionResultParser.before.first is CommaParser
+                  ? criterionResultParser.after
+                  : EmptySetParser();
 
       final otherwiseResult = otherwiseResultParser.execute(results, passed);
 
       return otherwiseResult;
     }
   }
+
+  String toString() => 'IifParser: ${value.toString()}';
 }
 
 /// Implements rule http://hl7.org/fhirpath/#singleton-evaluation-of-collections
@@ -319,6 +332,20 @@ class ConvertsToQuantityParser extends FhirPathParser {
   ConvertsToQuantityParser();
   List execute(List results, Map<String, dynamic> passed) => [];
 }
+
+bool? _convertsToBoolean(dynamic value) => value == true ||
+        value == 1 ||
+        ['true', 't', 'yes', 'y', '1', '1.0'].indexWhere(
+                (element) => element == value.toString().toLowerCase()) !=
+            -1
+    ? true
+    : value == false ||
+            value == 0 ||
+            ['false', 'f', 'no', 'n', '0', '0.0'].indexWhere(
+                    (element) => element == value.toString().toLowerCase()) !=
+                -1
+        ? false
+        : null;
 
 bool _isNotAcceptedType(List results) =>
     results.first is! bool && results.first is! num && results.first is! String;
