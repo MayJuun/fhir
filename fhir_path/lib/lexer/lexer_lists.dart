@@ -24,7 +24,7 @@ final wordOperationLexer = impliesLexer |
     inLexer |
     asLexer |
     isLexer |
-    divModLexer |
+    modLexer |
     divStringLexer;
 
 /// Lexers for identifying key symbols
