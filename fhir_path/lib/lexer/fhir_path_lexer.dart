@@ -47,34 +47,25 @@ ParserList operatorValues(List fullList) {
   /// We remove the whiteSpace because for evaluation purposes it's unimportant
   fullList.removeWhere((element) => element is WhiteSpaceParser);
 
-  /// We identify OperatorParsers. OperatorParsers are tricky because they operate
-  /// on items both before and after them, and are not generally identified by
-  /// parentheses the way normal functionParsers are. Thus, in order to ensure
-  /// the proper order of operations, they must first all be identified
-  final parseList = fullList.whereType<OperatorParser>().toList();
-  if (parseList.isEmpty) {
+  if (fullList.indexWhere((element) => element is OperatorParser) == -1) {
     /// If there are no Operators, we just return the current elements
     return ParserList(fullList.map((e) => e as FhirPathParser).toList());
   } else {
-    // If there are operators, we sort them by order of precedence
-    // Use a stable sorting algorithm
-    insertionSort<OperatorParser>(parseList,
-        compare: (a, b) => (operatorOrderMap[b.runtimeType] ?? 99)
-            .compareTo((operatorOrderMap[a.runtimeType] ?? 99)));
-    parseList.forEach((element) {
-      print(element.toString());
-    });
+    var highest = -1;
+    for (var entry in fullList) {
+      if ((operatorOrderMap[entry.runtimeType] ?? -1) > highest &&
+          entry is OperatorParser) {
+        highest = operatorOrderMap[entry.runtimeType] ?? -1;
+      }
+    }
 
-    /// We now have the proper order to apply the operators, so we identify the
-    /// index of that operator in the overall list
-    final splitIndex = fullList.indexOf(parseList.first);
+    final splitIndex = fullList
+        .lastIndexWhere((e) => operatorOrderMap[e.runtimeType] == highest);
 
-    /// We split the list into those that are before the operator
-    /// and those that are after. We then recursively apply this same function
-    /// to each of those groupings until we reach the end
-    parseList.first.before = operatorValues(fullList.sublist(0, splitIndex));
-    parseList.first.after =
+    fullList[splitIndex].before =
+        operatorValues(fullList.sublist(0, splitIndex));
+    fullList[splitIndex].after =
         operatorValues(fullList.sublist(splitIndex + 1, fullList.length));
-    return ParserList([parseList.first]);
+    return ParserList([fullList[splitIndex]]);
   }
 }
