@@ -5,6 +5,9 @@ import '../../fhir_path.dart';
 /// http://hl7.org/fhirpath/#iifcriterion-expression-true-result-collection-otherwise-result-collection-collection
 ///The iif function in FHIRPath is an immediate if, also known as a conditional operator (such as C’s ? : operator).
 /// The criterion expression is expected to evaluate to a Boolean.
+/// See: http://hl7.org/fhirpath/#singleton-evaluation-of-collections for rules of Boolean evaluation.
+/// Any collection with a single non-boolean item is true.
+///
 /// If criterion is true, the function returns the value of the true-result argument.
 /// If criterion is false or an empty collection, the function returns otherwise-result, unless the optional otherwise-result is not given, in which case the function returns an empty collection.
 /// Note that short-circuit behavior is expected in this function. In other words, true-result should only be evaluated if the criterion evaluates to true, and otherwise-result should only be evaluated otherwise. For implementations, this means delaying evaluation of the arguments.
@@ -12,35 +15,80 @@ class IifParser extends FunctionParser {
   IifParser();
   late ParserList value;
   List execute(List results, Map<String, dynamic> passed) {
-    var executedValue = value.first.execute(results.toList(), passed);
-    if (executedValue.length < 2 || executedValue.length > 3) {
-      throw FhirPathEvaluationException(
-          'The function iif must evaluate to a criterion expression '
-          ' a true-result collection, and an optional other-wise-result'
-          ' but instead evaluated to: $executedValue',
-          operation: 'iif',
-          collection: results);
-    } else if (executedValue.first is! bool) {
-      throw FhirPathEvaluationException(
-          'The function iif requires that its criterion expression evaluates '
-          'to a boolean value, instead it evaluated to: ${executedValue.first}',
-          operation: 'iif',
-          collection: results);
-    } else if (executedValue.first) {
-      if (executedValue[1] is List) {
-        return executedValue[1];
-      } else {
-        return [executedValue[1]];
-      }
-    } else if (executedValue.length == 3) {
-      if (executedValue[2] is List) {
-        return executedValue[2];
-      } else {
-        return [executedValue[2]];
-      }
-    } else {
-      return [];
+    // The regular .execute method on CommaParser does not implement the
+    // short-circuit logic. Bespoke execution path required.
+    if (value.first is! CommaParser) {
+      // While this happens at eval time, it is due to incorrect syntax
+      throw FhirPathInvalidExpressionException(
+        'The function iif must have a criterion expression, followed by '
+        ' a true-result collection, and an optional other-wise-result. '
+        'Instead it has: ${value.first}',
+      );
     }
+
+    final criterionResultParser = value.first as CommaParser;
+    List<dynamic> criterionCollection = [];
+    if (criterionResultParser.before.first is CommaParser) {
+      criterionCollection.addAll(
+          (criterionResultParser.before.first as CommaParser)
+              .before
+              .execute(results, passed));
+    } else {
+      criterionCollection
+          .addAll(criterionResultParser.before.execute(results, passed));
+    }
+
+    final criterion = SingletonEvaluation.toBool(criterionCollection,
+        name: 'criterion expression', operation: 'iif', collection: results);
+
+    // Short-circuit: Only evaluate what matches the criterion.
+    if (criterion) {
+      final trueResultParser = criterionResultParser.before.first is CommaParser
+          ? (criterionResultParser.before.first as CommaParser).after
+          : (criterionResultParser.after.first is CommaParser)
+              ? (criterionResultParser.after.first as CommaParser).before
+              : criterionResultParser.after.first;
+
+      final trueResult = trueResultParser.execute(results, passed);
+
+      return trueResult;
+    } else {
+      final otherwiseResultParser =
+          (criterionResultParser.after.first is CommaParser)
+              ? (criterionResultParser.after.first as CommaParser).after
+              : criterionResultParser.before.first is CommaParser
+                  ? criterionResultParser.after
+                  : EmptySetParser();
+
+      final otherwiseResult = otherwiseResultParser.execute(results, passed);
+
+      return otherwiseResult;
+    }
+  }
+
+  String toString() => 'IifParser: ${value.toString()}';
+}
+
+/// Implements rule http://hl7.org/fhirpath/#singleton-evaluation-of-collections
+class SingletonEvaluation {
+  static bool toBool(
+    List<dynamic> input, {
+    String? name,
+    String? operation,
+    List<dynamic>? collection,
+  }) {
+    if (input.length > 1) {
+      throw FhirPathEvaluationException(
+          'The $name is required to be '
+          'either an empty value, or a single value. Instead it evaluated to: ${input}.',
+          operation: operation,
+          collection: collection);
+    }
+
+    // true if either a true boolean, or a single non-boolean.
+    return input.isNotEmpty
+        ? (input.first is bool && input.first) || (input.first is! bool)
+        : false;
   }
 }
 
@@ -284,6 +332,20 @@ class ConvertsToQuantityParser extends FhirPathParser {
   ConvertsToQuantityParser();
   List execute(List results, Map<String, dynamic> passed) => [];
 }
+
+bool? _convertsToBoolean(dynamic value) => value == true ||
+        value == 1 ||
+        ['true', 't', 'yes', 'y', '1', '1.0'].indexWhere(
+                (element) => element == value.toString().toLowerCase()) !=
+            -1
+    ? true
+    : value == false ||
+            value == 0 ||
+            ['false', 'f', 'no', 'n', '0', '0.0'].indexWhere(
+                    (element) => element == value.toString().toLowerCase()) !=
+                -1
+        ? false
+        : null;
 
 bool _isNotAcceptedType(List results) =>
     results.first is! bool && results.first is! num && results.first is! String;

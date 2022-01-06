@@ -27,7 +27,6 @@ abstract class OperatorParser extends FhirPathParser {
 class ParserList extends FhirPathParser {
   ParserList(this.value);
   List<FhirPathParser> value;
-  String toString() => 'ParserList: ${value.map((e) => e.toString())}';
 
   List execute(List results, Map<String, dynamic> passed) {
     void addToList(List toAdd) => results
@@ -59,4 +58,5 @@ class ParserList extends FhirPathParser {
   FhirPathParser get first => value.first;
   FhirPathParser get last => value.last;
   FhirPathParser removeAt(int i) => value.removeAt(i);
+  String toString() => 'ParserList: ${value.map((e) => e.toString())}';
 }

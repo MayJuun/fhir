@@ -1,7 +1,6 @@
 import 'package:fhir/r4.dart';
-import 'package:test/test.dart';
-
 import 'package:fhir_path/fhir_path.dart';
+import 'package:test/test.dart';
 
 void testNoArgFxns() {
   group('Functions w/o Arguments: ', () {
@@ -12,6 +11,7 @@ void testNoArgFxns() {
           [true], walkFhirPath(resource.toJson(), 'Patient.language.empty()'));
       expect([true],
           walkFhirPath(resource.toJson(), 'Patient.name.period.empty()'));
+      expect([true], walkFhirPath(resource.toJson(), '{ }.empty()'));
     });
     test('allTrue', () {
       expect(
