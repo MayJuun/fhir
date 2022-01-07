@@ -208,6 +208,7 @@ void testBasicOperators() {
     'Math Operators: ',
     () {
       test('/ : ', () {
+        expect(walkPath('(1.2 / 1.8).round(8) = 0.66666667'), [true]);
         expect(walkPath('1/0'), []);
       });
       test('- : ', () {
