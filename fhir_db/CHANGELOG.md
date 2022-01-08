@@ -1,5 +1,8 @@
 # fhir_db
 
+## [0.5.0-6]
+
+* Updated dependencies
 ## [0.5.0-5]
 
 * Added an example

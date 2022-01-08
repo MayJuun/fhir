@@ -98,14 +98,6 @@ void testArgFxns() {
         'Jingleheimer',
       ]);
     });
-    // TODO: This doesn't look like a test for exists?
-    test('exists', () {
-      final response = QuestionnaireResponse.fromJson(questionnaireResponse);
-      expect(
-          walkFhirPath(response.toJson(),
-              r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"),
-          [13]);
-    });
     test('exists', () {
       expect(walkFhirPath(resource.toJson(), 'name.given.exists()'), [true]);
       expect(walkFhirPath(resource.toJson(), 'Patient.language.exists()'),

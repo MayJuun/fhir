@@ -14,7 +14,7 @@ packages:
       name: characters
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.1.0"
+    version: "1.2.0"
   charcode:
     dependency: transitive
     description:
@@ -49,21 +49,21 @@ packages:
       name: fhir
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.5.0-10"
+    version: "0.5.0-12"
   fhir_auth:
     dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
-    version: "0.5.0-6"
+    version: "0.5.0-10"
   fhir_yaml:
     dependency: transitive
     description:
       name: fhir_yaml
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.5.1"
+    version: "0.5.2"
   flutter:
     dependency: "direct main"
     description: flutter
@@ -94,7 +94,7 @@ packages:
       name: freezed_annotation
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "1.1.0"
   google_sign_in:
     dependency: transitive
     description:
@@ -178,7 +178,7 @@ packages:
       name: oauth2_client
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.3.0"
+    version: "2.3.1"
   path:
     dependency: transitive
     description:
@@ -267,7 +267,7 @@ packages:
       name: vector_math
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.0"
+    version: "2.1.1"
   yaml:
     dependency: transitive
     description:
@@ -276,5 +276,5 @@ packages:
     source: hosted
     version: "3.1.0"
 sdks:
-  dart: ">=2.14.0 <3.0.0"
+  dart: ">=2.15.0 <3.0.0"
   flutter: ">=2.5.0"

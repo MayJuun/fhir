@@ -1,5 +1,8 @@
 # fhir_auth
 
+## [0.5.0-10]
+
+* Updated fhir version
 ## [0.5.0-9]
 
 * Base FhirClient was still returning void from isLoggedIn (but should return a boolean)

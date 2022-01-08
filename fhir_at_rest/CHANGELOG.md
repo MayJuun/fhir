@@ -1,5 +1,8 @@
 # fhir_at_rest
 
+## [0.5.0-13]
+
+* Updated dependencies
 ## [0.5.0-12]
 
 * Dart to 2.15.0

@@ -1,5 +1,9 @@
 # fhir_bulk
 
+## [0.5.0-8]
+
+* Updated dependencies
+
 ## [0.5.0-7]
 
 * Added lots of comments

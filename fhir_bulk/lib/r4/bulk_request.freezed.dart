@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'bulk_request.dart';
@@ -264,15 +265,19 @@ class _$_BulkPatientRequest extends _BulkPatientRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _BulkPatientRequest &&
-            (identical(other.base, base) || other.base == base) &&
-            (identical(other.since, since) || other.since == since) &&
+            const DeepCollectionEquality().equals(other.base, base) &&
+            const DeepCollectionEquality().equals(other.since, since) &&
             const DeepCollectionEquality().equals(other.types, types) &&
-            (identical(other.client, client) || other.client == client));
+            const DeepCollectionEquality().equals(other.client, client));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, base, since,
-      const DeepCollectionEquality().hash(types), client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(base),
+      const DeepCollectionEquality().hash(since),
+      const DeepCollectionEquality().hash(types),
+      const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
@@ -479,16 +484,21 @@ class _$_BulkGroupRequest extends _BulkGroupRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _BulkGroupRequest &&
-            (identical(other.base, base) || other.base == base) &&
-            (identical(other.id, id) || other.id == id) &&
-            (identical(other.since, since) || other.since == since) &&
+            const DeepCollectionEquality().equals(other.base, base) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.since, since) &&
             const DeepCollectionEquality().equals(other.types, types) &&
-            (identical(other.client, client) || other.client == client));
+            const DeepCollectionEquality().equals(other.client, client));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, base, id, since,
-      const DeepCollectionEquality().hash(types), client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(base),
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(since),
+      const DeepCollectionEquality().hash(types),
+      const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override
@@ -685,15 +695,19 @@ class _$_BulkSystemRequest extends _BulkSystemRequest {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _BulkSystemRequest &&
-            (identical(other.base, base) || other.base == base) &&
-            (identical(other.since, since) || other.since == since) &&
+            const DeepCollectionEquality().equals(other.base, base) &&
+            const DeepCollectionEquality().equals(other.since, since) &&
             const DeepCollectionEquality().equals(other.types, types) &&
-            (identical(other.client, client) || other.client == client));
+            const DeepCollectionEquality().equals(other.client, client));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, base, since,
-      const DeepCollectionEquality().hash(types), client);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(base),
+      const DeepCollectionEquality().hash(since),
+      const DeepCollectionEquality().hash(types),
+      const DeepCollectionEquality().hash(client));
 
   @JsonKey(ignore: true)
   @override

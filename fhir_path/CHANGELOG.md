@@ -1,5 +1,7 @@
 # fhir_path
 
+## [0.5.0-19]
+* Forgot to update to newest fhir package
 ## [0.5.0-18]
 * Allow pre-parsing of the AST for repeat use later. Boosts performance.
 * Allow lazy evaluation of passed-in variables (by passing in a function, instead of an actual value)
