@@ -78,13 +78,21 @@ class AllParser extends ValueParser<ParserList> {
     if (results.isEmpty) {
       return [true];
     }
-    final executedValue = value.execute(results.toList(), passed);
-    for (var r in executedValue) {
-      if (r != true) {
-        return [false];
-      }
-    }
-    return [true];
+    return IterationContext.withIterationContext((iterationContext) {
+      bool allResult = true;
+      results.forEachIndexed((i, r) {
+        iterationContext.thisValue = r;
+        iterationContext.indexValue = i;
+        final executedValue = value.execute([r], passed);
+        if (SingletonEvaluation.toBool(executedValue,
+                name: 'expression in all()', operation: 'all') !=
+            true) {
+          allResult = false;
+          return;
+        }
+      });
+      return [allResult];
+    }, passed);
   }
 }
 
