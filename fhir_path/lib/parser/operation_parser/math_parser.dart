@@ -20,10 +20,10 @@ class UnaryNegateParser extends OperatorParser {
     if (executedAfter.first is num) {
       return [-(executedAfter.first as num)];
     }
-    if (executedAfter.first is QuantityParser) {
+    if (executedAfter.first is FhirPathQuantity) {
       return [
-        FhirPathQuantity(-(executedAfter.first as QuantityParser).value.amount,
-            (executedAfter.first as QuantityParser).value.unit)
+        FhirPathQuantity(-(executedAfter.first as FhirPathQuantity).amount,
+            (executedAfter.first as FhirPathQuantity).unit)
       ];
     } else {
       throw FhirPathInvalidExpressionException(

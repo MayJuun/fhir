@@ -193,4 +193,9 @@ class FhirPathQuantity {
 
   FhirPathQuantity operator %(FhirPathQuantity o) =>
       FhirPathQuantity(amount % o.amount, unit);
+
+  Map<String, dynamic> toJson() => {
+        'value': amount,
+        'unit': unit,
+      };
 }
