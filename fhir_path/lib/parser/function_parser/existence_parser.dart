@@ -1,3 +1,5 @@
+import 'package:collection/collection.dart';
+
 import '../../fhir_path.dart';
 
 /// Returns true if the input collection is empty ({ }) and false otherwise.
@@ -50,14 +52,19 @@ class ExistsParser extends FunctionParser {
   late ParserList value;
   List execute(List results, Map<String, dynamic> passed) {
     final returnList = [];
-    results.forEach((element) {
-      final newResult = value.execute([element], passed);
-      if (newResult.isNotEmpty) {
-        if (!(newResult.length == 1 && newResult.first == false)) {
-          returnList.add(element);
+    IterationContext.withIterationContext((iterationContext) {
+      results.forEachIndexed((i, element) {
+        iterationContext.indexValue = i;
+        iterationContext.thisValue = element;
+        final newResult = value.execute([element], passed);
+        if (newResult.isNotEmpty) {
+          if (!(newResult.length == 1 && newResult.first == false)) {
+            returnList.add(element);
+          }
         }
-      }
-    });
+      });
+    }, passed);
+
     return [returnList.isNotEmpty];
   }
 }

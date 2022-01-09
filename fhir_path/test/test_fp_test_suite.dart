@@ -135,17 +135,24 @@ test("testSimpleBackTick1", () {expect(walkFhirPath(patientExample(), r"`Patient
 */
   group('testDollar', () {
 // test(patient(), "Patient.name.given.where(substring($this.length()-3) = 'out')", 0);
-/*<test name="testDollarThis1" inputfile="patient-example.xml">
-<expression>Patient.name.given.where(substring($this.length()-3) = 'out')</expression>
-});
+    test('testDollarThis1', () {
+      expect(
+          walkFhirPath(patientExample(),
+              r"Patient.name.given.where(substring($this.length()-3) = 'out')"),
+          []);
+    });
 
 // test(patient(), "Patient.name.given.where(substring($this.length()-3) = 'ter')", 1, "string");
-test("testDollarThis2", () {expect(walkFhirPath(patientExample(), r"Patient.name.given.where(substring($this.length()-3) = 'ter')"), ["Peter"]);});
-<output type="string">Peter</output>
-});
+    test("testDollarThis2", () {
+      expect(
+          walkFhirPath(patientExample(),
+              r"Patient.name.given.where(substring($this.length()-3) = 'ter')"),
+          ["Peter", "Peter"]);
+    });
+  });
 
 // test(patient(), "Patient.name.skip(1).given", 1, "string");
-test("testDollarOrderAllowed", () {expect(walkFhirPath(patientExample(), r"Patient.name.skip(1).given"), ["Jim"]);});
+/*test("testDollarOrderAllowed", () {expect(walkFhirPath(patientExample(), r"Patient.name.skip(1).given"), ["Jim"]);});
 <output type="string">Peter</output>
 <output type="string">James</output>
 });
@@ -158,8 +165,8 @@ test("testDollarOrderAllowed", () {expect(walkFhirPath(patientExample(), r"Patie
 // testWrong(patient(), "Patient.children().skip(1)");
 <test name="testDollarOrderNotAllowed" inputfile="patient-example.xml" mode="strict" checkOrderedFunctions="true">
 <expression invalid="semantic">Patient.children().skip(1)</expression>
-});*/
-  });
+});
+  });*/
 
   group('testLiterals', () {
 // testBoolean(patient(), "Patient.name.exists() = true", true);

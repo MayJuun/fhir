@@ -112,7 +112,7 @@ class RoundParser extends ValueParser<ParserList> {
     return results.length == 0
         ? []
         : results.length > 1
-            ? throw _wrongLength('.power()', results)
+            ? throw _wrongLength('.round()', results)
             : results.first is num
                 ? [
                     executedValue.isEmpty
@@ -120,7 +120,7 @@ class RoundParser extends ValueParser<ParserList> {
                         : double.parse(
                             results.first.toStringAsFixed(executedValue.first))
                   ]
-                : throw _wrongTypes('.power()', results, executedValue);
+                : throw _wrongTypes('.round()', results, executedValue);
   }
 }
 
