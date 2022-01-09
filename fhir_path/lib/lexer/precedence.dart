@@ -41,7 +41,7 @@ const operatorOrderMap = {
   /// #05: +, -, &
   PlusParser: 5,
   MinusParser: 5,
-  AndSignParser: 5,
+  StringConcatenationParser: 5,
 
   /// #04: *, /, div, mod
   StarParser: 4,

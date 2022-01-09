@@ -29,9 +29,12 @@ class EnvVariableParser extends ValueParser<String> {
   String value;
 
   List execute(List results, Map<String, dynamic> passed) {
-    final passedValue = passed[value];
+    final variableName = value.replaceAll('`', '');
+
+    final passedValue = passed[variableName];
     if (passedValue == null) {
-      throw FhirPathEvaluationException('Variable $value does not exist.',
+      throw FhirPathEvaluationException(
+          'Variable $variableName does not exist.',
           variables: passed);
     }
 

@@ -16,12 +16,33 @@ class UnionOperatorParser extends OperatorParser {
   }
 }
 
+/// http://hl7.org/fhirpath/N1/#in-membership
 class InParser extends OperatorParser {
   InParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
+
   List execute(List results, Map<String, dynamic> passed) {
-    return [];
+    final executedBefore = before.execute(results.toList(), passed);
+    final executedAfter = after.execute(results.toList(), passed);
+
+    if (executedBefore.isEmpty) {
+      return (executedAfter.isEmpty) ? [] : [false];
+    }
+
+    if (executedBefore.length > 1) {
+      throw FhirPathEvaluationException(
+          "The 'in' operator is expecting a single item on its left side. Found $executedBefore",
+          operation: 'in',
+          collection: results);
+    }
+
+    final leftItem = executedBefore.first.toString();
+    return [
+      executedAfter.firstWhere((rightItem) => rightItem.toString() == leftItem,
+              orElse: () => null) !=
+          null
+    ];
   }
 }
 

@@ -131,7 +131,7 @@ class SqrtParser extends FhirPathParser {
       : results.length > 1
           ? throw _wrongLength('.sqrt()', results)
           : results.first is num
-              ? [sqrt(results.first)]
+              ? (sqrt(results.first).isNaN ? [] : [sqrt(results.first)])
               : throw _wrongTypes('.sqrt()', results, 'none');
 }
 
