@@ -11,18 +11,21 @@ class FpWhereParser extends FunctionParser {
   FpWhereParser();
   late ParserList value;
   List execute(List results, Map<String, dynamic> passed) {
-    final returnList = [];
-    IterationContext.withIterationContext((iterationContext) {
+    final returnList =
+        IterationContext.withIterationContext((iterationContext) {
+      final iterationResult = [];
       results.forEachIndexed((i, element) {
         iterationContext.indexValue = i;
         iterationContext.thisValue = element;
         final newResult = value.execute([element], passed);
         if (newResult.isNotEmpty) {
           if (!(newResult.length == 1 && newResult.first == false)) {
-            returnList.add(element);
+            iterationResult.add(element);
           }
         }
       });
+
+      return iterationResult;
     }, passed);
 
     return returnList;

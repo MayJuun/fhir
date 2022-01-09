@@ -24,16 +24,18 @@ class IterationContext {
 
   static const _iterationKey = r'$iteration';
 
-  static void withIterationContext(
-      void Function(IterationContext) iteratedFunction,
+  static List<dynamic> withIterationContext(
+      List<dynamic> Function(IterationContext) iteratedFunction,
       Map<String, dynamic> passed) {
     final topIterationContext = passed[_iterationKey];
     final thisIterationContext = IterationContext();
     passed[_iterationKey] = thisIterationContext;
 
-    iteratedFunction(thisIterationContext);
+    final result = iteratedFunction(thisIterationContext);
 
     passed[_iterationKey] = topIterationContext;
+
+    return result;
   }
 
   static IterationContext current(Map<String, dynamic> passed) {
@@ -63,9 +65,10 @@ class AggregateParser extends ValueParser<ParserList> {
   AggregateParser();
   late ParserList value;
   List execute(List results, Map<String, dynamic> passed) {
-    List<dynamic> finalTotal = [];
+    final finalTotal =
+        IterationContext.withIterationContext((iterationContext) {
+      List<dynamic> currentTotal = [];
 
-    IterationContext.withIterationContext((iterationContext) {
       late FhirPathParser expression;
       late dynamic initialValue;
       if (value.value.first is CommaParser) {
@@ -83,8 +86,10 @@ class AggregateParser extends ValueParser<ParserList> {
         iterationContext.indexValue = i;
         iterationContext.thisValue = r;
         iterationContext.totalValue = expression.execute([r], passed);
-        finalTotal = iterationContext.totalValue;
+        currentTotal = iterationContext.totalValue;
       });
+
+      return currentTotal;
     }, passed);
 
     return finalTotal;
