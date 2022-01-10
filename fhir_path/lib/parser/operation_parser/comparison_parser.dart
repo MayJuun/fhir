@@ -43,8 +43,8 @@ List executeComparisons(List results, ParserList before, ParserList after,
   bool stringGt(dynamic param1, dynamic param2) {
     if (param1 is! String || param2 is! String) {
       throw FhirPathEvaluationException(
-          'Can only check equality on Strings compared to other Strings',
-          operation: '==',
+          'Can only compare Strings to other Strings',
+          operation: 'comparator',
           arguments: [param1, param2],
           collection: results);
     } else if (param1 == param2) {
@@ -84,15 +84,22 @@ List executeComparisons(List results, ParserList before, ParserList after,
     }
   }
 
-  final executedBefore = before.execute(results.toList(), passed);
-  final executedAfter = after.execute(results.toList(), passed);
-  if (executedBefore.isEmpty || executedAfter.isEmpty) {
+  final lhs = SingletonEvaluation.toSingleton(
+      before.execute(results.toList(), passed),
+      name: 'left-hand side',
+      operation: comparator.toString(),
+      collection: results);
+  final rhs = SingletonEvaluation.toSingleton(
+      after.execute(results.toList(), passed),
+      name: 'right-hand side',
+      operation: comparator.toString(),
+      collection: results);
+
+  if (lhs.isEmpty || rhs.isEmpty) {
     return [];
   } else {
-    if (executedBefore.length != 1 ||
-        executedAfter.length != 1 ||
-        !_allowedTypes.contains(executedBefore.first.runtimeType) ||
-        !_allowedTypes.contains(executedAfter.first.runtimeType)) {
+    if (!_allowedTypes.contains(lhs.first.runtimeType) ||
+        !_allowedTypes.contains(rhs.first.runtimeType)) {
       final functionName = comparator == Comparator.gt
           ? '>'
           : comparator == Comparator.gte
@@ -103,18 +110,18 @@ List executeComparisons(List results, ParserList before, ParserList after,
       throw FhirPathEvaluationException(
           'The comparator $functionName cannot work with the types '
           'passed.\n'
-          'Before: $executedBefore\n'
-          'After: $executedAfter',
+          'LHS: $lhs\n'
+          'RHS: $rhs',
           operation: functionName,
           arguments: [before, after]);
     } else {
       if (where) {
-        results.retainWhere((element) =>
-            compare(element[executedBefore.first], executedAfter.first));
+        results
+            .retainWhere((element) => compare(element[lhs.first], rhs.first));
         return results;
       } else {
         try {
-          return [compare(executedBefore.first, executedAfter.first)];
+          return [compare(lhs.first, rhs.first)];
         } catch (e) {
           return [];
         }
