@@ -77,9 +77,9 @@ final Parser<NotEquivalentParser> notEquivalentLexer =
 /// identifies ins
 final Parser<InParser> inLexer = string(' in ').map((_) => InParser());
 
-/// identifies containsOperators
-final Parser<ContainsParser> containsOperatorLexer =
-    string(' contains ').map((_) => ContainsParser());
+/// identifies contains operators
+final Parser<ContainsOperatorParser> containsOperatorLexer =
+    string(' contains ').map((_) => ContainsOperatorParser());
 
 /// identifies andStrings
 final Parser<AndStringParser> andStringLexer =

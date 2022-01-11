@@ -31,6 +31,23 @@ class EnvVariableParser extends ValueParser<String> {
   List execute(List results, Map<String, dynamic> passed) {
     final variableName = value.replaceAll('`', '');
 
+    if (variableName == '%sct') {
+      return ['http://snomed.info/sct'];
+    }
+
+    if (variableName == '%loinc') {
+      return ['http://loinc.org'];
+    }
+
+    if (variableName == '%ucum') {
+      return ['http://unitsofmeasure.org'];
+    }
+
+    if (variableName.startsWith('%vs-')) {
+      final valueSet = variableName.substring(4);
+      return ['http://hl7.org/fhir/ValueSet/$valueSet'];
+    }
+
     final passedValue = passed[variableName];
     if (passedValue == null) {
       throw FhirPathEvaluationException(

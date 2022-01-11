@@ -5,10 +5,7 @@ import 'package:test/test.dart';
 
 /// FHIRPath Test Suite - reference="http://hl7.org/fhirpath|2.0.0"
 void testFhirPathTestSuite() {
-// Commented out portions with single-line comments were commented out in the original test-suite.
-/* Commented out portions with block comments were commented due to missing conversion */
-
-/*
+  /*
 group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
 <test name="testExtractBirthDate" description="Extract birthDate" inputfile="patient-example.xml" predicate="false">
 <expression>birthDate</expression>
@@ -87,18 +84,16 @@ test("testSimpleBackTick1", () {expect(walkFhirPath(patientExample(), r"`Patient
 <expression invalid="semantic">Observation.valueQuantity.unit</expression>
 });*/
 
-// testBoolean(observation(), "Observation.value is Quantity", true);
-  test("testPolymorphismIsA", () {
-    expect(walkFhirPath(observationExample(), r"Observation.value is Quantity"),
-        [true]);
-  });
-// testBoolean(observation(), "Observation.value is Quantity", true);
   test("testPolymorphismIsA", () {
     expect(walkFhirPath(observationExample(), r"Observation.value is Quantity"),
         [true]);
   });
 
-// testBoolean(observation(), "Observation.value is Period.not()", true);
+  test("testPolymorphismIsA", () {
+    expect(walkFhirPath(observationExample(), r"Observation.value is Quantity"),
+        [true]);
+  });
+
 // TODO: Test makes wrong assumption about precedence
 /*  test("testPolymorphismIsB", () {
     expect(
@@ -158,18 +153,15 @@ test("testSimpleBackTick1", () {expect(walkFhirPath(patientExample(), r"`Patient
     });
   });
 
-// test(patient(), "Patient.name.skip(1).given", 1, "string");
 /*test("testDollarOrderAllowed", () {expect(walkFhirPath(patientExample(), r"Patient.name.skip(1).given"), ["Jim"]);});
 <output type="string">Peter</output>
 <output type="string">James</output>
 });
 
-// test(patient(), "Patient.name.skip(3).given", 0);
 <test name="testDollarOrderAllowedA" inputfile="patient-example.xml">
 <expression>Patient.name.skip(3).given</expression>
 });
 
-// testWrong(patient(), "Patient.children().skip(1)");
 <test name="testDollarOrderNotAllowed" inputfile="patient-example.xml" mode="strict" checkOrderedFunctions="true">
 <expression invalid="semantic">Patient.children().skip(1)</expression>
 });
@@ -483,13 +475,13 @@ test("testSimpleBackTick1", () {expect(walkFhirPath(patientExample(), r"`Patient
       expect(walkFhirPath(patientExample(), "Patient.name.given != {}"), []);
     });
 
-/*<test name="testExpressions" inputfile="patient-example.xml" ordered="false"><expression>Patient.name.select(given | family).distinct()</expression>
-<output type="string">Peter</output>
-<output type="string">James</output>
-<output type="string">Chalmers</output>
-<output type="string">Jim</output>
-<output type="string">Windsor</output>
-});*/
+    test("testExpressions", () {
+      expect(
+          walkFhirPath(patientExample(),
+              "Patient.name.select(given | family).distinct()"),
+          unorderedEquals(['Peter', 'James', 'Chalmers', 'Jim', 'Windsor']));
+    });
+
     test("testExpressionsEqual", () {
       expect(
           walkFhirPath(patientExample(), r"Patient.name.given.count() = 1 + 4"),
@@ -630,11 +622,22 @@ test("testSimpleBackTick1", () {expect(walkFhirPath(patientExample(), r"`Patient
       expect(
           walkFhirPath(patientExample(), r"true.convertsToInteger()"), [true]);
     });
-    test("testBooleanLiteralIsNotInteger", () {
+// TODO: Incorrect test case. Wrong assumptions around precedence
+/*    test("testBooleanLiteralIsNotInteger", () {
       expect(walkFhirPath(patientExample(), r"true is Integer.not()"), [true]);
+    }); */
+    test("testBooleanLiteralIsNotInteger-fixed", () {
+      expect(
+          walkFhirPath(patientExample(), r"(true is Integer).not()"), [true]);
     });
-    test("testDateIsNotInteger", () {
+// TODO: Incorrect test case. Wrong assumptions around precedence
+/*    test("testDateIsNotInteger", () {
       expect(walkFhirPath(patientExample(), r"@2013-04-05 is Integer.not()"),
+          [true]);
+    }); */
+// TODO: Incorrect test case. Wrong assumptions around precedence
+    test("testDateIsNotInteger-fixed", () {
+      expect(walkFhirPath(patientExample(), r"(@2013-04-05 is Integer).not()"),
           [true]);
     });
 
@@ -1240,10 +1243,10 @@ test("testSimpleBackTick1", () {expect(walkFhirPath(patientExample(), r"`Patient
 
     group('testTail', () {
       // TODO: Incorrect test case. Union operator does specifically not guarantee an order
-      test("testTail1", () {
+/*      test("testTail1", () {
         expect(walkFhirPath(patientExample(), r"(0 | 1 | 2).tail() = 1 | 2"),
             [true]);
-      });
+      }); */
 /*      test("testTail2", () {
         // TODO: Incorrect test case. Union operator does specifically not guarantee an order
         expect(
@@ -1259,15 +1262,15 @@ test("testSimpleBackTick1", () {expect(walkFhirPath(patientExample(), r"`Patient
 
     group('testSkip', () {
       // TODO: Incorrect test case. Assumes order of union
-      test("testSkip1", () {
+/*      test("testSkip1", () {
         expect(walkFhirPath(patientExample(), r"(0 | 1 | 2).skip(1) = 1 | 2"),
             [true]);
-      });
+      }); */
       // TODO: Incorrect test case. Assumes order of union
-      test("testSkip2", () {
+/*      test("testSkip2", () {
         expect(
             walkFhirPath(patientExample(), r"(0 | 1 | 2).skip(2) = 2"), [true]);
-      });
+      }); */
       // TODO: Incorrect test case. Assumes order of union
 /*      test("testSkip3", () {
         expect(
@@ -1291,15 +1294,15 @@ test("testSimpleBackTick1", () {expect(walkFhirPath(patientExample(), r"`Patient
 
     group('testTake', () {
       // TODO: Incorrect test case. Assumes order of union
-      test("testTake1", () {
+/*      test("testTake1", () {
         expect(
             walkFhirPath(patientExample(), r"(0 | 1 | 2).take(1) = 0"), [true]);
-      });
+      }); */
       // TODO: Incorrect test case. Assumes order of union
-      test("testTake2", () {
+/*      test("testTake2", () {
         expect(walkFhirPath(patientExample(), r"(0 | 1 | 2).take(2) = 0 | 1"),
             [true]);
-      });
+      }); */
       // TODO: Incorrect test case. Assumes order of union
 /*      test("testTake3", () {
         expect(

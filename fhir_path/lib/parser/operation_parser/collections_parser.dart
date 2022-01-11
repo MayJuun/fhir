@@ -16,6 +16,41 @@ class UnionOperatorParser extends OperatorParser {
   }
 }
 
+// http://hl7.org/fhirpath/#contains-containership
+class ContainsOperatorParser extends OperatorParser {
+  ContainsOperatorParser();
+  ParserList before = ParserList([]);
+  ParserList after = ParserList([]);
+
+  List execute(List results, Map<String, dynamic> passed) {
+    final leftOperand = before.execute(results.toList(), passed);
+    final rightOperand = after.execute(results.toList(), passed);
+
+    if (leftOperand.isEmpty) {
+      return [false];
+    }
+
+    if (rightOperand.isEmpty) {
+      return [];
+    }
+
+    if (rightOperand.length > 1) {
+      throw FhirPathEvaluationException(
+          "The 'contains' operator is expecting a single item on its right side. Found $rightOperand",
+          operation: 'contains',
+          collection: results);
+    }
+
+    final rightItem = rightOperand.first.toString();
+
+    return [
+      leftOperand.firstWhere((leftItem) => leftItem.toString() == rightItem,
+              orElse: () => null) !=
+          null
+    ];
+  }
+}
+
 /// http://hl7.org/fhirpath/N1/#in-membership
 class InParser extends OperatorParser {
   InParser();

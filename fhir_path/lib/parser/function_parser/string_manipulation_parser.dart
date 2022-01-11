@@ -98,8 +98,9 @@ class EndsWithParser extends ValueParser<ParserList> {
   }
 }
 
-class ContainsParser extends ValueParser<ParserList> {
-  ContainsParser();
+// http://hl7.org/fhirpath/#containssubstring-string-boolean
+class ContainsFunctionParser extends ValueParser<ParserList> {
+  ContainsFunctionParser();
   late ParserList value;
   List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
@@ -108,13 +109,6 @@ class ContainsParser extends ValueParser<ParserList> {
         : results
             .map((e) => e is String && e.contains(executedValue.first))
             .toList();
-    // results.length > 1
-    //     ? throw _requiresList('.contains()', results)
-    //     : executedValue.first is! String
-    //         ? throw _requiresString('.contains()', results)
-    //         : results.first.toString() == ''
-    //             ? [true]
-    //             : [results.first.toString().contains(executedValue.first)];
   }
 }
 
