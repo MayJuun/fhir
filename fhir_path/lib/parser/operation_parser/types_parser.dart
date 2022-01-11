@@ -58,7 +58,7 @@ class IsParser extends OperatorParser {
                               ]
                             : executedAfter.first == 'Date'
                                 ? [executedBefore.first is Date]
-                                : executedAfter.first == 'Datetime'
+                                : executedAfter.first == 'DateTime'
                                     ? [
                                         executedBefore.first is DateTime ||
                                             executedBefore.first is FhirDateTime
