@@ -89,12 +89,26 @@ class IntersectParser extends ValueParser<ParserList> {
   IntersectParser();
   late ParserList value;
   List execute(List results, Map<String, dynamic> passed) {
-    final executedValue = value.execute(results.toList(), passed);
-    results.removeWhere((e) =>
-        executedValue.indexWhere(
+    final other = value.execute(results.toList(), passed);
+    final inBag = [...results];
+
+    // Eliminate duplicates in input
+    final outBag = [];
+    for (final item in inBag) {
+      if (outBag.indexWhere((otherItem) =>
+              DeepCollectionEquality().equals(item, otherItem)) ==
+          -1) {
+        outBag.add(item);
+      }
+    }
+
+    // Intersect
+    outBag.removeWhere((e) =>
+        other.indexWhere(
             (element) => DeepCollectionEquality().equals(e, element)) ==
         -1);
-    return results;
+
+    return outBag;
   }
 }
 
