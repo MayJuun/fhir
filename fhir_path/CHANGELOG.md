@@ -1,5 +1,12 @@
 # fhir_path
 
+## [0.5.0-20]
+* Multiple bug fixes and improvements again by [Tilo](https://github.com/tiloc)
+* Ported the FHIRPath test suite from XML to Dart 
+* More tests enabled & fixed
+* Fixed .all(XXX), .instersect()
+* Fixes % to variables, is for DateTime, comparisons for quantities
+* Fixed bug when using $this in nexted iifs
 ## [0.5.0-19]
 * Forgot to update to newest fhir package
 ## [0.5.0-18]
