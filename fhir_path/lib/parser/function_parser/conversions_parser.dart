@@ -32,10 +32,10 @@ class IifParser extends FunctionParser {
       criterionCollection.addAll(
           (criterionResultParser.before.first as CommaParser)
               .before
-              .execute(results, passed));
+              .execute(results.toList(), passed));
     } else {
-      criterionCollection
-          .addAll(criterionResultParser.before.execute(results, passed));
+      criterionCollection.addAll(
+          criterionResultParser.before.execute(results.toList(), passed));
     }
 
     final criterion = SingletonEvaluation.toBool(criterionCollection,
@@ -49,7 +49,7 @@ class IifParser extends FunctionParser {
               ? (criterionResultParser.after.first as CommaParser).before
               : criterionResultParser.after.first;
 
-      final trueResult = trueResultParser.execute(results, passed);
+      final trueResult = trueResultParser.execute(results.toList(), passed);
 
       return trueResult;
     } else {
@@ -60,7 +60,8 @@ class IifParser extends FunctionParser {
                   ? criterionResultParser.after
                   : EmptySetParser();
 
-      final otherwiseResult = otherwiseResultParser.execute(results, passed);
+      final otherwiseResult =
+          otherwiseResultParser.execute(results.toList(), passed);
 
       return otherwiseResult;
     }
