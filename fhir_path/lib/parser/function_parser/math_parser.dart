@@ -15,7 +15,7 @@ class AbsParser extends FhirPathParser {
               : results.first is FhirPathQuantity
                   ? results.first.abs().isNaN
                       ? []
-                      : [(results.first as FhirPathQuantity).abs().toString()]
+                      : [(results.first as FhirPathQuantity).abs()]
                   : throw _wrongTypes('.abs()', results, 'none');
 }
 
@@ -112,7 +112,7 @@ class RoundParser extends ValueParser<ParserList> {
     return results.length == 0
         ? []
         : results.length > 1
-            ? throw _wrongLength('.power()', results)
+            ? throw _wrongLength('.round()', results)
             : results.first is num
                 ? [
                     executedValue.isEmpty
@@ -120,7 +120,7 @@ class RoundParser extends ValueParser<ParserList> {
                         : double.parse(
                             results.first.toStringAsFixed(executedValue.first))
                   ]
-                : throw _wrongTypes('.power()', results, executedValue);
+                : throw _wrongTypes('.round()', results, executedValue);
   }
 }
 
@@ -131,7 +131,7 @@ class SqrtParser extends FhirPathParser {
       : results.length > 1
           ? throw _wrongLength('.sqrt()', results)
           : results.first is num
-              ? [sqrt(results.first)]
+              ? (sqrt(results.first).isNaN ? [] : [sqrt(results.first)])
               : throw _wrongTypes('.sqrt()', results, 'none');
 }
 

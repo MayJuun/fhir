@@ -123,7 +123,7 @@ class FhirPathQuantity {
     return this;
   }
 
-  bool stringEquality(String string) {
+  bool hasSameUnit(String string) {
     final thisRunes = unit.runes.toList();
     final thoseRunes = string.runes.toList();
     if (thisRunes.length != thoseRunes.length) {
@@ -147,11 +147,11 @@ class FhirPathQuantity {
     if (amount != o.amount) {
       return false;
     }
-    return stringEquality(o.unit);
+    return hasSameUnit(o.unit);
   }
 
   bool operator >(FhirPathQuantity o) {
-    if (!stringEquality(o.unit)) {
+    if (!hasSameUnit(o.unit)) {
       throw FhirPathEvaluationException(
           'The units on these two quantities are not the same and'
           ' this version of FHIRPath does not currently support unit conversion'
@@ -164,7 +164,7 @@ class FhirPathQuantity {
   bool operator >=(FhirPathQuantity o) => this == o || this > o;
 
   bool operator <(FhirPathQuantity o) {
-    if (!stringEquality(o.unit)) {
+    if (!hasSameUnit(o.unit)) {
       throw FhirPathEvaluationException(
           'The units on these two quantities are not the same and'
           ' this version of FHIRPath does not currently support unit conversion'
@@ -193,4 +193,9 @@ class FhirPathQuantity {
 
   FhirPathQuantity operator %(FhirPathQuantity o) =>
       FhirPathQuantity(amount % o.amount, unit);
+
+  Map<String, dynamic> toJson() => {
+        'value': amount,
+        'code': unit,
+      };
 }

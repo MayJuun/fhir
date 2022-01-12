@@ -23,21 +23,20 @@ final Parser<DivStringParser> divStringLexer =
     string(' div ').map((_) => DivStringParser());
 
 /// identifies divMods
-final Parser<ModParser> modLexer =
-    string(' mod ').map((_) => ModParser());
+final Parser<ModParser> modLexer = string(' mod ').map((_) => ModParser());
 
 final plusLexer = char('+').map((_) => PlusParser());
 
 final minusLexer = char('-').map((_) => MinusParser());
 
-/// identifies andSigns
-final Parser<AndSignParser> andSignLexer =
-    char('&').map((_) => AndSignParser());
+/// identifies string concatenation ampersand (&)
+final Parser<StringConcatenationParser> stringConcatenationLexer =
+    char('&').map((_) => StringConcatenationParser());
 
-/// identifies iss
+/// identifies is
 final Parser<IsParser> isLexer = string(' is ').map((_) => IsParser());
 
-/// identifies ass
+/// identifies as
 final Parser<AsParser> asLexer = string(' as ').map((_) => AsParser());
 
 /// identifies unionOperators
@@ -78,9 +77,9 @@ final Parser<NotEquivalentParser> notEquivalentLexer =
 /// identifies ins
 final Parser<InParser> inLexer = string(' in ').map((_) => InParser());
 
-/// identifies containsOperators
-final Parser<ContainsParser> containsOperatorLexer =
-    string(' contains ').map((_) => ContainsParser());
+/// identifies contains operators
+final Parser<ContainsOperatorParser> containsOperatorLexer =
+    string(' contains ').map((_) => ContainsOperatorParser());
 
 /// identifies andStrings
 final Parser<AndStringParser> andStringLexer =
@@ -93,6 +92,6 @@ final Parser<XorParser> xorLexer = string(' xor ').map((_) => XorParser());
 final Parser<OrStringParser> orStringLexer =
     string(' or ').map((_) => OrStringParser());
 
-/// identifies impliess
+/// identifies implies
 final Parser<ImpliesParser> impliesLexer =
     string(' implies ').map((_) => ImpliesParser());

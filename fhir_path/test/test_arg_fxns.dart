@@ -393,21 +393,21 @@ void testArgFxns() {
           walkFhirPath(
               resource.toJson(), "Patient.name.given.intersect(%nameList)",
               environment: {'%nameList': 'Jason'}),
-          ['Jason', 'Jason']);
+          ['Jason']);
       expect(
           walkFhirPath(
               resource.toJson(), "Patient.name.given.intersect(%nameList)",
               environment: {
                 '%nameList': ['Jason', 'Kristin']
               }),
-          ['Jason', 'Jason', 'Kristin']);
+          ['Jason', 'Kristin']);
       expect(
           walkFhirPath(
               resource.toJson(), "Patient.name.given.intersect(%nameList)",
               environment: {
                 '%nameList': ['Jason', 'Fnuts']
               }),
-          ['Jason', 'Jason']);
+          ['Jason']);
     });
     test('exclude', () {
       expect(

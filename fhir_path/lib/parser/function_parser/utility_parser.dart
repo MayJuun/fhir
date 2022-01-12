@@ -5,21 +5,10 @@ import '../../fhir_path.dart';
 class FpNotParser extends FhirPathParser {
   FpNotParser();
   List execute(List results, Map<String, dynamic> passed) {
-    if (results.isEmpty) {
-      return [];
-    }
+    final input = SingletonEvaluation.toBool(results,
+        name: 'input for .not()', operation: 'not()', collection: results);
 
-    if (results.length != 1) {
-      throw FhirPathEvaluationException('not() requires a single input',
-          collection: results, operation: 'not');
-    }
-
-    if (results.first is! bool) {
-      throw FhirPathEvaluationException('not() requires an input of type bool.',
-          collection: results, operation: 'not');
-    }
-
-    return [!(results.first as bool)];
+    return input != null ? [!input] : [];
   }
 }
 
@@ -44,5 +33,5 @@ class TodayParser extends FhirPathParser {
 class TraceParser extends ValueParser {
   TraceParser();
   dynamic value;
-  List execute(List results, Map<String, dynamic> passed) => [];
+  List execute(List results, Map<String, dynamic> passed) => results;
 }

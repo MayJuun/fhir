@@ -1,3 +1,5 @@
+import 'package:collection/collection.dart';
+
 import '../../fhir_path.dart';
 
 /// Returns true if the input collection is empty ({ }) and false otherwise.
@@ -49,15 +51,22 @@ class ExistsParser extends FunctionParser {
   ExistsParser();
   late ParserList value;
   List execute(List results, Map<String, dynamic> passed) {
-    final returnList = [];
-    results.forEach((element) {
-      final newResult = value.execute([element], passed);
-      if (newResult.isNotEmpty) {
-        if (!(newResult.length == 1 && newResult.first == false)) {
-          returnList.add(element);
+    final returnList =
+        IterationContext.withIterationContext((iterationContext) {
+      final iterationResult = [];
+      results.forEachIndexed((i, element) {
+        iterationContext.indexValue = i;
+        iterationContext.thisValue = element;
+        final newResult = value.execute([element], passed);
+        if (newResult.isNotEmpty) {
+          if (!(newResult.length == 1 && newResult.first == false)) {
+            iterationResult.add(element);
+          }
         }
-      }
-    });
+      });
+      return iterationResult;
+    }, passed);
+
     return [returnList.isNotEmpty];
   }
 }
@@ -69,13 +78,21 @@ class AllParser extends ValueParser<ParserList> {
     if (results.isEmpty) {
       return [true];
     }
-    final executedValue = value.execute(results.toList(), passed);
-    for (var r in executedValue) {
-      if (r != true) {
-        return [false];
-      }
-    }
-    return [true];
+    return IterationContext.withIterationContext((iterationContext) {
+      bool allResult = true;
+      results.forEachIndexed((i, r) {
+        iterationContext.thisValue = r;
+        iterationContext.indexValue = i;
+        final executedValue = value.execute([r], passed);
+        if (SingletonEvaluation.toBool(executedValue,
+                name: 'expression in all()', operation: 'all') !=
+            true) {
+          allResult = false;
+          return;
+        }
+      });
+      return [allResult];
+    }, passed);
   }
 }
 

@@ -17,7 +17,7 @@ const operatorOrderMap = {
 
   /// #10: in, contains
   InParser: 10,
-  ContainsParser: 10,
+  ContainsOperatorParser: 10,
 
   /// #09: =, ~, !=, !~
   EqualsParser: 9,
@@ -41,7 +41,7 @@ const operatorOrderMap = {
   /// #05: +, -, &
   PlusParser: 5,
   MinusParser: 5,
-  AndSignParser: 5,
+  StringConcatenationParser: 5,
 
   /// #04: *, /, div, mod
   StarParser: 4,
@@ -71,6 +71,7 @@ const operatorOrderMap = {
   CeilingParser: 1,
   ChildrenParser: 1,
   CombineParser: 1,
+  ContainsFunctionParser: 1,
   ConvertsToBooleanParser: 1,
   ConvertsToDateParser: 1,
   ConvertsToDateTimeParser: 1,

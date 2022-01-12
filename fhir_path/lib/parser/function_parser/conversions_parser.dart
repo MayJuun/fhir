@@ -42,7 +42,7 @@ class IifParser extends FunctionParser {
         name: 'criterion expression', operation: 'iif', collection: results);
 
     // Short-circuit: Only evaluate what matches the criterion.
-    if (criterion) {
+    if (criterion == true) {
       final trueResultParser = criterionResultParser.before.first is CommaParser
           ? (criterionResultParser.before.first as CommaParser).after
           : (criterionResultParser.after.first is CommaParser)
@@ -67,29 +67,6 @@ class IifParser extends FunctionParser {
   }
 
   String toString() => 'IifParser: ${value.toString()}';
-}
-
-/// Implements rule http://hl7.org/fhirpath/#singleton-evaluation-of-collections
-class SingletonEvaluation {
-  static bool toBool(
-    List<dynamic> input, {
-    String? name,
-    String? operation,
-    List<dynamic>? collection,
-  }) {
-    if (input.length > 1) {
-      throw FhirPathEvaluationException(
-          'The $name is required to be '
-          'either an empty value, or a single value. Instead it evaluated to: ${input}.',
-          operation: operation,
-          collection: collection);
-    }
-
-    // true if either a true boolean, or a single non-boolean.
-    return input.isNotEmpty
-        ? (input.first is bool && input.first) || (input.first is! bool)
-        : false;
-  }
 }
 
 /// http://hl7.org/fhirpath/#toboolean-boolean
