@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart' as r4;
@@ -10,15 +11,23 @@ class FpWhereParser extends FunctionParser {
   FpWhereParser();
   late ParserList value;
   List execute(List results, Map<String, dynamic> passed) {
-    final returnList = [];
-    results.forEach((element) {
-      final newResult = value.execute([element], passed);
-      if (newResult.isNotEmpty) {
-        if (!(newResult.length == 1 && newResult.first == false)) {
-          returnList.add(element);
+    final returnList =
+        IterationContext.withIterationContext((iterationContext) {
+      final iterationResult = [];
+      results.forEachIndexed((i, element) {
+        iterationContext.indexValue = i;
+        iterationContext.thisValue = element;
+        final newResult = value.execute([element], passed);
+        if (newResult.isNotEmpty) {
+          if (!(newResult.length == 1 && newResult.first == false)) {
+            iterationResult.add(element);
+          }
         }
-      }
-    });
+      });
+
+      return iterationResult;
+    }, passed);
+
     return returnList;
   }
 }

@@ -90,8 +90,9 @@ final Parser<EndsWithParser> endsWithLexer =
     (string('endsWith(') | string('.endsWith(')).map((_) => EndsWithParser());
 
 /// identifies containsFunctions
-final Parser<ContainsParser> containsFunctionLexer =
-    (string('contains(') | string('.contains(')).map((_) => ContainsParser());
+final Parser<ContainsFunctionParser> containsFunctionLexer =
+    (string('contains(') | string('.contains('))
+        .map((_) => ContainsFunctionParser());
 
 /// identifies replaces
 final Parser<ReplaceParser> replaceLexer =

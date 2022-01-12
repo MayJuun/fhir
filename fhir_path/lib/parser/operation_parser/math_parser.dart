@@ -20,10 +20,10 @@ class UnaryNegateParser extends OperatorParser {
     if (executedAfter.first is num) {
       return [-(executedAfter.first as num)];
     }
-    if (executedAfter.first is QuantityParser) {
+    if (executedAfter.first is FhirPathQuantity) {
       return [
-        FhirPathQuantity(-(executedAfter.first as QuantityParser).value.amount,
-            (executedAfter.first as QuantityParser).value.unit)
+        FhirPathQuantity(-(executedAfter.first as FhirPathQuantity).amount,
+            (executedAfter.first as FhirPathQuantity).unit)
       ];
     } else {
       throw FhirPathInvalidExpressionException(
@@ -174,6 +174,8 @@ class ModParser extends OperatorParser {
           'Operand 2: $executedAfter',
           operation: 'mod',
           collection: results);
+    } else if (executedAfter.first is num && executedAfter.first == 0) {
+      return [];
     } else if (executedBefore.first is num && executedAfter.first is num) {
       return [executedBefore.first % executedAfter.first];
     } else if (executedBefore.first is FhirPathQuantity &&
@@ -419,23 +421,34 @@ class MinusParser extends OperatorParser {
   }
 }
 
-class AndSignParser extends OperatorParser {
-  AndSignParser();
+class StringConcatenationParser extends OperatorParser {
+  StringConcatenationParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
   List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
-    if (executedBefore.isEmpty || executedAfter.isEmpty) {
-      return [];
-    } else if (executedBefore.length != 1 || executedAfter.length != 1) {
+
+    if (executedBefore.length > 1 || executedAfter.length > 1) {
       throw FhirPathEvaluationException(
-          'Math Operators require each operand to result in a '
-          'single object. The "&" operator was passed the following:\n'
+          'String concatenation operates on 2 single items. '
+          'The "&" operator was passed the following:\n'
           'Operand 1: $executedBefore\n'
           'Operand 2: $executedAfter',
           operation: '&',
           collection: results);
+    }
+
+    if (executedBefore.isEmpty && executedAfter.isEmpty) {
+      return [''];
+    } else if (executedBefore.isNotEmpty &&
+        executedBefore.first is String &&
+        executedAfter.isEmpty) {
+      return [(executedBefore.first as String)];
+    } else if (executedBefore.isEmpty &&
+        executedAfter.isNotEmpty &&
+        executedAfter.first is String) {
+      return [(executedAfter.first as String)];
     } else if (executedBefore.first is String &&
         executedAfter.first is String) {
       return [

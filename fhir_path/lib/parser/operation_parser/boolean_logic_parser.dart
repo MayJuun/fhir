@@ -7,28 +7,21 @@ class AndStringParser extends OperatorParser {
   List execute(List results, Map<String, dynamic> passed) {
     final executedBefore = before.execute(results.toList(), passed);
     final executedAfter = after.execute(results.toList(), passed);
-    if (executedBefore.length > 1 || executedAfter.length > 1) {
-      throw FhirPathEvaluationException(
-          'The "and" operator can only work with lists of 0 or 1 '
-          'but was passed the following:\n'
-          'Collection1: $executedBefore\n'
-          'Collection2: $executedAfter',
-          operation: 'and',
-          arguments: [executedBefore, executedAfter],
-          collection: results);
-    } else if (executedBefore.isEmpty) {
-      return executedAfter.isEmpty || executedAfter.first == true
-          ? []
-          : [false];
-    } else if (executedBefore.first == true) {
-      return executedAfter.isEmpty
-          ? []
-          : executedAfter.first == true
-              ? [true]
-              : [false];
-    } else {
+
+    final beforeBool = SingletonEvaluation.toBool(executedBefore,
+        name: "parameter before 'and'", operation: 'and', collection: results);
+    final afterBool = SingletonEvaluation.toBool(executedAfter,
+        name: "parameter after 'and'", operation: 'and', collection: results);
+
+    if (beforeBool == true && afterBool == true) {
+      return [true];
+    }
+
+    if (beforeBool == false || afterBool == false) {
       return [false];
     }
+
+    return [];
   }
 }
 
@@ -37,7 +30,27 @@ class XorParser extends OperatorParser {
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
   List execute(List results, Map<String, dynamic> passed) {
-    return [];
+    final executedBefore = before.execute(results.toList(), passed);
+    final executedAfter = after.execute(results.toList(), passed);
+
+    final beforeBool = SingletonEvaluation.toBool(executedBefore,
+        name: "parameter before 'xor'", operation: 'xor', collection: results);
+    final afterBool = SingletonEvaluation.toBool(executedAfter,
+        name: "parameter after 'xor'", operation: 'xor', collection: results);
+
+    if (beforeBool == null || afterBool == null) {
+      return [];
+    }
+
+    if (beforeBool == false && afterBool == false) {
+      return [false];
+    }
+
+    if (beforeBool == true && afterBool == true) {
+      return [false];
+    }
+
+    return [true];
   }
 }
 
@@ -46,7 +59,23 @@ class OrStringParser extends OperatorParser {
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
   List execute(List results, Map<String, dynamic> passed) {
-    return [];
+    final executedBefore = before.execute(results.toList(), passed);
+    final executedAfter = after.execute(results.toList(), passed);
+
+    final beforeBool = SingletonEvaluation.toBool(executedBefore,
+        name: "parameter before 'or'", operation: 'or', collection: results);
+    final afterBool = SingletonEvaluation.toBool(executedAfter,
+        name: "parameter after 'or'", operation: 'or', collection: results);
+
+    if (beforeBool == true || afterBool == true) {
+      return [true];
+    }
+
+    if (beforeBool == null || afterBool == null) {
+      return [];
+    }
+
+    return [false];
   }
 }
 
@@ -55,6 +84,30 @@ class ImpliesParser extends OperatorParser {
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
   List execute(List results, Map<String, dynamic> passed) {
+    final executedBefore = before.execute(results.toList(), passed);
+    final executedAfter = after.execute(results.toList(), passed);
+
+    final beforeBool = SingletonEvaluation.toBool(executedBefore,
+        name: "parameter before 'implies'",
+        operation: 'implies',
+        collection: results);
+    final afterBool = SingletonEvaluation.toBool(executedAfter,
+        name: "parameter after 'implies'",
+        operation: 'implies',
+        collection: results);
+
+    if (beforeBool == true) {
+      return afterBool != null ? [afterBool] : [];
+    }
+
+    if (beforeBool == false) {
+      return [true];
+    }
+
+    if (afterBool == true) {
+      return [true];
+    }
+
     return [];
   }
 }

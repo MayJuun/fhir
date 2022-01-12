@@ -37,7 +37,7 @@ final symbolOperationLexer = notEquivalentLexer |
     lessLexer |
     greaterLexer |
     unionOperatorLexer |
-    andSignLexer |
+    stringConcatenationLexer |
     minusLexer |
     plusLexer |
     divSignLexer |
