@@ -2,6 +2,33 @@ import 'package:fhir/r4.dart';
 import 'package:fhir_path/fhir_path.dart';
 
 class FhirPathQuantity {
+  factory FhirPathQuantity.fromString(String quantityString) {
+    final qtyParts = quantityString.split(' ');
+    if (qtyParts.length != 2) {
+      throw FhirPathEvaluationException('Malformed quantity: $quantityString');
+    }
+    final amountString = qtyParts.first;
+    String unitString = qtyParts.last;
+
+    // Cannot just replace all apostrophes, as some units have one in the middle.
+    if (unitString.startsWith("'")) {
+      unitString = unitString.substring(1, unitString.length - 1);
+    }
+
+    // Escaped ' can all be removed
+    unitString.replaceAll(r"\'", '');
+
+    // Try to normalize duration unit
+    unitString = durationCode[unitString] ?? unitString;
+
+    // Special logic for UCUM, where the empty unit is '1';
+    if (unitString.isEmpty) {
+      unitString = '1';
+    }
+
+    return FhirPathQuantity(num.parse(amountString), unitString);
+  }
+
   FhirPathQuantity(this.amount, this.unit);
   num amount;
   String unit;

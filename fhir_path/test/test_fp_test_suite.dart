@@ -724,8 +724,12 @@ test("testSimpleBackTick1", () {expect(walkFhirPath(patientExample(), r"`Patient
     test("testIntegerLiteralConvertsToQuantity", () {
       expect(walkFhirPath(patientExample(), r"1.convertsToQuantity()"), [true]);
     });
-    test("testIntegerLiteralIsNotQuantity", () {
+// TODO: Wrong assumption about precedence
+    /*    test("testIntegerLiteralIsNotQuantity", () {
       expect(walkFhirPath(patientExample(), r"1 is Quantity.not()"), [true]);
+    }); */
+    test("testIntegerLiteralIsNotQuantity-fixed", () {
+      expect(walkFhirPath(patientExample(), r"(1 is Quantity).not()"), [true]);
     });
     test("testDecimalLiteralConvertsToQuantity", () {
       expect(

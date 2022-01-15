@@ -302,11 +302,15 @@ class ConvertsToTimeParser extends FhirPathParser {
 }
 
 class ToQuantityParser extends FhirPathParser {
+  dynamic value;
+
   ToQuantityParser();
   List execute(List results, Map<String, dynamic> passed) => [];
 }
 
 class ConvertsToQuantityParser extends FhirPathParser {
+  dynamic value;
+
   ConvertsToQuantityParser();
   List execute(List results, Map<String, dynamic> passed) => [];
 }
