@@ -322,8 +322,8 @@ class ConvertsToQuantityParser extends FhirPathParser {
   dynamic value;
 
   ConvertsToQuantityParser();
-  List execute(List results, Map<String, dynamic> passed) => throw UnsupportedError(
-      'convertsToQuantity is not implemented. results: $results, value: $value');
+  List execute(List results, Map<String, dynamic> passed) =>
+      ToQuantityParser().execute(results, passed).isNotEmpty ? [true] : [false];
 }
 
 bool _isNotAcceptedType(List results) =>
