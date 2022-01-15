@@ -305,14 +305,25 @@ class ToQuantityParser extends FhirPathParser {
   dynamic value;
 
   ToQuantityParser();
-  List execute(List results, Map<String, dynamic> passed) => [];
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _conversionException('.toQuantity()', results)
+          : results.first is FhirPathQuantity
+              ? [results.first]
+              : results.first is num
+                  ? [FhirPathQuantity(results.first, '1')]
+                  : results.first is String
+                      ? [FhirPathQuantity.fromString(results.first)]
+                      : [];
 }
 
 class ConvertsToQuantityParser extends FhirPathParser {
   dynamic value;
 
   ConvertsToQuantityParser();
-  List execute(List results, Map<String, dynamic> passed) => [];
+  List execute(List results, Map<String, dynamic> passed) => throw UnsupportedError(
+      'convertsToQuantity is not implemented. results: $results, value: $value');
 }
 
 bool _isNotAcceptedType(List results) =>

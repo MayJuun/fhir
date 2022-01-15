@@ -35,7 +35,7 @@ class FhirPathQuantity {
 
   String get value => toString();
   bool get isNaN => amount.isNaN;
-  bool get isDateTime => durationCode.contains(unit);
+  bool get isDateTime => durationCode.containsValue(unit);
   String toString() => '$amount '
       '${isDateTime ? "" : "'"}'
       '$unit'
