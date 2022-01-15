@@ -694,35 +694,35 @@ void testArgFxns() {
               }),
           [0]);
     });
-    test('iif-nested-iff-with-this', () {
+    test('iif-act-on-score', () {
       expect(
           walkFhirPath(
             null,
-            "(2 + 2).iif(\$this > 2, \$this, '<= 2')",
+            r"(2 + 2).select(iif($this > 2, $this, '<= 2'))",
           ),
           [4]);
       expect(
           walkFhirPath(
             null,
-            "(1 + 1).iif(\$this > 2, \$this, '<= 2')",
+            r"(1 + 1).select(iif($this > 2, $this, '<= 2'))",
           ),
           ['<= 2']);
       expect(
           walkFhirPath(
             null,
-            "(1 + 1).iif(\$this > 2, \$this, iif(\$this < 2, \$this.toString() + ' is below 2', \$this.toString() + ' is above 2'))",
+            r"(1 + 1).select(iif($this > 2, $this, iif($this < 2, $this.toString() + ' is below 2', $this.toString() + ' is above 2')))",
           ),
           ['2 is above 2']);
       expect(
           walkFhirPath(
             null,
-            "(2 + 2).iif(\$this > 2, \$this, iif(\$this < 2, \$this.toString() + ' is below 2', \$this.toString() + ' is above 2'))",
+            r"(2 + 2).select(iif($this > 2, $this, iif($this < 2, $this.toString() + ' is below 2', $this.toString() + ' is above 2')))",
           ),
           [4]);
       expect(
           walkFhirPath(
             null,
-            "(1 + 0).iif(\$this > 2, \$this, iif(\$this < 2, \$this.toString() + ' is below 2', \$this.toString() + ' is above 2'))",
+            r"(1 + 0).select(iif($this > 2, $this, iif($this < 2, $this.toString() + ' is below 2', $this.toString() + ' is above 2')))",
           ),
           ['1 is below 2']);
     });

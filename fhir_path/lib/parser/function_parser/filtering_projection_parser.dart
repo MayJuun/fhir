@@ -36,9 +36,16 @@ class SelectParser extends ValueParser<ParserList> {
   SelectParser();
   late ParserList value;
   List execute(List results, Map<String, dynamic> passed) {
-    final finalResults = [];
-    results.forEach((e) => finalResults.addAll(value.execute([e], passed)));
-    return finalResults;
+    return IterationContext.withIterationContext((iterationContext) {
+      final outputCollection = [];
+      results.forEachIndexed((i, e) {
+        iterationContext.thisValue = e;
+        iterationContext.indexValue = i;
+        outputCollection.addAll(value.execute([e], passed));
+      });
+
+      return outputCollection;
+    }, passed);
   }
 }
 

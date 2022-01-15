@@ -1,5 +1,3 @@
-import 'package:fhir_path/fhir_path.dart';
-
 /// FhirPathParser: base parser
 abstract class FhirPathParser {
   List execute(List results, Map<String, dynamic> passed) => [];
@@ -34,21 +32,7 @@ class ParserList extends FhirPathParser {
       ..addAll(toAdd);
 
     value.forEach((v) {
-      if (v is ThisParser) {
-        final tempResults = [];
-        for (var r in results) {
-          tempResults.addAll(v.execute([r], passed).toList());
-        }
-        addToList(tempResults);
-      } else if (v is IndexParser) {
-        final tempResults = [];
-        for (var i = 0; i < results.length; i++) {
-          tempResults.addAll(v.execute([i], passed).toList());
-        }
-        addToList(tempResults);
-      } else {
-        addToList(v.execute(results, passed).toList());
-      }
+      addToList(v.execute(results, passed).toList());
     });
     return results;
   }
