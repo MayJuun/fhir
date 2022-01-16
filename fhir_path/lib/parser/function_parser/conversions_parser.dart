@@ -322,8 +322,18 @@ class ConvertsToQuantityParser extends FhirPathParser {
   dynamic value;
 
   ConvertsToQuantityParser();
-  List execute(List results, Map<String, dynamic> passed) =>
-      ToQuantityParser().execute(results, passed).isNotEmpty ? [true] : [false];
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+      ? []
+      : results.length > 1
+          ? throw _conversionException('.convertsToQuantity()', results)
+          : (results.first is num ||
+                  results.first is FhirPathQuantity ||
+                  results.first is bool)
+              ? [true]
+              : (results.first is String &&
+                      ToQuantityParser().execute(results, passed).isNotEmpty)
+                  ? [true]
+                  : [false];
 }
 
 bool _isNotAcceptedType(List results) =>
