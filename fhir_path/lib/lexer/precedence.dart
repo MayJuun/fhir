@@ -94,8 +94,10 @@ const operatorOrderMap = {
   ExcludeParser: 1,
   ExistsParser: 1,
   ExpParser: 1,
+  ExtensionParser: 1,
   FirstParser: 1,
   FloorParser: 1,
+  FpWhereParser: 1,
   HasValueParser: 1,
   IdentifierParser: 1,
   IifParser: 1,
@@ -149,6 +151,5 @@ const operatorOrderMap = {
   TruncateParser: 1,
   UnionFunctionParser: 1,
   UpperParser: 1,
-  WhereParser: 1,
   WhiteSpaceParser: 1,
 };

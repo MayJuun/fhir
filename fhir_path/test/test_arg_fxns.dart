@@ -619,6 +619,13 @@ void testArgFxns() {
           [3.142]);
     });
 
+    test('complex-extension', () {
+      expect(
+          walkFhirPath(questionnaireResponse,
+              r'%context.repeat(item).answer.value.extension(%`ext-ordinalValue`).value.sum()'),
+          [13]);
+    });
+
     test('iif-basic', () {
       expect(walkFhirPath(null, 'iif(true, 1, 0)'), [1]);
       expect(walkFhirPath(null, 'iif(false, 1, 0)'), [0]);

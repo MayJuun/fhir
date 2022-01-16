@@ -48,6 +48,11 @@ class EnvVariableParser extends ValueParser<String> {
       return ['http://hl7.org/fhir/ValueSet/$valueSet'];
     }
 
+    if (variableName.startsWith('%ext-')) {
+      final extension = variableName.substring(5);
+      return ['http://hl7.org/fhir/StructureDefinition/$extension'];
+    }
+
     final passedValue = passed[variableName];
     if (passedValue == null) {
       throw FhirPathEvaluationException(

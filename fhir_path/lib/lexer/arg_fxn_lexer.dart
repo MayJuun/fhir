@@ -59,6 +59,10 @@ final Parser<RepeatParser> repeatLexer =
 final Parser<OfTypeParser> ofTypeLexer =
     (string('ofType(') | string('.ofType(')).map((_) => OfTypeParser());
 
+final Parser<ExtensionParser> extensionLexer =
+    (string('extension(') | string('.extension('))
+        .map((_) => ExtensionParser());
+
 /// identifies logs
 final Parser<LogParser> logLexer =
     (string('log(') | string('.log(')).map((_) => LogParser());

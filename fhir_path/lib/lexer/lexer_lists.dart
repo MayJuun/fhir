@@ -57,6 +57,7 @@ final functionLexer = unionFunctionLexer |
     selectLexer |
     repeatLexer |
     ofTypeLexer |
+    extensionLexer |
     logLexer |
     powerLexer |
     roundLexer |
