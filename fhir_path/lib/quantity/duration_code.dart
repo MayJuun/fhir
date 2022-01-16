@@ -1,5 +1,5 @@
 // http://hl7.org/fhirpath/#time-valued-quantities
-const durationCode = {
+const timeValuedQuantitiesUnits = {
   'milliseconds': 'millisecond',
   'seconds': 'second',
   'minutes': 'minute',
@@ -16,4 +16,14 @@ const durationCode = {
   'week': 'week',
   'month': 'month',
   'year': 'year',
+};
+
+// https://www.hl7.org/fhir/fhirpath.html#quantity
+const definiteQuantityDurationUnits = {
+  'a': 'year',
+  'mo': 'month',
+  'd': 'day',
+  'h': 'hour',
+  'min': 'minute',
+  's': 'second',
 };

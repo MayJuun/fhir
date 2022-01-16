@@ -18,8 +18,8 @@ class FhirPathQuantity {
     // Escaped ' can all be removed
     unitString.replaceAll(r"\'", '');
 
-    // Try to normalize duration unit
-    unitString = durationCode[unitString] ?? unitString;
+    // Try to normalize time-valued units
+    unitString = timeValuedQuantitiesUnits[unitString] ?? unitString;
 
     // Special logic for UCUM, where the empty unit is '1';
     if (unitString.isEmpty) {
@@ -35,11 +35,10 @@ class FhirPathQuantity {
 
   String get value => toString();
   bool get isNaN => amount.isNaN;
-  bool get isDateTime => durationCode.containsValue(unit);
-  String toString() => '$amount '
-      '${isDateTime ? "" : "'"}'
-      '$unit'
-      '${isDateTime ? "" : "'"}';
+  bool get isTimeValued => timeValuedQuantitiesUnits.containsValue(unit);
+  bool get isDefiniteDuration =>
+      definiteQuantityDurationUnits.containsKey(unit);
+  String toString() => isTimeValued ? '$amount $unit' : "$amount '$unit'";
 
   dynamic subtract(dynamic executedBefore) {
     amount = amount * -1;
@@ -49,27 +48,23 @@ class FhirPathQuantity {
   }
 
   dynamic add(dynamic executedBefore) {
-    final yearAmount = (unit.contains('year')
+    final yearAmount = (unit == 'year'
             ? amount
-            : unit.contains('month')
+            : unit == 'month'
                 ? (amount / 12).truncate()
                 : 0)
         .toInt();
-    final monthAmount =
-        (unit.contains('month') ? amount.remainder(12) : 0).toInt();
-    final dayAmount = (unit.contains('week')
+    final monthAmount = (unit == 'month' ? amount.remainder(12) : 0).toInt();
+    final dayAmount = (unit == 'week'
             ? amount * 7
-            : unit.contains('day')
+            : unit == 'day'
                 ? amount
                 : 0)
         .toInt();
-    final hourAmount = (unit.contains('hour') ? amount : 0).toInt();
-    final minuteAmount = (unit.contains('minut') ? amount : 0).toInt();
-    final secondAmount =
-        (unit.contains('second') && !unit.contains('millisecond') ? amount : 0)
-            .toInt();
-    final millisecondAmount =
-        (unit.contains('millisecond') ? amount : 0).toInt();
+    final hourAmount = (unit == 'hour' ? amount : 0).toInt();
+    final minuteAmount = (unit == 'minute' ? amount : 0).toInt();
+    final secondAmount = (unit == 'second' ? amount : 0).toInt();
+    final millisecondAmount = (unit == 'millisecond' ? amount : 0).toInt();
     if ((executedBefore is Date &&
             (hourAmount != 0 ||
                 minuteAmount != 0 ||
@@ -150,19 +145,18 @@ class FhirPathQuantity {
     return this;
   }
 
-  bool hasSameUnit(String string) {
-    final thisRunes = unit.runes.toList();
-    final thoseRunes = string.runes.toList();
-    if (thisRunes.length != thoseRunes.length) {
-      return false;
-    } else {
-      for (var i = 0; i < thisRunes.length; i++) {
-        if (thisRunes[i] != thoseRunes[i]) {
-          return false;
-        }
-      }
+  bool hasSameUnit(String otherUnit) {
+    if (unit == otherUnit) {
       return true;
     }
+    // For the sake of equality, second and UCUM 's' are identical
+    // http://hl7.org/fhirpath/#quantity-equality
+    if ((unit == 'second' || unit == 's') &&
+        (otherUnit == 'second' || otherUnit == 's')) {
+      return true;
+    }
+
+    return false;
   }
 
   bool operator ==(Object o) {
