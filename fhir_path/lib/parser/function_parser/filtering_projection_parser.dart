@@ -131,6 +131,8 @@ class OfTypeParser extends ValueParser<ParserList> {
 }
 
 class ExtensionParser extends ValueParser<ParserList> {
+  static const extensionKey = '__extension';
+
   ExtensionParser();
 
   @override
@@ -144,7 +146,6 @@ class ExtensionParser extends ValueParser<ParserList> {
       return [];
     }
 
-    if (results.first is Map) {
       // .extension(exturl) is short-hand for .extension.where(url='exturl')
       final urlEquals = EqualsParser();
       urlEquals.before = ParserList([IdentifierParser('url')]);
@@ -158,12 +159,5 @@ class ExtensionParser extends ValueParser<ParserList> {
           ParserList([IdentifierParser('extension'), whereParser]);
 
       return extensionParsers.execute(results.toList(), passed);
-    } else {
-      // TODO: Really implement this on primitive types
-      // (sounds like a very fundamental rewrite)
-      throw FhirPathEvaluationException(
-          '.extension() is unsupported on primitive types.',
-          collection: results);
-    }
   }
 }
