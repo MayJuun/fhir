@@ -8,7 +8,7 @@ import 'test_paths.dart';
 import 'test_questionnaire.dart';
 
 void main() {
-  testFhirPathTestSuite();
+  // testFhirPathTestSuite();
   testBasicTypes();
   testPaths();
   testNoArgFxns();

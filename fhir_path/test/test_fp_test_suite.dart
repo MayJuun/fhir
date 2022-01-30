@@ -89,11 +89,6 @@ test("testSimpleBackTick1", () {expect(walkFhirPath(patientExample(), r"`Patient
         [true]);
   });
 
-  test("testPolymorphismIsA", () {
-    expect(walkFhirPath(observationExample(), r"Observation.value is Quantity"),
-        [true]);
-  });
-
 // TODO: Test makes wrong assumption about precedence
 /*  test("testPolymorphismIsB", () {
     expect(

@@ -8,9 +8,11 @@ void main() {
 
   // final dateTime = DateTime(2020, 1, 1);
   // print(DateTime(dateTime.year + 12, dateTime.month + 27, dateTime.day + 1065));
-  final response = QuestionnaireResponse.fromJson(questionnaireResponse);
+  // final response = QuestionnaireResponse.fromJson(questionnaireResponse);
 
-  print(walkFhirPath(null, 'iif(true, 1, 0)'));
+  print(walkFhirPath(
+      null, " %resource.item.where(linkId='/8302-2').answer.value*0.0254",
+      resource: arguments));
   //       expect(walkFhirPath(null, 'iif(true, 1, 0)'), [1]);
   //     expect(walkFhirPath(null, 'iif(false, 1, 0)'), [0]);
   //     expect(walkFhirPath(null, 'iif({}, 1, 0)'), [0]);
@@ -32,6 +34,34 @@ void main() {
   //   '%practitioner': null,
   // }));
 }
+
+final arguments = {
+  "resourceType": "QuestionnaireResponse",
+  "status": "in-progress",
+  "item": [
+    {
+      "linkId": "/29463-7",
+      "text": "Weight",
+      "answer": [
+        {"valueDecimal": 185}
+      ]
+    },
+    {"linkId": "/8352-7", "text": "Clothing worn during measure", "answer": []},
+    {
+      "linkId": "/8302-2",
+      "text": "Body height",
+      "answer": [
+        {"valueDecimal": 66.89999999999999}
+      ]
+    },
+    {"linkId": "/39156-5", "text": "BMI", "answer": []},
+    {
+      "linkId": "/8361-8",
+      "text": "Bdy position with respect to gravity",
+      "answer": []
+    }
+  ]
+};
 
 final bundle = Bundle.fromJson({
   "resourceType": "Bundle",
