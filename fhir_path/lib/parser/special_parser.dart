@@ -51,7 +51,8 @@ class IterationContext {
 
 class ThisParser extends FhirPathParser {
   ThisParser();
-  List execute(List results, Map<String, dynamic> passed) => results;
+  List execute(List results, Map<String, dynamic> passed) =>
+      [IterationContext.current(passed).thisValue];
 }
 
 class TotalParser extends ValueParser<String> {

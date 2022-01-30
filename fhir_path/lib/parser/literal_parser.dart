@@ -79,11 +79,15 @@ class EnvVariableParser extends ValueParser<String> {
 
 class QuantityParser extends ValueParser<FhirPathQuantity> {
   QuantityParser(String stringValue) {
-    final stringList = stringValue.replaceAll("'", '').split(' ');
-    value = FhirPathQuantity(num.parse(stringList.first), stringList.last);
+    value = FhirPathQuantity.fromString(stringValue);
   }
   late FhirPathQuantity value;
   List execute(List results, Map<String, dynamic> passed) => [value];
+
+  @override
+  String toString() {
+    return 'Quantity: $value';
+  }
 }
 
 class IntegerParser extends ValueParser<int> {
@@ -93,7 +97,7 @@ class IntegerParser extends ValueParser<int> {
 
   @override
   String toString() {
-    return 'IntegerParser: $value';
+    return 'Integer: $value';
   }
 }
 
@@ -101,6 +105,11 @@ class DecimalParser extends ValueParser<double> {
   DecimalParser(String newValue) : value = double.parse(newValue);
   double value;
   List execute(List results, Map<String, dynamic> passed) => [value];
+
+  @override
+  String toString() {
+    return 'Decimal: $value';
+  }
 }
 
 class IdentifierParser extends ValueParser<String> {
