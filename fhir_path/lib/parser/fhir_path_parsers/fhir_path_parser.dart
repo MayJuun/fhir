@@ -58,5 +58,7 @@ class ParserList extends FhirPathParser {
   FhirPathParser get first => value.first;
   FhirPathParser get last => value.last;
   FhirPathParser removeAt(int i) => value.removeAt(i);
-  String toString() => 'ParserList: ${value.map((e) => e.toString())}';
+
+  @override
+  String toString() => 'PL(${value.length}): ${value.map((e) => e.toString())}';
 }
