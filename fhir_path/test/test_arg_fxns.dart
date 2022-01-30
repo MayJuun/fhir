@@ -2,6 +2,8 @@ import 'package:fhir/r4.dart';
 import 'package:fhir_path/fhir_path.dart';
 import 'package:test/test.dart';
 
+import 'test_fp_test_suite.dart';
+
 dynamic walkPath(dynamic arg) => arg;
 
 void testArgFxns() {
@@ -619,6 +621,13 @@ void testArgFxns() {
           [3.142]);
     });
 
+    test('complex-extension', () {
+      expect(
+          walkFhirPath(questionnaireResponse,
+              r'%context.repeat(item).answer.value.extension(%`ext-ordinalValue`).value.sum()'),
+          [13]);
+    });
+
     test('iif-basic', () {
       expect(walkFhirPath(null, 'iif(true, 1, 0)'), [1]);
       expect(walkFhirPath(null, 'iif(false, 1, 0)'), [0]);
@@ -725,6 +734,21 @@ void testArgFxns() {
             "(1 + 0).iif(\$this > 2, \$this, iif(\$this < 2, \$this.toString() + ' is below 2', \$this.toString() + ' is above 2'))",
           ),
           ['1 is below 2']);
+    });
+
+    group('extensions', () {
+      test(
+          'extensionOnPolymorphic',
+          () => expect(
+              walkFhirPath(questionnaireResponse,
+                  r'%context.repeat(item).answer.value.extension.where(url=%`ext-ordinalValue`).value'),
+              [4, 5, 4]));
+      test(
+          'extensionOnPrimitive',
+          () => expect(
+              walkFhirPath(patientExample(),
+                  r'Patient.contact.name.family.extension(%`ext-humanname-own-prefix`).value'),
+              ['VV']));
     });
 
     /// ToDo: trace

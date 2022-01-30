@@ -129,3 +129,35 @@ class OfTypeParser extends ValueParser<ParserList> {
     return finalResults;
   }
 }
+
+class ExtensionParser extends ValueParser<ParserList> {
+  static const extensionKey = '__extension';
+
+  ExtensionParser();
+
+  @override
+  List execute(List results, Map<String, dynamic> passed) {
+    if (results.isEmpty) {
+      return [];
+    }
+
+    final extensionUrl = value.execute(results.toList(), passed).firstOrNull;
+    if (extensionUrl == null) {
+      return [];
+    }
+
+      // .extension(exturl) is short-hand for .extension.where(url='exturl')
+      final urlEquals = EqualsParser();
+      urlEquals.before = ParserList([IdentifierParser('url')]);
+      urlEquals.after = ParserList([StringParser("'$extensionUrl'")]);
+      final extensionUrlPredicate = ParserList([
+        urlEquals,
+      ]);
+      final whereParser = FpWhereParser();
+      whereParser.value = extensionUrlPredicate;
+      final extensionParsers =
+          ParserList([IdentifierParser('extension'), whereParser]);
+
+      return extensionParsers.execute(results.toList(), passed);
+  }
+}

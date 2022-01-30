@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart' as r4;
@@ -46,6 +47,11 @@ class EnvVariableParser extends ValueParser<String> {
     if (variableName.startsWith('%vs-')) {
       final valueSet = variableName.substring(4);
       return ['http://hl7.org/fhir/ValueSet/$valueSet'];
+    }
+
+    if (variableName.startsWith('%ext-')) {
+      final extension = variableName.substring(5);
+      return ['http://hl7.org/fhir/StructureDefinition/$extension'];
     }
 
     final passedValue = passed[variableName];
@@ -101,48 +107,81 @@ class IdentifierParser extends ValueParser<String> {
   IdentifierParser(this.value);
   String value;
   List execute(List results, Map<String, dynamic> passed) {
+    final identifierName = value;
+
     final finalResults = [];
+    final finalPrimitiveExtensions =
+        List<dynamic>.filled(results.length, null, growable: false);
+
+    final passedExtensions = passed[ExtensionParser.extensionKey];
+    passed[ExtensionParser.extensionKey] = null;
+
     if (passed.isVersion(FhirVersion.r4)
-        ? r4.ResourceUtils.resourceTypeFromStringMap.keys.contains(value)
+        ? r4.ResourceUtils.resourceTypeFromStringMap.keys
+            .contains(identifierName)
         : passed.isVersion(FhirVersion.r5)
-            ? r5.ResourceUtils.resourceTypeFromStringMap.keys.contains(value)
+            ? r5.ResourceUtils.resourceTypeFromStringMap.keys
+                .contains(identifierName)
             : passed.isVersion(FhirVersion.dstu2)
                 ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
-                    .contains(value)
+                    .contains(identifierName)
                 : stu3.ResourceUtils.resourceTypeFromStringMap.keys
-                        .contains(value) &&
+                        .contains(identifierName) &&
                     (passed.hasNoContext
                         ? false
-                        : passed.context?['resourceType'] == value)) {
+                        : passed.context?['resourceType'] == identifierName)) {
       finalResults.add(passed.context);
     } else {
-      results.forEach((r) {
+      results.forEachIndexed((i, r) {
         if (r is Map) {
-          dynamic rValue = r[value];
+          String jsonIdentifierName = identifierName;
+          dynamic rValue = r[identifierName];
           if (rValue == null) {
             // Support for polymorphism:
             // If the key cannot be found in the r-map, then find
             // a key that starts with the same word, e.g. 'value' identifier will
             // match 'valueDateTime' key.
             r.forEach((k, v) {
-              if (k.toString().startsWith(value) &&
-                  polymorphicPrefixes.contains(value) &&
+              if (k.toString().startsWith(identifierName) &&
+                  polymorphicPrefixes.contains(identifierName) &&
                   startsWithAPolymorphicPrefix(k.toString())) {
                 rValue = v;
+                jsonIdentifierName = k;
               }
             });
+          }
+
+          final jsonPrimitiveExtension =
+              r['_$jsonIdentifierName'] as Map<String, dynamic>?;
+          if (jsonPrimitiveExtension != null) {
+            finalPrimitiveExtensions[i] = jsonPrimitiveExtension['extension'];
           }
 
           if (rValue is List) {
             finalResults.addAll(rValue);
           } else if (rValue != null) {
             finalResults.add(rValue);
-          } else if (r['resourceType'] == value) {
+          } else if (r['resourceType'] == identifierName) {
             finalResults.add(r);
+          }
+        } else {
+          if (identifierName == "extension") {
+            // Special processing for extensions on primitives
+            if (passedExtensions != null) {
+              final extensionOnPrimitive = passedExtensions[i];
+              if (extensionOnPrimitive != null) {
+                finalResults.addAll(extensionOnPrimitive);
+              }
+            } else {
+              // This primitive does not have an extension
+              // Do nothing.
+            }
           }
         }
       });
     }
+
+    passed[ExtensionParser.extensionKey] = finalPrimitiveExtensions;
 
     return finalResults;
   }
