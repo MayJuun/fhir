@@ -11,8 +11,9 @@ void main() {
   // final response = QuestionnaireResponse.fromJson(questionnaireResponse);
 
   print(walkFhirPath(
-      null, " %resource.item.where(linkId='/8302-2').answer.value*0.0254",
-      resource: arguments));
+    arguments,
+    " %resource.item.where(linkId='/8302-2').answer.value*0.0254",
+  ));
   //       expect(walkFhirPath(null, 'iif(true, 1, 0)'), [1]);
   //     expect(walkFhirPath(null, 'iif(false, 1, 0)'), [0]);
   //     expect(walkFhirPath(null, 'iif({}, 1, 0)'), [0]);
