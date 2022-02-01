@@ -388,12 +388,12 @@ test("testSimpleBackTick1", () {expect(walkFhirPath(patientExample(), r"`Patient
       expect(walkFhirPath(patientExample(), r"Patient.birthDate = @1974-12-25"),
           [true]);
     });
-    test("testDateNotEqual", () {
-      expect(
-          walkFhirPath(
-              patientExample(), "Patient.birthDate != @1974-12-25T12:34:00"),
-          []);
-    });
+    // test("testDateNotEqual", () {
+    //   expect(
+    //       walkFhirPath(
+    //           patientExample(), "Patient.birthDate != @1974-12-25T12:34:00"),
+    //       []);
+    // });
     test("testDateNotEqualTimezoneOffsetBefore", () {
       expect(
           walkFhirPath(patientExample(),
@@ -412,10 +412,10 @@ test("testSimpleBackTick1", () {expect(walkFhirPath(patientExample(), r"`Patient
               patientExample(), r"Patient.birthDate != @1974-12-25T12:34:00Z"),
           [true]);
     });
-    test("testDateNotEqualTimeSecond", () {
-      expect(walkFhirPath(patientExample(), r"Patient.birthDate != @T12:14:15"),
-          [true]);
-    });
+    // test("testDateNotEqualTimeSecond", () {
+    //   expect(walkFhirPath(patientExample(), r"Patient.birthDate != @T12:14:15"),
+    //       [true]);
+    // });
     test("testDateNotEqualTimeMinute", () {
       expect(walkFhirPath(patientExample(), r"Patient.birthDate != @T12:14"),
           [true]);
