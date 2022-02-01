@@ -15,6 +15,7 @@ class SumParser extends FhirPathParser {
                     collection: results))
             .sum
       ];
+  String prettyPrint(int indent) => '${"  " * indent}SumParser';
 }
 
 class MinParser extends FhirPathParser {
@@ -30,6 +31,8 @@ class MinParser extends FhirPathParser {
                     collection: results))
             .min
       ];
+
+  String prettyPrint(int indent) => '${"  " * indent}MinParser';
 }
 
 class MaxParser extends FhirPathParser {
@@ -45,6 +48,7 @@ class MaxParser extends FhirPathParser {
                     collection: results))
             .max
       ];
+  String prettyPrint(int indent) => '${"  " * indent}MaxParser';
 }
 
 class AvgParser extends FhirPathParser {
@@ -60,6 +64,7 @@ class AvgParser extends FhirPathParser {
                     collection: results))
             .average
       ];
+  String prettyPrint(int indent) => '${"  " * indent}AvgParser';
 }
 
 class AnswersParser extends FhirPathParser {
@@ -74,6 +79,8 @@ class AnswersParser extends FhirPathParser {
     });
     return answers;
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}AnswersParser';
 }
 
 class OrdinalParser extends FhirPathParser {
@@ -147,4 +154,6 @@ class OrdinalParser extends FhirPathParser {
 
     return newResults;
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}OrdinalParser';
 }

@@ -30,6 +30,9 @@ class FpWhereParser extends FunctionParser {
 
     return returnList;
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}FpWhereParser\n${value.prettyPrint(indent + 1)}';
 }
 
 class SelectParser extends ValueParser<ParserList> {
@@ -47,6 +50,9 @@ class SelectParser extends ValueParser<ParserList> {
       return outputCollection;
     }, passed);
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}SelectParser\n${value.prettyPrint(indent + 1)}';
 }
 
 class RepeatParser extends ValueParser<ParserList> {
@@ -75,6 +81,9 @@ class RepeatParser extends ValueParser<ParserList> {
     }
     return finalResults;
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}RepeatParser\n${value.prettyPrint(indent + 1)}';
 }
 
 class OfTypeParser extends ValueParser<ParserList> {
@@ -135,6 +144,9 @@ class OfTypeParser extends ValueParser<ParserList> {
     });
     return finalResults;
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}OfTypeParser\n${value.prettyPrint(indent + 1)}';
 }
 
 class ExtensionParser extends ValueParser<ParserList> {
@@ -153,18 +165,21 @@ class ExtensionParser extends ValueParser<ParserList> {
       return [];
     }
 
-      // .extension(exturl) is short-hand for .extension.where(url='exturl')
-      final urlEquals = EqualsParser();
-      urlEquals.before = ParserList([IdentifierParser('url')]);
-      urlEquals.after = ParserList([StringParser("'$extensionUrl'")]);
-      final extensionUrlPredicate = ParserList([
-        urlEquals,
-      ]);
-      final whereParser = FpWhereParser();
-      whereParser.value = extensionUrlPredicate;
-      final extensionParsers =
-          ParserList([IdentifierParser('extension'), whereParser]);
+    // .extension(exturl) is short-hand for .extension.where(url='exturl')
+    final urlEquals = EqualsParser();
+    urlEquals.before = ParserList([IdentifierParser('url')]);
+    urlEquals.after = ParserList([StringParser("'$extensionUrl'")]);
+    final extensionUrlPredicate = ParserList([
+      urlEquals,
+    ]);
+    final whereParser = FpWhereParser();
+    whereParser.value = extensionUrlPredicate;
+    final extensionParsers =
+        ParserList([IdentifierParser('extension'), whereParser]);
 
-      return extensionParsers.execute(results.toList(), passed);
+    return extensionParsers.execute(results.toList(), passed);
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}ExtensionParser\n${value.prettyPrint(indent + 1)}';
 }

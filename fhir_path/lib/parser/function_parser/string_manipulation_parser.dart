@@ -15,6 +15,9 @@ class IndexOfParser extends ValueParser<ParserList> {
                     ? []
                     : [results.first.toString().indexOf(executedValue.first)];
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}IndexOfParser\n${value.prettyPrint(indent + 1)}';
 }
 
 class SubstringParser extends ValueParser<ParserList> {
@@ -60,6 +63,9 @@ class SubstringParser extends ValueParser<ParserList> {
                                 collection: results,
                                 arguments: executedValue);
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}SubstringParser\n${value.prettyPrint(indent + 1)}';
 }
 
 class StartsWithParser extends ValueParser<ParserList> {
@@ -79,6 +85,9 @@ class StartsWithParser extends ValueParser<ParserList> {
                         results.first.toString().startsWith(executedValue.first)
                       ];
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}StartsWithParser\n${value.prettyPrint(indent + 1)}';
 }
 
 class EndsWithParser extends ValueParser<ParserList> {
@@ -96,6 +105,9 @@ class EndsWithParser extends ValueParser<ParserList> {
                     ? [true]
                     : [results.first.toString().endsWith(executedValue.first)];
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}EndsWithParser\n${value.prettyPrint(indent + 1)}';
 }
 
 // http://hl7.org/fhirpath/#containssubstring-string-boolean
@@ -110,6 +122,9 @@ class ContainsFunctionParser extends ValueParser<ParserList> {
             .map((e) => e is String && e.contains(executedValue.first))
             .toList();
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}ContainsFunctionParser\n${value.prettyPrint(indent + 1)}';
 }
 
 class UpperParser extends FhirPathParser {
@@ -119,6 +134,7 @@ class UpperParser extends FhirPathParser {
       : results.length > 1
           ? throw _requiresList('.upper()', results)
           : [results.first.toString().toUpperCase()];
+  String prettyPrint(int indent) => '${"  " * indent}UpperParser';
 }
 
 class LowerParser extends FhirPathParser {
@@ -128,6 +144,7 @@ class LowerParser extends FhirPathParser {
       : results.length > 1
           ? throw _requiresList('.lower()', results)
           : [results.first.toString().toLowerCase()];
+  String prettyPrint(int indent) => '${"  " * indent}LowerParser';
 }
 
 class ReplaceParser extends ValueParser<ParserList> {
@@ -147,6 +164,8 @@ class ReplaceParser extends ValueParser<ParserList> {
                         .replaceAll(executedValue.first, executedValue.last)
                   ];
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}ReplaceParser';
 }
 
 class FpMatchesParser extends ValueParser<ParserList> {
@@ -165,6 +184,9 @@ class FpMatchesParser extends ValueParser<ParserList> {
                         .hasMatch(results.first.toString())
                   ];
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}FpMatchesParser\n${value.prettyPrint(indent + 1)}';
 }
 
 class ReplaceMatchesParser extends ValueParser<ParserList> {
@@ -190,6 +212,9 @@ class ReplaceMatchesParser extends ValueParser<ParserList> {
                     collection: results,
                     arguments: value);
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}ReplaceMatchesParser\n${value.prettyPrint(indent + 1)}';
 }
 
 class LengthParser extends FhirPathParser {
@@ -203,6 +228,7 @@ class LengthParser extends FhirPathParser {
               : results.first is String
                   ? [results.first.value.length]
                   : throw _requiresString('.length()', results);
+  String prettyPrint(int indent) => '${"  " * indent}LengthParser';
 }
 
 class ToCharsParser extends FhirPathParser {
@@ -216,6 +242,7 @@ class ToCharsParser extends FhirPathParser {
               : results.first is String
                   ? results.first.value.split('')
                   : throw _requiresString('.toChar()', results);
+  String prettyPrint(int indent) => '${"  " * indent}ToCharsParser';
 }
 
 Exception _requiresList(String function, List results) =>

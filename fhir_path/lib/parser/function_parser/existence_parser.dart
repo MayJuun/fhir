@@ -7,6 +7,7 @@ class EmptyParser extends FhirPathParser {
   EmptyParser();
   List execute(List results, Map<String, dynamic> passed) =>
       results.isEmpty ? [true] : [false];
+  String prettyPrint(int indent) => '${"  " * indent}EmptyParser';
 }
 
 class HasValueParser extends FhirPathParser {
@@ -38,6 +39,9 @@ class HasValueParser extends FhirPathParser {
       return [true];
     }
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}HasValueParser\n${value.prettyPrint(indent + 1)}';
 }
 
 /// Returns true if the collection has any elements, and false otherwise.
@@ -69,6 +73,9 @@ class ExistsParser extends FunctionParser {
 
     return [returnList.isNotEmpty];
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}ExistsParser\n${value.prettyPrint(indent + 1)}';
 }
 
 class AllParser extends ValueParser<ParserList> {
@@ -94,6 +101,9 @@ class AllParser extends ValueParser<ParserList> {
       return [allResult];
     }, passed);
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}AllParser\n${value.prettyPrint(indent + 1)}';
 }
 
 /// Takes a collection of Boolean values and returns true if all the items are true.
@@ -107,6 +117,8 @@ class AllTrueParser extends FhirPathParser {
     results.removeWhere((element) => element == true);
     return [results.isEmpty];
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}AllTrueParser';
 }
 
 /// Takes a collection of Boolean values and returns true if any of the items are true.
@@ -120,6 +132,8 @@ class AnyTrueParser extends FhirPathParser {
     results.retainWhere((element) => element == true);
     return [results.length > 0];
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}AnyTrueParser';
 }
 
 /// Takes a collection of Boolean values and returns true if all the items are false.
@@ -133,6 +147,8 @@ class AllFalseParser extends FhirPathParser {
     results.removeWhere((element) => element == false);
     return [results.length == 0];
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}AllFalseParser';
 }
 
 /// Takes a collection of Boolean values and returns true if any of the items are false.
@@ -146,6 +162,8 @@ class AnyFalseParser extends FhirPathParser {
     results.retainWhere((element) => element == false);
     return [results.length > 0];
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}AnyFalseParser';
 }
 
 class SubsetOfParser extends ValueParser<ParserList> {
@@ -164,6 +182,9 @@ class SubsetOfParser extends ValueParser<ParserList> {
       return [true];
     }
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}SubsetOfParser\n${value.prettyPrint(indent + 1)}';
 }
 
 class SupersetOfParser extends FhirPathParser {
@@ -182,11 +203,15 @@ class SupersetOfParser extends FhirPathParser {
       return [true];
     }
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}SupersetOfParser\n${value.prettyPrint(indent + 1)}';
 }
 
 class CountParser extends FhirPathParser {
   CountParser();
   List execute(List results, Map<String, dynamic> passed) => [results.length];
+  String prettyPrint(int indent) => '${"  " * indent}CountParser';
 }
 
 class DistinctParser extends FhirPathParser {
@@ -200,6 +225,8 @@ class DistinctParser extends FhirPathParser {
     }
     return resultsList;
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}DistinctParser';
 }
 
 class IsDistinctParser extends FhirPathParser {
@@ -213,4 +240,6 @@ class IsDistinctParser extends FhirPathParser {
     }
     return [resultsList.length == results.length];
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}IsDistinctParser';
 }

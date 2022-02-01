@@ -197,10 +197,15 @@ void testBasicTypes() {
       );
     });
     test('Duration quantities', () {
-      expect(walkFhirPath(null, r"1 seconds = 1 second"), [true]);
-      expect(walkFhirPath(null, r"1 seconds = 1 's'"), [true]);
-      expect(walkFhirPath(null, r"2 seconds = 2 's'"), [true]);
-      expect(walkFhirPath(null, r"1 week != 1 'w'"), [true]);
+      expect(
+          walkFhirPath(context: null, pathExpression: r"1 seconds = 1 second"),
+          [true]);
+      expect(walkFhirPath(context: null, pathExpression: r"1 seconds = 1 's'"),
+          [true]);
+      expect(walkFhirPath(context: null, pathExpression: r"2 seconds = 2 's'"),
+          [true]);
+      expect(walkFhirPath(context: null, pathExpression: r"1 week != 1 'w'"),
+          [true]);
     });
     test('Non-Escape Sequences', () {
       /// ToDo: figure out escape sequences

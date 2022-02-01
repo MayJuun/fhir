@@ -15,6 +15,9 @@ class UnionFunctionParser extends FunctionParser {
       ..addAll(executedValue.where((v) => notFoundInList(finalResults, v)));
     return finalResults;
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}UnionParser\n${value.prettyPrint(indent + 1)}';
 }
 
 /// Merge the input and other collections into a single collection
@@ -33,4 +36,7 @@ class CombineParser extends FunctionParser {
       return executedValue;
     }
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}CombineParser\n${value.prettyPrint(indent + 1)}';
 }

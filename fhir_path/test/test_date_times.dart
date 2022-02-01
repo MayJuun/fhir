@@ -6,34 +6,57 @@ void testDateTimes() {
   group('DateTime Arithmetic', () {
     final response = QuestionnaireResponse.fromJson(questionnaireResponse);
     test('Basic Date Addition/Subtraction', () {
-      expect(walkFhirPath(response.toJson(), "authored"),
+      expect(
+          walkFhirPath(context: response.toJson(), pathExpression: "authored"),
           ['2014-12-11T04:44:16Z']);
-      expect(walkFhirPath(response.toJson(), "authored + 6 months"),
+      expect(
+          walkFhirPath(
+              context: response.toJson(),
+              pathExpression: "authored + 6 months"),
           ['2015-06-11T04:44:16.000-04:00']);
-      expect(walkFhirPath(response.toJson(), "authored - 6 months"),
+      expect(
+          walkFhirPath(
+              context: response.toJson(),
+              pathExpression: "authored - 6 months"),
           ['2014-06-11T04:44:16.000-04:00']);
       expect(
           walkFhirPath(
-              response.toJson(), "(today() - 6 months) > (today() - 7 months)"),
+              context: response.toJson(),
+              pathExpression: "(today() - 6 months) > (today() - 7 months)"),
           [true]);
       expect(
           walkFhirPath(
-              response.toJson(), "(today() - 6 months) < (today() - 7 months)"),
+              context: response.toJson(),
+              pathExpression: "(today() - 6 months) < (today() - 7 months)"),
           [false]);
-      expect(walkFhirPath(response.toJson(), "@2014 + 24 months"), ['2016']);
       expect(
           walkFhirPath(
-              response.toJson(), "@2019-03-01 + 24 months // @2021-03-01"),
+              context: response.toJson(), pathExpression: "@2014 + 24 months"),
+          ['2016']);
+      expect(
+          walkFhirPath(
+              context: response.toJson(),
+              pathExpression: "@2019-03-01 + 24 months // @2021-03-01"),
           ['2021-03-01']);
-      expect(walkFhirPath(response.toJson(), "@2014 + 23 months"), ['2015']);
+      expect(
+          walkFhirPath(
+              context: response.toJson(), pathExpression: "@2014 + 23 months"),
+          ['2015']);
 
       /// ToDo: Incorrect according to official specs
-      expect(walkFhirPath(response.toJson(), "@2016 + 365 days"), ['2016']);
-
-      expect(walkFhirPath(response.toJson(), "@2014 - 24 months"), ['2012']);
       expect(
           walkFhirPath(
-              response.toJson(), "@2019-03-01 - 24 months // @2021-03-01"),
+              context: response.toJson(), pathExpression: "@2016 + 365 days"),
+          ['2016']);
+
+      expect(
+          walkFhirPath(
+              context: response.toJson(), pathExpression: "@2014 - 24 months"),
+          ['2012']);
+      expect(
+          walkFhirPath(
+              context: response.toJson(),
+              pathExpression: "@2019-03-01 - 24 months // @2021-03-01"),
           ['2017-03-01']);
     });
   });
