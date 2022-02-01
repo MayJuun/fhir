@@ -8,7 +8,6 @@ import 'test_paths.dart';
 import 'test_questionnaire.dart';
 
 void main() {
-  // testFhirPathTestSuite();
   testBasicTypes();
   testPaths();
   testNoArgFxns();
@@ -16,4 +15,5 @@ void main() {
   testBasicOperators();
   testQuestionnaire();
   testDateTimes();
+  testFhirPathTestSuite();
 }

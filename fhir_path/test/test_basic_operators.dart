@@ -45,6 +45,25 @@ void testBasicOperators() {
       expect(walkPath('@T12:25 = @T12:27'), [false]);
       expect(walkPath("'String' = 'String'"), [true]);
       expect(walkPath("'String' = 'string'"), [false]);
+      expect(walkPath("@2012 = @2012 // returns true"), [true]);
+      expect(walkPath("@2012 = @2013 // returns false"), [false]);
+      expect(walkPath("@2012-01 = @2012 // returns empty ({ })"), []);
+      expect(walkPath("@2012-01-01T10:30 = @2012-01-01T10:30 // returns true"),
+          [true]);
+      expect(walkPath("@2012-01-01T10:30 = @2012-01-01T10:31 // returns false"),
+          [false]);
+      expect(
+          walkPath(
+              "@2012-01-01T10:30:31 = @2012-01-01T10:30 // returns empty ({ })"),
+          []);
+      expect(
+          walkPath(
+              "@2012-01-01T10:30:31.0 = @2012-01-01T10:30:31 // returns true"),
+          [true]);
+      expect(
+          walkPath(
+              "@2012-01-01T10:30:31.1 = @2012-01-01T10:30:31 // returns false"),
+          [false]);
     });
 
     /// ToDo: ~ (equivalent)
