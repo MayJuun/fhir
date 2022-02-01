@@ -6,22 +6,42 @@ import 'package:petitparser/core.dart';
 
 import 'fhir_path.dart';
 
-/// Start here! This is where the fun begins. It first checks to be sure there
-/// is a context to be evaluated, and an AST (abstract syntax tree) which
-/// admittedly in this case is a bit of a misnomer, because the AST is actually
-/// placed as a list into the value field of a ParserList
-List<dynamic> walkFhirPath(
-  Map<String, dynamic>? context,
-  String pathExpression, {
+/// Start here! This is where the fun begins. This is a bit confusing, so we'll
+/// explain the arguments that can be passed.
+///
+/// context (%context - https://hl7.org/fhirpath/#environment-variables)
+/// Is the original node that was passed to the evaluation engine before
+/// starting evaluation
+///
+/// resource (%resource - https://www.hl7.org/fhir/fhirpath.html#variables)
+/// the resource that contains the original node that is in %context
+///
+/// ToDo: rootResource (%rootResource - https://www.hl7.org/fhir/fhirpath.html#variables)
+/// the container resource for the resource identified by %resource
+///
+/// All other resources or varibles that you would like to pass that may be needed
+/// while evaluating your FHIRPath expression, you should pass as part of the
+/// environment argument, with the format:
+/// {
+///   "%pi": 3.1415927,
+///   "%myname": "Grey"
+/// }
+List<dynamic> walkFhirPath({
+  required Map<String, dynamic>? context,
+  required String pathExpression,
+  Map<String, dynamic>? resource,
+  Map<String, dynamic>? rootResource,
   Map<String, dynamic>? environment,
   FhirVersion version = FhirVersion.r4,
 }) {
   final ast = parseFhirPath(pathExpression);
 
   return executeFhirPath(
-    context,
-    ast,
-    pathExpression,
+    context: context,
+    parsedFhirPath: ast,
+    pathExpression: pathExpression,
+    resource: resource,
+    rootResource: rootResource,
     environment: environment,
     version: version,
   );
@@ -75,17 +95,28 @@ ParserList parseFhirPath(String pathExpression) {
 ///
 /// May be invoked repeatedly on the same parsed FHIRPath,
 /// resulting in a performance gain over [walkFhirPath].
-List<dynamic> executeFhirPath(
-  Map<String, dynamic>? context,
-  ParserList parsedFhirPath,
-  String pathExpression, {
+List<dynamic> executeFhirPath({
+  required Map<String, dynamic>? context,
+  required ParserList parsedFhirPath,
+  required String pathExpression,
+  Map<String, dynamic>? resource,
+  Map<String, dynamic>? rootResource,
   Map<String, dynamic>? environment,
   FhirVersion version = FhirVersion.r4,
 }) {
   final passedEnvironment = Map<String, dynamic>.from(environment ?? {});
+
+  /// check if there is a context element
   passedEnvironment.context = context ?? {};
-  passedEnvironment.resource = environment?['%resource'] ??
-      ((context?.containsKey('resourceType') ?? false) ? context : null);
+
+  /// check if there is a resource element, also check and ensure it wasn't
+  /// passed as an environment variable
+  passedEnvironment.resource = resource ?? environment?['%resource'];
+
+  /// check if there is a resource element, also check and ensure it wasn't
+  /// passed as an environment variable
+  passedEnvironment.rootResource =
+      rootResource ?? environment?['%rootResource'];
 
   passedEnvironment.version = version;
 
@@ -117,8 +148,8 @@ List<dynamic> r4WalkFhirPath(
 ]) {
   final resourceJson = resource?.toJson();
   return walkFhirPath(
-    resourceJson,
-    pathExpression,
+    context: resourceJson,
+    pathExpression: pathExpression,
     environment: environment,
     version: FhirVersion.r4,
   );
@@ -131,8 +162,8 @@ List<dynamic> r5WalkFhirPath(
 ]) {
   final resourceJson = resource?.toJson();
   return walkFhirPath(
-    resourceJson,
-    pathExpression,
+    context: resourceJson,
+    pathExpression: pathExpression,
     environment: environment,
     version: FhirVersion.r5,
   );
@@ -145,8 +176,8 @@ List<dynamic> dstu2WalkFhirPath(
 ]) {
   final resourceJson = resource?.toJson();
   return walkFhirPath(
-    resourceJson,
-    pathExpression,
+    context: resourceJson,
+    pathExpression: pathExpression,
     environment: environment,
     version: FhirVersion.dstu2,
   );
@@ -159,8 +190,8 @@ List<dynamic> stu3WalkFhirPath(
 ]) {
   final resourceJson = resource?.toJson();
   return walkFhirPath(
-    resourceJson,
-    pathExpression,
+    context: resourceJson,
+    pathExpression: pathExpression,
     environment: environment,
     version: FhirVersion.stu3,
   );
@@ -169,6 +200,11 @@ List<dynamic> stu3WalkFhirPath(
 extension FhirPathResourceExtension on Map<String, dynamic> {
   static const contextKey = '%context';
   static const resourceKey = '%resource';
+  static const rootResourceKey = '%rootResource';
+
+  Map<String, dynamic>? get context => this[contextKey];
+  void set context(Map<String, dynamic>? context) => this[contextKey] = context;
+  bool get hasNoContext => context == null;
 
   void set resource(Map<String, dynamic>? resource) {
     if (resource != null) {
@@ -176,7 +212,9 @@ extension FhirPathResourceExtension on Map<String, dynamic> {
     }
   }
 
-  Map<String, dynamic>? get context => this[contextKey];
-  void set context(Map<String, dynamic>? context) => this[contextKey] = context;
-  bool get hasNoContext => context == null;
+  void set rootResource(Map<String, dynamic>? rootResource) {
+    if (rootResource != null) {
+      this[resourceKey] = rootResource;
+    }
+  }
 }
