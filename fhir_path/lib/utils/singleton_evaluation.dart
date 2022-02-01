@@ -1,8 +1,6 @@
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir_path/fhir_path.dart';
 
-import 'exceptions.dart';
-
 /// Implements rule http://hl7.org/fhirpath/#singleton-evaluation-of-collections
 class SingletonEvaluation {
   /// Returns a singleton, based on the input.
