@@ -1,3 +1,5 @@
+import 'package:fhir/primitive_types/primitive_types.dart';
+
 import '../../fhir_path.dart';
 
 class EqualsParser extends OperatorParser {
@@ -13,7 +15,30 @@ class EqualsParser extends OperatorParser {
       return [false];
     } else {
       for (var i = 0; i < executedBefore.length; i++) {
-        if ((executedBefore[i] != executedAfter[i] &&
+        if (executedBefore[i] is FhirDateTime || executedBefore[i] is Date) {
+          if (executedAfter[i] is FhirDateTime || executedAfter[i] is Date) {
+            final beforeString = executedBefore[i].toString();
+            final afterString = executedAfter[i].toString();
+            final longerString = beforeString.length > afterString.length
+                ? beforeString
+                : afterString;
+            final shorterString =
+                longerString == beforeString ? afterString : beforeString;
+            if (shorterString !=
+                longerString.substring(0, shorterString.length)) {
+              return [false];
+            } else {
+              for (var j = shorterString.length; j < longerString.length; j++) {
+                if (num.tryParse(longerString[j]) != null &&
+                    longerString[j] != '0') {
+                  return [];
+                }
+              }
+            }
+          } else {
+            return [false];
+          }
+        } else if ((executedBefore[i] != executedAfter[i] &&
             executedAfter[i] != executedBefore[i])) {
           return [false];
         }

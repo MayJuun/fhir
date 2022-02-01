@@ -67,8 +67,7 @@ class IsParser extends OperatorParser {
                                         ? [executedBefore.first is Time]
                                         : executedAfter.first == 'Quantity'
                                             ? [
-                                                executedBefore.first
-                                                    is FhirPathQuantity
+                                                isQuantity(executedBefore.first)
                                               ]
                                             : [false];
   }
