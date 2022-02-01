@@ -16,6 +16,9 @@ class ParenthesesParser extends ValueParser<ParserList> {
   ParserList value;
   List execute(List results, Map<String, dynamic> passed) =>
       value.execute(results, passed);
+  String prettyPrint(int indent) => '${"  " * indent}(\n'
+      '${value.prettyPrint(indent + 1)}\n'
+      '${"  " * indent})';
 }
 
 /// FunctionParser: functions

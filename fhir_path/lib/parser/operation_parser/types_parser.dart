@@ -66,11 +66,13 @@ class IsParser extends OperatorParser {
                                     : executedAfter.first == 'Time'
                                         ? [executedBefore.first is Time]
                                         : executedAfter.first == 'Quantity'
-                                            ? [
-                                                isQuantity(executedBefore.first)
-                                              ]
+                                            ? [isQuantity(executedBefore.first)]
                                             : [false];
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}IsParser'
+      '\n${before.prettyPrint(indent + 1)}'
+      '\n${after.prettyPrint(indent + 1)}';
 }
 
 class AsParser extends OperatorParser {
@@ -140,4 +142,8 @@ class AsParser extends OperatorParser {
     }
     return [];
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}AsParser'
+      '\n${before.prettyPrint(indent + 1)}'
+      '\n${after.prettyPrint(indent + 1)}';
 }

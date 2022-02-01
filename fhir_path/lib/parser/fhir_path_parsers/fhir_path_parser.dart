@@ -1,6 +1,7 @@
 /// FhirPathParser: base parser
 abstract class FhirPathParser {
   List execute(List results, Map<String, dynamic> passed) => [];
+  String prettyPrint(int indent);
 }
 
 /// ValueParser: basic parser that holds a value
@@ -45,4 +46,11 @@ class ParserList extends FhirPathParser {
 
   @override
   String toString() => 'PL(${value.length}): ${value.map((e) => e.toString())}';
+  String prettyPrint(int indent) {
+    var returnString = '${"  " * indent}PL(${value.length})';
+    for (var item in value) {
+      returnString += '\n${item.prettyPrint(indent + 1)}';
+    }
+    return returnString;
+  }
 }

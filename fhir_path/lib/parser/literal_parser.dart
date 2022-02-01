@@ -13,6 +13,8 @@ class WhiteSpaceParser extends ValueParser<String> {
   WhiteSpaceParser(this.value);
   String value;
   List execute(List results, Map<String, dynamic> passed) => results;
+  String prettyPrint(int indent) =>
+      '${"  " * indent}WhiteSpaceParser: "$value"';
 }
 
 /// Boolean Parser, it returns a FHIR Boolean value
@@ -20,6 +22,7 @@ class BooleanParser extends ValueParser<bool> {
   BooleanParser(String newValue) : value = newValue == 'true';
   bool value;
   List execute(List results, Map<String, dynamic> passed) => [value];
+  String prettyPrint(int indent) => '${"  " * indent}BooleanParser: "$value"';
 }
 
 /// This allows the passing of a variable from the environment into the
@@ -75,6 +78,9 @@ class EnvVariableParser extends ValueParser<String> {
       }
     }
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}EnvVariableParser: "$value"';
 }
 
 class QuantityParser extends ValueParser<FhirPathQuantity> {
@@ -88,6 +94,8 @@ class QuantityParser extends ValueParser<FhirPathQuantity> {
   String toString() {
     return 'Quantity: $value';
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}QuantityParser: "$value"';
 }
 
 class IntegerParser extends ValueParser<int> {
@@ -99,6 +107,8 @@ class IntegerParser extends ValueParser<int> {
   String toString() {
     return 'Integer: $value';
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}IntegerParser: "$value"';
 }
 
 class DecimalParser extends ValueParser<double> {
@@ -110,6 +120,8 @@ class DecimalParser extends ValueParser<double> {
   String toString() {
     return 'Decimal: $value';
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}DecimalParser: "$value"';
 }
 
 class IdentifierParser extends ValueParser<String> {
@@ -194,6 +206,9 @@ class IdentifierParser extends ValueParser<String> {
 
     return finalResults;
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}IdentifierParser: "$value"';
 }
 
 class DelimitedIdentifierParser extends ValueParser<String> {
@@ -201,6 +216,8 @@ class DelimitedIdentifierParser extends ValueParser<String> {
       : value = newValue.substring(1, newValue.length - 1);
   String value;
   List execute(List results, Map<String, dynamic> passed) => [value];
+  String prettyPrint(int indent) =>
+      '${"  " * indent}DelimitedIdentifierParser: "$value"';
 }
 
 class StringParser extends ValueParser<String> {
@@ -210,6 +227,7 @@ class StringParser extends ValueParser<String> {
             : newValue.substring(1, newValue.length - 1);
   String value;
   List execute(List results, Map<String, dynamic> passed) => [value];
+  String prettyPrint(int indent) => '${"  " * indent}StringParser: "$value"';
 }
 
 class DateTimeParser extends BaseDateTimeParser<List> {
@@ -267,6 +285,8 @@ class DateTimeParser extends BaseDateTimeParser<List> {
       return '${value.first.toString()}T${value.last.toString()}';
     }
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}DateTimeParser: "$value"';
 }
 
 class DateParser extends BaseDateTimeParser<Date> {
@@ -277,6 +297,7 @@ class DateParser extends BaseDateTimeParser<Date> {
   List execute(List results, Map<String, dynamic> passed) => [value];
 
   String toString() => value.toString();
+  String prettyPrint(int indent) => '${"  " * indent}DateParser: "$value"';
 }
 
 class TimeParser extends BaseDateTimeParser<Time> {
@@ -288,4 +309,5 @@ class TimeParser extends BaseDateTimeParser<Time> {
   List execute(List results, Map<String, dynamic> passed) => [value];
 
   String toString() => value.toString();
+  String prettyPrint(int indent) => '${"  " * indent}TimeParser: "$value"';
 }

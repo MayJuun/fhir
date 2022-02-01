@@ -51,6 +51,10 @@ class EqualsParser extends OperatorParser {
   String toString() {
     return 'EqualsParser: $before EQUALS $after';
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}EqualsParser'
+      '\n${before.prettyPrint(indent + 1)}'
+      '\n${after.prettyPrint(indent + 1)}';
 }
 
 /// ToDo: write test
@@ -61,6 +65,10 @@ class EquivalentParser extends OperatorParser {
   List execute(List results, Map<String, dynamic> passed) {
     return [];
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}EquivalentParser'
+      '\n${before.prettyPrint(indent + 1)}'
+      '\n${after.prettyPrint(indent + 1)}';
 }
 
 /// https://hl7.org/fhirpath/#not-equals
@@ -76,6 +84,10 @@ class NotEqualsParser extends OperatorParser {
     final equality = equalsParser.execute(results, passed);
     return FpNotParser().execute(equality, passed);
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}NotEqualsParser'
+      '\n${before.prettyPrint(indent + 1)}'
+      '\n${after.prettyPrint(indent + 1)}';
 }
 
 class NotEquivalentParser extends OperatorParser {
@@ -110,4 +122,8 @@ class NotEquivalentParser extends OperatorParser {
       return [true];
     }
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}NotEquivalentParser'
+      '\n${before.prettyPrint(indent + 1)}'
+      '\n${after.prettyPrint(indent + 1)}';
 }

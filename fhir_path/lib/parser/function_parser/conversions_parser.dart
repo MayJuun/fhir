@@ -67,6 +67,8 @@ class IifParser extends FunctionParser {
   }
 
   String toString() => 'IifParser: ${value.toString()}';
+  String prettyPrint(int indent) =>
+      '${"  " * indent}IifParser\n${value.prettyPrint(indent + 1)}';
 }
 
 /// http://hl7.org/fhirpath/#toboolean-boolean
@@ -101,6 +103,8 @@ class ToBooleanParser extends FhirPathParser {
                               -1
                       ? [false]
                       : [];
+
+  String prettyPrint(int indent) => '${"  " * indent}ToBooleanParser';
 }
 
 /// http://hl7.org/fhirpath/#convertstoboolean-boolean
@@ -139,6 +143,8 @@ class ConvertsToBooleanParser extends FhirPathParser {
                           -1
                   ? [true]
                   : [false];
+
+  String prettyPrint(int indent) => '${"  " * indent}ConvertsToBooleanParser';
 }
 
 class ToIntegerParser extends FhirPathParser {
@@ -156,6 +162,8 @@ class ToIntegerParser extends FhirPathParser {
                       : int.tryParse(results.first) != null
                           ? [int.parse(results.first)]
                           : [];
+
+  String prettyPrint(int indent) => '${"  " * indent}ToIntegerParser';
 }
 
 class ConvertsToIntegerParser extends FhirPathParser {
@@ -173,6 +181,8 @@ class ConvertsToIntegerParser extends FhirPathParser {
                       : int.tryParse(results.first) != null
                           ? [true]
                           : [false];
+
+  String prettyPrint(int indent) => '${"  " * indent}ConvertsToIntegerParser';
 }
 
 class ToDateParser extends FhirPathParser {
@@ -184,6 +194,7 @@ class ToDateParser extends FhirPathParser {
           : Date(results.first.toString()).isValid
               ? [Date(results.first.toString())]
               : [];
+  String prettyPrint(int indent) => '${"  " * indent}ToDateParser';
 }
 
 class ConvertsToDateParser extends FhirPathParser {
@@ -193,6 +204,7 @@ class ConvertsToDateParser extends FhirPathParser {
       : results.length > 1
           ? throw _conversionException('.convertsToDate()', results)
           : [Date(results.first.toString()).isValid];
+  String prettyPrint(int indent) => '${"  " * indent}ConvertsToDateParser';
 }
 
 class ToDateTimeParser extends FhirPathParser {
@@ -204,6 +216,7 @@ class ToDateTimeParser extends FhirPathParser {
           : FhirDateTime(results.first.toString()).isValid
               ? [FhirDateTime(results.first.toString())]
               : [];
+  String prettyPrint(int indent) => '${"  " * indent}ToDateTimeParser';
 }
 
 class ConvertsToDateTimeParser extends FhirPathParser {
@@ -215,6 +228,7 @@ class ConvertsToDateTimeParser extends FhirPathParser {
           : FhirDateTime(results.first.toString()).isValid
               ? [FhirDateTime(results.first.toString()).isValid]
               : [];
+  String prettyPrint(int indent) => '${"  " * indent}ConvertsToDateTimeParser';
 }
 
 class ToDecimalParser extends FhirPathParser {
@@ -232,6 +246,7 @@ class ToDecimalParser extends FhirPathParser {
                       : double.tryParse(results.first) != null
                           ? [double.parse(results.first)]
                           : [];
+  String prettyPrint(int indent) => '${"  " * indent}ToDecimalParser';
 }
 
 class ConvertsToDecimalParser extends FhirPathParser {
@@ -249,6 +264,7 @@ class ConvertsToDecimalParser extends FhirPathParser {
                       : double.tryParse(results.first) != null
                           ? [true]
                           : [false];
+  String prettyPrint(int indent) => '${"  " * indent}ConvertsToDecimalParser';
 }
 
 class ToStringParser extends FhirPathParser {
@@ -262,6 +278,8 @@ class ToStringParser extends FhirPathParser {
                 ? [false]
                 : [results.first.toString()];
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}ToStringParser';
 }
 
 class ConvertsToStringParser extends FhirPathParser {
@@ -273,6 +291,8 @@ class ConvertsToStringParser extends FhirPathParser {
           : _isAllTypes(results)
               ? [false]
               : [true];
+
+  String prettyPrint(int indent) => '${"  " * indent}ConvertsToStringParser';
 }
 
 class ToTimeParser extends FhirPathParser {
@@ -286,6 +306,7 @@ class ToTimeParser extends FhirPathParser {
               : results.first is String && Time(results.first).isValid
                   ? [Time(results.first)]
                   : [];
+  String prettyPrint(int indent) => '${"  " * indent}ToTimeParser';
 }
 
 class ConvertsToTimeParser extends FhirPathParser {
@@ -298,6 +319,7 @@ class ConvertsToTimeParser extends FhirPathParser {
                   (results.first is String && Time(results.first).isValid)
               ? [true]
               : [false];
+  String prettyPrint(int indent) => '${"  " * indent}ConvertsToTimeParser';
 }
 
 class ToQuantityParser extends FhirPathParser {
@@ -315,6 +337,7 @@ class ToQuantityParser extends FhirPathParser {
                   : results.first is String
                       ? [FhirPathQuantity.fromString(results.first)]
                       : [];
+  String prettyPrint(int indent) => '${"  " * indent}ToQuantityParser';
 }
 
 class ConvertsToQuantityParser extends FhirPathParser {
@@ -333,6 +356,7 @@ class ConvertsToQuantityParser extends FhirPathParser {
                       ToQuantityParser().execute(results, passed).isNotEmpty)
                   ? [true]
                   : [false];
+  String prettyPrint(int indent) => '${"  " * indent}ConvertsToQuantityParser';
 }
 
 bool _isNotAcceptedType(List results) =>

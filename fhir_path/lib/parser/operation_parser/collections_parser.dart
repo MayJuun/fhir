@@ -14,6 +14,10 @@ class UnionOperatorParser extends OperatorParser {
     });
     return executedAfter;
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}UnionOperatorParser'
+      '\n${before.prettyPrint(indent + 1)}'
+      '\n${after.prettyPrint(indent + 1)}';
 }
 
 // http://hl7.org/fhirpath/#contains-containership
@@ -49,6 +53,10 @@ class ContainsOperatorParser extends OperatorParser {
           null
     ];
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}ContainsOperatorParser'
+      '\n${before.prettyPrint(indent + 1)}'
+      '\n${after.prettyPrint(indent + 1)}';
 }
 
 /// http://hl7.org/fhirpath/N1/#in-membership
@@ -79,6 +87,10 @@ class InParser extends OperatorParser {
           null
     ];
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}InParser'
+      '\n${before.prettyPrint(indent + 1)}'
+      '\n${after.prettyPrint(indent + 1)}';
 }
 
 class CommaParser extends OperatorParser {
@@ -111,4 +123,8 @@ class CommaParser extends OperatorParser {
   String toString() {
     return 'CommaParser - $before COMMA $after';
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}CommaParser'
+      '\n${before.prettyPrint(indent + 1)}'
+      '\n${after.prettyPrint(indent + 1)}';
 }

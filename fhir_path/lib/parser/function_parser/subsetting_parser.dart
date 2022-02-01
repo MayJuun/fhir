@@ -13,18 +13,21 @@ class SingleParser extends FhirPathParser {
               'item if evaluated using the .single() function',
               operation: '.single()',
               collection: results);
+  String prettyPrint(int indent) => '${"  " * indent}SingleParser';
 }
 
 class FirstParser extends FhirPathParser {
   FirstParser();
   List execute(List results, Map<String, dynamic> passed) =>
       results.isEmpty ? [] : [results.first];
+  String prettyPrint(int indent) => '${"  " * indent}FirstParser';
 }
 
 class LastParser extends FhirPathParser {
   LastParser();
   List execute(List results, Map<String, dynamic> passed) =>
       results.isEmpty ? [] : [results.last];
+  String prettyPrint(int indent) => '${"  " * indent}LastParser';
 }
 
 class TailParser extends FhirPathParser {
@@ -37,6 +40,8 @@ class TailParser extends FhirPathParser {
       return results;
     }
   }
+
+  String prettyPrint(int indent) => '${"  " * indent}TailParser';
 }
 
 class SkipParser extends FunctionParser {
@@ -60,6 +65,9 @@ class SkipParser extends FunctionParser {
                     ? []
                     : results.sublist(executedValue.first);
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}SkipParser\n${value.prettyPrint(indent + 1)}';
 }
 
 class TakeParser extends FunctionParser {
@@ -83,6 +91,9 @@ class TakeParser extends FunctionParser {
                 ? results
                 : results.sublist(0, executedValue.first);
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}TakeParser\n${value.prettyPrint(indent + 1)}';
 }
 
 class IntersectParser extends ValueParser<ParserList> {
@@ -110,6 +121,9 @@ class IntersectParser extends ValueParser<ParserList> {
 
     return outBag;
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}IntersectParser\n${value.prettyPrint(indent + 1)}';
 }
 
 class ExcludeParser extends ValueParser<ParserList> {
@@ -123,4 +137,7 @@ class ExcludeParser extends ValueParser<ParserList> {
         -1);
     return results;
   }
+
+  String prettyPrint(int indent) =>
+      '${"  " * indent}ExcludeParser\n${value.prettyPrint(indent + 1)}';
 }
