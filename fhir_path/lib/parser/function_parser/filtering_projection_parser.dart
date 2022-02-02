@@ -40,18 +40,13 @@ class SelectParser extends ValueParser<ParserList> {
   late ParserList value;
   List execute(List results, Map<String, dynamic> passed) {
     return IterationContext.withIterationContext((iterationContext) {
-      if (results.isEmpty) {
-        return value.execute(results, passed);
-      } else {
-        final outputCollection = [];
-        results.forEachIndexed((i, e) {
-          iterationContext.thisValue = e;
-          iterationContext.indexValue = i;
-          outputCollection.addAll(value.execute([e], passed));
-        });
-
-        return outputCollection;
-      }
+      final outputCollection = [];
+      results.forEachIndexed((i, e) {
+        iterationContext.thisValue = e;
+        iterationContext.indexValue = i;
+        outputCollection.addAll(value.execute([e], passed));
+      });
+      return outputCollection;
     }, passed);
   }
 

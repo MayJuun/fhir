@@ -71,7 +71,6 @@ class ExistsParser extends FunctionParser {
       return iterationResult;
     }, passed);
 
-    returnList.removeWhere((e) => e == null);
     return [returnList.isNotEmpty];
   }
 
