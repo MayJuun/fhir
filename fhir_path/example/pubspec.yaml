@@ -12,7 +12,7 @@ dependencies:
   fhir_path:
     path: ../../fhir_path
   google_fonts: ^2.2.0
-  url_launcher: ^6.0.17
+  url_launcher: ^6.0.18
   yaml_writer: ^1.0.1
 
 flutter:
