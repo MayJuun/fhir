@@ -1,23 +1,38 @@
 # fhir_path
 
+## [0.5.0-21]
+
+* Trying to improve $this
+* fixed .select (maybe)
+* Better handling quantity, including equality
+* Limited support for .extension()
+* Support extension on primitive types
+* Pretty print option (extensive, but may be helpful to evaluate lexing)
+
 ## [0.5.0-20]
+
 * Multiple bug fixes and improvements again by [Tilo](https://github.com/tiloc)
-* Ported the FHIRPath test suite from XML to Dart 
+* Ported the FHIRPath test suite from XML to Dart
 * More tests enabled & fixed
 * Fixed .all(XXX), .instersect()
 * Fixes % to variables, is for DateTime, comparisons for quantities
 * Fixed bug when using $this in nexted iifs
+
 ## [0.5.0-19]
+
 * Forgot to update to newest fhir package
+
 ## [0.5.0-18]
+
 * Allow pre-parsing of the AST for repeat use later. Boosts performance.
 * Allow lazy evaluation of passed-in variables (by passing in a function, instead of an actual value)
 * Numerous bug-fixes to iif, operator precedence, unary operators
 * Beefed up the test-suite to show that it really works
 
 ## [0.5.0-17]
+
 * **[Breaking]** Decoupled %context from %resource.
-  * Important for item-level expressions on QuestionnaireResponse, where `%context` is the item, 
+  * Important for item-level expressions on QuestionnaireResponse, where `%context` is the item,
   but `%resource` is the overall QuestionnaireResponse
 * Enable the UI to accept arbitrary JSON, rather than only FHIR Resources
 
