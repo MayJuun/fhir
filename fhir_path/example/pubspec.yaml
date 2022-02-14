@@ -11,7 +11,7 @@ dependencies:
   fhir: ^0.5.0-12
   fhir_path:
     path: ../../fhir_path
-  google_fonts: ^2.2.0
+  google_fonts: ^2.3.1
   url_launcher: ^6.0.18
   yaml_writer: ^1.0.1
 

@@ -4,10 +4,24 @@ import 'package:fhir/r4.dart';
 import 'package:fhir_path/fhir_path.dart';
 
 void main() {
-  final l1 = '1,2,3,4,5,6,7,8,9,0';
-  final l2 = '1,2,3,4,5';
-  print(l1.substring(0,l2.length));
-  print(l1.substring(l2.length));
+  final path = "(%resource.item.where(linkId='/8302-2').answer.value*3)";
+  print(walkFhirPath(
+    context: ozair,
+    pathExpression: path,
+    resource: ozair,
+  ));
+
+  final response = QuestionnaireResponse.fromJson(ozair);
+
+  print(response.item?[0].answer?[0].valueDecimal);
+  print(response.item?[0].answer?[0].valueDecimal?.isInt);
+  print(response.item?[0].answer?[0].valueDecimal?.isString);
+  print(response.item?[0].answer?[0].valueDecimal?.isValid);
+
+  // final l1 = '1,2,3,4,5,6,7,8,9,0';
+  // final l2 = '1,2,3,4,5';
+  // print(l1.substring(0,l2.length));
+  // print(l1.substring(l2.length));
   // print(11.remainder(12));
   // print(23.remainder(12));
   // print(Duration(days: 12, hours: 12));
@@ -43,6 +57,34 @@ void main() {
   //   '%practitioner': null,
   // }));
 }
+
+final ozair = <String, dynamic>{
+  "resourceType": "QuestionnaireResponse",
+  "status": "in-progress",
+  "item": [
+    {
+      "linkId": "/29463-7",
+      "text": "Weight",
+      "answer": [
+        {"valueDecimal": "185"}
+      ]
+    },
+    {"linkId": "/8352-7", "text": "Clothing worn during measure", "answer": []},
+    {
+      "linkId": "/8302-2",
+      "text": "Body height",
+      "answer": [
+        {"valueDecimal": 66.89999999999999}
+      ]
+    },
+    {"linkId": "/39156-5", "text": "BMI", "answer": []},
+    {
+      "linkId": "/8361-8",
+      "text": "Bdy position with respect to gravity",
+      "answer": []
+    }
+  ]
+};
 
 Map<String, dynamic>? observationExample() {
   return jsonDecode(observationJsonString);
