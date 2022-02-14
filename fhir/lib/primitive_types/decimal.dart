@@ -6,28 +6,30 @@ import 'fhir_number.dart';
 import 'integer.dart';
 
 class Decimal extends FhirNumber {
-  const Decimal._(String valueString, double? valueNumber, bool isValid,
-      this.isInt, bool isString)
-      : super(valueString, valueNumber, isValid, isString);
+  const Decimal._(
+    String valueString,
+    double? valueNumber,
+    bool isValid,
+    this.isInt,
+  ) : super(valueString, valueNumber, isValid);
 
   factory Decimal(dynamic inValue) {
     if (inValue is Decimal) {
       return inValue;
     } else if (inValue is Integer) {
-      return Decimal._(inValue.toString(), inValue.value?.toDouble(),
-          inValue.isValid, inValue.isValid, inValue.isString);
+      return Decimal._(
+        inValue.toString(),
+        inValue.value?.toDouble(),
+        inValue.isValid,
+        inValue.isValid,
+      );
     } else if (inValue is num) {
       return Decimal._(
         inValue.toString(),
         inValue.toDouble(),
         true,
         int.tryParse(inValue.toString()) != null,
-        false,
       );
-    } else if (inValue is String) {
-      return double.tryParse(inValue) != null
-          ? Decimal._(inValue, double.parse(inValue), true, false, true)
-          : Decimal._(inValue, null, false, false, true);
     }
     throw ArgumentError('Decimal cannot be constructed from $inValue.');
   }
@@ -45,16 +47,8 @@ class Decimal extends FhirNumber {
   double? get value => valueNumber as double?;
 
   @override
-  dynamic toJson() => isInt
-      ? valueNumber?.toInt()
-      : isValid && !isString
-          ? valueNumber
-          : valueString;
+  dynamic toJson() => isInt ? valueNumber?.toInt() : valueNumber;
 
   @override
-  dynamic toYaml() => isInt
-      ? valueNumber?.toInt()
-      : isValid && !isString
-          ? valueNumber
-          : valueString;
+  dynamic toYaml() => isInt ? valueNumber?.toInt() : valueNumber;
 }
