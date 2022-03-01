@@ -1,12 +1,19 @@
 # fhir_at_rest
 
+## [0.6.0]
+
+* Updated dependencies
+* New version
+
 ## [0.5.0-13]
 
 * Updated dependencies
+
 ## [0.5.0-12]
 
 * Dart to 2.15.0
 * Updated other dependencies
+
 ## [0.5.0-11]
 
 * most recent version of fhir package
