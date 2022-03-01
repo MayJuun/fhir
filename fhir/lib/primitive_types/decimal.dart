@@ -31,7 +31,8 @@ class Decimal extends FhirNumber {
         int.tryParse(inValue.toString()) != null,
       );
     }
-    throw ArgumentError('Decimal cannot be constructed from $inValue.');
+    throw ArgumentError(
+        'Decimal cannot be constructed from $inValue ${inValue.runtimeType}');
   }
 
   factory Decimal.fromJson(dynamic json) => Decimal(json);
