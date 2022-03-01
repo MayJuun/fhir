@@ -1,5 +1,14 @@
 # fhir
+
+## [0.6.0]
+
+* Because I was tired of having a test version and not an official version
+* Also mostly because I had to change numbers. Most basic numbers according to the FHIR spec, cannot accept Strings.
+* Previously this library DID allow this, and this has now been fixed, but could certainly break some implementations.
+* Double, Integer, Integer64, PositiveInt, UnsignedInt now ONLY allow numbers, not Strings.
+
 ## [0.5.0-12]
+
 * Allow construction of FhirDateTime from another FhirDateTime
 * Allow construction of Decimal from another Decimal or an Integer
 

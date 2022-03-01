@@ -1,27 +1,28 @@
 import 'dart:convert';
-import 'dart:math';
 
 import 'package:yaml/yaml.dart';
 
 import 'fhir_number.dart';
 
 class Integer64 extends FhirNumber {
-  const Integer64._(
-      String valueString, int? valueNumber, bool isValid, bool isString)
-      : super(valueString, valueNumber, isValid, isString);
+  const Integer64._(String valueString, int? valueNumber, bool isValid)
+      : super(valueString, valueNumber, isValid);
+
+  static const double bit64 = 9223372036854775808;
 
   factory Integer64(dynamic inValue) {
     if (inValue is int) {
-      return inValue <= pow(2, 63) && inValue >= pow(2, 63)
-          ? Integer64._(inValue.toString(), inValue, true, false)
-          : Integer64._(inValue.toString(), null, false, false);
-    } else if (inValue is String) {
-      final int? tempInteger64 = int.tryParse(inValue);
+      return inValue <= bit64 && inValue >= -bit64
+          ? Integer64._(inValue.toString(), inValue, true)
+          : Integer64._(inValue.toString(), null, false);
+    } else if (inValue is num) {
+      final int? tempInteger64 = int.tryParse(inValue.toString());
       return tempInteger64 == null
-          ? Integer64._(inValue, null, false, true)
-          : tempInteger64 <= pow(2, 63) && tempInteger64 >= pow(2, 63)
-              ? Integer64._(inValue, tempInteger64, true, true)
-              : Integer64._(inValue, null, false, true);
+          ? Integer64._(inValue.toString(), null, false)
+          : tempInteger64 <= bit64 && tempInteger64 >= -bit64
+              ? Integer64._(
+                  inValue.toString(), tempInteger64, true)
+              : Integer64._(inValue.toString(), null, false);
     }
     throw ArgumentError('Integer64 cannot be constructed from $inValue.');
   }
