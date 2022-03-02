@@ -1,11 +1,18 @@
 # fhir_db
 
+## [0.6.0]
+
+* Updated dependencies
+* Updating to 0.6.0
+
 ## [0.5.0-6]
 
 * Updated dependencies
+
 ## [0.5.0-5]
 
 * Added an example
+
 ## [0.5.0-4]
 
 * I forgot to update something in the fhir package

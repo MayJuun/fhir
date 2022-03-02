@@ -1,5 +1,10 @@
 # fhir_bulk
 
+## [0.6.0]
+
+* Updated dependencies
+* Updated to stable-ish 0.6.0
+
 ## [0.5.0-8]
 
 * Updated dependencies
