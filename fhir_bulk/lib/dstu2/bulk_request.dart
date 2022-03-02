@@ -11,6 +11,7 @@ import 'which_resource.dart';
 part 'bulk_request.freezed.dart';
 
 @freezed
+
 /// Freezed union class for making different types of Bulk Requests
 class BulkRequest with _$BulkRequest {
   BulkRequest._();

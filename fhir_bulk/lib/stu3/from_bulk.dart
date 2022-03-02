@@ -58,7 +58,8 @@ abstract class FhirBulk {
       final archive = TarDecoder().decodeBytes(unzipped);
       for (final file in archive) {
         if (file.isFile) {
-          resourceList.addAll(fromNdJson(utf8.decode(file.content as List<int>)));
+          resourceList
+              .addAll(fromNdJson(utf8.decode(file.content as List<int>)));
         }
       }
     } else if (contentType == 'application/gzip') {
@@ -68,7 +69,7 @@ abstract class FhirBulk {
     return resourceList;
   }
 
-  /// Accepts a file of data that is zipped, x-zip-compressed, tar, or gz. 
+  /// Accepts a file of data that is zipped, x-zip-compressed, tar, or gz.
   /// Note, this function assumes that all uncompressed data is in ndjson format
   static Future<List<Resource?>> fromCompressedFile(String path) async {
     final data = await File(path).readAsBytes();
