@@ -917,10 +917,11 @@ class FhirRequest with _$FhirRequest {
       if (body?['response'] != null &&
           body['response']['resourceType'] == 'OperationOutcome') {
         final operationOutcome = OperationOutcome.fromJson(body['response']);
-        if (body?['status'] != null || body?['message'] != null)
+        if (body?['status'] != null || body?['message'] != null) {
           operationOutcome.issue.add(OperationOutcomeIssue(
               diagnostics:
                   'Status: ${body?['status']}\nMessage: ${body?['message']}\n'));
+        }
         return operationOutcome;
       } else {
         return Resource.fromJson(jsonDecode(result.body));

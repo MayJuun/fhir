@@ -1,5 +1,9 @@
 # fhir_at_rest
 
+## [0.6.1]
+
+* More Pub Points! (added some curly braces to fix a linting error)
+
 ## [0.6.0]
 
 * Updated dependencies
