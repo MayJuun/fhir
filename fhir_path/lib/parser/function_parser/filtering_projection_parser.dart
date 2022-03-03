@@ -31,8 +31,10 @@ class FpWhereParser extends FunctionParser {
     return returnList;
   }
 
+  String verbosePrint(int indent) =>
+      '${"  " * indent}FpWhereParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '${"  " * indent}FpWhereParser\n${value.prettyPrint(indent + 1)}';
+      '.where(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 class SelectParser extends ValueParser<ParserList> {
@@ -50,8 +52,10 @@ class SelectParser extends ValueParser<ParserList> {
     }, passed);
   }
 
+  String verbosePrint(int indent) =>
+      '${"  " * indent}SelectParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '${"  " * indent}SelectParser\n${value.prettyPrint(indent + 1)}';
+      '.select(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 class RepeatParser extends ValueParser<ParserList> {
@@ -81,8 +85,10 @@ class RepeatParser extends ValueParser<ParserList> {
     return finalResults;
   }
 
+  String verbosePrint(int indent) =>
+      '${"  " * indent}RepeatParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '${"  " * indent}RepeatParser\n${value.prettyPrint(indent + 1)}';
+      '.repeat(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 class OfTypeParser extends ValueParser<ParserList> {
@@ -144,8 +150,10 @@ class OfTypeParser extends ValueParser<ParserList> {
     return finalResults;
   }
 
+  String verbosePrint(int indent) =>
+      '${"  " * indent}OfTypeParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '${"  " * indent}OfTypeParser\n${value.prettyPrint(indent + 1)}';
+      '.ofType(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 class ExtensionParser extends ValueParser<ParserList> {
@@ -179,6 +187,8 @@ class ExtensionParser extends ValueParser<ParserList> {
     return extensionParsers.execute(results.toList(), passed);
   }
 
+  String verbosePrint(int indent) =>
+      '${"  " * indent}ExtensionParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '${"  " * indent}ExtensionParser\n${value.prettyPrint(indent + 1)}';
+      '.extension(\n${value.prettyPrint(indent + 1)}\n)';
 }

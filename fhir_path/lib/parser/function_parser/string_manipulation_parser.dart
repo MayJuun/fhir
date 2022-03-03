@@ -16,8 +16,8 @@ class IndexOfParser extends ValueParser<ParserList> {
                     : [results.first.toString().indexOf(executedValue.first)];
   }
 
-  String prettyPrint(int indent) =>
-      '${"  " * indent}IndexOfParser\n${value.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) =>
+      '${"  " * indent}IndexOfParser\n${value.verbosePrint(indent + 1)}';
 }
 
 class SubstringParser extends ValueParser<ParserList> {
@@ -64,8 +64,8 @@ class SubstringParser extends ValueParser<ParserList> {
                                 arguments: executedValue);
   }
 
-  String prettyPrint(int indent) =>
-      '${"  " * indent}SubstringParser\n${value.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) =>
+      '${"  " * indent}SubstringParser\n${value.verbosePrint(indent + 1)}';
 }
 
 class StartsWithParser extends ValueParser<ParserList> {
@@ -86,8 +86,8 @@ class StartsWithParser extends ValueParser<ParserList> {
                       ];
   }
 
-  String prettyPrint(int indent) =>
-      '${"  " * indent}StartsWithParser\n${value.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) =>
+      '${"  " * indent}StartsWithParser\n${value.verbosePrint(indent + 1)}';
 }
 
 class EndsWithParser extends ValueParser<ParserList> {
@@ -106,8 +106,8 @@ class EndsWithParser extends ValueParser<ParserList> {
                     : [results.first.toString().endsWith(executedValue.first)];
   }
 
-  String prettyPrint(int indent) =>
-      '${"  " * indent}EndsWithParser\n${value.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) =>
+      '${"  " * indent}EndsWithParser\n${value.verbosePrint(indent + 1)}';
 }
 
 // http://hl7.org/fhirpath/#containssubstring-string-boolean
@@ -123,8 +123,8 @@ class ContainsFunctionParser extends ValueParser<ParserList> {
             .toList();
   }
 
-  String prettyPrint(int indent) =>
-      '${"  " * indent}ContainsFunctionParser\n${value.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) =>
+      '${"  " * indent}ContainsFunctionParser\n${value.verbosePrint(indent + 1)}';
 }
 
 class UpperParser extends FhirPathParser {
@@ -134,7 +134,7 @@ class UpperParser extends FhirPathParser {
       : results.length > 1
           ? throw _requiresList('.upper()', results)
           : [results.first.toString().toUpperCase()];
-  String prettyPrint(int indent) => '${"  " * indent}UpperParser';
+  String verbosePrint(int indent) => '${"  " * indent}UpperParser';
 }
 
 class LowerParser extends FhirPathParser {
@@ -144,7 +144,7 @@ class LowerParser extends FhirPathParser {
       : results.length > 1
           ? throw _requiresList('.lower()', results)
           : [results.first.toString().toLowerCase()];
-  String prettyPrint(int indent) => '${"  " * indent}LowerParser';
+  String verbosePrint(int indent) => '${"  " * indent}LowerParser';
 }
 
 class ReplaceParser extends ValueParser<ParserList> {
@@ -165,7 +165,7 @@ class ReplaceParser extends ValueParser<ParserList> {
                   ];
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}ReplaceParser';
+  String verbosePrint(int indent) => '${"  " * indent}ReplaceParser';
 }
 
 class FpMatchesParser extends ValueParser<ParserList> {
@@ -185,8 +185,8 @@ class FpMatchesParser extends ValueParser<ParserList> {
                   ];
   }
 
-  String prettyPrint(int indent) =>
-      '${"  " * indent}FpMatchesParser\n${value.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) =>
+      '${"  " * indent}FpMatchesParser\n${value.verbosePrint(indent + 1)}';
 }
 
 class ReplaceMatchesParser extends ValueParser<ParserList> {
@@ -213,8 +213,8 @@ class ReplaceMatchesParser extends ValueParser<ParserList> {
                     arguments: value);
   }
 
-  String prettyPrint(int indent) =>
-      '${"  " * indent}ReplaceMatchesParser\n${value.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) =>
+      '${"  " * indent}ReplaceMatchesParser\n${value.verbosePrint(indent + 1)}';
 }
 
 class LengthParser extends FhirPathParser {
@@ -228,7 +228,7 @@ class LengthParser extends FhirPathParser {
               : results.first is String
                   ? [results.first.value.length]
                   : throw _requiresString('.length()', results);
-  String prettyPrint(int indent) => '${"  " * indent}LengthParser';
+  String verbosePrint(int indent) => '${"  " * indent}LengthParser';
 }
 
 class ToCharsParser extends FhirPathParser {
@@ -242,7 +242,7 @@ class ToCharsParser extends FhirPathParser {
               : results.first is String
                   ? results.first.value.split('')
                   : throw _requiresString('.toChar()', results);
-  String prettyPrint(int indent) => '${"  " * indent}ToCharsParser';
+  String verbosePrint(int indent) => '${"  " * indent}ToCharsParser';
 }
 
 Exception _requiresList(String function, List results) =>

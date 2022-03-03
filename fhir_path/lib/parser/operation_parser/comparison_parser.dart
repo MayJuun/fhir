@@ -8,9 +8,9 @@ class GreaterParser extends OperatorParser {
   ParserList after = ParserList([]);
   List execute(List results, Map<String, dynamic> passed) =>
       executeComparisons(results, before, after, passed, Comparator.gt);
-  String prettyPrint(int indent) => '${"  " * indent}GreaterParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}GreaterParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }
 
 class LessParser extends OperatorParser {
@@ -19,9 +19,9 @@ class LessParser extends OperatorParser {
   ParserList after = ParserList([]);
   List execute(List results, Map<String, dynamic> passed) =>
       executeComparisons(results, before, after, passed, Comparator.lt);
-  String prettyPrint(int indent) => '${"  " * indent}LessParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}LessParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }
 
 class GreaterEqualParser extends OperatorParser {
@@ -32,9 +32,9 @@ class GreaterEqualParser extends OperatorParser {
     return executeComparisons(results, before, after, passed, Comparator.gte);
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}GreaterEqualParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}GreaterEqualParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }
 
 class LessEqualParser extends OperatorParser {
@@ -43,9 +43,9 @@ class LessEqualParser extends OperatorParser {
   ParserList after = ParserList([]);
   List execute(List results, Map<String, dynamic> passed) =>
       executeComparisons(results, before, after, passed, Comparator.lte);
-  String prettyPrint(int indent) => '${"  " * indent}LessEqualParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}LessEqualParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }
 
 enum Comparator { gt, gte, lt, lte }

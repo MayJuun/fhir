@@ -52,9 +52,9 @@ class EqualsParser extends OperatorParser {
     return 'EqualsParser: $before EQUALS $after';
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}EqualsParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}EqualsParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }
 
 /// ToDo: write test
@@ -66,9 +66,9 @@ class EquivalentParser extends OperatorParser {
     return [];
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}EquivalentParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}EquivalentParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }
 
 /// https://hl7.org/fhirpath/#not-equals
@@ -85,9 +85,9 @@ class NotEqualsParser extends OperatorParser {
     return FpNotParser().execute(equality, passed);
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}NotEqualsParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}NotEqualsParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }
 
 class NotEquivalentParser extends OperatorParser {
@@ -123,7 +123,7 @@ class NotEquivalentParser extends OperatorParser {
     }
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}NotEquivalentParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}NotEquivalentParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }

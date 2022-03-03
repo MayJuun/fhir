@@ -16,8 +16,11 @@ class UnionFunctionParser extends FunctionParser {
     return finalResults;
   }
 
+  String verbosePrint(int indent) =>
+      '${"  " * indent}UnionParser\n${value.verbosePrint(indent + 1)}';
+
   String prettyPrint(int indent) =>
-      '${"  " * indent}UnionParser\n${value.prettyPrint(indent + 1)}';
+      '.union(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 /// Merge the input and other collections into a single collection
@@ -37,6 +40,9 @@ class CombineParser extends FunctionParser {
     }
   }
 
+  String verbosePrint(int indent) =>
+      '${"  " * indent}CombineParser\n${value.verbosePrint(indent + 1)}';
+
   String prettyPrint(int indent) =>
-      '${"  " * indent}CombineParser\n${value.prettyPrint(indent + 1)}';
+      '.combine(\n${value.prettyPrint(indent + 1)}\n)';
 }

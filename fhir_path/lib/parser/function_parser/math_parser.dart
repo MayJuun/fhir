@@ -17,7 +17,7 @@ class AbsParser extends FhirPathParser {
                       ? []
                       : [(results.first as FhirPathQuantity).abs()]
                   : throw _wrongTypes('.abs()', results, 'none');
-  String prettyPrint(int indent) => '${"  " * indent}AbsParser';
+  String verbosePrint(int indent) => '${"  " * indent}AbsParser';
 }
 
 class CeilingParser extends FhirPathParser {
@@ -29,7 +29,7 @@ class CeilingParser extends FhirPathParser {
           : results.first is num
               ? [results.first.ceil()]
               : throw _wrongTypes('.ceiling()', results, 'none');
-  String prettyPrint(int indent) => '${"  " * indent}CeilingParser';
+  String verbosePrint(int indent) => '${"  " * indent}CeilingParser';
 }
 
 class ExpParser extends FhirPathParser {
@@ -41,7 +41,7 @@ class ExpParser extends FhirPathParser {
           : results.first is num
               ? [exp(results.first)]
               : throw _wrongTypes('.exp()', results, 'none');
-  String prettyPrint(int indent) => '${"  " * indent}ExpParser';
+  String verbosePrint(int indent) => '${"  " * indent}ExpParser';
 }
 
 class FloorParser extends FhirPathParser {
@@ -53,7 +53,7 @@ class FloorParser extends FhirPathParser {
           : results.first is num
               ? [results.first.floor()]
               : throw _wrongTypes('.floor()', results, 'none');
-  String prettyPrint(int indent) => '${"  " * indent}FloorParser';
+  String verbosePrint(int indent) => '${"  " * indent}FloorParser';
 }
 
 class LnParser extends FhirPathParser {
@@ -65,7 +65,7 @@ class LnParser extends FhirPathParser {
           : results.first is num
               ? [log(results.first)]
               : throw _wrongTypes('.ln()', results, 'none');
-  String prettyPrint(int indent) => '${"  " * indent}LnParser';
+  String verbosePrint(int indent) => '${"  " * indent}LnParser';
 }
 
 class LogParser extends ValueParser<ParserList> {
@@ -84,8 +84,8 @@ class LogParser extends ValueParser<ParserList> {
                     : throw _wrongTypes('log()', results, executedValue);
   }
 
-  String prettyPrint(int indent) =>
-      '${"  " * indent}LogParser\n${value.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) =>
+      '${"  " * indent}LogParser\n${value.verbosePrint(indent + 1)}';
 }
 
 class PowerParser extends ValueParser<ParserList> {
@@ -111,8 +111,8 @@ class PowerParser extends ValueParser<ParserList> {
         : [pow(finalResults, finalValue)];
   }
 
-  String prettyPrint(int indent) =>
-      '${"  " * indent}PowerParser\n${value.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) =>
+      '${"  " * indent}PowerParser\n${value.verbosePrint(indent + 1)}';
 }
 
 class RoundParser extends ValueParser<ParserList> {
@@ -134,8 +134,8 @@ class RoundParser extends ValueParser<ParserList> {
                 : throw _wrongTypes('.round()', results, executedValue);
   }
 
-  String prettyPrint(int indent) =>
-      '${"  " * indent}RoundParser\n${value.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) =>
+      '${"  " * indent}RoundParser\n${value.verbosePrint(indent + 1)}';
 }
 
 class SqrtParser extends FhirPathParser {
@@ -147,7 +147,7 @@ class SqrtParser extends FhirPathParser {
           : results.first is num
               ? (sqrt(results.first).isNaN ? [] : [sqrt(results.first)])
               : throw _wrongTypes('.sqrt()', results, 'none');
-  String prettyPrint(int indent) => '${"  " * indent}SqrtParser';
+  String verbosePrint(int indent) => '${"  " * indent}SqrtParser';
 }
 
 class TruncateParser extends ValueParser {
@@ -160,8 +160,8 @@ class TruncateParser extends ValueParser {
           : results.first is num
               ? [(results.first).toInt()]
               : throw _wrongTypes('.truncate()', results, 'none');
-  String prettyPrint(int indent) =>
-      '${"  " * indent}TruncateParser\n${value.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) =>
+      '${"  " * indent}TruncateParser\n${value.verbosePrint(indent + 1)}';
 }
 
 Exception _wrongLength(String functionName, List results) =>

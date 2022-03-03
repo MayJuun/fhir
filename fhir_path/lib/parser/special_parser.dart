@@ -8,7 +8,7 @@ class BracketsIndexParser extends ValueParser<int> {
   int value;
   List execute(List results, Map<String, dynamic> passed) =>
       results.isEmpty || value > results.length - 1 ? [] : [results[value]];
-  String prettyPrint(int indent) =>
+  String verbosePrint(int indent) =>
       '${"  " * indent}BracketsIndexParser: "$value"';
 }
 
@@ -16,7 +16,7 @@ class IndexParser extends FhirPathParser {
   IndexParser();
   List execute(List results, Map<String, dynamic> passed) =>
       [IterationContext.current(passed).indexValue];
-  String prettyPrint(int indent) => '${"  " * indent}IndexParser';
+  String verbosePrint(int indent) => '${"  " * indent}IndexParser';
 }
 
 class IterationContext {
@@ -56,14 +56,14 @@ class ThisParser extends FhirPathParser {
   ThisParser();
   List execute(List results, Map<String, dynamic> passed) =>
       [IterationContext.current(passed).thisValue];
-  String prettyPrint(int indent) => '${"  " * indent}ThisParser';
+  String verbosePrint(int indent) => '${"  " * indent}ThisParser';
 }
 
 class TotalParser extends ValueParser<String> {
   TotalParser();
   List execute(List results, Map<String, dynamic> passed) =>
       IterationContext.current(passed).totalValue;
-  String prettyPrint(int indent) => '${"  " * indent}TotalParser';
+  String verbosePrint(int indent) => '${"  " * indent}TotalParser';
 }
 
 class AggregateParser extends ValueParser<ParserList> {
@@ -100,18 +100,18 @@ class AggregateParser extends ValueParser<ParserList> {
     return finalTotal;
   }
 
-  String prettyPrint(int indent) =>
-      '${"  " * indent}AggregateParser\n${value.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) =>
+      '${"  " * indent}AggregateParser\n${value.verbosePrint(indent + 1)}';
 }
 
 class EmptySetParser extends FhirPathParser {
   EmptySetParser();
   List execute(List results, Map<String, dynamic> passed) => [];
-  String prettyPrint(int indent) => '${"  " * indent}EmptySetParser';
+  String verbosePrint(int indent) => '${"  " * indent}EmptySetParser';
 }
 
 class DotParser extends FhirPathParser {
   DotParser();
   List execute(List results, Map<String, dynamic> passed) => results;
-  String prettyPrint(int indent) => '${"  " * indent}DotParser';
+  String verbosePrint(int indent) => '${"  " * indent}DotParser';
 }

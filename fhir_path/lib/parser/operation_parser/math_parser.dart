@@ -31,9 +31,9 @@ class UnaryNegateParser extends OperatorParser {
     }
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}UnaryNegativeParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}UnaryNegativeParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }
 
 class UnaryPlusParser extends OperatorParser {
@@ -48,9 +48,9 @@ class UnaryPlusParser extends OperatorParser {
     return executedAfter;
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}UnaryPlusParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}UnaryPlusParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }
 
 class StarParser extends OperatorParser {
@@ -86,9 +86,9 @@ class StarParser extends OperatorParser {
     }
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}StarParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}StarParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }
 
 /// Divides the left operand by the right operand (supported for Integer, Decimal, and Quantity).
@@ -135,9 +135,9 @@ class DivSignParser extends OperatorParser {
     }
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}DivSignParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}DivSignParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }
 
 class DivStringParser extends OperatorParser {
@@ -172,9 +172,9 @@ class DivStringParser extends OperatorParser {
     }
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}DivStringParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}DivStringParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }
 
 class ModParser extends OperatorParser {
@@ -215,9 +215,9 @@ class ModParser extends OperatorParser {
     }
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}ModParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}ModParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }
 
 class PlusParser extends OperatorParser {
@@ -330,9 +330,9 @@ class PlusParser extends OperatorParser {
         collection: results);
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}PlusParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}PlusParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }
 
 class MinusParser extends OperatorParser {
@@ -448,9 +448,9 @@ class MinusParser extends OperatorParser {
     return 'MinusParser: $before MINUS $after';
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}MinusParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}MinusParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }
 
 class StringConcatenationParser extends OperatorParser {
@@ -497,7 +497,7 @@ class StringConcatenationParser extends OperatorParser {
     }
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}StringConcatenationParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}StringConcatenationParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }

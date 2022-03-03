@@ -1,6 +1,7 @@
 /// FhirPathParser: base parser
 abstract class FhirPathParser {
   List execute(List results, Map<String, dynamic> passed) => [];
+  String verbosePrint(int indent);
   String prettyPrint(int indent);
 }
 
@@ -46,11 +47,20 @@ class ParserList extends FhirPathParser {
 
   @override
   String toString() => 'PL(${value.length}): ${value.map((e) => e.toString())}';
-  String prettyPrint(int indent) {
+  String verbosePrint(int indent) {
     var returnString = '${"  " * indent}PL(${value.length})';
+    for (var item in value) {
+      returnString += '\n${item.verbosePrint(indent + 1)}';
+    }
+    return returnString;
+  }
+
+  String prettyPrint(int indent) {
+    var returnString = '${"  " * indent}PL(${value.length})\n${"  " * indent}[';
     for (var item in value) {
       returnString += '\n${item.prettyPrint(indent + 1)}';
     }
+    returnString += '\n${"  " * indent}]';
     return returnString;
   }
 }

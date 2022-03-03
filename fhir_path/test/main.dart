@@ -15,7 +15,6 @@ void main() {
 
   print(response.item?[0].answer?[0].valueDecimal);
   print(response.item?[0].answer?[0].valueDecimal?.isInt);
-  print(response.item?[0].answer?[0].valueDecimal?.isString);
   print(response.item?[0].answer?[0].valueDecimal?.isValid);
 
   // final l1 = '1,2,3,4,5,6,7,8,9,0';

@@ -67,8 +67,10 @@ class IifParser extends FunctionParser {
   }
 
   String toString() => 'IifParser: ${value.toString()}';
+  String verbosePrint(int indent) =>
+      '${"  " * indent}IifParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '${"  " * indent}IifParser\n${value.prettyPrint(indent + 1)}';
+      '.iif(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 /// http://hl7.org/fhirpath/#toboolean-boolean
@@ -104,7 +106,8 @@ class ToBooleanParser extends FhirPathParser {
                       ? [false]
                       : [];
 
-  String prettyPrint(int indent) => '${"  " * indent}ToBooleanParser';
+  String verbosePrint(int indent) => '${"  " * indent}ToBooleanParser';
+  String prettyPrint(int indent) => '.toBoolean()';
 }
 
 /// http://hl7.org/fhirpath/#convertstoboolean-boolean
@@ -144,7 +147,8 @@ class ConvertsToBooleanParser extends FhirPathParser {
                   ? [true]
                   : [false];
 
-  String prettyPrint(int indent) => '${"  " * indent}ConvertsToBooleanParser';
+  String verbosePrint(int indent) => '${"  " * indent}ConvertsToBooleanParser';
+  String prettyPrint(int indent) => '.convertsToBoolean()';
 }
 
 class ToIntegerParser extends FhirPathParser {
@@ -163,7 +167,8 @@ class ToIntegerParser extends FhirPathParser {
                           ? [int.parse(results.first)]
                           : [];
 
-  String prettyPrint(int indent) => '${"  " * indent}ToIntegerParser';
+  String verbosePrint(int indent) => '${"  " * indent}ToIntegerParser';
+  String prettyPrint(int indent) => '.toInteger()';
 }
 
 class ConvertsToIntegerParser extends FhirPathParser {
@@ -182,7 +187,8 @@ class ConvertsToIntegerParser extends FhirPathParser {
                           ? [true]
                           : [false];
 
-  String prettyPrint(int indent) => '${"  " * indent}ConvertsToIntegerParser';
+  String verbosePrint(int indent) => '${"  " * indent}ConvertsToIntegerParser';
+  String prettyPrint(int indent) => '.convertsToInteger()';
 }
 
 class ToDateParser extends FhirPathParser {
@@ -194,7 +200,8 @@ class ToDateParser extends FhirPathParser {
           : Date(results.first.toString()).isValid
               ? [Date(results.first.toString())]
               : [];
-  String prettyPrint(int indent) => '${"  " * indent}ToDateParser';
+  String verbosePrint(int indent) => '${"  " * indent}ToDateParser';
+  String prettyPrint(int indent) => '.toDate()';
 }
 
 class ConvertsToDateParser extends FhirPathParser {
@@ -204,7 +211,8 @@ class ConvertsToDateParser extends FhirPathParser {
       : results.length > 1
           ? throw _conversionException('.convertsToDate()', results)
           : [Date(results.first.toString()).isValid];
-  String prettyPrint(int indent) => '${"  " * indent}ConvertsToDateParser';
+  String verbosePrint(int indent) => '${"  " * indent}ConvertsToDateParser';
+  String prettyPrint(int indent) => '.convertsToDate()';
 }
 
 class ToDateTimeParser extends FhirPathParser {
@@ -216,7 +224,8 @@ class ToDateTimeParser extends FhirPathParser {
           : FhirDateTime(results.first.toString()).isValid
               ? [FhirDateTime(results.first.toString())]
               : [];
-  String prettyPrint(int indent) => '${"  " * indent}ToDateTimeParser';
+  String verbosePrint(int indent) => '${"  " * indent}ToDateTimeParser';
+  String prettyPrint(int indent) => '.toDateTime()';
 }
 
 class ConvertsToDateTimeParser extends FhirPathParser {
@@ -228,7 +237,8 @@ class ConvertsToDateTimeParser extends FhirPathParser {
           : FhirDateTime(results.first.toString()).isValid
               ? [FhirDateTime(results.first.toString()).isValid]
               : [];
-  String prettyPrint(int indent) => '${"  " * indent}ConvertsToDateTimeParser';
+  String verbosePrint(int indent) => '${"  " * indent}ConvertsToDateTimeParser';
+  String prettyPrint(int indent) => '.convertsToDateTime()';
 }
 
 class ToDecimalParser extends FhirPathParser {
@@ -246,7 +256,8 @@ class ToDecimalParser extends FhirPathParser {
                       : double.tryParse(results.first) != null
                           ? [double.parse(results.first)]
                           : [];
-  String prettyPrint(int indent) => '${"  " * indent}ToDecimalParser';
+  String verbosePrint(int indent) => '${"  " * indent}ToDecimalParser';
+  String prettyPrint(int indent) => '.toDecimal()';
 }
 
 class ConvertsToDecimalParser extends FhirPathParser {
@@ -264,7 +275,8 @@ class ConvertsToDecimalParser extends FhirPathParser {
                       : double.tryParse(results.first) != null
                           ? [true]
                           : [false];
-  String prettyPrint(int indent) => '${"  " * indent}ConvertsToDecimalParser';
+  String verbosePrint(int indent) => '${"  " * indent}ConvertsToDecimalParser';
+  String prettyPrint(int indent) => '.convertsToDecimal()';
 }
 
 class ToStringParser extends FhirPathParser {
@@ -279,7 +291,8 @@ class ToStringParser extends FhirPathParser {
                 : [results.first.toString()];
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}ToStringParser';
+  String verbosePrint(int indent) => '${"  " * indent}ToStringParser';
+  String prettyPrint(int indent) => '.toString()';
 }
 
 class ConvertsToStringParser extends FhirPathParser {
@@ -292,7 +305,8 @@ class ConvertsToStringParser extends FhirPathParser {
               ? [false]
               : [true];
 
-  String prettyPrint(int indent) => '${"  " * indent}ConvertsToStringParser';
+  String verbosePrint(int indent) => '${"  " * indent}ConvertsToStringParser';
+  String prettyPrint(int indent) => '.convertsToString()';
 }
 
 class ToTimeParser extends FhirPathParser {
@@ -306,7 +320,8 @@ class ToTimeParser extends FhirPathParser {
               : results.first is String && Time(results.first).isValid
                   ? [Time(results.first)]
                   : [];
-  String prettyPrint(int indent) => '${"  " * indent}ToTimeParser';
+  String verbosePrint(int indent) => '${"  " * indent}ToTimeParser';
+  String prettyPrint(int indent) => '.toTime()';
 }
 
 class ConvertsToTimeParser extends FhirPathParser {
@@ -319,7 +334,8 @@ class ConvertsToTimeParser extends FhirPathParser {
                   (results.first is String && Time(results.first).isValid)
               ? [true]
               : [false];
-  String prettyPrint(int indent) => '${"  " * indent}ConvertsToTimeParser';
+  String verbosePrint(int indent) => '${"  " * indent}ConvertsToTimeParser';
+  String prettyPrint(int indent) => '.convertsToTime()';
 }
 
 class ToQuantityParser extends FhirPathParser {
@@ -337,7 +353,8 @@ class ToQuantityParser extends FhirPathParser {
                   : results.first is String
                       ? [FhirPathQuantity.fromString(results.first)]
                       : [];
-  String prettyPrint(int indent) => '${"  " * indent}ToQuantityParser';
+  String verbosePrint(int indent) => '${"  " * indent}ToQuantityParser';
+  String prettyPrint(int indent) => '.toQuantity()';
 }
 
 class ConvertsToQuantityParser extends FhirPathParser {
@@ -356,7 +373,8 @@ class ConvertsToQuantityParser extends FhirPathParser {
                       ToQuantityParser().execute(results, passed).isNotEmpty)
                   ? [true]
                   : [false];
-  String prettyPrint(int indent) => '${"  " * indent}ConvertsToQuantityParser';
+  String verbosePrint(int indent) => '${"  " * indent}ConvertsToQuantityParser';
+  String prettyPrint(int indent) => '.convertsToQuantity()';
 }
 
 bool _isNotAcceptedType(List results) =>

@@ -7,7 +7,8 @@ class EmptyParser extends FhirPathParser {
   EmptyParser();
   List execute(List results, Map<String, dynamic> passed) =>
       results.isEmpty ? [true] : [false];
-  String prettyPrint(int indent) => '${"  " * indent}EmptyParser';
+  String verbosePrint(int indent) => '${"  " * indent}EmptyParser';
+  String prettyPrint(int indent) => '.empty()';
 }
 
 class HasValueParser extends FhirPathParser {
@@ -40,8 +41,9 @@ class HasValueParser extends FhirPathParser {
     }
   }
 
-  String prettyPrint(int indent) =>
-      '${"  " * indent}HasValueParser\n${value.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) =>
+      '${"  " * indent}HasValueParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) => '.hasValue()';
 }
 
 /// Returns true if the collection has any elements, and false otherwise.
@@ -74,8 +76,10 @@ class ExistsParser extends FunctionParser {
     return [returnList.isNotEmpty];
   }
 
+  String verbosePrint(int indent) =>
+      '${"  " * indent}ExistsParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '${"  " * indent}ExistsParser\n${value.prettyPrint(indent + 1)}';
+      '.exists(${value.isEmpty ? "" : "\n${value.verbosePrint(indent + 1)}\n)"}';
 }
 
 class AllParser extends ValueParser<ParserList> {
@@ -102,8 +106,10 @@ class AllParser extends ValueParser<ParserList> {
     }, passed);
   }
 
+  String verbosePrint(int indent) =>
+      '${"  " * indent}AllParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '${"  " * indent}AllParser\n${value.prettyPrint(indent + 1)}';
+      '.all(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 /// Takes a collection of Boolean values and returns true if all the items are true.
@@ -118,7 +124,8 @@ class AllTrueParser extends FhirPathParser {
     return [results.isEmpty];
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}AllTrueParser';
+  String verbosePrint(int indent) => '${"  " * indent}AllTrueParser';
+  String prettyPrint(int indent) => '.allTrue()';
 }
 
 /// Takes a collection of Boolean values and returns true if any of the items are true.
@@ -133,7 +140,8 @@ class AnyTrueParser extends FhirPathParser {
     return [results.length > 0];
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}AnyTrueParser';
+  String verbosePrint(int indent) => '${"  " * indent}AnyTrueParser';
+  String prettyPrint(int indent) => '.anyTrue()';
 }
 
 /// Takes a collection of Boolean values and returns true if all the items are false.
@@ -148,7 +156,8 @@ class AllFalseParser extends FhirPathParser {
     return [results.length == 0];
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}AllFalseParser';
+  String verbosePrint(int indent) => '${"  " * indent}AllFalseParser';
+  String prettyPrint(int indent) => '.allFalse()';
 }
 
 /// Takes a collection of Boolean values and returns true if any of the items are false.
@@ -163,7 +172,8 @@ class AnyFalseParser extends FhirPathParser {
     return [results.length > 0];
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}AnyFalseParser';
+  String verbosePrint(int indent) => '${"  " * indent}AnyFalseParser';
+  String prettyPrint(int indent) => '.anyFalse()';
 }
 
 class SubsetOfParser extends ValueParser<ParserList> {
@@ -183,8 +193,10 @@ class SubsetOfParser extends ValueParser<ParserList> {
     }
   }
 
+  String verbosePrint(int indent) =>
+      '${"  " * indent}SubsetOfParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '${"  " * indent}SubsetOfParser\n${value.prettyPrint(indent + 1)}';
+      '.subsetOf(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 class SupersetOfParser extends FhirPathParser {
@@ -204,14 +216,17 @@ class SupersetOfParser extends FhirPathParser {
     }
   }
 
+  String verbosePrint(int indent) =>
+      '${"  " * indent}SupersetOfParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '${"  " * indent}SupersetOfParser\n${value.prettyPrint(indent + 1)}';
+      '.supersetOf(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 class CountParser extends FhirPathParser {
   CountParser();
   List execute(List results, Map<String, dynamic> passed) => [results.length];
-  String prettyPrint(int indent) => '${"  " * indent}CountParser';
+  String verbosePrint(int indent) => '${"  " * indent}CountParser';
+  String prettyPrint(int indent) => '.count()';
 }
 
 class DistinctParser extends FhirPathParser {
@@ -226,7 +241,8 @@ class DistinctParser extends FhirPathParser {
     return resultsList;
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}DistinctParser';
+  String verbosePrint(int indent) => '${"  " * indent}DistinctParser';
+  String prettyPrint(int indent) => '.distinct()';
 }
 
 class IsDistinctParser extends FhirPathParser {
@@ -241,5 +257,6 @@ class IsDistinctParser extends FhirPathParser {
     return [resultsList.length == results.length];
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}IsDistinctParser';
+  String verbosePrint(int indent) => '${"  " * indent}IsDistinctParser';
+  String prettyPrint(int indent) => '.isDistinct()';
 }

@@ -24,9 +24,9 @@ class AndStringParser extends OperatorParser {
     return [];
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}AndStringParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}AndStringParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }
 
 class XorParser extends OperatorParser {
@@ -57,9 +57,9 @@ class XorParser extends OperatorParser {
     return [true];
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}XorParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}XorParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }
 
 class OrStringParser extends OperatorParser {
@@ -86,9 +86,9 @@ class OrStringParser extends OperatorParser {
     return [false];
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}OrStringParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}OrStringParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }
 
 class ImpliesParser extends OperatorParser {
@@ -123,7 +123,7 @@ class ImpliesParser extends OperatorParser {
     return [];
   }
 
-  String prettyPrint(int indent) => '${"  " * indent}ImpliesParser'
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}';
+  String verbosePrint(int indent) => '${"  " * indent}ImpliesParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
 }
