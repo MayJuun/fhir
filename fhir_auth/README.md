@@ -16,7 +16,7 @@ I've included examples in mobileauthdemo as well as webauthdemo.
 
 ### Android Setup
 
-In your file ```android/app/build.gradle``` you should have a section entitled ```defaultConfig```, you need to change it so that it looks similar to the following:
+In your file ```android/app/build.gradle``` you should have a section entitled ```defaultConfig```, you need to change it so that it looks similar to the following (please not the update, that for manifestPlaceholders it's now advised that you do += instead of simply = ):
 
 ```gradle
     defaultConfig {
@@ -26,7 +26,7 @@ In your file ```android/app/build.gradle``` you should have a section entitled `
         targetSdkVersion 29
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
-        manifestPlaceholders = [
+        manifestPlaceholders += [
             'appAuthRedirectScheme': 'your.application.id'
         ]
     }
@@ -38,7 +38,7 @@ A few notes.
 2. "your.application.id" is usually a reverse of a typicaly url format, so could be something like: "dev.fhirfli.application". This is also going to be your callback, although it should be something like: ```dev.fhirfli.application://callback``` (or in the case of google, sometimes they only allow a single slash, i.e. ```dev.fhirfli.application:/callback```).
 3. While it may not be completely necessary, I add the ```manifestPlaceholders``` as formatted above.
 
-In the AndroidManifest.xml file (```android/app/src/main/AndroidManifest.xml```)
+In the AndroidManifest.xml file (```android/app/src/main/AndroidManifest.xml```), you will need to add this section. You should be able to add it before or after the MainActivity.
 
 ```xml
 <activity android:name="com.linusu.flutter_web_auth.CallbackActivity" >
@@ -230,7 +230,7 @@ description: Full access for users with role Administrator from client shinynewa
 id: policy-for-shinynewapp-users-role-administrator
 resourceType: AccessPolicy
 ```
- 
+
 6. The mobileauthdemo should now be ready to connect to Aidbox.
 
 ### [Interopland](https://sandbox.interop.community/) and [MELD](https://meld.interop.community/)

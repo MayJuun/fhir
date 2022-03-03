@@ -1,12 +1,20 @@
 # fhir_auth
 
+## [0.6.0]
+
+* Updated dependencies
+* Updated to 0.6.0
+* Cleaned up Demos to work for Google, MELD, and Aidbox
+* Internal EHR Launch only works from MELD
+
 ## [0.5.0-10]
 
 * Updated fhir version
+
 ## [0.5.0-9]
 
 * Base FhirClient was still returning void from isLoggedIn (but should return a boolean)
-* Let `.login()` immediately ask for a token 
+* Let `.login()` immediately ask for a token
 * Updated dependencies
 * Dart 2.15.0
 

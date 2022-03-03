@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'aidbox_request.dart';
 import 'gcs_request.dart';
-import 'interop_request.dart';
 import 'meld_request.dart';
 
 Future main() async {
@@ -29,14 +28,6 @@ class MyApp extends StatelessWidget {
                     ),
                     child: Image.asset('assets/aidbox.png'),
                     onPressed: () async => await aidboxRequest()),
-                ElevatedButton(
-                    style: ButtonStyle(
-                      backgroundColor: MaterialStateProperty.all(Colors.white),
-                      side: MaterialStateProperty.all(
-                          const BorderSide(color: Colors.black)),
-                    ),
-                    child: Image.asset('assets/interopland.png'),
-                    onPressed: () async => await interopRequest()),
                 ElevatedButton(
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(Colors.white),
