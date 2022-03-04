@@ -14,6 +14,7 @@ class SingleParser extends FhirPathParser {
               operation: '.single()',
               collection: results);
   String verbosePrint(int indent) => '${"  " * indent}SingleParser';
+  String prettyPrint(int indent) => '.single()';
 }
 
 class FirstParser extends FhirPathParser {
@@ -21,6 +22,7 @@ class FirstParser extends FhirPathParser {
   List execute(List results, Map<String, dynamic> passed) =>
       results.isEmpty ? [] : [results.first];
   String verbosePrint(int indent) => '${"  " * indent}FirstParser';
+  String prettyPrint(int indent) => '.first()';
 }
 
 class LastParser extends FhirPathParser {
@@ -28,6 +30,7 @@ class LastParser extends FhirPathParser {
   List execute(List results, Map<String, dynamic> passed) =>
       results.isEmpty ? [] : [results.last];
   String verbosePrint(int indent) => '${"  " * indent}LastParser';
+  String prettyPrint(int indent) => '.last()';
 }
 
 class TailParser extends FhirPathParser {
@@ -42,6 +45,7 @@ class TailParser extends FhirPathParser {
   }
 
   String verbosePrint(int indent) => '${"  " * indent}TailParser';
+  String prettyPrint(int indent) => '.tail()';
 }
 
 class SkipParser extends FunctionParser {
@@ -68,6 +72,8 @@ class SkipParser extends FunctionParser {
 
   String verbosePrint(int indent) =>
       '${"  " * indent}SkipParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      'skip(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 class TakeParser extends FunctionParser {
@@ -94,6 +100,8 @@ class TakeParser extends FunctionParser {
 
   String verbosePrint(int indent) =>
       '${"  " * indent}TakeParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      'take(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 class IntersectParser extends ValueParser<ParserList> {
@@ -124,6 +132,8 @@ class IntersectParser extends ValueParser<ParserList> {
 
   String verbosePrint(int indent) =>
       '${"  " * indent}IntersectParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      'intersect(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 class ExcludeParser extends ValueParser<ParserList> {
@@ -140,4 +150,6 @@ class ExcludeParser extends ValueParser<ParserList> {
 
   String verbosePrint(int indent) =>
       '${"  " * indent}ExcludeParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      'exclude(\n${value.prettyPrint(indent + 1)}\n)';
 }

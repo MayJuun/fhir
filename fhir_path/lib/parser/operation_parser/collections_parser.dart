@@ -18,6 +18,9 @@ class UnionOperatorParser extends OperatorParser {
   String verbosePrint(int indent) => '${"  " * indent}UnionOperatorParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) => 'unionOperator('
+      '\n${before.prettyPrint(indent + 1)}'
+      '\n${after.prettyPrint(indent + 1)}\n)';
 }
 
 // http://hl7.org/fhirpath/#contains-containership
@@ -57,6 +60,9 @@ class ContainsOperatorParser extends OperatorParser {
   String verbosePrint(int indent) => '${"  " * indent}ContainsOperatorParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) => 'containsOperator('
+      '\n${before.prettyPrint(indent + 1)}'
+      '\n${after.prettyPrint(indent + 1)}\n)';
 }
 
 /// http://hl7.org/fhirpath/N1/#in-membership
@@ -91,6 +97,9 @@ class InParser extends OperatorParser {
   String verbosePrint(int indent) => '${"  " * indent}InParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) => 'in('
+      '\n${before.prettyPrint(indent + 1)}'
+      '\n${after.prettyPrint(indent + 1)}\n)';
 }
 
 class CommaParser extends OperatorParser {
@@ -127,4 +136,7 @@ class CommaParser extends OperatorParser {
   String verbosePrint(int indent) => '${"  " * indent}CommaParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) => 'comma('
+      '\n${before.prettyPrint(indent + 1)}'
+      '\n${after.prettyPrint(indent + 1)}\n)';
 }

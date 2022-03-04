@@ -43,7 +43,8 @@ class HasValueParser extends FhirPathParser {
 
   String verbosePrint(int indent) =>
       '${"  " * indent}HasValueParser\n${value.verbosePrint(indent + 1)}';
-  String prettyPrint(int indent) => '.hasValue()';
+  String prettyPrint(int indent) =>
+      '.hasValue(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 /// Returns true if the collection has any elements, and false otherwise.
@@ -79,7 +80,7 @@ class ExistsParser extends FunctionParser {
   String verbosePrint(int indent) =>
       '${"  " * indent}ExistsParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '.exists(${value.isEmpty ? "" : "\n${value.verbosePrint(indent + 1)}\n)"}';
+      '.exists(${value.isEmpty ? "" : "\n${value.prettyPrint(indent + 1)}\n)"}';
 }
 
 class AllParser extends ValueParser<ParserList> {
@@ -108,8 +109,12 @@ class AllParser extends ValueParser<ParserList> {
 
   String verbosePrint(int indent) =>
       '${"  " * indent}AllParser\n${value.verbosePrint(indent + 1)}';
-  String prettyPrint(int indent) =>
-      '.all(\n${value.prettyPrint(indent + 1)}\n)';
+  String prettyPrint(int indent) {
+    if (value == '') {
+      return '.all()';
+    } else {}
+    return '.all(\n${value.prettyPrint(indent + 1)}\n)';
+  }
 }
 
 /// Takes a collection of Boolean values and returns true if all the items are true.

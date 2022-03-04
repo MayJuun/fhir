@@ -56,11 +56,10 @@ class ParserList extends FhirPathParser {
   }
 
   String prettyPrint(int indent) {
-    var returnString = '${"  " * indent}PL(${value.length})\n${"  " * indent}[';
+    var returnString = '';
     for (var item in value) {
-      returnString += '\n${item.prettyPrint(indent + 1)}';
+      returnString += item.prettyPrint(indent + 1);
     }
-    returnString += '\n${"  " * indent}]';
     return returnString;
   }
 }

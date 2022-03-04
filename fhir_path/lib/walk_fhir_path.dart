@@ -36,6 +36,11 @@ List<dynamic> walkFhirPath({
 }) {
   final ast = parseFhirPath(pathExpression);
 
+  print('*****************');
+  print(pathExpression);
+  print(ast.prettyPrint(0));
+  print('*****************');
+
   return executeFhirPath(
     context: context,
     parsedFhirPath: ast,

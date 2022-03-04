@@ -18,6 +18,7 @@ class AbsParser extends FhirPathParser {
                       : [(results.first as FhirPathQuantity).abs()]
                   : throw _wrongTypes('.abs()', results, 'none');
   String verbosePrint(int indent) => '${"  " * indent}AbsParser';
+  String prettyPrint(int indent) => '.abs()';
 }
 
 class CeilingParser extends FhirPathParser {
@@ -30,6 +31,7 @@ class CeilingParser extends FhirPathParser {
               ? [results.first.ceil()]
               : throw _wrongTypes('.ceiling()', results, 'none');
   String verbosePrint(int indent) => '${"  " * indent}CeilingParser';
+  String prettyPrint(int indent) => '.ceiling()';
 }
 
 class ExpParser extends FhirPathParser {
@@ -42,6 +44,7 @@ class ExpParser extends FhirPathParser {
               ? [exp(results.first)]
               : throw _wrongTypes('.exp()', results, 'none');
   String verbosePrint(int indent) => '${"  " * indent}ExpParser';
+  String prettyPrint(int indent) => '.exp()';
 }
 
 class FloorParser extends FhirPathParser {
@@ -54,6 +57,7 @@ class FloorParser extends FhirPathParser {
               ? [results.first.floor()]
               : throw _wrongTypes('.floor()', results, 'none');
   String verbosePrint(int indent) => '${"  " * indent}FloorParser';
+  String prettyPrint(int indent) => '.floor()';
 }
 
 class LnParser extends FhirPathParser {
@@ -66,6 +70,7 @@ class LnParser extends FhirPathParser {
               ? [log(results.first)]
               : throw _wrongTypes('.ln()', results, 'none');
   String verbosePrint(int indent) => '${"  " * indent}LnParser';
+  String prettyPrint(int indent) => '.ln()';
 }
 
 class LogParser extends ValueParser<ParserList> {
@@ -86,6 +91,8 @@ class LogParser extends ValueParser<ParserList> {
 
   String verbosePrint(int indent) =>
       '${"  " * indent}LogParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      '.log(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 class PowerParser extends ValueParser<ParserList> {
@@ -113,6 +120,9 @@ class PowerParser extends ValueParser<ParserList> {
 
   String verbosePrint(int indent) =>
       '${"  " * indent}PowerParser\n${value.verbosePrint(indent + 1)}';
+
+  String prettyPrint(int indent) =>
+      '.power(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 class RoundParser extends ValueParser<ParserList> {
@@ -136,6 +146,8 @@ class RoundParser extends ValueParser<ParserList> {
 
   String verbosePrint(int indent) =>
       '${"  " * indent}RoundParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      '.round(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 class SqrtParser extends FhirPathParser {
@@ -148,6 +160,7 @@ class SqrtParser extends FhirPathParser {
               ? (sqrt(results.first).isNaN ? [] : [sqrt(results.first)])
               : throw _wrongTypes('.sqrt()', results, 'none');
   String verbosePrint(int indent) => '${"  " * indent}SqrtParser';
+  String prettyPrint(int indent) => '.sqrt()';
 }
 
 class TruncateParser extends ValueParser {
@@ -161,7 +174,14 @@ class TruncateParser extends ValueParser {
               ? [(results.first).toInt()]
               : throw _wrongTypes('.truncate()', results, 'none');
   String verbosePrint(int indent) =>
-      '${"  " * indent}TruncateParser\n${value.verbosePrint(indent + 1)}';
+      '${"  " * indent}TruncateParser\n${value?.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) {
+    if (value == null) {
+      return '.truncate()';
+    } else {
+      return '.truncate(\n${value?.prettyPrint(indent + 1)}\n)';
+    }
+  }
 }
 
 Exception _wrongLength(String functionName, List results) =>

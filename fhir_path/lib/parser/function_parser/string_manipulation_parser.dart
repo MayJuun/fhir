@@ -18,6 +18,8 @@ class IndexOfParser extends ValueParser<ParserList> {
 
   String verbosePrint(int indent) =>
       '${"  " * indent}IndexOfParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      'indexOf(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 class SubstringParser extends ValueParser<ParserList> {
@@ -66,6 +68,8 @@ class SubstringParser extends ValueParser<ParserList> {
 
   String verbosePrint(int indent) =>
       '${"  " * indent}SubstringParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      'substring(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 class StartsWithParser extends ValueParser<ParserList> {
@@ -88,6 +92,8 @@ class StartsWithParser extends ValueParser<ParserList> {
 
   String verbosePrint(int indent) =>
       '${"  " * indent}StartsWithParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      'startsWith(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 class EndsWithParser extends ValueParser<ParserList> {
@@ -108,6 +114,8 @@ class EndsWithParser extends ValueParser<ParserList> {
 
   String verbosePrint(int indent) =>
       '${"  " * indent}EndsWithParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      'endsWith(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 // http://hl7.org/fhirpath/#containssubstring-string-boolean
@@ -125,6 +133,8 @@ class ContainsFunctionParser extends ValueParser<ParserList> {
 
   String verbosePrint(int indent) =>
       '${"  " * indent}ContainsFunctionParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      'containsFunction(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 class UpperParser extends FhirPathParser {
@@ -135,6 +145,7 @@ class UpperParser extends FhirPathParser {
           ? throw _requiresList('.upper()', results)
           : [results.first.toString().toUpperCase()];
   String verbosePrint(int indent) => '${"  " * indent}UpperParser';
+  String prettyPrint(int indent) => '.upper()';
 }
 
 class LowerParser extends FhirPathParser {
@@ -145,6 +156,7 @@ class LowerParser extends FhirPathParser {
           ? throw _requiresList('.lower()', results)
           : [results.first.toString().toLowerCase()];
   String verbosePrint(int indent) => '${"  " * indent}LowerParser';
+  String prettyPrint(int indent) => '.lower()';
 }
 
 class ReplaceParser extends ValueParser<ParserList> {
@@ -166,6 +178,7 @@ class ReplaceParser extends ValueParser<ParserList> {
   }
 
   String verbosePrint(int indent) => '${"  " * indent}ReplaceParser';
+  String prettyPrint(int indent) => '.replace()';
 }
 
 class FpMatchesParser extends ValueParser<ParserList> {
@@ -187,6 +200,8 @@ class FpMatchesParser extends ValueParser<ParserList> {
 
   String verbosePrint(int indent) =>
       '${"  " * indent}FpMatchesParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      'fpMatches(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 class ReplaceMatchesParser extends ValueParser<ParserList> {
@@ -215,6 +230,8 @@ class ReplaceMatchesParser extends ValueParser<ParserList> {
 
   String verbosePrint(int indent) =>
       '${"  " * indent}ReplaceMatchesParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      'replaceMatches(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 class LengthParser extends FhirPathParser {
@@ -229,6 +246,7 @@ class LengthParser extends FhirPathParser {
                   ? [results.first.value.length]
                   : throw _requiresString('.length()', results);
   String verbosePrint(int indent) => '${"  " * indent}LengthParser';
+  String prettyPrint(int indent) => '.length()';
 }
 
 class ToCharsParser extends FhirPathParser {
@@ -243,6 +261,7 @@ class ToCharsParser extends FhirPathParser {
                   ? results.first.value.split('')
                   : throw _requiresString('.toChar()', results);
   String verbosePrint(int indent) => '${"  " * indent}ToCharsParser';
+  String prettyPrint(int indent) => '.toChars()';
 }
 
 Exception _requiresList(String function, List results) =>

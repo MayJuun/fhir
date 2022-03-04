@@ -10,6 +10,7 @@ class BracketsIndexParser extends ValueParser<int> {
       results.isEmpty || value > results.length - 1 ? [] : [results[value]];
   String verbosePrint(int indent) =>
       '${"  " * indent}BracketsIndexParser: "$value"';
+  String prettyPrint(int indent) => '[$value]';
 }
 
 class IndexParser extends FhirPathParser {
@@ -17,6 +18,7 @@ class IndexParser extends FhirPathParser {
   List execute(List results, Map<String, dynamic> passed) =>
       [IterationContext.current(passed).indexValue];
   String verbosePrint(int indent) => '${"  " * indent}IndexParser';
+  String prettyPrint(int indent) => 'index';
 }
 
 class IterationContext {
@@ -57,6 +59,7 @@ class ThisParser extends FhirPathParser {
   List execute(List results, Map<String, dynamic> passed) =>
       [IterationContext.current(passed).thisValue];
   String verbosePrint(int indent) => '${"  " * indent}ThisParser';
+  String prettyPrint(int indent) => 'this';
 }
 
 class TotalParser extends ValueParser<String> {
@@ -64,6 +67,7 @@ class TotalParser extends ValueParser<String> {
   List execute(List results, Map<String, dynamic> passed) =>
       IterationContext.current(passed).totalValue;
   String verbosePrint(int indent) => '${"  " * indent}TotalParser';
+  String prettyPrint(int indent) => 'total';
 }
 
 class AggregateParser extends ValueParser<ParserList> {
@@ -102,16 +106,20 @@ class AggregateParser extends ValueParser<ParserList> {
 
   String verbosePrint(int indent) =>
       '${"  " * indent}AggregateParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      'aggregate(\n${value.prettyPrint(indent + 1)}\n)';
 }
 
 class EmptySetParser extends FhirPathParser {
   EmptySetParser();
   List execute(List results, Map<String, dynamic> passed) => [];
   String verbosePrint(int indent) => '${"  " * indent}EmptySetParser';
+  String prettyPrint(int indent) => '{ }';
 }
 
 class DotParser extends FhirPathParser {
   DotParser();
   List execute(List results, Map<String, dynamic> passed) => results;
   String verbosePrint(int indent) => '${"  " * indent}DotParser';
+  String prettyPrint(int indent) => '.';
 }

@@ -8,12 +8,12 @@ import 'test_paths.dart';
 import 'test_questionnaire.dart';
 
 void main() {
-  testBasicTypes();
-  testPaths();
-  testNoArgFxns();
+  // testBasicTypes();
+  // testPaths();
+  // testNoArgFxns();
   testArgFxns();
-  testBasicOperators();
-  testQuestionnaire();
-  testDateTimes();
-  testFhirPathTestSuite();
+  // testBasicOperators();
+  // testQuestionnaire();
+  // testDateTimes();
+  // testFhirPathTestSuite();
 }

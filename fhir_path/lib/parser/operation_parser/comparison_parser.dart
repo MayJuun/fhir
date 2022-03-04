@@ -11,6 +11,9 @@ class GreaterParser extends OperatorParser {
   String verbosePrint(int indent) => '${"  " * indent}GreaterParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) => '>'
+      '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+      '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
 
 class LessParser extends OperatorParser {
@@ -22,6 +25,9 @@ class LessParser extends OperatorParser {
   String verbosePrint(int indent) => '${"  " * indent}LessParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) => '<'
+      '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+      '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
 
 class GreaterEqualParser extends OperatorParser {
@@ -35,6 +41,9 @@ class GreaterEqualParser extends OperatorParser {
   String verbosePrint(int indent) => '${"  " * indent}GreaterEqualParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) => '>='
+      '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+      '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
 
 class LessEqualParser extends OperatorParser {
@@ -46,6 +55,9 @@ class LessEqualParser extends OperatorParser {
   String verbosePrint(int indent) => '${"  " * indent}LessEqualParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) => '<='
+      '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+      '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
 
 enum Comparator { gt, gte, lt, lte }
