@@ -12,8 +12,6 @@ dependencies:
   fhir: ^0.6.0
   flutter:
     sdk: flutter
-  flutter_web_plugins:
-    sdk: flutter
   freezed_annotation: ^1.1.0
   google_sign_in: ^5.2.4
   http: ^0.13.4
