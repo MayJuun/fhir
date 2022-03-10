@@ -144,7 +144,7 @@ To briefly setup your app (assuming you have your GCP setup completed).
 2. Your sensitive scopes - Cloud Healthcare API
 3. APIs & Services -> Credentials -> Create OAuth client ID
 4. Package name should be (assuming API file above): ```com.myshiny.newapp```
-5. You do need the SHA-1 certificate for this
+5. You do need the SHA-1 certificate for this (ALWAYS remember to update this, I always forget and then spend at least an hour cursing at myself for why it's not working when I didn't change anything - and I forgot I changed computers, or reformatted, or something, and now my SHA-1 certificate is different)
 6. From the same menu, Create an OAuth client ID but select web application
 7. Identity Platform -> Add a Provider -> Select Google
 8. Web Client ID (from the above web app) and Web Client Secret (from the above web app)

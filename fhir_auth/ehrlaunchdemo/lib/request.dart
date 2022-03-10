@@ -17,5 +17,6 @@ Future<Resource?> request(SmartClient client) async {
     return response;
   } catch (e) {
     print(e);
+    return null;
   }
 }
