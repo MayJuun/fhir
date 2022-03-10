@@ -55,9 +55,9 @@ class EqualsParser extends OperatorParser {
   String verbosePrint(int indent) => '${"  " * indent}EqualsParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
-  String prettyPrint(int indent) => '${"  " * indent}='
-      '\n${"  " * indent}${"  " * indent}${before.prettyPrint(indent + 1)}'
-      '\n${"  " * indent}${"  " * indent}${after.prettyPrint(indent + 1)}';
+  String prettyPrint(int indent) => '='
+      '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+      '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
 
 /// ToDo: write test

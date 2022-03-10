@@ -70,7 +70,8 @@ class IifParser extends FunctionParser {
   String verbosePrint(int indent) =>
       '${"  " * indent}IifParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '.iif(\n${value.prettyPrint(indent + 1)}\n)';
+      '.iif(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 /// http://hl7.org/fhirpath/#toboolean-boolean

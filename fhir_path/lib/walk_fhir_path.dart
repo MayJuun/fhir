@@ -35,12 +35,6 @@ List<dynamic> walkFhirPath({
   FhirVersion version = FhirVersion.r4,
 }) {
   final ast = parseFhirPath(pathExpression);
-
-  print('*****************');
-  print(pathExpression);
-  print(ast.prettyPrint(0));
-  print('*****************');
-
   return executeFhirPath(
     context: context,
     parsedFhirPath: ast,

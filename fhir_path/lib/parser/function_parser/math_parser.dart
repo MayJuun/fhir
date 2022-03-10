@@ -92,7 +92,8 @@ class LogParser extends ValueParser<ParserList> {
   String verbosePrint(int indent) =>
       '${"  " * indent}LogParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '.log(\n${value.prettyPrint(indent + 1)}\n)';
+      '.log(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class PowerParser extends ValueParser<ParserList> {
@@ -122,7 +123,8 @@ class PowerParser extends ValueParser<ParserList> {
       '${"  " * indent}PowerParser\n${value.verbosePrint(indent + 1)}';
 
   String prettyPrint(int indent) =>
-      '.power(\n${value.prettyPrint(indent + 1)}\n)';
+      '.power(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class RoundParser extends ValueParser<ParserList> {
@@ -146,8 +148,10 @@ class RoundParser extends ValueParser<ParserList> {
 
   String verbosePrint(int indent) =>
       '${"  " * indent}RoundParser\n${value.verbosePrint(indent + 1)}';
-  String prettyPrint(int indent) =>
-      '.round(\n${value.prettyPrint(indent + 1)}\n)';
+  String prettyPrint(int indent) => value.isEmpty
+      ? '.round()'
+      : '.round(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+          '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class SqrtParser extends FhirPathParser {
@@ -179,7 +183,8 @@ class TruncateParser extends ValueParser {
     if (value == null) {
       return '.truncate()';
     } else {
-      return '.truncate(\n${value?.prettyPrint(indent + 1)}\n)';
+      return '.truncate(\n${value?.prettyPrint(indent + 1)}\n'
+          '${indent <= 0 ? "" : "  " * (indent - 1)})';
     }
   }
 }

@@ -93,9 +93,9 @@ class StarParser extends OperatorParser {
   String verbosePrint(int indent) => '${"  " * indent}StarParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
-  String prettyPrint(int indent) => 'star('
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}\n)';
+  String prettyPrint(int indent) => '*'
+      '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+      '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
 
 /// Divides the left operand by the right operand (supported for Integer, Decimal, and Quantity).
@@ -145,9 +145,9 @@ class DivSignParser extends OperatorParser {
   String verbosePrint(int indent) => '${"  " * indent}DivSignParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
-  String prettyPrint(int indent) => 'divSign('
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}\n)';
+  String prettyPrint(int indent) => '/'
+      '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+      '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
 
 class DivStringParser extends OperatorParser {
@@ -185,9 +185,9 @@ class DivStringParser extends OperatorParser {
   String verbosePrint(int indent) => '${"  " * indent}DivStringParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
-  String prettyPrint(int indent) => 'divString('
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}\n)';
+  String prettyPrint(int indent) => 'div'
+      '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+      '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
 
 class ModParser extends OperatorParser {
@@ -231,9 +231,9 @@ class ModParser extends OperatorParser {
   String verbosePrint(int indent) => '${"  " * indent}ModParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
-  String prettyPrint(int indent) => 'mod('
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}\n)';
+  String prettyPrint(int indent) => '%'
+      '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+      '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
 
 class PlusParser extends OperatorParser {
@@ -470,9 +470,11 @@ class MinusParser extends OperatorParser {
   String verbosePrint(int indent) => '${"  " * indent}MinusParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
-  String prettyPrint(int indent) => 'minus('
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}\n)';
+  String prettyPrint(int indent) => before.isEmpty
+      ? '-${after.prettyPrint(indent + 1)}'
+      : '-'
+          '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+          '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
 
 class StringConcatenationParser extends OperatorParser {
@@ -523,6 +525,7 @@ class StringConcatenationParser extends OperatorParser {
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) => 'stringConcatenation('
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}\n)';
+      '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+      '\n${"  " * indent}${after.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }

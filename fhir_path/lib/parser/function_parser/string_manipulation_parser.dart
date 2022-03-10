@@ -19,7 +19,8 @@ class IndexOfParser extends ValueParser<ParserList> {
   String verbosePrint(int indent) =>
       '${"  " * indent}IndexOfParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      'indexOf(\n${value.prettyPrint(indent + 1)}\n)';
+      '.indexOf(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class SubstringParser extends ValueParser<ParserList> {
@@ -69,7 +70,8 @@ class SubstringParser extends ValueParser<ParserList> {
   String verbosePrint(int indent) =>
       '${"  " * indent}SubstringParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      'substring(\n${value.prettyPrint(indent + 1)}\n)';
+      '.substring(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class StartsWithParser extends ValueParser<ParserList> {
@@ -93,7 +95,8 @@ class StartsWithParser extends ValueParser<ParserList> {
   String verbosePrint(int indent) =>
       '${"  " * indent}StartsWithParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      'startsWith(\n${value.prettyPrint(indent + 1)}\n)';
+      '.startsWith(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class EndsWithParser extends ValueParser<ParserList> {
@@ -115,7 +118,8 @@ class EndsWithParser extends ValueParser<ParserList> {
   String verbosePrint(int indent) =>
       '${"  " * indent}EndsWithParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      'endsWith(\n${value.prettyPrint(indent + 1)}\n)';
+      '.endsWith(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 // http://hl7.org/fhirpath/#containssubstring-string-boolean
@@ -134,7 +138,8 @@ class ContainsFunctionParser extends ValueParser<ParserList> {
   String verbosePrint(int indent) =>
       '${"  " * indent}ContainsFunctionParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      'containsFunction(\n${value.prettyPrint(indent + 1)}\n)';
+      '.containsFunction(\n${"  " * indent}${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class UpperParser extends FhirPathParser {
@@ -178,7 +183,10 @@ class ReplaceParser extends ValueParser<ParserList> {
   }
 
   String verbosePrint(int indent) => '${"  " * indent}ReplaceParser';
-  String prettyPrint(int indent) => '.replace()';
+  String prettyPrint(int indent) => value.isEmpty
+      ? '.replace()'
+      : '.replace(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+          '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class FpMatchesParser extends ValueParser<ParserList> {
@@ -201,7 +209,8 @@ class FpMatchesParser extends ValueParser<ParserList> {
   String verbosePrint(int indent) =>
       '${"  " * indent}FpMatchesParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      'fpMatches(\n${value.prettyPrint(indent + 1)}\n)';
+      '.matches(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class ReplaceMatchesParser extends ValueParser<ParserList> {
@@ -231,7 +240,8 @@ class ReplaceMatchesParser extends ValueParser<ParserList> {
   String verbosePrint(int indent) =>
       '${"  " * indent}ReplaceMatchesParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      'replaceMatches(\n${value.prettyPrint(indent + 1)}\n)';
+      '.replaceMatches(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class LengthParser extends FhirPathParser {

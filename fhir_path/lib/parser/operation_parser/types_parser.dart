@@ -75,7 +75,8 @@ class IsParser extends OperatorParser {
       '\n${after.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) => 'is('
       '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}\n)';
+      '\n${after.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class AsParser extends OperatorParser {
@@ -149,7 +150,7 @@ class AsParser extends OperatorParser {
   String verbosePrint(int indent) => '${"  " * indent}AsParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
-  String prettyPrint(int indent) => 'as('
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}\n)';
+  String prettyPrint(int indent) => 'as'
+      '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+      '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }

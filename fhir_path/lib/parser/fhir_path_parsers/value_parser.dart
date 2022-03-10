@@ -20,9 +20,9 @@ class ParenthesesParser extends ValueParser<ParserList> {
       '${value.verbosePrint(indent + 1)}\n'
       '${"  " * indent})';
 
-  String prettyPrint(int indent) => '${"  " * indent}(\n'
-      '${value.prettyPrint(indent + 1)}\n'
-      '${"  " * indent})';
+  String prettyPrint(int indent) => '(\n'
+      '${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 /// FunctionParser: functions

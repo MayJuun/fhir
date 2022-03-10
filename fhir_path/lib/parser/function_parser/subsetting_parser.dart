@@ -73,7 +73,8 @@ class SkipParser extends FunctionParser {
   String verbosePrint(int indent) =>
       '${"  " * indent}SkipParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      'skip(\n${value.prettyPrint(indent + 1)}\n)';
+      '.skip(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class TakeParser extends FunctionParser {
@@ -101,7 +102,8 @@ class TakeParser extends FunctionParser {
   String verbosePrint(int indent) =>
       '${"  " * indent}TakeParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      'take(\n${value.prettyPrint(indent + 1)}\n)';
+      '.take(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class IntersectParser extends ValueParser<ParserList> {
@@ -133,7 +135,8 @@ class IntersectParser extends ValueParser<ParserList> {
   String verbosePrint(int indent) =>
       '${"  " * indent}IntersectParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      'intersect(\n${value.prettyPrint(indent + 1)}\n)';
+      '.intersect(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class ExcludeParser extends ValueParser<ParserList> {
@@ -151,5 +154,6 @@ class ExcludeParser extends ValueParser<ParserList> {
   String verbosePrint(int indent) =>
       '${"  " * indent}ExcludeParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      'exclude(\n${value.prettyPrint(indent + 1)}\n)';
+      '.exclude(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }

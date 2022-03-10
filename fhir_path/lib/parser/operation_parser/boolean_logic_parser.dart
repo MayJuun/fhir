@@ -27,9 +27,9 @@ class AndStringParser extends OperatorParser {
   String verbosePrint(int indent) => '${"  " * indent}AndStringParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
-  String prettyPrint(int indent) => 'andString('
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}\n)';
+  String prettyPrint(int indent) => 'and'
+      '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+      '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
 
 class XorParser extends OperatorParser {
@@ -63,9 +63,9 @@ class XorParser extends OperatorParser {
   String verbosePrint(int indent) => '${"  " * indent}XorParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
-  String prettyPrint(int indent) => 'xor('
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}\n)';
+  String prettyPrint(int indent) => 'xor'
+      '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+      '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
 
 class OrStringParser extends OperatorParser {
@@ -95,9 +95,9 @@ class OrStringParser extends OperatorParser {
   String verbosePrint(int indent) => '${"  " * indent}OrStringParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
-  String prettyPrint(int indent) => 'orString('
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}\n)';
+  String prettyPrint(int indent) => 'or'
+      '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+      '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
 
 class ImpliesParser extends OperatorParser {
@@ -136,6 +136,7 @@ class ImpliesParser extends OperatorParser {
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) => 'implies('
-      '\n${before.prettyPrint(indent + 1)}'
-      '\n${after.prettyPrint(indent + 1)}\n)';
+      '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+      '\n${"  " * indent}${after.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }

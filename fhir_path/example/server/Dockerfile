@@ -1,5 +1,5 @@
 ################
-FROM google/dart:2.14.0
+FROM google/dart:2.15.0
 
 WORKDIR /app
 COPY pubspec.yaml /app/pubspec.yaml

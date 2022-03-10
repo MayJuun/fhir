@@ -34,7 +34,8 @@ class FpWhereParser extends FunctionParser {
   String verbosePrint(int indent) =>
       '${"  " * indent}FpWhereParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '.where(\n${value.prettyPrint(indent + 1)}\n)';
+      '.where(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class SelectParser extends ValueParser<ParserList> {
@@ -55,7 +56,7 @@ class SelectParser extends ValueParser<ParserList> {
   String verbosePrint(int indent) =>
       '${"  " * indent}SelectParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '.select(\n${value.prettyPrint(indent + 1)}\n)';
+      '.select(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n)';
 }
 
 class RepeatParser extends ValueParser<ParserList> {
@@ -88,7 +89,8 @@ class RepeatParser extends ValueParser<ParserList> {
   String verbosePrint(int indent) =>
       '${"  " * indent}RepeatParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '.repeat(\n${value.prettyPrint(indent + 1)}\n)';
+      '.repeat(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class OfTypeParser extends ValueParser<ParserList> {
@@ -153,7 +155,8 @@ class OfTypeParser extends ValueParser<ParserList> {
   String verbosePrint(int indent) =>
       '${"  " * indent}OfTypeParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '.ofType(\n${value.prettyPrint(indent + 1)}\n)';
+      '.ofType(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class ExtensionParser extends ValueParser<ParserList> {
@@ -190,5 +193,6 @@ class ExtensionParser extends ValueParser<ParserList> {
   String verbosePrint(int indent) =>
       '${"  " * indent}ExtensionParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '.extension(\n${value.prettyPrint(indent + 1)}\n)';
+      '.extension(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }

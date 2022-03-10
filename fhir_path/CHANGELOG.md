@@ -6,6 +6,7 @@
 * Still needs some work for some of the tests
 * prettyPrint is now called verbosePrint because, well, it is
 * There is also a new PrettyPrint which is more what I wanted when I first created verbosePrint (it looks kind of like reverse polish notation)
+* Some of the spacing, especially for the commaParser, is likely to change for PrettyPrint, but I think it's close enough to go ahead and publish
 
 ## [0.5.0-21]
 

@@ -44,7 +44,8 @@ class HasValueParser extends FhirPathParser {
   String verbosePrint(int indent) =>
       '${"  " * indent}HasValueParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '.hasValue(\n${value.prettyPrint(indent + 1)}\n)';
+      '.hasValue(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 /// Returns true if the collection has any elements, and false otherwise.
@@ -80,7 +81,8 @@ class ExistsParser extends FunctionParser {
   String verbosePrint(int indent) =>
       '${"  " * indent}ExistsParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '.exists(${value.isEmpty ? "" : "\n${value.prettyPrint(indent + 1)}\n)"}';
+      '.exists(${value.isEmpty ? "" : "\n${"  " * indent}${value.prettyPrint(indent + 1)}\n"}'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class AllParser extends ValueParser<ParserList> {
@@ -110,10 +112,11 @@ class AllParser extends ValueParser<ParserList> {
   String verbosePrint(int indent) =>
       '${"  " * indent}AllParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) {
-    if (value == '') {
+    if (value.isEmpty) {
       return '.all()';
-    } else {}
-    return '.all(\n${value.prettyPrint(indent + 1)}\n)';
+    }
+    return '.all(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+        '${indent <= 0 ? "" : "  " * (indent - 1)})';
   }
 }
 
@@ -201,7 +204,8 @@ class SubsetOfParser extends ValueParser<ParserList> {
   String verbosePrint(int indent) =>
       '${"  " * indent}SubsetOfParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '.subsetOf(\n${value.prettyPrint(indent + 1)}\n)';
+      '.subsetOf(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class SupersetOfParser extends FhirPathParser {
@@ -224,7 +228,8 @@ class SupersetOfParser extends FhirPathParser {
   String verbosePrint(int indent) =>
       '${"  " * indent}SupersetOfParser\n${value.verbosePrint(indent + 1)}';
   String prettyPrint(int indent) =>
-      '.supersetOf(\n${value.prettyPrint(indent + 1)}\n)';
+      '.supersetOf(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class CountParser extends FhirPathParser {
