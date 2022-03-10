@@ -9,7 +9,7 @@ part of 'evidence_based_medicine.dart';
 _$_EffectEvidenceSynthesis _$$_EffectEvidenceSynthesisFromJson(
         Map<String, dynamic> json) =>
     _$_EffectEvidenceSynthesis(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.EffectEvidenceSynthesis) ??
           R4ResourceType.EffectEvidenceSynthesis,
@@ -59,7 +59,7 @@ _$_EffectEvidenceSynthesis _$$_EffectEvidenceSynthesisFromJson(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$EffectEvidenceSynthesisStatusEnumMap, json['status'],
           unknownValue: EffectEvidenceSynthesisStatus.unknown),
       statusElement: json['_status'] == null
@@ -239,43 +239,6 @@ Map<String, dynamic> _$$_EffectEvidenceSynthesisToJson(
   writeNotNull(
       'certainty', instance.certainty?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R4ResourceTypeEnumMap = {
@@ -507,7 +470,7 @@ _$_EffectEvidenceSynthesisResultsByExposure
           descriptionElement: json['_description'] == null
               ? null
               : Element.fromJson(json['_description'] as Map<String, dynamic>),
-          exposureState: _$enumDecodeNullable(
+          exposureState: $enumDecodeNullable(
               _$EffectEvidenceSynthesisResultsByExposureExposureStateEnumMap,
               json['exposureState'],
               unknownValue:
@@ -765,7 +728,7 @@ Map<String, dynamic> _$$_EffectEvidenceSynthesisCertaintySubcomponentToJson(
 }
 
 _$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Evidence) ??
           R4ResourceType.Evidence,
@@ -823,7 +786,7 @@ _$_Evidence _$$_EvidenceFromJson(Map<String, dynamic> json) => _$_Evidence(
       subtitleElement: json['_subtitle'] == null
           ? null
           : Element.fromJson(json['_subtitle'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$EvidenceStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$EvidenceStatusEnumMap, json['status'],
           unknownValue: EvidenceStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -985,7 +948,7 @@ const _$EvidenceStatusEnumMap = {
 
 _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
     _$_EvidenceVariable(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.EvidenceVariable) ??
           R4ResourceType.EvidenceVariable,
@@ -1043,7 +1006,7 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
       subtitleElement: json['_subtitle'] == null
           ? null
           : Element.fromJson(json['_subtitle'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$EvidenceVariableStatusEnumMap, json['status'],
           unknownValue: EvidenceVariableStatus.unknown),
       statusElement: json['_status'] == null
@@ -1114,7 +1077,7 @@ _$_EvidenceVariable _$$_EvidenceVariableFromJson(Map<String, dynamic> json) =>
       relatedArtifact: (json['relatedArtifact'] as List<dynamic>?)
           ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecodeNullable(_$EvidenceVariableTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$EvidenceVariableTypeEnumMap, json['type'],
           unknownValue: EvidenceVariableType.unknown),
       typeElement: json['_type'] == null
           ? null
@@ -1285,7 +1248,7 @@ _$_EvidenceVariableCharacteristic _$$_EvidenceVariableCharacteristicFromJson(
           ? null
           : FhirDuration.fromJson(
               json['timeFromStart'] as Map<String, dynamic>),
-      groupMeasure: _$enumDecodeNullable(
+      groupMeasure: $enumDecodeNullable(
           _$EvidenceVariableCharacteristicGroupMeasureEnumMap,
           json['groupMeasure'],
           unknownValue: EvidenceVariableCharacteristicGroupMeasure.unknown),
@@ -1359,7 +1322,7 @@ const _$EvidenceVariableCharacteristicGroupMeasureEnumMap = {
 _$_ResearchDefinition _$$_ResearchDefinitionFromJson(
         Map<String, dynamic> json) =>
     _$_ResearchDefinition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ResearchDefinition) ??
           R4ResourceType.ResearchDefinition,
@@ -1417,7 +1380,7 @@ _$_ResearchDefinition _$$_ResearchDefinitionFromJson(
       subtitleElement: json['_subtitle'] == null
           ? null
           : Element.fromJson(json['_subtitle'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$ResearchDefinitionStatusEnumMap, json['status'],
           unknownValue: ResearchDefinitionStatus.unknown),
       statusElement: json['_status'] == null
@@ -1627,7 +1590,7 @@ const _$ResearchDefinitionStatusEnumMap = {
 _$_ResearchElementDefinition _$$_ResearchElementDefinitionFromJson(
         Map<String, dynamic> json) =>
     _$_ResearchElementDefinition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ResearchElementDefinition) ??
           R4ResourceType.ResearchElementDefinition,
@@ -1685,7 +1648,7 @@ _$_ResearchElementDefinition _$$_ResearchElementDefinitionFromJson(
       subtitleElement: json['_subtitle'] == null
           ? null
           : Element.fromJson(json['_subtitle'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$ResearchElementDefinitionStatusEnumMap, json['status'],
           unknownValue: ResearchElementDefinitionStatus.unknown),
       statusElement: json['_status'] == null
@@ -1785,13 +1748,13 @@ _$_ResearchElementDefinition _$$_ResearchElementDefinitionFromJson(
       library_: (json['library'] as List<dynamic>?)
           ?.map((e) => Canonical.fromJson(e))
           .toList(),
-      type: _$enumDecodeNullable(
+      type: $enumDecodeNullable(
           _$ResearchElementDefinitionTypeEnumMap, json['type'],
           unknownValue: ResearchElementDefinitionType.unknown),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      variableType: _$enumDecodeNullable(
+      variableType: $enumDecodeNullable(
           _$ResearchElementDefinitionVariableTypeEnumMap, json['variableType'],
           unknownValue: ResearchElementDefinitionVariableType.unknown),
       variableTypeElement: json['_variableType'] == null
@@ -1988,7 +1951,7 @@ _$_ResearchElementDefinitionCharacteristic
               ? null
               : FhirDuration.fromJson(
                   json['studyEffectiveTimeFromStart'] as Map<String, dynamic>),
-          studyEffectiveGroupMeasure: _$enumDecodeNullable(
+          studyEffectiveGroupMeasure: $enumDecodeNullable(
               _$ResearchElementDefinitionCharacteristicStudyEffectiveGroupMeasureEnumMap,
               json['studyEffectiveGroupMeasure'],
               unknownValue:
@@ -2034,7 +1997,7 @@ _$_ResearchElementDefinitionCharacteristic
                   : FhirDuration.fromJson(
                       json['participantEffectiveTimeFromStart']
                           as Map<String, dynamic>),
-          participantEffectiveGroupMeasure: _$enumDecodeNullable(
+          participantEffectiveGroupMeasure: $enumDecodeNullable(
               _$ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasureEnumMap,
               json['participantEffectiveGroupMeasure'],
               unknownValue:
@@ -2158,7 +2121,7 @@ const _$ResearchElementDefinitionCharacteristicParticipantEffectiveGroupMeasureE
 _$_RiskEvidenceSynthesis _$$_RiskEvidenceSynthesisFromJson(
         Map<String, dynamic> json) =>
     _$_RiskEvidenceSynthesis(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.RiskEvidenceSynthesis) ??
           R4ResourceType.RiskEvidenceSynthesis,
@@ -2208,7 +2171,7 @@ _$_RiskEvidenceSynthesis _$$_RiskEvidenceSynthesisFromJson(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$RiskEvidenceSynthesisStatusEnumMap, json['status'],
           unknownValue: RiskEvidenceSynthesisStatus.unknown),
       statusElement: json['_status'] == null

@@ -8,7 +8,7 @@ part of 'operations_control.dart';
 
 _$_Conformance _$$_ConformanceFromJson(Map<String, dynamic> json) =>
     _$_Conformance(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Conformance) ??
           Dstu2ResourceType.Conformance,
@@ -39,7 +39,7 @@ _$_Conformance _$$_ConformanceFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_url'] as Map<String, dynamic>),
       version: json['version'] as String?,
       name: json['name'] as String?,
-      status: _$enumDecodeNullable(_$ConformanceStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$ConformanceStatusEnumMap, json['status'],
           unknownValue: ConformanceStatus.unknown),
       experimental: json['experimental'] == null
           ? null
@@ -52,7 +52,7 @@ _$_Conformance _$$_ConformanceFromJson(Map<String, dynamic> json) =>
       description: json['description'] as String?,
       requirements: json['requirements'] as String?,
       copyright: json['copyright'] as String?,
-      kind: _$enumDecode(_$ConformanceKindEnumMap, json['kind'],
+      kind: $enumDecode(_$ConformanceKindEnumMap, json['kind'],
           unknownValue: ConformanceKind.unknown),
       software: json['software'] == null
           ? null
@@ -66,14 +66,14 @@ _$_Conformance _$$_ConformanceFromJson(Map<String, dynamic> json) =>
       fhirVersionElement: json['_fhirVersion'] == null
           ? null
           : Element.fromJson(json['_fhirVersion'] as Map<String, dynamic>),
-      acceptUnknown: _$enumDecode(
+      acceptUnknown: $enumDecode(
           _$ConformanceAcceptUnknownEnumMap, json['acceptUnknown'],
           unknownValue: ConformanceAcceptUnknown.unknown),
       acceptUnknownElement: json['_acceptUnknown'] == null
           ? null
           : Element.fromJson(json['_acceptUnknown'] as Map<String, dynamic>),
       format: (json['format'] as List<dynamic>)
-          .map((e) => _$enumDecode(_$ConformanceFormatEnumMap, e))
+          .map((e) => $enumDecode(_$ConformanceFormatEnumMap, e))
           .toList(),
       profile: (json['profile'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
@@ -139,43 +139,6 @@ Map<String, dynamic> _$$_ConformanceToJson(_$_Conformance instance) {
       'messaging', instance.messaging?.map((e) => e.toJson()).toList());
   writeNotNull('document', instance.document?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -312,7 +275,7 @@ const _$ConformanceFormatEnumMap = {
 _$_CapabilityStatement _$$_CapabilityStatementFromJson(
         Map<String, dynamic> json) =>
     _$_CapabilityStatement(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.CapabilityStatement) ??
           Dstu2ResourceType.CapabilityStatement,
@@ -343,7 +306,7 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
           : Element.fromJson(json['_url'] as Map<String, dynamic>),
       version: json['version'] as String?,
       name: json['name'] as String?,
-      status: _$enumDecodeNullable(_$ConformanceStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$ConformanceStatusEnumMap, json['status'],
           unknownValue: ConformanceStatus.unknown),
       experimental: json['experimental'] == null
           ? null
@@ -356,7 +319,7 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
       description: json['description'] as String?,
       requirements: json['requirements'] as String?,
       copyright: json['copyright'] as String?,
-      kind: _$enumDecode(_$ConformanceKindEnumMap, json['kind'],
+      kind: $enumDecode(_$ConformanceKindEnumMap, json['kind'],
           unknownValue: ConformanceKind.unknown),
       software: json['software'] == null
           ? null
@@ -370,14 +333,14 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
       fhirVersionElement: json['_fhirVersion'] == null
           ? null
           : Element.fromJson(json['_fhirVersion'] as Map<String, dynamic>),
-      acceptUnknown: _$enumDecode(
+      acceptUnknown: $enumDecode(
           _$ConformanceAcceptUnknownEnumMap, json['acceptUnknown'],
           unknownValue: ConformanceAcceptUnknown.unknown),
       acceptUnknownElement: json['_acceptUnknown'] == null
           ? null
           : Element.fromJson(json['_acceptUnknown'] as Map<String, dynamic>),
       format: (json['format'] as List<dynamic>)
-          .map((e) => _$enumDecode(_$ConformanceFormatEnumMap, e))
+          .map((e) => $enumDecode(_$ConformanceFormatEnumMap, e))
           .toList(),
       profile: (json['profile'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
@@ -566,7 +529,7 @@ _$_ConformanceRest _$$_ConformanceRestFromJson(Map<String, dynamic> json) =>
       fhirComments: (json['fhir_comments'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      mode: _$enumDecode(_$RestModeEnumMap, json['mode'],
+      mode: $enumDecode(_$RestModeEnumMap, json['mode'],
           unknownValue: RestMode.unknown),
       modeElement: json['_mode'] == null
           ? null
@@ -584,7 +547,7 @@ _$_ConformanceRest _$$_ConformanceRestFromJson(Map<String, dynamic> json) =>
           ?.map((e) =>
               ConformanceRestInteraction.fromJson(e as Map<String, dynamic>))
           .toList(),
-      transactionMode: _$enumDecodeNullable(
+      transactionMode: $enumDecodeNullable(
           _$RestTransactionModeEnumMap, json['transactionMode'],
           unknownValue: RestTransactionMode.unknown),
       searchParam: (json['searchParam'] as List<dynamic>?)
@@ -710,7 +673,7 @@ _$_ConformanceDocument _$$_ConformanceDocumentFromJson(
       fhirComments: (json['fhir_comments'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      mode: _$enumDecode(_$DocumentModeEnumMap, json['mode'],
+      mode: $enumDecode(_$DocumentModeEnumMap, json['mode'],
           unknownValue: DocumentMode.unknown),
       documentation: json['documentation'] as String?,
       profile: Reference.fromJson(json['profile'] as Map<String, dynamic>),
@@ -820,7 +783,7 @@ _$_ConformanceRestResource _$$_ConformanceRestResourceFromJson(
         .map((e) =>
             ConformanceResourceInteraction.fromJson(e as Map<String, dynamic>))
         .toList(),
-    versioning: _$enumDecodeNullable(
+    versioning: $enumDecodeNullable(
         _$ResourceVersioningEnumMap, json['versioning'],
         unknownValue: ResourceVersioning.unknown),
     readHistory: json['readHistory'] == null
@@ -841,7 +804,7 @@ _$_ConformanceRestResource _$$_ConformanceRestResourceFromJson(
     conditionalUpdate: json['conditionalUpdate'] == null
         ? null
         : Boolean.fromJson(json['conditionalUpdate']),
-    conditionalDelete: _$enumDecodeNullable(
+    conditionalDelete: $enumDecodeNullable(
         _$ResourceConditionalDeleteEnumMap, json['conditionalDelete'],
         unknownValue: ResourceConditionalDelete.unknown),
     conditionalDeleteElement: json['_conditionalDelete'] == null
@@ -923,7 +886,7 @@ _$_ConformanceResourceInteraction _$$_ConformanceResourceInteractionFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: _$enumDecode(_$ResourceInteractionCodeEnumMap, json['code'],
+      code: $enumDecode(_$ResourceInteractionCodeEnumMap, json['code'],
           unknownValue: ResourceInteractionCode.unknown),
       documentation: json['documentation'] as String?,
     );
@@ -1049,9 +1012,9 @@ _$_ConformanceMessagingEvent _$$_ConformanceMessagingEventFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       code: Coding.fromJson(json['code'] as Map<String, dynamic>),
-      category: _$enumDecodeNullable(_$EventCategoryEnumMap, json['category'],
+      category: $enumDecodeNullable(_$EventCategoryEnumMap, json['category'],
           unknownValue: EventCategory.unknown),
-      mode: _$enumDecode(_$EventModeEnumMap, json['mode'],
+      mode: $enumDecode(_$EventModeEnumMap, json['mode'],
           unknownValue: EventMode.unknown),
       modeElement: json['_mode'] == null
           ? null
@@ -1149,7 +1112,7 @@ _$_ConformanceRestInteraction _$$_ConformanceRestInteractionFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: _$enumDecode(_$RestInteractionCodeEnumMap, json['code'],
+      code: $enumDecode(_$RestInteractionCodeEnumMap, json['code'],
           unknownValue: RestInteractionCode.unknown),
       documentation: json['documentation'] as String?,
     );
@@ -1198,14 +1161,14 @@ _$_ConformanceResourceSearchParam _$$_ConformanceResourceSearchParamFromJson(
       definition: json['definition'] == null
           ? null
           : FhirUri.fromJson(json['definition']),
-      type: _$enumDecode(_$SearchParamTypeEnumMap, json['type'],
+      type: $enumDecode(_$SearchParamTypeEnumMap, json['type'],
           unknownValue: SearchParamType.unknown),
       documentation: json['documentation'] as String?,
       target: (json['target'] as List<dynamic>?)
           ?.map((e) => Code.fromJson(e))
           .toList(),
       modifier: (json['modifier'] as List<dynamic>?)
-          ?.map((e) => _$enumDecode(_$SearchParamModifierEnumMap, e))
+          ?.map((e) => $enumDecode(_$SearchParamModifierEnumMap, e))
           .toList(),
       chain:
           (json['chain'] as List<dynamic>?)?.map((e) => e as String).toList(),
@@ -1271,7 +1234,7 @@ _$_OperationDefinition _$$_OperationDefinitionFromJson(
     requiredKeys: const ['status'],
   );
   return _$_OperationDefinition(
-    resourceType: _$enumDecodeNullable(
+    resourceType: $enumDecodeNullable(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.OperationDefinition) ??
         Dstu2ResourceType.OperationDefinition,
@@ -1298,9 +1261,9 @@ _$_OperationDefinition _$$_OperationDefinitionFromJson(
     url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
     version: json['version'] as String?,
     name: json['name'] as String,
-    status: _$enumDecode(_$OperationDefinitionStatusEnumMap, json['status'],
+    status: $enumDecode(_$OperationDefinitionStatusEnumMap, json['status'],
         unknownValue: OperationDefinitionStatus.unknown),
-    kind: _$enumDecode(_$OperationDefinitionKindEnumMap, json['kind'],
+    kind: $enumDecode(_$OperationDefinitionKindEnumMap, json['kind'],
         unknownValue: OperationDefinitionKind.unknown),
     experimental: json['experimental'] == null
         ? null
@@ -1441,7 +1404,7 @@ _$_OperationDefinitionParameter _$$_OperationDefinitionParameterFromJson(
           ?.map((e) => e as String)
           .toList(),
       name: Code.fromJson(json['name']),
-      use: _$enumDecode(_$ParameterUseEnumMap, json['use'],
+      use: $enumDecode(_$ParameterUseEnumMap, json['use'],
           unknownValue: ParameterUse.unknown),
       min: Integer.fromJson(json['min']),
       max: json['max'] as String,
@@ -1508,7 +1471,7 @@ _$_OperationDefinitionParameterBinding
     modifierExtension: (json['modifierExtension'] as List<dynamic>?)
         ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
         .toList(),
-    strength: _$enumDecode(
+    strength: $enumDecode(
         _$OperationDefinitionBindingStrengthEnumMap, json['strength'],
         unknownValue: OperationDefinitionBindingStrength.unknown),
     valueSetUri: json['valueSetUri'] == null
@@ -1552,7 +1515,7 @@ const _$OperationDefinitionBindingStrengthEnumMap = {
 
 _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
     _$_SearchParameter(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.SearchParameter) ??
           Dstu2ResourceType.SearchParameter,
@@ -1579,7 +1542,7 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
           .toList(),
       url: FhirUri.fromJson(json['url']),
       name: json['name'] as String,
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$SearchParameterStatusEnumMap, json['status'],
           unknownValue: SearchParameterStatus.unknown),
       experimental: json['experimental'] == null
@@ -1597,11 +1560,11 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_requirements'] as Map<String, dynamic>),
       code: Code.fromJson(json['code']),
       base: json['base'] == null ? null : Code.fromJson(json['base']),
-      type: _$enumDecode(_$SearchParameterTypeEnumMap, json['type'],
+      type: $enumDecode(_$SearchParameterTypeEnumMap, json['type'],
           unknownValue: SearchParameterType.unknown),
       description: json['description'] as String?,
       xpath: json['xpath'] as String?,
-      xpathUsage: _$enumDecodeNullable(
+      xpathUsage: $enumDecodeNullable(
           _$SearchParameterXpathUsageEnumMap, json['xpathUsage'],
           unknownValue: SearchParameterXpathUsage.unknown),
       target: (json['target'] as List<dynamic>?)

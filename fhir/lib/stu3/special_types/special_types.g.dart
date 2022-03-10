@@ -7,7 +7,7 @@ part of 'special_types.dart';
 // **************************************************************************
 
 _$_Narrative _$$_NarrativeFromJson(Map<String, dynamic> json) => _$_Narrative(
-      status: _$enumDecodeNullable(_$NarrativeStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$NarrativeStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -27,43 +27,6 @@ Map<String, dynamic> _$$_NarrativeToJson(_$_Narrative instance) {
   writeNotNull('_status', instance.statusElement?.toJson());
   val['div'] = instance.div;
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$NarrativeStatusEnumMap = {
@@ -164,8 +127,7 @@ _$_ElementDefinition _$$_ElementDefinitionFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_path'] as Map<String, dynamic>),
       representation: (json['representation'] as List<dynamic>?)
-          ?.map(
-              (e) => _$enumDecode(_$ElementDefinitionRepresentationEnumMap, e))
+          ?.map((e) => $enumDecode(_$ElementDefinitionRepresentationEnumMap, e))
           .toList(),
       representationElement: (json['_representation'] as List<dynamic>?)
           ?.map((e) =>
@@ -1454,7 +1416,7 @@ _$_ElementDefinitionSlicing _$$_ElementDefinitionSlicingFromJson(
       orderedElement: json['_ordered'] == null
           ? null
           : Element.fromJson(json['_ordered'] as Map<String, dynamic>),
-      rules: _$enumDecodeNullable(
+      rules: $enumDecodeNullable(
           _$ElementDefinitionSlicingRulesEnumMap, json['rules']),
       rulesElement: json['_rules'] == null
           ? null
@@ -1492,7 +1454,7 @@ const _$ElementDefinitionSlicingRulesEnumMap = {
 _$_ElementDefinitionDiscriminator _$$_ElementDefinitionDiscriminatorFromJson(
         Map<String, dynamic> json) =>
     _$_ElementDefinitionDiscriminator(
-      type: _$enumDecodeNullable(
+      type: $enumDecodeNullable(
           _$ElementDefinitionDiscriminatorTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
@@ -1586,13 +1548,13 @@ _$_ElementDefinitionType _$$_ElementDefinitionTypeFromJson(
           : Element.fromJson(json['_targetProfile'] as Map<String, dynamic>),
       aggregation: (json['aggregation'] as List<dynamic>?)
           ?.map(
-              (e) => _$enumDecode(_$ElementDefinitionTypeAggregationEnumMap, e))
+              (e) => $enumDecode(_$ElementDefinitionTypeAggregationEnumMap, e))
           .toList(),
       aggregationElement: (json['_aggregation'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      versioning: _$enumDecodeNullable(
+      versioning: $enumDecodeNullable(
           _$ElementDefinitionTypeVersioningEnumMap, json['versioning']),
       versioningElement: json['_versioning'] == null
           ? null
@@ -1965,7 +1927,7 @@ _$_ElementDefinitionConstraint _$$_ElementDefinitionConstraintFromJson(
       requirementsElement: json['_requirements'] == null
           ? null
           : Element.fromJson(json['_requirements'] as Map<String, dynamic>),
-      severity: _$enumDecodeNullable(
+      severity: $enumDecodeNullable(
           _$ElementDefinitionConstraintSeverityEnumMap, json['severity']),
       severityElement: json['_severity'] == null
           ? null
@@ -2028,7 +1990,7 @@ _$_ElementDefinitionBinding _$$_ElementDefinitionBindingFromJson(
       extension_: (json['extension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      strength: _$enumDecodeNullable(
+      strength: $enumDecodeNullable(
           _$ElementDefinitionBindingStrengthEnumMap, json['strength']),
       strengthElement: json['_strength'] == null
           ? null

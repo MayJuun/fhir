@@ -6,45 +6,70 @@ class GreaterParser extends OperatorParser {
   GreaterParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) =>
+  List execute(List results, Map<String, dynamic> passed) =>
       executeComparisons(results, before, after, passed, Comparator.gt);
+  String verbosePrint(int indent) => '${"  " * indent}GreaterParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) => '>'
+      '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+      '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
 
 class LessParser extends OperatorParser {
   LessParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) =>
+  List execute(List results, Map<String, dynamic> passed) =>
       executeComparisons(results, before, after, passed, Comparator.lt);
+  String verbosePrint(int indent) => '${"  " * indent}LessParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) => '<'
+      '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+      '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
 
 class GreaterEqualParser extends OperatorParser {
   GreaterEqualParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     return executeComparisons(results, before, after, passed, Comparator.gte);
   }
+
+  String verbosePrint(int indent) => '${"  " * indent}GreaterEqualParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) => '>='
+      '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+      '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
 
 class LessEqualParser extends OperatorParser {
   LessEqualParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
-  List execute(List results, Map passed) =>
+  List execute(List results, Map<String, dynamic> passed) =>
       executeComparisons(results, before, after, passed, Comparator.lte);
+  String verbosePrint(int indent) => '${"  " * indent}LessEqualParser'
+      '\n${before.verbosePrint(indent + 1)}'
+      '\n${after.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) => '<='
+      '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
+      '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
 
 enum Comparator { gt, gte, lt, lte }
 
 List executeComparisons(List results, ParserList before, ParserList after,
-    Map passed, Comparator comparator,
+    Map<String, dynamic> passed, Comparator comparator,
     {bool where = false}) {
   bool stringGt(dynamic param1, dynamic param2) {
     if (param1 is! String || param2 is! String) {
       throw FhirPathEvaluationException(
-          'Can only check equality on Strings compared to other Strings',
-          operation: '==',
+          'Can only compare Strings to other Strings',
+          operation: 'comparator',
           arguments: [param1, param2],
           collection: results);
     } else if (param1 == param2) {
@@ -84,15 +109,22 @@ List executeComparisons(List results, ParserList before, ParserList after,
     }
   }
 
-  final executedBefore = before.execute(results.toList(), passed);
-  final executedAfter = after.execute(results.toList(), passed);
-  if (executedBefore.isEmpty || executedAfter.isEmpty) {
+  final lhs = SingletonEvaluation.toSingleton(
+      before.execute(results.toList(), passed),
+      name: 'left-hand side',
+      operation: comparator.toString(),
+      collection: results);
+  final rhs = SingletonEvaluation.toSingleton(
+      after.execute(results.toList(), passed),
+      name: 'right-hand side',
+      operation: comparator.toString(),
+      collection: results);
+
+  if (lhs.isEmpty || rhs.isEmpty) {
     return [];
   } else {
-    if (executedBefore.length != 1 ||
-        executedAfter.length != 1 ||
-        !_allowedTypes.contains(executedBefore.first.runtimeType) ||
-        !_allowedTypes.contains(executedAfter.first.runtimeType)) {
+    if (!_allowedTypes.contains(lhs.first.runtimeType) ||
+        !_allowedTypes.contains(rhs.first.runtimeType)) {
       final functionName = comparator == Comparator.gt
           ? '>'
           : comparator == Comparator.gte
@@ -101,22 +133,21 @@ List executeComparisons(List results, ParserList before, ParserList after,
                   ? '<'
                   : '<=';
       throw FhirPathEvaluationException(
-          'The function $functionName cannot work with the types '
+          'The comparator $functionName cannot work with the types '
           'passed.\n'
-          'Before: $before\n'
-          'After: $after',
+          'LHS: $lhs\n'
+          'RHS: $rhs',
           operation: functionName,
           arguments: [before, after]);
     } else {
       if (where) {
-        results.retainWhere((element) =>
-            compare(element[executedBefore.first], executedAfter.first));
+        results
+            .retainWhere((element) => compare(element[lhs.first], rhs.first));
         return results;
       } else {
         try {
-          return [compare(executedBefore.first, executedAfter.first)];
+          return [compare(lhs.first, rhs.first)];
         } catch (e) {
-          print(e);
           return [];
         }
       }

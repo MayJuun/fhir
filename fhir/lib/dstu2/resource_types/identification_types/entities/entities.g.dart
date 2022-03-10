@@ -7,7 +7,7 @@ part of 'entities.dart';
 // **************************************************************************
 
 _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Location) ??
           Dstu2ResourceType.Location,
@@ -41,7 +41,7 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$LocationStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$LocationStatusEnumMap, json['status'],
           unknownValue: LocationStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -54,7 +54,7 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      mode: _$enumDecodeNullable(_$LocationModeEnumMap, json['mode'],
+      mode: $enumDecodeNullable(_$LocationModeEnumMap, json['mode'],
           unknownValue: LocationMode.unknown),
       modeElement: json['_mode'] == null
           ? null
@@ -126,43 +126,6 @@ Map<String, dynamic> _$$_LocationToJson(_$_Location instance) {
   writeNotNull('managingOrganization', instance.managingOrganization?.toJson());
   writeNotNull('partOf', instance.partOf?.toJson());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -324,7 +287,7 @@ Map<String, dynamic> _$$_LocationPositionToJson(_$_LocationPosition instance) {
 }
 
 _$_Substance _$$_SubstanceFromJson(Map<String, dynamic> json) => _$_Substance(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Substance) ??
           Dstu2ResourceType.Substance,
@@ -491,7 +454,7 @@ Map<String, dynamic> _$$_SubstanceIngredientToJson(
 }
 
 _$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Person) ??
           Dstu2ResourceType.Person,
@@ -531,7 +494,7 @@ _$_Person _$$_PersonFromJson(Map<String, dynamic> json) => _$_Person(
       telecom: (json['telecom'] as List<dynamic>?)
           ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
           .toList(),
-      gender: _$enumDecodeNullable(_$PersonGenderEnumMap, json['gender'],
+      gender: $enumDecodeNullable(_$PersonGenderEnumMap, json['gender'],
           unknownValue: PersonGender.unknown),
       genderElement: json['_gender'] == null
           ? null
@@ -618,7 +581,7 @@ _$_PersonLink _$$_PersonLinkFromJson(Map<String, dynamic> json) =>
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       target: Reference.fromJson(json['target'] as Map<String, dynamic>),
-      assurance: _$enumDecodeNullable(_$LinkAssuranceEnumMap, json['assurance'],
+      assurance: $enumDecodeNullable(_$LinkAssuranceEnumMap, json['assurance'],
           unknownValue: LinkAssurance.unknown),
       assuranceElement: json['_assurance'] == null
           ? null
@@ -654,7 +617,7 @@ const _$LinkAssuranceEnumMap = {
 };
 
 _$_Contract _$$_ContractFromJson(Map<String, dynamic> json) => _$_Contract(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Contract) ??
           Dstu2ResourceType.Contract,

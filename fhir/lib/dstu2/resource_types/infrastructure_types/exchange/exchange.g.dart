@@ -8,7 +8,7 @@ part of 'exchange.dart';
 
 _$_MessageHeader _$$_MessageHeaderFromJson(Map<String, dynamic> json) =>
     _$_MessageHeader(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.MessageHeader) ??
           Dstu2ResourceType.MessageHeader,
@@ -108,43 +108,6 @@ Map<String, dynamic> _$$_MessageHeaderToJson(_$_MessageHeader instance) {
   writeNotNull('reason', instance.reason?.toJson());
   writeNotNull('data', instance.data?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -259,7 +222,7 @@ _$_MessageHeaderResponse _$$_MessageHeaderResponseFromJson(
       identifierElement: json['_identifier'] == null
           ? null
           : Element.fromJson(json['_identifier'] as Map<String, dynamic>),
-      code: _$enumDecode(_$ResponseCodeEnumMap, json['code'],
+      code: $enumDecode(_$ResponseCodeEnumMap, json['code'],
           unknownValue: ResponseCode.unknown),
       codeElement: json['_code'] == null
           ? null
@@ -405,7 +368,7 @@ Map<String, dynamic> _$$_MessageHeaderDestinationToJson(
 
 _$_OperationOutcome _$$_OperationOutcomeFromJson(Map<String, dynamic> json) =>
     _$_OperationOutcome(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.OperationOutcome) ??
           Dstu2ResourceType.OperationOutcome,
@@ -483,7 +446,7 @@ _$_OperationOutcomeIssue _$$_OperationOutcomeIssueFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      severity: _$enumDecode(_$IssueSeverityEnumMap, json['severity'],
+      severity: $enumDecode(_$IssueSeverityEnumMap, json['severity'],
           unknownValue: IssueSeverity.unknown),
       code: Code.fromJson(json['code']),
       details: json['details'] == null
@@ -528,7 +491,7 @@ const _$IssueSeverityEnumMap = {
 
 _$_Parameters _$$_ParametersFromJson(Map<String, dynamic> json) =>
     _$_Parameters(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Parameters) ??
           Dstu2ResourceType.Parameters,
@@ -771,7 +734,7 @@ Map<String, dynamic> _$$_ParametersParameterToJson(
 
 _$_Subscription _$$_SubscriptionFromJson(Map<String, dynamic> json) =>
     _$_Subscription(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Subscription) ??
           Dstu2ResourceType.Subscription,
@@ -813,7 +776,7 @@ _$_Subscription _$$_SubscriptionFromJson(Map<String, dynamic> json) =>
       reasonElement: json['_reason'] == null
           ? null
           : Element.fromJson(json['_reason'] as Map<String, dynamic>),
-      status: _$enumDecode(_$SubscriptionStatusEnumMap, json['status'],
+      status: $enumDecode(_$SubscriptionStatusEnumMap, json['status'],
           unknownValue: SubscriptionStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -891,7 +854,7 @@ _$_SubscriptionChannel _$$_SubscriptionChannelFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecode(_$ChannelTypeEnumMap, json['type'],
+      type: $enumDecode(_$ChannelTypeEnumMap, json['type'],
           unknownValue: ChannelType.unknown),
       typeElement: json['_type'] == null
           ? null

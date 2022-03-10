@@ -4,7 +4,7 @@ import '../../fhir_path.dart';
 
 class SingleParser extends FhirPathParser {
   SingleParser();
-  List execute(List results, Map passed) => results.length == 1
+  List execute(List results, Map<String, dynamic> passed) => results.length == 1
       ? results
       : results.length == 0
           ? []
@@ -13,23 +13,29 @@ class SingleParser extends FhirPathParser {
               'item if evaluated using the .single() function',
               operation: '.single()',
               collection: results);
+  String verbosePrint(int indent) => '${"  " * indent}SingleParser';
+  String prettyPrint(int indent) => '.single()';
 }
 
 class FirstParser extends FhirPathParser {
   FirstParser();
-  List execute(List results, Map passed) =>
+  List execute(List results, Map<String, dynamic> passed) =>
       results.isEmpty ? [] : [results.first];
+  String verbosePrint(int indent) => '${"  " * indent}FirstParser';
+  String prettyPrint(int indent) => '.first()';
 }
 
 class LastParser extends FhirPathParser {
   LastParser();
-  List execute(List results, Map passed) =>
+  List execute(List results, Map<String, dynamic> passed) =>
       results.isEmpty ? [] : [results.last];
+  String verbosePrint(int indent) => '${"  " * indent}LastParser';
+  String prettyPrint(int indent) => '.last()';
 }
 
 class TailParser extends FhirPathParser {
   TailParser();
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     if (results.length < 2) {
       return [];
     } else {
@@ -37,12 +43,15 @@ class TailParser extends FhirPathParser {
       return results;
     }
   }
+
+  String verbosePrint(int indent) => '${"  " * indent}TailParser';
+  String prettyPrint(int indent) => '.tail()';
 }
 
 class SkipParser extends FunctionParser {
   SkipParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
     return executedValue.length != 1 || executedValue.first is! int
         ? throw FhirPathEvaluationException(
@@ -60,12 +69,18 @@ class SkipParser extends FunctionParser {
                     ? []
                     : results.sublist(executedValue.first);
   }
+
+  String verbosePrint(int indent) =>
+      '${"  " * indent}SkipParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      '.skip(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class TakeParser extends FunctionParser {
   TakeParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
     return value.length != 1 || value.first is! IntegerParser
         ? throw FhirPathEvaluationException(
@@ -83,25 +98,51 @@ class TakeParser extends FunctionParser {
                 ? results
                 : results.sublist(0, executedValue.first);
   }
+
+  String verbosePrint(int indent) =>
+      '${"  " * indent}TakeParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      '.take(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class IntersectParser extends ValueParser<ParserList> {
   IntersectParser();
   late ParserList value;
-  List execute(List results, Map passed) {
-    final executedValue = value.execute(results.toList(), passed);
-    results.removeWhere((e) =>
-        executedValue.indexWhere(
+  List execute(List results, Map<String, dynamic> passed) {
+    final other = value.execute(results.toList(), passed);
+    final inBag = [...results];
+
+    // Eliminate duplicates in input
+    final outBag = [];
+    for (final item in inBag) {
+      if (outBag.indexWhere((otherItem) =>
+              DeepCollectionEquality().equals(item, otherItem)) ==
+          -1) {
+        outBag.add(item);
+      }
+    }
+
+    // Intersect
+    outBag.removeWhere((e) =>
+        other.indexWhere(
             (element) => DeepCollectionEquality().equals(e, element)) ==
         -1);
-    return results;
+
+    return outBag;
   }
+
+  String verbosePrint(int indent) =>
+      '${"  " * indent}IntersectParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      '.intersect(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class ExcludeParser extends ValueParser<ParserList> {
   ExcludeParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
     results.removeWhere((e) =>
         executedValue.indexWhere(
@@ -109,4 +150,10 @@ class ExcludeParser extends ValueParser<ParserList> {
         -1);
     return results;
   }
+
+  String verbosePrint(int indent) =>
+      '${"  " * indent}ExcludeParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      '.exclude(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }

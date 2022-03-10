@@ -7,7 +7,7 @@ part of 'care_provision.dart';
 // **************************************************************************
 
 _$_CarePlan _$$_CarePlanFromJson(Map<String, dynamic> json) => _$_CarePlan(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.CarePlan) ??
           Dstu2ResourceType.CarePlan,
@@ -44,7 +44,7 @@ _$_CarePlan _$$_CarePlanFromJson(Map<String, dynamic> json) => _$_CarePlan(
       subject: json['subject'] == null
           ? null
           : Reference.fromJson(json['subject'] as Map<String, dynamic>),
-      status: _$enumDecode(_$CarePlanStatusEnumMap, json['status'],
+      status: $enumDecode(_$CarePlanStatusEnumMap, json['status'],
           unknownValue: CarePlanStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -138,43 +138,6 @@ Map<String, dynamic> _$$_CarePlanToJson(_$_CarePlan instance) {
   writeNotNull('activity', instance.activity?.map((e) => e.toJson()).toList());
   writeNotNull('note', instance.note?.toJson());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -294,7 +257,7 @@ _$_CarePlanRelatedPlan _$$_CarePlanRelatedPlanFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: _$enumDecodeNullable(_$RelatedPlanCodeEnumMap, json['code'],
+      code: $enumDecodeNullable(_$RelatedPlanCodeEnumMap, json['code'],
           unknownValue: RelatedPlanCode.unknown),
       plan: Reference.fromJson(json['plan'] as Map<String, dynamic>),
     );
@@ -442,7 +405,7 @@ _$_CarePlanActivityDetail _$$_CarePlanActivityDetailFromJson(
       goal: (json['goal'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$DetailStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$DetailStatusEnumMap, json['status'],
           unknownValue: DetailStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -543,7 +506,7 @@ const _$DetailStatusEnumMap = {
 };
 
 _$_Goal _$$_GoalFromJson(Map<String, dynamic> json) => _$_Goal(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Goal) ??
           Dstu2ResourceType.Goal,
@@ -598,7 +561,7 @@ _$_Goal _$$_GoalFromJson(Map<String, dynamic> json) => _$_Goal(
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
       description: json['description'] as String,
-      status: _$enumDecode(_$GoalStatusEnumMap, json['status'],
+      status: $enumDecode(_$GoalStatusEnumMap, json['status'],
           unknownValue: GoalStatus.unknown),
       statusDate:
           json['statusDate'] == null ? null : Date.fromJson(json['statusDate']),
@@ -730,7 +693,7 @@ Map<String, dynamic> _$$_GoalOutcomeToJson(_$_GoalOutcome instance) {
 
 _$_ReferralRequest _$$_ReferralRequestFromJson(Map<String, dynamic> json) =>
     _$_ReferralRequest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ReferralRequest) ??
           Dstu2ResourceType.ReferralRequest,
@@ -755,7 +718,7 @@ _$_ReferralRequest _$$_ReferralRequestFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecode(_$ReferralRequestStatusEnumMap, json['status'],
+      status: $enumDecode(_$ReferralRequestStatusEnumMap, json['status'],
           unknownValue: ReferralRequestStatus.unknown),
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
@@ -858,7 +821,7 @@ const _$ReferralRequestStatusEnumMap = {
 
 _$_ProcedureRequest _$$_ProcedureRequestFromJson(Map<String, dynamic> json) =>
     _$_ProcedureRequest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.ProcedureRequest) ??
           Dstu2ResourceType.ProcedureRequest,
@@ -913,7 +876,7 @@ _$_ProcedureRequest _$$_ProcedureRequestFromJson(Map<String, dynamic> json) =>
       performer: json['performer'] == null
           ? null
           : Reference.fromJson(json['performer'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$ProcedureRequestStatusEnumMap, json['status'],
           unknownValue: ProcedureRequestStatus.unknown),
       notes: (json['notes'] as List<dynamic>?)
@@ -932,7 +895,7 @@ _$_ProcedureRequest _$$_ProcedureRequestFromJson(Map<String, dynamic> json) =>
       orderer: json['orderer'] == null
           ? null
           : Reference.fromJson(json['orderer'] as Map<String, dynamic>),
-      priority: _$enumDecodeNullable(
+      priority: $enumDecodeNullable(
           _$ProcedureRequestPriorityEnumMap, json['priority'],
           unknownValue: ProcedureRequestPriority.unknown),
     );
@@ -1008,7 +971,7 @@ const _$ProcedureRequestPriorityEnumMap = {
 
 _$_NutritionOrder _$$_NutritionOrderFromJson(Map<String, dynamic> json) =>
     _$_NutritionOrder(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.NutritionOrder) ??
           Dstu2ResourceType.NutritionOrder,
@@ -1053,8 +1016,7 @@ _$_NutritionOrder _$$_NutritionOrderFromJson(Map<String, dynamic> json) =>
       dateTimeElement: json['_dateTime'] == null
           ? null
           : Element.fromJson(json['_dateTime'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
-          _$NutritionOrderStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$NutritionOrderStatusEnumMap, json['status'],
           unknownValue: NutritionOrderStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -1493,14 +1455,14 @@ _$_VisionPrescriptionDispense _$$_VisionPrescriptionDispenseFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       product: Coding.fromJson(json['product'] as Map<String, dynamic>),
-      eye: _$enumDecodeNullable(_$DispenseEyeEnumMap, json['eye'],
+      eye: $enumDecodeNullable(_$DispenseEyeEnumMap, json['eye'],
           unknownValue: DispenseEye.unknown),
       sphere: json['sphere'] == null ? null : Decimal.fromJson(json['sphere']),
       cylinder:
           json['cylinder'] == null ? null : Decimal.fromJson(json['cylinder']),
       axis: json['axis'] == null ? null : Integer.fromJson(json['axis']),
       prism: json['prism'] == null ? null : Decimal.fromJson(json['prism']),
-      base: _$enumDecodeNullable(_$DispenseBaseEnumMap, json['base'],
+      base: $enumDecodeNullable(_$DispenseBaseEnumMap, json['base'],
           unknownValue: DispenseBase.unknown),
       add: json['add'] == null ? null : Decimal.fromJson(json['add']),
       power: json['power'] == null ? null : Decimal.fromJson(json['power']),
@@ -1567,7 +1529,7 @@ const _$DispenseBaseEnumMap = {
 _$_VisionPrescription _$$_VisionPrescriptionFromJson(
         Map<String, dynamic> json) =>
     _$_VisionPrescription(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.VisionPrescription) ??
           Dstu2ResourceType.VisionPrescription,

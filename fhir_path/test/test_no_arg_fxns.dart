@@ -1,674 +1,1105 @@
 import 'package:fhir/r4.dart';
-import 'package:test/test.dart';
-
 import 'package:fhir_path/fhir_path.dart';
-
-dynamic walkPath(dynamic arg) => arg;
+import 'package:test/test.dart';
 
 void testNoArgFxns() {
   group('Functions w/o Arguments: ', () {
     test('empty', () {
-      expect([false], walkFhirPath(resource.toJson(), 'name.family.empty()'));
-      expect([false], walkFhirPath(resource.toJson(), 'name.given.empty()'));
       expect(
-          [true], walkFhirPath(resource.toJson(), 'Patient.language.empty()'));
-      expect([true],
-          walkFhirPath(resource.toJson(), 'Patient.name.period.empty()'));
+          [false],
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'name.family.empty()'));
+      expect(
+          [false],
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'name.given.empty()'));
+      expect(
+          [true],
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.language.empty()'));
+      expect(
+          [true],
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.period.empty()'));
+      expect(
+          [true],
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: '{ }.empty()'));
     });
     test('allTrue', () {
       expect(
-          walkFhirPath(resource.toJson(), 'Patient.active.allTrue()'), [true]);
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.active.allTrue()'),
+          [true]);
       expect(
-          walkFhirPath(resource.toJson(), 'Patient.deceasedBoolean.allTrue()'),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.deceasedBoolean.allTrue()'),
           [false]);
     });
     test('anyTrue', () {
       expect(
-          walkFhirPath(resource.toJson(), 'Patient.active.anyTrue()'), [true]);
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.active.anyTrue()'),
+          [true]);
       expect(
-          walkFhirPath(resource.toJson(), 'Patient.deceasedBoolean.anyTrue()'),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.deceasedBoolean.anyTrue()'),
           [false]);
     });
     test('allFalse', () {
-      expect(walkFhirPath(resource.toJson(), 'Patient.active.allFalse()'),
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.active.allFalse()'),
           [false]);
       expect(
-          walkFhirPath(resource.toJson(), 'Patient.deceasedBoolean.allFalse()'),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.deceasedBoolean.allFalse()'),
           [true]);
     });
     test('anyFalse', () {
-      expect(walkFhirPath(resource.toJson(), 'Patient.active.anyFalse()'),
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.active.anyFalse()'),
           [false]);
       expect(
-          walkFhirPath(resource.toJson(), 'Patient.deceasedBoolean.anyFalse()'),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.deceasedBoolean.anyFalse()'),
           [true]);
     });
     test('count', () {
-      expect(walkFhirPath(resource.toJson(), 'Patient.name.count()'), [4]);
       expect(
-          walkFhirPath(resource.toJson(), 'Patient.name.given.count()'), [8]);
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.count()'),
+          [4]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.given.count()'),
+          [8]);
     });
     test('distinct', () {
-      expect(walkFhirPath(resource.toJson(), 'Patient.name.distinct()'), [
-        {
-          'use': 'official',
-          'family': 'Faulkenberry',
-          'given': ['Jason', 'Grey']
-        },
-        {
-          'family': 'Niel',
-          'given': ['Kristin']
-        },
-        {
-          'family': 'Smith',
-          'given': ['John', 'Jacob', 'Jingleheimer']
-        },
-      ]);
-      expect(walkFhirPath(resource.toJson(), 'Patient.name.given.distinct()'),
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.distinct()'),
+          [
+            {
+              'use': 'official',
+              'family': 'Faulkenberry',
+              'given': ['Jason', 'Grey']
+            },
+            {
+              'family': 'Niel',
+              'given': ['Kristin']
+            },
+            {
+              'family': 'Smith',
+              'given': ['John', 'Jacob', 'Jingleheimer']
+            },
+          ]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.given.distinct()'),
           ['Jason', 'Grey', 'Kristin', 'John', 'Jacob', 'Jingleheimer']);
     });
     test('isDistinct', () {
       expect(
           walkFhirPath(
-              resource.toJson(), 'Patient.name.distinct().isDistinct()'),
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.distinct().isDistinct()'),
           [true]);
       expect(
           walkFhirPath(
-              resource.toJson(), 'Patient.name.given.distinct().isDistinct()'),
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.given.distinct().isDistinct()'),
           [true]);
       expect(
           walkFhirPath(
-              resource.toJson(), 'Patient.address.period.isDistinct()'),
+              context: resource.toJson(),
+              pathExpression: 'Patient.address.period.isDistinct()'),
           [true]);
-      expect(walkFhirPath(resource.toJson(), 'Patient.name.isDistinct()'),
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.isDistinct()'),
           [false]);
     });
     test('Single', () {
-      expect(walkFhirPath(resource.toJson(), 'Patient.telecom.single()'), [
-        {
-          'system': 'email',
-          'use': 'mobile',
-          'rank': 3,
-        },
-      ]);
-      expect(walkFhirPath(resource.toJson(), 'Patient.name.id.single()'), []);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.telecom.single()'),
+          [
+            {
+              'system': 'email',
+              'use': 'mobile',
+              'rank': 3,
+            },
+          ]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.id.single()'),
+          []);
     });
     test('First', () {
-      expect(walkFhirPath(resource.toJson(), 'Patient.name.id.first()'), []);
-      expect(walkFhirPath(resource.toJson(), 'Patient.name.given.first()'),
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.id.first()'),
+          []);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.given.first()'),
           ['Jason']);
     });
     test('Last', () {
-      expect(walkFhirPath(resource.toJson(), 'Patient.name.id.last()'), []);
-      expect(walkFhirPath(resource.toJson(), 'Patient.name.given.last()'),
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.id.last()'),
+          []);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.given.last()'),
           ['Jingleheimer']);
     });
     test('Tail', () {
-      expect(walkFhirPath(resource.toJson(), 'Patient.name.id.tail()'), []);
-      expect(walkFhirPath(resource.toJson(), 'Patient.name.given.tail()'), [
-        'Grey',
-        'Jason',
-        'Grey',
-        'Kristin',
-        'John',
-        'Jacob',
-        'Jingleheimer',
-      ]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.id.tail()'),
+          []);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: 'Patient.name.given.tail()'),
+          [
+            'Grey',
+            'Jason',
+            'Grey',
+            'Kristin',
+            'John',
+            'Jacob',
+            'Jingleheimer',
+          ]);
     });
     test('toBoolean', () {
       expect(
-          walkFhirPath(resource.toJson(), walkPath("'1'.toBoolean()")), [true]);
-      expect(walkFhirPath(resource.toJson(), walkPath("'true'.toBoolean()")),
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'1'.toBoolean()"),
           [true]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("'t'.toBoolean()")), [true]);
-      expect(walkFhirPath(resource.toJson(), walkPath("'yes'.toBoolean()")),
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'true'.toBoolean()"),
           [true]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("'y'.toBoolean()")), [true]);
-      expect(walkFhirPath(resource.toJson(), walkPath("'1.0'.toBoolean()")),
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'t'.toBoolean()"),
           [true]);
-      expect(walkFhirPath(resource.toJson(), walkPath("'0'.toBoolean()")),
-          [false]);
-      expect(walkFhirPath(resource.toJson(), walkPath("'false'.toBoolean()")),
-          [false]);
-      expect(walkFhirPath(resource.toJson(), walkPath("'f'.toBoolean()")),
-          [false]);
-      expect(walkFhirPath(resource.toJson(), walkPath("'no'.toBoolean()")),
-          [false]);
-      expect(walkFhirPath(resource.toJson(), walkPath("'n'.toBoolean()")),
-          [false]);
-      expect(walkFhirPath(resource.toJson(), walkPath("'0.0'.toBoolean()")),
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'yes'.toBoolean()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'y'.toBoolean()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'1.0'.toBoolean()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'0'.toBoolean()"),
           [false]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("1.toBoolean()")), [true]);
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'false'.toBoolean()"),
+          [false]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("0.toBoolean()")), [false]);
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'f'.toBoolean()"),
+          [false]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("1.0.toBoolean()")), [true]);
-      expect(walkFhirPath(resource.toJson(), walkPath("0.0.toBoolean()")),
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'no'.toBoolean()"),
+          [false]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'n'.toBoolean()"),
+          [false]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'0.0'.toBoolean()"),
+          [false]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "1.toBoolean()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "0.toBoolean()"),
+          [false]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "1.0.toBoolean()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "0.0.toBoolean()"),
           [false]);
     });
     test('convertsToBoolean', () {
       expect(
-          walkFhirPath(resource.toJson(),
-              walkPath("'1'.toBoolean().convertsToBoolean()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(),
-              walkPath("'true'.toBoolean().convertsToBoolean()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(),
-              walkPath("'t'.toBoolean().convertsToBoolean()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(),
-              walkPath("'yes'.toBoolean().convertsToBoolean()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(),
-              walkPath("'y'.toBoolean().convertsToBoolean()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(),
-              walkPath("'1.0'.toBoolean().convertsToBoolean()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(),
-              walkPath("'0'.toBoolean().convertsToBoolean()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(),
-              walkPath("'false'.toBoolean().convertsToBoolean()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(),
-              walkPath("'f'.toBoolean().convertsToBoolean()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(),
-              walkPath("'no'.toBoolean().convertsToBoolean()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(),
-              walkPath("'n'.toBoolean().convertsToBoolean()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(),
-              walkPath("'0.0'.toBoolean().convertsToBoolean()")),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'1'.toBoolean().convertsToBoolean()"),
           [true]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("1.toBoolean().convertsToBoolean()")),
+              context: resource.toJson(),
+              pathExpression: "'true'.toBoolean().convertsToBoolean()"),
           [true]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("0.toBoolean().convertsToBoolean()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(),
-              walkPath("1.0.toBoolean().convertsToBoolean()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(),
-              walkPath("0.0.toBoolean().convertsToBoolean()")),
+              context: resource.toJson(),
+              pathExpression: "'t'.toBoolean().convertsToBoolean()"),
           [true]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("name.first().convertsToBoolean()")),
+              context: resource.toJson(),
+              pathExpression: "'yes'.toBoolean().convertsToBoolean()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'y'.toBoolean().convertsToBoolean()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'1.0'.toBoolean().convertsToBoolean()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'0'.toBoolean().convertsToBoolean()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'false'.toBoolean().convertsToBoolean()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'f'.toBoolean().convertsToBoolean()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'no'.toBoolean().convertsToBoolean()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'n'.toBoolean().convertsToBoolean()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'0.0'.toBoolean().convertsToBoolean()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "1.toBoolean().convertsToBoolean()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "0.toBoolean().convertsToBoolean()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "1.0.toBoolean().convertsToBoolean()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "0.0.toBoolean().convertsToBoolean()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "name.first().convertsToBoolean()"),
           [false]);
       expect(
-          walkFhirPath(resource.toJson(),
-              walkPath("name.given.first().convertsToBoolean()")),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "name.given.first().convertsToBoolean()"),
           [false]);
     });
     test('toInteger', () {
-      expect(walkFhirPath(resource.toJson(), walkPath("'1'.toInteger()")), [1]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("'true'.toInteger()")), []);
-      expect(walkFhirPath(resource.toJson(), walkPath("'t'.toInteger()")), []);
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'1'.toInteger()"),
+          [1]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("'yes'.toInteger()")), []);
-      expect(walkFhirPath(resource.toJson(), walkPath("'y'.toInteger()")), []);
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'true'.toInteger()"),
+          []);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("'1.0'.toInteger()")), []);
-      expect(walkFhirPath(resource.toJson(), walkPath("'0'.toInteger()")), [0]);
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'t'.toInteger()"),
+          []);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("'false'.toInteger()")), []);
-      expect(walkFhirPath(resource.toJson(), walkPath("'f'.toInteger()")), []);
-      expect(walkFhirPath(resource.toJson(), walkPath("'no'.toInteger()")), []);
-      expect(walkFhirPath(resource.toJson(), walkPath("'n'.toInteger()")), []);
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'yes'.toInteger()"),
+          []);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("'0.0'.toInteger()")), []);
-      expect(walkFhirPath(resource.toJson(), walkPath("1.toInteger()")), [1]);
-      expect(walkFhirPath(resource.toJson(), walkPath("0.toInteger()")), [0]);
-      expect(walkFhirPath(resource.toJson(), walkPath("1.0.toInteger()")), [1]);
-      expect(walkFhirPath(resource.toJson(), walkPath("0.0.toInteger()")), [0]);
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'y'.toInteger()"),
+          []);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("true.toInteger()")), [1]);
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'1.0'.toInteger()"),
+          []);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("false.toInteger()")), [0]);
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'0'.toInteger()"),
+          [0]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'false'.toInteger()"),
+          []);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'f'.toInteger()"),
+          []);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'no'.toInteger()"),
+          []);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'n'.toInteger()"),
+          []);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'0.0'.toInteger()"),
+          []);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "1.toInteger()"),
+          [1]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "0.toInteger()"),
+          [0]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "1.0.toInteger()"),
+          [1]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "0.0.toInteger()"),
+          [0]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "true.toInteger()"),
+          [1]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "false.toInteger()"),
+          [0]);
     });
     test('convertsToInteger', () {
       expect(
-          walkFhirPath(resource.toJson(), walkPath("'1'.convertsToInteger()")),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'1'.convertsToInteger()"),
           [true]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("'true'.convertsToInteger()")),
-          [false]);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("'t'.convertsToInteger()")),
-          [false]);
-      expect(
-          walkFhirPath(
-              resource.toJson(), walkPath("'yes'.convertsToInteger()")),
-          [false]);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("'y'.convertsToInteger()")),
+              context: resource.toJson(),
+              pathExpression: "'true'.convertsToInteger()"),
           [false]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("'1.0'.convertsToInteger()")),
-          [false]);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("'0'.convertsToInteger()")),
-          [true]);
-      expect(
-          walkFhirPath(
-              resource.toJson(), walkPath("'false'.convertsToInteger()")),
-          [false]);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("'f'.convertsToInteger()")),
-          [false]);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("'no'.convertsToInteger()")),
-          [false]);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("'n'.convertsToInteger()")),
+              context: resource.toJson(),
+              pathExpression: "'t'.convertsToInteger()"),
           [false]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("'0.0'.convertsToInteger()")),
+              context: resource.toJson(),
+              pathExpression: "'yes'.convertsToInteger()"),
           [false]);
-      expect(walkFhirPath(resource.toJson(), walkPath("1.convertsToInteger()")),
-          [true]);
-      expect(walkFhirPath(resource.toJson(), walkPath("0.convertsToInteger()")),
-          [true]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("1.0.convertsToInteger()")),
-          [true]);
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'y'.convertsToInteger()"),
+          [false]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("0.0.convertsToInteger()")),
-          [true]);
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'1.0'.convertsToInteger()"),
+          [false]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("true.convertsToInteger()")),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'0'.convertsToInteger()"),
           [true]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("false.convertsToInteger()")),
+              context: resource.toJson(),
+              pathExpression: "'false'.convertsToInteger()"),
+          [false]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'f'.convertsToInteger()"),
+          [false]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'no'.convertsToInteger()"),
+          [false]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'n'.convertsToInteger()"),
+          [false]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'0.0'.convertsToInteger()"),
+          [false]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "1.convertsToInteger()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "0.convertsToInteger()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "1.0.convertsToInteger()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "0.0.convertsToInteger()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "true.convertsToInteger()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "false.convertsToInteger()"),
           [true]);
     });
     test('toDate', () {
-      expect(walkFhirPath(resource.toJson(), walkPath("@2021-01-01.toDate()")),
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "@2021-01-01.toDate()"),
           [Date('2021-01-01')]);
-      expect(walkFhirPath(resource.toJson(), walkPath("'2021-01-01'.toDate()")),
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'2021-01-01'.toDate()"),
           [Date('2021-01-01')]);
     });
     test('convertsToDate', () {
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("@2021-01-01.convertsToDate()")),
+              context: resource.toJson(),
+              pathExpression: "@2021-01-01.convertsToDate()"),
           [true]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("'2021-01-01'.convertsToDate()")),
+              context: resource.toJson(),
+              pathExpression: "'2021-01-01'.convertsToDate()"),
           [true]);
     });
     test('toDateTime', () {
       expect(
-          walkFhirPath(resource.toJson(), walkPath("@2021-01-01.toDateTime()")),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "@2021-01-01.toDateTime()"),
           [FhirDateTime('2021-01-01')]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("'2021-01-01'.toDateTime()")),
+              context: resource.toJson(),
+              pathExpression: "'2021-01-01'.toDateTime()"),
           [FhirDateTime('2021-01-01')]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("@2021-01-01T12:12.toDateTime()")),
+              context: resource.toJson(),
+              pathExpression: "@2021-01-01T12:12.toDateTime()"),
           [FhirDateTime('2021-01-01T12:12')]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("'2021-01-01T12:12'.toDateTime()")),
+              context: resource.toJson(),
+              pathExpression: "'2021-01-01T12:12'.toDateTime()"),
           [FhirDateTime('2021-01-01T12:12')]);
     });
     test('convertsToDateTime', () {
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("@2021-01-01.convertsToDateTime()")),
+              context: resource.toJson(),
+              pathExpression: "@2021-01-01.convertsToDateTime()"),
           [true]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("'2021-01-01'.convertsToDateTime()")),
+              context: resource.toJson(),
+              pathExpression: "'2021-01-01'.convertsToDateTime()"),
           [true]);
       expect(
-          walkFhirPath(resource.toJson(),
-              walkPath("@2021-01-01T12:12.convertsToDateTime()")),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "@2021-01-01T12:12.convertsToDateTime()"),
           [true]);
       expect(
-          walkFhirPath(resource.toJson(),
-              walkPath("'2021-01-01T12:12'.convertsToDateTime()")),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'2021-01-01T12:12'.convertsToDateTime()"),
           [true]);
     });
     test('toDecimal', () {
       expect(
-          walkFhirPath(resource.toJson(), walkPath("'1'.toDecimal()")), [1.0]);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("'true'.toDecimal()")), []);
-      expect(walkFhirPath(resource.toJson(), walkPath("'t'.toDecimal()")), []);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("'yes'.toDecimal()")), []);
-      expect(walkFhirPath(resource.toJson(), walkPath("'y'.toDecimal()")), []);
-      expect(walkFhirPath(resource.toJson(), walkPath("'1.0'.toDecimal()")),
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'1'.toDecimal()"),
           [1.0]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("'0'.toDecimal()")), [0.0]);
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'true'.toDecimal()"),
+          []);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("'false'.toDecimal()")), []);
-      expect(walkFhirPath(resource.toJson(), walkPath("'f'.toDecimal()")), []);
-      expect(walkFhirPath(resource.toJson(), walkPath("'no'.toDecimal()")), []);
-      expect(walkFhirPath(resource.toJson(), walkPath("'n'.toDecimal()")), []);
-      expect(walkFhirPath(resource.toJson(), walkPath("'0.0'.toDecimal()")),
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'t'.toDecimal()"),
+          []);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'yes'.toDecimal()"),
+          []);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'y'.toDecimal()"),
+          []);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'1.0'.toDecimal()"),
+          [1.0]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'0'.toDecimal()"),
           [0.0]);
-      expect(walkFhirPath(resource.toJson(), walkPath("1.toDecimal()")), [1.0]);
-      expect(walkFhirPath(resource.toJson(), walkPath("0.toDecimal()")), [0.0]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("1.0.toDecimal()")), [1.0]);
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'false'.toDecimal()"),
+          []);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("0.0.toDecimal()")), [0.0]);
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'f'.toDecimal()"),
+          []);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("true.toDecimal()")), [1.0]);
-      expect(walkFhirPath(resource.toJson(), walkPath("false.toDecimal()")),
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'no'.toDecimal()"),
+          []);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'n'.toDecimal()"),
+          []);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'0.0'.toDecimal()"),
+          [0.0]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "1.toDecimal()"),
+          [1.0]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "0.toDecimal()"),
+          [0.0]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "1.0.toDecimal()"),
+          [1.0]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "0.0.toDecimal()"),
+          [0.0]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "true.toDecimal()"),
+          [1.0]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "false.toDecimal()"),
           [0.0]);
     });
     test('convertsToDecimal', () {
       expect(
-          walkFhirPath(resource.toJson(), walkPath("'1'.convertsToDecimal()")),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'1'.convertsToDecimal()"),
           [true]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("'true'.convertsToDecimal()")),
-          [false]);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("'t'.convertsToDecimal()")),
-          [false]);
-      expect(
-          walkFhirPath(
-              resource.toJson(), walkPath("'yes'.convertsToDecimal()")),
-          [false]);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("'y'.convertsToDecimal()")),
+              context: resource.toJson(),
+              pathExpression: "'true'.convertsToDecimal()"),
           [false]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("'1.0'.convertsToDecimal()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("'0'.convertsToDecimal()")),
-          [true]);
-      expect(
-          walkFhirPath(
-              resource.toJson(), walkPath("'false'.convertsToDecimal()")),
-          [false]);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("'f'.convertsToDecimal()")),
-          [false]);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("'no'.convertsToDecimal()")),
-          [false]);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("'n'.convertsToDecimal()")),
+              context: resource.toJson(),
+              pathExpression: "'t'.convertsToDecimal()"),
           [false]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("'0.0'.convertsToDecimal()")),
-          [true]);
-      expect(walkFhirPath(resource.toJson(), walkPath("1.convertsToDecimal()")),
-          [true]);
-      expect(walkFhirPath(resource.toJson(), walkPath("0.convertsToDecimal()")),
-          [true]);
+              context: resource.toJson(),
+              pathExpression: "'yes'.convertsToDecimal()"),
+          [false]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("1.0.convertsToDecimal()")),
-          [true]);
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'y'.convertsToDecimal()"),
+          [false]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("0.0.convertsToDecimal()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("true.convertsToDecimal()")),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'1.0'.convertsToDecimal()"),
           [true]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("false.convertsToDecimal()")),
+              context: resource.toJson(),
+              pathExpression: "'0'.convertsToDecimal()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'false'.convertsToDecimal()"),
+          [false]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'f'.convertsToDecimal()"),
+          [false]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'no'.convertsToDecimal()"),
+          [false]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'n'.convertsToDecimal()"),
+          [false]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'0.0'.convertsToDecimal()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "1.convertsToDecimal()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "0.convertsToDecimal()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "1.0.convertsToDecimal()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "0.0.convertsToDecimal()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "true.convertsToDecimal()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "false.convertsToDecimal()"),
           [true]);
     });
 
     /// ToDo: toQuantity
     /// ToDo: convertsToQuantity
     test('toString', () {
-      expect(walkFhirPath(resource.toJson(), walkPath("true.toString()")),
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "true.toString()"),
           ['true']);
-      expect(walkFhirPath(resource.toJson(), walkPath("false.toString()")),
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "false.toString()"),
           ['false']);
-      expect(walkFhirPath(resource.toJson(), walkPath("1.toString()")), ['1']);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("111.toString()")), ['111']);
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "1.toString()"),
+          ['1']);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("1.1.toString()")), ['1.1']);
-      expect(walkFhirPath(resource.toJson(), walkPath("111.1.toString()")),
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "111.toString()"),
+          ['111']);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "1.1.toString()"),
+          ['1.1']);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "111.1.toString()"),
           ['111.1']);
-      expect(walkFhirPath(resource.toJson(), walkPath("1.1 'mg'.toString()")),
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "1.1 'mg'.toString()"),
           ["1.1 'mg'"]);
-      expect(walkFhirPath(resource.toJson(), walkPath("111.1 'mL'.toString()")),
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "111.1 'mL'.toString()"),
           ["111.1 'mL'"]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("@2019-08-01.toString()")),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "@2019-08-01.toString()"),
           ['2019-08-01']);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("@2021-01-01T12:12.toString()")),
+              context: resource.toJson(),
+              pathExpression: "@2021-01-01T12:12.toString()"),
           ['2021-01-01T12:12']);
-      expect(walkFhirPath(resource.toJson(), walkPath("@T12:12.toString()")),
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "@T12:12.toString()"),
           ['12:12']);
     });
     test('convertsToString', () {
       expect(
-          walkFhirPath(resource.toJson(), walkPath("true.convertsToString()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("false.convertsToString()")),
-          [true]);
-      expect(walkFhirPath(resource.toJson(), walkPath("1.convertsToString()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("111.convertsToString()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("1.1.convertsToString()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("111.1.convertsToString()")),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "true.convertsToString()"),
           [true]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("1.1 'mg'.convertsToString()")),
+              context: resource.toJson(),
+              pathExpression: "false.convertsToString()"),
           [true]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("111.1 'mL'.convertsToString()")),
+              context: resource.toJson(),
+              pathExpression: "1.convertsToString()"),
           [true]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("@2019-08-01.convertsToString()")),
-          [true]);
-      expect(
-          walkFhirPath(resource.toJson(),
-              walkPath("@2021-01-01T12:12.convertsToString()")),
+              context: resource.toJson(),
+              pathExpression: "111.convertsToString()"),
           [true]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("@T12:12.convertsToString()")),
+              context: resource.toJson(),
+              pathExpression: "1.1.convertsToString()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "111.1.convertsToString()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "1.1 'mg'.convertsToString()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "111.1 'mL'.convertsToString()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "@2019-08-01.convertsToString()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "@2021-01-01T12:12.convertsToString()"),
+          [true]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "@T12:12.convertsToString()"),
           [true]);
     });
     test('toTime', () {
-      expect(walkFhirPath(resource.toJson(), walkPath("@T12:22.toTime()")),
-          [Time('12:22')]);
-      expect(walkFhirPath(resource.toJson(), walkPath("@T12:22:33.toTime()")),
-          [Time('12:22:33')]);
-      expect(walkFhirPath(resource.toJson(), walkPath("'12:22'.toTime()")),
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "@T12:22.toTime()"),
           [Time('12:22')]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("'12:22:33.321'.toTime()")),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "@T12:22:33.toTime()"),
+          [Time('12:22:33')]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'12:22'.toTime()"),
+          [Time('12:22')]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "'12:22:33.321'.toTime()"),
           [Time('12:22:33.321')]);
     });
     test('convertsToTime', () {
       expect(
-          walkFhirPath(resource.toJson(), walkPath("@T12:22.convertsToTime()")),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "@T12:22.convertsToTime()"),
           [true]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("@T12:22:33.convertsToTime()")),
+              context: resource.toJson(),
+              pathExpression: "@T12:22:33.convertsToTime()"),
           [true]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("'T12:22'.convertsToTime()")),
+              context: resource.toJson(),
+              pathExpression: "'T12:22'.convertsToTime()"),
           [false]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("'12:22:33.321'.convertsToTime()")),
+              context: resource.toJson(),
+              pathExpression: "'12:22:33.321'.convertsToTime()"),
           [true]);
     });
     test('upper', () {
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("'abcdefg'.upper() // 'ABCDEFG'")),
+              context: resource.toJson(),
+              pathExpression: "'abcdefg'.upper() // 'ABCDEFG'"),
           ['ABCDEFG']);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("'AbCdefg'.upper() // 'ABCDEFG'")),
+              context: resource.toJson(),
+              pathExpression: "'AbCdefg'.upper() // 'ABCDEFG'"),
           ['ABCDEFG']);
     });
     test('lower', () {
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("'ABCDEFG'.lower() // 'abcdefg'")),
+              context: resource.toJson(),
+              pathExpression: "'ABCDEFG'.lower() // 'abcdefg'"),
           ['abcdefg']);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("'aBcDEFG'.lower() // 'abcdefg'")),
+              context: resource.toJson(),
+              pathExpression: "'aBcDEFG'.lower() // 'abcdefg'"),
           ['abcdefg']);
     });
     test('Length', () {
       expect(
-          walkFhirPath(resource.toJson(), walkPath("true.toString().length()")),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "true.toString().length()"),
           [4]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("false.toString().length()")),
+              context: resource.toJson(),
+              pathExpression: "false.toString().length()"),
           [5]);
-      expect(walkFhirPath(resource.toJson(), walkPath("1.toString().length()")),
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "1.toString().length()"),
           [1]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("111.toString().length()")),
-          [3]);
-      expect(
-          walkFhirPath(resource.toJson(), walkPath("1.1.toString().length()")),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "111.toString().length()"),
           [3]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("111.1.toString().length()")),
+              context: resource.toJson(),
+              pathExpression: "1.1.toString().length()"),
+          [3]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "111.1.toString().length()"),
           [5]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("1.1 'mg'.toString().length()")),
+              context: resource.toJson(),
+              pathExpression: "1.1 'mg'.toString().length()"),
           [8]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("111.1 'mL'.toString().length()")),
+              context: resource.toJson(),
+              pathExpression: "111.1 'mL'.toString().length()"),
           [10]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("@2019-08-01.toString().length()")),
+              context: resource.toJson(),
+              pathExpression: "@2019-08-01.toString().length()"),
           [10]);
       expect(
-          walkFhirPath(resource.toJson(),
-              walkPath("@2021-01-01T12:12.toString().length()")),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "@2021-01-01T12:12.toString().length()"),
           [16]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("@T12:12.toString().length()")),
+              context: resource.toJson(),
+              pathExpression: "@T12:12.toString().length()"),
           [5]);
     });
     test('toChars', () {
-      expect(walkFhirPath(resource.toJson(), walkPath("'true'.toChars()")),
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "'true'.toChars()"),
           ['t', 'r', 'u', 'e']);
     });
     test('abs', () {
-      // expect(walkFhirPath(resource.toJson(), walkPath("(-5).abs() // 5")), [5]);
-      // expect(walkFhirPath(resource.toJson(), walkPath("(-5.5).abs() // 5.5")),
-      //     [5.5]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "(-5) // -5"),
+          [-5]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "(-5).abs() // 5"),
+          [5]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "(-5.5).abs() // 5.5"),
+          [5.5]);
+      print(walkFhirPath(
+          context: resource.toJson(), pathExpression: "today() + 5.5 'mg'"));
       // expect(
-      //     walkFhirPath(
-      //             resource.toJson(), walkPath("(-5.5 'mg').abs() // 5.5 'mg'"))
-      //         .first,
+      //     walkFhirPath(context: //         resource.toJson(), pathExpression: "(-5.5 'mg').abs() // 5.5 'mg'"),
       //     FhirPathQuantity(5.5, "'mg'"));
     });
     test('ceiling', () {
       expect(
-          walkFhirPath(resource.toJson(), walkPath("1.ceiling() // 1")), [1]);
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "1.ceiling() // 1"),
+          [1]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("1.1.ceiling() // 2")), [2]);
-      // expect(
-      //     walkFhirPath(resource.toJson(), walkPath("(-1.1).ceiling() // -1")),
-      //     [-1]);
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "1.1.ceiling() // 2"),
+          [2]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "(-1.1).ceiling() // -1"),
+          [-1]);
     });
     test('exp', () {
       expect(
-          walkFhirPath(resource.toJson(), walkPath("0.exp() // 1.0")), [1.0]);
-      // expect(walkFhirPath(resource.toJson(), walkPath("(-0.0).exp() // 1.0")),
-      //     [1.0]);
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "0.exp() // 1.0"),
+          [1.0]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "(-0.0).exp() // 1.0"),
+          [1.0]);
     });
     test('floor', () {
-      expect(walkFhirPath(resource.toJson(), walkPath("1.floor() // 1")), [1]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("2.1.floor() // 2")), [2]);
-      expect(walkFhirPath(resource.toJson(), walkPath("(-2.1).floor() // -3")),
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "1.floor() // 1"),
+          [1]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "2.1.floor() // 2"),
+          [2]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "(-2.1).floor() // -3"),
           [-3]);
     });
     test('ln', () {
-      expect(walkFhirPath(resource.toJson(), walkPath("1.ln() // 0.0")), [0.0]);
       expect(
-          walkFhirPath(resource.toJson(), walkPath("1.0.ln() // 0.0")), [0.0]);
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "1.ln() // 0.0"),
+          [0.0]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "1.0.ln() // 0.0"),
+          [0.0]);
     });
     test('sqrt', () {
       expect(
-          walkFhirPath(resource.toJson(), walkPath("81.sqrt() // 9.0")), [9.0]);
-      // expect(walkFhirPath(resource.toJson(), walkPath("(-1).sqrt() // empty")), []);
+          walkFhirPath(
+              context: resource.toJson(), pathExpression: "81.sqrt() // 9.0"),
+          [9.0]);
+      // expect(walkFhirPath(context: resource.toJson(), pathExpression: "(-1).sqrt() // empty"), []);
     });
     test('truncate', () {
-      expect(walkFhirPath(resource.toJson(), walkPath("101.truncate() // 101")),
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "101.truncate() // 101"),
           [101]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("1.00000001.truncate() // 1")),
+              context: resource.toJson(),
+              pathExpression: "1.00000001.truncate() // 1"),
           [1]);
-      // expect(
-      //     walkFhirPath(resource.toJson(), walkPath("(-1.56).truncate() // -1")),
-      //     [-1]);
+      expect(
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "(-1.56).truncate() // -1"),
+          [-1]);
     });
     test('children', () {
       expect(
-          walkFhirPath(resource.toJson(), walkPath("Patient.name.children()")),
+          walkFhirPath(
+              context: resource.toJson(),
+              pathExpression: "Patient.name.children()"),
           [
             'official',
             'Faulkenberry',
@@ -687,7 +1118,8 @@ void testNoArgFxns() {
           ]);
       expect(
           walkFhirPath(
-              resource.toJson(), walkPath("Patient.address.children()")),
+              context: resource.toJson(),
+              pathExpression: "Patient.address.children()"),
           [
             {
               "extension": [
@@ -750,13 +1182,14 @@ void testNoArgFxns() {
 
     test('DateTimeFunctions', () {
       expect(
-          walkFhirPath(resource.toJson(), walkPath("now()"))
+          walkFhirPath(context: resource.toJson(), pathExpression: "now()")
               .first
               .toString()
               .substring(0, 12),
           DateTime.now().toIso8601String().substring(0, 12));
       expect(
-          walkFhirPath(resource.toJson(), walkPath("timeOfDay()"))
+          walkFhirPath(
+                  context: resource.toJson(), pathExpression: "timeOfDay()")
               .first
               .toString()
               .substring(0, 11),
@@ -765,7 +1198,8 @@ void testNoArgFxns() {
               .split('T')
               .last
               .substring(0, 11)));
-      expect(walkFhirPath(resource.toJson(), walkPath("today()")),
+      expect(
+          walkFhirPath(context: resource.toJson(), pathExpression: "today()"),
           [Date(DateTime.now().toIso8601String().split('T').first)]);
     });
   });

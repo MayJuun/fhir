@@ -7,7 +7,7 @@ part of 'workflow1.dart';
 // **************************************************************************
 
 _$_Order _$$_OrderFromJson(Map<String, dynamic> json) => _$_Order(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Order) ??
           Dstu2ResourceType.Order,
@@ -94,43 +94,6 @@ Map<String, dynamic> _$$_OrderToJson(_$_Order instance) {
   writeNotNull('when', instance.when?.toJson());
   val['detail'] = instance.detail.map((e) => e.toJson()).toList();
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -272,7 +235,7 @@ Map<String, dynamic> _$$_OrderWhenToJson(_$_OrderWhen instance) {
 
 _$_OrderResponse _$$_OrderResponseFromJson(Map<String, dynamic> json) =>
     _$_OrderResponse(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.OrderResponse) ??
           Dstu2ResourceType.OrderResponse,
@@ -305,7 +268,7 @@ _$_OrderResponse _$$_OrderResponseFromJson(Map<String, dynamic> json) =>
       who: json['who'] == null
           ? null
           : Reference.fromJson(json['who'] as Map<String, dynamic>),
-      orderStatus: _$enumDecode(
+      orderStatus: $enumDecode(
           _$OrderResponseOrderStatusEnumMap, json['orderStatus'],
           unknownValue: OrderResponseOrderStatus.unknown),
       orderStatusElement: json['_orderStatus'] == null
@@ -368,7 +331,7 @@ const _$OrderResponseOrderStatusEnumMap = {
 _$_CommunicationRequest _$$_CommunicationRequestFromJson(
         Map<String, dynamic> json) =>
     _$_CommunicationRequest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.CommunicationRequest) ??
           Dstu2ResourceType.CommunicationRequest,
@@ -421,7 +384,7 @@ _$_CommunicationRequest _$$_CommunicationRequestFromJson(
       requester: json['requester'] == null
           ? null
           : Reference.fromJson(json['requester'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$CommunicationRequestStatusEnumMap, json['status'],
           unknownValue: CommunicationRequestStatus.unknown),
       statusElement: json['_status'] == null
@@ -562,7 +525,7 @@ Map<String, dynamic> _$$_CommunicationRequestPayloadToJson(
 
 _$_DeviceUseRequest _$$_DeviceUseRequestFromJson(Map<String, dynamic> json) =>
     _$_DeviceUseRequest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DeviceUseRequest) ??
           Dstu2ResourceType.DeviceUseRequest,
@@ -601,7 +564,7 @@ _$_DeviceUseRequest _$$_DeviceUseRequestFromJson(Map<String, dynamic> json) =>
           ? null
           : Reference.fromJson(
               json['bodySiteReference'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$DeviceUseRequestStatusEnumMap, json['status'],
           unknownValue: DeviceUseRequestStatus.unknown),
       statusElement: json['_status'] == null
@@ -637,7 +600,7 @@ _$_DeviceUseRequest _$$_DeviceUseRequestFromJson(Map<String, dynamic> json) =>
       timingDateTime: json['timingDateTime'] == null
           ? null
           : FhirDateTime.fromJson(json['timingDateTime']),
-      priority: _$enumDecodeNullable(
+      priority: $enumDecodeNullable(
           _$DeviceUseRequestPriorityEnumMap, json['priority'],
           unknownValue: DeviceUseRequestPriority.unknown),
       priorityElement: json['_priority'] == null
@@ -720,7 +683,7 @@ const _$DeviceUseRequestPriorityEnumMap = {
 _$_DeviceUseStatement _$$_DeviceUseStatementFromJson(
         Map<String, dynamic> json) =>
     _$_DeviceUseStatement(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DeviceUseStatement) ??
           Dstu2ResourceType.DeviceUseStatement,

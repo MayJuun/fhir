@@ -1,6 +1,5 @@
-import 'package:test/test.dart';
-
 import 'package:fhir_path/fhir_path.dart';
+import 'package:test/test.dart';
 
 dynamic walkPath(dynamic arg) => lexer().parse(arg).value.execute([], {});
 
@@ -46,6 +45,25 @@ void testBasicOperators() {
       expect(walkPath('@T12:25 = @T12:27'), [false]);
       expect(walkPath("'String' = 'String'"), [true]);
       expect(walkPath("'String' = 'string'"), [false]);
+      expect(walkPath("@2012 = @2012 // returns true"), [true]);
+      expect(walkPath("@2012 = @2013 // returns false"), [false]);
+      expect(walkPath("@2012-01 = @2012 // returns empty ({ })"), []);
+      expect(walkPath("@2012-01-01T10:30 = @2012-01-01T10:30 // returns true"),
+          [true]);
+      expect(walkPath("@2012-01-01T10:30 = @2012-01-01T10:31 // returns false"),
+          [false]);
+      expect(
+          walkPath(
+              "@2012-01-01T10:30:31 = @2012-01-01T10:30 // returns empty ({ })"),
+          []);
+      expect(
+          walkPath(
+              "@2012-01-01T10:30:31.0 = @2012-01-01T10:30:31 // returns true"),
+          [true]);
+      expect(
+          walkPath(
+              "@2012-01-01T10:30:31.1 = @2012-01-01T10:30:31 // returns false"),
+          [false]);
     });
 
     /// ToDo: ~ (equivalent)
@@ -106,7 +124,7 @@ void testBasicOperators() {
       // expect(
       //     walkPath(
       //         "4 'm' > 4 'cm' // true (or { } if the implementation does not support unit conversion)"),
-      //     [], {});
+      //     [true]);
       expect(walkPath('@2018-03-01 > @2018-01-01 // true'), [true]);
       expect(walkPath('@2018-03 > @2018-03-01 // empty ({ })'), []);
       expect(walkPath('@2018-03-01T10:30:00 > @2018-03-01T10:00:00 // true'),
@@ -132,7 +150,7 @@ void testBasicOperators() {
       // expect(
       //     walkPath(
       //         "4 'm' > 4 'cm' // true (or { } if the implementation does not support unit conversion)"),
-      //     [], {});
+      //     [true]);
       expect(walkPath('@2018-03-01 < @2018-01-01 // false'), [false]);
       expect(walkPath('@2018-03 < @2018-03-01 // empty ({ })'), []);
       expect(walkPath('@2018-03-01T10:30:00 < @2018-03-01T10:00:00 // false'),
@@ -158,7 +176,7 @@ void testBasicOperators() {
       // expect(
       //     walkPath(
       //         "4 'm' > 4 'cm' // true (or { } if the implementation does not support unit conversion)"),
-      //     []);
+      //     [true]);
       expect(walkPath('@2018-03-01 <= @2018-01-01 // false'), [false]);
       expect(walkPath('@2018-03 <= @2018-03-01 // empty ({ })'), []);
       expect(walkPath('@2018-03-01T10:30:00 <= @2018-03-01T10:00:00 // false'),
@@ -205,4 +223,25 @@ void testBasicOperators() {
       expect(walkPath('12.5 is Decimal'), [true]);
     });
   });
+  group(
+    'Math Operators: ',
+    () {
+      test('/ : ', () {
+        expect(walkPath('(1.2 / 1.8).round(8) = 0.66666667'), [true]);
+        expect(walkPath('1/0'), []);
+      });
+      test('- : ', () {
+        expect(walkPath('75-70'), [5]);
+        expect(walkPath('75-70-75'), [-70]);
+      });
+      test('Precedence : ', () {
+        expect(walkPath('75+70-75'), [70]);
+        expect(walkPath('1+2*3+4 = 11'), [true]);
+        expect(walkPath('1+2*-3+4 = -1'), [true]);
+        expect(walkPath('-1-2*3 = -7'), [true]);
+        expect(walkPath('1-2*3-4*5 = -25'), [true]);
+        expect(walkPath('1-2.ceiling()*3-4*5.ceiling() = -25'), [true]);
+      });
+    },
+  );
 }

@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'scopes.dart';
 
@@ -384,62 +386,47 @@ class _$_Scopes extends _Scopes {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Scopes &&
-            (identical(other.clinicalScopes, clinicalScopes) ||
-                const DeepCollectionEquality()
-                    .equals(other.clinicalScopes, clinicalScopes)) &&
-            (identical(other.openid, openid) ||
-                const DeepCollectionEquality().equals(other.openid, openid)) &&
-            (identical(other.fhirUser, fhirUser) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirUser, fhirUser)) &&
-            (identical(other.profile, profile) ||
-                const DeepCollectionEquality()
-                    .equals(other.profile, profile)) &&
-            (identical(other.offlineAccess, offlineAccess) ||
-                const DeepCollectionEquality()
-                    .equals(other.offlineAccess, offlineAccess)) &&
-            (identical(other.onlineAccess, onlineAccess) ||
-                const DeepCollectionEquality()
-                    .equals(other.onlineAccess, onlineAccess)) &&
-            (identical(other.ehrLaunch, ehrLaunch) ||
-                const DeepCollectionEquality()
-                    .equals(other.ehrLaunch, ehrLaunch)) &&
-            (identical(other.patientLaunch, patientLaunch) ||
-                const DeepCollectionEquality()
-                    .equals(other.patientLaunch, patientLaunch)) &&
-            (identical(other.encounterLaunch, encounterLaunch) ||
-                const DeepCollectionEquality()
-                    .equals(other.encounterLaunch, encounterLaunch)) &&
-            (identical(other.needPatientBanner, needPatientBanner) ||
-                const DeepCollectionEquality()
-                    .equals(other.needPatientBanner, needPatientBanner)) &&
-            (identical(other.smartOrchestrateLaunch, smartOrchestrateLaunch) ||
-                const DeepCollectionEquality().equals(
-                    other.smartOrchestrateLaunch, smartOrchestrateLaunch)) &&
-            (identical(other.intent, intent) ||
-                const DeepCollectionEquality().equals(other.intent, intent)) &&
-            (identical(other.additional, additional) ||
-                const DeepCollectionEquality()
-                    .equals(other.additional, additional)));
+        (other.runtimeType == runtimeType &&
+            other is _Scopes &&
+            const DeepCollectionEquality()
+                .equals(other.clinicalScopes, clinicalScopes) &&
+            const DeepCollectionEquality().equals(other.openid, openid) &&
+            const DeepCollectionEquality().equals(other.fhirUser, fhirUser) &&
+            const DeepCollectionEquality().equals(other.profile, profile) &&
+            const DeepCollectionEquality()
+                .equals(other.offlineAccess, offlineAccess) &&
+            const DeepCollectionEquality()
+                .equals(other.onlineAccess, onlineAccess) &&
+            const DeepCollectionEquality().equals(other.ehrLaunch, ehrLaunch) &&
+            const DeepCollectionEquality()
+                .equals(other.patientLaunch, patientLaunch) &&
+            const DeepCollectionEquality()
+                .equals(other.encounterLaunch, encounterLaunch) &&
+            const DeepCollectionEquality()
+                .equals(other.needPatientBanner, needPatientBanner) &&
+            const DeepCollectionEquality()
+                .equals(other.smartOrchestrateLaunch, smartOrchestrateLaunch) &&
+            const DeepCollectionEquality().equals(other.intent, intent) &&
+            const DeepCollectionEquality()
+                .equals(other.additional, additional));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(clinicalScopes) ^
-      const DeepCollectionEquality().hash(openid) ^
-      const DeepCollectionEquality().hash(fhirUser) ^
-      const DeepCollectionEquality().hash(profile) ^
-      const DeepCollectionEquality().hash(offlineAccess) ^
-      const DeepCollectionEquality().hash(onlineAccess) ^
-      const DeepCollectionEquality().hash(ehrLaunch) ^
-      const DeepCollectionEquality().hash(patientLaunch) ^
-      const DeepCollectionEquality().hash(encounterLaunch) ^
-      const DeepCollectionEquality().hash(needPatientBanner) ^
-      const DeepCollectionEquality().hash(smartOrchestrateLaunch) ^
-      const DeepCollectionEquality().hash(intent) ^
-      const DeepCollectionEquality().hash(additional);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(clinicalScopes),
+      const DeepCollectionEquality().hash(openid),
+      const DeepCollectionEquality().hash(fhirUser),
+      const DeepCollectionEquality().hash(profile),
+      const DeepCollectionEquality().hash(offlineAccess),
+      const DeepCollectionEquality().hash(onlineAccess),
+      const DeepCollectionEquality().hash(ehrLaunch),
+      const DeepCollectionEquality().hash(patientLaunch),
+      const DeepCollectionEquality().hash(encounterLaunch),
+      const DeepCollectionEquality().hash(needPatientBanner),
+      const DeepCollectionEquality().hash(smartOrchestrateLaunch),
+      const DeepCollectionEquality().hash(intent),
+      const DeepCollectionEquality().hash(additional));
 
   @JsonKey(ignore: true)
   @override
@@ -467,57 +454,57 @@ abstract class _Scopes extends Scopes {
   @override
 
   /// see the clinical scopes class for details
-  List<ClinicalScope>? get clinicalScopes => throw _privateConstructorUsedError;
+  List<ClinicalScope>? get clinicalScopes;
   @override
 
   /// permission to retrieve information about the current logged-in user
   /// almost always coupled with fhirUser
-  bool? get openid => throw _privateConstructorUsedError;
+  bool? get openid;
   @override
 
   /// permission to retrieve information about the current logged-in user
   /// almost always coupled with openid
-  bool? get fhirUser => throw _privateConstructorUsedError;
+  bool? get fhirUser;
   @override
 
   /// this is being deprecated but still commonly required
-  bool? get profile => throw _privateConstructorUsedError;
+  bool? get profile;
   @override
 
   /// will this app require offline access? specifies the kind of token that
   /// will be returned
-  bool? get offlineAccess => throw _privateConstructorUsedError;
+  bool? get offlineAccess;
   @override
 
   /// will this app require online access? specifies the kind of token that
   /// will be returned
-  bool? get onlineAccess => throw _privateConstructorUsedError;
+  bool? get onlineAccess;
   @override
 
   ///if this app is going to be launched from within an EHR
-  bool? get ehrLaunch => throw _privateConstructorUsedError;
+  bool? get ehrLaunch;
   @override
 
   /// if the context of this app is about a specific patient
-  bool? get patientLaunch => throw _privateConstructorUsedError;
+  bool? get patientLaunch;
   @override
 
   /// if the context of this app is in regards to a specific encounter
-  bool? get encounterLaunch => throw _privateConstructorUsedError;
+  bool? get encounterLaunch;
   @override
 
   /// does this request need a patient banner
-  bool? get needPatientBanner => throw _privateConstructorUsedError;
+  bool? get needPatientBanner;
   @override
 
   /// I'm not actually sure what this does
-  bool? get smartOrchestrateLaunch => throw _privateConstructorUsedError;
+  bool? get smartOrchestrateLaunch;
   @override
 
   /// String value describing the intent of the application launch
-  String? get intent => throw _privateConstructorUsedError;
+  String? get intent;
   @override
-  List<String>? get additional => throw _privateConstructorUsedError;
+  List<String>? get additional;
   @override
   @JsonKey(ignore: true)
   _$ScopesCopyWith<_Scopes> get copyWith => throw _privateConstructorUsedError;

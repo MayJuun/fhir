@@ -8,7 +8,7 @@ part of 'scheduling.dart';
 
 _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
     _$_Appointment(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Appointment) ??
           Dstu2ResourceType.Appointment,
@@ -42,7 +42,7 @@ _$_Appointment _$$_AppointmentFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecode(_$AppointmentStatusEnumMap, json['status'],
+      status: $enumDecode(_$AppointmentStatusEnumMap, json['status'],
           unknownValue: AppointmentStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -135,43 +135,6 @@ Map<String, dynamic> _$$_AppointmentToJson(_$_Appointment instance) {
   writeNotNull('_comment', instance.commentElement?.toJson());
   val['participant'] = instance.participant.map((e) => e.toJson()).toList();
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -299,13 +262,13 @@ _$_AppointmentParticipant _$$_AppointmentParticipantFromJson(
       actor: json['actor'] == null
           ? null
           : Reference.fromJson(json['actor'] as Map<String, dynamic>),
-      required_: _$enumDecodeNullable(
+      required_: $enumDecodeNullable(
           _$ParticipantRequiredEnumMap, json['required'],
           unknownValue: ParticipantRequired.unknown),
       requiredElement: json['_required'] == null
           ? null
           : Element.fromJson(json['_required'] as Map<String, dynamic>),
-      status: _$enumDecode(_$ParticipantStatusEnumMap, json['status'],
+      status: $enumDecode(_$ParticipantStatusEnumMap, json['status'],
           unknownValue: ParticipantStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -358,7 +321,7 @@ _$_AppointmentResponse _$$_AppointmentResponseFromJson(
     requiredKeys: const ['participantStatus'],
   );
   return _$_AppointmentResponse(
-    resourceType: _$enumDecodeNullable(
+    resourceType: $enumDecodeNullable(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.AppointmentResponse) ??
         Dstu2ResourceType.AppointmentResponse,
@@ -407,7 +370,7 @@ _$_AppointmentResponse _$$_AppointmentResponseFromJson(
     actor: json['actor'] == null
         ? null
         : Reference.fromJson(json['actor'] as Map<String, dynamic>),
-    participantStatus: _$enumDecode(
+    participantStatus: $enumDecode(
         _$AppointmentResponseParticipantStatusEnumMap,
         json['participantStatus'],
         unknownValue: AppointmentResponseParticipantStatus.unknown),
@@ -476,7 +439,7 @@ const _$AppointmentResponseParticipantStatusEnumMap = {
 };
 
 _$_Schedule _$$_ScheduleFromJson(Map<String, dynamic> json) => _$_Schedule(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Schedule) ??
           Dstu2ResourceType.Schedule,
@@ -558,7 +521,7 @@ Map<String, dynamic> _$$_ScheduleToJson(_$_Schedule instance) {
 }
 
 _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Slot) ??
           Dstu2ResourceType.Slot,
@@ -596,8 +559,7 @@ _$_Slot _$$_SlotFromJson(Map<String, dynamic> json) => _$_Slot(
           ? null
           : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
       schedule: Reference.fromJson(json['schedule'] as Map<String, dynamic>),
-      freeBusyType: _$enumDecode(
-          _$SlotFreeBusyTypeEnumMap, json['freeBusyType'],
+      freeBusyType: $enumDecode(_$SlotFreeBusyTypeEnumMap, json['freeBusyType'],
           unknownValue: SlotFreeBusyType.unknown),
       start: Instant.fromJson(json['start']),
       startElement: json['_start'] == null

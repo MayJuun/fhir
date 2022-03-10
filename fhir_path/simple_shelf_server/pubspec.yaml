@@ -1,9 +1,0 @@
-name: simple_shelf_server
-description: Simple standalone server for serving flutter web apps, utilizing shelf, goal is full stack dart.
-
-environment:
-  sdk: ">=2.14.0 <3.0.0"
-
-dependencies:
-  functions_framework: ^0.4.1
-  shelf_static: ^1.1.0

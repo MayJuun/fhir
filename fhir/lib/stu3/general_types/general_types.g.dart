@@ -131,7 +131,7 @@ Map<String, dynamic> _$$_AttachmentToJson(_$_Attachment instance) {
 
 _$_Identifier _$$_IdentifierFromJson(Map<String, dynamic> json) =>
     _$_Identifier(
-      use: _$enumDecodeNullable(_$IdentifierUseEnumMap, json['use']),
+      use: $enumDecodeNullable(_$IdentifierUseEnumMap, json['use']),
       useElement: json['_use'] == null
           ? null
           : Element.fromJson(json['_use'] as Map<String, dynamic>),
@@ -173,43 +173,6 @@ Map<String, dynamic> _$$_IdentifierToJson(_$_Identifier instance) {
   writeNotNull('period', instance.period?.toJson());
   writeNotNull('assigner', instance.assigner?.toJson());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$IdentifierUseEnumMap = {
@@ -299,7 +262,7 @@ _$_Quantity _$$_QuantityFromJson(Map<String, dynamic> json) => _$_Quantity(
           ? null
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
       comparator:
-          _$enumDecodeNullable(_$QuantityComparatorEnumMap, json['comparator']),
+          $enumDecodeNullable(_$QuantityComparatorEnumMap, json['comparator']),
       comparatorElement: json['_comparator'] == null
           ? null
           : Element.fromJson(json['_comparator'] as Map<String, dynamic>),
@@ -354,7 +317,7 @@ _$_FhirDuration _$$_FhirDurationFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
       comparator:
-          _$enumDecodeNullable(_$QuantityComparatorEnumMap, json['comparator']),
+          $enumDecodeNullable(_$QuantityComparatorEnumMap, json['comparator']),
       comparatorElement: json['_comparator'] == null
           ? null
           : Element.fromJson(json['_comparator'] as Map<String, dynamic>),
@@ -400,7 +363,7 @@ _$_Distance _$$_DistanceFromJson(Map<String, dynamic> json) => _$_Distance(
           ? null
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
       comparator:
-          _$enumDecodeNullable(_$QuantityComparatorEnumMap, json['comparator']),
+          $enumDecodeNullable(_$QuantityComparatorEnumMap, json['comparator']),
       comparatorElement: json['_comparator'] == null
           ? null
           : Element.fromJson(json['_comparator'] as Map<String, dynamic>),
@@ -446,7 +409,7 @@ _$_Count _$$_CountFromJson(Map<String, dynamic> json) => _$_Count(
           ? null
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
       comparator:
-          _$enumDecodeNullable(_$QuantityComparatorEnumMap, json['comparator']),
+          $enumDecodeNullable(_$QuantityComparatorEnumMap, json['comparator']),
       comparatorElement: json['_comparator'] == null
           ? null
           : Element.fromJson(json['_comparator'] as Map<String, dynamic>),
@@ -492,7 +455,7 @@ _$_Money _$$_MoneyFromJson(Map<String, dynamic> json) => _$_Money(
           ? null
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
       comparator:
-          _$enumDecodeNullable(_$QuantityComparatorEnumMap, json['comparator']),
+          $enumDecodeNullable(_$QuantityComparatorEnumMap, json['comparator']),
       comparatorElement: json['_comparator'] == null
           ? null
           : Element.fromJson(json['_comparator'] as Map<String, dynamic>),
@@ -538,7 +501,7 @@ _$_Age _$$_AgeFromJson(Map<String, dynamic> json) => _$_Age(
           ? null
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
       comparator:
-          _$enumDecodeNullable(_$QuantityComparatorEnumMap, json['comparator']),
+          $enumDecodeNullable(_$QuantityComparatorEnumMap, json['comparator']),
       comparatorElement: json['_comparator'] == null
           ? null
           : Element.fromJson(json['_comparator'] as Map<String, dynamic>),
@@ -772,7 +735,7 @@ Map<String, dynamic> _$$_SignatureToJson(_$_Signature instance) {
 }
 
 _$_HumanName _$$_HumanNameFromJson(Map<String, dynamic> json) => _$_HumanName(
-      use: _$enumDecodeNullable(_$HumanNameUseEnumMap, json['use']),
+      use: $enumDecodeNullable(_$HumanNameUseEnumMap, json['use']),
       useElement: json['_use'] == null
           ? null
           : Element.fromJson(json['_use'] as Map<String, dynamic>),
@@ -847,11 +810,11 @@ const _$HumanNameUseEnumMap = {
 };
 
 _$_Address _$$_AddressFromJson(Map<String, dynamic> json) => _$_Address(
-      use: _$enumDecodeNullable(_$AddressUseEnumMap, json['use']),
+      use: $enumDecodeNullable(_$AddressUseEnumMap, json['use']),
       useElement: json['_use'] == null
           ? null
           : Element.fromJson(json['_use'] as Map<String, dynamic>),
-      type: _$enumDecodeNullable(_$AddressTypeEnumMap, json['type']),
+      type: $enumDecodeNullable(_$AddressTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -937,7 +900,7 @@ const _$AddressTypeEnumMap = {
 
 _$_ContactPoint _$$_ContactPointFromJson(Map<String, dynamic> json) =>
     _$_ContactPoint(
-      system: _$enumDecodeNullable(_$ContactPointSystemEnumMap, json['system']),
+      system: $enumDecodeNullable(_$ContactPointSystemEnumMap, json['system']),
       systemElement: json['_system'] == null
           ? null
           : Element.fromJson(json['_system'] as Map<String, dynamic>),
@@ -945,7 +908,7 @@ _$_ContactPoint _$$_ContactPointFromJson(Map<String, dynamic> json) =>
       valueElement: json['_value'] == null
           ? null
           : Element.fromJson(json['_value'] as Map<String, dynamic>),
-      use: _$enumDecodeNullable(_$ContactPointUseEnumMap, json['use']),
+      use: $enumDecodeNullable(_$ContactPointUseEnumMap, json['use']),
       useElement: json['_use'] == null
           ? null
           : Element.fromJson(json['_use'] as Map<String, dynamic>),
@@ -1063,7 +1026,7 @@ _$_TimingRepeat _$$_TimingRepeatFromJson(Map<String, dynamic> json) =>
       durationMaxElement: json['_durationMax'] == null
           ? null
           : Element.fromJson(json['_durationMax'] as Map<String, dynamic>),
-      durationUnit: _$enumDecodeNullable(
+      durationUnit: $enumDecodeNullable(
           _$TimingRepeatDurationUnitEnumMap, json['durationUnit']),
       durationUnitElement: json['_durationUnit'] == null
           ? null
@@ -1090,7 +1053,7 @@ _$_TimingRepeat _$$_TimingRepeatFromJson(Map<String, dynamic> json) =>
       periodMaxElement: json['_periodMax'] == null
           ? null
           : Element.fromJson(json['_periodMax'] as Map<String, dynamic>),
-      periodUnit: _$enumDecodeNullable(
+      periodUnit: $enumDecodeNullable(
           _$TimingRepeatPeriodUnitEnumMap, json['periodUnit']),
       periodUnitElement: json['_periodUnit'] == null
           ? null
@@ -1110,7 +1073,7 @@ _$_TimingRepeat _$$_TimingRepeatFromJson(Map<String, dynamic> json) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       when: (json['when'] as List<dynamic>?)
-          ?.map((e) => _$enumDecode(_$TimingRepeatWhenEnumMap, e))
+          ?.map((e) => $enumDecode(_$TimingRepeatWhenEnumMap, e))
           .toList(),
       whenElement: (json['_when'] as List<dynamic>?)
           ?.map((e) =>

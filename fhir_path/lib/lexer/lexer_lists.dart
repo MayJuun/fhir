@@ -1,12 +1,13 @@
 import 'package:petitparser/petitparser.dart';
 
 import 'arg_fxn_lexer.dart';
+import 'extension_lexer.dart';
 import 'literal_lexer.dart';
 import 'no_arg_fxn_lexer.dart';
 import 'operator_lexer.dart';
 import 'special_lexer.dart';
-import 'symbol_lexer.dart';
 
+/// Lexers for identifying special items
 final specialLexer = bracketsIndexLexer |
     indexLexer |
     thisLexer |
@@ -14,6 +15,7 @@ final specialLexer = bracketsIndexLexer |
     emptySetLexer |
     dotLexer;
 
+/// Lexers for identifying key words
 final wordOperationLexer = impliesLexer |
     orStringLexer |
     xorLexer |
@@ -22,9 +24,10 @@ final wordOperationLexer = impliesLexer |
     inLexer |
     asLexer |
     isLexer |
-    divModLexer |
+    modLexer |
     divStringLexer;
 
+/// Lexers for identifying key symbols
 final symbolOperationLexer = notEquivalentLexer |
     notEqualsLexer |
     equivalentLexer |
@@ -34,13 +37,14 @@ final symbolOperationLexer = notEquivalentLexer |
     lessLexer |
     greaterLexer |
     unionOperatorLexer |
-    andSignLexer |
+    stringConcatenationLexer |
     minusLexer |
     plusLexer |
     divSignLexer |
     starLexer |
     commaLexer;
 
+/// All lexers for functions that accept arguments
 final functionLexer = unionFunctionLexer |
     combineLexer |
     toQuantityLexer |
@@ -53,6 +57,7 @@ final functionLexer = unionFunctionLexer |
     selectLexer |
     repeatLexer |
     ofTypeLexer |
+    extensionLexer |
     logLexer |
     powerLexer |
     roundLexer |
@@ -72,21 +77,23 @@ final functionLexer = unionFunctionLexer |
     aggregateLexer |
     iifLexer;
 
+/// Lexer for all types of white space
 final wsLexer = whiteSpaceLexer | lineCommentLexer | multiLineCommentLexer;
 
-final literalLexer = quantityLexer |
-    booleanLexer |
+/// Lexers identifying special formatting of certain types of data
+final literalLexer = stringLexer |
     envVariableLexer |
-    numberLexer |
-    stringLexer |
-    identifierLexer |
     delimitedIdentifierLexer |
+    booleanLexer |
+    quantityLexer |
+    identifierLexer |
+    numberLexer |
     dateTimeLexer |
     dateLexer |
     timeLexer;
 
-final simpleLexer = symbolLexer |
-    toBooleanLexer |
+/// All lexers for functions that don't accept arguments
+final simpleLexer = toBooleanLexer |
     convertsToBooleanLexer |
     toIntegerLexer |
     convertsToIntegerLexer |
@@ -101,6 +108,8 @@ final simpleLexer = symbolLexer |
     toTimeLexer |
     convertsToTimeLexer |
     emptyLexer |
+    notLexer |
+    hasValueLexer |
     allTrueLexer |
     anyTrueLexer |
     allFalseLexer |
@@ -127,18 +136,10 @@ final simpleLexer = symbolLexer |
     descendantsLexer |
     nowLexer |
     timeOfDayLexer |
-    todayLexer;
-
-final symbolLexer = millisecondLexer |
-    secondLexer |
-    secondsLexer |
-    minutesLexer |
-    hourLexer |
-    hoursLexer |
-    dayLexer |
-    daysLexer |
-    weeksLexer |
-    monthLexer |
-    monthsLexer |
-    yearLexer |
-    yearsLexer;
+    todayLexer |
+    sumLexer |
+    minLexer |
+    maxLexer |
+    avgLexer |
+    answersLexer |
+    ordinalLexer;

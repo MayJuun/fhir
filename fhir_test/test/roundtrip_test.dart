@@ -2,7 +2,7 @@ import 'package:test/test.dart';
 
 import 'validation/validation.dart';
 
-Future main() async {
+Future roundtripTest() async {
   group(
     'Runs through all examples provided. Each example resource is a Json file,'
     'we read in that file as a Resource, convert it back to a map, and then '
@@ -23,7 +23,7 @@ Future main() async {
 
           expect(testList.isEmpty, true);
         },
-        timeout: Timeout(Duration(minutes: 8)),
+        timeout: Timeout(Duration(minutes: 15)),
       );
 
       test(

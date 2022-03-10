@@ -3,7 +3,7 @@ import 'package:fhir_path/fhir_path.dart';
 import 'package:test/test.dart';
 
 dynamic walkPath(dynamic arg) =>
-    walkFhirPath(resource.toJson(), arg).toString();
+    walkFhirPath(context: resource.toJson(), pathExpression: arg).toString();
 
 void testQuestionnaire() {
   group('Questionnaire Logic', () {
@@ -11,41 +11,61 @@ void testQuestionnaire() {
     test('Partial Score', () {
       expect(
           walkFhirPath(
-              response.toJson(),
-              "QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.valueDecimal + "
-              "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.valueDecimal+ "
-              "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.valueDecimal"),
+            context: response.toJson(),
+            pathExpression:
+                "QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.valueDecimal + "
+                "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.valueDecimal+ "
+                "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.valueDecimal",
+            resource: response.toJson(),
+          ),
           [13]);
       expect(
           walkFhirPath(
-              response.toJson(),
-              "(QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.valueDecimal + "
-              "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.valueDecimal+ "
-              "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.valueDecimal) < 12"),
+            context: response.toJson(),
+            pathExpression:
+                "(QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.valueDecimal + "
+                "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.valueDecimal+ "
+                "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.valueDecimal) < 12",
+            resource: response.toJson(),
+          ),
           [false]);
       expect(
           walkFhirPath(
-              response.toJson(),
-              "QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.value + "
-              "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.value + "
-              "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.value"),
+            context: response.toJson(),
+            pathExpression:
+                "QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.value + "
+                "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.value + "
+                "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.value",
+            resource: response.toJson(),
+          ),
           [13]);
       expect(
           walkFhirPath(
-              response.toJson(),
-              "(QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.value + "
-              "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.value + "
-              "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.value) < 12"),
+            context: response.toJson(),
+            pathExpression:
+                "(QuestionnaireResponse.item.where(linkId = '1.1').answer.valueCoding.extension.value + "
+                "QuestionnaireResponse.item.where(linkId = '1.2').answer.valueCoding.extension.value + "
+                "QuestionnaireResponse.item.where(linkId = '1.3').answer.valueCoding.extension.value) < 12",
+            resource: response.toJson(),
+          ),
           [false]);
     });
     test('Total Score Aggregate', () {
       expect(
-          walkFhirPath(response.toJson(),
-              r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"),
+          walkFhirPath(
+            context: response.toJson(),
+            pathExpression:
+                r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)",
+            resource: response.toJson(),
+          ),
           [13]);
       expect(
-          walkFhirPath(response.toJson(),
-              r"QuestionnaireResponse.item.answer.valueCoding.extension.value.aggregate($this + $total, 0)"),
+          walkFhirPath(
+            context: response.toJson(),
+            pathExpression:
+                r"QuestionnaireResponse.item.answer.valueCoding.extension.value.aggregate($this + $total, 0)",
+            resource: response.toJson(),
+          ),
           [13]);
     });
   });
@@ -53,46 +73,54 @@ void testQuestionnaire() {
     test('EnableWhen with specific polymorphic items', () {
       expect(
           walkFhirPath(
-              faiadashuResponse.toJson(),
-              "%resource.repeat(item).where(linkId='4.2.b.1').answer.valueCoding.code "
-              "="
-              "'female' "
-              "and"
-              " today().toString().substring(0, 4).toInteger() "
-              "-"
-              " %resource.repeat(item).where(linkId='4.2.b.5').answer.valueDate.toString().substring(0, 4).toInteger() "
-              ">="
-              " 40"),
+            context: faiadashuResponse.toJson(),
+            pathExpression:
+                "%resource.repeat(item).where(linkId='4.2.b.1').answer.valueCoding.code "
+                "="
+                "'female' "
+                "and"
+                " today().toString().substring(0, 4).toInteger() "
+                "-"
+                " %resource.repeat(item).where(linkId='4.2.b.5').answer.valueDate.toString().substring(0, 4).toInteger() "
+                ">="
+                " 40",
+            resource: faiadashuResponse.toJson(),
+          ),
           [false]);
     });
     test('EnableWhen using generic value polymorphic type', () {
       expect(
           walkFhirPath(
-              faiadashuResponse.toJson(),
-              "%resource.repeat(item).where(linkId='4.2.b.1').answer.value.code "
-              "="
-              "'female' "
-              "and"
-              " today().toString().substring(0, 4).toInteger() "
-              "-"
-              " %resource.repeat(item).where(linkId='4.2.b.5').answer.value.toString().substring(0, 4).toInteger() "
-              ">="
-              " 40"),
+            context: faiadashuResponse.toJson(),
+            pathExpression:
+                "%resource.repeat(item).where(linkId='4.2.b.1').answer.value.code "
+                "="
+                "'female' "
+                "and"
+                " today().toString().substring(0, 4).toInteger() "
+                "-"
+                " %resource.repeat(item).where(linkId='4.2.b.5').answer.value.toString().substring(0, 4).toInteger() "
+                ">="
+                " 40",
+            resource: faiadashuResponse.toJson(),
+          ),
           [false]);
     });
     test('EnableWhen using a defined polymorphic type', () {
       expect(
           walkFhirPath(
-            faiadashuResponse.toJson(),
-            "%resource.repeat(item).where(linkId='4.2.b.1').answer.(value as Coding).code "
-            "="
-            "'female' "
-            "and"
-            " today().toString().substring(0, 4).toInteger() "
-            "-"
-            " %resource.repeat(item).where(linkId='4.2.b.5').answer.(value as Date).toString().substring(0, 4).toInteger() "
-            ">="
-            " 40",
+            context: faiadashuResponse.toJson(),
+            pathExpression:
+                "%resource.repeat(item).where(linkId='4.2.b.1').answer.(value as Coding).code "
+                "="
+                "'female' "
+                "and"
+                " today().toString().substring(0, 4).toInteger() "
+                "-"
+                " %resource.repeat(item).where(linkId='4.2.b.5').answer.(value as Date).toString().substring(0, 4).toInteger() "
+                ">="
+                " 40",
+            resource: faiadashuResponse.toJson(),
           ),
           [false]);
     });
@@ -100,22 +128,55 @@ void testQuestionnaire() {
   group('More Complicated Responses', () {
     test('Contains on more than one item', () {
       expect(
-          walkFhirPath(newResponse.toJson(),
-              "item.where(linkId.contains('/psc/preschool/routines/inflexibility'))"),
-          [
-            {'linkId': '/psc/preschool/routines/inflexibility/fidgety'},
-            {'linkId': '/psc/preschool/routines/inflexibility/angry'}
-          ]);
+        walkFhirPath(
+          context: newResponse.toJson(),
+          pathExpression:
+              "item.where(linkId.contains('/psc/preschool/routines/inflexibility'))",
+          resource: newResponse.toJson(),
+        ),
+        [
+          {'linkId': '/psc/preschool/routines/inflexibility/fidgety'},
+          {'linkId': '/psc/preschool/routines/inflexibility/angry'}
+        ],
+      );
     });
     test('Fuckin a sums scores', () {
       expect(
-          walkFhirPath(newResponse.toJson(),
-              r"item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"),
+          walkFhirPath(
+            context: newResponse.toJson(),
+            pathExpression:
+                r"item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)",
+            resource: newResponse.toJson(),
+          ),
           [2]);
       expect(
-          walkFhirPath(newResponse.toJson(),
-              r"item.answer.valueCoding.extension.value.aggregate($this + $total, 0)"),
+          walkFhirPath(
+            context: newResponse.toJson(),
+            pathExpression:
+                r"item.answer.valueCoding.extension.value.aggregate($this + $total, 0)",
+            resource: newResponse.toJson(),
+          ),
           [2]);
+    });
+    test('Risk scoring', () {
+      expect(
+          walkFhirPath(
+            context: null,
+            pathExpression:
+                r"iif(%allQuestionsAnswered, iif(%gender = 'Male', iif(%age>70, 1 - (0.9402).power((52.00961  * (%age.ln() - 3.8926095) + 20.014077 * (%tChol.ln() - 5.3441475) - 0.905964  * (%hdl.ln() - 3.7731132) + 1.305784  * (%systolic.ln() - 4.8618212) + 0.241549  * (%antihypert - 0.1180474) + 12.096316 * (%smokes - 0.335602) - 4.605038  * (%age.ln() * %tChol.ln() - 20.8111562) - 2.84367   * (70.ln() * %smokes  - 1.2890301) - 2.93323   * (%age.ln() * %age.ln() - 15.2144965)).exp()), {}), {}), {})",
+            environment: {
+              '%allQuestionsAnswered': true,
+              '%gender': 'Male',
+              '%age': 75,
+              '%tChol': 8,
+              '%hdl': 0.2,
+              '%systolic': 180,
+              '%antihypert': 0,
+              '%smokes': 1
+            },
+            resource: newResponse.toJson(),
+          ),
+          [0.9999999999988963]);
     });
   });
 }

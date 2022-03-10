@@ -8,13 +8,13 @@ import 'ndjson/MedicationRequest.dart';
 import 'ndjson/accountMedRequest.dart';
 import 'ndjson/medRequestAccount.dart';
 
-void main() {
+void compressTest() {
   group('FHIR Bulk From File/s:', () {
     test('From Accounts ndjson file', () async {
       final resources = await FhirBulk.fromFile('./test/ndjson/Account.ndjson');
       String stringList = '';
       for (final resource in resources) {
-        stringList += '\n${json.encode(resource?.toJson())}';
+        stringList += '\n${jsonEncode(resource?.toJson())}';
       }
       stringList = stringList.replaceFirst('\n', '');
       expect(stringList, account);
@@ -25,7 +25,7 @@ void main() {
           await FhirBulk.fromFile('./test/ndjson/MedicationRequest.ndjson');
       String stringList = '';
       for (final resource in resources) {
-        stringList += '\n${json.encode(resource?.toJson())}';
+        stringList += '\n${jsonEncode(resource?.toJson())}';
       }
       stringList = stringList.replaceFirst('\n', '');
       expect(stringList, medicationRequest);
@@ -38,7 +38,7 @@ void main() {
           await FhirBulk.fromCompressedFile('./test/ndjson/account.zip');
       String stringList = '';
       for (final resource in resources) {
-        stringList += '\n${json.encode(resource?.toJson())}';
+        stringList += '\n${jsonEncode(resource?.toJson())}';
       }
       stringList = stringList.replaceFirst('\n', '');
       expect(stringList, account);
@@ -49,7 +49,7 @@ void main() {
           './test/ndjson/medicationRequest.zip');
       String stringList = '';
       for (final resource in resources) {
-        stringList += '\n${json.encode(resource?.toJson())}';
+        stringList += '\n${jsonEncode(resource?.toJson())}';
       }
       stringList = stringList.replaceFirst('\n', '');
       expect(stringList, medicationRequest);
@@ -60,7 +60,7 @@ void main() {
           './test/ndjson/accountMedRequest.zip');
       String stringList = '';
       for (final resource in resources) {
-        stringList += '\n${json.encode(resource?.toJson())}';
+        stringList += '\n${jsonEncode(resource?.toJson())}';
       }
       stringList = stringList.replaceFirst('\n', '');
       expect(stringList, accountMedRequest);
@@ -71,7 +71,7 @@ void main() {
           await FhirBulk.fromCompressedFile('./test/ndjson/Account.ndjson.gz');
       String stringList = '';
       for (final resource in resources) {
-        stringList += '\n${json.encode(resource?.toJson())}';
+        stringList += '\n${jsonEncode(resource?.toJson())}';
       }
       stringList = stringList.replaceFirst('\n', '');
       expect(stringList, account);
@@ -82,7 +82,7 @@ void main() {
           './test/ndjson/MedicationRequest.ndjson.gz');
       String stringList = '';
       for (final resource in resources) {
-        stringList += '\n${json.encode(resource?.toJson())}';
+        stringList += '\n${jsonEncode(resource?.toJson())}';
       }
       stringList = stringList.replaceFirst('\n', '');
       expect(stringList, medicationRequest);
@@ -93,7 +93,7 @@ void main() {
           await FhirBulk.fromCompressedFile('./test/ndjson/tarGzip.tar.gz');
       String stringList = '';
       for (final resource in resources) {
-        stringList += '\n${json.encode(resource?.toJson())}';
+        stringList += '\n${jsonEncode(resource?.toJson())}';
       }
       stringList = stringList.replaceFirst('\n', '');
       expect(stringList, medRequestAccount);
@@ -102,7 +102,7 @@ void main() {
 
   group('Creating Bulk FHIR String', () {
     test('To Accounts ndjson', () async {
-      final resources = await FhirBulk.fromData(account);
+      final resources = await FhirBulk.fromNdJson(account);
       final List<Resource> resourceList = <Resource>[];
       for (var resource in resources) {
         if (resource != null) {
@@ -114,7 +114,7 @@ void main() {
     });
 
     test('To MedicationRequest ndjson', () async {
-      final resources = await FhirBulk.fromData(medicationRequest);
+      final resources = await FhirBulk.fromNdJson(medicationRequest);
       final List<Resource> resourceList = <Resource>[];
       for (var resource in resources) {
         if (resource != null) {

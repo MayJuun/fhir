@@ -8,7 +8,7 @@ part of 'payment.dart';
 
 _$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
     _$_PaymentNotice(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.PaymentNotice) ??
           R4ResourceType.PaymentNotice,
@@ -120,43 +120,6 @@ Map<String, dynamic> _$$_PaymentNoticeToJson(_$_PaymentNotice instance) {
   val['amount'] = instance.amount.toJson();
   writeNotNull('paymentStatus', instance.paymentStatus?.toJson());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R4ResourceTypeEnumMap = {
@@ -314,7 +277,7 @@ const _$R4ResourceTypeEnumMap = {
 _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
         Map<String, dynamic> json) =>
     _$_PaymentReconciliation(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.PaymentReconciliation) ??
           R4ResourceType.PaymentReconciliation,
@@ -370,7 +333,7 @@ _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
       requestor: json['requestor'] == null
           ? null
           : Reference.fromJson(json['requestor'] as Map<String, dynamic>),
-      outcome: _$enumDecodeNullable(
+      outcome: $enumDecodeNullable(
           _$PaymentReconciliationOutcomeEnumMap, json['outcome'],
           unknownValue: PaymentReconciliationOutcome.unknown),
       outcomeElement: json['_outcome'] == null
@@ -544,7 +507,7 @@ _$_PaymentReconciliationProcessNote
           modifierExtension: (json['modifierExtension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
-          type: _$enumDecodeNullable(
+          type: $enumDecodeNullable(
               _$PaymentReconciliationProcessNoteTypeEnumMap, json['type'],
               unknownValue: PaymentReconciliationProcessNoteType.unknown),
           typeElement: json['_type'] == null

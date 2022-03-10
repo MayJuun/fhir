@@ -9,7 +9,7 @@ part of 'definitional_artifacts.dart';
 _$_ActivityDefinition _$$_ActivityDefinitionFromJson(
         Map<String, dynamic> json) =>
     _$_ActivityDefinition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.ActivityDefinition) ??
           R5ResourceType.ActivityDefinition,
@@ -59,7 +59,7 @@ _$_ActivityDefinition _$$_ActivityDefinitionFromJson(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$ActivityDefinitionStatusEnumMap, json['status'],
           unknownValue: ActivityDefinitionStatus.unknown),
       statusElement: json['_status'] == null
@@ -355,43 +355,6 @@ Map<String, dynamic> _$$_ActivityDefinitionToJson(
   return val;
 }
 
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
-
 const _$R5ResourceTypeEnumMap = {
   R5ResourceType.Account: 'Account',
   R5ResourceType.ActivityDefinition: 'ActivityDefinition',
@@ -641,7 +604,7 @@ Map<String, dynamic> _$$_ActivityDefinitionDynamicValueToJson(
 _$_ConditionDefinition _$$_ConditionDefinitionFromJson(
         Map<String, dynamic> json) =>
     _$_ConditionDefinition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.ConditionDefinition) ??
           R5ResourceType.ConditionDefinition,
@@ -691,7 +654,7 @@ _$_ConditionDefinition _$$_ConditionDefinitionFromJson(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$ConditionDefinitionStatusEnumMap, json['status'],
           unknownValue: ConditionDefinitionStatus.unknown),
       statusElement: json['_status'] == null
@@ -1020,7 +983,7 @@ _$_ConditionDefinitionPrecondition _$$_ConditionDefinitionPreconditionFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecodeNullable(
+      type: $enumDecodeNullable(
           _$ConditionDefinitionPreconditionTypeEnumMap, json['type'],
           unknownValue: ConditionDefinitionPreconditionType.unknown),
       typeElement: json['_type'] == null
@@ -1076,7 +1039,7 @@ _$_ConditionDefinitionQuestionnaire
           modifierExtension: (json['modifierExtension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
-          purpose: _$enumDecodeNullable(
+          purpose: $enumDecodeNullable(
               _$ConditionDefinitionQuestionnairePurposeEnumMap, json['purpose'],
               unknownValue: ConditionDefinitionQuestionnairePurpose.unknown),
           purposeElement: json['_purpose'] == null
@@ -1153,7 +1116,7 @@ Map<String, dynamic> _$$_ConditionDefinitionPlanToJson(
 
 _$_DeviceDefinition _$$_DeviceDefinitionFromJson(Map<String, dynamic> json) =>
     _$_DeviceDefinition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.DeviceDefinition) ??
           R5ResourceType.DeviceDefinition,
@@ -1405,7 +1368,7 @@ _$_DeviceDefinitionDeviceName _$$_DeviceDefinitionDeviceNameFromJson(
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      type: _$enumDecodeNullable(
+      type: $enumDecodeNullable(
           _$DeviceDefinitionDeviceNameTypeEnumMap, json['type'],
           unknownValue: DeviceDefinitionDeviceNameType.unknown),
       typeElement: json['_type'] == null
@@ -1857,7 +1820,7 @@ Map<String, dynamic> _$$_DeviceDefinitionMaterialToJson(
 
 _$_EventDefinition _$$_EventDefinitionFromJson(Map<String, dynamic> json) =>
     _$_EventDefinition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.EventDefinition) ??
           R5ResourceType.EventDefinition,
@@ -1907,7 +1870,7 @@ _$_EventDefinition _$$_EventDefinitionFromJson(Map<String, dynamic> json) =>
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$EventDefinitionStatusEnumMap, json['status'],
           unknownValue: EventDefinitionStatus.unknown),
       statusElement: json['_status'] == null
@@ -2093,7 +2056,7 @@ const _$EventDefinitionStatusEnumMap = {
 _$_ObservationDefinition _$$_ObservationDefinitionFromJson(
         Map<String, dynamic> json) =>
     _$_ObservationDefinition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.ObservationDefinition) ??
           R5ResourceType.ObservationDefinition,
@@ -2223,7 +2186,7 @@ _$_ObservationDefinition _$$_ObservationDefinitionFromJson(
       code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
       permittedDataType: (json['permittedDataType'] as List<dynamic>?)
           ?.map((e) =>
-              _$enumDecode(_$ObservationDefinitionPermittedDataTypeEnumMap, e))
+              $enumDecode(_$ObservationDefinitionPermittedDataTypeEnumMap, e))
           .toList(),
       permittedDataTypeElement: (json['_permittedDataType'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -2455,7 +2418,7 @@ _$_ObservationDefinitionQualifiedValue
           appliesTo: (json['appliesTo'] as List<dynamic>?)
               ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
               .toList(),
-          gender: _$enumDecodeNullable(
+          gender: $enumDecodeNullable(
               _$ObservationDefinitionQualifiedValueGenderEnumMap,
               json['gender'],
               unknownValue: ObservationDefinitionQualifiedValueGender.unknown),
@@ -2552,7 +2515,7 @@ _$_ObservationDefinitionComponent _$$_ObservationDefinitionComponentFromJson(
           .toList(),
       code: CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
       permittedDataType: (json['permittedDataType'] as List<dynamic>?)
-          ?.map((e) => _$enumDecode(
+          ?.map((e) => $enumDecode(
               _$ObservationDefinitionComponentPermittedDataTypeEnumMap, e))
           .toList(),
       permittedDataTypeElement: (json['_permittedDataType'] as List<dynamic>?)
@@ -2616,7 +2579,7 @@ const _$ObservationDefinitionComponentPermittedDataTypeEnumMap = {
 
 _$_PlanDefinition _$$_PlanDefinitionFromJson(Map<String, dynamic> json) =>
     _$_PlanDefinition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.PlanDefinition) ??
           R5ResourceType.PlanDefinition,
@@ -2666,8 +2629,7 @@ _$_PlanDefinition _$$_PlanDefinitionFromJson(Map<String, dynamic> json) =>
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
-          _$PlanDefinitionStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$PlanDefinitionStatusEnumMap, json['status'],
           unknownValue: PlanDefinitionStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -3177,14 +3139,14 @@ _$_PlanDefinitionAction _$$_PlanDefinitionActionFromJson(
       type: json['type'] == null
           ? null
           : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-      groupingBehavior: _$enumDecodeNullable(
+      groupingBehavior: $enumDecodeNullable(
           _$PlanDefinitionActionGroupingBehaviorEnumMap,
           json['groupingBehavior'],
           unknownValue: PlanDefinitionActionGroupingBehavior.unknown),
       groupingBehaviorElement: json['_groupingBehavior'] == null
           ? null
           : Element.fromJson(json['_groupingBehavior'] as Map<String, dynamic>),
-      selectionBehavior: _$enumDecodeNullable(
+      selectionBehavior: $enumDecodeNullable(
           _$PlanDefinitionActionSelectionBehaviorEnumMap,
           json['selectionBehavior'],
           unknownValue: PlanDefinitionActionSelectionBehavior.unknown),
@@ -3192,21 +3154,21 @@ _$_PlanDefinitionAction _$$_PlanDefinitionActionFromJson(
           ? null
           : Element.fromJson(
               json['_selectionBehavior'] as Map<String, dynamic>),
-      requiredBehavior: _$enumDecodeNullable(
+      requiredBehavior: $enumDecodeNullable(
           _$PlanDefinitionActionRequiredBehaviorEnumMap,
           json['requiredBehavior'],
           unknownValue: PlanDefinitionActionRequiredBehavior.unknown),
       requiredBehaviorElement: json['_requiredBehavior'] == null
           ? null
           : Element.fromJson(json['_requiredBehavior'] as Map<String, dynamic>),
-      precheckBehavior: _$enumDecodeNullable(
+      precheckBehavior: $enumDecodeNullable(
           _$PlanDefinitionActionPrecheckBehaviorEnumMap,
           json['precheckBehavior'],
           unknownValue: PlanDefinitionActionPrecheckBehavior.unknown),
       precheckBehaviorElement: json['_precheckBehavior'] == null
           ? null
           : Element.fromJson(json['_precheckBehavior'] as Map<String, dynamic>),
-      cardinalityBehavior: _$enumDecodeNullable(
+      cardinalityBehavior: $enumDecodeNullable(
           _$PlanDefinitionActionCardinalityBehaviorEnumMap,
           json['cardinalityBehavior'],
           unknownValue: PlanDefinitionActionCardinalityBehavior.unknown),
@@ -3371,7 +3333,7 @@ _$_PlanDefinitionCondition _$$_PlanDefinitionConditionFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      kind: _$enumDecodeNullable(
+      kind: $enumDecodeNullable(
           _$PlanDefinitionConditionKindEnumMap, json['kind'],
           unknownValue: PlanDefinitionConditionKind.unknown),
       kindElement: json['_kind'] == null
@@ -3519,7 +3481,7 @@ _$_PlanDefinitionRelatedAction _$$_PlanDefinitionRelatedActionFromJson(
       targetIdElement: json['_targetId'] == null
           ? null
           : Element.fromJson(json['_targetId'] as Map<String, dynamic>),
-      relationship: _$enumDecodeNullable(
+      relationship: $enumDecodeNullable(
           _$PlanDefinitionRelatedActionRelationshipEnumMap,
           json['relationship'],
           unknownValue: PlanDefinitionRelatedActionRelationship.unknown),
@@ -3589,7 +3551,7 @@ _$_PlanDefinitionParticipant _$$_PlanDefinitionParticipantFromJson(
       actorIdElement: json['_actorId'] == null
           ? null
           : Element.fromJson(json['_actorId'] as Map<String, dynamic>),
-      type: _$enumDecodeNullable(
+      type: $enumDecodeNullable(
           _$PlanDefinitionParticipantTypeEnumMap, json['type'],
           unknownValue: PlanDefinitionParticipantType.unknown),
       typeElement: json['_type'] == null
@@ -3681,7 +3643,7 @@ Map<String, dynamic> _$$_PlanDefinitionDynamicValueToJson(
 
 _$_Questionnaire _$$_QuestionnaireFromJson(Map<String, dynamic> json) =>
     _$_Questionnaire(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.Questionnaire) ??
           R5ResourceType.Questionnaire,
@@ -3731,7 +3693,7 @@ _$_Questionnaire _$$_QuestionnaireFromJson(Map<String, dynamic> json) =>
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$QuestionnaireStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$QuestionnaireStatusEnumMap, json['status'],
           unknownValue: QuestionnaireStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -3939,7 +3901,7 @@ _$_QuestionnaireItem _$$_QuestionnaireItemFromJson(Map<String, dynamic> json) =>
       textElement: json['_text'] == null
           ? null
           : Element.fromJson(json['_text'] as Map<String, dynamic>),
-      type: _$enumDecode(_$QuestionnaireItemTypeEnumMap, json['type'],
+      type: $enumDecode(_$QuestionnaireItemTypeEnumMap, json['type'],
           unknownValue: QuestionnaireItemType.unknown),
       typeElement: json['_type'] == null
           ? null
@@ -3948,7 +3910,7 @@ _$_QuestionnaireItem _$$_QuestionnaireItemFromJson(Map<String, dynamic> json) =>
           ?.map((e) =>
               QuestionnaireEnableWhen.fromJson(e as Map<String, dynamic>))
           .toList(),
-      enableBehavior: _$enumDecodeNullable(
+      enableBehavior: $enumDecodeNullable(
           _$QuestionnaireItemEnableBehaviorEnumMap, json['enableBehavior'],
           unknownValue: QuestionnaireItemEnableBehavior.unknown),
       enableBehaviorElement: json['_enableBehavior'] == null
@@ -4095,7 +4057,7 @@ _$_QuestionnaireEnableWhen _$$_QuestionnaireEnableWhenFromJson(
       questionElement: json['_question'] == null
           ? null
           : Element.fromJson(json['_question'] as Map<String, dynamic>),
-      operator_: _$enumDecodeNullable(
+      operator_: $enumDecodeNullable(
           _$QuestionnaireEnableWhenOperatorEnumMap, json['operator'],
           unknownValue: QuestionnaireEnableWhenOperator.unknown),
       operatorElement: json['_operator'] == null
@@ -4384,7 +4346,7 @@ Map<String, dynamic> _$$_QuestionnaireInitialToJson(
 _$_SpecimenDefinition _$$_SpecimenDefinitionFromJson(
         Map<String, dynamic> json) =>
     _$_SpecimenDefinition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R5ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R5ResourceType.SpecimenDefinition) ??
           R5ResourceType.SpecimenDefinition,
@@ -4620,7 +4582,7 @@ _$_SpecimenDefinitionTypeTested _$$_SpecimenDefinitionTypeTestedFromJson(
       type: json['type'] == null
           ? null
           : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
-      preference: _$enumDecodeNullable(
+      preference: $enumDecodeNullable(
           _$SpecimenDefinitionTypeTestedPreferenceEnumMap, json['preference'],
           unknownValue: SpecimenDefinitionTypeTestedPreference.unknown),
       preferenceElement: json['_preference'] == null

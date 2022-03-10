@@ -4,69 +4,79 @@ import '../../fhir_path.dart';
 
 class AbsParser extends FhirPathParser {
   AbsParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _wrongLength('.abs()', results)
           : results.first is num
               ? results.first.abs().isNaN
                   ? []
-                  : [results.first.abs()]
+                  : [(results.first as num).abs()]
               : results.first is FhirPathQuantity
                   ? results.first.abs().isNaN
                       ? []
-                      : [results.first.abs()]
+                      : [(results.first as FhirPathQuantity).abs()]
                   : throw _wrongTypes('.abs()', results, 'none');
+  String verbosePrint(int indent) => '${"  " * indent}AbsParser';
+  String prettyPrint(int indent) => '.abs()';
 }
 
 class CeilingParser extends FhirPathParser {
   CeilingParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _wrongLength('.ceiling()', results)
           : results.first is num
               ? [results.first.ceil()]
               : throw _wrongTypes('.ceiling()', results, 'none');
+  String verbosePrint(int indent) => '${"  " * indent}CeilingParser';
+  String prettyPrint(int indent) => '.ceiling()';
 }
 
 class ExpParser extends FhirPathParser {
   ExpParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _wrongLength('.exp()', results)
           : results.first is num
               ? [exp(results.first)]
               : throw _wrongTypes('.exp()', results, 'none');
+  String verbosePrint(int indent) => '${"  " * indent}ExpParser';
+  String prettyPrint(int indent) => '.exp()';
 }
 
 class FloorParser extends FhirPathParser {
   FloorParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _wrongLength('.floor()', results)
           : results.first is num
               ? [results.first.floor()]
               : throw _wrongTypes('.floor()', results, 'none');
+  String verbosePrint(int indent) => '${"  " * indent}FloorParser';
+  String prettyPrint(int indent) => '.floor()';
 }
 
 class LnParser extends FhirPathParser {
   LnParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _wrongLength('.ln()', results)
           : results.first is num
               ? [log(results.first)]
               : throw _wrongTypes('.ln()', results, 'none');
+  String verbosePrint(int indent) => '${"  " * indent}LnParser';
+  String prettyPrint(int indent) => '.ln()';
 }
 
 class LogParser extends ValueParser<ParserList> {
   LogParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
     return results.length == 0
         ? []
@@ -78,12 +88,18 @@ class LogParser extends ValueParser<ParserList> {
                     ? [log(results.first) / log(executedValue.first)]
                     : throw _wrongTypes('log()', results, executedValue);
   }
+
+  String verbosePrint(int indent) =>
+      '${"  " * indent}LogParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      '.log(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class PowerParser extends ValueParser<ParserList> {
   PowerParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
     if (results.length == 0 || executedValue.length == 0) {
       return [];
@@ -102,17 +118,24 @@ class PowerParser extends ValueParser<ParserList> {
         ? []
         : [pow(finalResults, finalValue)];
   }
+
+  String verbosePrint(int indent) =>
+      '${"  " * indent}PowerParser\n${value.verbosePrint(indent + 1)}';
+
+  String prettyPrint(int indent) =>
+      '.power(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class RoundParser extends ValueParser<ParserList> {
   RoundParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
     return results.length == 0
         ? []
         : results.length > 1
-            ? throw _wrongLength('.power()', results)
+            ? throw _wrongLength('.round()', results)
             : results.first is num
                 ? [
                     executedValue.isEmpty
@@ -120,31 +143,50 @@ class RoundParser extends ValueParser<ParserList> {
                         : double.parse(
                             results.first.toStringAsFixed(executedValue.first))
                   ]
-                : throw _wrongTypes('.power()', results, executedValue);
+                : throw _wrongTypes('.round()', results, executedValue);
   }
+
+  String verbosePrint(int indent) =>
+      '${"  " * indent}RoundParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) => value.isEmpty
+      ? '.round()'
+      : '.round(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+          '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class SqrtParser extends FhirPathParser {
   SqrtParser();
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _wrongLength('.sqrt()', results)
           : results.first is num
-              ? [sqrt(results.first)]
+              ? (sqrt(results.first).isNaN ? [] : [sqrt(results.first)])
               : throw _wrongTypes('.sqrt()', results, 'none');
+  String verbosePrint(int indent) => '${"  " * indent}SqrtParser';
+  String prettyPrint(int indent) => '.sqrt()';
 }
 
 class TruncateParser extends ValueParser {
   TruncateParser();
   dynamic value;
-  List execute(List results, Map passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.length == 0
       ? []
       : results.length > 1
           ? throw _wrongLength('.truncate()', results)
           : results.first is num
               ? [(results.first).toInt()]
               : throw _wrongTypes('.truncate()', results, 'none');
+  String verbosePrint(int indent) =>
+      '${"  " * indent}TruncateParser\n${value?.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) {
+    if (value == null) {
+      return '.truncate()';
+    } else {
+      return '.truncate(\n${value?.prettyPrint(indent + 1)}\n'
+          '${indent <= 0 ? "" : "  " * (indent - 1)})';
+    }
+  }
 }
 
 Exception _wrongLength(String functionName, List results) =>

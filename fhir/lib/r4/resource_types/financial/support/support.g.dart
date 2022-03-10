@@ -7,7 +7,7 @@ part of 'support.dart';
 // **************************************************************************
 
 _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Coverage) ??
           R4ResourceType.Coverage,
@@ -150,43 +150,6 @@ Map<String, dynamic> _$$_CoverageToJson(_$_Coverage instance) {
   writeNotNull('_subrogation', instance.subrogationElement?.toJson());
   writeNotNull('contract', instance.contract?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R4ResourceTypeEnumMap = {
@@ -468,7 +431,7 @@ Map<String, dynamic> _$$_CoverageExceptionToJson(
 _$_CoverageEligibilityRequest _$$_CoverageEligibilityRequestFromJson(
         Map<String, dynamic> json) =>
     _$_CoverageEligibilityRequest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.CoverageEligibilityRequest) ??
           R4ResourceType.CoverageEligibilityRequest,
@@ -510,8 +473,8 @@ _$_CoverageEligibilityRequest _$$_CoverageEligibilityRequestFromJson(
           ? null
           : CodeableConcept.fromJson(json['priority'] as Map<String, dynamic>),
       purpose: (json['purpose'] as List<dynamic>?)
-          ?.map((e) =>
-              _$enumDecode(_$CoverageEligibilityRequestPurposeEnumMap, e))
+          ?.map(
+              (e) => $enumDecode(_$CoverageEligibilityRequestPurposeEnumMap, e))
           .toList(),
       purposeElement: (json['_purpose'] as List<dynamic>?)
           ?.map((e) =>
@@ -843,7 +806,7 @@ Map<String, dynamic> _$$_CoverageEligibilityRequestDiagnosisToJson(
 _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
         Map<String, dynamic> json) =>
     _$_CoverageEligibilityResponse(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.CoverageEligibilityResponse) ??
           R4ResourceType.CoverageEligibilityResponse,
@@ -883,7 +846,7 @@ _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       purpose: (json['purpose'] as List<dynamic>?)
           ?.map((e) =>
-              _$enumDecode(_$CoverageEligibilityResponsePurposeEnumMap, e))
+              $enumDecode(_$CoverageEligibilityResponsePurposeEnumMap, e))
           .toList(),
       purposeElement: (json['_purpose'] as List<dynamic>?)
           ?.map((e) =>
@@ -909,7 +872,7 @@ _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
           ? null
           : Reference.fromJson(json['requestor'] as Map<String, dynamic>),
       request: Reference.fromJson(json['request'] as Map<String, dynamic>),
-      outcome: _$enumDecodeNullable(
+      outcome: $enumDecodeNullable(
           _$CoverageEligibilityResponseOutcomeEnumMap, json['outcome'],
           unknownValue: CoverageEligibilityResponseOutcome.unknown),
       outcomeElement: json['_outcome'] == null
@@ -1277,7 +1240,7 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseErrorToJson(
 
 _$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
     _$_EnrollmentRequest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.EnrollmentRequest) ??
           R4ResourceType.EnrollmentRequest,
@@ -1376,7 +1339,7 @@ Map<String, dynamic> _$$_EnrollmentRequestToJson(
 _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
         Map<String, dynamic> json) =>
     _$_EnrollmentResponse(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.EnrollmentResponse) ??
           R4ResourceType.EnrollmentResponse,
@@ -1417,7 +1380,7 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
       request: json['request'] == null
           ? null
           : Reference.fromJson(json['request'] as Map<String, dynamic>),
-      outcome: _$enumDecodeNullable(
+      outcome: $enumDecodeNullable(
           _$EnrollmentResponseOutcomeEnumMap, json['outcome'],
           unknownValue: EnrollmentResponseOutcome.unknown),
       outcomeElement: json['_outcome'] == null

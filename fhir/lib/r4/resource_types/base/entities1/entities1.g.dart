@@ -7,7 +7,7 @@ part of 'entities1.dart';
 // **************************************************************************
 
 _$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Endpoint) ??
           R4ResourceType.Endpoint,
@@ -41,7 +41,7 @@ _$_Endpoint _$$_EndpointFromJson(Map<String, dynamic> json) => _$_Endpoint(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$EndpointStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$EndpointStatusEnumMap, json['status'],
           unknownValue: EndpointStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -130,43 +130,6 @@ Map<String, dynamic> _$$_EndpointToJson(_$_Endpoint instance) {
   writeNotNull(
       '_header', instance.headerElement?.map((e) => e?.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R4ResourceTypeEnumMap = {
@@ -333,7 +296,7 @@ const _$EndpointStatusEnumMap = {
 
 _$_HealthcareService _$$_HealthcareServiceFromJson(Map<String, dynamic> json) =>
     _$_HealthcareService(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.HealthcareService) ??
           R4ResourceType.HealthcareService,
@@ -575,8 +538,8 @@ _$_HealthcareServiceAvailableTime _$$_HealthcareServiceAvailableTimeFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       daysOfWeek: (json['daysOfWeek'] as List<dynamic>?)
-          ?.map((e) => _$enumDecode(
-              _$HealthcareServiceAvailableTimeDaysOfWeekEnumMap, e))
+          ?.map((e) =>
+              $enumDecode(_$HealthcareServiceAvailableTimeDaysOfWeekEnumMap, e))
           .toList(),
       daysOfWeekElement: (json['_daysOfWeek'] as List<dynamic>?)
           ?.map((e) =>
@@ -685,7 +648,7 @@ Map<String, dynamic> _$$_HealthcareServiceNotAvailableToJson(
 }
 
 _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Location) ??
           R4ResourceType.Location,
@@ -719,7 +682,7 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$LocationStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$LocationStatusEnumMap, json['status'],
           unknownValue: LocationStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -741,7 +704,7 @@ _$_Location _$$_LocationFromJson(Map<String, dynamic> json) => _$_Location(
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      mode: _$enumDecodeNullable(_$LocationModeEnumMap, json['mode'],
+      mode: $enumDecodeNullable(_$LocationModeEnumMap, json['mode'],
           unknownValue: LocationMode.unknown),
       modeElement: json['_mode'] == null
           ? null
@@ -965,7 +928,7 @@ Map<String, dynamic> _$$_LocationHoursOfOperationToJson(
 
 _$_Organization _$$_OrganizationFromJson(Map<String, dynamic> json) =>
     _$_Organization(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Organization) ??
           R4ResourceType.Organization,
@@ -1124,7 +1087,7 @@ Map<String, dynamic> _$$_OrganizationContactToJson(
 _$_OrganizationAffiliation _$$_OrganizationAffiliationFromJson(
         Map<String, dynamic> json) =>
     _$_OrganizationAffiliation(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.OrganizationAffiliation) ??
           R4ResourceType.OrganizationAffiliation,

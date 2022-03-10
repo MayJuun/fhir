@@ -4,7 +4,6 @@ import 'dart:convert';
 
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:uuid/uuid.dart' as uuid;
 import 'package:yaml/yaml.dart';
 
 // import 'package:flutter/foundation.dart';
@@ -13,6 +12,7 @@ import '../../r5.dart';
 
 part 'resource.g.dart';
 part 'resource_from_json.dart';
+part 'resource_new_id.dart';
 part 'resource_new_version.dart';
 part 'resource_types_enum.dart';
 
@@ -104,16 +104,19 @@ class Resource {
       ResourceUtils.resourceTypeToStringMap[resourceType];
 
   /// Convenience method to return a [Reference] referring to that [Resource]
-  Reference thisReference() => Reference(reference: '$resourceType/$id');
+  Reference thisReference() =>
+      Reference(reference: '${resourceTypeString()}/$id');
+
+  /// Local Reference for this Resource
+  String path() => '${resourceTypeString()}/$id';
 
   /// returns the same resource with a new ID if there is no current ID
-  Resource newIdIfNoId() => id != null ? this : newId();
+  Resource newIdIfNoId() => id == null ? _newId(this) : this;
 
   /// returns the same resource with a new ID (even if there is already an ID present)
-  Resource newId() => copyWith(id: Id(const uuid.Uuid().v4()));
+  Resource newId() => _newId(this);
 
   /// Updates the [meta] field of this Resource, updates the [lastUpdated], adds
-  /// 1 to the version number and adds an [Id] if there is not already one
-  Resource updateMeta({Meta? oldMeta}) =>
-      _updateMeta(this, meta: oldMeta);
+  /// 1 to the version number
+  Resource updateVersion({Meta? oldMeta}) => _updateMeta(this, meta: oldMeta);
 }

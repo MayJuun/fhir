@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:fhir/r4.dart' as r4;
@@ -5,39 +6,63 @@ import 'package:fhir/r5.dart' as r5;
 import 'package:fhir/stu3.dart' as stu3;
 
 import '../../fhir_path.dart';
-import '../../utils/deep_comparison_lists.dart';
 
 class FpWhereParser extends FunctionParser {
   FpWhereParser();
   late ParserList value;
-  List execute(List results, Map passed) {
-    final returnList = [];
-    results.forEach((element) {
-      final newResult = value.execute([element], passed);
-      if (newResult.isNotEmpty) {
-        if (!(newResult.length == 1 && newResult.first == false)) {
-          returnList.add(element);
+  List execute(List results, Map<String, dynamic> passed) {
+    final returnList =
+        IterationContext.withIterationContext((iterationContext) {
+      final iterationResult = [];
+      results.forEachIndexed((i, element) {
+        iterationContext.indexValue = i;
+        iterationContext.thisValue = element;
+        final newResult = value.execute([element], passed);
+        if (newResult.isNotEmpty) {
+          if (!(newResult.length == 1 && newResult.first == false)) {
+            iterationResult.add(element);
+          }
         }
-      }
-    });
+      });
+
+      return iterationResult;
+    }, passed);
+
     return returnList;
   }
+
+  String verbosePrint(int indent) =>
+      '${"  " * indent}FpWhereParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      '.where(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class SelectParser extends ValueParser<ParserList> {
   SelectParser();
   late ParserList value;
-  List execute(List results, Map passed) {
-    final finalResults = [];
-    results.forEach((e) => finalResults.addAll(value.execute([e], passed)));
-    return finalResults;
+  List execute(List results, Map<String, dynamic> passed) {
+    return IterationContext.withIterationContext((iterationContext) {
+      final outputCollection = [];
+      results.forEachIndexed((i, e) {
+        iterationContext.thisValue = e;
+        iterationContext.indexValue = i;
+        outputCollection.addAll(value.execute([e], passed));
+      });
+      return outputCollection;
+    }, passed);
   }
+
+  String verbosePrint(int indent) =>
+      '${"  " * indent}SelectParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      '.select(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n)';
 }
 
 class RepeatParser extends ValueParser<ParserList> {
   RepeatParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     var finalResults = [];
     results.forEach((r) {
       value.execute([r], passed).forEach((e) {
@@ -60,12 +85,18 @@ class RepeatParser extends ValueParser<ParserList> {
     }
     return finalResults;
   }
+
+  String verbosePrint(int indent) =>
+      '${"  " * indent}RepeatParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      '.repeat(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
 
 class OfTypeParser extends ValueParser<ParserList> {
   OfTypeParser();
   late ParserList value;
-  List execute(List results, Map passed) {
+  List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.length == 1 && value.first is IdentifierParser
         ? [value.first]
         : value.execute(results.toList(), passed);
@@ -80,14 +111,14 @@ class OfTypeParser extends ValueParser<ParserList> {
     }
     final finalResults = [];
     results.forEach((e) {
-      if (((passed['version'] == FhirVersion.r4
+      if (((passed.isVersion(FhirVersion.r4)
                   ? r4.ResourceUtils.resourceTypeFromStringMap.keys
                       .contains((executedValue.first as IdentifierParser).value)
-                  : passed['version'] == FhirVersion.r5
+                  : passed.isVersion(FhirVersion.r5)
                       ? r5.ResourceUtils.resourceTypeFromStringMap.keys
                           .contains(
                               (executedValue.first as IdentifierParser).value)
-                      : passed['version'] == FhirVersion.dstu2
+                      : passed.isVersion(FhirVersion.dstu2)
                           ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
                               .contains(
                                   (executedValue.first as IdentifierParser)
@@ -120,4 +151,48 @@ class OfTypeParser extends ValueParser<ParserList> {
     });
     return finalResults;
   }
+
+  String verbosePrint(int indent) =>
+      '${"  " * indent}OfTypeParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      '.ofType(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
+}
+
+class ExtensionParser extends ValueParser<ParserList> {
+  static const extensionKey = '__extension';
+
+  ExtensionParser();
+
+  @override
+  List execute(List results, Map<String, dynamic> passed) {
+    if (results.isEmpty) {
+      return [];
+    }
+
+    final extensionUrl = value.execute(results.toList(), passed).firstOrNull;
+    if (extensionUrl == null) {
+      return [];
+    }
+
+    // .extension(exturl) is short-hand for .extension.where(url='exturl')
+    final urlEquals = EqualsParser();
+    urlEquals.before = ParserList([IdentifierParser('url')]);
+    urlEquals.after = ParserList([StringParser("'$extensionUrl'")]);
+    final extensionUrlPredicate = ParserList([
+      urlEquals,
+    ]);
+    final whereParser = FpWhereParser();
+    whereParser.value = extensionUrlPredicate;
+    final extensionParsers =
+        ParserList([IdentifierParser('extension'), whereParser]);
+
+    return extensionParsers.execute(results.toList(), passed);
+  }
+
+  String verbosePrint(int indent) =>
+      '${"  " * indent}ExtensionParser\n${value.verbosePrint(indent + 1)}';
+  String prettyPrint(int indent) =>
+      '.extension(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
+      '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }

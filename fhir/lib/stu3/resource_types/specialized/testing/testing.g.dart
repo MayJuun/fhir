@@ -8,7 +8,7 @@ part of 'testing.dart';
 
 _$_TestReport _$$_TestReportFromJson(Map<String, dynamic> json) =>
     _$_TestReport(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.TestReport) ??
           Stu3ResourceType.TestReport,
@@ -46,13 +46,13 @@ _$_TestReport _$$_TestReportFromJson(Map<String, dynamic> json) =>
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$TestReportStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$TestReportStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       testScript:
           Reference.fromJson(json['testScript'] as Map<String, dynamic>),
-      result: _$enumDecodeNullable(_$TestReportResultEnumMap, json['result']),
+      result: $enumDecodeNullable(_$TestReportResultEnumMap, json['result']),
       resultElement: json['_result'] == null
           ? null
           : Element.fromJson(json['_result'] as Map<String, dynamic>),
@@ -128,43 +128,6 @@ Map<String, dynamic> _$$_TestReportToJson(_$_TestReport instance) {
   writeNotNull('test', instance.test?.map((e) => e.toJson()).toList());
   writeNotNull('teardown', instance.teardown?.toJson());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Stu3ResourceTypeEnumMap = {
@@ -306,8 +269,8 @@ const _$TestReportResultEnumMap = {
 _$_TestReportParticipant _$$_TestReportParticipantFromJson(
         Map<String, dynamic> json) =>
     _$_TestReportParticipant(
-      type: _$enumDecodeNullable(
-          _$TestReportParticipantTypeEnumMap, json['type']),
+      type:
+          $enumDecodeNullable(_$TestReportParticipantTypeEnumMap, json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -387,7 +350,7 @@ Map<String, dynamic> _$$_TestReportActionToJson(_$_TestReportAction instance) {
 _$_TestReportOperation _$$_TestReportOperationFromJson(
         Map<String, dynamic> json) =>
     _$_TestReportOperation(
-      result: _$enumDecodeNullable(
+      result: $enumDecodeNullable(
           _$TestReportOperationResultEnumMap, json['result']),
       resultElement: json['_result'] == null
           ? null
@@ -433,7 +396,7 @@ const _$TestReportOperationResultEnumMap = {
 _$_TestReportAssert _$$_TestReportAssertFromJson(Map<String, dynamic> json) =>
     _$_TestReportAssert(
       result:
-          _$enumDecodeNullable(_$TestReportAssertResultEnumMap, json['result']),
+          $enumDecodeNullable(_$TestReportAssertResultEnumMap, json['result']),
       resultElement: json['_result'] == null
           ? null
           : Element.fromJson(json['_result'] as Map<String, dynamic>),
@@ -560,7 +523,7 @@ Map<String, dynamic> _$$_TestReportAction2ToJson(
 
 _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
     _$_TestScript(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.TestScript) ??
           Stu3ResourceType.TestScript,
@@ -610,7 +573,7 @@ _$_TestScript _$$_TestScriptFromJson(Map<String, dynamic> json) =>
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$TestScriptStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$TestScriptStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1210,12 +1173,12 @@ _$_TestScriptOperation _$$_TestScriptOperationFromJson(
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      accept: _$enumDecodeNullable(
+      accept: $enumDecodeNullable(
           _$TestScriptOperationAcceptEnumMap, json['accept']),
       acceptElement: json['_accept'] == null
           ? null
           : Element.fromJson(json['_accept'] as Map<String, dynamic>),
-      contentType: _$enumDecodeNullable(
+      contentType: $enumDecodeNullable(
           _$TestScriptOperationContentTypeEnumMap, json['contentType']),
       contentTypeElement: json['_contentType'] == null
           ? null
@@ -1369,7 +1332,7 @@ _$_TestScriptAssert _$$_TestScriptAssertFromJson(Map<String, dynamic> json) =>
       descriptionElement: json['_description'] == null
           ? null
           : Element.fromJson(json['_description'] as Map<String, dynamic>),
-      direction: _$enumDecodeNullable(
+      direction: $enumDecodeNullable(
           _$TestScriptAssertDirectionEnumMap, json['direction']),
       directionElement: json['_direction'] == null
           ? null
@@ -1390,7 +1353,7 @@ _$_TestScriptAssert _$$_TestScriptAssertFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(
               json['_compareToSourcePath'] as Map<String, dynamic>),
-      contentType: _$enumDecodeNullable(
+      contentType: $enumDecodeNullable(
           _$TestScriptAssertContentTypeEnumMap, json['contentType']),
       contentTypeElement: json['_contentType'] == null
           ? null
@@ -1413,7 +1376,7 @@ _$_TestScriptAssert _$$_TestScriptAssertFromJson(Map<String, dynamic> json) =>
       navigationLinksElement: json['_navigationLinks'] == null
           ? null
           : Element.fromJson(json['_navigationLinks'] as Map<String, dynamic>),
-      operator_: _$enumDecodeNullable(
+      operator_: $enumDecodeNullable(
           _$TestScriptAssertOperatorEnumMap, json['operator']),
       operatorElement: json['_operator'] == null
           ? null
@@ -1422,7 +1385,7 @@ _$_TestScriptAssert _$$_TestScriptAssertFromJson(Map<String, dynamic> json) =>
       pathElement: json['_path'] == null
           ? null
           : Element.fromJson(json['_path'] as Map<String, dynamic>),
-      requestMethod: _$enumDecodeNullable(
+      requestMethod: $enumDecodeNullable(
           _$TestScriptAssertRequestMethodEnumMap, json['requestMethod']),
       requestMethodElement: json['_requestMethod'] == null
           ? null
@@ -1435,7 +1398,7 @@ _$_TestScriptAssert _$$_TestScriptAssertFromJson(Map<String, dynamic> json) =>
       resourceElement: json['_resource'] == null
           ? null
           : Element.fromJson(json['_resource'] as Map<String, dynamic>),
-      response: _$enumDecodeNullable(
+      response: $enumDecodeNullable(
           _$TestScriptAssertResponseEnumMap, json['response']),
       responseElement: json['_response'] == null
           ? null

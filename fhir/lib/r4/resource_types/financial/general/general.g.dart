@@ -7,7 +7,7 @@ part of 'general.dart';
 // **************************************************************************
 
 _$_Account _$$_AccountFromJson(Map<String, dynamic> json) => _$_Account(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Account) ??
           R4ResourceType.Account,
@@ -41,7 +41,7 @@ _$_Account _$$_AccountFromJson(Map<String, dynamic> json) => _$_Account(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$AccountStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$AccountStatusEnumMap, json['status'],
           unknownValue: AccountStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -118,43 +118,6 @@ Map<String, dynamic> _$$_AccountToJson(_$_Account instance) {
       'guarantor', instance.guarantor?.map((e) => e.toJson()).toList());
   writeNotNull('partOf', instance.partOf?.toJson());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R4ResourceTypeEnumMap = {
@@ -397,7 +360,7 @@ Map<String, dynamic> _$$_AccountGuarantorToJson(_$_AccountGuarantor instance) {
 
 _$_ChargeItem _$$_ChargeItemFromJson(Map<String, dynamic> json) =>
     _$_ChargeItem(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ChargeItem) ??
           R4ResourceType.ChargeItem,
@@ -441,7 +404,7 @@ _$_ChargeItem _$$_ChargeItemFromJson(Map<String, dynamic> json) =>
       definitionCanonical: (json['definitionCanonical'] as List<dynamic>?)
           ?.map((e) => Canonical.fromJson(e))
           .toList(),
-      status: _$enumDecodeNullable(_$ChargeItemStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$ChargeItemStatusEnumMap, json['status'],
           unknownValue: ChargeItemStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -655,7 +618,7 @@ Map<String, dynamic> _$$_ChargeItemPerformerToJson(
 _$_ChargeItemDefinition _$$_ChargeItemDefinitionFromJson(
         Map<String, dynamic> json) =>
     _$_ChargeItemDefinition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ChargeItemDefinition) ??
           R4ResourceType.ChargeItemDefinition,
@@ -714,7 +677,7 @@ _$_ChargeItemDefinition _$$_ChargeItemDefinitionFromJson(
       replaces: (json['replaces'] as List<dynamic>?)
           ?.map((e) => Canonical.fromJson(e))
           .toList(),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$ChargeItemDefinitionStatusEnumMap, json['status'],
           unknownValue: ChargeItemDefinitionStatus.unknown),
       statusElement: json['_status'] == null
@@ -1005,7 +968,7 @@ Map<String, dynamic> _$$_ChargeItemDefinitionPriceComponentToJson(
 }
 
 _$_Contract _$$_ContractFromJson(Map<String, dynamic> json) => _$_Contract(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Contract) ??
           R4ResourceType.Contract,
@@ -2296,7 +2259,7 @@ Map<String, dynamic> _$$_ContractRuleToJson(_$_ContractRule instance) {
 _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
         Map<String, dynamic> json) =>
     _$_ExplanationOfBenefit(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ExplanationOfBenefit) ??
           R4ResourceType.ExplanationOfBenefit,
@@ -2330,7 +2293,7 @@ _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$ExplanationOfBenefitStatusEnumMap, json['status'],
           unknownValue: ExplanationOfBenefitStatus.unknown),
       statusElement: json['_status'] == null
@@ -3873,7 +3836,7 @@ _$_ExplanationOfBenefitProcessNote _$$_ExplanationOfBenefitProcessNoteFromJson(
       numberElement: json['_number'] == null
           ? null
           : Element.fromJson(json['_number'] as Map<String, dynamic>),
-      type: _$enumDecodeNullable(
+      type: $enumDecodeNullable(
           _$ExplanationOfBenefitProcessNoteTypeEnumMap, json['type'],
           unknownValue: ExplanationOfBenefitProcessNoteType.unknown),
       typeElement: json['_type'] == null
@@ -4059,7 +4022,7 @@ Map<String, dynamic> _$$_ExplanationOfBenefitFinancialToJson(
 
 _$_InsurancePlan _$$_InsurancePlanFromJson(Map<String, dynamic> json) =>
     _$_InsurancePlan(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.InsurancePlan) ??
           R4ResourceType.InsurancePlan,
@@ -4093,7 +4056,7 @@ _$_InsurancePlan _$$_InsurancePlanFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$InsurancePlanStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$InsurancePlanStatusEnumMap, json['status'],
           unknownValue: InsurancePlanStatus.unknown),
       statusElement: json['_status'] == null
           ? null

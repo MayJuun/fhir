@@ -12,7 +12,7 @@ _$_VisionPrescriptionDispense _$$_VisionPrescriptionDispenseFromJson(
       product: json['product'] == null
           ? null
           : CodeableConcept.fromJson(json['product'] as Map<String, dynamic>),
-      eye: _$enumDecodeNullable(
+      eye: $enumDecodeNullable(
           _$VisionPrescriptionDispenseEyeEnumMap, json['eye']),
       eyeElement: json['_eye'] == null
           ? null
@@ -34,7 +34,7 @@ _$_VisionPrescriptionDispense _$$_VisionPrescriptionDispenseFromJson(
       prismElement: json['_prism'] == null
           ? null
           : Element.fromJson(json['_prism'] as Map<String, dynamic>),
-      base: _$enumDecodeNullable(
+      base: $enumDecodeNullable(
           _$VisionPrescriptionDispenseBaseEnumMap, json['base']),
       baseElement: json['_base'] == null
           ? null
@@ -114,43 +114,6 @@ Map<String, dynamic> _$$_VisionPrescriptionDispenseToJson(
   return val;
 }
 
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
-}
-
 const _$VisionPrescriptionDispenseEyeEnumMap = {
   VisionPrescriptionDispenseEye.right: 'right',
   VisionPrescriptionDispenseEye.left: 'left',
@@ -166,7 +129,7 @@ const _$VisionPrescriptionDispenseBaseEnumMap = {
 };
 
 _$_CarePlan _$$_CarePlanFromJson(Map<String, dynamic> json) => _$_CarePlan(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.CarePlan) ??
           Stu3ResourceType.CarePlan,
@@ -212,11 +175,11 @@ _$_CarePlan _$$_CarePlanFromJson(Map<String, dynamic> json) => _$_CarePlan(
       partOf: (json['partOf'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$CarePlanStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$CarePlanStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      intent: _$enumDecodeNullable(_$CarePlanIntentEnumMap, json['intent']),
+      intent: $enumDecodeNullable(_$CarePlanIntentEnumMap, json['intent']),
       intentElement: json['_intent'] == null
           ? null
           : Element.fromJson(json['_intent'] as Map<String, dynamic>),
@@ -513,7 +476,7 @@ _$_CarePlanDetail _$$_CarePlanDetailFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
       status:
-          _$enumDecodeNullable(_$CarePlanDetailStatusEnumMap, json['status']),
+          $enumDecodeNullable(_$CarePlanDetailStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -614,7 +577,7 @@ const _$CarePlanDetailStatusEnumMap = {
 };
 
 _$_CareTeam _$$_CareTeamFromJson(Map<String, dynamic> json) => _$_CareTeam(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.CareTeam) ??
           Stu3ResourceType.CareTeam,
@@ -648,7 +611,7 @@ _$_CareTeam _$$_CareTeamFromJson(Map<String, dynamic> json) => _$_CareTeam(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$CareTeamStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$CareTeamStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -775,7 +738,7 @@ Map<String, dynamic> _$$_CareTeamParticipantToJson(
 }
 
 _$_Goal _$$_GoalFromJson(Map<String, dynamic> json) => _$_Goal(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Goal) ??
           Stu3ResourceType.Goal,
@@ -809,7 +772,7 @@ _$_Goal _$$_GoalFromJson(Map<String, dynamic> json) => _$_Goal(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$GoalStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$GoalStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -976,7 +939,7 @@ Map<String, dynamic> _$$_GoalTargetToJson(_$_GoalTarget instance) {
 
 _$_NutritionOrder _$$_NutritionOrderFromJson(Map<String, dynamic> json) =>
     _$_NutritionOrder(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.NutritionOrder) ??
           Stu3ResourceType.NutritionOrder,
@@ -1011,7 +974,7 @@ _$_NutritionOrder _$$_NutritionOrderFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
       status:
-          _$enumDecodeNullable(_$NutritionOrderStatusEnumMap, json['status']),
+          $enumDecodeNullable(_$NutritionOrderStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -1362,7 +1325,7 @@ Map<String, dynamic> _$$_NutritionOrderAdministrationToJson(
 
 _$_ProcedureRequest _$$_ProcedureRequestFromJson(Map<String, dynamic> json) =>
     _$_ProcedureRequest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ProcedureRequest) ??
           Stu3ResourceType.ProcedureRequest,
@@ -1593,7 +1556,7 @@ Map<String, dynamic> _$$_ProcedureRequestRequesterToJson(
 
 _$_ReferralRequest _$$_ReferralRequestFromJson(Map<String, dynamic> json) =>
     _$_ReferralRequest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ReferralRequest) ??
           Stu3ResourceType.ReferralRequest,
@@ -1800,7 +1763,7 @@ Map<String, dynamic> _$$_ReferralRequestRequesterToJson(
 
 _$_RiskAssessment _$$_RiskAssessmentFromJson(Map<String, dynamic> json) =>
     _$_RiskAssessment(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.RiskAssessment) ??
           Stu3ResourceType.RiskAssessment,
@@ -2014,7 +1977,7 @@ Map<String, dynamic> _$$_RiskAssessmentPredictionToJson(
 _$_VisionPrescription _$$_VisionPrescriptionFromJson(
         Map<String, dynamic> json) =>
     _$_VisionPrescription(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.VisionPrescription) ??
           Stu3ResourceType.VisionPrescription,

@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'medication_and_immunization.dart';
@@ -62,7 +63,7 @@ class _$MedicationTearOff {
     );
   }
 
-  Medication fromJson(Map<String, Object> json) {
+  Medication fromJson(Map<String, Object?> json) {
     return Medication.fromJson(json);
   }
 }
@@ -539,71 +540,52 @@ class _$_Medication extends _Medication {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Medication &&
-            (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
-            (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
-            (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
-            (identical(other.isBrand, isBrand) ||
-                const DeepCollectionEquality()
-                    .equals(other.isBrand, isBrand)) &&
-            (identical(other.manufacturer, manufacturer) ||
-                const DeepCollectionEquality()
-                    .equals(other.manufacturer, manufacturer)) &&
-            (identical(other.product, product) ||
-                const DeepCollectionEquality()
-                    .equals(other.product, product)) &&
-            (identical(other.package, package) ||
-                const DeepCollectionEquality().equals(other.package, package)));
+        (other.runtimeType == runtimeType &&
+            other is _Medication &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.code, code) &&
+            const DeepCollectionEquality().equals(other.isBrand, isBrand) &&
+            const DeepCollectionEquality()
+                .equals(other.manufacturer, manufacturer) &&
+            const DeepCollectionEquality().equals(other.product, product) &&
+            const DeepCollectionEquality().equals(other.package, package));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(isBrand) ^
-      const DeepCollectionEquality().hash(manufacturer) ^
-      const DeepCollectionEquality().hash(product) ^
-      const DeepCollectionEquality().hash(package);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(resourceType),
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(meta),
+      const DeepCollectionEquality().hash(implicitRules),
+      const DeepCollectionEquality().hash(implicitRulesElement),
+      const DeepCollectionEquality().hash(language),
+      const DeepCollectionEquality().hash(languageElement),
+      const DeepCollectionEquality().hash(text),
+      const DeepCollectionEquality().hash(contained),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(code),
+      const DeepCollectionEquality().hash(isBrand),
+      const DeepCollectionEquality().hash(manufacturer),
+      const DeepCollectionEquality().hash(product),
+      const DeepCollectionEquality().hash(package));
 
   @JsonKey(ignore: true)
   @override
@@ -645,41 +627,40 @@ abstract class _Medication extends Medication {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Medication)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get code => throw _privateConstructorUsedError;
+  CodeableConcept? get code;
   @override
-  Boolean? get isBrand => throw _privateConstructorUsedError;
+  Boolean? get isBrand;
   @override
-  Reference? get manufacturer => throw _privateConstructorUsedError;
+  Reference? get manufacturer;
   @override
-  MedicationProduct? get product => throw _privateConstructorUsedError;
+  MedicationProduct? get product;
   @override
-  MedicationPackage? get package => throw _privateConstructorUsedError;
+  MedicationPackage? get package;
   @override
   @JsonKey(ignore: true)
   _$MedicationCopyWith<_Medication> get copyWith =>
@@ -713,7 +694,7 @@ class _$MedicationProductTearOff {
     );
   }
 
-  MedicationProduct fromJson(Map<String, Object> json) {
+  MedicationProduct fromJson(Map<String, Object?> json) {
     return MedicationProduct.fromJson(json);
   }
 }
@@ -936,37 +917,31 @@ class _$_MedicationProduct extends _MedicationProduct {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MedicationProduct &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.fhirComments, fhirComments) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirComments, fhirComments)) &&
-            (identical(other.form, form) ||
-                const DeepCollectionEquality().equals(other.form, form)) &&
-            (identical(other.ingredient, ingredient) ||
-                const DeepCollectionEquality()
-                    .equals(other.ingredient, ingredient)) &&
-            (identical(other.batch, batch) ||
-                const DeepCollectionEquality().equals(other.batch, batch)));
+        (other.runtimeType == runtimeType &&
+            other is _MedicationProduct &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.fhirComments, fhirComments) &&
+            const DeepCollectionEquality().equals(other.form, form) &&
+            const DeepCollectionEquality()
+                .equals(other.ingredient, ingredient) &&
+            const DeepCollectionEquality().equals(other.batch, batch));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(fhirComments) ^
-      const DeepCollectionEquality().hash(form) ^
-      const DeepCollectionEquality().hash(ingredient) ^
-      const DeepCollectionEquality().hash(batch);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(fhirComments),
+      const DeepCollectionEquality().hash(form),
+      const DeepCollectionEquality().hash(ingredient),
+      const DeepCollectionEquality().hash(batch));
 
   @JsonKey(ignore: true)
   @override
@@ -994,23 +969,21 @@ abstract class _MedicationProduct extends MedicationProduct {
       _$_MedicationProduct.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
-  CodeableConcept? get form => throw _privateConstructorUsedError;
+  CodeableConcept? get form;
   @override
-  List<MedicationProductIngredient>? get ingredient =>
-      throw _privateConstructorUsedError;
+  List<MedicationProductIngredient>? get ingredient;
   @override
-  List<MedicationProductBatch>? get batch => throw _privateConstructorUsedError;
+  List<MedicationProductBatch>? get batch;
   @override
   @JsonKey(ignore: true)
   _$MedicationProductCopyWith<_MedicationProduct> get copyWith =>
@@ -1041,7 +1014,7 @@ class _$MedicationProductIngredientTearOff {
     );
   }
 
-  MedicationProductIngredient fromJson(Map<String, Object> json) {
+  MedicationProductIngredient fromJson(Map<String, Object?> json) {
     return MedicationProductIngredient.fromJson(json);
   }
 }
@@ -1243,29 +1216,25 @@ class _$_MedicationProductIngredient extends _MedicationProductIngredient {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MedicationProductIngredient &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.item, item) ||
-                const DeepCollectionEquality().equals(other.item, item)) &&
-            (identical(other.amount, amount) ||
-                const DeepCollectionEquality().equals(other.amount, amount)));
+        (other.runtimeType == runtimeType &&
+            other is _MedicationProductIngredient &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.item, item) &&
+            const DeepCollectionEquality().equals(other.amount, amount));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(item) ^
-      const DeepCollectionEquality().hash(amount);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(item),
+      const DeepCollectionEquality().hash(amount));
 
   @JsonKey(ignore: true)
   @override
@@ -1293,17 +1262,16 @@ abstract class _MedicationProductIngredient
       _$_MedicationProductIngredient.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Reference get item => throw _privateConstructorUsedError;
+  Reference get item;
   @override
-  Ratio? get amount => throw _privateConstructorUsedError;
+  Ratio? get amount;
   @override
   @JsonKey(ignore: true)
   _$MedicationProductIngredientCopyWith<_MedicationProductIngredient>
@@ -1338,7 +1306,7 @@ class _$MedicationProductBatchTearOff {
     );
   }
 
-  MedicationProductBatch fromJson(Map<String, Object> json) {
+  MedicationProductBatch fromJson(Map<String, Object?> json) {
     return MedicationProductBatch.fromJson(json);
   }
 }
@@ -1576,39 +1544,32 @@ class _$_MedicationProductBatch extends _MedicationProductBatch {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MedicationProductBatch &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.lotNumber, lotNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.lotNumber, lotNumber)) &&
-            (identical(other.lotNumberElement, lotNumberElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.lotNumberElement, lotNumberElement)) &&
-            (identical(other.expirationDate, expirationDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.expirationDate, expirationDate)) &&
-            (identical(other.expirationDateElement, expirationDateElement) ||
-                const DeepCollectionEquality().equals(
-                    other.expirationDateElement, expirationDateElement)));
+        (other.runtimeType == runtimeType &&
+            other is _MedicationProductBatch &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.lotNumber, lotNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.lotNumberElement, lotNumberElement) &&
+            const DeepCollectionEquality()
+                .equals(other.expirationDate, expirationDate) &&
+            const DeepCollectionEquality()
+                .equals(other.expirationDateElement, expirationDateElement));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(lotNumber) ^
-      const DeepCollectionEquality().hash(lotNumberElement) ^
-      const DeepCollectionEquality().hash(expirationDate) ^
-      const DeepCollectionEquality().hash(expirationDateElement);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(lotNumber),
+      const DeepCollectionEquality().hash(lotNumberElement),
+      const DeepCollectionEquality().hash(expirationDate),
+      const DeepCollectionEquality().hash(expirationDateElement));
 
   @JsonKey(ignore: true)
   @override
@@ -1638,23 +1599,22 @@ abstract class _MedicationProductBatch extends MedicationProductBatch {
       _$_MedicationProductBatch.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String? get lotNumber => throw _privateConstructorUsedError;
+  String? get lotNumber;
   @override
   @JsonKey(name: '_lotNumber')
-  Element? get lotNumberElement => throw _privateConstructorUsedError;
+  Element? get lotNumberElement;
   @override
-  FhirDateTime? get expirationDate => throw _privateConstructorUsedError;
+  FhirDateTime? get expirationDate;
   @override
   @JsonKey(name: '_expirationDate')
-  Element? get expirationDateElement => throw _privateConstructorUsedError;
+  Element? get expirationDateElement;
   @override
   @JsonKey(ignore: true)
   _$MedicationProductBatchCopyWith<_MedicationProductBatch> get copyWith =>
@@ -1686,7 +1646,7 @@ class _$MedicationPackageTearOff {
     );
   }
 
-  MedicationPackage fromJson(Map<String, Object> json) {
+  MedicationPackage fromJson(Map<String, Object?> json) {
     return MedicationPackage.fromJson(json);
   }
 }
@@ -1893,34 +1853,28 @@ class _$_MedicationPackage extends _MedicationPackage {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MedicationPackage &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.fhirComments, fhirComments) ||
-                const DeepCollectionEquality()
-                    .equals(other.fhirComments, fhirComments)) &&
-            (identical(other.container, container) ||
-                const DeepCollectionEquality()
-                    .equals(other.container, container)) &&
-            (identical(other.content, content) ||
-                const DeepCollectionEquality().equals(other.content, content)));
+        (other.runtimeType == runtimeType &&
+            other is _MedicationPackage &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.fhirComments, fhirComments) &&
+            const DeepCollectionEquality().equals(other.container, container) &&
+            const DeepCollectionEquality().equals(other.content, content));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(fhirComments) ^
-      const DeepCollectionEquality().hash(container) ^
-      const DeepCollectionEquality().hash(content);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(fhirComments),
+      const DeepCollectionEquality().hash(container),
+      const DeepCollectionEquality().hash(content));
 
   @JsonKey(ignore: true)
   @override
@@ -1947,21 +1901,19 @@ abstract class _MedicationPackage extends MedicationPackage {
       _$_MedicationPackage.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
   @JsonKey(name: 'fhir_comments')
-  List<String>? get fhirComments => throw _privateConstructorUsedError;
+  List<String>? get fhirComments;
   @override
-  CodeableConcept? get container => throw _privateConstructorUsedError;
+  CodeableConcept? get container;
   @override
-  List<MedicationPackageContent>? get content =>
-      throw _privateConstructorUsedError;
+  List<MedicationPackageContent>? get content;
   @override
   @JsonKey(ignore: true)
   _$MedicationPackageCopyWith<_MedicationPackage> get copyWith =>
@@ -1992,7 +1944,7 @@ class _$MedicationPackageContentTearOff {
     );
   }
 
-  MedicationPackageContent fromJson(Map<String, Object> json) {
+  MedicationPackageContent fromJson(Map<String, Object?> json) {
     return MedicationPackageContent.fromJson(json);
   }
 }
@@ -2191,29 +2143,25 @@ class _$_MedicationPackageContent extends _MedicationPackageContent {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MedicationPackageContent &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.item, item) ||
-                const DeepCollectionEquality().equals(other.item, item)) &&
-            (identical(other.amount, amount) ||
-                const DeepCollectionEquality().equals(other.amount, amount)));
+        (other.runtimeType == runtimeType &&
+            other is _MedicationPackageContent &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.item, item) &&
+            const DeepCollectionEquality().equals(other.amount, amount));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(item) ^
-      const DeepCollectionEquality().hash(amount);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(item),
+      const DeepCollectionEquality().hash(amount));
 
   @JsonKey(ignore: true)
   @override
@@ -2240,17 +2188,16 @@ abstract class _MedicationPackageContent extends MedicationPackageContent {
       _$_MedicationPackageContent.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Reference get item => throw _privateConstructorUsedError;
+  Reference get item;
   @override
-  Quantity? get amount => throw _privateConstructorUsedError;
+  Quantity? get amount;
   @override
   @JsonKey(ignore: true)
   _$MedicationPackageContentCopyWith<_MedicationPackageContent> get copyWith =>
@@ -2331,7 +2278,7 @@ class _$MedicationOrderTearOff {
     );
   }
 
-  MedicationOrder fromJson(Map<String, Object> json) {
+  MedicationOrder fromJson(Map<String, Object?> json) {
     return MedicationOrder.fromJson(json);
   }
 }
@@ -3115,110 +3062,87 @@ class _$_MedicationOrder extends _MedicationOrder {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MedicationOrder &&
-            (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.idElement, idElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.idElement, idElement)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
-            (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
-            (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.dateWritten, dateWritten) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateWritten, dateWritten)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.dateEnded, dateEnded) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateEnded, dateEnded)) &&
-            (identical(other.reasonEnded, reasonEnded) ||
-                const DeepCollectionEquality()
-                    .equals(other.reasonEnded, reasonEnded)) &&
-            (identical(other.patient, patient) ||
-                const DeepCollectionEquality()
-                    .equals(other.patient, patient)) &&
-            (identical(other.prescriber, prescriber) ||
-                const DeepCollectionEquality()
-                    .equals(other.prescriber, prescriber)) &&
-            (identical(other.encounter, encounter) ||
-                const DeepCollectionEquality()
-                    .equals(other.encounter, encounter)) &&
-            (identical(other.reasonCodeableConcept, reasonCodeableConcept) ||
-                const DeepCollectionEquality().equals(
-                    other.reasonCodeableConcept, reasonCodeableConcept)) &&
-            (identical(other.reasonReference, reasonReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.reasonReference, reasonReference)) &&
-            (identical(other.note, note) ||
-                const DeepCollectionEquality().equals(other.note, note)) &&
-            (identical(other.medicationCodeableConcept, medicationCodeableConcept) ||
-                const DeepCollectionEquality().equals(
-                    other.medicationCodeableConcept,
-                    medicationCodeableConcept)) &&
-            (identical(other.medicationReference, medicationReference) || const DeepCollectionEquality().equals(other.medicationReference, medicationReference)) &&
-            (identical(other.dosageInstruction, dosageInstruction) || const DeepCollectionEquality().equals(other.dosageInstruction, dosageInstruction)) &&
-            (identical(other.dispenseRequest, dispenseRequest) || const DeepCollectionEquality().equals(other.dispenseRequest, dispenseRequest)) &&
-            (identical(other.substitution, substitution) || const DeepCollectionEquality().equals(other.substitution, substitution)) &&
-            (identical(other.priorPrescription, priorPrescription) || const DeepCollectionEquality().equals(other.priorPrescription, priorPrescription)));
+        (other.runtimeType == runtimeType &&
+            other is _MedicationOrder &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.idElement, idElement) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality()
+                .equals(other.dateWritten, dateWritten) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality()
+                .equals(other.statusElement, statusElement) &&
+            const DeepCollectionEquality().equals(other.dateEnded, dateEnded) &&
+            const DeepCollectionEquality()
+                .equals(other.reasonEnded, reasonEnded) &&
+            const DeepCollectionEquality().equals(other.patient, patient) &&
+            const DeepCollectionEquality()
+                .equals(other.prescriber, prescriber) &&
+            const DeepCollectionEquality().equals(other.encounter, encounter) &&
+            const DeepCollectionEquality()
+                .equals(other.reasonCodeableConcept, reasonCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.reasonReference, reasonReference) &&
+            const DeepCollectionEquality().equals(other.note, note) &&
+            const DeepCollectionEquality().equals(
+                other.medicationCodeableConcept, medicationCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.medicationReference, medicationReference) &&
+            const DeepCollectionEquality()
+                .equals(other.dosageInstruction, dosageInstruction) &&
+            const DeepCollectionEquality()
+                .equals(other.dispenseRequest, dispenseRequest) &&
+            const DeepCollectionEquality()
+                .equals(other.substitution, substitution) &&
+            const DeepCollectionEquality()
+                .equals(other.priorPrescription, priorPrescription));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(idElement) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(dateWritten) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(dateEnded) ^
-      const DeepCollectionEquality().hash(reasonEnded) ^
-      const DeepCollectionEquality().hash(patient) ^
-      const DeepCollectionEquality().hash(prescriber) ^
-      const DeepCollectionEquality().hash(encounter) ^
-      const DeepCollectionEquality().hash(reasonCodeableConcept) ^
-      const DeepCollectionEquality().hash(reasonReference) ^
-      const DeepCollectionEquality().hash(note) ^
-      const DeepCollectionEquality().hash(medicationCodeableConcept) ^
-      const DeepCollectionEquality().hash(medicationReference) ^
-      const DeepCollectionEquality().hash(dosageInstruction) ^
-      const DeepCollectionEquality().hash(dispenseRequest) ^
-      const DeepCollectionEquality().hash(substitution) ^
-      const DeepCollectionEquality().hash(priorPrescription);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(idElement),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(text),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(dateWritten),
+        const DeepCollectionEquality().hash(status),
+        const DeepCollectionEquality().hash(statusElement),
+        const DeepCollectionEquality().hash(dateEnded),
+        const DeepCollectionEquality().hash(reasonEnded),
+        const DeepCollectionEquality().hash(patient),
+        const DeepCollectionEquality().hash(prescriber),
+        const DeepCollectionEquality().hash(encounter),
+        const DeepCollectionEquality().hash(reasonCodeableConcept),
+        const DeepCollectionEquality().hash(reasonReference),
+        const DeepCollectionEquality().hash(note),
+        const DeepCollectionEquality().hash(medicationCodeableConcept),
+        const DeepCollectionEquality().hash(medicationReference),
+        const DeepCollectionEquality().hash(dosageInstruction),
+        const DeepCollectionEquality().hash(dispenseRequest),
+        const DeepCollectionEquality().hash(substitution),
+        const DeepCollectionEquality().hash(priorPrescription)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -3273,71 +3197,65 @@ abstract class _MedicationOrder extends MedicationOrder {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationOrder)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: '_id')
-  Element? get idElement => throw _privateConstructorUsedError;
+  Element? get idElement;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  FhirDateTime? get dateWritten => throw _privateConstructorUsedError;
+  FhirDateTime? get dateWritten;
   @override
   @JsonKey(unknownEnumValue: MedicationOrderStatus.unknown)
-  MedicationOrderStatus? get status => throw _privateConstructorUsedError;
+  MedicationOrderStatus? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  FhirDateTime? get dateEnded => throw _privateConstructorUsedError;
+  FhirDateTime? get dateEnded;
   @override
-  CodeableConcept? get reasonEnded => throw _privateConstructorUsedError;
+  CodeableConcept? get reasonEnded;
   @override
-  Reference? get patient => throw _privateConstructorUsedError;
+  Reference? get patient;
   @override
-  Reference? get prescriber => throw _privateConstructorUsedError;
+  Reference? get prescriber;
   @override
-  Reference? get encounter => throw _privateConstructorUsedError;
+  Reference? get encounter;
   @override
-  CodeableConcept? get reasonCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get reasonCodeableConcept;
   @override
-  Reference? get reasonReference => throw _privateConstructorUsedError;
+  Reference? get reasonReference;
   @override
-  String? get note => throw _privateConstructorUsedError;
+  String? get note;
   @override
-  CodeableConcept? get medicationCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get medicationCodeableConcept;
   @override
-  Reference? get medicationReference => throw _privateConstructorUsedError;
+  Reference? get medicationReference;
   @override
-  List<MedicationOrderDosageInstruction>? get dosageInstruction =>
-      throw _privateConstructorUsedError;
+  List<MedicationOrderDosageInstruction>? get dosageInstruction;
   @override
-  MedicationOrderDispenseRequest? get dispenseRequest =>
-      throw _privateConstructorUsedError;
+  MedicationOrderDispenseRequest? get dispenseRequest;
   @override
-  MedicationOrderSubstitution? get substitution =>
-      throw _privateConstructorUsedError;
+  MedicationOrderSubstitution? get substitution;
   @override
-  Reference? get priorPrescription => throw _privateConstructorUsedError;
+  Reference? get priorPrescription;
   @override
   @JsonKey(ignore: true)
   _$MedicationOrderCopyWith<_MedicationOrder> get copyWith =>
@@ -3392,7 +3310,7 @@ class _$MedicationOrderDosageInstructionTearOff {
     );
   }
 
-  MedicationOrderDosageInstruction fromJson(Map<String, Object> json) {
+  MedicationOrderDosageInstruction fromJson(Map<String, Object?> json) {
     return MedicationOrderDosageInstruction.fromJson(json);
   }
 }
@@ -3938,76 +3856,56 @@ class _$_MedicationOrderDosageInstruction
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MedicationOrderDosageInstruction &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.additionalInstructions, additionalInstructions) ||
-                const DeepCollectionEquality().equals(
-                    other.additionalInstructions, additionalInstructions)) &&
-            (identical(other.timing, timing) ||
-                const DeepCollectionEquality().equals(other.timing, timing)) &&
-            (identical(other.asNeededBoolean, asNeededBoolean) ||
-                const DeepCollectionEquality()
-                    .equals(other.asNeededBoolean, asNeededBoolean)) &&
-            (identical(
-                    other.asNeededCodeableConcept, asNeededCodeableConcept) ||
-                const DeepCollectionEquality().equals(
-                    other.asNeededCodeableConcept, asNeededCodeableConcept)) &&
-            (identical(other.siteCodeableConcept, siteCodeableConcept) ||
-                const DeepCollectionEquality()
-                    .equals(other.siteCodeableConcept, siteCodeableConcept)) &&
-            (identical(other.siteReference, siteReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.siteReference, siteReference)) &&
-            (identical(other.route, route) ||
-                const DeepCollectionEquality().equals(other.route, route)) &&
-            (identical(other.method, method) ||
-                const DeepCollectionEquality().equals(other.method, method)) &&
-            (identical(other.doseRange, doseRange) ||
-                const DeepCollectionEquality()
-                    .equals(other.doseRange, doseRange)) &&
-            (identical(other.doseQuantity, doseQuantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.doseQuantity, doseQuantity)) &&
-            (identical(other.rateRatio, rateRatio) ||
-                const DeepCollectionEquality()
-                    .equals(other.rateRatio, rateRatio)) &&
-            (identical(other.rateRange, rateRange) ||
-                const DeepCollectionEquality()
-                    .equals(other.rateRange, rateRange)) &&
-            (identical(other.maxDosePerPeriod, maxDosePerPeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.maxDosePerPeriod, maxDosePerPeriod)));
+        (other.runtimeType == runtimeType &&
+            other is _MedicationOrderDosageInstruction &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality()
+                .equals(other.additionalInstructions, additionalInstructions) &&
+            const DeepCollectionEquality().equals(other.timing, timing) &&
+            const DeepCollectionEquality()
+                .equals(other.asNeededBoolean, asNeededBoolean) &&
+            const DeepCollectionEquality().equals(
+                other.asNeededCodeableConcept, asNeededCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.siteCodeableConcept, siteCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.siteReference, siteReference) &&
+            const DeepCollectionEquality().equals(other.route, route) &&
+            const DeepCollectionEquality().equals(other.method, method) &&
+            const DeepCollectionEquality().equals(other.doseRange, doseRange) &&
+            const DeepCollectionEquality()
+                .equals(other.doseQuantity, doseQuantity) &&
+            const DeepCollectionEquality().equals(other.rateRatio, rateRatio) &&
+            const DeepCollectionEquality().equals(other.rateRange, rateRange) &&
+            const DeepCollectionEquality()
+                .equals(other.maxDosePerPeriod, maxDosePerPeriod));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(additionalInstructions) ^
-      const DeepCollectionEquality().hash(timing) ^
-      const DeepCollectionEquality().hash(asNeededBoolean) ^
-      const DeepCollectionEquality().hash(asNeededCodeableConcept) ^
-      const DeepCollectionEquality().hash(siteCodeableConcept) ^
-      const DeepCollectionEquality().hash(siteReference) ^
-      const DeepCollectionEquality().hash(route) ^
-      const DeepCollectionEquality().hash(method) ^
-      const DeepCollectionEquality().hash(doseRange) ^
-      const DeepCollectionEquality().hash(doseQuantity) ^
-      const DeepCollectionEquality().hash(rateRatio) ^
-      const DeepCollectionEquality().hash(rateRange) ^
-      const DeepCollectionEquality().hash(maxDosePerPeriod);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(text),
+      const DeepCollectionEquality().hash(additionalInstructions),
+      const DeepCollectionEquality().hash(timing),
+      const DeepCollectionEquality().hash(asNeededBoolean),
+      const DeepCollectionEquality().hash(asNeededCodeableConcept),
+      const DeepCollectionEquality().hash(siteCodeableConcept),
+      const DeepCollectionEquality().hash(siteReference),
+      const DeepCollectionEquality().hash(route),
+      const DeepCollectionEquality().hash(method),
+      const DeepCollectionEquality().hash(doseRange),
+      const DeepCollectionEquality().hash(doseQuantity),
+      const DeepCollectionEquality().hash(rateRatio),
+      const DeepCollectionEquality().hash(rateRange),
+      const DeepCollectionEquality().hash(maxDosePerPeriod));
 
   @JsonKey(ignore: true)
   @override
@@ -4047,44 +3945,40 @@ abstract class _MedicationOrderDosageInstruction
       Map<String, dynamic> json) = _$_MedicationOrderDosageInstruction.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String? get text => throw _privateConstructorUsedError;
+  String? get text;
   @override
-  CodeableConcept? get additionalInstructions =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get additionalInstructions;
   @override
-  Timing? get timing => throw _privateConstructorUsedError;
+  Timing? get timing;
   @override
-  Boolean? get asNeededBoolean => throw _privateConstructorUsedError;
+  Boolean? get asNeededBoolean;
   @override
-  CodeableConcept? get asNeededCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get asNeededCodeableConcept;
   @override
-  CodeableConcept? get siteCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get siteCodeableConcept;
   @override
-  Reference? get siteReference => throw _privateConstructorUsedError;
+  Reference? get siteReference;
   @override
-  CodeableConcept? get route => throw _privateConstructorUsedError;
+  CodeableConcept? get route;
   @override
-  CodeableConcept? get method => throw _privateConstructorUsedError;
+  CodeableConcept? get method;
   @override
-  Range? get doseRange => throw _privateConstructorUsedError;
+  Range? get doseRange;
   @override
-  Quantity? get doseQuantity => throw _privateConstructorUsedError;
+  Quantity? get doseQuantity;
   @override
-  Ratio? get rateRatio => throw _privateConstructorUsedError;
+  Ratio? get rateRatio;
   @override
-  Range? get rateRange => throw _privateConstructorUsedError;
+  Range? get rateRange;
   @override
-  Ratio? get maxDosePerPeriod => throw _privateConstructorUsedError;
+  Ratio? get maxDosePerPeriod;
   @override
   @JsonKey(ignore: true)
   _$MedicationOrderDosageInstructionCopyWith<_MedicationOrderDosageInstruction>
@@ -4123,7 +4017,7 @@ class _$MedicationOrderDispenseRequestTearOff {
     );
   }
 
-  MedicationOrderDispenseRequest fromJson(Map<String, Object> json) {
+  MedicationOrderDispenseRequest fromJson(Map<String, Object?> json) {
     return MedicationOrderDispenseRequest.fromJson(json);
   }
 }
@@ -4440,49 +4334,38 @@ class _$_MedicationOrderDispenseRequest
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MedicationOrderDispenseRequest &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.medicationCodeableConcept,
-                    medicationCodeableConcept) ||
-                const DeepCollectionEquality().equals(
-                    other.medicationCodeableConcept,
-                    medicationCodeableConcept)) &&
-            (identical(other.medicationReference, medicationReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.medicationReference, medicationReference)) &&
-            (identical(other.validityPeriod, validityPeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.validityPeriod, validityPeriod)) &&
-            (identical(other.numberOfRepeatsAllowed, numberOfRepeatsAllowed) ||
-                const DeepCollectionEquality().equals(
-                    other.numberOfRepeatsAllowed, numberOfRepeatsAllowed)) &&
-            (identical(other.quantity, quantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.quantity, quantity)) &&
-            (identical(other.expectedSupplyDuration, expectedSupplyDuration) ||
-                const DeepCollectionEquality().equals(
-                    other.expectedSupplyDuration, expectedSupplyDuration)));
+        (other.runtimeType == runtimeType &&
+            other is _MedicationOrderDispenseRequest &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(
+                other.medicationCodeableConcept, medicationCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.medicationReference, medicationReference) &&
+            const DeepCollectionEquality()
+                .equals(other.validityPeriod, validityPeriod) &&
+            const DeepCollectionEquality()
+                .equals(other.numberOfRepeatsAllowed, numberOfRepeatsAllowed) &&
+            const DeepCollectionEquality().equals(other.quantity, quantity) &&
+            const DeepCollectionEquality()
+                .equals(other.expectedSupplyDuration, expectedSupplyDuration));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(medicationCodeableConcept) ^
-      const DeepCollectionEquality().hash(medicationReference) ^
-      const DeepCollectionEquality().hash(validityPeriod) ^
-      const DeepCollectionEquality().hash(numberOfRepeatsAllowed) ^
-      const DeepCollectionEquality().hash(quantity) ^
-      const DeepCollectionEquality().hash(expectedSupplyDuration);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(medicationCodeableConcept),
+      const DeepCollectionEquality().hash(medicationReference),
+      const DeepCollectionEquality().hash(validityPeriod),
+      const DeepCollectionEquality().hash(numberOfRepeatsAllowed),
+      const DeepCollectionEquality().hash(quantity),
+      const DeepCollectionEquality().hash(expectedSupplyDuration));
 
   @JsonKey(ignore: true)
   @override
@@ -4514,26 +4397,24 @@ abstract class _MedicationOrderDispenseRequest
       _$_MedicationOrderDispenseRequest.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get medicationCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get medicationCodeableConcept;
   @override
-  Reference? get medicationReference => throw _privateConstructorUsedError;
+  Reference? get medicationReference;
   @override
-  Period? get validityPeriod => throw _privateConstructorUsedError;
+  Period? get validityPeriod;
   @override
-  PositiveInt? get numberOfRepeatsAllowed => throw _privateConstructorUsedError;
+  PositiveInt? get numberOfRepeatsAllowed;
   @override
-  Quantity? get quantity => throw _privateConstructorUsedError;
+  Quantity? get quantity;
   @override
-  Quantity? get expectedSupplyDuration => throw _privateConstructorUsedError;
+  Quantity? get expectedSupplyDuration;
   @override
   @JsonKey(ignore: true)
   _$MedicationOrderDispenseRequestCopyWith<_MedicationOrderDispenseRequest>
@@ -4564,7 +4445,7 @@ class _$MedicationOrderSubstitutionTearOff {
     );
   }
 
-  MedicationOrderSubstitution fromJson(Map<String, Object> json) {
+  MedicationOrderSubstitution fromJson(Map<String, Object?> json) {
     return MedicationOrderSubstitution.fromJson(json);
   }
 }
@@ -4766,29 +4647,25 @@ class _$_MedicationOrderSubstitution extends _MedicationOrderSubstitution {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MedicationOrderSubstitution &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.reason, reason) ||
-                const DeepCollectionEquality().equals(other.reason, reason)));
+        (other.runtimeType == runtimeType &&
+            other is _MedicationOrderSubstitution &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.reason, reason));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(reason);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(reason));
 
   @JsonKey(ignore: true)
   @override
@@ -4816,17 +4693,16 @@ abstract class _MedicationOrderSubstitution
       _$_MedicationOrderSubstitution.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept get type => throw _privateConstructorUsedError;
+  CodeableConcept get type;
   @override
-  CodeableConcept? get reason => throw _privateConstructorUsedError;
+  CodeableConcept? get reason;
   @override
   @JsonKey(ignore: true)
   _$MedicationOrderSubstitutionCopyWith<_MedicationOrderSubstitution>
@@ -4913,7 +4789,7 @@ class _$MedicationAdministrationTearOff {
     );
   }
 
-  MedicationAdministration fromJson(Map<String, Object> json) {
+  MedicationAdministration fromJson(Map<String, Object?> json) {
     return MedicationAdministration.fromJson(json);
   }
 }
@@ -5705,112 +5581,90 @@ class _$_MedicationAdministration extends _MedicationAdministration {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MedicationAdministration &&
-            (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
-            (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
-            (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.patient, patient) ||
-                const DeepCollectionEquality()
-                    .equals(other.patient, patient)) &&
-            (identical(other.practitioner, practitioner) ||
-                const DeepCollectionEquality()
-                    .equals(other.practitioner, practitioner)) &&
-            (identical(other.encounter, encounter) ||
-                const DeepCollectionEquality()
-                    .equals(other.encounter, encounter)) &&
-            (identical(other.prescription, prescription) ||
-                const DeepCollectionEquality()
-                    .equals(other.prescription, prescription)) &&
-            (identical(other.wasNotGiven, wasNotGiven) ||
-                const DeepCollectionEquality()
-                    .equals(other.wasNotGiven, wasNotGiven)) &&
-            (identical(other.reasonNotGiven, reasonNotGiven) ||
-                const DeepCollectionEquality()
-                    .equals(other.reasonNotGiven, reasonNotGiven)) &&
-            (identical(other.reasonGiven, reasonGiven) ||
-                const DeepCollectionEquality()
-                    .equals(other.reasonGiven, reasonGiven)) &&
-            (identical(other.effectiveTimeDateTime, effectiveTimeDateTime) ||
-                const DeepCollectionEquality().equals(
-                    other.effectiveTimeDateTime, effectiveTimeDateTime)) &&
-            (identical(other.effectiveDateTimeElement, effectiveDateTimeElement) ||
-                const DeepCollectionEquality().equals(
-                    other.effectiveDateTimeElement, effectiveDateTimeElement)) &&
-            (identical(other.effectiveTimePeriod, effectiveTimePeriod) || const DeepCollectionEquality().equals(other.effectiveTimePeriod, effectiveTimePeriod)) &&
-            (identical(other.medicationCodeableConcept, medicationCodeableConcept) || const DeepCollectionEquality().equals(other.medicationCodeableConcept, medicationCodeableConcept)) &&
-            (identical(other.medicationReference, medicationReference) || const DeepCollectionEquality().equals(other.medicationReference, medicationReference)) &&
-            (identical(other.device, device) || const DeepCollectionEquality().equals(other.device, device)) &&
-            (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
-            (identical(other.dosage, dosage) || const DeepCollectionEquality().equals(other.dosage, dosage)));
+        (other.runtimeType == runtimeType &&
+            other is _MedicationAdministration &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality()
+                .equals(other.statusElement, statusElement) &&
+            const DeepCollectionEquality().equals(other.patient, patient) &&
+            const DeepCollectionEquality()
+                .equals(other.practitioner, practitioner) &&
+            const DeepCollectionEquality().equals(other.encounter, encounter) &&
+            const DeepCollectionEquality()
+                .equals(other.prescription, prescription) &&
+            const DeepCollectionEquality()
+                .equals(other.wasNotGiven, wasNotGiven) &&
+            const DeepCollectionEquality()
+                .equals(other.reasonNotGiven, reasonNotGiven) &&
+            const DeepCollectionEquality()
+                .equals(other.reasonGiven, reasonGiven) &&
+            const DeepCollectionEquality()
+                .equals(other.effectiveTimeDateTime, effectiveTimeDateTime) &&
+            const DeepCollectionEquality().equals(
+                other.effectiveDateTimeElement, effectiveDateTimeElement) &&
+            const DeepCollectionEquality()
+                .equals(other.effectiveTimePeriod, effectiveTimePeriod) &&
+            const DeepCollectionEquality().equals(
+                other.medicationCodeableConcept, medicationCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.medicationReference, medicationReference) &&
+            const DeepCollectionEquality().equals(other.device, device) &&
+            const DeepCollectionEquality().equals(other.note, note) &&
+            const DeepCollectionEquality().equals(other.dosage, dosage));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(patient) ^
-      const DeepCollectionEquality().hash(practitioner) ^
-      const DeepCollectionEquality().hash(encounter) ^
-      const DeepCollectionEquality().hash(prescription) ^
-      const DeepCollectionEquality().hash(wasNotGiven) ^
-      const DeepCollectionEquality().hash(reasonNotGiven) ^
-      const DeepCollectionEquality().hash(reasonGiven) ^
-      const DeepCollectionEquality().hash(effectiveTimeDateTime) ^
-      const DeepCollectionEquality().hash(effectiveDateTimeElement) ^
-      const DeepCollectionEquality().hash(effectiveTimePeriod) ^
-      const DeepCollectionEquality().hash(medicationCodeableConcept) ^
-      const DeepCollectionEquality().hash(medicationReference) ^
-      const DeepCollectionEquality().hash(device) ^
-      const DeepCollectionEquality().hash(note) ^
-      const DeepCollectionEquality().hash(dosage);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(status),
+        const DeepCollectionEquality().hash(statusElement),
+        const DeepCollectionEquality().hash(patient),
+        const DeepCollectionEquality().hash(practitioner),
+        const DeepCollectionEquality().hash(encounter),
+        const DeepCollectionEquality().hash(prescription),
+        const DeepCollectionEquality().hash(wasNotGiven),
+        const DeepCollectionEquality().hash(reasonNotGiven),
+        const DeepCollectionEquality().hash(reasonGiven),
+        const DeepCollectionEquality().hash(effectiveTimeDateTime),
+        const DeepCollectionEquality().hash(effectiveDateTimeElement),
+        const DeepCollectionEquality().hash(effectiveTimePeriod),
+        const DeepCollectionEquality().hash(medicationCodeableConcept),
+        const DeepCollectionEquality().hash(medicationReference),
+        const DeepCollectionEquality().hash(device),
+        const DeepCollectionEquality().hash(note),
+        const DeepCollectionEquality().hash(dosage)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -5869,75 +5723,70 @@ abstract class _MedicationAdministration extends MedicationAdministration {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationAdministration)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
   @JsonKey(
       required: true, unknownEnumValue: MedicationAdministrationStatus.unknown)
-  MedicationAdministrationStatus get status =>
-      throw _privateConstructorUsedError;
+  MedicationAdministrationStatus get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  Reference get patient => throw _privateConstructorUsedError;
+  Reference get patient;
   @override
-  Reference? get practitioner => throw _privateConstructorUsedError;
+  Reference? get practitioner;
   @override
-  Reference? get encounter => throw _privateConstructorUsedError;
+  Reference? get encounter;
   @override
-  Reference? get prescription => throw _privateConstructorUsedError;
+  Reference? get prescription;
   @override
-  Boolean? get wasNotGiven => throw _privateConstructorUsedError;
+  Boolean? get wasNotGiven;
   @override
-  List<CodeableConcept>? get reasonNotGiven =>
-      throw _privateConstructorUsedError;
+  List<CodeableConcept>? get reasonNotGiven;
   @override
-  List<CodeableConcept>? get reasonGiven => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get reasonGiven;
   @override
-  FhirDateTime? get effectiveTimeDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get effectiveTimeDateTime;
   @override
   @JsonKey(name: '_effectiveDateTime')
-  Element? get effectiveDateTimeElement => throw _privateConstructorUsedError;
+  Element? get effectiveDateTimeElement;
   @override
-  Period? get effectiveTimePeriod => throw _privateConstructorUsedError;
+  Period? get effectiveTimePeriod;
   @override
-  CodeableConcept? get medicationCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get medicationCodeableConcept;
   @override
-  Reference? get medicationReference => throw _privateConstructorUsedError;
+  Reference? get medicationReference;
   @override
-  List<Reference>? get device => throw _privateConstructorUsedError;
+  List<Reference>? get device;
   @override
-  String? get note => throw _privateConstructorUsedError;
+  String? get note;
   @override
-  MedicationAdministrationDosage? get dosage =>
-      throw _privateConstructorUsedError;
+  MedicationAdministrationDosage? get dosage;
   @override
   @JsonKey(ignore: true)
   _$MedicationAdministrationCopyWith<_MedicationAdministration> get copyWith =>
@@ -5982,7 +5831,7 @@ class _$MedicationAdministrationDosageTearOff {
     );
   }
 
-  MedicationAdministrationDosage fromJson(Map<String, Object> json) {
+  MedicationAdministrationDosage fromJson(Map<String, Object?> json) {
     return MedicationAdministrationDosage.fromJson(json);
   }
 }
@@ -6390,56 +6239,42 @@ class _$_MedicationAdministrationDosage
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MedicationAdministrationDosage &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.textElement, textElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.textElement, textElement)) &&
-            (identical(other.siteCodeableConcept, siteCodeableConcept) ||
-                const DeepCollectionEquality()
-                    .equals(other.siteCodeableConcept, siteCodeableConcept)) &&
-            (identical(other.siteReference, siteReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.siteReference, siteReference)) &&
-            (identical(other.route, route) ||
-                const DeepCollectionEquality().equals(other.route, route)) &&
-            (identical(other.method, method) ||
-                const DeepCollectionEquality().equals(other.method, method)) &&
-            (identical(other.quantity, quantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.quantity, quantity)) &&
-            (identical(other.rateRatio, rateRatio) ||
-                const DeepCollectionEquality()
-                    .equals(other.rateRatio, rateRatio)) &&
-            (identical(other.rateRange, rateRange) ||
-                const DeepCollectionEquality()
-                    .equals(other.rateRange, rateRange)));
+        (other.runtimeType == runtimeType &&
+            other is _MedicationAdministrationDosage &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality()
+                .equals(other.textElement, textElement) &&
+            const DeepCollectionEquality()
+                .equals(other.siteCodeableConcept, siteCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.siteReference, siteReference) &&
+            const DeepCollectionEquality().equals(other.route, route) &&
+            const DeepCollectionEquality().equals(other.method, method) &&
+            const DeepCollectionEquality().equals(other.quantity, quantity) &&
+            const DeepCollectionEquality().equals(other.rateRatio, rateRatio) &&
+            const DeepCollectionEquality().equals(other.rateRange, rateRange));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(textElement) ^
-      const DeepCollectionEquality().hash(siteCodeableConcept) ^
-      const DeepCollectionEquality().hash(siteReference) ^
-      const DeepCollectionEquality().hash(route) ^
-      const DeepCollectionEquality().hash(method) ^
-      const DeepCollectionEquality().hash(quantity) ^
-      const DeepCollectionEquality().hash(rateRatio) ^
-      const DeepCollectionEquality().hash(rateRange);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(text),
+      const DeepCollectionEquality().hash(textElement),
+      const DeepCollectionEquality().hash(siteCodeableConcept),
+      const DeepCollectionEquality().hash(siteReference),
+      const DeepCollectionEquality().hash(route),
+      const DeepCollectionEquality().hash(method),
+      const DeepCollectionEquality().hash(quantity),
+      const DeepCollectionEquality().hash(rateRatio),
+      const DeepCollectionEquality().hash(rateRange));
 
   @JsonKey(ignore: true)
   @override
@@ -6474,33 +6309,31 @@ abstract class _MedicationAdministrationDosage
       _$_MedicationAdministrationDosage.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String? get text => throw _privateConstructorUsedError;
+  String? get text;
   @override
   @JsonKey(name: '_text')
-  Element? get textElement => throw _privateConstructorUsedError;
+  Element? get textElement;
   @override
-  CodeableConcept? get siteCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get siteCodeableConcept;
   @override
-  Reference? get siteReference => throw _privateConstructorUsedError;
+  Reference? get siteReference;
   @override
-  CodeableConcept? get route => throw _privateConstructorUsedError;
+  CodeableConcept? get route;
   @override
-  CodeableConcept? get method => throw _privateConstructorUsedError;
+  CodeableConcept? get method;
   @override
-  Quantity? get quantity => throw _privateConstructorUsedError;
+  Quantity? get quantity;
   @override
-  Ratio? get rateRatio => throw _privateConstructorUsedError;
+  Ratio? get rateRatio;
   @override
-  Range? get rateRange => throw _privateConstructorUsedError;
+  Range? get rateRange;
   @override
   @JsonKey(ignore: true)
   _$MedicationAdministrationDosageCopyWith<_MedicationAdministrationDosage>
@@ -6590,7 +6423,7 @@ class _$MedicationDispenseTearOff {
     );
   }
 
-  MedicationDispense fromJson(Map<String, Object> json) {
+  MedicationDispense fromJson(Map<String, Object?> json) {
     return MedicationDispense.fromJson(json);
   }
 }
@@ -7462,114 +7295,95 @@ class _$_MedicationDispense extends _MedicationDispense {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MedicationDispense &&
-            (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
-            (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
-            (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.patient, patient) ||
-                const DeepCollectionEquality()
-                    .equals(other.patient, patient)) &&
-            (identical(other.dispenser, dispenser) ||
-                const DeepCollectionEquality()
-                    .equals(other.dispenser, dispenser)) &&
-            (identical(other.authorizingPrescription, authorizingPrescription) ||
-                const DeepCollectionEquality().equals(
-                    other.authorizingPrescription, authorizingPrescription)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.quantity, quantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.quantity, quantity)) &&
-            (identical(other.daysSupply, daysSupply) ||
-                const DeepCollectionEquality()
-                    .equals(other.daysSupply, daysSupply)) &&
-            (identical(other.medicationCodeableConcept, medicationCodeableConcept) ||
-                const DeepCollectionEquality().equals(
-                    other.medicationCodeableConcept,
-                    medicationCodeableConcept)) &&
-            (identical(other.medicationReference, medicationReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.medicationReference, medicationReference)) &&
-            (identical(other.whenPrepared, whenPrepared) || const DeepCollectionEquality().equals(other.whenPrepared, whenPrepared)) &&
-            (identical(other.whenPreparedElement, whenPreparedElement) || const DeepCollectionEquality().equals(other.whenPreparedElement, whenPreparedElement)) &&
-            (identical(other.whenHandedOver, whenHandedOver) || const DeepCollectionEquality().equals(other.whenHandedOver, whenHandedOver)) &&
-            (identical(other.whenHandedOverElement, whenHandedOverElement) || const DeepCollectionEquality().equals(other.whenHandedOverElement, whenHandedOverElement)) &&
-            (identical(other.destination, destination) || const DeepCollectionEquality().equals(other.destination, destination)) &&
-            (identical(other.receiver, receiver) || const DeepCollectionEquality().equals(other.receiver, receiver)) &&
-            (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
-            (identical(other.dosageInstruction, dosageInstruction) || const DeepCollectionEquality().equals(other.dosageInstruction, dosageInstruction)) &&
-            (identical(other.substitution, substitution) || const DeepCollectionEquality().equals(other.substitution, substitution)));
+        (other.runtimeType == runtimeType &&
+            other is _MedicationDispense &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality()
+                .equals(other.statusElement, statusElement) &&
+            const DeepCollectionEquality().equals(other.patient, patient) &&
+            const DeepCollectionEquality().equals(other.dispenser, dispenser) &&
+            const DeepCollectionEquality().equals(
+                other.authorizingPrescription, authorizingPrescription) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.quantity, quantity) &&
+            const DeepCollectionEquality()
+                .equals(other.daysSupply, daysSupply) &&
+            const DeepCollectionEquality().equals(
+                other.medicationCodeableConcept, medicationCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.medicationReference, medicationReference) &&
+            const DeepCollectionEquality()
+                .equals(other.whenPrepared, whenPrepared) &&
+            const DeepCollectionEquality()
+                .equals(other.whenPreparedElement, whenPreparedElement) &&
+            const DeepCollectionEquality()
+                .equals(other.whenHandedOver, whenHandedOver) &&
+            const DeepCollectionEquality()
+                .equals(other.whenHandedOverElement, whenHandedOverElement) &&
+            const DeepCollectionEquality()
+                .equals(other.destination, destination) &&
+            const DeepCollectionEquality().equals(other.receiver, receiver) &&
+            const DeepCollectionEquality().equals(other.note, note) &&
+            const DeepCollectionEquality()
+                .equals(other.dosageInstruction, dosageInstruction) &&
+            const DeepCollectionEquality()
+                .equals(other.substitution, substitution));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(patient) ^
-      const DeepCollectionEquality().hash(dispenser) ^
-      const DeepCollectionEquality().hash(authorizingPrescription) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(quantity) ^
-      const DeepCollectionEquality().hash(daysSupply) ^
-      const DeepCollectionEquality().hash(medicationCodeableConcept) ^
-      const DeepCollectionEquality().hash(medicationReference) ^
-      const DeepCollectionEquality().hash(whenPrepared) ^
-      const DeepCollectionEquality().hash(whenPreparedElement) ^
-      const DeepCollectionEquality().hash(whenHandedOver) ^
-      const DeepCollectionEquality().hash(whenHandedOverElement) ^
-      const DeepCollectionEquality().hash(destination) ^
-      const DeepCollectionEquality().hash(receiver) ^
-      const DeepCollectionEquality().hash(note) ^
-      const DeepCollectionEquality().hash(dosageInstruction) ^
-      const DeepCollectionEquality().hash(substitution);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(status),
+        const DeepCollectionEquality().hash(statusElement),
+        const DeepCollectionEquality().hash(patient),
+        const DeepCollectionEquality().hash(dispenser),
+        const DeepCollectionEquality().hash(authorizingPrescription),
+        const DeepCollectionEquality().hash(type),
+        const DeepCollectionEquality().hash(quantity),
+        const DeepCollectionEquality().hash(daysSupply),
+        const DeepCollectionEquality().hash(medicationCodeableConcept),
+        const DeepCollectionEquality().hash(medicationReference),
+        const DeepCollectionEquality().hash(whenPrepared),
+        const DeepCollectionEquality().hash(whenPreparedElement),
+        const DeepCollectionEquality().hash(whenHandedOver),
+        const DeepCollectionEquality().hash(whenHandedOverElement),
+        const DeepCollectionEquality().hash(destination),
+        const DeepCollectionEquality().hash(receiver),
+        const DeepCollectionEquality().hash(note),
+        const DeepCollectionEquality().hash(dosageInstruction),
+        const DeepCollectionEquality().hash(substitution)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -7630,79 +7444,74 @@ abstract class _MedicationDispense extends MedicationDispense {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationDispense)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  Identifier? get identifier => throw _privateConstructorUsedError;
+  Identifier? get identifier;
   @override
   @JsonKey(unknownEnumValue: MedicationDispenseStatus.unknown)
-  MedicationDispenseStatus? get status => throw _privateConstructorUsedError;
+  MedicationDispenseStatus? get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  Reference? get patient => throw _privateConstructorUsedError;
+  Reference? get patient;
   @override
-  Reference? get dispenser => throw _privateConstructorUsedError;
+  Reference? get dispenser;
   @override
-  List<Reference>? get authorizingPrescription =>
-      throw _privateConstructorUsedError;
+  List<Reference>? get authorizingPrescription;
   @override
-  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get type;
   @override
-  Quantity? get quantity => throw _privateConstructorUsedError;
+  Quantity? get quantity;
   @override
-  Quantity? get daysSupply => throw _privateConstructorUsedError;
+  Quantity? get daysSupply;
   @override
-  CodeableConcept? get medicationCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get medicationCodeableConcept;
   @override
-  Reference? get medicationReference => throw _privateConstructorUsedError;
+  Reference? get medicationReference;
   @override
-  FhirDateTime? get whenPrepared => throw _privateConstructorUsedError;
+  FhirDateTime? get whenPrepared;
   @override
   @JsonKey(name: '_whenPrepared')
-  Element? get whenPreparedElement => throw _privateConstructorUsedError;
+  Element? get whenPreparedElement;
   @override
-  FhirDateTime? get whenHandedOver => throw _privateConstructorUsedError;
+  FhirDateTime? get whenHandedOver;
   @override
   @JsonKey(name: '_whenHandedOver')
-  Element? get whenHandedOverElement => throw _privateConstructorUsedError;
+  Element? get whenHandedOverElement;
   @override
-  Reference? get destination => throw _privateConstructorUsedError;
+  Reference? get destination;
   @override
-  List<Reference>? get receiver => throw _privateConstructorUsedError;
+  List<Reference>? get receiver;
   @override
-  String? get note => throw _privateConstructorUsedError;
+  String? get note;
   @override
-  List<MedicationDispenseDosageInstruction>? get dosageInstruction =>
-      throw _privateConstructorUsedError;
+  List<MedicationDispenseDosageInstruction>? get dosageInstruction;
   @override
-  MedicationDispenseSubstitution? get substitution =>
-      throw _privateConstructorUsedError;
+  MedicationDispenseSubstitution? get substitution;
   @override
   @JsonKey(ignore: true)
   _$MedicationDispenseCopyWith<_MedicationDispense> get copyWith =>
@@ -7757,7 +7566,7 @@ class _$MedicationDispenseDosageInstructionTearOff {
     );
   }
 
-  MedicationDispenseDosageInstruction fromJson(Map<String, Object> json) {
+  MedicationDispenseDosageInstruction fromJson(Map<String, Object?> json) {
     return MedicationDispenseDosageInstruction.fromJson(json);
   }
 }
@@ -8304,76 +8113,56 @@ class _$_MedicationDispenseDosageInstruction
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MedicationDispenseDosageInstruction &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.additionalInstructions, additionalInstructions) ||
-                const DeepCollectionEquality().equals(
-                    other.additionalInstructions, additionalInstructions)) &&
-            (identical(other.timing, timing) ||
-                const DeepCollectionEquality().equals(other.timing, timing)) &&
-            (identical(other.asNeededBoolean, asNeededBoolean) ||
-                const DeepCollectionEquality()
-                    .equals(other.asNeededBoolean, asNeededBoolean)) &&
-            (identical(
-                    other.asNeededCodeableConcept, asNeededCodeableConcept) ||
-                const DeepCollectionEquality().equals(
-                    other.asNeededCodeableConcept, asNeededCodeableConcept)) &&
-            (identical(other.siteCodeableConcept, siteCodeableConcept) ||
-                const DeepCollectionEquality()
-                    .equals(other.siteCodeableConcept, siteCodeableConcept)) &&
-            (identical(other.siteReference, siteReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.siteReference, siteReference)) &&
-            (identical(other.route, route) ||
-                const DeepCollectionEquality().equals(other.route, route)) &&
-            (identical(other.method, method) ||
-                const DeepCollectionEquality().equals(other.method, method)) &&
-            (identical(other.doseRange, doseRange) ||
-                const DeepCollectionEquality()
-                    .equals(other.doseRange, doseRange)) &&
-            (identical(other.doseQuantity, doseQuantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.doseQuantity, doseQuantity)) &&
-            (identical(other.rateRatio, rateRatio) ||
-                const DeepCollectionEquality()
-                    .equals(other.rateRatio, rateRatio)) &&
-            (identical(other.rateRange, rateRange) ||
-                const DeepCollectionEquality()
-                    .equals(other.rateRange, rateRange)) &&
-            (identical(other.maxDosePerPeriod, maxDosePerPeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.maxDosePerPeriod, maxDosePerPeriod)));
+        (other.runtimeType == runtimeType &&
+            other is _MedicationDispenseDosageInstruction &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality()
+                .equals(other.additionalInstructions, additionalInstructions) &&
+            const DeepCollectionEquality().equals(other.timing, timing) &&
+            const DeepCollectionEquality()
+                .equals(other.asNeededBoolean, asNeededBoolean) &&
+            const DeepCollectionEquality().equals(
+                other.asNeededCodeableConcept, asNeededCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.siteCodeableConcept, siteCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.siteReference, siteReference) &&
+            const DeepCollectionEquality().equals(other.route, route) &&
+            const DeepCollectionEquality().equals(other.method, method) &&
+            const DeepCollectionEquality().equals(other.doseRange, doseRange) &&
+            const DeepCollectionEquality()
+                .equals(other.doseQuantity, doseQuantity) &&
+            const DeepCollectionEquality().equals(other.rateRatio, rateRatio) &&
+            const DeepCollectionEquality().equals(other.rateRange, rateRange) &&
+            const DeepCollectionEquality()
+                .equals(other.maxDosePerPeriod, maxDosePerPeriod));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(additionalInstructions) ^
-      const DeepCollectionEquality().hash(timing) ^
-      const DeepCollectionEquality().hash(asNeededBoolean) ^
-      const DeepCollectionEquality().hash(asNeededCodeableConcept) ^
-      const DeepCollectionEquality().hash(siteCodeableConcept) ^
-      const DeepCollectionEquality().hash(siteReference) ^
-      const DeepCollectionEquality().hash(route) ^
-      const DeepCollectionEquality().hash(method) ^
-      const DeepCollectionEquality().hash(doseRange) ^
-      const DeepCollectionEquality().hash(doseQuantity) ^
-      const DeepCollectionEquality().hash(rateRatio) ^
-      const DeepCollectionEquality().hash(rateRange) ^
-      const DeepCollectionEquality().hash(maxDosePerPeriod);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(text),
+      const DeepCollectionEquality().hash(additionalInstructions),
+      const DeepCollectionEquality().hash(timing),
+      const DeepCollectionEquality().hash(asNeededBoolean),
+      const DeepCollectionEquality().hash(asNeededCodeableConcept),
+      const DeepCollectionEquality().hash(siteCodeableConcept),
+      const DeepCollectionEquality().hash(siteReference),
+      const DeepCollectionEquality().hash(route),
+      const DeepCollectionEquality().hash(method),
+      const DeepCollectionEquality().hash(doseRange),
+      const DeepCollectionEquality().hash(doseQuantity),
+      const DeepCollectionEquality().hash(rateRatio),
+      const DeepCollectionEquality().hash(rateRange),
+      const DeepCollectionEquality().hash(maxDosePerPeriod));
 
   @JsonKey(ignore: true)
   @override
@@ -8415,44 +8204,40 @@ abstract class _MedicationDispenseDosageInstruction
       _$_MedicationDispenseDosageInstruction.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String? get text => throw _privateConstructorUsedError;
+  String? get text;
   @override
-  CodeableConcept? get additionalInstructions =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get additionalInstructions;
   @override
-  Timing? get timing => throw _privateConstructorUsedError;
+  Timing? get timing;
   @override
-  Boolean? get asNeededBoolean => throw _privateConstructorUsedError;
+  Boolean? get asNeededBoolean;
   @override
-  CodeableConcept? get asNeededCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get asNeededCodeableConcept;
   @override
-  CodeableConcept? get siteCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get siteCodeableConcept;
   @override
-  Reference? get siteReference => throw _privateConstructorUsedError;
+  Reference? get siteReference;
   @override
-  CodeableConcept? get route => throw _privateConstructorUsedError;
+  CodeableConcept? get route;
   @override
-  CodeableConcept? get method => throw _privateConstructorUsedError;
+  CodeableConcept? get method;
   @override
-  Range? get doseRange => throw _privateConstructorUsedError;
+  Range? get doseRange;
   @override
-  Quantity? get doseQuantity => throw _privateConstructorUsedError;
+  Quantity? get doseQuantity;
   @override
-  Ratio? get rateRatio => throw _privateConstructorUsedError;
+  Ratio? get rateRatio;
   @override
-  Range? get rateRange => throw _privateConstructorUsedError;
+  Range? get rateRange;
   @override
-  Ratio? get maxDosePerPeriod => throw _privateConstructorUsedError;
+  Ratio? get maxDosePerPeriod;
   @override
   @JsonKey(ignore: true)
   _$MedicationDispenseDosageInstructionCopyWith<
@@ -8486,7 +8271,7 @@ class _$MedicationDispenseSubstitutionTearOff {
     );
   }
 
-  MedicationDispenseSubstitution fromJson(Map<String, Object> json) {
+  MedicationDispenseSubstitution fromJson(Map<String, Object?> json) {
     return MedicationDispenseSubstitution.fromJson(json);
   }
 }
@@ -8693,33 +8478,28 @@ class _$_MedicationDispenseSubstitution
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MedicationDispenseSubstitution &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.type, type) ||
-                const DeepCollectionEquality().equals(other.type, type)) &&
-            (identical(other.reason, reason) ||
-                const DeepCollectionEquality().equals(other.reason, reason)) &&
-            (identical(other.responsibleParty, responsibleParty) ||
-                const DeepCollectionEquality()
-                    .equals(other.responsibleParty, responsibleParty)));
+        (other.runtimeType == runtimeType &&
+            other is _MedicationDispenseSubstitution &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.reason, reason) &&
+            const DeepCollectionEquality()
+                .equals(other.responsibleParty, responsibleParty));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(type) ^
-      const DeepCollectionEquality().hash(reason) ^
-      const DeepCollectionEquality().hash(responsibleParty);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(reason),
+      const DeepCollectionEquality().hash(responsibleParty));
 
   @JsonKey(ignore: true)
   @override
@@ -8748,19 +8528,18 @@ abstract class _MedicationDispenseSubstitution
       _$_MedicationDispenseSubstitution.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept get type => throw _privateConstructorUsedError;
+  CodeableConcept get type;
   @override
-  List<CodeableConcept>? get reason => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get reason;
   @override
-  List<Reference>? get responsibleParty => throw _privateConstructorUsedError;
+  List<Reference>? get responsibleParty;
   @override
   @JsonKey(ignore: true)
   _$MedicationDispenseSubstitutionCopyWith<_MedicationDispenseSubstitution>
@@ -8849,7 +8628,7 @@ class _$MedicationStatementTearOff {
     );
   }
 
-  MedicationStatement fromJson(Map<String, Object> json) {
+  MedicationStatement fromJson(Map<String, Object?> json) {
     return MedicationStatement.fromJson(json);
   }
 }
@@ -9660,114 +9439,96 @@ class _$_MedicationStatement extends _MedicationStatement {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MedicationStatement &&
-            (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
-            (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
-            (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.patient, patient) ||
-                const DeepCollectionEquality()
-                    .equals(other.patient, patient)) &&
-            (identical(other.informationSource, informationSource) ||
-                const DeepCollectionEquality()
-                    .equals(other.informationSource, informationSource)) &&
-            (identical(other.dateAsserted, dateAsserted) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateAsserted, dateAsserted)) &&
-            (identical(other.dateAssertedElement, dateAssertedElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateAssertedElement, dateAssertedElement)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.wasNotTaken, wasNotTaken) ||
-                const DeepCollectionEquality()
-                    .equals(other.wasNotTaken, wasNotTaken)) &&
-            (identical(other.reasonNotTaken, reasonNotTaken) ||
-                const DeepCollectionEquality()
-                    .equals(other.reasonNotTaken, reasonNotTaken)) &&
-            (identical(other.reasonForUseCodeableConcept, reasonForUseCodeableConcept) ||
-                const DeepCollectionEquality().equals(
-                    other.reasonForUseCodeableConcept,
-                    reasonForUseCodeableConcept)) &&
-            (identical(other.reasonForUseReference, reasonForUseReference) ||
-                const DeepCollectionEquality().equals(
-                    other.reasonForUseReference, reasonForUseReference)) &&
-            (identical(other.effectiveDateTime, effectiveDateTime) ||
-                const DeepCollectionEquality().equals(other.effectiveDateTime, effectiveDateTime)) &&
-            (identical(other.effectiveDateTimeElement, effectiveDateTimeElement) || const DeepCollectionEquality().equals(other.effectiveDateTimeElement, effectiveDateTimeElement)) &&
-            (identical(other.effectivePeriod, effectivePeriod) || const DeepCollectionEquality().equals(other.effectivePeriod, effectivePeriod)) &&
-            (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
-            (identical(other.supportingInformation, supportingInformation) || const DeepCollectionEquality().equals(other.supportingInformation, supportingInformation)) &&
-            (identical(other.medicationCodeableConcept, medicationCodeableConcept) || const DeepCollectionEquality().equals(other.medicationCodeableConcept, medicationCodeableConcept)) &&
-            (identical(other.medicationReference, medicationReference) || const DeepCollectionEquality().equals(other.medicationReference, medicationReference)) &&
-            (identical(other.dosage, dosage) || const DeepCollectionEquality().equals(other.dosage, dosage)));
+        (other.runtimeType == runtimeType &&
+            other is _MedicationStatement &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality().equals(other.patient, patient) &&
+            const DeepCollectionEquality()
+                .equals(other.informationSource, informationSource) &&
+            const DeepCollectionEquality()
+                .equals(other.dateAsserted, dateAsserted) &&
+            const DeepCollectionEquality()
+                .equals(other.dateAssertedElement, dateAssertedElement) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality()
+                .equals(other.statusElement, statusElement) &&
+            const DeepCollectionEquality()
+                .equals(other.wasNotTaken, wasNotTaken) &&
+            const DeepCollectionEquality()
+                .equals(other.reasonNotTaken, reasonNotTaken) &&
+            const DeepCollectionEquality().equals(
+                other.reasonForUseCodeableConcept,
+                reasonForUseCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.reasonForUseReference, reasonForUseReference) &&
+            const DeepCollectionEquality()
+                .equals(other.effectiveDateTime, effectiveDateTime) &&
+            const DeepCollectionEquality().equals(
+                other.effectiveDateTimeElement, effectiveDateTimeElement) &&
+            const DeepCollectionEquality()
+                .equals(other.effectivePeriod, effectivePeriod) &&
+            const DeepCollectionEquality().equals(other.note, note) &&
+            const DeepCollectionEquality()
+                .equals(other.supportingInformation, supportingInformation) &&
+            const DeepCollectionEquality().equals(
+                other.medicationCodeableConcept, medicationCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.medicationReference, medicationReference) &&
+            const DeepCollectionEquality().equals(other.dosage, dosage));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(patient) ^
-      const DeepCollectionEquality().hash(informationSource) ^
-      const DeepCollectionEquality().hash(dateAsserted) ^
-      const DeepCollectionEquality().hash(dateAssertedElement) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(wasNotTaken) ^
-      const DeepCollectionEquality().hash(reasonNotTaken) ^
-      const DeepCollectionEquality().hash(reasonForUseCodeableConcept) ^
-      const DeepCollectionEquality().hash(reasonForUseReference) ^
-      const DeepCollectionEquality().hash(effectiveDateTime) ^
-      const DeepCollectionEquality().hash(effectiveDateTimeElement) ^
-      const DeepCollectionEquality().hash(effectivePeriod) ^
-      const DeepCollectionEquality().hash(note) ^
-      const DeepCollectionEquality().hash(supportingInformation) ^
-      const DeepCollectionEquality().hash(medicationCodeableConcept) ^
-      const DeepCollectionEquality().hash(medicationReference) ^
-      const DeepCollectionEquality().hash(dosage);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(patient),
+        const DeepCollectionEquality().hash(informationSource),
+        const DeepCollectionEquality().hash(dateAsserted),
+        const DeepCollectionEquality().hash(dateAssertedElement),
+        const DeepCollectionEquality().hash(status),
+        const DeepCollectionEquality().hash(statusElement),
+        const DeepCollectionEquality().hash(wasNotTaken),
+        const DeepCollectionEquality().hash(reasonNotTaken),
+        const DeepCollectionEquality().hash(reasonForUseCodeableConcept),
+        const DeepCollectionEquality().hash(reasonForUseReference),
+        const DeepCollectionEquality().hash(effectiveDateTime),
+        const DeepCollectionEquality().hash(effectiveDateTimeElement),
+        const DeepCollectionEquality().hash(effectivePeriod),
+        const DeepCollectionEquality().hash(note),
+        const DeepCollectionEquality().hash(supportingInformation),
+        const DeepCollectionEquality().hash(medicationCodeableConcept),
+        const DeepCollectionEquality().hash(medicationReference),
+        const DeepCollectionEquality().hash(dosage)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -9828,78 +9589,72 @@ abstract class _MedicationStatement extends MedicationStatement {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.MedicationStatement)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  Reference get patient => throw _privateConstructorUsedError;
+  Reference get patient;
   @override
-  Reference? get informationSource => throw _privateConstructorUsedError;
+  Reference? get informationSource;
   @override
-  FhirDateTime? get dateAsserted => throw _privateConstructorUsedError;
+  FhirDateTime? get dateAsserted;
   @override
   @JsonKey(name: '_dateAsserted')
-  Element? get dateAssertedElement => throw _privateConstructorUsedError;
+  Element? get dateAssertedElement;
   @override
   @JsonKey(required: true, unknownEnumValue: MedicationStatementStatus.unknown)
-  MedicationStatementStatus get status => throw _privateConstructorUsedError;
+  MedicationStatementStatus get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  Boolean? get wasNotTaken => throw _privateConstructorUsedError;
+  Boolean? get wasNotTaken;
   @override
-  List<CodeableConcept>? get reasonNotTaken =>
-      throw _privateConstructorUsedError;
+  List<CodeableConcept>? get reasonNotTaken;
   @override
-  CodeableConcept? get reasonForUseCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get reasonForUseCodeableConcept;
   @override
-  Reference? get reasonForUseReference => throw _privateConstructorUsedError;
+  Reference? get reasonForUseReference;
   @override
-  FhirDateTime? get effectiveDateTime => throw _privateConstructorUsedError;
+  FhirDateTime? get effectiveDateTime;
   @override
   @JsonKey(name: '_effectiveDateTime')
-  Element? get effectiveDateTimeElement => throw _privateConstructorUsedError;
+  Element? get effectiveDateTimeElement;
   @override
-  Period? get effectivePeriod => throw _privateConstructorUsedError;
+  Period? get effectivePeriod;
   @override
-  String? get note => throw _privateConstructorUsedError;
+  String? get note;
   @override
-  List<Reference>? get supportingInformation =>
-      throw _privateConstructorUsedError;
+  List<Reference>? get supportingInformation;
   @override
-  CodeableConcept? get medicationCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get medicationCodeableConcept;
   @override
-  Reference? get medicationReference => throw _privateConstructorUsedError;
+  Reference? get medicationReference;
   @override
-  List<MedicationStatementDosage>? get dosage =>
-      throw _privateConstructorUsedError;
+  List<MedicationStatementDosage>? get dosage;
   @override
   @JsonKey(ignore: true)
   _$MedicationStatementCopyWith<_MedicationStatement> get copyWith =>
@@ -9952,7 +9707,7 @@ class _$MedicationStatementDosageTearOff {
     );
   }
 
-  MedicationStatementDosage fromJson(Map<String, Object> json) {
+  MedicationStatementDosage fromJson(Map<String, Object?> json) {
     return MedicationStatementDosage.fromJson(json);
   }
 }
@@ -10460,72 +10215,54 @@ class _$_MedicationStatementDosage extends _MedicationStatementDosage {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MedicationStatementDosage &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.timing, timing) ||
-                const DeepCollectionEquality().equals(other.timing, timing)) &&
-            (identical(other.asNeededBoolean, asNeededBoolean) ||
-                const DeepCollectionEquality()
-                    .equals(other.asNeededBoolean, asNeededBoolean)) &&
-            (identical(
-                    other.asNeededCodeableConcept, asNeededCodeableConcept) ||
-                const DeepCollectionEquality().equals(
-                    other.asNeededCodeableConcept, asNeededCodeableConcept)) &&
-            (identical(other.siteCodeableConcept, siteCodeableConcept) ||
-                const DeepCollectionEquality()
-                    .equals(other.siteCodeableConcept, siteCodeableConcept)) &&
-            (identical(other.siteReference, siteReference) ||
-                const DeepCollectionEquality()
-                    .equals(other.siteReference, siteReference)) &&
-            (identical(other.route, route) ||
-                const DeepCollectionEquality().equals(other.route, route)) &&
-            (identical(other.method, method) ||
-                const DeepCollectionEquality().equals(other.method, method)) &&
-            (identical(other.quantityQuantity, quantityQuantity) ||
-                const DeepCollectionEquality()
-                    .equals(other.quantityQuantity, quantityQuantity)) &&
-            (identical(other.quantityRange, quantityRange) ||
-                const DeepCollectionEquality()
-                    .equals(other.quantityRange, quantityRange)) &&
-            (identical(other.rateRatio, rateRatio) ||
-                const DeepCollectionEquality()
-                    .equals(other.rateRatio, rateRatio)) &&
-            (identical(other.rateRange, rateRange) ||
-                const DeepCollectionEquality()
-                    .equals(other.rateRange, rateRange)) &&
-            (identical(other.maxDosePerPeriod, maxDosePerPeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.maxDosePerPeriod, maxDosePerPeriod)));
+        (other.runtimeType == runtimeType &&
+            other is _MedicationStatementDosage &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality().equals(other.timing, timing) &&
+            const DeepCollectionEquality()
+                .equals(other.asNeededBoolean, asNeededBoolean) &&
+            const DeepCollectionEquality().equals(
+                other.asNeededCodeableConcept, asNeededCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.siteCodeableConcept, siteCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.siteReference, siteReference) &&
+            const DeepCollectionEquality().equals(other.route, route) &&
+            const DeepCollectionEquality().equals(other.method, method) &&
+            const DeepCollectionEquality()
+                .equals(other.quantityQuantity, quantityQuantity) &&
+            const DeepCollectionEquality()
+                .equals(other.quantityRange, quantityRange) &&
+            const DeepCollectionEquality().equals(other.rateRatio, rateRatio) &&
+            const DeepCollectionEquality().equals(other.rateRange, rateRange) &&
+            const DeepCollectionEquality()
+                .equals(other.maxDosePerPeriod, maxDosePerPeriod));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(timing) ^
-      const DeepCollectionEquality().hash(asNeededBoolean) ^
-      const DeepCollectionEquality().hash(asNeededCodeableConcept) ^
-      const DeepCollectionEquality().hash(siteCodeableConcept) ^
-      const DeepCollectionEquality().hash(siteReference) ^
-      const DeepCollectionEquality().hash(route) ^
-      const DeepCollectionEquality().hash(method) ^
-      const DeepCollectionEquality().hash(quantityQuantity) ^
-      const DeepCollectionEquality().hash(quantityRange) ^
-      const DeepCollectionEquality().hash(rateRatio) ^
-      const DeepCollectionEquality().hash(rateRange) ^
-      const DeepCollectionEquality().hash(maxDosePerPeriod);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(text),
+      const DeepCollectionEquality().hash(timing),
+      const DeepCollectionEquality().hash(asNeededBoolean),
+      const DeepCollectionEquality().hash(asNeededCodeableConcept),
+      const DeepCollectionEquality().hash(siteCodeableConcept),
+      const DeepCollectionEquality().hash(siteReference),
+      const DeepCollectionEquality().hash(route),
+      const DeepCollectionEquality().hash(method),
+      const DeepCollectionEquality().hash(quantityQuantity),
+      const DeepCollectionEquality().hash(quantityRange),
+      const DeepCollectionEquality().hash(rateRatio),
+      const DeepCollectionEquality().hash(rateRange),
+      const DeepCollectionEquality().hash(maxDosePerPeriod));
 
   @JsonKey(ignore: true)
   @override
@@ -10564,41 +10301,38 @@ abstract class _MedicationStatementDosage extends MedicationStatementDosage {
       _$_MedicationStatementDosage.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  String? get text => throw _privateConstructorUsedError;
+  String? get text;
   @override
-  Timing? get timing => throw _privateConstructorUsedError;
+  Timing? get timing;
   @override
-  Boolean? get asNeededBoolean => throw _privateConstructorUsedError;
+  Boolean? get asNeededBoolean;
   @override
-  CodeableConcept? get asNeededCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get asNeededCodeableConcept;
   @override
-  CodeableConcept? get siteCodeableConcept =>
-      throw _privateConstructorUsedError;
+  CodeableConcept? get siteCodeableConcept;
   @override
-  Reference? get siteReference => throw _privateConstructorUsedError;
+  Reference? get siteReference;
   @override
-  CodeableConcept? get route => throw _privateConstructorUsedError;
+  CodeableConcept? get route;
   @override
-  CodeableConcept? get method => throw _privateConstructorUsedError;
+  CodeableConcept? get method;
   @override
-  Quantity? get quantityQuantity => throw _privateConstructorUsedError;
+  Quantity? get quantityQuantity;
   @override
-  Range? get quantityRange => throw _privateConstructorUsedError;
+  Range? get quantityRange;
   @override
-  Ratio? get rateRatio => throw _privateConstructorUsedError;
+  Ratio? get rateRatio;
   @override
-  Range? get rateRange => throw _privateConstructorUsedError;
+  Range? get rateRange;
   @override
-  Ratio? get maxDosePerPeriod => throw _privateConstructorUsedError;
+  Ratio? get maxDosePerPeriod;
   @override
   @JsonKey(ignore: true)
   _$MedicationStatementDosageCopyWith<_MedicationStatementDosage>
@@ -10696,7 +10430,7 @@ class _$ImmunizationTearOff {
     );
   }
 
-  Immunization fromJson(Map<String, Object> json) {
+  Immunization fromJson(Map<String, Object?> json) {
     return Immunization.fromJson(json);
   }
 }
@@ -11633,125 +11367,101 @@ class _$_Immunization extends _Immunization {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Immunization &&
-            (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
-            (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
-            (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.status, status) ||
-                const DeepCollectionEquality().equals(other.status, status)) &&
-            (identical(other.statusElement, statusElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.statusElement, statusElement)) &&
-            (identical(other.date, date) ||
-                const DeepCollectionEquality().equals(other.date, date)) &&
-            (identical(other.vaccineCode, vaccineCode) ||
-                const DeepCollectionEquality()
-                    .equals(other.vaccineCode, vaccineCode)) &&
-            (identical(other.patient, patient) ||
-                const DeepCollectionEquality()
-                    .equals(other.patient, patient)) &&
-            (identical(other.wasNotGiven, wasNotGiven) ||
-                const DeepCollectionEquality()
-                    .equals(other.wasNotGiven, wasNotGiven)) &&
-            (identical(other.reported, reported) ||
-                const DeepCollectionEquality()
-                    .equals(other.reported, reported)) &&
-            (identical(other.performer, performer) ||
-                const DeepCollectionEquality()
-                    .equals(other.performer, performer)) &&
-            (identical(other.requester, requester) ||
-                const DeepCollectionEquality()
-                    .equals(other.requester, requester)) &&
-            (identical(other.encounter, encounter) ||
-                const DeepCollectionEquality()
-                    .equals(other.encounter, encounter)) &&
-            (identical(other.manufacturer, manufacturer) ||
-                const DeepCollectionEquality()
-                    .equals(other.manufacturer, manufacturer)) &&
-            (identical(other.location, location) ||
-                const DeepCollectionEquality()
-                    .equals(other.location, location)) &&
-            (identical(other.lotNumber, lotNumber) || const DeepCollectionEquality().equals(other.lotNumber, lotNumber)) &&
-            (identical(other.lotNumberElement, lotNumberElement) || const DeepCollectionEquality().equals(other.lotNumberElement, lotNumberElement)) &&
-            (identical(other.expirationDate, expirationDate) || const DeepCollectionEquality().equals(other.expirationDate, expirationDate)) &&
-            (identical(other.expirationDateElement, expirationDateElement) || const DeepCollectionEquality().equals(other.expirationDateElement, expirationDateElement)) &&
-            (identical(other.site, site) || const DeepCollectionEquality().equals(other.site, site)) &&
-            (identical(other.route, route) || const DeepCollectionEquality().equals(other.route, route)) &&
-            (identical(other.doseQuantity, doseQuantity) || const DeepCollectionEquality().equals(other.doseQuantity, doseQuantity)) &&
-            (identical(other.note, note) || const DeepCollectionEquality().equals(other.note, note)) &&
-            (identical(other.explanation, explanation) || const DeepCollectionEquality().equals(other.explanation, explanation)) &&
-            (identical(other.reaction, reaction) || const DeepCollectionEquality().equals(other.reaction, reaction)) &&
-            (identical(other.vaccinationProtocol, vaccinationProtocol) || const DeepCollectionEquality().equals(other.vaccinationProtocol, vaccinationProtocol)));
+        (other.runtimeType == runtimeType &&
+            other is _Immunization &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality()
+                .equals(other.statusElement, statusElement) &&
+            const DeepCollectionEquality().equals(other.date, date) &&
+            const DeepCollectionEquality()
+                .equals(other.vaccineCode, vaccineCode) &&
+            const DeepCollectionEquality().equals(other.patient, patient) &&
+            const DeepCollectionEquality()
+                .equals(other.wasNotGiven, wasNotGiven) &&
+            const DeepCollectionEquality().equals(other.reported, reported) &&
+            const DeepCollectionEquality().equals(other.performer, performer) &&
+            const DeepCollectionEquality().equals(other.requester, requester) &&
+            const DeepCollectionEquality().equals(other.encounter, encounter) &&
+            const DeepCollectionEquality()
+                .equals(other.manufacturer, manufacturer) &&
+            const DeepCollectionEquality().equals(other.location, location) &&
+            const DeepCollectionEquality().equals(other.lotNumber, lotNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.lotNumberElement, lotNumberElement) &&
+            const DeepCollectionEquality()
+                .equals(other.expirationDate, expirationDate) &&
+            const DeepCollectionEquality()
+                .equals(other.expirationDateElement, expirationDateElement) &&
+            const DeepCollectionEquality().equals(other.site, site) &&
+            const DeepCollectionEquality().equals(other.route, route) &&
+            const DeepCollectionEquality()
+                .equals(other.doseQuantity, doseQuantity) &&
+            const DeepCollectionEquality().equals(other.note, note) &&
+            const DeepCollectionEquality()
+                .equals(other.explanation, explanation) &&
+            const DeepCollectionEquality().equals(other.reaction, reaction) &&
+            const DeepCollectionEquality()
+                .equals(other.vaccinationProtocol, vaccinationProtocol));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(status) ^
-      const DeepCollectionEquality().hash(statusElement) ^
-      const DeepCollectionEquality().hash(date) ^
-      const DeepCollectionEquality().hash(vaccineCode) ^
-      const DeepCollectionEquality().hash(patient) ^
-      const DeepCollectionEquality().hash(wasNotGiven) ^
-      const DeepCollectionEquality().hash(reported) ^
-      const DeepCollectionEquality().hash(performer) ^
-      const DeepCollectionEquality().hash(requester) ^
-      const DeepCollectionEquality().hash(encounter) ^
-      const DeepCollectionEquality().hash(manufacturer) ^
-      const DeepCollectionEquality().hash(location) ^
-      const DeepCollectionEquality().hash(lotNumber) ^
-      const DeepCollectionEquality().hash(lotNumberElement) ^
-      const DeepCollectionEquality().hash(expirationDate) ^
-      const DeepCollectionEquality().hash(expirationDateElement) ^
-      const DeepCollectionEquality().hash(site) ^
-      const DeepCollectionEquality().hash(route) ^
-      const DeepCollectionEquality().hash(doseQuantity) ^
-      const DeepCollectionEquality().hash(note) ^
-      const DeepCollectionEquality().hash(explanation) ^
-      const DeepCollectionEquality().hash(reaction) ^
-      const DeepCollectionEquality().hash(vaccinationProtocol);
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
+        const DeepCollectionEquality().hash(contained),
+        const DeepCollectionEquality().hash(extension_),
+        const DeepCollectionEquality().hash(modifierExtension),
+        const DeepCollectionEquality().hash(identifier),
+        const DeepCollectionEquality().hash(status),
+        const DeepCollectionEquality().hash(statusElement),
+        const DeepCollectionEquality().hash(date),
+        const DeepCollectionEquality().hash(vaccineCode),
+        const DeepCollectionEquality().hash(patient),
+        const DeepCollectionEquality().hash(wasNotGiven),
+        const DeepCollectionEquality().hash(reported),
+        const DeepCollectionEquality().hash(performer),
+        const DeepCollectionEquality().hash(requester),
+        const DeepCollectionEquality().hash(encounter),
+        const DeepCollectionEquality().hash(manufacturer),
+        const DeepCollectionEquality().hash(location),
+        const DeepCollectionEquality().hash(lotNumber),
+        const DeepCollectionEquality().hash(lotNumberElement),
+        const DeepCollectionEquality().hash(expirationDate),
+        const DeepCollectionEquality().hash(expirationDateElement),
+        const DeepCollectionEquality().hash(site),
+        const DeepCollectionEquality().hash(route),
+        const DeepCollectionEquality().hash(doseQuantity),
+        const DeepCollectionEquality().hash(note),
+        const DeepCollectionEquality().hash(explanation),
+        const DeepCollectionEquality().hash(reaction),
+        const DeepCollectionEquality().hash(vaccinationProtocol)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -11817,86 +11527,82 @@ abstract class _Immunization extends Immunization {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.Immunization)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
   @JsonKey(unknownEnumValue: ImmunizationStatus.unknown)
-  ImmunizationStatus get status => throw _privateConstructorUsedError;
+  ImmunizationStatus get status;
   @override
   @JsonKey(name: '_status')
-  Element? get statusElement => throw _privateConstructorUsedError;
+  Element? get statusElement;
   @override
-  FhirDateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date;
   @override
-  CodeableConcept get vaccineCode => throw _privateConstructorUsedError;
+  CodeableConcept get vaccineCode;
   @override
-  Reference get patient => throw _privateConstructorUsedError;
+  Reference get patient;
   @override
-  Boolean get wasNotGiven => throw _privateConstructorUsedError;
+  Boolean get wasNotGiven;
   @override
-  Boolean get reported => throw _privateConstructorUsedError;
+  Boolean get reported;
   @override
-  Reference? get performer => throw _privateConstructorUsedError;
+  Reference? get performer;
   @override
-  Reference? get requester => throw _privateConstructorUsedError;
+  Reference? get requester;
   @override
-  Reference? get encounter => throw _privateConstructorUsedError;
+  Reference? get encounter;
   @override
-  Reference? get manufacturer => throw _privateConstructorUsedError;
+  Reference? get manufacturer;
   @override
-  Reference? get location => throw _privateConstructorUsedError;
+  Reference? get location;
   @override
-  String? get lotNumber => throw _privateConstructorUsedError;
+  String? get lotNumber;
   @override
   @JsonKey(name: '_lotNumber')
-  Element? get lotNumberElement => throw _privateConstructorUsedError;
+  Element? get lotNumberElement;
   @override
-  Date? get expirationDate => throw _privateConstructorUsedError;
+  Date? get expirationDate;
   @override
   @JsonKey(name: '_expirationDate')
-  Element? get expirationDateElement => throw _privateConstructorUsedError;
+  Element? get expirationDateElement;
   @override
-  CodeableConcept? get site => throw _privateConstructorUsedError;
+  CodeableConcept? get site;
   @override
-  CodeableConcept? get route => throw _privateConstructorUsedError;
+  CodeableConcept? get route;
   @override
-  Quantity? get doseQuantity => throw _privateConstructorUsedError;
+  Quantity? get doseQuantity;
   @override
-  List<Annotation>? get note => throw _privateConstructorUsedError;
+  List<Annotation>? get note;
   @override
-  ImmunizationExplanation? get explanation =>
-      throw _privateConstructorUsedError;
+  ImmunizationExplanation? get explanation;
   @override
-  List<ImmunizationReaction>? get reaction =>
-      throw _privateConstructorUsedError;
+  List<ImmunizationReaction>? get reaction;
   @override
-  List<ImmunizationVaccinationProtocol>? get vaccinationProtocol =>
-      throw _privateConstructorUsedError;
+  List<ImmunizationVaccinationProtocol>? get vaccinationProtocol;
   @override
   @JsonKey(ignore: true)
   _$ImmunizationCopyWith<_Immunization> get copyWith =>
@@ -11927,7 +11633,7 @@ class _$ImmunizationExplanationTearOff {
     );
   }
 
-  ImmunizationExplanation fromJson(Map<String, Object> json) {
+  ImmunizationExplanation fromJson(Map<String, Object?> json) {
     return ImmunizationExplanation.fromJson(json);
   }
 }
@@ -12101,30 +11807,26 @@ class _$_ImmunizationExplanation extends _ImmunizationExplanation {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ImmunizationExplanation &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.reason, reason) ||
-                const DeepCollectionEquality().equals(other.reason, reason)) &&
-            (identical(other.reasonNotGiven, reasonNotGiven) ||
-                const DeepCollectionEquality()
-                    .equals(other.reasonNotGiven, reasonNotGiven)));
+        (other.runtimeType == runtimeType &&
+            other is _ImmunizationExplanation &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.reason, reason) &&
+            const DeepCollectionEquality()
+                .equals(other.reasonNotGiven, reasonNotGiven));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(reason) ^
-      const DeepCollectionEquality().hash(reasonNotGiven);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(reason),
+      const DeepCollectionEquality().hash(reasonNotGiven));
 
   @JsonKey(ignore: true)
   @override
@@ -12151,18 +11853,16 @@ abstract class _ImmunizationExplanation extends ImmunizationExplanation {
       _$_ImmunizationExplanation.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<CodeableConcept>? get reason => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get reason;
   @override
-  List<CodeableConcept>? get reasonNotGiven =>
-      throw _privateConstructorUsedError;
+  List<CodeableConcept>? get reasonNotGiven;
   @override
   @JsonKey(ignore: true)
   _$ImmunizationExplanationCopyWith<_ImmunizationExplanation> get copyWith =>
@@ -12198,7 +11898,7 @@ class _$ImmunizationReactionTearOff {
     );
   }
 
-  ImmunizationReaction fromJson(Map<String, Object> json) {
+  ImmunizationReaction fromJson(Map<String, Object?> json) {
     return ImmunizationReaction.fromJson(json);
   }
 }
@@ -12466,41 +12166,33 @@ class _$_ImmunizationReaction extends _ImmunizationReaction {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ImmunizationReaction &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.date, date) ||
-                const DeepCollectionEquality().equals(other.date, date)) &&
-            (identical(other.dateElement, dateElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateElement, dateElement)) &&
-            (identical(other.detail, detail) ||
-                const DeepCollectionEquality().equals(other.detail, detail)) &&
-            (identical(other.reported, reported) ||
-                const DeepCollectionEquality()
-                    .equals(other.reported, reported)) &&
-            (identical(other.reportedElement, reportedElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.reportedElement, reportedElement)));
+        (other.runtimeType == runtimeType &&
+            other is _ImmunizationReaction &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.date, date) &&
+            const DeepCollectionEquality()
+                .equals(other.dateElement, dateElement) &&
+            const DeepCollectionEquality().equals(other.detail, detail) &&
+            const DeepCollectionEquality().equals(other.reported, reported) &&
+            const DeepCollectionEquality()
+                .equals(other.reportedElement, reportedElement));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(date) ^
-      const DeepCollectionEquality().hash(dateElement) ^
-      const DeepCollectionEquality().hash(detail) ^
-      const DeepCollectionEquality().hash(reported) ^
-      const DeepCollectionEquality().hash(reportedElement);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(date),
+      const DeepCollectionEquality().hash(dateElement),
+      const DeepCollectionEquality().hash(detail),
+      const DeepCollectionEquality().hash(reported),
+      const DeepCollectionEquality().hash(reportedElement));
 
   @JsonKey(ignore: true)
   @override
@@ -12531,25 +12223,24 @@ abstract class _ImmunizationReaction extends ImmunizationReaction {
       _$_ImmunizationReaction.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  FhirDateTime? get date => throw _privateConstructorUsedError;
+  FhirDateTime? get date;
   @override
   @JsonKey(name: '_date')
-  Element? get dateElement => throw _privateConstructorUsedError;
+  Element? get dateElement;
   @override
-  Reference? get detail => throw _privateConstructorUsedError;
+  Reference? get detail;
   @override
-  Boolean? get reported => throw _privateConstructorUsedError;
+  Boolean? get reported;
   @override
   @JsonKey(name: '_reported')
-  Element? get reportedElement => throw _privateConstructorUsedError;
+  Element? get reportedElement;
   @override
   @JsonKey(ignore: true)
   _$ImmunizationReactionCopyWith<_ImmunizationReaction> get copyWith =>
@@ -12594,7 +12285,7 @@ class _$ImmunizationVaccinationProtocolTearOff {
     );
   }
 
-  ImmunizationVaccinationProtocol fromJson(Map<String, Object> json) {
+  ImmunizationVaccinationProtocol fromJson(Map<String, Object?> json) {
     return ImmunizationVaccinationProtocol.fromJson(json);
   }
 }
@@ -12942,58 +12633,46 @@ class _$_ImmunizationVaccinationProtocol
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ImmunizationVaccinationProtocol &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.doseSequence, doseSequence) ||
-                const DeepCollectionEquality()
-                    .equals(other.doseSequence, doseSequence)) &&
-            (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.authority, authority) ||
-                const DeepCollectionEquality()
-                    .equals(other.authority, authority)) &&
-            (identical(other.series, series) ||
-                const DeepCollectionEquality().equals(other.series, series)) &&
-            (identical(other.seriesElement, seriesElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.seriesElement, seriesElement)) &&
-            (identical(other.seriesDoses, seriesDoses) ||
-                const DeepCollectionEquality()
-                    .equals(other.seriesDoses, seriesDoses)) &&
-            (identical(other.targetDisease, targetDisease) ||
-                const DeepCollectionEquality()
-                    .equals(other.targetDisease, targetDisease)) &&
-            (identical(other.doseStatus, doseStatus) ||
-                const DeepCollectionEquality()
-                    .equals(other.doseStatus, doseStatus)) &&
-            (identical(other.doseStatusReason, doseStatusReason) ||
-                const DeepCollectionEquality()
-                    .equals(other.doseStatusReason, doseStatusReason)));
+        (other.runtimeType == runtimeType &&
+            other is _ImmunizationVaccinationProtocol &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.doseSequence, doseSequence) &&
+            const DeepCollectionEquality()
+                .equals(other.description, description) &&
+            const DeepCollectionEquality().equals(other.authority, authority) &&
+            const DeepCollectionEquality().equals(other.series, series) &&
+            const DeepCollectionEquality()
+                .equals(other.seriesElement, seriesElement) &&
+            const DeepCollectionEquality()
+                .equals(other.seriesDoses, seriesDoses) &&
+            const DeepCollectionEquality()
+                .equals(other.targetDisease, targetDisease) &&
+            const DeepCollectionEquality()
+                .equals(other.doseStatus, doseStatus) &&
+            const DeepCollectionEquality()
+                .equals(other.doseStatusReason, doseStatusReason));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(doseSequence) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(authority) ^
-      const DeepCollectionEquality().hash(series) ^
-      const DeepCollectionEquality().hash(seriesElement) ^
-      const DeepCollectionEquality().hash(seriesDoses) ^
-      const DeepCollectionEquality().hash(targetDisease) ^
-      const DeepCollectionEquality().hash(doseStatus) ^
-      const DeepCollectionEquality().hash(doseStatusReason);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(doseSequence),
+      const DeepCollectionEquality().hash(description),
+      const DeepCollectionEquality().hash(authority),
+      const DeepCollectionEquality().hash(series),
+      const DeepCollectionEquality().hash(seriesElement),
+      const DeepCollectionEquality().hash(seriesDoses),
+      const DeepCollectionEquality().hash(targetDisease),
+      const DeepCollectionEquality().hash(doseStatus),
+      const DeepCollectionEquality().hash(doseStatusReason));
 
   @JsonKey(ignore: true)
   @override
@@ -13028,33 +12707,31 @@ abstract class _ImmunizationVaccinationProtocol
       _$_ImmunizationVaccinationProtocol.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  PositiveInt get doseSequence => throw _privateConstructorUsedError;
+  PositiveInt get doseSequence;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  Reference? get authority => throw _privateConstructorUsedError;
+  Reference? get authority;
   @override
-  String? get series => throw _privateConstructorUsedError;
+  String? get series;
   @override
   @JsonKey(name: '_series')
-  Element? get seriesElement => throw _privateConstructorUsedError;
+  Element? get seriesElement;
   @override
-  PositiveInt? get seriesDoses => throw _privateConstructorUsedError;
+  PositiveInt? get seriesDoses;
   @override
-  List<CodeableConcept>? get targetDisease =>
-      throw _privateConstructorUsedError;
+  List<CodeableConcept>? get targetDisease;
   @override
-  CodeableConcept get doseStatus => throw _privateConstructorUsedError;
+  CodeableConcept get doseStatus;
   @override
-  CodeableConcept? get doseStatusReason => throw _privateConstructorUsedError;
+  CodeableConcept? get doseStatusReason;
   @override
   @JsonKey(ignore: true)
   _$ImmunizationVaccinationProtocolCopyWith<_ImmunizationVaccinationProtocol>
@@ -13110,7 +12787,7 @@ class _$ImmunizationRecommendationTearOff {
     );
   }
 
-  ImmunizationRecommendation fromJson(Map<String, Object> json) {
+  ImmunizationRecommendation fromJson(Map<String, Object?> json) {
     return ImmunizationRecommendation.fromJson(json);
   }
 }
@@ -13520,65 +13197,49 @@ class _$_ImmunizationRecommendation extends _ImmunizationRecommendation {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ImmunizationRecommendation &&
-            (identical(other.resourceType, resourceType) ||
-                const DeepCollectionEquality()
-                    .equals(other.resourceType, resourceType)) &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.meta, meta) ||
-                const DeepCollectionEquality().equals(other.meta, meta)) &&
-            (identical(other.implicitRules, implicitRules) ||
-                const DeepCollectionEquality()
-                    .equals(other.implicitRules, implicitRules)) &&
-            (identical(other.implicitRulesElement, implicitRulesElement) ||
-                const DeepCollectionEquality().equals(
-                    other.implicitRulesElement, implicitRulesElement)) &&
-            (identical(other.language, language) ||
-                const DeepCollectionEquality()
-                    .equals(other.language, language)) &&
-            (identical(other.languageElement, languageElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.languageElement, languageElement)) &&
-            (identical(other.text, text) ||
-                const DeepCollectionEquality().equals(other.text, text)) &&
-            (identical(other.contained, contained) ||
-                const DeepCollectionEquality()
-                    .equals(other.contained, contained)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.identifier, identifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.identifier, identifier)) &&
-            (identical(other.patient, patient) ||
-                const DeepCollectionEquality()
-                    .equals(other.patient, patient)) &&
-            (identical(other.recommendation, recommendation) ||
-                const DeepCollectionEquality()
-                    .equals(other.recommendation, recommendation)));
+        (other.runtimeType == runtimeType &&
+            other is _ImmunizationRecommendation &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality().equals(other.contained, contained) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.identifier, identifier) &&
+            const DeepCollectionEquality().equals(other.patient, patient) &&
+            const DeepCollectionEquality()
+                .equals(other.recommendation, recommendation));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(resourceType) ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(meta) ^
-      const DeepCollectionEquality().hash(implicitRules) ^
-      const DeepCollectionEquality().hash(implicitRulesElement) ^
-      const DeepCollectionEquality().hash(language) ^
-      const DeepCollectionEquality().hash(languageElement) ^
-      const DeepCollectionEquality().hash(text) ^
-      const DeepCollectionEquality().hash(contained) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(identifier) ^
-      const DeepCollectionEquality().hash(patient) ^
-      const DeepCollectionEquality().hash(recommendation);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(resourceType),
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(meta),
+      const DeepCollectionEquality().hash(implicitRules),
+      const DeepCollectionEquality().hash(implicitRulesElement),
+      const DeepCollectionEquality().hash(language),
+      const DeepCollectionEquality().hash(languageElement),
+      const DeepCollectionEquality().hash(text),
+      const DeepCollectionEquality().hash(contained),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(identifier),
+      const DeepCollectionEquality().hash(patient),
+      const DeepCollectionEquality().hash(recommendation));
 
   @JsonKey(ignore: true)
   @override
@@ -13621,39 +13282,37 @@ abstract class _ImmunizationRecommendation extends ImmunizationRecommendation {
 
   @override
   @JsonKey(unknownEnumValue: Dstu2ResourceType.ImmunizationRecommendation)
-  Dstu2ResourceType get resourceType => throw _privateConstructorUsedError;
+  Dstu2ResourceType get resourceType;
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  Meta? get meta => throw _privateConstructorUsedError;
+  Meta? get meta;
   @override
-  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules;
   @override
   @JsonKey(name: '_implicitRules')
-  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Element? get implicitRulesElement;
   @override
-  Code? get language => throw _privateConstructorUsedError;
+  Code? get language;
   @override
   @JsonKey(name: '_language')
-  Element? get languageElement => throw _privateConstructorUsedError;
+  Element? get languageElement;
   @override
-  Narrative? get text => throw _privateConstructorUsedError;
+  Narrative? get text;
   @override
-  List<Resource>? get contained => throw _privateConstructorUsedError;
+  List<Resource>? get contained;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  List<Identifier>? get identifier;
   @override
-  Reference get patient => throw _privateConstructorUsedError;
+  Reference get patient;
   @override
   @JsonKey(required: true)
-  List<ImmunizationRecommendationRecommendation> get recommendation =>
-      throw _privateConstructorUsedError;
+  List<ImmunizationRecommendationRecommendation> get recommendation;
   @override
   @JsonKey(ignore: true)
   _$ImmunizationRecommendationCopyWith<_ImmunizationRecommendation>
@@ -13698,7 +13357,7 @@ class _$ImmunizationRecommendationRecommendationTearOff {
     );
   }
 
-  ImmunizationRecommendationRecommendation fromJson(Map<String, Object> json) {
+  ImmunizationRecommendationRecommendation fromJson(Map<String, Object?> json) {
     return ImmunizationRecommendationRecommendation.fromJson(json);
   }
 }
@@ -14021,56 +13680,44 @@ class _$_ImmunizationRecommendationRecommendation
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ImmunizationRecommendationRecommendation &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExtension, modifierExtension) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExtension, modifierExtension)) &&
-            (identical(other.date, date) ||
-                const DeepCollectionEquality().equals(other.date, date)) &&
-            (identical(other.vaccineCode, vaccineCode) ||
-                const DeepCollectionEquality()
-                    .equals(other.vaccineCode, vaccineCode)) &&
-            (identical(other.doseNumber, doseNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.doseNumber, doseNumber)) &&
-            (identical(other.forecastStatus, forecastStatus) ||
-                const DeepCollectionEquality()
-                    .equals(other.forecastStatus, forecastStatus)) &&
-            (identical(other.dateCriterion, dateCriterion) ||
-                const DeepCollectionEquality()
-                    .equals(other.dateCriterion, dateCriterion)) &&
-            (identical(other.protocol, protocol) ||
-                const DeepCollectionEquality()
-                    .equals(other.protocol, protocol)) &&
-            (identical(other.supportingImmunization, supportingImmunization) ||
-                const DeepCollectionEquality().equals(
-                    other.supportingImmunization, supportingImmunization)) &&
-            (identical(other.supportingPatientInformation,
-                    supportingPatientInformation) ||
-                const DeepCollectionEquality().equals(
-                    other.supportingPatientInformation,
-                    supportingPatientInformation)));
+        (other.runtimeType == runtimeType &&
+            other is _ImmunizationRecommendationRecommendation &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExtension, modifierExtension) &&
+            const DeepCollectionEquality().equals(other.date, date) &&
+            const DeepCollectionEquality()
+                .equals(other.vaccineCode, vaccineCode) &&
+            const DeepCollectionEquality()
+                .equals(other.doseNumber, doseNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.forecastStatus, forecastStatus) &&
+            const DeepCollectionEquality()
+                .equals(other.dateCriterion, dateCriterion) &&
+            const DeepCollectionEquality().equals(other.protocol, protocol) &&
+            const DeepCollectionEquality()
+                .equals(other.supportingImmunization, supportingImmunization) &&
+            const DeepCollectionEquality().equals(
+                other.supportingPatientInformation,
+                supportingPatientInformation));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExtension) ^
-      const DeepCollectionEquality().hash(date) ^
-      const DeepCollectionEquality().hash(vaccineCode) ^
-      const DeepCollectionEquality().hash(doseNumber) ^
-      const DeepCollectionEquality().hash(forecastStatus) ^
-      const DeepCollectionEquality().hash(dateCriterion) ^
-      const DeepCollectionEquality().hash(protocol) ^
-      const DeepCollectionEquality().hash(supportingImmunization) ^
-      const DeepCollectionEquality().hash(supportingPatientInformation);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExtension),
+      const DeepCollectionEquality().hash(date),
+      const DeepCollectionEquality().hash(vaccineCode),
+      const DeepCollectionEquality().hash(doseNumber),
+      const DeepCollectionEquality().hash(forecastStatus),
+      const DeepCollectionEquality().hash(dateCriterion),
+      const DeepCollectionEquality().hash(protocol),
+      const DeepCollectionEquality().hash(supportingImmunization),
+      const DeepCollectionEquality().hash(supportingPatientInformation));
 
   @JsonKey(ignore: true)
   @override
@@ -14108,33 +13755,29 @@ abstract class _ImmunizationRecommendationRecommendation
       _$_ImmunizationRecommendationRecommendation.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension;
   @override
-  FhirDateTime get date => throw _privateConstructorUsedError;
+  FhirDateTime get date;
   @override
-  CodeableConcept get vaccineCode => throw _privateConstructorUsedError;
+  CodeableConcept get vaccineCode;
   @override
-  PositiveInt? get doseNumber => throw _privateConstructorUsedError;
+  PositiveInt? get doseNumber;
   @override
-  CodeableConcept get forecastStatus => throw _privateConstructorUsedError;
+  CodeableConcept get forecastStatus;
   @override
   List<ImmunizationRecommendationRecommendationDateCriterion>?
-      get dateCriterion => throw _privateConstructorUsedError;
+      get dateCriterion;
   @override
-  ImmunizationRecommendationRecommendationProtocol? get protocol =>
-      throw _privateConstructorUsedError;
+  ImmunizationRecommendationRecommendationProtocol? get protocol;
   @override
-  List<Reference>? get supportingImmunization =>
-      throw _privateConstructorUsedError;
+  List<Reference>? get supportingImmunization;
   @override
-  List<Reference>? get supportingPatientInformation =>
-      throw _privateConstructorUsedError;
+  List<Reference>? get supportingPatientInformation;
   @override
   @JsonKey(ignore: true)
   _$ImmunizationRecommendationRecommendationCopyWith<
@@ -14170,7 +13813,7 @@ class _$ImmunizationRecommendationRecommendationDateCriterionTearOff {
   }
 
   ImmunizationRecommendationRecommendationDateCriterion fromJson(
-      Map<String, Object> json) {
+      Map<String, Object?> json) {
     return ImmunizationRecommendationRecommendationDateCriterion.fromJson(json);
   }
 }
@@ -14434,33 +14077,26 @@ class _$_ImmunizationRecommendationRecommendationDateCriterion
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ImmunizationRecommendationRecommendationDateCriterion &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extensio, extensio) ||
-                const DeepCollectionEquality()
-                    .equals(other.extensio, extensio)) &&
-            (identical(other.modifier, modifier) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifier, modifier)) &&
-            (identical(other.code, code) ||
-                const DeepCollectionEquality().equals(other.code, code)) &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)) &&
-            (identical(other.valueElement, valueElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.valueElement, valueElement)));
+        (other.runtimeType == runtimeType &&
+            other is _ImmunizationRecommendationRecommendationDateCriterion &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.extensio, extensio) &&
+            const DeepCollectionEquality().equals(other.modifier, modifier) &&
+            const DeepCollectionEquality().equals(other.code, code) &&
+            const DeepCollectionEquality().equals(other.value, value) &&
+            const DeepCollectionEquality()
+                .equals(other.valueElement, valueElement));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extensio) ^
-      const DeepCollectionEquality().hash(modifier) ^
-      const DeepCollectionEquality().hash(code) ^
-      const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(valueElement);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extensio),
+      const DeepCollectionEquality().hash(modifier),
+      const DeepCollectionEquality().hash(code),
+      const DeepCollectionEquality().hash(value),
+      const DeepCollectionEquality().hash(valueElement));
 
   @JsonKey(ignore: true)
   @override
@@ -14495,18 +14131,18 @@ abstract class _ImmunizationRecommendationRecommendationDateCriterion
       _$_ImmunizationRecommendationRecommendationDateCriterion.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
-  FhirExtension? get extensio => throw _privateConstructorUsedError;
+  FhirExtension? get extensio;
   @override
-  FhirExtension? get modifier => throw _privateConstructorUsedError;
+  FhirExtension? get modifier;
   @override
-  CodeableConcept get code => throw _privateConstructorUsedError;
+  CodeableConcept get code;
   @override
-  FhirDateTime get value => throw _privateConstructorUsedError;
+  FhirDateTime get value;
   @override
   @JsonKey(name: '_value')
-  Element? get valueElement => throw _privateConstructorUsedError;
+  Element? get valueElement;
   @override
   @JsonKey(ignore: true)
   _$ImmunizationRecommendationRecommendationDateCriterionCopyWith<
@@ -14546,7 +14182,7 @@ class _$ImmunizationRecommendationRecommendationProtocolTearOff {
   }
 
   ImmunizationRecommendationRecommendationProtocol fromJson(
-      Map<String, Object> json) {
+      Map<String, Object?> json) {
     return ImmunizationRecommendationRecommendationProtocol.fromJson(json);
   }
 }
@@ -14826,42 +14462,34 @@ class _$_ImmunizationRecommendationRecommendationProtocol
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _ImmunizationRecommendationRecommendationProtocol &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.extension_, extension_) ||
-                const DeepCollectionEquality()
-                    .equals(other.extension_, extension_)) &&
-            (identical(other.modifierExten, modifierExten) ||
-                const DeepCollectionEquality()
-                    .equals(other.modifierExten, modifierExten)) &&
-            (identical(other.doseSequence, doseSequence) ||
-                const DeepCollectionEquality()
-                    .equals(other.doseSequence, doseSequence)) &&
-            (identical(other.description, description) ||
-                const DeepCollectionEquality()
-                    .equals(other.description, description)) &&
-            (identical(other.authority, authority) ||
-                const DeepCollectionEquality()
-                    .equals(other.authority, authority)) &&
-            (identical(other.series, series) ||
-                const DeepCollectionEquality().equals(other.series, series)) &&
-            (identical(other.seriesElement, seriesElement) ||
-                const DeepCollectionEquality()
-                    .equals(other.seriesElement, seriesElement)));
+        (other.runtimeType == runtimeType &&
+            other is _ImmunizationRecommendationRecommendationProtocol &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality()
+                .equals(other.modifierExten, modifierExten) &&
+            const DeepCollectionEquality()
+                .equals(other.doseSequence, doseSequence) &&
+            const DeepCollectionEquality()
+                .equals(other.description, description) &&
+            const DeepCollectionEquality().equals(other.authority, authority) &&
+            const DeepCollectionEquality().equals(other.series, series) &&
+            const DeepCollectionEquality()
+                .equals(other.seriesElement, seriesElement));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(extension_) ^
-      const DeepCollectionEquality().hash(modifierExten) ^
-      const DeepCollectionEquality().hash(doseSequence) ^
-      const DeepCollectionEquality().hash(description) ^
-      const DeepCollectionEquality().hash(authority) ^
-      const DeepCollectionEquality().hash(series) ^
-      const DeepCollectionEquality().hash(seriesElement);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(modifierExten),
+      const DeepCollectionEquality().hash(doseSequence),
+      const DeepCollectionEquality().hash(description),
+      const DeepCollectionEquality().hash(authority),
+      const DeepCollectionEquality().hash(series),
+      const DeepCollectionEquality().hash(seriesElement));
 
   @JsonKey(ignore: true)
   @override
@@ -14897,23 +14525,23 @@ abstract class _ImmunizationRecommendationRecommendationProtocol
       _$_ImmunizationRecommendationRecommendationProtocol.fromJson;
 
   @override
-  Id? get id => throw _privateConstructorUsedError;
+  Id? get id;
   @override
   @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get extension_;
   @override
-  FhirExtension? get modifierExten => throw _privateConstructorUsedError;
+  FhirExtension? get modifierExten;
   @override
-  Integer? get doseSequence => throw _privateConstructorUsedError;
+  Integer? get doseSequence;
   @override
-  String? get description => throw _privateConstructorUsedError;
+  String? get description;
   @override
-  Reference? get authority => throw _privateConstructorUsedError;
+  Reference? get authority;
   @override
-  String? get series => throw _privateConstructorUsedError;
+  String? get series;
   @override
   @JsonKey(name: '_series')
-  Element? get seriesElement => throw _privateConstructorUsedError;
+  Element? get seriesElement;
   @override
   @JsonKey(ignore: true)
   _$ImmunizationRecommendationRecommendationProtocolCopyWith<

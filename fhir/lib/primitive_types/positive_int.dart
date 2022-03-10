@@ -5,22 +5,21 @@ import 'package:yaml/yaml.dart';
 import 'fhir_number.dart';
 
 class PositiveInt extends FhirNumber {
-  const PositiveInt._(
-      String valueString, int? valueNumber, bool isValid, bool isString)
-      : super(valueString, valueNumber, isValid, isString);
+  const PositiveInt._(String valueString, int? valueNumber, bool isValid)
+      : super(valueString, valueNumber, isValid);
 
   factory PositiveInt(dynamic inValue) {
     if (inValue is int) {
       return inValue > 0
-          ? PositiveInt._(inValue.toString(), inValue, true, false)
-          : PositiveInt._(inValue.toString(), null, false, false);
-    } else if (inValue is String) {
-      final int? tempPositiveInt = int.tryParse(inValue);
+          ? PositiveInt._(inValue.toString(), inValue, true)
+          : PositiveInt._(inValue.toString(), null, false);
+    } else if (inValue is num) {
+      final int? tempPositiveInt = int.tryParse(inValue.toString());
       return tempPositiveInt == null
-          ? PositiveInt._(inValue, null, false, true)
+          ? PositiveInt._(inValue.toString(), null, false)
           : tempPositiveInt > 0
-              ? PositiveInt._(inValue, tempPositiveInt, true, true)
-              : PositiveInt._(inValue, null, false, true);
+              ? PositiveInt._(inValue.toString(), tempPositiveInt, true)
+              : PositiveInt._(inValue.toString(), null, false);
     }
     throw ArgumentError('PositiveInt cannot be constructed from $inValue.');
   }

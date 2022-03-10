@@ -8,7 +8,7 @@ part of 'medications.dart';
 
 _$_Immunization _$$_ImmunizationFromJson(Map<String, dynamic> json) =>
     _$_Immunization(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Immunization) ??
           Stu3ResourceType.Immunization,
@@ -171,43 +171,6 @@ Map<String, dynamic> _$$_ImmunizationToJson(_$_Immunization instance) {
   writeNotNull('vaccinationProtocol',
       instance.vaccinationProtocol?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Stu3ResourceTypeEnumMap = {
@@ -481,7 +444,7 @@ Map<String, dynamic> _$$_ImmunizationVaccinationProtocolToJson(
 _$_ImmunizationRecommendation _$$_ImmunizationRecommendationFromJson(
         Map<String, dynamic> json) =>
     _$_ImmunizationRecommendation(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.ImmunizationRecommendation) ??
           Stu3ResourceType.ImmunizationRecommendation,
@@ -696,7 +659,7 @@ Map<String, dynamic> _$$_ImmunizationRecommendationProtocolToJson(
 
 _$_Medication _$$_MedicationFromJson(Map<String, dynamic> json) =>
     _$_Medication(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Medication) ??
           Stu3ResourceType.Medication,
@@ -730,7 +693,7 @@ _$_Medication _$$_MedicationFromJson(Map<String, dynamic> json) =>
       code: json['code'] == null
           ? null
           : CodeableConcept.fromJson(json['code'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$MedicationStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$MedicationStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -939,7 +902,7 @@ Map<String, dynamic> _$$_MedicationBatchToJson(_$_MedicationBatch instance) {
 _$_MedicationAdministration _$$_MedicationAdministrationFromJson(
         Map<String, dynamic> json) =>
     _$_MedicationAdministration(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.MedicationAdministration) ??
           Stu3ResourceType.MedicationAdministration,
@@ -979,7 +942,7 @@ _$_MedicationAdministration _$$_MedicationAdministrationFromJson(
       partOf: (json['partOf'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$MedicationAdministrationStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
@@ -1198,7 +1161,7 @@ Map<String, dynamic> _$$_MedicationAdministrationDosageToJson(
 _$_MedicationDispense _$$_MedicationDispenseFromJson(
         Map<String, dynamic> json) =>
     _$_MedicationDispense(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.MedicationDispense) ??
           Stu3ResourceType.MedicationDispense,
@@ -1235,7 +1198,7 @@ _$_MedicationDispense _$$_MedicationDispenseFromJson(
       partOf: (json['partOf'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$MedicationDispenseStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
@@ -1466,7 +1429,7 @@ Map<String, dynamic> _$$_MedicationDispenseSubstitutionToJson(
 
 _$_MedicationRequest _$$_MedicationRequestFromJson(Map<String, dynamic> json) =>
     _$_MedicationRequest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.MedicationRequest) ??
           Stu3ResourceType.MedicationRequest,
@@ -1510,20 +1473,20 @@ _$_MedicationRequest _$$_MedicationRequestFromJson(Map<String, dynamic> json) =>
           ? null
           : Identifier.fromJson(
               json['groupIdentifier'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
-          _$MedicationRequestStatusEnumMap, json['status']),
+      status:
+          $enumDecodeNullable(_$MedicationRequestStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      intent: _$enumDecodeNullable(
-          _$MedicationRequestIntentEnumMap, json['intent']),
+      intent:
+          $enumDecodeNullable(_$MedicationRequestIntentEnumMap, json['intent']),
       intentElement: json['_intent'] == null
           ? null
           : Element.fromJson(json['_intent'] as Map<String, dynamic>),
       category: json['category'] == null
           ? null
           : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
-      priority: _$enumDecodeNullable(
+      priority: $enumDecodeNullable(
           _$MedicationRequestPriorityEnumMap, json['priority']),
       priorityElement: json['_priority'] == null
           ? null
@@ -1784,7 +1747,7 @@ Map<String, dynamic> _$$_MedicationRequestSubstitutionToJson(
 _$_MedicationStatement _$$_MedicationStatementFromJson(
         Map<String, dynamic> json) =>
     _$_MedicationStatement(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.MedicationStatement) ??
           Stu3ResourceType.MedicationStatement,
@@ -1827,7 +1790,7 @@ _$_MedicationStatement _$$_MedicationStatementFromJson(
       context: json['context'] == null
           ? null
           : Reference.fromJson(json['context'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$MedicationStatementStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
@@ -1867,8 +1830,8 @@ _$_MedicationStatement _$$_MedicationStatementFromJson(
       derivedFrom: (json['derivedFrom'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      taken: _$enumDecodeNullable(
-          _$MedicationStatementTakenEnumMap, json['taken']),
+      taken:
+          $enumDecodeNullable(_$MedicationStatementTakenEnumMap, json['taken']),
       takenElement: json['_taken'] == null
           ? null
           : Element.fromJson(json['_taken'] as Map<String, dynamic>),

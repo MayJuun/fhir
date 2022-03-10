@@ -1,7 +1,7 @@
 import 'package:fhir/r4.dart';
 import 'package:test/test.dart';
 
-void main() {
+void resourceTest() {
   test('Patient', () {
     var pat1 = Patient(id: Id('12345'), name: [
       HumanName(family: 'Faulkenberry'),

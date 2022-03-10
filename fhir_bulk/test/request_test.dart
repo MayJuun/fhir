@@ -6,7 +6,7 @@ import 'package:test/test.dart';
 
 import 'bulk_download.dart';
 
-void main() {
+void requestTest() {
   kTestMode = true;
 
   group('FHIR Bulk Request Patient:', () {
@@ -104,7 +104,7 @@ void main() {
 
       var fileString = '';
       for (final res in response) {
-        fileString += json.encode(res?.toJson());
+        fileString += jsonEncode(res?.toJson());
       }
       expect(fileString, bulkDownload);
     }, timeout: Timeout(Duration(minutes: 2)));

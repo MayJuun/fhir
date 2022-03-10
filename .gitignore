@@ -29,7 +29,7 @@
 *.pub-cache/
 *.pub/
 *build/
-*pubspec.lock
+# *pubspec.lock
 
 # Android related
 **/android/**/gradle-wrapper.jar
@@ -94,3 +94,4 @@
 *google-services.json
 *client_secret*
 *secret*
+*.sh

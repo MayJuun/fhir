@@ -1,7 +1,11 @@
 //ignore_for_file: avoid_equals_and_hash_code_on_mutable_classes, avoid_renaming_method_parameters, avoid_bool_literals_in_conditional_expressions
 
 import 'dart:convert';
+import 'package:uuid/uuid.dart' as uuid;
 import 'package:yaml/yaml.dart';
+
+/// returns the same resource with a new ID (even if there is already an ID present)
+Id newId() => Id(const uuid.Uuid().v4());
 
 class Id {
   const Id._(this._valueString, this._valueId, this._isValid);

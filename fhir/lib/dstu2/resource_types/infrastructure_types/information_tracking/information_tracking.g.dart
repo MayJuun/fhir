@@ -8,7 +8,7 @@ part of 'information_tracking.dart';
 
 _$_Questionnaire _$$_QuestionnaireFromJson(Map<String, dynamic> json) =>
     _$_Questionnaire(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Questionnaire) ??
           Dstu2ResourceType.Questionnaire,
@@ -49,7 +49,7 @@ _$_Questionnaire _$$_QuestionnaireFromJson(Map<String, dynamic> json) =>
       versionElement: json['_version'] == null
           ? null
           : Element.fromJson(json['_version'] as Map<String, dynamic>),
-      status: _$enumDecode(_$QuestionnaireStatusEnumMap, json['status'],
+      status: $enumDecode(_$QuestionnaireStatusEnumMap, json['status'],
           unknownValue: QuestionnaireStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -117,43 +117,6 @@ Map<String, dynamic> _$$_QuestionnaireToJson(_$_Questionnaire instance) {
       instance.subjectTypeElement?.map((e) => e?.toJson()).toList());
   val['group'] = instance.group.toJson();
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -349,7 +312,7 @@ _$_QuestionnaireGroupQuestion _$$_QuestionnaireGroupQuestionFromJson(
           ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
           .toList(),
       text: json['text'] as String?,
-      type: _$enumDecodeNullable(_$QuestionTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$QuestionTypeEnumMap, json['type'],
           unknownValue: QuestionType.unknown),
       required_:
           json['required'] == null ? null : Boolean.fromJson(json['required']),
@@ -421,7 +384,7 @@ _$_QuestionnaireResponse _$$_QuestionnaireResponseFromJson(
     requiredKeys: const ['status'],
   );
   return _$_QuestionnaireResponse(
-    resourceType: _$enumDecodeNullable(
+    resourceType: $enumDecodeNullable(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.QuestionnaireResponse) ??
         Dstu2ResourceType.QuestionnaireResponse,
@@ -460,7 +423,7 @@ _$_QuestionnaireResponse _$$_QuestionnaireResponseFromJson(
     questionnaire: json['questionnaire'] == null
         ? null
         : Reference.fromJson(json['questionnaire'] as Map<String, dynamic>),
-    status: _$enumDecode(_$QuestionnaireResponseStatusEnumMap, json['status'],
+    status: $enumDecode(_$QuestionnaireResponseStatusEnumMap, json['status'],
         unknownValue: QuestionnaireResponseStatus.unknown),
     statusElement: json['_status'] == null
         ? null
@@ -778,7 +741,7 @@ Map<String, dynamic> _$$_QuestionnaireResponseQuestionAnswerToJson(
 
 _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
     _$_Provenance(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Provenance) ??
           Dstu2ResourceType.Provenance,
@@ -947,7 +910,7 @@ _$_ProvenanceEntity _$$_ProvenanceEntityFromJson(Map<String, dynamic> json) =>
       fhirComments: (json['fhir_comments'] as List<dynamic>?)
           ?.map((e) => e as String)
           .toList(),
-      role: _$enumDecode(_$EntityRoleEnumMap, json['role'],
+      role: $enumDecode(_$EntityRoleEnumMap, json['role'],
           unknownValue: EntityRole.unknown),
       roleElement: json['_role'] == null
           ? null
@@ -1032,7 +995,7 @@ Map<String, dynamic> _$$_ProvenanceAgentRelatedAgentToJson(
 
 _$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
     _$_AuditEvent(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.AuditEvent) ??
           Dstu2ResourceType.AuditEvent,

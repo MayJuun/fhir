@@ -4,7 +4,7 @@ import 'package:test/test.dart';
 import 'package:fhir_path/fhir_path.dart';
 
 dynamic walkPath(dynamic arg) =>
-    walkFhirPath(resource.toJson(), arg).toString();
+    walkFhirPath(context: resource.toJson(), pathExpression: arg).toString();
 
 void testPaths() {
   group('Path Test', () {
@@ -67,33 +67,38 @@ void testPaths() {
     });
     test('Sample Patient', () {
       expect(
-          walkFhirPath(patient.toJson(), 'Patient.text.status'), ['generated']);
-      expect(walkFhirPath(patient.toJson(), 'Patient.text.div'), [
-        '<div xmlns="http://www.w3.org/1999/xhtml">\n'
-            '\t\t\t<table>\n'
-            '\t\t\t\t<tbody>\n'
-            '\t\t\t\t\t<tr>\n'
-            '\t\t\t\t\t\t<td>Name</td>\n'
-            '\t\t\t\t\t\t<td>Peter James \n'
-            '              <b>Chalmers</b> (&quot;Jim&quot;)\n'
-            '            </td>\n'
-            '\t\t\t\t\t</tr>\n'
-            '\t\t\t\t\t<tr>\n'
-            '\t\t\t\t\t\t<td>Address</td>\n'
-            '\t\t\t\t\t\t<td>534 Erewhon, Pleasantville, Vic, 3999</td>\n'
-            '\t\t\t\t\t</tr>\n'
-            '\t\t\t\t\t<tr>\n'
-            '\t\t\t\t\t\t<td>Contacts</td>\n'
-            '\t\t\t\t\t\t<td>Home: unknown. Work: (03) 5555 6473</td>\n'
-            '\t\t\t\t\t</tr>\n'
-            '\t\t\t\t\t<tr>\n'
-            '\t\t\t\t\t\t<td>Id</td>\n'
-            '\t\t\t\t\t\t<td>MRN: 12345 (Acme Healthcare)</td>\n'
-            '\t\t\t\t\t</tr>\n'
-            '\t\t\t\t</tbody>\n'
-            '\t\t\t</table>\n'
-            '\t\t</div>'
-      ]);
+          walkFhirPath(
+              context: patient.toJson(), pathExpression: 'Patient.text.status'),
+          ['generated']);
+      expect(
+          walkFhirPath(
+              context: patient.toJson(), pathExpression: 'Patient.text.div'),
+          [
+            '<div xmlns="http://www.w3.org/1999/xhtml">\n'
+                '\t\t\t<table>\n'
+                '\t\t\t\t<tbody>\n'
+                '\t\t\t\t\t<tr>\n'
+                '\t\t\t\t\t\t<td>Name</td>\n'
+                '\t\t\t\t\t\t<td>Peter James \n'
+                '              <b>Chalmers</b> (&quot;Jim&quot;)\n'
+                '            </td>\n'
+                '\t\t\t\t\t</tr>\n'
+                '\t\t\t\t\t<tr>\n'
+                '\t\t\t\t\t\t<td>Address</td>\n'
+                '\t\t\t\t\t\t<td>534 Erewhon, Pleasantville, Vic, 3999</td>\n'
+                '\t\t\t\t\t</tr>\n'
+                '\t\t\t\t\t<tr>\n'
+                '\t\t\t\t\t\t<td>Contacts</td>\n'
+                '\t\t\t\t\t\t<td>Home: unknown. Work: (03) 5555 6473</td>\n'
+                '\t\t\t\t\t</tr>\n'
+                '\t\t\t\t\t<tr>\n'
+                '\t\t\t\t\t\t<td>Id</td>\n'
+                '\t\t\t\t\t\t<td>MRN: 12345 (Acme Healthcare)</td>\n'
+                '\t\t\t\t\t</tr>\n'
+                '\t\t\t\t</tbody>\n'
+                '\t\t\t</table>\n'
+                '\t\t</div>'
+          ]);
     });
   });
 }

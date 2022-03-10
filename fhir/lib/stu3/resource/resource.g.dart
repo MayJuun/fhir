@@ -9,7 +9,7 @@ part of 'resource.dart';
 Resource _$ResourceFromJson(Map<String, dynamic> json) => Resource()
   ..id = json['id'] == null ? null : Id.fromJson(json['id'])
   ..resourceType =
-      _$enumDecodeNullable(_$Stu3ResourceTypeEnumMap, json['resourceType'])
+      $enumDecodeNullable(_$Stu3ResourceTypeEnumMap, json['resourceType'])
   ..meta = json['meta'] == null
       ? null
       : Meta.fromJson(json['meta'] as Map<String, dynamic>)
@@ -53,43 +53,6 @@ Map<String, dynamic> _$ResourceToJson(Resource instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Stu3ResourceTypeEnumMap = {

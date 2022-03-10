@@ -8,7 +8,7 @@ part of 'documents.dart';
 
 _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
     _$_Composition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.Composition) ??
           Stu3ResourceType.Composition,
@@ -42,7 +42,7 @@ _$_Composition _$$_CompositionFromJson(Map<String, dynamic> json) =>
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$CompositionStatusEnumMap, json['status']),
+      status: $enumDecodeNullable(_$CompositionStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -133,43 +133,6 @@ Map<String, dynamic> _$$_CompositionToJson(_$_Composition instance) {
   writeNotNull('event', instance.event?.map((e) => e.toJson()).toList());
   writeNotNull('section', instance.section?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Stu3ResourceTypeEnumMap = {
@@ -304,7 +267,7 @@ _$_CompositionAttester _$$_CompositionAttesterFromJson(
         Map<String, dynamic> json) =>
     _$_CompositionAttester(
       mode: (json['mode'] as List<dynamic>?)
-          ?.map((e) => _$enumDecode(_$CompositionAttesterModeEnumMap, e))
+          ?.map((e) => $enumDecode(_$CompositionAttesterModeEnumMap, e))
           .toList(),
       modeElement: (json['_mode'] as List<dynamic>?)
           ?.map((e) =>
@@ -464,7 +427,7 @@ Map<String, dynamic> _$$_CompositionSectionToJson(
 
 _$_DocumentManifest _$$_DocumentManifestFromJson(Map<String, dynamic> json) =>
     _$_DocumentManifest(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.DocumentManifest) ??
           Stu3ResourceType.DocumentManifest,
@@ -503,7 +466,7 @@ _$_DocumentManifest _$$_DocumentManifestFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
       status:
-          _$enumDecodeNullable(_$DocumentManifestStatusEnumMap, json['status']),
+          $enumDecodeNullable(_$DocumentManifestStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -647,7 +610,7 @@ Map<String, dynamic> _$$_DocumentManifestRelatedToJson(
 
 _$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
     _$_DocumentReference(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Stu3ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Stu3ResourceType.DocumentReference) ??
           Stu3ResourceType.DocumentReference,
@@ -685,8 +648,8 @@ _$_DocumentReference _$$_DocumentReferenceFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(
-          _$DocumentReferenceStatusEnumMap, json['status']),
+      status:
+          $enumDecodeNullable(_$DocumentReferenceStatusEnumMap, json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -802,7 +765,7 @@ const _$DocumentReferenceStatusEnumMap = {
 _$_DocumentReferenceRelatesTo _$$_DocumentReferenceRelatesToFromJson(
         Map<String, dynamic> json) =>
     _$_DocumentReferenceRelatesTo(
-      code: _$enumDecodeNullable(
+      code: $enumDecodeNullable(
           _$DocumentReferenceRelatesToCodeEnumMap, json['code']),
       codeElement: json['_code'] == null
           ? null

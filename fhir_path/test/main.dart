@@ -1,15 +1,179 @@
+import 'dart:convert';
+
 import 'package:fhir/r4.dart';
 import 'package:fhir_path/fhir_path.dart';
-import 'package:fhir_path/run_fhir_path.dart';
 
 void main() {
-  print(
-    walkFhirPath(
-      bundle.toJson(),
-      "entry.resource.ofType(QuestionnaireResponse).item.where(linkId.contains('/posi/')).answer.valueCoding.extension.value.aggregate(\$this + \$total, 0)",
-    ),
-  );
+  final path = "(%resource.item.where(linkId='/8302-2').answer.value*3)";
+  print(walkFhirPath(
+    context: ozair,
+    pathExpression: path,
+    resource: ozair,
+  ));
+
+  final response = QuestionnaireResponse.fromJson(ozair);
+
+  print(response.item?[0].answer?[0].valueDecimal);
+  print(response.item?[0].answer?[0].valueDecimal?.isInt);
+  print(response.item?[0].answer?[0].valueDecimal?.isValid);
+
+  // final l1 = '1,2,3,4,5,6,7,8,9,0';
+  // final l2 = '1,2,3,4,5';
+  // print(l1.substring(0,l2.length));
+  // print(l1.substring(l2.length));
+  // print(11.remainder(12));
+  // print(23.remainder(12));
+  // print(Duration(days: 12, hours: 12));
+
+  // final dateTime = DateTime(2020, 1, 1);
+  // print(DateTime(dateTime.year + 12, dateTime.month + 27, dateTime.day + 1065));
+  // final response = QuestionnaireResponse.fromJson(questionnaireResponse);
+
+  // print(walkFhirPath(observationExample(), r"Observation.value is Quantity"));
+
+  // print(walkFhirPath(
+  //   arguments,
+  //   " %resource.item.where(linkId='/8302-2').answer.value*0.0254",
+  // ));
+  //       expect(walkFhirPath(null, 'iif(true, 1, 0)'), [1]);
+  //     expect(walkFhirPath(null, 'iif(false, 1, 0)'), [0]);
+  //     expect(walkFhirPath(null, 'iif({}, 1, 0)'), [0]);
+  //     // non-empty, non-bool is true.
+  //     expect(walkFhirPath(null, 'iif(5, 1, 0)'), [1]);
+  //     expect(walkFhirPath(null, 'iif(true, 1)'), [1]);
+  //     expect(walkFhirPath(null, 'iif(false, 1)'), []);
+  // print(walkFhirPath(response.toJson(),
+  //     r"QuestionnaireResponse.item.answer.valueCoding.extension.valueDecimal.aggregate($this + $total, 0)"));
+  // print(lexer().parse(r'75 - 70 - 75'));
+  // print(walkFhirPath(response.toJson(), r"75 - 70 - 75"));
+  // print(walkFhirPath(response.toJson(), r"6 months"));
+  // print(walkFhirPath(response.toJson(), r"today() + 6 months"));
+  // print(walkFhirPath(response.toJson(), r"today() - 6 months"));
+
+  // print(walkFhirPath(null, "'PARENT: I,'", {
+  //   '%relatedPerson': relatedPerson.toJson(),
+  //   '%patient': null,
+  //   '%practitioner': null,
+  // }));
 }
+
+final ozair = <String, dynamic>{
+  "resourceType": "QuestionnaireResponse",
+  "status": "in-progress",
+  "item": [
+    {
+      "linkId": "/29463-7",
+      "text": "Weight",
+      "answer": [
+        {"valueDecimal": "185"}
+      ]
+    },
+    {"linkId": "/8352-7", "text": "Clothing worn during measure", "answer": []},
+    {
+      "linkId": "/8302-2",
+      "text": "Body height",
+      "answer": [
+        {"valueDecimal": 66.89999999999999}
+      ]
+    },
+    {"linkId": "/39156-5", "text": "BMI", "answer": []},
+    {
+      "linkId": "/8361-8",
+      "text": "Bdy position with respect to gravity",
+      "answer": []
+    }
+  ]
+};
+
+Map<String, dynamic>? observationExample() {
+  return jsonDecode(observationJsonString);
+}
+
+const observationJsonString = r'''{
+	"resourceType": "Observation",
+	"id": "example",
+	"text": {
+		"status": "generated",
+		"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative with Details</b></p><p><b>id</b>: example</p><p><b>status</b>: final</p><p><b>category</b>: Vital Signs <span>(Details : {http://terminology.hl7.org/CodeSystem/observation-category code 'vital-signs' = 'Vital Signs', given as 'Vital Signs'})</span></p><p><b>code</b>: Body Weight <span>(Details : {LOINC code '29463-7' = 'Body weight', given as 'Body Weight'}; {LOINC code '3141-9' = 'Body weight Measured', given as 'Body weight Measured'}; {SNOMED CT code '27113001' = 'Body weight', given as 'Body weight'}; {http://acme.org/devices/clinical-codes code 'body-weight' = 'body-weight', given as 'Body Weight'})</span></p><p><b>subject</b>: <a>Patient/example</a></p><p><b>encounter</b>: <a>Encounter/example</a></p><p><b>effective</b>: 28/03/2016</p><p><b>value</b>: 185 lbs<span> (Details: UCUM code [lb_av] = 'lb_av')</span></p></div>"
+	},
+	"status": "final",
+	"category": [
+		{
+			"coding": [
+				{
+					"system": "http://terminology.hl7.org/CodeSystem/observation-category",
+					"code": "vital-signs",
+					"display": "Vital Signs"
+				}
+			]
+		}
+	],
+	"code": {
+		"coding": [
+			{
+				"system": "http://loinc.org",
+				"code": "29463-7",
+				"display": "Body Weight"
+			},
+			{
+				"system": "http://loinc.org",
+				"code": "3141-9",
+				"display": "Body weight Measured"
+			},
+			{
+				"system": "http://snomed.info/sct",
+				"code": "27113001",
+				"display": "Body weight"
+			},
+			{
+				"system": "http://acme.org/devices/clinical-codes",
+				"code": "body-weight",
+				"display": "Body Weight"
+			}
+		]
+	},
+	"subject": {
+		"reference": "Patient/example"
+	},
+	"encounter": {
+		"reference": "Encounter/example"
+	},
+	"effectiveDateTime": "2016-03-28",
+	"valueQuantity": {
+		"value": 185,
+		"unit": "lbs",
+		"system": "http://unitsofmeasure.org",
+		"code": "[lb_av]"
+	}
+}''';
+
+final arguments = {
+  "resourceType": "QuestionnaireResponse",
+  "status": "in-progress",
+  "item": [
+    {
+      "linkId": "/29463-7",
+      "text": "Weight",
+      "answer": [
+        {"valueDecimal": 185}
+      ]
+    },
+    {"linkId": "/8352-7", "text": "Clothing worn during measure", "answer": []},
+    {
+      "linkId": "/8302-2",
+      "text": "Body height",
+      "answer": [
+        {"valueDecimal": 66.89999999999999}
+      ]
+    },
+    {"linkId": "/39156-5", "text": "BMI", "answer": []},
+    {
+      "linkId": "/8361-8",
+      "text": "Bdy position with respect to gravity",
+      "answer": []
+    }
+  ]
+};
 
 final bundle = Bundle.fromJson({
   "resourceType": "Bundle",

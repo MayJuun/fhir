@@ -3,7 +3,7 @@ import 'package:fhir_at_rest/globals.dart' as globals;
 import 'package:fhir_at_rest/r4.dart';
 import 'package:test/test.dart';
 
-void main() {
+Future<void> requestsTest() async {
   globals.kTestMode = true;
   const String mimeType = 'json';
 

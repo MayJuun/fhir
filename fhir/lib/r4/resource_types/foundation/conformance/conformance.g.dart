@@ -9,7 +9,7 @@ part of 'conformance.dart';
 _$_CapabilityStatement _$$_CapabilityStatementFromJson(
         Map<String, dynamic> json) =>
     _$_CapabilityStatement(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.CapabilityStatement) ??
           R4ResourceType.CapabilityStatement,
@@ -56,7 +56,7 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$CapabilityStatementStatusEnumMap, json['status'],
           unknownValue: CapabilityStatementStatus.unknown),
       statusElement: json['_status'] == null
@@ -102,7 +102,7 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
       copyrightElement: json['_copyright'] == null
           ? null
           : Element.fromJson(json['_copyright'] as Map<String, dynamic>),
-      kind: _$enumDecodeNullable(_$CapabilityStatementKindEnumMap, json['kind'],
+      kind: $enumDecodeNullable(_$CapabilityStatementKindEnumMap, json['kind'],
           unknownValue: CapabilityStatementKind.unknown),
       kindElement: json['_kind'] == null
           ? null
@@ -121,7 +121,7 @@ _$_CapabilityStatement _$$_CapabilityStatementFromJson(
           ? null
           : CapabilityStatementImplementation.fromJson(
               json['implementation'] as Map<String, dynamic>),
-      fhirVersion: _$enumDecodeNullable(
+      fhirVersion: $enumDecodeNullable(
           _$CapabilityStatementFhirVersionEnumMap, json['fhirVersion'],
           unknownValue: CapabilityStatementFhirVersion.unknown),
       fhirVersionElement: json['_fhirVersion'] == null
@@ -234,43 +234,6 @@ Map<String, dynamic> _$$_CapabilityStatementToJson(
       'messaging', instance.messaging?.map((e) => e.toJson()).toList());
   writeNotNull('document', instance.document?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R4ResourceTypeEnumMap = {
@@ -571,7 +534,7 @@ _$_CapabilityStatementRest _$$_CapabilityStatementRestFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      mode: _$enumDecodeNullable(
+      mode: $enumDecodeNullable(
           _$CapabilityStatementRestModeEnumMap, json['mode'],
           unknownValue: CapabilityStatementRestMode.unknown),
       modeElement: json['_mode'] == null
@@ -723,7 +686,7 @@ _$_CapabilityStatementResource _$$_CapabilityStatementResourceFromJson(
           ?.map((e) => CapabilityStatementInteraction.fromJson(
               e as Map<String, dynamic>))
           .toList(),
-      versioning: _$enumDecodeNullable(
+      versioning: $enumDecodeNullable(
           _$CapabilityStatementResourceVersioningEnumMap, json['versioning'],
           unknownValue: CapabilityStatementResourceVersioning.unknown),
       versioningElement: json['_versioning'] == null
@@ -748,7 +711,7 @@ _$_CapabilityStatementResource _$$_CapabilityStatementResourceFromJson(
           ? null
           : Element.fromJson(
               json['_conditionalCreate'] as Map<String, dynamic>),
-      conditionalRead: _$enumDecodeNullable(
+      conditionalRead: $enumDecodeNullable(
           _$CapabilityStatementResourceConditionalReadEnumMap,
           json['conditionalRead'],
           unknownValue: CapabilityStatementResourceConditionalRead.unknown),
@@ -762,7 +725,7 @@ _$_CapabilityStatementResource _$$_CapabilityStatementResourceFromJson(
           ? null
           : Element.fromJson(
               json['_conditionalUpdate'] as Map<String, dynamic>),
-      conditionalDelete: _$enumDecodeNullable(
+      conditionalDelete: $enumDecodeNullable(
           _$CapabilityStatementResourceConditionalDeleteEnumMap,
           json['conditionalDelete'],
           unknownValue: CapabilityStatementResourceConditionalDelete.unknown),
@@ -771,7 +734,7 @@ _$_CapabilityStatementResource _$$_CapabilityStatementResourceFromJson(
           : Element.fromJson(
               json['_conditionalDelete'] as Map<String, dynamic>),
       referencePolicy: (json['referencePolicy'] as List<dynamic>?)
-          ?.map((e) => _$enumDecode(
+          ?.map((e) => $enumDecode(
               _$CapabilityStatementResourceReferencePolicyEnumMap, e))
           .toList(),
       referencePolicyElement: (json['_referencePolicy'] as List<dynamic>?)
@@ -911,7 +874,7 @@ _$_CapabilityStatementInteraction _$$_CapabilityStatementInteractionFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: _$enumDecodeNullable(
+      code: $enumDecodeNullable(
           _$CapabilityStatementInteractionCodeEnumMap, json['code'],
           unknownValue: CapabilityStatementInteractionCode.unknown),
       codeElement: json['_code'] == null
@@ -978,7 +941,7 @@ _$_CapabilityStatementSearchParam _$$_CapabilityStatementSearchParamFromJson(
       definition: json['definition'] == null
           ? null
           : Canonical.fromJson(json['definition']),
-      type: _$enumDecodeNullable(
+      type: $enumDecodeNullable(
           _$CapabilityStatementSearchParamTypeEnumMap, json['type'],
           unknownValue: CapabilityStatementSearchParamType.unknown),
       typeElement: json['_type'] == null
@@ -1087,7 +1050,7 @@ _$_CapabilityStatementInteraction1 _$$_CapabilityStatementInteraction1FromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: _$enumDecodeNullable(
+      code: $enumDecodeNullable(
           _$CapabilityStatementInteraction1CodeEnumMap, json['code'],
           unknownValue: CapabilityStatementInteraction1Code.unknown),
       codeElement: json['_code'] == null
@@ -1239,7 +1202,7 @@ _$_CapabilityStatementSupportedMessage
           modifierExtension: (json['modifierExtension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
-          mode: _$enumDecodeNullable(
+          mode: $enumDecodeNullable(
               _$CapabilityStatementSupportedMessageModeEnumMap, json['mode'],
               unknownValue: CapabilityStatementSupportedMessageMode.unknown),
           modeElement: json['_mode'] == null
@@ -1286,7 +1249,7 @@ _$_CapabilityStatementDocument _$$_CapabilityStatementDocumentFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      mode: _$enumDecodeNullable(
+      mode: $enumDecodeNullable(
           _$CapabilityStatementDocumentModeEnumMap, json['mode'],
           unknownValue: CapabilityStatementDocumentMode.unknown),
       modeElement: json['_mode'] == null
@@ -1333,7 +1296,7 @@ const _$CapabilityStatementDocumentModeEnumMap = {
 _$_CompartmentDefinition _$$_CompartmentDefinitionFromJson(
         Map<String, dynamic> json) =>
     _$_CompartmentDefinition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.CompartmentDefinition) ??
           R4ResourceType.CompartmentDefinition,
@@ -1376,7 +1339,7 @@ _$_CompartmentDefinition _$$_CompartmentDefinitionFromJson(
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$CompartmentDefinitionStatusEnumMap, json['status'],
           unknownValue: CompartmentDefinitionStatus.unknown),
       statusElement: json['_status'] == null
@@ -1413,7 +1376,7 @@ _$_CompartmentDefinition _$$_CompartmentDefinitionFromJson(
       purposeElement: json['_purpose'] == null
           ? null
           : Element.fromJson(json['_purpose'] as Map<String, dynamic>),
-      code: _$enumDecodeNullable(
+      code: $enumDecodeNullable(
           _$CompartmentDefinitionCodeEnumMap, json['code'],
           unknownValue: CompartmentDefinitionCode.unknown),
       codeElement: json['_code'] == null
@@ -1552,7 +1515,7 @@ Map<String, dynamic> _$$_CompartmentDefinitionResourceToJson(
 
 _$_ExampleScenario _$$_ExampleScenarioFromJson(Map<String, dynamic> json) =>
     _$_ExampleScenario(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ExampleScenario) ??
           R4ResourceType.ExampleScenario,
@@ -1598,7 +1561,7 @@ _$_ExampleScenario _$$_ExampleScenarioFromJson(Map<String, dynamic> json) =>
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$ExampleScenarioStatusEnumMap, json['status'],
           unknownValue: ExampleScenarioStatus.unknown),
       statusElement: json['_status'] == null
@@ -1731,8 +1694,7 @@ _$_ExampleScenarioActor _$$_ExampleScenarioActorFromJson(
       actorIdElement: json['_actorId'] == null
           ? null
           : Element.fromJson(json['_actorId'] as Map<String, dynamic>),
-      type: _$enumDecodeNullable(
-          _$ExampleScenarioActorTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$ExampleScenarioActorTypeEnumMap, json['type'],
           unknownValue: ExampleScenarioActorType.unknown),
       typeElement: json['_type'] == null
           ? null
@@ -2196,7 +2158,7 @@ Map<String, dynamic> _$$_ExampleScenarioAlternativeToJson(
 
 _$_GraphDefinition _$$_GraphDefinitionFromJson(Map<String, dynamic> json) =>
     _$_GraphDefinition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.GraphDefinition) ??
           R4ResourceType.GraphDefinition,
@@ -2239,7 +2201,7 @@ _$_GraphDefinition _$$_GraphDefinitionFromJson(Map<String, dynamic> json) =>
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$GraphDefinitionStatusEnumMap, json['status'],
           unknownValue: GraphDefinitionStatus.unknown),
       statusElement: json['_status'] == null
@@ -2481,7 +2443,7 @@ _$_GraphDefinitionCompartment _$$_GraphDefinitionCompartmentFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      use: _$enumDecodeNullable(
+      use: $enumDecodeNullable(
           _$GraphDefinitionCompartmentUseEnumMap, json['use'],
           unknownValue: GraphDefinitionCompartmentUse.unknown),
       useElement: json['_use'] == null
@@ -2491,7 +2453,7 @@ _$_GraphDefinitionCompartment _$$_GraphDefinitionCompartmentFromJson(
       codeElement: json['_code'] == null
           ? null
           : Element.fromJson(json['_code'] as Map<String, dynamic>),
-      rule: _$enumDecodeNullable(
+      rule: $enumDecodeNullable(
           _$GraphDefinitionCompartmentRuleEnumMap, json['rule'],
           unknownValue: GraphDefinitionCompartmentRule.unknown),
       ruleElement: json['_rule'] == null
@@ -2552,7 +2514,7 @@ const _$GraphDefinitionCompartmentRuleEnumMap = {
 _$_ImplementationGuide _$$_ImplementationGuideFromJson(
         Map<String, dynamic> json) =>
     _$_ImplementationGuide(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ImplementationGuide) ??
           R4ResourceType.ImplementationGuide,
@@ -2599,7 +2561,7 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$ImplementationGuideStatusEnumMap, json['status'],
           unknownValue: ImplementationGuideStatus.unknown),
       statusElement: json['_status'] == null
@@ -2645,14 +2607,14 @@ _$_ImplementationGuide _$$_ImplementationGuideFromJson(
       packageIdElement: json['_packageId'] == null
           ? null
           : Element.fromJson(json['_packageId'] as Map<String, dynamic>),
-      license: _$enumDecodeNullable(
+      license: $enumDecodeNullable(
           _$ImplementationGuideLicenseEnumMap, json['license'],
           unknownValue: ImplementationGuideLicense.unknown),
       licenseElement: json['_license'] == null
           ? null
           : Element.fromJson(json['_license'] as Map<String, dynamic>),
       fhirVersion: (json['fhirVersion'] as List<dynamic>?)
-          ?.map((e) => _$enumDecode(_$ImplementationGuideFhirVersionEnumMap, e))
+          ?.map((e) => $enumDecode(_$ImplementationGuideFhirVersionEnumMap, e))
           .toList(),
       fhirVersionElement: (json['_fhirVersion'] as List<dynamic>?)
           ?.map((e) =>
@@ -3329,7 +3291,7 @@ _$_ImplementationGuideResource _$$_ImplementationGuideResourceFromJson(
       reference: Reference.fromJson(json['reference'] as Map<String, dynamic>),
       fhirVersion: (json['fhirVersion'] as List<dynamic>?)
           ?.map((e) =>
-              _$enumDecode(_$ImplementationGuideResourceFhirVersionEnumMap, e))
+              $enumDecode(_$ImplementationGuideResourceFhirVersionEnumMap, e))
           .toList(),
       fhirVersionElement: (json['_fhirVersion'] as List<dynamic>?)
           ?.map((e) =>
@@ -3446,7 +3408,7 @@ _$_ImplementationGuidePage _$$_ImplementationGuidePageFromJson(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      generation: _$enumDecodeNullable(
+      generation: $enumDecodeNullable(
           _$ImplementationGuidePageGenerationEnumMap, json['generation'],
           unknownValue: ImplementationGuidePageGeneration.unknown),
       generationElement: json['_generation'] == null
@@ -3503,7 +3465,7 @@ _$_ImplementationGuideParameter _$$_ImplementationGuideParameterFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      code: _$enumDecodeNullable(
+      code: $enumDecodeNullable(
           _$ImplementationGuideParameterCodeEnumMap, json['code'],
           unknownValue: ImplementationGuideParameterCode.unknown),
       codeElement: json['_code'] == null
@@ -3775,7 +3737,7 @@ Map<String, dynamic> _$$_ImplementationGuidePage1ToJson(
 
 _$_MessageDefinition _$$_MessageDefinitionFromJson(Map<String, dynamic> json) =>
     _$_MessageDefinition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.MessageDefinition) ??
           R4ResourceType.MessageDefinition,
@@ -3828,7 +3790,7 @@ _$_MessageDefinition _$$_MessageDefinitionFromJson(Map<String, dynamic> json) =>
       replaces: (json['replaces'] as List<dynamic>?)
           ?.map((e) => Canonical.fromJson(e))
           .toList(),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$MessageDefinitionStatusEnumMap, json['status'],
           unknownValue: MessageDefinitionStatus.unknown),
       statusElement: json['_status'] == null
@@ -3886,7 +3848,7 @@ _$_MessageDefinition _$$_MessageDefinitionFromJson(Map<String, dynamic> json) =>
       eventUriElement: json['_eventUri'] == null
           ? null
           : Element.fromJson(json['_eventUri'] as Map<String, dynamic>),
-      category: _$enumDecodeNullable(
+      category: $enumDecodeNullable(
           _$MessageDefinitionCategoryEnumMap, json['category'],
           unknownValue: MessageDefinitionCategory.unknown),
       categoryElement: json['_category'] == null
@@ -3896,7 +3858,7 @@ _$_MessageDefinition _$$_MessageDefinitionFromJson(Map<String, dynamic> json) =>
           ?.map(
               (e) => MessageDefinitionFocus.fromJson(e as Map<String, dynamic>))
           .toList(),
-      responseRequired: _$enumDecodeNullable(
+      responseRequired: $enumDecodeNullable(
           _$MessageDefinitionResponseRequiredEnumMap, json['responseRequired'],
           unknownValue: MessageDefinitionResponseRequired.unknown),
       responseRequiredElement: json['_responseRequired'] == null
@@ -4100,7 +4062,7 @@ Map<String, dynamic> _$$_MessageDefinitionAllowedResponseToJson(
 _$_OperationDefinition _$$_OperationDefinitionFromJson(
         Map<String, dynamic> json) =>
     _$_OperationDefinition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.OperationDefinition) ??
           R4ResourceType.OperationDefinition,
@@ -4147,13 +4109,13 @@ _$_OperationDefinition _$$_OperationDefinitionFromJson(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$OperationDefinitionStatusEnumMap, json['status'],
           unknownValue: OperationDefinitionStatus.unknown),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      kind: _$enumDecodeNullable(_$OperationDefinitionKindEnumMap, json['kind'],
+      kind: $enumDecodeNullable(_$OperationDefinitionKindEnumMap, json['kind'],
           unknownValue: OperationDefinitionKind.unknown),
       kindElement: json['_kind'] == null
           ? null
@@ -4347,7 +4309,7 @@ _$_OperationDefinitionParameter _$$_OperationDefinitionParameterFromJson(
       nameElement: json['_name'] == null
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
-      use: _$enumDecodeNullable(
+      use: $enumDecodeNullable(
           _$OperationDefinitionParameterUseEnumMap, json['use'],
           unknownValue: OperationDefinitionParameterUse.unknown),
       useElement: json['_use'] == null
@@ -4372,7 +4334,7 @@ _$_OperationDefinitionParameter _$$_OperationDefinitionParameterFromJson(
       targetProfile: (json['targetProfile'] as List<dynamic>?)
           ?.map((e) => Canonical.fromJson(e))
           .toList(),
-      searchType: _$enumDecodeNullable(
+      searchType: $enumDecodeNullable(
           _$OperationDefinitionParameterSearchTypeEnumMap, json['searchType'],
           unknownValue: OperationDefinitionParameterSearchType.unknown),
       searchTypeElement: json['_searchType'] == null
@@ -4460,7 +4422,7 @@ _$_OperationDefinitionBinding _$$_OperationDefinitionBindingFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      strength: _$enumDecodeNullable(
+      strength: $enumDecodeNullable(
           _$OperationDefinitionBindingStrengthEnumMap, json['strength'],
           unknownValue: OperationDefinitionBindingStrength.unknown),
       strengthElement: json['_strength'] == null
@@ -4589,7 +4551,7 @@ Map<String, dynamic> _$$_OperationDefinitionOverloadToJson(
 
 _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
     _$_SearchParameter(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.SearchParameter) ??
           R4ResourceType.SearchParameter,
@@ -4635,7 +4597,7 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
       derivedFrom: json['derivedFrom'] == null
           ? null
           : Canonical.fromJson(json['derivedFrom']),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$SearchParameterStatusEnumMap, json['status'],
           unknownValue: SearchParameterStatus.unknown),
       statusElement: json['_status'] == null
@@ -4686,7 +4648,7 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecodeNullable(_$SearchParameterTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$SearchParameterTypeEnumMap, json['type'],
           unknownValue: SearchParameterType.unknown),
       typeElement: json['_type'] == null
           ? null
@@ -4699,7 +4661,7 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
       xpathElement: json['_xpath'] == null
           ? null
           : Element.fromJson(json['_xpath'] as Map<String, dynamic>),
-      xpathUsage: _$enumDecodeNullable(
+      xpathUsage: $enumDecodeNullable(
           _$SearchParameterXpathUsageEnumMap, json['xpathUsage'],
           unknownValue: SearchParameterXpathUsage.unknown),
       xpathUsageElement: json['_xpathUsage'] == null
@@ -4725,14 +4687,14 @@ _$_SearchParameter _$$_SearchParameterFromJson(Map<String, dynamic> json) =>
           ? null
           : Element.fromJson(json['_multipleAnd'] as Map<String, dynamic>),
       comparator: (json['comparator'] as List<dynamic>?)
-          ?.map((e) => _$enumDecode(_$SearchParameterComparatorEnumMap, e))
+          ?.map((e) => $enumDecode(_$SearchParameterComparatorEnumMap, e))
           .toList(),
       comparatorElement: (json['_comparator'] as List<dynamic>?)
           ?.map((e) =>
               e == null ? null : Element.fromJson(e as Map<String, dynamic>))
           .toList(),
       modifier: (json['modifier'] as List<dynamic>?)
-          ?.map((e) => _$enumDecode(_$SearchParameterModifierEnumMap, e))
+          ?.map((e) => $enumDecode(_$SearchParameterModifierEnumMap, e))
           .toList(),
       modifierElement: (json['_modifier'] as List<dynamic>?)
           ?.map((e) =>
@@ -4939,7 +4901,7 @@ Map<String, dynamic> _$$_SearchParameterComponentToJson(
 _$_StructureDefinition _$$_StructureDefinitionFromJson(
         Map<String, dynamic> json) =>
     _$_StructureDefinition(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.StructureDefinition) ??
           R4ResourceType.StructureDefinition,
@@ -4989,7 +4951,7 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$StructureDefinitionStatusEnumMap, json['status'],
           unknownValue: StructureDefinitionStatus.unknown),
       statusElement: json['_status'] == null
@@ -5038,7 +5000,7 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
       keyword: (json['keyword'] as List<dynamic>?)
           ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
           .toList(),
-      fhirVersion: _$enumDecodeNullable(
+      fhirVersion: $enumDecodeNullable(
           _$StructureDefinitionFhirVersionEnumMap, json['fhirVersion'],
           unknownValue: StructureDefinitionFhirVersion.unknown),
       fhirVersionElement: json['_fhirVersion'] == null
@@ -5048,7 +5010,7 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
           ?.map((e) =>
               StructureDefinitionMapping.fromJson(e as Map<String, dynamic>))
           .toList(),
-      kind: _$enumDecodeNullable(_$StructureDefinitionKindEnumMap, json['kind'],
+      kind: $enumDecodeNullable(_$StructureDefinitionKindEnumMap, json['kind'],
           unknownValue: StructureDefinitionKind.unknown),
       kindElement: json['_kind'] == null
           ? null
@@ -5079,7 +5041,7 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
       baseDefinitionElement: json['_baseDefinition'] == null
           ? null
           : Element.fromJson(json['_baseDefinition'] as Map<String, dynamic>),
-      derivation: _$enumDecodeNullable(
+      derivation: $enumDecodeNullable(
           _$StructureDefinitionDerivationEnumMap, json['derivation'],
           unknownValue: StructureDefinitionDerivation.unknown),
       derivationElement: json['_derivation'] == null
@@ -5285,7 +5247,7 @@ _$_StructureDefinitionContext _$$_StructureDefinitionContextFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecodeNullable(
+      type: $enumDecodeNullable(
           _$StructureDefinitionContextTypeEnumMap, json['type'],
           unknownValue: StructureDefinitionContextType.unknown),
       typeElement: json['_type'] == null
@@ -5396,7 +5358,7 @@ Map<String, dynamic> _$$_StructureDefinitionDifferentialToJson(
 
 _$_StructureMap _$$_StructureMapFromJson(Map<String, dynamic> json) =>
     _$_StructureMap(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.StructureMap) ??
           R4ResourceType.StructureMap,
@@ -5446,7 +5408,7 @@ _$_StructureMap _$$_StructureMapFromJson(Map<String, dynamic> json) =>
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(_$StructureMapStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$StructureMapStatusEnumMap, json['status'],
           unknownValue: StructureMapStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -5581,7 +5543,7 @@ _$_StructureMapStructure _$$_StructureMapStructureFromJson(
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
       url: Canonical.fromJson(json['url']),
-      mode: _$enumDecodeNullable(
+      mode: $enumDecodeNullable(
           _$StructureMapStructureModeEnumMap, json['mode'],
           unknownValue: StructureMapStructureMode.unknown),
       modeElement: json['_mode'] == null
@@ -5647,7 +5609,7 @@ _$_StructureMapGroup _$$_StructureMapGroupFromJson(Map<String, dynamic> json) =>
       extendsElement: json['_extends'] == null
           ? null
           : Element.fromJson(json['_extends'] as Map<String, dynamic>),
-      typeMode: _$enumDecodeNullable(
+      typeMode: $enumDecodeNullable(
           _$StructureMapGroupTypeModeEnumMap, json['typeMode'],
           unknownValue: StructureMapGroupTypeMode.unknown),
       typeModeElement: json['_typeMode'] == null
@@ -5718,7 +5680,7 @@ _$_StructureMapInput _$$_StructureMapInputFromJson(Map<String, dynamic> json) =>
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
-      mode: _$enumDecodeNullable(_$StructureMapInputModeEnumMap, json['mode'],
+      mode: $enumDecodeNullable(_$StructureMapInputModeEnumMap, json['mode'],
           unknownValue: StructureMapInputMode.unknown),
       modeElement: json['_mode'] == null
           ? null
@@ -6089,7 +6051,7 @@ _$_StructureMapSource _$$_StructureMapSourceFromJson(
       elementElement: json['_element'] == null
           ? null
           : Element.fromJson(json['_element'] as Map<String, dynamic>),
-      listMode: _$enumDecodeNullable(
+      listMode: $enumDecodeNullable(
           _$StructureMapSourceListModeEnumMap, json['listMode'],
           unknownValue: StructureMapSourceListMode.unknown),
       listModeElement: json['_listMode'] == null
@@ -6276,7 +6238,7 @@ _$_StructureMapTarget _$$_StructureMapTargetFromJson(
       contextElement: json['_context'] == null
           ? null
           : Element.fromJson(json['_context'] as Map<String, dynamic>),
-      contextType: _$enumDecodeNullable(
+      contextType: $enumDecodeNullable(
           _$StructureMapTargetContextTypeEnumMap, json['contextType'],
           unknownValue: StructureMapTargetContextType.unknown),
       contextTypeElement: json['_contextType'] == null
@@ -6291,7 +6253,7 @@ _$_StructureMapTarget _$$_StructureMapTargetFromJson(
           ? null
           : Element.fromJson(json['_variable'] as Map<String, dynamic>),
       listMode: (json['listMode'] as List<dynamic>?)
-          ?.map((e) => _$enumDecode(_$StructureMapTargetListModeEnumMap, e))
+          ?.map((e) => $enumDecode(_$StructureMapTargetListModeEnumMap, e))
           .toList(),
       listModeElement: (json['_listMode'] as List<dynamic>?)
           ?.map((e) =>
@@ -6302,7 +6264,7 @@ _$_StructureMapTarget _$$_StructureMapTargetFromJson(
       listRuleIdElement: json['_listRuleId'] == null
           ? null
           : Element.fromJson(json['_listRuleId'] as Map<String, dynamic>),
-      transform: _$enumDecodeNullable(
+      transform: $enumDecodeNullable(
           _$StructureMapTargetTransformEnumMap, json['transform'],
           unknownValue: StructureMapTargetTransform.unknown),
       transformElement: json['_transform'] == null

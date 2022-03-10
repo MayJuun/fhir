@@ -7,7 +7,7 @@ part of 'billing.dart';
 // **************************************************************************
 
 _$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Claim) ??
           R4ResourceType.Claim,
@@ -49,7 +49,7 @@ _$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
       subType: json['subType'] == null
           ? null
           : CodeableConcept.fromJson(json['subType'] as Map<String, dynamic>),
-      use: _$enumDecodeNullable(_$ClaimUseEnumMap, json['use'],
+      use: $enumDecodeNullable(_$ClaimUseEnumMap, json['use'],
           unknownValue: ClaimUse.unknown),
       useElement: json['_use'] == null
           ? null
@@ -181,43 +181,6 @@ Map<String, dynamic> _$$_ClaimToJson(_$_Claim instance) {
   writeNotNull('item', instance.item?.map((e) => e.toJson()).toList());
   writeNotNull('total', instance.total?.toJson());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R4ResourceTypeEnumMap = {
@@ -1161,7 +1124,7 @@ Map<String, dynamic> _$$_ClaimSubDetailToJson(_$_ClaimSubDetail instance) {
 
 _$_ClaimResponse _$$_ClaimResponseFromJson(Map<String, dynamic> json) =>
     _$_ClaimResponse(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.ClaimResponse) ??
           R4ResourceType.ClaimResponse,
@@ -1970,7 +1933,7 @@ _$_ClaimResponseProcessNote _$$_ClaimResponseProcessNoteFromJson(
       numberElement: json['_number'] == null
           ? null
           : Element.fromJson(json['_number'] as Map<String, dynamic>),
-      type: _$enumDecodeNullable(
+      type: $enumDecodeNullable(
           _$ClaimResponseProcessNoteTypeEnumMap, json['type'],
           unknownValue: ClaimResponseProcessNoteType.unknown),
       typeElement: json['_type'] == null
@@ -2134,7 +2097,7 @@ Map<String, dynamic> _$$_ClaimResponseErrorToJson(
 }
 
 _$_Invoice _$$_InvoiceFromJson(Map<String, dynamic> json) => _$_Invoice(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Invoice) ??
           R4ResourceType.Invoice,
@@ -2168,7 +2131,7 @@ _$_Invoice _$$_InvoiceFromJson(Map<String, dynamic> json) => _$_Invoice(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$InvoiceStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$InvoiceStatusEnumMap, json['status'],
           unknownValue: InvoiceStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -2381,7 +2344,7 @@ _$_InvoicePriceComponent _$$_InvoicePriceComponentFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecodeNullable(
+      type: $enumDecodeNullable(
           _$InvoicePriceComponentTypeEnumMap, json['type'],
           unknownValue: InvoicePriceComponentType.unknown),
       typeElement: json['_type'] == null

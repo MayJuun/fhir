@@ -8,7 +8,7 @@ class Base64Binary {
   const Base64Binary._(
       this._valueString, this._valueBase64Binary, this._isValid);
 
-// TODO: This regexp is the most correct way to check the validity of a base64
+// TODO(TILO): This regexp is the most correct way to check the validity of a base64
 // But crashes the library on release builds with large base64 strings (images)
 
 //  static final RegExp _base64RegExp = RegExp(

@@ -13,7 +13,7 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
     requiredKeys: const ['status'],
   );
   return _$_StructureDefinition(
-    resourceType: _$enumDecodeNullable(
+    resourceType: $enumDecodeNullable(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.StructureDefinition) ??
         Dstu2ResourceType.StructureDefinition,
@@ -62,7 +62,7 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
     displayElement: json['_display'] == null
         ? null
         : Element.fromJson(json['_display'] as Map<String, dynamic>),
-    status: _$enumDecode(_$StructureDefinitionStatusEnumMap, json['status'],
+    status: $enumDecode(_$StructureDefinitionStatusEnumMap, json['status'],
         unknownValue: StructureDefinitionStatus.unknown),
     statusElement: json['_status'] == null
         ? null
@@ -109,7 +109,7 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
         ?.map((e) =>
             StructureDefinitionMapping.fromJson(e as Map<String, dynamic>))
         .toList(),
-    kind: _$enumDecode(_$StructureDefinitionKindEnumMap, json['kind'],
+    kind: $enumDecode(_$StructureDefinitionKindEnumMap, json['kind'],
         unknownValue: StructureDefinitionKind.unknown),
     kindElement: json['_kind'] == null
         ? null
@@ -121,7 +121,7 @@ _$_StructureDefinition _$$_StructureDefinitionFromJson(
     abstractElement: json['_abstract'] == null
         ? null
         : Element.fromJson(json['_abstract'] as Map<String, dynamic>),
-    contextType: _$enumDecodeNullable(
+    contextType: $enumDecodeNullable(
         _$StructureDefinitionContextTypeEnumMap, json['contextType'],
         unknownValue: StructureDefinitionContextType.unknown),
     context:
@@ -205,43 +205,6 @@ Map<String, dynamic> _$$_StructureDefinitionToJson(
   writeNotNull('snapshot', instance.snapshot?.toJson());
   writeNotNull('differential', instance.differential?.toJson());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -528,7 +491,7 @@ Map<String, dynamic> _$$_StructureDefinitionDifferentialToJson(
 
 _$_DataElement _$$_DataElementFromJson(Map<String, dynamic> json) =>
     _$_DataElement(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.DataElement) ??
           Dstu2ResourceType.DataElement,
@@ -559,7 +522,7 @@ _$_DataElement _$$_DataElementFromJson(Map<String, dynamic> json) =>
           .toList(),
       version: json['version'] as String?,
       name: json['name'] as String?,
-      status: _$enumDecode(_$DataElementStatusEnumMap, json['status'],
+      status: $enumDecode(_$DataElementStatusEnumMap, json['status'],
           unknownValue: DataElementStatus.unknown),
       experimental: json['experimental'] == null
           ? null
@@ -573,7 +536,7 @@ _$_DataElement _$$_DataElementFromJson(Map<String, dynamic> json) =>
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
       copyright: json['copyright'] as String?,
-      stringency: _$enumDecodeNullable(
+      stringency: $enumDecodeNullable(
           _$DataElementStringencyEnumMap, json['stringency'],
           unknownValue: DataElementStringency.unknown),
       mapping: (json['mapping'] as List<dynamic>?)

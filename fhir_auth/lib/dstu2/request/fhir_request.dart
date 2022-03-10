@@ -5,7 +5,6 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart';
 
 import '../../dstu2.dart';
-import '../../enums/enums.dart';
 import '../../globals.dart' as globals;
 
 part 'fhir_request.freezed.dart';
@@ -14,7 +13,20 @@ part 'fhir_request.freezed.dart';
 class FhirRequest with _$FhirRequest {
   FhirRequest._();
 
-  ///  READ constructor
+  /// READ constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [id] - the id for the resource
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.read({
     required Uri base,
     required Dstu2ResourceType type,
@@ -24,10 +36,25 @@ class FhirRequest with _$FhirRequest {
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
-    FhirClient? fhirClient,
+    MimeType? mimeType,
+    required FhirClient client,
   }) = _FhirReadRequest;
 
   ///  VREAD constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [id] - the id for the resource
+  /// [vid] - the version id of the rsource
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.vRead({
     required Uri base,
     required Dstu2ResourceType type,
@@ -38,10 +65,22 @@ class FhirRequest with _$FhirRequest {
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
-    FhirClient? fhirClient,
+    MimeType? mimeType,
+    required FhirClient client,
   }) = _FhirVReadRequest;
 
   ///  UPDATE constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.update({
     required Uri base,
     required Resource resource,
@@ -50,10 +89,22 @@ class FhirRequest with _$FhirRequest {
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
-    FhirClient? fhirClient,
+    MimeType? mimeType,
+    required FhirClient client,
   }) = _FhirUpdateRequest;
 
   ///  PATCH constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.patch({
     required Uri base,
     required Resource resource,
@@ -62,10 +113,24 @@ class FhirRequest with _$FhirRequest {
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
-    FhirClient? fhirClient,
+    MimeType? mimeType,
+    required FhirClient client,
   }) = _FhirPatchRequest;
 
   ///  DELETE constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [id] - the id for the resource
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.delete({
     required Uri base,
     required Dstu2ResourceType type,
@@ -75,10 +140,22 @@ class FhirRequest with _$FhirRequest {
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
-    FhirClient? fhirClient,
+    MimeType? mimeType,
+    required FhirClient client,
   }) = _FhirDeleteRequest;
 
   ///  CREATE constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.create({
     required Uri base,
     required Resource resource,
@@ -87,10 +164,25 @@ class FhirRequest with _$FhirRequest {
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
-    FhirClient? fhirClient,
+    MimeType? mimeType,
+    required FhirClient client,
   }) = _FhirCreateRequest;
 
   ///  SEARCH constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [usePost] - defines if you would prefer to use a post request instead of
+  ///   a get request for this search
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.search({
     required Uri base,
     required Dstu2ResourceType type,
@@ -101,10 +193,22 @@ class FhirRequest with _$FhirRequest {
     @Default(<String>[]) List<String> parameters,
     @Default(false) bool usePost,
     @Default(RestfulRequest.get_) RestfulRequest restfulRequest,
-    FhirClient? fhirClient,
+    MimeType? mimeType,
+    required FhirClient client,
   }) = _FhirSearchRequest;
 
   ///  SEARCH-ALL constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.searchAll({
     required Uri base,
     @Default(false) bool pretty,
@@ -112,10 +216,23 @@ class FhirRequest with _$FhirRequest {
     @Default('json') String format,
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
-    FhirClient? fhirClient,
+    MimeType? mimeType,
+    required FhirClient client,
   }) = _FhirSearchAllRequest;
 
   ///  SEARCH-ALL constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [mode] - defines the mode as defined https://www.hl7.org/fhir/http.html#capabilities
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.capabilities({
     required Uri base,
     @Default(false) bool pretty,
@@ -124,10 +241,23 @@ class FhirRequest with _$FhirRequest {
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     @Default(Mode.full) Mode mode,
-    FhirClient? fhirClient,
+    MimeType? mimeType,
+    required FhirClient client,
   }) = _FhirCapabilitiesRequest;
 
-  ///  BATCH/TRANSACTION constructor
+  ///  TRANSACTION constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [bundle] - the bundle to be uploaded
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.transaction({
     required Uri base,
     @Default(false) bool pretty,
@@ -136,9 +266,23 @@ class FhirRequest with _$FhirRequest {
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     required Bundle bundle,
-    FhirClient? fhirClient,
+    MimeType? mimeType,
+    required FhirClient client,
   }) = _FhirTransactionRequest;
 
+  ///  BATCH constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [bundle] - the bundle to be uploaded
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.batch({
     required Uri base,
     @Default(false) bool pretty,
@@ -147,10 +291,33 @@ class FhirRequest with _$FhirRequest {
     @Default(<String>[]) List<String> elements,
     @Default(<String>[]) List<String> parameters,
     required Bundle bundle,
-    FhirClient? fhirClient,
+    MimeType? mimeType,
+    required FhirClient client,
   }) = _FhirBatchRequest;
 
   ///  HISTORY constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [id] - the id for the resource
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [count] - The maximum number of search results on a page, excluding related
+  ///   resources included by _include or _revinclude or OperationOutcomes. The
+  ///   server is not bound to return the number requested, but cannot return more
+  /// [since] - Only include resource versions that were created at or after the
+  ///   given instant in time
+  /// [at] - Only include resource versions that were current at some point
+  ///   during the time period specified in the date time value
+  /// [reference] - Only include resource versions that are referenced in
+  ///   the specified list
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.history({
     required Uri base,
     required Dstu2ResourceType type,
@@ -164,10 +331,32 @@ class FhirRequest with _$FhirRequest {
     Instant? since,
     FhirDateTime? at,
     String? reference,
-    FhirClient? fhirClient,
+    MimeType? mimeType,
+    required FhirClient client,
   }) = _FhirHistoryRequest;
 
   ///  HISTORY-TYPE constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [count] - The maximum number of search results on a page, excluding related
+  ///   resources included by _include or _revinclude or OperationOutcomes. The
+  ///   server is not bound to return the number requested, but cannot return more
+  /// [since] - Only include resource versions that were created at or after the
+  ///   given instant in time
+  /// [at] - Only include resource versions that were current at some point
+  ///   during the time period specified in the date time value
+  /// [reference] - Only include resource versions that are referenced in
+  ///   the specified list
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.historyType({
     required Uri base,
     required Dstu2ResourceType type,
@@ -180,10 +369,31 @@ class FhirRequest with _$FhirRequest {
     Instant? since,
     FhirDateTime? at,
     String? reference,
-    FhirClient? fhirClient,
+    MimeType? mimeType,
+    required FhirClient client,
   }) = _FhirHistoryTypeRequest;
 
   ///  HISTORY-ALL constructor
+  /// [base] - the base URI for the FHIR server
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [count] - The maximum number of search results on a page, excluding related
+  ///   resources included by _include or _revinclude or OperationOutcomes. The
+  ///   server is not bound to return the number requested, but cannot return more
+  /// [since] - Only include resource versions that were created at or after the
+  ///   given instant in time
+  /// [at] - Only include resource versions that were current at some point
+  ///   during the time period specified in the date time value
+  /// [reference] - Only include resource versions that are referenced in
+  ///   the specified list
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.historyAll({
     required Uri base,
     @Default(false) bool pretty,
@@ -195,10 +405,27 @@ class FhirRequest with _$FhirRequest {
     Instant? since,
     FhirDateTime? at,
     String? reference,
-    FhirClient? fhirClient,
+    MimeType? mimeType,
+    required FhirClient client,
   }) = _FhirHistoryAllRequest;
 
   ///  OPERATION constructor
+  /// [base] - the base URI for the FHIR server
+  /// [type] - the type of resource you're looking for
+  /// [id] - the id for the resource
+  /// [pretty] - pretty print the json formatting in the response
+  /// [summary] - do you want the result to be a summary
+  /// [format] - currently requests json, but could consider requesting
+  ///   json+fhir or fhir+json (would not request XML as this library doesn't
+  ///   work with XML)
+  /// [elements] - elements you need to pass in
+  /// [parameters] - any extra parameters
+  /// [fhirParameters] - any extra fhirParameters
+  ///   ToDo: why did I include this?
+  /// [usePost] - defines if you would prefer to use a post request instead of Get
+  /// [mimeType] - specify the MimeType in the Header - this should be fhir+json
+  ///   but there are some older systems that won't accept that
+  /// [client] - if there's a specific client that you're going to be using
   factory FhirRequest.operation({
     required Uri base,
     Dstu2ResourceType? type,
@@ -212,70 +439,93 @@ class FhirRequest with _$FhirRequest {
     required String operation,
     @Default(false) bool usePost,
     @Default(false) bool useFormData,
-    FhirClient? fhirClient,
+    MimeType? mimeType,
+    required FhirClient client,
   }) = _FhirOperationRequest;
 
-  Future<Resource?> request({
+  /// REQUEST
+  /// after creating a request with the above constructors, they can be called
+  /// to interact with the server by using this method. If necessary,
+  /// authorization or other headers can be passed in as well
+  Future<Resource> request({
     Map<String, String>? headers,
   }) async {
     return await map(
       read: (m) async => await _request(
-        RestfulRequest.get_,
-        uri(parameters: m.parameters),
-        'Read',
+        type: RestfulRequest.get_,
+        uri: uri(parameters: m.parameters),
+        requestType: 'Read',
+        client: m.client,
         headers: headers,
+        mimeType: m.mimeType,
       ),
       vRead: (m) async => await _request(
-        RestfulRequest.get_,
-        uri(parameters: m.parameters),
-        'Vread',
+        type: RestfulRequest.get_,
+        uri: uri(parameters: m.parameters),
+        requestType: 'Vread',
+        client: m.client,
         headers: headers,
+        mimeType: m.mimeType,
       ),
       update: (m) async => await _request(
-        RestfulRequest.put_,
-        uri(parameters: m.parameters),
-        'Update',
+        type: RestfulRequest.put_,
+        uri: uri(parameters: m.parameters),
+        requestType: 'Update',
+        client: m.client,
         headers: headers,
         resource: m.resource,
+        mimeType: m.mimeType,
       ),
       patch: (m) async => await _request(
-        RestfulRequest.patch_,
-        uri(parameters: m.parameters),
-        'Patch',
+        type: RestfulRequest.patch_,
+        uri: uri(parameters: m.parameters),
+        requestType: 'Patch',
+        client: m.client,
         headers: headers,
         resource: m.resource,
+        mimeType: m.mimeType,
       ),
       delete: (m) async => await _request(
-        RestfulRequest.delete_,
-        uri(parameters: m.parameters),
-        'Delete',
+        type: RestfulRequest.delete_,
+        uri: uri(parameters: m.parameters),
+        requestType: 'Delete',
+        client: m.client,
         headers: headers,
+        mimeType: m.mimeType,
       ),
       create: (m) async => await _request(
-        RestfulRequest.post_,
-        uri(parameters: m.parameters),
-        'Create',
+        type: RestfulRequest.post_,
+        uri: uri(parameters: m.parameters),
+        requestType: 'Create',
+        client: m.client,
         headers: headers,
         resource: m.resource,
+        mimeType: m.mimeType,
       ),
       search: (m) async => await _request(
-        m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
-        m.usePost ? url : uri(parameters: m.parameters),
-        'Search',
+        type: m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
+        uri: m.usePost ? url : uri(parameters: m.parameters),
+        requestType: 'Search',
+        client: m.client,
         headers: headers,
         formData: m.usePost ? m.formData(parameters: m.parameters) : null,
+        mimeType: m.mimeType,
       ),
       searchAll: (m) async => await _request(
-        RestfulRequest.get_,
-        uri(parameters: m.parameters),
-        'Search All',
+        type: RestfulRequest.get_,
+        uri: uri(parameters: m.parameters),
+        requestType: 'Search All',
+        client: m.client,
         headers: headers,
+        mimeType: m.mimeType,
       ),
       capabilities: (m) async => await _request(
-        RestfulRequest.get_,
-        uri(parameters: m.parameters),
-        'Capabilities',
+        type: RestfulRequest.get_,
+        uri: uri(parameters: m.parameters),
+        requestType: 'Capabilities',
+        client: m.client,
         headers: headers,
+        mimeType: m.mimeType,
       ),
       transaction: (m) async {
         if (m.bundle.type != BundleType.transaction) {
@@ -296,11 +546,13 @@ class FhirRequest with _$FhirRequest {
           }
         }
         return await _request(
-          RestfulRequest.post_,
-          uri(),
-          'Transaction',
+          type: RestfulRequest.post_,
+          uri: uri(),
+          requestType: 'Transaction',
+          client: m.client,
           headers: headers,
           resource: m.bundle,
+          mimeType: m.mimeType,
         );
       },
       batch: (m) async {
@@ -323,11 +575,13 @@ class FhirRequest with _$FhirRequest {
           }
         }
         return await _request(
-          RestfulRequest.post_,
-          uri(),
-          'Batch',
+          type: RestfulRequest.post_,
+          uri: uri(),
+          requestType: 'Batch',
+          client: m.client,
           headers: headers,
           resource: m.bundle,
+          mimeType: m.mimeType,
         );
       },
       history: (m) async {
@@ -342,10 +596,12 @@ class FhirRequest with _$FhirRequest {
         }
 
         return await _request(
-          RestfulRequest.get_,
-          uri(parameters: parameterList),
-          'History',
+          type: RestfulRequest.get_,
+          uri: uri(parameters: parameterList),
+          requestType: 'History',
+          client: m.client,
           headers: headers,
+          mimeType: m.mimeType,
         );
       },
       historyType: (m) async {
@@ -360,10 +616,12 @@ class FhirRequest with _$FhirRequest {
         }
 
         return await _request(
-          RestfulRequest.get_,
-          uri(parameters: parameterList),
-          'History Type',
+          type: RestfulRequest.get_,
+          uri: uri(parameters: parameterList),
+          requestType: 'History Type',
+          client: m.client,
           headers: headers,
+          mimeType: m.mimeType,
         );
       },
       historyAll: (m) async {
@@ -378,16 +636,19 @@ class FhirRequest with _$FhirRequest {
         }
 
         return await _request(
-          RestfulRequest.get_,
-          uri(parameters: parameterList),
-          'History all',
+          type: RestfulRequest.get_,
+          uri: uri(parameters: parameterList),
+          requestType: 'History all',
+          client: m.client,
           headers: headers,
+          mimeType: m.mimeType,
         );
       },
       operation: (m) async => await _request(
-        m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
-        m.usePost ? url : uri(parameters: parameters),
-        'Operation',
+        type: m.usePost ? RestfulRequest.post_ : RestfulRequest.get_,
+        uri: m.usePost ? url : uri(parameters: parameters),
+        requestType: 'Operation',
+        client: m.client,
         headers: headers,
         resource: m.usePost && m.useFormData
             ? null
@@ -395,6 +656,7 @@ class FhirRequest with _$FhirRequest {
         formData: m.usePost && m.useFormData
             ? m.formData(parameters: parameters)
             : null,
+        mimeType: m.mimeType,
       ),
     );
   }
@@ -421,19 +683,21 @@ class FhirRequest with _$FhirRequest {
     return parameters;
   }
 
-  Future<Resource?> _request(
-    RestfulRequest type,
-    String uri,
-    String requestType, {
+  Future<Resource> _request({
+    required RestfulRequest type,
+    required String uri,
+    required String requestType,
+    required FhirClient client,
     Map<String, String>? headers,
     Resource? resource,
     String? formData,
+    MimeType? mimeType,
   }) async {
     try {
       final result = await _makeRequest(
           type: type,
           thisRequest: uri,
-          fhirClient: fhirClient,
+          client: client,
           headers: headers,
           resource: resource == null ? null : resource.toJson());
       return result;
@@ -546,16 +810,15 @@ class FhirRequest with _$FhirRequest {
             '\$${f.operation}',
       );
 
-  Future<Resource?> _makeRequest({
+  Future<Resource> _makeRequest({
     required RestfulRequest type,
     required String thisRequest,
+    required FhirClient client,
     Map<String, String>? headers,
     Map<String, dynamic>? resource,
     String? formData,
-    FhirClient? fhirClient,
   }) async {
     Response? result;
-    fhirClient ??= InsecureFhirClient();
 
     if (globals.kTestMode) {
       return _operationOutcome(thisRequest);
@@ -565,7 +828,7 @@ class FhirRequest with _$FhirRequest {
       switch (type) {
         case RestfulRequest.get_:
           {
-            result = await fhirClient.get(
+            result = await client.get(
               thisRequest,
               headers: headers,
             );
@@ -575,7 +838,7 @@ class FhirRequest with _$FhirRequest {
           {
             headers ??= {};
             headers['Content-Type'] = 'application/fhir+json';
-            result = await fhirClient.put(
+            result = await client.put(
               thisRequest,
               headers: headers,
               body: jsonEncode(resource),
@@ -584,7 +847,7 @@ class FhirRequest with _$FhirRequest {
           }
         case RestfulRequest.delete_:
           {
-            result = await fhirClient.delete(
+            result = await client.delete(
               thisRequest,
               headers: headers,
             );
@@ -594,7 +857,7 @@ class FhirRequest with _$FhirRequest {
           {
             headers ??= {};
             headers['Content-Type'] = 'application/fhir+json';
-            result = await fhirClient.patch(
+            result = await client.patch(
               thisRequest,
               headers: headers,
               body: jsonEncode(resource),
@@ -607,7 +870,7 @@ class FhirRequest with _$FhirRequest {
             headers['Content-Type'] = formData != null
                 ? 'application/x-www-form-urlencoded'
                 : 'application/fhir+json';
-            result = await fhirClient.post(
+            result = await client.post(
               thisRequest,
               headers: headers,
               body: formData ?? jsonEncode(resource),
@@ -636,7 +899,7 @@ class FhirRequest with _$FhirRequest {
           )
         ]);
       }
-      return Resource.fromJson(json.decode(result.body));
+      return Resource.fromJson(jsonDecode(result.body));
     }
   }
 

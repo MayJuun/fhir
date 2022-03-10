@@ -8,7 +8,7 @@ part of 'medication_and_immunization.dart';
 
 _$_Medication _$$_MedicationFromJson(Map<String, dynamic> json) =>
     _$_Medication(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Medication) ??
           Dstu2ResourceType.Medication,
@@ -85,43 +85,6 @@ Map<String, dynamic> _$$_MedicationToJson(_$_Medication instance) {
   writeNotNull('product', instance.product?.toJson());
   writeNotNull('package', instance.package?.toJson());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$Dstu2ResourceTypeEnumMap = {
@@ -430,7 +393,7 @@ Map<String, dynamic> _$$_MedicationPackageContentToJson(
 
 _$_MedicationOrder _$$_MedicationOrderFromJson(Map<String, dynamic> json) =>
     _$_MedicationOrder(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.MedicationOrder) ??
           Dstu2ResourceType.MedicationOrder,
@@ -464,7 +427,7 @@ _$_MedicationOrder _$$_MedicationOrderFromJson(Map<String, dynamic> json) =>
       dateWritten: json['dateWritten'] == null
           ? null
           : FhirDateTime.fromJson(json['dateWritten']),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$MedicationOrderStatusEnumMap, json['status'],
           unknownValue: MedicationOrderStatus.unknown),
       statusElement: json['_status'] == null
@@ -773,7 +736,7 @@ _$_MedicationAdministration _$$_MedicationAdministrationFromJson(
     requiredKeys: const ['status'],
   );
   return _$_MedicationAdministration(
-    resourceType: _$enumDecodeNullable(
+    resourceType: $enumDecodeNullable(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.MedicationAdministration) ??
         Dstu2ResourceType.MedicationAdministration,
@@ -806,8 +769,7 @@ _$_MedicationAdministration _$$_MedicationAdministrationFromJson(
     identifier: (json['identifier'] as List<dynamic>?)
         ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
         .toList(),
-    status: _$enumDecode(
-        _$MedicationAdministrationStatusEnumMap, json['status'],
+    status: $enumDecode(_$MedicationAdministrationStatusEnumMap, json['status'],
         unknownValue: MedicationAdministrationStatus.unknown),
     statusElement: json['_status'] == null
         ? null
@@ -988,7 +950,7 @@ Map<String, dynamic> _$$_MedicationAdministrationDosageToJson(
 _$_MedicationDispense _$$_MedicationDispenseFromJson(
         Map<String, dynamic> json) =>
     _$_MedicationDispense(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.MedicationDispense) ??
           Dstu2ResourceType.MedicationDispense,
@@ -1022,7 +984,7 @@ _$_MedicationDispense _$$_MedicationDispenseFromJson(
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-      status: _$enumDecodeNullable(
+      status: $enumDecodeNullable(
           _$MedicationDispenseStatusEnumMap, json['status'],
           unknownValue: MedicationDispenseStatus.unknown),
       statusElement: json['_status'] == null
@@ -1285,7 +1247,7 @@ _$_MedicationStatement _$$_MedicationStatementFromJson(
     requiredKeys: const ['status'],
   );
   return _$_MedicationStatement(
-    resourceType: _$enumDecodeNullable(
+    resourceType: $enumDecodeNullable(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.MedicationStatement) ??
         Dstu2ResourceType.MedicationStatement,
@@ -1328,7 +1290,7 @@ _$_MedicationStatement _$$_MedicationStatementFromJson(
     dateAssertedElement: json['_dateAsserted'] == null
         ? null
         : Element.fromJson(json['_dateAsserted'] as Map<String, dynamic>),
-    status: _$enumDecode(_$MedicationStatementStatusEnumMap, json['status'],
+    status: $enumDecode(_$MedicationStatementStatusEnumMap, json['status'],
         unknownValue: MedicationStatementStatus.unknown),
     statusElement: json['_status'] == null
         ? null
@@ -1522,7 +1484,7 @@ Map<String, dynamic> _$$_MedicationStatementDosageToJson(
 
 _$_Immunization _$$_ImmunizationFromJson(Map<String, dynamic> json) =>
     _$_Immunization(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$Dstu2ResourceTypeEnumMap, json['resourceType'],
               unknownValue: Dstu2ResourceType.Immunization) ??
           Dstu2ResourceType.Immunization,
@@ -1556,7 +1518,7 @@ _$_Immunization _$$_ImmunizationFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecode(_$ImmunizationStatusEnumMap, json['status'],
+      status: $enumDecode(_$ImmunizationStatusEnumMap, json['status'],
           unknownValue: ImmunizationStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -1833,7 +1795,7 @@ _$_ImmunizationRecommendation _$$_ImmunizationRecommendationFromJson(
     requiredKeys: const ['recommendation'],
   );
   return _$_ImmunizationRecommendation(
-    resourceType: _$enumDecodeNullable(
+    resourceType: $enumDecodeNullable(
             _$Dstu2ResourceTypeEnumMap, json['resourceType'],
             unknownValue: Dstu2ResourceType.ImmunizationRecommendation) ??
         Dstu2ResourceType.ImmunizationRecommendation,

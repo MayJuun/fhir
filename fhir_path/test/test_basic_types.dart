@@ -1,6 +1,5 @@
-import 'package:test/test.dart';
-
 import 'package:fhir_path/fhir_path.dart';
+import 'package:test/test.dart';
 
 FhirPathParser parseResult(dynamic arg) => lexer().parse(arg).value;
 
@@ -196,6 +195,17 @@ void testBasicTypes() {
         (ParserList([QuantityParser("100 '[degF]'")]).first as ValueParser)
             .value,
       );
+    });
+    test('Duration quantities', () {
+      expect(
+          walkFhirPath(context: null, pathExpression: r"1 seconds = 1 second"),
+          [true]);
+      expect(walkFhirPath(context: null, pathExpression: r"1 seconds = 1 's'"),
+          [true]);
+      expect(walkFhirPath(context: null, pathExpression: r"2 seconds = 2 's'"),
+          [true]);
+      expect(walkFhirPath(context: null, pathExpression: r"1 week != 1 'w'"),
+          [true]);
     });
     test('Non-Escape Sequences', () {
       /// ToDo: figure out escape sequences

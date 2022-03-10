@@ -8,7 +8,7 @@ part of 'security.dart';
 
 _$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
     _$_AuditEvent(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.AuditEvent) ??
           R4ResourceType.AuditEvent,
@@ -43,7 +43,7 @@ _$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
       subtype: (json['subtype'] as List<dynamic>?)
           ?.map((e) => Coding.fromJson(e as Map<String, dynamic>))
           .toList(),
-      action: _$enumDecodeNullable(_$AuditEventActionEnumMap, json['action'],
+      action: $enumDecodeNullable(_$AuditEventActionEnumMap, json['action'],
           unknownValue: AuditEventAction.unknown),
       actionElement: json['_action'] == null
           ? null
@@ -56,7 +56,7 @@ _$_AuditEvent _$$_AuditEventFromJson(Map<String, dynamic> json) =>
       recordedElement: json['_recorded'] == null
           ? null
           : Element.fromJson(json['_recorded'] as Map<String, dynamic>),
-      outcome: _$enumDecodeNullable(_$AuditEventOutcomeEnumMap, json['outcome'],
+      outcome: $enumDecodeNullable(_$AuditEventOutcomeEnumMap, json['outcome'],
           unknownValue: AuditEventOutcome.unknown),
       outcomeElement: json['_outcome'] == null
           ? null
@@ -118,43 +118,6 @@ Map<String, dynamic> _$$_AuditEventToJson(_$_AuditEvent instance) {
   val['source'] = instance.source.toJson();
   writeNotNull('entity', instance.entity?.map((e) => e.toJson()).toList());
   return val;
-}
-
-K _$enumDecode<K, V>(
-  Map<K, V> enumValues,
-  Object? source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    throw ArgumentError(
-      'A value must be provided. Supported values: '
-      '${enumValues.values.join(', ')}',
-    );
-  }
-
-  return enumValues.entries.singleWhere(
-    (e) => e.value == source,
-    orElse: () {
-      if (unknownValue == null) {
-        throw ArgumentError(
-          '`$source` is not one of the supported values: '
-          '${enumValues.values.join(', ')}',
-        );
-      }
-      return MapEntry(unknownValue, enumValues.values.first);
-    },
-  ).key;
-}
-
-K? _$enumDecodeNullable<K, V>(
-  Map<K, V> enumValues,
-  dynamic source, {
-  K? unknownValue,
-}) {
-  if (source == null) {
-    return null;
-  }
-  return _$enumDecode<K, V>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$R4ResourceTypeEnumMap = {
@@ -426,7 +389,7 @@ _$_AuditEventNetwork _$$_AuditEventNetworkFromJson(Map<String, dynamic> json) =>
       addressElement: json['_address'] == null
           ? null
           : Element.fromJson(json['_address'] as Map<String, dynamic>),
-      type: _$enumDecodeNullable(_$AuditEventNetworkTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$AuditEventNetworkTypeEnumMap, json['type'],
           unknownValue: AuditEventNetworkType.unknown),
       typeElement: json['_type'] == null
           ? null
@@ -627,7 +590,7 @@ Map<String, dynamic> _$$_AuditEventDetailToJson(_$_AuditEventDetail instance) {
 }
 
 _$_Consent _$$_ConsentFromJson(Map<String, dynamic> json) => _$_Consent(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Consent) ??
           R4ResourceType.Consent,
@@ -661,7 +624,7 @@ _$_Consent _$$_ConsentFromJson(Map<String, dynamic> json) => _$_Consent(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: _$enumDecodeNullable(_$ConsentStatusEnumMap, json['status'],
+      status: $enumDecodeNullable(_$ConsentStatusEnumMap, json['status'],
           unknownValue: ConsentStatus.unknown),
       statusElement: json['_status'] == null
           ? null
@@ -865,7 +828,7 @@ _$_ConsentProvision _$$_ConsentProvisionFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: _$enumDecodeNullable(_$ConsentProvisionTypeEnumMap, json['type'],
+      type: $enumDecodeNullable(_$ConsentProvisionTypeEnumMap, json['type'],
           unknownValue: ConsentProvisionType.unknown),
       typeElement: json['_type'] == null
           ? null
@@ -980,8 +943,7 @@ _$_ConsentData _$$_ConsentDataFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      meaning: _$enumDecodeNullable(
-          _$ConsentDataMeaningEnumMap, json['meaning'],
+      meaning: $enumDecodeNullable(_$ConsentDataMeaningEnumMap, json['meaning'],
           unknownValue: ConsentDataMeaning.unknown),
       meaningElement: json['_meaning'] == null
           ? null
@@ -1019,7 +981,7 @@ const _$ConsentDataMeaningEnumMap = {
 
 _$_Provenance _$$_ProvenanceFromJson(Map<String, dynamic> json) =>
     _$_Provenance(
-      resourceType: _$enumDecodeNullable(
+      resourceType: $enumDecodeNullable(
               _$R4ResourceTypeEnumMap, json['resourceType'],
               unknownValue: R4ResourceType.Provenance) ??
           R4ResourceType.Provenance,
@@ -1188,7 +1150,7 @@ _$_ProvenanceEntity _$$_ProvenanceEntityFromJson(Map<String, dynamic> json) =>
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      role: _$enumDecodeNullable(_$ProvenanceEntityRoleEnumMap, json['role'],
+      role: $enumDecodeNullable(_$ProvenanceEntityRoleEnumMap, json['role'],
           unknownValue: ProvenanceEntityRole.unknown),
       roleElement: json['_role'] == null
           ? null

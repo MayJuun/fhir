@@ -19,7 +19,10 @@ class FhirDateTime extends FhirDateTimeBase {
       : super(valueString, valueDateTime, isValid, parseError);
 
   factory FhirDateTime(dynamic inValue) {
-    if (inValue is DateTime) {
+    if (inValue is FhirDateTime) {
+      return inValue;
+    }
+    else if (inValue is DateTime) {
       return FhirDateTime.fromDateTime(inValue);
     } else if (inValue is String) {
       try {
