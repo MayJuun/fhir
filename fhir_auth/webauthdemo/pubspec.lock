@@ -119,7 +119,7 @@ packages:
     source: hosted
     version: "0.4.1"
   flutter_web_plugins:
-    dependency: transitive
+    dependency: "direct main"
     description: flutter
     source: sdk
     version: "0.0.0"
@@ -131,7 +131,7 @@ packages:
     source: hosted
     version: "1.1.0"
   google_sign_in:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: google_sign_in
       url: "https://pub.dartlang.org"
@@ -143,14 +143,14 @@ packages:
       name: google_sign_in_platform_interface
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.0"
+    version: "2.1.2"
   google_sign_in_web:
     dependency: transitive
     description:
       name: google_sign_in_web
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.10.0+3"
+    version: "0.10.0+5"
   html:
     dependency: transitive
     description:
@@ -227,7 +227,7 @@ packages:
       name: path
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.8.0"
+    version: "1.8.1"
   plugin_platform_interface:
     dependency: transitive
     description:
@@ -260,7 +260,7 @@ packages:
       name: source_span
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.8.1"
+    version: "1.8.2"
   stack_trace:
     dependency: transitive
     description:
