@@ -40,6 +40,18 @@ class Resource {
   static Resource fromJson(Map<String, dynamic> json) =>
       _resourceFromJson(json);
 
+  /// Acts like a constructor, returns a [Resource], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  static Resource fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _resourceFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+
   /// Returns a Resource, accepts a [String] in YAML format as an argument
   static Resource fromYaml(dynamic yaml) => yaml is String
       ? Resource.fromJson(
