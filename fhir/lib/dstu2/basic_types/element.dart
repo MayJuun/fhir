@@ -34,8 +34,8 @@ class Element with _$Element {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-    factory Element.fromJson(Map<String, dynamic> json) =>
-      _$ElementFromJson(json); 
+  factory Element.fromJson(Map<String, dynamic> json) =>
+      _$ElementFromJson(json);
 
   /// Acts like a constructor, returns a [Element], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out

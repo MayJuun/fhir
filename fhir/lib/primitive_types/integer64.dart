@@ -20,8 +20,7 @@ class Integer64 extends FhirNumber {
       return tempInteger64 == null
           ? Integer64._(inValue.toString(), null, false)
           : tempInteger64 <= bit64 && tempInteger64 >= -bit64
-              ? Integer64._(
-                  inValue.toString(), tempInteger64, true)
+              ? Integer64._(inValue.toString(), tempInteger64, true)
               : Integer64._(inValue.toString(), null, false);
     }
     throw ArgumentError('Integer64 cannot be constructed from $inValue.');

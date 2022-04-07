@@ -263,8 +263,9 @@ class Coding with _$Coding {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-    factory Coding.fromJson(Map<String, dynamic> json) => _$CodingFromJson(json); 
-/// Acts like a constructor, returns a [Coding], accepts a
+  factory Coding.fromJson(Map<String, dynamic> json) => _$CodingFromJson(json);
+
+  /// Acts like a constructor, returns a [Coding], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Coding.fromJsonString(String source) {
     final json = jsonDecode(source);
@@ -448,8 +449,9 @@ class Count with _$Count {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-    factory Count.fromJson(Map<String, dynamic> json) => _$CountFromJson(json); 
-/// Acts like a constructor, returns a [Count], accepts a
+  factory Count.fromJson(Map<String, dynamic> json) => _$CountFromJson(json);
+
+  /// Acts like a constructor, returns a [Count], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Count.fromJsonString(String source) {
     final json = jsonDecode(source);
@@ -492,8 +494,9 @@ class Money with _$Money {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-    factory Money.fromJson(Map<String, dynamic> json) => _$MoneyFromJson(json); 
-/// Acts like a constructor, returns a [Money], accepts a
+  factory Money.fromJson(Map<String, dynamic> json) => _$MoneyFromJson(json);
+
+  /// Acts like a constructor, returns a [Money], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Money.fromJsonString(String source) {
     final json = jsonDecode(source);
@@ -535,8 +538,9 @@ class Age with _$Age {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-    factory Age.fromJson(Map<String, dynamic> json) => _$AgeFromJson(json); 
-/// Acts like a constructor, returns a [Age], accepts a
+  factory Age.fromJson(Map<String, dynamic> json) => _$AgeFromJson(json);
+
+  /// Acts like a constructor, returns a [Age], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Age.fromJsonString(String source) {
     final json = jsonDecode(source);
@@ -571,8 +575,9 @@ class Range with _$Range {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-    factory Range.fromJson(Map<String, dynamic> json) => _$RangeFromJson(json); 
-/// Acts like a constructor, returns a [Range], accepts a
+  factory Range.fromJson(Map<String, dynamic> json) => _$RangeFromJson(json);
+
+  /// Acts like a constructor, returns a [Range], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Range.fromJsonString(String source) {
     final json = jsonDecode(source);
@@ -610,8 +615,9 @@ class Period with _$Period {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-    factory Period.fromJson(Map<String, dynamic> json) => _$PeriodFromJson(json); 
-/// Acts like a constructor, returns a [Period], accepts a
+  factory Period.fromJson(Map<String, dynamic> json) => _$PeriodFromJson(json);
+
+  /// Acts like a constructor, returns a [Period], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Period.fromJsonString(String source) {
     final json = jsonDecode(source);
@@ -646,8 +652,9 @@ class Ratio with _$Ratio {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-    factory Ratio.fromJson(Map<String, dynamic> json) => _$RatioFromJson(json); 
-/// Acts like a constructor, returns a [Ratio], accepts a
+  factory Ratio.fromJson(Map<String, dynamic> json) => _$RatioFromJson(json);
+
+  /// Acts like a constructor, returns a [Ratio], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Ratio.fromJsonString(String source) {
     final json = jsonDecode(source);
@@ -937,8 +944,9 @@ class Timing with _$Timing {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-    factory Timing.fromJson(Map<String, dynamic> json) => _$TimingFromJson(json); 
-/// Acts like a constructor, returns a [Timing], accepts a
+  factory Timing.fromJson(Map<String, dynamic> json) => _$TimingFromJson(json);
+
+  /// Acts like a constructor, returns a [Timing], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Timing.fromJsonString(String source) {
     final json = jsonDecode(source);

@@ -21,8 +21,7 @@ class FhirDateTime extends FhirDateTimeBase {
   factory FhirDateTime(dynamic inValue) {
     if (inValue is FhirDateTime) {
       return inValue;
-    }
-    else if (inValue is DateTime) {
+    } else if (inValue is DateTime) {
       return FhirDateTime.fromDateTime(inValue);
     } else if (inValue is String) {
       try {

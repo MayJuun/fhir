@@ -121,8 +121,9 @@ class Meta with _$Meta {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-    factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json); 
-/// Acts like a constructor, returns a [Meta], accepts a
+  factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
+
+  /// Acts like a constructor, returns a [Meta], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Meta.fromJsonString(String source) {
     final json = jsonDecode(source);
@@ -939,8 +940,9 @@ class Dosage with _$Dosage {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-    factory Dosage.fromJson(Map<String, dynamic> json) => _$DosageFromJson(json); 
-/// Acts like a constructor, returns a [Dosage], accepts a
+  factory Dosage.fromJson(Map<String, dynamic> json) => _$DosageFromJson(json);
+
+  /// Acts like a constructor, returns a [Dosage], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
   factory Dosage.fromJsonString(String source) {
     final json = jsonDecode(source);
