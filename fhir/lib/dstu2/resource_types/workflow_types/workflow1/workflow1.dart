@@ -84,6 +84,18 @@ class OrderWhen with _$OrderWhen {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OrderWhen.fromJson(Map<String, dynamic> json) =>
       _$OrderWhenFromJson(json);
+
+  /// Acts like a constructor, returns a [OrderWhen], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory OrderWhen.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$OrderWhenFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -130,6 +142,18 @@ class OrderResponse with Resource, _$OrderResponse {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OrderResponse.fromJson(Map<String, dynamic> json) =>
       _$OrderResponseFromJson(json);
+
+  /// Acts like a constructor, returns a [OrderResponse], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory OrderResponse.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$OrderResponseFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -187,6 +211,18 @@ class CommunicationRequest with Resource, _$CommunicationRequest {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CommunicationRequest.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestFromJson(json);
+
+  /// Acts like a constructor, returns a [CommunicationRequest], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory CommunicationRequest.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$CommunicationRequestFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -219,6 +255,18 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CommunicationRequestPayload.fromJson(Map<String, dynamic> json) =>
       _$CommunicationRequestPayloadFromJson(json);
+
+  /// Acts like a constructor, returns a [CommunicationRequestPayload], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory CommunicationRequestPayload.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$CommunicationRequestPayloadFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -278,6 +326,18 @@ class DeviceUseRequest with Resource, _$DeviceUseRequest {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceUseRequest.fromJson(Map<String, dynamic> json) =>
       _$DeviceUseRequestFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceUseRequest], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceUseRequest.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceUseRequestFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -331,4 +391,16 @@ class DeviceUseStatement with Resource, _$DeviceUseStatement {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceUseStatement.fromJson(Map<String, dynamic> json) =>
       _$DeviceUseStatementFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceUseStatement], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceUseStatement.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceUseStatementFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }

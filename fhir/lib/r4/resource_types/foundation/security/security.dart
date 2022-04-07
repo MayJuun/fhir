@@ -157,6 +157,18 @@ class AuditEvent with Resource, _$AuditEvent {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEvent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventFromJson(json);
+
+  /// Acts like a constructor, returns a [AuditEvent], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory AuditEvent.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$AuditEventFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -271,6 +283,18 @@ class AuditEventAgent with _$AuditEventAgent {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventAgent.fromJson(Map<String, dynamic> json) =>
       _$AuditEventAgentFromJson(json);
+
+  /// Acts like a constructor, returns a [AuditEventAgent], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory AuditEventAgent.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$AuditEventAgentFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -342,6 +366,18 @@ class AuditEventNetwork with _$AuditEventNetwork {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventNetwork.fromJson(Map<String, dynamic> json) =>
       _$AuditEventNetworkFromJson(json);
+
+  /// Acts like a constructor, returns a [AuditEventNetwork], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory AuditEventNetwork.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$AuditEventNetworkFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -412,6 +448,18 @@ class AuditEventSource with _$AuditEventSource {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventSource.fromJson(Map<String, dynamic> json) =>
       _$AuditEventSourceFromJson(json);
+
+  /// Acts like a constructor, returns a [AuditEventSource], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory AuditEventSource.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$AuditEventSourceFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -507,6 +555,18 @@ class AuditEventEntity with _$AuditEventEntity {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventEntity.fromJson(Map<String, dynamic> json) =>
       _$AuditEventEntityFromJson(json);
+
+  /// Acts like a constructor, returns a [AuditEventEntity], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory AuditEventEntity.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$AuditEventEntityFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -581,6 +641,18 @@ class AuditEventDetail with _$AuditEventDetail {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AuditEventDetail.fromJson(Map<String, dynamic> json) =>
       _$AuditEventDetailFromJson(json);
+
+  /// Acts like a constructor, returns a [AuditEventDetail], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory AuditEventDetail.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$AuditEventDetailFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -746,6 +818,18 @@ class Consent with Resource, _$Consent {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Consent.fromJson(Map<String, dynamic> json) =>
       _$ConsentFromJson(json);
+
+  /// Acts like a constructor, returns a [Consent], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Consent.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ConsentFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -818,6 +902,18 @@ class ConsentPolicy with _$ConsentPolicy {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConsentPolicy.fromJson(Map<String, dynamic> json) =>
       _$ConsentPolicyFromJson(json);
+
+  /// Acts like a constructor, returns a [ConsentPolicy], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ConsentPolicy.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ConsentPolicyFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -891,6 +987,18 @@ class ConsentVerification with _$ConsentVerification {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConsentVerification.fromJson(Map<String, dynamic> json) =>
       _$ConsentVerificationFromJson(json);
+
+  /// Acts like a constructor, returns a [ConsentVerification], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ConsentVerification.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ConsentVerificationFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -994,6 +1102,18 @@ class ConsentProvision with _$ConsentProvision {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConsentProvision.fromJson(Map<String, dynamic> json) =>
       _$ConsentProvisionFromJson(json);
+
+  /// Acts like a constructor, returns a [ConsentProvision], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ConsentProvision.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ConsentProvisionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1060,6 +1180,18 @@ class ConsentActor with _$ConsentActor {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConsentActor.fromJson(Map<String, dynamic> json) =>
       _$ConsentActorFromJson(json);
+
+  /// Acts like a constructor, returns a [ConsentActor], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ConsentActor.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ConsentActorFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1129,6 +1261,18 @@ class ConsentData with _$ConsentData {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConsentData.fromJson(Map<String, dynamic> json) =>
       _$ConsentDataFromJson(json);
+
+  /// Acts like a constructor, returns a [ConsentData], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ConsentData.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ConsentDataFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1283,6 +1427,18 @@ class Provenance with Resource, _$Provenance {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Provenance.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceFromJson(json);
+
+  /// Acts like a constructor, returns a [Provenance], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Provenance.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ProvenanceFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1361,6 +1517,18 @@ class ProvenanceAgent with _$ProvenanceAgent {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProvenanceAgent.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceAgentFromJson(json);
+
+  /// Acts like a constructor, returns a [ProvenanceAgent], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ProvenanceAgent.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ProvenanceAgentFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1441,4 +1609,16 @@ class ProvenanceEntity with _$ProvenanceEntity {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProvenanceEntity.fromJson(Map<String, dynamic> json) =>
       _$ProvenanceEntityFromJson(json);
+
+  /// Acts like a constructor, returns a [ProvenanceEntity], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ProvenanceEntity.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ProvenanceEntityFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }

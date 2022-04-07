@@ -69,6 +69,18 @@ class Composition with Resource, _$Composition {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Composition.fromJson(Map<String, dynamic> json) =>
       _$CompositionFromJson(json);
+
+  /// Acts like a constructor, returns a [Composition], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Composition.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$CompositionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -102,6 +114,18 @@ class CompositionAttester with _$CompositionAttester {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CompositionAttester.fromJson(Map<String, dynamic> json) =>
       _$CompositionAttesterFromJson(json);
+
+  /// Acts like a constructor, returns a [CompositionAttester], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory CompositionAttester.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$CompositionAttesterFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -133,6 +157,18 @@ class CompositionEvent with _$CompositionEvent {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CompositionEvent.fromJson(Map<String, dynamic> json) =>
       _$CompositionEventFromJson(json);
+
+  /// Acts like a constructor, returns a [CompositionEvent], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory CompositionEvent.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$CompositionEventFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -172,6 +208,18 @@ class CompositionSection with _$CompositionSection {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CompositionSection.fromJson(Map<String, dynamic> json) =>
       _$CompositionSectionFromJson(json);
+
+  /// Acts like a constructor, returns a [CompositionSection], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory CompositionSection.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$CompositionSectionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -228,6 +276,18 @@ class DocumentManifest with Resource, _$DocumentManifest {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentManifest.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestFromJson(json);
+
+  /// Acts like a constructor, returns a [DocumentManifest], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DocumentManifest.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DocumentManifestFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -258,6 +318,18 @@ class DocumentManifestContent with _$DocumentManifestContent {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentManifestContent.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestContentFromJson(json);
+
+  /// Acts like a constructor, returns a [DocumentManifestContent], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DocumentManifestContent.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DocumentManifestContentFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -288,6 +360,18 @@ class DocumentManifestRelated with _$DocumentManifestRelated {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentManifestRelated.fromJson(Map<String, dynamic> json) =>
       _$DocumentManifestRelatedFromJson(json);
+
+  /// Acts like a constructor, returns a [DocumentManifestRelated], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DocumentManifestRelated.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DocumentManifestRelatedFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -348,6 +432,18 @@ class DocumentReference with Resource, _$DocumentReference {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReference.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceFromJson(json);
+
+  /// Acts like a constructor, returns a [DocumentReference], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DocumentReference.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DocumentReferenceFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -380,6 +476,18 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReferenceRelatesTo.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceRelatesToFromJson(json);
+
+  /// Acts like a constructor, returns a [DocumentReferenceRelatesTo], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DocumentReferenceRelatesTo.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DocumentReferenceRelatesToFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -410,6 +518,18 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReferenceContent.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContentFromJson(json);
+
+  /// Acts like a constructor, returns a [DocumentReferenceContent], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DocumentReferenceContent.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DocumentReferenceContentFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -445,6 +565,18 @@ class DocumentReferenceContext with _$DocumentReferenceContext {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReferenceContext.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContextFromJson(json);
+
+  /// Acts like a constructor, returns a [DocumentReferenceContext], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DocumentReferenceContext.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DocumentReferenceContextFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -476,6 +608,18 @@ class DocumentReferenceContextRelated with _$DocumentReferenceContextRelated {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DocumentReferenceContextRelated.fromJson(Map<String, dynamic> json) =>
       _$DocumentReferenceContextRelatedFromJson(json);
+
+  /// Acts like a constructor, returns a [DocumentReferenceContextRelated], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DocumentReferenceContextRelated.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DocumentReferenceContextRelatedFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -565,4 +709,16 @@ class ListEntry with _$ListEntry {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ListEntry.fromJson(Map<String, dynamic> json) =>
       _$ListEntryFromJson(json);
+
+  /// Acts like a constructor, returns a [ListEntry], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ListEntry.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ListEntryFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }

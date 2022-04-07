@@ -290,6 +290,18 @@ class EffectEvidenceSynthesis with Resource, _$EffectEvidenceSynthesis {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EffectEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
       _$EffectEvidenceSynthesisFromJson(json);
+
+  /// Acts like a constructor, returns a [EffectEvidenceSynthesis], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EffectEvidenceSynthesis.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EffectEvidenceSynthesisFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1027,6 +1039,18 @@ class Evidence with Resource, _$Evidence {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Evidence.fromJson(Map<String, dynamic> json) =>
       _$EvidenceFromJson(json);
+
+  /// Acts like a constructor, returns a [Evidence], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Evidence.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1302,6 +1326,18 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariable.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableFromJson(json);
+
+  /// Acts like a constructor, returns a [EvidenceVariable], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EvidenceVariable.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceVariableFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1448,6 +1484,18 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableCharacteristicFromJson(json);
+
+  /// Acts like a constructor, returns a [EvidenceVariableCharacteristic], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EvidenceVariableCharacteristic.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceVariableCharacteristicFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1767,6 +1815,18 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchDefinition.fromJson(Map<String, dynamic> json) =>
       _$ResearchDefinitionFromJson(json);
+
+  /// Acts like a constructor, returns a [ResearchDefinition], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ResearchDefinition.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ResearchDefinitionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -2096,6 +2156,18 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$ResearchElementDefinitionFromJson(json);
+
+  /// Acts like a constructor, returns a [ResearchElementDefinition], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ResearchElementDefinition.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ResearchElementDefinitionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -2558,6 +2630,18 @@ class RiskEvidenceSynthesis with Resource, _$RiskEvidenceSynthesis {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RiskEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
       _$RiskEvidenceSynthesisFromJson(json);
+
+  /// Acts like a constructor, returns a [RiskEvidenceSynthesis], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory RiskEvidenceSynthesis.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$RiskEvidenceSynthesisFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -2636,6 +2720,18 @@ class RiskEvidenceSynthesisSampleSize with _$RiskEvidenceSynthesisSampleSize {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RiskEvidenceSynthesisSampleSize.fromJson(Map<String, dynamic> json) =>
       _$RiskEvidenceSynthesisSampleSizeFromJson(json);
+
+  /// Acts like a constructor, returns a [RiskEvidenceSynthesisSampleSize], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory RiskEvidenceSynthesisSampleSize.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$RiskEvidenceSynthesisSampleSizeFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -2880,6 +2976,18 @@ class RiskEvidenceSynthesisCertainty with _$RiskEvidenceSynthesisCertainty {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RiskEvidenceSynthesisCertainty.fromJson(Map<String, dynamic> json) =>
       _$RiskEvidenceSynthesisCertaintyFromJson(json);
+
+  /// Acts like a constructor, returns a [RiskEvidenceSynthesisCertainty], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory RiskEvidenceSynthesisCertainty.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$RiskEvidenceSynthesisCertaintyFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed

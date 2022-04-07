@@ -61,6 +61,18 @@ class PaymentNotice with Resource, _$PaymentNotice {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentNotice.fromJson(Map<String, dynamic> json) =>
       _$PaymentNoticeFromJson(json);
+
+  /// Acts like a constructor, returns a [PaymentNotice], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory PaymentNotice.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$PaymentNoticeFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -117,6 +129,18 @@ class PaymentReconciliation with Resource, _$PaymentReconciliation {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentReconciliation.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationFromJson(json);
+
+  /// Acts like a constructor, returns a [PaymentReconciliation], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory PaymentReconciliation.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$PaymentReconciliationFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -150,6 +174,18 @@ class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
       _$PaymentReconciliationDetailFromJson(json);
+
+  /// Acts like a constructor, returns a [PaymentReconciliationDetail], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory PaymentReconciliationDetail.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$PaymentReconciliationDetailFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed

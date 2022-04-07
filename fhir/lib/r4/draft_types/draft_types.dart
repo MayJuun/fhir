@@ -78,6 +78,18 @@ class Population with _$Population {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Population.fromJson(Map<String, dynamic> json) =>
       _$PopulationFromJson(json);
+
+  /// Acts like a constructor, returns a [Population], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Population.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$PopulationFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -155,6 +167,18 @@ class ProductShelfLife with _$ProductShelfLife {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProductShelfLife.fromJson(Map<String, dynamic> json) =>
       _$ProductShelfLifeFromJson(json);
+
+  /// Acts like a constructor, returns a [ProductShelfLife], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ProductShelfLife.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ProductShelfLifeFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -278,6 +302,18 @@ class ProdCharacteristic with _$ProdCharacteristic {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProdCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$ProdCharacteristicFromJson(json);
+
+  /// Acts like a constructor, returns a [ProdCharacteristic], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ProdCharacteristic.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ProdCharacteristicFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -372,6 +408,18 @@ class MarketingStatus with _$MarketingStatus {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MarketingStatus.fromJson(Map<String, dynamic> json) =>
       _$MarketingStatusFromJson(json);
+
+  /// Acts like a constructor, returns a [MarketingStatus], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MarketingStatus.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MarketingStatusFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -471,6 +519,18 @@ class SubstanceAmount with _$SubstanceAmount {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceAmount.fromJson(Map<String, dynamic> json) =>
       _$SubstanceAmountFromJson(json);
+
+  /// Acts like a constructor, returns a [SubstanceAmount], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubstanceAmount.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubstanceAmountFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -537,4 +597,16 @@ class SubstanceAmountReferenceRange with _$SubstanceAmountReferenceRange {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceAmountReferenceRange.fromJson(Map<String, dynamic> json) =>
       _$SubstanceAmountReferenceRangeFromJson(json);
+
+  /// Acts like a constructor, returns a [SubstanceAmountReferenceRange], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubstanceAmountReferenceRange.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubstanceAmountReferenceRangeFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }

@@ -340,4 +340,16 @@ class FhirExtension with _$FhirExtension {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory FhirExtension.fromJson(Map<String, dynamic> json) =>
       _$FhirExtensionFromJson(json);
+
+  /// Acts like a constructor, returns a [FhirExtension], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory FhirExtension.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$FhirExtensionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }

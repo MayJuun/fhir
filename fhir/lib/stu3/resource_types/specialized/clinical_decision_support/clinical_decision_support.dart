@@ -66,4 +66,16 @@ class GuidanceResponse with Resource, _$GuidanceResponse {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory GuidanceResponse.fromJson(Map<String, dynamic> json) =>
       _$GuidanceResponseFromJson(json);
+
+  /// Acts like a constructor, returns a [GuidanceResponse], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory GuidanceResponse.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$GuidanceResponseFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }

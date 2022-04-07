@@ -174,6 +174,18 @@ class BundleLink with _$BundleLink {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleLink.fromJson(Map<String, dynamic> json) =>
       _$BundleLinkFromJson(json);
+
+  /// Acts like a constructor, returns a [BundleLink], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory BundleLink.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$BundleLinkFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -210,6 +222,18 @@ class BundleEntry with _$BundleEntry {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleEntry.fromJson(Map<String, dynamic> json) =>
       _$BundleEntryFromJson(json);
+
+  /// Acts like a constructor, returns a [BundleEntry], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory BundleEntry.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$BundleEntryFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -243,6 +267,18 @@ class BundleEntrySearch with _$BundleEntrySearch {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleEntrySearch.fromJson(Map<String, dynamic> json) =>
       _$BundleEntrySearchFromJson(json);
+
+  /// Acts like a constructor, returns a [BundleEntrySearch], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory BundleEntrySearch.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$BundleEntrySearchFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -285,6 +321,18 @@ class BundleEntryRequest with _$BundleEntryRequest {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleEntryRequest.fromJson(Map<String, dynamic> json) =>
       _$BundleEntryRequestFromJson(json);
+
+  /// Acts like a constructor, returns a [BundleEntryRequest], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory BundleEntryRequest.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$BundleEntryRequestFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -322,6 +370,18 @@ class BundleEntryResponse with _$BundleEntryResponse {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BundleEntryResponse.fromJson(Map<String, dynamic> json) =>
       _$BundleEntryResponseFromJson(json);
+
+  /// Acts like a constructor, returns a [BundleEntryResponse], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory BundleEntryResponse.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$BundleEntryResponseFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
