@@ -161,7 +161,7 @@ packages:
       name: fhir_yaml
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.6.0"
+    version: "0.6.1"
   file:
     dependency: transitive
     description:

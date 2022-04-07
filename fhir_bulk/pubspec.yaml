@@ -1,11 +1,11 @@
 name: fhir_bulk
 description: A Dart/Flutter package for working with FHIR bulk data. Also includes ability to archive.
-version: 0.6.0
+version: 0.6.1
 homepage: https://www.fhirfli.dev/
 repository: https://github.com/MayJuun/fhir/tree/main/fhir_bulk
 
 environment:
-  sdk: '>=2.15.0 <3.0.0'
+  sdk: '>=2.16.0 <3.0.0'
 
 dependencies:
   archive: ^3.2.1
