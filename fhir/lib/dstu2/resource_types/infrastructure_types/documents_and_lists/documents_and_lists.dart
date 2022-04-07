@@ -1,13 +1,18 @@
 // ignore_for_file: camel_case_types
 
+// Dart imports:
 import 'dart:convert';
 
+// Package imports:
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
+
+// Project imports:
+import '../../../../dstu2.dart';
+
 // import 'package:flutter/foundation.dart';
 
-import '../../../../dstu2.dart';
 
 part 'documents_and_lists.enums.dart';
 part 'documents_and_lists.freezed.dart';

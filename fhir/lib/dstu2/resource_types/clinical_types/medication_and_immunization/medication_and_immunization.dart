@@ -1,11 +1,16 @@
+// Dart imports:
 import 'dart:convert';
 
+// Package imports:
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
+
+// Project imports:
+import '../../../../dstu2.dart';
+
 // import 'package:flutter/foundation.dart';
 
-import '../../../../dstu2.dart';
 
 part 'medication_and_immunization.enums.dart';
 part 'medication_and_immunization.freezed.dart';

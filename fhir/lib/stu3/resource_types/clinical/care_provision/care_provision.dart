@@ -1,11 +1,16 @@
+// Dart imports:
 import 'dart:convert';
 
+// Package imports:
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
+
+// Project imports:
+import '../../../../stu3.dart';
+
 // import 'package:flutter/foundation.dart';
 
-import '../../../../stu3.dart';
 
 part 'care_provision.enums.dart';
 part 'care_provision.freezed.dart';
