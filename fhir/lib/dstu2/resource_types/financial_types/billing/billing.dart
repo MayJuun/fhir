@@ -142,6 +142,18 @@ class Claim with Resource, _$Claim {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Claim.fromJson(Map<String, dynamic> json) => _$ClaimFromJson(json);
+
+  /// Acts like a constructor, returns a [Claim], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Claim.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ClaimFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed

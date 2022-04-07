@@ -317,6 +317,18 @@ class Person with Resource, _$Person {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
+
+  /// Acts like a constructor, returns a [Person], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Person.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$PersonFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed

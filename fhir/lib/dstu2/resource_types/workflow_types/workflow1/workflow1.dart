@@ -53,6 +53,18 @@ class Order with Resource, _$Order {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Order.fromJson(Map<String, dynamic> json) => _$OrderFromJson(json);
+
+  /// Acts like a constructor, returns a [Order], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Order.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$OrderFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed

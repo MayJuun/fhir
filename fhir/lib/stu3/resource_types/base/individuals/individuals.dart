@@ -60,6 +60,18 @@ class Group with Resource, _$Group {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Group.fromJson(Map<String, dynamic> json) => _$GroupFromJson(json);
+
+  /// Acts like a constructor, returns a [Group], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Group.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$GroupFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -442,6 +454,18 @@ class Person with Resource, _$Person {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Person.fromJson(Map<String, dynamic> json) => _$PersonFromJson(json);
+
+  /// Acts like a constructor, returns a [Person], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Person.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$PersonFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed

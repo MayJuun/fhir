@@ -1,5 +1,10 @@
 # fhir
 
+## [0.6.1]
+
+* Updated to dart 2.16.0
+* Added a .fromJsonString(String source) because I'm tired of writing Resource.fromjson(jsonDecode(source));
+
 ## [0.6.0]
 
 * Because I was tired of having a test version and not an official version

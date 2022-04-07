@@ -40,7 +40,18 @@ class Period with _$Period {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Period.fromJson(Map<String, dynamic> json) => _$PeriodFromJson(json);
+    factory Period.fromJson(Map<String, dynamic> json) => _$PeriodFromJson(json); 
+/// Acts like a constructor, returns a [Period], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Period.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$PeriodFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -77,7 +88,18 @@ class Coding with _$Coding {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Coding.fromJson(Map<String, dynamic> json) => _$CodingFromJson(json);
+    factory Coding.fromJson(Map<String, dynamic> json) => _$CodingFromJson(json); 
+/// Acts like a constructor, returns a [Coding], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Coding.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$CodingFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -104,7 +126,18 @@ class Range with _$Range {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Range.fromJson(Map<String, dynamic> json) => _$RangeFromJson(json);
+    factory Range.fromJson(Map<String, dynamic> json) => _$RangeFromJson(json); 
+/// Acts like a constructor, returns a [Range], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Range.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$RangeFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -238,7 +271,18 @@ class Ratio with _$Ratio {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Ratio.fromJson(Map<String, dynamic> json) => _$RatioFromJson(json);
+    factory Ratio.fromJson(Map<String, dynamic> json) => _$RatioFromJson(json); 
+/// Acts like a constructor, returns a [Ratio], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Ratio.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$RatioFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -510,7 +554,18 @@ class Timing with _$Timing {
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Timing.fromJson(Map<String, dynamic> json) => _$TimingFromJson(json);
+    factory Timing.fromJson(Map<String, dynamic> json) => _$TimingFromJson(json); 
+/// Acts like a constructor, returns a [Timing], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Timing.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TimingFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed

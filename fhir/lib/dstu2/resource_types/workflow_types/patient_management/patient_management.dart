@@ -576,4 +576,16 @@ class Flag with Resource, _$Flag {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Flag.fromJson(Map<String, dynamic> json) => _$FlagFromJson(json);
+
+  /// Acts like a constructor, returns a [Flag], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Flag.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$FlagFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }

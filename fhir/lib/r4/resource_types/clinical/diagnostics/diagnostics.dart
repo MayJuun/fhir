@@ -1172,6 +1172,18 @@ class Media with Resource, _$Media {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Media.fromJson(Map<String, dynamic> json) => _$MediaFromJson(json);
+
+  /// Acts like a constructor, returns a [Media], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Media.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MediaFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
