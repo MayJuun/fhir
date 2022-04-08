@@ -21,6 +21,8 @@ abstract class OperatorParser extends FhirPathParser {
   List execute(List results, Map<String, dynamic> passed);
   String toString();
   bool operator ==(Object o);
+  @override
+  int get hashCode => super.hashCode;
 }
 
 /// ParserList: anything that is a List of FhirPathParsers

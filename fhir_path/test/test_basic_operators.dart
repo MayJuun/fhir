@@ -1,5 +1,8 @@
-import 'package:fhir_path/fhir_path.dart';
+// Package imports:
 import 'package:test/test.dart';
+
+// Project imports:
+import 'package:fhir_path/fhir_path.dart';
 
 dynamic walkPath(dynamic arg) => lexer().parse(arg).value.execute([], {});
 

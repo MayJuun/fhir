@@ -8,7 +8,7 @@ environment:
   sdk: '>=2.16.0 <3.0.0'
 
 dependencies:
-  collection: ^1.16.0
+  collection: ^1.15.0
   fhir: ^0.6.1
   petitparser: ^5.0.0
 

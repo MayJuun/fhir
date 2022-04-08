@@ -70,7 +70,7 @@ packages:
       name: build_runner
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.1.7"
+    version: "2.1.8"
   build_runner_core:
     dependency: transitive
     description:
@@ -175,14 +175,14 @@ packages:
       name: fhir
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.6.0"
+    version: "0.6.1"
   fhir_yaml:
     dependency: transitive
     description:
       name: fhir_yaml
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.6.0"
+    version: "0.6.1"
   file:
     dependency: transitive
     description:
@@ -430,7 +430,7 @@ packages:
       name: oauth2_client
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.3.2"
+    version: "2.3.3"
   package_config:
     dependency: transitive
     description:
@@ -596,7 +596,7 @@ packages:
       name: test
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.20.1"
+    version: "1.20.2"
   test_api:
     dependency: transitive
     description:

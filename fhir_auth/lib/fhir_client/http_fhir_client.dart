@@ -3,8 +3,8 @@ import 'package:http/http.dart' as http;
 
 import 'fhir_client.dart';
 
-class NonFhirClient extends FhirClient {
-  NonFhirClient({
+class HttpFhirClient extends FhirClient {
+  HttpFhirClient({
     this.redirectUri,
     required this.fhirUri,
     this.clientId = '',

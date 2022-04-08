@@ -1,10 +1,12 @@
+// Dart imports:
 import 'dart:math';
 
+// Project imports:
 import '../../fhir_path.dart';
 
 class AbsParser extends FhirPathParser {
   AbsParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _wrongLength('.abs()', results)
@@ -23,7 +25,7 @@ class AbsParser extends FhirPathParser {
 
 class CeilingParser extends FhirPathParser {
   CeilingParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _wrongLength('.ceiling()', results)
@@ -36,7 +38,7 @@ class CeilingParser extends FhirPathParser {
 
 class ExpParser extends FhirPathParser {
   ExpParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _wrongLength('.exp()', results)
@@ -49,7 +51,7 @@ class ExpParser extends FhirPathParser {
 
 class FloorParser extends FhirPathParser {
   FloorParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _wrongLength('.floor()', results)
@@ -62,7 +64,7 @@ class FloorParser extends FhirPathParser {
 
 class LnParser extends FhirPathParser {
   LnParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _wrongLength('.ln()', results)
@@ -78,7 +80,7 @@ class LogParser extends ValueParser<ParserList> {
   late ParserList value;
   List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
-    return results.length == 0
+    return results.isEmpty
         ? []
         : results.length > 1
             ? throw _wrongLength('.log()', results)
@@ -101,7 +103,7 @@ class PowerParser extends ValueParser<ParserList> {
   late ParserList value;
   List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
-    if (results.length == 0 || executedValue.length == 0) {
+    if (results.isEmpty || executedValue.isEmpty) {
       return [];
     } else if (results.length > 1) {
       throw _wrongLength('.power()', results);
@@ -132,7 +134,7 @@ class RoundParser extends ValueParser<ParserList> {
   late ParserList value;
   List execute(List results, Map<String, dynamic> passed) {
     final executedValue = value.execute(results.toList(), passed);
-    return results.length == 0
+    return results.isEmpty
         ? []
         : results.length > 1
             ? throw _wrongLength('.round()', results)
@@ -156,7 +158,7 @@ class RoundParser extends ValueParser<ParserList> {
 
 class SqrtParser extends FhirPathParser {
   SqrtParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _wrongLength('.sqrt()', results)
@@ -170,7 +172,7 @@ class SqrtParser extends FhirPathParser {
 class TruncateParser extends ValueParser {
   TruncateParser();
   dynamic value;
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _wrongLength('.truncate()', results)

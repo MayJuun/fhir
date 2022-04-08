@@ -1,3 +1,4 @@
+// Project imports:
 import '../../fhir_path.dart';
 
 /// Merge the two collections into a single collection,
@@ -33,7 +34,7 @@ class CombineParser extends FunctionParser {
   CombineParser();
   late ParserList value;
   List execute(List results, Map<String, dynamic> passed) {
-    if (value.length == 0) {
+    if (value.isEmpty) {
       return results;
     } else {
       var executedValue = value.execute(results.toList(), passed);

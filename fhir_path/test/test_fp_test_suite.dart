@@ -1,7 +1,11 @@
+// Dart imports:
 import 'dart:convert';
 
-import 'package:fhir_path/fhir_path.dart';
+// Package imports:
 import 'package:test/test.dart';
+
+// Project imports:
+import 'package:fhir_path/fhir_path.dart';
 
 /// FHIRPath Test Suite - reference="http://hl7.org/fhirpath|2.0.0"
 void testFhirPathTestSuite() {

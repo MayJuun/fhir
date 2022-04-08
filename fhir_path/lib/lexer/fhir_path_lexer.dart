@@ -1,7 +1,9 @@
+// Package imports:
 import 'package:collection/collection.dart';
-import 'package:fhir_path/lexer/precedence.dart';
 import 'package:petitparser/petitparser.dart';
 
+// Project imports:
+import 'package:fhir_path/lexer/precedence.dart';
 import '../../fhir_path.dart';
 import 'lexer_lists.dart';
 

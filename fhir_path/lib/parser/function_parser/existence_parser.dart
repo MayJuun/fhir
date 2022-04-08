@@ -1,5 +1,7 @@
+// Package imports:
 import 'package:collection/collection.dart';
 
+// Project imports:
 import '../../fhir_path.dart';
 
 /// Returns true if the input collection is empty ({ }) and false otherwise.
@@ -161,7 +163,7 @@ class AllFalseParser extends FhirPathParser {
       return [true];
     }
     results.removeWhere((element) => element == false);
-    return [results.length == 0];
+    return [results.isEmpty];
   }
 
   String verbosePrint(int indent) => '${"  " * indent}AllFalseParser';

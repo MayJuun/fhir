@@ -1,12 +1,14 @@
+// Package imports:
 import 'package:collection/collection.dart';
 
+// Project imports:
 import '../../fhir_path.dart';
 
 class SingleParser extends FhirPathParser {
   SingleParser();
   List execute(List results, Map<String, dynamic> passed) => results.length == 1
       ? results
-      : results.length == 0
+      : results.isEmpty
           ? []
           : throw FhirPathEvaluationException(
               'The List $results is only allowed to contain one '

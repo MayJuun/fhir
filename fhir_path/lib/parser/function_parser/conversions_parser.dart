@@ -1,5 +1,7 @@
+// Package imports:
 import 'package:fhir/primitive_types/primitive_types.dart';
 
+// Project imports:
 import '../../fhir_path.dart';
 
 /// http://hl7.org/fhirpath/#iifcriterion-expression-true-result-collection-otherwise-result-collection-collection
@@ -83,7 +85,7 @@ class IifParser extends FunctionParser {
 /// If the item is not one the above types, or the item is a String, Integer, or Decimal, but is not equal to one of the possible values convertible to a Boolean, the result is empty.
 class ToBooleanParser extends FhirPathParser {
   ToBooleanParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.toBoolean()', results)
@@ -119,7 +121,7 @@ class ToBooleanParser extends FhirPathParser {
 /// the item is a String that is equal to one of the possible string representations of Boolean values
 class ConvertsToBooleanParser extends FhirPathParser {
   ConvertsToBooleanParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToBoolean()', results)
@@ -152,9 +154,10 @@ class ConvertsToBooleanParser extends FhirPathParser {
   String prettyPrint(int indent) => '.convertsToBoolean()';
 }
 
+/// Converts input to an [Integer] if possible
 class ToIntegerParser extends FhirPathParser {
   ToIntegerParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.toInteger()', results)
@@ -172,9 +175,10 @@ class ToIntegerParser extends FhirPathParser {
   String prettyPrint(int indent) => '.toInteger()';
 }
 
+/// Checks if input can be converted to an [Integer]
 class ConvertsToIntegerParser extends FhirPathParser {
   ConvertsToIntegerParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToInteger()', results)
@@ -192,9 +196,10 @@ class ConvertsToIntegerParser extends FhirPathParser {
   String prettyPrint(int indent) => '.convertsToInteger()';
 }
 
+/// Converts input to an [Date] if possible
 class ToDateParser extends FhirPathParser {
   ToDateParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.toDate()', results)
@@ -205,9 +210,10 @@ class ToDateParser extends FhirPathParser {
   String prettyPrint(int indent) => '.toDate()';
 }
 
+/// Checks if input can be converted to a [Date]
 class ConvertsToDateParser extends FhirPathParser {
   ConvertsToDateParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToDate()', results)
@@ -216,9 +222,10 @@ class ConvertsToDateParser extends FhirPathParser {
   String prettyPrint(int indent) => '.convertsToDate()';
 }
 
+/// Converts input to [FhirDateTime] if possible
 class ToDateTimeParser extends FhirPathParser {
   ToDateTimeParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.toDateTime()', results)
@@ -229,9 +236,10 @@ class ToDateTimeParser extends FhirPathParser {
   String prettyPrint(int indent) => '.toDateTime()';
 }
 
+/// Checks if input can be converted to a [FhirDateTime]
 class ConvertsToDateTimeParser extends FhirPathParser {
   ConvertsToDateTimeParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToDateTime()', results)
@@ -242,9 +250,10 @@ class ConvertsToDateTimeParser extends FhirPathParser {
   String prettyPrint(int indent) => '.convertsToDateTime()';
 }
 
+/// Converts input to a [Decimal] if possible
 class ToDecimalParser extends FhirPathParser {
   ToDecimalParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.toDecimal()', results)
@@ -261,9 +270,10 @@ class ToDecimalParser extends FhirPathParser {
   String prettyPrint(int indent) => '.toDecimal()';
 }
 
+/// Checks if input can be converted into a [Decimal]
 class ConvertsToDecimalParser extends FhirPathParser {
   ConvertsToDecimalParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToDecimal()', results)
@@ -280,10 +290,11 @@ class ConvertsToDecimalParser extends FhirPathParser {
   String prettyPrint(int indent) => '.convertsToDecimal()';
 }
 
+/// Converts input to a [String] if possible
 class ToStringParser extends FhirPathParser {
   ToStringParser();
   List execute(List results, Map<String, dynamic> passed) {
-    return results.length == 0
+    return results.isEmpty
         ? []
         : results.length > 1
             ? throw _conversionException('.toString()', results)
@@ -296,9 +307,10 @@ class ToStringParser extends FhirPathParser {
   String prettyPrint(int indent) => '.toString()';
 }
 
+/// Checks if input can be converted to a [String]
 class ConvertsToStringParser extends FhirPathParser {
   ConvertsToStringParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToString()', results)
@@ -310,9 +322,10 @@ class ConvertsToStringParser extends FhirPathParser {
   String prettyPrint(int indent) => '.convertsToString()';
 }
 
+/// Converts input to a [Time] if possible
 class ToTimeParser extends FhirPathParser {
   ToTimeParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.toTime()', results)
@@ -325,9 +338,10 @@ class ToTimeParser extends FhirPathParser {
   String prettyPrint(int indent) => '.toTime()';
 }
 
+/// Checks if input can be converted to a [Time]
 class ConvertsToTimeParser extends FhirPathParser {
   ConvertsToTimeParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToTime()', results)
@@ -339,11 +353,12 @@ class ConvertsToTimeParser extends FhirPathParser {
   String prettyPrint(int indent) => '.convertsToTime()';
 }
 
+/// Converts input to a [Quantity] if possible
 class ToQuantityParser extends FhirPathParser {
   dynamic value;
 
   ToQuantityParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.toQuantity()', results)
@@ -358,11 +373,12 @@ class ToQuantityParser extends FhirPathParser {
   String prettyPrint(int indent) => '.toQuantity()';
 }
 
+/// Checks if input can be converted to a [Quantity]
 class ConvertsToQuantityParser extends FhirPathParser {
   dynamic value;
 
   ConvertsToQuantityParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToQuantity()', results)
