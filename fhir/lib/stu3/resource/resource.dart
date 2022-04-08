@@ -13,7 +13,6 @@ import '../../stu3.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'resource.g.dart';
 part 'resource_from_json.dart';
 part 'resource_new_id.dart';
@@ -116,15 +115,14 @@ class Resource {
   String toYaml() => json2yaml(toJson());
 
   /// produce a string of the [resourceType]
-  String? resourceTypeString() =>
+  String? get resourceTypeString =>
       ResourceUtils.resourceTypeToStringMap[resourceType];
 
   /// Convenience method to return a [Reference] referring to that [Resource]
-  Reference thisReference() =>
-      Reference(reference: '${resourceTypeString()}/$id');
+  Reference get thisReference => Reference(reference: path);
 
   /// Local Reference for this Resource
-  String path() => '${resourceTypeString()}/$id';
+  String get path => '$resourceTypeString/$id';
 
   /// returns the same resource with a new ID if there is no current ID
   Resource newIdIfNoId() => id == null ? _newId(this) : this;
