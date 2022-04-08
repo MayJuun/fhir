@@ -1,6 +1,10 @@
-import 'package:fhir/r5.dart';
+// Flutter imports:
 import 'package:flutter/foundation.dart' show kIsWeb;
 
+// Package imports:
+import 'package:fhir/r5.dart';
+
+// Project imports:
 import '../../../r5.dart';
 
 import 'smart_mobile_client.dart'; // dart:io implementation

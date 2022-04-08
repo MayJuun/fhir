@@ -1,9 +1,12 @@
+// Dart imports:
 import 'dart:convert';
 
+// Package imports:
 import 'package:fhir/dstu2.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart';
 
+// Project imports:
 import '../../dstu2.dart';
 import '../../globals.dart' as globals;
 

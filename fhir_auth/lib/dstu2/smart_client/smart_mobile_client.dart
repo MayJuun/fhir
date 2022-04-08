@@ -1,11 +1,14 @@
+// Dart imports:
 import 'dart:convert';
 
+// Package imports:
 import 'package:collection/collection.dart';
 import 'package:fhir/dstu2.dart';
 import 'package:http/http.dart' as http;
 import 'package:oauth2_client/oauth2_client.dart';
 import 'package:oauth2_client/oauth2_helper.dart';
 
+// Project imports:
 import 'smart_client.dart';
 
 /// the star of our show, who you've all come to see, the Smart object who

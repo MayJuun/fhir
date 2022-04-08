@@ -1,8 +1,10 @@
 // ignore_for_file: prefer_final_locals
 
+// Package imports:
 import 'package:fhir/r4.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
+// Project imports:
 import 'clinical_scope.dart';
 
 part 'scopes.freezed.dart';

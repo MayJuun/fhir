@@ -1,6 +1,8 @@
+// Package imports:
 import 'package:fhir/primitive_types/primitive_types.dart';
 import 'package:http/http.dart' as http;
 
+// Project imports:
 import 'fhir_client.dart';
 
 class HttpFhirClient extends FhirClient {
