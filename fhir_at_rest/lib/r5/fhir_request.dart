@@ -1,9 +1,12 @@
+// Dart imports:
 import 'dart:convert';
 
+// Package imports:
 import 'package:fhir/r5.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:http/http.dart';
 
+// Project imports:
 import '../enums/enums.dart';
 import '../globals.dart' as globals;
 

@@ -9,7 +9,7 @@ environment:
   sdk: '>=2.16.0 <3.0.0'
 
 dependencies:
-  fhir: ^0.6.0
+  fhir: ^0.6.1
   freezed_annotation: ^1.1.0
   http: ^0.13.4
 

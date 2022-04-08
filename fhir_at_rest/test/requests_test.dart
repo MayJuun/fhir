@@ -1,7 +1,10 @@
+// Package imports:
 import 'package:fhir/r4.dart';
+import 'package:test/test.dart';
+
+// Project imports:
 import 'package:fhir_at_rest/globals.dart' as globals;
 import 'package:fhir_at_rest/r4.dart';
-import 'package:test/test.dart';
 
 Future<void> requestsTest() async {
   globals.kTestMode = true;
