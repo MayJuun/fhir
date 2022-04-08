@@ -30,11 +30,11 @@ class Account with Resource, _$Account {
   ///
   /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
   ///
-  /// [_implicitRules]: "Extensions for implicitRules"
+  /// [implicitRulesElement]: "Extensions for implicitRules"
   ///
   /// [language]: "The base language in which the resource is written."
   ///
-  /// [_language]: "Extensions for language"
+  /// [languageElement]: "Extensions for language"
   ///
   /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
   ///
@@ -48,7 +48,7 @@ class Account with Resource, _$Account {
   ///
   /// [status]: "Indicates whether the account is presently used/usable or not."
   ///
-  /// [_status]: "Extensions for status"
+  /// [statusElement]: "Extensions for status"
   ///
   /// [billingStatus]: "The BillingStatus tracks the lifecycle of the account through the billing process. It indicates how transactions are treated when they are allocated to the account."
   ///
@@ -56,7 +56,7 @@ class Account with Resource, _$Account {
   ///
   /// [name]: "Name used for the account when displaying it to humans in reports, etc."
   ///
-  /// [_name]: "Extensions for name"
+  /// [nameElement]: "Extensions for name"
   ///
   /// [subject]: "Identifies the entity which incurs the expenses. While the immediate recipients of services or goods might be entities related to the subject, the expenses were ultimately incurred by the subject of the Account."
   ///
@@ -68,7 +68,7 @@ class Account with Resource, _$Account {
   ///
   /// [description]: "Provides additional information about what the account tracks and how it is used."
   ///
-  /// [_description]: "Extensions for description"
+  /// [descriptionElement]: "Extensions for description"
   ///
   /// [guarantor]: "The parties responsible for balancing the account if other payment options fall short."
   ///
@@ -140,7 +140,7 @@ class Account with Resource, _$Account {
 class AccountCoverage with _$AccountCoverage {
   AccountCoverage._();
 
-  /// [Account_Coverage]: "A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc."
+  /// [AccountCoverage]: "A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -152,7 +152,7 @@ class AccountCoverage with _$AccountCoverage {
   ///
   /// [priority]: "The priority of the coverage in the context of this account."
   ///
-  /// [_priority]: "Extensions for priority"
+  /// [priorityElement]: "Extensions for priority"
 
   factory AccountCoverage({
     String? id,
@@ -198,7 +198,7 @@ class AccountCoverage with _$AccountCoverage {
 class AccountGuarantor with _$AccountGuarantor {
   AccountGuarantor._();
 
-  /// [Account_Guarantor]: "A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc."
+  /// [AccountGuarantor]: "A financial tool for tracking value accrued for a particular purpose.  In the healthcare field, used to track charges for a patient, cost centers, etc."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -210,7 +210,7 @@ class AccountGuarantor with _$AccountGuarantor {
   ///
   /// [onHold]: "A guarantor may be placed on credit hold or otherwise have their role temporarily suspended."
   ///
-  /// [_onHold]: "Extensions for onHold"
+  /// [onHoldElement]: "Extensions for onHold"
   ///
   /// [period]: "The timeframe during which the guarantor accepts responsibility for the account."
 
@@ -269,11 +269,11 @@ class ChargeItem with Resource, _$ChargeItem {
   ///
   /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
   ///
-  /// [_implicitRules]: "Extensions for implicitRules"
+  /// [implicitRulesElement]: "Extensions for implicitRules"
   ///
   /// [language]: "The base language in which the resource is written."
   ///
-  /// [_language]: "Extensions for language"
+  /// [languageElement]: "Extensions for language"
   ///
   /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
   ///
@@ -287,13 +287,13 @@ class ChargeItem with Resource, _$ChargeItem {
   ///
   /// [definitionUri]: "References the (external) source of pricing information, rules of application for the code this ChargeItem uses."
   ///
-  /// [_definitionUri]: "Extensions for definitionUri"
+  /// [definitionUriElement]: "Extensions for definitionUri"
   ///
   /// [definitionCanonical]: "References the source of pricing information, rules of application for the code this ChargeItem uses."
   ///
   /// [status]: "The current state of the ChargeItem."
   ///
-  /// [_status]: "Extensions for status"
+  /// [statusElement]: "Extensions for status"
   ///
   /// [partOf]: "ChargeItems can be grouped to larger ChargeItems covering the whole set."
   ///
@@ -305,7 +305,7 @@ class ChargeItem with Resource, _$ChargeItem {
   ///
   /// [occurrenceDateTime]: "Date/time(s) or duration when the charged service was applied."
   ///
-  /// [_occurrenceDateTime]: "Extensions for occurrenceDateTime"
+  /// [occurrenceDateTimeElement]: "Extensions for occurrenceDateTime"
   ///
   /// [occurrencePeriod]: "Date/time(s) or duration when the charged service was applied."
   ///
@@ -325,19 +325,19 @@ class ChargeItem with Resource, _$ChargeItem {
   ///
   /// [factorOverride]: "Factor overriding the factor determined by the rules associated with the code."
   ///
-  /// [_factorOverride]: "Extensions for factorOverride"
+  /// [factorOverrideElement]: "Extensions for factorOverride"
   ///
   /// [priceOverride]: "Total price of the charge overriding the list price associated with the code."
   ///
   /// [overrideReason]: "If the list price or the rule-based factor associated with the code is overridden, this attribute can capture a text to indicate the  reason for this action."
   ///
-  /// [_overrideReason]: "Extensions for overrideReason"
+  /// [overrideReasonElement]: "Extensions for overrideReason"
   ///
   /// [enterer]: "The device, practitioner, etc. who entered the charge item."
   ///
   /// [enteredDate]: "Date the charge item was entered."
   ///
-  /// [_enteredDate]: "Extensions for enteredDate"
+  /// [enteredDateElement]: "Extensions for enteredDate"
   ///
   /// [reason]: "Describes why the event occurred in coded or textual form."
   ///
@@ -439,7 +439,7 @@ class ChargeItem with Resource, _$ChargeItem {
 class ChargeItemPerformer with _$ChargeItemPerformer {
   ChargeItemPerformer._();
 
-  /// [ChargeItem_Performer]: "The resource ChargeItem describes the provision of healthcare provider products for a certain patient, therefore referring not only to the product, but containing in addition details of the provision, like date, time, amounts and participating organizations and persons. Main Usage of the ChargeItem is to enable the billing process and internal cost allocation."
+  /// [ChargeItemPerformer]: "The resource ChargeItem describes the provision of healthcare provider products for a certain patient, therefore referring not only to the product, but containing in addition details of the provision, like date, time, amounts and participating organizations and persons. Main Usage of the ChargeItem is to enable the billing process and internal cost allocation."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -504,11 +504,11 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   ///
   /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
   ///
-  /// [_implicitRules]: "Extensions for implicitRules"
+  /// [implicitRulesElement]: "Extensions for implicitRules"
   ///
   /// [language]: "The base language in which the resource is written."
   ///
-  /// [_language]: "Extensions for language"
+  /// [languageElement]: "Extensions for language"
   ///
   /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
   ///
@@ -520,43 +520,43 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   ///
   /// [url]: "An absolute URI that is used to identify this charge item definition when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this charge item definition is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the charge item definition is stored on different servers."
   ///
-  /// [_url]: "Extensions for url"
+  /// [urlElement]: "Extensions for url"
   ///
   /// [identifier]: "A formal identifier that is used to identify this charge item definition when it is represented in other formats, or referenced in a specification, model, design or an instance."
   ///
   /// [version]: "The identifier that is used to identify this version of the charge item definition when it is referenced in a specification, model, design or instance. This is an arbitrary value managed by the charge item definition author and is not expected to be globally unique. For example, it might be a timestamp (e.g. yyyymmdd) if a managed version is not available. There is also no expectation that versions can be placed in a lexicographical sequence. To provide a version consistent with the Decision Support Service specification, use the format Major.Minor.Revision (e.g. 1.0.0). For more information on versioning knowledge assets, refer to the Decision Support Service specification. Note that a version is required for non-experimental active assets."
   ///
-  /// [_version]: "Extensions for version"
+  /// [versionElement]: "Extensions for version"
   ///
   /// [name]: "A natural language name identifying the {{title}}. This name should be usable as an identifier for the module by machine processing applications such as code generation."
   ///
-  /// [_name]: "Extensions for name"
+  /// [nameElement]: "Extensions for name"
   ///
   /// [title]: "A short, descriptive, user-friendly title for the charge item definition."
   ///
-  /// [_title]: "Extensions for title"
+  /// [titleElement]: "Extensions for title"
   ///
   /// [status]: "The current state of the ChargeItemDefinition."
   ///
-  /// [_status]: "Extensions for status"
+  /// [statusElement]: "Extensions for status"
   ///
   /// [experimental]: "A Boolean value to indicate that this charge item definition is authored for testing purposes (or education/evaluation/marketing) and is not intended to be used for genuine usage."
   ///
-  /// [_experimental]: "Extensions for experimental"
+  /// [experimentalElement]: "Extensions for experimental"
   ///
   /// [date]: "The date  (and optionally time) when the charge item definition was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the charge item definition changes."
   ///
-  /// [_date]: "Extensions for date"
+  /// [dateElement]: "Extensions for date"
   ///
   /// [publisher]: "The name of the organization or individual that published the charge item definition."
   ///
-  /// [_publisher]: "Extensions for publisher"
+  /// [publisherElement]: "Extensions for publisher"
   ///
   /// [contact]: "Contact details to assist a user in finding and communicating with the publisher."
   ///
   /// [description]: "A free text natural language description of the charge item definition from a consumer\u0027s perspective."
   ///
-  /// [_description]: "Extensions for description"
+  /// [descriptionElement]: "Extensions for description"
   ///
   /// [useContext]: "The content was developed with a focus and intent of supporting the contexts that are listed. These contexts may be general categories (gender, age, ...) or may be references to specific programs (insurance plans, studies, ...) and may be used to assist with indexing and searching for appropriate charge item definition instances."
   ///
@@ -564,19 +564,19 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   ///
   /// [purpose]: "Explanation of why this {{title}} is needed and why it has been designed as it has."
   ///
-  /// [_purpose]: "Extensions for purpose"
+  /// [purposeElement]: "Extensions for purpose"
   ///
   /// [copyright]: "A copyright statement relating to the charge item definition and/or its contents. Copyright statements are generally legal restrictions on the use and publishing of the charge item definition."
   ///
-  /// [_copyright]: "Extensions for copyright"
+  /// [copyrightElement]: "Extensions for copyright"
   ///
   /// [approvalDate]: "The date on which the resource content was approved by the publisher. Approval happens once when the content is officially approved for usage."
   ///
-  /// [_approvalDate]: "Extensions for approvalDate"
+  /// [approvalDateElement]: "Extensions for approvalDate"
   ///
   /// [lastReviewDate]: "The date on which the resource content was last reviewed. Review happens periodically after approval but does not change the original approval date."
   ///
-  /// [_lastReviewDate]: "Extensions for lastReviewDate"
+  /// [lastReviewDateElement]: "Extensions for lastReviewDate"
   ///
   /// [effectivePeriod]: "The period during which the charge item definition content was or is planned to be in active use."
   ///
@@ -594,7 +594,7 @@ class ChargeItemDefinition with Resource, _$ChargeItemDefinition {
   ///
   /// [derivedFromUri]: "The URL pointing to an externally-defined charge item definition that is adhered to in whole or in part by this definition."
   ///
-  /// [_derivedFromUri]: "Extensions for derivedFromUri"
+  /// [derivedFromUriElement]: "Extensions for derivedFromUri"
   ///
   /// [partOf]: "A larger definition of which this particular definition is a component or step."
   ///
@@ -707,7 +707,7 @@ class ChargeItemDefinitionApplicability
     with _$ChargeItemDefinitionApplicability {
   ChargeItemDefinitionApplicability._();
 
-  /// [ChargeItemDefinition_Applicability]: "The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system."
+  /// [ChargeItemDefinitionApplicability]: "The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -717,15 +717,15 @@ class ChargeItemDefinitionApplicability
   ///
   /// [description]: "A brief, natural language description of the condition that effectively communicates the intended semantics."
   ///
-  /// [_description]: "Extensions for description"
+  /// [descriptionElement]: "Extensions for description"
   ///
   /// [language]: "The media type of the language for the expression, e.g. \"text/cql\" for Clinical Query Language expressions or \"text/fhirpath\" for FHIRPath expressions."
   ///
-  /// [_language]: "Extensions for language"
+  /// [languageElement]: "Extensions for language"
   ///
   /// [expression]: "An expression that returns true or false, indicating whether the condition is satisfied. When using FHIRPath expressions, the %context environment variable must be replaced at runtime with the ChargeItem resource to which this definition is applied."
   ///
-  /// [_expression]: "Extensions for expression"
+  /// [expressionElement]: "Extensions for expression"
 
   factory ChargeItemDefinitionApplicability({
     String? id,
@@ -765,7 +765,7 @@ class ChargeItemDefinitionPropertyGroup
     with _$ChargeItemDefinitionPropertyGroup {
   ChargeItemDefinitionPropertyGroup._();
 
-  /// [ChargeItemDefinition_PropertyGroup]: "The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system."
+  /// [ChargeItemDefinitionPropertyGroup]: "The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -811,7 +811,7 @@ class ChargeItemDefinitionPriceComponent
     with _$ChargeItemDefinitionPriceComponent {
   ChargeItemDefinitionPriceComponent._();
 
-  /// [ChargeItemDefinition_PriceComponent]: "The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system."
+  /// [ChargeItemDefinitionPriceComponent]: "The ChargeItemDefinition resource provides the properties that apply to the (billing) codes necessary to calculate costs and prices. The properties may differ largely depending on type and realm, therefore this resource gives only a rough structure and requires profiling for each type of billing code system."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -821,13 +821,13 @@ class ChargeItemDefinitionPriceComponent
   ///
   /// [type]: "This code identifies the type of the component."
   ///
-  /// [_type]: "Extensions for type"
+  /// [typeElement]: "Extensions for type"
   ///
   /// [code]: "A code that identifies the component. Codes may be used to differentiate between kinds of taxes, surcharges, discounts etc."
   ///
   /// [factor]: "The factor that has been applied on the base price for calculating this component."
   ///
-  /// [_factor]: "Extensions for factor"
+  /// [factorElement]: "Extensions for factor"
   ///
   /// [amount]: "The amount calculated for this component."
 
@@ -878,11 +878,11 @@ class Contract with Resource, _$Contract {
   ///
   /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
   ///
-  /// [_implicitRules]: "Extensions for implicitRules"
+  /// [implicitRulesElement]: "Extensions for implicitRules"
   ///
   /// [language]: "The base language in which the resource is written."
   ///
-  /// [_language]: "Extensions for language"
+  /// [languageElement]: "Extensions for language"
   ///
   /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
   ///
@@ -896,15 +896,15 @@ class Contract with Resource, _$Contract {
   ///
   /// [url]: "Canonical identifier for this contract, represented as a URI (globally unique)."
   ///
-  /// [_url]: "Extensions for url"
+  /// [urlElement]: "Extensions for url"
   ///
   /// [version]: "An edition identifier used for business purposes to label business significant variants."
   ///
-  /// [_version]: "Extensions for version"
+  /// [versionElement]: "Extensions for version"
   ///
   /// [status]: "The status of the resource instance."
   ///
-  /// [_status]: "Extensions for status"
+  /// [statusElement]: "Extensions for status"
   ///
   /// [legalState]: "Legal states of the formation of a legal instrument, which is a formally executed written document that can be formally attributed to its author, records and formally expresses a legally enforceable act, process, or contractual duty, obligation, or right, and therefore evidences that act, process, or agreement."
   ///
@@ -912,13 +912,13 @@ class Contract with Resource, _$Contract {
   ///
   /// [instantiatesUri]: "The URL pointing to an externally maintained definition that is adhered to in whole or in part by this Contract."
   ///
-  /// [_instantiatesUri]: "Extensions for instantiatesUri"
+  /// [instantiatesUriElement]: "Extensions for instantiatesUri"
   ///
   /// [contentDerivative]: "The minimal content derived from the basal information source at a specific stage in its lifecycle."
   ///
   /// [issued]: "When this  Contract was issued."
   ///
-  /// [_issued]: "Extensions for issued"
+  /// [issuedElement]: "Extensions for issued"
   ///
   /// [applies]: "Relevant time or time-period when this Contract is applicable."
   ///
@@ -934,19 +934,19 @@ class Contract with Resource, _$Contract {
   ///
   /// [name]: "A natural language name identifying this Contract definition, derivative, or instance in any legal state. Provides additional information about its content. This name should be usable as an identifier for the module by machine processing applications such as code generation."
   ///
-  /// [_name]: "Extensions for name"
+  /// [nameElement]: "Extensions for name"
   ///
   /// [title]: "A short, descriptive, user-friendly title for this Contract definition, derivative, or instance in any legal state.t giving additional information about its content."
   ///
-  /// [_title]: "Extensions for title"
+  /// [titleElement]: "Extensions for title"
   ///
   /// [subtitle]: "An explanatory or alternate user-friendly title for this Contract definition, derivative, or instance in any legal state.t giving additional information about its content."
   ///
-  /// [_subtitle]: "Extensions for subtitle"
+  /// [subtitleElement]: "Extensions for subtitle"
   ///
   /// [alias]: "Alternative representation of the title for this Contract definition, derivative, or instance in any legal state., e.g., a domain specific contract number related to legislation."
   ///
-  /// [_alias]: "Extensions for alias"
+  /// [aliasElement]: "Extensions for alias"
   ///
   /// [author]: "The individual or organization that authored the Contract definition, derivative, or instance in any legal state."
   ///
@@ -1076,7 +1076,7 @@ class Contract with Resource, _$Contract {
 class ContractContentDefinition with _$ContractContentDefinition {
   ContractContentDefinition._();
 
-  /// [Contract_ContentDefinition]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
+  /// [ContractContentDefinition]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -1092,15 +1092,15 @@ class ContractContentDefinition with _$ContractContentDefinition {
   ///
   /// [publicationDate]: "The date (and optionally time) when the contract was published. The date must change when the business version changes and it must change if the status code changes. In addition, it should change when the substantive content of the contract changes."
   ///
-  /// [_publicationDate]: "Extensions for publicationDate"
+  /// [publicationDateElement]: "Extensions for publicationDate"
   ///
   /// [publicationStatus]: "amended | appended | cancelled | disputed | entered-in-error | executable +."
   ///
-  /// [_publicationStatus]: "Extensions for publicationStatus"
+  /// [publicationStatusElement]: "Extensions for publicationStatus"
   ///
   /// [copyright]: "A copyright statement relating to Contract precursor content. Copyright statements are generally legal restrictions on the use and publishing of the Contract precursor content."
   ///
-  /// [_copyright]: "Extensions for copyright"
+  /// [copyrightElement]: "Extensions for copyright"
 
   factory ContractContentDefinition({
     String? id,
@@ -1152,7 +1152,7 @@ class ContractContentDefinition with _$ContractContentDefinition {
 class ContractTerm with _$ContractTerm {
   ContractTerm._();
 
-  /// [Contract_Term]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
+  /// [ContractTerm]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -1164,7 +1164,7 @@ class ContractTerm with _$ContractTerm {
   ///
   /// [issued]: "When this Contract Provision was issued."
   ///
-  /// [_issued]: "Extensions for issued"
+  /// [issuedElement]: "Extensions for issued"
   ///
   /// [applies]: "Relevant time or time-period when this Contract Provision is applicable."
   ///
@@ -1178,7 +1178,7 @@ class ContractTerm with _$ContractTerm {
   ///
   /// [text]: "Statement of a provision in a policy or a contract."
   ///
-  /// [_text]: "Extensions for text"
+  /// [textElement]: "Extensions for text"
   ///
   /// [securityLabel]: "Security labels that protect the handling of information about the term and its elements, which may be specifically identified.."
   ///
@@ -1246,7 +1246,7 @@ class ContractTerm with _$ContractTerm {
 class ContractSecurityLabel with _$ContractSecurityLabel {
   ContractSecurityLabel._();
 
-  /// [Contract_SecurityLabel]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
+  /// [ContractSecurityLabel]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -1256,7 +1256,7 @@ class ContractSecurityLabel with _$ContractSecurityLabel {
   ///
   /// [number]: "Number used to link this term or term element to the applicable Security Label."
   ///
-  /// [_number]: "Extensions for number"
+  /// [numberElement]: "Extensions for number"
   ///
   /// [classification]: "Security label privacy tag that species the level of confidentiality protection required for this term and/or term elements."
   ///
@@ -1310,7 +1310,7 @@ class ContractSecurityLabel with _$ContractSecurityLabel {
 class ContractOffer with _$ContractOffer {
   ContractOffer._();
 
-  /// [Contract_Offer]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
+  /// [ContractOffer]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -1334,15 +1334,15 @@ class ContractOffer with _$ContractOffer {
   ///
   /// [text]: "Human readable form of this Contract Offer."
   ///
-  /// [_text]: "Extensions for text"
+  /// [textElement]: "Extensions for text"
   ///
   /// [linkId]: "The id of the clause or question text of the offer in the referenced questionnaire/response."
   ///
-  /// [_linkId]: "Extensions for linkId"
+  /// [linkIdElement]: "Extensions for linkId"
   ///
   /// [securityLabelNumber]: "Security labels that protects the offer."
   ///
-  /// [_securityLabelNumber]: "Extensions for securityLabelNumber"
+  /// [securityLabelNumberElement]: "Extensions for securityLabelNumber"
 
   factory ContractOffer({
     String? id,
@@ -1399,7 +1399,7 @@ class ContractOffer with _$ContractOffer {
 class ContractParty with _$ContractParty {
   ContractParty._();
 
-  /// [Contract_Party]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
+  /// [ContractParty]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -1454,7 +1454,7 @@ class ContractParty with _$ContractParty {
 class ContractAnswer with _$ContractAnswer {
   ContractAnswer._();
 
-  /// [Contract_Answer]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
+  /// [ContractAnswer]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -1464,35 +1464,35 @@ class ContractAnswer with _$ContractAnswer {
   ///
   /// [valueBoolean]: "Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research."
   ///
-  /// [_valueBoolean]: "Extensions for valueBoolean"
+  /// [valueBooleanElement]: "Extensions for valueBoolean"
   ///
   /// [valueDecimal]: "Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research."
   ///
-  /// [_valueDecimal]: "Extensions for valueDecimal"
+  /// [valueDecimalElement]: "Extensions for valueDecimal"
   ///
   /// [valueInteger]: "Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research."
   ///
-  /// [_valueInteger]: "Extensions for valueInteger"
+  /// [valueIntegerElement]: "Extensions for valueInteger"
   ///
   /// [valueDate]: "Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research."
   ///
-  /// [_valueDate]: "Extensions for valueDate"
+  /// [valueDateElement]: "Extensions for valueDate"
   ///
   /// [valueDateTime]: "Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research."
   ///
-  /// [_valueDateTime]: "Extensions for valueDateTime"
+  /// [valueDateTimeElement]: "Extensions for valueDateTime"
   ///
   /// [valueTime]: "Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research."
   ///
-  /// [_valueTime]: "Extensions for valueTime"
+  /// [valueTimeElement]: "Extensions for valueTime"
   ///
   /// [valueString]: "Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research."
   ///
-  /// [_valueString]: "Extensions for valueString"
+  /// [valueStringElement]: "Extensions for valueString"
   ///
   /// [valueUri]: "Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research."
   ///
-  /// [_valueUri]: "Extensions for valueUri"
+  /// [valueUriElement]: "Extensions for valueUri"
   ///
   /// [valueAttachment]: "Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research."
   ///
@@ -1502,7 +1502,7 @@ class ContractAnswer with _$ContractAnswer {
   ///
   /// [valueReference]: "Response to an offer clause or question text,  which enables selection of values to be agreed to, e.g., the period of participation, the date of occupancy of a rental, warrently duration, or whether biospecimen may be used for further research."
   ///
-  /// [Contract_Asset]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
+  /// [ContractAsset]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -1524,7 +1524,7 @@ class ContractAnswer with _$ContractAnswer {
   ///
   /// [condition]: "Description of the quality and completeness of the asset that imay be a factor in its valuation."
   ///
-  /// [_condition]: "Extensions for condition"
+  /// [conditionElement]: "Extensions for condition"
   ///
   /// [periodType]: "Type of Asset availability for use or ownership."
   ///
@@ -1534,17 +1534,17 @@ class ContractAnswer with _$ContractAnswer {
   ///
   /// [text]: "Clause or question text (Prose Object) concerning the asset in a linked form, such as a QuestionnaireResponse used in the formation of the contract."
   ///
-  /// [_text]: "Extensions for text"
+  /// [textElement]: "Extensions for text"
   ///
   /// [linkId]: "Id [identifier??] of the clause or question text about the asset in the referenced form or QuestionnaireResponse."
   ///
-  /// [_linkId]: "Extensions for linkId"
+  /// [linkIdElement]: "Extensions for linkId"
   ///
   /// [answer]: "Response to assets."
   ///
   /// [securityLabelNumber]: "Security labels that protects the asset."
   ///
-  /// [_securityLabelNumber]: "Extensions for securityLabelNumber"
+  /// [securityLabelNumberElement]: "Extensions for securityLabelNumber"
   ///
   /// [valuedItem]: "Contract Valued Item List."
 
@@ -1670,7 +1670,7 @@ class ContractAsset with _$ContractAsset {
 class ContractContext with _$ContractContext {
   ContractContext._();
 
-  /// [Contract_Context]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
+  /// [ContractContext]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -1684,7 +1684,7 @@ class ContractContext with _$ContractContext {
   ///
   /// [text]: "Context description."
   ///
-  /// [_text]: "Extensions for text"
+  /// [textElement]: "Extensions for text"
 
   factory ContractContext({
     String? id,
@@ -1731,7 +1731,7 @@ class ContractContext with _$ContractContext {
 class ContractValuedItem with _$ContractValuedItem {
   ContractValuedItem._();
 
-  /// [Contract_ValuedItem]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
+  /// [ContractValuedItem]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -1747,7 +1747,7 @@ class ContractValuedItem with _$ContractValuedItem {
   ///
   /// [effectiveTime]: "Indicates the time during which this Contract ValuedItem information is effective."
   ///
-  /// [_effectiveTime]: "Extensions for effectiveTime"
+  /// [effectiveTimeElement]: "Extensions for effectiveTime"
   ///
   /// [quantity]: "Specifies the units by which the Contract Valued Item is measured or counted, and quantifies the countable or measurable Contract Valued Item instances."
   ///
@@ -1755,21 +1755,21 @@ class ContractValuedItem with _$ContractValuedItem {
   ///
   /// [factor]: "A real number that represents a multiplier used in determining the overall value of the Contract Valued Item delivered. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount."
   ///
-  /// [_factor]: "Extensions for factor"
+  /// [factorElement]: "Extensions for factor"
   ///
   /// [points]: "An amount that expresses the weighting (based on difficulty, cost and/or resource intensiveness) associated with the Contract Valued Item delivered. The concept of Points allows for assignment of point values for a Contract Valued Item, such that a monetary amount can be assigned to each point."
   ///
-  /// [_points]: "Extensions for points"
+  /// [pointsElement]: "Extensions for points"
   ///
   /// [net]: "Expresses the product of the Contract Valued Item unitQuantity and the unitPriceAmt. For example, the formula: unit Quantity * unit Price (Cost per Point) * factor Number  * points \u003d net Amount. Quantity, factor and points are assumed to be 1 if not supplied."
   ///
   /// [payment]: "Terms of valuation."
   ///
-  /// [_payment]: "Extensions for payment"
+  /// [paymentElement]: "Extensions for payment"
   ///
   /// [paymentDate]: "When payment is due."
   ///
-  /// [_paymentDate]: "Extensions for paymentDate"
+  /// [paymentDateElement]: "Extensions for paymentDate"
   ///
   /// [responsible]: "Who will make payment."
   ///
@@ -1777,11 +1777,11 @@ class ContractValuedItem with _$ContractValuedItem {
   ///
   /// [linkId]: "Id  of the clause or question text related to the context of this valuedItem in the referenced form or QuestionnaireResponse."
   ///
-  /// [_linkId]: "Extensions for linkId"
+  /// [linkIdElement]: "Extensions for linkId"
   ///
   /// [securityLabelNumber]: "A set of security labels that define which terms are controlled by this condition."
   ///
-  /// [_securityLabelNumber]: "Extensions for securityLabelNumber"
+  /// [securityLabelNumberElement]: "Extensions for securityLabelNumber"
 
   factory ContractValuedItem({
     String? id,
@@ -1847,7 +1847,7 @@ class ContractValuedItem with _$ContractValuedItem {
 class ContractAction with _$ContractAction {
   ContractAction._();
 
-  /// [Contract_Action]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
+  /// [ContractAction]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -1857,7 +1857,7 @@ class ContractAction with _$ContractAction {
   ///
   /// [doNotPerform]: "True if the term prohibits the  action."
   ///
-  /// [_doNotPerform]: "Extensions for doNotPerform"
+  /// [doNotPerformElement]: "Extensions for doNotPerform"
   ///
   /// [type]: "Activity or service obligation to be done or not done, performed or not performed, effectuated or not by this Contract term."
   ///
@@ -1867,7 +1867,7 @@ class ContractAction with _$ContractAction {
   ///
   /// [linkId]: "Id [identifier??] of the clause or question text related to this action in the referenced form or QuestionnaireResponse."
   ///
-  /// [_linkId]: "Extensions for linkId"
+  /// [linkIdElement]: "Extensions for linkId"
   ///
   /// [status]: "Current state of the term action."
   ///
@@ -1875,11 +1875,11 @@ class ContractAction with _$ContractAction {
   ///
   /// [contextLinkId]: "Id [identifier??] of the clause or question text related to the requester of this action in the referenced form or QuestionnaireResponse."
   ///
-  /// [_contextLinkId]: "Extensions for contextLinkId"
+  /// [contextLinkIdElement]: "Extensions for contextLinkId"
   ///
   /// [occurrenceDateTime]: "When action happens."
   ///
-  /// [_occurrenceDateTime]: "Extensions for occurrenceDateTime"
+  /// [occurrenceDateTimeElement]: "Extensions for occurrenceDateTime"
   ///
   /// [occurrencePeriod]: "When action happens."
   ///
@@ -1889,7 +1889,7 @@ class ContractAction with _$ContractAction {
   ///
   /// [requesterLinkId]: "Id [identifier??] of the clause or question text related to the requester of this action in the referenced form or QuestionnaireResponse."
   ///
-  /// [_requesterLinkId]: "Extensions for requesterLinkId"
+  /// [requesterLinkIdElement]: "Extensions for requesterLinkId"
   ///
   /// [performerType]: "The type of individual that is desired or required to perform or not perform the action."
   ///
@@ -1899,19 +1899,19 @@ class ContractAction with _$ContractAction {
   ///
   /// [performerLinkId]: "Id [identifier??] of the clause or question text related to the reason type or reference of this  action in the referenced form or QuestionnaireResponse."
   ///
-  /// [_performerLinkId]: "Extensions for performerLinkId"
+  /// [performerLinkIdElement]: "Extensions for performerLinkId"
   ///
   /// [reason]: "Rationale for the action to be performed or not performed. Describes why the action is permitted or prohibited. Either a coded concept, or another resource whose existence justifies permitting or not permitting this action."
   ///
   /// [reasonLinkId]: "Id [identifier??] of the clause or question text related to the reason type or reference of this  action in the referenced form or QuestionnaireResponse."
   ///
-  /// [_reasonLinkId]: "Extensions for reasonLinkId"
+  /// [reasonLinkIdElement]: "Extensions for reasonLinkId"
   ///
   /// [note]: "Comments made about the term action made by the requester, performer, subject or other participants."
   ///
   /// [securityLabelNumber]: "Security labels that protects the action."
   ///
-  /// [_securityLabelNumber]: "Extensions for securityLabelNumber"
+  /// [securityLabelNumberElement]: "Extensions for securityLabelNumber"
 
   factory ContractAction({
     String? id,
@@ -1984,7 +1984,7 @@ class ContractAction with _$ContractAction {
 class ContractSubject with _$ContractSubject {
   ContractSubject._();
 
-  /// [Contract_Subject]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
+  /// [ContractSubject]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -2039,7 +2039,7 @@ class ContractSubject with _$ContractSubject {
 class ContractSigner with _$ContractSigner {
   ContractSigner._();
 
-  /// [Contract_Signer]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
+  /// [ContractSigner]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -2097,7 +2097,7 @@ class ContractSigner with _$ContractSigner {
 class ContractFriendly with _$ContractFriendly {
   ContractFriendly._();
 
-  /// [Contract_Friendly]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
+  /// [ContractFriendly]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -2152,7 +2152,7 @@ class ContractFriendly with _$ContractFriendly {
 class ContractLegal with _$ContractLegal {
   ContractLegal._();
 
-  /// [Contract_Legal]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
+  /// [ContractLegal]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -2207,7 +2207,7 @@ class ContractLegal with _$ContractLegal {
 class ContractRule with _$ContractRule {
   ContractRule._();
 
-  /// [Contract_Rule]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
+  /// [ContractRule]: "Legally enforceable, formally recorded unilateral or bilateral directive i.e., a policy or agreement."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -2229,11 +2229,11 @@ class ContractRule with _$ContractRule {
   ///
   /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
   ///
-  /// [_implicitRules]: "Extensions for implicitRules"
+  /// [implicitRulesElement]: "Extensions for implicitRules"
   ///
   /// [language]: "The base language in which the resource is written."
   ///
-  /// [_language]: "Extensions for language"
+  /// [languageElement]: "Extensions for language"
   ///
   /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
   ///
@@ -2247,7 +2247,7 @@ class ContractRule with _$ContractRule {
   ///
   /// [status]: "The status of the resource instance."
   ///
-  /// [_status]: "Extensions for status"
+  /// [statusElement]: "Extensions for status"
   ///
   /// [type]: "The type of coverage: social program, medical plan, accident coverage (workers compensation, auto), group health or payment by an individual or organization."
   ///
@@ -2261,7 +2261,7 @@ class ContractRule with _$ContractRule {
   ///
   /// [dependent]: "A designator for a dependent under the coverage."
   ///
-  /// [_dependent]: "Extensions for dependent"
+  /// [dependentElement]: "Extensions for dependent"
   ///
   /// [relationship]: "The relationship of beneficiary (patient) to the subscriber."
   ///
@@ -2273,17 +2273,17 @@ class ContractRule with _$ContractRule {
   ///
   /// [order]: "The order of applicability of this coverage relative to other coverages which are currently in force. Note, there may be gaps in the numbering and this does not imply primary, secondary etc. as the specific positioning of coverages depends upon the episode of care."
   ///
-  /// [_order]: "Extensions for order"
+  /// [orderElement]: "Extensions for order"
   ///
   /// [network]: "The insurer-specific identifier for the insurer-defined network of providers to which the beneficiary may seek treatment which will be covered at the \u0027in-network\u0027 rate, otherwise \u0027out of network\u0027 terms and conditions apply."
   ///
-  /// [_network]: "Extensions for network"
+  /// [networkElement]: "Extensions for network"
   ///
   /// [costToBeneficiary]: "A suite of codes indicating the cost category and associated amount which have been detailed in the policy and may have been  included on the health card."
   ///
   /// [subrogation]: "When \u0027subrogation\u003dtrue\u0027 this insurance instance has been included not for adjudication but to provide insurers with the details to recover costs."
   ///
-  /// [_subrogation]: "Extensions for subrogation"
+  /// [subrogationElement]: "Extensions for subrogation"
   ///
   /// [contract]: "The policy(s) which constitute this insurance coverage."
 
@@ -2340,11 +2340,11 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   ///
   /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
   ///
-  /// [_implicitRules]: "Extensions for implicitRules"
+  /// [implicitRulesElement]: "Extensions for implicitRules"
   ///
   /// [language]: "The base language in which the resource is written."
   ///
-  /// [_language]: "Extensions for language"
+  /// [languageElement]: "Extensions for language"
   ///
   /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
   ///
@@ -2358,7 +2358,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   ///
   /// [status]: "The status of the resource instance."
   ///
-  /// [_status]: "Extensions for status"
+  /// [statusElement]: "Extensions for status"
   ///
   /// [type]: "The category of claim, e.g. oral, pharmacy, vision, institutional, professional."
   ///
@@ -2366,7 +2366,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   ///
   /// [use]: "A code to indicate whether the nature of the request is: to request adjudication of products and services previously rendered; or requesting authorization and adjudication for provision in the future; or requesting the non-binding adjudication of the listed products and services which could be provided in the future."
   ///
-  /// [_use]: "Extensions for use"
+  /// [useElement]: "Extensions for use"
   ///
   /// [patient]: "The party to whom the professional services and/or products have been supplied or are being considered and for whom actual for forecast reimbursement is sought."
   ///
@@ -2374,7 +2374,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   ///
   /// [created]: "The date this resource was created."
   ///
-  /// [_created]: "Extensions for created"
+  /// [createdElement]: "Extensions for created"
   ///
   /// [enterer]: "Individual who created the claim, predetermination or preauthorization."
   ///
@@ -2406,15 +2406,15 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   ///
   /// [outcome]: "The outcome of the claim, predetermination, or preauthorization processing."
   ///
-  /// [_outcome]: "Extensions for outcome"
+  /// [outcomeElement]: "Extensions for outcome"
   ///
   /// [disposition]: "A human readable description of the status of the adjudication."
   ///
-  /// [_disposition]: "Extensions for disposition"
+  /// [dispositionElement]: "Extensions for disposition"
   ///
   /// [preAuthRef]: "Reference from the Insurer which is used in later communications which refers to this adjudication."
   ///
-  /// [_preAuthRef]: "Extensions for preAuthRef"
+  /// [preAuthRefElement]: "Extensions for preAuthRef"
   ///
   /// [preAuthRefPeriod]: "The timeframe during which the supplied preauthorization reference may be quoted on claims to obtain the adjudication as provided."
   ///
@@ -2428,7 +2428,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
   ///
   /// [precedence]: "This indicates the relative order of a series of EOBs related to different coverages for the same suite of services."
   ///
-  /// [_precedence]: "Extensions for precedence"
+  /// [precedenceElement]: "Extensions for precedence"
   ///
   /// [insurance]: "Financial instruments for reimbursement for the health care products and services specified on the claim."
   ///
@@ -2557,7 +2557,7 @@ class ExplanationOfBenefit with Resource, _$ExplanationOfBenefit {
 class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
   ExplanationOfBenefitRelated._();
 
-  /// [ExplanationOfBenefit_Related]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitRelated]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -2615,7 +2615,7 @@ class ExplanationOfBenefitRelated with _$ExplanationOfBenefitRelated {
 class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
   ExplanationOfBenefitPayee._();
 
-  /// [ExplanationOfBenefit_Payee]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitPayee]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -2670,7 +2670,7 @@ class ExplanationOfBenefitPayee with _$ExplanationOfBenefitPayee {
 class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
   ExplanationOfBenefitCareTeam._();
 
-  /// [ExplanationOfBenefit_CareTeam]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitCareTeam]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -2680,13 +2680,13 @@ class ExplanationOfBenefitCareTeam with _$ExplanationOfBenefitCareTeam {
   ///
   /// [sequence]: "A number to uniquely identify care team entries."
   ///
-  /// [_sequence]: "Extensions for sequence"
+  /// [sequenceElement]: "Extensions for sequence"
   ///
   /// [provider]: "Member of the team who provided the product or service."
   ///
   /// [responsible]: "The party who is billing and/or responsible for the claimed products or services."
   ///
-  /// [_responsible]: "Extensions for responsible"
+  /// [responsibleElement]: "Extensions for responsible"
   ///
   /// [role]: "The lead, assisting or supervising practitioner and their discipline if a multidisciplinary team."
   ///
@@ -2741,7 +2741,7 @@ class ExplanationOfBenefitSupportingInfo
     with _$ExplanationOfBenefitSupportingInfo {
   ExplanationOfBenefitSupportingInfo._();
 
-  /// [ExplanationOfBenefit_SupportingInfo]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitSupportingInfo]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -2751,7 +2751,7 @@ class ExplanationOfBenefitSupportingInfo
   ///
   /// [sequence]: "A number to uniquely identify supporting information entries."
   ///
-  /// [_sequence]: "Extensions for sequence"
+  /// [sequenceElement]: "Extensions for sequence"
   ///
   /// [category]: "The general class of the information supplied: information; exception; accident, employment; onset, etc."
   ///
@@ -2759,17 +2759,17 @@ class ExplanationOfBenefitSupportingInfo
   ///
   /// [timingDate]: "The date when or period to which this information refers."
   ///
-  /// [_timingDate]: "Extensions for timingDate"
+  /// [timingDateElement]: "Extensions for timingDate"
   ///
   /// [timingPeriod]: "The date when or period to which this information refers."
   ///
   /// [valueBoolean]: "Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data."
   ///
-  /// [_valueBoolean]: "Extensions for valueBoolean"
+  /// [valueBooleanElement]: "Extensions for valueBoolean"
   ///
   /// [valueString]: "Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data."
   ///
-  /// [_valueString]: "Extensions for valueString"
+  /// [valueStringElement]: "Extensions for valueString"
   ///
   /// [valueQuantity]: "Additional data or information such as resources, documents, images etc. including references to the data or the actual inclusion of the data."
   ///
@@ -2825,7 +2825,7 @@ class ExplanationOfBenefitSupportingInfo
 class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
   ExplanationOfBenefitDiagnosis._();
 
-  /// [ExplanationOfBenefit_Diagnosis]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitDiagnosis]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -2835,7 +2835,7 @@ class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
   ///
   /// [sequence]: "A number to uniquely identify diagnosis entries."
   ///
-  /// [_sequence]: "Extensions for sequence"
+  /// [sequenceElement]: "Extensions for sequence"
   ///
   /// [diagnosisCodeableConcept]: "The nature of illness or problem in a coded form or as a reference to an external defined Condition."
   ///
@@ -2895,7 +2895,7 @@ class ExplanationOfBenefitDiagnosis with _$ExplanationOfBenefitDiagnosis {
 class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
   ExplanationOfBenefitProcedure._();
 
-  /// [ExplanationOfBenefit_Procedure]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitProcedure]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -2905,13 +2905,13 @@ class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
   ///
   /// [sequence]: "A number to uniquely identify procedure entries."
   ///
-  /// [_sequence]: "Extensions for sequence"
+  /// [sequenceElement]: "Extensions for sequence"
   ///
   /// [type]: "When the condition was observed or the relative ranking."
   ///
   /// [date]: "Date and optionally time the procedure was performed."
   ///
-  /// [_date]: "Extensions for date"
+  /// [dateElement]: "Extensions for date"
   ///
   /// [procedureCodeableConcept]: "The code or reference to a Procedure resource which identifies the clinical intervention performed."
   ///
@@ -2968,7 +2968,7 @@ class ExplanationOfBenefitProcedure with _$ExplanationOfBenefitProcedure {
 class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
   ExplanationOfBenefitInsurance._();
 
-  /// [ExplanationOfBenefit_Insurance]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitInsurance]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -2978,13 +2978,13 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
   ///
   /// [focal]: "A flag to indicate that this Coverage is to be used for adjudication of this claim when set to true."
   ///
-  /// [_focal]: "Extensions for focal"
+  /// [focalElement]: "Extensions for focal"
   ///
   /// [coverage]: "Reference to the insurance card level information contained in the Coverage resource. The coverage issuing insurer will use these details to locate the patient\u0027s actual coverage within the insurer\u0027s information system."
   ///
   /// [preAuthRef]: "Reference numbers previously provided by the insurer to the provider to be quoted on subsequent claims containing services or products related to the prior authorization."
   ///
-  /// [_preAuthRef]: "Extensions for preAuthRef"
+  /// [preAuthRefElement]: "Extensions for preAuthRef"
 
   factory ExplanationOfBenefitInsurance({
     String? id,
@@ -3032,7 +3032,7 @@ class ExplanationOfBenefitInsurance with _$ExplanationOfBenefitInsurance {
 class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
   ExplanationOfBenefitAccident._();
 
-  /// [ExplanationOfBenefit_Accident]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitAccident]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -3042,7 +3042,7 @@ class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
   ///
   /// [date]: "Date of an accident event  related to the products and services contained in the claim."
   ///
-  /// [_date]: "Extensions for date"
+  /// [dateElement]: "Extensions for date"
   ///
   /// [type]: "The type or context of the accident event for the purposes of selection of potential insurance coverages and determination of coordination between insurers."
   ///
@@ -3096,7 +3096,7 @@ class ExplanationOfBenefitAccident with _$ExplanationOfBenefitAccident {
 class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   ExplanationOfBenefitItem._();
 
-  /// [ExplanationOfBenefit_Item]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitItem]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -3106,23 +3106,23 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   ///
   /// [sequence]: "A number to uniquely identify item entries."
   ///
-  /// [_sequence]: "Extensions for sequence"
+  /// [sequenceElement]: "Extensions for sequence"
   ///
   /// [careTeamSequence]: "Care team members related to this service or product."
   ///
-  /// [_careTeamSequence]: "Extensions for careTeamSequence"
+  /// [careTeamSequenceElement]: "Extensions for careTeamSequence"
   ///
   /// [diagnosisSequence]: "Diagnoses applicable for this service or product."
   ///
-  /// [_diagnosisSequence]: "Extensions for diagnosisSequence"
+  /// [diagnosisSequenceElement]: "Extensions for diagnosisSequence"
   ///
   /// [procedureSequence]: "Procedures applicable for this service or product."
   ///
-  /// [_procedureSequence]: "Extensions for procedureSequence"
+  /// [procedureSequenceElement]: "Extensions for procedureSequence"
   ///
   /// [informationSequence]: "Exceptions, special conditions and supporting information applicable for this service or product."
   ///
-  /// [_informationSequence]: "Extensions for informationSequence"
+  /// [informationSequenceElement]: "Extensions for informationSequence"
   ///
   /// [revenue]: "The type of revenue or cost center providing the product and/or service."
   ///
@@ -3136,7 +3136,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   ///
   /// [servicedDate]: "The date or dates when the service or product was supplied, performed or completed."
   ///
-  /// [_servicedDate]: "Extensions for servicedDate"
+  /// [servicedDateElement]: "Extensions for servicedDate"
   ///
   /// [servicedPeriod]: "The date or dates when the service or product was supplied, performed or completed."
   ///
@@ -3152,7 +3152,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   ///
   /// [factor]: "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount."
   ///
-  /// [_factor]: "Extensions for factor"
+  /// [factorElement]: "Extensions for factor"
   ///
   /// [net]: "The quantity times the unit price for an additional service or product or charge."
   ///
@@ -3166,7 +3166,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
   ///
   /// [noteNumber]: "The numbers associated with notes below which apply to the adjudication of this item."
   ///
-  /// [_noteNumber]: "Extensions for noteNumber"
+  /// [noteNumberElement]: "Extensions for noteNumber"
   ///
   /// [adjudication]: "If this item is a group then the values here are a summary of the adjudication of the detail items. If this item is a simple product or service then this is the result of the adjudication of this item."
   ///
@@ -3250,7 +3250,7 @@ class ExplanationOfBenefitItem with _$ExplanationOfBenefitItem {
 class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
   ExplanationOfBenefitAdjudication._();
 
-  /// [ExplanationOfBenefit_Adjudication]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitAdjudication]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -3266,7 +3266,7 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
   ///
   /// [value]: "A non-monetary value associated with the category. Mutually exclusive to the amount element above."
   ///
-  /// [_value]: "Extensions for value"
+  /// [valueElement]: "Extensions for value"
 
   factory ExplanationOfBenefitAdjudication({
     String? id,
@@ -3304,7 +3304,7 @@ class ExplanationOfBenefitAdjudication with _$ExplanationOfBenefitAdjudication {
 class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   ExplanationOfBenefitDetail._();
 
-  /// [ExplanationOfBenefit_Detail]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitDetail]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -3314,7 +3314,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   ///
   /// [sequence]: "A claim detail line. Either a simple (a product or service) or a \u0027group\u0027 of sub-details which are simple items."
   ///
-  /// [_sequence]: "Extensions for sequence"
+  /// [sequenceElement]: "Extensions for sequence"
   ///
   /// [revenue]: "The type of revenue or cost center providing the product and/or service."
   ///
@@ -3332,7 +3332,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   ///
   /// [factor]: "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount."
   ///
-  /// [_factor]: "Extensions for factor"
+  /// [factorElement]: "Extensions for factor"
   ///
   /// [net]: "The quantity times the unit price for an additional service or product or charge."
   ///
@@ -3340,7 +3340,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
   ///
   /// [noteNumber]: "The numbers associated with notes below which apply to the adjudication of this item."
   ///
-  /// [_noteNumber]: "Extensions for noteNumber"
+  /// [noteNumberElement]: "Extensions for noteNumber"
   ///
   /// [adjudication]: "The adjudication results."
   ///
@@ -3404,7 +3404,7 @@ class ExplanationOfBenefitDetail with _$ExplanationOfBenefitDetail {
 class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   ExplanationOfBenefitSubDetail._();
 
-  /// [ExplanationOfBenefit_SubDetail]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitSubDetail]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -3414,7 +3414,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   ///
   /// [sequence]: "A claim detail line. Either a simple (a product or service) or a \u0027group\u0027 of sub-details which are simple items."
   ///
-  /// [_sequence]: "Extensions for sequence"
+  /// [sequenceElement]: "Extensions for sequence"
   ///
   /// [revenue]: "The type of revenue or cost center providing the product and/or service."
   ///
@@ -3432,7 +3432,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   ///
   /// [factor]: "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount."
   ///
-  /// [_factor]: "Extensions for factor"
+  /// [factorElement]: "Extensions for factor"
   ///
   /// [net]: "The quantity times the unit price for an additional service or product or charge."
   ///
@@ -3440,7 +3440,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
   ///
   /// [noteNumber]: "The numbers associated with notes below which apply to the adjudication of this item."
   ///
-  /// [_noteNumber]: "Extensions for noteNumber"
+  /// [noteNumberElement]: "Extensions for noteNumber"
   ///
   /// [adjudication]: "The adjudication results."
 
@@ -3501,7 +3501,7 @@ class ExplanationOfBenefitSubDetail with _$ExplanationOfBenefitSubDetail {
 class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   ExplanationOfBenefitAddItem._();
 
-  /// [ExplanationOfBenefit_AddItem]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitAddItem]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -3511,15 +3511,15 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   ///
   /// [itemSequence]: "Claim items which this service line is intended to replace."
   ///
-  /// [_itemSequence]: "Extensions for itemSequence"
+  /// [itemSequenceElement]: "Extensions for itemSequence"
   ///
   /// [detailSequence]: "The sequence number of the details within the claim item which this line is intended to replace."
   ///
-  /// [_detailSequence]: "Extensions for detailSequence"
+  /// [detailSequenceElement]: "Extensions for detailSequence"
   ///
   /// [subDetailSequence]: "The sequence number of the sub-details woithin the details within the claim item which this line is intended to replace."
   ///
-  /// [_subDetailSequence]: "Extensions for subDetailSequence"
+  /// [subDetailSequenceElement]: "Extensions for subDetailSequence"
   ///
   /// [provider]: "The providers who are authorized for the services rendered to the patient."
   ///
@@ -3531,7 +3531,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   ///
   /// [servicedDate]: "The date or dates when the service or product was supplied, performed or completed."
   ///
-  /// [_servicedDate]: "Extensions for servicedDate"
+  /// [servicedDateElement]: "Extensions for servicedDate"
   ///
   /// [servicedPeriod]: "The date or dates when the service or product was supplied, performed or completed."
   ///
@@ -3547,7 +3547,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   ///
   /// [factor]: "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount."
   ///
-  /// [_factor]: "Extensions for factor"
+  /// [factorElement]: "Extensions for factor"
   ///
   /// [net]: "The quantity times the unit price for an additional service or product or charge."
   ///
@@ -3557,7 +3557,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
   ///
   /// [noteNumber]: "The numbers associated with notes below which apply to the adjudication of this item."
   ///
-  /// [_noteNumber]: "Extensions for noteNumber"
+  /// [noteNumberElement]: "Extensions for noteNumber"
   ///
   /// [adjudication]: "The adjudication results."
   ///
@@ -3632,7 +3632,7 @@ class ExplanationOfBenefitAddItem with _$ExplanationOfBenefitAddItem {
 class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
   ExplanationOfBenefitDetail1._();
 
-  /// [ExplanationOfBenefit_Detail1]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitDetail1]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -3650,13 +3650,13 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
   ///
   /// [factor]: "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount."
   ///
-  /// [_factor]: "Extensions for factor"
+  /// [factorElement]: "Extensions for factor"
   ///
   /// [net]: "The quantity times the unit price for an additional service or product or charge."
   ///
   /// [noteNumber]: "The numbers associated with notes below which apply to the adjudication of this item."
   ///
-  /// [_noteNumber]: "Extensions for noteNumber"
+  /// [noteNumberElement]: "Extensions for noteNumber"
   ///
   /// [adjudication]: "The adjudication results."
   ///
@@ -3714,7 +3714,7 @@ class ExplanationOfBenefitDetail1 with _$ExplanationOfBenefitDetail1 {
 class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
   ExplanationOfBenefitSubDetail1._();
 
-  /// [ExplanationOfBenefit_SubDetail1]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitSubDetail1]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -3732,13 +3732,13 @@ class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
   ///
   /// [factor]: "A real number that represents a multiplier used in determining the overall value of services delivered and/or goods received. The concept of a Factor allows for a discount or surcharge multiplier to be applied to a monetary amount."
   ///
-  /// [_factor]: "Extensions for factor"
+  /// [factorElement]: "Extensions for factor"
   ///
   /// [net]: "The quantity times the unit price for an additional service or product or charge."
   ///
   /// [noteNumber]: "The numbers associated with notes below which apply to the adjudication of this item."
   ///
-  /// [_noteNumber]: "Extensions for noteNumber"
+  /// [noteNumberElement]: "Extensions for noteNumber"
   ///
   /// [adjudication]: "The adjudication results."
 
@@ -3794,7 +3794,7 @@ class ExplanationOfBenefitSubDetail1 with _$ExplanationOfBenefitSubDetail1 {
 class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
   ExplanationOfBenefitTotal._();
 
-  /// [ExplanationOfBenefit_Total]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitTotal]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -3849,7 +3849,7 @@ class ExplanationOfBenefitTotal with _$ExplanationOfBenefitTotal {
 class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
   ExplanationOfBenefitPayment._();
 
-  /// [ExplanationOfBenefit_Payment]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitPayment]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -3865,7 +3865,7 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
   ///
   /// [date]: "Estimated date the payment will be issued or the actual issue date of payment."
   ///
-  /// [_date]: "Extensions for date"
+  /// [dateElement]: "Extensions for date"
   ///
   /// [amount]: "Benefits payable less any payment adjustment."
   ///
@@ -3919,7 +3919,7 @@ class ExplanationOfBenefitPayment with _$ExplanationOfBenefitPayment {
 class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
   ExplanationOfBenefitProcessNote._();
 
-  /// [ExplanationOfBenefit_ProcessNote]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitProcessNote]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -3929,15 +3929,15 @@ class ExplanationOfBenefitProcessNote with _$ExplanationOfBenefitProcessNote {
   ///
   /// [number]: "A number to uniquely identify a note entry."
   ///
-  /// [_number]: "Extensions for number"
+  /// [numberElement]: "Extensions for number"
   ///
   /// [type]: "The business purpose of the note text."
   ///
-  /// [_type]: "Extensions for type"
+  /// [typeElement]: "Extensions for type"
   ///
   /// [text]: "The explanation or description associated with the processing."
   ///
-  /// [_text]: "Extensions for text"
+  /// [textElement]: "Extensions for text"
   ///
   /// [language]: "A code to define the language used in the text of the note."
 
@@ -3992,7 +3992,7 @@ class ExplanationOfBenefitBenefitBalance
     with _$ExplanationOfBenefitBenefitBalance {
   ExplanationOfBenefitBenefitBalance._();
 
-  /// [ExplanationOfBenefit_BenefitBalance]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitBenefitBalance]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -4004,15 +4004,15 @@ class ExplanationOfBenefitBenefitBalance
   ///
   /// [excluded]: "True if the indicated class of service is excluded from the plan, missing or False indicates the product or service is included in the coverage."
   ///
-  /// [_excluded]: "Extensions for excluded"
+  /// [excludedElement]: "Extensions for excluded"
   ///
   /// [name]: "A short name or tag for the benefit."
   ///
-  /// [_name]: "Extensions for name"
+  /// [nameElement]: "Extensions for name"
   ///
   /// [description]: "A richer description of the benefit or services covered."
   ///
-  /// [_description]: "Extensions for description"
+  /// [descriptionElement]: "Extensions for description"
   ///
   /// [network]: "Is a flag to indicate whether the benefits refer to in-network providers or out-of-network providers."
   ///
@@ -4064,7 +4064,7 @@ class ExplanationOfBenefitBenefitBalance
 class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   ExplanationOfBenefitFinancial._();
 
-  /// [ExplanationOfBenefit_Financial]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
+  /// [ExplanationOfBenefitFinancial]: "This resource provides: the claim details; adjudication details from the processing of a Claim; and optionally account balance information, for informing the subscriber of the benefits provided."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -4076,17 +4076,17 @@ class ExplanationOfBenefitFinancial with _$ExplanationOfBenefitFinancial {
   ///
   /// [allowedUnsignedInt]: "The quantity of the benefit which is permitted under the coverage."
   ///
-  /// [_allowedUnsignedInt]: "Extensions for allowedUnsignedInt"
+  /// [allowedUnsignedIntElement]: "Extensions for allowedUnsignedInt"
   ///
   /// [allowedString]: "The quantity of the benefit which is permitted under the coverage."
   ///
-  /// [_allowedString]: "Extensions for allowedString"
+  /// [allowedStringElement]: "Extensions for allowedString"
   ///
   /// [allowedMoney]: "The quantity of the benefit which is permitted under the coverage."
   ///
   /// [usedUnsignedInt]: "The quantity of the benefit which have been consumed to date."
   ///
-  /// [_usedUnsignedInt]: "Extensions for usedUnsignedInt"
+  /// [usedUnsignedIntElement]: "Extensions for usedUnsignedInt"
   ///
   /// [usedMoney]: "The quantity of the benefit which have been consumed to date."
 
@@ -4150,11 +4150,11 @@ class InsurancePlan with Resource, _$InsurancePlan {
   ///
   /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
   ///
-  /// [_implicitRules]: "Extensions for implicitRules"
+  /// [implicitRulesElement]: "Extensions for implicitRules"
   ///
   /// [language]: "The base language in which the resource is written."
   ///
-  /// [_language]: "Extensions for language"
+  /// [languageElement]: "Extensions for language"
   ///
   /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
   ///
@@ -4168,17 +4168,17 @@ class InsurancePlan with Resource, _$InsurancePlan {
   ///
   /// [status]: "The current state of the health insurance product."
   ///
-  /// [_status]: "Extensions for status"
+  /// [statusElement]: "Extensions for status"
   ///
   /// [type]: "The kind of health insurance product."
   ///
   /// [name]: "Official name of the health insurance product as designated by the owner."
   ///
-  /// [_name]: "Extensions for name"
+  /// [nameElement]: "Extensions for name"
   ///
   /// [alias]: "A list of alternate names that the product is known as, or was known as in the past."
   ///
-  /// [_alias]: "Extensions for alias"
+  /// [aliasElement]: "Extensions for alias"
   ///
   /// [period]: "The period of time that the health insurance product is available."
   ///
@@ -4268,7 +4268,7 @@ class InsurancePlan with Resource, _$InsurancePlan {
 class InsurancePlanContact with _$InsurancePlanContact {
   InsurancePlanContact._();
 
-  /// [InsurancePlan_Contact]: "Details of a Health Insurance product/plan provided by an organization."
+  /// [InsurancePlanContact]: "Details of a Health Insurance product/plan provided by an organization."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -4329,7 +4329,7 @@ class InsurancePlanContact with _$InsurancePlanContact {
 class InsurancePlanCoverage with _$InsurancePlanCoverage {
   InsurancePlanCoverage._();
 
-  /// [InsurancePlan_Coverage]: "Details of a Health Insurance product/plan provided by an organization."
+  /// [InsurancePlanCoverage]: "Details of a Health Insurance product/plan provided by an organization."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -4387,7 +4387,7 @@ class InsurancePlanCoverage with _$InsurancePlanCoverage {
 class InsurancePlanBenefit with _$InsurancePlanBenefit {
   InsurancePlanBenefit._();
 
-  /// [InsurancePlan_Benefit]: "Details of a Health Insurance product/plan provided by an organization."
+  /// [InsurancePlanBenefit]: "Details of a Health Insurance product/plan provided by an organization."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -4399,7 +4399,7 @@ class InsurancePlanBenefit with _$InsurancePlanBenefit {
   ///
   /// [requirement]: "The referral requirements to have access/coverage for this benefit."
   ///
-  /// [_requirement]: "Extensions for requirement"
+  /// [requirementElement]: "Extensions for requirement"
   ///
   /// [limit]: "The specific limits on the benefit."
 
@@ -4448,7 +4448,7 @@ class InsurancePlanBenefit with _$InsurancePlanBenefit {
 class InsurancePlanLimit with _$InsurancePlanLimit {
   InsurancePlanLimit._();
 
-  /// [InsurancePlan_Limit]: "Details of a Health Insurance product/plan provided by an organization."
+  /// [InsurancePlanLimit]: "Details of a Health Insurance product/plan provided by an organization."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -4502,7 +4502,7 @@ class InsurancePlanLimit with _$InsurancePlanLimit {
 class InsurancePlanPlan with _$InsurancePlanPlan {
   InsurancePlanPlan._();
 
-  /// [InsurancePlan_Plan]: "Details of a Health Insurance product/plan provided by an organization."
+  /// [InsurancePlanPlan]: "Details of a Health Insurance product/plan provided by an organization."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -4569,7 +4569,7 @@ class InsurancePlanPlan with _$InsurancePlanPlan {
 class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
   InsurancePlanGeneralCost._();
 
-  /// [InsurancePlan_GeneralCost]: "Details of a Health Insurance product/plan provided by an organization."
+  /// [InsurancePlanGeneralCost]: "Details of a Health Insurance product/plan provided by an organization."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -4581,13 +4581,13 @@ class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
   ///
   /// [groupSize]: "Number of participants enrolled in the plan."
   ///
-  /// [_groupSize]: "Extensions for groupSize"
+  /// [groupSizeElement]: "Extensions for groupSize"
   ///
   /// [cost]: "Value of the cost."
   ///
   /// [comment]: "Additional information about the general costs associated with this plan."
   ///
-  /// [_comment]: "Extensions for comment"
+  /// [commentElement]: "Extensions for comment"
 
   factory InsurancePlanGeneralCost({
     String? id,
@@ -4636,7 +4636,7 @@ class InsurancePlanGeneralCost with _$InsurancePlanGeneralCost {
 class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
   InsurancePlanSpecificCost._();
 
-  /// [InsurancePlan_SpecificCost]: "Details of a Health Insurance product/plan provided by an organization."
+  /// [InsurancePlanSpecificCost]: "Details of a Health Insurance product/plan provided by an organization."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -4691,7 +4691,7 @@ class InsurancePlanSpecificCost with _$InsurancePlanSpecificCost {
 class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
   InsurancePlanBenefit1._();
 
-  /// [InsurancePlan_Benefit1]: "Details of a Health Insurance product/plan provided by an organization."
+  /// [InsurancePlanBenefit1]: "Details of a Health Insurance product/plan provided by an organization."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -4746,7 +4746,7 @@ class InsurancePlanBenefit1 with _$InsurancePlanBenefit1 {
 class InsurancePlanCost with _$InsurancePlanCost {
   InsurancePlanCost._();
 
-  /// [InsurancePlan_Cost]: "Details of a Health Insurance product/plan provided by an organization."
+  /// [InsurancePlanCost]: "Details of a Health Insurance product/plan provided by an organization."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///

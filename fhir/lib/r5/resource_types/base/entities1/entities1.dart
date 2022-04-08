@@ -11,7 +11,6 @@ import '../../../../r5.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'entities1.enums.dart';
 part 'entities1.freezed.dart';
 part 'entities1.g.dart';
@@ -30,11 +29,11 @@ class Endpoint with Resource, _$Endpoint {
   ///
   /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
   ///
-  /// [_implicitRules]: "Extensions for implicitRules"
+  /// [implicitRules$2]: "Extensions for implicitRules"
   ///
   /// [language]: "The base language in which the resource is written."
   ///
-  /// [_language]: "Extensions for language"
+  /// [language$2]: "Extensions for language"
   ///
   /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
   ///
@@ -48,13 +47,13 @@ class Endpoint with Resource, _$Endpoint {
   ///
   /// [status]: "active | suspended | error | off | test."
   ///
-  /// [_status]: "Extensions for status"
+  /// [status$2]: "Extensions for status"
   ///
   /// [connectionType]: "A coded value that represents the technical details of the usage of this endpoint, such as what WSDLs should be used in what way. (e.g. XDS.b/DICOM/cds-hook)."
   ///
   /// [name]: "A friendly name that this endpoint can be referred to with."
   ///
-  /// [_name]: "Extensions for name"
+  /// [name$2]: "Extensions for name"
   ///
   /// [managingOrganization]: "The organization that manages this endpoint (even if technically another organization is hosting this in the cloud, it is the organization associated with the data)."
   ///
@@ -66,15 +65,15 @@ class Endpoint with Resource, _$Endpoint {
   ///
   /// [payloadMimeType]: "The mime type to send the payload in - e.g. application/fhir+xml, application/fhir+json. If the mime type is not specified, then the sender could send any content (including no content depending on the connectionType)."
   ///
-  /// [_payloadMimeType]: "Extensions for payloadMimeType"
+  /// [payloadMimeType$2]: "Extensions for payloadMimeType"
   ///
   /// [address]: "The uri that describes the actual end-point to connect to."
   ///
-  /// [_address]: "Extensions for address"
+  /// [address$2]: "Extensions for address"
   ///
   /// [header]: "Additional headers / information to send as part of the notification."
   ///
-  /// [_header]: "Extensions for header"
+  /// [header$2]: "Extensions for header"
 
   factory Endpoint({
     @Default(R5ResourceType.Endpoint)
@@ -154,11 +153,11 @@ class HealthcareService with Resource, _$HealthcareService {
   ///
   /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
   ///
-  /// [_implicitRules]: "Extensions for implicitRules"
+  /// [implicitRules$2]: "Extensions for implicitRules"
   ///
   /// [language]: "The base language in which the resource is written."
   ///
-  /// [_language]: "Extensions for language"
+  /// [language$2]: "Extensions for language"
   ///
   /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
   ///
@@ -172,7 +171,7 @@ class HealthcareService with Resource, _$HealthcareService {
   ///
   /// [active]: "This flag is used to mark the record to not be used. This is not used when a center is closed for maintenance, or for holidays, the notAvailable period is to be used for this."
   ///
-  /// [_active]: "Extensions for active"
+  /// [active$2]: "Extensions for active"
   ///
   /// [providedBy]: "The organization that provides this healthcare service."
   ///
@@ -186,15 +185,15 @@ class HealthcareService with Resource, _$HealthcareService {
   ///
   /// [name]: "Further description of the service as it would be presented to a consumer while searching."
   ///
-  /// [_name]: "Extensions for name"
+  /// [name$2]: "Extensions for name"
   ///
   /// [comment]: "Any additional description of the service and/or any specific issues not covered by the other attributes, which can be displayed as further detail under the serviceName."
   ///
-  /// [_comment]: "Extensions for comment"
+  /// [comment$2]: "Extensions for comment"
   ///
   /// [extraDetails]: "Extra details about the service that can\u0027t be placed in the other fields."
   ///
-  /// [_extraDetails]: "Extensions for extraDetails"
+  /// [extraDetails$2]: "Extensions for extraDetails"
   ///
   /// [photo]: "If there is a photo/symbol associated with this HealthcareService, it may be included here to facilitate quick identification of the service in a list."
   ///
@@ -216,7 +215,7 @@ class HealthcareService with Resource, _$HealthcareService {
   ///
   /// [appointmentRequired]: "Indicates whether or not a prospective consumer will require an appointment for a particular service at a site to be provided by the Organization. Indicates if an appointment is required for access to this service."
   ///
-  /// [_appointmentRequired]: "Extensions for appointmentRequired"
+  /// [appointmentRequired$2]: "Extensions for appointmentRequired"
   ///
   /// [availableTime]: "A collection of times that the Service Site is available."
   ///
@@ -224,7 +223,7 @@ class HealthcareService with Resource, _$HealthcareService {
   ///
   /// [availabilityExceptions]: "A description of site availability exceptions, e.g. public holiday availability. Succinctly describing all possible exceptions to normal site availability as details in the available Times and not available Times."
   ///
-  /// [_availabilityExceptions]: "Extensions for availabilityExceptions"
+  /// [availabilityExceptions$2]: "Extensions for availabilityExceptions"
   ///
   /// [endpoint]: "Technical endpoints providing access to services operated for the specific healthcare services defined at this resource."
 
@@ -311,7 +310,7 @@ class HealthcareService with Resource, _$HealthcareService {
 class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   HealthcareServiceEligibility._();
 
-  /// [HealthcareService_Eligibility]: "The details of a healthcare service available at a location."
+  /// [HealthcareServiceEligibility]: "The details of a healthcare service available at a location."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -323,7 +322,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   ///
   /// [comment]: "Describes the eligibility conditions for the service."
   ///
-  /// [_comment]: "Extensions for comment"
+  /// [comment$2]: "Extensions for comment"
 
   factory HealthcareServiceEligibility({
     String? id,
@@ -369,7 +368,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
 class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   HealthcareServiceAvailableTime._();
 
-  /// [HealthcareService_AvailableTime]: "The details of a healthcare service available at a location."
+  /// [HealthcareServiceAvailableTime]: "The details of a healthcare service available at a location."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -379,19 +378,19 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   ///
   /// [daysOfWeek]: "Indicates which days of the week are available between the start and end Times."
   ///
-  /// [_daysOfWeek]: "Extensions for daysOfWeek"
+  /// [daysOfWeek$2]: "Extensions for daysOfWeek"
   ///
   /// [allDay]: "Is this always available? (hence times are irrelevant) e.g. 24 hour service."
   ///
-  /// [_allDay]: "Extensions for allDay"
+  /// [allDay$2]: "Extensions for allDay"
   ///
   /// [availableStartTime]: "The opening time of day. Note: If the AllDay flag is set, then this time is ignored."
   ///
-  /// [_availableStartTime]: "Extensions for availableStartTime"
+  /// [availableStartTime$2]: "Extensions for availableStartTime"
   ///
   /// [availableEndTime]: "The closing time of day. Note: If the AllDay flag is set, then this time is ignored."
   ///
-  /// [_availableEndTime]: "Extensions for availableEndTime"
+  /// [availableEndTime$2]: "Extensions for availableEndTime"
 
   factory HealthcareServiceAvailableTime({
     String? id,
@@ -443,7 +442,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
 class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   HealthcareServiceNotAvailable._();
 
-  /// [HealthcareService_NotAvailable]: "The details of a healthcare service available at a location."
+  /// [HealthcareServiceNotAvailable]: "The details of a healthcare service available at a location."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -453,7 +452,7 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   ///
   /// [description]: "The reason that can be presented to the user as to why this time is not available."
   ///
-  /// [_description]: "Extensions for description"
+  /// [description$2]: "Extensions for description"
   ///
   /// [during]: "Service is not available (seasonally or for a public holiday) from this date."
   ///
@@ -467,11 +466,11 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   ///
   /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
   ///
-  /// [_implicitRules]: "Extensions for implicitRules"
+  /// [implicitRules$2]: "Extensions for implicitRules"
   ///
   /// [language]: "The base language in which the resource is written."
   ///
-  /// [_language]: "Extensions for language"
+  /// [language$2]: "Extensions for language"
   ///
   /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
   ///
@@ -489,7 +488,7 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   ///
   /// [issued]: "The date and time this imaging selection was created."
   ///
-  /// [_issued]: "Extensions for issued"
+  /// [issued$2]: "Extensions for issued"
   ///
   /// [performer]: "Author – human or machine."
   ///
@@ -497,7 +496,7 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   ///
   /// [studyUid]: "The Study Instance UID for the DICOM Study from which the images were selected."
   ///
-  /// [_studyUid]: "Extensions for studyUid"
+  /// [studyUid$2]: "Extensions for studyUid"
   ///
   /// [derivedFrom]: "The imaging study from which the imaging selection is made."
   ///
@@ -505,11 +504,11 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   ///
   /// [seriesUid]: "The Series Instance UID for the DICOM Series from which the images were selected."
   ///
-  /// [_seriesUid]: "Extensions for seriesUid"
+  /// [seriesUid$2]: "Extensions for seriesUid"
   ///
   /// [frameOfReferenceUid]: "The Frame of Reference UID identifying the coordinate system that conveys spatial and/or temporal information for the selected images or frames."
   ///
-  /// [_frameOfReferenceUid]: "Extensions for frameOfReferenceUid"
+  /// [frameOfReferenceUid$2]: "Extensions for frameOfReferenceUid"
   ///
   /// [bodySite]: "The anatomic structures examined. See DICOM Part 16 Annex L (http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM to SNOMED-CT mappings."
   ///
@@ -571,11 +570,11 @@ class Location with Resource, _$Location {
   ///
   /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
   ///
-  /// [_implicitRules]: "Extensions for implicitRules"
+  /// [implicitRules$2]: "Extensions for implicitRules"
   ///
   /// [language]: "The base language in which the resource is written."
   ///
-  /// [_language]: "Extensions for language"
+  /// [language$2]: "Extensions for language"
   ///
   /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
   ///
@@ -589,25 +588,25 @@ class Location with Resource, _$Location {
   ///
   /// [status]: "The status property covers the general availability of the resource, not the current value which may be covered by the operationStatus, or by a schedule/slots if they are configured for the location."
   ///
-  /// [_status]: "Extensions for status"
+  /// [status$2]: "Extensions for status"
   ///
   /// [operationalStatus]: "The operational status covers operation values most relevant to beds (but can also apply to rooms/units/chairs/etc. such as an isolation unit/dialysis chair). This typically covers concepts such as contamination, housekeeping, and other activities like maintenance."
   ///
   /// [name]: "Name of the location as used by humans. Does not need to be unique."
   ///
-  /// [_name]: "Extensions for name"
+  /// [name$2]: "Extensions for name"
   ///
   /// [alias]: "A list of alternate names that the location is known as, or was known as, in the past."
   ///
-  /// [_alias]: "Extensions for alias"
+  /// [alias$2]: "Extensions for alias"
   ///
   /// [description]: "Description of the Location, which helps in finding or referencing the place."
   ///
-  /// [_description]: "Extensions for description"
+  /// [description$2]: "Extensions for description"
   ///
   /// [mode]: "Indicates whether a resource instance represents a specific location or a class of locations."
   ///
-  /// [_mode]: "Extensions for mode"
+  /// [mode$2]: "Extensions for mode"
   ///
   /// [type]: "Indicates the type of function performed at the location."
   ///
@@ -627,7 +626,7 @@ class Location with Resource, _$Location {
   ///
   /// [availabilityExceptions]: "A description of when the locations opening ours are different to normal, e.g. public holiday availability. Succinctly describing all possible exceptions to normal site availability as detailed in the opening hours Times."
   ///
-  /// [_availabilityExceptions]: "Extensions for availabilityExceptions"
+  /// [availabilityExceptions$2]: "Extensions for availabilityExceptions"
   ///
   /// [endpoint]: "Technical endpoints providing access to services operated for the location."
 
@@ -707,7 +706,7 @@ class Location with Resource, _$Location {
 class LocationPosition with _$LocationPosition {
   LocationPosition._();
 
-  /// [Location_Position]: "Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated."
+  /// [LocationPosition]: "Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -717,15 +716,15 @@ class LocationPosition with _$LocationPosition {
   ///
   /// [longitude]: "Longitude. The value domain and the interpretation are the same as for the text of the longitude element in KML (see notes below)."
   ///
-  /// [_longitude]: "Extensions for longitude"
+  /// [longitude$2]: "Extensions for longitude"
   ///
   /// [latitude]: "Latitude. The value domain and the interpretation are the same as for the text of the latitude element in KML (see notes below)."
   ///
-  /// [_latitude]: "Extensions for latitude"
+  /// [latitude$2]: "Extensions for latitude"
   ///
   /// [altitude]: "Altitude. The value domain and the interpretation are the same as for the text of the altitude element in KML (see notes below)."
   ///
-  /// [_altitude]: "Extensions for altitude"
+  /// [altitude$2]: "Extensions for altitude"
 
   factory LocationPosition({
     String? id,
@@ -774,7 +773,7 @@ class LocationPosition with _$LocationPosition {
 class LocationHoursOfOperation with _$LocationHoursOfOperation {
   LocationHoursOfOperation._();
 
-  /// [Location_HoursOfOperation]: "Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated."
+  /// [LocationHoursOfOperation]: "Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -784,19 +783,19 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
   ///
   /// [daysOfWeek]: "Indicates which days of the week are available between the start and end Times."
   ///
-  /// [_daysOfWeek]: "Extensions for daysOfWeek"
+  /// [daysOfWeek$2]: "Extensions for daysOfWeek"
   ///
   /// [allDay]: "The Location is open all day."
   ///
-  /// [_allDay]: "Extensions for allDay"
+  /// [allDay$2]: "Extensions for allDay"
   ///
   /// [openingTime]: "Time that the Location opens."
   ///
-  /// [_openingTime]: "Extensions for openingTime"
+  /// [openingTime$2]: "Extensions for openingTime"
   ///
   /// [closingTime]: "Time that the Location closes."
   ///
-  /// [_closingTime]: "Extensions for closingTime"
+  /// [closingTime$2]: "Extensions for closingTime"
   ///
   /// [ManufacturedItemDefinition]: "The definition and characteristics of a medicinal manufactured item, such as a tablet or capsule, as contained in a packaged medicinal product."
   ///
@@ -808,11 +807,11 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
   ///
   /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
   ///
-  /// [_implicitRules]: "Extensions for implicitRules"
+  /// [implicitRules$2]: "Extensions for implicitRules"
   ///
   /// [language]: "The base language in which the resource is written."
   ///
-  /// [_language]: "Extensions for language"
+  /// [language$2]: "Extensions for language"
   ///
   /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
   ///
@@ -826,7 +825,7 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
   ///
   /// [status]: "The status of this item. Enables tracking the life-cycle of the content."
   ///
-  /// [_status]: "Extensions for status"
+  /// [status$2]: "Extensions for status"
   ///
   /// [manufacturedDoseForm]: "Dose form as manufactured and before any transformation into the pharmaceutical product."
   ///
@@ -897,11 +896,11 @@ class Organization with Resource, _$Organization {
   ///
   /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
   ///
-  /// [_implicitRules]: "Extensions for implicitRules"
+  /// [implicitRules$2]: "Extensions for implicitRules"
   ///
   /// [language]: "The base language in which the resource is written."
   ///
-  /// [_language]: "Extensions for language"
+  /// [language$2]: "Extensions for language"
   ///
   /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
   ///
@@ -915,17 +914,17 @@ class Organization with Resource, _$Organization {
   ///
   /// [active]: "Whether the organization\u0027s record is still in active use."
   ///
-  /// [_active]: "Extensions for active"
+  /// [active$2]: "Extensions for active"
   ///
   /// [type]: "The kind(s) of organization that this is."
   ///
   /// [name]: "A name associated with the organization."
   ///
-  /// [_name]: "Extensions for name"
+  /// [name$2]: "Extensions for name"
   ///
   /// [alias]: "A list of alternate names that the organization is known as, or was known as in the past."
   ///
-  /// [_alias]: "Extensions for alias"
+  /// [alias$2]: "Extensions for alias"
   ///
   /// [telecom]: "A contact detail for the organization."
   ///
@@ -1002,7 +1001,7 @@ class Organization with Resource, _$Organization {
 class OrganizationContact with _$OrganizationContact {
   OrganizationContact._();
 
-  /// [Organization_Contact]: "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc."
+  /// [OrganizationContact]: "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -1028,11 +1027,11 @@ class OrganizationContact with _$OrganizationContact {
   ///
   /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
   ///
-  /// [_implicitRules]: "Extensions for implicitRules"
+  /// [implicitRules$2]: "Extensions for implicitRules"
   ///
   /// [language]: "The base language in which the resource is written."
   ///
-  /// [_language]: "Extensions for language"
+  /// [language$2]: "Extensions for language"
   ///
   /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
   ///
@@ -1046,7 +1045,7 @@ class OrganizationContact with _$OrganizationContact {
   ///
   /// [active]: "Whether this organization affiliation record is in active use."
   ///
-  /// [_active]: "Extensions for active"
+  /// [active$2]: "Extensions for active"
   ///
   /// [period]: "The period during which the participatingOrganization is affiliated with the primary organization."
   ///

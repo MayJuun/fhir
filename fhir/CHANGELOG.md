@@ -1,5 +1,8 @@
 # fhir
 
+## [0.6.2]
+* 3 Resource methods changed to getters: resourceTypeString, thisReference, path (this will break some things, but I think they make more sense as getters)
+
 ## [0.6.1]
 
 * Updated to dart 2.16.0

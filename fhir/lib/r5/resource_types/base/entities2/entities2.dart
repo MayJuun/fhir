@@ -11,7 +11,6 @@ import '../../../../r5.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'entities2.enums.dart';
 part 'entities2.freezed.dart';
 part 'entities2.g.dart';
@@ -30,11 +29,11 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   ///
   /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
   ///
-  /// [_implicitRules]: "Extensions for implicitRules"
+  /// [implicitRules$2]: "Extensions for implicitRules"
   ///
   /// [language]: "The base language in which the resource is written."
   ///
-  /// [_language]: "Extensions for language"
+  /// [language$2]: "Extensions for language"
   ///
   /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
   ///
@@ -46,7 +45,7 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   ///
   /// [productCategory]: "Broad category of this product."
   ///
-  /// [_productCategory]: "Extensions for productCategory"
+  /// [productCategory$2]: "Extensions for productCategory"
   ///
   /// [productCode]: "A code that identifies the kind of this biologically derived product (SNOMED Ctcode)."
   ///
@@ -62,15 +61,15 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   ///
   /// [division]: "Description of division."
   ///
-  /// [_division]: "Extensions for division"
+  /// [division$2]: "Extensions for division"
   ///
   /// [status]: "Whether the product is currently available."
   ///
-  /// [_status]: "Extensions for status"
+  /// [status$2]: "Extensions for status"
   ///
   /// [expirationDate]: "Date of expiration."
   ///
-  /// [_expirationDate]: "Extensions for expirationDate"
+  /// [expirationDate$2]: "Extensions for expirationDate"
   ///
   /// [collection]: "How this product was collected."
   ///
@@ -147,7 +146,7 @@ class BiologicallyDerivedProductCollection
     with _$BiologicallyDerivedProductCollection {
   BiologicallyDerivedProductCollection._();
 
-  /// [BiologicallyDerivedProduct_Collection]: "This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused\ninto another (possibly the same) biological entity."
+  /// [BiologicallyDerivedProductCollection]: "This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused\ninto another (possibly the same) biological entity."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -161,7 +160,7 @@ class BiologicallyDerivedProductCollection
   ///
   /// [collectedDateTime]: "Time of product collection."
   ///
-  /// [_collectedDateTime]: "Extensions for collectedDateTime"
+  /// [collectedDateTime$2]: "Extensions for collectedDateTime"
   ///
   /// [collectedPeriod]: "Time of product collection."
 
@@ -202,7 +201,7 @@ class BiologicallyDerivedProductProcessing
     with _$BiologicallyDerivedProductProcessing {
   BiologicallyDerivedProductProcessing._();
 
-  /// [BiologicallyDerivedProduct_Property]: "This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused\ninto another (possibly the same) biological entity."
+  /// [BiologicallyDerivedProductProperty]: "This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused\ninto another (possibly the same) biological entity."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -214,11 +213,11 @@ class BiologicallyDerivedProductProcessing
   ///
   /// [valueBoolean]: "Property values."
   ///
-  /// [_valueBoolean]: "Extensions for valueBoolean"
+  /// [valueBoolean$2]: "Extensions for valueBoolean"
   ///
   /// [valueInteger]: "Property values."
   ///
-  /// [_valueInteger]: "Extensions for valueInteger"
+  /// [valueInteger$2]: "Extensions for valueInteger"
   ///
   /// [valueCodeableConcept]: "Property values."
   ///
@@ -228,7 +227,7 @@ class BiologicallyDerivedProductProcessing
   ///
   /// [valueString]: "Property values."
   ///
-  /// [_valueString]: "Extensions for valueString"
+  /// [valueString$2]: "Extensions for valueString"
   ///
   /// [valueAttachment]: "Property values."
 
@@ -356,11 +355,11 @@ class Device with Resource, _$Device {
   ///
   /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
   ///
-  /// [_implicitRules]: "Extensions for implicitRules"
+  /// [implicitRules$2]: "Extensions for implicitRules"
   ///
   /// [language]: "The base language in which the resource is written."
   ///
-  /// [_language]: "Extensions for language"
+  /// [language$2]: "Extensions for language"
   ///
   /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
   ///
@@ -374,7 +373,7 @@ class Device with Resource, _$Device {
   ///
   /// [displayName]: "The name used to display by default when the device is referenced. Based on intent of use by the resource creator, this may reflect one of the names in Device.deviceName, or may be another simple name."
   ///
-  /// [_displayName]: "Extensions for displayName"
+  /// [displayName$2]: "Extensions for displayName"
   ///
   /// [definition]: "The reference to the definition for the device."
   ///
@@ -382,7 +381,7 @@ class Device with Resource, _$Device {
   ///
   /// [status]: "Status of the Device record. This is not the status of the device like availability."
   ///
-  /// [_status]: "Extensions for status"
+  /// [status$2]: "Extensions for status"
   ///
   /// [statusReason]: "Reason for the status of the Device record. For example, why is the record not active."
   ///
@@ -390,33 +389,33 @@ class Device with Resource, _$Device {
   ///
   /// [manufacturer]: "A name of the manufacturer or entity legally responsible for the device."
   ///
-  /// [_manufacturer]: "Extensions for manufacturer"
+  /// [manufacturer$2]: "Extensions for manufacturer"
   ///
   /// [manufactureDate]: "The date and time when the device was manufactured."
   ///
-  /// [_manufactureDate]: "Extensions for manufactureDate"
+  /// [manufactureDate$2]: "Extensions for manufactureDate"
   ///
   /// [expirationDate]: "The date and time beyond which this device is no longer valid or should not be used (if applicable)."
   ///
-  /// [_expirationDate]: "Extensions for expirationDate"
+  /// [expirationDate$2]: "Extensions for expirationDate"
   ///
   /// [lotNumber]: "Lot number assigned by the manufacturer."
   ///
-  /// [_lotNumber]: "Extensions for lotNumber"
+  /// [lotNumber$2]: "Extensions for lotNumber"
   ///
   /// [serialNumber]: "The serial number assigned by the organization when the device was manufactured."
   ///
-  /// [_serialNumber]: "Extensions for serialNumber"
+  /// [serialNumber$2]: "Extensions for serialNumber"
   ///
   /// [deviceName]: "This represents the manufacturer\u0027s name of the device as provided by the device, from a UDI label, or by a person describing the Device.  This typically would be used when a person provides the name(s) or when the device represents one of the names available from DeviceDefinition."
   ///
   /// [modelNumber]: "The manufacturer\u0027s model number for the device."
   ///
-  /// [_modelNumber]: "Extensions for modelNumber"
+  /// [modelNumber$2]: "Extensions for modelNumber"
   ///
   /// [partNumber]: "The part number or catalog number of the device."
   ///
-  /// [_partNumber]: "Extensions for partNumber"
+  /// [partNumber$2]: "Extensions for partNumber"
   ///
   /// [type]: "The kind or type of device. A device instance may have more than one type - in which case those are the types that apply to the specific instance of the device."
   ///
@@ -438,7 +437,7 @@ class Device with Resource, _$Device {
   ///
   /// [url]: "A network address on which the device may be contacted directly."
   ///
-  /// [_url]: "Extensions for url"
+  /// [url$2]: "Extensions for url"
   ///
   /// [endpoint]: "Technical endpoints providing access to services provided by the device defined at this resource."
   ///
@@ -541,7 +540,7 @@ class Device with Resource, _$Device {
 class DeviceUdiCarrier with _$DeviceUdiCarrier {
   DeviceUdiCarrier._();
 
-  /// [Device_UdiCarrier]: "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device."
+  /// [DeviceUdiCarrier]: "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -551,29 +550,29 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   ///
   /// [deviceIdentifier]: "The device identifier (DI) is a mandatory, fixed portion of a UDI that identifies the labeler and the specific version or model of a device."
   ///
-  /// [_deviceIdentifier]: "Extensions for deviceIdentifier"
+  /// [deviceIdentifier$2]: "Extensions for deviceIdentifier"
   ///
   /// [issuer]: "Organization that is charged with issuing UDIs for devices. For example, the US FDA issuers include: \n1) GS1: http://hl7.org/fhir/NamingSystem/gs1-di, \n2) HIBCC: http://hl7.org/fhir/NamingSystem/hibcc-diI, \n3) ICCBBA for blood containers: http://hl7.org/fhir/NamingSystem/iccbba-blood-di, \n4) ICCBA for other devices: http://hl7.org/fhir/NamingSystem/iccbba-other-di # Informationsstelle für Arzneispezialitäten (IFA GmbH) (EU only): http://hl7.org/fhir/NamingSystem/ifa-gmbh-di."
   ///
-  /// [_issuer]: "Extensions for issuer"
+  /// [issuer$2]: "Extensions for issuer"
   ///
   /// [jurisdiction]: "The identity of the authoritative source for UDI generation within a jurisdiction. All UDIs are globally unique within a single namespace with the appropriate repository uri as the system. For example, UDIs of devices managed in the U.S. by the FDA, the value is http://hl7.org/fhir/NamingSystem/us-fda-udi or in the European Union by the European Commission http://hl7.org/fhir/NamingSystem/eu-ec-udi."
   ///
-  /// [_jurisdiction]: "Extensions for jurisdiction"
+  /// [jurisdiction$2]: "Extensions for jurisdiction"
   ///
   /// [carrierAIDC]: "The full UDI carrier of the Automatic Identification and Data Capture (AIDC) technology representation of the barcode string as printed on the packaging of the device - e.g., a barcode or RFID.   Because of limitations on character sets in XML and the need to round-trip JSON data through XML, AIDC Formats *SHALL* be base64 encoded."
   ///
-  /// [_carrierAIDC]: "Extensions for carrierAIDC"
+  /// [carrierAIDC$2]: "Extensions for carrierAIDC"
   ///
   /// [carrierHRF]: "The full UDI carrier as the human readable form (HRF) representation of the barcode string as printed on the packaging of the device."
   ///
-  /// [_carrierHRF]: "Extensions for carrierHRF"
+  /// [carrierHRF$2]: "Extensions for carrierHRF"
   ///
   /// [entryType]: "A coded entry to indicate how the data was entered."
   ///
-  /// [_entryType]: "Extensions for entryType"
+  /// [entryType$2]: "Extensions for entryType"
   ///
-  /// [Device_DeviceName]: "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device."
+  /// [DeviceDeviceName]: "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -583,13 +582,13 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   ///
   /// [name]: "The name that identifies the device."
   ///
-  /// [_name]: "Extensions for name"
+  /// [name$2]: "Extensions for name"
   ///
   /// [type]: "The type of deviceName. Note that ManufactureDeviceName means that the name is the name as given by the manufacturer, not the name of the manufacturer.\nRegisteredName | UserFriendlyName | PatientReportedName."
   ///
-  /// [_type]: "Extensions for type"
+  /// [type$2]: "Extensions for type"
   ///
-  /// [Device_Version]: "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device."
+  /// [DeviceVersion]: "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -603,9 +602,9 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   ///
   /// [value]: "The version text."
   ///
-  /// [_value]: "Extensions for value"
+  /// [value$2]: "Extensions for value"
   ///
-  /// [Device_Property]: "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device."
+  /// [DeviceProperty]: "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -621,15 +620,15 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   ///
   /// [valueString]: "Property value - can be a code, quantity, boolean, string or attachment."
   ///
-  /// [_valueString]: "Extensions for valueString"
+  /// [valueString$2]: "Extensions for valueString"
   ///
   /// [valueBoolean]: "Property value - can be a code, quantity, boolean, string or attachment."
   ///
-  /// [_valueBoolean]: "Extensions for valueBoolean"
+  /// [valueBoolean$2]: "Extensions for valueBoolean"
   ///
   /// [valueInteger]: "Property value - can be a code, quantity, boolean, string or attachment."
   ///
-  /// [_valueInteger]: "Extensions for valueInteger"
+  /// [valueInteger$2]: "Extensions for valueInteger"
   ///
   /// [valueRange]: "Property value - can be a code, quantity, boolean, string or attachment."
   ///
@@ -864,7 +863,7 @@ class DeviceProperty with _$DeviceProperty {
 class DeviceOperationalStatus with _$DeviceOperationalStatus {
   DeviceOperationalStatus._();
 
-  /// [Device_OperationalStatus]: "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device."
+  /// [DeviceOperationalStatus]: "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
@@ -919,7 +918,7 @@ class DeviceOperationalStatus with _$DeviceOperationalStatus {
 class DeviceAssociationStatus with _$DeviceAssociationStatus {
   DeviceAssociationStatus._();
 
-  /// [Device_AssociationStatus]: "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device."
+  /// [DeviceAssociationStatus]: "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device."
   ///
   /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
   ///
