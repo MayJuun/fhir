@@ -66,7 +66,7 @@ class ResourceDao {
       if (resource.resourceType != null) {
         await _addResourceType(password, resource.resourceType!);
 
-        _setStoreType(resource.resourceTypeString()!);
+        _setStoreType(resource.resourceTypeString ?? 'resources');
 
         return resource.id == null
             ? await _insert(password, resource)

@@ -785,15 +785,15 @@ class FhirRequest with _$FhirRequest {
             '${f.base}/${enumToString(f.type)}/${f.id.toString()}/_history/${f.vid.toString()}',
         // UPDATE
         update: (f) =>
-            '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
+            '${f.base}/${f.resource.resourceTypeString}/${f.resource.id.toString()}',
         // PATCH
         patch: (f) =>
-            '${f.base}/${f.resource.resourceTypeString()}/${f.resource.id.toString()}',
+            '${f.base}/${f.resource.resourceTypeString}/${f.resource.id.toString()}',
         // DELETE
         delete: (f) => '${f.base}/${enumToString(f.type)}/${f.id.toString()}',
         // CREATE
         create: (f) =>
-            '${f.base}/${enumToString(f.resource.resourceTypeString())}',
+            '${f.base}/${enumToString(f.resource.resourceTypeString)}',
         // SEARCH
         search: (f) => '${f.base}/${enumToString(f.type)}'
             '${f.restfulRequest == RestfulRequest.post_ ? '/_search' : ''}',
