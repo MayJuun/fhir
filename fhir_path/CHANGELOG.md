@@ -1,5 +1,9 @@
 # fhir_path
 
+## [0.6.2]
+
+* updated to fhir 0.6.2
+
 ## [0.6.1]
 
 * Update to dart 2.16.0
