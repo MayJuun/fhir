@@ -11,7 +11,6 @@ import '../../../../stu3.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'definitional_artifacts.enums.dart';
 part 'definitional_artifacts.freezed.dart';
 part 'definitional_artifacts.g.dart';

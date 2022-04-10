@@ -14,9 +14,9 @@ Meta _updateMetaVersion(Meta? oldMeta) {
   );
 }
 
-/// Updates the [meta] field of this Resource, updates the meta.lastUpdated 
+/// Updates the [meta] field of this Resource, updates the meta.lastUpdated
 /// field, adds 1 to the version number and adds an [Id] if there is not already
-/// one, accepts [meta] as an argument and will update that field, otherwise 
+/// one, accepts [meta] as an argument and will update that field, otherwise
 /// will try and update the [meta] field already in the resource
 Resource _updateMeta(Resource resource, {Meta? meta}) {
   switch (resource.resourceType) {

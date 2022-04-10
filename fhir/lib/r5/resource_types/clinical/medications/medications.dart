@@ -11,7 +11,6 @@ import '../../../../r5.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'medications.freezed.dart';
 part 'medications.g.dart';
 

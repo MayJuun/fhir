@@ -11,7 +11,6 @@ import '../../../../r5.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'terminology.enums.dart';
 part 'terminology.freezed.dart';
 part 'terminology.g.dart';

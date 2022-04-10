@@ -11,7 +11,6 @@ import '../../../../r5.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'support.enums.dart';
 part 'support.freezed.dart';
 part 'support.g.dart';

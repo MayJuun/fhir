@@ -11,7 +11,6 @@ import '../../dstu2.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'element.freezed.dart';
 part 'element.g.dart';
 

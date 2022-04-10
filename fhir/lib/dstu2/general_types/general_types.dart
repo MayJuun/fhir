@@ -11,7 +11,6 @@ import '../../dstu2.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'general_types.enums.dart';
 part 'general_types.freezed.dart';
 part 'general_types.g.dart';

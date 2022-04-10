@@ -11,7 +11,6 @@ import '../../r5.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'special_types.enums.dart';
 part 'special_types.freezed.dart';
 part 'special_types.g.dart';

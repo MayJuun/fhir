@@ -11,7 +11,6 @@ import '../../../../r5.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'care_provision.enums.dart';
 part 'care_provision.freezed.dart';
 part 'care_provision.g.dart';

@@ -11,7 +11,6 @@ import '../../../../dstu2.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'misc.enums.dart';
 part 'misc.freezed.dart';
 part 'misc.g.dart';

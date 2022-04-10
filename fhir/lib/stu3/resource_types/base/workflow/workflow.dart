@@ -11,7 +11,6 @@ import '../../../../stu3.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'workflow.enums.dart';
 part 'workflow.freezed.dart';
 part 'workflow.g.dart';

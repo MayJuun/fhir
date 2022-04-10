@@ -11,7 +11,6 @@ import '../../../../dstu2.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'medication_and_immunization.enums.dart';
 part 'medication_and_immunization.freezed.dart';
 part 'medication_and_immunization.g.dart';

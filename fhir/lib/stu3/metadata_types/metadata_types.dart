@@ -11,7 +11,6 @@ import '../../stu3.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'metadata_types.enums.dart';
 part 'metadata_types.freezed.dart';
 part 'metadata_types.g.dart';

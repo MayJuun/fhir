@@ -11,7 +11,6 @@ import '../../dstu2.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'fhir_extension.freezed.dart';
 part 'fhir_extension.g.dart';
 

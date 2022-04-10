@@ -11,7 +11,6 @@ import '../../../../dstu2.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'payment.enums.dart';
 part 'payment.freezed.dart';
 part 'payment.g.dart';

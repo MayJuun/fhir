@@ -11,7 +11,6 @@ import '../../../../dstu2.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'devices.enums.dart';
 part 'devices.freezed.dart';
 part 'devices.g.dart';

@@ -11,7 +11,6 @@ import '../../../../dstu2.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'workflow2.enums.dart';
 part 'workflow2.freezed.dart';
 part 'workflow2.g.dart';

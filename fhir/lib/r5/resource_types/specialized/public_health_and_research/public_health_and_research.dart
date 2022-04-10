@@ -11,7 +11,6 @@ import '../../../../r5.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'public_health_and_research.enums.dart';
 part 'public_health_and_research.freezed.dart';
 part 'public_health_and_research.g.dart';

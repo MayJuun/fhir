@@ -11,7 +11,6 @@ import '../../../../dstu2.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'information_tracking.enums.dart';
 part 'information_tracking.freezed.dart';
 part 'information_tracking.g.dart';

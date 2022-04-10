@@ -11,7 +11,6 @@ import '../../../../stu3.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'testing.enums.dart';
 part 'testing.freezed.dart';
 part 'testing.g.dart';

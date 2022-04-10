@@ -11,7 +11,6 @@ import '../../../../r5.dart';
 
 // import 'package:flutter/foundation.dart';
 
-
 part 'medication_definition.enums.dart';
 part 'medication_definition.freezed.dart';
 part 'medication_definition.g.dart';
