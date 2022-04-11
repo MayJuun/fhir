@@ -1,5 +1,11 @@
 # fhir_db
 
+## [0.6.1]
+
+* updated dependencies (includin fhir 0.6.2)
+* the resourceTypeString is now a getter, not a function
+* sorting imports
+
 ## [0.6.0]
 
 * Updated dependencies

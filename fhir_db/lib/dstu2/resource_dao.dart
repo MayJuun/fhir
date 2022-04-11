@@ -1,7 +1,9 @@
+// Package imports:
 import 'package:fhir/dstu2.dart';
-import 'package:fhir_db/dstu2/database_mode.dart' as mode;
 import 'package:sembast/sembast.dart';
 
+// Project imports:
+import 'package:fhir_db/dstu2/database_mode.dart' as mode;
 import 'fhir_db.dart';
 
 class ResourceDao {

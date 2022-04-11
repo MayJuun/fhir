@@ -1,7 +1,12 @@
-import 'package:fhir/r4.dart';
-import 'package:fhir_db/r4.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
+import 'package:fhir/r4.dart';
 import 'package:test/test.dart';
+
+// Project imports:
+import 'package:fhir_db/r4.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

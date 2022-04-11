@@ -1,7 +1,9 @@
+// Package imports:
 import 'package:fhir/stu3.dart';
-import 'package:fhir_db/stu3/database_mode.dart' as mode;
 import 'package:sembast/sembast.dart';
 
+// Project imports:
+import 'package:fhir_db/stu3/database_mode.dart' as mode;
 import 'fhir_db.dart';
 
 class ResourceDao {
@@ -66,7 +68,7 @@ class ResourceDao {
       if (resource.resourceType != null) {
         await _addResourceType(password, resource.resourceType!);
 
-        _setStoreType(resource.resourceTypeString!);
+        _setStoreType(resource.resourceTypeString ?? 'resources');
 
         return resource.id == null
             ? await _insert(password, resource)

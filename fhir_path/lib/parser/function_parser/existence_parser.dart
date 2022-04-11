@@ -147,7 +147,7 @@ class AnyTrueParser extends FhirPathParser {
       return [false];
     }
     results.retainWhere((element) => element == true);
-    return [results.length > 0];
+    return [results.isNotEmpty];
   }
 
   String verbosePrint(int indent) => '${"  " * indent}AnyTrueParser';
@@ -179,7 +179,7 @@ class AnyFalseParser extends FhirPathParser {
       return [false];
     }
     results.retainWhere((element) => element == false);
-    return [results.length > 0];
+    return [results.isNotEmpty];
   }
 
   String verbosePrint(int indent) => '${"  " * indent}AnyFalseParser';

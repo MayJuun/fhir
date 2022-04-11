@@ -28,7 +28,7 @@ In order to use this package in your app, you must include the following in your
 
 ```yaml
 dependencies:
-  fhir: ^0.6.0
+  fhir: ^0.6.2
 ```
 
 Or if you want to include the most recent unreleased version from Github
