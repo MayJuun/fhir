@@ -53,7 +53,7 @@ class SubstringParser extends ValueParser<ParserList> {
             ? throw _requiresList('.substring()', results)
             : (results.first is! String)
                 ? throw _requiresString('.substring()', results)
-                : executedValue.length >= 1 &&
+                : executedValue.isNotEmpty &&
                         executedValue.first is int &&
                         (executedValue.first >= results.first.length ||
                             executedValue.first < 0)

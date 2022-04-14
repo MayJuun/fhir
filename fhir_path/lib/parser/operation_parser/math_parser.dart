@@ -354,15 +354,15 @@ class PlusParser extends OperatorParser {
             if (executedAfter.first is num) {
               return [executedBefore.first + executedAfter.first];
             }
-            break;
           }
+          break;
         case double:
           {
             if (executedAfter.first is num) {
               return [executedBefore.first + executedAfter.first];
             }
-            break;
           }
+          break;
         case FhirPathQuantity:
           {
             if (executedAfter.first is FhirPathQuantity) {
@@ -371,8 +371,8 @@ class PlusParser extends OperatorParser {
                     (executedAfter.first as FhirPathQuantity)
               ];
             }
-            break;
           }
+          break;
         case FhirDateTime:
           {
             if (executedAfter.first is FhirPathQuantity) {
@@ -382,8 +382,8 @@ class PlusParser extends OperatorParser {
                     .toString()
               ];
             }
-            break;
           }
+          break;
         case Date:
           {
             if (executedAfter.first is FhirPathQuantity) {
@@ -393,8 +393,8 @@ class PlusParser extends OperatorParser {
                     .toString()
               ];
             }
-            break;
           }
+          break;
         case Time:
           {
             if (executedAfter.first is FhirPathQuantity) {
@@ -404,8 +404,8 @@ class PlusParser extends OperatorParser {
                     .toString()
               ];
             }
-            break;
           }
+          break;
         case String:
           {
             if (executedAfter.first is String) {
@@ -425,8 +425,8 @@ class PlusParser extends OperatorParser {
                 ];
               }
             }
-            break;
           }
+          break;
         default:
           break;
       }
