@@ -1,6 +1,9 @@
 ## FHIRPath
 
 - Checkout [this page](https://hl7.org/fhirpath/) from HL7 for the full specification
+- Please note that most of the comments on the parser classes are taken directly from HL7's
+FHIRPath specification with full credit given. I thought it would be helpful to have it as a comment while trying to use this package, so I've included it. If this is not allowed, please alert me, and
+I will immediately remove the comments.
 
 ### Functionality
 

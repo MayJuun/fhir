@@ -8,7 +8,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  fhir: ^0.6.1
+  fhir: ^0.6.2
   fhir_path:
     path: ../../fhir_path
   google_fonts: ^2.3.1

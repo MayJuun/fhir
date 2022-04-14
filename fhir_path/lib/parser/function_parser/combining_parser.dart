@@ -8,6 +8,9 @@ import '../../fhir_path.dart';
 class UnionFunctionParser extends FunctionParser {
   UnionFunctionParser();
   late ParserList value;
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
   List execute(List results, Map<String, dynamic> passed) {
     var executedValue = value.execute(results.toList(), passed);
     final finalResults = [];
@@ -17,9 +20,20 @@ class UnionFunctionParser extends FunctionParser {
     return finalResults;
   }
 
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) =>
       '${"  " * indent}UnionParser\n${value.verbosePrint(indent + 1)}';
 
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => value.isEmpty
       ? '.union()'
       : '.union(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
@@ -33,6 +47,9 @@ class UnionFunctionParser extends FunctionParser {
 class CombineParser extends FunctionParser {
   CombineParser();
   late ParserList value;
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
   List execute(List results, Map<String, dynamic> passed) {
     if (value.isEmpty) {
       return results;
@@ -43,9 +60,20 @@ class CombineParser extends FunctionParser {
     }
   }
 
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) =>
       '${"  " * indent}CombineParser\n${value.verbosePrint(indent + 1)}';
 
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => value.isEmpty
       ? '.combine()'
       : '.combine(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'

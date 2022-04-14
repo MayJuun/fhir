@@ -1,5 +1,11 @@
 # fhir_path
 
+## [0.6.3]
+
+* I want pub points!
+* Added in a bunch of comments
+* Replaced some results.length > 0 with results.isNotEmpty
+
 ## [0.6.2]
 
 * updated to fhir 0.6.2
