@@ -54,9 +54,15 @@ import 'fhir_path.dart';
 /// }
 /// ```
 ///
+/// *** Lazy-loading ***
 /// Instead of a static value, the [environment] may map keys to functions
 /// which return the actual value. These functions will only be evaluated when
-/// the variable is accessed. This lazy evaluation may boost performance.
+/// the variable is accessed. This lazy evaluation may boost performance, for
+/// instance when iif is used to determine which of two expensive objects is to
+/// be used.
+///
+/// The lazy-loading mechanism is currently only supported through the
+/// [environment] map, not for explicitly passed-in parameters.
 List<dynamic> walkFhirPath({
   required Map<String, dynamic>? context,
   required String pathExpression,
@@ -242,16 +248,16 @@ extension FhirPathResourceExtension on Map<String, dynamic> {
   static const rootResourceKey = '%rootResource';
 
   Map<String, dynamic>? get context => this[contextKey];
-  void set context(dynamic context) => this[contextKey] = context;
+  void set context(Map<String, dynamic>? context) => this[contextKey] = context;
   bool get hasNoContext => context == null;
 
-  void set resource(dynamic resource) {
+  void set resource(Map<String, dynamic>? resource) {
     if (resource != null) {
       this[resourceKey] = resource;
     }
   }
 
-  void set rootResource(dynamic rootResource) {
+  void set rootResource(Map<String, dynamic>? rootResource) {
     if (rootResource != null) {
       this[resourceKey] = rootResource;
     }
