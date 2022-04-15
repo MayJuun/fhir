@@ -16,5 +16,5 @@ void main() {
   testBasicOperators();
   testQuestionnaire();
   testDateTimes();
-  // testFhirPathTestSuite();
+  testFhirPathTestSuite();
 }

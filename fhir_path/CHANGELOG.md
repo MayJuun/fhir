@@ -1,4 +1,7 @@
 # fhir_path
+## [0.6.4]
+* Fix lazy evaluation of environment (regression bug introduced in 0.5.0-21)
+* Better documentation of parameters
 
 ## [0.6.3]
 
@@ -39,9 +42,9 @@
 * Multiple bug fixes and improvements again by [Tilo](https://github.com/tiloc)
 * Ported the FHIRPath test suite from XML to Dart
 * More tests enabled & fixed
-* Fixed .all(XXX), .instersect()
+* Fixed .all(XXX), .intersect()
 * Fixes % to variables, is for DateTime, comparisons for quantities
-* Fixed bug when using $this in nexted iifs
+* Fixed bug when using $this in nested iifs
 
 ## [0.5.0-19]
 

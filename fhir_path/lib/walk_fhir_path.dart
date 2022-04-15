@@ -11,23 +11,52 @@ import 'fhir_path.dart';
 /// Start here! This is where the fun begins. This is a bit confusing, so we'll
 /// explain the arguments that can be passed.
 ///
-/// context (%context - https://hl7.org/fhirpath/#environment-variables)
-/// Is the original node that was passed to the evaluation engine before
-/// starting evaluation
+/// The FHIRPath specification defines the following inputs:
 ///
-/// resource (%resource - https://www.hl7.org/fhir/fhirpath.html#variables)
+/// **context**
+///
+/// [context](https://hl7.org/fhirpath/#environment-variables)
+/// Is the original node that was passed to the evaluation engine before
+/// starting evaluation.
+///
+/// Should always be passed in through the [context] parameter.
+///
+///
+/// **resource**
+///
+/// [resource](https://www.hl7.org/fhir/fhirpath.html#variables)
 /// the resource that contains the original node that is in %context
 ///
-/// ToDo: rootResource (%rootResource - https://www.hl7.org/fhir/fhirpath.html#variables)
+/// May be passed in either through an entry in the [environment] map,
+/// named "%resource", or through the dedicated parameter.
+/// A non-null dedicated parameter takes precedence.
+///
+///
+/// **rootResource**
+///
+/// [rootResource](https://www.hl7.org/fhir/fhirpath.html#variables)
 /// the container resource for the resource identified by %resource
 ///
-/// All other resources or varibles that you would like to pass that may be needed
-/// while evaluating your FHIRPath expression, you should pass as part of the
-/// environment argument, with the format:
+/// May be passed in either through an entry in the [environment] map,
+/// named "%rootResource", or through the dedicated parameter.
+/// A non-null dedicated parameter takes precedence.
+///
+/// **environment variables / resources**
+///
+/// [environment] - arbitrary named environment variables.
+/// These should be passed in as a map, where each key has the format
+/// "%variable-name".
+///
+/// ```json
 /// {
 ///   "%pi": 3.1415927,
 ///   "%myname": "Grey"
 /// }
+/// ```
+///
+/// Instead of a static value, the [environment] may map keys to functions
+/// which return the actual value. These functions will only be evaluated when
+/// the variable is accessed. This lazy evaluation may boost performance.
 List<dynamic> walkFhirPath({
   required Map<String, dynamic>? context,
   required String pathExpression,
@@ -96,7 +125,10 @@ ParserList parseFhirPath(String pathExpression) {
 ///
 /// May be invoked repeatedly on the same parsed FHIRPath,
 /// resulting in a performance gain over [walkFhirPath].
+///
+/// All parameters have the same meaning as for [walkFhirPath].
 List<dynamic> executeFhirPath({
+  ///
   required Map<String, dynamic>? context,
   required ParserList parsedFhirPath,
   required String pathExpression,
@@ -105,19 +137,25 @@ List<dynamic> executeFhirPath({
   Map<String, dynamic>? environment,
   FhirVersion version = FhirVersion.r4,
 }) {
+  // Use passed-in environment as the starting point.
+  // It will later be amended/overridden by explicitly passed resources.
   final passedEnvironment = Map<String, dynamic>.from(environment ?? {});
 
-  /// check if there is a context element
-  passedEnvironment.context = context ?? {};
+  // Explicitly passed context overrides context that might have been passed
+  // through environment.
+  passedEnvironment.context = context;
 
-  /// check if there is a resource element, also check and ensure it wasn't
-  /// passed as an environment variable
-  passedEnvironment.resource = resource ?? environment?['%resource'];
+  // Explicitly passed resource overrides resource that might have been passed
+  // through environment.
+  if (resource != null) {
+    passedEnvironment.resource = resource;
+  }
 
-  /// check if there is a resource element, also check and ensure it wasn't
-  /// passed as an environment variable
-  passedEnvironment.rootResource =
-      rootResource ?? environment?['%rootResource'];
+  // Explicitly passed rootResource overrides rootResource that might have been passed
+  // through environment.
+  if (rootResource != null) {
+    passedEnvironment.rootResource = rootResource;
+  }
 
   passedEnvironment.version = version;
 
@@ -204,16 +242,16 @@ extension FhirPathResourceExtension on Map<String, dynamic> {
   static const rootResourceKey = '%rootResource';
 
   Map<String, dynamic>? get context => this[contextKey];
-  void set context(Map<String, dynamic>? context) => this[contextKey] = context;
+  void set context(dynamic context) => this[contextKey] = context;
   bool get hasNoContext => context == null;
 
-  void set resource(Map<String, dynamic>? resource) {
+  void set resource(dynamic resource) {
     if (resource != null) {
       this[resourceKey] = resource;
     }
   }
 
-  void set rootResource(Map<String, dynamic>? rootResource) {
+  void set rootResource(dynamic rootResource) {
     if (rootResource != null) {
       this[resourceKey] = rootResource;
     }
