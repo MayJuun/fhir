@@ -94,4 +94,4 @@
 *google-services.json
 *client_secret*
 *secret*
-*.sh
+# *.sh

@@ -5,6 +5,8 @@
 # This file contains the analysis options used by Flutter tools, such as IntelliJ,
 # Android Studio, and the `flutter analyze` command.
 
+include: package:lints/recommended.yaml
+
 analyzer:
   strong-mode:
     implicit-dynamic: true
@@ -78,7 +80,7 @@ linter:
     - control_flow_in_finally
     # - curly_braces_in_flow_control_structures # not yet tested
     # - diagnostic_describe_all_properties # not yet tested
-    - directives_ordering
+    # - directives_ordering
     - empty_catches
     - empty_constructor_bodies
     - empty_statements

@@ -1,11 +1,15 @@
+// Dart imports:
 import 'dart:convert';
 
+// Package imports:
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
+// Project imports:
 import '../../../../r4.dart';
+
+// import 'package:flutter/foundation.dart';
 
 part 'quality_reporting_and_testing.enums.dart';
 part 'quality_reporting_and_testing.freezed.dart';
@@ -50,7 +54,7 @@ class Measure with Resource, _$Measure {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -212,7 +216,7 @@ class Measure with Resource, _$Measure {
   /// [relatedArtifact]: Related artifacts such as additional documentation,
   ///  justification, or bibliographic references.
   ///
-  /// [library_]: A reference to a Library resource containing the formal logic
+  /// [library]: A reference to a Library resource containing the formal logic
   ///  used by the measure.
   ///
   /// [disclaimer]: Notices and disclaimers regarding the use of the measure or
@@ -376,6 +380,18 @@ class Measure with Resource, _$Measure {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Measure.fromJson(Map<String, dynamic> json) =>
       _$MeasureFromJson(json);
+
+  /// Acts like a constructor, returns a [Measure], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Measure.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -388,7 +404,7 @@ class MeasureGroup with _$MeasureGroup {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -451,6 +467,18 @@ class MeasureGroup with _$MeasureGroup {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureGroup.fromJson(Map<String, dynamic> json) =>
       _$MeasureGroupFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureGroup], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureGroup.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureGroupFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -463,7 +491,7 @@ class MeasurePopulation with _$MeasurePopulation {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -519,6 +547,18 @@ class MeasurePopulation with _$MeasurePopulation {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasurePopulation.fromJson(Map<String, dynamic> json) =>
       _$MeasurePopulationFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasurePopulation], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasurePopulation.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasurePopulationFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -531,7 +571,7 @@ class MeasureStratifier with _$MeasureStratifier {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -596,6 +636,18 @@ class MeasureStratifier with _$MeasureStratifier {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureStratifier.fromJson(Map<String, dynamic> json) =>
       _$MeasureStratifierFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureStratifier], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureStratifier.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureStratifierFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -608,7 +660,7 @@ class MeasureComponent with _$MeasureComponent {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -670,6 +722,18 @@ class MeasureComponent with _$MeasureComponent {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureComponent.fromJson(Map<String, dynamic> json) =>
       _$MeasureComponentFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureComponent], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureComponent.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureComponentFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -682,7 +746,7 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -750,6 +814,18 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureSupplementalData.fromJson(Map<String, dynamic> json) =>
       _$MeasureSupplementalDataFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureSupplementalData], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureSupplementalData.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureSupplementalDataFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -792,7 +868,7 @@ class MeasureReport with Resource, _$MeasureReport {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -905,6 +981,18 @@ class MeasureReport with Resource, _$MeasureReport {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReport.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureReport], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureReport.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureReportFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -918,7 +1006,7 @@ class MeasureReportGroup with _$MeasureReportGroup {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -978,6 +1066,18 @@ class MeasureReportGroup with _$MeasureReportGroup {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportGroup.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportGroupFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureReportGroup], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureReportGroup.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureReportGroupFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -991,7 +1091,7 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1047,6 +1147,18 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportPopulation.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportPopulationFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureReportPopulation], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureReportPopulation.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureReportPopulationFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1060,7 +1172,7 @@ class MeasureReportStratifier with _$MeasureReportStratifier {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1112,6 +1224,18 @@ class MeasureReportStratifier with _$MeasureReportStratifier {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportStratifier.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportStratifierFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureReportStratifier], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureReportStratifier.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureReportStratifierFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1125,7 +1249,7 @@ class MeasureReportStratum with _$MeasureReportStratum {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1185,6 +1309,18 @@ class MeasureReportStratum with _$MeasureReportStratum {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportStratumFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureReportStratum], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureReportStratum.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureReportStratumFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1198,7 +1334,7 @@ class MeasureReportComponent with _$MeasureReportComponent {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1247,6 +1383,18 @@ class MeasureReportComponent with _$MeasureReportComponent {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportComponent.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportComponentFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureReportComponent], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureReportComponent.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureReportComponentFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1260,7 +1408,7 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1317,6 +1465,18 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportPopulation1FromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureReportPopulation1], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureReportPopulation1.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureReportPopulation1FromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1358,7 +1518,7 @@ class TestReport with Resource, _$TestReport {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1478,6 +1638,18 @@ class TestReport with Resource, _$TestReport {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReport.fromJson(Map<String, dynamic> json) =>
       _$TestReportFromJson(json);
+
+  /// Acts like a constructor, returns a [TestReport], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestReport.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestReportFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1490,7 +1662,7 @@ class TestReportParticipant with _$TestReportParticipant {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1552,6 +1724,18 @@ class TestReportParticipant with _$TestReportParticipant {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportParticipant.fromJson(Map<String, dynamic> json) =>
       _$TestReportParticipantFromJson(json);
+
+  /// Acts like a constructor, returns a [TestReportParticipant], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestReportParticipant.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestReportParticipantFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1564,7 +1748,7 @@ class TestReportSetup with _$TestReportSetup {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1610,6 +1794,18 @@ class TestReportSetup with _$TestReportSetup {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportSetup.fromJson(Map<String, dynamic> json) =>
       _$TestReportSetupFromJson(json);
+
+  /// Acts like a constructor, returns a [TestReportSetup], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestReportSetup.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestReportSetupFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1622,7 +1818,7 @@ class TestReportAction with _$TestReportAction {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1645,7 +1841,7 @@ class TestReportAction with _$TestReportAction {
   ///
   /// [operation]: The operation performed.
   ///
-  /// [assert_]: The results of the assertion performed on the previous
+  /// [assert]: The results of the assertion performed on the previous
   ///  operations.
   factory TestReportAction({
     String? id,
@@ -1672,6 +1868,18 @@ class TestReportAction with _$TestReportAction {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportAction.fromJson(Map<String, dynamic> json) =>
       _$TestReportActionFromJson(json);
+
+  /// Acts like a constructor, returns a [TestReportAction], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestReportAction.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestReportActionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1684,7 +1892,7 @@ class TestReportOperation with _$TestReportOperation {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1746,6 +1954,18 @@ class TestReportOperation with _$TestReportOperation {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportOperation.fromJson(Map<String, dynamic> json) =>
       _$TestReportOperationFromJson(json);
+
+  /// Acts like a constructor, returns a [TestReportOperation], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestReportOperation.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestReportOperationFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1758,7 +1978,7 @@ class TestReportAssert with _$TestReportAssert {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1820,6 +2040,18 @@ class TestReportAssert with _$TestReportAssert {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportAssert.fromJson(Map<String, dynamic> json) =>
       _$TestReportAssertFromJson(json);
+
+  /// Acts like a constructor, returns a [TestReportAssert], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestReportAssert.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestReportAssertFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1832,7 +2064,7 @@ class TestReportTest with _$TestReportTest {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1892,6 +2124,18 @@ class TestReportTest with _$TestReportTest {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportTest.fromJson(Map<String, dynamic> json) =>
       _$TestReportTestFromJson(json);
+
+  /// Acts like a constructor, returns a [TestReportTest], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestReportTest.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestReportTestFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1904,7 +2148,7 @@ class TestReportAction1 with _$TestReportAction1 {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1927,7 +2171,7 @@ class TestReportAction1 with _$TestReportAction1 {
   ///
   /// [operation]: An operation would involve a REST request to a server.
   ///
-  /// [assert_]: The results of the assertion performed on the previous
+  /// [assert]: The results of the assertion performed on the previous
   ///  operations.
   factory TestReportAction1({
     String? id,
@@ -1954,6 +2198,18 @@ class TestReportAction1 with _$TestReportAction1 {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportAction1.fromJson(Map<String, dynamic> json) =>
       _$TestReportAction1FromJson(json);
+
+  /// Acts like a constructor, returns a [TestReportAction1], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestReportAction1.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestReportAction1FromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1966,7 +2222,7 @@ class TestReportTeardown with _$TestReportTeardown {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2012,6 +2268,18 @@ class TestReportTeardown with _$TestReportTeardown {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportTeardown.fromJson(Map<String, dynamic> json) =>
       _$TestReportTeardownFromJson(json);
+
+  /// Acts like a constructor, returns a [TestReportTeardown], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestReportTeardown.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestReportTeardownFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -2024,7 +2292,7 @@ class TestReportAction2 with _$TestReportAction2 {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2070,6 +2338,18 @@ class TestReportAction2 with _$TestReportAction2 {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestReportAction2.fromJson(Map<String, dynamic> json) =>
       _$TestReportAction2FromJson(json);
+
+  /// Acts like a constructor, returns a [TestReportAction2], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestReportAction2.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestReportAction2FromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -2111,7 +2391,7 @@ class TestScript with Resource, _$TestScript {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2310,6 +2590,18 @@ class TestScript with Resource, _$TestScript {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScript.fromJson(Map<String, dynamic> json) =>
       _$TestScriptFromJson(json);
+
+  /// Acts like a constructor, returns a [TestScript], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestScript.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestScriptFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -2323,7 +2615,7 @@ class TestScriptOrigin with _$TestScriptOrigin {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2376,6 +2668,18 @@ class TestScriptOrigin with _$TestScriptOrigin {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptOrigin.fromJson(Map<String, dynamic> json) =>
       _$TestScriptOriginFromJson(json);
+
+  /// Acts like a constructor, returns a [TestScriptOrigin], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestScriptOrigin.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestScriptOriginFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -2389,7 +2693,7 @@ class TestScriptDestination with _$TestScriptDestination {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2442,6 +2746,18 @@ class TestScriptDestination with _$TestScriptDestination {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptDestination.fromJson(Map<String, dynamic> json) =>
       _$TestScriptDestinationFromJson(json);
+
+  /// Acts like a constructor, returns a [TestScriptDestination], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestScriptDestination.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestScriptDestinationFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -2455,7 +2771,7 @@ class TestScriptMetadata with _$TestScriptMetadata {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2505,6 +2821,18 @@ class TestScriptMetadata with _$TestScriptMetadata {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptMetadata.fromJson(Map<String, dynamic> json) =>
       _$TestScriptMetadataFromJson(json);
+
+  /// Acts like a constructor, returns a [TestScriptMetadata], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestScriptMetadata.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestScriptMetadataFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -2518,7 +2846,7 @@ class TestScriptLink with _$TestScriptLink {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2574,6 +2902,18 @@ class TestScriptLink with _$TestScriptLink {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptLink.fromJson(Map<String, dynamic> json) =>
       _$TestScriptLinkFromJson(json);
+
+  /// Acts like a constructor, returns a [TestScriptLink], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestScriptLink.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestScriptLinkFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -2587,7 +2927,7 @@ class TestScriptCapability with _$TestScriptCapability {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2676,6 +3016,18 @@ class TestScriptCapability with _$TestScriptCapability {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptCapability.fromJson(Map<String, dynamic> json) =>
       _$TestScriptCapabilityFromJson(json);
+
+  /// Acts like a constructor, returns a [TestScriptCapability], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestScriptCapability.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestScriptCapabilityFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -2689,7 +3041,7 @@ class TestScriptFixture with _$TestScriptFixture {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2754,6 +3106,18 @@ class TestScriptFixture with _$TestScriptFixture {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptFixture.fromJson(Map<String, dynamic> json) =>
       _$TestScriptFixtureFromJson(json);
+
+  /// Acts like a constructor, returns a [TestScriptFixture], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestScriptFixture.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestScriptFixtureFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -2767,7 +3131,7 @@ class TestScriptVariable with _$TestScriptVariable {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2867,6 +3231,18 @@ class TestScriptVariable with _$TestScriptVariable {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptVariable.fromJson(Map<String, dynamic> json) =>
       _$TestScriptVariableFromJson(json);
+
+  /// Acts like a constructor, returns a [TestScriptVariable], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestScriptVariable.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestScriptVariableFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -2880,7 +3256,7 @@ class TestScriptSetup with _$TestScriptSetup {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2926,6 +3302,18 @@ class TestScriptSetup with _$TestScriptSetup {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptSetup.fromJson(Map<String, dynamic> json) =>
       _$TestScriptSetupFromJson(json);
+
+  /// Acts like a constructor, returns a [TestScriptSetup], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestScriptSetup.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestScriptSetupFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -2939,7 +3327,7 @@ class TestScriptAction with _$TestScriptAction {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2962,7 +3350,7 @@ class TestScriptAction with _$TestScriptAction {
   ///
   /// [operation]: The operation to perform.
   ///
-  /// [assert_]: Evaluates the results of previous operations to determine if the
+  /// [assert]: Evaluates the results of previous operations to determine if the
   ///  server under test behaves appropriately.
   factory TestScriptAction({
     String? id,
@@ -2989,6 +3377,18 @@ class TestScriptAction with _$TestScriptAction {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptAction.fromJson(Map<String, dynamic> json) =>
       _$TestScriptActionFromJson(json);
+
+  /// Acts like a constructor, returns a [TestScriptAction], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestScriptAction.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestScriptActionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -3002,7 +3402,7 @@ class TestScriptOperation with _$TestScriptOperation {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3156,6 +3556,18 @@ class TestScriptOperation with _$TestScriptOperation {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptOperation.fromJson(Map<String, dynamic> json) =>
       _$TestScriptOperationFromJson(json);
+
+  /// Acts like a constructor, returns a [TestScriptOperation], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestScriptOperation.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestScriptOperationFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -3169,7 +3581,7 @@ class TestScriptRequestHeader with _$TestScriptRequestHeader {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3224,6 +3636,18 @@ class TestScriptRequestHeader with _$TestScriptRequestHeader {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptRequestHeader.fromJson(Map<String, dynamic> json) =>
       _$TestScriptRequestHeaderFromJson(json);
+
+  /// Acts like a constructor, returns a [TestScriptRequestHeader], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestScriptRequestHeader.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestScriptRequestHeaderFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -3237,7 +3661,7 @@ class TestScriptAssert with _$TestScriptAssert {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3440,6 +3864,18 @@ class TestScriptAssert with _$TestScriptAssert {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptAssert.fromJson(Map<String, dynamic> json) =>
       _$TestScriptAssertFromJson(json);
+
+  /// Acts like a constructor, returns a [TestScriptAssert], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestScriptAssert.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestScriptAssertFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -3453,7 +3889,7 @@ class TestScriptTest with _$TestScriptTest {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3513,6 +3949,18 @@ class TestScriptTest with _$TestScriptTest {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptTest.fromJson(Map<String, dynamic> json) =>
       _$TestScriptTestFromJson(json);
+
+  /// Acts like a constructor, returns a [TestScriptTest], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestScriptTest.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestScriptTestFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -3526,7 +3974,7 @@ class TestScriptAction1 with _$TestScriptAction1 {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3549,7 +3997,7 @@ class TestScriptAction1 with _$TestScriptAction1 {
   ///
   /// [operation]: An operation would involve a REST request to a server.
   ///
-  /// [assert_]: Evaluates the results of previous operations to determine if the
+  /// [assert]: Evaluates the results of previous operations to determine if the
   ///  server under test behaves appropriately.
   factory TestScriptAction1({
     String? id,
@@ -3576,6 +4024,18 @@ class TestScriptAction1 with _$TestScriptAction1 {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptAction1.fromJson(Map<String, dynamic> json) =>
       _$TestScriptAction1FromJson(json);
+
+  /// Acts like a constructor, returns a [TestScriptAction1], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestScriptAction1.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestScriptAction1FromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -3589,7 +4049,7 @@ class TestScriptTeardown with _$TestScriptTeardown {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3635,6 +4095,18 @@ class TestScriptTeardown with _$TestScriptTeardown {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptTeardown.fromJson(Map<String, dynamic> json) =>
       _$TestScriptTeardownFromJson(json);
+
+  /// Acts like a constructor, returns a [TestScriptTeardown], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestScriptTeardown.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestScriptTeardownFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -3648,7 +4120,7 @@ class TestScriptAction2 with _$TestScriptAction2 {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -3694,4 +4166,16 @@ class TestScriptAction2 with _$TestScriptAction2 {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory TestScriptAction2.fromJson(Map<String, dynamic> json) =>
       _$TestScriptAction2FromJson(json);
+
+  /// Acts like a constructor, returns a [TestScriptAction2], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory TestScriptAction2.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$TestScriptAction2FromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }

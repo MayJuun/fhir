@@ -49,3 +49,20 @@ ToDo:
 1. Update fhir_db (Hive?)
 2. Update fhir_auth
 3. Update fhir_profiles
+
+
+
+factory (.*).fromJson\(Map<String, dynamic> json(.*)\n(.*)\(json\);
+
+
+  factory $1.fromJson(Map<String, dynamic> json$2\n$3 \n/// Acts like a constructor, returns a [$1], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory $1.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return $3(json);
+    } else {
+      throw FormatException('FormatException:\\nYou passed $json\\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }

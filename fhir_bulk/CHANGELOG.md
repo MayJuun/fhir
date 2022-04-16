@@ -1,5 +1,11 @@
 # fhir_bulk
 
+## [0.6.1]
+
+* Updated depndencies
+* Now FHIR 0.6.2
+* Import sorter
+
 ## [0.6.0]
 
 * Updated dependencies

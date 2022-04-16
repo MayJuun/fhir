@@ -1,11 +1,15 @@
+// Dart imports:
 import 'dart:convert';
 
+// Package imports:
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
+// Project imports:
 import '../../r5.dart';
+
+// import 'package:flutter/foundation.dart';
 
 part 'special_types.enums.dart';
 part 'special_types.freezed.dart';
@@ -39,6 +43,18 @@ class Narrative with _$Narrative {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Narrative.fromJson(Map<String, dynamic> json) =>
       _$NarrativeFromJson(json);
+
+  /// Acts like a constructor, returns a [Narrative], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Narrative.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$NarrativeFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -68,6 +84,18 @@ class CodeableReference with _$CodeableReference {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory CodeableReference.fromJson(Map<String, dynamic> json) =>
       _$CodeableReferenceFromJson(json);
+
+  /// Acts like a constructor, returns a [CodeableReference], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory CodeableReference.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$CodeableReferenceFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -102,6 +130,18 @@ class Reference with _$Reference {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Reference.fromJson(Map<String, dynamic> json) =>
       _$ReferenceFromJson(json);
+
+  /// Acts like a constructor, returns a [Reference], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Reference.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ReferenceFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -143,6 +183,18 @@ class Statistic with _$Statistic {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Statistic.fromJson(Map<String, dynamic> json) =>
       _$StatisticFromJson(json);
+
+  /// Acts like a constructor, returns a [Statistic], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Statistic.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$StatisticFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -181,6 +233,18 @@ class StatisticSampleSize with _$StatisticSampleSize {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StatisticSampleSize.fromJson(Map<String, dynamic> json) =>
       _$StatisticSampleSizeFromJson(json);
+
+  /// Acts like a constructor, returns a [StatisticSampleSize], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory StatisticSampleSize.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$StatisticSampleSizeFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -218,6 +282,18 @@ class StatisticAttributeEstimate with _$StatisticAttributeEstimate {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StatisticAttributeEstimate.fromJson(Map<String, dynamic> json) =>
       _$StatisticAttributeEstimateFromJson(json);
+
+  /// Acts like a constructor, returns a [StatisticAttributeEstimate], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory StatisticAttributeEstimate.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$StatisticAttributeEstimateFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -254,6 +330,18 @@ class StatisticAttributeEstimate1 with _$StatisticAttributeEstimate1 {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StatisticAttributeEstimate1.fromJson(Map<String, dynamic> json) =>
       _$StatisticAttributeEstimate1FromJson(json);
+
+  /// Acts like a constructor, returns a [StatisticAttributeEstimate1], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory StatisticAttributeEstimate1.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$StatisticAttributeEstimate1FromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -285,6 +373,18 @@ class StatisticModelCharacteristic with _$StatisticModelCharacteristic {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StatisticModelCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$StatisticModelCharacteristicFromJson(json);
+
+  /// Acts like a constructor, returns a [StatisticModelCharacteristic], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory StatisticModelCharacteristic.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$StatisticModelCharacteristicFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -319,6 +419,18 @@ class StatisticVariable with _$StatisticVariable {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory StatisticVariable.fromJson(Map<String, dynamic> json) =>
       _$StatisticVariableFromJson(json);
+
+  /// Acts like a constructor, returns a [StatisticVariable], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory StatisticVariable.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$StatisticVariableFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -355,6 +467,18 @@ class OrderedDistribution with _$OrderedDistribution {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OrderedDistribution.fromJson(Map<String, dynamic> json) =>
       _$OrderedDistributionFromJson(json);
+
+  /// Acts like a constructor, returns a [OrderedDistribution], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory OrderedDistribution.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$OrderedDistributionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -386,6 +510,18 @@ class OrderedDistributionInterval with _$OrderedDistributionInterval {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory OrderedDistributionInterval.fromJson(Map<String, dynamic> json) =>
       _$OrderedDistributionIntervalFromJson(json);
+
+  /// Acts like a constructor, returns a [OrderedDistributionInterval], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory OrderedDistributionInterval.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$OrderedDistributionIntervalFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -420,6 +556,18 @@ class Meta with _$Meta {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Meta.fromJson(Map<String, dynamic> json) => _$MetaFromJson(json);
+
+  /// Acts like a constructor, returns a [Meta], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Meta.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MetaFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -465,6 +613,18 @@ class Dosage with _$Dosage {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Dosage.fromJson(Map<String, dynamic> json) => _$DosageFromJson(json);
+
+  /// Acts like a constructor, returns a [Dosage], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Dosage.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DosageFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -499,6 +659,18 @@ class DosageDoseAndRate with _$DosageDoseAndRate {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DosageDoseAndRate.fromJson(Map<String, dynamic> json) =>
       _$DosageDoseAndRateFromJson(json);
+
+  /// Acts like a constructor, returns a [DosageDoseAndRate], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DosageDoseAndRate.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DosageDoseAndRateFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -835,6 +1007,18 @@ class ElementDefinition with _$ElementDefinition {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionFromJson(json);
+
+  /// Acts like a constructor, returns a [ElementDefinition], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ElementDefinition.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ElementDefinitionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -871,6 +1055,18 @@ class ElementDefinitionSlicing with _$ElementDefinitionSlicing {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionSlicingFromJson(json);
+
+  /// Acts like a constructor, returns a [ElementDefinitionSlicing], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ElementDefinitionSlicing.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ElementDefinitionSlicingFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -905,6 +1101,18 @@ class ElementDefinitionDiscriminator with _$ElementDefinitionDiscriminator {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionDiscriminator.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionDiscriminatorFromJson(json);
+
+  /// Acts like a constructor, returns a [ElementDefinitionDiscriminator], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ElementDefinitionDiscriminator.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ElementDefinitionDiscriminatorFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -939,6 +1147,18 @@ class ElementDefinitionBase with _$ElementDefinitionBase {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionBase.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionBaseFromJson(json);
+
+  /// Acts like a constructor, returns a [ElementDefinitionBase], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ElementDefinitionBase.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ElementDefinitionBaseFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -977,6 +1197,18 @@ class ElementDefinitionType with _$ElementDefinitionType {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionTypeFromJson(json);
+
+  /// Acts like a constructor, returns a [ElementDefinitionType], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ElementDefinitionType.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ElementDefinitionTypeFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1078,6 +1310,18 @@ class ElementDefinitionExample with _$ElementDefinitionExample {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionExample.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionExampleFromJson(json);
+
+  /// Acts like a constructor, returns a [ElementDefinitionExample], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ElementDefinitionExample.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ElementDefinitionExampleFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1120,6 +1364,18 @@ class ElementDefinitionConstraint with _$ElementDefinitionConstraint {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionConstraint.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionConstraintFromJson(json);
+
+  /// Acts like a constructor, returns a [ElementDefinitionConstraint], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ElementDefinitionConstraint.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ElementDefinitionConstraintFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1154,6 +1410,18 @@ class ElementDefinitionBinding with _$ElementDefinitionBinding {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionBinding.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionBindingFromJson(json);
+
+  /// Acts like a constructor, returns a [ElementDefinitionBinding], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ElementDefinitionBinding.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ElementDefinitionBindingFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1190,4 +1458,16 @@ class ElementDefinitionMapping with _$ElementDefinitionMapping {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ElementDefinitionMapping.fromJson(Map<String, dynamic> json) =>
       _$ElementDefinitionMappingFromJson(json);
+
+  /// Acts like a constructor, returns a [ElementDefinitionMapping], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ElementDefinitionMapping.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ElementDefinitionMappingFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }

@@ -1,14 +1,17 @@
 //ignore_for_file: always_specify_types
 
+// Dart imports:
 import 'dart:convert';
 
+// Package imports:
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:yaml/yaml.dart';
 
-// import 'package:flutter/foundation.dart';
-
+// Project imports:
 import '../../dstu2.dart';
+
+// import 'package:flutter/foundation.dart';
 
 part 'resource.g.dart';
 part 'resource_from_json.dart';
@@ -36,9 +39,21 @@ class Resource {
   List<FhirExtension>? modifierExtension;
 
   /// Acts like a constructor, returns a [Resource], accepts a
-  /// [Map<String, Dyamic] as an argument
+  /// [Map<String, Dynamic>] as an argument
   static Resource fromJson(Map<String, dynamic> json) =>
       _resourceFromJson(json);
+
+  /// Acts like a constructor, returns a [Resource], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  static Resource fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _resourceFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 
   /// Returns a Resource, accepts a [String] in YAML format as an argument
   static Resource fromYaml(dynamic yaml) => yaml is String
@@ -100,23 +115,23 @@ class Resource {
   String toYaml() => json2yaml(toJson());
 
   /// produce a string of the [resourceType]
-  String? resourceTypeString() =>
+  String? get resourceTypeString =>
       ResourceUtils.resourceTypeToStringMap[resourceType];
 
   /// Convenience method to return a [Reference] referring to that [Resource]
-  Reference thisReference() =>
-      Reference(reference: '${resourceTypeString()}/$id');
+  Reference get thisReference => Reference(reference: path);
 
-  /// Local Reference for this Resource
-  String path() => '${resourceTypeString()}/$id';
+  /// Local Reference for this Resource, form is "ResourceType/Id"
+  String get path => '$resourceTypeString/$id';
 
   /// returns the same resource with a new ID if there is no current ID
   Resource newIdIfNoId() => id == null ? _newId(this) : this;
 
-  /// returns the same resource with a new ID (even if there is already an ID present)
+  /// returns the same resource with a new ID (even if there is already an ID
+  /// present)
   Resource newId() => _newId(this);
 
-  /// Updates the [meta] field of this Resource, updates the [lastUpdated], adds
-  /// 1 to the version number
+  /// Updates the [meta] field of this Resource, updates the meta.lastUpdated
+  /// field, adds 1 to the version number
   Resource updateVersion({Meta? oldMeta}) => _updateMeta(this, meta: oldMeta);
 }

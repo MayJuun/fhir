@@ -1,16 +1,34 @@
+// Package imports:
 import 'package:fhir/primitive_types/primitive_types.dart';
 
+// Project imports:
 import '../../fhir_path.dart';
 
 class GreaterParser extends OperatorParser {
   GreaterParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
   List execute(List results, Map<String, dynamic> passed) =>
       executeComparisons(results, before, after, passed, Comparator.gt);
+
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}GreaterParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '>'
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
@@ -20,11 +38,27 @@ class LessParser extends OperatorParser {
   LessParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
   List execute(List results, Map<String, dynamic> passed) =>
       executeComparisons(results, before, after, passed, Comparator.lt);
+
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}LessParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '<'
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
@@ -34,13 +68,28 @@ class GreaterEqualParser extends OperatorParser {
   GreaterEqualParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
   List execute(List results, Map<String, dynamic> passed) {
     return executeComparisons(results, before, after, passed, Comparator.gte);
   }
 
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}GreaterEqualParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '>='
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
@@ -50,11 +99,27 @@ class LessEqualParser extends OperatorParser {
   LessEqualParser();
   ParserList before = ParserList([]);
   ParserList after = ParserList([]);
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
   List execute(List results, Map<String, dynamic> passed) =>
       executeComparisons(results, before, after, passed, Comparator.lte);
+
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}LessEqualParser'
       '\n${before.verbosePrint(indent + 1)}'
       '\n${after.verbosePrint(indent + 1)}';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '<='
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';

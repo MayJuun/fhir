@@ -1,5 +1,16 @@
 # fhir_at_rest
 
+## [0.6.3]
+
+* updated dependencies
+* this included updated new getter from FHIR resourceTypeString (initially resourceTypeString())
+
+## [0.6.2]
+
+* Updated fhir
+* Updated to dart 2.16.0
+* added import_sorter
+
 ## [0.6.1]
 
 * More Pub Points! (added some curly braces to fix a linting error)

@@ -1,4 +1,7 @@
+// Package imports:
 import 'package:fhir/primitive_types/primitive_types.dart';
+
+// Project imports:
 import 'package:fhir_path/fhir_path.dart';
 
 /// Implements rule http://hl7.org/fhirpath/#singleton-evaluation-of-collections

@@ -1,11 +1,15 @@
+// Dart imports:
 import 'dart:convert';
 
+// Package imports:
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
+// Project imports:
 import '../../../../r4.dart';
+
+// import 'package:flutter/foundation.dart';
 
 part 'evidence_based_medicine.enums.dart';
 part 'evidence_based_medicine.freezed.dart';
@@ -52,7 +56,7 @@ class EffectEvidenceSynthesis with Resource, _$EffectEvidenceSynthesis {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -290,6 +294,18 @@ class EffectEvidenceSynthesis with Resource, _$EffectEvidenceSynthesis {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EffectEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
       _$EffectEvidenceSynthesisFromJson(json);
+
+  /// Acts like a constructor, returns a [EffectEvidenceSynthesis], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EffectEvidenceSynthesis.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EffectEvidenceSynthesisFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -305,7 +321,7 @@ class EffectEvidenceSynthesisSampleSize
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -384,7 +400,7 @@ class EffectEvidenceSynthesisResultsByExposure
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -466,7 +482,7 @@ class EffectEvidenceSynthesisEffectEstimate
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -551,7 +567,7 @@ class EffectEvidenceSynthesisPrecisionEstimate
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -630,7 +646,7 @@ class EffectEvidenceSynthesisCertainty with _$EffectEvidenceSynthesisCertainty {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -700,7 +716,7 @@ class EffectEvidenceSynthesisCertaintySubcomponent
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -797,7 +813,7 @@ class Evidence with Resource, _$Evidence {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1027,6 +1043,18 @@ class Evidence with Resource, _$Evidence {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Evidence.fromJson(Map<String, dynamic> json) =>
       _$EvidenceFromJson(json);
+
+  /// Acts like a constructor, returns a [Evidence], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Evidence.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1068,7 +1096,7 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1302,6 +1330,18 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariable.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableFromJson(json);
+
+  /// Acts like a constructor, returns a [EvidenceVariable], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EvidenceVariable.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceVariableFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1315,7 +1355,7 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -1448,6 +1488,18 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableCharacteristicFromJson(json);
+
+  /// Acts like a constructor, returns a [EvidenceVariableCharacteristic], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EvidenceVariableCharacteristic.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceVariableCharacteristicFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1491,7 +1543,7 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1666,7 +1718,7 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   /// [relatedArtifact]: Related artifacts such as additional documentation,
   ///  justification, or bibliographic references.
   ///
-  /// [library_]: A reference to a Library resource containing the formal logic
+  /// [library]: A reference to a Library resource containing the formal logic
   ///  used by the ResearchDefinition.
   ///
   /// [population]: A reference to a ResearchElementDefinition resource that
@@ -1767,6 +1819,18 @@ class ResearchDefinition with Resource, _$ResearchDefinition {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchDefinition.fromJson(Map<String, dynamic> json) =>
       _$ResearchDefinitionFromJson(json);
+
+  /// Acts like a constructor, returns a [ResearchDefinition], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ResearchDefinition.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ResearchDefinitionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -1809,7 +1873,7 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -1990,7 +2054,7 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// [relatedArtifact]: Related artifacts such as additional documentation,
   ///  justification, or bibliographic references.
   ///
-  /// [library_]: A reference to a Library resource containing the formal logic
+  /// [library]: A reference to a Library resource containing the formal logic
   ///  used by the ResearchElementDefinition.
   ///
   /// [type]: The type of research element, a population, an exposure, or an
@@ -2096,6 +2160,18 @@ class ResearchElementDefinition with Resource, _$ResearchElementDefinition {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ResearchElementDefinition.fromJson(Map<String, dynamic> json) =>
       _$ResearchElementDefinitionFromJson(json);
+
+  /// Acts like a constructor, returns a [ResearchElementDefinition], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ResearchElementDefinition.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ResearchElementDefinitionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -2110,7 +2186,7 @@ class ResearchElementDefinitionCharacteristic
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2328,7 +2404,7 @@ class RiskEvidenceSynthesis with Resource, _$RiskEvidenceSynthesis {
   /// independently, and nor can they have their own independent transaction
   ///  scope.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the resource. To make the use of
   /// extensions safe and manageable, there is a strict set of governance
   /// applied to the definition and use of extensions. Though any implementer
@@ -2558,6 +2634,18 @@ class RiskEvidenceSynthesis with Resource, _$RiskEvidenceSynthesis {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RiskEvidenceSynthesis.fromJson(Map<String, dynamic> json) =>
       _$RiskEvidenceSynthesisFromJson(json);
+
+  /// Acts like a constructor, returns a [RiskEvidenceSynthesis], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory RiskEvidenceSynthesis.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$RiskEvidenceSynthesisFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -2572,7 +2660,7 @@ class RiskEvidenceSynthesisSampleSize with _$RiskEvidenceSynthesisSampleSize {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2636,6 +2724,18 @@ class RiskEvidenceSynthesisSampleSize with _$RiskEvidenceSynthesisSampleSize {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RiskEvidenceSynthesisSampleSize.fromJson(Map<String, dynamic> json) =>
       _$RiskEvidenceSynthesisSampleSizeFromJson(json);
+
+  /// Acts like a constructor, returns a [RiskEvidenceSynthesisSampleSize], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory RiskEvidenceSynthesisSampleSize.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$RiskEvidenceSynthesisSampleSizeFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -2651,7 +2751,7 @@ class RiskEvidenceSynthesisRiskEstimate
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2746,7 +2846,7 @@ class RiskEvidenceSynthesisPrecisionEstimate
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2825,7 +2925,7 @@ class RiskEvidenceSynthesisCertainty with _$RiskEvidenceSynthesisCertainty {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -2880,6 +2980,18 @@ class RiskEvidenceSynthesisCertainty with _$RiskEvidenceSynthesisCertainty {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RiskEvidenceSynthesisCertainty.fromJson(Map<String, dynamic> json) =>
       _$RiskEvidenceSynthesisCertaintyFromJson(json);
+
+  /// Acts like a constructor, returns a [RiskEvidenceSynthesisCertainty], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory RiskEvidenceSynthesisCertainty.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$RiskEvidenceSynthesisCertaintyFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -2895,7 +3007,7 @@ class RiskEvidenceSynthesisCertaintySubcomponent
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an

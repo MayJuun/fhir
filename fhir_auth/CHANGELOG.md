@@ -1,5 +1,14 @@
 # fhir_auth
 
+## [0.6.1]
+
+* Updated dependencies
+* Updated to fhir 0.6.1
+* Imports sorted
+* Added NonFhirClient
+* Linting Changes
+* ToDo: Fix overriding fields
+
 ## [0.6.0]
 
 * Updated dependencies

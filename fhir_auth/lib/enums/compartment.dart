@@ -6,7 +6,7 @@ enum Compartment {
   device,
 }
 
-const CompartmentEnumMap = {
+const compartmentEnumMap = {
   Compartment.patient: 'patient',
   Compartment.encounter: 'encounter',
   Compartment.relatedPerson: 'relatedPerson',

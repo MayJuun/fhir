@@ -1,5 +1,14 @@
 # fhir
 
+## [0.6.2]
+
+* 3 Resource methods changed to getters: resourceTypeString, thisReference, path (this will break some things, but I think they make more sense as getters)
+
+## [0.6.1]
+
+* Updated to dart 2.16.0
+* Added a .fromJsonString(String source) because I'm tired of writing Resource.fromjson(jsonDecode(source));
+
 ## [0.6.0]
 
 * Because I was tired of having a test version and not an official version
@@ -161,7 +170,7 @@
 
 ## [0.1.3]
 
-* added a resourceTypeString() method to easily get string from enum (needed for Db)
+* added a resourceTypeString method to easily get string from enum (needed for Db)
 
 ## [0.1.2]
 

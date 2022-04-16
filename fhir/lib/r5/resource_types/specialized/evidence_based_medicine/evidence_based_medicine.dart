@@ -1,11 +1,15 @@
+// Dart imports:
 import 'dart:convert';
 
+// Package imports:
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
+// Project imports:
 import '../../../../r5.dart';
+
+// import 'package:flutter/foundation.dart';
 
 part 'evidence_based_medicine.enums.dart';
 part 'evidence_based_medicine.freezed.dart';
@@ -97,6 +101,18 @@ class Evidence with Resource, _$Evidence {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Evidence.fromJson(Map<String, dynamic> json) =>
       _$EvidenceFromJson(json);
+
+  /// Acts like a constructor, returns a [Evidence], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Evidence.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -132,6 +148,18 @@ class EvidenceVariableDefinition with _$EvidenceVariableDefinition {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariableDefinition.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableDefinitionFromJson(json);
+
+  /// Acts like a constructor, returns a [EvidenceVariableDefinition], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EvidenceVariableDefinition.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceVariableDefinitionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -168,6 +196,18 @@ class EvidenceCertainty with _$EvidenceCertainty {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceCertainty.fromJson(Map<String, dynamic> json) =>
       _$EvidenceCertaintyFromJson(json);
+
+  /// Acts like a constructor, returns a [EvidenceCertainty], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EvidenceCertainty.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceCertaintyFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -261,6 +301,18 @@ class EvidenceVariable with Resource, _$EvidenceVariable {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariable.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableFromJson(json);
+
+  /// Acts like a constructor, returns a [EvidenceVariable], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EvidenceVariable.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceVariableFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -305,6 +357,18 @@ class EvidenceVariableCharacteristic with _$EvidenceVariableCharacteristic {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariableCharacteristic.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableCharacteristicFromJson(json);
+
+  /// Acts like a constructor, returns a [EvidenceVariableCharacteristic], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EvidenceVariableCharacteristic.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceVariableCharacteristicFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -338,6 +402,18 @@ class EvidenceVariableTimeFromStart with _$EvidenceVariableTimeFromStart {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariableTimeFromStart.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableTimeFromStartFromJson(json);
+
+  /// Acts like a constructor, returns a [EvidenceVariableTimeFromStart], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EvidenceVariableTimeFromStart.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceVariableTimeFromStartFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -371,4 +447,16 @@ class EvidenceVariableCategory with _$EvidenceVariableCategory {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory EvidenceVariableCategory.fromJson(Map<String, dynamic> json) =>
       _$EvidenceVariableCategoryFromJson(json);
+
+  /// Acts like a constructor, returns a [EvidenceVariableCategory], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory EvidenceVariableCategory.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$EvidenceVariableCategoryFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }

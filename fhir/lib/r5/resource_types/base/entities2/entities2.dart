@@ -1,11 +1,15 @@
+// Dart imports:
 import 'dart:convert';
 
+// Package imports:
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
+// Project imports:
 import '../../../../r5.dart';
+
+// import 'package:flutter/foundation.dart';
 
 part 'entities2.enums.dart';
 part 'entities2.freezed.dart';
@@ -14,6 +18,65 @@ part 'entities2.g.dart';
 @freezed
 class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   BiologicallyDerivedProduct._();
+
+  /// [BiologicallyDerivedProduct]: "This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused\ninto another (possibly the same) biological entity."
+  ///
+  /// [resourceType]: "This is a BiologicallyDerivedProduct resource"
+  ///
+  /// [id]: "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes."
+  ///
+  /// [meta]: "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource."
+  ///
+  /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
+  ///
+  /// [implicitRules$2]: "Extensions for implicitRules"
+  ///
+  /// [language]: "The base language in which the resource is written."
+  ///
+  /// [language$2]: "Extensions for language"
+  ///
+  /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
+  ///
+  /// [contained]: "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope."
+  ///
+  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
+  ///
+  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
+  ///
+  /// [productCategory]: "Broad category of this product."
+  ///
+  /// [productCategory$2]: "Extensions for productCategory"
+  ///
+  /// [productCode]: "A code that identifies the kind of this biologically derived product (SNOMED Ctcode)."
+  ///
+  /// [parent]: "Parent product (if any)."
+  ///
+  /// [request]: "Procedure request to obtain this biologically derived product."
+  ///
+  /// [identifier]: "This records identifiers associated with this biologically derived product instance that are defined by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate (e.g. in CDA documents, or in written / printed documentation)."
+  ///
+  /// [biologicalSource]: "An identifier that supports traceability to the biological entity that is the source of biological material in the product."
+  ///
+  /// [processingFacility]: "Processing facilities for this biologically derived product."
+  ///
+  /// [division]: "Description of division."
+  ///
+  /// [division$2]: "Extensions for division"
+  ///
+  /// [status]: "Whether the product is currently available."
+  ///
+  /// [status$2]: "Extensions for status"
+  ///
+  /// [expirationDate]: "Date of expiration."
+  ///
+  /// [expirationDate$2]: "Extensions for expirationDate"
+  ///
+  /// [collection]: "How this product was collected."
+  ///
+  /// [storageTempRequirements]: "Product storage temp requirements."
+  ///
+  /// [property]: "A property that is specific to this BiologicallyDerviedProduct instance."
+
   factory BiologicallyDerivedProduct({
     @Default(R5ResourceType.BiologicallyDerivedProduct)
     @JsonKey(unknownEnumValue: R5ResourceType.BiologicallyDerivedProduct)
@@ -64,12 +127,43 @@ class BiologicallyDerivedProduct with Resource, _$BiologicallyDerivedProduct {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory BiologicallyDerivedProduct.fromJson(Map<String, dynamic> json) =>
       _$BiologicallyDerivedProductFromJson(json);
+
+  /// Acts like a constructor, returns a [BiologicallyDerivedProduct], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory BiologicallyDerivedProduct.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$BiologicallyDerivedProductFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class BiologicallyDerivedProductCollection
     with _$BiologicallyDerivedProductCollection {
   BiologicallyDerivedProductCollection._();
+
+  /// [BiologicallyDerivedProductCollection]: "This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused\ninto another (possibly the same) biological entity."
+  ///
+  /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
+  ///
+  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
+  ///
+  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
+  ///
+  /// [collector]: "Healthcare professional who is performing the collection."
+  ///
+  /// [source]: "The patient or entity, such as a hospital or vendor in the case of a processed/manipulated/manufactured product, providing the product."
+  ///
+  /// [collectedDateTime]: "Time of product collection."
+  ///
+  /// [collectedDateTime$2]: "Extensions for collectedDateTime"
+  ///
+  /// [collectedPeriod]: "Time of product collection."
+
   factory BiologicallyDerivedProductCollection({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -106,6 +200,37 @@ class BiologicallyDerivedProductCollection
 class BiologicallyDerivedProductProcessing
     with _$BiologicallyDerivedProductProcessing {
   BiologicallyDerivedProductProcessing._();
+
+  /// [BiologicallyDerivedProductProperty]: "This resource reflects an instance of a biologically derived product. A material substance originating from a biological entity intended to be transplanted or infused\ninto another (possibly the same) biological entity."
+  ///
+  /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
+  ///
+  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
+  ///
+  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
+  ///
+  /// [type]: "Code that specifies the property."
+  ///
+  /// [valueBoolean]: "Property values."
+  ///
+  /// [valueBoolean$2]: "Extensions for valueBoolean"
+  ///
+  /// [valueInteger]: "Property values."
+  ///
+  /// [valueInteger$2]: "Extensions for valueInteger"
+  ///
+  /// [valueCodeableConcept]: "Property values."
+  ///
+  /// [valueQuantity]: "Property values."
+  ///
+  /// [valueRange]: "Property values."
+  ///
+  /// [valueString]: "Property values."
+  ///
+  /// [valueString$2]: "Extensions for valueString"
+  ///
+  /// [valueAttachment]: "Property values."
+
   factory BiologicallyDerivedProductProcessing({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -144,6 +269,7 @@ class BiologicallyDerivedProductProcessing
 class BiologicallyDerivedProductManipulation
     with _$BiologicallyDerivedProductManipulation {
   BiologicallyDerivedProductManipulation._();
+
   factory BiologicallyDerivedProductManipulation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -218,6 +344,111 @@ class BiologicallyDerivedProductStorage
 @freezed
 class Device with Resource, _$Device {
   Device._();
+
+  /// [Device]: "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device."
+  ///
+  /// [resourceType]: "This is a Device resource"
+  ///
+  /// [id]: "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes."
+  ///
+  /// [meta]: "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource."
+  ///
+  /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
+  ///
+  /// [implicitRules$2]: "Extensions for implicitRules"
+  ///
+  /// [language]: "The base language in which the resource is written."
+  ///
+  /// [language$2]: "Extensions for language"
+  ///
+  /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
+  ///
+  /// [contained]: "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope."
+  ///
+  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
+  ///
+  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
+  ///
+  /// [identifier]: "Unique instance identifiers assigned to a device by manufacturers other organizations or owners."
+  ///
+  /// [displayName]: "The name used to display by default when the device is referenced. Based on intent of use by the resource creator, this may reflect one of the names in Device.deviceName, or may be another simple name."
+  ///
+  /// [displayName$2]: "Extensions for displayName"
+  ///
+  /// [definition]: "The reference to the definition for the device."
+  ///
+  /// [udiCarrier]: "Unique device identifier (UDI) assigned to device label or package.  Note that the Device may include multiple udiCarriers as it either may include just the udiCarrier for the jurisdiction it is sold, or for multiple jurisdictions it could have been sold."
+  ///
+  /// [status]: "Status of the Device record. This is not the status of the device like availability."
+  ///
+  /// [status$2]: "Extensions for status"
+  ///
+  /// [statusReason]: "Reason for the status of the Device record. For example, why is the record not active."
+  ///
+  /// [biologicalSource]: "An identifier that supports traceability to the biological entity that is the source of biological material in the product."
+  ///
+  /// [manufacturer]: "A name of the manufacturer or entity legally responsible for the device."
+  ///
+  /// [manufacturer$2]: "Extensions for manufacturer"
+  ///
+  /// [manufactureDate]: "The date and time when the device was manufactured."
+  ///
+  /// [manufactureDate$2]: "Extensions for manufactureDate"
+  ///
+  /// [expirationDate]: "The date and time beyond which this device is no longer valid or should not be used (if applicable)."
+  ///
+  /// [expirationDate$2]: "Extensions for expirationDate"
+  ///
+  /// [lotNumber]: "Lot number assigned by the manufacturer."
+  ///
+  /// [lotNumber$2]: "Extensions for lotNumber"
+  ///
+  /// [serialNumber]: "The serial number assigned by the organization when the device was manufactured."
+  ///
+  /// [serialNumber$2]: "Extensions for serialNumber"
+  ///
+  /// [deviceName]: "This represents the manufacturer\u0027s name of the device as provided by the device, from a UDI label, or by a person describing the Device.  This typically would be used when a person provides the name(s) or when the device represents one of the names available from DeviceDefinition."
+  ///
+  /// [modelNumber]: "The manufacturer\u0027s model number for the device."
+  ///
+  /// [modelNumber$2]: "Extensions for modelNumber"
+  ///
+  /// [partNumber]: "The part number or catalog number of the device."
+  ///
+  /// [partNumber$2]: "Extensions for partNumber"
+  ///
+  /// [type]: "The kind or type of device. A device instance may have more than one type - in which case those are the types that apply to the specific instance of the device."
+  ///
+  /// [version]: "The actual design of the device or software version running on the device."
+  ///
+  /// [property]: "The actual configuration settings of a device as it actually operates, e.g., regulation status, time properties."
+  ///
+  /// [subject]: "Patient information, if the device is affixed to, or associated to a patient for their specific use, irrespective of the procedure, use, observation, or other activity that the device is involved in."
+  ///
+  /// [operationalStatus]: "The status of the device itself - whether it is switched on, or activated, etc."
+  ///
+  /// [associationStatus]: "The state of the usage or application of the device - whether the device is implanted, or explanted, or attached to the patient."
+  ///
+  /// [owner]: "An organization that is responsible for the provision and ongoing maintenance of the device."
+  ///
+  /// [contact]: "Contact details for an organization or a particular human that is responsible for the device."
+  ///
+  /// [location]: "The place where the device can be found."
+  ///
+  /// [url]: "A network address on which the device may be contacted directly."
+  ///
+  /// [url$2]: "Extensions for url"
+  ///
+  /// [endpoint]: "Technical endpoints providing access to services provided by the device defined at this resource."
+  ///
+  /// [link]: "An associated device, attached to, used with, communicating with or linking a previous or new device model to the focal device."
+  ///
+  /// [note]: "Descriptive information, usage information or implantation information that is not captured in an existing element."
+  ///
+  /// [safety]: "Provides additional safety characteristics about a medical device.  For example devices containing latex."
+  ///
+  /// [parent]: "The device that this device is attached to or is part of."
+
   factory Device({
     @Default(R5ResourceType.Device)
     @JsonKey(unknownEnumValue: R5ResourceType.Device)
@@ -291,11 +522,118 @@ class Device with Resource, _$Device {
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Device.fromJson(Map<String, dynamic> json) => _$DeviceFromJson(json);
+
+  /// Acts like a constructor, returns a [Device], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Device.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class DeviceUdiCarrier with _$DeviceUdiCarrier {
   DeviceUdiCarrier._();
+
+  /// [DeviceUdiCarrier]: "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device."
+  ///
+  /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
+  ///
+  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
+  ///
+  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
+  ///
+  /// [deviceIdentifier]: "The device identifier (DI) is a mandatory, fixed portion of a UDI that identifies the labeler and the specific version or model of a device."
+  ///
+  /// [deviceIdentifier$2]: "Extensions for deviceIdentifier"
+  ///
+  /// [issuer]: "Organization that is charged with issuing UDIs for devices. For example, the US FDA issuers include: \n1) GS1: http://hl7.org/fhir/NamingSystem/gs1-di, \n2) HIBCC: http://hl7.org/fhir/NamingSystem/hibcc-diI, \n3) ICCBBA for blood containers: http://hl7.org/fhir/NamingSystem/iccbba-blood-di, \n4) ICCBA for other devices: http://hl7.org/fhir/NamingSystem/iccbba-other-di # Informationsstelle für Arzneispezialitäten (IFA GmbH) (EU only): http://hl7.org/fhir/NamingSystem/ifa-gmbh-di."
+  ///
+  /// [issuer$2]: "Extensions for issuer"
+  ///
+  /// [jurisdiction]: "The identity of the authoritative source for UDI generation within a jurisdiction. All UDIs are globally unique within a single namespace with the appropriate repository uri as the system. For example, UDIs of devices managed in the U.S. by the FDA, the value is http://hl7.org/fhir/NamingSystem/us-fda-udi or in the European Union by the European Commission http://hl7.org/fhir/NamingSystem/eu-ec-udi."
+  ///
+  /// [jurisdiction$2]: "Extensions for jurisdiction"
+  ///
+  /// [carrierAIDC]: "The full UDI carrier of the Automatic Identification and Data Capture (AIDC) technology representation of the barcode string as printed on the packaging of the device - e.g., a barcode or RFID.   Because of limitations on character sets in XML and the need to round-trip JSON data through XML, AIDC Formats *SHALL* be base64 encoded."
+  ///
+  /// [carrierAIDC$2]: "Extensions for carrierAIDC"
+  ///
+  /// [carrierHRF]: "The full UDI carrier as the human readable form (HRF) representation of the barcode string as printed on the packaging of the device."
+  ///
+  /// [carrierHRF$2]: "Extensions for carrierHRF"
+  ///
+  /// [entryType]: "A coded entry to indicate how the data was entered."
+  ///
+  /// [entryType$2]: "Extensions for entryType"
+  ///
+  /// [DeviceDeviceName]: "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device."
+  ///
+  /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
+  ///
+  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
+  ///
+  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
+  ///
+  /// [name]: "The name that identifies the device."
+  ///
+  /// [name$2]: "Extensions for name"
+  ///
+  /// [type]: "The type of deviceName. Note that ManufactureDeviceName means that the name is the name as given by the manufacturer, not the name of the manufacturer.\nRegisteredName | UserFriendlyName | PatientReportedName."
+  ///
+  /// [type$2]: "Extensions for type"
+  ///
+  /// [DeviceVersion]: "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device."
+  ///
+  /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
+  ///
+  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
+  ///
+  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
+  ///
+  /// [type]: "The type of the device version, e.g. manufacturer, approved, internal."
+  ///
+  /// [component]: "The hardware or software module of the device to which the version applies."
+  ///
+  /// [value]: "The version text."
+  ///
+  /// [value$2]: "Extensions for value"
+  ///
+  /// [DeviceProperty]: "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device."
+  ///
+  /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
+  ///
+  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
+  ///
+  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
+  ///
+  /// [type]: "Code that specifies the property being represented. No codes are specified but the MDC codes are an example: https://build.fhir.org/mdc.html."
+  ///
+  /// [valueQuantity]: "Property value - can be a code, quantity, boolean, string or attachment."
+  ///
+  /// [valueCodeableConcept]: "Property value - can be a code, quantity, boolean, string or attachment."
+  ///
+  /// [valueString]: "Property value - can be a code, quantity, boolean, string or attachment."
+  ///
+  /// [valueString$2]: "Extensions for valueString"
+  ///
+  /// [valueBoolean]: "Property value - can be a code, quantity, boolean, string or attachment."
+  ///
+  /// [valueBoolean$2]: "Extensions for valueBoolean"
+  ///
+  /// [valueInteger]: "Property value - can be a code, quantity, boolean, string or attachment."
+  ///
+  /// [valueInteger$2]: "Extensions for valueInteger"
+  ///
+  /// [valueRange]: "Property value - can be a code, quantity, boolean, string or attachment."
+  ///
+  /// [valueAttachment]: "Property value - can be a code, quantity, boolean, string or attachment."
+
   factory DeviceUdiCarrier({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -332,6 +670,18 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceUdiCarrier.fromJson(Map<String, dynamic> json) =>
       _$DeviceUdiCarrierFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceUdiCarrier], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceUdiCarrier.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceUdiCarrierFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -365,6 +715,18 @@ class DeviceDeviceName with _$DeviceDeviceName {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceDeviceName.fromJson(Map<String, dynamic> json) =>
       _$DeviceDeviceNameFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceDeviceName], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceDeviceName.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceDeviceNameFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -396,6 +758,18 @@ class DeviceSpecialization with _$DeviceSpecialization {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceSpecialization.fromJson(Map<String, dynamic> json) =>
       _$DeviceSpecializationFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceSpecialization], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceSpecialization.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceSpecializationFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -428,6 +802,18 @@ class DeviceVersion with _$DeviceVersion {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceVersion.fromJson(Map<String, dynamic> json) =>
       _$DeviceVersionFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceVersion], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceVersion.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceVersionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -459,11 +845,36 @@ class DeviceProperty with _$DeviceProperty {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceProperty.fromJson(Map<String, dynamic> json) =>
       _$DevicePropertyFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceProperty], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceProperty.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DevicePropertyFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class DeviceOperationalStatus with _$DeviceOperationalStatus {
   DeviceOperationalStatus._();
+
+  /// [DeviceOperationalStatus]: "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device."
+  ///
+  /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
+  ///
+  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
+  ///
+  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
+  ///
+  /// [value]: "on |off | standby."
+  ///
+  /// [reason]: "The reasons given for the current operational status - i.e. why is the device switched on etc."
+
   factory DeviceOperationalStatus({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -489,11 +900,36 @@ class DeviceOperationalStatus with _$DeviceOperationalStatus {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceOperationalStatus.fromJson(Map<String, dynamic> json) =>
       _$DeviceOperationalStatusFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceOperationalStatus], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceOperationalStatus.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceOperationalStatusFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class DeviceAssociationStatus with _$DeviceAssociationStatus {
   DeviceAssociationStatus._();
+
+  /// [DeviceAssociationStatus]: "A type of a manufactured item that is used in the provision of healthcare without being substantially changed through that activity. The device may be a medical or non-medical device."
+  ///
+  /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
+  ///
+  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
+  ///
+  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
+  ///
+  /// [value]: "implanted|explanted|attached."
+  ///
+  /// [reason]: "The reasons given for the current association status - i.e. why is the device explanted, or attached to the patient, etc."
+
   factory DeviceAssociationStatus({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -519,6 +955,18 @@ class DeviceAssociationStatus with _$DeviceAssociationStatus {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceAssociationStatus.fromJson(Map<String, dynamic> json) =>
       _$DeviceAssociationStatusFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceAssociationStatus], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceAssociationStatus.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceAssociationStatusFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -574,6 +1022,18 @@ class DeviceMetric with Resource, _$DeviceMetric {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceMetric.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceMetric], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceMetric.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceMetricFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -610,6 +1070,18 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DeviceMetricCalibration.fromJson(Map<String, dynamic> json) =>
       _$DeviceMetricCalibrationFromJson(json);
+
+  /// Acts like a constructor, returns a [DeviceMetricCalibration], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DeviceMetricCalibration.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DeviceMetricCalibrationFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -661,6 +1133,18 @@ class NutritionProduct with Resource, _$NutritionProduct {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NutritionProduct.fromJson(Map<String, dynamic> json) =>
       _$NutritionProductFromJson(json);
+
+  /// Acts like a constructor, returns a [NutritionProduct], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory NutritionProduct.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$NutritionProductFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -691,6 +1175,18 @@ class NutritionProductNutrient with _$NutritionProductNutrient {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NutritionProductNutrient.fromJson(Map<String, dynamic> json) =>
       _$NutritionProductNutrientFromJson(json);
+
+  /// Acts like a constructor, returns a [NutritionProductNutrient], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory NutritionProductNutrient.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$NutritionProductNutrientFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -721,6 +1217,18 @@ class NutritionProductIngredient with _$NutritionProductIngredient {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NutritionProductIngredient.fromJson(Map<String, dynamic> json) =>
       _$NutritionProductIngredientFromJson(json);
+
+  /// Acts like a constructor, returns a [NutritionProductIngredient], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory NutritionProductIngredient.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$NutritionProductIngredientFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -798,6 +1306,18 @@ class NutritionProductInstance with _$NutritionProductInstance {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory NutritionProductInstance.fromJson(Map<String, dynamic> json) =>
       _$NutritionProductInstanceFromJson(json);
+
+  /// Acts like a constructor, returns a [NutritionProductInstance], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory NutritionProductInstance.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$NutritionProductInstanceFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -850,6 +1370,18 @@ class Substance with Resource, _$Substance {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Substance.fromJson(Map<String, dynamic> json) =>
       _$SubstanceFromJson(json);
+
+  /// Acts like a constructor, returns a [Substance], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Substance.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubstanceFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -881,4 +1413,16 @@ class SubstanceIngredient with _$SubstanceIngredient {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory SubstanceIngredient.fromJson(Map<String, dynamic> json) =>
       _$SubstanceIngredientFromJson(json);
+
+  /// Acts like a constructor, returns a [SubstanceIngredient], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubstanceIngredient.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubstanceIngredientFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }

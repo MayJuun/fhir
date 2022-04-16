@@ -1,5 +1,8 @@
-import 'package:fhir_path/fhir_path.dart';
+// Package imports:
 import 'package:petitparser/petitparser.dart';
+
+// Project imports:
+import 'package:fhir_path/fhir_path.dart';
 
 /// Trying to enforce Operator Order Precedence
 const operatorOrderMap = {

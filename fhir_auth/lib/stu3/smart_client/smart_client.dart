@@ -1,6 +1,10 @@
-import 'package:fhir/stu3.dart';
+// Flutter imports:
 import 'package:flutter/foundation.dart' show kIsWeb;
 
+// Package imports:
+import 'package:fhir/stu3.dart';
+
+// Project imports:
 import '../../../stu3.dart';
 
 import 'smart_mobile_client.dart'; // dart:io implementation

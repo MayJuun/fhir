@@ -1,8 +1,10 @@
+// Package imports:
 import 'package:fhir/dstu2.dart' as dstu2;
 import 'package:fhir/r4.dart' as r4;
 import 'package:fhir/r5.dart' as r5;
 import 'package:fhir/stu3.dart' as stu3;
 
+// Project imports:
 import '../enums/enums.dart';
 
 /// A more advanced way to change an enum to a string, mostly used for

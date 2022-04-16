@@ -1,5 +1,22 @@
 # fhir_path
 
+## [0.6.3]
+
+* I want pub points!
+* Added in a bunch of comments
+* Replaced some results.length > 0 with results.isNotEmpty
+
+## [0.6.2]
+
+* updated to fhir 0.6.2
+
+## [0.6.1]
+
+* Update to dart 2.16.0
+* Update to fhir 0.6.1
+* Added import sorter
+* Changed a bunch of .length == 0 to .isEmpty
+
 ## [0.6.0]
 
 * Updated to 0.6.0 to follow the rest of the FHIR packages

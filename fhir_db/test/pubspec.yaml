@@ -1,14 +1,14 @@
 name: fhir_db_test
 
 environment:
-  sdk: '>=2.15.0 <3.0.0'
+  sdk: '>=2.16.0 <3.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
   fhir_db:
     path: ../../fhir_db
-  fhir: ^0.6.0
+  fhir: ^0.6.2
 
 dev_dependencies:
   test: ^1.20.1

@@ -1,11 +1,15 @@
+// Dart imports:
 import 'dart:convert';
 
+// Package imports:
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
+// Project imports:
 import '../../r5.dart';
+
+// import 'package:flutter/foundation.dart';
 
 part 'fhir_extension.freezed.dart';
 part 'fhir_extension.g.dart';
@@ -14,12 +18,12 @@ part 'fhir_extension.g.dart';
 class FhirExtension with _$FhirExtension {
   FhirExtension._();
 
-  /// [extension_]: Optional Extension Element - found in all resources.
+  /// [extension]: Optional Extension Element - found in all resources.
   ///
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -231,7 +235,7 @@ class FhirExtension with _$FhirExtension {
   /// [id]: Unique id for the element within a resource (for internal
   ///  references). This may be any string value that does not contain spaces.
   ///
-  /// [extension_]: May be used to represent additional information that is not
+  /// [extension]: May be used to represent additional information that is not
   /// part of the basic definition of the element. To make the use of extensions
   /// safe and manageable, there is a strict set of governance  applied to the
   /// definition and use of extensions. Though any implementer can define an
@@ -340,4 +344,16 @@ class FhirExtension with _$FhirExtension {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory FhirExtension.fromJson(Map<String, dynamic> json) =>
       _$FhirExtensionFromJson(json);
+
+  /// Acts like a constructor, returns a [FhirExtension], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory FhirExtension.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$FhirExtensionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }

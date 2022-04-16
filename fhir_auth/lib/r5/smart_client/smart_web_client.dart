@@ -1,12 +1,19 @@
+// ignore_for_file: non_constant_identifier_names, overridden_fields
+
+// Dart imports:
 import 'dart:convert';
 
+// Flutter imports:
+import 'package:flutter/services.dart';
+
+// Package imports:
 import 'package:collection/collection.dart';
 import 'package:fhir/r5.dart';
-import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 import 'package:oauth2_client/access_token_response.dart';
 import 'package:oauth2_client/oauth2_client.dart';
 
+// Project imports:
 import 'smart_client.dart';
 
 /// the star of our show, who you've all come to see, the Smart object who
@@ -253,8 +260,7 @@ class SmartWebClient extends SmartClient {
         ?.extension_
         ?.firstWhereOrNull((_) => true)
         ?.extension_
-        ?.firstWhereOrNull(
-            (ext) => (ext.url == null ? null : ext.url.toString()) == type)
+        ?.firstWhereOrNull((ext) => (ext.url?.toString()) == type)
         ?.valueUri;
   }
 

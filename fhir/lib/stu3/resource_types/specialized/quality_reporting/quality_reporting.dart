@@ -1,11 +1,15 @@
+// Dart imports:
 import 'dart:convert';
 
+// Package imports:
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
+// Project imports:
 import '../../../../stu3.dart';
+
+// import 'package:flutter/foundation.dart';
 
 part 'quality_reporting.enums.dart';
 part 'quality_reporting.freezed.dart';
@@ -109,6 +113,18 @@ class Measure with Resource, _$Measure {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Measure.fromJson(Map<String, dynamic> json) =>
       _$MeasureFromJson(json);
+
+  /// Acts like a constructor, returns a [Measure], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Measure.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -141,6 +157,18 @@ class MeasureGroup with _$MeasureGroup {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureGroup.fromJson(Map<String, dynamic> json) =>
       _$MeasureGroupFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureGroup], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureGroup.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureGroupFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -174,6 +202,18 @@ class MeasurePopulation with _$MeasurePopulation {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasurePopulation.fromJson(Map<String, dynamic> json) =>
       _$MeasurePopulationFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasurePopulation], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasurePopulation.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasurePopulationFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -204,6 +244,18 @@ class MeasureStratifier with _$MeasureStratifier {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureStratifier.fromJson(Map<String, dynamic> json) =>
       _$MeasureStratifierFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureStratifier], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureStratifier.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureStratifierFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -235,6 +287,18 @@ class MeasureSupplementalData with _$MeasureSupplementalData {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureSupplementalData.fromJson(Map<String, dynamic> json) =>
       _$MeasureSupplementalDataFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureSupplementalData], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureSupplementalData.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureSupplementalDataFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -287,6 +351,18 @@ class MeasureReport with Resource, _$MeasureReport {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReport.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureReport], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureReport.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureReportFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -317,6 +393,18 @@ class MeasureReportGroup with _$MeasureReportGroup {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportGroup.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportGroupFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureReportGroup], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureReportGroup.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureReportGroupFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -347,6 +435,18 @@ class MeasureReportPopulation with _$MeasureReportPopulation {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportPopulation.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportPopulationFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureReportPopulation], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureReportPopulation.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureReportPopulationFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -374,6 +474,18 @@ class MeasureReportStratifier with _$MeasureReportStratifier {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportStratifier.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportStratifierFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureReportStratifier], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureReportStratifier.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureReportStratifierFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -404,6 +516,18 @@ class MeasureReportStratum with _$MeasureReportStratum {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportStratum.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportStratumFromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureReportStratum], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureReportStratum.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureReportStratumFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -434,4 +558,16 @@ class MeasureReportPopulation1 with _$MeasureReportPopulation1 {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory MeasureReportPopulation1.fromJson(Map<String, dynamic> json) =>
       _$MeasureReportPopulation1FromJson(json);
+
+  /// Acts like a constructor, returns a [MeasureReportPopulation1], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MeasureReportPopulation1.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MeasureReportPopulation1FromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }

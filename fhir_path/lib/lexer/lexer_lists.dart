@@ -1,5 +1,7 @@
+// Package imports:
 import 'package:petitparser/petitparser.dart';
 
+// Project imports:
 import 'arg_fxn_lexer.dart';
 import 'extension_lexer.dart';
 import 'literal_lexer.dart';

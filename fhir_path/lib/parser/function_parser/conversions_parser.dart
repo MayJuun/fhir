@@ -1,5 +1,7 @@
+// Package imports:
 import 'package:fhir/primitive_types/primitive_types.dart';
 
+// Project imports:
 import '../../fhir_path.dart';
 
 /// http://hl7.org/fhirpath/#iifcriterion-expression-true-result-collection-otherwise-result-collection-collection
@@ -14,6 +16,9 @@ import '../../fhir_path.dart';
 class IifParser extends FunctionParser {
   IifParser();
   late ParserList value;
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
   List execute(List results, Map<String, dynamic> passed) {
     // The regular .execute method on CommaParser does not implement the
     // short-circuit logic. Bespoke execution path required.
@@ -67,8 +72,21 @@ class IifParser extends FunctionParser {
   }
 
   String toString() => 'IifParser: ${value.toString()}';
+
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) =>
       '${"  " * indent}IifParser\n${value.verbosePrint(indent + 1)}';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) =>
       '.iif(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';
@@ -83,7 +101,10 @@ class IifParser extends FunctionParser {
 /// If the item is not one the above types, or the item is a String, Integer, or Decimal, but is not equal to one of the possible values convertible to a Boolean, the result is empty.
 class ToBooleanParser extends FhirPathParser {
   ToBooleanParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.toBoolean()', results)
@@ -107,7 +128,19 @@ class ToBooleanParser extends FhirPathParser {
                       ? [false]
                       : [];
 
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}ToBooleanParser';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '.toBoolean()';
 }
 
@@ -119,7 +152,10 @@ class ToBooleanParser extends FhirPathParser {
 /// the item is a String that is equal to one of the possible string representations of Boolean values
 class ConvertsToBooleanParser extends FhirPathParser {
   ConvertsToBooleanParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToBoolean()', results)
@@ -148,13 +184,29 @@ class ConvertsToBooleanParser extends FhirPathParser {
                   ? [true]
                   : [false];
 
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}ConvertsToBooleanParser';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '.convertsToBoolean()';
 }
 
+/// Converts input to an [Integer] if possible
 class ToIntegerParser extends FhirPathParser {
   ToIntegerParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.toInteger()', results)
@@ -168,13 +220,29 @@ class ToIntegerParser extends FhirPathParser {
                           ? [int.parse(results.first)]
                           : [];
 
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}ToIntegerParser';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '.toInteger()';
 }
 
+/// Checks if input can be converted to an [Integer]
 class ConvertsToIntegerParser extends FhirPathParser {
   ConvertsToIntegerParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToInteger()', results)
@@ -188,63 +256,147 @@ class ConvertsToIntegerParser extends FhirPathParser {
                           ? [true]
                           : [false];
 
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}ConvertsToIntegerParser';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '.convertsToInteger()';
 }
 
+/// Converts input to an [Date] if possible
 class ToDateParser extends FhirPathParser {
   ToDateParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.toDate()', results)
           : Date(results.first.toString()).isValid
               ? [Date(results.first.toString())]
               : [];
+
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}ToDateParser';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '.toDate()';
 }
 
+/// Checks if input can be converted to a [Date]
 class ConvertsToDateParser extends FhirPathParser {
   ConvertsToDateParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToDate()', results)
           : [Date(results.first.toString()).isValid];
+
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}ConvertsToDateParser';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '.convertsToDate()';
 }
 
+/// Converts input to [FhirDateTime] if possible
 class ToDateTimeParser extends FhirPathParser {
   ToDateTimeParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.toDateTime()', results)
           : FhirDateTime(results.first.toString()).isValid
               ? [FhirDateTime(results.first.toString())]
               : [];
+
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}ToDateTimeParser';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '.toDateTime()';
 }
 
+/// Checks if input can be converted to a [FhirDateTime]
 class ConvertsToDateTimeParser extends FhirPathParser {
   ConvertsToDateTimeParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToDateTime()', results)
           : FhirDateTime(results.first.toString()).isValid
               ? [FhirDateTime(results.first.toString()).isValid]
               : [];
+
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}ConvertsToDateTimeParser';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '.convertsToDateTime()';
 }
 
+/// Converts input to a [Decimal] if possible
 class ToDecimalParser extends FhirPathParser {
   ToDecimalParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.toDecimal()', results)
@@ -257,13 +409,30 @@ class ToDecimalParser extends FhirPathParser {
                       : double.tryParse(results.first) != null
                           ? [double.parse(results.first)]
                           : [];
+
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}ToDecimalParser';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '.toDecimal()';
 }
 
+/// Checks if input can be converted into a [Decimal]
 class ConvertsToDecimalParser extends FhirPathParser {
   ConvertsToDecimalParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToDecimal()', results)
@@ -276,14 +445,31 @@ class ConvertsToDecimalParser extends FhirPathParser {
                       : double.tryParse(results.first) != null
                           ? [true]
                           : [false];
+
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}ConvertsToDecimalParser';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '.convertsToDecimal()';
 }
 
+/// Converts input to a [String] if possible
 class ToStringParser extends FhirPathParser {
   ToStringParser();
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
   List execute(List results, Map<String, dynamic> passed) {
-    return results.length == 0
+    return results.isEmpty
         ? []
         : results.length > 1
             ? throw _conversionException('.toString()', results)
@@ -292,13 +478,29 @@ class ToStringParser extends FhirPathParser {
                 : [results.first.toString()];
   }
 
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}ToStringParser';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '.toString()';
 }
 
+/// Checks if input can be converted to a [String]
 class ConvertsToStringParser extends FhirPathParser {
   ConvertsToStringParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToString()', results)
@@ -306,13 +508,29 @@ class ConvertsToStringParser extends FhirPathParser {
               ? [false]
               : [true];
 
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}ConvertsToStringParser';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '.convertsToString()';
 }
 
+/// Converts input to a [Time] if possible
 class ToTimeParser extends FhirPathParser {
   ToTimeParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.toTime()', results)
@@ -321,13 +539,30 @@ class ToTimeParser extends FhirPathParser {
               : results.first is String && Time(results.first).isValid
                   ? [Time(results.first)]
                   : [];
+
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}ToTimeParser';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '.toTime()';
 }
 
+/// Checks if input can be converted to a [Time]
 class ConvertsToTimeParser extends FhirPathParser {
   ConvertsToTimeParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToTime()', results)
@@ -335,15 +570,32 @@ class ConvertsToTimeParser extends FhirPathParser {
                   (results.first is String && Time(results.first).isValid)
               ? [true]
               : [false];
+
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}ConvertsToTimeParser';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '.convertsToTime()';
 }
 
+/// Converts input to a [Quantity] if possible
 class ToQuantityParser extends FhirPathParser {
   dynamic value;
 
   ToQuantityParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.toQuantity()', results)
@@ -354,15 +606,32 @@ class ToQuantityParser extends FhirPathParser {
                   : results.first is String
                       ? [FhirPathQuantity.fromString(results.first)]
                       : [];
+
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}ToQuantityParser';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '.toQuantity()';
 }
 
+/// Checks if input can be converted to a [Quantity]
 class ConvertsToQuantityParser extends FhirPathParser {
   dynamic value;
 
   ConvertsToQuantityParser();
-  List execute(List results, Map<String, dynamic> passed) => results.length == 0
+
+  /// The iterable, nested function that evaluates the entire FHIRPath
+  /// expression one object at a time
+  List execute(List results, Map<String, dynamic> passed) => results.isEmpty
       ? []
       : results.length > 1
           ? throw _conversionException('.convertsToQuantity()', results)
@@ -374,7 +643,20 @@ class ConvertsToQuantityParser extends FhirPathParser {
                       ToQuantityParser().execute(results, passed).isNotEmpty)
                   ? [true]
                   : [false];
+
+  /// To print the entire parsed FHIRPath expression, this includes ALL
+  /// of the Parsers that are used in this package by the names used in
+  /// this package. These are not always synonymous with the FHIRPath
+  /// specification (although they usually are), and include some parser
+  /// classes that were created for ease of evaluation but are not included
+  /// at all as objects in the official spec. I'm generally going to recommend
+  /// that you use [prettyPrint] instead
   String verbosePrint(int indent) => '${"  " * indent}ConvertsToQuantityParser';
+
+  /// Uses a rough approximation of reverse polish notation to render the
+  /// parsed value of a FHIRPath in a more human readable way than
+  /// [verbosePrint], while still demonstrating how the expression was parsed
+  /// and nested according to this package
   String prettyPrint(int indent) => '.convertsToQuantity()';
 }
 

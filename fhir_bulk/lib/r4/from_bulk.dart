@@ -1,8 +1,10 @@
+// Dart imports:
 import 'dart:convert';
 
+// Package imports:
+import 'package:archive/archive.dart';
 import 'package:fhir/r4.dart';
 import 'package:mime/mime.dart';
-import 'package:archive/archive.dart';
 import 'package:universal_io/io.dart';
 
 /// Class doing the lifting for transforming regular FHIR json into formats more

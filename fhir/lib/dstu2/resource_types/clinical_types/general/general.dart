@@ -1,11 +1,15 @@
+// Dart imports:
 import 'dart:convert';
 
+// Package imports:
 import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:yaml/yaml.dart';
-// import 'package:flutter/foundation.dart';
 
+// Project imports:
 import '../../../../dstu2.dart';
+
+// import 'package:flutter/foundation.dart';
 
 part 'general.enums.dart';
 part 'general.freezed.dart';
@@ -72,6 +76,18 @@ class AllergyIntolerance with Resource, _$AllergyIntolerance {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AllergyIntolerance.fromJson(Map<String, dynamic> json) =>
       _$AllergyIntoleranceFromJson(json);
+
+  /// Acts like a constructor, returns a [AllergyIntolerance], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory AllergyIntolerance.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$AllergyIntoleranceFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -115,6 +131,18 @@ class AllergyIntoleranceReaction with _$AllergyIntoleranceReaction {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory AllergyIntoleranceReaction.fromJson(Map<String, dynamic> json) =>
       _$AllergyIntoleranceReactionFromJson(json);
+
+  /// Acts like a constructor, returns a [AllergyIntoleranceReaction], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory AllergyIntoleranceReaction.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$AllergyIntoleranceReactionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -186,6 +214,18 @@ class Condition with Resource, _$Condition {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Condition.fromJson(Map<String, dynamic> json) =>
       _$ConditionFromJson(json);
+
+  /// Acts like a constructor, returns a [Condition], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Condition.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ConditionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -217,6 +257,18 @@ class ConditionStage with _$ConditionStage {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConditionStage.fromJson(Map<String, dynamic> json) =>
       _$ConditionStageFromJson(json);
+
+  /// Acts like a constructor, returns a [ConditionStage], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ConditionStage.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ConditionStageFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -248,6 +300,18 @@ class ConditionEvidence with _$ConditionEvidence {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ConditionEvidence.fromJson(Map<String, dynamic> json) =>
       _$ConditionEvidenceFromJson(json);
+
+  /// Acts like a constructor, returns a [ConditionEvidence], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ConditionEvidence.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ConditionEvidenceFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -313,6 +377,18 @@ class Procedure with Resource, _$Procedure {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory Procedure.fromJson(Map<String, dynamic> json) =>
       _$ProcedureFromJson(json);
+
+  /// Acts like a constructor, returns a [Procedure], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory Procedure.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ProcedureFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -344,6 +420,18 @@ class ProcedurePerformer with _$ProcedurePerformer {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcedurePerformer.fromJson(Map<String, dynamic> json) =>
       _$ProcedurePerformerFromJson(json);
+
+  /// Acts like a constructor, returns a [ProcedurePerformer], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ProcedurePerformer.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ProcedurePerformerFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -374,6 +462,18 @@ class ProcedureFocalDevice with _$ProcedureFocalDevice {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ProcedureFocalDevice.fromJson(Map<String, dynamic> json) =>
       _$ProcedureFocalDeviceFromJson(json);
+
+  /// Acts like a constructor, returns a [ProcedureFocalDevice], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ProcedureFocalDevice.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ProcedureFocalDeviceFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -437,6 +537,18 @@ class ClinicalImpression with Resource, _$ClinicalImpression {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClinicalImpression.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionFromJson(json);
+
+  /// Acts like a constructor, returns a [ClinicalImpression], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ClinicalImpression.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ClinicalImpressionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -498,6 +610,18 @@ class ClinicalImpressionFinding with _$ClinicalImpressionFinding {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClinicalImpressionFinding.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionFindingFromJson(json);
+
+  /// Acts like a constructor, returns a [ClinicalImpressionFinding], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ClinicalImpressionFinding.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ClinicalImpressionFindingFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -528,6 +652,18 @@ class ClinicalImpressionRuledOut with _$ClinicalImpressionRuledOut {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory ClinicalImpressionRuledOut.fromJson(Map<String, dynamic> json) =>
       _$ClinicalImpressionRuledOutFromJson(json);
+
+  /// Acts like a constructor, returns a [ClinicalImpressionRuledOut], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ClinicalImpressionRuledOut.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ClinicalImpressionRuledOutFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -598,6 +734,18 @@ class FamilyMemberHistory with Resource, _$FamilyMemberHistory {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory FamilyMemberHistory.fromJson(Map<String, dynamic> json) =>
       _$FamilyMemberHistoryFromJson(json);
+
+  /// Acts like a constructor, returns a [FamilyMemberHistory], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory FamilyMemberHistory.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$FamilyMemberHistoryFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -634,6 +782,18 @@ class FamilyMemberHistoryCondition with _$FamilyMemberHistoryCondition {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory FamilyMemberHistoryCondition.fromJson(Map<String, dynamic> json) =>
       _$FamilyMemberHistoryConditionFromJson(json);
+
+  /// Acts like a constructor, returns a [FamilyMemberHistoryCondition], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory FamilyMemberHistoryCondition.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$FamilyMemberHistoryConditionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -684,6 +844,18 @@ class RiskAssessment with Resource, _$RiskAssessment {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RiskAssessment.fromJson(Map<String, dynamic> json) =>
       _$RiskAssessmentFromJson(json);
+
+  /// Acts like a constructor, returns a [RiskAssessment], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory RiskAssessment.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$RiskAssessmentFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -723,6 +895,18 @@ class RiskAssessmentPrediction with _$RiskAssessmentPrediction {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory RiskAssessmentPrediction.fromJson(Map<String, dynamic> json) =>
       _$RiskAssessmentPredictionFromJson(json);
+
+  /// Acts like a constructor, returns a [RiskAssessmentPrediction], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory RiskAssessmentPrediction.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$RiskAssessmentPredictionFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -776,6 +960,18 @@ class DetectedIssue with Resource, _$DetectedIssue {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DetectedIssue.fromJson(Map<String, dynamic> json) =>
       _$DetectedIssueFromJson(json);
+
+  /// Acts like a constructor, returns a [DetectedIssue], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DetectedIssue.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DetectedIssueFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
@@ -807,4 +1003,16 @@ class DetectedIssueMitigation with _$DetectedIssueMitigation {
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
   factory DetectedIssueMitigation.fromJson(Map<String, dynamic> json) =>
       _$DetectedIssueMitigationFromJson(json);
+
+  /// Acts like a constructor, returns a [DetectedIssueMitigation], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory DetectedIssueMitigation.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$DetectedIssueMitigationFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }

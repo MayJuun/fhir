@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'aidbox_request.dart';
 import 'gcs_request.dart';
+import 'hapi_request.dart';
 import 'meld_request.dart';
 
 void main() {
@@ -35,6 +36,14 @@ class DemoPage extends StatelessWidget {
             childAspectRatio: 2.0,
             crossAxisCount: 2,
             children: [
+              ElevatedButton(
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.white),
+                    side: MaterialStateProperty.all(
+                        const BorderSide(color: Colors.black)),
+                  ),
+                  child: Image.asset('assets/hapi.png'),
+                  onPressed: () async => await hapiRequest()),
               ElevatedButton(
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(Colors.white),
