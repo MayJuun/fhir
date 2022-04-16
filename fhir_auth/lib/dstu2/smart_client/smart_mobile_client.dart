@@ -1,3 +1,5 @@
+// ignore_for_file: overridden_fields
+
 // Dart imports:
 import 'dart:convert';
 
