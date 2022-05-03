@@ -1,9 +1,14 @@
 # CHANGELOG
 
+## [0.6.2]
+
+* Updated dependencies
+
 ## [0.6.1]
 
 * Updated dependencies
 * Dart now > 2.16.0
+
 ## [0.6.0]
 
 * Updating dependencies
