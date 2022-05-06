@@ -74,10 +74,20 @@ Future<void> main() async {
           addToStringMap(resource.toString(),
               '  factory ${resource.replaceAll('_', '')}({\n');
           for (final k in definitions[resource]['properties'].keys) {
-            if (k == 'resourceType' && resourceGroups.contains(resource)) {
+            if (k == 'resourceType') {
               if (definitions[resource]['properties'][k]['const'] != null) {
                 addToStringMap(resource.toString(),
                     'R5ResourceType resourceType = const R5ResourceType.$resource,\n');
+              } else if (definitions[resource]['properties'][k][r'$ref'] !=
+                  null) {
+                String? type =
+                    definitions[resource]['properties'][k][r'$ref'].toString();
+                type = type.contains('uri')
+                    ? 'FhirUri'
+                    : type.contains('code')
+                        ? 'Code'
+                        : null;
+                addToStringMap(resource.toString(), '$type? $k\n');
               } else {
                 print(
                     "No const for ${definitions[resource]['properties'][k]['resourceType']}\n"

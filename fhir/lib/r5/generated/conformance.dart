@@ -2530,6 +2530,7 @@ R5ResourceType resourceType = const R5ResourceType.ExampleScenario,
    List<FhirExtension>? modifierExtension,
    String? resourceId,
 @JsonKey(name: '_resourceId')   Element? resourceIdElement,
+Code? resourceType
 @JsonKey(name: '_resourceType')   Element? resourceTypeElement,
    String? name,
 @JsonKey(name: '_name')   Element? nameElement,

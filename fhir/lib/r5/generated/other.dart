@@ -1829,6 +1829,7 @@ R5ResourceType resourceType = const R5ResourceType.Subscription,
    String? id,
 @JsonKey(name: 'extension')   List<FhirExtension>? extension_,
    List<FhirExtension>? modifierExtension,
+FhirUri? resourceType
 @JsonKey(name: '_resourceType')   Element? resourceTypeElement,
    String? filterParameter,
 @JsonKey(name: '_filterParameter')   Element? filterParameterElement,
