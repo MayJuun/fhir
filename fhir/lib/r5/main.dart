@@ -5,6 +5,7 @@ import 'dart:io';
 
 import 'class_list.dart';
 import 'dart_words.dart';
+import 'file_names.dart';
 import 'grouped_resources.dart';
 import 'imports.dart';
 import 'primitives.dart';
@@ -284,8 +285,12 @@ Future<void> main() async {
       for (var k in finalReplace.keys) {
         finalString = finalString.replaceAll(k, finalReplace[k]!);
       }
-      await File('generated/${strings.first}.dart').writeAsString(finalString);
+      if(fileNames[strings] != null){
+      await File(fileNames[strings]!).writeAsString(finalString);
     }
+    else {
+      print('Unable to write for $strings');
+    }}
   }
   // final bigString = stringMap.values
   //     .join('\n\n/// ***********************************************\n\n');

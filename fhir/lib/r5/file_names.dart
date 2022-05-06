@@ -1,6 +1,6 @@
 import 'grouped_resources.dart';
 
-const importMap = {
+const fileNames = {
   intRef: 'draft_types/internal_reference.dart',
   entities1: 'entities1/entities1.dart',
   entities2: 'entities2/entities2.dart',
