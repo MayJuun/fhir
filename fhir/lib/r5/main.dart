@@ -78,7 +78,7 @@ Future<void> main() async {
             if (k == 'resourceType') {
               if (definitions[resource]['properties'][k]['const'] != null) {
                 addToStringMap(resource.toString(),
-                    'R5ResourceType resourceType = const R5ResourceType.$resource,\n');
+                    '@Default(R5ResourceType.$resource) R5ResourceType resourceType,\n');
               } else if (definitions[resource]['properties'][k][r'$ref'] !=
                   null) {
                 String? type =
@@ -88,7 +88,7 @@ Future<void> main() async {
                     : type.contains('code')
                         ? 'Code'
                         : null;
-                addToStringMap(resource.toString(), '$type? $k\n');
+                addToStringMap(resource.toString(), '$type? $k,\n');
               } else {
                 print(
                     "No const for ${definitions[resource]['properties'][k]['resourceType']}\n"
@@ -285,12 +285,12 @@ Future<void> main() async {
       for (var k in finalReplace.keys) {
         finalString = finalString.replaceAll(k, finalReplace[k]!);
       }
-      if(fileNames[strings] != null){
-      await File(fileNames[strings]!).writeAsString(finalString);
+      if (fileNames[strings] != null) {
+        await File(fileNames[strings]!).writeAsString(finalString);
+      } else {
+        print('Unable to write for $strings');
+      }
     }
-    else {
-      print('Unable to write for $strings');
-    }}
   }
   // final bigString = stringMap.values
   //     .join('\n\n/// ***********************************************\n\n');
@@ -303,6 +303,52 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
       '''
 /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;''',
   'Base64binary': 'Base64Binary',
+  '''
+1) GS1: http://hl7.org/fhir/NamingSystem/gs1-di, 
+2) HIBCC: http://hl7.org/fhir/NamingSystem/hibcc-diI, 
+3) ICCBBA for blood containers: http://hl7.org/fhir/NamingSystem/iccbba-blood-di, 
+4) ICCBA for other devices: http://hl7.org/fhir/NamingSystem/iccbba-other-di # Informationsstelle für Arzneispezialitäten (IFA GmbH) (EU only): http://hl7.org/fhir/NamingSystem/ifa-gmbh-di.;''':
+      '''
+/// 1) GS1: http://hl7.org/fhir/NamingSystem/gs1-di, 
+/// 2) HIBCC: http://hl7.org/fhir/NamingSystem/hibcc-diI, 
+/// 3) ICCBBA for blood containers: http://hl7.org/fhir/NamingSystem/iccbba-blood-di, 
+/// 4) ICCBA for other devices: http://hl7.org/fhir/NamingSystem/iccbba-other-di # Informationsstelle für Arzneispezialitäten (IFA GmbH) (EU only): http://hl7.org/fhir/NamingSystem/ifa-gmbh-di.;''',
+  '''
+/// [type]: The type of deviceName.
+
+RegisteredName | UserFriendlyName | PatientReportedName.;''': '''
+/// [type]: The type of deviceName. RegisteredName | UserFriendlyName | PatientReportedName.''',
+  'RegisteredName | UserFriendlyName | PatientReportedName.;':
+      '/// RegisteredName | UserFriendlyName | PatientReportedName.',
+  '''
+/// [requestedPeriod]: A set of date ranges (potentially including times) that the appointment is preferred to be scheduled within.
+
+The duration (usually in minutes) could also be provided to indicate the length of the appointment to fill and populate the start/end times for the actual allocated time. However, in other situations the duration may be calculated by the scheduling system.;''':
+      '''
+/// [requestedPeriod]: A set of date ranges (potentially including times) that the appointment is preferred to be scheduled within. 
+      /// The duration (usually in minutes) could also be provided to indicate the length of the appointment to fill and populate the start/end times for the actual allocated time. However, in other situations the duration may be calculated by the scheduling system.''',
+  'The duration (usually in minutes) could also be provided to indicate the length of the appointment to fill and populate the start/end times for the actual allocated time. However, in other situations the duration may be calculated by the scheduling system.;':
+      '/// The duration (usually in minutes) could also be provided to indicate the length of the appointment to fill and populate the start/end times for the actual allocated time. However, in other situations the duration may be calculated by the scheduling system.',
+  '\nThe duration (usually in minutes)':
+      '\n/// The duration (usually in minutes)',
+  '\nRegisteredName': '\n/// RegisteredName',
+  '\nMany systems use this property': '\n/// Many systems use this property',
+  '\nIt is often used to filter patient lists to exclude inactive patients':
+      '\n/// It is often used to filter patient lists to exclude inactive patients',
+  '\nDeceased patients may also be marked as':
+      '\n/// Deceased patients may also be marked as',
+  '\nA coverage may only be responsible':
+      '\n/// A coverage may only be responsible',
+  '\nFor resource issues, this will be a simple XPath ':
+      '\n/// For resource issues, this will be a simple XPath ',
+  '\n* fullUrl can be empty on a POST':
+      '\n/// * fullUrl can be empty on a POST',
+  '\n* Results from operations might': '\n/// * Results from operations might',
+  '\n§ Purpose – a specific purpose of the data.;':
+      '\n/// § Purpose – a specific purpose of the data.',
+  // '\nThe duration (usually in minutes) ':
+  //     '\n/// The duration (usually in minutes) ',
+  // '\nMany systems use this property ': '\n/// Many systems use this property ',
 };
 
 const replaceMap = <String, String>{

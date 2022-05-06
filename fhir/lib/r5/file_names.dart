@@ -13,7 +13,7 @@ const fileNames = {
   medications: 'resource_types/clinical/medications/medications.dart',
   requestAndResponse:
       'resource_types/clinical/request_and_response/request_and_response.dart',
-  summary: 'resource_types/clinicalsummary/summary.dart',
+  summary: 'resource_types/clinical/summary/summary.dart',
   billing: 'resource_types/financial/billing/billing.dart',
   general: 'resource_types/financial/general/general.dart',
   payment: 'resource_types/financial/payment/payment.dart',
@@ -30,7 +30,7 @@ const fileNames = {
   medicationDefinition:
       'resource_types/specialized/medication_definition/medication_definition.dart',
   publicHealthAndResearch:
-      'resource_types/specialized/public_health_and_research/public_health_and_research',
+      'resource_types/specialized/public_health_and_research/public_health_and_research.dart',
   qualityReportingAndTesting:
       'resource_types/specialized/quality_reporting_and_testing/quality_reporting_and_testing.dart',
 };

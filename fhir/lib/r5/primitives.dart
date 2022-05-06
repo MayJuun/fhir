@@ -1,7 +1,8 @@
 const primitiveMap = {
   r'^\s*([A-Za-z0-9+\\/]{4})*(([A-Za-z0-9+\\/]{2}\u003d\u003d)|([A-Za-z0-9+\\/]{3}\u003d)|([A-Za-z0-9+\\/]{4}))\s*$':
       'base64Binary',
-  r'^\s*([A-Za-z0-9+\\/]{4})*(([A-Za-z0-9+\\/]{2}==)|([A-Za-z0-9+\\/]{3}=)|([A-Za-z0-9+\\/]{4}))\s*$': 'base64binary',
+  r'^\s*([A-Za-z0-9+\\/]{4})*(([A-Za-z0-9+\\/]{2}==)|([A-Za-z0-9+\\/]{3}=)|([A-Za-z0-9+\\/]{4}))\s*$':
+      'base64binary',
   r'^true|false$': 'boolean',
   //  r'^\S*$':  'canonical',
   r'^[^\s]+( [^\s]+)*$': 'code',

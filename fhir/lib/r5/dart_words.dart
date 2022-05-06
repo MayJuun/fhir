@@ -1,4 +1,5 @@
 const words = [
+  'assert',
   'abstract',
   'else',
   'import',
