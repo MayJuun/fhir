@@ -1,7 +1,7 @@
-const resourceTypes = [
-'resourceTypes',
-  ...base,
-  ...dataTypes,
+const resourceTypes = <String>[
+  'resourceTypes',
+  // ...base,
+  // ...dataTypes,
   ...conformance,
   ...terminology,
   ...security,
@@ -28,22 +28,29 @@ const resourceTypes = [
   ...medicationDefinition,
 ];
 
-const base = [
-'base',
+const base = <String>[
+  'base',
   'Extension',
   'BackboneType',
   'Element',
 ];
 
-const dataTypes = [
-'dataTypes',
+const intRef = <String>[
+  'intRef',
+  'MarketingStatus',
+  'ProductShelfLife',
+  'Population',
+];
+
+const dataTypes = <String>[
+  'dataTypes',
   ...genPurpose,
   ...meta,
   ...special,
 ];
 
-const genPurpose = [
-'genPurpose',
+const genPurpose = <String>[
+  'genPurpose',
   'Ratio',
   'Period',
   'Range',
@@ -69,8 +76,8 @@ const genPurpose = [
   'Annotation',
 ];
 
-const meta = [
-'meta',
+const meta = <String>[
+  'meta',
   'ContactDetail',
   'Contributor',
   'DataRequirement',
@@ -82,8 +89,8 @@ const meta = [
   'RelatedArtifact'
 ];
 
-const special = [
-'special',
+const special = <String>[
+  'special',
   'Meta',
   'Reference',
   'Dosage',
@@ -95,7 +102,6 @@ const special = [
 ];
 
 const resourceGroups = [
-'resourceGroups',
   conformance,
   terminology,
   security,
@@ -122,8 +128,8 @@ const resourceGroups = [
   medicationDefinition,
 ];
 
-const conformance = [
-'conformance',
+const conformance = <String>[
+  'conformance',
   'CapabilityStatement',
   'CapabilityStatement2',
   'StructureDefinition',
@@ -137,8 +143,8 @@ const conformance = [
   'ExampleScenario',
 ];
 
-const terminology = [
-'terminology',
+const terminology = <String>[
+  'terminology',
   'CodeSystem',
   'ValueSet',
   'ConceptMap',
@@ -146,22 +152,22 @@ const terminology = [
   'NamingSystem',
   'TerminologyCapabilities',
 ];
-const security = [
-'security',
+const security = <String>[
+  'security',
   'Provenance',
   'AuditEvent',
   'Permission',
   'Consent',
 ];
 
-const documents = [
-'documents',
+const documents = <String>[
+  'documents',
   'Composition',
   'DocumentManifest',
   'DocumentReference',
 ];
-const other = [
-'other',
+const other = <String>[
+  'other',
   'Basic',
   'Binary',
   'Bundle',
@@ -173,8 +179,8 @@ const other = [
   'SubscriptionStatus',
   'SubscriptionTopic',
 ];
-const individuals = [
-'individuals',
+const individuals = <String>[
+  'individuals',
   'Patient',
   'Practitioner',
   'PractitionerRole',
@@ -183,8 +189,8 @@ const individuals = [
   'Group',
 ];
 
-const entities1 = [
-'entities1',
+const entities1 = <String>[
+  'entities1',
   'Organization',
   'OrganizationAffiliation',
   'HealthcareService',
@@ -192,8 +198,8 @@ const entities1 = [
   'Location',
 ];
 
-const entities2 = [
-'entities2',
+const entities2 = <String>[
+  'entities2',
   'Substance',
   'BiologicallyDerivedProduct',
   'Device',
@@ -201,8 +207,8 @@ const entities2 = [
   'NutritionProduct',
 ];
 
-const workflow = [
-'workflow',
+const workflow = <String>[
+  'workflow',
   'Task',
   'Transport',
   'Appointment',
@@ -212,8 +218,8 @@ const workflow = [
   'VerificationResult',
 ];
 
-const management = [
-'management',
+const management = <String>[
+  'management',
   'Encounter',
   'EpisodeOfCare',
   'Flag',
@@ -221,8 +227,8 @@ const management = [
   'Library',
 ];
 
-const summary = [
-'summary',
+const summary = <String>[
+  'summary',
   'AllergyIntolerance',
   'AdverseEvent',
   'Condition',
@@ -232,8 +238,8 @@ const summary = [
   'DetectedIssue',
 ];
 
-const diagnostics = [
-'diagnostics',
+const diagnostics = <String>[
+  'diagnostics',
   'Observation',
   'DocumentReference',
   'DiagnosticReport',
@@ -245,8 +251,8 @@ const diagnostics = [
   'MolecularSequence',
 ];
 
-const medications = [
-'medications',
+const medications = <String>[
+  'medications',
   'MedicationRequest',
   'MedicationAdministration',
   'MedicationDispense',
@@ -258,8 +264,8 @@ const medications = [
   'ImmunizationRecommendation',
 ];
 
-const careProvision = [
-'careProvision',
+const careProvision = <String>[
+  'careProvision',
   'CarePlan',
   'CareTeam',
   'Goal',
@@ -271,8 +277,8 @@ const careProvision = [
   'RequestGroup',
 ];
 
-const requestAndResponse = [
-'requestAndResponse',
+const requestAndResponse = <String>[
+  'requestAndResponse',
   'Communication',
   'CommunicationRequest',
   'DeviceRequest',
@@ -284,28 +290,28 @@ const requestAndResponse = [
   'InventoryReport',
 ];
 
-const support = [
-'support',
+const support = <String>[
+  'support',
   'Coverage',
   'CoverageEligibilityRequest',
   'CoverageEligibilityResponse',
   'EnrollmentRequest',
   'EnrollmentResponse',
 ];
-const billing = [
-'billing',
+const billing = <String>[
+  'billing',
   'Claim',
   'ClaimResponse',
   'Invoice',
 ];
 
-const payment = [
-'payment',
+const payment = <String>[
+  'payment',
   'PaymentNotice',
   'PaymentReconciliation',
 ];
-const general = [
-'general',
+const general = <String>[
+  'general',
   'Account',
   'ChargeItem',
   'ChargeItemDefinition',
@@ -314,14 +320,14 @@ const general = [
   'InsurancePlan',
 ];
 
-const publicHealthAndResearch = [
-'publicHealthAndResearch',
+const publicHealthAndResearch = <String>[
+  'publicHealthAndResearch',
   'ResearchStudy',
   'ResearchSubject',
 ];
 
-const definitionalArtifacts = [
-'definitionalArtifacts',
+const definitionalArtifacts = <String>[
+  'definitionalArtifacts',
   'ActivityDefinition',
   'ConditionDefinition',
   'DeviceDefinition',
@@ -332,8 +338,8 @@ const definitionalArtifacts = [
   'SpecimenDefinition',
 ];
 
-const evidenceBasedMedicine = [
-'evidenceBasedMedicine',
+const evidenceBasedMedicine = <String>[
+  'evidenceBasedMedicine',
   'ArtifactAssessment',
   'Citation',
   'Evidence',
@@ -341,16 +347,16 @@ const evidenceBasedMedicine = [
   'EvidenceVariable',
 ];
 
-const qualityReportingAndTesting = [
-'qualityReportingAndTesting',
+const qualityReportingAndTesting = <String>[
+  'qualityReportingAndTesting',
   'Measure',
   'MeasureReport',
   'TestScript',
   'TestReport',
 ];
 
-const medicationDefinition = [
-'medicationDefinition',
+const medicationDefinition = <String>[
+  'medicationDefinition',
   'MedicinalProductDefinition',
   'PackagedProductDefinition',
   'AdministrableProductDefinition',

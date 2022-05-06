@@ -1,7 +1,18 @@
-import '../r5.dart';
+// Dart imports:
+import 'dart:convert';
+
+// Package imports:
+import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:yaml/yaml.dart';
 
+// Project imports:
+import '../../r5.dart';
 
+// import 'package:flutter/foundation.dart';
+part 'terminology.enums.dart';
+part 'terminology.freezed.dart';
+part 'terminology.g.dart';
   @freezed
 
   class CodeSystem with Resource,  _CodeSystem {
@@ -32,7 +43,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [url]: An absolute URI that is used to identify this code system when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this code system is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the code system is stored on different servers. This is used in [Coding](datatypes.html#Coding).system.;
 ///
@@ -120,7 +131,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 ///
 /// [concept]: Concepts that are in the code system. The concept definitions are inherently hierarchical, but the definitions must be consulted to determine what the meanings of the hierarchical relationships are.;
   factory CodeSystem({
-resourceType = const R5ResourceType.CodeSystem R5ResourceType,
+R5ResourceType resourceType = const R5ResourceType.CodeSystem,
    Id? id,
    Meta? meta,
    Uri? implicitRules,
@@ -128,9 +139,9 @@ resourceType = const R5ResourceType.CodeSystem R5ResourceType,
    Code? language,
 @JsonKey(name: '_language')   Element? languageElement,
    Narrative? text,
-   List<ResourceList>? contained,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+   List<Resource>? contained,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Uri? url,
 @JsonKey(name: '_url')   Element? urlElement,
    List<Identifier>? identifier,
@@ -202,9 +213,7 @@ resourceType = const R5ResourceType.CodeSystem R5ResourceType,
     if (json is Map<String, dynamic>) {
       return _$CodeSystemFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -223,7 +232,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [code]: The code that identifies this filter when it is used as a filter in [ValueSet](valueset.html#).compose.include.filter.;
 ///
@@ -242,8 +251,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [valueElement] (_value): Extensions for value;
   factory CodeSystemFilter({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Code? code,
 @JsonKey(name: '_code')   Element? codeElement,
    String? description,
@@ -259,30 +268,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CodeSystem_Filter.fromYaml(dynamic yaml) => yaml is String
-      ? CodeSystem_Filter.fromJson(
+  factory CodeSystemFilter.fromYaml(dynamic yaml) => yaml is String
+      ? CodeSystemFilter.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CodeSystem_Filter.fromJson(
+          ? CodeSystemFilter.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'CodeSystem_Filter cannot be constructed from input provided,'
+              'CodeSystemFilter cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeSystem_Filter.fromJson(Map<String, dynamic> json) =>
-      _$CodeSystem_FilterFromJson(json);
+  factory CodeSystemFilter.fromJson(Map<String, dynamic> json) =>
+      _$CodeSystemFilterFromJson(json);
 
-  /// Acts like a constructor, returns a [CodeSystem_Filter], accepts a
+  /// Acts like a constructor, returns a [CodeSystemFilter], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory CodeSystem_Filter.fromJsonString(String source) {
+  factory CodeSystemFilter.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$CodeSystem_FilterFromJson(json);
+      return _$CodeSystemFilterFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -301,7 +308,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [code]: A code that is used to identify the property. The code is used internally (in CodeSystem.concept.property.code) and also externally, such as in property filters.;
 ///
@@ -320,8 +327,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [typeElement] (_type): Extensions for type;
   factory CodeSystemProperty({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Code? code,
 @JsonKey(name: '_code')   Element? codeElement,
    Uri? uri,
@@ -337,30 +344,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CodeSystem_Property.fromYaml(dynamic yaml) => yaml is String
-      ? CodeSystem_Property.fromJson(
+  factory CodeSystemProperty.fromYaml(dynamic yaml) => yaml is String
+      ? CodeSystemProperty.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CodeSystem_Property.fromJson(
+          ? CodeSystemProperty.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'CodeSystem_Property cannot be constructed from input provided,'
+              'CodeSystemProperty cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeSystem_Property.fromJson(Map<String, dynamic> json) =>
-      _$CodeSystem_PropertyFromJson(json);
+  factory CodeSystemProperty.fromJson(Map<String, dynamic> json) =>
+      _$CodeSystemPropertyFromJson(json);
 
-  /// Acts like a constructor, returns a [CodeSystem_Property], accepts a
+  /// Acts like a constructor, returns a [CodeSystemProperty], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory CodeSystem_Property.fromJsonString(String source) {
+  factory CodeSystemProperty.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$CodeSystem_PropertyFromJson(json);
+      return _$CodeSystemPropertyFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -379,7 +384,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [code]: A code - a text symbol - that uniquely identifies the concept within the code system.;
 ///
@@ -400,8 +405,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [concept]: Defines children of a concept to produce a hierarchy of concepts. The nature of the relationships is variable (is-a/contains/categorizes) - see hierarchyMeaning.;
   factory CodeSystemConcept({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Code? code,
 @JsonKey(name: '_code')   Element? codeElement,
    String? display,
@@ -418,30 +423,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CodeSystem_Concept.fromYaml(dynamic yaml) => yaml is String
-      ? CodeSystem_Concept.fromJson(
+  factory CodeSystemConcept.fromYaml(dynamic yaml) => yaml is String
+      ? CodeSystemConcept.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CodeSystem_Concept.fromJson(
+          ? CodeSystemConcept.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'CodeSystem_Concept cannot be constructed from input provided,'
+              'CodeSystemConcept cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeSystem_Concept.fromJson(Map<String, dynamic> json) =>
-      _$CodeSystem_ConceptFromJson(json);
+  factory CodeSystemConcept.fromJson(Map<String, dynamic> json) =>
+      _$CodeSystemConceptFromJson(json);
 
-  /// Acts like a constructor, returns a [CodeSystem_Concept], accepts a
+  /// Acts like a constructor, returns a [CodeSystemConcept], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory CodeSystem_Concept.fromJsonString(String source) {
+  factory CodeSystemConcept.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$CodeSystem_ConceptFromJson(json);
+      return _$CodeSystemConceptFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -460,7 +463,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [language]: The language this designation is defined for.;
 ///
@@ -473,8 +476,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [valueElement] (_value): Extensions for value;
   factory CodeSystemDesignation({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Code? language,
 @JsonKey(name: '_language')   Element? languageElement,
    Coding? use,
@@ -487,30 +490,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CodeSystem_Designation.fromYaml(dynamic yaml) => yaml is String
-      ? CodeSystem_Designation.fromJson(
+  factory CodeSystemDesignation.fromYaml(dynamic yaml) => yaml is String
+      ? CodeSystemDesignation.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CodeSystem_Designation.fromJson(
+          ? CodeSystemDesignation.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'CodeSystem_Designation cannot be constructed from input provided,'
+              'CodeSystemDesignation cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeSystem_Designation.fromJson(Map<String, dynamic> json) =>
-      _$CodeSystem_DesignationFromJson(json);
+  factory CodeSystemDesignation.fromJson(Map<String, dynamic> json) =>
+      _$CodeSystemDesignationFromJson(json);
 
-  /// Acts like a constructor, returns a [CodeSystem_Designation], accepts a
+  /// Acts like a constructor, returns a [CodeSystemDesignation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory CodeSystem_Designation.fromJsonString(String source) {
+  factory CodeSystemDesignation.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$CodeSystem_DesignationFromJson(json);
+      return _$CodeSystemDesignationFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -529,7 +530,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [code]: A code that is a reference to CodeSystem.property.code.;
 ///
@@ -562,22 +563,22 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [valueDecimalElement] (_valueDecimal): Extensions for valueDecimal;
   factory CodeSystemProperty1({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Code? code,
 @JsonKey(name: '_code')   Element? codeElement,
-   Null? valueCode,
+   Code? valueCode,
 @JsonKey(name: '_valueCode')   Element? valueCodeElement,
    Coding? valueCoding,
-   Null? valueString,
+   Markdown? valueString,
 @JsonKey(name: '_valueString')   Element? valueStringElement,
    Integer? valueInteger,
 @JsonKey(name: '_valueInteger')   Element? valueIntegerElement,
    Boolean? valueBoolean,
 @JsonKey(name: '_valueBoolean')   Element? valueBooleanElement,
-   Null? valueDateTime,
+   DateTime? valueDateTime,
 @JsonKey(name: '_valueDateTime')   Element? valueDateTimeElement,
-   Null? valueDecimal,
+   Decimal? valueDecimal,
 @JsonKey(name: '_valueDecimal')   Element? valueDecimalElement,
   }) = _$CodeSystemProperty1;
 
@@ -586,30 +587,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory CodeSystem_Property1.fromYaml(dynamic yaml) => yaml is String
-      ? CodeSystem_Property1.fromJson(
+  factory CodeSystemProperty1.fromYaml(dynamic yaml) => yaml is String
+      ? CodeSystemProperty1.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? CodeSystem_Property1.fromJson(
+          ? CodeSystemProperty1.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'CodeSystem_Property1 cannot be constructed from input provided,'
+              'CodeSystemProperty1 cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory CodeSystem_Property1.fromJson(Map<String, dynamic> json) =>
-      _$CodeSystem_Property1FromJson(json);
+  factory CodeSystemProperty1.fromJson(Map<String, dynamic> json) =>
+      _$CodeSystemProperty1FromJson(json);
 
-  /// Acts like a constructor, returns a [CodeSystem_Property1], accepts a
+  /// Acts like a constructor, returns a [CodeSystemProperty1], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory CodeSystem_Property1.fromJsonString(String source) {
+  factory CodeSystemProperty1.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$CodeSystem_Property1FromJson(json);
+      return _$CodeSystemProperty1FromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -644,7 +643,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [url]: An absolute URI that is used to identify this concept map when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this concept map is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the concept map is stored on different servers.;
 ///
@@ -716,7 +715,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 ///
 /// [group]: A group of mappings that all have the same source and target system.;
   factory ConceptMap({
-resourceType = const R5ResourceType.ConceptMap R5ResourceType,
+R5ResourceType resourceType = const R5ResourceType.ConceptMap,
    Id? id,
    Meta? meta,
    Uri? implicitRules,
@@ -724,9 +723,9 @@ resourceType = const R5ResourceType.ConceptMap R5ResourceType,
    Code? language,
 @JsonKey(name: '_language')   Element? languageElement,
    Narrative? text,
-   List<ResourceList>? contained,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+   List<Resource>? contained,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Uri? url,
 @JsonKey(name: '_url')   Element? urlElement,
    List<Identifier>? identifier,
@@ -753,13 +752,13 @@ resourceType = const R5ResourceType.ConceptMap R5ResourceType,
 @JsonKey(name: '_purpose')   Element? purposeElement,
    Markdown? copyright,
 @JsonKey(name: '_copyright')   Element? copyrightElement,
-   Null? sourceUri,
+   FhirUri? sourceUri,
 @JsonKey(name: '_sourceUri')   Element? sourceUriElement,
-   Null? sourceCanonical,
+   Canonical? sourceCanonical,
 @JsonKey(name: '_sourceCanonical')   Element? sourceCanonicalElement,
-   Null? targetUri,
+   FhirUri? targetUri,
 @JsonKey(name: '_targetUri')   Element? targetUriElement,
-   Null? targetCanonical,
+   Canonical? targetCanonical,
 @JsonKey(name: '_targetCanonical')   Element? targetCanonicalElement,
    List<ConceptMapGroup>? group,
   }) = _$ConceptMap;
@@ -790,9 +789,7 @@ resourceType = const R5ResourceType.ConceptMap R5ResourceType,
     if (json is Map<String, dynamic>) {
       return _$ConceptMapFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -811,7 +808,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [source]: An absolute URI that identifies the source system where the concepts to be mapped are defined.;
 ///
@@ -822,8 +819,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [unmapped]: What to do when there is no mapping to a target concept from the source concept.  This provides the "default" to be applied when there is no target concept mapping specified.  The 'unmapped' element is ignored if a code is specified to have relationship = not-related-to.;
   factory ConceptMapGroup({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Canonical? source,
    Canonical? target,
   required List<ConceptMapElement> element,
@@ -835,30 +832,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ConceptMap_Group.fromYaml(dynamic yaml) => yaml is String
-      ? ConceptMap_Group.fromJson(
+  factory ConceptMapGroup.fromYaml(dynamic yaml) => yaml is String
+      ? ConceptMapGroup.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConceptMap_Group.fromJson(
+          ? ConceptMapGroup.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'ConceptMap_Group cannot be constructed from input provided,'
+              'ConceptMapGroup cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMap_Group.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMap_GroupFromJson(json);
+  factory ConceptMapGroup.fromJson(Map<String, dynamic> json) =>
+      _$ConceptMapGroupFromJson(json);
 
-  /// Acts like a constructor, returns a [ConceptMap_Group], accepts a
+  /// Acts like a constructor, returns a [ConceptMapGroup], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory ConceptMap_Group.fromJsonString(String source) {
+  factory ConceptMapGroup.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ConceptMap_GroupFromJson(json);
+      return _$ConceptMapGroupFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -877,7 +872,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [code]: Identity (code or path) or the element/item being mapped.;
 ///
@@ -894,8 +889,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [target]: A concept from the target value set that this concept maps to.;
   factory ConceptMapElement({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Code? code,
 @JsonKey(name: '_code')   Element? codeElement,
    String? display,
@@ -910,30 +905,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ConceptMap_Element.fromYaml(dynamic yaml) => yaml is String
-      ? ConceptMap_Element.fromJson(
+  factory ConceptMapElement.fromYaml(dynamic yaml) => yaml is String
+      ? ConceptMapElement.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConceptMap_Element.fromJson(
+          ? ConceptMapElement.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'ConceptMap_Element cannot be constructed from input provided,'
+              'ConceptMapElement cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMap_Element.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMap_ElementFromJson(json);
+  factory ConceptMapElement.fromJson(Map<String, dynamic> json) =>
+      _$ConceptMapElementFromJson(json);
 
-  /// Acts like a constructor, returns a [ConceptMap_Element], accepts a
+  /// Acts like a constructor, returns a [ConceptMapElement], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory ConceptMap_Element.fromJsonString(String source) {
+  factory ConceptMapElement.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ConceptMap_ElementFromJson(json);
+      return _$ConceptMapElementFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -952,7 +945,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [code]: Identity (code or path) or the element/item that the map refers to.;
 ///
@@ -975,8 +968,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [product]: A set of additional outcomes from this mapping to other elements. To properly execute this mapping, the specified element must be mapped to some data element or source that is in context. The mapping may still be useful without a place for the additional data elements, but the relationship (e.g., equivalent) cannot be relied on.;
   factory ConceptMapTarget({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Code? code,
 @JsonKey(name: '_code')   Element? codeElement,
    String? display,
@@ -994,30 +987,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ConceptMap_Target.fromYaml(dynamic yaml) => yaml is String
-      ? ConceptMap_Target.fromJson(
+  factory ConceptMapTarget.fromYaml(dynamic yaml) => yaml is String
+      ? ConceptMapTarget.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConceptMap_Target.fromJson(
+          ? ConceptMapTarget.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'ConceptMap_Target cannot be constructed from input provided,'
+              'ConceptMapTarget cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMap_Target.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMap_TargetFromJson(json);
+  factory ConceptMapTarget.fromJson(Map<String, dynamic> json) =>
+      _$ConceptMapTargetFromJson(json);
 
-  /// Acts like a constructor, returns a [ConceptMap_Target], accepts a
+  /// Acts like a constructor, returns a [ConceptMapTarget], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory ConceptMap_Target.fromJsonString(String source) {
+  factory ConceptMapTarget.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ConceptMap_TargetFromJson(json);
+      return _$ConceptMapTargetFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1036,7 +1027,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [property]: A reference to an element that holds a coded value that corresponds to a code system property. The idea is that the information model carries an element somewhere that is labeled to correspond with a code system property.;
 ///
@@ -1053,8 +1044,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [displayElement] (_display): Extensions for display;
   factory ConceptMapDependsOn({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Uri? property,
 @JsonKey(name: '_property')   Element? propertyElement,
    Canonical? system,
@@ -1069,30 +1060,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ConceptMap_DependsOn.fromYaml(dynamic yaml) => yaml is String
-      ? ConceptMap_DependsOn.fromJson(
+  factory ConceptMapDependsOn.fromYaml(dynamic yaml) => yaml is String
+      ? ConceptMapDependsOn.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConceptMap_DependsOn.fromJson(
+          ? ConceptMapDependsOn.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'ConceptMap_DependsOn cannot be constructed from input provided,'
+              'ConceptMapDependsOn cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMap_DependsOn.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMap_DependsOnFromJson(json);
+  factory ConceptMapDependsOn.fromJson(Map<String, dynamic> json) =>
+      _$ConceptMapDependsOnFromJson(json);
 
-  /// Acts like a constructor, returns a [ConceptMap_DependsOn], accepts a
+  /// Acts like a constructor, returns a [ConceptMapDependsOn], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory ConceptMap_DependsOn.fromJsonString(String source) {
+  factory ConceptMapDependsOn.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ConceptMap_DependsOnFromJson(json);
+      return _$ConceptMapDependsOnFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1111,7 +1100,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [mode]: Defines which action to take if there is no match for the source concept in the target system designated for the group. One of 3 actions are possible: use the unmapped code (this is useful when doing a mapping between versions, and only a few codes have changed), use a fixed code (a default code), or alternatively, a reference to a different concept map can be provided (by canonical URL).;
 ///
@@ -1128,8 +1117,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [url]: The canonical reference to an additional ConceptMap resource instance to use for mapping if this ConceptMap resource contains no matching mapping for the source concept.;
   factory ConceptMapUnmapped({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Code? mode,
 @JsonKey(name: '_mode')   Element? modeElement,
    Code? code,
@@ -1144,30 +1133,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ConceptMap_Unmapped.fromYaml(dynamic yaml) => yaml is String
-      ? ConceptMap_Unmapped.fromJson(
+  factory ConceptMapUnmapped.fromYaml(dynamic yaml) => yaml is String
+      ? ConceptMapUnmapped.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ConceptMap_Unmapped.fromJson(
+          ? ConceptMapUnmapped.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'ConceptMap_Unmapped cannot be constructed from input provided,'
+              'ConceptMapUnmapped cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ConceptMap_Unmapped.fromJson(Map<String, dynamic> json) =>
-      _$ConceptMap_UnmappedFromJson(json);
+  factory ConceptMapUnmapped.fromJson(Map<String, dynamic> json) =>
+      _$ConceptMapUnmappedFromJson(json);
 
-  /// Acts like a constructor, returns a [ConceptMap_Unmapped], accepts a
+  /// Acts like a constructor, returns a [ConceptMapUnmapped], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory ConceptMap_Unmapped.fromJsonString(String source) {
+  factory ConceptMapUnmapped.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ConceptMap_UnmappedFromJson(json);
+      return _$ConceptMapUnmappedFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1202,7 +1189,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [url]: An absolute URI that is used to identify this naming system when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this naming system is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the naming system is stored on different servers.;
 ///
@@ -1294,7 +1281,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 ///
 /// [uniqueId]: Indicates how the system may be identified when referenced in electronic exchange.;
   factory NamingSystem({
-resourceType = const R5ResourceType.NamingSystem R5ResourceType,
+R5ResourceType resourceType = const R5ResourceType.NamingSystem,
    Id? id,
    Meta? meta,
    Uri? implicitRules,
@@ -1302,9 +1289,9 @@ resourceType = const R5ResourceType.NamingSystem R5ResourceType,
    Code? language,
 @JsonKey(name: '_language')   Element? languageElement,
    Narrative? text,
-   List<ResourceList>? contained,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+   List<Resource>? contained,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Uri? url,
 @JsonKey(name: '_url')   Element? urlElement,
    List<Identifier>? identifier,
@@ -1378,9 +1365,7 @@ resourceType = const R5ResourceType.NamingSystem R5ResourceType,
     if (json is Map<String, dynamic>) {
       return _$NamingSystemFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1399,7 +1384,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [type]: Identifies the unique identifier scheme used for this particular identifier.;
 ///
@@ -1424,8 +1409,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [authoritativeElement] (_authoritative): Extensions for authoritative;
   factory NamingSystemUniqueId({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Code? type,
 @JsonKey(name: '_type')   Element? typeElement,
    String? value,
@@ -1444,30 +1429,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory NamingSystem_UniqueId.fromYaml(dynamic yaml) => yaml is String
-      ? NamingSystem_UniqueId.fromJson(
+  factory NamingSystemUniqueId.fromYaml(dynamic yaml) => yaml is String
+      ? NamingSystemUniqueId.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? NamingSystem_UniqueId.fromJson(
+          ? NamingSystemUniqueId.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'NamingSystem_UniqueId cannot be constructed from input provided,'
+              'NamingSystemUniqueId cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory NamingSystem_UniqueId.fromJson(Map<String, dynamic> json) =>
-      _$NamingSystem_UniqueIdFromJson(json);
+  factory NamingSystemUniqueId.fromJson(Map<String, dynamic> json) =>
+      _$NamingSystemUniqueIdFromJson(json);
 
-  /// Acts like a constructor, returns a [NamingSystem_UniqueId], accepts a
+  /// Acts like a constructor, returns a [NamingSystemUniqueId], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory NamingSystem_UniqueId.fromJsonString(String source) {
+  factory NamingSystemUniqueId.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$NamingSystem_UniqueIdFromJson(json);
+      return _$NamingSystemUniqueIdFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1502,7 +1485,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [url]: An absolute URI that is used to identify this terminology capabilities when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which at which an authoritative instance of this terminology capabilities is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the terminology capabilities is stored on different servers.;
 ///
@@ -1582,7 +1565,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 ///
 /// [closure]: Whether the $closure operation is supported.;
   factory TerminologyCapabilities({
-resourceType = const R5ResourceType.TerminologyCapabilities R5ResourceType,
+R5ResourceType resourceType = const R5ResourceType.TerminologyCapabilities,
    Id? id,
    Meta? meta,
    Uri? implicitRules,
@@ -1590,9 +1573,9 @@ resourceType = const R5ResourceType.TerminologyCapabilities R5ResourceType,
    Code? language,
 @JsonKey(name: '_language')   Element? languageElement,
    Narrative? text,
-   List<ResourceList>? contained,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+   List<Resource>? contained,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Uri? url,
 @JsonKey(name: '_url')   Element? urlElement,
    List<Identifier>? identifier,
@@ -1660,9 +1643,7 @@ resourceType = const R5ResourceType.TerminologyCapabilities R5ResourceType,
     if (json is Map<String, dynamic>) {
       return _$TerminologyCapabilitiesFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1681,7 +1662,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [name]: Name the software is known by.;
 ///
@@ -1692,8 +1673,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [versionElement] (_version): Extensions for version;
   factory TerminologyCapabilitiesSoftware({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    String? name,
 @JsonKey(name: '_name')   Element? nameElement,
    String? version,
@@ -1705,30 +1686,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TerminologyCapabilities_Software.fromYaml(dynamic yaml) => yaml is String
-      ? TerminologyCapabilities_Software.fromJson(
+  factory TerminologyCapabilitiesSoftware.fromYaml(dynamic yaml) => yaml is String
+      ? TerminologyCapabilitiesSoftware.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TerminologyCapabilities_Software.fromJson(
+          ? TerminologyCapabilitiesSoftware.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'TerminologyCapabilities_Software cannot be constructed from input provided,'
+              'TerminologyCapabilitiesSoftware cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilities_Software.fromJson(Map<String, dynamic> json) =>
-      _$TerminologyCapabilities_SoftwareFromJson(json);
+  factory TerminologyCapabilitiesSoftware.fromJson(Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesSoftwareFromJson(json);
 
-  /// Acts like a constructor, returns a [TerminologyCapabilities_Software], accepts a
+  /// Acts like a constructor, returns a [TerminologyCapabilitiesSoftware], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory TerminologyCapabilities_Software.fromJsonString(String source) {
+  factory TerminologyCapabilitiesSoftware.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$TerminologyCapabilities_SoftwareFromJson(json);
+      return _$TerminologyCapabilitiesSoftwareFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1747,7 +1726,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [description]: Information about the specific installation that this terminology capability statement relates to.;
 ///
@@ -1758,8 +1737,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [urlElement] (_url): Extensions for url;
   factory TerminologyCapabilitiesImplementation({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    String? description,
 @JsonKey(name: '_description')   Element? descriptionElement,
    Url? url,
@@ -1771,30 +1750,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TerminologyCapabilities_Implementation.fromYaml(dynamic yaml) => yaml is String
-      ? TerminologyCapabilities_Implementation.fromJson(
+  factory TerminologyCapabilitiesImplementation.fromYaml(dynamic yaml) => yaml is String
+      ? TerminologyCapabilitiesImplementation.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TerminologyCapabilities_Implementation.fromJson(
+          ? TerminologyCapabilitiesImplementation.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'TerminologyCapabilities_Implementation cannot be constructed from input provided,'
+              'TerminologyCapabilitiesImplementation cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilities_Implementation.fromJson(Map<String, dynamic> json) =>
-      _$TerminologyCapabilities_ImplementationFromJson(json);
+  factory TerminologyCapabilitiesImplementation.fromJson(Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesImplementationFromJson(json);
 
-  /// Acts like a constructor, returns a [TerminologyCapabilities_Implementation], accepts a
+  /// Acts like a constructor, returns a [TerminologyCapabilitiesImplementation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory TerminologyCapabilities_Implementation.fromJsonString(String source) {
+  factory TerminologyCapabilitiesImplementation.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$TerminologyCapabilities_ImplementationFromJson(json);
+      return _$TerminologyCapabilitiesImplementationFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1813,7 +1790,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [uri]: Canonical identifier for the code system, represented as a URI.;
 ///
@@ -1824,8 +1801,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [subsumptionElement] (_subsumption): Extensions for subsumption;
   factory TerminologyCapabilitiesCodeSystem({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Canonical? uri,
    List<TerminologyCapabilitiesVersion>? version,
    Boolean? subsumption,
@@ -1837,30 +1814,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TerminologyCapabilities_CodeSystem.fromYaml(dynamic yaml) => yaml is String
-      ? TerminologyCapabilities_CodeSystem.fromJson(
+  factory TerminologyCapabilitiesCodeSystem.fromYaml(dynamic yaml) => yaml is String
+      ? TerminologyCapabilitiesCodeSystem.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TerminologyCapabilities_CodeSystem.fromJson(
+          ? TerminologyCapabilitiesCodeSystem.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'TerminologyCapabilities_CodeSystem cannot be constructed from input provided,'
+              'TerminologyCapabilitiesCodeSystem cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilities_CodeSystem.fromJson(Map<String, dynamic> json) =>
-      _$TerminologyCapabilities_CodeSystemFromJson(json);
+  factory TerminologyCapabilitiesCodeSystem.fromJson(Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesCodeSystemFromJson(json);
 
-  /// Acts like a constructor, returns a [TerminologyCapabilities_CodeSystem], accepts a
+  /// Acts like a constructor, returns a [TerminologyCapabilitiesCodeSystem], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory TerminologyCapabilities_CodeSystem.fromJsonString(String source) {
+  factory TerminologyCapabilitiesCodeSystem.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$TerminologyCapabilities_CodeSystemFromJson(json);
+      return _$TerminologyCapabilitiesCodeSystemFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1879,7 +1854,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [code]: For version-less code systems, there should be a single version with no identifier.;
 ///
@@ -1904,8 +1879,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [propertyElement] (_property): Extensions for property;
   factory TerminologyCapabilitiesVersion({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    String? code,
 @JsonKey(name: '_code')   Element? codeElement,
    Boolean? isDefault,
@@ -1924,30 +1899,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TerminologyCapabilities_Version.fromYaml(dynamic yaml) => yaml is String
-      ? TerminologyCapabilities_Version.fromJson(
+  factory TerminologyCapabilitiesVersion.fromYaml(dynamic yaml) => yaml is String
+      ? TerminologyCapabilitiesVersion.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TerminologyCapabilities_Version.fromJson(
+          ? TerminologyCapabilitiesVersion.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'TerminologyCapabilities_Version cannot be constructed from input provided,'
+              'TerminologyCapabilitiesVersion cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilities_Version.fromJson(Map<String, dynamic> json) =>
-      _$TerminologyCapabilities_VersionFromJson(json);
+  factory TerminologyCapabilitiesVersion.fromJson(Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesVersionFromJson(json);
 
-  /// Acts like a constructor, returns a [TerminologyCapabilities_Version], accepts a
+  /// Acts like a constructor, returns a [TerminologyCapabilitiesVersion], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory TerminologyCapabilities_Version.fromJsonString(String source) {
+  factory TerminologyCapabilitiesVersion.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$TerminologyCapabilities_VersionFromJson(json);
+      return _$TerminologyCapabilitiesVersionFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1966,7 +1939,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [code]: Code of the property supported.;
 ///
@@ -1977,8 +1950,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [opElement] (_op): Extensions for op;
   factory TerminologyCapabilitiesFilter({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Code? code,
 @JsonKey(name: '_code')   Element? codeElement,
    List<Code>? op,
@@ -1990,30 +1963,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TerminologyCapabilities_Filter.fromYaml(dynamic yaml) => yaml is String
-      ? TerminologyCapabilities_Filter.fromJson(
+  factory TerminologyCapabilitiesFilter.fromYaml(dynamic yaml) => yaml is String
+      ? TerminologyCapabilitiesFilter.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TerminologyCapabilities_Filter.fromJson(
+          ? TerminologyCapabilitiesFilter.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'TerminologyCapabilities_Filter cannot be constructed from input provided,'
+              'TerminologyCapabilitiesFilter cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilities_Filter.fromJson(Map<String, dynamic> json) =>
-      _$TerminologyCapabilities_FilterFromJson(json);
+  factory TerminologyCapabilitiesFilter.fromJson(Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesFilterFromJson(json);
 
-  /// Acts like a constructor, returns a [TerminologyCapabilities_Filter], accepts a
+  /// Acts like a constructor, returns a [TerminologyCapabilitiesFilter], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory TerminologyCapabilities_Filter.fromJsonString(String source) {
+  factory TerminologyCapabilitiesFilter.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$TerminologyCapabilities_FilterFromJson(json);
+      return _$TerminologyCapabilitiesFilterFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2032,7 +2003,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [hierarchical]: Whether the server can return nested value sets.;
 ///
@@ -2053,8 +2024,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [textFilterElement] (_textFilter): Extensions for textFilter;
   factory TerminologyCapabilitiesExpansion({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Boolean? hierarchical,
 @JsonKey(name: '_hierarchical')   Element? hierarchicalElement,
    Boolean? paging,
@@ -2071,30 +2042,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TerminologyCapabilities_Expansion.fromYaml(dynamic yaml) => yaml is String
-      ? TerminologyCapabilities_Expansion.fromJson(
+  factory TerminologyCapabilitiesExpansion.fromYaml(dynamic yaml) => yaml is String
+      ? TerminologyCapabilitiesExpansion.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TerminologyCapabilities_Expansion.fromJson(
+          ? TerminologyCapabilitiesExpansion.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'TerminologyCapabilities_Expansion cannot be constructed from input provided,'
+              'TerminologyCapabilitiesExpansion cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilities_Expansion.fromJson(Map<String, dynamic> json) =>
-      _$TerminologyCapabilities_ExpansionFromJson(json);
+  factory TerminologyCapabilitiesExpansion.fromJson(Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesExpansionFromJson(json);
 
-  /// Acts like a constructor, returns a [TerminologyCapabilities_Expansion], accepts a
+  /// Acts like a constructor, returns a [TerminologyCapabilitiesExpansion], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory TerminologyCapabilities_Expansion.fromJsonString(String source) {
+  factory TerminologyCapabilitiesExpansion.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$TerminologyCapabilities_ExpansionFromJson(json);
+      return _$TerminologyCapabilitiesExpansionFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2113,7 +2082,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [name]: Name of the supported expansion parameter.;
 ///
@@ -2124,8 +2093,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [documentationElement] (_documentation): Extensions for documentation;
   factory TerminologyCapabilitiesParameter({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Code? name,
 @JsonKey(name: '_name')   Element? nameElement,
    String? documentation,
@@ -2137,30 +2106,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TerminologyCapabilities_Parameter.fromYaml(dynamic yaml) => yaml is String
-      ? TerminologyCapabilities_Parameter.fromJson(
+  factory TerminologyCapabilitiesParameter.fromYaml(dynamic yaml) => yaml is String
+      ? TerminologyCapabilitiesParameter.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TerminologyCapabilities_Parameter.fromJson(
+          ? TerminologyCapabilitiesParameter.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'TerminologyCapabilities_Parameter cannot be constructed from input provided,'
+              'TerminologyCapabilitiesParameter cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilities_Parameter.fromJson(Map<String, dynamic> json) =>
-      _$TerminologyCapabilities_ParameterFromJson(json);
+  factory TerminologyCapabilitiesParameter.fromJson(Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesParameterFromJson(json);
 
-  /// Acts like a constructor, returns a [TerminologyCapabilities_Parameter], accepts a
+  /// Acts like a constructor, returns a [TerminologyCapabilitiesParameter], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory TerminologyCapabilities_Parameter.fromJsonString(String source) {
+  factory TerminologyCapabilitiesParameter.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$TerminologyCapabilities_ParameterFromJson(json);
+      return _$TerminologyCapabilitiesParameterFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2179,15 +2146,15 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [translations]: Whether translations are validated.;
 ///
 /// [translationsElement] (_translations): Extensions for translations;
   factory TerminologyCapabilitiesValidateCode({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Boolean? translations,
 @JsonKey(name: '_translations')   Element? translationsElement,
   }) = _$TerminologyCapabilitiesValidateCode;
@@ -2197,30 +2164,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TerminologyCapabilities_ValidateCode.fromYaml(dynamic yaml) => yaml is String
-      ? TerminologyCapabilities_ValidateCode.fromJson(
+  factory TerminologyCapabilitiesValidateCode.fromYaml(dynamic yaml) => yaml is String
+      ? TerminologyCapabilitiesValidateCode.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TerminologyCapabilities_ValidateCode.fromJson(
+          ? TerminologyCapabilitiesValidateCode.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'TerminologyCapabilities_ValidateCode cannot be constructed from input provided,'
+              'TerminologyCapabilitiesValidateCode cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilities_ValidateCode.fromJson(Map<String, dynamic> json) =>
-      _$TerminologyCapabilities_ValidateCodeFromJson(json);
+  factory TerminologyCapabilitiesValidateCode.fromJson(Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesValidateCodeFromJson(json);
 
-  /// Acts like a constructor, returns a [TerminologyCapabilities_ValidateCode], accepts a
+  /// Acts like a constructor, returns a [TerminologyCapabilitiesValidateCode], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory TerminologyCapabilities_ValidateCode.fromJsonString(String source) {
+  factory TerminologyCapabilitiesValidateCode.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$TerminologyCapabilities_ValidateCodeFromJson(json);
+      return _$TerminologyCapabilitiesValidateCodeFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2239,15 +2204,15 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [needsMap]: Whether the client must identify the map.;
 ///
 /// [needsMapElement] (_needsMap): Extensions for needsMap;
   factory TerminologyCapabilitiesTranslation({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Boolean? needsMap,
 @JsonKey(name: '_needsMap')   Element? needsMapElement,
   }) = _$TerminologyCapabilitiesTranslation;
@@ -2257,30 +2222,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TerminologyCapabilities_Translation.fromYaml(dynamic yaml) => yaml is String
-      ? TerminologyCapabilities_Translation.fromJson(
+  factory TerminologyCapabilitiesTranslation.fromYaml(dynamic yaml) => yaml is String
+      ? TerminologyCapabilitiesTranslation.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TerminologyCapabilities_Translation.fromJson(
+          ? TerminologyCapabilitiesTranslation.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'TerminologyCapabilities_Translation cannot be constructed from input provided,'
+              'TerminologyCapabilitiesTranslation cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilities_Translation.fromJson(Map<String, dynamic> json) =>
-      _$TerminologyCapabilities_TranslationFromJson(json);
+  factory TerminologyCapabilitiesTranslation.fromJson(Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesTranslationFromJson(json);
 
-  /// Acts like a constructor, returns a [TerminologyCapabilities_Translation], accepts a
+  /// Acts like a constructor, returns a [TerminologyCapabilitiesTranslation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory TerminologyCapabilities_Translation.fromJsonString(String source) {
+  factory TerminologyCapabilitiesTranslation.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$TerminologyCapabilities_TranslationFromJson(json);
+      return _$TerminologyCapabilitiesTranslationFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2299,15 +2262,15 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [translation]: If cross-system closure is supported.;
 ///
 /// [translationElement] (_translation): Extensions for translation;
   factory TerminologyCapabilitiesClosure({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Boolean? translation,
 @JsonKey(name: '_translation')   Element? translationElement,
   }) = _$TerminologyCapabilitiesClosure;
@@ -2317,30 +2280,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory TerminologyCapabilities_Closure.fromYaml(dynamic yaml) => yaml is String
-      ? TerminologyCapabilities_Closure.fromJson(
+  factory TerminologyCapabilitiesClosure.fromYaml(dynamic yaml) => yaml is String
+      ? TerminologyCapabilitiesClosure.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? TerminologyCapabilities_Closure.fromJson(
+          ? TerminologyCapabilitiesClosure.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'TerminologyCapabilities_Closure cannot be constructed from input provided,'
+              'TerminologyCapabilitiesClosure cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory TerminologyCapabilities_Closure.fromJson(Map<String, dynamic> json) =>
-      _$TerminologyCapabilities_ClosureFromJson(json);
+  factory TerminologyCapabilitiesClosure.fromJson(Map<String, dynamic> json) =>
+      _$TerminologyCapabilitiesClosureFromJson(json);
 
-  /// Acts like a constructor, returns a [TerminologyCapabilities_Closure], accepts a
+  /// Acts like a constructor, returns a [TerminologyCapabilitiesClosure], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory TerminologyCapabilities_Closure.fromJsonString(String source) {
+  factory TerminologyCapabilitiesClosure.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$TerminologyCapabilities_ClosureFromJson(json);
+      return _$TerminologyCapabilitiesClosureFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2375,7 +2336,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [url]: An absolute URI that is used to identify this value set when it is referenced in a specification, model, design or an instance; also called its canonical identifier. This SHOULD be globally unique and SHOULD be a literal address at which an authoritative instance of this value set is (or will be) published. This URL can be the target of a canonical reference. It SHALL remain the same when the value set is stored on different servers.;
 ///
@@ -2439,7 +2400,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 ///
 /// [scope]: Description of the semantic space the Value Set Expansion is intended to cover and should further clarify the text in ValueSet.description.;
   factory ValueSet({
-resourceType = const R5ResourceType.ValueSet R5ResourceType,
+R5ResourceType resourceType = const R5ResourceType.ValueSet,
    Id? id,
    Meta? meta,
    Uri? implicitRules,
@@ -2447,9 +2408,9 @@ resourceType = const R5ResourceType.ValueSet R5ResourceType,
    Code? language,
 @JsonKey(name: '_language')   Element? languageElement,
    Narrative? text,
-   List<ResourceList>? contained,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+   List<Resource>? contained,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Uri? url,
 @JsonKey(name: '_url')   Element? urlElement,
    List<Identifier>? identifier,
@@ -2509,9 +2470,7 @@ resourceType = const R5ResourceType.ValueSet R5ResourceType,
     if (json is Map<String, dynamic>) {
       return _$ValueSetFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2530,7 +2489,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [lockedDate]: The Locked Date is  the effective date that is used to determine the version of all referenced Code Systems and Value Set Definitions included in the compose that are not already tied to a specific version.;
 ///
@@ -2549,8 +2508,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [propertyElement] (_property): Extensions for property;
   factory ValueSetCompose({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Date? lockedDate,
 @JsonKey(name: '_lockedDate')   Element? lockedDateElement,
    Boolean? inactive,
@@ -2566,30 +2525,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ValueSet_Compose.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSet_Compose.fromJson(
+  factory ValueSetCompose.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetCompose.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ValueSet_Compose.fromJson(
+          ? ValueSetCompose.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'ValueSet_Compose cannot be constructed from input provided,'
+              'ValueSetCompose cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSet_Compose.fromJson(Map<String, dynamic> json) =>
-      _$ValueSet_ComposeFromJson(json);
+  factory ValueSetCompose.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetComposeFromJson(json);
 
-  /// Acts like a constructor, returns a [ValueSet_Compose], accepts a
+  /// Acts like a constructor, returns a [ValueSetCompose], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory ValueSet_Compose.fromJsonString(String source) {
+  factory ValueSetCompose.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ValueSet_ComposeFromJson(json);
+      return _$ValueSetComposeFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2608,7 +2565,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [system]: An absolute URI which is the code system from which the selected codes come from.;
 ///
@@ -2629,8 +2586,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [copyrightElement] (_copyright): Extensions for copyright;
   factory ValueSetInclude({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Uri? system,
 @JsonKey(name: '_system')   Element? systemElement,
    String? version,
@@ -2647,30 +2604,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ValueSet_Include.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSet_Include.fromJson(
+  factory ValueSetInclude.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetInclude.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ValueSet_Include.fromJson(
+          ? ValueSetInclude.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'ValueSet_Include cannot be constructed from input provided,'
+              'ValueSetInclude cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSet_Include.fromJson(Map<String, dynamic> json) =>
-      _$ValueSet_IncludeFromJson(json);
+  factory ValueSetInclude.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetIncludeFromJson(json);
 
-  /// Acts like a constructor, returns a [ValueSet_Include], accepts a
+  /// Acts like a constructor, returns a [ValueSetInclude], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory ValueSet_Include.fromJsonString(String source) {
+  factory ValueSetInclude.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ValueSet_IncludeFromJson(json);
+      return _$ValueSetIncludeFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2689,7 +2644,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [code]: Specifies a code for the concept to be included or excluded.;
 ///
@@ -2702,8 +2657,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [designation]: Additional representations for this concept when used in this value set - other languages, aliases, specialized purposes, used for particular purposes, etc.;
   factory ValueSetConcept({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Code? code,
 @JsonKey(name: '_code')   Element? codeElement,
    String? display,
@@ -2716,30 +2671,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ValueSet_Concept.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSet_Concept.fromJson(
+  factory ValueSetConcept.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetConcept.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ValueSet_Concept.fromJson(
+          ? ValueSetConcept.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'ValueSet_Concept cannot be constructed from input provided,'
+              'ValueSetConcept cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSet_Concept.fromJson(Map<String, dynamic> json) =>
-      _$ValueSet_ConceptFromJson(json);
+  factory ValueSetConcept.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetConceptFromJson(json);
 
-  /// Acts like a constructor, returns a [ValueSet_Concept], accepts a
+  /// Acts like a constructor, returns a [ValueSetConcept], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory ValueSet_Concept.fromJsonString(String source) {
+  factory ValueSetConcept.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ValueSet_ConceptFromJson(json);
+      return _$ValueSetConceptFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2758,7 +2711,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [language]: The language this designation is defined for.;
 ///
@@ -2771,8 +2724,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [valueElement] (_value): Extensions for value;
   factory ValueSetDesignation({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Code? language,
 @JsonKey(name: '_language')   Element? languageElement,
    Coding? use,
@@ -2785,30 +2738,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ValueSet_Designation.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSet_Designation.fromJson(
+  factory ValueSetDesignation.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetDesignation.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ValueSet_Designation.fromJson(
+          ? ValueSetDesignation.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'ValueSet_Designation cannot be constructed from input provided,'
+              'ValueSetDesignation cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSet_Designation.fromJson(Map<String, dynamic> json) =>
-      _$ValueSet_DesignationFromJson(json);
+  factory ValueSetDesignation.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetDesignationFromJson(json);
 
-  /// Acts like a constructor, returns a [ValueSet_Designation], accepts a
+  /// Acts like a constructor, returns a [ValueSetDesignation], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory ValueSet_Designation.fromJsonString(String source) {
+  factory ValueSetDesignation.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ValueSet_DesignationFromJson(json);
+      return _$ValueSetDesignationFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2827,7 +2778,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [property]: A code that identifies a property or a filter defined in the code system.;
 ///
@@ -2842,8 +2793,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [valueElement] (_value): Extensions for value;
   factory ValueSetFilter({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Code? property,
 @JsonKey(name: '_property')   Element? propertyElement,
    Code? op,
@@ -2857,30 +2808,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ValueSet_Filter.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSet_Filter.fromJson(
+  factory ValueSetFilter.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetFilter.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ValueSet_Filter.fromJson(
+          ? ValueSetFilter.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'ValueSet_Filter cannot be constructed from input provided,'
+              'ValueSetFilter cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSet_Filter.fromJson(Map<String, dynamic> json) =>
-      _$ValueSet_FilterFromJson(json);
+  factory ValueSetFilter.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetFilterFromJson(json);
 
-  /// Acts like a constructor, returns a [ValueSet_Filter], accepts a
+  /// Acts like a constructor, returns a [ValueSetFilter], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory ValueSet_Filter.fromJsonString(String source) {
+  factory ValueSetFilter.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ValueSet_FilterFromJson(json);
+      return _$ValueSetFilterFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2899,7 +2848,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [identifier]: An identifier that uniquely identifies this expansion of the valueset, based on a unique combination of the provided parameters, the system default parameters, and the underlying system code system versions etc. Systems may re-use the same identifier as long as those factors remain the same, and the expansion is the same, but are not required to do so. This is a business identifier.;
 ///
@@ -2924,8 +2873,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [contains]: The codes that are contained in the value set expansion.;
   factory ValueSetExpansion({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Uri? identifier,
 @JsonKey(name: '_identifier')   Element? identifierElement,
    DateTime? timestamp,
@@ -2944,30 +2893,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ValueSet_Expansion.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSet_Expansion.fromJson(
+  factory ValueSetExpansion.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetExpansion.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ValueSet_Expansion.fromJson(
+          ? ValueSetExpansion.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'ValueSet_Expansion cannot be constructed from input provided,'
+              'ValueSetExpansion cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSet_Expansion.fromJson(Map<String, dynamic> json) =>
-      _$ValueSet_ExpansionFromJson(json);
+  factory ValueSetExpansion.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetExpansionFromJson(json);
 
-  /// Acts like a constructor, returns a [ValueSet_Expansion], accepts a
+  /// Acts like a constructor, returns a [ValueSetExpansion], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory ValueSet_Expansion.fromJsonString(String source) {
+  factory ValueSetExpansion.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ValueSet_ExpansionFromJson(json);
+      return _$ValueSetExpansionFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2986,7 +2933,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [name]: Name of the input parameter to the $expand operation; may be a server-assigned name for additional default or other server-supplied parameters used to control the expansion process.;
 ///
@@ -3021,23 +2968,23 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [valueDateTimeElement] (_valueDateTime): Extensions for valueDateTime;
   factory ValueSetParameter({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    String? name,
 @JsonKey(name: '_name')   Element? nameElement,
-   Null? valueString,
+   Markdown? valueString,
 @JsonKey(name: '_valueString')   Element? valueStringElement,
    Boolean? valueBoolean,
 @JsonKey(name: '_valueBoolean')   Element? valueBooleanElement,
    Integer? valueInteger,
 @JsonKey(name: '_valueInteger')   Element? valueIntegerElement,
-   Null? valueDecimal,
+   Decimal? valueDecimal,
 @JsonKey(name: '_valueDecimal')   Element? valueDecimalElement,
-   Null? valueUri,
+   FhirUri? valueUri,
 @JsonKey(name: '_valueUri')   Element? valueUriElement,
-   Null? valueCode,
+   Code? valueCode,
 @JsonKey(name: '_valueCode')   Element? valueCodeElement,
-   Null? valueDateTime,
+   DateTime? valueDateTime,
 @JsonKey(name: '_valueDateTime')   Element? valueDateTimeElement,
   }) = _$ValueSetParameter;
 
@@ -3046,30 +2993,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ValueSet_Parameter.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSet_Parameter.fromJson(
+  factory ValueSetParameter.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetParameter.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ValueSet_Parameter.fromJson(
+          ? ValueSetParameter.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'ValueSet_Parameter cannot be constructed from input provided,'
+              'ValueSetParameter cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSet_Parameter.fromJson(Map<String, dynamic> json) =>
-      _$ValueSet_ParameterFromJson(json);
+  factory ValueSetParameter.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetParameterFromJson(json);
 
-  /// Acts like a constructor, returns a [ValueSet_Parameter], accepts a
+  /// Acts like a constructor, returns a [ValueSetParameter], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory ValueSet_Parameter.fromJsonString(String source) {
+  factory ValueSetParameter.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ValueSet_ParameterFromJson(json);
+      return _$ValueSetParameterFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -3088,7 +3033,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [code]: A code that is used to identify the property. The code is used in ValueSet.expansion.contains.property.code.;
 ///
@@ -3099,8 +3044,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [uriElement] (_uri): Extensions for uri;
   factory ValueSetProperty({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Code? code,
 @JsonKey(name: '_code')   Element? codeElement,
    Uri? uri,
@@ -3112,30 +3057,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ValueSet_Property.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSet_Property.fromJson(
+  factory ValueSetProperty.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetProperty.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ValueSet_Property.fromJson(
+          ? ValueSetProperty.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'ValueSet_Property cannot be constructed from input provided,'
+              'ValueSetProperty cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSet_Property.fromJson(Map<String, dynamic> json) =>
-      _$ValueSet_PropertyFromJson(json);
+  factory ValueSetProperty.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetPropertyFromJson(json);
 
-  /// Acts like a constructor, returns a [ValueSet_Property], accepts a
+  /// Acts like a constructor, returns a [ValueSetProperty], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory ValueSet_Property.fromJsonString(String source) {
+  factory ValueSetProperty.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ValueSet_PropertyFromJson(json);
+      return _$ValueSetPropertyFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -3154,7 +3097,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [system]: An absolute URI which is the code system in which the code for this item in the expansion is defined.;
 ///
@@ -3187,8 +3130,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [contains]: Other codes and entries contained under this entry in the hierarchy.;
   factory ValueSetContains({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Uri? system,
 @JsonKey(name: '_system')   Element? systemElement,
 @JsonKey(name: 'abstract')   Boolean? abstract_,
@@ -3211,30 +3154,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ValueSet_Contains.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSet_Contains.fromJson(
+  factory ValueSetContains.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetContains.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ValueSet_Contains.fromJson(
+          ? ValueSetContains.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'ValueSet_Contains cannot be constructed from input provided,'
+              'ValueSetContains cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSet_Contains.fromJson(Map<String, dynamic> json) =>
-      _$ValueSet_ContainsFromJson(json);
+  factory ValueSetContains.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetContainsFromJson(json);
 
-  /// Acts like a constructor, returns a [ValueSet_Contains], accepts a
+  /// Acts like a constructor, returns a [ValueSetContains], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory ValueSet_Contains.fromJsonString(String source) {
+  factory ValueSetContains.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ValueSet_ContainsFromJson(json);
+      return _$ValueSetContainsFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -3253,7 +3194,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [code]: A code that is a reference to ValueSet.expansion.property.code.;
 ///
@@ -3286,22 +3227,22 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [valueDecimalElement] (_valueDecimal): Extensions for valueDecimal;
   factory ValueSetProperty1({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Code? code,
 @JsonKey(name: '_code')   Element? codeElement,
-   Null? valueCode,
+   Code? valueCode,
 @JsonKey(name: '_valueCode')   Element? valueCodeElement,
    Coding? valueCoding,
-   Null? valueString,
+   Markdown? valueString,
 @JsonKey(name: '_valueString')   Element? valueStringElement,
    Integer? valueInteger,
 @JsonKey(name: '_valueInteger')   Element? valueIntegerElement,
    Boolean? valueBoolean,
 @JsonKey(name: '_valueBoolean')   Element? valueBooleanElement,
-   Null? valueDateTime,
+   DateTime? valueDateTime,
 @JsonKey(name: '_valueDateTime')   Element? valueDateTimeElement,
-   Null? valueDecimal,
+   Decimal? valueDecimal,
 @JsonKey(name: '_valueDecimal')   Element? valueDecimalElement,
   }) = _$ValueSetProperty1;
 
@@ -3310,30 +3251,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ValueSet_Property1.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSet_Property1.fromJson(
+  factory ValueSetProperty1.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetProperty1.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ValueSet_Property1.fromJson(
+          ? ValueSetProperty1.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'ValueSet_Property1 cannot be constructed from input provided,'
+              'ValueSetProperty1 cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSet_Property1.fromJson(Map<String, dynamic> json) =>
-      _$ValueSet_Property1FromJson(json);
+  factory ValueSetProperty1.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetProperty1FromJson(json);
 
-  /// Acts like a constructor, returns a [ValueSet_Property1], accepts a
+  /// Acts like a constructor, returns a [ValueSetProperty1], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory ValueSet_Property1.fromJsonString(String source) {
+  factory ValueSetProperty1.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ValueSet_Property1FromJson(json);
+      return _$ValueSetProperty1FromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -3352,7 +3291,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [focus]: The general focus of the Value Set as it relates to the intended semantic space. This can be the information about clinical relevancy or the statement about the general focus of the Value Set, such as a description of types of messages, payment options, geographic locations, etc.;
 ///
@@ -3367,8 +3306,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [exclusionCriteriaElement] (_exclusionCriteria): Extensions for exclusionCriteria;
   factory ValueSetScope({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    String? focus,
 @JsonKey(name: '_focus')   Element? focusElement,
    String? inclusionCriteria,
@@ -3382,30 +3321,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ValueSet_Scope.fromYaml(dynamic yaml) => yaml is String
-      ? ValueSet_Scope.fromJson(
+  factory ValueSetScope.fromYaml(dynamic yaml) => yaml is String
+      ? ValueSetScope.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? ValueSet_Scope.fromJson(
+          ? ValueSetScope.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'ValueSet_Scope cannot be constructed from input provided,'
+              'ValueSetScope cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ValueSet_Scope.fromJson(Map<String, dynamic> json) =>
-      _$ValueSet_ScopeFromJson(json);
+  factory ValueSetScope.fromJson(Map<String, dynamic> json) =>
+      _$ValueSetScopeFromJson(json);
 
-  /// Acts like a constructor, returns a [ValueSet_Scope], accepts a
+  /// Acts like a constructor, returns a [ValueSetScope], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory ValueSet_Scope.fromJsonString(String source) {
+  factory ValueSetScope.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ValueSet_ScopeFromJson(json);
+      return _$ValueSetScopeFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }

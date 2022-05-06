@@ -1,7 +1,18 @@
-import '../r5.dart';
+// Dart imports:
+import 'dart:convert';
+
+// Package imports:
+import 'package:fhir_yaml/fhir_yaml.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:yaml/yaml.dart';
 
+// Project imports:
+import '../../r5.dart';
 
+// import 'package:flutter/foundation.dart';
+part 'payment.enums.dart';
+part 'payment.freezed.dart';
+part 'payment.g.dart';
   @freezed
 
   class PaymentNotice with Resource,  _PaymentNotice {
@@ -32,7 +43,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [identifier]: A unique identifier assigned to this payment notice.;
 ///
@@ -64,7 +75,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 ///
 /// [paymentStatus]: A code indicating whether payment has been sent or cleared.;
   factory PaymentNotice({
-resourceType = const R5ResourceType.PaymentNotice R5ResourceType,
+R5ResourceType resourceType = const R5ResourceType.PaymentNotice,
    Id? id,
    Meta? meta,
    Uri? implicitRules,
@@ -72,9 +83,9 @@ resourceType = const R5ResourceType.PaymentNotice R5ResourceType,
    Code? language,
 @JsonKey(name: '_language')   Element? languageElement,
    Narrative? text,
-   List<ResourceList>? contained,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+   List<Resource>? contained,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    List<Identifier>? identifier,
    Code? status,
 @JsonKey(name: '_status')   Element? statusElement,
@@ -118,9 +129,7 @@ resourceType = const R5ResourceType.PaymentNotice R5ResourceType,
     if (json is Map<String, dynamic>) {
       return _$PaymentNoticeFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -155,7 +164,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [identifier]: A unique identifier assigned to this payment reconciliation.;
 ///
@@ -197,7 +206,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 ///
 /// [processNote]: A note that describes or explains the processing in a human readable form.;
   factory PaymentReconciliation({
-resourceType = const R5ResourceType.PaymentReconciliation R5ResourceType,
+R5ResourceType resourceType = const R5ResourceType.PaymentReconciliation,
    Id? id,
    Meta? meta,
    Uri? implicitRules,
@@ -205,9 +214,9 @@ resourceType = const R5ResourceType.PaymentReconciliation R5ResourceType,
    Code? language,
 @JsonKey(name: '_language')   Element? languageElement,
    Narrative? text,
-   List<ResourceList>? contained,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+   List<Resource>? contained,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    List<Identifier>? identifier,
    Code? status,
 @JsonKey(name: '_status')   Element? statusElement,
@@ -256,9 +265,7 @@ resourceType = const R5ResourceType.PaymentReconciliation R5ResourceType,
     if (json is Map<String, dynamic>) {
       return _$PaymentReconciliationFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -277,7 +284,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [identifier]: Unique identifier for the current payment item for the referenced payable.;
 ///
@@ -302,8 +309,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [amount]: The monetary amount allocated from the total payment to the payable.;
   factory PaymentReconciliationDetail({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Identifier? identifier,
    Identifier? predecessor,
   required CodeableConcept type,
@@ -322,30 +329,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory PaymentReconciliation_Detail.fromYaml(dynamic yaml) => yaml is String
-      ? PaymentReconciliation_Detail.fromJson(
+  factory PaymentReconciliationDetail.fromYaml(dynamic yaml) => yaml is String
+      ? PaymentReconciliationDetail.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? PaymentReconciliation_Detail.fromJson(
+          ? PaymentReconciliationDetail.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'PaymentReconciliation_Detail cannot be constructed from input provided,'
+              'PaymentReconciliationDetail cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentReconciliation_Detail.fromJson(Map<String, dynamic> json) =>
-      _$PaymentReconciliation_DetailFromJson(json);
+  factory PaymentReconciliationDetail.fromJson(Map<String, dynamic> json) =>
+      _$PaymentReconciliationDetailFromJson(json);
 
-  /// Acts like a constructor, returns a [PaymentReconciliation_Detail], accepts a
+  /// Acts like a constructor, returns a [PaymentReconciliationDetail], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory PaymentReconciliation_Detail.fromJsonString(String source) {
+  factory PaymentReconciliationDetail.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$PaymentReconciliation_DetailFromJson(json);
+      return _$PaymentReconciliationDetailFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -364,7 +369,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [type]: The business purpose of the note text.;
 ///
@@ -375,8 +380,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [textElement] (_text): Extensions for text;
   factory PaymentReconciliationProcessNote({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Code? type,
 @JsonKey(name: '_type')   Element? typeElement,
    String? text,
@@ -388,30 +393,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory PaymentReconciliation_ProcessNote.fromYaml(dynamic yaml) => yaml is String
-      ? PaymentReconciliation_ProcessNote.fromJson(
+  factory PaymentReconciliationProcessNote.fromYaml(dynamic yaml) => yaml is String
+      ? PaymentReconciliationProcessNote.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? PaymentReconciliation_ProcessNote.fromJson(
+          ? PaymentReconciliationProcessNote.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'PaymentReconciliation_ProcessNote cannot be constructed from input provided,'
+              'PaymentReconciliationProcessNote cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory PaymentReconciliation_ProcessNote.fromJson(Map<String, dynamic> json) =>
-      _$PaymentReconciliation_ProcessNoteFromJson(json);
+  factory PaymentReconciliationProcessNote.fromJson(Map<String, dynamic> json) =>
+      _$PaymentReconciliationProcessNoteFromJson(json);
 
-  /// Acts like a constructor, returns a [PaymentReconciliation_ProcessNote], accepts a
+  /// Acts like a constructor, returns a [PaymentReconciliationProcessNote], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory PaymentReconciliation_ProcessNote.fromJsonString(String source) {
+  factory PaymentReconciliationProcessNote.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$PaymentReconciliation_ProcessNoteFromJson(json);
+      return _$PaymentReconciliationProcessNoteFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }

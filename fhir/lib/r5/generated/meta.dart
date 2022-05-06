@@ -1,10 +1,19 @@
-import '../r5.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
+// Dart imports:
+import 'dart:convert';
 
+// Package imports:
+import 'package:fhir_yaml/fhir_yaml.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:yaml/yaml.dart';
+
+// Project imports:
+import '../../r5.dart';
+
+// import 'package:flutter/foundation.dart';
 
   @freezed
 
-  class ContactDetail with Resource,  _ContactDetail {
+  class ContactDetail with  _ContactDetail {
   ContactDetail._();
 
   /// [ContactDetail]: Specifies contact information for a person or organization.
@@ -21,7 +30,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 /// [telecom]: The contact details for the individual (if a name was provided) or the organization.;
   factory ContactDetail({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
    String? name,
 @JsonKey(name: '_name')   Element? nameElement,
    List<ContactPoint>? telecom,
@@ -53,16 +62,14 @@ import 'package:freezed_annotation/freezed_annotation.dart';
     if (json is Map<String, dynamic>) {
       return _$ContactDetailFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class Contributor with Resource,  _Contributor {
+  class Contributor with  _Contributor {
   Contributor._();
 
   /// [Contributor]: A contributor to the content of a knowledge asset, including authors, editors, reviewers, and endorsers.
@@ -83,7 +90,8 @@ You passed Instance of 'JsonCodec'
 /// [contact]: Contact details to assist a user in finding and communicating with the contributor.;
   factory Contributor({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   ContributorType? type,
 @JsonKey(name: '_type')   Element? typeElement,
    String? name,
 @JsonKey(name: '_name')   Element? nameElement,
@@ -116,16 +124,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$ContributorFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class DataRequirement with Resource,  _DataRequirement {
+  class DataRequirement with  _DataRequirement {
   DataRequirement._();
 
   /// [DataRequirement]: Describes a required data item for evaluation in terms of the type of data, and optional code or date-based filters of the data.
@@ -162,7 +168,7 @@ The value of mustSupport SHALL be a FHIRPath resolveable on the type of the Data
 /// [sort]: Specifies the order of the results to be returned.;
   factory DataRequirement({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
    Code? type,
 @JsonKey(name: '_type')   Element? typeElement,
    List<Canonical>? profile,
@@ -203,9 +209,7 @@ The value of mustSupport SHALL be a FHIRPath resolveable on the type of the Data
     if (json is Map<String, dynamic>) {
       return _$DataRequirementFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -224,7 +228,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [path]: The code-valued attribute of the filter. The specified path SHALL be a FHIRPath resolveable on the specified type of the DataRequirement, and SHALL consist only of identifiers, constant indexers, and .resolve(). The path is allowed to contain qualifiers (.) to traverse sub-elements, as well as indexers ([x]) to traverse multiple-cardinality sub-elements (see the [Simple FHIRPath Profile](fhirpath.html#simple) for full details). Note that the index must be an integer constant. The path must resolve to an element of type code, Coding, or CodeableConcept.;
 ///
@@ -239,8 +243,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [code]: The codes for the code filter. If values are given, the filter will return only those data items for which the code-valued attribute specified by the path has a value that is one of the specified codes. If codes are specified in addition to a value set, the filter returns items matching a code in the value set or one of the specified codes.;
   factory DataRequirementCodeFilter({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    String? path,
 @JsonKey(name: '_path')   Element? pathElement,
    String? searchParam,
@@ -254,30 +258,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory DataRequirement_CodeFilter.fromYaml(dynamic yaml) => yaml is String
-      ? DataRequirement_CodeFilter.fromJson(
+  factory DataRequirementCodeFilter.fromYaml(dynamic yaml) => yaml is String
+      ? DataRequirementCodeFilter.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DataRequirement_CodeFilter.fromJson(
+          ? DataRequirementCodeFilter.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'DataRequirement_CodeFilter cannot be constructed from input provided,'
+              'DataRequirementCodeFilter cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DataRequirement_CodeFilter.fromJson(Map<String, dynamic> json) =>
-      _$DataRequirement_CodeFilterFromJson(json);
+  factory DataRequirementCodeFilter.fromJson(Map<String, dynamic> json) =>
+      _$DataRequirementCodeFilterFromJson(json);
 
-  /// Acts like a constructor, returns a [DataRequirement_CodeFilter], accepts a
+  /// Acts like a constructor, returns a [DataRequirementCodeFilter], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory DataRequirement_CodeFilter.fromJsonString(String source) {
+  factory DataRequirementCodeFilter.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$DataRequirement_CodeFilterFromJson(json);
+      return _$DataRequirementCodeFilterFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -296,7 +298,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [path]: The date-valued attribute of the filter. The specified path SHALL be a FHIRPath resolveable on the specified type of the DataRequirement, and SHALL consist only of identifiers, constant indexers, and .resolve(). The path is allowed to contain qualifiers (.) to traverse sub-elements, as well as indexers ([x]) to traverse multiple-cardinality sub-elements (see the [Simple FHIRPath Profile](fhirpath.html#simple) for full details). Note that the index must be an integer constant. The path must resolve to an element of type date, dateTime, Period, Schedule, or Timing.;
 ///
@@ -315,13 +317,13 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [valueDuration]: The value of the filter. If period is specified, the filter will return only those data items that fall within the bounds determined by the Period, inclusive of the period boundaries. If dateTime is specified, the filter will return only those data items that are equal to the specified dateTime. If a Duration is specified, the filter will return only those data items that fall within Duration before now.;
   factory DataRequirementDateFilter({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    String? path,
 @JsonKey(name: '_path')   Element? pathElement,
    String? searchParam,
 @JsonKey(name: '_searchParam')   Element? searchParamElement,
-   Null? valueDateTime,
+   DateTime? valueDateTime,
 @JsonKey(name: '_valueDateTime')   Element? valueDateTimeElement,
    Period? valuePeriod,
    Duration? valueDuration,
@@ -332,30 +334,28 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory DataRequirement_DateFilter.fromYaml(dynamic yaml) => yaml is String
-      ? DataRequirement_DateFilter.fromJson(
+  factory DataRequirementDateFilter.fromYaml(dynamic yaml) => yaml is String
+      ? DataRequirementDateFilter.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DataRequirement_DateFilter.fromJson(
+          ? DataRequirementDateFilter.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'DataRequirement_DateFilter cannot be constructed from input provided,'
+              'DataRequirementDateFilter cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DataRequirement_DateFilter.fromJson(Map<String, dynamic> json) =>
-      _$DataRequirement_DateFilterFromJson(json);
+  factory DataRequirementDateFilter.fromJson(Map<String, dynamic> json) =>
+      _$DataRequirementDateFilterFromJson(json);
 
-  /// Acts like a constructor, returns a [DataRequirement_DateFilter], accepts a
+  /// Acts like a constructor, returns a [DataRequirementDateFilter], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory DataRequirement_DateFilter.fromJsonString(String source) {
+  factory DataRequirementDateFilter.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$DataRequirement_DateFilterFromJson(json);
+      return _$DataRequirementDateFilterFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -374,7 +374,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [path]: The attribute of the sort. The specified path must be resolvable from the type of the required data. The path is allowed to contain qualifiers (.) to traverse sub-elements, as well as indexers ([x]) to traverse multiple-cardinality sub-elements. Note that the index must be an integer constant.;
 ///
@@ -385,10 +385,11 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [directionElement] (_direction): Extensions for direction;
   factory DataRequirementSort({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    String? path,
 @JsonKey(name: '_path')   Element? pathElement,
+   DataRequirementSortDirection? direction,
 @JsonKey(name: '_direction')   Element? directionElement,
   }) = _$DataRequirementSort;
 
@@ -397,37 +398,35 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory DataRequirement_Sort.fromYaml(dynamic yaml) => yaml is String
-      ? DataRequirement_Sort.fromJson(
+  factory DataRequirementSort.fromYaml(dynamic yaml) => yaml is String
+      ? DataRequirementSort.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? DataRequirement_Sort.fromJson(
+          ? DataRequirementSort.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'DataRequirement_Sort cannot be constructed from input provided,'
+              'DataRequirementSort cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory DataRequirement_Sort.fromJson(Map<String, dynamic> json) =>
-      _$DataRequirement_SortFromJson(json);
+  factory DataRequirementSort.fromJson(Map<String, dynamic> json) =>
+      _$DataRequirementSortFromJson(json);
 
-  /// Acts like a constructor, returns a [DataRequirement_Sort], accepts a
+  /// Acts like a constructor, returns a [DataRequirementSort], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory DataRequirement_Sort.fromJsonString(String source) {
+  factory DataRequirementSort.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$DataRequirement_SortFromJson(json);
+      return _$DataRequirementSortFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class ParameterDefinition with Resource,  _ParameterDefinition {
+  class ParameterDefinition with  _ParameterDefinition {
   ParameterDefinition._();
 
   /// [ParameterDefinition]: The parameters to the module. This collection specifies both the input and output parameters. Input parameters are provided by the caller as part of the $evaluate operation. Output parameters are included in the GuidanceResponse.
@@ -464,7 +463,7 @@ You passed Instance of 'JsonCodec'
 /// [profile]: If specified, this indicates a profile that the input data must conform to, or that the output data will conform to.;
   factory ParameterDefinition({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
    Code? name,
 @JsonKey(name: '_name')   Element? nameElement,
    Code? use,
@@ -506,16 +505,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$ParameterDefinitionFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class RelatedArtifact with Resource,  _RelatedArtifact {
+  class RelatedArtifact with  _RelatedArtifact {
   RelatedArtifact._();
 
   /// [RelatedArtifact]: Related artifacts such as additional documentation, justification, or bibliographic references.
@@ -550,7 +547,8 @@ You passed Instance of 'JsonCodec'
 /// [resourceReference]: The related artifact, if the artifact is not a canonical resource, or a resource reference to a canonical resource.;
   factory RelatedArtifact({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   RelatedArtifactType? type,
 @JsonKey(name: '_type')   Element? typeElement,
    List<CodeableConcept>? classifier,
    String? label,
@@ -590,16 +588,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$RelatedArtifactFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class TriggerDefinition with Resource,  _TriggerDefinition {
+  class TriggerDefinition with  _TriggerDefinition {
   TriggerDefinition._();
 
   /// [TriggerDefinition]: A description of a triggering event. Triggering events can be named events, data events, or periodic, as determined by the type element.
@@ -634,7 +630,8 @@ You passed Instance of 'JsonCodec'
 /// [condition]: A boolean-valued expression that is evaluated in the context of the container of the trigger definition and returns whether or not the trigger fires.;
   factory TriggerDefinition({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   TriggerDefinitionType? type,
 @JsonKey(name: '_type')   Element? typeElement,
    String? name,
 @JsonKey(name: '_name')   Element? nameElement,
@@ -642,7 +639,7 @@ You passed Instance of 'JsonCodec'
    Reference? timingReference,
    Date? timingDate,
 @JsonKey(name: '_timingDate')   Element? timingDateElement,
-   Null? timingDateTime,
+   DateTime? timingDateTime,
 @JsonKey(name: '_timingDateTime')   Element? timingDateTimeElement,
    List<DataRequirement>? data,
    Expression? condition,
@@ -674,16 +671,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$TriggerDefinitionFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class UsageContext with Resource,  _UsageContext {
+  class UsageContext with  _UsageContext {
   UsageContext._();
 
   /// [UsageContext]: Specifies clinical/business/etc. metadata that can be used to retrieve, index and/or categorize an artifact. This metadata can either be specific to the applicable population (e.g., age category, DRG) or the specific context of care (e.g., venue, care setting, provider of care).
@@ -704,7 +699,7 @@ You passed Instance of 'JsonCodec'
 /// [valueReference]: A value that defines the context specified in this context of use. The interpretation of the value is defined by the code.;
   factory UsageContext({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
   required Coding code,
    CodeableConcept? valueCodeableConcept,
    Quantity? valueQuantity,
@@ -738,16 +733,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$UsageContextFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class Expression with Resource,  _Expression {
+  class Expression with  _Expression {
   Expression._();
 
   /// [Expression]: A expression that is evaluated in a specified context and returns a value. The context of use of the expression must specify the context in which the expression is evaluated, and how the result of the expression is used.
@@ -778,7 +771,7 @@ You passed Instance of 'JsonCodec'
 /// [referenceElement] (_reference): Extensions for reference;
   factory Expression({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
    String? description,
 @JsonKey(name: '_description')   Element? descriptionElement,
    Id? name,
@@ -817,9 +810,7 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$ExpressionFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }

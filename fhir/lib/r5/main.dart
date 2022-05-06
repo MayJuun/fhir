@@ -6,12 +6,14 @@ import 'dart:io';
 import 'class_list.dart';
 import 'dart_words.dart';
 import 'grouped_resources.dart';
+import 'imports.dart';
 import 'primitives.dart';
 
 RegExp regExp = RegExp('[A-Z]');
 
 Future<void> main() async {
   final stringMap = startingStringMap;
+
   void addToStringMap(String resource, String addOn) {
     final index = stringMap.keys
         .toList()
@@ -30,8 +32,8 @@ Future<void> main() async {
 
   for (final strings in stringMap.keys) {
     if (stringMap[strings] != null) {
-      stringMap[strings] =
-          "import '../r5.dart';\nimport 'package:freezed_annotation/freezed_annotation.dart';\n\n";
+      stringMap[strings] = mostImports + (importMap[strings] ?? '');
+      // "import '../r5.dart';\nimport 'package:freezed_annotation/freezed_annotation.dart';\n\n";
     }
   }
 
@@ -72,10 +74,10 @@ Future<void> main() async {
           addToStringMap(resource.toString(),
               '  factory ${resource.replaceAll('_', '')}({\n');
           for (final k in definitions[resource]['properties'].keys) {
-            if (k == 'resourceType') {
+            if (k == 'resourceType' && resourceGroups.contains(resource)) {
               if (definitions[resource]['properties'][k]['const'] != null) {
                 addToStringMap(resource.toString(),
-                    'resourceType = const R5ResourceType.$resource R5ResourceType,\n');
+                    'R5ResourceType resourceType = const R5ResourceType.$resource,\n');
               } else {
                 print(
                     "No const for ${definitions[resource]['properties'][k]['resourceType']}\n"
@@ -89,7 +91,9 @@ Future<void> main() async {
                   .last;
               type = type.substring(0, 1).toUpperCase() + type.substring(1);
               var variable = k;
-              if (variable[0] == '_') {
+              if (variable == 'Extension') {
+                variable = 'FhirExtension';
+              } else if (variable[0] == '_') {
                 variable = variable.substring(1) + 'Element';
               } else if (words.contains(variable)) {
                 variable = '${variable}_';
@@ -108,23 +112,44 @@ Future<void> main() async {
                   print(
                       'Items with type NOT array: ${definitions[resource]['properties'][k]}');
                 } else {
-                  var type = definitions[resource]['properties'][k]['items']
-                          [r'$ref']
-                      .toString()
-                      .split('/')
-                      .last;
-                  type = type.substring(0, 1).toUpperCase() + type.substring(1);
-                  var variable = k;
-                  if (variable[0] == '_') {
-                    variable = variable.substring(1) + 'Element';
-                  } else if (words.contains(variable)) {
-                    variable = '${variable}_';
-                  }
+                  if (definitions[resource]['properties'][k]['items']['enum'] !=
+                      null) {
+                    var variable =
+                        k.substring(0, 1).toUpperCase() + k.substring(1);
+                    variable = '${resource.replaceAll("_", "")}$variable';
 
-                  addToStringMap(
-                      resource.toString(),
-                      "${k[0] == '_' || words.contains(k) ? '@JsonKey(name: \'$k\')' : ''}"
-                      '  ${required.contains(k) ? "required" : ""} List<${type.replaceAll("_", "")}>${required.contains(k) ? "" : "?"} $variable,\n');
+                    addToStringMap(
+                        resource.toString(),
+                        "${k[0] == '_' || words.contains(k) ? '@JsonKey(name: \'$k\')' : ''}"
+                        '  ${required.contains(k) ? "required" : ""} List<$variable>${required.contains(k) ? "" : "?"} $k,\n');
+                  } else {
+                    var type = definitions[resource]['properties'][k]['items']
+                            [r'$ref']
+                        .toString()
+                        .split('/')
+                        .last;
+                    type =
+                        type.substring(0, 1).toUpperCase() + type.substring(1);
+                    var variable = k;
+                    if (variable == 'Extension') {
+                      variable = 'FhirExtension';
+                    } else if (variable[0] == '_') {
+                      variable = variable.substring(1) + 'Element';
+                    } else if (words.contains(variable)) {
+                      variable = '${variable}_';
+                    }
+
+                    if (type == 'Extension') {
+                      type = 'FhirExtension';
+                    } else if (type == 'ResourceList') {
+                      type = 'Resource';
+                    }
+
+                    addToStringMap(
+                        resource.toString(),
+                        "${k[0] == '_' || words.contains(k) ? '@JsonKey(name: \'$k\')' : ''}"
+                        '  ${required.contains(k) ? "required" : ""} List<${type.replaceAll("_", "")}>${required.contains(k) ? "" : "?"} $variable,\n');
+                  }
                 }
               } else {
                 /// In case they introduce an item without a type
@@ -138,39 +163,41 @@ Future<void> main() async {
                       ['pattern']]
                   .toString();
               if (type != null) {
-                if(type == 'uri'){
-                  if(k.toLowerCase().contains('uri')){
+                if (type.toLowerCase() == 'uri') {
+                  if (k.toString().toLowerCase().contains('uri')) {
                     type = 'FhirUri';
-                  } else if(k.toLowerCase().contains('url')){
+                  } else if (k.toString().toLowerCase().contains('url')) {
                     type = 'FhirUrl';
-                  } else if (k.toLowerCase().contains('canonical')){
+                  } else if (k.toString().toLowerCase().contains('canonical')) {
                     type = 'Canonical';
                   } else {
                     type = 'FhirUri';
                   }
-                } else if(type == 'integer'){
-                  if(k.contains('64')){
+                } else if (type.toLowerCase() == 'integer') {
+                  if (k.toString().contains('64')) {
                     type = 'Integer64';
                   } else {
                     type = 'Integer';
                   }
-                } else if (type == 'code'){
-                  if(k.toLowerCase().contains('code')){
+                } else if (type.toLowerCase() == 'code') {
+                  if (k.toString().toLowerCase().contains('code')) {
                     type = 'Code';
                   } else {
                     type = 'String';
                   }
-                }
-                else 
-                {
-                type = type.substring(0, 1).toUpperCase() + type.substring(1);
+                } else {
+                  type = type.substring(0, 1).toUpperCase() + type.substring(1);
                 }
                 var variable = k;
+                if (variable == 'Extension') {
+                  variable = 'FhirExtension';
+                }
                 if (variable[0] == '_') {
                   variable = variable.substring(1) + 'Element';
                 } else if (words.contains(variable)) {
                   variable = '${variable}_';
                 }
+
                 addToStringMap(
                     resource.toString(),
                     "${k[0] == '_' || words.contains(k) ? '@JsonKey(name: \'$k\')' : ''}"
@@ -180,7 +207,14 @@ Future<void> main() async {
                     'No primitive found for ${definitions[resource]['properties'][k]['pattern']}');
               }
             } else if (definitions[resource]['properties'][k]['enum'] != null) {
-              print('Enum: ${definitions[resource]['properties'][k]['enum']}');
+              var variable = k.substring(0, 1).toUpperCase() + k.substring(1);
+              variable = '${resource.replaceAll("_", "")}$variable';
+              addToStringMap(
+                  resource.toString(),
+                  "${k[0] == '_' || words.contains(k) ? '@JsonKey(name: \'$k\')' : ''}"
+                  '  ${required.contains(k) ? "required" : ""} $variable${required.contains(k) ? "" : "?"} $k,\n');
+
+              // print('Enum: ${resource.replaceAll("_", "")}$variable');
             } else {
               print(
                   'No \$ref, items, pattern, or enum: ${definitions[resource]['properties'][k]}');
@@ -189,34 +223,34 @@ Future<void> main() async {
         }
         addToStringMap(resource.toString(),
             '  }) = _\$${resource.replaceAll('_', '')};\n\n');
-        addToStringMap(resource.toString(),'''
+        addToStringMap(resource.toString(), '''
           /// Produces a Yaml formatted String version of the object
   @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory $resource.fromYaml(dynamic yaml) => yaml is String
-      ? $resource.fromJson(
+  factory ${resource.replaceAll('_', '')}.fromYaml(dynamic yaml) => yaml is String
+      ? ${resource.replaceAll('_', '')}.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? $resource.fromJson(
+          ? ${resource.replaceAll('_', '')}.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              '$resource cannot be constructed from input provided,'
+              '${resource.replaceAll('_', '')} cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory $resource.fromJson(Map<String, dynamic> json) =>
-      _\$${resource}FromJson(json);
+  factory ${resource.replaceAll('_', '')}.fromJson(Map<String, dynamic> json) =>
+      _\$${resource.replaceAll('_', '')}FromJson(json);
 
-  /// Acts like a constructor, returns a [$resource], accepts a
+  /// Acts like a constructor, returns a [${resource.replaceAll('_', '')}], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory $resource.fromJsonString(String source) {
+  factory ${resource.replaceAll('_', '')}.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _\$${resource}FromJson(json);
+      return _\$${resource.replaceAll('_', '')}FromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed \$json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -234,14 +268,27 @@ Future<void> main() async {
       }
     }
   }
-  for(final strings in stringMap.keys){
-    if(strings.first != null && stringMap[strings] != null){
-    await File('generated/${strings.first}.dart').writeAsString(stringMap[strings]!);
-  }}
+  for (final strings in stringMap.keys) {
+    if (strings.first != null && stringMap[strings] != null) {
+      var finalString = stringMap[strings]!;
+      for (var k in finalReplace.keys) {
+        finalString = finalString.replaceAll(k, finalReplace[k]!);
+      }
+      await File('generated/${strings.first}.dart').writeAsString(finalString);
+    }
+  }
   // final bigString = stringMap.values
   //     .join('\n\n/// ***********************************************\n\n');
   // File('temp.dart').writeAsString(bigString);
 }
+
+const finalReplace = <String, String>{
+  '''
+Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;''':
+      '''
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;''',
+  'Base64binary': 'Base64Binary',
+};
 
 const replaceMap = <String, String>{
   '''
@@ -409,12 +456,13 @@ Work addresses are not typically entered in this property as they are usually ro
       '''/// The dosage instructions should reflect the dosage of the medication that was administered.;'''
 };
 
-final startingStringMap = {
+final startingStringMap = <List<String>, String>{
+  intRef: '',
   base: '',
   genPurpose: '',
   meta: '',
   special: '',
-  resourceGroups: '',
+  // resourceGroups: '',
   conformance: '',
   terminology: '',
   security: '',

@@ -1,10 +1,19 @@
-import '../r5.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
+// Dart imports:
+import 'dart:convert';
 
+// Package imports:
+import 'package:fhir_yaml/fhir_yaml.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:yaml/yaml.dart';
+
+// Project imports:
+import '../../r5.dart';
+
+// import 'package:flutter/foundation.dart';
 
   @freezed
 
-  class Annotation with Resource,  _Annotation {
+  class Annotation with  _Annotation {
   Annotation._();
 
   /// [Annotation]: A  text note which also  contains information about who made the statement and when.
@@ -29,9 +38,9 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 /// [textElement] (_text): Extensions for text;
   factory Annotation({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
    Reference? authorReference,
-   Null? authorString,
+   Markdown? authorString,
 @JsonKey(name: '_authorString')   Element? authorStringElement,
    DateTime? time,
 @JsonKey(name: '_time')   Element? timeElement,
@@ -65,16 +74,14 @@ import 'package:freezed_annotation/freezed_annotation.dart';
     if (json is Map<String, dynamic>) {
       return _$AnnotationFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class Attachment with Resource,  _Attachment {
+  class Attachment with  _Attachment {
   Attachment._();
 
   /// [Attachment]: For referring to data content defined in other formats.
@@ -137,7 +144,7 @@ You passed Instance of 'JsonCodec'
 /// [pagesElement] (_pages): Extensions for pages;
   factory Attachment({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
    Code? contentType,
 @JsonKey(name: '_contentType')   Element? contentTypeElement,
    Code? language,
@@ -192,16 +199,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$AttachmentFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class Identifier with Resource,  _Identifier {
+  class Identifier with  _Identifier {
   Identifier._();
 
   /// [Identifier]: An identifier - identifies some entity uniquely and unambiguously. Typically this is used for business identifiers.
@@ -230,7 +235,8 @@ You passed Instance of 'JsonCodec'
 /// [assigner]: Organization that issued/manages the identifier.;
   factory Identifier({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   IdentifierUse? use,
 @JsonKey(name: '_use')   Element? useElement,
    CodeableConcept? type,
    Uri? system,
@@ -267,16 +273,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$IdentifierFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class CodeableConcept with Resource,  _CodeableConcept {
+  class CodeableConcept with  _CodeableConcept {
   CodeableConcept._();
 
   /// [CodeableConcept]: A concept that may be defined by a formal reference to a terminology or ontology or may be provided by text.
@@ -293,7 +297,7 @@ You passed Instance of 'JsonCodec'
 /// [textElement] (_text): Extensions for text;
   factory CodeableConcept({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
    List<Coding>? coding,
    String? text,
 @JsonKey(name: '_text')   Element? textElement,
@@ -325,16 +329,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$CodeableConceptFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class Coding with Resource,  _Coding {
+  class Coding with  _Coding {
   Coding._();
 
   /// [Coding]: A reference to a code defined by a terminology system.
@@ -365,7 +367,7 @@ You passed Instance of 'JsonCodec'
 /// [userSelectedElement] (_userSelected): Extensions for userSelected;
   factory Coding({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
    Uri? system,
 @JsonKey(name: '_system')   Element? systemElement,
    String? version,
@@ -404,16 +406,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$CodingFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class Quantity with Resource,  _Quantity {
+  class Quantity with  _Quantity {
   Quantity._();
 
   /// [Quantity]: A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
@@ -444,9 +444,10 @@ You passed Instance of 'JsonCodec'
 /// [codeElement] (_code): Extensions for code;
   factory Quantity({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
    Decimal? value,
 @JsonKey(name: '_value')   Element? valueElement,
+   QuantityComparator? comparator,
 @JsonKey(name: '_comparator')   Element? comparatorElement,
    String? unit,
 @JsonKey(name: '_unit')   Element? unitElement,
@@ -482,16 +483,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$QuantityFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class Distance with Resource,  _Distance {
+  class Distance with  _Distance {
   Distance._();
 
   /// [Distance]: A length - a value with a unit that is a physical distance.
@@ -522,9 +521,10 @@ You passed Instance of 'JsonCodec'
 /// [codeElement] (_code): Extensions for code;
   factory Distance({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
    Decimal? value,
 @JsonKey(name: '_value')   Element? valueElement,
+   DistanceComparator? comparator,
 @JsonKey(name: '_comparator')   Element? comparatorElement,
    String? unit,
 @JsonKey(name: '_unit')   Element? unitElement,
@@ -560,16 +560,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$DistanceFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class Count with Resource,  _Count {
+  class Count with  _Count {
   Count._();
 
   /// [Count]: A measured amount (or an amount that can potentially be measured). Note that measured amounts include amounts that are not precisely quantified, including amounts involving arbitrary units and floating currencies.
@@ -600,9 +598,10 @@ You passed Instance of 'JsonCodec'
 /// [codeElement] (_code): Extensions for code;
   factory Count({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
    Decimal? value,
 @JsonKey(name: '_value')   Element? valueElement,
+   CountComparator? comparator,
 @JsonKey(name: '_comparator')   Element? comparatorElement,
    String? unit,
 @JsonKey(name: '_unit')   Element? unitElement,
@@ -638,16 +637,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$CountFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class Money with Resource,  _Money {
+  class Money with  _Money {
   Money._();
 
   /// [Money]: An amount of economic utility in some recognized currency.
@@ -666,7 +663,7 @@ You passed Instance of 'JsonCodec'
 /// [currencyElement] (_currency): Extensions for currency;
   factory Money({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
    Decimal? value,
 @JsonKey(name: '_value')   Element? valueElement,
    Code? currency,
@@ -699,16 +696,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$MoneyFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class Age with Resource,  _Age {
+  class Age with  _Age {
   Age._();
 
   /// [Age]: A duration of time during which an organism (or a process) has existed.
@@ -739,9 +734,10 @@ You passed Instance of 'JsonCodec'
 /// [codeElement] (_code): Extensions for code;
   factory Age({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
    Decimal? value,
 @JsonKey(name: '_value')   Element? valueElement,
+   AgeComparator? comparator,
 @JsonKey(name: '_comparator')   Element? comparatorElement,
    String? unit,
 @JsonKey(name: '_unit')   Element? unitElement,
@@ -777,16 +773,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$AgeFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class Range with Resource,  _Range {
+  class Range with  _Range {
   Range._();
 
   /// [Range]: A set of ordered Quantities defined by a low and high limit.
@@ -801,7 +795,7 @@ You passed Instance of 'JsonCodec'
 /// [high]: The high limit. The boundary is inclusive.;
   factory Range({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
    Quantity? low,
    Quantity? high,
   }) = _$Range;
@@ -832,16 +826,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$RangeFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class Period with Resource,  _Period {
+  class Period with  _Period {
   Period._();
 
   /// [Period]: A time period defined by a start and end date and optionally time.
@@ -860,7 +852,7 @@ You passed Instance of 'JsonCodec'
 /// [endElement] (_end): Extensions for end;
   factory Period({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
    DateTime? start,
 @JsonKey(name: '_start')   Element? startElement,
    DateTime? end,
@@ -893,16 +885,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$PeriodFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class Ratio with Resource,  _Ratio {
+  class Ratio with  _Ratio {
   Ratio._();
 
   /// [Ratio]: A relationship of two Quantity values - expressed as a numerator and a denominator.
@@ -917,7 +907,7 @@ You passed Instance of 'JsonCodec'
 /// [denominator]: The value of the denominator.;
   factory Ratio({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
    Quantity? numerator,
    Quantity? denominator,
   }) = _$Ratio;
@@ -948,16 +938,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$RatioFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class SampledData with Resource,  _SampledData {
+  class SampledData with  _SampledData {
   SampledData._();
 
   /// [SampledData]: A series of measurements taken by a device, with upper and lower limits. There may be more than one dimension in the data.
@@ -994,7 +982,7 @@ You passed Instance of 'JsonCodec'
 /// [dataElement] (_data): Extensions for data;
   factory SampledData({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
   required Quantity origin,
    Decimal? period,
 @JsonKey(name: '_period')   Element? periodElement,
@@ -1036,16 +1024,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$SampledDataFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class Signature with Resource,  _Signature {
+  class Signature with  _Signature {
   Signature._();
 
   /// [Signature]: A signature along with supporting context. The signature may be a digital signature that is cryptographic in nature, or some other signature acceptable to the domain. This other signature may be as simple as a graphical image representing a hand-written signature, or a signature ceremony Different signature approaches have different utilities.
@@ -1078,7 +1064,7 @@ You passed Instance of 'JsonCodec'
 /// [dataElement] (_data): Extensions for data;
   factory Signature({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
    List<Coding>? type,
    Instant? when,
 @JsonKey(name: '_when')   Element? whenElement,
@@ -1118,16 +1104,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$SignatureFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class HumanName with Resource,  _HumanName {
+  class HumanName with  _HumanName {
   HumanName._();
 
   /// [HumanName]: A human's name with the ability to identify parts and usage.
@@ -1164,7 +1148,8 @@ You passed Instance of 'JsonCodec'
 /// [period]: Indicates the period of time when this name was valid for the named person.;
   factory HumanName({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   HumanNameUse? use,
 @JsonKey(name: '_use')   Element? useElement,
    String? text,
 @JsonKey(name: '_text')   Element? textElement,
@@ -1205,16 +1190,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$HumanNameFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class Address with Resource,  _Address {
+  class Address with  _Address {
   Address._();
 
   /// [Address]: An address expressed using postal conventions (as opposed to GPS or other location definition formats).  This data type may be used to convey addresses for use in delivering mail as well as for visiting locations which might not be valid for mail delivery.  There are a variety of postal address formats defined around the world.
@@ -1263,8 +1246,10 @@ You passed Instance of 'JsonCodec'
 /// [period]: Time period when address was/is in use.;
   factory Address({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   AddressUse? use,
 @JsonKey(name: '_use')   Element? useElement,
+   AddressType? type,
 @JsonKey(name: '_type')   Element? typeElement,
    String? text,
 @JsonKey(name: '_text')   Element? textElement,
@@ -1309,16 +1294,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$AddressFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class ContactPoint with Resource,  _ContactPoint {
+  class ContactPoint with  _ContactPoint {
   ContactPoint._();
 
   /// [ContactPoint]: Details for all kinds of technology mediated contact points for a person or organization, including telephone, email, etc.
@@ -1347,10 +1330,12 @@ You passed Instance of 'JsonCodec'
 /// [period]: Time period when the contact point was/is in use.;
   factory ContactPoint({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   ContactPointSystem? system,
 @JsonKey(name: '_system')   Element? systemElement,
    String? value,
 @JsonKey(name: '_value')   Element? valueElement,
+   ContactPointUse? use,
 @JsonKey(name: '_use')   Element? useElement,
    PositiveInt? rank,
 @JsonKey(name: '_rank')   Element? rankElement,
@@ -1383,16 +1368,14 @@ You passed Instance of 'JsonCodec'
     if (json is Map<String, dynamic>) {
       return _$ContactPointFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
   @freezed
 
-  class Timing with Resource,  _Timing {
+  class Timing with  _Timing {
   Timing._();
 
   /// [Timing]: Specifies an event that may occur multiple times. Timing schedules are used to record when things are planned, expected or requested to occur. The most common usage is in dosage instructions for medications. They are also used when planning care of various kinds, and may be used for reporting the schedule to which past regular activities were carried out.
@@ -1404,7 +1387,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [event]: Identifies specific times when the event occurs.;
 ///
@@ -1415,8 +1398,8 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
 /// [code]: A code for the timing schedule (or just text in code.text). Some codes such as BID are ubiquitous, but many institutions define their own additional codes. If a code is provided, the code is understood to be a complete statement of whatever is specified in the structured timing data, and either the code or the data may be used to interpret the Timing, with the exception that .repeat.bounds still applies over the code (and is not contained in the code).;
   factory Timing({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    List<DateTime>? event,
 @JsonKey(name: '_event')   List<Element>? eventElement,
    TimingRepeat? repeat,
@@ -1449,9 +1432,7 @@ Modifier extensions SHALL NOT change the meaning of any elements on Resource or 
     if (json is Map<String, dynamic>) {
       return _$TimingFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1470,7 +1451,7 @@ You passed Instance of 'JsonCodec'
 ///
 /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
 
-Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+/// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
 ///
 /// [boundsDuration]: Either a duration for the length of the timing schedule, a range of possible length, or outer bounds for start and/or end limits of the timing schedule.;
 ///
@@ -1537,8 +1518,8 @@ Normal practice is to use the 'mo' code as a calendar month when calculating the
 /// [offsetElement] (_offset): Extensions for offset;
   factory TimingRepeat({
    String? id,
-@JsonKey(name: 'extension')   List<Extension>? extension_,
-   List<Extension>? modifierExtension,
+@JsonKey(name: 'extension')   List<FhirExtension>? extension_,
+   List<FhirExtension>? modifierExtension,
    Duration? boundsDuration,
    Range? boundsRange,
    Period? boundsPeriod,
@@ -1550,6 +1531,7 @@ Normal practice is to use the 'mo' code as a calendar month when calculating the
 @JsonKey(name: '_duration')   Element? durationElement,
    Decimal? durationMax,
 @JsonKey(name: '_durationMax')   Element? durationMaxElement,
+   TimingRepeatDurationUnit? durationUnit,
 @JsonKey(name: '_durationUnit')   Element? durationUnitElement,
    PositiveInt? frequency,
 @JsonKey(name: '_frequency')   Element? frequencyElement,
@@ -1559,12 +1541,13 @@ Normal practice is to use the 'mo' code as a calendar month when calculating the
 @JsonKey(name: '_period')   Element? periodElement,
    Decimal? periodMax,
 @JsonKey(name: '_periodMax')   Element? periodMaxElement,
+   TimingRepeatPeriodUnit? periodUnit,
 @JsonKey(name: '_periodUnit')   Element? periodUnitElement,
    List<Code>? dayOfWeek,
 @JsonKey(name: '_dayOfWeek')   List<Element>? dayOfWeekElement,
    List<Time>? timeOfDay,
 @JsonKey(name: '_timeOfDay')   List<Element>? timeOfDayElement,
-   List<Null>? when,
+   List<TimingRepeatWhen>? when,
 @JsonKey(name: '_when')   List<Element>? whenElement,
    UnsignedInt? offset,
 @JsonKey(name: '_offset')   Element? offsetElement,
@@ -1575,30 +1558,28 @@ Normal practice is to use the 'mo' code as a calendar month when calculating the
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory Timing_Repeat.fromYaml(dynamic yaml) => yaml is String
-      ? Timing_Repeat.fromJson(
+  factory TimingRepeat.fromYaml(dynamic yaml) => yaml is String
+      ? TimingRepeat.fromJson(
           jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
       : yaml is YamlMap
-          ? Timing_Repeat.fromJson(
+          ? TimingRepeat.fromJson(
               jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
           : throw ArgumentError(
-              'Timing_Repeat cannot be constructed from input provided,'
+              'TimingRepeat cannot be constructed from input provided,'
               ' it is neither a yaml string nor a yaml map.');
 
   /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory Timing_Repeat.fromJson(Map<String, dynamic> json) =>
-      _$Timing_RepeatFromJson(json);
+  factory TimingRepeat.fromJson(Map<String, dynamic> json) =>
+      _$TimingRepeatFromJson(json);
 
-  /// Acts like a constructor, returns a [Timing_Repeat], accepts a
+  /// Acts like a constructor, returns a [TimingRepeat], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory Timing_Repeat.fromJsonString(String source) {
+  factory TimingRepeat.fromJsonString(String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$Timing_RepeatFromJson(json);
+      return _$TimingRepeatFromJson(json);
     } else {
-      throw FormatException('FormatException:
-You passed Instance of 'JsonCodec'
-'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
