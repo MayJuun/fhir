@@ -47,8 +47,7 @@ FHIR® is a registered trademark of Health Level Seven International (HL7) and i
 ToDo:
 
 1. Update fhir_db (Hive?)
-2. Update fhir_auth
-3. Update fhir_profiles
+2. Update fhir_profiles
 
 
 
