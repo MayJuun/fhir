@@ -10,7 +10,6 @@ import 'package:yaml/yaml.dart';
 import '../../../../r5.dart';
 
 // import 'package:flutter/foundation.dart';
-
 part 'entities1.enums.dart';
 part 'entities1.freezed.dart';
 part 'entities1.g.dart';
@@ -19,69 +18,69 @@ part 'entities1.g.dart';
 class Endpoint with Resource, _$Endpoint {
   Endpoint._();
 
-  /// [Endpoint]: "The technical details of an endpoint that can be used for electronic services, such as for web services providing XDS.b or a REST endpoint for another FHIR server. This may include any security context information."
-  ///
-  /// [resourceType]: "This is a Endpoint resource"
-  ///
-  /// [id]: "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes."
-  ///
-  /// [meta]: "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource."
-  ///
-  /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
-  ///
-  /// [implicitRules$2]: "Extensions for implicitRules"
-  ///
-  /// [language]: "The base language in which the resource is written."
-  ///
-  /// [language$2]: "Extensions for language"
-  ///
-  /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
-  ///
-  /// [contained]: "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope."
-  ///
-  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
-  ///
-  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
-  ///
-  /// [identifier]: "Identifier for the organization that is used to identify the endpoint across multiple disparate systems."
-  ///
-  /// [status]: "active | suspended | error | off | test."
-  ///
-  /// [status$2]: "Extensions for status"
-  ///
-  /// [connectionType]: "A coded value that represents the technical details of the usage of this endpoint, such as what WSDLs should be used in what way. (e.g. XDS.b/DICOM/cds-hook)."
-  ///
-  /// [name]: "A friendly name that this endpoint can be referred to with."
-  ///
-  /// [name$2]: "Extensions for name"
-  ///
-  /// [managingOrganization]: "The organization that manages this endpoint (even if technically another organization is hosting this in the cloud, it is the organization associated with the data)."
-  ///
-  /// [contact]: "Contact details for a human to contact about the subscription. The primary use of this for system administrator troubleshooting."
-  ///
-  /// [period]: "The interval during which the endpoint is expected to be operational."
-  ///
-  /// [payloadType]: "The payload type describes the acceptable content that can be communicated on the endpoint."
-  ///
-  /// [payloadMimeType]: "The mime type to send the payload in - e.g. application/fhir+xml, application/fhir+json. If the mime type is not specified, then the sender could send any content (including no content depending on the connectionType)."
-  ///
-  /// [payloadMimeType$2]: "Extensions for payloadMimeType"
-  ///
-  /// [address]: "The uri that describes the actual end-point to connect to."
-  ///
-  /// [address$2]: "Extensions for address"
-  ///
-  /// [header]: "Additional headers / information to send as part of the notification."
-  ///
-  /// [header$2]: "Extensions for header"
+  /// [Endpoint]: The technical details of an endpoint that can be used for electronic services, such as for web services providing XDS.b, a REST endpoint for another FHIR server, or a s/Mime email address. This may include any security context information.
 
+  ///
+  /// [resourceType]: This is a Endpoint resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [identifier]: Identifier for the organization that is used to identify the endpoint across multiple disparate systems.;
+  ///
+  /// [status]: The endpoint status represents the general expected availability of an endpoint.;
+  ///
+  /// [statusElement] (_status): Extensions for status;
+  ///
+  /// [connectionType]: A coded value that represents the technical details of the usage of this endpoint, such as what WSDLs should be used in what way. (e.g. XDS.b/DICOM/cds-hook).;
+  ///
+  /// [name]: A friendly name that this endpoint can be referred to with.;
+  ///
+  /// [nameElement] (_name): Extensions for name;
+  ///
+  /// [managingOrganization]: The organization that manages this endpoint (even if technically another organization is hosting this in the cloud, it is the organization associated with the data).;
+  ///
+  /// [contact]: Contact details for a human to contact about the subscription. The primary use of this for system administrator troubleshooting.;
+  ///
+  /// [period]: The interval during which the endpoint is expected to be operational.;
+  ///
+  /// [payloadType]: The payload type describes the acceptable content that can be communicated on the endpoint.;
+  ///
+  /// [payloadMimeType]: The mime type to send the payload in - e.g. application/fhir+xml, application/fhir+json. If the mime type is not specified, then the sender could send any content (including no content depending on the connectionType).;
+  ///
+  /// [payloadMimeTypeElement] (_payloadMimeType): Extensions for payloadMimeType;
+  ///
+  /// [address]: The uri that describes the actual end-point to connect to.;
+  ///
+  /// [addressElement] (_address): Extensions for address;
+  ///
+  /// [header]: Additional headers / information to send as part of the notification.;
+  ///
+  /// [headerElement] (_header): Extensions for header;
   factory Endpoint({
-    @Default(R5ResourceType.Endpoint)
-    @JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Endpoint) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-    FhirUri? implicitRules,
+     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -90,15 +89,15 @@ class Endpoint with Resource, _$Endpoint {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: EndpointStatus.unknown) EndpointStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
-    required Coding connectionType,
+    required List<Coding> connectionType,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     Reference? managingOrganization,
     List<ContactPoint>? contact,
     Period? period,
-    required List<CodeableConcept> payloadType,
+    List<CodeableConcept>? payloadType,
     List<Code>? payloadMimeType,
     @JsonKey(name: '_payloadMimeType') List<Element>? payloadMimeTypeElement,
     FhirUrl? address,
@@ -133,7 +132,7 @@ class Endpoint with Resource, _$Endpoint {
     if (json is Map<String, dynamic>) {
       return _$EndpointFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -143,97 +142,99 @@ class Endpoint with Resource, _$Endpoint {
 class HealthcareService with Resource, _$HealthcareService {
   HealthcareService._();
 
-  /// [HealthcareService]: "The details of a healthcare service available at a location."
-  ///
-  /// [resourceType]: "This is a HealthcareService resource"
-  ///
-  /// [id]: "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes."
-  ///
-  /// [meta]: "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource."
-  ///
-  /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
-  ///
-  /// [implicitRules$2]: "Extensions for implicitRules"
-  ///
-  /// [language]: "The base language in which the resource is written."
-  ///
-  /// [language$2]: "Extensions for language"
-  ///
-  /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
-  ///
-  /// [contained]: "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope."
-  ///
-  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
-  ///
-  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
-  ///
-  /// [identifier]: "External identifiers for this item."
-  ///
-  /// [active]: "This flag is used to mark the record to not be used. This is not used when a center is closed for maintenance, or for holidays, the notAvailable period is to be used for this."
-  ///
-  /// [active$2]: "Extensions for active"
-  ///
-  /// [providedBy]: "The organization that provides this healthcare service."
-  ///
-  /// [category]: "Identifies the broad category of service being performed or delivered."
-  ///
-  /// [type]: "The specific type of service that may be delivered or performed."
-  ///
-  /// [specialty]: "Collection of specialties handled by the service site. This is more of a medical term."
-  ///
-  /// [location]: "The location(s) where this healthcare service may be provided."
-  ///
-  /// [name]: "Further description of the service as it would be presented to a consumer while searching."
-  ///
-  /// [name$2]: "Extensions for name"
-  ///
-  /// [comment]: "Any additional description of the service and/or any specific issues not covered by the other attributes, which can be displayed as further detail under the serviceName."
-  ///
-  /// [comment$2]: "Extensions for comment"
-  ///
-  /// [extraDetails]: "Extra details about the service that can\u0027t be placed in the other fields."
-  ///
-  /// [extraDetails$2]: "Extensions for extraDetails"
-  ///
-  /// [photo]: "If there is a photo/symbol associated with this HealthcareService, it may be included here to facilitate quick identification of the service in a list."
-  ///
-  /// [telecom]: "List of contacts related to this specific healthcare service."
-  ///
-  /// [coverageArea]: "The location(s) that this service is available to (not where the service is provided)."
-  ///
-  /// [serviceProvisionCode]: "The code(s) that detail the conditions under which the healthcare service is available/offered."
-  ///
-  /// [eligibility]: "Does this service have specific eligibility requirements that need to be met in order to use the service?"
-  ///
-  /// [program]: "Programs that this service is applicable to."
-  ///
-  /// [characteristic]: "Collection of characteristics (attributes)."
-  ///
-  /// [communication]: "Some services are specifically made available in multiple languages, this property permits a directory to declare the languages this is offered in. Typically this is only provided where a service operates in communities with mixed languages used."
-  ///
-  /// [referralMethod]: "Ways that the service accepts referrals, if this is not provided then it is implied that no referral is required."
-  ///
-  /// [appointmentRequired]: "Indicates whether or not a prospective consumer will require an appointment for a particular service at a site to be provided by the Organization. Indicates if an appointment is required for access to this service."
-  ///
-  /// [appointmentRequired$2]: "Extensions for appointmentRequired"
-  ///
-  /// [availableTime]: "A collection of times that the Service Site is available."
-  ///
-  /// [notAvailable]: "The HealthcareService is not available during this period of time due to the provided reason."
-  ///
-  /// [availabilityExceptions]: "A description of site availability exceptions, e.g. public holiday availability. Succinctly describing all possible exceptions to normal site availability as details in the available Times and not available Times."
-  ///
-  /// [availabilityExceptions$2]: "Extensions for availabilityExceptions"
-  ///
-  /// [endpoint]: "Technical endpoints providing access to services operated for the specific healthcare services defined at this resource."
+  /// [HealthcareService]: The details of a healthcare service available at a location.
 
+  ///
+  /// [resourceType]: This is a HealthcareService resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [identifier]: External identifiers for this item.;
+  ///
+  /// [active]: This flag is used to mark the record to not be used. This is not used when a center is closed for maintenance, or for holidays, the notAvailable period is to be used for this.;
+  ///
+  /// [activeElement] (_active): Extensions for active;
+  ///
+  /// [providedBy]: The organization that provides this healthcare service.;
+  ///
+  /// [category]: Identifies the broad category of service being performed or delivered.;
+  ///
+  /// [type]: The specific type of service that may be delivered or performed.;
+  ///
+  /// [specialty]: Collection of specialties handled by the service site. This is more of a medical term.;
+  ///
+  /// [location]: The location(s) where this healthcare service may be provided.;
+  ///
+  /// [name]: Further description of the service as it would be presented to a consumer while searching.;
+  ///
+  /// [nameElement] (_name): Extensions for name;
+  ///
+  /// [comment]: Any additional description of the service and/or any specific issues not covered by the other attributes, which can be displayed as further detail under the serviceName.;
+  ///
+  /// [commentElement] (_comment): Extensions for comment;
+  ///
+  /// [extraDetails]: Extra details about the service that can't be placed in the other fields.;
+  ///
+  /// [extraDetailsElement] (_extraDetails): Extensions for extraDetails;
+  ///
+  /// [photo]: If there is a photo/symbol associated with this HealthcareService, it may be included here to facilitate quick identification of the service in a list.;
+  ///
+  /// [contact]: The contact details of communication devices available relevant to the specific HealthcareService. This can include addresses, phone numbers, fax numbers, mobile numbers, email addresses and web sites.;
+  ///
+  /// [telecom]: List of contacts related to this specific healthcare service.;
+  ///
+  /// [coverageArea]: The location(s) that this service is available to (not where the service is provided).;
+  ///
+  /// [serviceProvisionCode]: The code(s) that detail the conditions under which the healthcare service is available/offered.;
+  ///
+  /// [eligibility]: Does this service have specific eligibility requirements that need to be met in order to use the service?;
+  ///
+  /// [program]: Programs that this service is applicable to.;
+  ///
+  /// [characteristic]: Collection of characteristics (attributes).;
+  ///
+  /// [communication]: Some services are specifically made available in multiple languages, this property permits a directory to declare the languages this is offered in. Typically this is only provided where a service operates in communities with mixed languages used.;
+  ///
+  /// [referralMethod]: Ways that the service accepts referrals, if this is not provided then it is implied that no referral is required.;
+  ///
+  /// [appointmentRequired]: Indicates whether or not a prospective consumer will require an appointment for a particular service at a site to be provided by the Organization. Indicates if an appointment is required for access to this service.;
+  ///
+  /// [appointmentRequiredElement] (_appointmentRequired): Extensions for appointmentRequired;
+  ///
+  /// [availableTime]: A collection of times that the Service Site is available.;
+  ///
+  /// [notAvailable]: The HealthcareService is not available during this period of time due to the provided reason.;
+  ///
+  /// [availabilityExceptions]: A description of site availability exceptions, e.g. public holiday availability. Succinctly describing all possible exceptions to normal site availability as details in the available Times and not available Times.;
+  ///
+  /// [availabilityExceptionsElement] (_availabilityExceptions): Extensions for availabilityExceptions;
+  ///
+  /// [endpoint]: Technical endpoints providing access to services operated for the specific healthcare services defined at this resource.;
   factory HealthcareService({
-    @Default(R5ResourceType.HealthcareService)
-    @JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.HealthcareService) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-    FhirUri? implicitRules,
+     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -256,6 +257,7 @@ class HealthcareService with Resource, _$HealthcareService {
     Markdown? extraDetails,
     @JsonKey(name: '_extraDetails') Element? extraDetailsElement,
     Attachment? photo,
+    List<ExtendedContactDetail>? contact,
     List<ContactPoint>? telecom,
     List<Reference>? coverageArea,
     List<CodeableConcept>? serviceProvisionCode,
@@ -300,7 +302,7 @@ class HealthcareService with Resource, _$HealthcareService {
     if (json is Map<String, dynamic>) {
       return _$HealthcareServiceFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -310,20 +312,22 @@ class HealthcareService with Resource, _$HealthcareService {
 class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   HealthcareServiceEligibility._();
 
-  /// [HealthcareServiceEligibility]: "The details of a healthcare service available at a location."
-  ///
-  /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
-  ///
-  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
-  ///
-  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
-  ///
-  /// [code]: "Coded value for the eligibility."
-  ///
-  /// [comment]: "Describes the eligibility conditions for the service."
-  ///
-  /// [comment$2]: "Extensions for comment"
+  /// [HealthcareServiceEligibility]: The details of a healthcare service available at a location.
 
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [code]: Coded value for the eligibility.;
+  ///
+  /// [comment]: Describes the eligibility conditions for the service.;
+  ///
+  /// [commentElement] (_comment): Extensions for comment;
   factory HealthcareServiceEligibility({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -334,6 +338,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   }) = _HealthcareServiceEligibility;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -358,7 +363,7 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
     if (json is Map<String, dynamic>) {
       return _$HealthcareServiceEligibilityFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -368,35 +373,37 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
 class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   HealthcareServiceAvailableTime._();
 
-  /// [HealthcareServiceAvailableTime]: "The details of a healthcare service available at a location."
-  ///
-  /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
-  ///
-  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
-  ///
-  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
-  ///
-  /// [daysOfWeek]: "Indicates which days of the week are available between the start and end Times."
-  ///
-  /// [daysOfWeek$2]: "Extensions for daysOfWeek"
-  ///
-  /// [allDay]: "Is this always available? (hence times are irrelevant) e.g. 24 hour service."
-  ///
-  /// [allDay$2]: "Extensions for allDay"
-  ///
-  /// [availableStartTime]: "The opening time of day. Note: If the AllDay flag is set, then this time is ignored."
-  ///
-  /// [availableStartTime$2]: "Extensions for availableStartTime"
-  ///
-  /// [availableEndTime]: "The closing time of day. Note: If the AllDay flag is set, then this time is ignored."
-  ///
-  /// [availableEndTime$2]: "Extensions for availableEndTime"
+  /// [HealthcareServiceAvailableTime]: The details of a healthcare service available at a location.
 
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [daysOfWeek]: Indicates which days of the week are available between the start and end Times.;
+  ///
+  /// [daysOfWeekElement] (_daysOfWeek): Extensions for daysOfWeek;
+  ///
+  /// [allDay]: Is this always available? (hence times are irrelevant) i.e. 24 hour service.;
+  ///
+  /// [allDayElement] (_allDay): Extensions for allDay;
+  ///
+  /// [availableStartTime]: The opening time of day. Note: If the AllDay flag is set, then this time is ignored.;
+  ///
+  /// [availableStartTimeElement] (_availableStartTime): Extensions for availableStartTime;
+  ///
+  /// [availableEndTime]: The closing time of day. Note: If the AllDay flag is set, then this time is ignored.;
+  ///
+  /// [availableEndTimeElement] (_availableEndTime): Extensions for availableEndTime;
   factory HealthcareServiceAvailableTime({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
+    List<Code>? daysOfWeek,
     @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
     Boolean? allDay,
     @JsonKey(name: '_allDay') Element? allDayElement,
@@ -407,6 +414,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   }) = _HealthcareServiceAvailableTime;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -432,7 +440,7 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
     if (json is Map<String, dynamic>) {
       return _$HealthcareServiceAvailableTimeFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -442,80 +450,22 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
 class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   HealthcareServiceNotAvailable._();
 
-  /// [HealthcareServiceNotAvailable]: "The details of a healthcare service available at a location."
-  ///
-  /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
-  ///
-  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
-  ///
-  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
-  ///
-  /// [description]: "The reason that can be presented to the user as to why this time is not available."
-  ///
-  /// [description$2]: "Extensions for description"
-  ///
-  /// [during]: "Service is not available (seasonally or for a public holiday) from this date."
-  ///
-  /// [ImagingSelection]: "A selection of DICOM SOP instances and/or frames within a single Study and Series. This might include additional specifics such as an image region, an Observation UID or a Segmentation Number, allowing linkage to an Observation Resource or transferring this information along with the ImagingStudy Resource."
-  ///
-  /// [resourceType]: "This is a ImagingSelection resource"
-  ///
-  /// [id]: "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes."
-  ///
-  /// [meta]: "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource."
-  ///
-  /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
-  ///
-  /// [implicitRules$2]: "Extensions for implicitRules"
-  ///
-  /// [language]: "The base language in which the resource is written."
-  ///
-  /// [language$2]: "Extensions for language"
-  ///
-  /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
-  ///
-  /// [contained]: "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope."
-  ///
-  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
-  ///
-  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
-  ///
-  /// [identifier]: "A unique identifier assigned to this imaging selection."
-  ///
-  /// [basedOn]: "A list of the diagnostic requests that resulted in this imaging selection being performed."
-  ///
-  /// [subject]: "The patient, or group of patients, location, device, organization, procedure or practitioner this imaging selection is about and into whose or what record the imaging selection is placed."
-  ///
-  /// [issued]: "The date and time this imaging selection was created."
-  ///
-  /// [issued$2]: "Extensions for issued"
-  ///
-  /// [performer]: "Author – human or machine."
-  ///
-  /// [code]: "Describes the imaging selection."
-  ///
-  /// [studyUid]: "The Study Instance UID for the DICOM Study from which the images were selected."
-  ///
-  /// [studyUid$2]: "Extensions for studyUid"
-  ///
-  /// [derivedFrom]: "The imaging study from which the imaging selection is made."
-  ///
-  /// [endpoint]: "The network service providing retrieval access to the selected images, frames, etc. See implementation notes for information about using DICOM endpoints."
-  ///
-  /// [seriesUid]: "The Series Instance UID for the DICOM Series from which the images were selected."
-  ///
-  /// [seriesUid$2]: "Extensions for seriesUid"
-  ///
-  /// [frameOfReferenceUid]: "The Frame of Reference UID identifying the coordinate system that conveys spatial and/or temporal information for the selected images or frames."
-  ///
-  /// [frameOfReferenceUid$2]: "Extensions for frameOfReferenceUid"
-  ///
-  /// [bodySite]: "The anatomic structures examined. See DICOM Part 16 Annex L (http://dicom.nema.org/medical/dicom/current/output/chtml/part16/chapter_L.html) for DICOM to SNOMED-CT mappings."
-  ///
-  /// [instance]: "Each imaging selection includes one or more selected DICOM SOP instances."
-  ///
-  /// [imageRegion]: "Each imaging selection might includes one or more image regions. Image regions are specified by a region type and a set of 2D or 3D coordinates."
+  /// [HealthcareServiceNotAvailable]: The details of a healthcare service available at a location.
 
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [description]: The reason that can be presented to the user as to why this time is not available.;
+  ///
+  /// [descriptionElement] (_description): Extensions for description;
+  ///
+  /// [during]: Service is not available (seasonally or for a public holiday) from this date.;
   factory HealthcareServiceNotAvailable({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -526,6 +476,7 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   }) = _HealthcareServiceNotAvailable;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -550,7 +501,7 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
     if (json is Map<String, dynamic>) {
       return _$HealthcareServiceNotAvailableFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -560,83 +511,85 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
 class Location with Resource, _$Location {
   Location._();
 
-  /// [Location]: "Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated."
-  ///
-  /// [resourceType]: "This is a Location resource"
-  ///
-  /// [id]: "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes."
-  ///
-  /// [meta]: "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource."
-  ///
-  /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
-  ///
-  /// [implicitRules$2]: "Extensions for implicitRules"
-  ///
-  /// [language]: "The base language in which the resource is written."
-  ///
-  /// [language$2]: "Extensions for language"
-  ///
-  /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
-  ///
-  /// [contained]: "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope."
-  ///
-  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
-  ///
-  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
-  ///
-  /// [identifier]: "Unique code or number identifying the location to its users."
-  ///
-  /// [status]: "The status property covers the general availability of the resource, not the current value which may be covered by the operationStatus, or by a schedule/slots if they are configured for the location."
-  ///
-  /// [status$2]: "Extensions for status"
-  ///
-  /// [operationalStatus]: "The operational status covers operation values most relevant to beds (but can also apply to rooms/units/chairs/etc. such as an isolation unit/dialysis chair). This typically covers concepts such as contamination, housekeeping, and other activities like maintenance."
-  ///
-  /// [name]: "Name of the location as used by humans. Does not need to be unique."
-  ///
-  /// [name$2]: "Extensions for name"
-  ///
-  /// [alias]: "A list of alternate names that the location is known as, or was known as, in the past."
-  ///
-  /// [alias$2]: "Extensions for alias"
-  ///
-  /// [description]: "Description of the Location, which helps in finding or referencing the place."
-  ///
-  /// [description$2]: "Extensions for description"
-  ///
-  /// [mode]: "Indicates whether a resource instance represents a specific location or a class of locations."
-  ///
-  /// [mode$2]: "Extensions for mode"
-  ///
-  /// [type]: "Indicates the type of function performed at the location."
-  ///
-  /// [telecom]: "The contact details of communication devices available at the location. This can include phone numbers, fax numbers, mobile numbers, email addresses and web sites."
-  ///
-  /// [address]: "Physical location."
-  ///
-  /// [physicalType]: "Physical form of the location, e.g. building, room, vehicle, road."
-  ///
-  /// [position]: "The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML)."
-  ///
-  /// [managingOrganization]: "The organization responsible for the provisioning and upkeep of the location."
-  ///
-  /// [partOf]: "Another Location of which this Location is physically a part of."
-  ///
-  /// [hoursOfOperation]: "What days/times during a week is this location usually open."
-  ///
-  /// [availabilityExceptions]: "A description of when the locations opening ours are different to normal, e.g. public holiday availability. Succinctly describing all possible exceptions to normal site availability as detailed in the opening hours Times."
-  ///
-  /// [availabilityExceptions$2]: "Extensions for availabilityExceptions"
-  ///
-  /// [endpoint]: "Technical endpoints providing access to services operated for the location."
+  /// [Location]: Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated.
 
+  ///
+  /// [resourceType]: This is a Location resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [identifier]: Unique code or number identifying the location to its users.;
+  ///
+  /// [status]: The status property covers the general availability of the resource, not the current value which may be covered by the operationStatus, or by a schedule/slots if they are configured for the location.;
+  ///
+  /// [statusElement] (_status): Extensions for status;
+  ///
+  /// [operationalStatus]: The operational status covers operation values most relevant to beds (but can also apply to rooms/units/chairs/etc. such as an isolation unit/dialysis chair). This typically covers concepts such as contamination, housekeeping, and other activities like maintenance.;
+  ///
+  /// [name]: Name of the location as used by humans. Does not need to be unique.;
+  ///
+  /// [nameElement] (_name): Extensions for name;
+  ///
+  /// [alias]: A list of alternate names that the location is known as, or was known as, in the past.;
+  ///
+  /// [aliasElement] (_alias): Extensions for alias;
+  ///
+  /// [description]: Description of the Location, which helps in finding or referencing the place.;
+  ///
+  /// [descriptionElement] (_description): Extensions for description;
+  ///
+  /// [mode]: Indicates whether a resource instance represents a specific location or a class of locations.;
+  ///
+  /// [modeElement] (_mode): Extensions for mode;
+  ///
+  /// [type]: Indicates the type of function performed at the location.;
+  ///
+  /// [contact]: The contact details of communication devices available at the location. This can include addresses, phone numbers, fax numbers, mobile numbers, email addresses and web sites.;
+  ///
+  /// [telecom]: Deprecated - use contact.telecom.;
+  ///
+  /// [address]: Physical location.;
+  ///
+  /// [physicalType]: Physical form of the location, e.g. building, room, vehicle, road.;
+  ///
+  /// [position]: The absolute geographic location of the Location, expressed using the WGS84 datum (This is the same co-ordinate system used in KML).;
+  ///
+  /// [managingOrganization]: The organization responsible for the provisioning and upkeep of the location.;
+  ///
+  /// [partOf]: Another Location of which this Location is physically a part of.;
+  ///
+  /// [hoursOfOperation]: What days/times during a week is this location usually open.;
+  ///
+  /// [availabilityExceptions]: A description of when the locations opening ours are different to normal, e.g. public holiday availability. Succinctly describing all possible exceptions to normal site availability as detailed in the opening hours Times.;
+  ///
+  /// [availabilityExceptionsElement] (_availabilityExceptions): Extensions for availabilityExceptions;
+  ///
+  /// [endpoint]: Technical endpoints providing access to services operated for the location.;
   factory Location({
-    @Default(R5ResourceType.Location)
-    @JsonKey(unknownEnumValue: R5ResourceType.Location)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Location) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-    FhirUri? implicitRules,
+     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -645,7 +598,7 @@ class Location with Resource, _$Location {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: LocationStatus.unknown) LocationStatus? status,
+    Code? status,
     @JsonKey(name: '_status') Element? statusElement,
     Coding? operationalStatus,
     String? name,
@@ -654,9 +607,10 @@ class Location with Resource, _$Location {
     @JsonKey(name: '_alias') List<Element>? aliasElement,
     String? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    @JsonKey(unknownEnumValue: LocationMode.unknown) LocationMode? mode,
+    Code? mode,
     @JsonKey(name: '_mode') Element? modeElement,
     List<CodeableConcept>? type,
+    List<ExtendedContactDetail>? contact,
     List<ContactPoint>? telecom,
     Address? address,
     CodeableConcept? physicalType,
@@ -696,7 +650,7 @@ class Location with Resource, _$Location {
     if (json is Map<String, dynamic>) {
       return _$LocationFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -706,26 +660,28 @@ class Location with Resource, _$Location {
 class LocationPosition with _$LocationPosition {
   LocationPosition._();
 
-  /// [LocationPosition]: "Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated."
-  ///
-  /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
-  ///
-  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
-  ///
-  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
-  ///
-  /// [longitude]: "Longitude. The value domain and the interpretation are the same as for the text of the longitude element in KML (see notes below)."
-  ///
-  /// [longitude$2]: "Extensions for longitude"
-  ///
-  /// [latitude]: "Latitude. The value domain and the interpretation are the same as for the text of the latitude element in KML (see notes below)."
-  ///
-  /// [latitude$2]: "Extensions for latitude"
-  ///
-  /// [altitude]: "Altitude. The value domain and the interpretation are the same as for the text of the altitude element in KML (see notes below)."
-  ///
-  /// [altitude$2]: "Extensions for altitude"
+  /// [LocationPosition]: Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated.
 
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [longitude]: Longitude. The value domain and the interpretation are the same as for the text of the longitude element in KML (see notes on Location main page).;
+  ///
+  /// [longitudeElement] (_longitude): Extensions for longitude;
+  ///
+  /// [latitude]: Latitude. The value domain and the interpretation are the same as for the text of the latitude element in KML (see notes on Location main page).;
+  ///
+  /// [latitudeElement] (_latitude): Extensions for latitude;
+  ///
+  /// [altitude]: Altitude. The value domain and the interpretation are the same as for the text of the altitude element in KML (see notes on Location main page).;
+  ///
+  /// [altitudeElement] (_altitude): Extensions for altitude;
   factory LocationPosition({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -739,6 +695,7 @@ class LocationPosition with _$LocationPosition {
   }) = _LocationPosition;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -763,7 +720,7 @@ class LocationPosition with _$LocationPosition {
     if (json is Map<String, dynamic>) {
       return _$LocationPositionFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -773,70 +730,32 @@ class LocationPosition with _$LocationPosition {
 class LocationHoursOfOperation with _$LocationHoursOfOperation {
   LocationHoursOfOperation._();
 
-  /// [LocationHoursOfOperation]: "Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated."
-  ///
-  /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
-  ///
-  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
-  ///
-  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
-  ///
-  /// [daysOfWeek]: "Indicates which days of the week are available between the start and end Times."
-  ///
-  /// [daysOfWeek$2]: "Extensions for daysOfWeek"
-  ///
-  /// [allDay]: "The Location is open all day."
-  ///
-  /// [allDay$2]: "Extensions for allDay"
-  ///
-  /// [openingTime]: "Time that the Location opens."
-  ///
-  /// [openingTime$2]: "Extensions for openingTime"
-  ///
-  /// [closingTime]: "Time that the Location closes."
-  ///
-  /// [closingTime$2]: "Extensions for closingTime"
-  ///
-  /// [ManufacturedItemDefinition]: "The definition and characteristics of a medicinal manufactured item, such as a tablet or capsule, as contained in a packaged medicinal product."
-  ///
-  /// [resourceType]: "This is a ManufacturedItemDefinition resource"
-  ///
-  /// [id]: "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes."
-  ///
-  /// [meta]: "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource."
-  ///
-  /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
-  ///
-  /// [implicitRules$2]: "Extensions for implicitRules"
-  ///
-  /// [language]: "The base language in which the resource is written."
-  ///
-  /// [language$2]: "Extensions for language"
-  ///
-  /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
-  ///
-  /// [contained]: "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope."
-  ///
-  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
-  ///
-  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
-  ///
-  /// [identifier]: "Unique identifier."
-  ///
-  /// [status]: "The status of this item. Enables tracking the life-cycle of the content."
-  ///
-  /// [status$2]: "Extensions for status"
-  ///
-  /// [manufacturedDoseForm]: "Dose form as manufactured and before any transformation into the pharmaceutical product."
-  ///
-  /// [unitOfPresentation]: "The “real world” units in which the quantity of the manufactured item is described."
-  ///
-  /// [manufacturer]: "Manufacturer of the item (Note that this should be named \"manufacturer\" but it currently causes technical issues)."
-  ///
-  /// [ingredient]: "The ingredients of this manufactured item. This is only needed if the ingredients are not specified by incoming references from the Ingredient resource."
-  ///
-  /// [property]: "General characteristics of this item."
+  /// [LocationHoursOfOperation]: Details and position information for a physical place where services are provided and resources and participants may be stored, found, contained, or accommodated.
 
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [daysOfWeek]: Indicates which days of the week are available between the start and end Times.;
+  ///
+  /// [daysOfWeekElement] (_daysOfWeek): Extensions for daysOfWeek;
+  ///
+  /// [allDay]: Is this always available? (hence times are irrelevant) i.e. 24 hour service.;
+  ///
+  /// [allDayElement] (_allDay): Extensions for allDay;
+  ///
+  /// [openingTime]: Time that the Location opens.;
+  ///
+  /// [openingTimeElement] (_openingTime): Extensions for openingTime;
+  ///
+  /// [closingTime]: Time that the Location closes.;
+  ///
+  /// [closingTimeElement] (_closingTime): Extensions for closingTime;
   factory LocationHoursOfOperation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -852,6 +771,7 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
   }) = _LocationHoursOfOperation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -876,7 +796,7 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
     if (json is Map<String, dynamic>) {
       return _$LocationHoursOfOperationFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -886,63 +806,67 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
 class Organization with Resource, _$Organization {
   Organization._();
 
-  /// [Organization]: "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc."
-  ///
-  /// [resourceType]: "This is a Organization resource"
-  ///
-  /// [id]: "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes."
-  ///
-  /// [meta]: "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource."
-  ///
-  /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
-  ///
-  /// [implicitRules$2]: "Extensions for implicitRules"
-  ///
-  /// [language]: "The base language in which the resource is written."
-  ///
-  /// [language$2]: "Extensions for language"
-  ///
-  /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
-  ///
-  /// [contained]: "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope."
-  ///
-  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
-  ///
-  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
-  ///
-  /// [identifier]: "Identifier for the organization that is used to identify the organization across multiple disparate systems."
-  ///
-  /// [active]: "Whether the organization\u0027s record is still in active use."
-  ///
-  /// [active$2]: "Extensions for active"
-  ///
-  /// [type]: "The kind(s) of organization that this is."
-  ///
-  /// [name]: "A name associated with the organization."
-  ///
-  /// [name$2]: "Extensions for name"
-  ///
-  /// [alias]: "A list of alternate names that the organization is known as, or was known as in the past."
-  ///
-  /// [alias$2]: "Extensions for alias"
-  ///
-  /// [telecom]: "A contact detail for the organization."
-  ///
-  /// [address]: "An address for the organization."
-  ///
-  /// [partOf]: "The organization of which this organization forms a part."
-  ///
-  /// [contact]: "Contact for the organization for a certain purpose."
-  ///
-  /// [endpoint]: "Technical endpoints providing access to services operated for the organization."
+  /// [Organization]: A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc.
 
+  ///
+  /// [resourceType]: This is a Organization resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [identifier]: Identifier for the organization that is used to identify the organization across multiple disparate systems.;
+  ///
+  /// [active]: Whether the organization's record is still in active use.;
+  ///
+  /// [activeElement] (_active): Extensions for active;
+  ///
+  /// [type]: The kind(s) of organization that this is.;
+  ///
+  /// [name]: A name associated with the organization.;
+  ///
+  /// [nameElement] (_name): Extensions for name;
+  ///
+  /// [alias]: A list of alternate names that the organization is known as, or was known as in the past.;
+  ///
+  /// [aliasElement] (_alias): Extensions for alias;
+  ///
+  /// [description]: Description of the organization, which helps provide additional general context on the organization to ensure that the correct organization is selected.;
+  ///
+  /// [descriptionElement] (_description): Extensions for description;
+  ///
+  /// [contact]: The contact details of communication devices available relevant to the specific Organization. This can include addresses, phone numbers, fax numbers, mobile numbers, email addresses and web sites.;
+  ///
+  /// [telecom]: A contact detail for the organization.;
+  ///
+  /// [address]: An address for the organization.;
+  ///
+  /// [partOf]: The organization of which this organization forms a part.;
+  ///
+  /// [endpoint]: Technical endpoints providing access to services operated for the organization.;
   factory Organization({
-    @Default(R5ResourceType.Organization)
-    @JsonKey(unknownEnumValue: R5ResourceType.Organization)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Organization) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-    FhirUri? implicitRules,
+     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -958,10 +882,12 @@ class Organization with Resource, _$Organization {
     @JsonKey(name: '_name') Element? nameElement,
     List<String>? alias,
     @JsonKey(name: '_alias') List<Element>? aliasElement,
+    String? description,
+    @JsonKey(name: '_description') Element? descriptionElement,
+    List<ExtendedContactDetail>? contact,
     List<ContactPoint>? telecom,
     List<Address>? address,
     Reference? partOf,
-    List<OrganizationContact>? contact,
     List<Reference>? endpoint,
   }) = _Organization;
 
@@ -991,118 +917,7 @@ class Organization with Resource, _$Organization {
     if (json is Map<String, dynamic>) {
       return _$OrganizationFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class OrganizationContact with _$OrganizationContact {
-  OrganizationContact._();
-
-  /// [OrganizationContact]: "A formally or informally recognized grouping of people or organizations formed for the purpose of achieving some form of collective action.  Includes companies, institutions, corporations, departments, community groups, healthcare practice groups, payer/insurer, etc."
-  ///
-  /// [id]: "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces."
-  ///
-  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
-  ///
-  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
-  ///
-  /// [purpose]: "Indicates a purpose for which the contact can be reached."
-  ///
-  /// [name]: "A name associated with the contact."
-  ///
-  /// [telecom]: "A contact detail (e.g. a telephone number or an email address) by which the party may be contacted."
-  ///
-  /// [address]: "Visiting or postal addresses for the contact."
-  ///
-  /// [OrganizationAffiliation]: "Defines an affiliation/assotiation/relationship between 2 distinct organizations, that is not a part-of relationship/sub-division relationship."
-  ///
-  /// [resourceType]: "This is a OrganizationAffiliation resource"
-  ///
-  /// [id]: "The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes."
-  ///
-  /// [meta]: "The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource."
-  ///
-  /// [implicitRules]: "A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc."
-  ///
-  /// [implicitRules$2]: "Extensions for implicitRules"
-  ///
-  /// [language]: "The base language in which the resource is written."
-  ///
-  /// [language$2]: "Extensions for language"
-  ///
-  /// [text]: "A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it \"clinically safe\" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety."
-  ///
-  /// [contained]: "These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope."
-  ///
-  /// [extension]: "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension."
-  ///
-  /// [modifierExtension]: "May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element\u0027s descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself)."
-  ///
-  /// [identifier]: "Business identifiers that are specific to this role."
-  ///
-  /// [active]: "Whether this organization affiliation record is in active use."
-  ///
-  /// [active$2]: "Extensions for active"
-  ///
-  /// [period]: "The period during which the participatingOrganization is affiliated with the primary organization."
-  ///
-  /// [organization]: "Organization where the role is available (primary organization/has members)."
-  ///
-  /// [participatingOrganization]: "The Participating Organization provides/performs the role(s) defined by the code to the Primary Organization (e.g. providing services or is a member of)."
-  ///
-  /// [network]: "Health insurance provider network in which the participatingOrganization provides the role\u0027s services (if defined) at the indicated locations (if defined)."
-  ///
-  /// [code]: "Definition of the role the participatingOrganization plays in the association."
-  ///
-  /// [specialty]: "Specific specialty of the participatingOrganization in the context of the role."
-  ///
-  /// [location]: "The location(s) at which the role occurs."
-  ///
-  /// [healthcareService]: "Healthcare services provided through the role."
-  ///
-  /// [telecom]: "Contact details at the participatingOrganization relevant to this Affiliation."
-  ///
-  /// [endpoint]: "Technical endpoints providing access to services operated for this role."
-
-  factory OrganizationContact({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? purpose,
-    HumanName? name,
-    List<ContactPoint>? telecom,
-    Address? address,
-  }) = _OrganizationContact;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory OrganizationContact.fromYaml(dynamic yaml) => yaml is String
-      ? OrganizationContact.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? OrganizationContact.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'OrganizationContact cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory OrganizationContact.fromJson(Map<String, dynamic> json) =>
-      _$OrganizationContactFromJson(json);
-
-  /// Acts like a constructor, returns a [OrganizationContact], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory OrganizationContact.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$OrganizationContactFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1112,13 +927,64 @@ class OrganizationContact with _$OrganizationContact {
 class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
   OrganizationAffiliation._();
 
+  /// [OrganizationAffiliation]: Defines an affiliation/assotiation/relationship between 2 distinct organizations, that is not a part-of relationship/sub-division relationship.
+
+  ///
+  /// [resourceType]: This is a OrganizationAffiliation resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [identifier]: Business identifiers that are specific to this role.;
+  ///
+  /// [active]: Whether this organization affiliation record is in active use.;
+  ///
+  /// [activeElement] (_active): Extensions for active;
+  ///
+  /// [period]: The period during which the participatingOrganization is affiliated with the primary organization.;
+  ///
+  /// [organization]: Organization where the role is available (primary organization/has members).;
+  ///
+  /// [participatingOrganization]: The Participating Organization provides/performs the role(s) defined by the code to the Primary Organization (e.g. providing services or is a member of).;
+  ///
+  /// [network]: Health insurance provider network in which the participatingOrganization provides the role's services (if defined) at the indicated locations (if defined).;
+  ///
+  /// [code]: Definition of the role the participatingOrganization plays in the association.;
+  ///
+  /// [specialty]: Specific specialty of the participatingOrganization in the context of the role.;
+  ///
+  /// [location]: The location(s) at which the role occurs.;
+  ///
+  /// [healthcareService]: Healthcare services provided through the role.;
+  ///
+  /// [telecom]: Contact details at the participatingOrganization relevant to this Affiliation.;
+  ///
+  /// [endpoint]: Technical endpoints providing access to services operated for this role.;
   factory OrganizationAffiliation({
     @Default(R5ResourceType.OrganizationAffiliation)
-    @JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
         R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-    FhirUri? implicitRules,
+     FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -1167,7 +1033,7 @@ class OrganizationAffiliation with Resource, _$OrganizationAffiliation {
     if (json is Map<String, dynamic>) {
       return _$OrganizationAffiliationFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }

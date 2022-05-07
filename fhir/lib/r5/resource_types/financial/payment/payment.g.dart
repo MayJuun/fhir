@@ -8,10 +8,9 @@ part of 'payment.dart';
 
 _$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
     _$_PaymentNotice(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.PaymentNotice) ??
-          R5ResourceType.PaymentNotice,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.PaymentNotice,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -54,7 +53,7 @@ _$_PaymentNotice _$$_PaymentNoticeFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['response'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : DateTime.parse(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -109,7 +108,7 @@ Map<String, dynamic> _$$_PaymentNoticeToJson(_$_PaymentNotice instance) {
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('response', instance.response?.toJson());
-  writeNotNull('created', instance.created?.toJson());
+  writeNotNull('created', instance.created?.toIso8601String());
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('provider', instance.provider?.toJson());
   val['payment'] = instance.payment.toJson();
@@ -277,10 +276,9 @@ const _$R5ResourceTypeEnumMap = {
 _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
         Map<String, dynamic> json) =>
     _$_PaymentReconciliation(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.PaymentReconciliation) ??
-          R5ResourceType.PaymentReconciliation,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.PaymentReconciliation,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -320,7 +318,7 @@ _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
           : Period.fromJson(json['period'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : DateTime.parse(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -333,9 +331,7 @@ _$_PaymentReconciliation _$$_PaymentReconciliationFromJson(
       requestor: json['requestor'] == null
           ? null
           : Reference.fromJson(json['requestor'] as Map<String, dynamic>),
-      outcome: $enumDecodeNullable(
-          _$PaymentReconciliationOutcomeEnumMap, json['outcome'],
-          unknownValue: PaymentReconciliationOutcome.unknown),
+      outcome: json['outcome'] == null ? null : Code.fromJson(json['outcome']),
       outcomeElement: json['_outcome'] == null
           ? null
           : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
@@ -398,13 +394,12 @@ Map<String, dynamic> _$$_PaymentReconciliationToJson(
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('period', instance.period?.toJson());
-  writeNotNull('created', instance.created?.toJson());
+  writeNotNull('created', instance.created?.toIso8601String());
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('paymentIssuer', instance.paymentIssuer?.toJson());
   writeNotNull('request', instance.request?.toJson());
   writeNotNull('requestor', instance.requestor?.toJson());
-  writeNotNull(
-      'outcome', _$PaymentReconciliationOutcomeEnumMap[instance.outcome]);
+  writeNotNull('outcome', instance.outcome?.toJson());
   writeNotNull('_outcome', instance.outcomeElement?.toJson());
   writeNotNull('disposition', instance.disposition);
   writeNotNull('_disposition', instance.dispositionElement?.toJson());
@@ -418,14 +413,6 @@ Map<String, dynamic> _$$_PaymentReconciliationToJson(
       'processNote', instance.processNote?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$PaymentReconciliationOutcomeEnumMap = {
-  PaymentReconciliationOutcome.queued: 'queued',
-  PaymentReconciliationOutcome.complete: 'complete',
-  PaymentReconciliationOutcome.error: 'error',
-  PaymentReconciliationOutcome.partial: 'partial',
-  PaymentReconciliationOutcome.unknown: 'unknown',
-};
 
 _$_PaymentReconciliationDetail _$$_PaymentReconciliationDetailFromJson(
         Map<String, dynamic> json) =>
@@ -507,9 +494,7 @@ _$_PaymentReconciliationProcessNote
           modifierExtension: (json['modifierExtension'] as List<dynamic>?)
               ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
               .toList(),
-          type: $enumDecodeNullable(
-              _$PaymentReconciliationProcessNoteTypeEnumMap, json['type'],
-              unknownValue: PaymentReconciliationProcessNoteType.unknown),
+          type: json['type'] == null ? null : Code.fromJson(json['type']),
           typeElement: json['_type'] == null
               ? null
               : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -534,17 +519,9 @@ Map<String, dynamic> _$$_PaymentReconciliationProcessNoteToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'type', _$PaymentReconciliationProcessNoteTypeEnumMap[instance.type]);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('text', instance.text);
   writeNotNull('_text', instance.textElement?.toJson());
   return val;
 }
-
-const _$PaymentReconciliationProcessNoteTypeEnumMap = {
-  PaymentReconciliationProcessNoteType.display: 'display',
-  PaymentReconciliationProcessNoteType.print: 'print',
-  PaymentReconciliationProcessNoteType.printoper: 'printoper',
-  PaymentReconciliationProcessNoteType.unknown: 'unknown',
-};

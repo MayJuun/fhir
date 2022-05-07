@@ -13,6 +13,8 @@ import 'primitives.dart';
 RegExp regExp = RegExp('[A-Z]');
 
 Future<void> main() async {
+  var enums = '';
+
   final stringMap = startingStringMap;
 
   void addToStringMap(String resource, String addOn) {
@@ -128,6 +130,13 @@ Future<void> main() async {
                     var variable =
                         k.substring(0, 1).toUpperCase() + k.substring(1);
                     variable = '${resource.replaceAll("_", "")}$variable';
+                    enums += 'enum $resource$variable {\n';
+                    for (var e in definitions[resource]['properties'][k]
+                        ['items']['enum']) {
+                      enums +=
+                          "@JsonValue('$e') ${e.toString().toLowerCase().replaceAll('.', '_').replaceAll('-', '_')},\n";
+                    }
+                    enums += '\n}\n\n';
 
                     addToStringMap(
                         resource.toString(),
@@ -220,6 +229,13 @@ Future<void> main() async {
             } else if (definitions[resource]['properties'][k]['enum'] != null) {
               var variable = k.substring(0, 1).toUpperCase() + k.substring(1);
               variable = '${resource.replaceAll("_", "")}$variable';
+              enums += 'enum $resource$variable {\n';
+              for (var e in definitions[resource]['properties'][k]['enum']) {
+                enums +=
+                    "@JsonValue('$e') ${e.toString().toLowerCase().replaceAll('.', '_').replaceAll('-', '_')},\n";
+              }
+              enums += '\n}\n\n';
+
               addToStringMap(
                   resource.toString(),
                   "${k[0] == '_' || words.contains(k) ? '@JsonKey(name: \'$k\')' : ''}"
@@ -233,7 +249,7 @@ Future<void> main() async {
           }
         }
         addToStringMap(resource.toString(),
-            '  }) = _\$${resource.replaceAll('_', '')};\n\n');
+            '  }) = _${resource.replaceAll('_', '')};\n\n');
         addToStringMap(resource.toString(), '''
           /// Produces a Yaml formatted String version of the object
   @override
@@ -286,12 +302,13 @@ Future<void> main() async {
         finalString = finalString.replaceAll(k, finalReplace[k]!);
       }
       if (fileNames[strings] != null) {
-        await File(fileNames[strings]!).writeAsString(finalString);
+        // await File(fileNames[strings]!).writeAsString(finalString);
       } else {
         print('Unable to write for $strings');
       }
     }
   }
+  await File('enums.dart').writeAsString(enums);
   // final bigString = stringMap.values
   //     .join('\n\n/// ***********************************************\n\n');
   // File('temp.dart').writeAsString(bigString);

@@ -58,12 +58,57 @@ class ContactDetail with _$ContactDetail {
 }
 
 @freezed
+class ExtendedContactDetail with _$ExtendedContactDetail {
+  ExtendedContactDetail._();
+  factory ExtendedContactDetail({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    CodeableConcept? purpose,
+    HumanName? name,
+    List<ContactPoint>? telecom,
+    Address? address,
+    Reference? organization,
+    Period? period,
+  }) = _ExtendedContactDetail;
+
+  /// Produces a Yaml formatted String version of the object
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory ExtendedContactDetail.fromYaml(dynamic yaml) => yaml is String
+      ? ExtendedContactDetail.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? ExtendedContactDetail.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'ExtendedContactDetail cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory ExtendedContactDetail.fromJson(Map<String, dynamic> json) =>
+      _$ExtendedContactDetailFromJson(json);
+
+  /// Acts like a constructor, returns a [ExtendedContactDetail], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ExtendedContactDetail.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ExtendedContactDetailFromJson(json);
+    } else {
+      throw FormatException('FormatException:\nYou passed $json\n'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
 class Contributor with _$Contributor {
   Contributor._();
   factory Contributor({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType? type,
+     ContributorType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
@@ -255,7 +300,7 @@ class DataRequirementSort with _$DataRequirementSort {
     List<FhirExtension>? modifierExtension,
     String? path,
     @JsonKey(name: '_path') Element? pathElement,
-    @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
+    
         DataRequirementSortDirection? direction,
     @JsonKey(name: '_direction') Element? directionElement,
   }) = _DataRequirementSort;
@@ -349,7 +394,7 @@ class RelatedArtifact with _$RelatedArtifact {
   factory RelatedArtifact({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
+    
         RelatedArtifactType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? label,
@@ -401,7 +446,7 @@ class TriggerDefinition with _$TriggerDefinition {
   factory TriggerDefinition({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
+    
         TriggerDefinitionType? type,
     @JsonKey(name: '_type') Element? typeElement,
     String? name,

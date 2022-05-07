@@ -23,43 +23,33 @@ class _$EndpointTearOff {
   const _$EndpointTearOff();
 
   _Endpoint call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
-          R5ResourceType resourceType = R5ResourceType.Endpoint,
+      {R5ResourceType resourceType = R5ResourceType.Endpoint,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-          EndpointStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      required Coding connectionType,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      required List<Coding> connectionType,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       Reference? managingOrganization,
       List<ContactPoint>? contact,
       Period? period,
-      required List<CodeableConcept> payloadType,
+      List<CodeableConcept>? payloadType,
       List<Code>? payloadMimeType,
-      @JsonKey(name: '_payloadMimeType')
-          List<Element>? payloadMimeTypeElement,
+      @JsonKey(name: '_payloadMimeType') List<Element>? payloadMimeTypeElement,
       FhirUrl? address,
-      @JsonKey(name: '_address')
-          Element? addressElement,
+      @JsonKey(name: '_address') Element? addressElement,
       List<String>? header,
-      @JsonKey(name: '_header')
-          List<Element>? headerElement}) {
+      @JsonKey(name: '_header') List<Element>? headerElement}) {
     return _Endpoint(
       resourceType: resourceType,
       id: id,
@@ -101,7 +91,6 @@ const $Endpoint = _$EndpointTearOff();
 
 /// @nodoc
 mixin _$Endpoint {
-  @JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
@@ -118,18 +107,17 @@ mixin _$Endpoint {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-  EndpointStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
-  Coding get connectionType => throw _privateConstructorUsedError;
+  List<Coding> get connectionType => throw _privateConstructorUsedError;
   String? get name => throw _privateConstructorUsedError;
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
   Reference? get managingOrganization => throw _privateConstructorUsedError;
   List<ContactPoint>? get contact => throw _privateConstructorUsedError;
   Period? get period => throw _privateConstructorUsedError;
-  List<CodeableConcept> get payloadType => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get payloadType => throw _privateConstructorUsedError;
   List<Code>? get payloadMimeType => throw _privateConstructorUsedError;
   @JsonKey(name: '_payloadMimeType')
   List<Element>? get payloadMimeTypeElement =>
@@ -152,50 +140,39 @@ abstract class $EndpointCopyWith<$Res> {
   factory $EndpointCopyWith(Endpoint value, $Res Function(Endpoint) then) =
       _$EndpointCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-          EndpointStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      Coding connectionType,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      List<Coding> connectionType,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       Reference? managingOrganization,
       List<ContactPoint>? contact,
       Period? period,
-      List<CodeableConcept> payloadType,
+      List<CodeableConcept>? payloadType,
       List<Code>? payloadMimeType,
-      @JsonKey(name: '_payloadMimeType')
-          List<Element>? payloadMimeTypeElement,
+      @JsonKey(name: '_payloadMimeType') List<Element>? payloadMimeTypeElement,
       FhirUrl? address,
-      @JsonKey(name: '_address')
-          Element? addressElement,
+      @JsonKey(name: '_address') Element? addressElement,
       List<String>? header,
-      @JsonKey(name: '_header')
-          List<Element>? headerElement});
+      @JsonKey(name: '_header') List<Element>? headerElement});
 
   $MetaCopyWith<$Res>? get meta;
   $ElementCopyWith<$Res>? get implicitRulesElement;
   $ElementCopyWith<$Res>? get languageElement;
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get statusElement;
-  $CodingCopyWith<$Res> get connectionType;
   $ElementCopyWith<$Res>? get nameElement;
   $ReferenceCopyWith<$Res>? get managingOrganization;
   $PeriodCopyWith<$Res>? get period;
@@ -292,7 +269,7 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EndpointStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -300,7 +277,7 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
       connectionType: connectionType == freezed
           ? _value.connectionType
           : connectionType // ignore: cast_nullable_to_non_nullable
-              as Coding,
+              as List<Coding>,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -324,7 +301,7 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
       payloadType: payloadType == freezed
           ? _value.payloadType
           : payloadType // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>,
+              as List<CodeableConcept>?,
       payloadMimeType: payloadMimeType == freezed
           ? _value.payloadMimeType
           : payloadMimeType // ignore: cast_nullable_to_non_nullable
@@ -408,13 +385,6 @@ class _$EndpointCopyWithImpl<$Res> implements $EndpointCopyWith<$Res> {
   }
 
   @override
-  $CodingCopyWith<$Res> get connectionType {
-    return $CodingCopyWith<$Res>(_value.connectionType, (value) {
-      return _then(_value.copyWith(connectionType: value));
-    });
-  }
-
-  @override
   $ElementCopyWith<$Res>? get nameElement {
     if (_value.nameElement == null) {
       return null;
@@ -465,43 +435,33 @@ abstract class _$EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
       __$EndpointCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-          EndpointStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      Coding connectionType,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      List<Coding> connectionType,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       Reference? managingOrganization,
       List<ContactPoint>? contact,
       Period? period,
-      List<CodeableConcept> payloadType,
+      List<CodeableConcept>? payloadType,
       List<Code>? payloadMimeType,
-      @JsonKey(name: '_payloadMimeType')
-          List<Element>? payloadMimeTypeElement,
+      @JsonKey(name: '_payloadMimeType') List<Element>? payloadMimeTypeElement,
       FhirUrl? address,
-      @JsonKey(name: '_address')
-          Element? addressElement,
+      @JsonKey(name: '_address') Element? addressElement,
       List<String>? header,
-      @JsonKey(name: '_header')
-          List<Element>? headerElement});
+      @JsonKey(name: '_header') List<Element>? headerElement});
 
   @override
   $MetaCopyWith<$Res>? get meta;
@@ -513,8 +473,6 @@ abstract class _$EndpointCopyWith<$Res> implements $EndpointCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   @override
   $ElementCopyWith<$Res>? get statusElement;
-  @override
-  $CodingCopyWith<$Res> get connectionType;
   @override
   $ElementCopyWith<$Res>? get nameElement;
   @override
@@ -616,7 +574,7 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as EndpointStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -624,7 +582,7 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
       connectionType: connectionType == freezed
           ? _value.connectionType
           : connectionType // ignore: cast_nullable_to_non_nullable
-              as Coding,
+              as List<Coding>,
       name: name == freezed
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -648,7 +606,7 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
       payloadType: payloadType == freezed
           ? _value.payloadType
           : payloadType // ignore: cast_nullable_to_non_nullable
-              as List<CodeableConcept>,
+              as List<CodeableConcept>?,
       payloadMimeType: payloadMimeType == freezed
           ? _value.payloadMimeType
           : payloadMimeType // ignore: cast_nullable_to_non_nullable
@@ -681,50 +639,40 @@ class __$EndpointCopyWithImpl<$Res> extends _$EndpointCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Endpoint extends _Endpoint {
   _$_Endpoint(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
-          this.resourceType = R5ResourceType.Endpoint,
+      {this.resourceType = R5ResourceType.Endpoint,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
-      @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
       required this.connectionType,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.managingOrganization,
       this.contact,
       this.period,
-      required this.payloadType,
+      this.payloadType,
       this.payloadMimeType,
-      @JsonKey(name: '_payloadMimeType')
-          this.payloadMimeTypeElement,
+      @JsonKey(name: '_payloadMimeType') this.payloadMimeTypeElement,
       this.address,
-      @JsonKey(name: '_address')
-          this.addressElement,
+      @JsonKey(name: '_address') this.addressElement,
       this.header,
-      @JsonKey(name: '_header')
-          this.headerElement})
+      @JsonKey(name: '_header') this.headerElement})
       : super._();
 
   factory _$_Endpoint.fromJson(Map<String, dynamic> json) =>
       _$$_EndpointFromJson(json);
 
+  @JsonKey()
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -752,13 +700,12 @@ class _$_Endpoint extends _Endpoint {
   @override
   final List<Identifier>? identifier;
   @override
-  @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-  final EndpointStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
   @override
-  final Coding connectionType;
+  final List<Coding> connectionType;
   @override
   final String? name;
   @override
@@ -771,7 +718,7 @@ class _$_Endpoint extends _Endpoint {
   @override
   final Period? period;
   @override
-  final List<CodeableConcept> payloadType;
+  final List<CodeableConcept>? payloadType;
   @override
   final List<Code>? payloadMimeType;
   @override
@@ -888,49 +835,38 @@ class _$_Endpoint extends _Endpoint {
 
 abstract class _Endpoint extends Endpoint {
   factory _Endpoint(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-          EndpointStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
-      required Coding connectionType,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      required List<Coding> connectionType,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       Reference? managingOrganization,
       List<ContactPoint>? contact,
       Period? period,
-      required List<CodeableConcept> payloadType,
+      List<CodeableConcept>? payloadType,
       List<Code>? payloadMimeType,
-      @JsonKey(name: '_payloadMimeType')
-          List<Element>? payloadMimeTypeElement,
+      @JsonKey(name: '_payloadMimeType') List<Element>? payloadMimeTypeElement,
       FhirUrl? address,
-      @JsonKey(name: '_address')
-          Element? addressElement,
+      @JsonKey(name: '_address') Element? addressElement,
       List<String>? header,
-      @JsonKey(name: '_header')
-          List<Element>? headerElement}) = _$_Endpoint;
+      @JsonKey(name: '_header') List<Element>? headerElement}) = _$_Endpoint;
   _Endpoint._() : super._();
 
   factory _Endpoint.fromJson(Map<String, dynamic> json) = _$_Endpoint.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Endpoint)
   R5ResourceType get resourceType;
   @override
   Id? get id;
@@ -958,13 +894,12 @@ abstract class _Endpoint extends Endpoint {
   @override
   List<Identifier>? get identifier;
   @override
-  @JsonKey(unknownEnumValue: EndpointStatus.unknown)
-  EndpointStatus? get status;
+  Code? get status;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement;
   @override
-  Coding get connectionType;
+  List<Coding> get connectionType;
   @override
   String? get name;
   @override
@@ -977,7 +912,7 @@ abstract class _Endpoint extends Endpoint {
   @override
   Period? get period;
   @override
-  List<CodeableConcept> get payloadType;
+  List<CodeableConcept>? get payloadType;
   @override
   List<Code>? get payloadMimeType;
   @override
@@ -1008,8 +943,7 @@ class _$HealthcareServiceTearOff {
   const _$HealthcareServiceTearOff();
 
   _HealthcareService call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
-          R5ResourceType resourceType = R5ResourceType.HealthcareService,
+      {R5ResourceType resourceType = R5ResourceType.HealthcareService,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -1042,6 +976,7 @@ class _$HealthcareServiceTearOff {
       @JsonKey(name: '_extraDetails')
           Element? extraDetailsElement,
       Attachment? photo,
+      List<ExtendedContactDetail>? contact,
       List<ContactPoint>? telecom,
       List<Reference>? coverageArea,
       List<CodeableConcept>? serviceProvisionCode,
@@ -1086,6 +1021,7 @@ class _$HealthcareServiceTearOff {
       extraDetails: extraDetails,
       extraDetailsElement: extraDetailsElement,
       photo: photo,
+      contact: contact,
       telecom: telecom,
       coverageArea: coverageArea,
       serviceProvisionCode: serviceProvisionCode,
@@ -1114,7 +1050,6 @@ const $HealthcareService = _$HealthcareServiceTearOff();
 
 /// @nodoc
 mixin _$HealthcareService {
-  @JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
@@ -1149,6 +1084,8 @@ mixin _$HealthcareService {
   @JsonKey(name: '_extraDetails')
   Element? get extraDetailsElement => throw _privateConstructorUsedError;
   Attachment? get photo => throw _privateConstructorUsedError;
+  List<ExtendedContactDetail>? get contact =>
+      throw _privateConstructorUsedError;
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   List<Reference>? get coverageArea => throw _privateConstructorUsedError;
   List<CodeableConcept>? get serviceProvisionCode =>
@@ -1187,8 +1124,7 @@ abstract class $HealthcareServiceCopyWith<$Res> {
           HealthcareService value, $Res Function(HealthcareService) then) =
       _$HealthcareServiceCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -1221,6 +1157,7 @@ abstract class $HealthcareServiceCopyWith<$Res> {
       @JsonKey(name: '_extraDetails')
           Element? extraDetailsElement,
       Attachment? photo,
+      List<ExtendedContactDetail>? contact,
       List<ContactPoint>? telecom,
       List<Reference>? coverageArea,
       List<CodeableConcept>? serviceProvisionCode,
@@ -1290,6 +1227,7 @@ class _$HealthcareServiceCopyWithImpl<$Res>
     Object? extraDetails = freezed,
     Object? extraDetailsElement = freezed,
     Object? photo = freezed,
+    Object? contact = freezed,
     Object? telecom = freezed,
     Object? coverageArea = freezed,
     Object? serviceProvisionCode = freezed,
@@ -1411,6 +1349,10 @@ class _$HealthcareServiceCopyWithImpl<$Res>
           ? _value.photo
           : photo // ignore: cast_nullable_to_non_nullable
               as Attachment?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ExtendedContactDetail>?,
       telecom: telecom == freezed
           ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
@@ -1616,8 +1558,7 @@ abstract class _$HealthcareServiceCopyWith<$Res>
       __$HealthcareServiceCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -1650,6 +1591,7 @@ abstract class _$HealthcareServiceCopyWith<$Res>
       @JsonKey(name: '_extraDetails')
           Element? extraDetailsElement,
       Attachment? photo,
+      List<ExtendedContactDetail>? contact,
       List<ContactPoint>? telecom,
       List<Reference>? coverageArea,
       List<CodeableConcept>? serviceProvisionCode,
@@ -1733,6 +1675,7 @@ class __$HealthcareServiceCopyWithImpl<$Res>
     Object? extraDetails = freezed,
     Object? extraDetailsElement = freezed,
     Object? photo = freezed,
+    Object? contact = freezed,
     Object? telecom = freezed,
     Object? coverageArea = freezed,
     Object? serviceProvisionCode = freezed,
@@ -1854,6 +1797,10 @@ class __$HealthcareServiceCopyWithImpl<$Res>
           ? _value.photo
           : photo // ignore: cast_nullable_to_non_nullable
               as Attachment?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ExtendedContactDetail>?,
       telecom: telecom == freezed
           ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
@@ -1922,8 +1869,7 @@ class __$HealthcareServiceCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_HealthcareService extends _HealthcareService {
   _$_HealthcareService(
-      {@JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
-          this.resourceType = R5ResourceType.HealthcareService,
+      {this.resourceType = R5ResourceType.HealthcareService,
       this.id,
       this.meta,
       this.implicitRules,
@@ -1956,6 +1902,7 @@ class _$_HealthcareService extends _HealthcareService {
       @JsonKey(name: '_extraDetails')
           this.extraDetailsElement,
       this.photo,
+      this.contact,
       this.telecom,
       this.coverageArea,
       this.serviceProvisionCode,
@@ -1978,8 +1925,8 @@ class _$_HealthcareService extends _HealthcareService {
   factory _$_HealthcareService.fromJson(Map<String, dynamic> json) =>
       _$$_HealthcareServiceFromJson(json);
 
+  @JsonKey()
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -2039,6 +1986,8 @@ class _$_HealthcareService extends _HealthcareService {
   @override
   final Attachment? photo;
   @override
+  final List<ExtendedContactDetail>? contact;
+  @override
   final List<ContactPoint>? telecom;
   @override
   final List<Reference>? coverageArea;
@@ -2073,7 +2022,7 @@ class _$_HealthcareService extends _HealthcareService {
 
   @override
   String toString() {
-    return 'HealthcareService(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, activeElement: $activeElement, providedBy: $providedBy, category: $category, type: $type, specialty: $specialty, location: $location, name: $name, nameElement: $nameElement, comment: $comment, commentElement: $commentElement, extraDetails: $extraDetails, extraDetailsElement: $extraDetailsElement, photo: $photo, telecom: $telecom, coverageArea: $coverageArea, serviceProvisionCode: $serviceProvisionCode, eligibility: $eligibility, program: $program, characteristic: $characteristic, communication: $communication, referralMethod: $referralMethod, appointmentRequired: $appointmentRequired, appointmentRequiredElement: $appointmentRequiredElement, availableTime: $availableTime, notAvailable: $notAvailable, availabilityExceptions: $availabilityExceptions, availabilityExceptionsElement: $availabilityExceptionsElement, endpoint: $endpoint)';
+    return 'HealthcareService(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, activeElement: $activeElement, providedBy: $providedBy, category: $category, type: $type, specialty: $specialty, location: $location, name: $name, nameElement: $nameElement, comment: $comment, commentElement: $commentElement, extraDetails: $extraDetails, extraDetailsElement: $extraDetailsElement, photo: $photo, contact: $contact, telecom: $telecom, coverageArea: $coverageArea, serviceProvisionCode: $serviceProvisionCode, eligibility: $eligibility, program: $program, characteristic: $characteristic, communication: $communication, referralMethod: $referralMethod, appointmentRequired: $appointmentRequired, appointmentRequiredElement: $appointmentRequiredElement, availableTime: $availableTime, notAvailable: $notAvailable, availabilityExceptions: $availabilityExceptions, availabilityExceptionsElement: $availabilityExceptionsElement, endpoint: $endpoint)';
   }
 
   @override
@@ -2120,6 +2069,7 @@ class _$_HealthcareService extends _HealthcareService {
             const DeepCollectionEquality()
                 .equals(other.extraDetailsElement, extraDetailsElement) &&
             const DeepCollectionEquality().equals(other.photo, photo) &&
+            const DeepCollectionEquality().equals(other.contact, contact) &&
             const DeepCollectionEquality().equals(other.telecom, telecom) &&
             const DeepCollectionEquality()
                 .equals(other.coverageArea, coverageArea) &&
@@ -2179,6 +2129,7 @@ class _$_HealthcareService extends _HealthcareService {
         const DeepCollectionEquality().hash(extraDetails),
         const DeepCollectionEquality().hash(extraDetailsElement),
         const DeepCollectionEquality().hash(photo),
+        const DeepCollectionEquality().hash(contact),
         const DeepCollectionEquality().hash(telecom),
         const DeepCollectionEquality().hash(coverageArea),
         const DeepCollectionEquality().hash(serviceProvisionCode),
@@ -2209,8 +2160,7 @@ class _$_HealthcareService extends _HealthcareService {
 
 abstract class _HealthcareService extends HealthcareService {
   factory _HealthcareService(
-      {@JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -2243,6 +2193,7 @@ abstract class _HealthcareService extends HealthcareService {
       @JsonKey(name: '_extraDetails')
           Element? extraDetailsElement,
       Attachment? photo,
+      List<ExtendedContactDetail>? contact,
       List<ContactPoint>? telecom,
       List<Reference>? coverageArea,
       List<CodeableConcept>? serviceProvisionCode,
@@ -2266,7 +2217,6 @@ abstract class _HealthcareService extends HealthcareService {
       _$_HealthcareService.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.HealthcareService)
   R5ResourceType get resourceType;
   @override
   Id? get id;
@@ -2325,6 +2275,8 @@ abstract class _HealthcareService extends HealthcareService {
   Element? get extraDetailsElement;
   @override
   Attachment? get photo;
+  @override
+  List<ExtendedContactDetail>? get contact;
   @override
   List<ContactPoint>? get telecom;
   @override
@@ -2696,7 +2648,7 @@ class _$HealthcareServiceAvailableTimeTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
+      List<Code>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
@@ -2735,8 +2687,7 @@ mixin _$HealthcareServiceAvailableTime {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  List<HealthcareServiceAvailableTimeDaysOfWeek>? get daysOfWeek =>
-      throw _privateConstructorUsedError;
+  List<Code>? get daysOfWeek => throw _privateConstructorUsedError;
   @JsonKey(name: '_daysOfWeek')
   List<Element>? get daysOfWeekElement => throw _privateConstructorUsedError;
   Boolean? get allDay => throw _privateConstructorUsedError;
@@ -2765,7 +2716,7 @@ abstract class $HealthcareServiceAvailableTimeCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
+      List<Code>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
@@ -2818,7 +2769,7 @@ class _$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
       daysOfWeek: daysOfWeek == freezed
           ? _value.daysOfWeek
           : daysOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<HealthcareServiceAvailableTimeDaysOfWeek>?,
+              as List<Code>?,
       daysOfWeekElement: daysOfWeekElement == freezed
           ? _value.daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -2896,7 +2847,7 @@ abstract class _$HealthcareServiceAvailableTimeCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
+      List<Code>? daysOfWeek,
       @JsonKey(name: '_daysOfWeek') List<Element>? daysOfWeekElement,
       Boolean? allDay,
       @JsonKey(name: '_allDay') Element? allDayElement,
@@ -2956,7 +2907,7 @@ class __$HealthcareServiceAvailableTimeCopyWithImpl<$Res>
       daysOfWeek: daysOfWeek == freezed
           ? _value.daysOfWeek
           : daysOfWeek // ignore: cast_nullable_to_non_nullable
-              as List<HealthcareServiceAvailableTimeDaysOfWeek>?,
+              as List<Code>?,
       daysOfWeekElement: daysOfWeekElement == freezed
           ? _value.daysOfWeekElement
           : daysOfWeekElement // ignore: cast_nullable_to_non_nullable
@@ -3019,7 +2970,7 @@ class _$_HealthcareServiceAvailableTime
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek;
+  final List<Code>? daysOfWeek;
   @override
   @JsonKey(name: '_daysOfWeek')
   final List<Element>? daysOfWeekElement;
@@ -3105,7 +3056,7 @@ abstract class _HealthcareServiceAvailableTime
           @JsonKey(name: 'extension')
               List<FhirExtension>? extension_,
           List<FhirExtension>? modifierExtension,
-          List<HealthcareServiceAvailableTimeDaysOfWeek>? daysOfWeek,
+          List<Code>? daysOfWeek,
           @JsonKey(name: '_daysOfWeek')
               List<Element>? daysOfWeekElement,
           Boolean? allDay,
@@ -3131,7 +3082,7 @@ abstract class _HealthcareServiceAvailableTime
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  List<HealthcareServiceAvailableTimeDaysOfWeek>? get daysOfWeek;
+  List<Code>? get daysOfWeek;
   @override
   @JsonKey(name: '_daysOfWeek')
   List<Element>? get daysOfWeekElement;
@@ -3486,8 +3437,7 @@ class _$LocationTearOff {
   const _$LocationTearOff();
 
   _Location call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Location)
-          R5ResourceType resourceType = R5ResourceType.Location,
+      {R5ResourceType resourceType = R5ResourceType.Location,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -3502,8 +3452,7 @@ class _$LocationTearOff {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown)
-          LocationStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding? operationalStatus,
@@ -3516,11 +3465,11 @@ class _$LocationTearOff {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      @JsonKey(unknownEnumValue: LocationMode.unknown)
-          LocationMode? mode,
+      Code? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       List<CodeableConcept>? type,
+      List<ExtendedContactDetail>? contact,
       List<ContactPoint>? telecom,
       Address? address,
       CodeableConcept? physicalType,
@@ -3557,6 +3506,7 @@ class _$LocationTearOff {
       mode: mode,
       modeElement: modeElement,
       type: type,
+      contact: contact,
       telecom: telecom,
       address: address,
       physicalType: physicalType,
@@ -3580,7 +3530,6 @@ const $Location = _$LocationTearOff();
 
 /// @nodoc
 mixin _$Location {
-  @JsonKey(unknownEnumValue: R5ResourceType.Location)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
@@ -3597,8 +3546,7 @@ mixin _$Location {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: LocationStatus.unknown)
-  LocationStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   Coding? get operationalStatus => throw _privateConstructorUsedError;
@@ -3611,11 +3559,12 @@ mixin _$Location {
   String? get description => throw _privateConstructorUsedError;
   @JsonKey(name: '_description')
   Element? get descriptionElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: LocationMode.unknown)
-  LocationMode? get mode => throw _privateConstructorUsedError;
+  Code? get mode => throw _privateConstructorUsedError;
   @JsonKey(name: '_mode')
   Element? get modeElement => throw _privateConstructorUsedError;
   List<CodeableConcept>? get type => throw _privateConstructorUsedError;
+  List<ExtendedContactDetail>? get contact =>
+      throw _privateConstructorUsedError;
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   Address? get address => throw _privateConstructorUsedError;
   CodeableConcept? get physicalType => throw _privateConstructorUsedError;
@@ -3641,8 +3590,7 @@ abstract class $LocationCopyWith<$Res> {
   factory $LocationCopyWith(Location value, $Res Function(Location) then) =
       _$LocationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Location)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -3657,8 +3605,7 @@ abstract class $LocationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown)
-          LocationStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding? operationalStatus,
@@ -3671,11 +3618,11 @@ abstract class $LocationCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      @JsonKey(unknownEnumValue: LocationMode.unknown)
-          LocationMode? mode,
+      Code? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       List<CodeableConcept>? type,
+      List<ExtendedContactDetail>? contact,
       List<ContactPoint>? telecom,
       Address? address,
       CodeableConcept? physicalType,
@@ -3739,6 +3686,7 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
     Object? mode = freezed,
     Object? modeElement = freezed,
     Object? type = freezed,
+    Object? contact = freezed,
     Object? telecom = freezed,
     Object? address = freezed,
     Object? physicalType = freezed,
@@ -3802,7 +3750,7 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as LocationStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -3838,7 +3786,7 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as LocationMode?,
+              as Code?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -3847,6 +3795,10 @@ class _$LocationCopyWithImpl<$Res> implements $LocationCopyWith<$Res> {
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ExtendedContactDetail>?,
       telecom: telecom == freezed
           ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
@@ -4063,8 +4015,7 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       __$LocationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Location)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -4079,8 +4030,7 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown)
-          LocationStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding? operationalStatus,
@@ -4093,11 +4043,11 @@ abstract class _$LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      @JsonKey(unknownEnumValue: LocationMode.unknown)
-          LocationMode? mode,
+      Code? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       List<CodeableConcept>? type,
+      List<ExtendedContactDetail>? contact,
       List<ContactPoint>? telecom,
       Address? address,
       CodeableConcept? physicalType,
@@ -4177,6 +4127,7 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
     Object? mode = freezed,
     Object? modeElement = freezed,
     Object? type = freezed,
+    Object? contact = freezed,
     Object? telecom = freezed,
     Object? address = freezed,
     Object? physicalType = freezed,
@@ -4240,7 +4191,7 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as LocationStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -4276,7 +4227,7 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
       mode: mode == freezed
           ? _value.mode
           : mode // ignore: cast_nullable_to_non_nullable
-              as LocationMode?,
+              as Code?,
       modeElement: modeElement == freezed
           ? _value.modeElement
           : modeElement // ignore: cast_nullable_to_non_nullable
@@ -4285,6 +4236,10 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as List<CodeableConcept>?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ExtendedContactDetail>?,
       telecom: telecom == freezed
           ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
@@ -4333,8 +4288,7 @@ class __$LocationCopyWithImpl<$Res> extends _$LocationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Location extends _Location {
   _$_Location(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Location)
-          this.resourceType = R5ResourceType.Location,
+      {this.resourceType = R5ResourceType.Location,
       this.id,
       this.meta,
       this.implicitRules,
@@ -4349,8 +4303,7 @@ class _$_Location extends _Location {
           this.extension_,
       this.modifierExtension,
       this.identifier,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown)
-          this.status,
+      this.status,
       @JsonKey(name: '_status')
           this.statusElement,
       this.operationalStatus,
@@ -4363,11 +4316,11 @@ class _$_Location extends _Location {
       this.description,
       @JsonKey(name: '_description')
           this.descriptionElement,
-      @JsonKey(unknownEnumValue: LocationMode.unknown)
-          this.mode,
+      this.mode,
       @JsonKey(name: '_mode')
           this.modeElement,
       this.type,
+      this.contact,
       this.telecom,
       this.address,
       this.physicalType,
@@ -4384,8 +4337,8 @@ class _$_Location extends _Location {
   factory _$_Location.fromJson(Map<String, dynamic> json) =>
       _$$_LocationFromJson(json);
 
+  @JsonKey()
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Location)
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -4413,8 +4366,7 @@ class _$_Location extends _Location {
   @override
   final List<Identifier>? identifier;
   @override
-  @JsonKey(unknownEnumValue: LocationStatus.unknown)
-  final LocationStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -4436,13 +4388,14 @@ class _$_Location extends _Location {
   @JsonKey(name: '_description')
   final Element? descriptionElement;
   @override
-  @JsonKey(unknownEnumValue: LocationMode.unknown)
-  final LocationMode? mode;
+  final Code? mode;
   @override
   @JsonKey(name: '_mode')
   final Element? modeElement;
   @override
   final List<CodeableConcept>? type;
+  @override
+  final List<ExtendedContactDetail>? contact;
   @override
   final List<ContactPoint>? telecom;
   @override
@@ -4467,7 +4420,7 @@ class _$_Location extends _Location {
 
   @override
   String toString() {
-    return 'Location(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, operationalStatus: $operationalStatus, name: $name, nameElement: $nameElement, alias: $alias, aliasElement: $aliasElement, description: $description, descriptionElement: $descriptionElement, mode: $mode, modeElement: $modeElement, type: $type, telecom: $telecom, address: $address, physicalType: $physicalType, position: $position, managingOrganization: $managingOrganization, partOf: $partOf, hoursOfOperation: $hoursOfOperation, availabilityExceptions: $availabilityExceptions, availabilityExceptionsElement: $availabilityExceptionsElement, endpoint: $endpoint)';
+    return 'Location(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, status: $status, statusElement: $statusElement, operationalStatus: $operationalStatus, name: $name, nameElement: $nameElement, alias: $alias, aliasElement: $aliasElement, description: $description, descriptionElement: $descriptionElement, mode: $mode, modeElement: $modeElement, type: $type, contact: $contact, telecom: $telecom, address: $address, physicalType: $physicalType, position: $position, managingOrganization: $managingOrganization, partOf: $partOf, hoursOfOperation: $hoursOfOperation, availabilityExceptions: $availabilityExceptions, availabilityExceptionsElement: $availabilityExceptionsElement, endpoint: $endpoint)';
   }
 
   @override
@@ -4513,6 +4466,7 @@ class _$_Location extends _Location {
             const DeepCollectionEquality()
                 .equals(other.modeElement, modeElement) &&
             const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other.contact, contact) &&
             const DeepCollectionEquality().equals(other.telecom, telecom) &&
             const DeepCollectionEquality().equals(other.address, address) &&
             const DeepCollectionEquality()
@@ -4558,6 +4512,7 @@ class _$_Location extends _Location {
         const DeepCollectionEquality().hash(mode),
         const DeepCollectionEquality().hash(modeElement),
         const DeepCollectionEquality().hash(type),
+        const DeepCollectionEquality().hash(contact),
         const DeepCollectionEquality().hash(telecom),
         const DeepCollectionEquality().hash(address),
         const DeepCollectionEquality().hash(physicalType),
@@ -4583,8 +4538,7 @@ class _$_Location extends _Location {
 
 abstract class _Location extends Location {
   factory _Location(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Location)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
@@ -4599,8 +4553,7 @@ abstract class _Location extends Location {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: LocationStatus.unknown)
-          LocationStatus? status,
+      Code? status,
       @JsonKey(name: '_status')
           Element? statusElement,
       Coding? operationalStatus,
@@ -4613,11 +4566,11 @@ abstract class _Location extends Location {
       String? description,
       @JsonKey(name: '_description')
           Element? descriptionElement,
-      @JsonKey(unknownEnumValue: LocationMode.unknown)
-          LocationMode? mode,
+      Code? mode,
       @JsonKey(name: '_mode')
           Element? modeElement,
       List<CodeableConcept>? type,
+      List<ExtendedContactDetail>? contact,
       List<ContactPoint>? telecom,
       Address? address,
       CodeableConcept? physicalType,
@@ -4634,7 +4587,6 @@ abstract class _Location extends Location {
   factory _Location.fromJson(Map<String, dynamic> json) = _$_Location.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Location)
   R5ResourceType get resourceType;
   @override
   Id? get id;
@@ -4662,8 +4614,7 @@ abstract class _Location extends Location {
   @override
   List<Identifier>? get identifier;
   @override
-  @JsonKey(unknownEnumValue: LocationStatus.unknown)
-  LocationStatus? get status;
+  Code? get status;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -4685,13 +4636,14 @@ abstract class _Location extends Location {
   @JsonKey(name: '_description')
   Element? get descriptionElement;
   @override
-  @JsonKey(unknownEnumValue: LocationMode.unknown)
-  LocationMode? get mode;
+  Code? get mode;
   @override
   @JsonKey(name: '_mode')
   Element? get modeElement;
   @override
   List<CodeableConcept>? get type;
+  @override
+  List<ExtendedContactDetail>? get contact;
   @override
   List<ContactPoint>? get telecom;
   @override
@@ -5592,36 +5544,31 @@ class _$OrganizationTearOff {
   const _$OrganizationTearOff();
 
   _Organization call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Organization)
-          R5ResourceType resourceType = R5ResourceType.Organization,
+      {R5ResourceType resourceType = R5ResourceType.Organization,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       List<CodeableConcept>? type,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       List<String>? alias,
-      @JsonKey(name: '_alias')
-          List<Element>? aliasElement,
+      @JsonKey(name: '_alias') List<Element>? aliasElement,
+      String? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      List<ExtendedContactDetail>? contact,
       List<ContactPoint>? telecom,
       List<Address>? address,
       Reference? partOf,
-      List<OrganizationContact>? contact,
       List<Reference>? endpoint}) {
     return _Organization(
       resourceType: resourceType,
@@ -5643,10 +5590,12 @@ class _$OrganizationTearOff {
       nameElement: nameElement,
       alias: alias,
       aliasElement: aliasElement,
+      description: description,
+      descriptionElement: descriptionElement,
+      contact: contact,
       telecom: telecom,
       address: address,
       partOf: partOf,
-      contact: contact,
       endpoint: endpoint,
     );
   }
@@ -5661,7 +5610,6 @@ const $Organization = _$OrganizationTearOff();
 
 /// @nodoc
 mixin _$Organization {
-  @JsonKey(unknownEnumValue: R5ResourceType.Organization)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
@@ -5688,10 +5636,14 @@ mixin _$Organization {
   List<String>? get alias => throw _privateConstructorUsedError;
   @JsonKey(name: '_alias')
   List<Element>? get aliasElement => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  @JsonKey(name: '_description')
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  List<ExtendedContactDetail>? get contact =>
+      throw _privateConstructorUsedError;
   List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
   List<Address>? get address => throw _privateConstructorUsedError;
   Reference? get partOf => throw _privateConstructorUsedError;
-  List<OrganizationContact>? get contact => throw _privateConstructorUsedError;
   List<Reference>? get endpoint => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -5706,36 +5658,31 @@ abstract class $OrganizationCopyWith<$Res> {
           Organization value, $Res Function(Organization) then) =
       _$OrganizationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Organization)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       List<CodeableConcept>? type,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       List<String>? alias,
-      @JsonKey(name: '_alias')
-          List<Element>? aliasElement,
+      @JsonKey(name: '_alias') List<Element>? aliasElement,
+      String? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      List<ExtendedContactDetail>? contact,
       List<ContactPoint>? telecom,
       List<Address>? address,
       Reference? partOf,
-      List<OrganizationContact>? contact,
       List<Reference>? endpoint});
 
   $MetaCopyWith<$Res>? get meta;
@@ -5744,6 +5691,7 @@ abstract class $OrganizationCopyWith<$Res> {
   $NarrativeCopyWith<$Res>? get text;
   $ElementCopyWith<$Res>? get activeElement;
   $ElementCopyWith<$Res>? get nameElement;
+  $ElementCopyWith<$Res>? get descriptionElement;
   $ReferenceCopyWith<$Res>? get partOf;
 }
 
@@ -5776,10 +5724,12 @@ class _$OrganizationCopyWithImpl<$Res> implements $OrganizationCopyWith<$Res> {
     Object? nameElement = freezed,
     Object? alias = freezed,
     Object? aliasElement = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? contact = freezed,
     Object? telecom = freezed,
     Object? address = freezed,
     Object? partOf = freezed,
-    Object? contact = freezed,
     Object? endpoint = freezed,
   }) {
     return _then(_value.copyWith(
@@ -5859,6 +5809,18 @@ class _$OrganizationCopyWithImpl<$Res> implements $OrganizationCopyWith<$Res> {
           ? _value.aliasElement
           : aliasElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ExtendedContactDetail>?,
       telecom: telecom == freezed
           ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
@@ -5871,10 +5833,6 @@ class _$OrganizationCopyWithImpl<$Res> implements $OrganizationCopyWith<$Res> {
           ? _value.partOf
           : partOf // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact // ignore: cast_nullable_to_non_nullable
-              as List<OrganizationContact>?,
       endpoint: endpoint == freezed
           ? _value.endpoint
           : endpoint // ignore: cast_nullable_to_non_nullable
@@ -5949,6 +5907,17 @@ class _$OrganizationCopyWithImpl<$Res> implements $OrganizationCopyWith<$Res> {
   }
 
   @override
+  $ElementCopyWith<$Res>? get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
   $ReferenceCopyWith<$Res>? get partOf {
     if (_value.partOf == null) {
       return null;
@@ -5968,36 +5937,31 @@ abstract class _$OrganizationCopyWith<$Res>
       __$OrganizationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Organization)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       List<CodeableConcept>? type,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       List<String>? alias,
-      @JsonKey(name: '_alias')
-          List<Element>? aliasElement,
+      @JsonKey(name: '_alias') List<Element>? aliasElement,
+      String? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      List<ExtendedContactDetail>? contact,
       List<ContactPoint>? telecom,
       List<Address>? address,
       Reference? partOf,
-      List<OrganizationContact>? contact,
       List<Reference>? endpoint});
 
   @override
@@ -6012,6 +5976,8 @@ abstract class _$OrganizationCopyWith<$Res>
   $ElementCopyWith<$Res>? get activeElement;
   @override
   $ElementCopyWith<$Res>? get nameElement;
+  @override
+  $ElementCopyWith<$Res>? get descriptionElement;
   @override
   $ReferenceCopyWith<$Res>? get partOf;
 }
@@ -6047,10 +6013,12 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
     Object? nameElement = freezed,
     Object? alias = freezed,
     Object? aliasElement = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? contact = freezed,
     Object? telecom = freezed,
     Object? address = freezed,
     Object? partOf = freezed,
-    Object? contact = freezed,
     Object? endpoint = freezed,
   }) {
     return _then(_Organization(
@@ -6130,6 +6098,18 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
           ? _value.aliasElement
           : aliasElement // ignore: cast_nullable_to_non_nullable
               as List<Element>?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      contact: contact == freezed
+          ? _value.contact
+          : contact // ignore: cast_nullable_to_non_nullable
+              as List<ExtendedContactDetail>?,
       telecom: telecom == freezed
           ? _value.telecom
           : telecom // ignore: cast_nullable_to_non_nullable
@@ -6142,10 +6122,6 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
           ? _value.partOf
           : partOf // ignore: cast_nullable_to_non_nullable
               as Reference?,
-      contact: contact == freezed
-          ? _value.contact
-          : contact // ignore: cast_nullable_to_non_nullable
-              as List<OrganizationContact>?,
       endpoint: endpoint == freezed
           ? _value.endpoint
           : endpoint // ignore: cast_nullable_to_non_nullable
@@ -6158,44 +6134,39 @@ class __$OrganizationCopyWithImpl<$Res> extends _$OrganizationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_Organization extends _Organization {
   _$_Organization(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Organization)
-          this.resourceType = R5ResourceType.Organization,
+      {this.resourceType = R5ResourceType.Organization,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.active,
-      @JsonKey(name: '_active')
-          this.activeElement,
+      @JsonKey(name: '_active') this.activeElement,
       this.type,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.alias,
-      @JsonKey(name: '_alias')
-          this.aliasElement,
+      @JsonKey(name: '_alias') this.aliasElement,
+      this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
+      this.contact,
       this.telecom,
       this.address,
       this.partOf,
-      this.contact,
       this.endpoint})
       : super._();
 
   factory _$_Organization.fromJson(Map<String, dynamic> json) =>
       _$$_OrganizationFromJson(json);
 
+  @JsonKey()
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Organization)
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -6240,19 +6211,24 @@ class _$_Organization extends _Organization {
   @JsonKey(name: '_alias')
   final List<Element>? aliasElement;
   @override
+  final String? description;
+  @override
+  @JsonKey(name: '_description')
+  final Element? descriptionElement;
+  @override
+  final List<ExtendedContactDetail>? contact;
+  @override
   final List<ContactPoint>? telecom;
   @override
   final List<Address>? address;
   @override
   final Reference? partOf;
   @override
-  final List<OrganizationContact>? contact;
-  @override
   final List<Reference>? endpoint;
 
   @override
   String toString() {
-    return 'Organization(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, activeElement: $activeElement, type: $type, name: $name, nameElement: $nameElement, alias: $alias, aliasElement: $aliasElement, telecom: $telecom, address: $address, partOf: $partOf, contact: $contact, endpoint: $endpoint)';
+    return 'Organization(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, active: $active, activeElement: $activeElement, type: $type, name: $name, nameElement: $nameElement, alias: $alias, aliasElement: $aliasElement, description: $description, descriptionElement: $descriptionElement, contact: $contact, telecom: $telecom, address: $address, partOf: $partOf, endpoint: $endpoint)';
   }
 
   @override
@@ -6289,10 +6265,14 @@ class _$_Organization extends _Organization {
             const DeepCollectionEquality().equals(other.alias, alias) &&
             const DeepCollectionEquality()
                 .equals(other.aliasElement, aliasElement) &&
+            const DeepCollectionEquality()
+                .equals(other.description, description) &&
+            const DeepCollectionEquality()
+                .equals(other.descriptionElement, descriptionElement) &&
+            const DeepCollectionEquality().equals(other.contact, contact) &&
             const DeepCollectionEquality().equals(other.telecom, telecom) &&
             const DeepCollectionEquality().equals(other.address, address) &&
             const DeepCollectionEquality().equals(other.partOf, partOf) &&
-            const DeepCollectionEquality().equals(other.contact, contact) &&
             const DeepCollectionEquality().equals(other.endpoint, endpoint));
   }
 
@@ -6318,10 +6298,12 @@ class _$_Organization extends _Organization {
         const DeepCollectionEquality().hash(nameElement),
         const DeepCollectionEquality().hash(alias),
         const DeepCollectionEquality().hash(aliasElement),
+        const DeepCollectionEquality().hash(description),
+        const DeepCollectionEquality().hash(descriptionElement),
+        const DeepCollectionEquality().hash(contact),
         const DeepCollectionEquality().hash(telecom),
         const DeepCollectionEquality().hash(address),
         const DeepCollectionEquality().hash(partOf),
-        const DeepCollectionEquality().hash(contact),
         const DeepCollectionEquality().hash(endpoint)
       ]);
 
@@ -6338,36 +6320,31 @@ class _$_Organization extends _Organization {
 
 abstract class _Organization extends Organization {
   factory _Organization(
-      {@JsonKey(unknownEnumValue: R5ResourceType.Organization)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       List<CodeableConcept>? type,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       List<String>? alias,
-      @JsonKey(name: '_alias')
-          List<Element>? aliasElement,
+      @JsonKey(name: '_alias') List<Element>? aliasElement,
+      String? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      List<ExtendedContactDetail>? contact,
       List<ContactPoint>? telecom,
       List<Address>? address,
       Reference? partOf,
-      List<OrganizationContact>? contact,
       List<Reference>? endpoint}) = _$_Organization;
   _Organization._() : super._();
 
@@ -6375,7 +6352,6 @@ abstract class _Organization extends Organization {
       _$_Organization.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.Organization)
   R5ResourceType get resourceType;
   @override
   Id? get id;
@@ -6420,364 +6396,23 @@ abstract class _Organization extends Organization {
   @JsonKey(name: '_alias')
   List<Element>? get aliasElement;
   @override
+  String? get description;
+  @override
+  @JsonKey(name: '_description')
+  Element? get descriptionElement;
+  @override
+  List<ExtendedContactDetail>? get contact;
+  @override
   List<ContactPoint>? get telecom;
   @override
   List<Address>? get address;
   @override
   Reference? get partOf;
   @override
-  List<OrganizationContact>? get contact;
-  @override
   List<Reference>? get endpoint;
   @override
   @JsonKey(ignore: true)
   _$OrganizationCopyWith<_Organization> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-OrganizationContact _$OrganizationContactFromJson(Map<String, dynamic> json) {
-  return _OrganizationContact.fromJson(json);
-}
-
-/// @nodoc
-class _$OrganizationContactTearOff {
-  const _$OrganizationContactTearOff();
-
-  _OrganizationContact call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? purpose,
-      HumanName? name,
-      List<ContactPoint>? telecom,
-      Address? address}) {
-    return _OrganizationContact(
-      id: id,
-      extension_: extension_,
-      modifierExtension: modifierExtension,
-      purpose: purpose,
-      name: name,
-      telecom: telecom,
-      address: address,
-    );
-  }
-
-  OrganizationContact fromJson(Map<String, Object?> json) {
-    return OrganizationContact.fromJson(json);
-  }
-}
-
-/// @nodoc
-const $OrganizationContact = _$OrganizationContactTearOff();
-
-/// @nodoc
-mixin _$OrganizationContact {
-  String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  List<FhirExtension>? get modifierExtension =>
-      throw _privateConstructorUsedError;
-  CodeableConcept? get purpose => throw _privateConstructorUsedError;
-  HumanName? get name => throw _privateConstructorUsedError;
-  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
-  Address? get address => throw _privateConstructorUsedError;
-
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
-  $OrganizationContactCopyWith<OrganizationContact> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $OrganizationContactCopyWith<$Res> {
-  factory $OrganizationContactCopyWith(
-          OrganizationContact value, $Res Function(OrganizationContact) then) =
-      _$OrganizationContactCopyWithImpl<$Res>;
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? purpose,
-      HumanName? name,
-      List<ContactPoint>? telecom,
-      Address? address});
-
-  $CodeableConceptCopyWith<$Res>? get purpose;
-  $HumanNameCopyWith<$Res>? get name;
-  $AddressCopyWith<$Res>? get address;
-}
-
-/// @nodoc
-class _$OrganizationContactCopyWithImpl<$Res>
-    implements $OrganizationContactCopyWith<$Res> {
-  _$OrganizationContactCopyWithImpl(this._value, this._then);
-
-  final OrganizationContact _value;
-  // ignore: unused_field
-  final $Res Function(OrganizationContact) _then;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? purpose = freezed,
-    Object? name = freezed,
-    Object? telecom = freezed,
-    Object? address = freezed,
-  }) {
-    return _then(_value.copyWith(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      purpose: purpose == freezed
-          ? _value.purpose
-          : purpose // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as HumanName?,
-      telecom: telecom == freezed
-          ? _value.telecom
-          : telecom // ignore: cast_nullable_to_non_nullable
-              as List<ContactPoint>?,
-      address: address == freezed
-          ? _value.address
-          : address // ignore: cast_nullable_to_non_nullable
-              as Address?,
-    ));
-  }
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get purpose {
-    if (_value.purpose == null) {
-      return null;
-    }
-
-    return $CodeableConceptCopyWith<$Res>(_value.purpose!, (value) {
-      return _then(_value.copyWith(purpose: value));
-    });
-  }
-
-  @override
-  $HumanNameCopyWith<$Res>? get name {
-    if (_value.name == null) {
-      return null;
-    }
-
-    return $HumanNameCopyWith<$Res>(_value.name!, (value) {
-      return _then(_value.copyWith(name: value));
-    });
-  }
-
-  @override
-  $AddressCopyWith<$Res>? get address {
-    if (_value.address == null) {
-      return null;
-    }
-
-    return $AddressCopyWith<$Res>(_value.address!, (value) {
-      return _then(_value.copyWith(address: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$OrganizationContactCopyWith<$Res>
-    implements $OrganizationContactCopyWith<$Res> {
-  factory _$OrganizationContactCopyWith(_OrganizationContact value,
-          $Res Function(_OrganizationContact) then) =
-      __$OrganizationContactCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? purpose,
-      HumanName? name,
-      List<ContactPoint>? telecom,
-      Address? address});
-
-  @override
-  $CodeableConceptCopyWith<$Res>? get purpose;
-  @override
-  $HumanNameCopyWith<$Res>? get name;
-  @override
-  $AddressCopyWith<$Res>? get address;
-}
-
-/// @nodoc
-class __$OrganizationContactCopyWithImpl<$Res>
-    extends _$OrganizationContactCopyWithImpl<$Res>
-    implements _$OrganizationContactCopyWith<$Res> {
-  __$OrganizationContactCopyWithImpl(
-      _OrganizationContact _value, $Res Function(_OrganizationContact) _then)
-      : super(_value, (v) => _then(v as _OrganizationContact));
-
-  @override
-  _OrganizationContact get _value => super._value as _OrganizationContact;
-
-  @override
-  $Res call({
-    Object? id = freezed,
-    Object? extension_ = freezed,
-    Object? modifierExtension = freezed,
-    Object? purpose = freezed,
-    Object? name = freezed,
-    Object? telecom = freezed,
-    Object? address = freezed,
-  }) {
-    return _then(_OrganizationContact(
-      id: id == freezed
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      extension_: extension_ == freezed
-          ? _value.extension_
-          : extension_ // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      modifierExtension: modifierExtension == freezed
-          ? _value.modifierExtension
-          : modifierExtension // ignore: cast_nullable_to_non_nullable
-              as List<FhirExtension>?,
-      purpose: purpose == freezed
-          ? _value.purpose
-          : purpose // ignore: cast_nullable_to_non_nullable
-              as CodeableConcept?,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as HumanName?,
-      telecom: telecom == freezed
-          ? _value.telecom
-          : telecom // ignore: cast_nullable_to_non_nullable
-              as List<ContactPoint>?,
-      address: address == freezed
-          ? _value.address
-          : address // ignore: cast_nullable_to_non_nullable
-              as Address?,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$_OrganizationContact extends _OrganizationContact {
-  _$_OrganizationContact(
-      {this.id,
-      @JsonKey(name: 'extension') this.extension_,
-      this.modifierExtension,
-      this.purpose,
-      this.name,
-      this.telecom,
-      this.address})
-      : super._();
-
-  factory _$_OrganizationContact.fromJson(Map<String, dynamic> json) =>
-      _$$_OrganizationContactFromJson(json);
-
-  @override
-  final String? id;
-  @override
-  @JsonKey(name: 'extension')
-  final List<FhirExtension>? extension_;
-  @override
-  final List<FhirExtension>? modifierExtension;
-  @override
-  final CodeableConcept? purpose;
-  @override
-  final HumanName? name;
-  @override
-  final List<ContactPoint>? telecom;
-  @override
-  final Address? address;
-
-  @override
-  String toString() {
-    return 'OrganizationContact(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, purpose: $purpose, name: $name, telecom: $telecom, address: $address)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _OrganizationContact &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality()
-                .equals(other.extension_, extension_) &&
-            const DeepCollectionEquality()
-                .equals(other.modifierExtension, modifierExtension) &&
-            const DeepCollectionEquality().equals(other.purpose, purpose) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.telecom, telecom) &&
-            const DeepCollectionEquality().equals(other.address, address));
-  }
-
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(extension_),
-      const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(purpose),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(telecom),
-      const DeepCollectionEquality().hash(address));
-
-  @JsonKey(ignore: true)
-  @override
-  _$OrganizationContactCopyWith<_OrganizationContact> get copyWith =>
-      __$OrganizationContactCopyWithImpl<_OrganizationContact>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_OrganizationContactToJson(this);
-  }
-}
-
-abstract class _OrganizationContact extends OrganizationContact {
-  factory _OrganizationContact(
-      {String? id,
-      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      CodeableConcept? purpose,
-      HumanName? name,
-      List<ContactPoint>? telecom,
-      Address? address}) = _$_OrganizationContact;
-  _OrganizationContact._() : super._();
-
-  factory _OrganizationContact.fromJson(Map<String, dynamic> json) =
-      _$_OrganizationContact.fromJson;
-
-  @override
-  String? get id;
-  @override
-  @JsonKey(name: 'extension')
-  List<FhirExtension>? get extension_;
-  @override
-  List<FhirExtension>? get modifierExtension;
-  @override
-  CodeableConcept? get purpose;
-  @override
-  HumanName? get name;
-  @override
-  List<ContactPoint>? get telecom;
-  @override
-  Address? get address;
-  @override
-  @JsonKey(ignore: true)
-  _$OrganizationContactCopyWith<_OrganizationContact> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -6791,25 +6426,20 @@ class _$OrganizationAffiliationTearOff {
   const _$OrganizationAffiliationTearOff();
 
   _OrganizationAffiliation call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
-          R5ResourceType resourceType = R5ResourceType.OrganizationAffiliation,
+      {R5ResourceType resourceType = R5ResourceType.OrganizationAffiliation,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       Period? period,
       Reference? organization,
       Reference? participatingOrganization,
@@ -6858,7 +6488,6 @@ const $OrganizationAffiliation = _$OrganizationAffiliationTearOff();
 
 /// @nodoc
 mixin _$OrganizationAffiliation {
-  @JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
@@ -6902,25 +6531,20 @@ abstract class $OrganizationAffiliationCopyWith<$Res> {
           $Res Function(OrganizationAffiliation) then) =
       _$OrganizationAffiliationCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       Period? period,
       Reference? organization,
       Reference? participatingOrganization,
@@ -7175,25 +6799,20 @@ abstract class _$OrganizationAffiliationCopyWith<$Res>
       __$OrganizationAffiliationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       Period? period,
       Reference? organization,
       Reference? participatingOrganization,
@@ -7367,25 +6986,20 @@ class __$OrganizationAffiliationCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_OrganizationAffiliation extends _OrganizationAffiliation {
   _$_OrganizationAffiliation(
-      {@JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
-          this.resourceType = R5ResourceType.OrganizationAffiliation,
+      {this.resourceType = R5ResourceType.OrganizationAffiliation,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
       this.active,
-      @JsonKey(name: '_active')
-          this.activeElement,
+      @JsonKey(name: '_active') this.activeElement,
       this.period,
       this.organization,
       this.participatingOrganization,
@@ -7401,8 +7015,8 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
   factory _$_OrganizationAffiliation.fromJson(Map<String, dynamic> json) =>
       _$$_OrganizationAffiliationFromJson(json);
 
+  @JsonKey()
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -7545,25 +7159,20 @@ class _$_OrganizationAffiliation extends _OrganizationAffiliation {
 
 abstract class _OrganizationAffiliation extends OrganizationAffiliation {
   factory _OrganizationAffiliation(
-      {@JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
       Boolean? active,
-      @JsonKey(name: '_active')
-          Element? activeElement,
+      @JsonKey(name: '_active') Element? activeElement,
       Period? period,
       Reference? organization,
       Reference? participatingOrganization,
@@ -7580,7 +7189,6 @@ abstract class _OrganizationAffiliation extends OrganizationAffiliation {
       _$_OrganizationAffiliation.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.OrganizationAffiliation)
   R5ResourceType get resourceType;
   @override
   Id? get id;

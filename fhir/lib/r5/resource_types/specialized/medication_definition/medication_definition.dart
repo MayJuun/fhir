@@ -10,78 +10,43 @@ import 'package:yaml/yaml.dart';
 import '../../../../r5.dart';
 
 // import 'package:flutter/foundation.dart';
-
 part 'medication_definition.enums.dart';
 part 'medication_definition.freezed.dart';
 part 'medication_definition.g.dart';
 
 @freezed
-class AdministrableProductDefinition
-    with Resource, _$AdministrableProductDefinition {
-  AdministrableProductDefinition._();
-  factory AdministrableProductDefinition({
-    @Default(R5ResourceType.AdministrableProductDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.AdministrableProductDefinition)
-        R5ResourceType resourceType,
-    Id? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    List<Reference>? subject,
-    CodeableConcept? administrableDoseForm,
-    CodeableConcept? unitOfPresentation,
-    List<Reference>? producedFrom,
-    List<Reference>? ingredient,
-    List<Reference>? device,
-    List<AdministrableProductDefinitionProperty>? property,
-    required List<AdministrableProductDefinitionRouteOfAdministration>
-        routeOfAdministration,
-  }) = _AdministrableProductDefinition;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory AdministrableProductDefinition.fromYaml(dynamic yaml) => yaml
-          is String
-      ? AdministrableProductDefinition.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? AdministrableProductDefinition.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'AdministrableProductDefinition cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory AdministrableProductDefinition.fromJson(Map<String, dynamic> json) =>
-      _$AdministrableProductDefinitionFromJson(json);
-
-  /// Acts like a constructor, returns a [AdministrableProductDefinition], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory AdministrableProductDefinition.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$AdministrableProductDefinitionFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
 class AdministrableProductDefinitionProperty
     with _$AdministrableProductDefinitionProperty {
   AdministrableProductDefinitionProperty._();
+
+  /// [AdministrableProductDefinitionProperty]: A medicinal product in the final form which is suitable for administering to a patient (after any mixing of multiple components, dissolution etc. has been performed).
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [type]: A code expressing the type of characteristic.;
+  ///
+  /// [valueCodeableConcept]: A value for the characteristic.;
+  ///
+  /// [valueQuantity]: A value for the characteristic.;
+  ///
+  /// [valueDate]: A value for the characteristic.;
+  ///
+  /// [valueDateElement] (_valueDate): Extensions for valueDate;
+  ///
+  /// [valueBoolean]: A value for the characteristic.;
+  ///
+  /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
+  ///
+  /// [valueAttachment]: A value for the characteristic.;
+  ///
+  /// [status]: The status of characteristic e.g. assigned or pending.;
   factory AdministrableProductDefinitionProperty({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -98,6 +63,7 @@ class AdministrableProductDefinitionProperty
   }) = _AdministrableProductDefinitionProperty;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -116,12 +82,49 @@ class AdministrableProductDefinitionProperty
   factory AdministrableProductDefinitionProperty.fromJson(
           Map<String, dynamic> json) =>
       _$AdministrableProductDefinitionPropertyFromJson(json);
+
+  /// Acts like a constructor, returns a [AdministrableProductDefinitionProperty], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory AdministrableProductDefinitionProperty.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$AdministrableProductDefinitionPropertyFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class AdministrableProductDefinitionRouteOfAdministration
     with _$AdministrableProductDefinitionRouteOfAdministration {
   AdministrableProductDefinitionRouteOfAdministration._();
+
+  /// [AdministrableProductDefinitionRouteOfAdministration]: A medicinal product in the final form which is suitable for administering to a patient (after any mixing of multiple components, dissolution etc. has been performed).
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [code]: Coded expression for the route.;
+  ///
+  /// [firstDose]: The first dose (dose quantity) administered can be specified for the product, using a numerical value and its unit of measurement.;
+  ///
+  /// [maxSingleDose]: The maximum single dose that can be administered, specified using a numerical value and its unit of measurement.;
+  ///
+  /// [maxDosePerDay]: The maximum dose per day (maximum dose quantity to be administered in any one 24-h period) that can be administered.;
+  ///
+  /// [maxDosePerTreatmentPeriod]: The maximum dose per treatment period that can be administered.;
+  ///
+  /// [maxTreatmentPeriod]: The maximum treatment period during which the product can be administered.;
+  ///
+  /// [targetSpecies]: A species for which this route applies.;
   factory AdministrableProductDefinitionRouteOfAdministration({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -131,11 +134,12 @@ class AdministrableProductDefinitionRouteOfAdministration
     Quantity? maxSingleDose,
     Quantity? maxDosePerDay,
     Ratio? maxDosePerTreatmentPeriod,
-    FhirDuration? maxTreatmentPeriod,
+    Duration? maxTreatmentPeriod,
     List<AdministrableProductDefinitionTargetSpecies>? targetSpecies,
   }) = _AdministrableProductDefinitionRouteOfAdministration;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -155,12 +159,41 @@ class AdministrableProductDefinitionRouteOfAdministration
   factory AdministrableProductDefinitionRouteOfAdministration.fromJson(
           Map<String, dynamic> json) =>
       _$AdministrableProductDefinitionRouteOfAdministrationFromJson(json);
+
+  /// Acts like a constructor, returns a [AdministrableProductDefinitionRouteOfAdministration], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory AdministrableProductDefinitionRouteOfAdministration.fromJsonString(
+      String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$AdministrableProductDefinitionRouteOfAdministrationFromJson(
+          json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class AdministrableProductDefinitionTargetSpecies
     with _$AdministrableProductDefinitionTargetSpecies {
   AdministrableProductDefinitionTargetSpecies._();
+
+  /// [AdministrableProductDefinitionTargetSpecies]: A medicinal product in the final form which is suitable for administering to a patient (after any mixing of multiple components, dissolution etc. has been performed).
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [code]: Coded expression for the species.;
+  ///
+  /// [withdrawalPeriod]: A species specific time during which consumption of animal product is not appropriate.;
   factory AdministrableProductDefinitionTargetSpecies({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -170,6 +203,7 @@ class AdministrableProductDefinitionTargetSpecies
   }) = _AdministrableProductDefinitionTargetSpecies;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -188,12 +222,44 @@ class AdministrableProductDefinitionTargetSpecies
   factory AdministrableProductDefinitionTargetSpecies.fromJson(
           Map<String, dynamic> json) =>
       _$AdministrableProductDefinitionTargetSpeciesFromJson(json);
+
+  /// Acts like a constructor, returns a [AdministrableProductDefinitionTargetSpecies], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory AdministrableProductDefinitionTargetSpecies.fromJsonString(
+      String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$AdministrableProductDefinitionTargetSpeciesFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class AdministrableProductDefinitionWithdrawalPeriod
     with _$AdministrableProductDefinitionWithdrawalPeriod {
   AdministrableProductDefinitionWithdrawalPeriod._();
+
+  /// [AdministrableProductDefinitionWithdrawalPeriod]: A medicinal product in the final form which is suitable for administering to a patient (after any mixing of multiple components, dissolution etc. has been performed).
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [tissue]: Coded expression for the type of tissue for which the withdrawal period applies, e.g. meat, milk.;
+  ///
+  /// [value]: A value for the time.;
+  ///
+  /// [supportingInformation]: Extra information about the withdrawal period.;
+  ///
+  /// [supportingInformationElement] (_supportingInformation): Extensions for supportingInformation;
   factory AdministrableProductDefinitionWithdrawalPeriod({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -206,6 +272,7 @@ class AdministrableProductDefinitionWithdrawalPeriod
   }) = _AdministrableProductDefinitionWithdrawalPeriod;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -225,328 +292,78 @@ class AdministrableProductDefinitionWithdrawalPeriod
   factory AdministrableProductDefinitionWithdrawalPeriod.fromJson(
           Map<String, dynamic> json) =>
       _$AdministrableProductDefinitionWithdrawalPeriodFromJson(json);
-}
 
-@freezed
-class ClinicalUseIssue with Resource, _$ClinicalUseIssue {
-  ClinicalUseIssue._();
-  factory ClinicalUseIssue({
-    @Default(R5ResourceType.ClinicalUseIssue)
-    @JsonKey(unknownEnumValue: R5ResourceType.ClinicalUseIssue)
-        R5ResourceType resourceType,
-    Id? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<Identifier>? identifier,
-    @JsonKey(unknownEnumValue: ClinicalUseIssueType.unknown)
-        ClinicalUseIssueType? type,
-    @JsonKey(name: '_type') Element? typeElement,
-    CodeableConcept? category,
-    List<Reference>? subject,
-    CodeableConcept? status,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
-    ClinicalUseIssueContraindication? contraindication,
-    ClinicalUseIssueIndication? indication,
-    ClinicalUseIssueInteraction? interaction,
-    List<Population>? population,
-    ClinicalUseIssueUndesirableEffect? undesirableEffect,
-  }) = _ClinicalUseIssue;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ClinicalUseIssue.fromYaml(dynamic yaml) => yaml is String
-      ? ClinicalUseIssue.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ClinicalUseIssue.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ClinicalUseIssue cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClinicalUseIssue.fromJson(Map<String, dynamic> json) =>
-      _$ClinicalUseIssueFromJson(json);
-
-  /// Acts like a constructor, returns a [ClinicalUseIssue], accepts a
+  /// Acts like a constructor, returns a [AdministrableProductDefinitionWithdrawalPeriod], accepts a
   /// [String] as an argument, mostly because I got tired of typing it out
-  factory ClinicalUseIssue.fromJsonString(String source) {
+  factory AdministrableProductDefinitionWithdrawalPeriod.fromJsonString(
+      String source) {
     final json = jsonDecode(source);
     if (json is Map<String, dynamic>) {
-      return _$ClinicalUseIssueFromJson(json);
+      return _$AdministrableProductDefinitionWithdrawalPeriodFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
-}
-
-@freezed
-class ClinicalUseIssueContraindication with _$ClinicalUseIssueContraindication {
-  ClinicalUseIssueContraindication._();
-  factory ClinicalUseIssueContraindication({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableReference? diseaseSymptomProcedure,
-    CodeableReference? diseaseStatus,
-    List<CodeableReference>? comorbidity,
-    List<Reference>? indication,
-    List<ClinicalUseIssueOtherTherapy>? otherTherapy,
-  }) = _ClinicalUseIssueContraindication;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ClinicalUseIssueContraindication.fromYaml(dynamic yaml) => yaml
-          is String
-      ? ClinicalUseIssueContraindication.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ClinicalUseIssueContraindication.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ClinicalUseIssueContraindication cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClinicalUseIssueContraindication.fromJson(
-          Map<String, dynamic> json) =>
-      _$ClinicalUseIssueContraindicationFromJson(json);
-}
-
-@freezed
-class ClinicalUseIssueOtherTherapy with _$ClinicalUseIssueOtherTherapy {
-  ClinicalUseIssueOtherTherapy._();
-  factory ClinicalUseIssueOtherTherapy({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    required CodeableConcept relationshipType,
-    CodeableReference? therapy,
-  }) = _ClinicalUseIssueOtherTherapy;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ClinicalUseIssueOtherTherapy.fromYaml(dynamic yaml) => yaml is String
-      ? ClinicalUseIssueOtherTherapy.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ClinicalUseIssueOtherTherapy.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ClinicalUseIssueOtherTherapy cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClinicalUseIssueOtherTherapy.fromJson(Map<String, dynamic> json) =>
-      _$ClinicalUseIssueOtherTherapyFromJson(json);
-
-  /// Acts like a constructor, returns a [ClinicalUseIssueOtherTherapy], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory ClinicalUseIssueOtherTherapy.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ClinicalUseIssueOtherTherapyFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ClinicalUseIssueIndication with _$ClinicalUseIssueIndication {
-  ClinicalUseIssueIndication._();
-  factory ClinicalUseIssueIndication({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableReference? diseaseSymptomProcedure,
-    CodeableReference? diseaseStatus,
-    List<CodeableReference>? comorbidity,
-    CodeableReference? intendedEffect,
-    Quantity? duration,
-    List<Reference>? undesirableEffect,
-    List<ClinicalUseIssueOtherTherapy>? otherTherapy,
-  }) = _ClinicalUseIssueIndication;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ClinicalUseIssueIndication.fromYaml(dynamic yaml) => yaml is String
-      ? ClinicalUseIssueIndication.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ClinicalUseIssueIndication.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ClinicalUseIssueIndication cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClinicalUseIssueIndication.fromJson(Map<String, dynamic> json) =>
-      _$ClinicalUseIssueIndicationFromJson(json);
-
-  /// Acts like a constructor, returns a [ClinicalUseIssueIndication], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory ClinicalUseIssueIndication.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ClinicalUseIssueIndicationFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ClinicalUseIssueInteraction with _$ClinicalUseIssueInteraction {
-  ClinicalUseIssueInteraction._();
-  factory ClinicalUseIssueInteraction({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<ClinicalUseIssueInteractant>? interactant,
-    CodeableConcept? type,
-    CodeableReference? effect,
-    CodeableConcept? incidence,
-    CodeableConcept? management,
-  }) = _ClinicalUseIssueInteraction;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ClinicalUseIssueInteraction.fromYaml(dynamic yaml) => yaml is String
-      ? ClinicalUseIssueInteraction.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ClinicalUseIssueInteraction.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ClinicalUseIssueInteraction cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClinicalUseIssueInteraction.fromJson(Map<String, dynamic> json) =>
-      _$ClinicalUseIssueInteractionFromJson(json);
-
-  /// Acts like a constructor, returns a [ClinicalUseIssueInteraction], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory ClinicalUseIssueInteraction.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ClinicalUseIssueInteractionFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ClinicalUseIssueInteractant with _$ClinicalUseIssueInteractant {
-  ClinicalUseIssueInteractant._();
-  factory ClinicalUseIssueInteractant({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Reference? itemReference,
-    CodeableConcept? itemCodeableConcept,
-  }) = _ClinicalUseIssueInteractant;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ClinicalUseIssueInteractant.fromYaml(dynamic yaml) => yaml is String
-      ? ClinicalUseIssueInteractant.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ClinicalUseIssueInteractant.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ClinicalUseIssueInteractant cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClinicalUseIssueInteractant.fromJson(Map<String, dynamic> json) =>
-      _$ClinicalUseIssueInteractantFromJson(json);
-
-  /// Acts like a constructor, returns a [ClinicalUseIssueInteractant], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory ClinicalUseIssueInteractant.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$ClinicalUseIssueInteractantFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class ClinicalUseIssueUndesirableEffect
-    with _$ClinicalUseIssueUndesirableEffect {
-  ClinicalUseIssueUndesirableEffect._();
-  factory ClinicalUseIssueUndesirableEffect({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableReference? symptomConditionEffect,
-    CodeableConcept? classification,
-    CodeableConcept? frequencyOfOccurrence,
-  }) = _ClinicalUseIssueUndesirableEffect;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory ClinicalUseIssueUndesirableEffect.fromYaml(dynamic yaml) => yaml
-          is String
-      ? ClinicalUseIssueUndesirableEffect.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? ClinicalUseIssueUndesirableEffect.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'ClinicalUseIssueUndesirableEffect cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory ClinicalUseIssueUndesirableEffect.fromJson(
-          Map<String, dynamic> json) =>
-      _$ClinicalUseIssueUndesirableEffectFromJson(json);
 }
 
 @freezed
 class Ingredient with Resource, _$Ingredient {
   Ingredient._();
+
+  /// [Ingredient]: An ingredient of a manufactured item or pharmaceutical product.
+
+  ///
+  /// [resourceType]: This is a Ingredient resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [identifier]: The identifier(s) of this Ingredient that are assigned by business processes and/or used to refer to it when a direct URL reference to the resource itself is not appropriate.;
+  ///
+  /// [status]: The status of this ingredient. Enables tracking the life-cycle of the content.;
+  ///
+  /// [statusElement] (_status): Extensions for status;
+  ///
+  /// [for]: The product which this ingredient is a constituent part of.;
+  ///
+  /// [role]: A classification of the ingredient identifying its purpose within the product, e.g. active, inactive.;
+  ///
+  /// [function]: A classification of the ingredient identifying its precise purpose(s) in the drug product. This extends the Ingredient.role to add more detail. Example: antioxidant, alkalizing agent.;
+  ///
+  /// [group]: A classification of the ingredient according to where in the physical item it tends to be used, such the outer shell of a tablet, inner body or ink.;
+  ///
+  /// [allergenicIndicator]: If the ingredient is a known or suspected allergen. Note that this is a property of the substance, so if a reference to a SubstanceDefinition is used to decribe that (rather than just a code), the allergen information should go there, not here.;
+  ///
+  /// [allergenicIndicatorElement] (_allergenicIndicator): Extensions for allergenicIndicator;
+  ///
+  /// [manufacturer]: The organization(s) that manufacture this ingredient. Can be used to indicate:         1) Organizations we are aware of that manufacture this ingredient         2) Specific Manufacturer(s) currently being used         3) Set of organisations allowed to manufacture this ingredient for this product         Users must be clear on the application of context relevant to their use case.;
+  ///
+  /// [substance]: The substance that comprises this ingredient.;
   factory Ingredient({
-    @Default(R5ResourceType.Ingredient)
-    @JsonKey(unknownEnumValue: R5ResourceType.Ingredient)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.Ingredient) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-    FhirUri? implicitRules,
+   FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -555,16 +372,16 @@ class Ingredient with Resource, _$Ingredient {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Identifier? identifier,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
+    @JsonKey(name: 'for') List<Reference>? for_,
     required CodeableConcept role,
     List<CodeableConcept>? function,
     CodeableConcept? group,
-    Markdown? description,
-    @JsonKey(name: '_description') Element? descriptionElement,
     Boolean? allergenicIndicator,
     @JsonKey(name: '_allergenicIndicator') Element? allergenicIndicatorElement,
-    List<Reference>? manufacturer,
-    IngredientSubstance? substance,
-    List<IngredientSpecifiedSubstance>? specifiedSubstance,
+    List<IngredientManufacturer>? manufacturer,
+    required IngredientSubstance substance,
   }) = _Ingredient;
 
   /// Produces a Yaml formatted String version of the object
@@ -593,7 +410,7 @@ class Ingredient with Resource, _$Ingredient {
     if (json is Map<String, dynamic>) {
       return _$IngredientFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -602,15 +419,31 @@ class Ingredient with Resource, _$Ingredient {
 @freezed
 class IngredientSubstance with _$IngredientSubstance {
   IngredientSubstance._();
+
+  /// [IngredientSubstance]: An ingredient of a manufactured item or pharmaceutical product.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [code]: A code or full resource that represents the ingredient's substance.;
+  ///
+  /// [strength]: The quantity of substance in the unit of presentation, or in the volume (or mass) of the single pharmaceutical product or manufactured item. The allowed repetitions do not represent different strengths, but are different representations - mathematically equivalent - of a single strength.;
   factory IngredientSubstance({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    CodeableReference? code,
+    required CodeableReference code,
     List<IngredientStrength>? strength,
   }) = _IngredientSubstance;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -635,7 +468,7 @@ class IngredientSubstance with _$IngredientSubstance {
     if (json is Map<String, dynamic>) {
       return _$IngredientSubstanceFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -644,24 +477,67 @@ class IngredientSubstance with _$IngredientSubstance {
 @freezed
 class IngredientStrength with _$IngredientStrength {
   IngredientStrength._();
+
+  /// [IngredientStrength]: An ingredient of a manufactured item or pharmaceutical product.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [presentationRatio]: The quantity of substance in the unit of presentation, or in the volume (or mass) of the single pharmaceutical product or manufactured item. Unit of presentation refers to the quantity that the item occurs in e.g. a strength per tablet size, perhaps 'per 20mg' (the size of the tablet). It is not generally normalized as a unitary unit, which would be 'per mg').;
+  ///
+  /// [presentationRatioRange]: The quantity of substance in the unit of presentation, or in the volume (or mass) of the single pharmaceutical product or manufactured item. Unit of presentation refers to the quantity that the item occurs in e.g. a strength per tablet size, perhaps 'per 20mg' (the size of the tablet). It is not generally normalized as a unitary unit, which would be 'per mg').;
+  ///
+  /// [presentationCodeableConcept]: The quantity of substance in the unit of presentation, or in the volume (or mass) of the single pharmaceutical product or manufactured item. Unit of presentation refers to the quantity that the item occurs in e.g. a strength per tablet size, perhaps 'per 20mg' (the size of the tablet). It is not generally normalized as a unitary unit, which would be 'per mg').;
+  ///
+  /// [presentationQuantity]: The quantity of substance in the unit of presentation, or in the volume (or mass) of the single pharmaceutical product or manufactured item. Unit of presentation refers to the quantity that the item occurs in e.g. a strength per tablet size, perhaps 'per 20mg' (the size of the tablet). It is not generally normalized as a unitary unit, which would be 'per mg').;
+  ///
+  /// [textPresentation]: A textual represention of either the whole of the presentation strength or a part of it - with the rest being in Strength.presentation as a ratio.;
+  ///
+  /// [textPresentationElement] (_textPresentation): Extensions for textPresentation;
+  ///
+  /// [concentrationRatio]: The strength per unitary volume (or mass).;
+  ///
+  /// [concentrationRatioRange]: The strength per unitary volume (or mass).;
+  ///
+  /// [concentrationCodeableConcept]: The strength per unitary volume (or mass).;
+  ///
+  /// [concentrationQuantity]: The strength per unitary volume (or mass).;
+  ///
+  /// [textConcentration]: A textual represention of either the whole of the concentration strength or a part of it - with the rest being in Strength.concentration as a ratio.;
+  ///
+  /// [textConcentrationElement] (_textConcentration): Extensions for textConcentration;
+  ///
+  /// [basis]: A code that indicates if the strength is, for example, based on the ingredient substance as stated or on the substance base (when the ingredient is a salt).;
+  ///
+  /// [measurementPoint]: For when strength is measured at a particular point or distance. There are products where strength is measured at a particular point. For example, the strength of the ingredient in some inhalers is measured at a particular position relative to the point of aerosolization.;
+  ///
+  /// [measurementPointElement] (_measurementPoint): Extensions for measurementPoint;
+  ///
+  /// [country]: The country or countries for which the strength range applies.;
+  ///
+  /// [referenceStrength]: Strength expressed in terms of a reference substance. For when the ingredient strength is additionally expressed as equivalent to the strength of some other closely related substance (e.g. salt vs. base). Reference strength represents the strength (quantitative composition) of the active moiety of the active substance. There are situations when the active substance and active moiety are different, therefore both a strength and a reference strength are needed.;
   factory IngredientStrength({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Ratio? presentationRatio,
+    RatioRange? presentationRatioRange,
     CodeableConcept? presentationCodeableConcept,
     Quantity? presentationQuantity,
-    Ratio? presentationHighLimitRatio,
-    Quantity? presentationHighLimitQuantity,
-    String? presentationText,
-    @JsonKey(name: '_presentationText') Element? presentationTextElement,
+    String? textPresentation,
+    @JsonKey(name: '_textPresentation') Element? textPresentationElement,
     Ratio? concentrationRatio,
+    RatioRange? concentrationRatioRange,
     CodeableConcept? concentrationCodeableConcept,
     Quantity? concentrationQuantity,
-    Ratio? concentrationHighLimitRatio,
-    Quantity? concentrationHighLimitQuantity,
-    String? concentrationText,
-    @JsonKey(name: '_concentrationText') Element? concentrationTextElement,
+    String? textConcentration,
+    @JsonKey(name: '_textConcentration') Element? textConcentrationElement,
     CodeableConcept? basis,
     String? measurementPoint,
     @JsonKey(name: '_measurementPoint') Element? measurementPointElement,
@@ -670,6 +546,7 @@ class IngredientStrength with _$IngredientStrength {
   }) = _IngredientStrength;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -694,7 +571,7 @@ class IngredientStrength with _$IngredientStrength {
     if (json is Map<String, dynamic>) {
       return _$IngredientStrengthFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -703,21 +580,46 @@ class IngredientStrength with _$IngredientStrength {
 @freezed
 class IngredientReferenceStrength with _$IngredientReferenceStrength {
   IngredientReferenceStrength._();
+
+  /// [IngredientReferenceStrength]: An ingredient of a manufactured item or pharmaceutical product.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [substance]: Relevant reference substance.;
+  ///
+  /// [strengthRatio]: Strength expressed in terms of a reference substance.;
+  ///
+  /// [strengthRatioRange]: Strength expressed in terms of a reference substance.;
+  ///
+  /// [strengthQuantity]: Strength expressed in terms of a reference substance.;
+  ///
+  /// [measurementPoint]: For when strength is measured at a particular point or distance.;
+  ///
+  /// [measurementPointElement] (_measurementPoint): Extensions for measurementPoint;
+  ///
+  /// [country]: The country or countries for which the strength range applies.;
   factory IngredientReferenceStrength({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableReference? substance,
     Ratio? strengthRatio,
+    RatioRange? strengthRatioRange,
     Quantity? strengthQuantity,
-    Ratio? strengthHighLimitRatio,
-    Quantity? strengthHighLimitQuantity,
     String? measurementPoint,
     @JsonKey(name: '_measurementPoint') Element? measurementPointElement,
     List<CodeableConcept>? country,
   }) = _IngredientReferenceStrength;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -742,51 +644,7 @@ class IngredientReferenceStrength with _$IngredientReferenceStrength {
     if (json is Map<String, dynamic>) {
       return _$IngredientReferenceStrengthFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class IngredientSpecifiedSubstance with _$IngredientSpecifiedSubstance {
-  IngredientSpecifiedSubstance._();
-  factory IngredientSpecifiedSubstance({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableReference? code,
-    required CodeableConcept group,
-    CodeableConcept? confidentiality,
-    List<IngredientStrength>? strength,
-  }) = _IngredientSpecifiedSubstance;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory IngredientSpecifiedSubstance.fromYaml(dynamic yaml) => yaml is String
-      ? IngredientSpecifiedSubstance.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? IngredientSpecifiedSubstance.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'IngredientSpecifiedSubstance cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory IngredientSpecifiedSubstance.fromJson(Map<String, dynamic> json) =>
-      _$IngredientSpecifiedSubstanceFromJson(json);
-
-  /// Acts like a constructor, returns a [IngredientSpecifiedSubstance], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory IngredientSpecifiedSubstance.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$IngredientSpecifiedSubstanceFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -795,13 +653,55 @@ class IngredientSpecifiedSubstance with _$IngredientSpecifiedSubstance {
 @freezed
 class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
   ManufacturedItemDefinition._();
+
+  /// [ManufacturedItemDefinition]: The definition and characteristics of a medicinal manufactured item, such as a tablet or capsule, as contained in a packaged medicinal product.
+
+  ///
+  /// [resourceType]: This is a ManufacturedItemDefinition resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [identifier]: Unique identifier.;
+  ///
+  /// [status]: The status of this item. Enables tracking the life-cycle of the content.;
+  ///
+  /// [statusElement] (_status): Extensions for status;
+  ///
+  /// [manufacturedDoseForm]: Dose form as manufactured and before any transformation into the pharmaceutical product.;
+  ///
+  /// [unitOfPresentation]: The “real world” units in which the quantity of the manufactured item is described.;
+  ///
+  /// [manufacturer]: Manufacturer of the item (Note that this should be named "manufacturer" but it currently causes technical issues).;
+  ///
+  /// [ingredient]: The ingredients of this manufactured item. This is only needed if the ingredients are not specified by incoming references from the Ingredient resource.;
+  ///
+  /// [property]: General characteristics of this item.;
   factory ManufacturedItemDefinition({
     @Default(R5ResourceType.ManufacturedItemDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.ManufacturedItemDefinition)
         R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-    FhirUri? implicitRules,
+   FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -810,10 +710,12 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
+    Code? status,
+    @JsonKey(name: '_status') Element? statusElement,
     required CodeableConcept manufacturedDoseForm,
     CodeableConcept? unitOfPresentation,
     List<Reference>? manufacturer,
-    List<CodeableReference>? ingredient,
+    List<CodeableConcept>? ingredient,
     List<ManufacturedItemDefinitionProperty>? property,
   }) = _ManufacturedItemDefinition;
 
@@ -843,7 +745,7 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
     if (json is Map<String, dynamic>) {
       return _$ManufacturedItemDefinitionFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -853,6 +755,33 @@ class ManufacturedItemDefinition with Resource, _$ManufacturedItemDefinition {
 class ManufacturedItemDefinitionProperty
     with _$ManufacturedItemDefinitionProperty {
   ManufacturedItemDefinitionProperty._();
+
+  /// [ManufacturedItemDefinitionProperty]: The definition and characteristics of a medicinal manufactured item, such as a tablet or capsule, as contained in a packaged medicinal product.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [type]: A code expressing the type of characteristic.;
+  ///
+  /// [valueCodeableConcept]: A value for the characteristic.;
+  ///
+  /// [valueQuantity]: A value for the characteristic.;
+  ///
+  /// [valueDate]: A value for the characteristic.;
+  ///
+  /// [valueDateElement] (_valueDate): Extensions for valueDate;
+  ///
+  /// [valueBoolean]: A value for the characteristic.;
+  ///
+  /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
+  ///
+  /// [valueAttachment]: A value for the characteristic.;
   factory ManufacturedItemDefinitionProperty({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -868,6 +797,7 @@ class ManufacturedItemDefinitionProperty
   }) = _ManufacturedItemDefinitionProperty;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -886,18 +816,122 @@ class ManufacturedItemDefinitionProperty
   factory ManufacturedItemDefinitionProperty.fromJson(
           Map<String, dynamic> json) =>
       _$ManufacturedItemDefinitionPropertyFromJson(json);
+
+  /// Acts like a constructor, returns a [ManufacturedItemDefinitionProperty], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory ManufacturedItemDefinitionProperty.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$ManufacturedItemDefinitionPropertyFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
   MedicinalProductDefinition._();
+
+  /// [MedicinalProductDefinition]: A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
+
+  ///
+  /// [resourceType]: This is a MedicinalProductDefinition resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [identifier]: Business identifier for this product. Could be an MPID. When in development or being regulated, products are typically referenced by official identifiers, assigned by a manufacturer or regulator, and unique to a product (which, when compared to a product instance being prescribed, is actually a product type). See also MedicinalProductDefinition.code.;
+  ///
+  /// [type]: Regulatory type, e.g. Investigational or Authorized.;
+  ///
+  /// [domain]: If this medicine applies to human or veterinary uses.;
+  ///
+  /// [version]: A business identifier relating to a specific version of the product, this is commonly used to support revisions to an existing product.;
+  ///
+  /// [versionElement] (_version): Extensions for version;
+  ///
+  /// [status]: The status within the lifecycle of this product record. A high-level status, this is not intended to duplicate details carried elsewhere such as legal status, or authorization status.;
+  ///
+  /// [statusDate]: The date at which the given status became applicable.;
+  ///
+  /// [statusDateElement] (_statusDate): Extensions for statusDate;
+  ///
+  /// [description]: General description of this product.;
+  ///
+  /// [descriptionElement] (_description): Extensions for description;
+  ///
+  /// [combinedPharmaceuticalDoseForm]: The dose form for a single part product, or combined form of a multiple part product. This is one concept that describes all the components. It does not represent the form with components physically mixed, if that might be necessary, for which see (AdministrableProductDefinition.administrableDoseForm).;
+  ///
+  /// [route]: The path by which the product is taken into or makes contact with the body. In some regions this is referred to as the licenced or approved route. See also AdministrableProductDefinition resource. MedicinalProductDefinition.route is the same concept as AdministrableProductDefinition.routeOfAdministration.code, and they cannot be used together.;
+  ///
+  /// [indication]: Description of indication(s) for this product, used when structured indications are not required. In cases where structured indications are required, they are captured using the ClinicalUseDefinition resource. An indication is a medical situation for which using the product is appropriate.;
+  ///
+  /// [indicationElement] (_indication): Extensions for indication;
+  ///
+  /// [legalStatusOfSupply]: The legal status of supply of the medicinal product as classified by the regulator.;
+  ///
+  /// [additionalMonitoringIndicator]: Whether the Medicinal Product is subject to additional monitoring for regulatory reasons, such as heightened reporting requirements.;
+  ///
+  /// [specialMeasures]: Whether the Medicinal Product is subject to special measures for regulatory reasons, such as a requirement to conduct post-authorisation studies.;
+  ///
+  /// [pediatricUseIndicator]: If authorised for use in children, or infants, neonates etc.;
+  ///
+  /// [classification]: Allows the product to be classified by various systems, commonly WHO ATC.;
+  ///
+  /// [marketingStatus]: Marketing status of the medicinal product, in contrast to marketing authorization. This refers to the product being actually 'on the market' as opposed to being allowed to be on the market (which is an authorization).;
+  ///
+  /// [packagedMedicinalProduct]: Package type for the product. See also the PackagedProductDefinition resource.;
+  ///
+  /// [comprisedOf]: A medicinal manufactured item that this product consists of, such as a tablet or capsule. Used as a direct link when the item's packaging is not being recorded (see also PackagedProductDefinition.package.containedItem.item).;
+  ///
+  /// [ingredient]: The ingredients of this medicinal product - when not detailed in other resources. This is only needed if the ingredients are not specified by incoming references from the Ingredient resource, or indirectly via incoming AdministrableProductDefinition, PackagedProductDefinition or ManufacturedItemDefinition references. In cases where those levels of detail are not used, the ingredients may be specified directly here as codes.;
+  ///
+  /// [impurity]: Any component of the drug product which is not the chemical entity defined as the drug substance, or an excipient in the drug product. This includes process-related impurities and contaminants, product-related impurities including degradation products.;
+  ///
+  /// [attachedDocument]: Additional information or supporting documentation about the medicinal product.;
+  ///
+  /// [masterFile]: A master file for the medicinal product (e.g. Pharmacovigilance System Master File). Drug master files (DMFs) are documents submitted to regulatory agencies to provide confidential detailed information about facilities, processes or articles used in the manufacturing, processing, packaging and storing of drug products.;
+  ///
+  /// [contact]: A product specific contact, person (in a role), or an organization.;
+  ///
+  /// [clinicalTrial]: Clinical trials or studies that this product is involved in.;
+  ///
+  /// [code]: A code that this product is known by, usually within some formal terminology, perhaps assigned by a third party (i.e. not the manufacturer or regulator). Products (types of medications) tend to be known by identifiers during development and within regulatory process. However when they are prescribed they tend to be identified by codes. The same product may be have multiple codes, applied to it by multiple organizations.;
+  ///
+  /// [name]: The product's name, including full name and possibly coded parts.;
+  ///
+  /// [crossReference]: Reference to another product, e.g. for linking authorised to investigational product, or a virtual product.;
+  ///
+  /// [operation]: A manufacturing or administrative process or step associated with (or performed on) the medicinal product.;
+  ///
+  /// [characteristic]: Allows the key product features to be recorded, such as "sugar free", "modified release", "parallel import".;
   factory MedicinalProductDefinition({
     @Default(R5ResourceType.MedicinalProductDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.MedicinalProductDefinition)
         R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-    FhirUri? implicitRules,
+   FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -911,31 +945,33 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     CodeableConcept? status,
-    FhirDateTime? statusDate,
+    DateTime? statusDate,
     @JsonKey(name: '_statusDate') Element? statusDateElement,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     CodeableConcept? combinedPharmaceuticalDoseForm,
+    List<CodeableConcept>? route,
     Markdown? indication,
     @JsonKey(name: '_indication') Element? indicationElement,
     CodeableConcept? legalStatusOfSupply,
     CodeableConcept? additionalMonitoringIndicator,
     List<CodeableConcept>? specialMeasures,
-    CodeableConcept? paediatricUseIndicator,
+    CodeableConcept? pediatricUseIndicator,
     List<CodeableConcept>? classification,
-    List<CodeableConcept>? characteristic,
     List<MarketingStatus>? marketingStatus,
-    List<CodeableReference>? ingredient,
-    List<Reference>? impurity,
+    List<CodeableConcept>? packagedMedicinalProduct,
+    List<Reference>? comprisedOf,
+    List<CodeableConcept>? ingredient,
+    List<CodeableReference>? impurity,
     List<Reference>? attachedDocument,
     List<Reference>? masterFile,
     List<MedicinalProductDefinitionContact>? contact,
     List<Reference>? clinicalTrial,
+    List<Coding>? code,
     required List<MedicinalProductDefinitionName> name,
     List<MedicinalProductDefinitionCrossReference>? crossReference,
     List<MedicinalProductDefinitionOperation>? operation,
-    List<MedicinalProductDefinitionPackage>? package,
-    List<MedicinalProductDefinitionAdministrableProduct>? administrableProduct,
+    List<MedicinalProductDefinitionCharacteristic>? characteristic,
   }) = _MedicinalProductDefinition;
 
   /// Produces a Yaml formatted String version of the object
@@ -964,7 +1000,7 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
     if (json is Map<String, dynamic>) {
       return _$MedicinalProductDefinitionFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -974,6 +1010,21 @@ class MedicinalProductDefinition with Resource, _$MedicinalProductDefinition {
 class MedicinalProductDefinitionContact
     with _$MedicinalProductDefinitionContact {
   MedicinalProductDefinitionContact._();
+
+  /// [MedicinalProductDefinitionContact]: A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [type]: Allows the contact to be classified, for example QPPV, Pharmacovigilance Enquiry Information.;
+  ///
+  /// [contact]: A product specific contact, person (in a role), or an organization.;
   factory MedicinalProductDefinitionContact({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -983,6 +1034,7 @@ class MedicinalProductDefinitionContact
   }) = _MedicinalProductDefinitionContact;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1001,11 +1053,44 @@ class MedicinalProductDefinitionContact
   factory MedicinalProductDefinitionContact.fromJson(
           Map<String, dynamic> json) =>
       _$MedicinalProductDefinitionContactFromJson(json);
+
+  /// Acts like a constructor, returns a [MedicinalProductDefinitionContact], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MedicinalProductDefinitionContact.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MedicinalProductDefinitionContactFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class MedicinalProductDefinitionName with _$MedicinalProductDefinitionName {
   MedicinalProductDefinitionName._();
+
+  /// [MedicinalProductDefinitionName]: A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [productName]: The full product name.;
+  ///
+  /// [productNameElement] (_productName): Extensions for productName;
+  ///
+  /// [type]: Type of product name, such as rINN, BAN, Proprietary, Non-Proprietary.;
+  ///
+  /// [namePart]: Coding words or phrases of the name.;
+  ///
+  /// [countryLanguage]: Country and jurisdiction where the name applies, and associated language.;
   factory MedicinalProductDefinitionName({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1018,6 +1103,7 @@ class MedicinalProductDefinitionName with _$MedicinalProductDefinitionName {
   }) = _MedicinalProductDefinitionName;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1043,7 +1129,7 @@ class MedicinalProductDefinitionName with _$MedicinalProductDefinitionName {
     if (json is Map<String, dynamic>) {
       return _$MedicinalProductDefinitionNameFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1053,16 +1139,34 @@ class MedicinalProductDefinitionName with _$MedicinalProductDefinitionName {
 class MedicinalProductDefinitionNamePart
     with _$MedicinalProductDefinitionNamePart {
   MedicinalProductDefinitionNamePart._();
+
+  /// [MedicinalProductDefinitionNamePart]: A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [part]: A fragment of a product name.;
+  ///
+  /// [partElement] (_part): Extensions for part;
+  ///
+  /// [type]: Identifying type for this part of the name (e.g. strength part).;
   factory MedicinalProductDefinitionNamePart({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    String? part,
+    @JsonKey(name: 'part') String? part_,
     @JsonKey(name: '_part') Element? partElement,
     required CodeableConcept type,
   }) = _MedicinalProductDefinitionNamePart;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1081,12 +1185,41 @@ class MedicinalProductDefinitionNamePart
   factory MedicinalProductDefinitionNamePart.fromJson(
           Map<String, dynamic> json) =>
       _$MedicinalProductDefinitionNamePartFromJson(json);
+
+  /// Acts like a constructor, returns a [MedicinalProductDefinitionNamePart], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MedicinalProductDefinitionNamePart.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MedicinalProductDefinitionNamePartFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class MedicinalProductDefinitionCountryLanguage
     with _$MedicinalProductDefinitionCountryLanguage {
   MedicinalProductDefinitionCountryLanguage._();
+
+  /// [MedicinalProductDefinitionCountryLanguage]: A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [country]: Country code for where this name applies.;
+  ///
+  /// [jurisdiction]: Jurisdiction code for where this name applies. A jurisdiction may be a sub- or supra-national entity (e.g. a state or a geographic region).;
+  ///
+  /// [language]: Language code for this name.;
   factory MedicinalProductDefinitionCountryLanguage({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1097,6 +1230,7 @@ class MedicinalProductDefinitionCountryLanguage
   }) = _MedicinalProductDefinitionCountryLanguage;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1115,21 +1249,50 @@ class MedicinalProductDefinitionCountryLanguage
   factory MedicinalProductDefinitionCountryLanguage.fromJson(
           Map<String, dynamic> json) =>
       _$MedicinalProductDefinitionCountryLanguageFromJson(json);
+
+  /// Acts like a constructor, returns a [MedicinalProductDefinitionCountryLanguage], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MedicinalProductDefinitionCountryLanguage.fromJsonString(
+      String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MedicinalProductDefinitionCountryLanguageFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class MedicinalProductDefinitionCrossReference
     with _$MedicinalProductDefinitionCrossReference {
   MedicinalProductDefinitionCrossReference._();
+
+  /// [MedicinalProductDefinitionCrossReference]: A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [product]: Reference to another product, e.g. for linking authorised to investigational product.;
+  ///
+  /// [type]: The type of relationship, for instance branded to generic, virtual to actual product, product to development product (investigational), parallel import version.;
   factory MedicinalProductDefinitionCrossReference({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    CodeableReference? product,
+    required CodeableReference product,
     CodeableConcept? type,
   }) = _MedicinalProductDefinitionCrossReference;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1148,12 +1311,44 @@ class MedicinalProductDefinitionCrossReference
   factory MedicinalProductDefinitionCrossReference.fromJson(
           Map<String, dynamic> json) =>
       _$MedicinalProductDefinitionCrossReferenceFromJson(json);
+
+  /// Acts like a constructor, returns a [MedicinalProductDefinitionCrossReference], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MedicinalProductDefinitionCrossReference.fromJsonString(
+      String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MedicinalProductDefinitionCrossReferenceFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class MedicinalProductDefinitionOperation
     with _$MedicinalProductDefinitionOperation {
   MedicinalProductDefinitionOperation._();
+
+  /// [MedicinalProductDefinitionOperation]: A medicinal product, being a substance or combination of substances that is intended to treat, prevent or diagnose a disease, or to restore, correct or modify physiological functions by exerting a pharmacological, immunological or metabolic action. This resource is intended to define and detail such products and their properties, for uses other than direct patient care (e.g. regulatory use, or drug catalogs).
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [type]: The type of manufacturing operation e.g. manufacturing itself, re-packaging. For the authorization of this, a RegulatedAuthorization would point to the same plan or activity referenced here.;
+  ///
+  /// [effectiveDate]: Date range of applicability.;
+  ///
+  /// [organization]: The organization or establishment responsible for (or associated with) the particular process or step, examples include the manufacturer, importer, agent.;
+  ///
+  /// [confidentialityIndicator]: Specifies whether this particular business or manufacturing process is considered proprietary or confidential.;
   factory MedicinalProductDefinitionOperation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1161,11 +1356,11 @@ class MedicinalProductDefinitionOperation
     CodeableReference? type,
     Period? effectiveDate,
     List<Reference>? organization,
-    Reference? authorization,
     CodeableConcept? confidentialityIndicator,
   }) = _MedicinalProductDefinitionOperation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1184,88 +1379,94 @@ class MedicinalProductDefinitionOperation
   factory MedicinalProductDefinitionOperation.fromJson(
           Map<String, dynamic> json) =>
       _$MedicinalProductDefinitionOperationFromJson(json);
-}
 
-@freezed
-class MedicinalProductDefinitionPackage
-    with _$MedicinalProductDefinitionPackage {
-  MedicinalProductDefinitionPackage._();
-  factory MedicinalProductDefinitionPackage({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? type,
-    Quantity? sizeQuantity,
-    Integer? sizeInteger,
-    @JsonKey(name: '_sizeInteger') Element? sizeIntegerElement,
-    Reference? package,
-  }) = _MedicinalProductDefinitionPackage;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory MedicinalProductDefinitionPackage.fromYaml(dynamic yaml) => yaml
-          is String
-      ? MedicinalProductDefinitionPackage.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? MedicinalProductDefinitionPackage.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'MedicinalProductDefinitionPackage cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicinalProductDefinitionPackage.fromJson(
-          Map<String, dynamic> json) =>
-      _$MedicinalProductDefinitionPackageFromJson(json);
-}
-
-@freezed
-class MedicinalProductDefinitionAdministrableProduct
-    with _$MedicinalProductDefinitionAdministrableProduct {
-  MedicinalProductDefinitionAdministrableProduct._();
-  factory MedicinalProductDefinitionAdministrableProduct({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    List<CodeableConcept>? route,
-    Reference? product,
-  }) = _MedicinalProductDefinitionAdministrableProduct;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory MedicinalProductDefinitionAdministrableProduct.fromYaml(
-          dynamic yaml) =>
-      yaml is String
-          ? MedicinalProductDefinitionAdministrableProduct.fromJson(
-              jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-          : yaml is YamlMap
-              ? MedicinalProductDefinitionAdministrableProduct.fromJson(
-                  jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-              : throw ArgumentError(
-                  'MedicinalProductDefinitionAdministrableProduct cannot be constructed from input provided,'
-                  ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory MedicinalProductDefinitionAdministrableProduct.fromJson(
-          Map<String, dynamic> json) =>
-      _$MedicinalProductDefinitionAdministrableProductFromJson(json);
+  /// Acts like a constructor, returns a [MedicinalProductDefinitionOperation], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory MedicinalProductDefinitionOperation.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$MedicinalProductDefinitionOperationFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
   PackagedProductDefinition._();
+
+  /// [PackagedProductDefinition]: A medically related item or items, in a container or package.
+
+  ///
+  /// [resourceType]: This is a PackagedProductDefinition resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [identifier]: A unique identifier for this package as whole - not the the content of the package. Unique instance identifiers assigned to a package by manufacturers, regulators, drug catalogue custodians or other organizations.;
+  ///
+  /// [name]: A name for this package. Typically what it would be listed as in a drug formulary or catalogue, inventory etc.;
+  ///
+  /// [nameElement] (_name): Extensions for name;
+  ///
+  /// [type]: A high level category e.g. medicinal product, raw material, shipping/transport container, etc.;
+  ///
+  /// [packageFor]: The product this package model relates to, not the contents of the package (for which see package.containedItem).;
+  ///
+  /// [status]: The status within the lifecycle of this item. A high level status, this is not intended to duplicate details carried elsewhere such as legal status, or authorization or marketing status.;
+  ///
+  /// [statusDate]: The date at which the given status became applicable.;
+  ///
+  /// [statusDateElement] (_statusDate): Extensions for statusDate;
+  ///
+  /// [containedItemQuantity]: A total of the complete count of contained items of a particular type/form, independent of sub-packaging or organization. This can be considered as the pack size. This attribute differs from containedItem.amount in that it can give a single aggregated count of all tablet types in a pack, even when these are different manufactured items. For example a pill pack of 21 tablets plus 7 sugar tablets, can be denoted here as '28 tablets'. This attribute is repeatable so that the different item types in one pack type can be counted (e.g. a count of vials and count of syringes). Each repeat must have different units, so that it is clear what the different sets of counted items are, and it is not intended to allow different counts of similar items (e.g. not '2 tubes and 3 tubes'). Repeats are not to be used to represent different pack sizes (e.g. 20 pack vs. 50 pack) - which would be different instances of this resource.;
+  ///
+  /// [description]: Textual description. Note that this is not the name of the package or product.;
+  ///
+  /// [descriptionElement] (_description): Extensions for description;
+  ///
+  /// [legalStatusOfSupply]: The legal status of supply of the packaged item as classified by the regulator.;
+  ///
+  /// [marketingStatus]: Allows specifying that an item is on the market for sale, or that it is not available, and the dates and locations associated.;
+  ///
+  /// [characteristic]: Allows the key features to be recorded, such as "hospital pack", "nurse prescribable", "calendar pack".;
+  ///
+  /// [copackagedIndicator]: Identifies if the package contains different items, such as when a drug product is supplied with another item e.g. a diluent or adjuvant.;
+  ///
+  /// [copackagedIndicatorElement] (_copackagedIndicator): Extensions for copackagedIndicator;
+  ///
+  /// [manufacturer]: Manufacturer of this package type. When there are multiple it means these are all possible manufacturers.;
+  ///
+  /// [attachedDocument]: Additional information or supporting documentation about the packaged product.;
+  ///
+  /// [package]: A packaging item, as a container for medically related items, possibly with other packaging items within, or a packaging component, such as bottle cap (which is not a device or a medication manufactured item).;
   factory PackagedProductDefinition({
     @Default(R5ResourceType.PackagedProductDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.PackagedProductDefinition)
         R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-    FhirUri? implicitRules,
+   FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -1277,19 +1478,18 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
     String? name,
     @JsonKey(name: '_name') Element? nameElement,
     CodeableConcept? type,
-    List<Reference>? subject,
+    List<Reference>? packageFor,
     CodeableConcept? status,
-    FhirDateTime? statusDate,
+    DateTime? statusDate,
     @JsonKey(name: '_statusDate') Element? statusDateElement,
     List<Quantity>? containedItemQuantity,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    CodeableConcept? legalStatusOfSupply,
+    List<PackagedProductDefinitionLegalStatusOfSupply>? legalStatusOfSupply,
     List<MarketingStatus>? marketingStatus,
     List<CodeableConcept>? characteristic,
     Boolean? copackagedIndicator,
     @JsonKey(name: '_copackagedIndicator') Element? copackagedIndicatorElement,
-    Reference? marketingAuthorization,
     List<Reference>? manufacturer,
     List<Reference>? attachedDocument,
     PackagedProductDefinitionPackage? package,
@@ -1321,7 +1521,7 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
     if (json is Map<String, dynamic>) {
       return _$PackagedProductDefinitionFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1330,6 +1530,39 @@ class PackagedProductDefinition with Resource, _$PackagedProductDefinition {
 @freezed
 class PackagedProductDefinitionPackage with _$PackagedProductDefinitionPackage {
   PackagedProductDefinitionPackage._();
+
+  /// [PackagedProductDefinitionPackage]: A medically related item or items, in a container or package.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [identifier]: A business identifier that is specific to this particular part of the packaging, often assigned by the manufacturer. Including possibly Data Carrier Identifier (a GS1 barcode).;
+  ///
+  /// [type]: The physical type of the container of the items.;
+  ///
+  /// [quantity]: The quantity of packaging items contained at this layer of the package. This does not relate to the number of contained items but relates solely to the number of packaging items. When looking at the outermost layer it is always 1. If there are two boxes within, at the next layer it would be 2.;
+  ///
+  /// [quantityElement] (_quantity): Extensions for quantity;
+  ///
+  /// [material]: Material type of the package item.;
+  ///
+  /// [alternateMaterial]: A possible alternate material for this part of the packaging, that is allowed to be used instead of the usual material (e.g. different types of plastic for a blister sleeve).;
+  ///
+  /// [shelfLifeStorage]: Shelf Life and storage information.;
+  ///
+  /// [manufacturer]: Manufacturer of this packaging item. When there are multiple values each one is a potential manufacturer of this packaging item.;
+  ///
+  /// [property]: General characteristics of this item.;
+  ///
+  /// [containedItem]: The item(s) within the packaging.;
+  ///
+  /// [package]: Allows containers (and parts of containers) parwithin containers, still a single packaged product.  See also PackagedProductDefinition.package.containedItem.item(PackagedProductDefinition).;
   factory PackagedProductDefinitionPackage({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1348,6 +1581,7 @@ class PackagedProductDefinitionPackage with _$PackagedProductDefinitionPackage {
   }) = _PackagedProductDefinitionPackage;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1366,12 +1600,51 @@ class PackagedProductDefinitionPackage with _$PackagedProductDefinitionPackage {
   factory PackagedProductDefinitionPackage.fromJson(
           Map<String, dynamic> json) =>
       _$PackagedProductDefinitionPackageFromJson(json);
+
+  /// Acts like a constructor, returns a [PackagedProductDefinitionPackage], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory PackagedProductDefinitionPackage.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$PackagedProductDefinitionPackageFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class PackagedProductDefinitionProperty
     with _$PackagedProductDefinitionProperty {
   PackagedProductDefinitionProperty._();
+
+  /// [PackagedProductDefinitionProperty]: A medically related item or items, in a container or package.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [type]: A code expressing the type of characteristic.;
+  ///
+  /// [valueCodeableConcept]: A value for the characteristic.;
+  ///
+  /// [valueQuantity]: A value for the characteristic.;
+  ///
+  /// [valueDate]: A value for the characteristic.;
+  ///
+  /// [valueDateElement] (_valueDate): Extensions for valueDate;
+  ///
+  /// [valueBoolean]: A value for the characteristic.;
+  ///
+  /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
+  ///
+  /// [valueAttachment]: A value for the characteristic.;
   factory PackagedProductDefinitionProperty({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1387,6 +1660,7 @@ class PackagedProductDefinitionProperty
   }) = _PackagedProductDefinitionProperty;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1405,23 +1679,49 @@ class PackagedProductDefinitionProperty
   factory PackagedProductDefinitionProperty.fromJson(
           Map<String, dynamic> json) =>
       _$PackagedProductDefinitionPropertyFromJson(json);
+
+  /// Acts like a constructor, returns a [PackagedProductDefinitionProperty], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory PackagedProductDefinitionProperty.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$PackagedProductDefinitionPropertyFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class PackagedProductDefinitionContainedItem
     with _$PackagedProductDefinitionContainedItem {
   PackagedProductDefinitionContainedItem._();
+
+  /// [PackagedProductDefinitionContainedItem]: A medically related item or items, in a container or package.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [item]: The actual item(s) of medication, as manufactured, or a device (typically, but not necessarily, a co-packaged one), or other medically related item (such as food, biologicals, raw materials, medical fluids, gases etc.), as contained in the package. This also allows another whole packaged product to be included, which is solely for the case where a package of other entire packages is wanted - such as a wholesale or distribution pack (for layers within one package, use PackagedProductDefinition.package.package).;
+  ///
+  /// [amount]: The number of this type of item within this packaging.;
   factory PackagedProductDefinitionContainedItem({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    List<CodeableReference>? item,
-    Quantity? amountQuantity,
-    Integer? amountInteger,
-    @JsonKey(name: '_amountInteger') Element? amountIntegerElement,
+    required CodeableReference item,
+    Quantity? amount,
   }) = _PackagedProductDefinitionContainedItem;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1440,18 +1740,89 @@ class PackagedProductDefinitionContainedItem
   factory PackagedProductDefinitionContainedItem.fromJson(
           Map<String, dynamic> json) =>
       _$PackagedProductDefinitionContainedItemFromJson(json);
+
+  /// Acts like a constructor, returns a [PackagedProductDefinitionContainedItem], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory PackagedProductDefinitionContainedItem.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$PackagedProductDefinitionContainedItemFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
   RegulatedAuthorization._();
+
+  /// [RegulatedAuthorization]: Regulatory approval, clearance or licencing related to a regulated product, treatment, facility or activity that is cited in a guidance, regulation, rule or legislative act. An example is Market Authorization relating to a Medicinal Product.
+
+  ///
+  /// [resourceType]: This is a RegulatedAuthorization resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [identifier]: Business identifier for the authorization, typically assigned by the authorizing body.;
+  ///
+  /// [subject]: The product type, treatment, facility or activity that is being authorized.;
+  ///
+  /// [type]: Overall type of this authorization, for example drug marketing approval, orphan drug designation.;
+  ///
+  /// [description]: General textual supporting information.;
+  ///
+  /// [descriptionElement] (_description): Extensions for description;
+  ///
+  /// [region]: The territory (e.g., country, jurisdiction etc.) in which the authorization has been granted.;
+  ///
+  /// [status]: The status that is authorised e.g. approved. Intermediate states and actions can be tracked with cases and applications.;
+  ///
+  /// [statusDate]: The date at which the current status was assigned.;
+  ///
+  /// [statusDateElement] (_statusDate): Extensions for statusDate;
+  ///
+  /// [validityPeriod]: The time period in which the regulatory approval, clearance or licencing is in effect. As an example, a Marketing Authorization includes the date of authorization and/or an expiration date.;
+  ///
+  /// [indication]: Condition for which the use of the regulated product applies.;
+  ///
+  /// [intendedUse]: The intended use of the product, e.g. prevention, treatment, diagnosis.;
+  ///
+  /// [basis]: The legal or regulatory framework against which this authorization is granted, or other reasons for it.;
+  ///
+  /// [holder]: The organization that has been granted this authorization, by some authoritative body (the 'regulator').;
+  ///
+  /// [regulator]: The regulatory authority or authorizing body granting the authorization. For example, European Medicines Agency (EMA), Food and Drug Administration (FDA), Health Canada (HC), etc.;
+  ///
+  /// [attachedDocument]: Additional information or supporting documentation about the authorization.;
+  ///
+  /// [case]: The case or regulatory procedure for granting or amending a regulated authorization. An authorization is granted in response to submissions/applications by those seeking authorization. A case is the administrative process that deals with the application(s) that relate to this and assesses them. Note: This area is subject to ongoing review and the workgroup is seeking implementer feedback on its use (see link at bottom of page).;
   factory RegulatedAuthorization({
-    @Default(R5ResourceType.RegulatedAuthorization)
-    @JsonKey(unknownEnumValue: R5ResourceType.RegulatedAuthorization)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.RegulatedAuthorization) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-    FhirUri? implicitRules,
+   FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -1460,20 +1831,18 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     List<Identifier>? identifier,
-    Reference? subject,
+    List<Reference>? subject,
     CodeableConcept? type,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
     List<CodeableConcept>? region,
     CodeableConcept? status,
-    FhirDateTime? statusDate,
+    DateTime? statusDate,
     @JsonKey(name: '_statusDate') Element? statusDateElement,
     Period? validityPeriod,
     CodeableReference? indication,
     CodeableConcept? intendedUse,
     List<CodeableConcept>? basis,
-    List<RegulatedAuthorizationRelatedDate>? relatedDate,
-    List<Reference>? jurisdictionalAuthorization,
     Reference? holder,
     Reference? regulator,
     List<Reference>? attachedDocument,
@@ -1506,50 +1875,40 @@ class RegulatedAuthorization with Resource, _$RegulatedAuthorization {
     if (json is Map<String, dynamic>) {
       return _$RegulatedAuthorizationFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
 }
 
 @freezed
-class RegulatedAuthorizationRelatedDate
-    with _$RegulatedAuthorizationRelatedDate {
-  RegulatedAuthorizationRelatedDate._();
-  factory RegulatedAuthorizationRelatedDate({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Period? datePeriod,
-    FhirDateTime? dateDateTime,
-    @JsonKey(name: '_dateDateTime') Element? dateDateTimeElement,
-    required CodeableConcept type,
-  }) = _RegulatedAuthorizationRelatedDate;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory RegulatedAuthorizationRelatedDate.fromYaml(dynamic yaml) => yaml
-          is String
-      ? RegulatedAuthorizationRelatedDate.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? RegulatedAuthorizationRelatedDate.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'RegulatedAuthorizationRelatedDate cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory RegulatedAuthorizationRelatedDate.fromJson(
-          Map<String, dynamic> json) =>
-      _$RegulatedAuthorizationRelatedDateFromJson(json);
-}
-
-@freezed
 class RegulatedAuthorizationCase with _$RegulatedAuthorizationCase {
   RegulatedAuthorizationCase._();
+
+  /// [RegulatedAuthorizationCase]: Regulatory approval, clearance or licencing related to a regulated product, treatment, facility or activity that is cited in a guidance, regulation, rule or legislative act. An example is Market Authorization relating to a Medicinal Product.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [identifier]: Identifier by which this case can be referenced.;
+  ///
+  /// [type]: The defining type of case.;
+  ///
+  /// [status]: The status associated with the case.;
+  ///
+  /// [datePeriod]: Relevant date for this case.;
+  ///
+  /// [dateDateTime]: Relevant date for this case.;
+  ///
+  /// [dateDateTimeElement] (_dateDateTime): Extensions for dateDateTime;
+  ///
+  /// [application]: A regulatory submission from an organization to a regulator, as part of an assessing case. Multiple applications may occur over time, with more or different information to support or modify the submission or the authorization. The applications can be considered as steps within the longer running case or procedure for this authorization process.;
   factory RegulatedAuthorizationCase({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1558,12 +1917,13 @@ class RegulatedAuthorizationCase with _$RegulatedAuthorizationCase {
     CodeableConcept? type,
     CodeableConcept? status,
     Period? datePeriod,
-    FhirDateTime? dateDateTime,
+    DateTime? dateDateTime,
     @JsonKey(name: '_dateDateTime') Element? dateDateTimeElement,
     List<RegulatedAuthorizationCase>? application,
   }) = _RegulatedAuthorizationCase;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1588,7 +1948,7 @@ class RegulatedAuthorizationCase with _$RegulatedAuthorizationCase {
     if (json is Map<String, dynamic>) {
       return _$RegulatedAuthorizationCaseFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1597,13 +1957,88 @@ class RegulatedAuthorizationCase with _$RegulatedAuthorizationCase {
 @freezed
 class SubstanceDefinition with Resource, _$SubstanceDefinition {
   SubstanceDefinition._();
+
+  /// [SubstanceDefinition]: The detailed description of a substance, typically at a level beyond what is used for prescribing.
+
+  ///
+  /// [resourceType]: This is a SubstanceDefinition resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [identifier]: Identifier by which this substance is known.;
+  ///
+  /// [version]: A business level version identifier of the substance.;
+  ///
+  /// [versionElement] (_version): Extensions for version;
+  ///
+  /// [status]: Status of substance within the catalogue e.g. active, retired.;
+  ///
+  /// [classification]: A high level categorization, e.g. polymer or nucleic acid, or food, chemical, biological, or a lower level such as the general types of polymer (linear or branch chain) or type of impurity (process related or contaminant).;
+  ///
+  /// [domain]: If the substance applies to human or veterinary use.;
+  ///
+  /// [grade]: The quality standard, established benchmark, to which substance complies (e.g. USP/NF, Ph. Eur, JP, BP, Company Standard).;
+  ///
+  /// [description]: Textual description of the substance.;
+  ///
+  /// [descriptionElement] (_description): Extensions for description;
+  ///
+  /// [informationSource]: Supporting literature.;
+  ///
+  /// [note]: Textual comment about the substance's catalogue or registry record.;
+  ///
+  /// [manufacturer]: The entity that creates, makes, produces or fabricates the substance. This is a set of potential manufacturers but is not necessarily comprehensive.;
+  ///
+  /// [supplier]: An entity that is the source for the substance. It may be different from the manufacturer. Supplier is synonymous to a distributor.;
+  ///
+  /// [moiety]: Moiety, for structural modifications.;
+  ///
+  /// [property]: General specifications for this substance.;
+  ///
+  /// [referenceInformation]: General information detailing this substance.;
+  ///
+  /// [molecularWeight]: The molecular weight or weight range (for proteins, polymers or nucleic acids).;
+  ///
+  /// [structure]: Structural information.;
+  ///
+  /// [code]: Codes associated with the substance.;
+  ///
+  /// [name]: Names applicable to this substance.;
+  ///
+  /// [relationship]: A link between this substance and another, with details of the relationship.;
+  ///
+  /// [nucleicAcid]: Data items specific to nucleic acids.;
+  ///
+  /// [polymer]: Data items specific to polymers.;
+  ///
+  /// [protein]: Data items specific to proteins.;
+  ///
+  /// [sourceMaterial]: Material or taxonomic/anatomical source for the substance.;
   factory SubstanceDefinition({
-    @Default(R5ResourceType.SubstanceDefinition)
-    @JsonKey(unknownEnumValue: R5ResourceType.SubstanceDefinition)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.SubstanceDefinition) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-    FhirUri? implicitRules,
+   FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -1611,27 +2046,26 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
     List<Resource>? contained,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    Identifier? identifier,
+    List<Identifier>? identifier,
     String? version,
     @JsonKey(name: '_version') Element? versionElement,
     CodeableConcept? status,
-    CodeableConcept? category,
     List<CodeableConcept>? classification,
     CodeableConcept? domain,
     List<CodeableConcept>? grade,
     Markdown? description,
     @JsonKey(name: '_description') Element? descriptionElement,
-    List<Reference>? source,
+    List<Reference>? informationSource,
     List<Annotation>? note,
     List<Reference>? manufacturer,
     List<Reference>? supplier,
     List<SubstanceDefinitionMoiety>? moiety,
     List<SubstanceDefinitionProperty>? property,
     Reference? referenceInformation,
+    List<SubstanceDefinitionMolecularWeight>? molecularWeight,
     SubstanceDefinitionStructure? structure,
     List<SubstanceDefinitionCode>? code,
     List<SubstanceDefinitionName>? name,
-    List<SubstanceDefinitionMolecularWeight>? molecularWeight,
     List<SubstanceDefinitionRelationship>? relationship,
     Reference? nucleicAcid,
     Reference? polymer,
@@ -1665,7 +2099,7 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
     if (json is Map<String, dynamic>) {
       return _$SubstanceDefinitionFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1674,6 +2108,41 @@ class SubstanceDefinition with Resource, _$SubstanceDefinition {
 @freezed
 class SubstanceDefinitionMoiety with _$SubstanceDefinitionMoiety {
   SubstanceDefinitionMoiety._();
+
+  /// [SubstanceDefinitionMoiety]: The detailed description of a substance, typically at a level beyond what is used for prescribing.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [role]: Role that the moiety is playing.;
+  ///
+  /// [identifier]: Identifier by which this moiety substance is known.;
+  ///
+  /// [name]: Textual name for this moiety substance.;
+  ///
+  /// [nameElement] (_name): Extensions for name;
+  ///
+  /// [stereochemistry]: Stereochemistry type.;
+  ///
+  /// [opticalActivity]: Optical activity type.;
+  ///
+  /// [molecularFormula]: Molecular formula for this moiety of this substance, typically using the Hill system.;
+  ///
+  /// [molecularFormulaElement] (_molecularFormula): Extensions for molecularFormula;
+  ///
+  /// [amountQuantity]: Quantitative value for this moiety.;
+  ///
+  /// [amountString]: Quantitative value for this moiety.;
+  ///
+  /// [amountStringElement] (_amountString): Extensions for amountString;
+  ///
+  /// [measurementType]: The measurement type of the quantitative value. In capturing the actual relative amounts of substances or molecular fragments it may be necessary to indicate whether the amount refers to, for example, a mole ratio or weight ratio.;
   factory SubstanceDefinitionMoiety({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1687,12 +2156,13 @@ class SubstanceDefinitionMoiety with _$SubstanceDefinitionMoiety {
     String? molecularFormula,
     @JsonKey(name: '_molecularFormula') Element? molecularFormulaElement,
     Quantity? amountQuantity,
-    String? amountString,
+    Markdown? amountString,
     @JsonKey(name: '_amountString') Element? amountStringElement,
-    CodeableConcept? amountType,
+    CodeableConcept? measurementType,
   }) = _SubstanceDefinitionMoiety;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1717,7 +2187,7 @@ class SubstanceDefinitionMoiety with _$SubstanceDefinitionMoiety {
     if (json is Map<String, dynamic>) {
       return _$SubstanceDefinitionMoietyFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1726,23 +2196,49 @@ class SubstanceDefinitionMoiety with _$SubstanceDefinitionMoiety {
 @freezed
 class SubstanceDefinitionProperty with _$SubstanceDefinitionProperty {
   SubstanceDefinitionProperty._();
+
+  /// [SubstanceDefinitionProperty]: The detailed description of a substance, typically at a level beyond what is used for prescribing.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [type]: A code expressing the type of property.;
+  ///
+  /// [valueCodeableConcept]: A value for the property.;
+  ///
+  /// [valueQuantity]: A value for the property.;
+  ///
+  /// [valueDate]: A value for the property.;
+  ///
+  /// [valueDateElement] (_valueDate): Extensions for valueDate;
+  ///
+  /// [valueBoolean]: A value for the property.;
+  ///
+  /// [valueBooleanElement] (_valueBoolean): Extensions for valueBoolean;
+  ///
+  /// [valueAttachment]: A value for the property.;
   factory SubstanceDefinitionProperty({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    CodeableConcept? category,
-    CodeableConcept? code,
-    String? parameters,
-    @JsonKey(name: '_parameters') Element? parametersElement,
-    CodeableReference? definingSubstance,
-    Quantity? amountQuantity,
-    String? amountString,
-    @JsonKey(name: '_amountString') Element? amountStringElement,
-    Range? referenceRange,
-    List<Reference>? source,
+    required CodeableConcept type,
+    CodeableConcept? valueCodeableConcept,
+    Quantity? valueQuantity,
+    Date? valueDate,
+    @JsonKey(name: '_valueDate') Element? valueDateElement,
+    Boolean? valueBoolean,
+    @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+    Attachment? valueAttachment,
   }) = _SubstanceDefinitionProperty;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1767,7 +2263,71 @@ class SubstanceDefinitionProperty with _$SubstanceDefinitionProperty {
     if (json is Map<String, dynamic>) {
       return _$SubstanceDefinitionPropertyFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
+}
+
+@freezed
+class SubstanceDefinitionMolecularWeight
+    with _$SubstanceDefinitionMolecularWeight {
+  SubstanceDefinitionMolecularWeight._();
+
+  /// [SubstanceDefinitionMolecularWeight]: The detailed description of a substance, typically at a level beyond what is used for prescribing.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [method]: The method by which the molecular weight was determined.;
+  ///
+  /// [type]: Type of molecular weight such as exact, average (also known as. number average), weight average.;
+  ///
+  /// [amount]: Used to capture quantitative values for a variety of elements. If only limits are given, the arithmetic mean would be the average. If only a single definite value for a given element is given, it would be captured in this field.;
+  factory SubstanceDefinitionMolecularWeight({
+    String? id,
+    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+    List<FhirExtension>? modifierExtension,
+    CodeableConcept? method,
+    CodeableConcept? type,
+    required Quantity amount,
+  }) = _SubstanceDefinitionMolecularWeight;
+
+  /// Produces a Yaml formatted String version of the object
+  @override
+  String toYaml() => json2yaml(toJson());
+
+  /// Factory constructor that accepts a [String] in YAML format as an argument
+  factory SubstanceDefinitionMolecularWeight.fromYaml(dynamic yaml) => yaml
+          is String
+      ? SubstanceDefinitionMolecularWeight.fromJson(
+          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
+      : yaml is YamlMap
+          ? SubstanceDefinitionMolecularWeight.fromJson(
+              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
+          : throw ArgumentError(
+              'SubstanceDefinitionMolecularWeight cannot be constructed from input provided,'
+              ' it is neither a yaml string nor a yaml map.');
+
+  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
+  factory SubstanceDefinitionMolecularWeight.fromJson(
+          Map<String, dynamic> json) =>
+      _$SubstanceDefinitionMolecularWeightFromJson(json);
+
+  /// Acts like a constructor, returns a [SubstanceDefinitionMolecularWeight], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubstanceDefinitionMolecularWeight.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubstanceDefinitionMolecularWeightFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1776,6 +2336,37 @@ class SubstanceDefinitionProperty with _$SubstanceDefinitionProperty {
 @freezed
 class SubstanceDefinitionStructure with _$SubstanceDefinitionStructure {
   SubstanceDefinitionStructure._();
+
+  /// [SubstanceDefinitionStructure]: The detailed description of a substance, typically at a level beyond what is used for prescribing.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [stereochemistry]: Stereochemistry type.;
+  ///
+  /// [opticalActivity]: Optical activity type.;
+  ///
+  /// [molecularFormula]: Molecular formula of this substance, typically using the Hill system.;
+  ///
+  /// [molecularFormulaElement] (_molecularFormula): Extensions for molecularFormula;
+  ///
+  /// [molecularFormulaByMoiety]: Specified per moiety according to the Hill system, i.e. first C, then H, then alphabetical, each moiety separated by a dot.;
+  ///
+  /// [molecularFormulaByMoietyElement] (_molecularFormulaByMoiety): Extensions for molecularFormulaByMoiety;
+  ///
+  /// [molecularWeight]: The molecular weight or weight range (for proteins, polymers or nucleic acids).;
+  ///
+  /// [technique]: The method used to elucidate the structure or characterization of the drug substance. Examples: X-ray, HPLC, NMR, Peptide mapping, Ligand binding assay.;
+  ///
+  /// [sourceDocument]: The source of information about the structure.;
+  ///
+  /// [representation]: A depiction of the structure or characterization of the substance.;
   factory SubstanceDefinitionStructure({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1787,7 +2378,6 @@ class SubstanceDefinitionStructure with _$SubstanceDefinitionStructure {
     String? molecularFormulaByMoiety,
     @JsonKey(name: '_molecularFormulaByMoiety')
         Element? molecularFormulaByMoietyElement,
-    List<SubstanceDefinitionIsotope>? isotope,
     SubstanceDefinitionMolecularWeight? molecularWeight,
     List<CodeableConcept>? technique,
     List<Reference>? sourceDocument,
@@ -1795,6 +2385,7 @@ class SubstanceDefinitionStructure with _$SubstanceDefinitionStructure {
   }) = _SubstanceDefinitionStructure;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1819,95 +2410,37 @@ class SubstanceDefinitionStructure with _$SubstanceDefinitionStructure {
     if (json is Map<String, dynamic>) {
       return _$SubstanceDefinitionStructureFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
-}
-
-@freezed
-class SubstanceDefinitionIsotope with _$SubstanceDefinitionIsotope {
-  SubstanceDefinitionIsotope._();
-  factory SubstanceDefinitionIsotope({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    Identifier? identifier,
-    CodeableConcept? name,
-    CodeableConcept? substitution,
-    Quantity? halfLife,
-    SubstanceDefinitionMolecularWeight? molecularWeight,
-  }) = _SubstanceDefinitionIsotope;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory SubstanceDefinitionIsotope.fromYaml(dynamic yaml) => yaml is String
-      ? SubstanceDefinitionIsotope.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? SubstanceDefinitionIsotope.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'SubstanceDefinitionIsotope cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceDefinitionIsotope.fromJson(Map<String, dynamic> json) =>
-      _$SubstanceDefinitionIsotopeFromJson(json);
-
-  /// Acts like a constructor, returns a [SubstanceDefinitionIsotope], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory SubstanceDefinitionIsotope.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$SubstanceDefinitionIsotopeFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class SubstanceDefinitionMolecularWeight
-    with _$SubstanceDefinitionMolecularWeight {
-  SubstanceDefinitionMolecularWeight._();
-  factory SubstanceDefinitionMolecularWeight({
-    String? id,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    CodeableConcept? method,
-    CodeableConcept? type,
-    Quantity? amount,
-  }) = _SubstanceDefinitionMolecularWeight;
-
-  /// Produces a Yaml formatted String version of the object
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory SubstanceDefinitionMolecularWeight.fromYaml(dynamic yaml) => yaml
-          is String
-      ? SubstanceDefinitionMolecularWeight.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? SubstanceDefinitionMolecularWeight.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'SubstanceDefinitionMolecularWeight cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceDefinitionMolecularWeight.fromJson(
-          Map<String, dynamic> json) =>
-      _$SubstanceDefinitionMolecularWeightFromJson(json);
 }
 
 @freezed
 class SubstanceDefinitionRepresentation
     with _$SubstanceDefinitionRepresentation {
   SubstanceDefinitionRepresentation._();
+
+  /// [SubstanceDefinitionRepresentation]: The detailed description of a substance, typically at a level beyond what is used for prescribing.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [type]: The kind of structural representation (e.g. full, partial).;
+  ///
+  /// [representation]: The structural representation or characterization as a text string in a standard format.;
+  ///
+  /// [representationElement] (_representation): Extensions for representation;
+  ///
+  /// [format]: The format of the representation e.g. InChI, SMILES, MOLFILE, CDX, SDF, PDB, mmCIF. The logical content type rather than the physical file format of a document.;
+  ///
+  /// [document]: An attached file with the structural representation or characterization e.g. a molecular structure graphic of the substance, a JCAMP or AnIML file.;
   factory SubstanceDefinitionRepresentation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -1920,6 +2453,7 @@ class SubstanceDefinitionRepresentation
   }) = _SubstanceDefinitionRepresentation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1938,24 +2472,60 @@ class SubstanceDefinitionRepresentation
   factory SubstanceDefinitionRepresentation.fromJson(
           Map<String, dynamic> json) =>
       _$SubstanceDefinitionRepresentationFromJson(json);
+
+  /// Acts like a constructor, returns a [SubstanceDefinitionRepresentation], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubstanceDefinitionRepresentation.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubstanceDefinitionRepresentationFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class SubstanceDefinitionCode with _$SubstanceDefinitionCode {
   SubstanceDefinitionCode._();
+
+  /// [SubstanceDefinitionCode]: The detailed description of a substance, typically at a level beyond what is used for prescribing.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [code]: The specific code.;
+  ///
+  /// [status]: Status of the code assignment, for example 'provisional', 'approved'.;
+  ///
+  /// [statusDate]: The date at which the code status was changed as part of the terminology maintenance.;
+  ///
+  /// [statusDateElement] (_statusDate): Extensions for statusDate;
+  ///
+  /// [note]: Any comment can be provided in this field, if necessary.;
+  ///
+  /// [source]: Supporting literature.;
   factory SubstanceDefinitionCode({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? code,
     CodeableConcept? status,
-    FhirDateTime? statusDate,
+    DateTime? statusDate,
     @JsonKey(name: '_statusDate') Element? statusDateElement,
     List<Annotation>? note,
     List<Reference>? source,
   }) = _SubstanceDefinitionCode;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1980,7 +2550,7 @@ class SubstanceDefinitionCode with _$SubstanceDefinitionCode {
     if (json is Map<String, dynamic>) {
       return _$SubstanceDefinitionCodeFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -1989,6 +2559,43 @@ class SubstanceDefinitionCode with _$SubstanceDefinitionCode {
 @freezed
 class SubstanceDefinitionName with _$SubstanceDefinitionName {
   SubstanceDefinitionName._();
+
+  /// [SubstanceDefinitionName]: The detailed description of a substance, typically at a level beyond what is used for prescribing.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [name]: The actual name.;
+  ///
+  /// [nameElement] (_name): Extensions for name;
+  ///
+  /// [type]: Name type, for example 'systematic',  'scientific, 'brand'.;
+  ///
+  /// [status]: The status of the name, for example 'current', 'proposed'.;
+  ///
+  /// [preferred]: If this is the preferred name for this substance.;
+  ///
+  /// [preferredElement] (_preferred): Extensions for preferred;
+  ///
+  /// [language]: Human language that the name is written in.;
+  ///
+  /// [domain]: The use context of this name for example if there is a different name a drug active ingredient as opposed to a food colour additive.;
+  ///
+  /// [jurisdiction]: The jurisdiction where this name applies.;
+  ///
+  /// [synonym]: A synonym of this particular name, by which the substance is also known.;
+  ///
+  /// [translation]: A translation for this name into another human language.;
+  ///
+  /// [official]: Details of the official nature of this name.;
+  ///
+  /// [source]: Supporting literature.;
   factory SubstanceDefinitionName({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2009,6 +2616,7 @@ class SubstanceDefinitionName with _$SubstanceDefinitionName {
   }) = _SubstanceDefinitionName;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2033,7 +2641,7 @@ class SubstanceDefinitionName with _$SubstanceDefinitionName {
     if (json is Map<String, dynamic>) {
       return _$SubstanceDefinitionNameFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2042,17 +2650,37 @@ class SubstanceDefinitionName with _$SubstanceDefinitionName {
 @freezed
 class SubstanceDefinitionOfficial with _$SubstanceDefinitionOfficial {
   SubstanceDefinitionOfficial._();
+
+  /// [SubstanceDefinitionOfficial]: The detailed description of a substance, typically at a level beyond what is used for prescribing.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [authority]: Which authority uses this official name.;
+  ///
+  /// [status]: The status of the official name, for example 'draft', 'active', 'retired'.;
+  ///
+  /// [date]: Date of the official name change.;
+  ///
+  /// [dateElement] (_date): Extensions for date;
   factory SubstanceDefinitionOfficial({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? authority,
     CodeableConcept? status,
-    FhirDateTime? date,
+    DateTime? date,
     @JsonKey(name: '_date') Element? dateElement,
   }) = _SubstanceDefinitionOfficial;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2077,7 +2705,7 @@ class SubstanceDefinitionOfficial with _$SubstanceDefinitionOfficial {
     if (json is Map<String, dynamic>) {
       return _$SubstanceDefinitionOfficialFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2086,26 +2714,61 @@ class SubstanceDefinitionOfficial with _$SubstanceDefinitionOfficial {
 @freezed
 class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
   SubstanceDefinitionRelationship._();
+
+  /// [SubstanceDefinitionRelationship]: The detailed description of a substance, typically at a level beyond what is used for prescribing.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [substanceDefinitionReference]: A pointer to another substance, as a resource or just a representational code.;
+  ///
+  /// [substanceDefinitionCodeableConcept]: A pointer to another substance, as a resource or just a representational code.;
+  ///
+  /// [type]: For example "salt to parent", "active moiety", "starting material", "polymorph", "impurity of".;
+  ///
+  /// [isDefining]: For example where an enzyme strongly bonds with a particular substance, this is a defining relationship for that enzyme, out of several possible substance relationships.;
+  ///
+  /// [isDefiningElement] (_isDefining): Extensions for isDefining;
+  ///
+  /// [amountQuantity]: A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.;
+  ///
+  /// [amountRatio]: A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.;
+  ///
+  /// [amountString]: A numeric factor for the relationship, for instance to express that the salt of a substance has some percentage of the active substance in relation to some other.;
+  ///
+  /// [amountStringElement] (_amountString): Extensions for amountString;
+  ///
+  /// [ratioHighLimitAmount]: For use when the numeric has an uncertain range.;
+  ///
+  /// [comparator]: An operator for the amount, for example "average", "approximately", "less than".;
+  ///
+  /// [source]: Supporting literature.;
   factory SubstanceDefinitionRelationship({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Reference? substanceDefinitionReference,
     CodeableConcept? substanceDefinitionCodeableConcept,
-    CodeableConcept? type,
+    required CodeableConcept type,
     Boolean? isDefining,
     @JsonKey(name: '_isDefining') Element? isDefiningElement,
     Quantity? amountQuantity,
-    Range? amountRange,
     Ratio? amountRatio,
-    String? amountString,
+    Markdown? amountString,
     @JsonKey(name: '_amountString') Element? amountStringElement,
-    Ratio? amountRatioHighLimit,
-    CodeableConcept? amountType,
+    Ratio? ratioHighLimitAmount,
+    CodeableConcept? comparator,
     List<Reference>? source,
   }) = _SubstanceDefinitionRelationship;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2131,7 +2794,7 @@ class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
     if (json is Map<String, dynamic>) {
       return _$SubstanceDefinitionRelationshipFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2141,6 +2804,27 @@ class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
 class SubstanceDefinitionSourceMaterial
     with _$SubstanceDefinitionSourceMaterial {
   SubstanceDefinitionSourceMaterial._();
+
+  /// [SubstanceDefinitionSourceMaterial]: The detailed description of a substance, typically at a level beyond what is used for prescribing.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [type]: A classification that provides the origin of the raw material. Example: cat hair would be an Animal source type.;
+  ///
+  /// [genus]: The genus of an organism, typically referring to the Latin epithet of the genus element of the plant/animal scientific name.;
+  ///
+  /// [species]: The species of an organism, typically referring to the Latin epithet of the species of the plant/animal.;
+  ///
+  /// [part]: An anatomical origin of the source material within an organism.;
+  ///
+  /// [countryOfOrigin]: The country or countries where the material is harvested.;
   factory SubstanceDefinitionSourceMaterial({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2148,11 +2832,12 @@ class SubstanceDefinitionSourceMaterial
     CodeableConcept? type,
     CodeableConcept? genus,
     CodeableConcept? species,
-    CodeableConcept? part,
+    @JsonKey(name: 'part') CodeableConcept? part_,
     List<CodeableConcept>? countryOfOrigin,
   }) = _SubstanceDefinitionSourceMaterial;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2171,18 +2856,69 @@ class SubstanceDefinitionSourceMaterial
   factory SubstanceDefinitionSourceMaterial.fromJson(
           Map<String, dynamic> json) =>
       _$SubstanceDefinitionSourceMaterialFromJson(json);
+
+  /// Acts like a constructor, returns a [SubstanceDefinitionSourceMaterial], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubstanceDefinitionSourceMaterial.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubstanceDefinitionSourceMaterialFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
   SubstanceNucleicAcid._();
+
+  /// [SubstanceNucleicAcid]: Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.
+
+  ///
+  /// [resourceType]: This is a SubstanceNucleicAcid resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [sequenceType]: The type of the sequence shall be specified based on a controlled vocabulary.;
+  ///
+  /// [numberOfSubunits]: The number of linear sequences of nucleotides linked through phosphodiester bonds shall be described. Subunits would be strands of nucleic acids that are tightly associated typically through Watson-Crick base pairing. NOTE: If not specified in the reference source, the assumption is that there is 1 subunit.;
+  ///
+  /// [numberOfSubunitsElement] (_numberOfSubunits): Extensions for numberOfSubunits;
+  ///
+  /// [areaOfHybridisation]: The area of hybridisation shall be described if applicable for double stranded RNA or DNA. The number associated with the subunit followed by the number associated to the residue shall be specified in increasing order. The underscore “” shall be used as separator as follows: “Subunitnumber Residue”.;
+  ///
+  /// [areaOfHybridisationElement] (_areaOfHybridisation): Extensions for areaOfHybridisation;
+  ///
+  /// [oligoNucleotideType]: (TBC).;
+  ///
+  /// [subunit]: Subunits are listed in order of decreasing length; sequences of the same length will be ordered by molecular weight; subunits that have identical sequences will be repeated multiple times.;
   factory SubstanceNucleicAcid({
-    @Default(R5ResourceType.SubstanceNucleicAcid)
-    @JsonKey(unknownEnumValue: R5ResourceType.SubstanceNucleicAcid)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.SubstanceNucleicAcid) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-    FhirUri? implicitRules,
+   FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -2225,7 +2961,7 @@ class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
     if (json is Map<String, dynamic>) {
       return _$SubstanceNucleicAcidFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2234,6 +2970,39 @@ class SubstanceNucleicAcid with Resource, _$SubstanceNucleicAcid {
 @freezed
 class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
   SubstanceNucleicAcidSubunit._();
+
+  /// [SubstanceNucleicAcidSubunit]: Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [subunit]: Index of linear sequences of nucleic acids in order of decreasing length. Sequences of the same length will be ordered by molecular weight. Subunits that have identical sequences will be repeated and have sequential subscripts.;
+  ///
+  /// [subunitElement] (_subunit): Extensions for subunit;
+  ///
+  /// [sequence]: Actual nucleotide sequence notation from 5' to 3' end using standard single letter codes. In addition to the base sequence, sugar and type of phosphate or non-phosphate linkage should also be captured.;
+  ///
+  /// [sequenceElement] (_sequence): Extensions for sequence;
+  ///
+  /// [length]: The length of the sequence shall be captured.;
+  ///
+  /// [lengthElement] (_length): Extensions for length;
+  ///
+  /// [sequenceAttachment]: (TBC).;
+  ///
+  /// [fivePrime]: The nucleotide present at the 5’ terminal shall be specified based on a controlled vocabulary. Since the sequence is represented from the 5' to the 3' end, the 5’ prime nucleotide is the letter at the first position in the sequence. A separate representation would be redundant.;
+  ///
+  /// [threePrime]: The nucleotide present at the 3’ terminal shall be specified based on a controlled vocabulary. Since the sequence is represented from the 5' to the 3' end, the 5’ prime nucleotide is the letter at the last position in the sequence. A separate representation would be redundant.;
+  ///
+  /// [linkage]: The linkages between sugar residues will also be captured.;
+  ///
+  /// [sugar]: 5.3.6.8.1 Sugar ID (Mandatory).;
   factory SubstanceNucleicAcidSubunit({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2252,6 +3021,7 @@ class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
   }) = _SubstanceNucleicAcidSubunit;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2276,7 +3046,7 @@ class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
     if (json is Map<String, dynamic>) {
       return _$SubstanceNucleicAcidSubunitFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2285,6 +3055,31 @@ class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
 @freezed
 class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
   SubstanceNucleicAcidLinkage._();
+
+  /// [SubstanceNucleicAcidLinkage]: Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [connectivity]: The entity that links the sugar residues together should also be captured for nearly all naturally occurring nucleic acid the linkage is a phosphate group. For many synthetic oligonucleotides phosphorothioate linkages are often seen. Linkage connectivity is assumed to be 3’-5’. If the linkage is either 3’-3’ or 5’-5’ this should be specified.;
+  ///
+  /// [connectivityElement] (_connectivity): Extensions for connectivity;
+  ///
+  /// [identifier]: Each linkage will be registered as a fragment and have an ID.;
+  ///
+  /// [name]: Each linkage will be registered as a fragment and have at least one name. A single name shall be assigned to each linkage.;
+  ///
+  /// [nameElement] (_name): Extensions for name;
+  ///
+  /// [residueSite]: Residues shall be captured as described in 5.3.6.8.3.;
+  ///
+  /// [residueSiteElement] (_residueSite): Extensions for residueSite;
   factory SubstanceNucleicAcidLinkage({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2299,6 +3094,7 @@ class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
   }) = _SubstanceNucleicAcidLinkage;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2323,7 +3119,7 @@ class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
     if (json is Map<String, dynamic>) {
       return _$SubstanceNucleicAcidLinkageFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2332,6 +3128,27 @@ class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
 @freezed
 class SubstanceNucleicAcidSugar with _$SubstanceNucleicAcidSugar {
   SubstanceNucleicAcidSugar._();
+
+  /// [SubstanceNucleicAcidSugar]: Nucleic acids are defined by three distinct elements: the base, sugar and linkage. Individual substance/moiety IDs will be created for each of these elements. The nucleotide sequence will be always entered in the 5’-3’ direction.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [identifier]: The Substance ID of the sugar or sugar-like component that make up the nucleotide.;
+  ///
+  /// [name]: The name of the sugar or sugar-like component that make up the nucleotide.;
+  ///
+  /// [nameElement] (_name): Extensions for name;
+  ///
+  /// [residueSite]: The residues that contain a given sugar will be captured. The order of given residues will be captured in the 5‘-3‘direction consistent with the base sequences listed above.;
+  ///
+  /// [residueSiteElement] (_residueSite): Extensions for residueSite;
   factory SubstanceNucleicAcidSugar({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2344,6 +3161,7 @@ class SubstanceNucleicAcidSugar with _$SubstanceNucleicAcidSugar {
   }) = _SubstanceNucleicAcidSugar;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2368,7 +3186,7 @@ class SubstanceNucleicAcidSugar with _$SubstanceNucleicAcidSugar {
     if (json is Map<String, dynamic>) {
       return _$SubstanceNucleicAcidSugarFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2377,13 +3195,54 @@ class SubstanceNucleicAcidSugar with _$SubstanceNucleicAcidSugar {
 @freezed
 class SubstancePolymer with Resource, _$SubstancePolymer {
   SubstancePolymer._();
+
+  /// [SubstancePolymer]: Properties of a substance specific to it being a polymer.
+
+  ///
+  /// [resourceType]: This is a SubstancePolymer resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [identifier]: A business idenfier for this polymer, but typically this is handled by a SubstanceDefinition identifier.;
+  ///
+  /// [class]: Overall type of the polymer.;
+  ///
+  /// [geometry]: Polymer geometry, e.g. linear, branched, cross-linked, network or dendritic.;
+  ///
+  /// [copolymerConnectivity]: Descrtibes the copolymer sequence type (polymer connectivity).;
+  ///
+  /// [modification]: Todo - this is intended to connect to a repeating full modification structure, also used by Protein and Nucleic Acid . String is just a placeholder.;
+  ///
+  /// [modificationElement] (_modification): Extensions for modification;
+  ///
+  /// [monomerSet]: Todo.;
+  ///
+  /// [repeat]: Specifies and quantifies the repeated units and their configuration.;
   factory SubstancePolymer({
-    @Default(R5ResourceType.SubstancePolymer)
-    @JsonKey(unknownEnumValue: R5ResourceType.SubstancePolymer)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.SubstancePolymer) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-    FhirUri? implicitRules,
+   FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -2427,7 +3286,7 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
     if (json is Map<String, dynamic>) {
       return _$SubstancePolymerFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2436,6 +3295,21 @@ class SubstancePolymer with Resource, _$SubstancePolymer {
 @freezed
 class SubstancePolymerMonomerSet with _$SubstancePolymerMonomerSet {
   SubstancePolymerMonomerSet._();
+
+  /// [SubstancePolymerMonomerSet]: Properties of a substance specific to it being a polymer.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [ratioType]: Captures the type of ratio to the entire polymer, e.g. Monomer/Polymer ratio, SRU/Polymer Ratio.;
+  ///
+  /// [startingMaterial]: The starting materials - monomer(s) used in the synthesis of the polymer.;
   factory SubstancePolymerMonomerSet({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2445,6 +3319,7 @@ class SubstancePolymerMonomerSet with _$SubstancePolymerMonomerSet {
   }) = _SubstancePolymerMonomerSet;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2469,7 +3344,7 @@ class SubstancePolymerMonomerSet with _$SubstancePolymerMonomerSet {
     if (json is Map<String, dynamic>) {
       return _$SubstancePolymerMonomerSetFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2478,6 +3353,27 @@ class SubstancePolymerMonomerSet with _$SubstancePolymerMonomerSet {
 @freezed
 class SubstancePolymerStartingMaterial with _$SubstancePolymerStartingMaterial {
   SubstancePolymerStartingMaterial._();
+
+  /// [SubstancePolymerStartingMaterial]: Properties of a substance specific to it being a polymer.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [code]: The type of substance for this starting material.;
+  ///
+  /// [category]: Substance high level category, e.g. chemical substance.;
+  ///
+  /// [isDefining]: Used to specify whether the attribute described is a defining element for the unique identification of the polymer.;
+  ///
+  /// [isDefiningElement] (_isDefining): Extensions for isDefining;
+  ///
+  /// [amount]: A percentage.;
   factory SubstancePolymerStartingMaterial({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2490,6 +3386,7 @@ class SubstancePolymerStartingMaterial with _$SubstancePolymerStartingMaterial {
   }) = _SubstancePolymerStartingMaterial;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2508,11 +3405,42 @@ class SubstancePolymerStartingMaterial with _$SubstancePolymerStartingMaterial {
   factory SubstancePolymerStartingMaterial.fromJson(
           Map<String, dynamic> json) =>
       _$SubstancePolymerStartingMaterialFromJson(json);
+
+  /// Acts like a constructor, returns a [SubstancePolymerStartingMaterial], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubstancePolymerStartingMaterial.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubstancePolymerStartingMaterialFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class SubstancePolymerRepeat with _$SubstancePolymerRepeat {
   SubstancePolymerRepeat._();
+
+  /// [SubstancePolymerRepeat]: Properties of a substance specific to it being a polymer.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [averageMolecularFormula]: A representation of an (average) molecular formula from a polymer.;
+  ///
+  /// [averageMolecularFormulaElement] (_averageMolecularFormula): Extensions for averageMolecularFormula;
+  ///
+  /// [repeatUnitAmountType]: How the quantitative amount of Structural Repeat Units is captured (e.g. Exact, Numeric, Average).;
+  ///
+  /// [repeatUnit]: An SRU - Structural Repeat Unit.;
   factory SubstancePolymerRepeat({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2525,6 +3453,7 @@ class SubstancePolymerRepeat with _$SubstancePolymerRepeat {
   }) = _SubstancePolymerRepeat;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2549,7 +3478,7 @@ class SubstancePolymerRepeat with _$SubstancePolymerRepeat {
     if (json is Map<String, dynamic>) {
       return _$SubstancePolymerRepeatFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2558,6 +3487,31 @@ class SubstancePolymerRepeat with _$SubstancePolymerRepeat {
 @freezed
 class SubstancePolymerRepeatUnit with _$SubstancePolymerRepeatUnit {
   SubstancePolymerRepeatUnit._();
+
+  /// [SubstancePolymerRepeatUnit]: Properties of a substance specific to it being a polymer.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [unit]: Structural repeat units are essential elements for defining polymers.;
+  ///
+  /// [unitElement] (_unit): Extensions for unit;
+  ///
+  /// [orientation]: The orientation of the polymerisation, e.g. head-tail, head-head, random.;
+  ///
+  /// [amount]: Number of repeats of this unit.;
+  ///
+  /// [amountElement] (_amount): Extensions for amount;
+  ///
+  /// [degreeOfPolymerisation]: Applies to homopolymer and block co-polymers where the degree of polymerisation within a block can be described.;
+  ///
+  /// [structuralRepresentation]: A graphical structure for this SRU.;
   factory SubstancePolymerRepeatUnit({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2572,6 +3526,7 @@ class SubstancePolymerRepeatUnit with _$SubstancePolymerRepeatUnit {
   }) = _SubstancePolymerRepeatUnit;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2596,7 +3551,7 @@ class SubstancePolymerRepeatUnit with _$SubstancePolymerRepeatUnit {
     if (json is Map<String, dynamic>) {
       return _$SubstancePolymerRepeatUnitFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2606,6 +3561,31 @@ class SubstancePolymerRepeatUnit with _$SubstancePolymerRepeatUnit {
 class SubstancePolymerDegreeOfPolymerisation
     with _$SubstancePolymerDegreeOfPolymerisation {
   SubstancePolymerDegreeOfPolymerisation._();
+
+  /// [SubstancePolymerDegreeOfPolymerisation]: Properties of a substance specific to it being a polymer.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [type]: The type of the degree of polymerisation shall be described, e.g. SRU/Polymer Ratio.;
+  ///
+  /// [average]: An average amount of polymerisation.;
+  ///
+  /// [averageElement] (_average): Extensions for average;
+  ///
+  /// [low]: A low expected limit of the amount.;
+  ///
+  /// [lowElement] (_low): Extensions for low;
+  ///
+  /// [high]: A high expected limit of the amount.;
+  ///
+  /// [highElement] (_high): Extensions for high;
   factory SubstancePolymerDegreeOfPolymerisation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2620,6 +3600,7 @@ class SubstancePolymerDegreeOfPolymerisation
   }) = _SubstancePolymerDegreeOfPolymerisation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2638,12 +3619,45 @@ class SubstancePolymerDegreeOfPolymerisation
   factory SubstancePolymerDegreeOfPolymerisation.fromJson(
           Map<String, dynamic> json) =>
       _$SubstancePolymerDegreeOfPolymerisationFromJson(json);
+
+  /// Acts like a constructor, returns a [SubstancePolymerDegreeOfPolymerisation], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubstancePolymerDegreeOfPolymerisation.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubstancePolymerDegreeOfPolymerisationFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class SubstancePolymerStructuralRepresentation
     with _$SubstancePolymerStructuralRepresentation {
   SubstancePolymerStructuralRepresentation._();
+
+  /// [SubstancePolymerStructuralRepresentation]: Properties of a substance specific to it being a polymer.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [type]: The type of structure (e.g. Full, Partial, Representative).;
+  ///
+  /// [representation]: The structural representation as text string in a standard format e.g. InChI, SMILES, MOLFILE, CDX, SDF, PDB, mmCIF.;
+  ///
+  /// [representationElement] (_representation): Extensions for representation;
+  ///
+  /// [format]: The format of the representation e.g. InChI, SMILES, MOLFILE, CDX, SDF, PDB, mmCIF.;
+  ///
+  /// [attachment]: An attached file with the structural representation.;
   factory SubstancePolymerStructuralRepresentation({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2656,6 +3670,7 @@ class SubstancePolymerStructuralRepresentation
   }) = _SubstancePolymerStructuralRepresentation;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2674,18 +3689,68 @@ class SubstancePolymerStructuralRepresentation
   factory SubstancePolymerStructuralRepresentation.fromJson(
           Map<String, dynamic> json) =>
       _$SubstancePolymerStructuralRepresentationFromJson(json);
+
+  /// Acts like a constructor, returns a [SubstancePolymerStructuralRepresentation], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubstancePolymerStructuralRepresentation.fromJsonString(
+      String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubstancePolymerStructuralRepresentationFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class SubstanceProtein with Resource, _$SubstanceProtein {
   SubstanceProtein._();
+
+  /// [SubstanceProtein]: A SubstanceProtein is defined as a single unit of a linear amino acid sequence, or a combination of subunits that are either covalently linked or have a defined invariant stoichiometric relationship. This includes all synthetic, recombinant and purified SubstanceProteins of defined sequence, whether the use is therapeutic or prophylactic. This set of elements will be used to describe albumins, coagulation factors, cytokines, growth factors, peptide/SubstanceProtein hormones, enzymes, toxins, toxoids, recombinant vaccines, and immunomodulators.
+
+  ///
+  /// [resourceType]: This is a SubstanceProtein resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [sequenceType]: The SubstanceProtein descriptive elements will only be used when a complete or partial amino acid sequence is available or derivable from a nucleic acid sequence.;
+  ///
+  /// [numberOfSubunits]: Number of linear sequences of amino acids linked through peptide bonds. The number of subunits constituting the SubstanceProtein shall be described. It is possible that the number of subunits can be variable.;
+  ///
+  /// [numberOfSubunitsElement] (_numberOfSubunits): Extensions for numberOfSubunits;
+  ///
+  /// [disulfideLinkage]: The disulphide bond between two cysteine residues either on the same subunit or on two different subunits shall be described. The position of the disulfide bonds in the SubstanceProtein shall be listed in increasing order of subunit number and position within subunit followed by the abbreviation of the amino acids involved. The disulfide linkage positions shall actually contain the amino acid Cysteine at the respective positions.;
+  ///
+  /// [disulfideLinkageElement] (_disulfideLinkage): Extensions for disulfideLinkage;
+  ///
+  /// [subunit]: This subclause refers to the description of each subunit constituting the SubstanceProtein. A subunit is a linear sequence of amino acids linked through peptide bonds. The Subunit information shall be provided when the finished SubstanceProtein is a complex of multiple sequences; subunits are not used to delineate domains within a single sequence. Subunits are listed in order of decreasing length; sequences of the same length will be ordered by decreasing molecular weight; subunits that have identical sequences will be repeated multiple times.;
   factory SubstanceProtein({
-    @Default(R5ResourceType.SubstanceProtein)
-    @JsonKey(unknownEnumValue: R5ResourceType.SubstanceProtein)
-        R5ResourceType resourceType,
+    @Default(R5ResourceType.SubstanceProtein) R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-    FhirUri? implicitRules,
+   FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -2727,7 +3792,7 @@ class SubstanceProtein with Resource, _$SubstanceProtein {
     if (json is Map<String, dynamic>) {
       return _$SubstanceProteinFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2736,6 +3801,43 @@ class SubstanceProtein with Resource, _$SubstanceProtein {
 @freezed
 class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
   SubstanceProteinSubunit._();
+
+  /// [SubstanceProteinSubunit]: A SubstanceProtein is defined as a single unit of a linear amino acid sequence, or a combination of subunits that are either covalently linked or have a defined invariant stoichiometric relationship. This includes all synthetic, recombinant and purified SubstanceProteins of defined sequence, whether the use is therapeutic or prophylactic. This set of elements will be used to describe albumins, coagulation factors, cytokines, growth factors, peptide/SubstanceProtein hormones, enzymes, toxins, toxoids, recombinant vaccines, and immunomodulators.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [subunit]: Index of primary sequences of amino acids linked through peptide bonds in order of decreasing length. Sequences of the same length will be ordered by molecular weight. Subunits that have identical sequences will be repeated and have sequential subscripts.;
+  ///
+  /// [subunitElement] (_subunit): Extensions for subunit;
+  ///
+  /// [sequence]: The sequence information shall be provided enumerating the amino acids from N- to C-terminal end using standard single-letter amino acid codes. Uppercase shall be used for L-amino acids and lowercase for D-amino acids. Transcribed SubstanceProteins will always be described using the translated sequence; for synthetic peptide containing amino acids that are not represented with a single letter code an X should be used within the sequence. The modified amino acids will be distinguished by their position in the sequence.;
+  ///
+  /// [sequenceElement] (_sequence): Extensions for sequence;
+  ///
+  /// [length]: Length of linear sequences of amino acids contained in the subunit.;
+  ///
+  /// [lengthElement] (_length): Extensions for length;
+  ///
+  /// [sequenceAttachment]: The sequence information shall be provided enumerating the amino acids from N- to C-terminal end using standard single-letter amino acid codes. Uppercase shall be used for L-amino acids and lowercase for D-amino acids. Transcribed SubstanceProteins will always be described using the translated sequence; for synthetic peptide containing amino acids that are not represented with a single letter code an X should be used within the sequence. The modified amino acids will be distinguished by their position in the sequence.;
+  ///
+  /// [nTerminalModificationId]: Unique identifier for molecular fragment modification based on the ISO 11238 Substance ID.;
+  ///
+  /// [nTerminalModification]: The name of the fragment modified at the N-terminal of the SubstanceProtein shall be specified.;
+  ///
+  /// [nTerminalModificationElement] (_nTerminalModification): Extensions for nTerminalModification;
+  ///
+  /// [cTerminalModificationId]: Unique identifier for molecular fragment modification based on the ISO 11238 Substance ID.;
+  ///
+  /// [cTerminalModification]: The modification at the C-terminal shall be specified.;
+  ///
+  /// [cTerminalModificationElement] (_cTerminalModification): Extensions for cTerminalModification;
   factory SubstanceProteinSubunit({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2758,6 +3860,7 @@ class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
   }) = _SubstanceProteinSubunit;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2782,64 +3885,7 @@ class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
     if (json is Map<String, dynamic>) {
       return _$SubstanceProteinSubunitFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
-          'This does not properly decode to a Map<String,dynamic>.');
-    }
-  }
-}
-
-@freezed
-class SubstanceReferenceInformation
-    with Resource, _$SubstanceReferenceInformation {
-  SubstanceReferenceInformation._();
-  factory SubstanceReferenceInformation({
-    @Default(R5ResourceType.SubstanceReferenceInformation)
-    @JsonKey(unknownEnumValue: R5ResourceType.SubstanceReferenceInformation)
-        R5ResourceType resourceType,
-    Id? id,
-    Meta? meta,
-    FhirUri? implicitRules,
-    @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
-    Code? language,
-    @JsonKey(name: '_language') Element? languageElement,
-    Narrative? text,
-    List<Resource>? contained,
-    @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-    List<FhirExtension>? modifierExtension,
-    String? comment,
-    @JsonKey(name: '_comment') Element? commentElement,
-    List<SubstanceReferenceInformationGene>? gene,
-    List<SubstanceReferenceInformationGeneElement>? geneElement,
-    List<SubstanceReferenceInformationTarget>? target,
-  }) = _SubstanceReferenceInformation;
-
-  /// Produces a Yaml formatted String version of the object
-  @override
-  String toYaml() => json2yaml(toJson());
-
-  /// Factory constructor that accepts a [String] in YAML format as an argument
-  factory SubstanceReferenceInformation.fromYaml(dynamic yaml) => yaml is String
-      ? SubstanceReferenceInformation.fromJson(
-          jsonDecode(jsonEncode(loadYaml(yaml))) as Map<String, dynamic>)
-      : yaml is YamlMap
-          ? SubstanceReferenceInformation.fromJson(
-              jsonDecode(jsonEncode(yaml)) as Map<String, dynamic>)
-          : throw ArgumentError(
-              'SubstanceReferenceInformation cannot be constructed from input provided,'
-              ' it is neither a yaml string nor a yaml map.');
-
-  /// Factory constructor, accepts [Map<String, dynamic>] as an argument
-  factory SubstanceReferenceInformation.fromJson(Map<String, dynamic> json) =>
-      _$SubstanceReferenceInformationFromJson(json);
-
-  /// Acts like a constructor, returns a [SubstanceReferenceInformation], accepts a
-  /// [String] as an argument, mostly because I got tired of typing it out
-  factory SubstanceReferenceInformation.fromJsonString(String source) {
-    final json = jsonDecode(source);
-    if (json is Map<String, dynamic>) {
-      return _$SubstanceReferenceInformationFromJson(json);
-    } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -2849,6 +3895,23 @@ class SubstanceReferenceInformation
 class SubstanceReferenceInformationGene
     with _$SubstanceReferenceInformationGene {
   SubstanceReferenceInformationGene._();
+
+  /// [SubstanceReferenceInformationGene]: Todo.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [geneSequenceOrigin]: Todo.;
+  ///
+  /// [gene]: Todo.;
+  ///
+  /// [source]: Todo.;
   factory SubstanceReferenceInformationGene({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2859,6 +3922,7 @@ class SubstanceReferenceInformationGene
   }) = _SubstanceReferenceInformationGene;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2877,12 +3941,41 @@ class SubstanceReferenceInformationGene
   factory SubstanceReferenceInformationGene.fromJson(
           Map<String, dynamic> json) =>
       _$SubstanceReferenceInformationGeneFromJson(json);
+
+  /// Acts like a constructor, returns a [SubstanceReferenceInformationGene], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubstanceReferenceInformationGene.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubstanceReferenceInformationGeneFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class SubstanceReferenceInformationGeneElement
     with _$SubstanceReferenceInformationGeneElement {
   SubstanceReferenceInformationGeneElement._();
+
+  /// [SubstanceReferenceInformationGeneElement]: Todo.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [type]: Todo.;
+  ///
+  /// [element]: Todo.;
+  ///
+  /// [source]: Todo.;
   factory SubstanceReferenceInformationGeneElement({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2893,6 +3986,7 @@ class SubstanceReferenceInformationGeneElement
   }) = _SubstanceReferenceInformationGeneElement;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2911,12 +4005,58 @@ class SubstanceReferenceInformationGeneElement
   factory SubstanceReferenceInformationGeneElement.fromJson(
           Map<String, dynamic> json) =>
       _$SubstanceReferenceInformationGeneElementFromJson(json);
+
+  /// Acts like a constructor, returns a [SubstanceReferenceInformationGeneElement], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubstanceReferenceInformationGeneElement.fromJsonString(
+      String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubstanceReferenceInformationGeneElementFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class SubstanceReferenceInformationTarget
     with _$SubstanceReferenceInformationTarget {
   SubstanceReferenceInformationTarget._();
+
+  /// [SubstanceReferenceInformationTarget]: Todo.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [target]: Todo.;
+  ///
+  /// [type]: Todo.;
+  ///
+  /// [interaction]: Todo.;
+  ///
+  /// [organism]: Todo.;
+  ///
+  /// [organismType]: Todo.;
+  ///
+  /// [amountQuantity]: Todo.;
+  ///
+  /// [amountRange]: Todo.;
+  ///
+  /// [amountString]: Todo.;
+  ///
+  /// [amountStringElement] (_amountString): Extensions for amountString;
+  ///
+  /// [amountType]: Todo.;
+  ///
+  /// [source]: Todo.;
   factory SubstanceReferenceInformationTarget({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -2928,13 +4068,14 @@ class SubstanceReferenceInformationTarget
     CodeableConcept? organismType,
     Quantity? amountQuantity,
     Range? amountRange,
-    String? amountString,
+    Markdown? amountString,
     @JsonKey(name: '_amountString') Element? amountStringElement,
     CodeableConcept? amountType,
     List<Reference>? source,
   }) = _SubstanceReferenceInformationTarget;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2953,18 +4094,88 @@ class SubstanceReferenceInformationTarget
   factory SubstanceReferenceInformationTarget.fromJson(
           Map<String, dynamic> json) =>
       _$SubstanceReferenceInformationTargetFromJson(json);
+
+  /// Acts like a constructor, returns a [SubstanceReferenceInformationTarget], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubstanceReferenceInformationTarget.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubstanceReferenceInformationTargetFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
   SubstanceSourceMaterial._();
+
+  /// [SubstanceSourceMaterial]: Source material shall capture information on the taxonomic and anatomical origins as well as the fraction of a material that can result in or can be modified to form a substance. This set of data elements shall be used to define polymer substances isolated from biological matrices. Taxonomic and anatomical origins shall be described using a controlled vocabulary as required. This information is captured for naturally derived polymers ( . starch) and structurally diverse substances. For Organisms belonging to the Kingdom Plantae the Substance level defines the fresh material of a single species or infraspecies, the Herbal Drug and the Herbal preparation. For Herbal preparations, the fraction information will be captured at the Substance information level and additional information for herbal extracts will be captured at the Specified Substance Group 1 information level. See for further explanation the Substance Class: Structurally Diverse and the herbal annex.
+
+  ///
+  /// [resourceType]: This is a SubstanceSourceMaterial resource;
+  ///
+  /// [id]: The logical id of the resource, as used in the URL for the resource. Once assigned, this value never changes.;
+  ///
+  /// [meta]: The metadata about the resource. This is content that is maintained by the infrastructure. Changes to the content might not always be associated with version changes to the resource.;
+  ///
+  /// [implicitRules]: A reference to a set of rules that were followed when the resource was constructed, and which must be understood when processing the content. Often, this is a reference to an implementation guide that defines the special rules along with other profiles etc.;
+  ///
+  /// [implicitRulesElement] (_implicitRules): Extensions for implicitRules;
+  ///
+  /// [language]: The base language in which the resource is written.;
+  ///
+  /// [languageElement] (_language): Extensions for language;
+  ///
+  /// [text]: A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it "clinically safe" for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.;
+  ///
+  /// [contained]: These resources do not have an independent existence apart from the resource that contains them - they cannot be identified independently, nor can they have their own independent transaction scope.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the resource and that modifies the understanding of the element that contains it and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer is allowed to define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [sourceMaterialClass]: General high level classification of the source material specific to the origin of the material.;
+  ///
+  /// [sourceMaterialType]: The type of the source material shall be specified based on a controlled vocabulary. For vaccines, this subclause refers to the class of infectious agent.;
+  ///
+  /// [sourceMaterialState]: The state of the source material when extracted.;
+  ///
+  /// [organismId]: The unique identifier associated with the source material parent organism shall be specified.;
+  ///
+  /// [organismName]: The organism accepted Scientific name shall be provided based on the organism taxonomy.;
+  ///
+  /// [organismNameElement] (_organismName): Extensions for organismName;
+  ///
+  /// [parentSubstanceId]: The parent of the herbal drug Ginkgo biloba, Leaf is the substance ID of the substance (fresh) of Ginkgo biloba L. or Ginkgo biloba L. (Whole plant).;
+  ///
+  /// [parentSubstanceName]: The parent substance of the Herbal Drug, or Herbal preparation.;
+  ///
+  /// [parentSubstanceNameElement] (_parentSubstanceName): Extensions for parentSubstanceName;
+  ///
+  /// [countryOfOrigin]: The country where the plant material is harvested or the countries where the plasma is sourced from as laid down in accordance with the Plasma Master File. For “Plasma-derived substances” the attribute country of origin provides information about the countries used for the manufacturing of the Cryopoor plama or Crioprecipitate.;
+  ///
+  /// [geographicalLocation]: The place/region where the plant is harvested or the places/regions where the animal source material has its habitat.;
+  ///
+  /// [geographicalLocationElement] (_geographicalLocation): Extensions for geographicalLocation;
+  ///
+  /// [developmentStage]: Stage of life for animals, plants, insects and microorganisms. This information shall be provided only when the substance is significantly different in these stages (e.g. foetal bovine serum).;
+  ///
+  /// [fractionDescription]: Many complex materials are fractions of parts of plants, animals, or minerals. Fraction elements are often necessary to define both Substances and Specified Group 1 Substances. For substances derived from Plants, fraction information will be captured at the Substance information level ( . Oils, Juices and Exudates). Additional information for Extracts, such as extraction solvent composition, will be captured at the Specified Substance Group 1 information level. For plasma-derived products fraction information will be captured at the Substance and the Specified Substance Group 1 levels.;
+  ///
+  /// [organism]: This subclause describes the organism which the substance is derived from. For vaccines, the parent organism shall be specified based on these subclause elements. As an example, full taxonomy will be described for the Substance Name: ., Leaf.;
+  ///
+  /// [partDescription]: To do.;
   factory SubstanceSourceMaterial({
     @Default(R5ResourceType.SubstanceSourceMaterial)
-    @JsonKey(unknownEnumValue: R5ResourceType.SubstanceSourceMaterial)
         R5ResourceType resourceType,
     Id? id,
     Meta? meta,
-    FhirUri? implicitRules,
+   FhirUri? implicitRules,
     @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
     Code? language,
     @JsonKey(name: '_language') Element? languageElement,
@@ -3018,7 +4229,7 @@ class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
     if (json is Map<String, dynamic>) {
       return _$SubstanceSourceMaterialFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -3028,6 +4239,23 @@ class SubstanceSourceMaterial with Resource, _$SubstanceSourceMaterial {
 class SubstanceSourceMaterialFractionDescription
     with _$SubstanceSourceMaterialFractionDescription {
   SubstanceSourceMaterialFractionDescription._();
+
+  /// [SubstanceSourceMaterialFractionDescription]: Source material shall capture information on the taxonomic and anatomical origins as well as the fraction of a material that can result in or can be modified to form a substance. This set of data elements shall be used to define polymer substances isolated from biological matrices. Taxonomic and anatomical origins shall be described using a controlled vocabulary as required. This information is captured for naturally derived polymers ( . starch) and structurally diverse substances. For Organisms belonging to the Kingdom Plantae the Substance level defines the fresh material of a single species or infraspecies, the Herbal Drug and the Herbal preparation. For Herbal preparations, the fraction information will be captured at the Substance information level and additional information for herbal extracts will be captured at the Specified Substance Group 1 information level. See for further explanation the Substance Class: Structurally Diverse and the herbal annex.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [fraction]: This element is capturing information about the fraction of a plant part, or human plasma for fractionation.;
+  ///
+  /// [fractionElement] (_fraction): Extensions for fraction;
+  ///
+  /// [materialType]: The specific type of the material constituting the component. For Herbal preparations the particulars of the extracts (liquid/dry) is described in Specified Substance Group 1.;
   factory SubstanceSourceMaterialFractionDescription({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3038,6 +4266,7 @@ class SubstanceSourceMaterialFractionDescription
   }) = _SubstanceSourceMaterialFractionDescription;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3056,11 +4285,53 @@ class SubstanceSourceMaterialFractionDescription
   factory SubstanceSourceMaterialFractionDescription.fromJson(
           Map<String, dynamic> json) =>
       _$SubstanceSourceMaterialFractionDescriptionFromJson(json);
+
+  /// Acts like a constructor, returns a [SubstanceSourceMaterialFractionDescription], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubstanceSourceMaterialFractionDescription.fromJsonString(
+      String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubstanceSourceMaterialFractionDescriptionFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class SubstanceSourceMaterialOrganism with _$SubstanceSourceMaterialOrganism {
   SubstanceSourceMaterialOrganism._();
+
+  /// [SubstanceSourceMaterialOrganism]: Source material shall capture information on the taxonomic and anatomical origins as well as the fraction of a material that can result in or can be modified to form a substance. This set of data elements shall be used to define polymer substances isolated from biological matrices. Taxonomic and anatomical origins shall be described using a controlled vocabulary as required. This information is captured for naturally derived polymers ( . starch) and structurally diverse substances. For Organisms belonging to the Kingdom Plantae the Substance level defines the fresh material of a single species or infraspecies, the Herbal Drug and the Herbal preparation. For Herbal preparations, the fraction information will be captured at the Substance information level and additional information for herbal extracts will be captured at the Specified Substance Group 1 information level. See for further explanation the Substance Class: Structurally Diverse and the herbal annex.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [family]: The family of an organism shall be specified.;
+  ///
+  /// [genus]: The genus of an organism shall be specified; refers to the Latin epithet of the genus element of the plant/animal scientific name; it is present in names for genera, species and infraspecies.;
+  ///
+  /// [species]: The species of an organism shall be specified; refers to the Latin epithet of the species of the plant/animal; it is present in names for species and infraspecies.;
+  ///
+  /// [intraspecificType]: The Intraspecific type of an organism shall be specified.;
+  ///
+  /// [intraspecificDescription]: The intraspecific description of an organism shall be specified based on a controlled vocabulary. For Influenza Vaccine, the intraspecific description shall contain the syntax of the antigen in line with the WHO convention.;
+  ///
+  /// [intraspecificDescriptionElement] (_intraspecificDescription): Extensions for intraspecificDescription;
+  ///
+  /// [author]: 4.9.13.6.1 Author type (Conditional).;
+  ///
+  /// [hybrid]: 4.9.13.8.1 Hybrid species maternal organism ID (Optional).;
+  ///
+  /// [organismGeneral]: 4.9.13.7.1 Kingdom (Conditional).;
   factory SubstanceSourceMaterialOrganism({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3078,6 +4349,7 @@ class SubstanceSourceMaterialOrganism with _$SubstanceSourceMaterialOrganism {
   }) = _SubstanceSourceMaterialOrganism;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3103,7 +4375,7 @@ class SubstanceSourceMaterialOrganism with _$SubstanceSourceMaterialOrganism {
     if (json is Map<String, dynamic>) {
       return _$SubstanceSourceMaterialOrganismFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -3112,6 +4384,23 @@ class SubstanceSourceMaterialOrganism with _$SubstanceSourceMaterialOrganism {
 @freezed
 class SubstanceSourceMaterialAuthor with _$SubstanceSourceMaterialAuthor {
   SubstanceSourceMaterialAuthor._();
+
+  /// [SubstanceSourceMaterialAuthor]: Source material shall capture information on the taxonomic and anatomical origins as well as the fraction of a material that can result in or can be modified to form a substance. This set of data elements shall be used to define polymer substances isolated from biological matrices. Taxonomic and anatomical origins shall be described using a controlled vocabulary as required. This information is captured for naturally derived polymers ( . starch) and structurally diverse substances. For Organisms belonging to the Kingdom Plantae the Substance level defines the fresh material of a single species or infraspecies, the Herbal Drug and the Herbal preparation. For Herbal preparations, the fraction information will be captured at the Substance information level and additional information for herbal extracts will be captured at the Specified Substance Group 1 information level. See for further explanation the Substance Class: Structurally Diverse and the herbal annex.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [authorType]: The type of author of an organism species shall be specified. The parenthetical author of an organism species refers to the first author who published the plant/animal name (of any rank). The primary author of an organism species refers to the first author(s), who validly published the plant/animal name.;
+  ///
+  /// [authorDescription]: The author of an organism species shall be specified. The author year of an organism shall also be specified when applicable; refers to the year in which the first author(s) published the infraspecific plant/animal name (of any rank).;
+  ///
+  /// [authorDescriptionElement] (_authorDescription): Extensions for authorDescription;
   factory SubstanceSourceMaterialAuthor({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3122,6 +4411,7 @@ class SubstanceSourceMaterialAuthor with _$SubstanceSourceMaterialAuthor {
   }) = _SubstanceSourceMaterialAuthor;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3146,7 +4436,7 @@ class SubstanceSourceMaterialAuthor with _$SubstanceSourceMaterialAuthor {
     if (json is Map<String, dynamic>) {
       return _$SubstanceSourceMaterialAuthorFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -3155,6 +4445,35 @@ class SubstanceSourceMaterialAuthor with _$SubstanceSourceMaterialAuthor {
 @freezed
 class SubstanceSourceMaterialHybrid with _$SubstanceSourceMaterialHybrid {
   SubstanceSourceMaterialHybrid._();
+
+  /// [SubstanceSourceMaterialHybrid]: Source material shall capture information on the taxonomic and anatomical origins as well as the fraction of a material that can result in or can be modified to form a substance. This set of data elements shall be used to define polymer substances isolated from biological matrices. Taxonomic and anatomical origins shall be described using a controlled vocabulary as required. This information is captured for naturally derived polymers ( . starch) and structurally diverse substances. For Organisms belonging to the Kingdom Plantae the Substance level defines the fresh material of a single species or infraspecies, the Herbal Drug and the Herbal preparation. For Herbal preparations, the fraction information will be captured at the Substance information level and additional information for herbal extracts will be captured at the Specified Substance Group 1 information level. See for further explanation the Substance Class: Structurally Diverse and the herbal annex.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [maternalOrganismId]: The identifier of the maternal species constituting the hybrid organism shall be specified based on a controlled vocabulary. For plants, the parents aren’t always known, and it is unlikely that it will be known which is maternal and which is paternal.;
+  ///
+  /// [maternalOrganismIdElement] (_maternalOrganismId): Extensions for maternalOrganismId;
+  ///
+  /// [maternalOrganismName]: The name of the maternal species constituting the hybrid organism shall be specified. For plants, the parents aren’t always known, and it is unlikely that it will be known which is maternal and which is paternal.;
+  ///
+  /// [maternalOrganismNameElement] (_maternalOrganismName): Extensions for maternalOrganismName;
+  ///
+  /// [paternalOrganismId]: The identifier of the paternal species constituting the hybrid organism shall be specified based on a controlled vocabulary.;
+  ///
+  /// [paternalOrganismIdElement] (_paternalOrganismId): Extensions for paternalOrganismId;
+  ///
+  /// [paternalOrganismName]: The name of the paternal species constituting the hybrid organism shall be specified.;
+  ///
+  /// [paternalOrganismNameElement] (_paternalOrganismName): Extensions for paternalOrganismName;
+  ///
+  /// [hybridType]: The hybrid type of an organism shall be specified.;
   factory SubstanceSourceMaterialHybrid({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3173,6 +4492,7 @@ class SubstanceSourceMaterialHybrid with _$SubstanceSourceMaterialHybrid {
   }) = _SubstanceSourceMaterialHybrid;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3197,7 +4517,7 @@ class SubstanceSourceMaterialHybrid with _$SubstanceSourceMaterialHybrid {
     if (json is Map<String, dynamic>) {
       return _$SubstanceSourceMaterialHybridFromJson(json);
     } else {
-      throw FormatException('FormatException:\nYou passed $json\n'
+      throw FormatException('FormatException: You passed $json'
           'This does not properly decode to a Map<String,dynamic>.');
     }
   }
@@ -3207,6 +4527,25 @@ class SubstanceSourceMaterialHybrid with _$SubstanceSourceMaterialHybrid {
 class SubstanceSourceMaterialOrganismGeneral
     with _$SubstanceSourceMaterialOrganismGeneral {
   SubstanceSourceMaterialOrganismGeneral._();
+
+  /// [SubstanceSourceMaterialOrganismGeneral]: Source material shall capture information on the taxonomic and anatomical origins as well as the fraction of a material that can result in or can be modified to form a substance. This set of data elements shall be used to define polymer substances isolated from biological matrices. Taxonomic and anatomical origins shall be described using a controlled vocabulary as required. This information is captured for naturally derived polymers ( . starch) and structurally diverse substances. For Organisms belonging to the Kingdom Plantae the Substance level defines the fresh material of a single species or infraspecies, the Herbal Drug and the Herbal preparation. For Herbal preparations, the fraction information will be captured at the Substance information level and additional information for herbal extracts will be captured at the Specified Substance Group 1 information level. See for further explanation the Substance Class: Structurally Diverse and the herbal annex.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [kingdom]: The kingdom of an organism shall be specified.;
+  ///
+  /// [phylum]: The phylum of an organism shall be specified.;
+  ///
+  /// [class]: The class of an organism shall be specified.;
+  ///
+  /// [order]: The order of an organism shall be specified,.;
   factory SubstanceSourceMaterialOrganismGeneral({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
@@ -3218,6 +4557,7 @@ class SubstanceSourceMaterialOrganismGeneral
   }) = _SubstanceSourceMaterialOrganismGeneral;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3236,21 +4576,49 @@ class SubstanceSourceMaterialOrganismGeneral
   factory SubstanceSourceMaterialOrganismGeneral.fromJson(
           Map<String, dynamic> json) =>
       _$SubstanceSourceMaterialOrganismGeneralFromJson(json);
+
+  /// Acts like a constructor, returns a [SubstanceSourceMaterialOrganismGeneral], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubstanceSourceMaterialOrganismGeneral.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubstanceSourceMaterialOrganismGeneralFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }
 
 @freezed
 class SubstanceSourceMaterialPartDescription
     with _$SubstanceSourceMaterialPartDescription {
   SubstanceSourceMaterialPartDescription._();
+
+  /// [SubstanceSourceMaterialPartDescription]: Source material shall capture information on the taxonomic and anatomical origins as well as the fraction of a material that can result in or can be modified to form a substance. This set of data elements shall be used to define polymer substances isolated from biological matrices. Taxonomic and anatomical origins shall be described using a controlled vocabulary as required. This information is captured for naturally derived polymers ( . starch) and structurally diverse substances. For Organisms belonging to the Kingdom Plantae the Substance level defines the fresh material of a single species or infraspecies, the Herbal Drug and the Herbal preparation. For Herbal preparations, the fraction information will be captured at the Substance information level and additional information for herbal extracts will be captured at the Specified Substance Group 1 information level. See for further explanation the Substance Class: Structurally Diverse and the herbal annex.
+
+  ///
+  /// [id]: Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.;
+  ///
+  /// [extension]: May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.;
+  ///
+  /// [modifierExtension]: May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.
+
+  /// Modifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).;
+  ///
+  /// [part]: Entity of anatomical origin of source material within an organism.;
+  ///
+  /// [partLocation]: The detailed anatomic location when the part can be extracted from different anatomical locations of the organism. Multiple alternative locations may apply.;
   factory SubstanceSourceMaterialPartDescription({
     String? id,
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
-    CodeableConcept? part,
+    @JsonKey(name: 'part') CodeableConcept? part_,
     CodeableConcept? partLocation,
   }) = _SubstanceSourceMaterialPartDescription;
 
   /// Produces a Yaml formatted String version of the object
+  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3269,4 +4637,16 @@ class SubstanceSourceMaterialPartDescription
   factory SubstanceSourceMaterialPartDescription.fromJson(
           Map<String, dynamic> json) =>
       _$SubstanceSourceMaterialPartDescriptionFromJson(json);
+
+  /// Acts like a constructor, returns a [SubstanceSourceMaterialPartDescription], accepts a
+  /// [String] as an argument, mostly because I got tired of typing it out
+  factory SubstanceSourceMaterialPartDescription.fromJsonString(String source) {
+    final json = jsonDecode(source);
+    if (json is Map<String, dynamic>) {
+      return _$SubstanceSourceMaterialPartDescriptionFromJson(json);
+    } else {
+      throw FormatException('FormatException: You passed $json'
+          'This does not properly decode to a Map<String,dynamic>.');
+    }
+  }
 }

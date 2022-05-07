@@ -9,8 +9,6 @@ enum ContributorType {
   reviewer,
   @JsonValue('endorser')
   endorser,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum DataRequirementSortDirection {
@@ -18,8 +16,6 @@ enum DataRequirementSortDirection {
   ascending,
   @JsonValue('descending')
   descending,
-  @JsonValue('unknown')
-  unknown,
 }
 
 enum RelatedArtifactType {
@@ -39,8 +35,54 @@ enum RelatedArtifactType {
   depends_on,
   @JsonValue('composed-of')
   composed_of,
-  @JsonValue('unknown')
-  unknown,
+  @JsonValue('part-of')
+  part_of,
+  @JsonValue('amends')
+  amends,
+  @JsonValue('amended-with')
+  amended_with,
+  @JsonValue('appends')
+  appends,
+  @JsonValue('appended-with')
+  appended_with,
+  @JsonValue('cites')
+  cites,
+  @JsonValue('cited-by')
+  cited_by,
+  @JsonValue('comments-on')
+  comments_on,
+  @JsonValue('comment-in')
+  comment_in,
+  @JsonValue('contains')
+  contains,
+  @JsonValue('contained-in')
+  contained_in,
+  @JsonValue('corrects')
+  corrects,
+  @JsonValue('correction-in')
+  correction_in,
+  @JsonValue('replaces')
+  replaces,
+  @JsonValue('replaced-with')
+  replaced_with,
+  @JsonValue('retracts')
+  retracts,
+  @JsonValue('retracted-by')
+  retracted_by,
+  @JsonValue('signs')
+  signs,
+  @JsonValue('similar-to')
+  similar_to,
+  @JsonValue('supports')
+  supports,
+  @JsonValue('supported-with')
+  supported_with,
+  @JsonValue('transforms')
+  transforms,
+  @JsonValue('transformed-into')
+  transformed_into,
+  @JsonValue('transformed-with')
+  transformed_with,
 }
 
 enum TriggerDefinitionType {
@@ -60,6 +102,4 @@ enum TriggerDefinitionType {
   data_accessed,
   @JsonValue('data-access-ended')
   data_access_ended,
-  @JsonValue('unknown')
-  unknown,
 }

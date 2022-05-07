@@ -7,10 +7,9 @@ part of 'billing.dart';
 // **************************************************************************
 
 _$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.Claim) ??
-          R5ResourceType.Claim,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Claim,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -49,8 +48,7 @@ _$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
       subType: json['subType'] == null
           ? null
           : CodeableConcept.fromJson(json['subType'] as Map<String, dynamic>),
-      use: $enumDecodeNullable(_$ClaimUseEnumMap, json['use'],
-          unknownValue: ClaimUse.unknown),
+      use: json['use'] == null ? null : Code.fromJson(json['use']),
       useElement: json['_use'] == null
           ? null
           : Element.fromJson(json['_use'] as Map<String, dynamic>),
@@ -60,7 +58,7 @@ _$_Claim _$$_ClaimFromJson(Map<String, dynamic> json) => _$_Claim(
           : Period.fromJson(json['billablePeriod'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : DateTime.parse(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -152,11 +150,11 @@ Map<String, dynamic> _$$_ClaimToJson(_$_Claim instance) {
   writeNotNull('_status', instance.statusElement?.toJson());
   val['type'] = instance.type.toJson();
   writeNotNull('subType', instance.subType?.toJson());
-  writeNotNull('use', _$ClaimUseEnumMap[instance.use]);
+  writeNotNull('use', instance.use?.toJson());
   writeNotNull('_use', instance.useElement?.toJson());
   val['patient'] = instance.patient.toJson();
   writeNotNull('billablePeriod', instance.billablePeriod?.toJson());
-  writeNotNull('created', instance.created?.toJson());
+  writeNotNull('created', instance.created?.toIso8601String());
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('enterer', instance.enterer?.toJson());
   writeNotNull('insurer', instance.insurer?.toJson());
@@ -335,13 +333,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-const _$ClaimUseEnumMap = {
-  ClaimUse.claim: 'claim',
-  ClaimUse.preauthorization: 'preauthorization',
-  ClaimUse.predetermination: 'predetermination',
-  ClaimUse.unknown: 'unknown',
-};
-
 _$_ClaimRelated _$$_ClaimRelatedFromJson(Map<String, dynamic> json) =>
     _$_ClaimRelated(
       id: json['id'] as String?,
@@ -507,7 +498,9 @@ _$_ClaimSupportingInfo _$$_ClaimSupportingInfoFromJson(
       valueBooleanElement: json['_valueBoolean'] == null
           ? null
           : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
-      valueString: json['valueString'] as String?,
+      valueString: json['valueString'] == null
+          ? null
+          : Markdown.fromJson(json['valueString']),
       valueStringElement: json['_valueString'] == null
           ? null
           : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
@@ -550,7 +543,7 @@ Map<String, dynamic> _$$_ClaimSupportingInfoToJson(
   writeNotNull('timingPeriod', instance.timingPeriod?.toJson());
   writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
   writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
-  writeNotNull('valueString', instance.valueString);
+  writeNotNull('valueString', instance.valueString?.toJson());
   writeNotNull('_valueString', instance.valueStringElement?.toJson());
   writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
   writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
@@ -638,7 +631,8 @@ _$_ClaimProcedure _$$_ClaimProcedureFromJson(Map<String, dynamic> json) =>
       type: (json['type'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date:
+          json['date'] == null ? null : DateTime.parse(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -672,7 +666,7 @@ Map<String, dynamic> _$$_ClaimProcedureToJson(_$_ClaimProcedure instance) {
   writeNotNull('sequence', instance.sequence?.toJson());
   writeNotNull('_sequence', instance.sequenceElement?.toJson());
   writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
-  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull(
       'procedureCodeableConcept', instance.procedureCodeableConcept?.toJson());
@@ -1122,10 +1116,9 @@ Map<String, dynamic> _$$_ClaimSubDetailToJson(_$_ClaimSubDetail instance) {
 
 _$_ClaimResponse _$$_ClaimResponseFromJson(Map<String, dynamic> json) =>
     _$_ClaimResponse(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.ClaimResponse) ??
-          R5ResourceType.ClaimResponse,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.ClaimResponse,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1171,7 +1164,7 @@ _$_ClaimResponse _$$_ClaimResponseFromJson(Map<String, dynamic> json) =>
       patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : DateTime.parse(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -1276,7 +1269,7 @@ Map<String, dynamic> _$$_ClaimResponseToJson(_$_ClaimResponse instance) {
   writeNotNull('use', instance.use?.toJson());
   writeNotNull('_use', instance.useElement?.toJson());
   val['patient'] = instance.patient.toJson();
-  writeNotNull('created', instance.created?.toJson());
+  writeNotNull('created', instance.created?.toIso8601String());
   writeNotNull('_created', instance.createdElement?.toJson());
   val['insurer'] = instance.insurer.toJson();
   writeNotNull('requestor', instance.requestor?.toJson());
@@ -1923,9 +1916,7 @@ _$_ClaimResponseProcessNote _$$_ClaimResponseProcessNoteFromJson(
       numberElement: json['_number'] == null
           ? null
           : Element.fromJson(json['_number'] as Map<String, dynamic>),
-      type: $enumDecodeNullable(
-          _$ClaimResponseProcessNoteTypeEnumMap, json['type'],
-          unknownValue: ClaimResponseProcessNoteType.unknown),
+      type: json['type'] == null ? null : Code.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -1955,20 +1946,13 @@ Map<String, dynamic> _$$_ClaimResponseProcessNoteToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('number', instance.number?.toJson());
   writeNotNull('_number', instance.numberElement?.toJson());
-  writeNotNull('type', _$ClaimResponseProcessNoteTypeEnumMap[instance.type]);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('text', instance.text);
   writeNotNull('_text', instance.textElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
   return val;
 }
-
-const _$ClaimResponseProcessNoteTypeEnumMap = {
-  ClaimResponseProcessNoteType.display: 'display',
-  ClaimResponseProcessNoteType.print: 'print',
-  ClaimResponseProcessNoteType.printoper: 'printoper',
-  ClaimResponseProcessNoteType.unknown: 'unknown',
-};
 
 _$_ClaimResponseInsurance _$$_ClaimResponseInsuranceFromJson(
         Map<String, dynamic> json) =>
@@ -2087,10 +2071,9 @@ Map<String, dynamic> _$$_ClaimResponseErrorToJson(
 }
 
 _$_Invoice _$$_InvoiceFromJson(Map<String, dynamic> json) => _$_Invoice(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.Invoice) ??
-          R5ResourceType.Invoice,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Invoice,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2121,8 +2104,7 @@ _$_Invoice _$$_InvoiceFromJson(Map<String, dynamic> json) => _$_Invoice(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(_$InvoiceStatusEnumMap, json['status'],
-          unknownValue: InvoiceStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -2139,7 +2121,8 @@ _$_Invoice _$$_InvoiceFromJson(Map<String, dynamic> json) => _$_Invoice(
       recipient: json['recipient'] == null
           ? null
           : Reference.fromJson(json['recipient'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date:
+          json['date'] == null ? null : DateTime.parse(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -2202,14 +2185,14 @@ Map<String, dynamic> _$$_InvoiceToJson(_$_Invoice instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$InvoiceStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('cancelledReason', instance.cancelledReason);
   writeNotNull('_cancelledReason', instance.cancelledReasonElement?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('recipient', instance.recipient?.toJson());
-  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull(
       'participant', instance.participant?.map((e) => e.toJson()).toList());
@@ -2225,15 +2208,6 @@ Map<String, dynamic> _$$_InvoiceToJson(_$_Invoice instance) {
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$InvoiceStatusEnumMap = {
-  InvoiceStatus.draft: 'draft',
-  InvoiceStatus.issued: 'issued',
-  InvoiceStatus.balanced: 'balanced',
-  InvoiceStatus.cancelled: 'cancelled',
-  InvoiceStatus.entered_in_error: 'entered-in-error',
-  InvoiceStatus.unknown: 'unknown',
-};
 
 _$_InvoiceParticipant _$$_InvoiceParticipantFromJson(
         Map<String, dynamic> json) =>
@@ -2334,9 +2308,7 @@ _$_InvoicePriceComponent _$$_InvoicePriceComponentFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: $enumDecodeNullable(
-          _$InvoicePriceComponentTypeEnumMap, json['type'],
-          unknownValue: InvoicePriceComponentType.unknown),
+      type: json['type'] == null ? null : Code.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -2367,7 +2339,7 @@ Map<String, dynamic> _$$_InvoicePriceComponentToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('type', _$InvoicePriceComponentTypeEnumMap[instance.type]);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('code', instance.code?.toJson());
   writeNotNull('factor', instance.factor?.toJson());
@@ -2375,13 +2347,3 @@ Map<String, dynamic> _$$_InvoicePriceComponentToJson(
   writeNotNull('amount', instance.amount?.toJson());
   return val;
 }
-
-const _$InvoicePriceComponentTypeEnumMap = {
-  InvoicePriceComponentType.base: 'base',
-  InvoicePriceComponentType.surcharge: 'surcharge',
-  InvoicePriceComponentType.deduction: 'deduction',
-  InvoicePriceComponentType.discount: 'discount',
-  InvoicePriceComponentType.tax: 'tax',
-  InvoicePriceComponentType.informational: 'informational',
-  InvoicePriceComponentType.unknown: 'unknown',
-};

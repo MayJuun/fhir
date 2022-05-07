@@ -7,10 +7,9 @@ part of 'general.dart';
 // **************************************************************************
 
 _$_Account _$$_AccountFromJson(Map<String, dynamic> json) => _$_Account(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.Account) ??
-          R5ResourceType.Account,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Account,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -41,11 +40,14 @@ _$_Account _$$_AccountFromJson(Map<String, dynamic> json) => _$_Account(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(_$AccountStatusEnumMap, json['status'],
-          unknownValue: AccountStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      billingStatus: json['billingStatus'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['billingStatus'] as Map<String, dynamic>),
       type: json['type'] == null
           ? null
           : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
@@ -103,8 +105,9 @@ Map<String, dynamic> _$$_AccountToJson(_$_Account instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$AccountStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('billingStatus', instance.billingStatus?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
@@ -272,14 +275,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-const _$AccountStatusEnumMap = {
-  AccountStatus.active: 'active',
-  AccountStatus.inactive: 'inactive',
-  AccountStatus.entered_in_error: 'entered-in-error',
-  AccountStatus.on_hold: 'on-hold',
-  AccountStatus.unknown: 'unknown',
-};
-
 _$_AccountCoverage _$$_AccountCoverageFromJson(Map<String, dynamic> json) =>
     _$_AccountCoverage(
       id: json['id'] as String?,
@@ -360,10 +355,9 @@ Map<String, dynamic> _$$_AccountGuarantorToJson(_$_AccountGuarantor instance) {
 
 _$_ChargeItem _$$_ChargeItemFromJson(Map<String, dynamic> json) =>
     _$_ChargeItem(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.ChargeItem) ??
-          R5ResourceType.ChargeItem,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.ChargeItem,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -395,7 +389,7 @@ _$_ChargeItem _$$_ChargeItemFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
       definitionUri: (json['definitionUri'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
+          ?.map((e) => Uri.parse(e as String))
           .toList(),
       definitionUriElement: (json['_definitionUri'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -403,8 +397,7 @@ _$_ChargeItem _$$_ChargeItemFromJson(Map<String, dynamic> json) =>
       definitionCanonical: (json['definitionCanonical'] as List<dynamic>?)
           ?.map((e) => Canonical.fromJson(e))
           .toList(),
-      status: $enumDecodeNullable(_$ChargeItemStatusEnumMap, json['status'],
-          unknownValue: ChargeItemStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -418,7 +411,7 @@ _$_ChargeItem _$$_ChargeItemFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['context'] as Map<String, dynamic>),
       occurrenceDateTime: json['occurrenceDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['occurrenceDateTime']),
+          : DateTime.parse(json['occurrenceDateTime'] as String),
       occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
           ? null
           : Element.fromJson(
@@ -467,7 +460,7 @@ _$_ChargeItem _$$_ChargeItemFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['enterer'] as Map<String, dynamic>),
       enteredDate: json['enteredDate'] == null
           ? null
-          : FhirDateTime.fromJson(json['enteredDate']),
+          : DateTime.parse(json['enteredDate'] as String),
       enteredDateElement: json['_enteredDate'] == null
           ? null
           : Element.fromJson(json['_enteredDate'] as Map<String, dynamic>),
@@ -477,14 +470,9 @@ _$_ChargeItem _$$_ChargeItemFromJson(Map<String, dynamic> json) =>
       service: (json['service'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      productReference: json['productReference'] == null
-          ? null
-          : Reference.fromJson(
-              json['productReference'] as Map<String, dynamic>),
-      productCodeableConcept: json['productCodeableConcept'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['productCodeableConcept'] as Map<String, dynamic>),
+      product: (json['product'] as List<dynamic>?)
+          ?.map((e) => CodeableReference.fromJson(e as Map<String, dynamic>))
+          .toList(),
       account: (json['account'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -522,19 +510,20 @@ Map<String, dynamic> _$$_ChargeItemToJson(_$_ChargeItem instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'definitionUri', instance.definitionUri?.map((e) => e.toJson()).toList());
+  writeNotNull('definitionUri',
+      instance.definitionUri?.map((e) => e.toString()).toList());
   writeNotNull('_definitionUri',
       instance.definitionUriElement?.map((e) => e.toJson()).toList());
   writeNotNull('definitionCanonical',
       instance.definitionCanonical?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$ChargeItemStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
   val['code'] = instance.code.toJson();
   val['subject'] = instance.subject.toJson();
   writeNotNull('context', instance.context?.toJson());
-  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
+  writeNotNull(
+      'occurrenceDateTime', instance.occurrenceDateTime?.toIso8601String());
   writeNotNull(
       '_occurrenceDateTime', instance.occurrenceDateTimeElement?.toJson());
   writeNotNull('occurrencePeriod', instance.occurrencePeriod?.toJson());
@@ -554,29 +543,17 @@ Map<String, dynamic> _$$_ChargeItemToJson(_$_ChargeItem instance) {
   writeNotNull('overrideReason', instance.overrideReason);
   writeNotNull('_overrideReason', instance.overrideReasonElement?.toJson());
   writeNotNull('enterer', instance.enterer?.toJson());
-  writeNotNull('enteredDate', instance.enteredDate?.toJson());
+  writeNotNull('enteredDate', instance.enteredDate?.toIso8601String());
   writeNotNull('_enteredDate', instance.enteredDateElement?.toJson());
   writeNotNull('reason', instance.reason?.map((e) => e.toJson()).toList());
   writeNotNull('service', instance.service?.map((e) => e.toJson()).toList());
-  writeNotNull('productReference', instance.productReference?.toJson());
-  writeNotNull(
-      'productCodeableConcept', instance.productCodeableConcept?.toJson());
+  writeNotNull('product', instance.product?.map((e) => e.toJson()).toList());
   writeNotNull('account', instance.account?.map((e) => e.toJson()).toList());
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   writeNotNull('supportingInformation',
       instance.supportingInformation?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$ChargeItemStatusEnumMap = {
-  ChargeItemStatus.planned: 'planned',
-  ChargeItemStatus.billable: 'billable',
-  ChargeItemStatus.not_billable: 'not-billable',
-  ChargeItemStatus.aborted: 'aborted',
-  ChargeItemStatus.billed: 'billed',
-  ChargeItemStatus.entered_in_error: 'entered-in-error',
-  ChargeItemStatus.unknown: 'unknown',
-};
 
 _$_ChargeItemPerformer _$$_ChargeItemPerformerFromJson(
         Map<String, dynamic> json) =>
@@ -617,10 +594,9 @@ Map<String, dynamic> _$$_ChargeItemPerformerToJson(
 _$_ChargeItemDefinition _$$_ChargeItemDefinitionFromJson(
         Map<String, dynamic> json) =>
     _$_ChargeItemDefinition(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.ChargeItemDefinition) ??
-          R5ResourceType.ChargeItemDefinition,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.ChargeItemDefinition,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -667,9 +643,7 @@ _$_ChargeItemDefinition _$$_ChargeItemDefinitionFromJson(
       titleElement: json['_title'] == null
           ? null
           : Element.fromJson(json['_title'] as Map<String, dynamic>),
-      status: $enumDecodeNullable(
-          _$ChargeItemDefinitionStatusEnumMap, json['status'],
-          unknownValue: ChargeItemDefinitionStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -679,7 +653,8 @@ _$_ChargeItemDefinition _$$_ChargeItemDefinitionFromJson(
       experimentalElement: json['_experimental'] == null
           ? null
           : Element.fromJson(json['_experimental'] as Map<String, dynamic>),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date:
+          json['date'] == null ? null : DateTime.parse(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -747,7 +722,7 @@ _$_ChargeItemDefinition _$$_ChargeItemDefinitionFromJson(
           ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
           .toList(),
       derivedFromUri: (json['derivedFromUri'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
+          ?.map((e) => Uri.parse(e as String))
           .toList(),
       derivedFromUriElement: (json['_derivedFromUri'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -809,11 +784,11 @@ Map<String, dynamic> _$$_ChargeItemDefinitionToJson(
   writeNotNull('_name', instance.nameElement?.toJson());
   writeNotNull('title', instance.title);
   writeNotNull('_title', instance.titleElement?.toJson());
-  writeNotNull('status', _$ChargeItemDefinitionStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('experimental', instance.experimental?.toJson());
   writeNotNull('_experimental', instance.experimentalElement?.toJson());
-  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull('publisher', instance.publisher);
   writeNotNull('_publisher', instance.publisherElement?.toJson());
@@ -841,7 +816,7 @@ Map<String, dynamic> _$$_ChargeItemDefinitionToJson(
   writeNotNull('relatedArtifact',
       instance.relatedArtifact?.map((e) => e.toJson()).toList());
   writeNotNull('derivedFromUri',
-      instance.derivedFromUri?.map((e) => e.toJson()).toList());
+      instance.derivedFromUri?.map((e) => e.toString()).toList());
   writeNotNull('_derivedFromUri',
       instance.derivedFromUriElement?.map((e) => e.toJson()).toList());
   writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
@@ -854,13 +829,6 @@ Map<String, dynamic> _$$_ChargeItemDefinitionToJson(
       'propertyGroup', instance.propertyGroup?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$ChargeItemDefinitionStatusEnumMap = {
-  ChargeItemDefinitionStatus.draft: 'draft',
-  ChargeItemDefinitionStatus.active: 'active',
-  ChargeItemDefinitionStatus.retired: 'retired',
-  ChargeItemDefinitionStatus.unknown: 'unknown',
-};
 
 _$_ChargeItemDefinitionApplicability
     _$$_ChargeItemDefinitionApplicabilityFromJson(Map<String, dynamic> json) =>
@@ -1004,10 +972,9 @@ Map<String, dynamic> _$$_ChargeItemDefinitionPriceComponentToJson(
 }
 
 _$_Contract _$$_ContractFromJson(Map<String, dynamic> json) => _$_Contract(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.Contract) ??
-          R5ResourceType.Contract,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Contract,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1068,8 +1035,9 @@ _$_Contract _$$_ContractFromJson(Map<String, dynamic> json) => _$_Contract(
           ? null
           : CodeableConcept.fromJson(
               json['contentDerivative'] as Map<String, dynamic>),
-      issued:
-          json['issued'] == null ? null : FhirDateTime.fromJson(json['issued']),
+      issued: json['issued'] == null
+          ? null
+          : DateTime.parse(json['issued'] as String),
       issuedElement: json['_issued'] == null
           ? null
           : Element.fromJson(json['_issued'] as Map<String, dynamic>),
@@ -1201,7 +1169,7 @@ Map<String, dynamic> _$$_ContractToJson(_$_Contract instance) {
   writeNotNull('instantiatesUri', instance.instantiatesUri?.toJson());
   writeNotNull('_instantiatesUri', instance.instantiatesUriElement?.toJson());
   writeNotNull('contentDerivative', instance.contentDerivative?.toJson());
-  writeNotNull('issued', instance.issued?.toJson());
+  writeNotNull('issued', instance.issued?.toIso8601String());
   writeNotNull('_issued', instance.issuedElement?.toJson());
   writeNotNull('applies', instance.applies?.toJson());
   writeNotNull('expirationType', instance.expirationType?.toJson());
@@ -1261,7 +1229,7 @@ _$_ContractContentDefinition _$$_ContractContentDefinitionFromJson(
           : Reference.fromJson(json['publisher'] as Map<String, dynamic>),
       publicationDate: json['publicationDate'] == null
           ? null
-          : FhirDateTime.fromJson(json['publicationDate']),
+          : DateTime.parse(json['publicationDate'] as String),
       publicationDateElement: json['_publicationDate'] == null
           ? null
           : Element.fromJson(json['_publicationDate'] as Map<String, dynamic>),
@@ -1298,7 +1266,7 @@ Map<String, dynamic> _$$_ContractContentDefinitionToJson(
   val['type'] = instance.type.toJson();
   writeNotNull('subType', instance.subType?.toJson());
   writeNotNull('publisher', instance.publisher?.toJson());
-  writeNotNull('publicationDate', instance.publicationDate?.toJson());
+  writeNotNull('publicationDate', instance.publicationDate?.toIso8601String());
   writeNotNull('_publicationDate', instance.publicationDateElement?.toJson());
   writeNotNull('publicationStatus', instance.publicationStatus?.toJson());
   writeNotNull(
@@ -1320,8 +1288,9 @@ _$_ContractTerm _$$_ContractTermFromJson(Map<String, dynamic> json) =>
       identifier: json['identifier'] == null
           ? null
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
-      issued:
-          json['issued'] == null ? null : FhirDateTime.fromJson(json['issued']),
+      issued: json['issued'] == null
+          ? null
+          : DateTime.parse(json['issued'] as String),
       issuedElement: json['_issued'] == null
           ? null
           : Element.fromJson(json['_issued'] as Map<String, dynamic>),
@@ -1376,7 +1345,7 @@ Map<String, dynamic> _$$_ContractTermToJson(_$_ContractTerm instance) {
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('issued', instance.issued?.toJson());
+  writeNotNull('issued', instance.issued?.toIso8601String());
   writeNotNull('_issued', instance.issuedElement?.toJson());
   writeNotNull('applies', instance.applies?.toJson());
   writeNotNull('topicCodeableConcept', instance.topicCodeableConcept?.toJson());
@@ -1595,7 +1564,7 @@ _$_ContractAnswer _$$_ContractAnswerFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_valueDate'] as Map<String, dynamic>),
       valueDateTime: json['valueDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['valueDateTime']),
+          : DateTime.parse(json['valueDateTime'] as String),
       valueDateTimeElement: json['_valueDateTime'] == null
           ? null
           : Element.fromJson(json['_valueDateTime'] as Map<String, dynamic>),
@@ -1604,7 +1573,9 @@ _$_ContractAnswer _$$_ContractAnswerFromJson(Map<String, dynamic> json) =>
       valueTimeElement: json['_valueTime'] == null
           ? null
           : Element.fromJson(json['_valueTime'] as Map<String, dynamic>),
-      valueString: json['valueString'] as String?,
+      valueString: json['valueString'] == null
+          ? null
+          : Markdown.fromJson(json['valueString']),
       valueStringElement: json['_valueString'] == null
           ? null
           : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
@@ -1650,11 +1621,11 @@ Map<String, dynamic> _$$_ContractAnswerToJson(_$_ContractAnswer instance) {
   writeNotNull('_valueInteger', instance.valueIntegerElement?.toJson());
   writeNotNull('valueDate', instance.valueDate?.toJson());
   writeNotNull('_valueDate', instance.valueDateElement?.toJson());
-  writeNotNull('valueDateTime', instance.valueDateTime?.toJson());
+  writeNotNull('valueDateTime', instance.valueDateTime?.toIso8601String());
   writeNotNull('_valueDateTime', instance.valueDateTimeElement?.toJson());
   writeNotNull('valueTime', instance.valueTime?.toJson());
   writeNotNull('_valueTime', instance.valueTimeElement?.toJson());
-  writeNotNull('valueString', instance.valueString);
+  writeNotNull('valueString', instance.valueString?.toJson());
   writeNotNull('_valueString', instance.valueStringElement?.toJson());
   writeNotNull('valueUri', instance.valueUri?.toJson());
   writeNotNull('_valueUri', instance.valueUriElement?.toJson());
@@ -1836,7 +1807,7 @@ _$_ContractValuedItem _$$_ContractValuedItemFromJson(
           : Identifier.fromJson(json['identifier'] as Map<String, dynamic>),
       effectiveTime: json['effectiveTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['effectiveTime']),
+          : DateTime.parse(json['effectiveTime'] as String),
       effectiveTimeElement: json['_effectiveTime'] == null
           ? null
           : Element.fromJson(json['_effectiveTime'] as Map<String, dynamic>),
@@ -1863,7 +1834,7 @@ _$_ContractValuedItem _$$_ContractValuedItemFromJson(
           : Element.fromJson(json['_payment'] as Map<String, dynamic>),
       paymentDate: json['paymentDate'] == null
           ? null
-          : FhirDateTime.fromJson(json['paymentDate']),
+          : DateTime.parse(json['paymentDate'] as String),
       paymentDateElement: json['_paymentDate'] == null
           ? null
           : Element.fromJson(json['_paymentDate'] as Map<String, dynamic>),
@@ -1906,7 +1877,7 @@ Map<String, dynamic> _$$_ContractValuedItemToJson(
       'entityCodeableConcept', instance.entityCodeableConcept?.toJson());
   writeNotNull('entityReference', instance.entityReference?.toJson());
   writeNotNull('identifier', instance.identifier?.toJson());
-  writeNotNull('effectiveTime', instance.effectiveTime?.toJson());
+  writeNotNull('effectiveTime', instance.effectiveTime?.toIso8601String());
   writeNotNull('_effectiveTime', instance.effectiveTimeElement?.toJson());
   writeNotNull('quantity', instance.quantity?.toJson());
   writeNotNull('unitPrice', instance.unitPrice?.toJson());
@@ -1917,7 +1888,7 @@ Map<String, dynamic> _$$_ContractValuedItemToJson(
   writeNotNull('net', instance.net?.toJson());
   writeNotNull('payment', instance.payment);
   writeNotNull('_payment', instance.paymentElement?.toJson());
-  writeNotNull('paymentDate', instance.paymentDate?.toJson());
+  writeNotNull('paymentDate', instance.paymentDate?.toIso8601String());
   writeNotNull('_paymentDate', instance.paymentDateElement?.toJson());
   writeNotNull('responsible', instance.responsible?.toJson());
   writeNotNull('recipient', instance.recipient?.toJson());
@@ -1968,7 +1939,7 @@ _$_ContractAction _$$_ContractActionFromJson(Map<String, dynamic> json) =>
           .toList(),
       occurrenceDateTime: json['occurrenceDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['occurrenceDateTime']),
+          : DateTime.parse(json['occurrenceDateTime'] as String),
       occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
           ? null
           : Element.fromJson(
@@ -2052,7 +2023,8 @@ Map<String, dynamic> _$$_ContractActionToJson(_$_ContractAction instance) {
   writeNotNull('contextLinkId', instance.contextLinkId);
   writeNotNull('_contextLinkId',
       instance.contextLinkIdElement?.map((e) => e.toJson()).toList());
-  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
+  writeNotNull(
+      'occurrenceDateTime', instance.occurrenceDateTime?.toIso8601String());
   writeNotNull(
       '_occurrenceDateTime', instance.occurrenceDateTimeElement?.toJson());
   writeNotNull('occurrencePeriod', instance.occurrencePeriod?.toJson());
@@ -2270,10 +2242,9 @@ Map<String, dynamic> _$$_ContractRuleToJson(_$_ContractRule instance) {
 _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
         Map<String, dynamic> json) =>
     _$_ExplanationOfBenefit(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.ExplanationOfBenefit) ??
-          R5ResourceType.ExplanationOfBenefit,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.ExplanationOfBenefit,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -2304,9 +2275,7 @@ _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(
-          _$ExplanationOfBenefitStatusEnumMap, json['status'],
-          unknownValue: ExplanationOfBenefitStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -2324,7 +2293,7 @@ _$_ExplanationOfBenefit _$$_ExplanationOfBenefitFromJson(
           : Period.fromJson(json['billablePeriod'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : DateTime.parse(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -2484,7 +2453,7 @@ Map<String, dynamic> _$$_ExplanationOfBenefitToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$ExplanationOfBenefitStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   val['type'] = instance.type.toJson();
   writeNotNull('subType', instance.subType?.toJson());
@@ -2492,7 +2461,7 @@ Map<String, dynamic> _$$_ExplanationOfBenefitToJson(
   writeNotNull('_use', instance.useElement?.toJson());
   val['patient'] = instance.patient.toJson();
   writeNotNull('billablePeriod', instance.billablePeriod?.toJson());
-  writeNotNull('created', instance.created?.toJson());
+  writeNotNull('created', instance.created?.toIso8601String());
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('enterer', instance.enterer?.toJson());
   val['insurer'] = instance.insurer.toJson();
@@ -2544,14 +2513,6 @@ Map<String, dynamic> _$$_ExplanationOfBenefitToJson(
       instance.benefitBalance?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$ExplanationOfBenefitStatusEnumMap = {
-  ExplanationOfBenefitStatus.active: 'active',
-  ExplanationOfBenefitStatus.cancelled: 'cancelled',
-  ExplanationOfBenefitStatus.draft: 'draft',
-  ExplanationOfBenefitStatus.entered_in_error: 'entered-in-error',
-  ExplanationOfBenefitStatus.unknown: 'unknown',
-};
 
 _$_ExplanationOfBenefitRelated _$$_ExplanationOfBenefitRelatedFromJson(
         Map<String, dynamic> json) =>
@@ -2727,7 +2688,9 @@ _$_ExplanationOfBenefitSupportingInfo
           valueBooleanElement: json['_valueBoolean'] == null
               ? null
               : Element.fromJson(json['_valueBoolean'] as Map<String, dynamic>),
-          valueString: json['valueString'] as String?,
+          valueString: json['valueString'] == null
+              ? null
+              : Markdown.fromJson(json['valueString']),
           valueStringElement: json['_valueString'] == null
               ? null
               : Element.fromJson(json['_valueString'] as Map<String, dynamic>),
@@ -2772,7 +2735,7 @@ Map<String, dynamic> _$$_ExplanationOfBenefitSupportingInfoToJson(
   writeNotNull('timingPeriod', instance.timingPeriod?.toJson());
   writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
   writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
-  writeNotNull('valueString', instance.valueString);
+  writeNotNull('valueString', instance.valueString?.toJson());
   writeNotNull('_valueString', instance.valueStringElement?.toJson());
   writeNotNull('valueQuantity', instance.valueQuantity?.toJson());
   writeNotNull('valueAttachment', instance.valueAttachment?.toJson());
@@ -2863,7 +2826,8 @@ _$_ExplanationOfBenefitProcedure _$$_ExplanationOfBenefitProcedureFromJson(
       type: (json['type'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date:
+          json['date'] == null ? null : DateTime.parse(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
@@ -2898,7 +2862,7 @@ Map<String, dynamic> _$$_ExplanationOfBenefitProcedureToJson(
   writeNotNull('sequence', instance.sequence?.toJson());
   writeNotNull('_sequence', instance.sequenceElement?.toJson());
   writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
-  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('_date', instance.dateElement?.toJson());
   writeNotNull(
       'procedureCodeableConcept', instance.procedureCodeableConcept?.toJson());
@@ -3836,9 +3800,7 @@ _$_ExplanationOfBenefitProcessNote _$$_ExplanationOfBenefitProcessNoteFromJson(
       numberElement: json['_number'] == null
           ? null
           : Element.fromJson(json['_number'] as Map<String, dynamic>),
-      type: $enumDecodeNullable(
-          _$ExplanationOfBenefitProcessNoteTypeEnumMap, json['type'],
-          unknownValue: ExplanationOfBenefitProcessNoteType.unknown),
+      type: json['type'] == null ? null : Code.fromJson(json['type']),
       typeElement: json['_type'] == null
           ? null
           : Element.fromJson(json['_type'] as Map<String, dynamic>),
@@ -3868,21 +3830,13 @@ Map<String, dynamic> _$$_ExplanationOfBenefitProcessNoteToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('number', instance.number?.toJson());
   writeNotNull('_number', instance.numberElement?.toJson());
-  writeNotNull(
-      'type', _$ExplanationOfBenefitProcessNoteTypeEnumMap[instance.type]);
+  writeNotNull('type', instance.type?.toJson());
   writeNotNull('_type', instance.typeElement?.toJson());
   writeNotNull('text', instance.text);
   writeNotNull('_text', instance.textElement?.toJson());
   writeNotNull('language', instance.language?.toJson());
   return val;
 }
-
-const _$ExplanationOfBenefitProcessNoteTypeEnumMap = {
-  ExplanationOfBenefitProcessNoteType.display: 'display',
-  ExplanationOfBenefitProcessNoteType.print: 'print',
-  ExplanationOfBenefitProcessNoteType.printoper: 'printoper',
-  ExplanationOfBenefitProcessNoteType.unknown: 'unknown',
-};
 
 _$_ExplanationOfBenefitBenefitBalance
     _$$_ExplanationOfBenefitBenefitBalanceFromJson(Map<String, dynamic> json) =>
@@ -3974,7 +3928,9 @@ _$_ExplanationOfBenefitFinancial _$$_ExplanationOfBenefitFinancialFromJson(
           ? null
           : Element.fromJson(
               json['_allowedUnsignedInt'] as Map<String, dynamic>),
-      allowedString: json['allowedString'] as String?,
+      allowedString: json['allowedString'] == null
+          ? null
+          : Markdown.fromJson(json['allowedString']),
       allowedStringElement: json['_allowedString'] == null
           ? null
           : Element.fromJson(json['_allowedString'] as Map<String, dynamic>),
@@ -4011,7 +3967,7 @@ Map<String, dynamic> _$$_ExplanationOfBenefitFinancialToJson(
   writeNotNull('allowedUnsignedInt', instance.allowedUnsignedInt?.toJson());
   writeNotNull(
       '_allowedUnsignedInt', instance.allowedUnsignedIntElement?.toJson());
-  writeNotNull('allowedString', instance.allowedString);
+  writeNotNull('allowedString', instance.allowedString?.toJson());
   writeNotNull('_allowedString', instance.allowedStringElement?.toJson());
   writeNotNull('allowedMoney', instance.allowedMoney?.toJson());
   writeNotNull('usedUnsignedInt', instance.usedUnsignedInt?.toJson());
@@ -4022,10 +3978,9 @@ Map<String, dynamic> _$$_ExplanationOfBenefitFinancialToJson(
 
 _$_InsurancePlan _$$_InsurancePlanFromJson(Map<String, dynamic> json) =>
     _$_InsurancePlan(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.InsurancePlan) ??
-          R5ResourceType.InsurancePlan,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.InsurancePlan,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -4056,8 +4011,7 @@ _$_InsurancePlan _$$_InsurancePlanFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(_$InsurancePlanStatusEnumMap, json['status'],
-          unknownValue: InsurancePlanStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -4086,7 +4040,8 @@ _$_InsurancePlan _$$_InsurancePlanFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
       contact: (json['contact'] as List<dynamic>?)
-          ?.map((e) => InsurancePlanContact.fromJson(e as Map<String, dynamic>))
+          ?.map(
+              (e) => ExtendedContactDetail.fromJson(e as Map<String, dynamic>))
           .toList(),
       endpoint: (json['endpoint'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
@@ -4129,7 +4084,7 @@ Map<String, dynamic> _$$_InsurancePlanToJson(_$_InsurancePlan instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$InsurancePlanStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('type', instance.type?.map((e) => e.toJson()).toList());
   writeNotNull('name', instance.name);
@@ -4147,59 +4102,6 @@ Map<String, dynamic> _$$_InsurancePlanToJson(_$_InsurancePlan instance) {
   writeNotNull('network', instance.network?.map((e) => e.toJson()).toList());
   writeNotNull('coverage', instance.coverage?.map((e) => e.toJson()).toList());
   writeNotNull('plan', instance.plan?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-const _$InsurancePlanStatusEnumMap = {
-  InsurancePlanStatus.draft: 'draft',
-  InsurancePlanStatus.active: 'active',
-  InsurancePlanStatus.retired: 'retired',
-  InsurancePlanStatus.unknown: 'unknown',
-};
-
-_$_InsurancePlanContact _$$_InsurancePlanContactFromJson(
-        Map<String, dynamic> json) =>
-    _$_InsurancePlanContact(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      purpose: json['purpose'] == null
-          ? null
-          : CodeableConcept.fromJson(json['purpose'] as Map<String, dynamic>),
-      name: json['name'] == null
-          ? null
-          : HumanName.fromJson(json['name'] as Map<String, dynamic>),
-      telecom: (json['telecom'] as List<dynamic>?)
-          ?.map((e) => ContactPoint.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      address: json['address'] == null
-          ? null
-          : Address.fromJson(json['address'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$_InsurancePlanContactToJson(
-    _$_InsurancePlanContact instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('purpose', instance.purpose?.toJson());
-  writeNotNull('name', instance.name?.toJson());
-  writeNotNull('telecom', instance.telecom?.map((e) => e.toJson()).toList());
-  writeNotNull('address', instance.address?.toJson());
   return val;
 }
 

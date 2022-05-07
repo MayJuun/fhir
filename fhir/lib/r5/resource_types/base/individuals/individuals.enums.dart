@@ -13,8 +13,7 @@ enum GroupType {
   medication,
   @JsonValue('substance')
   substance,
-  @JsonValue('unknown')
-  unknown,
+
 }
 
 enum PatientGender {
@@ -24,8 +23,7 @@ enum PatientGender {
   female,
   @JsonValue('other')
   other,
-  @JsonValue('unknown')
-  unknown,
+
 }
 
 enum PatientContactGender {
@@ -35,8 +33,7 @@ enum PatientContactGender {
   female,
   @JsonValue('other')
   other,
-  @JsonValue('unknown')
-  unknown,
+
 }
 
 enum PatientLinkType {
@@ -48,8 +45,7 @@ enum PatientLinkType {
   refer,
   @JsonValue('seealso')
   seealso,
-  @JsonValue('unknown')
-  unknown,
+
 }
 
 enum PersonGender {
@@ -59,8 +55,7 @@ enum PersonGender {
   female,
   @JsonValue('other')
   other,
-  @JsonValue('unknown')
-  unknown,
+
 }
 
 enum PersonLinkAssurance {
@@ -72,8 +67,7 @@ enum PersonLinkAssurance {
   level3,
   @JsonValue('level4')
   level4,
-  @JsonValue('unknown')
-  unknown,
+
 }
 
 enum PractitionerGender {
@@ -83,8 +77,7 @@ enum PractitionerGender {
   female,
   @JsonValue('other')
   other,
-  @JsonValue('unknown')
-  unknown,
+
 }
 
 enum RelatedPersonGender {
@@ -94,6 +87,5 @@ enum RelatedPersonGender {
   female,
   @JsonValue('other')
   other,
-  @JsonValue('unknown')
-  unknown,
+
 }

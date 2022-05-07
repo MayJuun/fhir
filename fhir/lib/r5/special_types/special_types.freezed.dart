@@ -24,12 +24,9 @@ class _$NarrativeTearOff {
 
   _Narrative call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
-          NarrativeStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      NarrativeStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       required String div}) {
     return _Narrative(
       id: id,
@@ -53,7 +50,6 @@ mixin _$Narrative {
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
   NarrativeStatus? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
@@ -71,12 +67,9 @@ abstract class $NarrativeCopyWith<$Res> {
       _$NarrativeCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
-          NarrativeStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      NarrativeStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       String div});
 
   $ElementCopyWith<$Res>? get statusElement;
@@ -142,12 +135,9 @@ abstract class _$NarrativeCopyWith<$Res> implements $NarrativeCopyWith<$Res> {
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
-          NarrativeStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      NarrativeStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       String div});
 
   @override
@@ -202,7 +192,7 @@ class _$_Narrative extends _Narrative {
   _$_Narrative(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
-      @JsonKey(unknownEnumValue: NarrativeStatus.unknown) this.status,
+      this.status,
       @JsonKey(name: '_status') this.statusElement,
       required this.div})
       : super._();
@@ -216,7 +206,6 @@ class _$_Narrative extends _Narrative {
   @JsonKey(name: 'extension')
   final List<FhirExtension>? extension_;
   @override
-  @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
   final NarrativeStatus? status;
   @override
   @JsonKey(name: '_status')
@@ -266,12 +255,9 @@ class _$_Narrative extends _Narrative {
 abstract class _Narrative extends Narrative {
   factory _Narrative(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
-          NarrativeStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      NarrativeStatus? status,
+      @JsonKey(name: '_status') Element? statusElement,
       required String div}) = _$_Narrative;
   _Narrative._() : super._();
 
@@ -284,7 +270,6 @@ abstract class _Narrative extends Narrative {
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
-  @JsonKey(unknownEnumValue: NarrativeStatus.unknown)
   NarrativeStatus? get status;
   @override
   @JsonKey(name: '_status')
@@ -17004,20 +16989,15 @@ class _$ElementDefinitionSlicingTearOff {
 
   _ElementDefinitionSlicing call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<ElementDefinitionDiscriminator>? discriminator,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       Boolean? ordered,
-      @JsonKey(name: '_ordered')
-          Element? orderedElement,
-      @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
-          ElementDefinitionSlicingRules? rules,
-      @JsonKey(name: '_rules')
-          Element? rulesElement}) {
+      @JsonKey(name: '_ordered') Element? orderedElement,
+      ElementDefinitionSlicingRules? rules,
+      @JsonKey(name: '_rules') Element? rulesElement}) {
     return _ElementDefinitionSlicing(
       id: id,
       extension_: extension_,
@@ -17055,7 +17035,6 @@ mixin _$ElementDefinitionSlicing {
   Boolean? get ordered => throw _privateConstructorUsedError;
   @JsonKey(name: '_ordered')
   Element? get orderedElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
   ElementDefinitionSlicingRules? get rules =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_rules')
@@ -17074,20 +17053,15 @@ abstract class $ElementDefinitionSlicingCopyWith<$Res> {
       _$ElementDefinitionSlicingCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<ElementDefinitionDiscriminator>? discriminator,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       Boolean? ordered,
-      @JsonKey(name: '_ordered')
-          Element? orderedElement,
-      @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
-          ElementDefinitionSlicingRules? rules,
-      @JsonKey(name: '_rules')
-          Element? rulesElement});
+      @JsonKey(name: '_ordered') Element? orderedElement,
+      ElementDefinitionSlicingRules? rules,
+      @JsonKey(name: '_rules') Element? rulesElement});
 
   $ElementCopyWith<$Res>? get descriptionElement;
   $ElementCopyWith<$Res>? get orderedElement;
@@ -17203,20 +17177,15 @@ abstract class _$ElementDefinitionSlicingCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<ElementDefinitionDiscriminator>? discriminator,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       Boolean? ordered,
-      @JsonKey(name: '_ordered')
-          Element? orderedElement,
-      @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
-          ElementDefinitionSlicingRules? rules,
-      @JsonKey(name: '_rules')
-          Element? rulesElement});
+      @JsonKey(name: '_ordered') Element? orderedElement,
+      ElementDefinitionSlicingRules? rules,
+      @JsonKey(name: '_rules') Element? rulesElement});
 
   @override
   $ElementCopyWith<$Res>? get descriptionElement;
@@ -17301,20 +17270,15 @@ class __$ElementDefinitionSlicingCopyWithImpl<$Res>
 class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
   _$_ElementDefinitionSlicing(
       {this.id,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.discriminator,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.ordered,
-      @JsonKey(name: '_ordered')
-          this.orderedElement,
-      @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
-          this.rules,
-      @JsonKey(name: '_rules')
-          this.rulesElement})
+      @JsonKey(name: '_ordered') this.orderedElement,
+      this.rules,
+      @JsonKey(name: '_rules') this.rulesElement})
       : super._();
 
   factory _$_ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =>
@@ -17340,7 +17304,6 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
   @JsonKey(name: '_ordered')
   final Element? orderedElement;
   @override
-  @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
   final ElementDefinitionSlicingRules? rules;
   @override
   @JsonKey(name: '_rules')
@@ -17403,21 +17366,17 @@ class _$_ElementDefinitionSlicing extends _ElementDefinitionSlicing {
 
 abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
   factory _ElementDefinitionSlicing(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      List<ElementDefinitionDiscriminator>? discriminator,
-      String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
-      Boolean? ordered,
-      @JsonKey(name: '_ordered')
-          Element? orderedElement,
-      @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          List<ElementDefinitionDiscriminator>? discriminator,
+          String? description,
+          @JsonKey(name: '_description') Element? descriptionElement,
+          Boolean? ordered,
+          @JsonKey(name: '_ordered') Element? orderedElement,
           ElementDefinitionSlicingRules? rules,
-      @JsonKey(name: '_rules')
-          Element? rulesElement}) = _$_ElementDefinitionSlicing;
+          @JsonKey(name: '_rules') Element? rulesElement}) =
+      _$_ElementDefinitionSlicing;
   _ElementDefinitionSlicing._() : super._();
 
   factory _ElementDefinitionSlicing.fromJson(Map<String, dynamic> json) =
@@ -17443,7 +17402,6 @@ abstract class _ElementDefinitionSlicing extends ElementDefinitionSlicing {
   @JsonKey(name: '_ordered')
   Element? get orderedElement;
   @override
-  @JsonKey(unknownEnumValue: ElementDefinitionSlicingRules.unknown)
   ElementDefinitionSlicingRules? get rules;
   @override
   @JsonKey(name: '_rules')
@@ -17465,16 +17423,12 @@ class _$ElementDefinitionDiscriminatorTearOff {
 
   _ElementDefinitionDiscriminator call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
-          ElementDefinitionDiscriminatorType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      ElementDefinitionDiscriminatorType? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement}) {
+      @JsonKey(name: '_path') Element? pathElement}) {
     return _ElementDefinitionDiscriminator(
       id: id,
       extension_: extension_,
@@ -17502,7 +17456,6 @@ mixin _$ElementDefinitionDiscriminator {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
   ElementDefinitionDiscriminatorType? get type =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
@@ -17525,16 +17478,12 @@ abstract class $ElementDefinitionDiscriminatorCopyWith<$Res> {
       _$ElementDefinitionDiscriminatorCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
-          ElementDefinitionDiscriminatorType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      ElementDefinitionDiscriminatorType? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement});
+      @JsonKey(name: '_path') Element? pathElement});
 
   $ElementCopyWith<$Res>? get typeElement;
   $ElementCopyWith<$Res>? get pathElement;
@@ -17624,16 +17573,12 @@ abstract class _$ElementDefinitionDiscriminatorCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
-          ElementDefinitionDiscriminatorType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      ElementDefinitionDiscriminatorType? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement});
+      @JsonKey(name: '_path') Element? pathElement});
 
   @override
   $ElementCopyWith<$Res>? get typeElement;
@@ -17703,16 +17648,12 @@ class _$_ElementDefinitionDiscriminator
     extends _ElementDefinitionDiscriminator {
   _$_ElementDefinitionDiscriminator(
       {this.id,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
-          this.type,
-      @JsonKey(name: '_type')
-          this.typeElement,
+      this.type,
+      @JsonKey(name: '_type') this.typeElement,
       this.path,
-      @JsonKey(name: '_path')
-          this.pathElement})
+      @JsonKey(name: '_path') this.pathElement})
       : super._();
 
   factory _$_ElementDefinitionDiscriminator.fromJson(
@@ -17727,7 +17668,6 @@ class _$_ElementDefinitionDiscriminator
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
   final ElementDefinitionDiscriminatorType? type;
   @override
   @JsonKey(name: '_type')
@@ -17787,17 +17727,14 @@ class _$_ElementDefinitionDiscriminator
 abstract class _ElementDefinitionDiscriminator
     extends ElementDefinitionDiscriminator {
   factory _ElementDefinitionDiscriminator(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
           ElementDefinitionDiscriminatorType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
-      String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement}) = _$_ElementDefinitionDiscriminator;
+          @JsonKey(name: '_type') Element? typeElement,
+          String? path,
+          @JsonKey(name: '_path') Element? pathElement}) =
+      _$_ElementDefinitionDiscriminator;
   _ElementDefinitionDiscriminator._() : super._();
 
   factory _ElementDefinitionDiscriminator.fromJson(Map<String, dynamic> json) =
@@ -17811,7 +17748,6 @@ abstract class _ElementDefinitionDiscriminator
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: ElementDefinitionDiscriminatorType.unknown)
   ElementDefinitionDiscriminatorType? get type;
   @override
   @JsonKey(name: '_type')
@@ -18243,23 +18179,17 @@ class _$ElementDefinitionTypeTearOff {
 
   _ElementDefinitionType call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       List<Canonical>? profile,
-      @JsonKey(name: '_profile')
-          List<Element>? profileElement,
+      @JsonKey(name: '_profile') List<Element>? profileElement,
       List<Canonical>? targetProfile,
       List<ElementDefinitionTypeAggregation>? aggregation,
-      @JsonKey(name: '_aggregation')
-          List<Element>? aggregationElement,
-      @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
-          ElementDefinitionTypeVersioning? versioning,
-      @JsonKey(name: '_versioning')
-          Element? versioningElement}) {
+      @JsonKey(name: '_aggregation') List<Element>? aggregationElement,
+      ElementDefinitionTypeVersioning? versioning,
+      @JsonKey(name: '_versioning') Element? versioningElement}) {
     return _ElementDefinitionType(
       id: id,
       extension_: extension_,
@@ -18302,7 +18232,6 @@ mixin _$ElementDefinitionType {
       throw _privateConstructorUsedError;
   @JsonKey(name: '_aggregation')
   List<Element>? get aggregationElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
   ElementDefinitionTypeVersioning? get versioning =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_versioning')
@@ -18321,23 +18250,17 @@ abstract class $ElementDefinitionTypeCopyWith<$Res> {
       _$ElementDefinitionTypeCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       List<Canonical>? profile,
-      @JsonKey(name: '_profile')
-          List<Element>? profileElement,
+      @JsonKey(name: '_profile') List<Element>? profileElement,
       List<Canonical>? targetProfile,
       List<ElementDefinitionTypeAggregation>? aggregation,
-      @JsonKey(name: '_aggregation')
-          List<Element>? aggregationElement,
-      @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
-          ElementDefinitionTypeVersioning? versioning,
-      @JsonKey(name: '_versioning')
-          Element? versioningElement});
+      @JsonKey(name: '_aggregation') List<Element>? aggregationElement,
+      ElementDefinitionTypeVersioning? versioning,
+      @JsonKey(name: '_versioning') Element? versioningElement});
 
   $ElementCopyWith<$Res>? get codeElement;
   $ElementCopyWith<$Res>? get versioningElement;
@@ -18451,23 +18374,17 @@ abstract class _$ElementDefinitionTypeCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
+      @JsonKey(name: '_code') Element? codeElement,
       List<Canonical>? profile,
-      @JsonKey(name: '_profile')
-          List<Element>? profileElement,
+      @JsonKey(name: '_profile') List<Element>? profileElement,
       List<Canonical>? targetProfile,
       List<ElementDefinitionTypeAggregation>? aggregation,
-      @JsonKey(name: '_aggregation')
-          List<Element>? aggregationElement,
-      @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
-          ElementDefinitionTypeVersioning? versioning,
-      @JsonKey(name: '_versioning')
-          Element? versioningElement});
+      @JsonKey(name: '_aggregation') List<Element>? aggregationElement,
+      ElementDefinitionTypeVersioning? versioning,
+      @JsonKey(name: '_versioning') Element? versioningElement});
 
   @override
   $ElementCopyWith<$Res>? get codeElement;
@@ -18559,23 +18476,17 @@ class __$ElementDefinitionTypeCopyWithImpl<$Res>
 class _$_ElementDefinitionType extends _ElementDefinitionType {
   _$_ElementDefinitionType(
       {this.id,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.code,
-      @JsonKey(name: '_code')
-          this.codeElement,
+      @JsonKey(name: '_code') this.codeElement,
       this.profile,
-      @JsonKey(name: '_profile')
-          this.profileElement,
+      @JsonKey(name: '_profile') this.profileElement,
       this.targetProfile,
       this.aggregation,
-      @JsonKey(name: '_aggregation')
-          this.aggregationElement,
-      @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
-          this.versioning,
-      @JsonKey(name: '_versioning')
-          this.versioningElement})
+      @JsonKey(name: '_aggregation') this.aggregationElement,
+      this.versioning,
+      @JsonKey(name: '_versioning') this.versioningElement})
       : super._();
 
   factory _$_ElementDefinitionType.fromJson(Map<String, dynamic> json) =>
@@ -18606,7 +18517,6 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
   @JsonKey(name: '_aggregation')
   final List<Element>? aggregationElement;
   @override
-  @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
   final ElementDefinitionTypeVersioning? versioning;
   @override
   @JsonKey(name: '_versioning')
@@ -18675,24 +18585,19 @@ class _$_ElementDefinitionType extends _ElementDefinitionType {
 
 abstract class _ElementDefinitionType extends ElementDefinitionType {
   factory _ElementDefinitionType(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      FhirUri? code,
-      @JsonKey(name: '_code')
-          Element? codeElement,
-      List<Canonical>? profile,
-      @JsonKey(name: '_profile')
-          List<Element>? profileElement,
-      List<Canonical>? targetProfile,
-      List<ElementDefinitionTypeAggregation>? aggregation,
-      @JsonKey(name: '_aggregation')
-          List<Element>? aggregationElement,
-      @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          FhirUri? code,
+          @JsonKey(name: '_code') Element? codeElement,
+          List<Canonical>? profile,
+          @JsonKey(name: '_profile') List<Element>? profileElement,
+          List<Canonical>? targetProfile,
+          List<ElementDefinitionTypeAggregation>? aggregation,
+          @JsonKey(name: '_aggregation') List<Element>? aggregationElement,
           ElementDefinitionTypeVersioning? versioning,
-      @JsonKey(name: '_versioning')
-          Element? versioningElement}) = _$_ElementDefinitionType;
+          @JsonKey(name: '_versioning') Element? versioningElement}) =
+      _$_ElementDefinitionType;
   _ElementDefinitionType._() : super._();
 
   factory _ElementDefinitionType.fromJson(Map<String, dynamic> json) =
@@ -18723,7 +18628,6 @@ abstract class _ElementDefinitionType extends ElementDefinitionType {
   @JsonKey(name: '_aggregation')
   List<Element>? get aggregationElement;
   @override
-  @JsonKey(unknownEnumValue: ElementDefinitionTypeVersioning.unknown)
   ElementDefinitionTypeVersioning? get versioning;
   @override
   @JsonKey(name: '_versioning')
@@ -21481,28 +21385,20 @@ class _$ElementDefinitionConstraintTearOff {
 
   _ElementDefinitionConstraint call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? key,
-      @JsonKey(name: '_key')
-          Element? keyElement,
+      @JsonKey(name: '_key') Element? keyElement,
       String? requirements,
-      @JsonKey(name: '_requirements')
-          Element? requirementsElement,
-      @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
-          ElementDefinitionConstraintSeverity? severity,
-      @JsonKey(name: '_severity')
-          Element? severityElement,
+      @JsonKey(name: '_requirements') Element? requirementsElement,
+      ElementDefinitionConstraintSeverity? severity,
+      @JsonKey(name: '_severity') Element? severityElement,
       String? human,
-      @JsonKey(name: '_human')
-          Element? humanElement,
+      @JsonKey(name: '_human') Element? humanElement,
       String? expression,
-      @JsonKey(name: '_expression')
-          Element? expressionElement,
+      @JsonKey(name: '_expression') Element? expressionElement,
       String? xpath,
-      @JsonKey(name: '_xpath')
-          Element? xpathElement,
+      @JsonKey(name: '_xpath') Element? xpathElement,
       Canonical? source}) {
     return _ElementDefinitionConstraint(
       id: id,
@@ -21545,7 +21441,6 @@ mixin _$ElementDefinitionConstraint {
   String? get requirements => throw _privateConstructorUsedError;
   @JsonKey(name: '_requirements')
   Element? get requirementsElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
   ElementDefinitionConstraintSeverity? get severity =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_severity')
@@ -21575,28 +21470,20 @@ abstract class $ElementDefinitionConstraintCopyWith<$Res> {
       _$ElementDefinitionConstraintCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? key,
-      @JsonKey(name: '_key')
-          Element? keyElement,
+      @JsonKey(name: '_key') Element? keyElement,
       String? requirements,
-      @JsonKey(name: '_requirements')
-          Element? requirementsElement,
-      @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
-          ElementDefinitionConstraintSeverity? severity,
-      @JsonKey(name: '_severity')
-          Element? severityElement,
+      @JsonKey(name: '_requirements') Element? requirementsElement,
+      ElementDefinitionConstraintSeverity? severity,
+      @JsonKey(name: '_severity') Element? severityElement,
       String? human,
-      @JsonKey(name: '_human')
-          Element? humanElement,
+      @JsonKey(name: '_human') Element? humanElement,
       String? expression,
-      @JsonKey(name: '_expression')
-          Element? expressionElement,
+      @JsonKey(name: '_expression') Element? expressionElement,
       String? xpath,
-      @JsonKey(name: '_xpath')
-          Element? xpathElement,
+      @JsonKey(name: '_xpath') Element? xpathElement,
       Canonical? source});
 
   $ElementCopyWith<$Res>? get keyElement;
@@ -21780,28 +21667,20 @@ abstract class _$ElementDefinitionConstraintCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? key,
-      @JsonKey(name: '_key')
-          Element? keyElement,
+      @JsonKey(name: '_key') Element? keyElement,
       String? requirements,
-      @JsonKey(name: '_requirements')
-          Element? requirementsElement,
-      @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
-          ElementDefinitionConstraintSeverity? severity,
-      @JsonKey(name: '_severity')
-          Element? severityElement,
+      @JsonKey(name: '_requirements') Element? requirementsElement,
+      ElementDefinitionConstraintSeverity? severity,
+      @JsonKey(name: '_severity') Element? severityElement,
       String? human,
-      @JsonKey(name: '_human')
-          Element? humanElement,
+      @JsonKey(name: '_human') Element? humanElement,
       String? expression,
-      @JsonKey(name: '_expression')
-          Element? expressionElement,
+      @JsonKey(name: '_expression') Element? expressionElement,
       String? xpath,
-      @JsonKey(name: '_xpath')
-          Element? xpathElement,
+      @JsonKey(name: '_xpath') Element? xpathElement,
       Canonical? source});
 
   @override
@@ -21924,28 +21803,20 @@ class __$ElementDefinitionConstraintCopyWithImpl<$Res>
 class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
   _$_ElementDefinitionConstraint(
       {this.id,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.key,
-      @JsonKey(name: '_key')
-          this.keyElement,
+      @JsonKey(name: '_key') this.keyElement,
       this.requirements,
-      @JsonKey(name: '_requirements')
-          this.requirementsElement,
-      @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
-          this.severity,
-      @JsonKey(name: '_severity')
-          this.severityElement,
+      @JsonKey(name: '_requirements') this.requirementsElement,
+      this.severity,
+      @JsonKey(name: '_severity') this.severityElement,
       this.human,
-      @JsonKey(name: '_human')
-          this.humanElement,
+      @JsonKey(name: '_human') this.humanElement,
       this.expression,
-      @JsonKey(name: '_expression')
-          this.expressionElement,
+      @JsonKey(name: '_expression') this.expressionElement,
       this.xpath,
-      @JsonKey(name: '_xpath')
-          this.xpathElement,
+      @JsonKey(name: '_xpath') this.xpathElement,
       this.source})
       : super._();
 
@@ -21970,7 +21841,6 @@ class _$_ElementDefinitionConstraint extends _ElementDefinitionConstraint {
   @JsonKey(name: '_requirements')
   final Element? requirementsElement;
   @override
-  @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
   final ElementDefinitionConstraintSeverity? severity;
   @override
   @JsonKey(name: '_severity')
@@ -22067,28 +21937,20 @@ abstract class _ElementDefinitionConstraint
     extends ElementDefinitionConstraint {
   factory _ElementDefinitionConstraint(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Id? key,
-      @JsonKey(name: '_key')
-          Element? keyElement,
+      @JsonKey(name: '_key') Element? keyElement,
       String? requirements,
-      @JsonKey(name: '_requirements')
-          Element? requirementsElement,
-      @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
-          ElementDefinitionConstraintSeverity? severity,
-      @JsonKey(name: '_severity')
-          Element? severityElement,
+      @JsonKey(name: '_requirements') Element? requirementsElement,
+      ElementDefinitionConstraintSeverity? severity,
+      @JsonKey(name: '_severity') Element? severityElement,
       String? human,
-      @JsonKey(name: '_human')
-          Element? humanElement,
+      @JsonKey(name: '_human') Element? humanElement,
       String? expression,
-      @JsonKey(name: '_expression')
-          Element? expressionElement,
+      @JsonKey(name: '_expression') Element? expressionElement,
       String? xpath,
-      @JsonKey(name: '_xpath')
-          Element? xpathElement,
+      @JsonKey(name: '_xpath') Element? xpathElement,
       Canonical? source}) = _$_ElementDefinitionConstraint;
   _ElementDefinitionConstraint._() : super._();
 
@@ -22113,7 +21975,6 @@ abstract class _ElementDefinitionConstraint
   @JsonKey(name: '_requirements')
   Element? get requirementsElement;
   @override
-  @JsonKey(unknownEnumValue: ElementDefinitionConstraintSeverity.unknown)
   ElementDefinitionConstraintSeverity? get severity;
   @override
   @JsonKey(name: '_severity')
@@ -22152,16 +22013,12 @@ class _$ElementDefinitionBindingTearOff {
 
   _ElementDefinitionBinding call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-          ElementDefinitionBindingStrength? strength,
-      @JsonKey(name: '_strength')
-          Element? strengthElement,
+      ElementDefinitionBindingStrength? strength,
+      @JsonKey(name: '_strength') Element? strengthElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       Canonical? valueSet}) {
     return _ElementDefinitionBinding(
       id: id,
@@ -22190,7 +22047,6 @@ mixin _$ElementDefinitionBinding {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
   ElementDefinitionBindingStrength? get strength =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_strength')
@@ -22213,16 +22069,12 @@ abstract class $ElementDefinitionBindingCopyWith<$Res> {
       _$ElementDefinitionBindingCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-          ElementDefinitionBindingStrength? strength,
-      @JsonKey(name: '_strength')
-          Element? strengthElement,
+      ElementDefinitionBindingStrength? strength,
+      @JsonKey(name: '_strength') Element? strengthElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       Canonical? valueSet});
 
   $ElementCopyWith<$Res>? get strengthElement;
@@ -22317,16 +22169,12 @@ abstract class _$ElementDefinitionBindingCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-          ElementDefinitionBindingStrength? strength,
-      @JsonKey(name: '_strength')
-          Element? strengthElement,
+      ElementDefinitionBindingStrength? strength,
+      @JsonKey(name: '_strength') Element? strengthElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       Canonical? valueSet});
 
   @override
@@ -22400,16 +22248,12 @@ class __$ElementDefinitionBindingCopyWithImpl<$Res>
 class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
   _$_ElementDefinitionBinding(
       {this.id,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-          this.strength,
-      @JsonKey(name: '_strength')
-          this.strengthElement,
+      this.strength,
+      @JsonKey(name: '_strength') this.strengthElement,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.valueSet})
       : super._();
 
@@ -22424,7 +22268,6 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
   final ElementDefinitionBindingStrength? strength;
   @override
   @JsonKey(name: '_strength')
@@ -22489,16 +22332,12 @@ class _$_ElementDefinitionBinding extends _ElementDefinitionBinding {
 abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
   factory _ElementDefinitionBinding(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
-          ElementDefinitionBindingStrength? strength,
-      @JsonKey(name: '_strength')
-          Element? strengthElement,
+      ElementDefinitionBindingStrength? strength,
+      @JsonKey(name: '_strength') Element? strengthElement,
       String? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       Canonical? valueSet}) = _$_ElementDefinitionBinding;
   _ElementDefinitionBinding._() : super._();
 
@@ -22513,7 +22352,6 @@ abstract class _ElementDefinitionBinding extends ElementDefinitionBinding {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  @JsonKey(unknownEnumValue: ElementDefinitionBindingStrength.unknown)
   ElementDefinitionBindingStrength? get strength;
   @override
   @JsonKey(name: '_strength')

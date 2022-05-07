@@ -287,6 +287,403 @@ abstract class _ContactDetail extends ContactDetail {
       throw _privateConstructorUsedError;
 }
 
+ExtendedContactDetail _$ExtendedContactDetailFromJson(
+    Map<String, dynamic> json) {
+  return _ExtendedContactDetail.fromJson(json);
+}
+
+/// @nodoc
+class _$ExtendedContactDetailTearOff {
+  const _$ExtendedContactDetailTearOff();
+
+  _ExtendedContactDetail call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      CodeableConcept? purpose,
+      HumanName? name,
+      List<ContactPoint>? telecom,
+      Address? address,
+      Reference? organization,
+      Period? period}) {
+    return _ExtendedContactDetail(
+      id: id,
+      extension_: extension_,
+      purpose: purpose,
+      name: name,
+      telecom: telecom,
+      address: address,
+      organization: organization,
+      period: period,
+    );
+  }
+
+  ExtendedContactDetail fromJson(Map<String, Object?> json) {
+    return ExtendedContactDetail.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ExtendedContactDetail = _$ExtendedContactDetailTearOff();
+
+/// @nodoc
+mixin _$ExtendedContactDetail {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  CodeableConcept? get purpose => throw _privateConstructorUsedError;
+  HumanName? get name => throw _privateConstructorUsedError;
+  List<ContactPoint>? get telecom => throw _privateConstructorUsedError;
+  Address? get address => throw _privateConstructorUsedError;
+  Reference? get organization => throw _privateConstructorUsedError;
+  Period? get period => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ExtendedContactDetailCopyWith<ExtendedContactDetail> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ExtendedContactDetailCopyWith<$Res> {
+  factory $ExtendedContactDetailCopyWith(ExtendedContactDetail value,
+          $Res Function(ExtendedContactDetail) then) =
+      _$ExtendedContactDetailCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      CodeableConcept? purpose,
+      HumanName? name,
+      List<ContactPoint>? telecom,
+      Address? address,
+      Reference? organization,
+      Period? period});
+
+  $CodeableConceptCopyWith<$Res>? get purpose;
+  $HumanNameCopyWith<$Res>? get name;
+  $AddressCopyWith<$Res>? get address;
+  $ReferenceCopyWith<$Res>? get organization;
+  $PeriodCopyWith<$Res>? get period;
+}
+
+/// @nodoc
+class _$ExtendedContactDetailCopyWithImpl<$Res>
+    implements $ExtendedContactDetailCopyWith<$Res> {
+  _$ExtendedContactDetailCopyWithImpl(this._value, this._then);
+
+  final ExtendedContactDetail _value;
+  // ignore: unused_field
+  final $Res Function(ExtendedContactDetail) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? purpose = freezed,
+    Object? name = freezed,
+    Object? telecom = freezed,
+    Object? address = freezed,
+    Object? organization = freezed,
+    Object? period = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as HumanName?,
+      telecom: telecom == freezed
+          ? _value.telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as Address?,
+      organization: organization == freezed
+          ? _value.organization
+          : organization // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get purpose {
+    if (_value.purpose == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.purpose!, (value) {
+      return _then(_value.copyWith(purpose: value));
+    });
+  }
+
+  @override
+  $HumanNameCopyWith<$Res>? get name {
+    if (_value.name == null) {
+      return null;
+    }
+
+    return $HumanNameCopyWith<$Res>(_value.name!, (value) {
+      return _then(_value.copyWith(name: value));
+    });
+  }
+
+  @override
+  $AddressCopyWith<$Res>? get address {
+    if (_value.address == null) {
+      return null;
+    }
+
+    return $AddressCopyWith<$Res>(_value.address!, (value) {
+      return _then(_value.copyWith(address: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get organization {
+    if (_value.organization == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.organization!, (value) {
+      return _then(_value.copyWith(organization: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res>? get period {
+    if (_value.period == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.period!, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$ExtendedContactDetailCopyWith<$Res>
+    implements $ExtendedContactDetailCopyWith<$Res> {
+  factory _$ExtendedContactDetailCopyWith(_ExtendedContactDetail value,
+          $Res Function(_ExtendedContactDetail) then) =
+      __$ExtendedContactDetailCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      CodeableConcept? purpose,
+      HumanName? name,
+      List<ContactPoint>? telecom,
+      Address? address,
+      Reference? organization,
+      Period? period});
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get purpose;
+  @override
+  $HumanNameCopyWith<$Res>? get name;
+  @override
+  $AddressCopyWith<$Res>? get address;
+  @override
+  $ReferenceCopyWith<$Res>? get organization;
+  @override
+  $PeriodCopyWith<$Res>? get period;
+}
+
+/// @nodoc
+class __$ExtendedContactDetailCopyWithImpl<$Res>
+    extends _$ExtendedContactDetailCopyWithImpl<$Res>
+    implements _$ExtendedContactDetailCopyWith<$Res> {
+  __$ExtendedContactDetailCopyWithImpl(_ExtendedContactDetail _value,
+      $Res Function(_ExtendedContactDetail) _then)
+      : super(_value, (v) => _then(v as _ExtendedContactDetail));
+
+  @override
+  _ExtendedContactDetail get _value => super._value as _ExtendedContactDetail;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? purpose = freezed,
+    Object? name = freezed,
+    Object? telecom = freezed,
+    Object? address = freezed,
+    Object? organization = freezed,
+    Object? period = freezed,
+  }) {
+    return _then(_ExtendedContactDetail(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      purpose: purpose == freezed
+          ? _value.purpose
+          : purpose // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as HumanName?,
+      telecom: telecom == freezed
+          ? _value.telecom
+          : telecom // ignore: cast_nullable_to_non_nullable
+              as List<ContactPoint>?,
+      address: address == freezed
+          ? _value.address
+          : address // ignore: cast_nullable_to_non_nullable
+              as Address?,
+      organization: organization == freezed
+          ? _value.organization
+          : organization // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_ExtendedContactDetail extends _ExtendedContactDetail {
+  _$_ExtendedContactDetail(
+      {this.id,
+      @JsonKey(name: 'extension') this.extension_,
+      this.purpose,
+      this.name,
+      this.telecom,
+      this.address,
+      this.organization,
+      this.period})
+      : super._();
+
+  factory _$_ExtendedContactDetail.fromJson(Map<String, dynamic> json) =>
+      _$$_ExtendedContactDetailFromJson(json);
+
+  @override
+  final String? id;
+  @override
+  @JsonKey(name: 'extension')
+  final List<FhirExtension>? extension_;
+  @override
+  final CodeableConcept? purpose;
+  @override
+  final HumanName? name;
+  @override
+  final List<ContactPoint>? telecom;
+  @override
+  final Address? address;
+  @override
+  final Reference? organization;
+  @override
+  final Period? period;
+
+  @override
+  String toString() {
+    return 'ExtendedContactDetail(id: $id, extension_: $extension_, purpose: $purpose, name: $name, telecom: $telecom, address: $address, organization: $organization, period: $period)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _ExtendedContactDetail &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.extension_, extension_) &&
+            const DeepCollectionEquality().equals(other.purpose, purpose) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality().equals(other.telecom, telecom) &&
+            const DeepCollectionEquality().equals(other.address, address) &&
+            const DeepCollectionEquality()
+                .equals(other.organization, organization) &&
+            const DeepCollectionEquality().equals(other.period, period));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(extension_),
+      const DeepCollectionEquality().hash(purpose),
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(telecom),
+      const DeepCollectionEquality().hash(address),
+      const DeepCollectionEquality().hash(organization),
+      const DeepCollectionEquality().hash(period));
+
+  @JsonKey(ignore: true)
+  @override
+  _$ExtendedContactDetailCopyWith<_ExtendedContactDetail> get copyWith =>
+      __$ExtendedContactDetailCopyWithImpl<_ExtendedContactDetail>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ExtendedContactDetailToJson(this);
+  }
+}
+
+abstract class _ExtendedContactDetail extends ExtendedContactDetail {
+  factory _ExtendedContactDetail(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      CodeableConcept? purpose,
+      HumanName? name,
+      List<ContactPoint>? telecom,
+      Address? address,
+      Reference? organization,
+      Period? period}) = _$_ExtendedContactDetail;
+  _ExtendedContactDetail._() : super._();
+
+  factory _ExtendedContactDetail.fromJson(Map<String, dynamic> json) =
+      _$_ExtendedContactDetail.fromJson;
+
+  @override
+  String? get id;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_;
+  @override
+  CodeableConcept? get purpose;
+  @override
+  HumanName? get name;
+  @override
+  List<ContactPoint>? get telecom;
+  @override
+  Address? get address;
+  @override
+  Reference? get organization;
+  @override
+  Period? get period;
+  @override
+  @JsonKey(ignore: true)
+  _$ExtendedContactDetailCopyWith<_ExtendedContactDetail> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 Contributor _$ContributorFromJson(Map<String, dynamic> json) {
   return _Contributor.fromJson(json);
 }
@@ -298,7 +695,7 @@ class _$ContributorTearOff {
   _Contributor call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType? type,
+      ContributorType? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -327,7 +724,6 @@ mixin _$Contributor {
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ContributorType.unknown)
   ContributorType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -350,7 +746,7 @@ abstract class $ContributorCopyWith<$Res> {
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType? type,
+      ContributorType? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -443,7 +839,7 @@ abstract class _$ContributorCopyWith<$Res>
   $Res call(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType? type,
+      ContributorType? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -514,7 +910,7 @@ class _$_Contributor extends _Contributor {
   _$_Contributor(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
-      @JsonKey(unknownEnumValue: ContributorType.unknown) this.type,
+      this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
@@ -530,7 +926,6 @@ class _$_Contributor extends _Contributor {
   @JsonKey(name: 'extension')
   final List<FhirExtension>? extension_;
   @override
-  @JsonKey(unknownEnumValue: ContributorType.unknown)
   final ContributorType? type;
   @override
   @JsonKey(name: '_type')
@@ -591,7 +986,7 @@ abstract class _Contributor extends Contributor {
   factory _Contributor(
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
-      @JsonKey(unknownEnumValue: ContributorType.unknown) ContributorType? type,
+      ContributorType? type,
       @JsonKey(name: '_type') Element? typeElement,
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
@@ -607,7 +1002,6 @@ abstract class _Contributor extends Contributor {
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
-  @JsonKey(unknownEnumValue: ContributorType.unknown)
   ContributorType? get type;
   @override
   @JsonKey(name: '_type')
@@ -2049,16 +2443,12 @@ class _$DataRequirementSortTearOff {
 
   _DataRequirementSort call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement,
-      @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-          DataRequirementSortDirection? direction,
-      @JsonKey(name: '_direction')
-          Element? directionElement}) {
+      @JsonKey(name: '_path') Element? pathElement,
+      DataRequirementSortDirection? direction,
+      @JsonKey(name: '_direction') Element? directionElement}) {
     return _DataRequirementSort(
       id: id,
       extension_: extension_,
@@ -2088,7 +2478,6 @@ mixin _$DataRequirementSort {
   String? get path => throw _privateConstructorUsedError;
   @JsonKey(name: '_path')
   Element? get pathElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
   DataRequirementSortDirection? get direction =>
       throw _privateConstructorUsedError;
   @JsonKey(name: '_direction')
@@ -2107,16 +2496,12 @@ abstract class $DataRequirementSortCopyWith<$Res> {
       _$DataRequirementSortCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement,
-      @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-          DataRequirementSortDirection? direction,
-      @JsonKey(name: '_direction')
-          Element? directionElement});
+      @JsonKey(name: '_path') Element? pathElement,
+      DataRequirementSortDirection? direction,
+      @JsonKey(name: '_direction') Element? directionElement});
 
   $ElementCopyWith<$Res>? get pathElement;
   $ElementCopyWith<$Res>? get directionElement;
@@ -2205,16 +2590,12 @@ abstract class _$DataRequirementSortCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement,
-      @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-          DataRequirementSortDirection? direction,
-      @JsonKey(name: '_direction')
-          Element? directionElement});
+      @JsonKey(name: '_path') Element? pathElement,
+      DataRequirementSortDirection? direction,
+      @JsonKey(name: '_direction') Element? directionElement});
 
   @override
   $ElementCopyWith<$Res>? get pathElement;
@@ -2281,16 +2662,12 @@ class __$DataRequirementSortCopyWithImpl<$Res>
 class _$_DataRequirementSort extends _DataRequirementSort {
   _$_DataRequirementSort(
       {this.id,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.path,
-      @JsonKey(name: '_path')
-          this.pathElement,
-      @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
-          this.direction,
-      @JsonKey(name: '_direction')
-          this.directionElement})
+      @JsonKey(name: '_path') this.pathElement,
+      this.direction,
+      @JsonKey(name: '_direction') this.directionElement})
       : super._();
 
   factory _$_DataRequirementSort.fromJson(Map<String, dynamic> json) =>
@@ -2309,7 +2686,6 @@ class _$_DataRequirementSort extends _DataRequirementSort {
   @JsonKey(name: '_path')
   final Element? pathElement;
   @override
-  @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
   final DataRequirementSortDirection? direction;
   @override
   @JsonKey(name: '_direction')
@@ -2363,17 +2739,14 @@ class _$_DataRequirementSort extends _DataRequirementSort {
 
 abstract class _DataRequirementSort extends DataRequirementSort {
   factory _DataRequirementSort(
-      {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      List<FhirExtension>? modifierExtension,
-      String? path,
-      @JsonKey(name: '_path')
-          Element? pathElement,
-      @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
+          {String? id,
+          @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+          List<FhirExtension>? modifierExtension,
+          String? path,
+          @JsonKey(name: '_path') Element? pathElement,
           DataRequirementSortDirection? direction,
-      @JsonKey(name: '_direction')
-          Element? directionElement}) = _$_DataRequirementSort;
+          @JsonKey(name: '_direction') Element? directionElement}) =
+      _$_DataRequirementSort;
   _DataRequirementSort._() : super._();
 
   factory _DataRequirementSort.fromJson(Map<String, dynamic> json) =
@@ -2392,7 +2765,6 @@ abstract class _DataRequirementSort extends DataRequirementSort {
   @JsonKey(name: '_path')
   Element? get pathElement;
   @override
-  @JsonKey(unknownEnumValue: DataRequirementSortDirection.unknown)
   DataRequirementSortDirection? get direction;
   @override
   @JsonKey(name: '_direction')
@@ -3008,24 +3380,17 @@ class _$RelatedArtifactTearOff {
 
   _RelatedArtifact call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-          RelatedArtifactType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      RelatedArtifactType? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? label,
-      @JsonKey(name: '_label')
-          Element? labelElement,
+      @JsonKey(name: '_label') Element? labelElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement,
+      @JsonKey(name: '_display') Element? displayElement,
       Markdown? citation,
-      @JsonKey(name: '_citation')
-          Element? citationElement,
+      @JsonKey(name: '_citation') Element? citationElement,
       FhirUrl? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       Attachment? document,
       Canonical? resource}) {
     return _RelatedArtifact(
@@ -3059,7 +3424,6 @@ mixin _$RelatedArtifact {
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
   RelatedArtifactType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -3091,24 +3455,17 @@ abstract class $RelatedArtifactCopyWith<$Res> {
       _$RelatedArtifactCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-          RelatedArtifactType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      RelatedArtifactType? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? label,
-      @JsonKey(name: '_label')
-          Element? labelElement,
+      @JsonKey(name: '_label') Element? labelElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement,
+      @JsonKey(name: '_display') Element? displayElement,
       Markdown? citation,
-      @JsonKey(name: '_citation')
-          Element? citationElement,
+      @JsonKey(name: '_citation') Element? citationElement,
       FhirUrl? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       Attachment? document,
       Canonical? resource});
 
@@ -3282,24 +3639,17 @@ abstract class _$RelatedArtifactCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-          RelatedArtifactType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      RelatedArtifactType? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? label,
-      @JsonKey(name: '_label')
-          Element? labelElement,
+      @JsonKey(name: '_label') Element? labelElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement,
+      @JsonKey(name: '_display') Element? displayElement,
       Markdown? citation,
-      @JsonKey(name: '_citation')
-          Element? citationElement,
+      @JsonKey(name: '_citation') Element? citationElement,
       FhirUrl? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       Attachment? document,
       Canonical? resource});
 
@@ -3412,7 +3762,7 @@ class _$_RelatedArtifact extends _RelatedArtifact {
   _$_RelatedArtifact(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
-      @JsonKey(unknownEnumValue: RelatedArtifactType.unknown) this.type,
+      this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.label,
       @JsonKey(name: '_label') this.labelElement,
@@ -3435,7 +3785,6 @@ class _$_RelatedArtifact extends _RelatedArtifact {
   @JsonKey(name: 'extension')
   final List<FhirExtension>? extension_;
   @override
-  @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
   final RelatedArtifactType? type;
   @override
   @JsonKey(name: '_type')
@@ -3529,24 +3878,17 @@ class _$_RelatedArtifact extends _RelatedArtifact {
 abstract class _RelatedArtifact extends RelatedArtifact {
   factory _RelatedArtifact(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
-          RelatedArtifactType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      RelatedArtifactType? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? label,
-      @JsonKey(name: '_label')
-          Element? labelElement,
+      @JsonKey(name: '_label') Element? labelElement,
       String? display,
-      @JsonKey(name: '_display')
-          Element? displayElement,
+      @JsonKey(name: '_display') Element? displayElement,
       Markdown? citation,
-      @JsonKey(name: '_citation')
-          Element? citationElement,
+      @JsonKey(name: '_citation') Element? citationElement,
       FhirUrl? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       Attachment? document,
       Canonical? resource}) = _$_RelatedArtifact;
   _RelatedArtifact._() : super._();
@@ -3560,7 +3902,6 @@ abstract class _RelatedArtifact extends RelatedArtifact {
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
-  @JsonKey(unknownEnumValue: RelatedArtifactType.unknown)
   RelatedArtifactType? get type;
   @override
   @JsonKey(name: '_type')
@@ -3605,23 +3946,17 @@ class _$TriggerDefinitionTearOff {
 
   _TriggerDefinition call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-          TriggerDefinitionType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      TriggerDefinitionType? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       Timing? timingTiming,
       Reference? timingReference,
       Date? timingDate,
-      @JsonKey(name: '_timingDate')
-          Element? timingDateElement,
+      @JsonKey(name: '_timingDate') Element? timingDateElement,
       FhirDateTime? timingDateTime,
-      @JsonKey(name: '_timingDateTime')
-          Element? timingDateTimeElement,
+      @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
       List<DataRequirement>? data,
       Expression? condition}) {
     return _TriggerDefinition(
@@ -3655,7 +3990,6 @@ mixin _$TriggerDefinition {
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
   TriggerDefinitionType? get type => throw _privateConstructorUsedError;
   @JsonKey(name: '_type')
   Element? get typeElement => throw _privateConstructorUsedError;
@@ -3686,23 +4020,17 @@ abstract class $TriggerDefinitionCopyWith<$Res> {
       _$TriggerDefinitionCopyWithImpl<$Res>;
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-          TriggerDefinitionType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      TriggerDefinitionType? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       Timing? timingTiming,
       Reference? timingReference,
       Date? timingDate,
-      @JsonKey(name: '_timingDate')
-          Element? timingDateElement,
+      @JsonKey(name: '_timingDate') Element? timingDateElement,
       FhirDateTime? timingDateTime,
-      @JsonKey(name: '_timingDateTime')
-          Element? timingDateTimeElement,
+      @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
       List<DataRequirement>? data,
       Expression? condition});
 
@@ -3888,23 +4216,17 @@ abstract class _$TriggerDefinitionCopyWith<$Res>
   @override
   $Res call(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-          TriggerDefinitionType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      TriggerDefinitionType? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       Timing? timingTiming,
       Reference? timingReference,
       Date? timingDate,
-      @JsonKey(name: '_timingDate')
-          Element? timingDateElement,
+      @JsonKey(name: '_timingDate') Element? timingDateElement,
       FhirDateTime? timingDateTime,
-      @JsonKey(name: '_timingDateTime')
-          Element? timingDateTimeElement,
+      @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
       List<DataRequirement>? data,
       Expression? condition});
 
@@ -4019,7 +4341,7 @@ class _$_TriggerDefinition extends _TriggerDefinition {
   _$_TriggerDefinition(
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
-      @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown) this.type,
+      this.type,
       @JsonKey(name: '_type') this.typeElement,
       this.name,
       @JsonKey(name: '_name') this.nameElement,
@@ -4042,7 +4364,6 @@ class _$_TriggerDefinition extends _TriggerDefinition {
   @JsonKey(name: 'extension')
   final List<FhirExtension>? extension_;
   @override
-  @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
   final TriggerDefinitionType? type;
   @override
   @JsonKey(name: '_type')
@@ -4138,23 +4459,17 @@ class _$_TriggerDefinition extends _TriggerDefinition {
 abstract class _TriggerDefinition extends TriggerDefinition {
   factory _TriggerDefinition(
       {String? id,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
-      @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
-          TriggerDefinitionType? type,
-      @JsonKey(name: '_type')
-          Element? typeElement,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      TriggerDefinitionType? type,
+      @JsonKey(name: '_type') Element? typeElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       Timing? timingTiming,
       Reference? timingReference,
       Date? timingDate,
-      @JsonKey(name: '_timingDate')
-          Element? timingDateElement,
+      @JsonKey(name: '_timingDate') Element? timingDateElement,
       FhirDateTime? timingDateTime,
-      @JsonKey(name: '_timingDateTime')
-          Element? timingDateTimeElement,
+      @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
       List<DataRequirement>? data,
       Expression? condition}) = _$_TriggerDefinition;
   _TriggerDefinition._() : super._();
@@ -4168,7 +4483,6 @@ abstract class _TriggerDefinition extends TriggerDefinition {
   @JsonKey(name: 'extension')
   List<FhirExtension>? get extension_;
   @override
-  @JsonKey(unknownEnumValue: TriggerDefinitionType.unknown)
   TriggerDefinitionType? get type;
   @override
   @JsonKey(name: '_type')

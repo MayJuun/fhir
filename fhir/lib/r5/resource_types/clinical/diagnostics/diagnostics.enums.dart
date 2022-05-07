@@ -19,8 +19,7 @@ enum DiagnosticReportStatus {
   cancelled,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
+
 }
 
 enum ImagingStudyStatus {
@@ -32,8 +31,7 @@ enum ImagingStudyStatus {
   cancelled,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
+
 }
 
 enum MolecularSequenceType {
@@ -43,8 +41,7 @@ enum MolecularSequenceType {
   dna,
   @JsonValue('rna')
   rna,
-  @JsonValue('unknown')
-  unknown,
+
 }
 
 enum MolecularSequenceReferenceSeqOrientation {
@@ -52,8 +49,7 @@ enum MolecularSequenceReferenceSeqOrientation {
   sense,
   @JsonValue('antisense')
   antisense,
-  @JsonValue('unknown')
-  unknown,
+
 }
 
 enum MolecularSequenceReferenceSeqStrand {
@@ -61,8 +57,7 @@ enum MolecularSequenceReferenceSeqStrand {
   watson,
   @JsonValue('crick')
   crick,
-  @JsonValue('unknown')
-  unknown,
+
 }
 
 enum MolecularSequenceQualityType {
@@ -70,8 +65,7 @@ enum MolecularSequenceQualityType {
   indel,
   @JsonValue('snp')
   snp,
-  @JsonValue('unknown')
-  unknown,
+
 }
 
 enum MolecularSequenceRepositoryType {
@@ -85,8 +79,7 @@ enum MolecularSequenceRepositoryType {
   oauth,
   @JsonValue('other')
   other,
-  @JsonValue('unknown')
-  unknown,
+
 }
 
 enum ObservationStatus {
@@ -104,8 +97,7 @@ enum ObservationStatus {
   cancelled,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
+
 }
 
 enum QuestionnaireResponseStatus {
@@ -119,8 +111,7 @@ enum QuestionnaireResponseStatus {
   entered_in_error,
   @JsonValue('stopped')
   stopped,
-  @JsonValue('unknown')
-  unknown,
+
 }
 
 enum SpecimenStatus {
@@ -132,6 +123,5 @@ enum SpecimenStatus {
   unsatisfactory,
   @JsonValue('entered-in-error')
   entered_in_error,
-  @JsonValue('unknown')
-  unknown,
+
 }

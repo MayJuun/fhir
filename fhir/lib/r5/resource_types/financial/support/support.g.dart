@@ -7,10 +7,9 @@ part of 'support.dart';
 // **************************************************************************
 
 _$_Coverage _$$_CoverageFromJson(Map<String, dynamic> json) => _$_Coverage(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.Coverage) ??
-          R5ResourceType.Coverage,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Coverage,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -429,10 +428,9 @@ Map<String, dynamic> _$$_CoverageExceptionToJson(
 _$_CoverageEligibilityRequest _$$_CoverageEligibilityRequestFromJson(
         Map<String, dynamic> json) =>
     _$_CoverageEligibilityRequest(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.CoverageEligibilityRequest) ??
-          R5ResourceType.CoverageEligibilityRequest,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.CoverageEligibilityRequest,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -488,7 +486,7 @@ _$_CoverageEligibilityRequest _$$_CoverageEligibilityRequestFromJson(
           : Period.fromJson(json['servicedPeriod'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : DateTime.parse(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -553,7 +551,7 @@ Map<String, dynamic> _$$_CoverageEligibilityRequestToJson(
   writeNotNull('servicedDate', instance.servicedDate?.toJson());
   writeNotNull('_servicedDate', instance.servicedDateElement?.toJson());
   writeNotNull('servicedPeriod', instance.servicedPeriod?.toJson());
-  writeNotNull('created', instance.created?.toJson());
+  writeNotNull('created', instance.created?.toIso8601String());
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('enterer', instance.enterer?.toJson());
   writeNotNull('provider', instance.provider?.toJson());
@@ -790,10 +788,9 @@ Map<String, dynamic> _$$_CoverageEligibilityRequestDiagnosisToJson(
 _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
         Map<String, dynamic> json) =>
     _$_CoverageEligibilityResponse(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.CoverageEligibilityResponse) ??
-          R5ResourceType.CoverageEligibilityResponse,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.CoverageEligibilityResponse,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -846,7 +843,7 @@ _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
           : Period.fromJson(json['servicedPeriod'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : DateTime.parse(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -854,9 +851,7 @@ _$_CoverageEligibilityResponse _$$_CoverageEligibilityResponseFromJson(
           ? null
           : Reference.fromJson(json['requestor'] as Map<String, dynamic>),
       request: Reference.fromJson(json['request'] as Map<String, dynamic>),
-      outcome: $enumDecodeNullable(
-          _$CoverageEligibilityResponseOutcomeEnumMap, json['outcome'],
-          unknownValue: CoverageEligibilityResponseOutcome.unknown),
+      outcome: json['outcome'] == null ? null : Code.fromJson(json['outcome']),
       outcomeElement: json['_outcome'] == null
           ? null
           : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
@@ -918,12 +913,11 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseToJson(
   writeNotNull('servicedDate', instance.servicedDate?.toJson());
   writeNotNull('_servicedDate', instance.servicedDateElement?.toJson());
   writeNotNull('servicedPeriod', instance.servicedPeriod?.toJson());
-  writeNotNull('created', instance.created?.toJson());
+  writeNotNull('created', instance.created?.toIso8601String());
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('requestor', instance.requestor?.toJson());
   val['request'] = instance.request.toJson();
-  writeNotNull(
-      'outcome', _$CoverageEligibilityResponseOutcomeEnumMap[instance.outcome]);
+  writeNotNull('outcome', instance.outcome?.toJson());
   writeNotNull('_outcome', instance.outcomeElement?.toJson());
   writeNotNull('disposition', instance.disposition);
   writeNotNull('_disposition', instance.dispositionElement?.toJson());
@@ -936,14 +930,6 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseToJson(
   writeNotNull('error', instance.error?.map((e) => e.toJson()).toList());
   return val;
 }
-
-const _$CoverageEligibilityResponseOutcomeEnumMap = {
-  CoverageEligibilityResponseOutcome.queued: 'queued',
-  CoverageEligibilityResponseOutcome.complete: 'complete',
-  CoverageEligibilityResponseOutcome.error: 'error',
-  CoverageEligibilityResponseOutcome.partial: 'partial',
-  CoverageEligibilityResponseOutcome.unknown: 'unknown',
-};
 
 _$_CoverageEligibilityResponseInsurance
     _$$_CoverageEligibilityResponseInsuranceFromJson(
@@ -1122,7 +1108,9 @@ _$_CoverageEligibilityResponseBenefit
               ? null
               : Element.fromJson(
                   json['_allowedUnsignedInt'] as Map<String, dynamic>),
-          allowedString: json['allowedString'] as String?,
+          allowedString: json['allowedString'] == null
+              ? null
+              : Markdown.fromJson(json['allowedString']),
           allowedStringElement: json['_allowedString'] == null
               ? null
               : Element.fromJson(
@@ -1137,7 +1125,9 @@ _$_CoverageEligibilityResponseBenefit
               ? null
               : Element.fromJson(
                   json['_usedUnsignedInt'] as Map<String, dynamic>),
-          usedString: json['usedString'] as String?,
+          usedString: json['usedString'] == null
+              ? null
+              : Markdown.fromJson(json['usedString']),
           usedStringElement: json['_usedString'] == null
               ? null
               : Element.fromJson(json['_usedString'] as Map<String, dynamic>),
@@ -1165,12 +1155,12 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseBenefitToJson(
   writeNotNull('allowedUnsignedInt', instance.allowedUnsignedInt?.toJson());
   writeNotNull(
       '_allowedUnsignedInt', instance.allowedUnsignedIntElement?.toJson());
-  writeNotNull('allowedString', instance.allowedString);
+  writeNotNull('allowedString', instance.allowedString?.toJson());
   writeNotNull('_allowedString', instance.allowedStringElement?.toJson());
   writeNotNull('allowedMoney', instance.allowedMoney?.toJson());
   writeNotNull('usedUnsignedInt', instance.usedUnsignedInt?.toJson());
   writeNotNull('_usedUnsignedInt', instance.usedUnsignedIntElement?.toJson());
-  writeNotNull('usedString', instance.usedString);
+  writeNotNull('usedString', instance.usedString?.toJson());
   writeNotNull('_usedString', instance.usedStringElement?.toJson());
   writeNotNull('usedMoney', instance.usedMoney?.toJson());
   return val;
@@ -1210,10 +1200,9 @@ Map<String, dynamic> _$$_CoverageEligibilityResponseErrorToJson(
 
 _$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
     _$_EnrollmentRequest(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.EnrollmentRequest) ??
-          R5ResourceType.EnrollmentRequest,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.EnrollmentRequest,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1250,7 +1239,7 @@ _$_EnrollmentRequest _$$_EnrollmentRequestFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : DateTime.parse(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -1297,7 +1286,7 @@ Map<String, dynamic> _$$_EnrollmentRequestToJson(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull('created', instance.created?.toJson());
+  writeNotNull('created', instance.created?.toIso8601String());
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('insurer', instance.insurer?.toJson());
   writeNotNull('provider', instance.provider?.toJson());
@@ -1309,10 +1298,9 @@ Map<String, dynamic> _$$_EnrollmentRequestToJson(
 _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
         Map<String, dynamic> json) =>
     _$_EnrollmentResponse(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.EnrollmentResponse) ??
-          R5ResourceType.EnrollmentResponse,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.EnrollmentResponse,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1350,9 +1338,7 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
       request: json['request'] == null
           ? null
           : Reference.fromJson(json['request'] as Map<String, dynamic>),
-      outcome: $enumDecodeNullable(
-          _$EnrollmentResponseOutcomeEnumMap, json['outcome'],
-          unknownValue: EnrollmentResponseOutcome.unknown),
+      outcome: json['outcome'] == null ? null : Code.fromJson(json['outcome']),
       outcomeElement: json['_outcome'] == null
           ? null
           : Element.fromJson(json['_outcome'] as Map<String, dynamic>),
@@ -1362,7 +1348,7 @@ _$_EnrollmentResponse _$$_EnrollmentResponseFromJson(
           : Element.fromJson(json['_disposition'] as Map<String, dynamic>),
       created: json['created'] == null
           ? null
-          : FhirDateTime.fromJson(json['created']),
+          : DateTime.parse(json['created'] as String),
       createdElement: json['_created'] == null
           ? null
           : Element.fromJson(json['_created'] as Map<String, dynamic>),
@@ -1404,21 +1390,13 @@ Map<String, dynamic> _$$_EnrollmentResponseToJson(
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('request', instance.request?.toJson());
-  writeNotNull('outcome', _$EnrollmentResponseOutcomeEnumMap[instance.outcome]);
+  writeNotNull('outcome', instance.outcome?.toJson());
   writeNotNull('_outcome', instance.outcomeElement?.toJson());
   writeNotNull('disposition', instance.disposition);
   writeNotNull('_disposition', instance.dispositionElement?.toJson());
-  writeNotNull('created', instance.created?.toJson());
+  writeNotNull('created', instance.created?.toIso8601String());
   writeNotNull('_created', instance.createdElement?.toJson());
   writeNotNull('organization', instance.organization?.toJson());
   writeNotNull('requestProvider', instance.requestProvider?.toJson());
   return val;
 }
-
-const _$EnrollmentResponseOutcomeEnumMap = {
-  EnrollmentResponseOutcome.queued: 'queued',
-  EnrollmentResponseOutcome.complete: 'complete',
-  EnrollmentResponseOutcome.error: 'error',
-  EnrollmentResponseOutcome.partial: 'partial',
-  EnrollmentResponseOutcome.unknown: 'unknown',
-};

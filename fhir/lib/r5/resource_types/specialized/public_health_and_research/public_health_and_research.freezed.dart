@@ -23,45 +23,34 @@ class _$ResearchStudyTearOff {
   const _$ResearchStudyTearOff();
 
   _ResearchStudy call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
-          R5ResourceType resourceType = R5ResourceType.ResearchStudy,
+      {R5ResourceType resourceType = R5ResourceType.ResearchStudy,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       List<ResearchStudyLabel>? label,
       List<Reference>? protocol,
       List<Reference>? partOf,
       List<RelatedArtifact>? relatedArtifact,
-      FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
-      @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-          ResearchStudyStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      DateTime? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? primaryPurposeType,
       CodeableConcept? phase,
       List<CodeableConcept>? category,
@@ -70,11 +59,9 @@ class _$ResearchStudyTearOff {
       List<CodeableConcept>? keyword,
       List<CodeableConcept>? location,
       Markdown? descriptionSummary,
-      @JsonKey(name: '_descriptionSummary')
-          Element? descriptionSummaryElement,
+      @JsonKey(name: '_descriptionSummary') Element? descriptionSummaryElement,
       Markdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       Period? period,
       List<ContactDetail>? contact,
       Reference? sponsor,
@@ -162,7 +149,6 @@ const $ResearchStudy = _$ResearchStudyTearOff();
 
 /// @nodoc
 mixin _$ResearchStudy {
-  @JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
@@ -196,11 +182,10 @@ mixin _$ResearchStudy {
   List<Reference>? get partOf => throw _privateConstructorUsedError;
   List<RelatedArtifact>? get relatedArtifact =>
       throw _privateConstructorUsedError;
-  FhirDateTime? get date => throw _privateConstructorUsedError;
+  DateTime? get date => throw _privateConstructorUsedError;
   @JsonKey(name: '_date')
   Element? get dateElement => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-  ResearchStudyStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   CodeableConcept? get primaryPurposeType => throw _privateConstructorUsedError;
@@ -254,45 +239,34 @@ abstract class $ResearchStudyCopyWith<$Res> {
           ResearchStudy value, $Res Function(ResearchStudy) then) =
       _$ResearchStudyCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       List<ResearchStudyLabel>? label,
       List<Reference>? protocol,
       List<Reference>? partOf,
       List<RelatedArtifact>? relatedArtifact,
-      FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
-      @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-          ResearchStudyStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      DateTime? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? primaryPurposeType,
       CodeableConcept? phase,
       List<CodeableConcept>? category,
@@ -301,11 +275,9 @@ abstract class $ResearchStudyCopyWith<$Res> {
       List<CodeableConcept>? keyword,
       List<CodeableConcept>? location,
       Markdown? descriptionSummary,
-      @JsonKey(name: '_descriptionSummary')
-          Element? descriptionSummaryElement,
+      @JsonKey(name: '_descriptionSummary') Element? descriptionSummaryElement,
       Markdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       Period? period,
       List<ContactDetail>? contact,
       Reference? sponsor,
@@ -513,7 +485,7 @@ class _$ResearchStudyCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
+              as DateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -521,7 +493,7 @@ class _$ResearchStudyCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ResearchStudyStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -860,45 +832,34 @@ abstract class _$ResearchStudyCopyWith<$Res>
       __$ResearchStudyCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       List<ResearchStudyLabel>? label,
       List<Reference>? protocol,
       List<Reference>? partOf,
       List<RelatedArtifact>? relatedArtifact,
-      FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
-      @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-          ResearchStudyStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      DateTime? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? primaryPurposeType,
       CodeableConcept? phase,
       List<CodeableConcept>? category,
@@ -907,11 +868,9 @@ abstract class _$ResearchStudyCopyWith<$Res>
       List<CodeableConcept>? keyword,
       List<CodeableConcept>? location,
       Markdown? descriptionSummary,
-      @JsonKey(name: '_descriptionSummary')
-          Element? descriptionSummaryElement,
+      @JsonKey(name: '_descriptionSummary') Element? descriptionSummaryElement,
       Markdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       Period? period,
       List<ContactDetail>? contact,
       Reference? sponsor,
@@ -1140,7 +1099,7 @@ class __$ResearchStudyCopyWithImpl<$Res>
       date: date == freezed
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
+              as DateTime?,
       dateElement: dateElement == freezed
           ? _value.dateElement
           : dateElement // ignore: cast_nullable_to_non_nullable
@@ -1148,7 +1107,7 @@ class __$ResearchStudyCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ResearchStudyStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -1273,45 +1232,34 @@ class __$ResearchStudyCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ResearchStudy extends _ResearchStudy {
   _$_ResearchStudy(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
-          this.resourceType = R5ResourceType.ResearchStudy,
+      {this.resourceType = R5ResourceType.ResearchStudy,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.url,
-      @JsonKey(name: '_url')
-          this.urlElement,
+      @JsonKey(name: '_url') this.urlElement,
       this.identifier,
       this.version,
-      @JsonKey(name: '_version')
-          this.versionElement,
+      @JsonKey(name: '_version') this.versionElement,
       this.name,
-      @JsonKey(name: '_name')
-          this.nameElement,
+      @JsonKey(name: '_name') this.nameElement,
       this.title,
-      @JsonKey(name: '_title')
-          this.titleElement,
+      @JsonKey(name: '_title') this.titleElement,
       this.label,
       this.protocol,
       this.partOf,
       this.relatedArtifact,
       this.date,
-      @JsonKey(name: '_date')
-          this.dateElement,
-      @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      @JsonKey(name: '_date') this.dateElement,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.primaryPurposeType,
       this.phase,
       this.category,
@@ -1320,11 +1268,9 @@ class _$_ResearchStudy extends _ResearchStudy {
       this.keyword,
       this.location,
       this.descriptionSummary,
-      @JsonKey(name: '_descriptionSummary')
-          this.descriptionSummaryElement,
+      @JsonKey(name: '_descriptionSummary') this.descriptionSummaryElement,
       this.description,
-      @JsonKey(name: '_description')
-          this.descriptionElement,
+      @JsonKey(name: '_description') this.descriptionElement,
       this.period,
       this.contact,
       this.sponsor,
@@ -1347,8 +1293,8 @@ class _$_ResearchStudy extends _ResearchStudy {
   factory _$_ResearchStudy.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchStudyFromJson(json);
 
+  @JsonKey()
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -1404,13 +1350,12 @@ class _$_ResearchStudy extends _ResearchStudy {
   @override
   final List<RelatedArtifact>? relatedArtifact;
   @override
-  final FhirDateTime? date;
+  final DateTime? date;
   @override
   @JsonKey(name: '_date')
   final Element? dateElement;
   @override
-  @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-  final ResearchStudyStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -1644,45 +1589,34 @@ class _$_ResearchStudy extends _ResearchStudy {
 
 abstract class _ResearchStudy extends ResearchStudy {
   factory _ResearchStudy(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       FhirUri? url,
-      @JsonKey(name: '_url')
-          Element? urlElement,
+      @JsonKey(name: '_url') Element? urlElement,
       List<Identifier>? identifier,
       String? version,
-      @JsonKey(name: '_version')
-          Element? versionElement,
+      @JsonKey(name: '_version') Element? versionElement,
       String? name,
-      @JsonKey(name: '_name')
-          Element? nameElement,
+      @JsonKey(name: '_name') Element? nameElement,
       String? title,
-      @JsonKey(name: '_title')
-          Element? titleElement,
+      @JsonKey(name: '_title') Element? titleElement,
       List<ResearchStudyLabel>? label,
       List<Reference>? protocol,
       List<Reference>? partOf,
       List<RelatedArtifact>? relatedArtifact,
-      FhirDateTime? date,
-      @JsonKey(name: '_date')
-          Element? dateElement,
-      @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-          ResearchStudyStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      DateTime? date,
+      @JsonKey(name: '_date') Element? dateElement,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
       CodeableConcept? primaryPurposeType,
       CodeableConcept? phase,
       List<CodeableConcept>? category,
@@ -1691,11 +1625,9 @@ abstract class _ResearchStudy extends ResearchStudy {
       List<CodeableConcept>? keyword,
       List<CodeableConcept>? location,
       Markdown? descriptionSummary,
-      @JsonKey(name: '_descriptionSummary')
-          Element? descriptionSummaryElement,
+      @JsonKey(name: '_descriptionSummary') Element? descriptionSummaryElement,
       Markdown? description,
-      @JsonKey(name: '_description')
-          Element? descriptionElement,
+      @JsonKey(name: '_description') Element? descriptionElement,
       Period? period,
       List<ContactDetail>? contact,
       Reference? sponsor,
@@ -1719,7 +1651,6 @@ abstract class _ResearchStudy extends ResearchStudy {
       _$_ResearchStudy.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.ResearchStudy)
   R5ResourceType get resourceType;
   @override
   Id? get id;
@@ -1775,13 +1706,12 @@ abstract class _ResearchStudy extends ResearchStudy {
   @override
   List<RelatedArtifact>? get relatedArtifact;
   @override
-  FhirDateTime? get date;
+  DateTime? get date;
   @override
   @JsonKey(name: '_date')
   Element? get dateElement;
   @override
-  @JsonKey(unknownEnumValue: ResearchStudyStatus.unknown)
-  ResearchStudyStatus? get status;
+  Code? get status;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -2793,6 +2723,7 @@ class _$ResearchStudyAssociatedPartyTearOff {
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       required CodeableConcept role,
+      List<Period>? period,
       List<CodeableConcept>? classifier,
       Reference? party}) {
     return _ResearchStudyAssociatedParty(
@@ -2802,6 +2733,7 @@ class _$ResearchStudyAssociatedPartyTearOff {
       name: name,
       nameElement: nameElement,
       role: role,
+      period: period,
       classifier: classifier,
       party: party,
     );
@@ -2826,6 +2758,7 @@ mixin _$ResearchStudyAssociatedParty {
   @JsonKey(name: '_name')
   Element? get nameElement => throw _privateConstructorUsedError;
   CodeableConcept get role => throw _privateConstructorUsedError;
+  List<Period>? get period => throw _privateConstructorUsedError;
   List<CodeableConcept>? get classifier => throw _privateConstructorUsedError;
   Reference? get party => throw _privateConstructorUsedError;
 
@@ -2848,6 +2781,7 @@ abstract class $ResearchStudyAssociatedPartyCopyWith<$Res> {
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept role,
+      List<Period>? period,
       List<CodeableConcept>? classifier,
       Reference? party});
 
@@ -2873,6 +2807,7 @@ class _$ResearchStudyAssociatedPartyCopyWithImpl<$Res>
     Object? name = freezed,
     Object? nameElement = freezed,
     Object? role = freezed,
+    Object? period = freezed,
     Object? classifier = freezed,
     Object? party = freezed,
   }) {
@@ -2901,6 +2836,10 @@ class _$ResearchStudyAssociatedPartyCopyWithImpl<$Res>
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as List<Period>?,
       classifier: classifier == freezed
           ? _value.classifier
           : classifier // ignore: cast_nullable_to_non_nullable
@@ -2957,6 +2896,7 @@ abstract class _$ResearchStudyAssociatedPartyCopyWith<$Res>
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       CodeableConcept role,
+      List<Period>? period,
       List<CodeableConcept>? classifier,
       Reference? party});
 
@@ -2989,6 +2929,7 @@ class __$ResearchStudyAssociatedPartyCopyWithImpl<$Res>
     Object? name = freezed,
     Object? nameElement = freezed,
     Object? role = freezed,
+    Object? period = freezed,
     Object? classifier = freezed,
     Object? party = freezed,
   }) {
@@ -3017,6 +2958,10 @@ class __$ResearchStudyAssociatedPartyCopyWithImpl<$Res>
           ? _value.role
           : role // ignore: cast_nullable_to_non_nullable
               as CodeableConcept,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as List<Period>?,
       classifier: classifier == freezed
           ? _value.classifier
           : classifier // ignore: cast_nullable_to_non_nullable
@@ -3039,6 +2984,7 @@ class _$_ResearchStudyAssociatedParty extends _ResearchStudyAssociatedParty {
       this.name,
       @JsonKey(name: '_name') this.nameElement,
       required this.role,
+      this.period,
       this.classifier,
       this.party})
       : super._();
@@ -3061,13 +3007,15 @@ class _$_ResearchStudyAssociatedParty extends _ResearchStudyAssociatedParty {
   @override
   final CodeableConcept role;
   @override
+  final List<Period>? period;
+  @override
   final List<CodeableConcept>? classifier;
   @override
   final Reference? party;
 
   @override
   String toString() {
-    return 'ResearchStudyAssociatedParty(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, role: $role, classifier: $classifier, party: $party)';
+    return 'ResearchStudyAssociatedParty(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, name: $name, nameElement: $nameElement, role: $role, period: $period, classifier: $classifier, party: $party)';
   }
 
   @override
@@ -3084,6 +3032,7 @@ class _$_ResearchStudyAssociatedParty extends _ResearchStudyAssociatedParty {
             const DeepCollectionEquality()
                 .equals(other.nameElement, nameElement) &&
             const DeepCollectionEquality().equals(other.role, role) &&
+            const DeepCollectionEquality().equals(other.period, period) &&
             const DeepCollectionEquality()
                 .equals(other.classifier, classifier) &&
             const DeepCollectionEquality().equals(other.party, party));
@@ -3098,6 +3047,7 @@ class _$_ResearchStudyAssociatedParty extends _ResearchStudyAssociatedParty {
       const DeepCollectionEquality().hash(name),
       const DeepCollectionEquality().hash(nameElement),
       const DeepCollectionEquality().hash(role),
+      const DeepCollectionEquality().hash(period),
       const DeepCollectionEquality().hash(classifier),
       const DeepCollectionEquality().hash(party));
 
@@ -3122,6 +3072,7 @@ abstract class _ResearchStudyAssociatedParty
       String? name,
       @JsonKey(name: '_name') Element? nameElement,
       required CodeableConcept role,
+      List<Period>? period,
       List<CodeableConcept>? classifier,
       Reference? party}) = _$_ResearchStudyAssociatedParty;
   _ResearchStudyAssociatedParty._() : super._();
@@ -3143,6 +3094,8 @@ abstract class _ResearchStudyAssociatedParty
   Element? get nameElement;
   @override
   CodeableConcept get role;
+  @override
+  List<Period>? get period;
   @override
   List<CodeableConcept>? get classifier;
   @override
@@ -5266,14 +5219,14 @@ class _$ResearchStudyWebLocationTearOff {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept? classifier,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement}) {
     return _ResearchStudyWebLocation(
       id: id,
       extension_: extension_,
       modifierExtension: modifierExtension,
-      type: type,
+      classifier: classifier,
       url: url,
       urlElement: urlElement,
     );
@@ -5294,7 +5247,7 @@ mixin _$ResearchStudyWebLocation {
   List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
-  CodeableConcept? get type => throw _privateConstructorUsedError;
+  CodeableConcept? get classifier => throw _privateConstructorUsedError;
   FhirUri? get url => throw _privateConstructorUsedError;
   @JsonKey(name: '_url')
   Element? get urlElement => throw _privateConstructorUsedError;
@@ -5314,11 +5267,11 @@ abstract class $ResearchStudyWebLocationCopyWith<$Res> {
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept? classifier,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement});
 
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res>? get classifier;
   $ElementCopyWith<$Res>? get urlElement;
 }
 
@@ -5336,7 +5289,7 @@ class _$ResearchStudyWebLocationCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? type = freezed,
+    Object? classifier = freezed,
     Object? url = freezed,
     Object? urlElement = freezed,
   }) {
@@ -5353,9 +5306,9 @@ class _$ResearchStudyWebLocationCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
+      classifier: classifier == freezed
+          ? _value.classifier
+          : classifier // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       url: url == freezed
           ? _value.url
@@ -5369,13 +5322,13 @@ class _$ResearchStudyWebLocationCopyWithImpl<$Res>
   }
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type {
-    if (_value.type == null) {
+  $CodeableConceptCopyWith<$Res>? get classifier {
+    if (_value.classifier == null) {
       return null;
     }
 
-    return $CodeableConceptCopyWith<$Res>(_value.type!, (value) {
-      return _then(_value.copyWith(type: value));
+    return $CodeableConceptCopyWith<$Res>(_value.classifier!, (value) {
+      return _then(_value.copyWith(classifier: value));
     });
   }
 
@@ -5402,12 +5355,12 @@ abstract class _$ResearchStudyWebLocationCopyWith<$Res>
       {String? id,
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
-      CodeableConcept? type,
+      CodeableConcept? classifier,
       FhirUri? url,
       @JsonKey(name: '_url') Element? urlElement});
 
   @override
-  $CodeableConceptCopyWith<$Res>? get type;
+  $CodeableConceptCopyWith<$Res>? get classifier;
   @override
   $ElementCopyWith<$Res>? get urlElement;
 }
@@ -5429,7 +5382,7 @@ class __$ResearchStudyWebLocationCopyWithImpl<$Res>
     Object? id = freezed,
     Object? extension_ = freezed,
     Object? modifierExtension = freezed,
-    Object? type = freezed,
+    Object? classifier = freezed,
     Object? url = freezed,
     Object? urlElement = freezed,
   }) {
@@ -5446,9 +5399,9 @@ class __$ResearchStudyWebLocationCopyWithImpl<$Res>
           ? _value.modifierExtension
           : modifierExtension // ignore: cast_nullable_to_non_nullable
               as List<FhirExtension>?,
-      type: type == freezed
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
+      classifier: classifier == freezed
+          ? _value.classifier
+          : classifier // ignore: cast_nullable_to_non_nullable
               as CodeableConcept?,
       url: url == freezed
           ? _value.url
@@ -5469,7 +5422,7 @@ class _$_ResearchStudyWebLocation extends _ResearchStudyWebLocation {
       {this.id,
       @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
-      this.type,
+      this.classifier,
       this.url,
       @JsonKey(name: '_url') this.urlElement})
       : super._();
@@ -5485,7 +5438,7 @@ class _$_ResearchStudyWebLocation extends _ResearchStudyWebLocation {
   @override
   final List<FhirExtension>? modifierExtension;
   @override
-  final CodeableConcept? type;
+  final CodeableConcept? classifier;
   @override
   final FhirUri? url;
   @override
@@ -5494,7 +5447,7 @@ class _$_ResearchStudyWebLocation extends _ResearchStudyWebLocation {
 
   @override
   String toString() {
-    return 'ResearchStudyWebLocation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, url: $url, urlElement: $urlElement)';
+    return 'ResearchStudyWebLocation(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, classifier: $classifier, url: $url, urlElement: $urlElement)';
   }
 
   @override
@@ -5507,7 +5460,8 @@ class _$_ResearchStudyWebLocation extends _ResearchStudyWebLocation {
                 .equals(other.extension_, extension_) &&
             const DeepCollectionEquality()
                 .equals(other.modifierExtension, modifierExtension) &&
-            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality()
+                .equals(other.classifier, classifier) &&
             const DeepCollectionEquality().equals(other.url, url) &&
             const DeepCollectionEquality()
                 .equals(other.urlElement, urlElement));
@@ -5519,7 +5473,7 @@ class _$_ResearchStudyWebLocation extends _ResearchStudyWebLocation {
       const DeepCollectionEquality().hash(id),
       const DeepCollectionEquality().hash(extension_),
       const DeepCollectionEquality().hash(modifierExtension),
-      const DeepCollectionEquality().hash(type),
+      const DeepCollectionEquality().hash(classifier),
       const DeepCollectionEquality().hash(url),
       const DeepCollectionEquality().hash(urlElement));
 
@@ -5540,7 +5494,7 @@ abstract class _ResearchStudyWebLocation extends ResearchStudyWebLocation {
           {String? id,
           @JsonKey(name: 'extension') List<FhirExtension>? extension_,
           List<FhirExtension>? modifierExtension,
-          CodeableConcept? type,
+          CodeableConcept? classifier,
           FhirUri? url,
           @JsonKey(name: '_url') Element? urlElement}) =
       _$_ResearchStudyWebLocation;
@@ -5557,7 +5511,7 @@ abstract class _ResearchStudyWebLocation extends ResearchStudyWebLocation {
   @override
   List<FhirExtension>? get modifierExtension;
   @override
-  CodeableConcept? get type;
+  CodeableConcept? get classifier;
   @override
   FhirUri? get url;
   @override
@@ -5578,36 +5532,28 @@ class _$ResearchSubjectTearOff {
   const _$ResearchSubjectTearOff();
 
   _ResearchSubject call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
-          R5ResourceType resourceType = R5ResourceType.ResearchSubject,
+      {R5ResourceType resourceType = R5ResourceType.ResearchSubject,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-          ResearchSubjectStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
       List<ResearchSubjectProgress>? progress,
       Period? period,
       required Reference study,
       required Reference subject,
       String? assignedArm,
-      @JsonKey(name: '_assignedArm')
-          Element? assignedArmElement,
+      @JsonKey(name: '_assignedArm') Element? assignedArmElement,
       String? actualArm,
-      @JsonKey(name: '_actualArm')
-          Element? actualArmElement,
+      @JsonKey(name: '_actualArm') Element? actualArmElement,
       Reference? consent}) {
     return _ResearchSubject(
       resourceType: resourceType,
@@ -5646,7 +5592,6 @@ const $ResearchSubject = _$ResearchSubjectTearOff();
 
 /// @nodoc
 mixin _$ResearchSubject {
-  @JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
   R5ResourceType get resourceType => throw _privateConstructorUsedError;
   Id? get id => throw _privateConstructorUsedError;
   Meta? get meta => throw _privateConstructorUsedError;
@@ -5663,8 +5608,7 @@ mixin _$ResearchSubject {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   List<Identifier>? get identifier => throw _privateConstructorUsedError;
-  @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-  ResearchSubjectStatus? get status => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
   @JsonKey(name: '_status')
   Element? get statusElement => throw _privateConstructorUsedError;
   List<ResearchSubjectProgress>? get progress =>
@@ -5692,36 +5636,28 @@ abstract class $ResearchSubjectCopyWith<$Res> {
           ResearchSubject value, $Res Function(ResearchSubject) then) =
       _$ResearchSubjectCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-          ResearchSubjectStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
       List<ResearchSubjectProgress>? progress,
       Period? period,
       Reference study,
       Reference subject,
       String? assignedArm,
-      @JsonKey(name: '_assignedArm')
-          Element? assignedArmElement,
+      @JsonKey(name: '_assignedArm') Element? assignedArmElement,
       String? actualArm,
-      @JsonKey(name: '_actualArm')
-          Element? actualArmElement,
+      @JsonKey(name: '_actualArm') Element? actualArmElement,
       Reference? consent});
 
   $MetaCopyWith<$Res>? get meta;
@@ -5824,7 +5760,7 @@ class _$ResearchSubjectCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ResearchSubjectStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -5990,36 +5926,28 @@ abstract class _$ResearchSubjectCopyWith<$Res>
       __$ResearchSubjectCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-          ResearchSubjectStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
       List<ResearchSubjectProgress>? progress,
       Period? period,
       Reference study,
       Reference subject,
       String? assignedArm,
-      @JsonKey(name: '_assignedArm')
-          Element? assignedArmElement,
+      @JsonKey(name: '_assignedArm') Element? assignedArmElement,
       String? actualArm,
-      @JsonKey(name: '_actualArm')
-          Element? actualArmElement,
+      @JsonKey(name: '_actualArm') Element? actualArmElement,
       Reference? consent});
 
   @override
@@ -6135,7 +6063,7 @@ class __$ResearchSubjectCopyWithImpl<$Res>
       status: status == freezed
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
-              as ResearchSubjectStatus?,
+              as Code?,
       statusElement: statusElement == freezed
           ? _value.statusElement
           : statusElement // ignore: cast_nullable_to_non_nullable
@@ -6184,44 +6112,36 @@ class __$ResearchSubjectCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_ResearchSubject extends _ResearchSubject {
   _$_ResearchSubject(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
-          this.resourceType = R5ResourceType.ResearchSubject,
+      {this.resourceType = R5ResourceType.ResearchSubject,
       this.id,
       this.meta,
       this.implicitRules,
-      @JsonKey(name: '_implicitRules')
-          this.implicitRulesElement,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
       this.language,
-      @JsonKey(name: '_language')
-          this.languageElement,
+      @JsonKey(name: '_language') this.languageElement,
       this.text,
       this.contained,
-      @JsonKey(name: 'extension')
-          this.extension_,
+      @JsonKey(name: 'extension') this.extension_,
       this.modifierExtension,
       this.identifier,
-      @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-          this.status,
-      @JsonKey(name: '_status')
-          this.statusElement,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
       this.progress,
       this.period,
       required this.study,
       required this.subject,
       this.assignedArm,
-      @JsonKey(name: '_assignedArm')
-          this.assignedArmElement,
+      @JsonKey(name: '_assignedArm') this.assignedArmElement,
       this.actualArm,
-      @JsonKey(name: '_actualArm')
-          this.actualArmElement,
+      @JsonKey(name: '_actualArm') this.actualArmElement,
       this.consent})
       : super._();
 
   factory _$_ResearchSubject.fromJson(Map<String, dynamic> json) =>
       _$$_ResearchSubjectFromJson(json);
 
+  @JsonKey()
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
   final R5ResourceType resourceType;
   @override
   final Id? id;
@@ -6249,8 +6169,7 @@ class _$_ResearchSubject extends _ResearchSubject {
   @override
   final List<Identifier>? identifier;
   @override
-  @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-  final ResearchSubjectStatus? status;
+  final Code? status;
   @override
   @JsonKey(name: '_status')
   final Element? statusElement;
@@ -6362,36 +6281,28 @@ class _$_ResearchSubject extends _ResearchSubject {
 
 abstract class _ResearchSubject extends ResearchSubject {
   factory _ResearchSubject(
-      {@JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
-          R5ResourceType resourceType,
+      {R5ResourceType resourceType,
       Id? id,
       Meta? meta,
       FhirUri? implicitRules,
-      @JsonKey(name: '_implicitRules')
-          Element? implicitRulesElement,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
       Code? language,
-      @JsonKey(name: '_language')
-          Element? languageElement,
+      @JsonKey(name: '_language') Element? languageElement,
       Narrative? text,
       List<Resource>? contained,
-      @JsonKey(name: 'extension')
-          List<FhirExtension>? extension_,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       List<Identifier>? identifier,
-      @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-          ResearchSubjectStatus? status,
-      @JsonKey(name: '_status')
-          Element? statusElement,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
       List<ResearchSubjectProgress>? progress,
       Period? period,
       required Reference study,
       required Reference subject,
       String? assignedArm,
-      @JsonKey(name: '_assignedArm')
-          Element? assignedArmElement,
+      @JsonKey(name: '_assignedArm') Element? assignedArmElement,
       String? actualArm,
-      @JsonKey(name: '_actualArm')
-          Element? actualArmElement,
+      @JsonKey(name: '_actualArm') Element? actualArmElement,
       Reference? consent}) = _$_ResearchSubject;
   _ResearchSubject._() : super._();
 
@@ -6399,7 +6310,6 @@ abstract class _ResearchSubject extends ResearchSubject {
       _$_ResearchSubject.fromJson;
 
   @override
-  @JsonKey(unknownEnumValue: R5ResourceType.ResearchSubject)
   R5ResourceType get resourceType;
   @override
   Id? get id;
@@ -6427,8 +6337,7 @@ abstract class _ResearchSubject extends ResearchSubject {
   @override
   List<Identifier>? get identifier;
   @override
-  @JsonKey(unknownEnumValue: ResearchSubjectStatus.unknown)
-  ResearchSubjectStatus? get status;
+  Code? get status;
   @override
   @JsonKey(name: '_status')
   Element? get statusElement;
@@ -6475,9 +6384,9 @@ class _$ResearchSubjectProgressTearOff {
       CodeableConcept? subjectState,
       CodeableConcept? milestone,
       CodeableConcept? reason,
-      FhirDateTime? startDate,
+      DateTime? startDate,
       @JsonKey(name: '_startDate') Element? startDateElement,
-      FhirDateTime? endDate,
+      DateTime? endDate,
       @JsonKey(name: '_endDate') Element? endDateElement}) {
     return _ResearchSubjectProgress(
       id: id,
@@ -6513,10 +6422,10 @@ mixin _$ResearchSubjectProgress {
   CodeableConcept? get subjectState => throw _privateConstructorUsedError;
   CodeableConcept? get milestone => throw _privateConstructorUsedError;
   CodeableConcept? get reason => throw _privateConstructorUsedError;
-  FhirDateTime? get startDate => throw _privateConstructorUsedError;
+  DateTime? get startDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_startDate')
   Element? get startDateElement => throw _privateConstructorUsedError;
-  FhirDateTime? get endDate => throw _privateConstructorUsedError;
+  DateTime? get endDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_endDate')
   Element? get endDateElement => throw _privateConstructorUsedError;
 
@@ -6539,9 +6448,9 @@ abstract class $ResearchSubjectProgressCopyWith<$Res> {
       CodeableConcept? subjectState,
       CodeableConcept? milestone,
       CodeableConcept? reason,
-      FhirDateTime? startDate,
+      DateTime? startDate,
       @JsonKey(name: '_startDate') Element? startDateElement,
-      FhirDateTime? endDate,
+      DateTime? endDate,
       @JsonKey(name: '_endDate') Element? endDateElement});
 
   $CodeableConceptCopyWith<$Res>? get type;
@@ -6607,7 +6516,7 @@ class _$ResearchSubjectProgressCopyWithImpl<$Res>
       startDate: startDate == freezed
           ? _value.startDate
           : startDate // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
+              as DateTime?,
       startDateElement: startDateElement == freezed
           ? _value.startDateElement
           : startDateElement // ignore: cast_nullable_to_non_nullable
@@ -6615,7 +6524,7 @@ class _$ResearchSubjectProgressCopyWithImpl<$Res>
       endDate: endDate == freezed
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
+              as DateTime?,
       endDateElement: endDateElement == freezed
           ? _value.endDateElement
           : endDateElement // ignore: cast_nullable_to_non_nullable
@@ -6705,9 +6614,9 @@ abstract class _$ResearchSubjectProgressCopyWith<$Res>
       CodeableConcept? subjectState,
       CodeableConcept? milestone,
       CodeableConcept? reason,
-      FhirDateTime? startDate,
+      DateTime? startDate,
       @JsonKey(name: '_startDate') Element? startDateElement,
-      FhirDateTime? endDate,
+      DateTime? endDate,
       @JsonKey(name: '_endDate') Element? endDateElement});
 
   @override
@@ -6782,7 +6691,7 @@ class __$ResearchSubjectProgressCopyWithImpl<$Res>
       startDate: startDate == freezed
           ? _value.startDate
           : startDate // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
+              as DateTime?,
       startDateElement: startDateElement == freezed
           ? _value.startDateElement
           : startDateElement // ignore: cast_nullable_to_non_nullable
@@ -6790,7 +6699,7 @@ class __$ResearchSubjectProgressCopyWithImpl<$Res>
       endDate: endDate == freezed
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
-              as FhirDateTime?,
+              as DateTime?,
       endDateElement: endDateElement == freezed
           ? _value.endDateElement
           : endDateElement // ignore: cast_nullable_to_non_nullable
@@ -6835,12 +6744,12 @@ class _$_ResearchSubjectProgress extends _ResearchSubjectProgress {
   @override
   final CodeableConcept? reason;
   @override
-  final FhirDateTime? startDate;
+  final DateTime? startDate;
   @override
   @JsonKey(name: '_startDate')
   final Element? startDateElement;
   @override
-  final FhirDateTime? endDate;
+  final DateTime? endDate;
   @override
   @JsonKey(name: '_endDate')
   final Element? endDateElement;
@@ -6909,9 +6818,9 @@ abstract class _ResearchSubjectProgress extends ResearchSubjectProgress {
           CodeableConcept? subjectState,
           CodeableConcept? milestone,
           CodeableConcept? reason,
-          FhirDateTime? startDate,
+          DateTime? startDate,
           @JsonKey(name: '_startDate') Element? startDateElement,
-          FhirDateTime? endDate,
+          DateTime? endDate,
           @JsonKey(name: '_endDate') Element? endDateElement}) =
       _$_ResearchSubjectProgress;
   _ResearchSubjectProgress._() : super._();
@@ -6935,12 +6844,12 @@ abstract class _ResearchSubjectProgress extends ResearchSubjectProgress {
   @override
   CodeableConcept? get reason;
   @override
-  FhirDateTime? get startDate;
+  DateTime? get startDate;
   @override
   @JsonKey(name: '_startDate')
   Element? get startDateElement;
   @override
-  FhirDateTime? get endDate;
+  DateTime? get endDate;
   @override
   @JsonKey(name: '_endDate')
   Element? get endDateElement;

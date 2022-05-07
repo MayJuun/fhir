@@ -8,10 +8,9 @@ part of 'public_health_and_research.dart';
 
 _$_ResearchStudy _$$_ResearchStudyFromJson(Map<String, dynamic> json) =>
     _$_ResearchStudy(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.ResearchStudy) ??
-          R5ResourceType.ResearchStudy,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.ResearchStudy,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -70,12 +69,12 @@ _$_ResearchStudy _$$_ResearchStudyFromJson(Map<String, dynamic> json) =>
       relatedArtifact: (json['relatedArtifact'] as List<dynamic>?)
           ?.map((e) => RelatedArtifact.fromJson(e as Map<String, dynamic>))
           .toList(),
-      date: json['date'] == null ? null : FhirDateTime.fromJson(json['date']),
+      date:
+          json['date'] == null ? null : DateTime.parse(json['date'] as String),
       dateElement: json['_date'] == null
           ? null
           : Element.fromJson(json['_date'] as Map<String, dynamic>),
-      status: $enumDecodeNullable(_$ResearchStudyStatusEnumMap, json['status'],
-          unknownValue: ResearchStudyStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -216,9 +215,9 @@ Map<String, dynamic> _$$_ResearchStudyToJson(_$_ResearchStudy instance) {
   writeNotNull('partOf', instance.partOf?.map((e) => e.toJson()).toList());
   writeNotNull('relatedArtifact',
       instance.relatedArtifact?.map((e) => e.toJson()).toList());
-  writeNotNull('date', instance.date?.toJson());
+  writeNotNull('date', instance.date?.toIso8601String());
   writeNotNull('_date', instance.dateElement?.toJson());
-  writeNotNull('status', _$ResearchStudyStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('primaryPurposeType', instance.primaryPurposeType?.toJson());
   writeNotNull('phase', instance.phase?.toJson());
@@ -414,24 +413,6 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.VisionPrescription: 'VisionPrescription',
 };
 
-const _$ResearchStudyStatusEnumMap = {
-  ResearchStudyStatus.active: 'active',
-  ResearchStudyStatus.administratively_completed: 'administratively-completed',
-  ResearchStudyStatus.approved: 'approved',
-  ResearchStudyStatus.closed_to_accrual: 'closed-to-accrual',
-  ResearchStudyStatus.closed_to_accrual_and_intervention:
-      'closed-to-accrual-and-intervention',
-  ResearchStudyStatus.completed: 'completed',
-  ResearchStudyStatus.disapproved: 'disapproved',
-  ResearchStudyStatus.in_review: 'in-review',
-  ResearchStudyStatus.temporarily_closed_to_accrual:
-      'temporarily-closed-to-accrual',
-  ResearchStudyStatus.temporarily_closed_to_accrual_and_intervention:
-      'temporarily-closed-to-accrual-and-intervention',
-  ResearchStudyStatus.withdrawn: 'withdrawn',
-  ResearchStudyStatus.unknown: 'unknown',
-};
-
 _$_ResearchStudyLabel _$$_ResearchStudyLabelFromJson(
         Map<String, dynamic> json) =>
     _$_ResearchStudyLabel(
@@ -572,6 +553,9 @@ _$_ResearchStudyAssociatedParty _$$_ResearchStudyAssociatedPartyFromJson(
           ? null
           : Element.fromJson(json['_name'] as Map<String, dynamic>),
       role: CodeableConcept.fromJson(json['role'] as Map<String, dynamic>),
+      period: (json['period'] as List<dynamic>?)
+          ?.map((e) => Period.fromJson(e as Map<String, dynamic>))
+          .toList(),
       classifier: (json['classifier'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -598,6 +582,7 @@ Map<String, dynamic> _$$_ResearchStudyAssociatedPartyToJson(
   writeNotNull('name', instance.name);
   writeNotNull('_name', instance.nameElement?.toJson());
   val['role'] = instance.role.toJson();
+  writeNotNull('period', instance.period?.map((e) => e.toJson()).toList());
   writeNotNull(
       'classifier', instance.classifier?.map((e) => e.toJson()).toList());
   writeNotNull('party', instance.party?.toJson());
@@ -879,9 +864,10 @@ _$_ResearchStudyWebLocation _$$_ResearchStudyWebLocationFromJson(
       modifierExtension: (json['modifierExtension'] as List<dynamic>?)
           ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
           .toList(),
-      type: json['type'] == null
+      classifier: json['classifier'] == null
           ? null
-          : CodeableConcept.fromJson(json['type'] as Map<String, dynamic>),
+          : CodeableConcept.fromJson(
+              json['classifier'] as Map<String, dynamic>),
       url: json['url'] == null ? null : FhirUri.fromJson(json['url']),
       urlElement: json['_url'] == null
           ? null
@@ -903,7 +889,7 @@ Map<String, dynamic> _$$_ResearchStudyWebLocationToJson(
       'extension', instance.extension_?.map((e) => e.toJson()).toList());
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('type', instance.type?.toJson());
+  writeNotNull('classifier', instance.classifier?.toJson());
   writeNotNull('url', instance.url?.toJson());
   writeNotNull('_url', instance.urlElement?.toJson());
   return val;
@@ -911,10 +897,9 @@ Map<String, dynamic> _$$_ResearchStudyWebLocationToJson(
 
 _$_ResearchSubject _$$_ResearchSubjectFromJson(Map<String, dynamic> json) =>
     _$_ResearchSubject(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.ResearchSubject) ??
-          R5ResourceType.ResearchSubject,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.ResearchSubject,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -945,9 +930,7 @@ _$_ResearchSubject _$$_ResearchSubjectFromJson(Map<String, dynamic> json) =>
       identifier: (json['identifier'] as List<dynamic>?)
           ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(
-          _$ResearchSubjectStatusEnumMap, json['status'],
-          unknownValue: ResearchSubjectStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
@@ -999,7 +982,7 @@ Map<String, dynamic> _$$_ResearchSubjectToJson(_$_ResearchSubject instance) {
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$ResearchSubjectStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('progress', instance.progress?.map((e) => e.toJson()).toList());
   writeNotNull('period', instance.period?.toJson());
@@ -1012,13 +995,6 @@ Map<String, dynamic> _$$_ResearchSubjectToJson(_$_ResearchSubject instance) {
   writeNotNull('consent', instance.consent?.toJson());
   return val;
 }
-
-const _$ResearchSubjectStatusEnumMap = {
-  ResearchSubjectStatus.draft: 'draft',
-  ResearchSubjectStatus.active: 'active',
-  ResearchSubjectStatus.retired: 'retired',
-  ResearchSubjectStatus.unknown: 'unknown',
-};
 
 _$_ResearchSubjectProgress _$$_ResearchSubjectProgressFromJson(
         Map<String, dynamic> json) =>
@@ -1045,13 +1021,13 @@ _$_ResearchSubjectProgress _$$_ResearchSubjectProgressFromJson(
           : CodeableConcept.fromJson(json['reason'] as Map<String, dynamic>),
       startDate: json['startDate'] == null
           ? null
-          : FhirDateTime.fromJson(json['startDate']),
+          : DateTime.parse(json['startDate'] as String),
       startDateElement: json['_startDate'] == null
           ? null
           : Element.fromJson(json['_startDate'] as Map<String, dynamic>),
       endDate: json['endDate'] == null
           ? null
-          : FhirDateTime.fromJson(json['endDate']),
+          : DateTime.parse(json['endDate'] as String),
       endDateElement: json['_endDate'] == null
           ? null
           : Element.fromJson(json['_endDate'] as Map<String, dynamic>),
@@ -1076,9 +1052,9 @@ Map<String, dynamic> _$$_ResearchSubjectProgressToJson(
   writeNotNull('subjectState', instance.subjectState?.toJson());
   writeNotNull('milestone', instance.milestone?.toJson());
   writeNotNull('reason', instance.reason?.toJson());
-  writeNotNull('startDate', instance.startDate?.toJson());
+  writeNotNull('startDate', instance.startDate?.toIso8601String());
   writeNotNull('_startDate', instance.startDateElement?.toJson());
-  writeNotNull('endDate', instance.endDate?.toJson());
+  writeNotNull('endDate', instance.endDate?.toIso8601String());
   writeNotNull('_endDate', instance.endDateElement?.toJson());
   return val;
 }

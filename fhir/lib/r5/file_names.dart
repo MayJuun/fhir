@@ -1,7 +1,6 @@
 import 'grouped_resources.dart';
 
 const fileNames = {
-  intRef: 'draft_types/internal_reference.dart',
   entities1: 'resource_types/base/entities1/entities1.dart',
   entities2: 'resource_types/base/entities2/entities2.dart',
   individuals: 'resource_types/base/individuals/individuals.dart',
@@ -33,4 +32,8 @@ const fileNames = {
       'resource_types/specialized/public_health_and_research/public_health_and_research.dart',
   qualityReportingAndTesting:
       'resource_types/specialized/quality_reporting_and_testing/quality_reporting_and_testing.dart',
+  intRef: 'draft_types/draft_types.dart',
+  // genPurpose: 'general_types/general_types.dart',
+  // meta: 'metadata_types/metadata_types.dart',
+  // special: 'special_types/special_types.dart',
 };

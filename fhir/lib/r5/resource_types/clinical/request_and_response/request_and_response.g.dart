@@ -8,10 +8,9 @@ part of 'request_and_response.dart';
 
 _$_Communication _$$_CommunicationFromJson(Map<String, dynamic> json) =>
     _$_Communication(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.Communication) ??
-          R5ResourceType.Communication,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.Communication,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -46,7 +45,7 @@ _$_Communication _$$_CommunicationFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Canonical.fromJson(e))
           .toList(),
       instantiatesUri: (json['instantiatesUri'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
+          ?.map((e) => Uri.parse(e as String))
           .toList(),
       instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -91,13 +90,14 @@ _$_Communication _$$_CommunicationFromJson(Map<String, dynamic> json) =>
       encounter: json['encounter'] == null
           ? null
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
-      sent: json['sent'] == null ? null : FhirDateTime.fromJson(json['sent']),
+      sent:
+          json['sent'] == null ? null : DateTime.parse(json['sent'] as String),
       sentElement: json['_sent'] == null
           ? null
           : Element.fromJson(json['_sent'] as Map<String, dynamic>),
       received: json['received'] == null
           ? null
-          : FhirDateTime.fromJson(json['received']),
+          : DateTime.parse(json['received'] as String),
       receivedElement: json['_received'] == null
           ? null
           : Element.fromJson(json['_received'] as Map<String, dynamic>),
@@ -147,7 +147,7 @@ Map<String, dynamic> _$$_CommunicationToJson(_$_Communication instance) {
   writeNotNull('instantiatesCanonical',
       instance.instantiatesCanonical?.map((e) => e.toJson()).toList());
   writeNotNull('instantiatesUri',
-      instance.instantiatesUri?.map((e) => e.toJson()).toList());
+      instance.instantiatesUri?.map((e) => e.toString()).toList());
   writeNotNull('_instantiatesUri',
       instance.instantiatesUriElement?.map((e) => e.toJson()).toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
@@ -165,9 +165,9 @@ Map<String, dynamic> _$$_CommunicationToJson(_$_Communication instance) {
   writeNotNull('topic', instance.topic?.toJson());
   writeNotNull('about', instance.about?.map((e) => e.toJson()).toList());
   writeNotNull('encounter', instance.encounter?.toJson());
-  writeNotNull('sent', instance.sent?.toJson());
+  writeNotNull('sent', instance.sent?.toIso8601String());
   writeNotNull('_sent', instance.sentElement?.toJson());
-  writeNotNull('received', instance.received?.toJson());
+  writeNotNull('received', instance.received?.toIso8601String());
   writeNotNull('_received', instance.receivedElement?.toJson());
   writeNotNull(
       'recipient', instance.recipient?.map((e) => e.toJson()).toList());
@@ -379,10 +379,9 @@ Map<String, dynamic> _$$_CommunicationPayloadToJson(
 _$_CommunicationRequest _$$_CommunicationRequestFromJson(
         Map<String, dynamic> json) =>
     _$_CommunicationRequest(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.CommunicationRequest) ??
-          R5ResourceType.CommunicationRequest,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.CommunicationRequest,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -467,7 +466,7 @@ _$_CommunicationRequest _$$_CommunicationRequestFromJson(
           .toList(),
       occurrenceDateTime: json['occurrenceDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['occurrenceDateTime']),
+          : DateTime.parse(json['occurrenceDateTime'] as String),
       occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
           ? null
           : Element.fromJson(
@@ -477,7 +476,7 @@ _$_CommunicationRequest _$$_CommunicationRequestFromJson(
           : Period.fromJson(json['occurrencePeriod'] as Map<String, dynamic>),
       authoredOn: json['authoredOn'] == null
           ? null
-          : FhirDateTime.fromJson(json['authoredOn']),
+          : DateTime.parse(json['authoredOn'] as String),
       authoredOnElement: json['_authoredOn'] == null
           ? null
           : Element.fromJson(json['_authoredOn'] as Map<String, dynamic>),
@@ -543,11 +542,12 @@ Map<String, dynamic> _$$_CommunicationRequestToJson(
   writeNotNull('about', instance.about?.map((e) => e.toJson()).toList());
   writeNotNull('encounter', instance.encounter?.toJson());
   writeNotNull('payload', instance.payload?.map((e) => e.toJson()).toList());
-  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
+  writeNotNull(
+      'occurrenceDateTime', instance.occurrenceDateTime?.toIso8601String());
   writeNotNull(
       '_occurrenceDateTime', instance.occurrenceDateTimeElement?.toJson());
   writeNotNull('occurrencePeriod', instance.occurrencePeriod?.toJson());
-  writeNotNull('authoredOn', instance.authoredOn?.toJson());
+  writeNotNull('authoredOn', instance.authoredOn?.toIso8601String());
   writeNotNull('_authoredOn', instance.authoredOnElement?.toJson());
   writeNotNull('requester', instance.requester?.toJson());
   writeNotNull(
@@ -607,10 +607,9 @@ Map<String, dynamic> _$$_CommunicationRequestPayloadToJson(
 
 _$_DeviceRequest _$$_DeviceRequestFromJson(Map<String, dynamic> json) =>
     _$_DeviceRequest(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.DeviceRequest) ??
-          R5ResourceType.DeviceRequest,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.DeviceRequest,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -645,7 +644,7 @@ _$_DeviceRequest _$$_DeviceRequestFromJson(Map<String, dynamic> json) =>
           ?.map((e) => Canonical.fromJson(e))
           .toList(),
       instantiatesUri: (json['instantiatesUri'] as List<dynamic>?)
-          ?.map((e) => FhirUri.fromJson(e))
+          ?.map((e) => Uri.parse(e as String))
           .toList(),
       instantiatesUriElement: (json['_instantiatesUri'] as List<dynamic>?)
           ?.map((e) => Element.fromJson(e as Map<String, dynamic>))
@@ -679,9 +678,7 @@ _$_DeviceRequest _$$_DeviceRequestFromJson(Map<String, dynamic> json) =>
       doNotPerformElement: json['_doNotPerform'] == null
           ? null
           : Element.fromJson(json['_doNotPerform'] as Map<String, dynamic>),
-      code: json['code'] == null
-          ? null
-          : CodeableReference.fromJson(json['code'] as Map<String, dynamic>),
+      code: CodeableReference.fromJson(json['code'] as Map<String, dynamic>),
       quantity:
           json['quantity'] == null ? null : Integer.fromJson(json['quantity']),
       quantityElement: json['_quantity'] == null
@@ -697,7 +694,7 @@ _$_DeviceRequest _$$_DeviceRequestFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
       occurrenceDateTime: json['occurrenceDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['occurrenceDateTime']),
+          : DateTime.parse(json['occurrenceDateTime'] as String),
       occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
           ? null
           : Element.fromJson(
@@ -710,7 +707,7 @@ _$_DeviceRequest _$$_DeviceRequestFromJson(Map<String, dynamic> json) =>
           : Timing.fromJson(json['occurrenceTiming'] as Map<String, dynamic>),
       authoredOn: json['authoredOn'] == null
           ? null
-          : FhirDateTime.fromJson(json['authoredOn']),
+          : DateTime.parse(json['authoredOn'] as String),
       authoredOnElement: json['_authoredOn'] == null
           ? null
           : Element.fromJson(json['_authoredOn'] as Map<String, dynamic>),
@@ -770,7 +767,7 @@ Map<String, dynamic> _$$_DeviceRequestToJson(_$_DeviceRequest instance) {
   writeNotNull('instantiatesCanonical',
       instance.instantiatesCanonical?.map((e) => e.toJson()).toList());
   writeNotNull('instantiatesUri',
-      instance.instantiatesUri?.map((e) => e.toJson()).toList());
+      instance.instantiatesUri?.map((e) => e.toString()).toList());
   writeNotNull('_instantiatesUri',
       instance.instantiatesUriElement?.map((e) => e.toJson()).toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
@@ -785,19 +782,20 @@ Map<String, dynamic> _$$_DeviceRequestToJson(_$_DeviceRequest instance) {
   writeNotNull('_priority', instance.priorityElement?.toJson());
   writeNotNull('doNotPerform', instance.doNotPerform?.toJson());
   writeNotNull('_doNotPerform', instance.doNotPerformElement?.toJson());
-  writeNotNull('code', instance.code?.toJson());
+  val['code'] = instance.code.toJson();
   writeNotNull('quantity', instance.quantity?.toJson());
   writeNotNull('_quantity', instance.quantityElement?.toJson());
   writeNotNull(
       'parameter', instance.parameter?.map((e) => e.toJson()).toList());
   val['subject'] = instance.subject.toJson();
   writeNotNull('encounter', instance.encounter?.toJson());
-  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
+  writeNotNull(
+      'occurrenceDateTime', instance.occurrenceDateTime?.toIso8601String());
   writeNotNull(
       '_occurrenceDateTime', instance.occurrenceDateTimeElement?.toJson());
   writeNotNull('occurrencePeriod', instance.occurrencePeriod?.toJson());
   writeNotNull('occurrenceTiming', instance.occurrenceTiming?.toJson());
-  writeNotNull('authoredOn', instance.authoredOn?.toJson());
+  writeNotNull('authoredOn', instance.authoredOn?.toIso8601String());
   writeNotNull('_authoredOn', instance.authoredOnElement?.toJson());
   writeNotNull('requester', instance.requester?.toJson());
   writeNotNull('performerType', instance.performerType?.toJson());
@@ -870,10 +868,9 @@ Map<String, dynamic> _$$_DeviceRequestParameterToJson(
 
 _$_DeviceUsage _$$_DeviceUsageFromJson(Map<String, dynamic> json) =>
     _$_DeviceUsage(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.DeviceUsage) ??
-          R5ResourceType.DeviceUsage,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.DeviceUsage,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -907,15 +904,14 @@ _$_DeviceUsage _$$_DeviceUsageFromJson(Map<String, dynamic> json) =>
       basedOn: (json['basedOn'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
-      status: $enumDecodeNullable(_$DeviceUsageStatusEnumMap, json['status'],
-          unknownValue: DeviceUsageStatus.unknown),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
       category: (json['category'] as List<dynamic>?)
           ?.map((e) => CodeableConcept.fromJson(e as Map<String, dynamic>))
           .toList(),
-      subject: Reference.fromJson(json['subject'] as Map<String, dynamic>),
+      patient: Reference.fromJson(json['patient'] as Map<String, dynamic>),
       derivedFrom: (json['derivedFrom'] as List<dynamic>?)
           ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -930,13 +926,13 @@ _$_DeviceUsage _$$_DeviceUsageFromJson(Map<String, dynamic> json) =>
           : Period.fromJson(json['timingPeriod'] as Map<String, dynamic>),
       timingDateTime: json['timingDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['timingDateTime']),
+          : DateTime.parse(json['timingDateTime'] as String),
       timingDateTimeElement: json['_timingDateTime'] == null
           ? null
           : Element.fromJson(json['_timingDateTime'] as Map<String, dynamic>),
       dateAsserted: json['dateAsserted'] == null
           ? null
-          : FhirDateTime.fromJson(json['dateAsserted']),
+          : DateTime.parse(json['dateAsserted'] as String),
       dateAssertedElement: json['_dateAsserted'] == null
           ? null
           : Element.fromJson(json['_dateAsserted'] as Map<String, dynamic>),
@@ -951,9 +947,8 @@ _$_DeviceUsage _$$_DeviceUsageFromJson(Map<String, dynamic> json) =>
           ? null
           : Reference.fromJson(
               json['informationSource'] as Map<String, dynamic>),
-      device: json['device'] == null
-          ? null
-          : CodeableReference.fromJson(json['device'] as Map<String, dynamic>),
+      device:
+          CodeableReference.fromJson(json['device'] as Map<String, dynamic>),
       reason: (json['reason'] as List<dynamic>?)
           ?.map((e) => CodeableReference.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -993,46 +988,35 @@ Map<String, dynamic> _$$_DeviceUsageToJson(_$_DeviceUsage instance) {
   writeNotNull(
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$DeviceUsageStatusEnumMap[instance.status]);
+  writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('category', instance.category?.map((e) => e.toJson()).toList());
-  val['subject'] = instance.subject.toJson();
+  val['patient'] = instance.patient.toJson();
   writeNotNull(
       'derivedFrom', instance.derivedFrom?.map((e) => e.toJson()).toList());
   writeNotNull('context', instance.context?.toJson());
   writeNotNull('timingTiming', instance.timingTiming?.toJson());
   writeNotNull('timingPeriod', instance.timingPeriod?.toJson());
-  writeNotNull('timingDateTime', instance.timingDateTime?.toJson());
+  writeNotNull('timingDateTime', instance.timingDateTime?.toIso8601String());
   writeNotNull('_timingDateTime', instance.timingDateTimeElement?.toJson());
-  writeNotNull('dateAsserted', instance.dateAsserted?.toJson());
+  writeNotNull('dateAsserted', instance.dateAsserted?.toIso8601String());
   writeNotNull('_dateAsserted', instance.dateAssertedElement?.toJson());
   writeNotNull('usageStatus', instance.usageStatus?.toJson());
   writeNotNull(
       'usageReason', instance.usageReason?.map((e) => e.toJson()).toList());
   writeNotNull('informationSource', instance.informationSource?.toJson());
-  writeNotNull('device', instance.device?.toJson());
+  val['device'] = instance.device.toJson();
   writeNotNull('reason', instance.reason?.map((e) => e.toJson()).toList());
   writeNotNull('bodySite', instance.bodySite?.toJson());
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
   return val;
 }
 
-const _$DeviceUsageStatusEnumMap = {
-  DeviceUsageStatus.active: 'active',
-  DeviceUsageStatus.completed: 'completed',
-  DeviceUsageStatus.entered_in_error: 'entered-in-error',
-  DeviceUsageStatus.intended: 'intended',
-  DeviceUsageStatus.stopped: 'stopped',
-  DeviceUsageStatus.on_hold: 'on-hold',
-  DeviceUsageStatus.unknown: 'unknown',
-};
-
 _$_GuidanceResponse _$$_GuidanceResponseFromJson(Map<String, dynamic> json) =>
     _$_GuidanceResponse(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.GuidanceResponse) ??
-          R5ResourceType.GuidanceResponse,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.GuidanceResponse,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1095,7 +1079,7 @@ _$_GuidanceResponse _$$_GuidanceResponseFromJson(Map<String, dynamic> json) =>
           : Reference.fromJson(json['encounter'] as Map<String, dynamic>),
       occurrenceDateTime: json['occurrenceDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['occurrenceDateTime']),
+          : DateTime.parse(json['occurrenceDateTime'] as String),
       occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
           ? null
           : Element.fromJson(
@@ -1161,7 +1145,8 @@ Map<String, dynamic> _$$_GuidanceResponseToJson(_$_GuidanceResponse instance) {
   writeNotNull('_status', instance.statusElement?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('encounter', instance.encounter?.toJson());
-  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
+  writeNotNull(
+      'occurrenceDateTime', instance.occurrenceDateTime?.toIso8601String());
   writeNotNull(
       '_occurrenceDateTime', instance.occurrenceDateTimeElement?.toJson());
   writeNotNull('performer', instance.performer?.toJson());
@@ -1176,12 +1161,248 @@ Map<String, dynamic> _$$_GuidanceResponseToJson(_$_GuidanceResponse instance) {
   return val;
 }
 
+_$_InventoryReport _$$_InventoryReportFromJson(Map<String, dynamic> json) =>
+    _$_InventoryReport(
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.InventoryReport,
+      id: json['id'] == null ? null : Id.fromJson(json['id']),
+      meta: json['meta'] == null
+          ? null
+          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
+      implicitRules: json['implicitRules'] == null
+          ? null
+          : FhirUri.fromJson(json['implicitRules']),
+      implicitRulesElement: json['_implicitRules'] == null
+          ? null
+          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
+      language:
+          json['language'] == null ? null : Code.fromJson(json['language']),
+      languageElement: json['_language'] == null
+          ? null
+          : Element.fromJson(json['_language'] as Map<String, dynamic>),
+      text: json['text'] == null
+          ? null
+          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
+      contained: (json['contained'] as List<dynamic>?)
+          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      identifier: (json['identifier'] as List<dynamic>?)
+          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      status: json['status'] == null ? null : Code.fromJson(json['status']),
+      statusElement: json['_status'] == null
+          ? null
+          : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      countType:
+          json['countType'] == null ? null : Code.fromJson(json['countType']),
+      countTypeElement: json['_countType'] == null
+          ? null
+          : Element.fromJson(json['_countType'] as Map<String, dynamic>),
+      operationType: json['operationType'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['operationType'] as Map<String, dynamic>),
+      operationTypeReason: json['operationTypeReason'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['operationTypeReason'] as Map<String, dynamic>),
+      reportedDateTime: json['reportedDateTime'] == null
+          ? null
+          : DateTime.parse(json['reportedDateTime'] as String),
+      reportedDateTimeElement: json['_reportedDateTime'] == null
+          ? null
+          : Element.fromJson(json['_reportedDateTime'] as Map<String, dynamic>),
+      reporter: json['reporter'] == null
+          ? null
+          : Reference.fromJson(json['reporter'] as Map<String, dynamic>),
+      reportingPeriod: json['reportingPeriod'] == null
+          ? null
+          : Period.fromJson(json['reportingPeriod'] as Map<String, dynamic>),
+      inventoryListing: (json['inventoryListing'] as List<dynamic>?)
+          ?.map((e) => InventoryReportInventoryListing.fromJson(
+              e as Map<String, dynamic>))
+          .toList(),
+      note: json['note'] == null
+          ? null
+          : Annotation.fromJson(json['note'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_InventoryReportToJson(_$_InventoryReport instance) {
+  final val = <String, dynamic>{
+    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
+  };
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id?.toJson());
+  writeNotNull('meta', instance.meta?.toJson());
+  writeNotNull('implicitRules', instance.implicitRules?.toJson());
+  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
+  writeNotNull('language', instance.language?.toJson());
+  writeNotNull('_language', instance.languageElement?.toJson());
+  writeNotNull('text', instance.text?.toJson());
+  writeNotNull(
+      'contained', instance.contained?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull(
+      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
+  writeNotNull('status', instance.status?.toJson());
+  writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('countType', instance.countType?.toJson());
+  writeNotNull('_countType', instance.countTypeElement?.toJson());
+  writeNotNull('operationType', instance.operationType?.toJson());
+  writeNotNull('operationTypeReason', instance.operationTypeReason?.toJson());
+  writeNotNull(
+      'reportedDateTime', instance.reportedDateTime?.toIso8601String());
+  writeNotNull('_reportedDateTime', instance.reportedDateTimeElement?.toJson());
+  writeNotNull('reporter', instance.reporter?.toJson());
+  writeNotNull('reportingPeriod', instance.reportingPeriod?.toJson());
+  writeNotNull('inventoryListing',
+      instance.inventoryListing?.map((e) => e.toJson()).toList());
+  writeNotNull('note', instance.note?.toJson());
+  return val;
+}
+
+_$_InventoryReportInventoryListing _$$_InventoryReportInventoryListingFromJson(
+        Map<String, dynamic> json) =>
+    _$_InventoryReportInventoryListing(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      location: json['location'] == null
+          ? null
+          : Reference.fromJson(json['location'] as Map<String, dynamic>),
+      itemStatus: json['itemStatus'] == null
+          ? null
+          : CodeableConcept.fromJson(
+              json['itemStatus'] as Map<String, dynamic>),
+      countingDateTime: json['countingDateTime'] == null
+          ? null
+          : DateTime.parse(json['countingDateTime'] as String),
+      countingDateTimeElement: json['_countingDateTime'] == null
+          ? null
+          : Element.fromJson(json['_countingDateTime'] as Map<String, dynamic>),
+      items: (json['items'] as List<dynamic>?)
+          ?.map((e) => InventoryReportItems.fromJson(e as Map<String, dynamic>))
+          .toList(),
+    );
+
+Map<String, dynamic> _$$_InventoryReportInventoryListingToJson(
+    _$_InventoryReportInventoryListing instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('location', instance.location?.toJson());
+  writeNotNull('itemStatus', instance.itemStatus?.toJson());
+  writeNotNull(
+      'countingDateTime', instance.countingDateTime?.toIso8601String());
+  writeNotNull('_countingDateTime', instance.countingDateTimeElement?.toJson());
+  writeNotNull('items', instance.items?.map((e) => e.toJson()).toList());
+  return val;
+}
+
+_$_InventoryReportItems _$$_InventoryReportItemsFromJson(
+        Map<String, dynamic> json) =>
+    _$_InventoryReportItems(
+      id: json['id'] as String?,
+      extension_: (json['extension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
+          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      category: json['category'] == null
+          ? null
+          : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
+      quantity: Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
+      item: CodeableReference.fromJson(json['item'] as Map<String, dynamic>),
+      lot: json['lot'] as String?,
+      lotElement: json['_lot'] == null
+          ? null
+          : Element.fromJson(json['_lot'] as Map<String, dynamic>),
+      serial: json['serial'] as String?,
+      serialElement: json['_serial'] == null
+          ? null
+          : Element.fromJson(json['_serial'] as Map<String, dynamic>),
+      expiry: json['expiry'] == null
+          ? null
+          : DateTime.parse(json['expiry'] as String),
+      expiryElement: json['_expiry'] == null
+          ? null
+          : Element.fromJson(json['_expiry'] as Map<String, dynamic>),
+      manufacturingDate: json['manufacturingDate'] == null
+          ? null
+          : DateTime.parse(json['manufacturingDate'] as String),
+      manufacturingDateElement: json['_manufacturingDate'] == null
+          ? null
+          : Element.fromJson(
+              json['_manufacturingDate'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$$_InventoryReportItemsToJson(
+    _$_InventoryReportItems instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull(
+      'extension', instance.extension_?.map((e) => e.toJson()).toList());
+  writeNotNull('modifierExtension',
+      instance.modifierExtension?.map((e) => e.toJson()).toList());
+  writeNotNull('category', instance.category?.toJson());
+  val['quantity'] = instance.quantity.toJson();
+  val['item'] = instance.item.toJson();
+  writeNotNull('lot', instance.lot);
+  writeNotNull('_lot', instance.lotElement?.toJson());
+  writeNotNull('serial', instance.serial);
+  writeNotNull('_serial', instance.serialElement?.toJson());
+  writeNotNull('expiry', instance.expiry?.toIso8601String());
+  writeNotNull('_expiry', instance.expiryElement?.toJson());
+  writeNotNull(
+      'manufacturingDate', instance.manufacturingDate?.toIso8601String());
+  writeNotNull(
+      '_manufacturingDate', instance.manufacturingDateElement?.toJson());
+  return val;
+}
+
 _$_SupplyDelivery _$$_SupplyDeliveryFromJson(Map<String, dynamic> json) =>
     _$_SupplyDelivery(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.SupplyDelivery) ??
-          R5ResourceType.SupplyDelivery,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.SupplyDelivery,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1234,7 +1455,7 @@ _$_SupplyDelivery _$$_SupplyDeliveryFromJson(Map<String, dynamic> json) =>
               json['suppliedItem'] as Map<String, dynamic>),
       occurrenceDateTime: json['occurrenceDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['occurrenceDateTime']),
+          : DateTime.parse(json['occurrenceDateTime'] as String),
       occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
           ? null
           : Element.fromJson(
@@ -1289,7 +1510,8 @@ Map<String, dynamic> _$$_SupplyDeliveryToJson(_$_SupplyDelivery instance) {
   writeNotNull('patient', instance.patient?.toJson());
   writeNotNull('type', instance.type?.toJson());
   writeNotNull('suppliedItem', instance.suppliedItem?.toJson());
-  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
+  writeNotNull(
+      'occurrenceDateTime', instance.occurrenceDateTime?.toIso8601String());
   writeNotNull(
       '_occurrenceDateTime', instance.occurrenceDateTimeElement?.toJson());
   writeNotNull('occurrencePeriod', instance.occurrencePeriod?.toJson());
@@ -1345,10 +1567,9 @@ Map<String, dynamic> _$$_SupplyDeliverySuppliedItemToJson(
 
 _$_SupplyRequest _$$_SupplyRequestFromJson(Map<String, dynamic> json) =>
     _$_SupplyRequest(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.SupplyRequest) ??
-          R5ResourceType.SupplyRequest,
+      resourceType:
+          $enumDecodeNullable(_$R5ResourceTypeEnumMap, json['resourceType']) ??
+              R5ResourceType.SupplyRequest,
       id: json['id'] == null ? null : Id.fromJson(json['id']),
       meta: json['meta'] == null
           ? null
@@ -1383,6 +1604,9 @@ _$_SupplyRequest _$$_SupplyRequestFromJson(Map<String, dynamic> json) =>
       statusElement: json['_status'] == null
           ? null
           : Element.fromJson(json['_status'] as Map<String, dynamic>),
+      basedOn: (json['basedOn'] as List<dynamic>?)
+          ?.map((e) => Reference.fromJson(e as Map<String, dynamic>))
+          .toList(),
       category: json['category'] == null
           ? null
           : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
@@ -1391,9 +1615,7 @@ _$_SupplyRequest _$$_SupplyRequestFromJson(Map<String, dynamic> json) =>
       priorityElement: json['_priority'] == null
           ? null
           : Element.fromJson(json['_priority'] as Map<String, dynamic>),
-      item: json['item'] == null
-          ? null
-          : CodeableReference.fromJson(json['item'] as Map<String, dynamic>),
+      item: CodeableReference.fromJson(json['item'] as Map<String, dynamic>),
       quantity: Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
       parameter: (json['parameter'] as List<dynamic>?)
           ?.map(
@@ -1401,7 +1623,7 @@ _$_SupplyRequest _$$_SupplyRequestFromJson(Map<String, dynamic> json) =>
           .toList(),
       occurrenceDateTime: json['occurrenceDateTime'] == null
           ? null
-          : FhirDateTime.fromJson(json['occurrenceDateTime']),
+          : DateTime.parse(json['occurrenceDateTime'] as String),
       occurrenceDateTimeElement: json['_occurrenceDateTime'] == null
           ? null
           : Element.fromJson(
@@ -1414,7 +1636,7 @@ _$_SupplyRequest _$$_SupplyRequestFromJson(Map<String, dynamic> json) =>
           : Timing.fromJson(json['occurrenceTiming'] as Map<String, dynamic>),
       authoredOn: json['authoredOn'] == null
           ? null
-          : FhirDateTime.fromJson(json['authoredOn']),
+          : DateTime.parse(json['authoredOn'] as String),
       authoredOnElement: json['_authoredOn'] == null
           ? null
           : Element.fromJson(json['_authoredOn'] as Map<String, dynamic>),
@@ -1463,19 +1685,21 @@ Map<String, dynamic> _$$_SupplyRequestToJson(_$_SupplyRequest instance) {
       'identifier', instance.identifier?.map((e) => e.toJson()).toList());
   writeNotNull('status', instance.status?.toJson());
   writeNotNull('_status', instance.statusElement?.toJson());
+  writeNotNull('basedOn', instance.basedOn?.map((e) => e.toJson()).toList());
   writeNotNull('category', instance.category?.toJson());
   writeNotNull('priority', instance.priority?.toJson());
   writeNotNull('_priority', instance.priorityElement?.toJson());
-  writeNotNull('item', instance.item?.toJson());
+  val['item'] = instance.item.toJson();
   val['quantity'] = instance.quantity.toJson();
   writeNotNull(
       'parameter', instance.parameter?.map((e) => e.toJson()).toList());
-  writeNotNull('occurrenceDateTime', instance.occurrenceDateTime?.toJson());
+  writeNotNull(
+      'occurrenceDateTime', instance.occurrenceDateTime?.toIso8601String());
   writeNotNull(
       '_occurrenceDateTime', instance.occurrenceDateTimeElement?.toJson());
   writeNotNull('occurrencePeriod', instance.occurrencePeriod?.toJson());
   writeNotNull('occurrenceTiming', instance.occurrenceTiming?.toJson());
-  writeNotNull('authoredOn', instance.authoredOn?.toJson());
+  writeNotNull('authoredOn', instance.authoredOn?.toIso8601String());
   writeNotNull('_authoredOn', instance.authoredOnElement?.toJson());
   writeNotNull('requester', instance.requester?.toJson());
   writeNotNull('supplier', instance.supplier?.map((e) => e.toJson()).toList());
@@ -1537,261 +1761,5 @@ Map<String, dynamic> _$$_SupplyRequestParameterToJson(
   writeNotNull('valueRange', instance.valueRange?.toJson());
   writeNotNull('valueBoolean', instance.valueBoolean?.toJson());
   writeNotNull('_valueBoolean', instance.valueBooleanElement?.toJson());
-  return val;
-}
-
-_$_InventoryReport _$$_InventoryReportFromJson(Map<String, dynamic> json) =>
-    _$_InventoryReport(
-      resourceType: $enumDecodeNullable(
-              _$R5ResourceTypeEnumMap, json['resourceType'],
-              unknownValue: R5ResourceType.InventoryReport) ??
-          R5ResourceType.InventoryReport,
-      id: json['id'] == null ? null : Id.fromJson(json['id']),
-      meta: json['meta'] == null
-          ? null
-          : Meta.fromJson(json['meta'] as Map<String, dynamic>),
-      implicitRules: json['implicitRules'] == null
-          ? null
-          : FhirUri.fromJson(json['implicitRules']),
-      implicitRulesElement: json['_implicitRules'] == null
-          ? null
-          : Element.fromJson(json['_implicitRules'] as Map<String, dynamic>),
-      language:
-          json['language'] == null ? null : Code.fromJson(json['language']),
-      languageElement: json['_language'] == null
-          ? null
-          : Element.fromJson(json['_language'] as Map<String, dynamic>),
-      text: json['text'] == null
-          ? null
-          : Narrative.fromJson(json['text'] as Map<String, dynamic>),
-      contained: (json['contained'] as List<dynamic>?)
-          ?.map((e) => Resource.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      identifier: (json['identifier'] as List<dynamic>?)
-          ?.map((e) => Identifier.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      status: $enumDecodeNullable(
-          _$InventoryReportStatusEnumMap, json['status'],
-          unknownValue: InventoryReportStatus.unknown),
-      statusElement: json['_status'] == null
-          ? null
-          : Element.fromJson(json['_status'] as Map<String, dynamic>),
-      countType: $enumDecodeNullable(
-          _$InventoryReportCountyTypeEnumMap, json['countType'],
-          unknownValue: InventoryReportCountyType.unknown),
-      countTypeElement: json['_countType'] == null
-          ? null
-          : Element.fromJson(json['_countType'] as Map<String, dynamic>),
-      operationType: json['operationType'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['operationType'] as Map<String, dynamic>),
-      operationTypeReason: json['operationTypeReason'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['operationTypeReason'] as Map<String, dynamic>),
-      reportedDateTime: json['reportedDateTime'] == null
-          ? null
-          : FhirDateTime.fromJson(json['reportedDateTime']),
-      reportedDateTimeElement: json['_reportedDateTime'] == null
-          ? null
-          : Element.fromJson(json['_reportedDateTime'] as Map<String, dynamic>),
-      reporter: json['reporter'] == null
-          ? null
-          : Reference.fromJson(json['reporter'] as Map<String, dynamic>),
-      reportingPeriod: json['reportingPeriod'] == null
-          ? null
-          : Period.fromJson(json['reportingPeriod'] as Map<String, dynamic>),
-      inventoryListing: (json['inventoryListing'] as List<dynamic>?)
-          ?.map((e) => InventoryReportInventoryListing.fromJson(
-              e as Map<String, dynamic>))
-          .toList(),
-      note: json['note'] == null
-          ? null
-          : Annotation.fromJson(json['note'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$_InventoryReportToJson(_$_InventoryReport instance) {
-  final val = <String, dynamic>{
-    'resourceType': _$R5ResourceTypeEnumMap[instance.resourceType],
-  };
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id?.toJson());
-  writeNotNull('meta', instance.meta?.toJson());
-  writeNotNull('implicitRules', instance.implicitRules?.toJson());
-  writeNotNull('_implicitRules', instance.implicitRulesElement?.toJson());
-  writeNotNull('language', instance.language?.toJson());
-  writeNotNull('_language', instance.languageElement?.toJson());
-  writeNotNull('text', instance.text?.toJson());
-  writeNotNull(
-      'contained', instance.contained?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull(
-      'identifier', instance.identifier?.map((e) => e.toJson()).toList());
-  writeNotNull('status', _$InventoryReportStatusEnumMap[instance.status]);
-  writeNotNull('_status', instance.statusElement?.toJson());
-  writeNotNull(
-      'countType', _$InventoryReportCountyTypeEnumMap[instance.countType]);
-  writeNotNull('_countType', instance.countTypeElement?.toJson());
-  writeNotNull('operationType', instance.operationType?.toJson());
-  writeNotNull('operationTypeReason', instance.operationTypeReason?.toJson());
-  writeNotNull('reportedDateTime', instance.reportedDateTime?.toJson());
-  writeNotNull('_reportedDateTime', instance.reportedDateTimeElement?.toJson());
-  writeNotNull('reporter', instance.reporter?.toJson());
-  writeNotNull('reportingPeriod', instance.reportingPeriod?.toJson());
-  writeNotNull('inventoryListing',
-      instance.inventoryListing?.map((e) => e.toJson()).toList());
-  writeNotNull('note', instance.note?.toJson());
-  return val;
-}
-
-const _$InventoryReportStatusEnumMap = {
-  InventoryReportStatus.draft: 'draft',
-  InventoryReportStatus.requested: 'requested',
-  InventoryReportStatus.active: 'active',
-  InventoryReportStatus.entered_in_error: 'entered-in-error',
-  InventoryReportStatus.unknown: 'unknown',
-};
-
-const _$InventoryReportCountyTypeEnumMap = {
-  InventoryReportCountyType.snapshot: 'snapshot',
-  InventoryReportCountyType.difference: 'difference',
-  InventoryReportCountyType.unknown: 'unknown',
-};
-
-_$_InventoryReportInventoryListing _$$_InventoryReportInventoryListingFromJson(
-        Map<String, dynamic> json) =>
-    _$_InventoryReportInventoryListing(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      location: json['location'] == null
-          ? null
-          : Reference.fromJson(json['location'] as Map<String, dynamic>),
-      itemStatus: json['itemStatus'] == null
-          ? null
-          : CodeableConcept.fromJson(
-              json['itemStatus'] as Map<String, dynamic>),
-      countingDateTime: json['countingDateTime'] == null
-          ? null
-          : FhirDateTime.fromJson(json['countingDateTime']),
-      countingDateTimeElement: json['_countingDateTime'] == null
-          ? null
-          : Element.fromJson(json['_countingDateTime'] as Map<String, dynamic>),
-      items: (json['items'] as List<dynamic>?)
-          ?.map((e) => InventoryReportItems.fromJson(e as Map<String, dynamic>))
-          .toList(),
-    );
-
-Map<String, dynamic> _$$_InventoryReportInventoryListingToJson(
-    _$_InventoryReportInventoryListing instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('location', instance.location?.toJson());
-  writeNotNull('itemStatus', instance.itemStatus?.toJson());
-  writeNotNull('countingDateTime', instance.countingDateTime?.toJson());
-  writeNotNull('_countingDateTime', instance.countingDateTimeElement?.toJson());
-  writeNotNull('items', instance.items?.map((e) => e.toJson()).toList());
-  return val;
-}
-
-_$_InventoryReportItems _$$_InventoryReportItemsFromJson(
-        Map<String, dynamic> json) =>
-    _$_InventoryReportItems(
-      id: json['id'] as String?,
-      extension_: (json['extension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      modifierExtension: (json['modifierExtension'] as List<dynamic>?)
-          ?.map((e) => FhirExtension.fromJson(e as Map<String, dynamic>))
-          .toList(),
-      category: json['category'] == null
-          ? null
-          : CodeableConcept.fromJson(json['category'] as Map<String, dynamic>),
-      quantity: json['quantity'] == null
-          ? null
-          : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
-      item: json['item'] == null
-          ? null
-          : CodeableReference.fromJson(json['item'] as Map<String, dynamic>),
-      lot: json['lot'] as String?,
-      lotElement: json['_lot'] == null
-          ? null
-          : Element.fromJson(json['_lot'] as Map<String, dynamic>),
-      serial: json['serial'] as String?,
-      serialElement: json['_serial'] == null
-          ? null
-          : Element.fromJson(json['_serial'] as Map<String, dynamic>),
-      expiry:
-          json['expiry'] == null ? null : FhirDateTime.fromJson(json['expiry']),
-      expiryElement: json['_expiry'] == null
-          ? null
-          : Element.fromJson(json['_expiry'] as Map<String, dynamic>),
-      manufacturingDate: json['manufacturingDate'] == null
-          ? null
-          : FhirDateTime.fromJson(json['manufacturingDate']),
-      manufacturingDateElement: json['_manufacturingDate'] == null
-          ? null
-          : Element.fromJson(
-              json['_manufacturingDate'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$$_InventoryReportItemsToJson(
-    _$_InventoryReportItems instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull(
-      'extension', instance.extension_?.map((e) => e.toJson()).toList());
-  writeNotNull('modifierExtension',
-      instance.modifierExtension?.map((e) => e.toJson()).toList());
-  writeNotNull('category', instance.category?.toJson());
-  writeNotNull('quantity', instance.quantity?.toJson());
-  writeNotNull('item', instance.item?.toJson());
-  writeNotNull('lot', instance.lot);
-  writeNotNull('_lot', instance.lotElement?.toJson());
-  writeNotNull('serial', instance.serial);
-  writeNotNull('_serial', instance.serialElement?.toJson());
-  writeNotNull('expiry', instance.expiry?.toJson());
-  writeNotNull('_expiry', instance.expiryElement?.toJson());
-  writeNotNull('manufacturingDate', instance.manufacturingDate?.toJson());
-  writeNotNull(
-      '_manufacturingDate', instance.manufacturingDateElement?.toJson());
   return val;
 }
