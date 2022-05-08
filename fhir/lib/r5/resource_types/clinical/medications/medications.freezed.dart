@@ -17052,7 +17052,7 @@ mixin _$MedicationKnowledgeMaxDispense {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   Quantity get quantity => throw _privateConstructorUsedError;
-  Duration? get period => throw _privateConstructorUsedError;
+  FhirDuration? get period => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -17071,9 +17071,10 @@ abstract class $MedicationKnowledgeMaxDispenseCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Quantity quantity,
-      Duration? period});
+      FhirDuration? period});
 
   $QuantityCopyWith<$Res> get quantity;
+  $FhirDurationCopyWith<$Res>? get period;
 }
 
 /// @nodoc
@@ -17113,7 +17114,7 @@ class _$MedicationKnowledgeMaxDispenseCopyWithImpl<$Res>
       period: period == freezed
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
     ));
   }
 
@@ -17121,6 +17122,17 @@ class _$MedicationKnowledgeMaxDispenseCopyWithImpl<$Res>
   $QuantityCopyWith<$Res> get quantity {
     return $QuantityCopyWith<$Res>(_value.quantity, (value) {
       return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get period {
+    if (_value.period == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.period!, (value) {
+      return _then(_value.copyWith(period: value));
     });
   }
 }
@@ -17138,10 +17150,12 @@ abstract class _$$_MedicationKnowledgeMaxDispenseCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Quantity quantity,
-      Duration? period});
+      FhirDuration? period});
 
   @override
   $QuantityCopyWith<$Res> get quantity;
+  @override
+  $FhirDurationCopyWith<$Res>? get period;
 }
 
 /// @nodoc
@@ -17185,7 +17199,7 @@ class __$$_MedicationKnowledgeMaxDispenseCopyWithImpl<$Res>
       period: period == freezed
           ? _value.period
           : period // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
     ));
   }
 }
@@ -17232,7 +17246,7 @@ class _$_MedicationKnowledgeMaxDispense
   @override
   final Quantity quantity;
   @override
-  final Duration? period;
+  final FhirDuration? period;
 
   @override
   String toString() {
@@ -17282,7 +17296,7 @@ abstract class _MedicationKnowledgeMaxDispense
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       required final Quantity quantity,
-      final Duration? period}) = _$_MedicationKnowledgeMaxDispense;
+      final FhirDuration? period}) = _$_MedicationKnowledgeMaxDispense;
   _MedicationKnowledgeMaxDispense._() : super._();
 
   factory _MedicationKnowledgeMaxDispense.fromJson(Map<String, dynamic> json) =
@@ -17299,7 +17313,7 @@ abstract class _MedicationKnowledgeMaxDispense
   @override
   Quantity get quantity => throw _privateConstructorUsedError;
   @override
-  Duration? get period => throw _privateConstructorUsedError;
+  FhirDuration? get period => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_MedicationKnowledgeMaxDispenseCopyWith<_$_MedicationKnowledgeMaxDispense>
@@ -18205,7 +18219,7 @@ mixin _$MedicationKnowledgeStorageGuideline {
   @JsonKey(name: '_reference')
   Element? get referenceElement => throw _privateConstructorUsedError;
   List<Annotation>? get note => throw _privateConstructorUsedError;
-  Duration? get stabilityDuration => throw _privateConstructorUsedError;
+  FhirDuration? get stabilityDuration => throw _privateConstructorUsedError;
   List<MedicationKnowledgeEnvironmentalSetting>? get environmentalSetting =>
       throw _privateConstructorUsedError;
 
@@ -18229,10 +18243,11 @@ abstract class $MedicationKnowledgeStorageGuidelineCopyWith<$Res> {
       FhirUri? reference,
       @JsonKey(name: '_reference') Element? referenceElement,
       List<Annotation>? note,
-      Duration? stabilityDuration,
+      FhirDuration? stabilityDuration,
       List<MedicationKnowledgeEnvironmentalSetting>? environmentalSetting});
 
   $ElementCopyWith<$Res>? get referenceElement;
+  $FhirDurationCopyWith<$Res>? get stabilityDuration;
 }
 
 /// @nodoc
@@ -18283,7 +18298,7 @@ class _$MedicationKnowledgeStorageGuidelineCopyWithImpl<$Res>
       stabilityDuration: stabilityDuration == freezed
           ? _value.stabilityDuration
           : stabilityDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       environmentalSetting: environmentalSetting == freezed
           ? _value.environmentalSetting
           : environmentalSetting // ignore: cast_nullable_to_non_nullable
@@ -18299,6 +18314,17 @@ class _$MedicationKnowledgeStorageGuidelineCopyWithImpl<$Res>
 
     return $ElementCopyWith<$Res>(_value.referenceElement!, (value) {
       return _then(_value.copyWith(referenceElement: value));
+    });
+  }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get stabilityDuration {
+    if (_value.stabilityDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.stabilityDuration!, (value) {
+      return _then(_value.copyWith(stabilityDuration: value));
     });
   }
 }
@@ -18318,11 +18344,13 @@ abstract class _$$_MedicationKnowledgeStorageGuidelineCopyWith<$Res>
       FhirUri? reference,
       @JsonKey(name: '_reference') Element? referenceElement,
       List<Annotation>? note,
-      Duration? stabilityDuration,
+      FhirDuration? stabilityDuration,
       List<MedicationKnowledgeEnvironmentalSetting>? environmentalSetting});
 
   @override
   $ElementCopyWith<$Res>? get referenceElement;
+  @override
+  $FhirDurationCopyWith<$Res>? get stabilityDuration;
 }
 
 /// @nodoc
@@ -18378,7 +18406,7 @@ class __$$_MedicationKnowledgeStorageGuidelineCopyWithImpl<$Res>
       stabilityDuration: stabilityDuration == freezed
           ? _value.stabilityDuration
           : stabilityDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       environmentalSetting: environmentalSetting == freezed
           ? _value._environmentalSetting
           : environmentalSetting // ignore: cast_nullable_to_non_nullable
@@ -18447,7 +18475,7 @@ class _$_MedicationKnowledgeStorageGuideline
   }
 
   @override
-  final Duration? stabilityDuration;
+  final FhirDuration? stabilityDuration;
   final List<MedicationKnowledgeEnvironmentalSetting>? _environmentalSetting;
   @override
   List<MedicationKnowledgeEnvironmentalSetting>? get environmentalSetting {
@@ -18517,7 +18545,7 @@ abstract class _MedicationKnowledgeStorageGuideline
       final FhirUri? reference,
       @JsonKey(name: '_reference') final Element? referenceElement,
       final List<Annotation>? note,
-      final Duration? stabilityDuration,
+      final FhirDuration? stabilityDuration,
       final List<MedicationKnowledgeEnvironmentalSetting>?
           environmentalSetting}) = _$_MedicationKnowledgeStorageGuideline;
   _MedicationKnowledgeStorageGuideline._() : super._();
@@ -18542,7 +18570,7 @@ abstract class _MedicationKnowledgeStorageGuideline
   @override
   List<Annotation>? get note => throw _privateConstructorUsedError;
   @override
-  Duration? get stabilityDuration => throw _privateConstructorUsedError;
+  FhirDuration? get stabilityDuration => throw _privateConstructorUsedError;
   @override
   List<MedicationKnowledgeEnvironmentalSetting>? get environmentalSetting =>
       throw _privateConstructorUsedError;
@@ -21418,14 +21446,15 @@ mixin _$MedicationRequestDispenseRequest {
       throw _privateConstructorUsedError;
   MedicationRequestInitialFill? get initialFill =>
       throw _privateConstructorUsedError;
-  Duration? get dispenseInterval => throw _privateConstructorUsedError;
+  FhirDuration? get dispenseInterval => throw _privateConstructorUsedError;
   Period? get validityPeriod => throw _privateConstructorUsedError;
   UnsignedInt? get numberOfRepeatsAllowed => throw _privateConstructorUsedError;
   @JsonKey(name: '_numberOfRepeatsAllowed')
   Element? get numberOfRepeatsAllowedElement =>
       throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
-  Duration? get expectedSupplyDuration => throw _privateConstructorUsedError;
+  FhirDuration? get expectedSupplyDuration =>
+      throw _privateConstructorUsedError;
   Reference? get dispenser => throw _privateConstructorUsedError;
   List<Annotation>? get dispenserInstruction =>
       throw _privateConstructorUsedError;
@@ -21450,21 +21479,23 @@ abstract class $MedicationRequestDispenseRequestCopyWith<$Res> {
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       MedicationRequestInitialFill? initialFill,
-      Duration? dispenseInterval,
+      FhirDuration? dispenseInterval,
       Period? validityPeriod,
       UnsignedInt? numberOfRepeatsAllowed,
       @JsonKey(name: '_numberOfRepeatsAllowed')
           Element? numberOfRepeatsAllowedElement,
       Quantity? quantity,
-      Duration? expectedSupplyDuration,
+      FhirDuration? expectedSupplyDuration,
       Reference? dispenser,
       List<Annotation>? dispenserInstruction,
       CodeableConcept? doseAdministrationAid});
 
   $MedicationRequestInitialFillCopyWith<$Res>? get initialFill;
+  $FhirDurationCopyWith<$Res>? get dispenseInterval;
   $PeriodCopyWith<$Res>? get validityPeriod;
   $ElementCopyWith<$Res>? get numberOfRepeatsAllowedElement;
   $QuantityCopyWith<$Res>? get quantity;
+  $FhirDurationCopyWith<$Res>? get expectedSupplyDuration;
   $ReferenceCopyWith<$Res>? get dispenser;
   $CodeableConceptCopyWith<$Res>? get doseAdministrationAid;
 }
@@ -21514,7 +21545,7 @@ class _$MedicationRequestDispenseRequestCopyWithImpl<$Res>
       dispenseInterval: dispenseInterval == freezed
           ? _value.dispenseInterval
           : dispenseInterval // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       validityPeriod: validityPeriod == freezed
           ? _value.validityPeriod
           : validityPeriod // ignore: cast_nullable_to_non_nullable
@@ -21534,7 +21565,7 @@ class _$MedicationRequestDispenseRequestCopyWithImpl<$Res>
       expectedSupplyDuration: expectedSupplyDuration == freezed
           ? _value.expectedSupplyDuration
           : expectedSupplyDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       dispenser: dispenser == freezed
           ? _value.dispenser
           : dispenser // ignore: cast_nullable_to_non_nullable
@@ -21559,6 +21590,17 @@ class _$MedicationRequestDispenseRequestCopyWithImpl<$Res>
     return $MedicationRequestInitialFillCopyWith<$Res>(_value.initialFill!,
         (value) {
       return _then(_value.copyWith(initialFill: value));
+    });
+  }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get dispenseInterval {
+    if (_value.dispenseInterval == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.dispenseInterval!, (value) {
+      return _then(_value.copyWith(dispenseInterval: value));
     });
   }
 
@@ -21593,6 +21635,17 @@ class _$MedicationRequestDispenseRequestCopyWithImpl<$Res>
 
     return $QuantityCopyWith<$Res>(_value.quantity!, (value) {
       return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get expectedSupplyDuration {
+    if (_value.expectedSupplyDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.expectedSupplyDuration!, (value) {
+      return _then(_value.copyWith(expectedSupplyDuration: value));
     });
   }
 
@@ -21634,13 +21687,13 @@ abstract class _$$_MedicationRequestDispenseRequestCopyWith<$Res>
           List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       MedicationRequestInitialFill? initialFill,
-      Duration? dispenseInterval,
+      FhirDuration? dispenseInterval,
       Period? validityPeriod,
       UnsignedInt? numberOfRepeatsAllowed,
       @JsonKey(name: '_numberOfRepeatsAllowed')
           Element? numberOfRepeatsAllowedElement,
       Quantity? quantity,
-      Duration? expectedSupplyDuration,
+      FhirDuration? expectedSupplyDuration,
       Reference? dispenser,
       List<Annotation>? dispenserInstruction,
       CodeableConcept? doseAdministrationAid});
@@ -21648,11 +21701,15 @@ abstract class _$$_MedicationRequestDispenseRequestCopyWith<$Res>
   @override
   $MedicationRequestInitialFillCopyWith<$Res>? get initialFill;
   @override
+  $FhirDurationCopyWith<$Res>? get dispenseInterval;
+  @override
   $PeriodCopyWith<$Res>? get validityPeriod;
   @override
   $ElementCopyWith<$Res>? get numberOfRepeatsAllowedElement;
   @override
   $QuantityCopyWith<$Res>? get quantity;
+  @override
+  $FhirDurationCopyWith<$Res>? get expectedSupplyDuration;
   @override
   $ReferenceCopyWith<$Res>? get dispenser;
   @override
@@ -21708,7 +21765,7 @@ class __$$_MedicationRequestDispenseRequestCopyWithImpl<$Res>
       dispenseInterval: dispenseInterval == freezed
           ? _value.dispenseInterval
           : dispenseInterval // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       validityPeriod: validityPeriod == freezed
           ? _value.validityPeriod
           : validityPeriod // ignore: cast_nullable_to_non_nullable
@@ -21728,7 +21785,7 @@ class __$$_MedicationRequestDispenseRequestCopyWithImpl<$Res>
       expectedSupplyDuration: expectedSupplyDuration == freezed
           ? _value.expectedSupplyDuration
           : expectedSupplyDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       dispenser: dispenser == freezed
           ? _value.dispenser
           : dispenser // ignore: cast_nullable_to_non_nullable
@@ -21798,7 +21855,7 @@ class _$_MedicationRequestDispenseRequest
   @override
   final MedicationRequestInitialFill? initialFill;
   @override
-  final Duration? dispenseInterval;
+  final FhirDuration? dispenseInterval;
   @override
   final Period? validityPeriod;
   @override
@@ -21809,7 +21866,7 @@ class _$_MedicationRequestDispenseRequest
   @override
   final Quantity? quantity;
   @override
-  final Duration? expectedSupplyDuration;
+  final FhirDuration? expectedSupplyDuration;
   @override
   final Reference? dispenser;
   final List<Annotation>? _dispenserInstruction;
@@ -21899,13 +21956,13 @@ abstract class _MedicationRequestDispenseRequest
               final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final MedicationRequestInitialFill? initialFill,
-          final Duration? dispenseInterval,
+          final FhirDuration? dispenseInterval,
           final Period? validityPeriod,
           final UnsignedInt? numberOfRepeatsAllowed,
           @JsonKey(name: '_numberOfRepeatsAllowed')
               final Element? numberOfRepeatsAllowedElement,
           final Quantity? quantity,
-          final Duration? expectedSupplyDuration,
+          final FhirDuration? expectedSupplyDuration,
           final Reference? dispenser,
           final List<Annotation>? dispenserInstruction,
           final CodeableConcept? doseAdministrationAid}) =
@@ -21927,7 +21984,7 @@ abstract class _MedicationRequestDispenseRequest
   MedicationRequestInitialFill? get initialFill =>
       throw _privateConstructorUsedError;
   @override
-  Duration? get dispenseInterval => throw _privateConstructorUsedError;
+  FhirDuration? get dispenseInterval => throw _privateConstructorUsedError;
   @override
   Period? get validityPeriod => throw _privateConstructorUsedError;
   @override
@@ -21939,7 +21996,8 @@ abstract class _MedicationRequestDispenseRequest
   @override
   Quantity? get quantity => throw _privateConstructorUsedError;
   @override
-  Duration? get expectedSupplyDuration => throw _privateConstructorUsedError;
+  FhirDuration? get expectedSupplyDuration =>
+      throw _privateConstructorUsedError;
   @override
   Reference? get dispenser => throw _privateConstructorUsedError;
   @override
@@ -21968,7 +22026,7 @@ mixin _$MedicationRequestInitialFill {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
-  Duration? get duration => throw _privateConstructorUsedError;
+  FhirDuration? get duration => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -21987,9 +22045,10 @@ abstract class $MedicationRequestInitialFillCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Quantity? quantity,
-      Duration? duration});
+      FhirDuration? duration});
 
   $QuantityCopyWith<$Res>? get quantity;
+  $FhirDurationCopyWith<$Res>? get duration;
 }
 
 /// @nodoc
@@ -22029,7 +22088,7 @@ class _$MedicationRequestInitialFillCopyWithImpl<$Res>
       duration: duration == freezed
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
     ));
   }
 
@@ -22041,6 +22100,17 @@ class _$MedicationRequestInitialFillCopyWithImpl<$Res>
 
     return $QuantityCopyWith<$Res>(_value.quantity!, (value) {
       return _then(_value.copyWith(quantity: value));
+    });
+  }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get duration {
+    if (_value.duration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.duration!, (value) {
+      return _then(_value.copyWith(duration: value));
     });
   }
 }
@@ -22058,10 +22128,12 @@ abstract class _$$_MedicationRequestInitialFillCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       Quantity? quantity,
-      Duration? duration});
+      FhirDuration? duration});
 
   @override
   $QuantityCopyWith<$Res>? get quantity;
+  @override
+  $FhirDurationCopyWith<$Res>? get duration;
 }
 
 /// @nodoc
@@ -22105,7 +22177,7 @@ class __$$_MedicationRequestInitialFillCopyWithImpl<$Res>
       duration: duration == freezed
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
     ));
   }
 }
@@ -22150,7 +22222,7 @@ class _$_MedicationRequestInitialFill extends _MedicationRequestInitialFill {
   @override
   final Quantity? quantity;
   @override
-  final Duration? duration;
+  final FhirDuration? duration;
 
   @override
   String toString() {
@@ -22200,7 +22272,7 @@ abstract class _MedicationRequestInitialFill
       @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
       final List<FhirExtension>? modifierExtension,
       final Quantity? quantity,
-      final Duration? duration}) = _$_MedicationRequestInitialFill;
+      final FhirDuration? duration}) = _$_MedicationRequestInitialFill;
   _MedicationRequestInitialFill._() : super._();
 
   factory _MedicationRequestInitialFill.fromJson(Map<String, dynamic> json) =
@@ -22217,7 +22289,7 @@ abstract class _MedicationRequestInitialFill
   @override
   Quantity? get quantity => throw _privateConstructorUsedError;
   @override
-  Duration? get duration => throw _privateConstructorUsedError;
+  FhirDuration? get duration => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_MedicationRequestInitialFillCopyWith<_$_MedicationRequestInitialFill>

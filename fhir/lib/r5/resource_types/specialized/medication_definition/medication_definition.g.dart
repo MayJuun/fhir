@@ -371,7 +371,8 @@ _$_AdministrableProductDefinitionRouteOfAdministration
                   json['maxDosePerTreatmentPeriod'] as Map<String, dynamic>),
           maxTreatmentPeriod: json['maxTreatmentPeriod'] == null
               ? null
-              : Duration(microseconds: json['maxTreatmentPeriod'] as int),
+              : FhirDuration.fromJson(
+                  json['maxTreatmentPeriod'] as Map<String, dynamic>),
           targetSpecies: (json['targetSpecies'] as List<dynamic>?)
               ?.map((e) => AdministrableProductDefinitionTargetSpecies.fromJson(
                   e as Map<String, dynamic>))
@@ -400,8 +401,7 @@ Map<String, dynamic>
   writeNotNull('maxDosePerDay', instance.maxDosePerDay?.toJson());
   writeNotNull('maxDosePerTreatmentPeriod',
       instance.maxDosePerTreatmentPeriod?.toJson());
-  writeNotNull(
-      'maxTreatmentPeriod', instance.maxTreatmentPeriod?.inMicroseconds);
+  writeNotNull('maxTreatmentPeriod', instance.maxTreatmentPeriod?.toJson());
   writeNotNull(
       'targetSpecies', instance.targetSpecies?.map((e) => e.toJson()).toList());
   return val;

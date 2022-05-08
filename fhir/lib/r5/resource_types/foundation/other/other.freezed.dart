@@ -8265,7 +8265,7 @@ mixin _$ParametersParameter {
   ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
   Count? get valueCount => throw _privateConstructorUsedError;
   Distance? get valueDistance => throw _privateConstructorUsedError;
-  Duration? get valueDuration => throw _privateConstructorUsedError;
+  FhirDuration? get valueDuration => throw _privateConstructorUsedError;
   HumanName? get valueHumanName => throw _privateConstructorUsedError;
   Identifier? get valueIdentifier => throw _privateConstructorUsedError;
   Money? get valueMoney => throw _privateConstructorUsedError;
@@ -8363,7 +8363,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
       ContactPoint? valueContactPoint,
       Count? valueCount,
       Distance? valueDistance,
-      Duration? valueDuration,
+      FhirDuration? valueDuration,
       HumanName? valueHumanName,
       Identifier? valueIdentifier,
       Money? valueMoney,
@@ -8420,6 +8420,7 @@ abstract class $ParametersParameterCopyWith<$Res> {
   $ContactPointCopyWith<$Res>? get valueContactPoint;
   $CountCopyWith<$Res>? get valueCount;
   $DistanceCopyWith<$Res>? get valueDistance;
+  $FhirDurationCopyWith<$Res>? get valueDuration;
   $HumanNameCopyWith<$Res>? get valueHumanName;
   $IdentifierCopyWith<$Res>? get valueIdentifier;
   $MoneyCopyWith<$Res>? get valueMoney;
@@ -8760,7 +8761,7 @@ class _$ParametersParameterCopyWithImpl<$Res>
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
           : valueDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName // ignore: cast_nullable_to_non_nullable
@@ -9204,6 +9205,17 @@ class _$ParametersParameterCopyWithImpl<$Res>
   }
 
   @override
+  $FhirDurationCopyWith<$Res>? get valueDuration {
+    if (_value.valueDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.valueDuration!, (value) {
+      return _then(_value.copyWith(valueDuration: value));
+    });
+  }
+
+  @override
   $HumanNameCopyWith<$Res>? get valueHumanName {
     if (_value.valueHumanName == null) {
       return null;
@@ -9513,7 +9525,7 @@ abstract class _$$_ParametersParameterCopyWith<$Res>
       ContactPoint? valueContactPoint,
       Count? valueCount,
       Distance? valueDistance,
-      Duration? valueDuration,
+      FhirDuration? valueDuration,
       HumanName? valueHumanName,
       Identifier? valueIdentifier,
       Money? valueMoney,
@@ -9601,6 +9613,8 @@ abstract class _$$_ParametersParameterCopyWith<$Res>
   $CountCopyWith<$Res>? get valueCount;
   @override
   $DistanceCopyWith<$Res>? get valueDistance;
+  @override
+  $FhirDurationCopyWith<$Res>? get valueDuration;
   @override
   $HumanNameCopyWith<$Res>? get valueHumanName;
   @override
@@ -9965,7 +9979,7 @@ class __$$_ParametersParameterCopyWithImpl<$Res>
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
           : valueDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName // ignore: cast_nullable_to_non_nullable
@@ -10305,7 +10319,7 @@ class _$_ParametersParameter extends _ParametersParameter {
   @override
   final Distance? valueDistance;
   @override
-  final Duration? valueDuration;
+  final FhirDuration? valueDuration;
   @override
   final HumanName? valueHumanName;
   @override
@@ -10674,7 +10688,7 @@ abstract class _ParametersParameter extends ParametersParameter {
       final ContactPoint? valueContactPoint,
       final Count? valueCount,
       final Distance? valueDistance,
-      final Duration? valueDuration,
+      final FhirDuration? valueDuration,
       final HumanName? valueHumanName,
       final Identifier? valueIdentifier,
       final Money? valueMoney,
@@ -10841,7 +10855,7 @@ abstract class _ParametersParameter extends ParametersParameter {
   @override
   Distance? get valueDistance => throw _privateConstructorUsedError;
   @override
-  Duration? get valueDuration => throw _privateConstructorUsedError;
+  FhirDuration? get valueDuration => throw _privateConstructorUsedError;
   @override
   HumanName? get valueHumanName => throw _privateConstructorUsedError;
   @override

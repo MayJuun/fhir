@@ -117,7 +117,7 @@ mixin _$ActivityDefinition {
   Timing? get timingTiming => throw _privateConstructorUsedError;
   Age? get timingAge => throw _privateConstructorUsedError;
   Range? get timingRange => throw _privateConstructorUsedError;
-  Duration? get timingDuration => throw _privateConstructorUsedError;
+  FhirDuration? get timingDuration => throw _privateConstructorUsedError;
   CodeableReference? get location => throw _privateConstructorUsedError;
   List<ActivityDefinitionParticipant>? get participant =>
       throw _privateConstructorUsedError;
@@ -219,7 +219,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
       Timing? timingTiming,
       Age? timingAge,
       Range? timingRange,
-      Duration? timingDuration,
+      FhirDuration? timingDuration,
       CodeableReference? location,
       List<ActivityDefinitionParticipant>? participant,
       Reference? productReference,
@@ -264,6 +264,7 @@ abstract class $ActivityDefinitionCopyWith<$Res> {
   $TimingCopyWith<$Res>? get timingTiming;
   $AgeCopyWith<$Res>? get timingAge;
   $RangeCopyWith<$Res>? get timingRange;
+  $FhirDurationCopyWith<$Res>? get timingDuration;
   $CodeableReferenceCopyWith<$Res>? get location;
   $ReferenceCopyWith<$Res>? get productReference;
   $CodeableConceptCopyWith<$Res>? get productCodeableConcept;
@@ -649,7 +650,7 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
       timingDuration: timingDuration == freezed
           ? _value.timingDuration
           : timingDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       location: location == freezed
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
@@ -1044,6 +1045,17 @@ class _$ActivityDefinitionCopyWithImpl<$Res>
   }
 
   @override
+  $FhirDurationCopyWith<$Res>? get timingDuration {
+    if (_value.timingDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.timingDuration!, (value) {
+      return _then(_value.copyWith(timingDuration: value));
+    });
+  }
+
+  @override
   $CodeableReferenceCopyWith<$Res>? get location {
     if (_value.location == null) {
       return null;
@@ -1167,7 +1179,7 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
       Timing? timingTiming,
       Age? timingAge,
       Range? timingRange,
-      Duration? timingDuration,
+      FhirDuration? timingDuration,
       CodeableReference? location,
       List<ActivityDefinitionParticipant>? participant,
       Reference? productReference,
@@ -1243,6 +1255,8 @@ abstract class _$$_ActivityDefinitionCopyWith<$Res>
   $AgeCopyWith<$Res>? get timingAge;
   @override
   $RangeCopyWith<$Res>? get timingRange;
+  @override
+  $FhirDurationCopyWith<$Res>? get timingDuration;
   @override
   $CodeableReferenceCopyWith<$Res>? get location;
   @override
@@ -1634,7 +1648,7 @@ class __$$_ActivityDefinitionCopyWithImpl<$Res>
       timingDuration: timingDuration == freezed
           ? _value.timingDuration
           : timingDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       location: location == freezed
           ? _value.location
           : location // ignore: cast_nullable_to_non_nullable
@@ -2064,7 +2078,7 @@ class _$_ActivityDefinition extends _ActivityDefinition {
   @override
   final Range? timingRange;
   @override
-  final Duration? timingDuration;
+  final FhirDuration? timingDuration;
   @override
   final CodeableReference? location;
   final List<ActivityDefinitionParticipant>? _participant;
@@ -2474,7 +2488,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
           final Timing? timingTiming,
           final Age? timingAge,
           final Range? timingRange,
-          final Duration? timingDuration,
+          final FhirDuration? timingDuration,
           final CodeableReference? location,
           final List<ActivityDefinitionParticipant>? participant,
           final Reference? productReference,
@@ -2661,7 +2675,7 @@ abstract class _ActivityDefinition extends ActivityDefinition {
   @override
   Range? get timingRange => throw _privateConstructorUsedError;
   @override
-  Duration? get timingDuration => throw _privateConstructorUsedError;
+  FhirDuration? get timingDuration => throw _privateConstructorUsedError;
   @override
   CodeableReference? get location => throw _privateConstructorUsedError;
   @override
@@ -22390,7 +22404,7 @@ mixin _$PlanDefinitionTarget {
   @JsonKey(name: '_detailInteger')
   Element? get detailIntegerElement => throw _privateConstructorUsedError;
   Ratio? get detailRatio => throw _privateConstructorUsedError;
-  Duration? get due => throw _privateConstructorUsedError;
+  FhirDuration? get due => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -22418,7 +22432,7 @@ abstract class $PlanDefinitionTargetCopyWith<$Res> {
       Integer? detailInteger,
       @JsonKey(name: '_detailInteger') Element? detailIntegerElement,
       Ratio? detailRatio,
-      Duration? due});
+      FhirDuration? due});
 
   $CodeableConceptCopyWith<$Res>? get measure;
   $QuantityCopyWith<$Res>? get detailQuantity;
@@ -22428,6 +22442,7 @@ abstract class $PlanDefinitionTargetCopyWith<$Res> {
   $ElementCopyWith<$Res>? get detailBooleanElement;
   $ElementCopyWith<$Res>? get detailIntegerElement;
   $RatioCopyWith<$Res>? get detailRatio;
+  $FhirDurationCopyWith<$Res>? get due;
 }
 
 /// @nodoc
@@ -22517,7 +22532,7 @@ class _$PlanDefinitionTargetCopyWithImpl<$Res>
       due: due == freezed
           ? _value.due
           : due // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
     ));
   }
 
@@ -22609,6 +22624,17 @@ class _$PlanDefinitionTargetCopyWithImpl<$Res>
       return _then(_value.copyWith(detailRatio: value));
     });
   }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get due {
+    if (_value.due == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.due!, (value) {
+      return _then(_value.copyWith(due: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -22633,7 +22659,7 @@ abstract class _$$_PlanDefinitionTargetCopyWith<$Res>
       Integer? detailInteger,
       @JsonKey(name: '_detailInteger') Element? detailIntegerElement,
       Ratio? detailRatio,
-      Duration? due});
+      FhirDuration? due});
 
   @override
   $CodeableConceptCopyWith<$Res>? get measure;
@@ -22651,6 +22677,8 @@ abstract class _$$_PlanDefinitionTargetCopyWith<$Res>
   $ElementCopyWith<$Res>? get detailIntegerElement;
   @override
   $RatioCopyWith<$Res>? get detailRatio;
+  @override
+  $FhirDurationCopyWith<$Res>? get due;
 }
 
 /// @nodoc
@@ -22742,7 +22770,7 @@ class __$$_PlanDefinitionTargetCopyWithImpl<$Res>
       due: due == freezed
           ? _value.due
           : due // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
     ));
   }
 }
@@ -22820,7 +22848,7 @@ class _$_PlanDefinitionTarget extends _PlanDefinitionTarget {
   @override
   final Ratio? detailRatio;
   @override
-  final Duration? due;
+  final FhirDuration? due;
 
   @override
   String toString() {
@@ -22909,7 +22937,7 @@ abstract class _PlanDefinitionTarget extends PlanDefinitionTarget {
       final Integer? detailInteger,
       @JsonKey(name: '_detailInteger') final Element? detailIntegerElement,
       final Ratio? detailRatio,
-      final Duration? due}) = _$_PlanDefinitionTarget;
+      final FhirDuration? due}) = _$_PlanDefinitionTarget;
   _PlanDefinitionTarget._() : super._();
 
   factory _PlanDefinitionTarget.fromJson(Map<String, dynamic> json) =
@@ -22950,7 +22978,7 @@ abstract class _PlanDefinitionTarget extends PlanDefinitionTarget {
   @override
   Ratio? get detailRatio => throw _privateConstructorUsedError;
   @override
-  Duration? get due => throw _privateConstructorUsedError;
+  FhirDuration? get due => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_PlanDefinitionTargetCopyWith<_$_PlanDefinitionTarget> get copyWith =>
@@ -23700,7 +23728,7 @@ mixin _$PlanDefinitionAction {
   List<PlanDefinitionRelatedAction>? get relatedAction =>
       throw _privateConstructorUsedError;
   Age? get timingAge => throw _privateConstructorUsedError;
-  Duration? get timingDuration => throw _privateConstructorUsedError;
+  FhirDuration? get timingDuration => throw _privateConstructorUsedError;
   Range? get timingRange => throw _privateConstructorUsedError;
   Timing? get timingTiming => throw _privateConstructorUsedError;
   CodeableReference? get location => throw _privateConstructorUsedError;
@@ -23784,7 +23812,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
       List<PlanDefinitionOutput>? output,
       List<PlanDefinitionRelatedAction>? relatedAction,
       Age? timingAge,
-      Duration? timingDuration,
+      FhirDuration? timingDuration,
       Range? timingRange,
       Timing? timingTiming,
       CodeableReference? location,
@@ -23826,6 +23854,7 @@ abstract class $PlanDefinitionActionCopyWith<$Res> {
   $ReferenceCopyWith<$Res>? get subjectReference;
   $ElementCopyWith<$Res>? get subjectCanonicalElement;
   $AgeCopyWith<$Res>? get timingAge;
+  $FhirDurationCopyWith<$Res>? get timingDuration;
   $RangeCopyWith<$Res>? get timingRange;
   $TimingCopyWith<$Res>? get timingTiming;
   $CodeableReferenceCopyWith<$Res>? get location;
@@ -24028,7 +24057,7 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
       timingDuration: timingDuration == freezed
           ? _value.timingDuration
           : timingDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       timingRange: timingRange == freezed
           ? _value.timingRange
           : timingRange // ignore: cast_nullable_to_non_nullable
@@ -24243,6 +24272,17 @@ class _$PlanDefinitionActionCopyWithImpl<$Res>
   }
 
   @override
+  $FhirDurationCopyWith<$Res>? get timingDuration {
+    if (_value.timingDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.timingDuration!, (value) {
+      return _then(_value.copyWith(timingDuration: value));
+    });
+  }
+
+  @override
   $RangeCopyWith<$Res>? get timingRange {
     if (_value.timingRange == null) {
       return null;
@@ -24411,7 +24451,7 @@ abstract class _$$_PlanDefinitionActionCopyWith<$Res>
       List<PlanDefinitionOutput>? output,
       List<PlanDefinitionRelatedAction>? relatedAction,
       Age? timingAge,
-      Duration? timingDuration,
+      FhirDuration? timingDuration,
       Range? timingRange,
       Timing? timingTiming,
       CodeableReference? location,
@@ -24464,6 +24504,8 @@ abstract class _$$_PlanDefinitionActionCopyWith<$Res>
   $ElementCopyWith<$Res>? get subjectCanonicalElement;
   @override
   $AgeCopyWith<$Res>? get timingAge;
+  @override
+  $FhirDurationCopyWith<$Res>? get timingDuration;
   @override
   $RangeCopyWith<$Res>? get timingRange;
   @override
@@ -24679,7 +24721,7 @@ class __$$_PlanDefinitionActionCopyWithImpl<$Res>
       timingDuration: timingDuration == freezed
           ? _value.timingDuration
           : timingDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       timingRange: timingRange == freezed
           ? _value.timingRange
           : timingRange // ignore: cast_nullable_to_non_nullable
@@ -24995,7 +25037,7 @@ class _$_PlanDefinitionAction extends _PlanDefinitionAction {
   @override
   final Age? timingAge;
   @override
-  final Duration? timingDuration;
+  final FhirDuration? timingDuration;
   @override
   final Range? timingRange;
   @override
@@ -25282,7 +25324,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
       final List<PlanDefinitionOutput>? output,
       final List<PlanDefinitionRelatedAction>? relatedAction,
       final Age? timingAge,
-      final Duration? timingDuration,
+      final FhirDuration? timingDuration,
       final Range? timingRange,
       final Timing? timingTiming,
       final CodeableReference? location,
@@ -25392,7 +25434,7 @@ abstract class _PlanDefinitionAction extends PlanDefinitionAction {
   @override
   Age? get timingAge => throw _privateConstructorUsedError;
   @override
-  Duration? get timingDuration => throw _privateConstructorUsedError;
+  FhirDuration? get timingDuration => throw _privateConstructorUsedError;
   @override
   Range? get timingRange => throw _privateConstructorUsedError;
   @override
@@ -26506,7 +26548,7 @@ mixin _$PlanDefinitionRelatedAction {
   Code? get relationship => throw _privateConstructorUsedError;
   @JsonKey(name: '_relationship')
   Element? get relationshipElement => throw _privateConstructorUsedError;
-  Duration? get offsetDuration => throw _privateConstructorUsedError;
+  FhirDuration? get offsetDuration => throw _privateConstructorUsedError;
   Range? get offsetRange => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -26529,11 +26571,12 @@ abstract class $PlanDefinitionRelatedActionCopyWith<$Res> {
       @JsonKey(name: '_targetId') Element? targetIdElement,
       Code? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
-      Duration? offsetDuration,
+      FhirDuration? offsetDuration,
       Range? offsetRange});
 
   $ElementCopyWith<$Res>? get targetIdElement;
   $ElementCopyWith<$Res>? get relationshipElement;
+  $FhirDurationCopyWith<$Res>? get offsetDuration;
   $RangeCopyWith<$Res>? get offsetRange;
 }
 
@@ -26590,7 +26633,7 @@ class _$PlanDefinitionRelatedActionCopyWithImpl<$Res>
       offsetDuration: offsetDuration == freezed
           ? _value.offsetDuration
           : offsetDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       offsetRange: offsetRange == freezed
           ? _value.offsetRange
           : offsetRange // ignore: cast_nullable_to_non_nullable
@@ -26617,6 +26660,17 @@ class _$PlanDefinitionRelatedActionCopyWithImpl<$Res>
 
     return $ElementCopyWith<$Res>(_value.relationshipElement!, (value) {
       return _then(_value.copyWith(relationshipElement: value));
+    });
+  }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get offsetDuration {
+    if (_value.offsetDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.offsetDuration!, (value) {
+      return _then(_value.copyWith(offsetDuration: value));
     });
   }
 
@@ -26648,13 +26702,15 @@ abstract class _$$_PlanDefinitionRelatedActionCopyWith<$Res>
       @JsonKey(name: '_targetId') Element? targetIdElement,
       Code? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
-      Duration? offsetDuration,
+      FhirDuration? offsetDuration,
       Range? offsetRange});
 
   @override
   $ElementCopyWith<$Res>? get targetIdElement;
   @override
   $ElementCopyWith<$Res>? get relationshipElement;
+  @override
+  $FhirDurationCopyWith<$Res>? get offsetDuration;
   @override
   $RangeCopyWith<$Res>? get offsetRange;
 }
@@ -26716,7 +26772,7 @@ class __$$_PlanDefinitionRelatedActionCopyWithImpl<$Res>
       offsetDuration: offsetDuration == freezed
           ? _value.offsetDuration
           : offsetDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       offsetRange: offsetRange == freezed
           ? _value.offsetRange
           : offsetRange // ignore: cast_nullable_to_non_nullable
@@ -26777,7 +26833,7 @@ class _$_PlanDefinitionRelatedAction extends _PlanDefinitionRelatedAction {
   @JsonKey(name: '_relationship')
   final Element? relationshipElement;
   @override
-  final Duration? offsetDuration;
+  final FhirDuration? offsetDuration;
   @override
   final Range? offsetRange;
 
@@ -26845,7 +26901,7 @@ abstract class _PlanDefinitionRelatedAction
       @JsonKey(name: '_targetId') final Element? targetIdElement,
       final Code? relationship,
       @JsonKey(name: '_relationship') final Element? relationshipElement,
-      final Duration? offsetDuration,
+      final FhirDuration? offsetDuration,
       final Range? offsetRange}) = _$_PlanDefinitionRelatedAction;
   _PlanDefinitionRelatedAction._() : super._();
 
@@ -26871,7 +26927,7 @@ abstract class _PlanDefinitionRelatedAction
   @JsonKey(name: '_relationship')
   Element? get relationshipElement => throw _privateConstructorUsedError;
   @override
-  Duration? get offsetDuration => throw _privateConstructorUsedError;
+  FhirDuration? get offsetDuration => throw _privateConstructorUsedError;
   @override
   Range? get offsetRange => throw _privateConstructorUsedError;
   @override
@@ -34492,7 +34548,7 @@ mixin _$SpecimenDefinitionTypeTested {
   String? get requirement => throw _privateConstructorUsedError;
   @JsonKey(name: '_requirement')
   Element? get requirementElement => throw _privateConstructorUsedError;
-  Duration? get retentionTime => throw _privateConstructorUsedError;
+  FhirDuration? get retentionTime => throw _privateConstructorUsedError;
   Boolean? get singleUse => throw _privateConstructorUsedError;
   @JsonKey(name: '_singleUse')
   Element? get singleUseElement => throw _privateConstructorUsedError;
@@ -34527,7 +34583,7 @@ abstract class $SpecimenDefinitionTypeTestedCopyWith<$Res> {
       SpecimenDefinitionContainer? container,
       String? requirement,
       @JsonKey(name: '_requirement') Element? requirementElement,
-      Duration? retentionTime,
+      FhirDuration? retentionTime,
       Boolean? singleUse,
       @JsonKey(name: '_singleUse') Element? singleUseElement,
       List<CodeableConcept>? rejectionCriterion,
@@ -34539,6 +34595,7 @@ abstract class $SpecimenDefinitionTypeTestedCopyWith<$Res> {
   $ElementCopyWith<$Res>? get preferenceElement;
   $SpecimenDefinitionContainerCopyWith<$Res>? get container;
   $ElementCopyWith<$Res>? get requirementElement;
+  $FhirDurationCopyWith<$Res>? get retentionTime;
   $ElementCopyWith<$Res>? get singleUseElement;
 }
 
@@ -34619,7 +34676,7 @@ class _$SpecimenDefinitionTypeTestedCopyWithImpl<$Res>
       retentionTime: retentionTime == freezed
           ? _value.retentionTime
           : retentionTime // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       singleUse: singleUse == freezed
           ? _value.singleUse
           : singleUse // ignore: cast_nullable_to_non_nullable
@@ -34700,6 +34757,17 @@ class _$SpecimenDefinitionTypeTestedCopyWithImpl<$Res>
   }
 
   @override
+  $FhirDurationCopyWith<$Res>? get retentionTime {
+    if (_value.retentionTime == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.retentionTime!, (value) {
+      return _then(_value.copyWith(retentionTime: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res>? get singleUseElement {
     if (_value.singleUseElement == null) {
       return null;
@@ -34731,7 +34799,7 @@ abstract class _$$_SpecimenDefinitionTypeTestedCopyWith<$Res>
       SpecimenDefinitionContainer? container,
       String? requirement,
       @JsonKey(name: '_requirement') Element? requirementElement,
-      Duration? retentionTime,
+      FhirDuration? retentionTime,
       Boolean? singleUse,
       @JsonKey(name: '_singleUse') Element? singleUseElement,
       List<CodeableConcept>? rejectionCriterion,
@@ -34748,6 +34816,8 @@ abstract class _$$_SpecimenDefinitionTypeTestedCopyWith<$Res>
   $SpecimenDefinitionContainerCopyWith<$Res>? get container;
   @override
   $ElementCopyWith<$Res>? get requirementElement;
+  @override
+  $FhirDurationCopyWith<$Res>? get retentionTime;
   @override
   $ElementCopyWith<$Res>? get singleUseElement;
 }
@@ -34833,7 +34903,7 @@ class __$$_SpecimenDefinitionTypeTestedCopyWithImpl<$Res>
       retentionTime: retentionTime == freezed
           ? _value.retentionTime
           : retentionTime // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       singleUse: singleUse == freezed
           ? _value.singleUse
           : singleUse // ignore: cast_nullable_to_non_nullable
@@ -34930,7 +35000,7 @@ class _$_SpecimenDefinitionTypeTested extends _SpecimenDefinitionTypeTested {
   @JsonKey(name: '_requirement')
   final Element? requirementElement;
   @override
-  final Duration? retentionTime;
+  final FhirDuration? retentionTime;
   @override
   final Boolean? singleUse;
   @override
@@ -35051,7 +35121,7 @@ abstract class _SpecimenDefinitionTypeTested
           final SpecimenDefinitionContainer? container,
           final String? requirement,
           @JsonKey(name: '_requirement') final Element? requirementElement,
-          final Duration? retentionTime,
+          final FhirDuration? retentionTime,
           final Boolean? singleUse,
           @JsonKey(name: '_singleUse') final Element? singleUseElement,
           final List<CodeableConcept>? rejectionCriterion,
@@ -35092,7 +35162,7 @@ abstract class _SpecimenDefinitionTypeTested
   @JsonKey(name: '_requirement')
   Element? get requirementElement => throw _privateConstructorUsedError;
   @override
-  Duration? get retentionTime => throw _privateConstructorUsedError;
+  FhirDuration? get retentionTime => throw _privateConstructorUsedError;
   @override
   Boolean? get singleUse => throw _privateConstructorUsedError;
   @override
@@ -36029,7 +36099,7 @@ mixin _$SpecimenDefinitionHandling {
   CodeableConcept? get temperatureQualifier =>
       throw _privateConstructorUsedError;
   Range? get temperatureRange => throw _privateConstructorUsedError;
-  Duration? get maxDuration => throw _privateConstructorUsedError;
+  FhirDuration? get maxDuration => throw _privateConstructorUsedError;
   String? get instruction => throw _privateConstructorUsedError;
   @JsonKey(name: '_instruction')
   Element? get instructionElement => throw _privateConstructorUsedError;
@@ -36051,12 +36121,13 @@ abstract class $SpecimenDefinitionHandlingCopyWith<$Res> {
       List<FhirExtension>? modifierExtension,
       CodeableConcept? temperatureQualifier,
       Range? temperatureRange,
-      Duration? maxDuration,
+      FhirDuration? maxDuration,
       String? instruction,
       @JsonKey(name: '_instruction') Element? instructionElement});
 
   $CodeableConceptCopyWith<$Res>? get temperatureQualifier;
   $RangeCopyWith<$Res>? get temperatureRange;
+  $FhirDurationCopyWith<$Res>? get maxDuration;
   $ElementCopyWith<$Res>? get instructionElement;
 }
 
@@ -36104,7 +36175,7 @@ class _$SpecimenDefinitionHandlingCopyWithImpl<$Res>
       maxDuration: maxDuration == freezed
           ? _value.maxDuration
           : maxDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       instruction: instruction == freezed
           ? _value.instruction
           : instruction // ignore: cast_nullable_to_non_nullable
@@ -36140,6 +36211,17 @@ class _$SpecimenDefinitionHandlingCopyWithImpl<$Res>
   }
 
   @override
+  $FhirDurationCopyWith<$Res>? get maxDuration {
+    if (_value.maxDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.maxDuration!, (value) {
+      return _then(_value.copyWith(maxDuration: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res>? get instructionElement {
     if (_value.instructionElement == null) {
       return null;
@@ -36165,7 +36247,7 @@ abstract class _$$_SpecimenDefinitionHandlingCopyWith<$Res>
       List<FhirExtension>? modifierExtension,
       CodeableConcept? temperatureQualifier,
       Range? temperatureRange,
-      Duration? maxDuration,
+      FhirDuration? maxDuration,
       String? instruction,
       @JsonKey(name: '_instruction') Element? instructionElement});
 
@@ -36173,6 +36255,8 @@ abstract class _$$_SpecimenDefinitionHandlingCopyWith<$Res>
   $CodeableConceptCopyWith<$Res>? get temperatureQualifier;
   @override
   $RangeCopyWith<$Res>? get temperatureRange;
+  @override
+  $FhirDurationCopyWith<$Res>? get maxDuration;
   @override
   $ElementCopyWith<$Res>? get instructionElement;
 }
@@ -36225,7 +36309,7 @@ class __$$_SpecimenDefinitionHandlingCopyWithImpl<$Res>
       maxDuration: maxDuration == freezed
           ? _value.maxDuration
           : maxDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       instruction: instruction == freezed
           ? _value.instruction
           : instruction // ignore: cast_nullable_to_non_nullable
@@ -36283,7 +36367,7 @@ class _$_SpecimenDefinitionHandling extends _SpecimenDefinitionHandling {
   @override
   final Range? temperatureRange;
   @override
-  final Duration? maxDuration;
+  final FhirDuration? maxDuration;
   @override
   final String? instruction;
   @override
@@ -36349,7 +36433,7 @@ abstract class _SpecimenDefinitionHandling extends SpecimenDefinitionHandling {
           final List<FhirExtension>? modifierExtension,
           final CodeableConcept? temperatureQualifier,
           final Range? temperatureRange,
-          final Duration? maxDuration,
+          final FhirDuration? maxDuration,
           final String? instruction,
           @JsonKey(name: '_instruction') final Element? instructionElement}) =
       _$_SpecimenDefinitionHandling;
@@ -36372,7 +36456,7 @@ abstract class _SpecimenDefinitionHandling extends SpecimenDefinitionHandling {
   @override
   Range? get temperatureRange => throw _privateConstructorUsedError;
   @override
-  Duration? get maxDuration => throw _privateConstructorUsedError;
+  FhirDuration? get maxDuration => throw _privateConstructorUsedError;
   @override
   String? get instruction => throw _privateConstructorUsedError;
   @override

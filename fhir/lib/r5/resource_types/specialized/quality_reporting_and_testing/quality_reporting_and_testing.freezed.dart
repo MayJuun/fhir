@@ -5727,7 +5727,7 @@ mixin _$MeasureReportGroup {
       throw _privateConstructorUsedError;
   Period? get measureScorePeriod => throw _privateConstructorUsedError;
   Range? get measureScoreRange => throw _privateConstructorUsedError;
-  Duration? get measureScoreDuration => throw _privateConstructorUsedError;
+  FhirDuration? get measureScoreDuration => throw _privateConstructorUsedError;
   List<MeasureReportStratifier>? get stratifier =>
       throw _privateConstructorUsedError;
 
@@ -5756,7 +5756,7 @@ abstract class $MeasureReportGroupCopyWith<$Res> {
       CodeableConcept? measureScoreCodeableConcept,
       Period? measureScorePeriod,
       Range? measureScoreRange,
-      Duration? measureScoreDuration,
+      FhirDuration? measureScoreDuration,
       List<MeasureReportStratifier>? stratifier});
 
   $CodeableConceptCopyWith<$Res>? get code;
@@ -5765,6 +5765,7 @@ abstract class $MeasureReportGroupCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res>? get measureScoreCodeableConcept;
   $PeriodCopyWith<$Res>? get measureScorePeriod;
   $RangeCopyWith<$Res>? get measureScoreRange;
+  $FhirDurationCopyWith<$Res>? get measureScoreDuration;
 }
 
 /// @nodoc
@@ -5840,7 +5841,7 @@ class _$MeasureReportGroupCopyWithImpl<$Res>
       measureScoreDuration: measureScoreDuration == freezed
           ? _value.measureScoreDuration
           : measureScoreDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       stratifier: stratifier == freezed
           ? _value.stratifier
           : stratifier // ignore: cast_nullable_to_non_nullable
@@ -5914,6 +5915,17 @@ class _$MeasureReportGroupCopyWithImpl<$Res>
       return _then(_value.copyWith(measureScoreRange: value));
     });
   }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get measureScoreDuration {
+    if (_value.measureScoreDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.measureScoreDuration!, (value) {
+      return _then(_value.copyWith(measureScoreDuration: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -5937,7 +5949,7 @@ abstract class _$$_MeasureReportGroupCopyWith<$Res>
       CodeableConcept? measureScoreCodeableConcept,
       Period? measureScorePeriod,
       Range? measureScoreRange,
-      Duration? measureScoreDuration,
+      FhirDuration? measureScoreDuration,
       List<MeasureReportStratifier>? stratifier});
 
   @override
@@ -5952,6 +5964,8 @@ abstract class _$$_MeasureReportGroupCopyWith<$Res>
   $PeriodCopyWith<$Res>? get measureScorePeriod;
   @override
   $RangeCopyWith<$Res>? get measureScoreRange;
+  @override
+  $FhirDurationCopyWith<$Res>? get measureScoreDuration;
 }
 
 /// @nodoc
@@ -6029,7 +6043,7 @@ class __$$_MeasureReportGroupCopyWithImpl<$Res>
       measureScoreDuration: measureScoreDuration == freezed
           ? _value.measureScoreDuration
           : measureScoreDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       stratifier: stratifier == freezed
           ? _value._stratifier
           : stratifier // ignore: cast_nullable_to_non_nullable
@@ -6110,7 +6124,7 @@ class _$_MeasureReportGroup extends _MeasureReportGroup {
   @override
   final Range? measureScoreRange;
   @override
-  final Duration? measureScoreDuration;
+  final FhirDuration? measureScoreDuration;
   final List<MeasureReportStratifier>? _stratifier;
   @override
   List<MeasureReportStratifier>? get stratifier {
@@ -6203,7 +6217,7 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
       final CodeableConcept? measureScoreCodeableConcept,
       final Period? measureScorePeriod,
       final Range? measureScoreRange,
-      final Duration? measureScoreDuration,
+      final FhirDuration? measureScoreDuration,
       final List<MeasureReportStratifier>? stratifier}) = _$_MeasureReportGroup;
   _MeasureReportGroup._() : super._();
 
@@ -6239,7 +6253,7 @@ abstract class _MeasureReportGroup extends MeasureReportGroup {
   @override
   Range? get measureScoreRange => throw _privateConstructorUsedError;
   @override
-  Duration? get measureScoreDuration => throw _privateConstructorUsedError;
+  FhirDuration? get measureScoreDuration => throw _privateConstructorUsedError;
   @override
   List<MeasureReportStratifier>? get stratifier =>
       throw _privateConstructorUsedError;
@@ -6887,7 +6901,7 @@ mixin _$MeasureReportStratum {
       throw _privateConstructorUsedError;
   Period? get measureScorePeriod => throw _privateConstructorUsedError;
   Range? get measureScoreRange => throw _privateConstructorUsedError;
-  Duration? get measureScoreDuration => throw _privateConstructorUsedError;
+  FhirDuration? get measureScoreDuration => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -6921,7 +6935,7 @@ abstract class $MeasureReportStratumCopyWith<$Res> {
       CodeableConcept? measureScoreCodeableConcept,
       Period? measureScorePeriod,
       Range? measureScoreRange,
-      Duration? measureScoreDuration});
+      FhirDuration? measureScoreDuration});
 
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
   $ElementCopyWith<$Res>? get valueBooleanElement;
@@ -6933,6 +6947,7 @@ abstract class $MeasureReportStratumCopyWith<$Res> {
   $CodeableConceptCopyWith<$Res>? get measureScoreCodeableConcept;
   $PeriodCopyWith<$Res>? get measureScorePeriod;
   $RangeCopyWith<$Res>? get measureScoreRange;
+  $FhirDurationCopyWith<$Res>? get measureScoreDuration;
 }
 
 /// @nodoc
@@ -7037,7 +7052,7 @@ class _$MeasureReportStratumCopyWithImpl<$Res>
       measureScoreDuration: measureScoreDuration == freezed
           ? _value.measureScoreDuration
           : measureScoreDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
     ));
   }
 
@@ -7152,6 +7167,17 @@ class _$MeasureReportStratumCopyWithImpl<$Res>
       return _then(_value.copyWith(measureScoreRange: value));
     });
   }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get measureScoreDuration {
+    if (_value.measureScoreDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.measureScoreDuration!, (value) {
+      return _then(_value.copyWith(measureScoreDuration: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -7182,7 +7208,7 @@ abstract class _$$_MeasureReportStratumCopyWith<$Res>
       CodeableConcept? measureScoreCodeableConcept,
       Period? measureScorePeriod,
       Range? measureScoreRange,
-      Duration? measureScoreDuration});
+      FhirDuration? measureScoreDuration});
 
   @override
   $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
@@ -7204,6 +7230,8 @@ abstract class _$$_MeasureReportStratumCopyWith<$Res>
   $PeriodCopyWith<$Res>? get measureScorePeriod;
   @override
   $RangeCopyWith<$Res>? get measureScoreRange;
+  @override
+  $FhirDurationCopyWith<$Res>? get measureScoreDuration;
 }
 
 /// @nodoc
@@ -7310,7 +7338,7 @@ class __$$_MeasureReportStratumCopyWithImpl<$Res>
       measureScoreDuration: measureScoreDuration == freezed
           ? _value.measureScoreDuration
           : measureScoreDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
     ));
   }
 }
@@ -7412,7 +7440,7 @@ class _$_MeasureReportStratum extends _MeasureReportStratum {
   @override
   final Range? measureScoreRange;
   @override
-  final Duration? measureScoreDuration;
+  final FhirDuration? measureScoreDuration;
 
   @override
   String toString() {
@@ -7520,7 +7548,7 @@ abstract class _MeasureReportStratum extends MeasureReportStratum {
       final CodeableConcept? measureScoreCodeableConcept,
       final Period? measureScorePeriod,
       final Range? measureScoreRange,
-      final Duration? measureScoreDuration}) = _$_MeasureReportStratum;
+      final FhirDuration? measureScoreDuration}) = _$_MeasureReportStratum;
   _MeasureReportStratum._() : super._();
 
   factory _MeasureReportStratum.fromJson(Map<String, dynamic> json) =
@@ -7570,7 +7598,7 @@ abstract class _MeasureReportStratum extends MeasureReportStratum {
   @override
   Range? get measureScoreRange => throw _privateConstructorUsedError;
   @override
-  Duration? get measureScoreDuration => throw _privateConstructorUsedError;
+  FhirDuration? get measureScoreDuration => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_MeasureReportStratumCopyWith<_$_MeasureReportStratum> get copyWith =>

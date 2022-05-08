@@ -107,7 +107,7 @@ class ProductShelfLife with _$ProductShelfLife {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     CodeableConcept? type,
-    Duration? periodDuration,
+    FhirDuration? periodDuration,
     Markdown? periodString,
     @JsonKey(name: '_periodString') Element? periodStringElement,
     List<CodeableConcept>? specialPrecautionsForStorage,

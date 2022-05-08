@@ -5234,7 +5234,7 @@ mixin _$GoalTarget {
   Date? get dueDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_dueDate')
   Element? get dueDateElement => throw _privateConstructorUsedError;
-  Duration? get dueDuration => throw _privateConstructorUsedError;
+  FhirDuration? get dueDuration => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -5264,7 +5264,7 @@ abstract class $GoalTargetCopyWith<$Res> {
       Ratio? detailRatio,
       Date? dueDate,
       @JsonKey(name: '_dueDate') Element? dueDateElement,
-      Duration? dueDuration});
+      FhirDuration? dueDuration});
 
   $CodeableConceptCopyWith<$Res>? get measure;
   $QuantityCopyWith<$Res>? get detailQuantity;
@@ -5275,6 +5275,7 @@ abstract class $GoalTargetCopyWith<$Res> {
   $ElementCopyWith<$Res>? get detailIntegerElement;
   $RatioCopyWith<$Res>? get detailRatio;
   $ElementCopyWith<$Res>? get dueDateElement;
+  $FhirDurationCopyWith<$Res>? get dueDuration;
 }
 
 /// @nodoc
@@ -5373,7 +5374,7 @@ class _$GoalTargetCopyWithImpl<$Res> implements $GoalTargetCopyWith<$Res> {
       dueDuration: dueDuration == freezed
           ? _value.dueDuration
           : dueDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
     ));
   }
 
@@ -5476,6 +5477,17 @@ class _$GoalTargetCopyWithImpl<$Res> implements $GoalTargetCopyWith<$Res> {
       return _then(_value.copyWith(dueDateElement: value));
     });
   }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get dueDuration {
+    if (_value.dueDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.dueDuration!, (value) {
+      return _then(_value.copyWith(dueDuration: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -5502,7 +5514,7 @@ abstract class _$$_GoalTargetCopyWith<$Res>
       Ratio? detailRatio,
       Date? dueDate,
       @JsonKey(name: '_dueDate') Element? dueDateElement,
-      Duration? dueDuration});
+      FhirDuration? dueDuration});
 
   @override
   $CodeableConceptCopyWith<$Res>? get measure;
@@ -5522,6 +5534,8 @@ abstract class _$$_GoalTargetCopyWith<$Res>
   $RatioCopyWith<$Res>? get detailRatio;
   @override
   $ElementCopyWith<$Res>? get dueDateElement;
+  @override
+  $FhirDurationCopyWith<$Res>? get dueDuration;
 }
 
 /// @nodoc
@@ -5622,7 +5636,7 @@ class __$$_GoalTargetCopyWithImpl<$Res> extends _$GoalTargetCopyWithImpl<$Res>
       dueDuration: dueDuration == freezed
           ? _value.dueDuration
           : dueDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
     ));
   }
 }
@@ -5707,7 +5721,7 @@ class _$_GoalTarget extends _GoalTarget {
   @JsonKey(name: '_dueDate')
   final Element? dueDateElement;
   @override
-  final Duration? dueDuration;
+  final FhirDuration? dueDuration;
 
   @override
   String toString() {
@@ -5803,7 +5817,7 @@ abstract class _GoalTarget extends GoalTarget {
       final Ratio? detailRatio,
       final Date? dueDate,
       @JsonKey(name: '_dueDate') final Element? dueDateElement,
-      final Duration? dueDuration}) = _$_GoalTarget;
+      final FhirDuration? dueDuration}) = _$_GoalTarget;
   _GoalTarget._() : super._();
 
   factory _GoalTarget.fromJson(Map<String, dynamic> json) =
@@ -5849,7 +5863,7 @@ abstract class _GoalTarget extends GoalTarget {
   @JsonKey(name: '_dueDate')
   Element? get dueDateElement => throw _privateConstructorUsedError;
   @override
-  Duration? get dueDuration => throw _privateConstructorUsedError;
+  FhirDuration? get dueDuration => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_GoalTargetCopyWith<_$_GoalTarget> get copyWith =>
@@ -13053,7 +13067,7 @@ mixin _$RequestGroupAction {
   Element? get timingDateTimeElement => throw _privateConstructorUsedError;
   Age? get timingAge => throw _privateConstructorUsedError;
   Period? get timingPeriod => throw _privateConstructorUsedError;
-  Duration? get timingDuration => throw _privateConstructorUsedError;
+  FhirDuration? get timingDuration => throw _privateConstructorUsedError;
   Range? get timingRange => throw _privateConstructorUsedError;
   Timing? get timingTiming => throw _privateConstructorUsedError;
   CodeableReference? get location => throw _privateConstructorUsedError;
@@ -13122,7 +13136,7 @@ abstract class $RequestGroupActionCopyWith<$Res> {
           Element? timingDateTimeElement,
       Age? timingAge,
       Period? timingPeriod,
-      Duration? timingDuration,
+      FhirDuration? timingDuration,
       Range? timingRange,
       Timing? timingTiming,
       CodeableReference? location,
@@ -13155,6 +13169,7 @@ abstract class $RequestGroupActionCopyWith<$Res> {
   $ElementCopyWith<$Res>? get timingDateTimeElement;
   $AgeCopyWith<$Res>? get timingAge;
   $PeriodCopyWith<$Res>? get timingPeriod;
+  $FhirDurationCopyWith<$Res>? get timingDuration;
   $RangeCopyWith<$Res>? get timingRange;
   $TimingCopyWith<$Res>? get timingTiming;
   $CodeableReferenceCopyWith<$Res>? get location;
@@ -13321,7 +13336,7 @@ class _$RequestGroupActionCopyWithImpl<$Res>
       timingDuration: timingDuration == freezed
           ? _value.timingDuration
           : timingDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       timingRange: timingRange == freezed
           ? _value.timingRange
           : timingRange // ignore: cast_nullable_to_non_nullable
@@ -13493,6 +13508,17 @@ class _$RequestGroupActionCopyWithImpl<$Res>
   }
 
   @override
+  $FhirDurationCopyWith<$Res>? get timingDuration {
+    if (_value.timingDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.timingDuration!, (value) {
+      return _then(_value.copyWith(timingDuration: value));
+    });
+  }
+
+  @override
   $RangeCopyWith<$Res>? get timingRange {
     if (_value.timingRange == null) {
       return null;
@@ -13643,7 +13669,7 @@ abstract class _$$_RequestGroupActionCopyWith<$Res>
           Element? timingDateTimeElement,
       Age? timingAge,
       Period? timingPeriod,
-      Duration? timingDuration,
+      FhirDuration? timingDuration,
       Range? timingRange,
       Timing? timingTiming,
       CodeableReference? location,
@@ -13685,6 +13711,8 @@ abstract class _$$_RequestGroupActionCopyWith<$Res>
   $AgeCopyWith<$Res>? get timingAge;
   @override
   $PeriodCopyWith<$Res>? get timingPeriod;
+  @override
+  $FhirDurationCopyWith<$Res>? get timingDuration;
   @override
   $RangeCopyWith<$Res>? get timingRange;
   @override
@@ -13863,7 +13891,7 @@ class __$$_RequestGroupActionCopyWithImpl<$Res>
       timingDuration: timingDuration == freezed
           ? _value.timingDuration
           : timingDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       timingRange: timingRange == freezed
           ? _value.timingRange
           : timingRange // ignore: cast_nullable_to_non_nullable
@@ -14102,7 +14130,7 @@ class _$_RequestGroupAction extends _RequestGroupAction {
   @override
   final Period? timingPeriod;
   @override
-  final Duration? timingDuration;
+  final FhirDuration? timingDuration;
   @override
   final Range? timingRange;
   @override
@@ -14334,7 +14362,7 @@ abstract class _RequestGroupAction extends RequestGroupAction {
           final Element? timingDateTimeElement,
       final Age? timingAge,
       final Period? timingPeriod,
-      final Duration? timingDuration,
+      final FhirDuration? timingDuration,
       final Range? timingRange,
       final Timing? timingTiming,
       final CodeableReference? location,
@@ -14423,7 +14451,7 @@ abstract class _RequestGroupAction extends RequestGroupAction {
   @override
   Period? get timingPeriod => throw _privateConstructorUsedError;
   @override
-  Duration? get timingDuration => throw _privateConstructorUsedError;
+  FhirDuration? get timingDuration => throw _privateConstructorUsedError;
   @override
   Range? get timingRange => throw _privateConstructorUsedError;
   @override
@@ -14793,7 +14821,7 @@ mixin _$RequestGroupRelatedAction {
   Code? get relationship => throw _privateConstructorUsedError;
   @JsonKey(name: '_relationship')
   Element? get relationshipElement => throw _privateConstructorUsedError;
-  Duration? get offsetDuration => throw _privateConstructorUsedError;
+  FhirDuration? get offsetDuration => throw _privateConstructorUsedError;
   Range? get offsetRange => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -14815,11 +14843,12 @@ abstract class $RequestGroupRelatedActionCopyWith<$Res> {
       @JsonKey(name: '_targetId') Element? targetIdElement,
       Code? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
-      Duration? offsetDuration,
+      FhirDuration? offsetDuration,
       Range? offsetRange});
 
   $ElementCopyWith<$Res>? get targetIdElement;
   $ElementCopyWith<$Res>? get relationshipElement;
+  $FhirDurationCopyWith<$Res>? get offsetDuration;
   $RangeCopyWith<$Res>? get offsetRange;
 }
 
@@ -14876,7 +14905,7 @@ class _$RequestGroupRelatedActionCopyWithImpl<$Res>
       offsetDuration: offsetDuration == freezed
           ? _value.offsetDuration
           : offsetDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       offsetRange: offsetRange == freezed
           ? _value.offsetRange
           : offsetRange // ignore: cast_nullable_to_non_nullable
@@ -14903,6 +14932,17 @@ class _$RequestGroupRelatedActionCopyWithImpl<$Res>
 
     return $ElementCopyWith<$Res>(_value.relationshipElement!, (value) {
       return _then(_value.copyWith(relationshipElement: value));
+    });
+  }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get offsetDuration {
+    if (_value.offsetDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.offsetDuration!, (value) {
+      return _then(_value.copyWith(offsetDuration: value));
     });
   }
 
@@ -14934,13 +14974,15 @@ abstract class _$$_RequestGroupRelatedActionCopyWith<$Res>
       @JsonKey(name: '_targetId') Element? targetIdElement,
       Code? relationship,
       @JsonKey(name: '_relationship') Element? relationshipElement,
-      Duration? offsetDuration,
+      FhirDuration? offsetDuration,
       Range? offsetRange});
 
   @override
   $ElementCopyWith<$Res>? get targetIdElement;
   @override
   $ElementCopyWith<$Res>? get relationshipElement;
+  @override
+  $FhirDurationCopyWith<$Res>? get offsetDuration;
   @override
   $RangeCopyWith<$Res>? get offsetRange;
 }
@@ -15002,7 +15044,7 @@ class __$$_RequestGroupRelatedActionCopyWithImpl<$Res>
       offsetDuration: offsetDuration == freezed
           ? _value.offsetDuration
           : offsetDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       offsetRange: offsetRange == freezed
           ? _value.offsetRange
           : offsetRange // ignore: cast_nullable_to_non_nullable
@@ -15063,7 +15105,7 @@ class _$_RequestGroupRelatedAction extends _RequestGroupRelatedAction {
   @JsonKey(name: '_relationship')
   final Element? relationshipElement;
   @override
-  final Duration? offsetDuration;
+  final FhirDuration? offsetDuration;
   @override
   final Range? offsetRange;
 
@@ -15130,7 +15172,7 @@ abstract class _RequestGroupRelatedAction extends RequestGroupRelatedAction {
       @JsonKey(name: '_targetId') final Element? targetIdElement,
       final Code? relationship,
       @JsonKey(name: '_relationship') final Element? relationshipElement,
-      final Duration? offsetDuration,
+      final FhirDuration? offsetDuration,
       final Range? offsetRange}) = _$_RequestGroupRelatedAction;
   _RequestGroupRelatedAction._() : super._();
 
@@ -15156,7 +15198,7 @@ abstract class _RequestGroupRelatedAction extends RequestGroupRelatedAction {
   @JsonKey(name: '_relationship')
   Element? get relationshipElement => throw _privateConstructorUsedError;
   @override
-  Duration? get offsetDuration => throw _privateConstructorUsedError;
+  FhirDuration? get offsetDuration => throw _privateConstructorUsedError;
   @override
   Range? get offsetRange => throw _privateConstructorUsedError;
   @override

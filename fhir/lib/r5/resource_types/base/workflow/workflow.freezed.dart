@@ -6393,7 +6393,7 @@ mixin _$TaskInput {
   ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
   Count? get valueCount => throw _privateConstructorUsedError;
   Distance? get valueDistance => throw _privateConstructorUsedError;
-  Duration? get valueDuration => throw _privateConstructorUsedError;
+  FhirDuration? get valueDuration => throw _privateConstructorUsedError;
   HumanName? get valueHumanName => throw _privateConstructorUsedError;
   Identifier? get valueIdentifier => throw _privateConstructorUsedError;
   Money? get valueMoney => throw _privateConstructorUsedError;
@@ -6486,7 +6486,7 @@ abstract class $TaskInputCopyWith<$Res> {
       ContactPoint? valueContactPoint,
       Count? valueCount,
       Distance? valueDistance,
-      Duration? valueDuration,
+      FhirDuration? valueDuration,
       HumanName? valueHumanName,
       Identifier? valueIdentifier,
       Money? valueMoney,
@@ -6541,6 +6541,7 @@ abstract class $TaskInputCopyWith<$Res> {
   $ContactPointCopyWith<$Res>? get valueContactPoint;
   $CountCopyWith<$Res>? get valueCount;
   $DistanceCopyWith<$Res>? get valueDistance;
+  $FhirDurationCopyWith<$Res>? get valueDuration;
   $HumanNameCopyWith<$Res>? get valueHumanName;
   $IdentifierCopyWith<$Res>? get valueIdentifier;
   $MoneyCopyWith<$Res>? get valueMoney;
@@ -6873,7 +6874,7 @@ class _$TaskInputCopyWithImpl<$Res> implements $TaskInputCopyWith<$Res> {
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
           : valueDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName // ignore: cast_nullable_to_non_nullable
@@ -7305,6 +7306,17 @@ class _$TaskInputCopyWithImpl<$Res> implements $TaskInputCopyWith<$Res> {
   }
 
   @override
+  $FhirDurationCopyWith<$Res>? get valueDuration {
+    if (_value.valueDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.valueDuration!, (value) {
+      return _then(_value.copyWith(valueDuration: value));
+    });
+  }
+
+  @override
   $HumanNameCopyWith<$Res>? get valueHumanName {
     if (_value.valueHumanName == null) {
       return null;
@@ -7612,7 +7624,7 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
       ContactPoint? valueContactPoint,
       Count? valueCount,
       Distance? valueDistance,
-      Duration? valueDuration,
+      FhirDuration? valueDuration,
       HumanName? valueHumanName,
       Identifier? valueIdentifier,
       Money? valueMoney,
@@ -7698,6 +7710,8 @@ abstract class _$$_TaskInputCopyWith<$Res> implements $TaskInputCopyWith<$Res> {
   $CountCopyWith<$Res>? get valueCount;
   @override
   $DistanceCopyWith<$Res>? get valueDistance;
+  @override
+  $FhirDurationCopyWith<$Res>? get valueDuration;
   @override
   $HumanNameCopyWith<$Res>? get valueHumanName;
   @override
@@ -8054,7 +8068,7 @@ class __$$_TaskInputCopyWithImpl<$Res> extends _$TaskInputCopyWithImpl<$Res>
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
           : valueDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName // ignore: cast_nullable_to_non_nullable
@@ -8379,7 +8393,7 @@ class _$_TaskInput extends _TaskInput {
   @override
   final Distance? valueDistance;
   @override
-  final Duration? valueDuration;
+  final FhirDuration? valueDuration;
   @override
   final HumanName? valueHumanName;
   @override
@@ -8728,7 +8742,7 @@ abstract class _TaskInput extends TaskInput {
       final ContactPoint? valueContactPoint,
       final Count? valueCount,
       final Distance? valueDistance,
-      final Duration? valueDuration,
+      final FhirDuration? valueDuration,
       final HumanName? valueHumanName,
       final Identifier? valueIdentifier,
       final Money? valueMoney,
@@ -8889,7 +8903,7 @@ abstract class _TaskInput extends TaskInput {
   @override
   Distance? get valueDistance => throw _privateConstructorUsedError;
   @override
-  Duration? get valueDuration => throw _privateConstructorUsedError;
+  FhirDuration? get valueDuration => throw _privateConstructorUsedError;
   @override
   HumanName? get valueHumanName => throw _privateConstructorUsedError;
   @override
@@ -9028,7 +9042,7 @@ mixin _$TaskOutput {
   ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
   Count? get valueCount => throw _privateConstructorUsedError;
   Distance? get valueDistance => throw _privateConstructorUsedError;
-  Duration? get valueDuration => throw _privateConstructorUsedError;
+  FhirDuration? get valueDuration => throw _privateConstructorUsedError;
   HumanName? get valueHumanName => throw _privateConstructorUsedError;
   Identifier? get valueIdentifier => throw _privateConstructorUsedError;
   Money? get valueMoney => throw _privateConstructorUsedError;
@@ -9122,7 +9136,7 @@ abstract class $TaskOutputCopyWith<$Res> {
       ContactPoint? valueContactPoint,
       Count? valueCount,
       Distance? valueDistance,
-      Duration? valueDuration,
+      FhirDuration? valueDuration,
       HumanName? valueHumanName,
       Identifier? valueIdentifier,
       Money? valueMoney,
@@ -9177,6 +9191,7 @@ abstract class $TaskOutputCopyWith<$Res> {
   $ContactPointCopyWith<$Res>? get valueContactPoint;
   $CountCopyWith<$Res>? get valueCount;
   $DistanceCopyWith<$Res>? get valueDistance;
+  $FhirDurationCopyWith<$Res>? get valueDuration;
   $HumanNameCopyWith<$Res>? get valueHumanName;
   $IdentifierCopyWith<$Res>? get valueIdentifier;
   $MoneyCopyWith<$Res>? get valueMoney;
@@ -9509,7 +9524,7 @@ class _$TaskOutputCopyWithImpl<$Res> implements $TaskOutputCopyWith<$Res> {
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
           : valueDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName // ignore: cast_nullable_to_non_nullable
@@ -9941,6 +9956,17 @@ class _$TaskOutputCopyWithImpl<$Res> implements $TaskOutputCopyWith<$Res> {
   }
 
   @override
+  $FhirDurationCopyWith<$Res>? get valueDuration {
+    if (_value.valueDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.valueDuration!, (value) {
+      return _then(_value.copyWith(valueDuration: value));
+    });
+  }
+
+  @override
   $HumanNameCopyWith<$Res>? get valueHumanName {
     if (_value.valueHumanName == null) {
       return null;
@@ -10249,7 +10275,7 @@ abstract class _$$_TaskOutputCopyWith<$Res>
       ContactPoint? valueContactPoint,
       Count? valueCount,
       Distance? valueDistance,
-      Duration? valueDuration,
+      FhirDuration? valueDuration,
       HumanName? valueHumanName,
       Identifier? valueIdentifier,
       Money? valueMoney,
@@ -10335,6 +10361,8 @@ abstract class _$$_TaskOutputCopyWith<$Res>
   $CountCopyWith<$Res>? get valueCount;
   @override
   $DistanceCopyWith<$Res>? get valueDistance;
+  @override
+  $FhirDurationCopyWith<$Res>? get valueDuration;
   @override
   $HumanNameCopyWith<$Res>? get valueHumanName;
   @override
@@ -10691,7 +10719,7 @@ class __$$_TaskOutputCopyWithImpl<$Res> extends _$TaskOutputCopyWithImpl<$Res>
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
           : valueDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName // ignore: cast_nullable_to_non_nullable
@@ -11016,7 +11044,7 @@ class _$_TaskOutput extends _TaskOutput {
   @override
   final Distance? valueDistance;
   @override
-  final Duration? valueDuration;
+  final FhirDuration? valueDuration;
   @override
   final HumanName? valueHumanName;
   @override
@@ -11365,7 +11393,7 @@ abstract class _TaskOutput extends TaskOutput {
       final ContactPoint? valueContactPoint,
       final Count? valueCount,
       final Distance? valueDistance,
-      final Duration? valueDuration,
+      final FhirDuration? valueDuration,
       final HumanName? valueHumanName,
       final Identifier? valueIdentifier,
       final Money? valueMoney,
@@ -11526,7 +11554,7 @@ abstract class _TaskOutput extends TaskOutput {
   @override
   Distance? get valueDistance => throw _privateConstructorUsedError;
   @override
-  Duration? get valueDuration => throw _privateConstructorUsedError;
+  FhirDuration? get valueDuration => throw _privateConstructorUsedError;
   @override
   HumanName? get valueHumanName => throw _privateConstructorUsedError;
   @override
@@ -13745,7 +13773,7 @@ mixin _$TransportInput {
   ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
   Count? get valueCount => throw _privateConstructorUsedError;
   Distance? get valueDistance => throw _privateConstructorUsedError;
-  Duration? get valueDuration => throw _privateConstructorUsedError;
+  FhirDuration? get valueDuration => throw _privateConstructorUsedError;
   HumanName? get valueHumanName => throw _privateConstructorUsedError;
   Identifier? get valueIdentifier => throw _privateConstructorUsedError;
   Money? get valueMoney => throw _privateConstructorUsedError;
@@ -13839,7 +13867,7 @@ abstract class $TransportInputCopyWith<$Res> {
       ContactPoint? valueContactPoint,
       Count? valueCount,
       Distance? valueDistance,
-      Duration? valueDuration,
+      FhirDuration? valueDuration,
       HumanName? valueHumanName,
       Identifier? valueIdentifier,
       Money? valueMoney,
@@ -13894,6 +13922,7 @@ abstract class $TransportInputCopyWith<$Res> {
   $ContactPointCopyWith<$Res>? get valueContactPoint;
   $CountCopyWith<$Res>? get valueCount;
   $DistanceCopyWith<$Res>? get valueDistance;
+  $FhirDurationCopyWith<$Res>? get valueDuration;
   $HumanNameCopyWith<$Res>? get valueHumanName;
   $IdentifierCopyWith<$Res>? get valueIdentifier;
   $MoneyCopyWith<$Res>? get valueMoney;
@@ -14227,7 +14256,7 @@ class _$TransportInputCopyWithImpl<$Res>
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
           : valueDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName // ignore: cast_nullable_to_non_nullable
@@ -14659,6 +14688,17 @@ class _$TransportInputCopyWithImpl<$Res>
   }
 
   @override
+  $FhirDurationCopyWith<$Res>? get valueDuration {
+    if (_value.valueDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.valueDuration!, (value) {
+      return _then(_value.copyWith(valueDuration: value));
+    });
+  }
+
+  @override
   $HumanNameCopyWith<$Res>? get valueHumanName {
     if (_value.valueHumanName == null) {
       return null;
@@ -14967,7 +15007,7 @@ abstract class _$$_TransportInputCopyWith<$Res>
       ContactPoint? valueContactPoint,
       Count? valueCount,
       Distance? valueDistance,
-      Duration? valueDuration,
+      FhirDuration? valueDuration,
       HumanName? valueHumanName,
       Identifier? valueIdentifier,
       Money? valueMoney,
@@ -15053,6 +15093,8 @@ abstract class _$$_TransportInputCopyWith<$Res>
   $CountCopyWith<$Res>? get valueCount;
   @override
   $DistanceCopyWith<$Res>? get valueDistance;
+  @override
+  $FhirDurationCopyWith<$Res>? get valueDuration;
   @override
   $HumanNameCopyWith<$Res>? get valueHumanName;
   @override
@@ -15410,7 +15452,7 @@ class __$$_TransportInputCopyWithImpl<$Res>
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
           : valueDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName // ignore: cast_nullable_to_non_nullable
@@ -15735,7 +15777,7 @@ class _$_TransportInput extends _TransportInput {
   @override
   final Distance? valueDistance;
   @override
-  final Duration? valueDuration;
+  final FhirDuration? valueDuration;
   @override
   final HumanName? valueHumanName;
   @override
@@ -16084,7 +16126,7 @@ abstract class _TransportInput extends TransportInput {
       final ContactPoint? valueContactPoint,
       final Count? valueCount,
       final Distance? valueDistance,
-      final Duration? valueDuration,
+      final FhirDuration? valueDuration,
       final HumanName? valueHumanName,
       final Identifier? valueIdentifier,
       final Money? valueMoney,
@@ -16245,7 +16287,7 @@ abstract class _TransportInput extends TransportInput {
   @override
   Distance? get valueDistance => throw _privateConstructorUsedError;
   @override
-  Duration? get valueDuration => throw _privateConstructorUsedError;
+  FhirDuration? get valueDuration => throw _privateConstructorUsedError;
   @override
   HumanName? get valueHumanName => throw _privateConstructorUsedError;
   @override
@@ -16384,7 +16426,7 @@ mixin _$TransportOutput {
   ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
   Count? get valueCount => throw _privateConstructorUsedError;
   Distance? get valueDistance => throw _privateConstructorUsedError;
-  Duration? get valueDuration => throw _privateConstructorUsedError;
+  FhirDuration? get valueDuration => throw _privateConstructorUsedError;
   HumanName? get valueHumanName => throw _privateConstructorUsedError;
   Identifier? get valueIdentifier => throw _privateConstructorUsedError;
   Money? get valueMoney => throw _privateConstructorUsedError;
@@ -16478,7 +16520,7 @@ abstract class $TransportOutputCopyWith<$Res> {
       ContactPoint? valueContactPoint,
       Count? valueCount,
       Distance? valueDistance,
-      Duration? valueDuration,
+      FhirDuration? valueDuration,
       HumanName? valueHumanName,
       Identifier? valueIdentifier,
       Money? valueMoney,
@@ -16533,6 +16575,7 @@ abstract class $TransportOutputCopyWith<$Res> {
   $ContactPointCopyWith<$Res>? get valueContactPoint;
   $CountCopyWith<$Res>? get valueCount;
   $DistanceCopyWith<$Res>? get valueDistance;
+  $FhirDurationCopyWith<$Res>? get valueDuration;
   $HumanNameCopyWith<$Res>? get valueHumanName;
   $IdentifierCopyWith<$Res>? get valueIdentifier;
   $MoneyCopyWith<$Res>? get valueMoney;
@@ -16866,7 +16909,7 @@ class _$TransportOutputCopyWithImpl<$Res>
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
           : valueDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName // ignore: cast_nullable_to_non_nullable
@@ -17298,6 +17341,17 @@ class _$TransportOutputCopyWithImpl<$Res>
   }
 
   @override
+  $FhirDurationCopyWith<$Res>? get valueDuration {
+    if (_value.valueDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.valueDuration!, (value) {
+      return _then(_value.copyWith(valueDuration: value));
+    });
+  }
+
+  @override
   $HumanNameCopyWith<$Res>? get valueHumanName {
     if (_value.valueHumanName == null) {
       return null;
@@ -17606,7 +17660,7 @@ abstract class _$$_TransportOutputCopyWith<$Res>
       ContactPoint? valueContactPoint,
       Count? valueCount,
       Distance? valueDistance,
-      Duration? valueDuration,
+      FhirDuration? valueDuration,
       HumanName? valueHumanName,
       Identifier? valueIdentifier,
       Money? valueMoney,
@@ -17692,6 +17746,8 @@ abstract class _$$_TransportOutputCopyWith<$Res>
   $CountCopyWith<$Res>? get valueCount;
   @override
   $DistanceCopyWith<$Res>? get valueDistance;
+  @override
+  $FhirDurationCopyWith<$Res>? get valueDuration;
   @override
   $HumanNameCopyWith<$Res>? get valueHumanName;
   @override
@@ -18049,7 +18105,7 @@ class __$$_TransportOutputCopyWithImpl<$Res>
       valueDuration: valueDuration == freezed
           ? _value.valueDuration
           : valueDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       valueHumanName: valueHumanName == freezed
           ? _value.valueHumanName
           : valueHumanName // ignore: cast_nullable_to_non_nullable
@@ -18374,7 +18430,7 @@ class _$_TransportOutput extends _TransportOutput {
   @override
   final Distance? valueDistance;
   @override
-  final Duration? valueDuration;
+  final FhirDuration? valueDuration;
   @override
   final HumanName? valueHumanName;
   @override
@@ -18723,7 +18779,7 @@ abstract class _TransportOutput extends TransportOutput {
       final ContactPoint? valueContactPoint,
       final Count? valueCount,
       final Distance? valueDistance,
-      final Duration? valueDuration,
+      final FhirDuration? valueDuration,
       final HumanName? valueHumanName,
       final Identifier? valueIdentifier,
       final Money? valueMoney,
@@ -18884,7 +18940,7 @@ abstract class _TransportOutput extends TransportOutput {
   @override
   Distance? get valueDistance => throw _privateConstructorUsedError;
   @override
-  Duration? get valueDuration => throw _privateConstructorUsedError;
+  FhirDuration? get valueDuration => throw _privateConstructorUsedError;
   @override
   HumanName? get valueHumanName => throw _privateConstructorUsedError;
   @override

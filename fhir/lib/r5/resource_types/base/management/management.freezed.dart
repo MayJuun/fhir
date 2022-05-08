@@ -62,7 +62,7 @@ mixin _$Encounter {
   DateTime? get plannedEndDate => throw _privateConstructorUsedError;
   @JsonKey(name: '_plannedEndDate')
   Element? get plannedEndDateElement => throw _privateConstructorUsedError;
-  Duration? get length => throw _privateConstructorUsedError;
+  FhirDuration? get length => throw _privateConstructorUsedError;
   List<CodeableReference>? get reason => throw _privateConstructorUsedError;
   List<EncounterDiagnosis>? get diagnosis => throw _privateConstructorUsedError;
   List<Reference>? get account => throw _privateConstructorUsedError;
@@ -114,7 +114,7 @@ abstract class $EncounterCopyWith<$Res> {
       @JsonKey(name: '_plannedStartDate') Element? plannedStartDateElement,
       DateTime? plannedEndDate,
       @JsonKey(name: '_plannedEndDate') Element? plannedEndDateElement,
-      Duration? length,
+      FhirDuration? length,
       List<CodeableReference>? reason,
       List<EncounterDiagnosis>? diagnosis,
       List<Reference>? account,
@@ -136,6 +136,7 @@ abstract class $EncounterCopyWith<$Res> {
   $PeriodCopyWith<$Res>? get actualPeriod;
   $ElementCopyWith<$Res>? get plannedStartDateElement;
   $ElementCopyWith<$Res>? get plannedEndDateElement;
+  $FhirDurationCopyWith<$Res>? get length;
   $EncounterHospitalizationCopyWith<$Res>? get hospitalization;
   $ReferenceCopyWith<$Res>? get serviceProvider;
   $ReferenceCopyWith<$Res>? get partOf;
@@ -319,7 +320,7 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
       length: length == freezed
           ? _value.length
           : length // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       reason: reason == freezed
           ? _value.reason
           : reason // ignore: cast_nullable_to_non_nullable
@@ -491,6 +492,17 @@ class _$EncounterCopyWithImpl<$Res> implements $EncounterCopyWith<$Res> {
   }
 
   @override
+  $FhirDurationCopyWith<$Res>? get length {
+    if (_value.length == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.length!, (value) {
+      return _then(_value.copyWith(length: value));
+    });
+  }
+
+  @override
   $EncounterHospitalizationCopyWith<$Res>? get hospitalization {
     if (_value.hospitalization == null) {
       return null;
@@ -563,7 +575,7 @@ abstract class _$$_EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
       @JsonKey(name: '_plannedStartDate') Element? plannedStartDateElement,
       DateTime? plannedEndDate,
       @JsonKey(name: '_plannedEndDate') Element? plannedEndDateElement,
-      Duration? length,
+      FhirDuration? length,
       List<CodeableReference>? reason,
       List<EncounterDiagnosis>? diagnosis,
       List<Reference>? account,
@@ -598,6 +610,8 @@ abstract class _$$_EncounterCopyWith<$Res> implements $EncounterCopyWith<$Res> {
   $ElementCopyWith<$Res>? get plannedStartDateElement;
   @override
   $ElementCopyWith<$Res>? get plannedEndDateElement;
+  @override
+  $FhirDurationCopyWith<$Res>? get length;
   @override
   $EncounterHospitalizationCopyWith<$Res>? get hospitalization;
   @override
@@ -786,7 +800,7 @@ class __$$_EncounterCopyWithImpl<$Res> extends _$EncounterCopyWithImpl<$Res>
       length: length == freezed
           ? _value.length
           : length // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       reason: reason == freezed
           ? _value._reason
           : reason // ignore: cast_nullable_to_non_nullable
@@ -1030,7 +1044,7 @@ class _$_Encounter extends _Encounter {
   @JsonKey(name: '_plannedEndDate')
   final Element? plannedEndDateElement;
   @override
-  final Duration? length;
+  final FhirDuration? length;
   final List<CodeableReference>? _reason;
   @override
   List<CodeableReference>? get reason {
@@ -1245,7 +1259,7 @@ abstract class _Encounter extends Encounter {
       final DateTime? plannedEndDate,
       @JsonKey(name: '_plannedEndDate')
           final Element? plannedEndDateElement,
-      final Duration? length,
+      final FhirDuration? length,
       final List<CodeableReference>? reason,
       final List<EncounterDiagnosis>? diagnosis,
       final List<Reference>? account,
@@ -1332,7 +1346,7 @@ abstract class _Encounter extends Encounter {
   @JsonKey(name: '_plannedEndDate')
   Element? get plannedEndDateElement => throw _privateConstructorUsedError;
   @override
-  Duration? get length => throw _privateConstructorUsedError;
+  FhirDuration? get length => throw _privateConstructorUsedError;
   @override
   List<CodeableReference>? get reason => throw _privateConstructorUsedError;
   @override

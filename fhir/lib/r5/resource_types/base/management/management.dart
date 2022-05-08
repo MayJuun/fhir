@@ -131,7 +131,7 @@ class Encounter with Resource, _$Encounter {
     @JsonKey(name: '_plannedStartDate') Element? plannedStartDateElement,
     DateTime? plannedEndDate,
     @JsonKey(name: '_plannedEndDate') Element? plannedEndDateElement,
-    Duration? length,
+    FhirDuration? length,
     List<CodeableReference>? reason,
     List<EncounterDiagnosis>? diagnosis,
     List<Reference>? account,

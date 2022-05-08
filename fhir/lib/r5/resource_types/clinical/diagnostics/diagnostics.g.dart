@@ -2170,7 +2170,7 @@ _$_SpecimenCollection _$$_SpecimenCollectionFromJson(
           : Period.fromJson(json['collectedPeriod'] as Map<String, dynamic>),
       duration: json['duration'] == null
           ? null
-          : Duration(microseconds: json['duration'] as int),
+          : FhirDuration.fromJson(json['duration'] as Map<String, dynamic>),
       quantity: json['quantity'] == null
           ? null
           : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
@@ -2193,7 +2193,8 @@ _$_SpecimenCollection _$$_SpecimenCollectionFromJson(
               json['fastingStatusCodeableConcept'] as Map<String, dynamic>),
       fastingStatusDuration: json['fastingStatusDuration'] == null
           ? null
-          : Duration(microseconds: json['fastingStatusDuration'] as int),
+          : FhirDuration.fromJson(
+              json['fastingStatusDuration'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_SpecimenCollectionToJson(
@@ -2217,7 +2218,7 @@ Map<String, dynamic> _$$_SpecimenCollectionToJson(
   writeNotNull(
       '_collectedDateTime', instance.collectedDateTimeElement?.toJson());
   writeNotNull('collectedPeriod', instance.collectedPeriod?.toJson());
-  writeNotNull('duration', instance.duration?.inMicroseconds);
+  writeNotNull('duration', instance.duration?.toJson());
   writeNotNull('quantity', instance.quantity?.toJson());
   writeNotNull('method', instance.method?.toJson());
   writeNotNull('device', instance.device?.toJson());
@@ -2226,7 +2227,7 @@ Map<String, dynamic> _$$_SpecimenCollectionToJson(
   writeNotNull('fastingStatusCodeableConcept',
       instance.fastingStatusCodeableConcept?.toJson());
   writeNotNull(
-      'fastingStatusDuration', instance.fastingStatusDuration?.inMicroseconds);
+      'fastingStatusDuration', instance.fastingStatusDuration?.toJson());
   return val;
 }
 

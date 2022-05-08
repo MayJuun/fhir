@@ -2646,7 +2646,7 @@ class MedicationKnowledgeMaxDispense with _$MedicationKnowledgeMaxDispense {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     required Quantity quantity,
-    Duration? period,
+    FhirDuration? period,
   }) = _MedicationKnowledgeMaxDispense;
 
   /// Produces a Yaml formatted String version of the object
@@ -2855,7 +2855,7 @@ class MedicationKnowledgeStorageGuideline
     FhirUri? reference,
     @JsonKey(name: '_reference') Element? referenceElement,
     List<Annotation>? note,
-    Duration? stabilityDuration,
+    FhirDuration? stabilityDuration,
     List<MedicationKnowledgeEnvironmentalSetting>? environmentalSetting,
   }) = _MedicationKnowledgeStorageGuideline;
 
@@ -3318,13 +3318,13 @@ class MedicationRequestDispenseRequest with _$MedicationRequestDispenseRequest {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     MedicationRequestInitialFill? initialFill,
-    Duration? dispenseInterval,
+    FhirDuration? dispenseInterval,
     Period? validityPeriod,
     UnsignedInt? numberOfRepeatsAllowed,
     @JsonKey(name: '_numberOfRepeatsAllowed')
         Element? numberOfRepeatsAllowedElement,
     Quantity? quantity,
-    Duration? expectedSupplyDuration,
+    FhirDuration? expectedSupplyDuration,
     Reference? dispenser,
     List<Annotation>? dispenserInstruction,
     CodeableConcept? doseAdministrationAid,
@@ -3386,7 +3386,7 @@ class MedicationRequestInitialFill with _$MedicationRequestInitialFill {
     @JsonKey(name: 'extension') List<FhirExtension>? extension_,
     List<FhirExtension>? modifierExtension,
     Quantity? quantity,
-    Duration? duration,
+    FhirDuration? duration,
   }) = _MedicationRequestInitialFill;
 
   /// Produces a Yaml formatted String version of the object

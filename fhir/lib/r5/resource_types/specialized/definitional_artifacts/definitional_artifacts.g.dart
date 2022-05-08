@@ -196,7 +196,8 @@ _$_ActivityDefinition _$$_ActivityDefinitionFromJson(
           : Range.fromJson(json['timingRange'] as Map<String, dynamic>),
       timingDuration: json['timingDuration'] == null
           ? null
-          : Duration(microseconds: json['timingDuration'] as int),
+          : FhirDuration.fromJson(
+              json['timingDuration'] as Map<String, dynamic>),
       location: json['location'] == null
           ? null
           : CodeableReference.fromJson(
@@ -330,7 +331,7 @@ Map<String, dynamic> _$$_ActivityDefinitionToJson(
   writeNotNull('timingTiming', instance.timingTiming?.toJson());
   writeNotNull('timingAge', instance.timingAge?.toJson());
   writeNotNull('timingRange', instance.timingRange?.toJson());
-  writeNotNull('timingDuration', instance.timingDuration?.inMicroseconds);
+  writeNotNull('timingDuration', instance.timingDuration?.toJson());
   writeNotNull('location', instance.location?.toJson());
   writeNotNull(
       'participant', instance.participant?.map((e) => e.toJson()).toList());
@@ -3132,7 +3133,7 @@ _$_PlanDefinitionTarget _$$_PlanDefinitionTargetFromJson(
           : Ratio.fromJson(json['detailRatio'] as Map<String, dynamic>),
       due: json['due'] == null
           ? null
-          : Duration(microseconds: json['due'] as int),
+          : FhirDuration.fromJson(json['due'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_PlanDefinitionTargetToJson(
@@ -3162,7 +3163,7 @@ Map<String, dynamic> _$$_PlanDefinitionTargetToJson(
   writeNotNull('detailInteger', instance.detailInteger?.toJson());
   writeNotNull('_detailInteger', instance.detailIntegerElement?.toJson());
   writeNotNull('detailRatio', instance.detailRatio?.toJson());
-  writeNotNull('due', instance.due?.inMicroseconds);
+  writeNotNull('due', instance.due?.toJson());
   return val;
 }
 
@@ -3344,7 +3345,8 @@ _$_PlanDefinitionAction _$$_PlanDefinitionActionFromJson(
           : Age.fromJson(json['timingAge'] as Map<String, dynamic>),
       timingDuration: json['timingDuration'] == null
           ? null
-          : Duration(microseconds: json['timingDuration'] as int),
+          : FhirDuration.fromJson(
+              json['timingDuration'] as Map<String, dynamic>),
       timingRange: json['timingRange'] == null
           ? null
           : Range.fromJson(json['timingRange'] as Map<String, dynamic>),
@@ -3466,7 +3468,7 @@ Map<String, dynamic> _$$_PlanDefinitionActionToJson(
   writeNotNull(
       'relatedAction', instance.relatedAction?.map((e) => e.toJson()).toList());
   writeNotNull('timingAge', instance.timingAge?.toJson());
-  writeNotNull('timingDuration', instance.timingDuration?.inMicroseconds);
+  writeNotNull('timingDuration', instance.timingDuration?.toJson());
   writeNotNull('timingRange', instance.timingRange?.toJson());
   writeNotNull('timingTiming', instance.timingTiming?.toJson());
   writeNotNull('location', instance.location?.toJson());
@@ -3654,7 +3656,8 @@ _$_PlanDefinitionRelatedAction _$$_PlanDefinitionRelatedActionFromJson(
           : Element.fromJson(json['_relationship'] as Map<String, dynamic>),
       offsetDuration: json['offsetDuration'] == null
           ? null
-          : Duration(microseconds: json['offsetDuration'] as int),
+          : FhirDuration.fromJson(
+              json['offsetDuration'] as Map<String, dynamic>),
       offsetRange: json['offsetRange'] == null
           ? null
           : Range.fromJson(json['offsetRange'] as Map<String, dynamic>),
@@ -3679,7 +3682,7 @@ Map<String, dynamic> _$$_PlanDefinitionRelatedActionToJson(
   writeNotNull('_targetId', instance.targetIdElement?.toJson());
   writeNotNull('relationship', instance.relationship?.toJson());
   writeNotNull('_relationship', instance.relationshipElement?.toJson());
-  writeNotNull('offsetDuration', instance.offsetDuration?.inMicroseconds);
+  writeNotNull('offsetDuration', instance.offsetDuration?.toJson());
   writeNotNull('offsetRange', instance.offsetRange?.toJson());
   return val;
 }
@@ -4689,7 +4692,8 @@ _$_SpecimenDefinitionTypeTested _$$_SpecimenDefinitionTypeTestedFromJson(
           : Element.fromJson(json['_requirement'] as Map<String, dynamic>),
       retentionTime: json['retentionTime'] == null
           ? null
-          : Duration(microseconds: json['retentionTime'] as int),
+          : FhirDuration.fromJson(
+              json['retentionTime'] as Map<String, dynamic>),
       singleUse: json['singleUse'] == null
           ? null
           : Boolean.fromJson(json['singleUse']),
@@ -4731,7 +4735,7 @@ Map<String, dynamic> _$$_SpecimenDefinitionTypeTestedToJson(
   writeNotNull('container', instance.container?.toJson());
   writeNotNull('requirement', instance.requirement);
   writeNotNull('_requirement', instance.requirementElement?.toJson());
-  writeNotNull('retentionTime', instance.retentionTime?.inMicroseconds);
+  writeNotNull('retentionTime', instance.retentionTime?.toJson());
   writeNotNull('singleUse', instance.singleUse?.toJson());
   writeNotNull('_singleUse', instance.singleUseElement?.toJson());
   writeNotNull('rejectionCriterion',
@@ -4881,7 +4885,7 @@ _$_SpecimenDefinitionHandling _$$_SpecimenDefinitionHandlingFromJson(
           : Range.fromJson(json['temperatureRange'] as Map<String, dynamic>),
       maxDuration: json['maxDuration'] == null
           ? null
-          : Duration(microseconds: json['maxDuration'] as int),
+          : FhirDuration.fromJson(json['maxDuration'] as Map<String, dynamic>),
       instruction: json['instruction'] as String?,
       instructionElement: json['_instruction'] == null
           ? null
@@ -4905,7 +4909,7 @@ Map<String, dynamic> _$$_SpecimenDefinitionHandlingToJson(
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('temperatureQualifier', instance.temperatureQualifier?.toJson());
   writeNotNull('temperatureRange', instance.temperatureRange?.toJson());
-  writeNotNull('maxDuration', instance.maxDuration?.inMicroseconds);
+  writeNotNull('maxDuration', instance.maxDuration?.toJson());
   writeNotNull('instruction', instance.instruction);
   writeNotNull('_instruction', instance.instructionElement?.toJson());
   return val;

@@ -228,7 +228,7 @@ class AdministrableProductDefinitionRouteOfAdministration
     Quantity? maxSingleDose,
     Quantity? maxDosePerDay,
     Ratio? maxDosePerTreatmentPeriod,
-    Duration? maxTreatmentPeriod,
+    FhirDuration? maxTreatmentPeriod,
     List<AdministrableProductDefinitionTargetSpecies>? targetSpecies,
   }) = _AdministrableProductDefinitionRouteOfAdministration;
 

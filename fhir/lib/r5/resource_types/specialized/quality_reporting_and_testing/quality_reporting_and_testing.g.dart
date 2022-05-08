@@ -908,7 +908,8 @@ _$_MeasureReportGroup _$$_MeasureReportGroupFromJson(
           : Range.fromJson(json['measureScoreRange'] as Map<String, dynamic>),
       measureScoreDuration: json['measureScoreDuration'] == null
           ? null
-          : Duration(microseconds: json['measureScoreDuration'] as int),
+          : FhirDuration.fromJson(
+              json['measureScoreDuration'] as Map<String, dynamic>),
       stratifier: (json['stratifier'] as List<dynamic>?)
           ?.map((e) =>
               MeasureReportStratifier.fromJson(e as Map<String, dynamic>))
@@ -942,8 +943,7 @@ Map<String, dynamic> _$$_MeasureReportGroupToJson(
       instance.measureScoreCodeableConcept?.toJson());
   writeNotNull('measureScorePeriod', instance.measureScorePeriod?.toJson());
   writeNotNull('measureScoreRange', instance.measureScoreRange?.toJson());
-  writeNotNull(
-      'measureScoreDuration', instance.measureScoreDuration?.inMicroseconds);
+  writeNotNull('measureScoreDuration', instance.measureScoreDuration?.toJson());
   writeNotNull(
       'stratifier', instance.stratifier?.map((e) => e.toJson()).toList());
   return val;
@@ -1091,7 +1091,8 @@ _$_MeasureReportStratum _$$_MeasureReportStratumFromJson(
           : Range.fromJson(json['measureScoreRange'] as Map<String, dynamic>),
       measureScoreDuration: json['measureScoreDuration'] == null
           ? null
-          : Duration(microseconds: json['measureScoreDuration'] as int),
+          : FhirDuration.fromJson(
+              json['measureScoreDuration'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_MeasureReportStratumToJson(
@@ -1128,8 +1129,7 @@ Map<String, dynamic> _$$_MeasureReportStratumToJson(
       instance.measureScoreCodeableConcept?.toJson());
   writeNotNull('measureScorePeriod', instance.measureScorePeriod?.toJson());
   writeNotNull('measureScoreRange', instance.measureScoreRange?.toJson());
-  writeNotNull(
-      'measureScoreDuration', instance.measureScoreDuration?.inMicroseconds);
+  writeNotNull('measureScoreDuration', instance.measureScoreDuration?.toJson());
   return val;
 }
 

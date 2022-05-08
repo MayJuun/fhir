@@ -1142,7 +1142,8 @@ _$_TaskInput _$$_TaskInputFromJson(Map<String, dynamic> json) => _$_TaskInput(
           : Distance.fromJson(json['valueDistance'] as Map<String, dynamic>),
       valueDuration: json['valueDuration'] == null
           ? null
-          : Duration(microseconds: json['valueDuration'] as int),
+          : FhirDuration.fromJson(
+              json['valueDuration'] as Map<String, dynamic>),
       valueHumanName: json['valueHumanName'] == null
           ? null
           : HumanName.fromJson(json['valueHumanName'] as Map<String, dynamic>),
@@ -1289,7 +1290,7 @@ Map<String, dynamic> _$$_TaskInputToJson(_$_TaskInput instance) {
   writeNotNull('valueContactPoint', instance.valueContactPoint?.toJson());
   writeNotNull('valueCount', instance.valueCount?.toJson());
   writeNotNull('valueDistance', instance.valueDistance?.toJson());
-  writeNotNull('valueDuration', instance.valueDuration?.inMicroseconds);
+  writeNotNull('valueDuration', instance.valueDuration?.toJson());
   writeNotNull('valueHumanName', instance.valueHumanName?.toJson());
   writeNotNull('valueIdentifier', instance.valueIdentifier?.toJson());
   writeNotNull('valueMoney', instance.valueMoney?.toJson());
@@ -1476,7 +1477,8 @@ _$_TaskOutput _$$_TaskOutputFromJson(Map<String, dynamic> json) =>
           : Distance.fromJson(json['valueDistance'] as Map<String, dynamic>),
       valueDuration: json['valueDuration'] == null
           ? null
-          : Duration(microseconds: json['valueDuration'] as int),
+          : FhirDuration.fromJson(
+              json['valueDuration'] as Map<String, dynamic>),
       valueHumanName: json['valueHumanName'] == null
           ? null
           : HumanName.fromJson(json['valueHumanName'] as Map<String, dynamic>),
@@ -1623,7 +1625,7 @@ Map<String, dynamic> _$$_TaskOutputToJson(_$_TaskOutput instance) {
   writeNotNull('valueContactPoint', instance.valueContactPoint?.toJson());
   writeNotNull('valueCount', instance.valueCount?.toJson());
   writeNotNull('valueDistance', instance.valueDistance?.toJson());
-  writeNotNull('valueDuration', instance.valueDuration?.inMicroseconds);
+  writeNotNull('valueDuration', instance.valueDuration?.toJson());
   writeNotNull('valueHumanName', instance.valueHumanName?.toJson());
   writeNotNull('valueIdentifier', instance.valueIdentifier?.toJson());
   writeNotNull('valueMoney', instance.valueMoney?.toJson());
@@ -2081,7 +2083,8 @@ _$_TransportInput _$$_TransportInputFromJson(Map<String, dynamic> json) =>
           : Distance.fromJson(json['valueDistance'] as Map<String, dynamic>),
       valueDuration: json['valueDuration'] == null
           ? null
-          : Duration(microseconds: json['valueDuration'] as int),
+          : FhirDuration.fromJson(
+              json['valueDuration'] as Map<String, dynamic>),
       valueHumanName: json['valueHumanName'] == null
           ? null
           : HumanName.fromJson(json['valueHumanName'] as Map<String, dynamic>),
@@ -2228,7 +2231,7 @@ Map<String, dynamic> _$$_TransportInputToJson(_$_TransportInput instance) {
   writeNotNull('valueContactPoint', instance.valueContactPoint?.toJson());
   writeNotNull('valueCount', instance.valueCount?.toJson());
   writeNotNull('valueDistance', instance.valueDistance?.toJson());
-  writeNotNull('valueDuration', instance.valueDuration?.inMicroseconds);
+  writeNotNull('valueDuration', instance.valueDuration?.toJson());
   writeNotNull('valueHumanName', instance.valueHumanName?.toJson());
   writeNotNull('valueIdentifier', instance.valueIdentifier?.toJson());
   writeNotNull('valueMoney', instance.valueMoney?.toJson());
@@ -2415,7 +2418,8 @@ _$_TransportOutput _$$_TransportOutputFromJson(Map<String, dynamic> json) =>
           : Distance.fromJson(json['valueDistance'] as Map<String, dynamic>),
       valueDuration: json['valueDuration'] == null
           ? null
-          : Duration(microseconds: json['valueDuration'] as int),
+          : FhirDuration.fromJson(
+              json['valueDuration'] as Map<String, dynamic>),
       valueHumanName: json['valueHumanName'] == null
           ? null
           : HumanName.fromJson(json['valueHumanName'] as Map<String, dynamic>),
@@ -2562,7 +2566,7 @@ Map<String, dynamic> _$$_TransportOutputToJson(_$_TransportOutput instance) {
   writeNotNull('valueContactPoint', instance.valueContactPoint?.toJson());
   writeNotNull('valueCount', instance.valueCount?.toJson());
   writeNotNull('valueDistance', instance.valueDistance?.toJson());
-  writeNotNull('valueDuration', instance.valueDuration?.inMicroseconds);
+  writeNotNull('valueDuration', instance.valueDuration?.toJson());
   writeNotNull('valueHumanName', instance.valueHumanName?.toJson());
   writeNotNull('valueIdentifier', instance.valueIdentifier?.toJson());
   writeNotNull('valueMoney', instance.valueMoney?.toJson());

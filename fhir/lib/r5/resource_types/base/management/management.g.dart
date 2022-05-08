@@ -99,7 +99,7 @@ _$_Encounter _$$_EncounterFromJson(Map<String, dynamic> json) => _$_Encounter(
           : Element.fromJson(json['_plannedEndDate'] as Map<String, dynamic>),
       length: json['length'] == null
           ? null
-          : Duration(microseconds: json['length'] as int),
+          : FhirDuration.fromJson(json['length'] as Map<String, dynamic>),
       reason: (json['reason'] as List<dynamic>?)
           ?.map((e) => CodeableReference.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -175,7 +175,7 @@ Map<String, dynamic> _$$_EncounterToJson(_$_Encounter instance) {
   writeNotNull('_plannedStartDate', instance.plannedStartDateElement?.toJson());
   writeNotNull('plannedEndDate', instance.plannedEndDate?.toIso8601String());
   writeNotNull('_plannedEndDate', instance.plannedEndDateElement?.toJson());
-  writeNotNull('length', instance.length?.inMicroseconds);
+  writeNotNull('length', instance.length?.toJson());
   writeNotNull('reason', instance.reason?.map((e) => e.toJson()).toList());
   writeNotNull(
       'diagnosis', instance.diagnosis?.map((e) => e.toJson()).toList());

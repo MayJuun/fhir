@@ -1373,7 +1373,7 @@ mixin _$AdministrableProductDefinitionRouteOfAdministration {
   Quantity? get maxSingleDose => throw _privateConstructorUsedError;
   Quantity? get maxDosePerDay => throw _privateConstructorUsedError;
   Ratio? get maxDosePerTreatmentPeriod => throw _privateConstructorUsedError;
-  Duration? get maxTreatmentPeriod => throw _privateConstructorUsedError;
+  FhirDuration? get maxTreatmentPeriod => throw _privateConstructorUsedError;
   List<AdministrableProductDefinitionTargetSpecies>? get targetSpecies =>
       throw _privateConstructorUsedError;
 
@@ -1401,7 +1401,7 @@ abstract class $AdministrableProductDefinitionRouteOfAdministrationCopyWith<
       Quantity? maxSingleDose,
       Quantity? maxDosePerDay,
       Ratio? maxDosePerTreatmentPeriod,
-      Duration? maxTreatmentPeriod,
+      FhirDuration? maxTreatmentPeriod,
       List<AdministrableProductDefinitionTargetSpecies>? targetSpecies});
 
   $CodeableConceptCopyWith<$Res> get code;
@@ -1409,6 +1409,7 @@ abstract class $AdministrableProductDefinitionRouteOfAdministrationCopyWith<
   $QuantityCopyWith<$Res>? get maxSingleDose;
   $QuantityCopyWith<$Res>? get maxDosePerDay;
   $RatioCopyWith<$Res>? get maxDosePerTreatmentPeriod;
+  $FhirDurationCopyWith<$Res>? get maxTreatmentPeriod;
 }
 
 /// @nodoc
@@ -1472,7 +1473,7 @@ class _$AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl<$Res>
       maxTreatmentPeriod: maxTreatmentPeriod == freezed
           ? _value.maxTreatmentPeriod
           : maxTreatmentPeriod // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       targetSpecies: targetSpecies == freezed
           ? _value.targetSpecies
           : targetSpecies // ignore: cast_nullable_to_non_nullable
@@ -1530,6 +1531,17 @@ class _$AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl<$Res>
       return _then(_value.copyWith(maxDosePerTreatmentPeriod: value));
     });
   }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get maxTreatmentPeriod {
+    if (_value.maxTreatmentPeriod == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.maxTreatmentPeriod!, (value) {
+      return _then(_value.copyWith(maxTreatmentPeriod: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -1553,7 +1565,7 @@ abstract class _$$_AdministrableProductDefinitionRouteOfAdministrationCopyWith<
       Quantity? maxSingleDose,
       Quantity? maxDosePerDay,
       Ratio? maxDosePerTreatmentPeriod,
-      Duration? maxTreatmentPeriod,
+      FhirDuration? maxTreatmentPeriod,
       List<AdministrableProductDefinitionTargetSpecies>? targetSpecies});
 
   @override
@@ -1566,6 +1578,8 @@ abstract class _$$_AdministrableProductDefinitionRouteOfAdministrationCopyWith<
   $QuantityCopyWith<$Res>? get maxDosePerDay;
   @override
   $RatioCopyWith<$Res>? get maxDosePerTreatmentPeriod;
+  @override
+  $FhirDurationCopyWith<$Res>? get maxTreatmentPeriod;
 }
 
 /// @nodoc
@@ -1636,7 +1650,7 @@ class __$$_AdministrableProductDefinitionRouteOfAdministrationCopyWithImpl<$Res>
       maxTreatmentPeriod: maxTreatmentPeriod == freezed
           ? _value.maxTreatmentPeriod
           : maxTreatmentPeriod // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       targetSpecies: targetSpecies == freezed
           ? _value._targetSpecies
           : targetSpecies // ignore: cast_nullable_to_non_nullable
@@ -1701,7 +1715,7 @@ class _$_AdministrableProductDefinitionRouteOfAdministration
   @override
   final Ratio? maxDosePerTreatmentPeriod;
   @override
-  final Duration? maxTreatmentPeriod;
+  final FhirDuration? maxTreatmentPeriod;
   final List<AdministrableProductDefinitionTargetSpecies>? _targetSpecies;
   @override
   List<AdministrableProductDefinitionTargetSpecies>? get targetSpecies {
@@ -1781,7 +1795,7 @@ abstract class _AdministrableProductDefinitionRouteOfAdministration
           final Quantity? maxSingleDose,
           final Quantity? maxDosePerDay,
           final Ratio? maxDosePerTreatmentPeriod,
-          final Duration? maxTreatmentPeriod,
+          final FhirDuration? maxTreatmentPeriod,
           final List<AdministrableProductDefinitionTargetSpecies>?
               targetSpecies}) =
       _$_AdministrableProductDefinitionRouteOfAdministration;
@@ -1810,7 +1824,7 @@ abstract class _AdministrableProductDefinitionRouteOfAdministration
   @override
   Ratio? get maxDosePerTreatmentPeriod => throw _privateConstructorUsedError;
   @override
-  Duration? get maxTreatmentPeriod => throw _privateConstructorUsedError;
+  FhirDuration? get maxTreatmentPeriod => throw _privateConstructorUsedError;
   @override
   List<AdministrableProductDefinitionTargetSpecies>? get targetSpecies =>
       throw _privateConstructorUsedError;

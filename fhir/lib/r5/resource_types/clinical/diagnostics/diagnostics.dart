@@ -2186,14 +2186,14 @@ class SpecimenCollection with _$SpecimenCollection {
     DateTime? collectedDateTime,
     @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
     Period? collectedPeriod,
-    Duration? duration,
+    FhirDuration? duration,
     Quantity? quantity,
     CodeableConcept? method,
     CodeableReference? device,
     Reference? procedure,
     CodeableReference? bodySite,
     CodeableConcept? fastingStatusCodeableConcept,
-    Duration? fastingStatusDuration,
+    FhirDuration? fastingStatusDuration,
   }) = _SpecimenCollection;
 
   /// Produces a Yaml formatted String version of the object

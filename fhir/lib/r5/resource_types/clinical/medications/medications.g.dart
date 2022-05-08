@@ -2439,7 +2439,7 @@ _$_MedicationKnowledgeMaxDispense _$$_MedicationKnowledgeMaxDispenseFromJson(
       quantity: Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
       period: json['period'] == null
           ? null
-          : Duration(microseconds: json['period'] as int),
+          : FhirDuration.fromJson(json['period'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_MedicationKnowledgeMaxDispenseToJson(
@@ -2458,7 +2458,7 @@ Map<String, dynamic> _$$_MedicationKnowledgeMaxDispenseToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   val['quantity'] = instance.quantity.toJson();
-  writeNotNull('period', instance.period?.inMicroseconds);
+  writeNotNull('period', instance.period?.toJson());
   return val;
 }
 
@@ -2602,7 +2602,8 @@ _$_MedicationKnowledgeStorageGuideline
               .toList(),
           stabilityDuration: json['stabilityDuration'] == null
               ? null
-              : Duration(microseconds: json['stabilityDuration'] as int),
+              : FhirDuration.fromJson(
+                  json['stabilityDuration'] as Map<String, dynamic>),
           environmentalSetting: (json['environmentalSetting'] as List<dynamic>?)
               ?.map((e) => MedicationKnowledgeEnvironmentalSetting.fromJson(
                   e as Map<String, dynamic>))
@@ -2627,7 +2628,7 @@ Map<String, dynamic> _$$_MedicationKnowledgeStorageGuidelineToJson(
   writeNotNull('reference', instance.reference?.toJson());
   writeNotNull('_reference', instance.referenceElement?.toJson());
   writeNotNull('note', instance.note?.map((e) => e.toJson()).toList());
-  writeNotNull('stabilityDuration', instance.stabilityDuration?.inMicroseconds);
+  writeNotNull('stabilityDuration', instance.stabilityDuration?.toJson());
   writeNotNull('environmentalSetting',
       instance.environmentalSetting?.map((e) => e.toJson()).toList());
   return val;
@@ -3030,7 +3031,8 @@ _$_MedicationRequestDispenseRequest
                   json['initialFill'] as Map<String, dynamic>),
           dispenseInterval: json['dispenseInterval'] == null
               ? null
-              : Duration(microseconds: json['dispenseInterval'] as int),
+              : FhirDuration.fromJson(
+                  json['dispenseInterval'] as Map<String, dynamic>),
           validityPeriod: json['validityPeriod'] == null
               ? null
               : Period.fromJson(json['validityPeriod'] as Map<String, dynamic>),
@@ -3046,7 +3048,8 @@ _$_MedicationRequestDispenseRequest
               : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
           expectedSupplyDuration: json['expectedSupplyDuration'] == null
               ? null
-              : Duration(microseconds: json['expectedSupplyDuration'] as int),
+              : FhirDuration.fromJson(
+                  json['expectedSupplyDuration'] as Map<String, dynamic>),
           dispenser: json['dispenser'] == null
               ? null
               : Reference.fromJson(json['dispenser'] as Map<String, dynamic>),
@@ -3075,15 +3078,15 @@ Map<String, dynamic> _$$_MedicationRequestDispenseRequestToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('initialFill', instance.initialFill?.toJson());
-  writeNotNull('dispenseInterval', instance.dispenseInterval?.inMicroseconds);
+  writeNotNull('dispenseInterval', instance.dispenseInterval?.toJson());
   writeNotNull('validityPeriod', instance.validityPeriod?.toJson());
   writeNotNull(
       'numberOfRepeatsAllowed', instance.numberOfRepeatsAllowed?.toJson());
   writeNotNull('_numberOfRepeatsAllowed',
       instance.numberOfRepeatsAllowedElement?.toJson());
   writeNotNull('quantity', instance.quantity?.toJson());
-  writeNotNull('expectedSupplyDuration',
-      instance.expectedSupplyDuration?.inMicroseconds);
+  writeNotNull(
+      'expectedSupplyDuration', instance.expectedSupplyDuration?.toJson());
   writeNotNull('dispenser', instance.dispenser?.toJson());
   writeNotNull('dispenserInstruction',
       instance.dispenserInstruction?.map((e) => e.toJson()).toList());
@@ -3107,7 +3110,7 @@ _$_MedicationRequestInitialFill _$$_MedicationRequestInitialFillFromJson(
           : Quantity.fromJson(json['quantity'] as Map<String, dynamic>),
       duration: json['duration'] == null
           ? null
-          : Duration(microseconds: json['duration'] as int),
+          : FhirDuration.fromJson(json['duration'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_MedicationRequestInitialFillToJson(
@@ -3126,7 +3129,7 @@ Map<String, dynamic> _$$_MedicationRequestInitialFillToJson(
   writeNotNull('modifierExtension',
       instance.modifierExtension?.map((e) => e.toJson()).toList());
   writeNotNull('quantity', instance.quantity?.toJson());
-  writeNotNull('duration', instance.duration?.inMicroseconds);
+  writeNotNull('duration', instance.duration?.toJson());
   return val;
 }
 

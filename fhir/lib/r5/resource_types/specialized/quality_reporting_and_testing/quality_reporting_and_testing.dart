@@ -819,7 +819,7 @@ class MeasureReportGroup with _$MeasureReportGroup {
     CodeableConcept? measureScoreCodeableConcept,
     Period? measureScorePeriod,
     Range? measureScoreRange,
-    Duration? measureScoreDuration,
+    FhirDuration? measureScoreDuration,
     List<MeasureReportStratifier>? stratifier,
   }) = _MeasureReportGroup;
 
@@ -1037,7 +1037,7 @@ class MeasureReportStratum with _$MeasureReportStratum {
     CodeableConcept? measureScoreCodeableConcept,
     Period? measureScorePeriod,
     Range? measureScoreRange,
-    Duration? measureScoreDuration,
+    FhirDuration? measureScoreDuration,
   }) = _MeasureReportStratum;
 
   /// Produces a Yaml formatted String version of the object

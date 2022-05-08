@@ -410,7 +410,7 @@ mixin _$ProductShelfLife {
   List<FhirExtension>? get modifierExtension =>
       throw _privateConstructorUsedError;
   CodeableConcept? get type => throw _privateConstructorUsedError;
-  Duration? get periodDuration => throw _privateConstructorUsedError;
+  FhirDuration? get periodDuration => throw _privateConstructorUsedError;
   Markdown? get periodString => throw _privateConstructorUsedError;
   @JsonKey(name: '_periodString')
   Element? get periodStringElement => throw _privateConstructorUsedError;
@@ -433,12 +433,13 @@ abstract class $ProductShelfLifeCopyWith<$Res> {
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? type,
-      Duration? periodDuration,
+      FhirDuration? periodDuration,
       Markdown? periodString,
       @JsonKey(name: '_periodString') Element? periodStringElement,
       List<CodeableConcept>? specialPrecautionsForStorage});
 
   $CodeableConceptCopyWith<$Res>? get type;
+  $FhirDurationCopyWith<$Res>? get periodDuration;
   $ElementCopyWith<$Res>? get periodStringElement;
 }
 
@@ -482,7 +483,7 @@ class _$ProductShelfLifeCopyWithImpl<$Res>
       periodDuration: periodDuration == freezed
           ? _value.periodDuration
           : periodDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       periodString: periodString == freezed
           ? _value.periodString
           : periodString // ignore: cast_nullable_to_non_nullable
@@ -510,6 +511,17 @@ class _$ProductShelfLifeCopyWithImpl<$Res>
   }
 
   @override
+  $FhirDurationCopyWith<$Res>? get periodDuration {
+    if (_value.periodDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.periodDuration!, (value) {
+      return _then(_value.copyWith(periodDuration: value));
+    });
+  }
+
+  @override
   $ElementCopyWith<$Res>? get periodStringElement {
     if (_value.periodStringElement == null) {
       return null;
@@ -533,13 +545,15 @@ abstract class _$$_ProductShelfLifeCopyWith<$Res>
       @JsonKey(name: 'extension') List<FhirExtension>? extension_,
       List<FhirExtension>? modifierExtension,
       CodeableConcept? type,
-      Duration? periodDuration,
+      FhirDuration? periodDuration,
       Markdown? periodString,
       @JsonKey(name: '_periodString') Element? periodStringElement,
       List<CodeableConcept>? specialPrecautionsForStorage});
 
   @override
   $CodeableConceptCopyWith<$Res>? get type;
+  @override
+  $FhirDurationCopyWith<$Res>? get periodDuration;
   @override
   $ElementCopyWith<$Res>? get periodStringElement;
 }
@@ -586,7 +600,7 @@ class __$$_ProductShelfLifeCopyWithImpl<$Res>
       periodDuration: periodDuration == freezed
           ? _value.periodDuration
           : periodDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       periodString: periodString == freezed
           ? _value.periodString
           : periodString // ignore: cast_nullable_to_non_nullable
@@ -647,7 +661,7 @@ class _$_ProductShelfLife extends _ProductShelfLife {
   @override
   final CodeableConcept? type;
   @override
-  final Duration? periodDuration;
+  final FhirDuration? periodDuration;
   @override
   final Markdown? periodString;
   @override
@@ -719,7 +733,7 @@ abstract class _ProductShelfLife extends ProductShelfLife {
           @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
           final List<FhirExtension>? modifierExtension,
           final CodeableConcept? type,
-          final Duration? periodDuration,
+          final FhirDuration? periodDuration,
           final Markdown? periodString,
           @JsonKey(name: '_periodString') final Element? periodStringElement,
           final List<CodeableConcept>? specialPrecautionsForStorage}) =
@@ -740,7 +754,7 @@ abstract class _ProductShelfLife extends ProductShelfLife {
   @override
   CodeableConcept? get type => throw _privateConstructorUsedError;
   @override
-  Duration? get periodDuration => throw _privateConstructorUsedError;
+  FhirDuration? get periodDuration => throw _privateConstructorUsedError;
   @override
   Markdown? get periodString => throw _privateConstructorUsedError;
   @override

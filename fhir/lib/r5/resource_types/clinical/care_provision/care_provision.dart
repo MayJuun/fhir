@@ -754,7 +754,7 @@ class GoalTarget with _$GoalTarget {
     Ratio? detailRatio,
     Date? dueDate,
     @JsonKey(name: '_dueDate') Element? dueDateElement,
-    Duration? dueDuration,
+    FhirDuration? dueDuration,
   }) = _GoalTarget;
 
   /// Produces a Yaml formatted String version of the object
@@ -1953,7 +1953,7 @@ class RequestGroupAction with _$RequestGroupAction {
     @JsonKey(name: '_timingDateTime') Element? timingDateTimeElement,
     Age? timingAge,
     Period? timingPeriod,
-    Duration? timingDuration,
+    FhirDuration? timingDuration,
     Range? timingRange,
     Timing? timingTiming,
     CodeableReference? location,
@@ -2098,7 +2098,7 @@ class RequestGroupRelatedAction with _$RequestGroupRelatedAction {
     @JsonKey(name: '_targetId') Element? targetIdElement,
     Code? relationship,
     @JsonKey(name: '_relationship') Element? relationshipElement,
-    Duration? offsetDuration,
+    FhirDuration? offsetDuration,
     Range? offsetRange,
   }) = _RequestGroupRelatedAction;
 

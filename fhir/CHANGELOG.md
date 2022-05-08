@@ -5,6 +5,7 @@
 * Finally updating R5 to most recent releast (0.4.6) - complete with comments
 * Removed commented out 'flutter/foundation.dart' because I don't want these to require Flutter dependence even if it would make it easily readable in Flutter's devtool.
 * Updated dependencies (most importantly to Freezed 2.0.0)
+* Made Integer64 a BigInt (which I think makes sense for what it's representing, although it does make it harder to compare with other FhirNumbers)
 
 
 ## [0.6.2]

@@ -258,7 +258,7 @@ class ActivityDefinition with Resource, _$ActivityDefinition {
     Timing? timingTiming,
     Age? timingAge,
     Range? timingRange,
-    Duration? timingDuration,
+    FhirDuration? timingDuration,
     CodeableReference? location,
     List<ActivityDefinitionParticipant>? participant,
     Reference? productReference,
@@ -3250,7 +3250,7 @@ class PlanDefinitionTarget with _$PlanDefinitionTarget {
     Integer? detailInteger,
     @JsonKey(name: '_detailInteger') Element? detailIntegerElement,
     Ratio? detailRatio,
-    Duration? due,
+    FhirDuration? due,
   }) = _PlanDefinitionTarget;
 
   /// Produces a Yaml formatted String version of the object
@@ -3558,7 +3558,7 @@ class PlanDefinitionAction with _$PlanDefinitionAction {
     List<PlanDefinitionOutput>? output,
     List<PlanDefinitionRelatedAction>? relatedAction,
     Age? timingAge,
-    Duration? timingDuration,
+    FhirDuration? timingDuration,
     Range? timingRange,
     Timing? timingTiming,
     CodeableReference? location,
@@ -3840,7 +3840,7 @@ class PlanDefinitionRelatedAction with _$PlanDefinitionRelatedAction {
     @JsonKey(name: '_targetId') Element? targetIdElement,
     Code? relationship,
     @JsonKey(name: '_relationship') Element? relationshipElement,
-    Duration? offsetDuration,
+    FhirDuration? offsetDuration,
     Range? offsetRange,
   }) = _PlanDefinitionRelatedAction;
 
@@ -4909,7 +4909,7 @@ class SpecimenDefinitionTypeTested with _$SpecimenDefinitionTypeTested {
     SpecimenDefinitionContainer? container,
     String? requirement,
     @JsonKey(name: '_requirement') Element? requirementElement,
-    Duration? retentionTime,
+    FhirDuration? retentionTime,
     Boolean? singleUse,
     @JsonKey(name: '_singleUse') Element? singleUseElement,
     List<CodeableConcept>? rejectionCriterion,
@@ -5122,7 +5122,7 @@ class SpecimenDefinitionHandling with _$SpecimenDefinitionHandling {
     List<FhirExtension>? modifierExtension,
     CodeableConcept? temperatureQualifier,
     Range? temperatureRange,
-    Duration? maxDuration,
+    FhirDuration? maxDuration,
     String? instruction,
     @JsonKey(name: '_instruction') Element? instructionElement,
   }) = _SpecimenDefinitionHandling;

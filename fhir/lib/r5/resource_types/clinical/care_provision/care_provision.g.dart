@@ -882,7 +882,7 @@ _$_GoalTarget _$$_GoalTargetFromJson(Map<String, dynamic> json) =>
           : Element.fromJson(json['_dueDate'] as Map<String, dynamic>),
       dueDuration: json['dueDuration'] == null
           ? null
-          : Duration(microseconds: json['dueDuration'] as int),
+          : FhirDuration.fromJson(json['dueDuration'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_GoalTargetToJson(_$_GoalTarget instance) {
@@ -913,7 +913,7 @@ Map<String, dynamic> _$$_GoalTargetToJson(_$_GoalTarget instance) {
   writeNotNull('detailRatio', instance.detailRatio?.toJson());
   writeNotNull('dueDate', instance.dueDate?.toJson());
   writeNotNull('_dueDate', instance.dueDateElement?.toJson());
-  writeNotNull('dueDuration', instance.dueDuration?.inMicroseconds);
+  writeNotNull('dueDuration', instance.dueDuration?.toJson());
   return val;
 }
 
@@ -1930,7 +1930,8 @@ _$_RequestGroupAction _$$_RequestGroupActionFromJson(
           : Period.fromJson(json['timingPeriod'] as Map<String, dynamic>),
       timingDuration: json['timingDuration'] == null
           ? null
-          : Duration(microseconds: json['timingDuration'] as int),
+          : FhirDuration.fromJson(
+              json['timingDuration'] as Map<String, dynamic>),
       timingRange: json['timingRange'] == null
           ? null
           : Range.fromJson(json['timingRange'] as Map<String, dynamic>),
@@ -2027,7 +2028,7 @@ Map<String, dynamic> _$$_RequestGroupActionToJson(
   writeNotNull('_timingDateTime', instance.timingDateTimeElement?.toJson());
   writeNotNull('timingAge', instance.timingAge?.toJson());
   writeNotNull('timingPeriod', instance.timingPeriod?.toJson());
-  writeNotNull('timingDuration', instance.timingDuration?.inMicroseconds);
+  writeNotNull('timingDuration', instance.timingDuration?.toJson());
   writeNotNull('timingRange', instance.timingRange?.toJson());
   writeNotNull('timingTiming', instance.timingTiming?.toJson());
   writeNotNull('location', instance.location?.toJson());
@@ -2113,7 +2114,8 @@ _$_RequestGroupRelatedAction _$$_RequestGroupRelatedActionFromJson(
           : Element.fromJson(json['_relationship'] as Map<String, dynamic>),
       offsetDuration: json['offsetDuration'] == null
           ? null
-          : Duration(microseconds: json['offsetDuration'] as int),
+          : FhirDuration.fromJson(
+              json['offsetDuration'] as Map<String, dynamic>),
       offsetRange: json['offsetRange'] == null
           ? null
           : Range.fromJson(json['offsetRange'] as Map<String, dynamic>),
@@ -2138,7 +2140,7 @@ Map<String, dynamic> _$$_RequestGroupRelatedActionToJson(
   writeNotNull('_targetId', instance.targetIdElement?.toJson());
   writeNotNull('relationship', instance.relationship?.toJson());
   writeNotNull('_relationship', instance.relationshipElement?.toJson());
-  writeNotNull('offsetDuration', instance.offsetDuration?.inMicroseconds);
+  writeNotNull('offsetDuration', instance.offsetDuration?.toJson());
   writeNotNull('offsetRange', instance.offsetRange?.toJson());
   return val;
 }

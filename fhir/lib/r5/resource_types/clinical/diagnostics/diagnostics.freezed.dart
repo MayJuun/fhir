@@ -15234,7 +15234,7 @@ mixin _$SpecimenCollection {
   @JsonKey(name: '_collectedDateTime')
   Element? get collectedDateTimeElement => throw _privateConstructorUsedError;
   Period? get collectedPeriod => throw _privateConstructorUsedError;
-  Duration? get duration => throw _privateConstructorUsedError;
+  FhirDuration? get duration => throw _privateConstructorUsedError;
   Quantity? get quantity => throw _privateConstructorUsedError;
   CodeableConcept? get method => throw _privateConstructorUsedError;
   CodeableReference? get device => throw _privateConstructorUsedError;
@@ -15242,7 +15242,7 @@ mixin _$SpecimenCollection {
   CodeableReference? get bodySite => throw _privateConstructorUsedError;
   CodeableConcept? get fastingStatusCodeableConcept =>
       throw _privateConstructorUsedError;
-  Duration? get fastingStatusDuration => throw _privateConstructorUsedError;
+  FhirDuration? get fastingStatusDuration => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -15263,24 +15263,26 @@ abstract class $SpecimenCollectionCopyWith<$Res> {
       DateTime? collectedDateTime,
       @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
       Period? collectedPeriod,
-      Duration? duration,
+      FhirDuration? duration,
       Quantity? quantity,
       CodeableConcept? method,
       CodeableReference? device,
       Reference? procedure,
       CodeableReference? bodySite,
       CodeableConcept? fastingStatusCodeableConcept,
-      Duration? fastingStatusDuration});
+      FhirDuration? fastingStatusDuration});
 
   $ReferenceCopyWith<$Res>? get collector;
   $ElementCopyWith<$Res>? get collectedDateTimeElement;
   $PeriodCopyWith<$Res>? get collectedPeriod;
+  $FhirDurationCopyWith<$Res>? get duration;
   $QuantityCopyWith<$Res>? get quantity;
   $CodeableConceptCopyWith<$Res>? get method;
   $CodeableReferenceCopyWith<$Res>? get device;
   $ReferenceCopyWith<$Res>? get procedure;
   $CodeableReferenceCopyWith<$Res>? get bodySite;
   $CodeableConceptCopyWith<$Res>? get fastingStatusCodeableConcept;
+  $FhirDurationCopyWith<$Res>? get fastingStatusDuration;
 }
 
 /// @nodoc
@@ -15342,7 +15344,7 @@ class _$SpecimenCollectionCopyWithImpl<$Res>
       duration: duration == freezed
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       quantity: quantity == freezed
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
@@ -15370,7 +15372,7 @@ class _$SpecimenCollectionCopyWithImpl<$Res>
       fastingStatusDuration: fastingStatusDuration == freezed
           ? _value.fastingStatusDuration
           : fastingStatusDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
     ));
   }
 
@@ -15404,6 +15406,17 @@ class _$SpecimenCollectionCopyWithImpl<$Res>
 
     return $PeriodCopyWith<$Res>(_value.collectedPeriod!, (value) {
       return _then(_value.copyWith(collectedPeriod: value));
+    });
+  }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get duration {
+    if (_value.duration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.duration!, (value) {
+      return _then(_value.copyWith(duration: value));
     });
   }
 
@@ -15473,6 +15486,17 @@ class _$SpecimenCollectionCopyWithImpl<$Res>
       return _then(_value.copyWith(fastingStatusCodeableConcept: value));
     });
   }
+
+  @override
+  $FhirDurationCopyWith<$Res>? get fastingStatusDuration {
+    if (_value.fastingStatusDuration == null) {
+      return null;
+    }
+
+    return $FhirDurationCopyWith<$Res>(_value.fastingStatusDuration!, (value) {
+      return _then(_value.copyWith(fastingStatusDuration: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -15490,14 +15514,14 @@ abstract class _$$_SpecimenCollectionCopyWith<$Res>
       DateTime? collectedDateTime,
       @JsonKey(name: '_collectedDateTime') Element? collectedDateTimeElement,
       Period? collectedPeriod,
-      Duration? duration,
+      FhirDuration? duration,
       Quantity? quantity,
       CodeableConcept? method,
       CodeableReference? device,
       Reference? procedure,
       CodeableReference? bodySite,
       CodeableConcept? fastingStatusCodeableConcept,
-      Duration? fastingStatusDuration});
+      FhirDuration? fastingStatusDuration});
 
   @override
   $ReferenceCopyWith<$Res>? get collector;
@@ -15505,6 +15529,8 @@ abstract class _$$_SpecimenCollectionCopyWith<$Res>
   $ElementCopyWith<$Res>? get collectedDateTimeElement;
   @override
   $PeriodCopyWith<$Res>? get collectedPeriod;
+  @override
+  $FhirDurationCopyWith<$Res>? get duration;
   @override
   $QuantityCopyWith<$Res>? get quantity;
   @override
@@ -15517,6 +15543,8 @@ abstract class _$$_SpecimenCollectionCopyWith<$Res>
   $CodeableReferenceCopyWith<$Res>? get bodySite;
   @override
   $CodeableConceptCopyWith<$Res>? get fastingStatusCodeableConcept;
+  @override
+  $FhirDurationCopyWith<$Res>? get fastingStatusDuration;
 }
 
 /// @nodoc
@@ -15580,7 +15608,7 @@ class __$$_SpecimenCollectionCopyWithImpl<$Res>
       duration: duration == freezed
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
       quantity: quantity == freezed
           ? _value.quantity
           : quantity // ignore: cast_nullable_to_non_nullable
@@ -15608,7 +15636,7 @@ class __$$_SpecimenCollectionCopyWithImpl<$Res>
       fastingStatusDuration: fastingStatusDuration == freezed
           ? _value.fastingStatusDuration
           : fastingStatusDuration // ignore: cast_nullable_to_non_nullable
-              as Duration?,
+              as FhirDuration?,
     ));
   }
 }
@@ -15670,7 +15698,7 @@ class _$_SpecimenCollection extends _SpecimenCollection {
   @override
   final Period? collectedPeriod;
   @override
-  final Duration? duration;
+  final FhirDuration? duration;
   @override
   final Quantity? quantity;
   @override
@@ -15684,7 +15712,7 @@ class _$_SpecimenCollection extends _SpecimenCollection {
   @override
   final CodeableConcept? fastingStatusCodeableConcept;
   @override
-  final Duration? fastingStatusDuration;
+  final FhirDuration? fastingStatusDuration;
 
   @override
   String toString() {
@@ -15764,14 +15792,14 @@ abstract class _SpecimenCollection extends SpecimenCollection {
       @JsonKey(name: '_collectedDateTime')
           final Element? collectedDateTimeElement,
       final Period? collectedPeriod,
-      final Duration? duration,
+      final FhirDuration? duration,
       final Quantity? quantity,
       final CodeableConcept? method,
       final CodeableReference? device,
       final Reference? procedure,
       final CodeableReference? bodySite,
       final CodeableConcept? fastingStatusCodeableConcept,
-      final Duration? fastingStatusDuration}) = _$_SpecimenCollection;
+      final FhirDuration? fastingStatusDuration}) = _$_SpecimenCollection;
   _SpecimenCollection._() : super._();
 
   factory _SpecimenCollection.fromJson(Map<String, dynamic> json) =
@@ -15795,7 +15823,7 @@ abstract class _SpecimenCollection extends SpecimenCollection {
   @override
   Period? get collectedPeriod => throw _privateConstructorUsedError;
   @override
-  Duration? get duration => throw _privateConstructorUsedError;
+  FhirDuration? get duration => throw _privateConstructorUsedError;
   @override
   Quantity? get quantity => throw _privateConstructorUsedError;
   @override
@@ -15810,7 +15838,7 @@ abstract class _SpecimenCollection extends SpecimenCollection {
   CodeableConcept? get fastingStatusCodeableConcept =>
       throw _privateConstructorUsedError;
   @override
-  Duration? get fastingStatusDuration => throw _privateConstructorUsedError;
+  FhirDuration? get fastingStatusDuration => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$$_SpecimenCollectionCopyWith<_$_SpecimenCollection> get copyWith =>
