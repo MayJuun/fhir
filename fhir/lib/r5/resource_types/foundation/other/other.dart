@@ -306,7 +306,6 @@ class BundleLink with _$BundleLink {
   }) = _BundleLink;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -381,7 +380,6 @@ class BundleEntry with _$BundleEntry {
   }) = _BundleEntry;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -445,7 +443,6 @@ class BundleSearch with _$BundleSearch {
   }) = _BundleSearch;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -533,7 +530,6 @@ class BundleRequest with _$BundleRequest {
   }) = _BundleRequest;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -612,7 +608,6 @@ class BundleResponse with _$BundleResponse {
   }) = _BundleResponse;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -761,7 +756,6 @@ class LinkageItem with _$LinkageItem {
   }) = _LinkageItem;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -946,7 +940,6 @@ class MessageHeaderDestination with _$MessageHeaderDestination {
   }) = _MessageHeaderDestination;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1025,7 +1018,6 @@ class MessageHeaderSource with _$MessageHeaderSource {
   }) = _MessageHeaderSource;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1089,7 +1081,6 @@ class MessageHeaderResponse with _$MessageHeaderResponse {
   }) = _MessageHeaderResponse;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1255,7 +1246,6 @@ class OperationOutcomeIssue with _$OperationOutcomeIssue {
   }) = _OperationOutcomeIssue;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1603,7 +1593,6 @@ class ParametersParameter with _$ParametersParameter {
   }) = _ParametersParameter;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1836,7 +1825,6 @@ class SubscriptionFilterBy with _$SubscriptionFilterBy {
   }) = _SubscriptionFilterBy;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2012,7 +2000,6 @@ class SubscriptionStatusNotificationEvent
   }) = _SubscriptionStatusNotificationEvent;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2278,7 +2265,6 @@ class SubscriptionTopicResourceTrigger with _$SubscriptionTopicResourceTrigger {
   }) = _SubscriptionTopicResourceTrigger;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2362,7 +2348,6 @@ class SubscriptionTopicQueryCriteria with _$SubscriptionTopicQueryCriteria {
   }) = _SubscriptionTopicQueryCriteria;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2430,7 +2415,6 @@ class SubscriptionTopicEventTrigger with _$SubscriptionTopicEventTrigger {
   }) = _SubscriptionTopicEventTrigger;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2512,7 +2496,6 @@ class SubscriptionTopicCanFilterBy with _$SubscriptionTopicCanFilterBy {
   }) = _SubscriptionTopicCanFilterBy;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2583,7 +2566,6 @@ class SubscriptionTopicNotificationShape
   }) = _SubscriptionTopicNotificationShape;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

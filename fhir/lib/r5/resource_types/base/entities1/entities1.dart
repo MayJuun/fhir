@@ -338,7 +338,6 @@ class HealthcareServiceEligibility with _$HealthcareServiceEligibility {
   }) = _HealthcareServiceEligibility;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -414,7 +413,6 @@ class HealthcareServiceAvailableTime with _$HealthcareServiceAvailableTime {
   }) = _HealthcareServiceAvailableTime;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -476,7 +474,6 @@ class HealthcareServiceNotAvailable with _$HealthcareServiceNotAvailable {
   }) = _HealthcareServiceNotAvailable;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -695,7 +692,6 @@ class LocationPosition with _$LocationPosition {
   }) = _LocationPosition;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -771,7 +767,6 @@ class LocationHoursOfOperation with _$LocationHoursOfOperation {
   }) = _LocationHoursOfOperation;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

@@ -255,7 +255,6 @@ class ResearchStudyLabel with _$ResearchStudyLabel {
   }) = _ResearchStudyLabel;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -319,7 +318,6 @@ class ResearchStudyFocus with _$ResearchStudyFocus {
   }) = _ResearchStudyFocus;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -377,7 +375,6 @@ class ResearchStudyClassification with _$ResearchStudyClassification {
   }) = _ResearchStudyClassification;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -447,7 +444,6 @@ class ResearchStudyAssociatedParty with _$ResearchStudyAssociatedParty {
   }) = _ResearchStudyAssociatedParty;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -511,7 +507,6 @@ class ResearchStudyStatusDate with _$ResearchStudyStatusDate {
   }) = _ResearchStudyStatusDate;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -581,7 +576,6 @@ class ResearchStudyRecruitment with _$ResearchStudyRecruitment {
   }) = _ResearchStudyRecruitment;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -663,7 +657,6 @@ class ResearchStudyComparisonGroup with _$ResearchStudyComparisonGroup {
   }) = _ResearchStudyComparisonGroup;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -730,7 +723,6 @@ class ResearchStudyObjective with _$ResearchStudyObjective {
   }) = _ResearchStudyObjective;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -800,7 +792,6 @@ class ResearchStudyOutcomeMeasure with _$ResearchStudyOutcomeMeasure {
   }) = _ResearchStudyOutcomeMeasure;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -861,7 +852,6 @@ class ResearchStudyWebLocation with _$ResearchStudyWebLocation {
   }) = _ResearchStudyWebLocation;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1049,7 +1039,6 @@ class ResearchSubjectProgress with _$ResearchSubjectProgress {
   }) = _ResearchSubjectProgress;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

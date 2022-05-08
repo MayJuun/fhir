@@ -204,7 +204,6 @@ class CompositionAttester with _$CompositionAttester {
   }) = _CompositionAttester;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -265,7 +264,6 @@ class CompositionEvent with _$CompositionEvent {
   }) = _CompositionEvent;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -353,7 +351,6 @@ class CompositionSection with _$CompositionSection {
   }) = _CompositionSection;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -535,7 +532,6 @@ class DocumentManifestRelated with _$DocumentManifestRelated {
   }) = _DocumentManifestRelated;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -756,7 +752,6 @@ class DocumentReferenceAttester with _$DocumentReferenceAttester {
   }) = _DocumentReferenceAttester;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -814,7 +809,6 @@ class DocumentReferenceRelatesTo with _$DocumentReferenceRelatesTo {
   }) = _DocumentReferenceRelatesTo;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -875,7 +869,6 @@ class DocumentReferenceContent with _$DocumentReferenceContent {
   }) = _DocumentReferenceContent;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -942,7 +935,6 @@ class DocumentReferenceProfile with _$DocumentReferenceProfile {
   }) = _DocumentReferenceProfile;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

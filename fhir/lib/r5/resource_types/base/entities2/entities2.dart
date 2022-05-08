@@ -171,7 +171,6 @@ class BiologicallyDerivedProductCollection
   }) = _BiologicallyDerivedProductCollection;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -264,7 +263,6 @@ class BiologicallyDerivedProductProperty
   }) = _BiologicallyDerivedProductProperty;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -526,7 +524,6 @@ class DeviceOperationalState with _$DeviceOperationalState {
   }) = _DeviceOperationalState;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -585,7 +582,6 @@ class DeviceAssociationState with _$DeviceAssociationState {
   }) = _DeviceAssociationState;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -674,7 +670,6 @@ class DeviceUdiCarrier with _$DeviceUdiCarrier {
   }) = _DeviceUdiCarrier;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -739,7 +734,6 @@ class DeviceDeviceName with _$DeviceDeviceName {
   }) = _DeviceDeviceName;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -806,7 +800,6 @@ class DeviceVersion with _$DeviceVersion {
   }) = _DeviceVersion;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -870,7 +863,6 @@ class DeviceSpecialization with _$DeviceSpecialization {
   }) = _DeviceSpecialization;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -955,7 +947,6 @@ class DeviceProperty with _$DeviceProperty {
   }) = _DeviceProperty;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1140,7 +1131,6 @@ class DeviceMetricCalibration with _$DeviceMetricCalibration {
   }) = _DeviceMetricCalibration;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1196,7 +1186,6 @@ class DeviceLink with _$DeviceLink {
   }) = _DeviceLink;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1363,7 +1352,6 @@ class NutritionProductNutrient with _$NutritionProductNutrient {
   }) = _NutritionProductNutrient;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1420,7 +1408,6 @@ class NutritionProductIngredient with _$NutritionProductIngredient {
   }) = _NutritionProductIngredient;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1500,7 +1487,6 @@ class NutritionProductCharacteristic with _$NutritionProductCharacteristic {
   }) = _NutritionProductCharacteristic;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1586,7 +1572,6 @@ class NutritionProductInstance with _$NutritionProductInstance {
   }) = _NutritionProductInstance;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1762,7 +1747,6 @@ class SubstanceIngredient with _$SubstanceIngredient {
   }) = _SubstanceIngredient;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

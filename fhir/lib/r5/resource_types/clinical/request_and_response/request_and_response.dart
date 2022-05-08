@@ -201,7 +201,6 @@ class CommunicationPayload with _$CommunicationPayload {
   }) = _CommunicationPayload;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -425,7 +424,6 @@ class CommunicationRequestPayload with _$CommunicationRequestPayload {
   }) = _CommunicationRequestPayload;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -676,7 +674,6 @@ class DeviceRequestParameter with _$DeviceRequestParameter {
   }) = _DeviceRequestParameter;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1133,7 +1130,6 @@ class InventoryReportInventoryListing with _$InventoryReportInventoryListing {
   }) = _InventoryReportInventoryListing;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1219,7 +1215,6 @@ class InventoryReportItems with _$InventoryReportItems {
   }) = _InventoryReportItems;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1401,7 +1396,6 @@ class SupplyDeliverySuppliedItem with _$SupplyDeliverySuppliedItem {
   }) = _SupplyDeliverySuppliedItem;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1610,7 +1604,6 @@ class SupplyRequestParameter with _$SupplyRequestParameter {
   }) = _SupplyRequestParameter;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

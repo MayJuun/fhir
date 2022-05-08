@@ -190,7 +190,6 @@ class GroupCharacteristic with _$GroupCharacteristic {
   }) = _GroupCharacteristic;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -254,7 +253,6 @@ class GroupMember with _$GroupMember {
   }) = _GroupMember;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -488,7 +486,6 @@ class PatientContact with _$PatientContact {
   }) = _PatientContact;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -549,7 +546,6 @@ class PatientCommunication with _$PatientCommunication {
   }) = _PatientCommunication;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -610,7 +606,6 @@ class PatientLink with _$PatientLink {
   }) = _PatientLink;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -802,7 +797,6 @@ class PersonCommunication with _$PersonCommunication {
   }) = _PersonCommunication;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -863,7 +857,6 @@ class PersonLink with _$PersonLink {
   }) = _PersonLink;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1054,7 +1047,6 @@ class PractitionerQualification with _$PractitionerQualification {
   }) = _PractitionerQualification;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1258,7 +1250,6 @@ class PractitionerRoleAvailableTime with _$PractitionerRoleAvailableTime {
   }) = _PractitionerRoleAvailableTime;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1319,7 +1310,6 @@ class PractitionerRoleNotAvailable with _$PractitionerRoleNotAvailable {
   }) = _PractitionerRoleNotAvailable;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1501,7 +1491,6 @@ class RelatedPersonCommunication with _$RelatedPersonCommunication {
   }) = _RelatedPersonCommunication;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

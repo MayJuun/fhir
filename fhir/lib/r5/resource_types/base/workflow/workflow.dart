@@ -223,7 +223,6 @@ class AppointmentParticipant with _$AppointmentParticipant {
   }) = _AppointmentParticipant;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -815,7 +814,6 @@ class TaskRestriction with _$TaskRestriction {
   }) = _TaskRestriction;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1089,7 +1087,6 @@ class TaskInput with _$TaskInput {
   }) = _TaskInput;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1363,7 +1360,6 @@ class TaskOutput with _$TaskOutput {
   }) = _TaskOutput;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1572,7 +1568,6 @@ class VerificationResultPrimarySource with _$VerificationResultPrimarySource {
   }) = _VerificationResultPrimarySource;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1660,7 +1655,6 @@ class VerificationResultAttestation with _$VerificationResultAttestation {
   }) = _VerificationResultAttestation;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1724,7 +1718,6 @@ class VerificationResultValidator with _$VerificationResultValidator {
   }) = _VerificationResultValidator;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

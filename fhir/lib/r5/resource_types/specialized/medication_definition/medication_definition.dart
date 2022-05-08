@@ -159,7 +159,6 @@ class AdministrableProductDefinitionProperty
   }) = _AdministrableProductDefinitionProperty;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -235,7 +234,6 @@ class AdministrableProductDefinitionRouteOfAdministration
   }) = _AdministrableProductDefinitionRouteOfAdministration;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -299,7 +297,6 @@ class AdministrableProductDefinitionTargetSpecies
   }) = _AdministrableProductDefinitionTargetSpecies;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -368,7 +365,6 @@ class AdministrableProductDefinitionWithdrawalPeriod
   }) = _AdministrableProductDefinitionWithdrawalPeriod;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -540,7 +536,6 @@ class IngredientManufacturer with _$IngredientManufacturer {
   }) = _IngredientManufacturer;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -598,7 +593,6 @@ class IngredientSubstance with _$IngredientSubstance {
   }) = _IngredientSubstance;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -701,7 +695,6 @@ class IngredientStrength with _$IngredientStrength {
   }) = _IngredientStrength;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -774,7 +767,6 @@ class IngredientReferenceStrength with _$IngredientReferenceStrength {
   }) = _IngredientReferenceStrength;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -952,7 +944,6 @@ class ManufacturedItemDefinitionProperty
   }) = _ManufacturedItemDefinitionProperty;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1189,7 +1180,6 @@ class MedicinalProductDefinitionContact
   }) = _MedicinalProductDefinitionContact;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1258,7 +1248,6 @@ class MedicinalProductDefinitionName with _$MedicinalProductDefinitionName {
   }) = _MedicinalProductDefinitionName;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1321,7 +1310,6 @@ class MedicinalProductDefinitionNamePart
   }) = _MedicinalProductDefinitionNamePart;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1385,7 +1373,6 @@ class MedicinalProductDefinitionCountryLanguage
   }) = _MedicinalProductDefinitionCountryLanguage;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1447,7 +1434,6 @@ class MedicinalProductDefinitionCrossReference
   }) = _MedicinalProductDefinitionCrossReference;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1515,7 +1501,6 @@ class MedicinalProductDefinitionOperation
   }) = _MedicinalProductDefinitionOperation;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1606,7 +1591,6 @@ class MedicinalProductDefinitionCharacteristic
   }) = _MedicinalProductDefinitionCharacteristic;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1802,7 +1786,6 @@ class PackagedProductDefinitionLegalStatusOfSupply
   }) = _PackagedProductDefinitionLegalStatusOfSupply;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1890,7 +1873,6 @@ class PackagedProductDefinitionPackage with _$PackagedProductDefinitionPackage {
   }) = _PackagedProductDefinitionPackage;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -1969,7 +1951,6 @@ class PackagedProductDefinitionProperty
   }) = _PackagedProductDefinitionProperty;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2030,7 +2011,6 @@ class PackagedProductDefinitionContainedItem
   }) = _PackagedProductDefinitionContainedItem;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2232,7 +2212,6 @@ class RegulatedAuthorizationCase with _$RegulatedAuthorizationCase {
   }) = _RegulatedAuthorizationCase;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2471,7 +2450,6 @@ class SubstanceDefinitionMoiety with _$SubstanceDefinitionMoiety {
   }) = _SubstanceDefinitionMoiety;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2547,7 +2525,6 @@ class SubstanceDefinitionProperty with _$SubstanceDefinitionProperty {
   }) = _SubstanceDefinitionProperty;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2609,7 +2586,6 @@ class SubstanceDefinitionMolecularWeight
   }) = _SubstanceDefinitionMolecularWeight;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2694,7 +2670,6 @@ class SubstanceDefinitionStructure with _$SubstanceDefinitionStructure {
   }) = _SubstanceDefinitionStructure;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2762,7 +2737,6 @@ class SubstanceDefinitionRepresentation
   }) = _SubstanceDefinitionRepresentation;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2834,7 +2808,6 @@ class SubstanceDefinitionCode with _$SubstanceDefinitionCode {
   }) = _SubstanceDefinitionCode;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2925,7 +2898,6 @@ class SubstanceDefinitionName with _$SubstanceDefinitionName {
   }) = _SubstanceDefinitionName;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -2989,7 +2961,6 @@ class SubstanceDefinitionOfficial with _$SubstanceDefinitionOfficial {
   }) = _SubstanceDefinitionOfficial;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3077,7 +3048,6 @@ class SubstanceDefinitionRelationship with _$SubstanceDefinitionRelationship {
   }) = _SubstanceDefinitionRelationship;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3146,7 +3116,6 @@ class SubstanceDefinitionSourceMaterial
   }) = _SubstanceDefinitionSourceMaterial;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3330,7 +3299,6 @@ class SubstanceNucleicAcidSubunit with _$SubstanceNucleicAcidSubunit {
   }) = _SubstanceNucleicAcidSubunit;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3403,7 +3371,6 @@ class SubstanceNucleicAcidLinkage with _$SubstanceNucleicAcidLinkage {
   }) = _SubstanceNucleicAcidLinkage;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3470,7 +3437,6 @@ class SubstanceNucleicAcidSugar with _$SubstanceNucleicAcidSugar {
   }) = _SubstanceNucleicAcidSugar;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3628,7 +3594,6 @@ class SubstancePolymerMonomerSet with _$SubstancePolymerMonomerSet {
   }) = _SubstancePolymerMonomerSet;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3695,7 +3660,6 @@ class SubstancePolymerStartingMaterial with _$SubstancePolymerStartingMaterial {
   }) = _SubstancePolymerStartingMaterial;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3762,7 +3726,6 @@ class SubstancePolymerRepeat with _$SubstancePolymerRepeat {
   }) = _SubstancePolymerRepeat;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3835,7 +3798,6 @@ class SubstancePolymerRepeatUnit with _$SubstancePolymerRepeatUnit {
   }) = _SubstancePolymerRepeatUnit;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3909,7 +3871,6 @@ class SubstancePolymerDegreeOfPolymerisation
   }) = _SubstancePolymerDegreeOfPolymerisation;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -3979,7 +3940,6 @@ class SubstancePolymerStructuralRepresentation
   }) = _SubstancePolymerStructuralRepresentation;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4169,7 +4129,6 @@ class SubstanceProteinSubunit with _$SubstanceProteinSubunit {
   }) = _SubstanceProteinSubunit;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4314,7 +4273,6 @@ class SubstanceReferenceInformationGene
   }) = _SubstanceReferenceInformationGene;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4378,7 +4336,6 @@ class SubstanceReferenceInformationGeneElement
   }) = _SubstanceReferenceInformationGeneElement;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4467,7 +4424,6 @@ class SubstanceReferenceInformationTarget
   }) = _SubstanceReferenceInformationTarget;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4658,7 +4614,6 @@ class SubstanceSourceMaterialFractionDescription
   }) = _SubstanceSourceMaterialFractionDescription;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4741,7 +4696,6 @@ class SubstanceSourceMaterialOrganism with _$SubstanceSourceMaterialOrganism {
   }) = _SubstanceSourceMaterialOrganism;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4803,7 +4757,6 @@ class SubstanceSourceMaterialAuthor with _$SubstanceSourceMaterialAuthor {
   }) = _SubstanceSourceMaterialAuthor;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4884,7 +4837,6 @@ class SubstanceSourceMaterialHybrid with _$SubstanceSourceMaterialHybrid {
   }) = _SubstanceSourceMaterialHybrid;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -4949,7 +4901,6 @@ class SubstanceSourceMaterialOrganismGeneral
   }) = _SubstanceSourceMaterialOrganismGeneral;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -5010,7 +4961,6 @@ class SubstanceSourceMaterialPartDescription
   }) = _SubstanceSourceMaterialPartDescription;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument

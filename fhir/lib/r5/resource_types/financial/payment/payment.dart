@@ -325,7 +325,6 @@ class PaymentReconciliationDetail with _$PaymentReconciliationDetail {
   }) = _PaymentReconciliationDetail;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
@@ -389,7 +388,6 @@ class PaymentReconciliationProcessNote with _$PaymentReconciliationProcessNote {
   }) = _PaymentReconciliationProcessNote;
 
   /// Produces a Yaml formatted String version of the object
-  @override
   String toYaml() => json2yaml(toJson());
 
   /// Factory constructor that accepts a [String] in YAML format as an argument
