@@ -603,6 +603,8 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
 
   group('testDates', () {
     test("testDateEqual", () {
+      print(parseFhirPath('Patient.birthDate'));
+      
       expect(
           walkFhirPath(
               context: patientExample(),

@@ -1,5 +1,9 @@
 # fhir_path
 
+## [0.7.0]
+
+* Updated dependencies
+
 ## [0.6.3]
 
 * I want pub points!
