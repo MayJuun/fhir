@@ -8,10 +8,10 @@
   "title": "Alive and not functionally dependent at 90 days",
   "status": "draft",
   "actual": false,
-  "characteristicCombination": "intersection",
   "characteristic": [
     {
       "description": "not functionally dependent at 90 days",
+      "exclude": true,
       "definitionCodeableConcept": {
         "coding": [
           {
@@ -21,18 +21,29 @@
           }
         ]
       },
-      "exclude": true,
-      "timeFromStart": {
-        "quantity": {
-          "value": 90,
-          "unit": "day",
-          "system": "http://unitsofmeasure.org",
-          "code": "d"
+      "timeFromEvent": [
+        {
+          "eventCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/evidence-variable-event",
+                "code": "study-start",
+                "display": "Study Start"
+              }
+            ]
+          },
+          "quantity": {
+            "value": 90,
+            "unit": "day",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
         }
-      }
+      ]
     },
     {
       "description": "alive at 90 days",
+      "exclude": true,
       "definitionCodeableConcept": {
         "coding": [
           {
@@ -42,15 +53,25 @@
           }
         ]
       },
-      "exclude": true,
-      "timeFromStart": {
-        "quantity": {
-          "value": 90,
-          "unit": "day",
-          "system": "http://unitsofmeasure.org",
-          "code": "d"
+      "timeFromEvent": [
+        {
+          "eventCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://hl7.org/fhir/evidence-variable-event",
+                "code": "study-start",
+                "display": "Study Start"
+              }
+            ]
+          },
+          "quantity": {
+            "value": 90,
+            "unit": "day",
+            "system": "http://unitsofmeasure.org",
+            "code": "d"
+          }
         }
-      }
+      ]
     }
   ],
   "handling": "dichotomous",

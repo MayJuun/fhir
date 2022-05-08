@@ -221,7 +221,9 @@
     {
       "type": "derived-from",
       "display": "NCCN Guidelines for Kidney Cancer. V.2.2016",
-      "url": "http://www.example.org/professionals/physician_gls/PDF/kidney.pdf"
+      "document": {
+        "url": "http://www.example.org/professionals/physician_gls/PDF/kidney.pdf"
+      }
     },
     {
       "type": "citation",
@@ -234,7 +236,9 @@
         ]
       },
       "citation": "Oudard S, et al. J Urol. 2007;177(5):1698-702",
-      "url": "http://www.ncbi.nlm.nih.gov/pubmed/17437788"
+      "document": {
+        "url": "http://www.ncbi.nlm.nih.gov/pubmed/17437788"
+      }
     }
   ],
   "action": [

@@ -2,14 +2,14 @@
   "resourceType": "CodeSystem",
   "id": "testscript-scope-conformance-codes",
   "meta": {
-    "lastUpdated": "2021-04-14T22:25:09-04:00",
+    "lastUpdated": "2022-05-06T13:02:42-04:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
   },
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \n      \u003cp\u003eThis code system http://hl7.org/fhir/testscript-conformance-level-codes defines the following codes:\u003c/p\u003e\n      \n      \u003ctable class\u003d\"codes\"\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003e\n            \n            \u003cb\u003eCode\u003c/b\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003e\n            \n            \u003cb\u003eDisplay\u003c/b\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003e\n            \n            \u003cb\u003eDefinition\u003c/b\u003e\n          \n          \u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003eresponse\n            \n            \u003ca name\u003d\"assert-direction-codes-response\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003erequired\u003c/td\u003e\n          \n          \u003ctd\u003eAll tests are expected to pass. This is the default value.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003erequest\n            \n            \u003ca name\u003d\"assert-direction-codes-request\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003eoptional\u003c/td\u003e\n          \n          \u003ctd\u003eAll tests are expected to pass but non-pass statuses may be allowed.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n      \n      \u003c/table\u003e\n    \n    \u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \n      \u003cp\u003eThis code system http://hl7.org/fhir/testscript-conformance-level-codes defines the following codes:\u003c/p\u003e\n      \n      \u003ctable class\u003d\"codes\"\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003e\n            \n            \u003cb\u003eCode\u003c/b\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003e\n            \n            \u003cb\u003eDisplay\u003c/b\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003e\n            \n            \u003cb\u003eDefinition\u003c/b\u003e\n          \n          \u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003erequired\n            \n            \u003ca name\u003d\"testscript-scope-conformance-codes-request\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003eRequired\u003c/td\u003e\n          \n          \u003ctd\u003eAll tests are expected to pass. Warning statuses are permitted. This is the default value.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003eoptional\n            \n            \u003ca name\u003d\"testscript-scope-conformance-codes-optional\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003eOptional\u003c/td\u003e\n          \n          \u003ctd\u003eAll tests are expected to pass but non-pass statuses may be allowed.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n        \n        \u003ctr\u003e\n          \n          \u003ctd style\u003d\"white-space:nowrap\"\u003estrict\n            \n            \u003ca name\u003d\"testscript-scope-conformance-codes-strict\"\u003e \u003c/a\u003e\n          \n          \u003c/td\u003e\n          \n          \u003ctd\u003eStrict\u003c/td\u003e\n          \n          \u003ctd\u003eAll tests are expected to pass. Warnings are treated as a failure.\u003c/td\u003e\n        \n        \u003c/tr\u003e\n      \n      \u003c/table\u003e\n    \n    \u003c/div\u003e"
   },
   "extension": [
     {
@@ -60,13 +60,18 @@
   "concept": [
     {
       "code": "required",
-      "display": "required",
-      "definition": "All tests are expected to pass. This is the default value."
+      "display": "Required",
+      "definition": "All tests are expected to pass. Warning statuses are permitted. This is the default value."
     },
     {
       "code": "optional",
-      "display": "optional",
+      "display": "Optional",
       "definition": "All tests are expected to pass but non-pass statuses may be allowed."
+    },
+    {
+      "code": "strict",
+      "display": "Strict",
+      "definition": "All tests are expected to pass. Warnings are treated as a failure."
     }
   ]
 }

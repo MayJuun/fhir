@@ -19,7 +19,7 @@
   "version": "4.6.0",
   "name": "xhtml",
   "status": "active",
-  "date": "2021-04-15T12:25:09+10:00",
+  "date": "2022-05-06T17:02:42+00:00",
   "publisher": "HL7 FHIR Standard",
   "contact": [
     {
@@ -151,7 +151,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "string"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -192,7 +192,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "string"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"

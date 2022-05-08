@@ -2,7 +2,7 @@
   "resourceType": "ValueSet",
   "id": "participant-role",
   "meta": {
-    "lastUpdated": "2021-04-15T12:25:09.461+10:00",
+    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
@@ -36,6 +36,7 @@
   "name": "ParticipantRoles",
   "title": "Participant Roles",
   "status": "draft",
+  "experimental": true,
   "publisher": "FHIR Project",
   "description": "Roles of participants that may be included in a care team.  Defined as: Healthcare professional (occupation) or Services (qualifier value).",
   "copyright": "This resource includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomed-ct or info@snomed.org",

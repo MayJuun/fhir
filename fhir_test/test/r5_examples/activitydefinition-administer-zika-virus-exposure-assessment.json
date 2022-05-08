@@ -25,7 +25,9 @@
   "relatedArtifact": [
     {
       "type": "derived-from",
-      "url": "https://www.cdc.gov/zika/hc-providers/pregnant-woman.html"
+      "document": {
+        "url": "https://www.cdc.gov/zika/hc-providers/pregnant-woman.html"
+      }
     },
     {
       "type": "depends-on",

@@ -5,7 +5,7 @@
     "status": "generated",
     "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\n      \u003cp\u003e\n        \u0026quot;Risk of fatal ICH with alteplase for stroke\u0026quot; is a univariate risk estimate.\n      \u003c/p\u003e\n\t\u003c/div\u003e"
   },
-  "url": "Evidence/example-stroke-alteplase-fatalICH",
+  "url": "http://hl7.org/fhir/Evidence/example-stroke-alteplase-fatalICH",
   "title": "Risk of fatal ICH with alteplase for stroke",
   "status": "draft",
   "relatedArtifact": [
@@ -14,7 +14,9 @@
       "label": "Emberson 2014",
       "display": "Effect of treatment delay, age, and stroke severity on the effects of intravenous thrombolysis with alteplase for acute ischaemic stroke: a meta-analysis of individual patient data from randomised trials.",
       "citation": "Emberson J, Lees KR, Lyden P, Blackwell L, Albers G, Bluhmki E, et al;Stroke Thrombolysis Trialists\u0027 Collaborative Group. Effect of treatment delay, age, and stroke severity on the effects of intravenous thrombolysis with alteplase for acute ischaemic stroke: a meta-analysis of individual patient data from randomised trials. Lancet 2014 Nov 29;384(9958):1929-35 PMID 25106063",
-      "url": "https://doi.org/10.1016/S0140-6736(14)60584-5"
+      "document": {
+        "url": "https://doi.org/10.1016/S0140-6736(14)60584-5"
+      }
     }
   ],
   "description": "2.7% incidence of fatal intracranial hemorrhage within 7 days with alteplase in patients with acute ischemic stroke",

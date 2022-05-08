@@ -1,0 +1,76 @@
+{
+  "resourceType": "ConceptMap2",
+  "id": "103",
+  "text": {
+    "status": "generated",
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cdiv style\u003d\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"\u003e\u003cp style\u003d\"margin-bottom: 0px\"\u003eResource \u0026quot;103\u0026quot; \u003c/p\u003e\u003c/div\u003e\u003cp\u003e\u003cb\u003eurl\u003c/b\u003e: \u003ca href\u003d\"conceptmap-103.html\"\u003eSNOMED CT to ICD-10-CM mappings for fracture of ulna\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: id: urn:uuid:53cd62ee-033e-414c-9f58-3ca97b5ffc3b\u003c/p\u003e\u003cp\u003e\u003cb\u003eversion\u003c/b\u003e: 20120613\u003c/p\u003e\u003cp\u003e\u003cb\u003ename\u003c/b\u003e: SNOMED CT to ICD-10-CM mappings for fracture of ulna\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: draft\u003c/p\u003e\u003cp\u003e\u003cb\u003eexperimental\u003c/b\u003e: true\u003c/p\u003e\u003cp\u003e\u003cb\u003edate\u003c/b\u003e: 2012-06-13\u003c/p\u003e\u003cp\u003e\u003cb\u003epublisher\u003c/b\u003e: HL7, Inc\u003c/p\u003e\u003cp\u003e\u003cb\u003econtact\u003c/b\u003e: FHIR project team (example): \u003ca href\u003d\"http://hl7.org/fhir\"\u003ehttp://hl7.org/fhir\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003edescription\u003c/b\u003e: Example rule-based mappings between SNOMED CT to ICD-10-CM for fracture of ulna\u003c/p\u003e\u003cp\u003e\u003cb\u003ejurisdiction\u003c/b\u003e: United States of America \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (m49.htm#840)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003epurpose\u003c/b\u003e: Show example rule based mappings\u003c/p\u003e\u003cp\u003e\u003cb\u003ecopyright\u003c/b\u003e: Creative Commons 0\u003c/p\u003e\u003cp\u003e\u003cb\u003esource\u003c/b\u003e: \u003ca href\u003d\"http://snomed.info/sct?fhir_vs\"\u003ehttp://snomed.info/sct?fhir_vs\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003etarget\u003c/b\u003e: \u003ca href\u003d\"http://hl7.org/fhir/sid/icd-10-us\"\u003ehttp://hl7.org/fhir/sid/icd-10-us\u003c/a\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003egroup\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esource\u003c/b\u003e: \u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-snomed-CT.html\"\u003eSNOMED CT International Edition\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003etarget\u003c/b\u003e: \u003ca href\u003d\"http://hl7.org/fhir/sid/icd-10-us\"\u003ehttp://hl7.org/fhir/sid/icd-10-us\u003c/a\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003eelement\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: 263204007\u003c/p\u003e\u003ch3\u003eTargets\u003c/h3\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eRelationship\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eComment\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003eS52.209A\u003c/td\u003e\u003ctd\u003esource-is-broader-than-target\u003c/td\u003e\u003ctd\u003eThe target mapping to ICD-10-CM is \u0027source-is-broader-than-target\u0027, since additional patient data on the encounter (initial vs. subsequent) and fracture type is required for a valid ICD-10-CM mapping.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003eelement\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: 263204007\u003c/p\u003e\u003ch3\u003eTargets\u003c/h3\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eRelationship\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eComment\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003eS52.209D\u003c/td\u003e\u003ctd\u003esource-is-broader-than-target\u003c/td\u003e\u003ctd\u003eThe target mapping to ICD-10-CM is \u0027source-is-broader-than-target\u0027, since additional patient data on the encounter (initial vs. subsequent), fracture type and healing (for subsequent encounter) is required for a valid ICD-10-CM mapping.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003c/div\u003e"
+  },
+  "url": "http://hl7.org/fhir/ConceptMap/103",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:uuid:53cd62ee-033e-414c-9f58-3ca97b5ffc3b"
+    }
+  ],
+  "version": "20120613",
+  "name": "SNOMED CT to ICD-10-CM mappings for fracture of ulna",
+  "status": "draft",
+  "experimental": true,
+  "date": "2012-06-13",
+  "publisher": "HL7, Inc",
+  "contact": [
+    {
+      "name": "FHIR project team (example)",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/fhir"
+        }
+      ]
+    }
+  ],
+  "description": "Example rule-based mappings between SNOMED CT to ICD-10-CM for fracture of ulna",
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code": "840",
+          "display": "United States of America"
+        }
+      ]
+    }
+  ],
+  "purpose": "Show example rule based mappings",
+  "copyright": "Creative Commons 0",
+  "sourceCanonical": "http://snomed.info/sct?fhir_vs",
+  "targetCanonical": "http://hl7.org/fhir/sid/icd-10-us",
+  "group": [
+    {
+      "source": "http://snomed.info/sct",
+      "target": "http://hl7.org/fhir/sid/icd-10-us",
+      "element": [
+        {
+          "code": "263204007",
+          "target": [
+            {
+              "code": "S52.209A",
+              "relationship": "source-is-broader-than-target",
+              "comment": "The target mapping to ICD-10-CM is \u0027source-is-broader-than-target\u0027, since additional patient data on the encounter (initial vs. subsequent) and fracture type is required for a valid ICD-10-CM mapping."
+            }
+          ]
+        },
+        {
+          "code": "263204007",
+          "target": [
+            {
+              "code": "S52.209D",
+              "relationship": "source-is-broader-than-target",
+              "comment": "The target mapping to ICD-10-CM is \u0027source-is-broader-than-target\u0027, since additional patient data on the encounter (initial vs. subsequent), fracture type and healing (for subsequent encounter) is required for a valid ICD-10-CM mapping."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

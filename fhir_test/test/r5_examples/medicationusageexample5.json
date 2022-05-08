@@ -3,13 +3,8 @@
   "id": "example005",
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ebasedOn\u003c/b\u003e: \u003ca\u003eGenerated Summary: status: active; intent: plan; period: 1 Jan. 2013, 9:30:00 pm --\u0026gt; (ongoing)\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: entered-in-error\u003c/p\u003e\u003ch3\u003eMedications\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca\u003eDonald Duck. Generated Summary: Medical record number: 654321 (USUAL); active; Duck Donald (OFFICIAL); gender: male\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eencounter\u003c/b\u003e: \u003ca\u003eGenerated Summary: id: Encounter_Roel_20130311 (TEMP); status: completed; \u003cspan\u003einpatient encounter\u003c/span\u003e; \u003cspan\u003eInpatient stay for nine days\u003c/span\u003e; \u003cspan\u003eHigh priority\u003c/span\u003e; period: 2013-03-11 --\u0026gt; 2013-03-20\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eeffective\u003c/b\u003e: 2014-01-23\u003c/p\u003e\u003cp\u003e\u003cb\u003edateAsserted\u003c/b\u003e: 2015-02-22\u003c/p\u003e\u003cp\u003e\u003cb\u003einformationSource\u003c/b\u003e: \u003ca\u003eDonald Duck. Generated Summary: Medical record number: 654321 (USUAL); active; Duck Donald (OFFICIAL); gender: male\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003enote\u003c/b\u003e: Patient indicated that they thought it was Amoxicillin they were taking but it was really Erythromycin\u003c/p\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cdiv style\u003d\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"\u003e\u003cp style\u003d\"margin-bottom: 0px\"\u003eResource \u0026quot;example005\u0026quot; \u003c/p\u003e\u003c/div\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: entered-in-error\u003c/p\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca href\u003d\"patient-pat1.html\"\u003ePatient/pat1: Donald Duck\u003c/a\u003e \u0026quot;Donald DUCK\u0026quot;\u003c/p\u003e\u003cp\u003e\u003cb\u003eencounter\u003c/b\u003e: \u003ca href\u003d\"encounter-f203.html\"\u003eEncounter/f203\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eeffective\u003c/b\u003e: 2014-01-23\u003c/p\u003e\u003cp\u003e\u003cb\u003edateAsserted\u003c/b\u003e: 2015-02-22\u003c/p\u003e\u003cp\u003e\u003cb\u003einformationSource\u003c/b\u003e: \u003ca href\u003d\"patient-pat1.html\"\u003ePatient/pat1: Donald Duck\u003c/a\u003e \u0026quot;Donald DUCK\u0026quot;\u003c/p\u003e\u003cp\u003e\u003cb\u003enote\u003c/b\u003e: Patient indicated that they thought it was Amoxicillin they were taking but it was really Erythromycin\u003c/p\u003e\u003c/div\u003e"
   },
-  "basedOn": [
-    {
-      "reference": "CarePlan/gpvisit"
-    }
-  ],
   "status": "entered-in-error",
   "medication": {
     "concept": {
@@ -31,10 +26,12 @@
   },
   "effectiveDateTime": "2014-01-23",
   "dateAsserted": "2015-02-22",
-  "informationSource": {
-    "reference": "Patient/pat1",
-    "display": "Donald Duck"
-  },
+  "informationSource": [
+    {
+      "reference": "Patient/pat1",
+      "display": "Donald Duck"
+    }
+  ],
   "note": [
     {
       "text": "Patient indicated that they thought it was Amoxicillin they were taking but it was really Erythromycin"

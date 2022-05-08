@@ -1,0 +1,1 @@
+{"resourceType":"NamingSystem","id":"tldc","name":"TemplateStatusCodeLifeCycle","status":"active","kind":"codesystem","date":"2013-12-05T00:00:00+00:00","publisher":"Art-Decor","description":"Life cycle of the Status Code of a Template Design (Version)","uniqueId":[{"type":"uri","value":"urn:oid:2.16.840.1.113883.3.1937.98.5.8","preferred":true}]}

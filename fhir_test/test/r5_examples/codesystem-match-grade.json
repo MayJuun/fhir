@@ -2,14 +2,14 @@
   "resourceType": "CodeSystem",
   "id": "match-grade",
   "meta": {
-    "lastUpdated": "2021-04-15T12:25:09.461+10:00",
+    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablecodesystem"
     ]
   },
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp/\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ecertain\u003ca name\u003d\"match-grade-certain\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eCertain Match\u003c/td\u003e\u003ctd\u003eThis record meets the matching criteria to be automatically considered as a full match.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eprobable\u003ca name\u003d\"match-grade-probable\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eProbable Match\u003c/td\u003e\u003ctd\u003eThis record is a close match, but not a certain match. Additional review (e.g. by a human) may be required before using this as a match.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003epossible\u003ca name\u003d\"match-grade-possible\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePossible Match\u003c/td\u003e\u003ctd\u003eThis record may be a matching one. Additional review (e.g. by a human) SHOULD be performed before using this as a match.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ecertainly-not\u003ca name\u003d\"match-grade-certainly-not\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eCertainly Not a Match\u003c/td\u003e\u003ctd\u003eThis record is known not to be a match. Note that usually non-matching records are not returned, but in some cases records previously or likely considered as a match may specifically be negated by the matching engine.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis code system http://hl7.org/fhir/match-grade defines the following codes:\u003c/p\u003e\u003ctable class\u003d\"codes\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDefinition\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ecertain\u003ca name\u003d\"match-grade-certain\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eCertain Match\u003c/td\u003e\u003ctd\u003eThis record meets the matching criteria to be automatically considered as a full match.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003eprobable\u003ca name\u003d\"match-grade-probable\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eProbable Match\u003c/td\u003e\u003ctd\u003eThis record is a close match, but not a certain match. Additional review (e.g. by a human) may be required before using this as a match.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003epossible\u003ca name\u003d\"match-grade-possible\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003ePossible Match\u003c/td\u003e\u003ctd\u003eThis record may be a matching one. Additional review (e.g. by a human) SHOULD be performed before using this as a match.\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003ecertainly-not\u003ca name\u003d\"match-grade-certainly-not\"\u003e \u003c/a\u003e\u003c/td\u003e\u003ctd\u003eCertainly Not a Match\u003c/td\u003e\u003ctd\u003eThis record is known not to be a match. Note that usually non-matching records are not returned, but in some cases records previously or likely considered as a match may specifically be negated by the matching engine.\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -27,6 +27,7 @@
   "version": "4.6.0",
   "name": "MatchGrade",
   "caseSensitive": true,
+  "content": "complete",
   "concept": [
     {
       "code": "certain",

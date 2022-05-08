@@ -2,14 +2,14 @@
   "resourceType": "ValueSet",
   "id": "servicerequest-category",
   "meta": {
-    "lastUpdated": "2021-04-15T12:25:09.461+10:00",
+    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
   },
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cul\u003e\u003cli\u003eInclude these codes as defined in \u003ca href\u003d\"http://www.snomed.org/\"\u003e\u003ccode\u003ehttp://snomed.info/sct\u003c/code\u003e\u003c/a\u003e\u003ctable class\u003d\"none\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://browser.ihtsdotools.org/?perspective\u003dfull\u0026amp;conceptId1\u003d108252007\"\u003e108252007\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eLaboratory procedure\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://browser.ihtsdotools.org/?perspective\u003dfull\u0026amp;conceptId1\u003d363679005\"\u003e363679005\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eImaging\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://browser.ihtsdotools.org/?perspective\u003dfull\u0026amp;conceptId1\u003d409063005\"\u003e409063005\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eCounselling\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://browser.ihtsdotools.org/?perspective\u003dfull\u0026amp;conceptId1\u003d409073007\"\u003e409073007\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eEducation\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://browser.ihtsdotools.org/?perspective\u003dfull\u0026amp;conceptId1\u003d387713003\"\u003e387713003\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSurgical procedure\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/li\u003e\u003c/ul\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cul\u003e\u003cli\u003eInclude these codes as defined in \u003ca href\u003d\"http://www.snomed.org/\"\u003e\u003ccode\u003ehttp://snomed.info/sct\u003c/code\u003e\u003c/a\u003e\u003ctable class\u003d\"none\"\u003e\u003ctr\u003e\u003ctd style\u003d\"white-space:nowrap\"\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDisplay\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://snomed.info/id/108252007\"\u003e108252007\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eLaboratory procedure\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://snomed.info/id/363679005\"\u003e363679005\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eImaging\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://snomed.info/id/409063005\"\u003e409063005\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eCounselling\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://snomed.info/id/409073007\"\u003e409073007\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eEducation\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e\u003ca href\u003d\"http://snomed.info/id/387713003\"\u003e387713003\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSurgical procedure\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/li\u003e\u003c/ul\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -36,6 +36,7 @@
   "name": "ServiceRequestCategoryCodes",
   "title": "Service Request Category Codes",
   "status": "draft",
+  "experimental": true,
   "publisher": "Orders and Observations Workgroup",
   "contact": [
     {

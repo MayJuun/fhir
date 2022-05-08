@@ -1,0 +1,48 @@
+{
+  "resourceType": "ConceptMap2",
+  "id": "cdshooks-indicator",
+  "text": {
+    "status": "generated",
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cdiv style\u003d\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"\u003e\u003cp style\u003d\"margin-bottom: 0px\"\u003eResource \u0026quot;cdshooks-indicator\u0026quot; \u003c/p\u003e\u003c/div\u003e\u003cp\u003e\u003cb\u003eurl\u003c/b\u003e: \u003ca href\u003d\"conceptmap-cdshooks-indicator.html\"\u003eIndicatorToRequestPriority\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ename\u003c/b\u003e: IndicatorToRequestPriority\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: draft\u003c/p\u003e\u003cp\u003e\u003cb\u003eexperimental\u003c/b\u003e: false\u003c/p\u003e\u003cp\u003e\u003cb\u003edescription\u003c/b\u003e: This concept map defines a mapping from CDS Hooks indicator to request priority.\u003c/p\u003e\u003cp\u003e\u003cb\u003esource\u003c/b\u003e: \u003ca href\u003d\"http://cds-hooks.hl7.org/ValueSet/indicator\"\u003ehttp://cds-hooks.hl7.org/ValueSet/indicator\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003etarget\u003c/b\u003e: \u003ca href\u003d\"valueset-request-priority.html\"\u003eRequestPriority\u003c/a\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003egroup\u003c/b\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003eelement\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: info\u003c/p\u003e\u003ch3\u003eTargets\u003c/h3\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eRelationship\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003eroutine\u003c/td\u003e\u003ctd\u003eequivalent\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003eelement\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: warning\u003c/p\u003e\u003ch3\u003eTargets\u003c/h3\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eRelationship\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003eurgent\u003c/td\u003e\u003ctd\u003eequivalent\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003eelement\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: critical\u003c/p\u003e\u003ch3\u003eTargets\u003c/h3\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eRelationship\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003estat\u003c/td\u003e\u003ctd\u003eequivalent\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003c/div\u003e"
+  },
+  "url": "http://cds-hooks.hl7.org/ConceptMap/indicator-to-request-priority",
+  "name": "IndicatorToRequestPriority",
+  "status": "draft",
+  "experimental": false,
+  "description": "This concept map defines a mapping from CDS Hooks indicator to request priority.",
+  "sourceCanonical": "http://cds-hooks.hl7.org/ValueSet/indicator",
+  "targetCanonical": "http://hl7.org/fhir/ValueSet/request-priority",
+  "group": [
+    {
+      "element": [
+        {
+          "code": "info",
+          "target": [
+            {
+              "code": "routine",
+              "relationship": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "warning",
+          "target": [
+            {
+              "code": "urgent",
+              "relationship": "equivalent"
+            }
+          ]
+        },
+        {
+          "code": "critical",
+          "target": [
+            {
+              "code": "stat",
+              "relationship": "equivalent"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

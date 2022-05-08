@@ -22,8 +22,12 @@
   "status": "available",
   "modality": [
     {
-      "system": "http://dicom.nema.org/resources/ontology/DCM",
-      "code": "DX"
+      "coding": [
+        {
+          "system": "http://dicom.nema.org/resources/ontology/DCM",
+          "code": "DX"
+        }
+      ]
     }
   ],
   "subject": {
@@ -72,12 +76,12 @@
   "numberOfInstances": 2,
   "procedure": [
     {
-      "valueReference": {
+      "reference": {
         "reference": "Procedure/example"
       }
     },
     {
-      "valueCodeableConcept": {
+      "concept": {
         "coding": [
           {
             "system": "http://www.radlex.org",
@@ -112,8 +116,12 @@
       "uid": "2.16.124.113543.6003.1154777499.30246.19789.3503430045.1",
       "number": 3,
       "modality": {
-        "system": "http://dicom.nema.org/resources/ontology/DCM",
-        "code": "DX"
+        "coding": [
+          {
+            "system": "http://dicom.nema.org/resources/ontology/DCM",
+            "code": "DX"
+          }
+        ]
       },
       "description": "XR Wrist 3+ Views",
       "numberOfInstances": 2,
@@ -123,14 +131,24 @@
         }
       ],
       "bodySite": {
-        "system": "http://snomed.info/sct",
-        "code": "T-15460",
-        "display": "Wrist Joint"
+        "concept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "T-15460",
+              "display": "Wrist Joint"
+            }
+          ]
+        }
       },
       "laterality": {
-        "system": "http://snomed.info/sct",
-        "code": "419161000",
-        "display": "Unilateral left"
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "419161000",
+            "display": "Unilateral left"
+          }
+        ]
       },
       "started": "2011-01-01T11:01:20+03:00",
       "performer": [

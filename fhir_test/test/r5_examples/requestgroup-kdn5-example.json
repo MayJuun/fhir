@@ -26,37 +26,39 @@
       "subject": {
         "reference": "Patient/example"
       },
-      "dosageInstruction": [
-        {
-          "text": "1250 mg/m² IV over 30 minutes",
-          "timing": {
-            "repeat": {
-              "duration": 30,
-              "durationUnit": "min"
-            }
-          },
-          "route": {
-            "text": "IV"
-          },
-          "doseAndRate": [
-            {
-              "type": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
-                    "code": "ordered",
-                    "display": "Ordered"
-                  }
-                ]
-              },
-              "doseQuantity": {
-                "value": 1250,
-                "unit": "mg/m²"
+      "dose": {
+        "dosageInstruction": [
+          {
+            "text": "1250 mg/m² IV over 30 minutes",
+            "timing": {
+              "repeat": {
+                "duration": 30,
+                "durationUnit": "min"
               }
-            }
-          ]
-        }
-      ]
+            },
+            "route": {
+              "text": "IV"
+            },
+            "doseAndRate": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                      "code": "ordered",
+                      "display": "Ordered"
+                    }
+                  ]
+                },
+                "doseQuantity": {
+                  "value": 1250,
+                  "unit": "mg/m²"
+                }
+              }
+            ]
+          }
+        ]
+      }
     },
     {
       "resourceType": "MedicationRequest",
@@ -78,41 +80,43 @@
       "subject": {
         "reference": "Patient/example"
       },
-      "dosageInstruction": [
-        {
-          "text": "AUC 5 IV over 30 minutes",
-          "timing": {
-            "repeat": {
-              "duration": 30,
-              "durationUnit": "min"
-            }
-          },
-          "route": {
-            "text": "IV"
-          },
-          "doseAndRate": [
-            {
-              "type": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
-                    "code": "ordered",
-                    "display": "Ordered"
-                  }
-                ]
-              },
-              "doseQuantity": {
-                "extension": [
-                  {
-                    "url": "http://example.org/fhir/AUC-dose",
-                    "valueInteger": 5
-                  }
-                ]
+      "dose": {
+        "dosageInstruction": [
+          {
+            "text": "AUC 5 IV over 30 minutes",
+            "timing": {
+              "repeat": {
+                "duration": 30,
+                "durationUnit": "min"
               }
-            }
-          ]
-        }
-      ]
+            },
+            "route": {
+              "text": "IV"
+            },
+            "doseAndRate": [
+              {
+                "type": {
+                  "coding": [
+                    {
+                      "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                      "code": "ordered",
+                      "display": "Ordered"
+                    }
+                  ]
+                },
+                "doseQuantity": {
+                  "extension": [
+                    {
+                      "url": "http://example.org/fhir/AUC-dose",
+                      "valueInteger": 5
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
     }
   ],
   "identifier": [

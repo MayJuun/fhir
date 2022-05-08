@@ -41,14 +41,10 @@
   ],
   "ingredient": [
     {
-      "reference": {
-        "display": "Equilidonium Phosphate"
-      }
+      "text": "Equilidonium Phosphate"
     },
     {
-      "reference": {
-        "display": "Calcium Carbonate"
-      }
+      "text": "Calcium Carbonate"
     }
   ],
   "name": [

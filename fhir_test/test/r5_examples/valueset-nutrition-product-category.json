@@ -2,14 +2,14 @@
   "resourceType": "ValueSet",
   "id": "nutrition-product-category",
   "meta": {
-    "lastUpdated": "2021-04-15T12:25:09.461+10:00",
+    "lastUpdated": "2022-05-06T17:02:42.916+00:00",
     "profile": [
       "http://hl7.org/fhir/StructureDefinition/shareablevalueset"
     ]
   },
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis value set includes codes based on the following rules:\u003c/p\u003e\u003cul\u003e\u003cli\u003eInclude codes from \u003ca href\u003d\"http://www.snomed.org/\"\u003e\u003ccode\u003ehttp://snomed.info/sct\u003c/code\u003e\u003c/a\u003e where parent  \u003d  327997002\u003c/li\u003e\u003cli\u003eInclude codes from \u003ca href\u003d\"http://www.snomed.org/\"\u003e\u003ccode\u003ehttp://snomed.info/sct\u003c/code\u003e\u003c/a\u003e where parent  \u003d  229963004\u003c/li\u003e\u003c/ul\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003eThis value set includes codes based on the following rules:\u003c/p\u003e\u003cul\u003e\u003cli\u003eInclude codes from \u003ca href\u003d\"http://www.snomed.org/\"\u003e\u003ccode\u003ehttp://snomed.info/sct\u003c/code\u003e\u003c/a\u003e where concept  is-a  255620007 (Foods)\u003c/li\u003e\u003cli\u003eInclude codes from \u003ca href\u003d\"http://www.snomed.org/\"\u003e\u003ccode\u003ehttp://snomed.info/sct\u003c/code\u003e\u003c/a\u003e where concept  is-a  226465004 (Drinks)\u003c/li\u003e\u003c/ul\u003e\u003c/div\u003e"
   },
   "extension": [
     {
@@ -35,6 +35,7 @@
   "version": "4.6.0",
   "name": "Categories of Nutrition Products",
   "status": "draft",
+  "experimental": true,
   "publisher": "FHIR Project team",
   "contact": [
     {
@@ -46,7 +47,7 @@
       ]
     }
   ],
-  "description": "This value set represents codes for types of edible substances and is provided as a suggestive example.  It include codes from [SNOMED CT](http://snomed.info/sct) where concept has a parent of 327997002 Foods for special diets (product) or has a parent of 229963004 Cultural food types (substance).",
+  "description": "This value set represents codes for types of edible substances and is provided as a suggestive example.  It include codes from [SNOMED CT](http://snomed.info/sct) where concept has a parent of 255620007 Foods (substance) or has a parent of 226465004 Drinks (substance).",
   "copyright": "This resource includes content from SNOMED Clinical Terms® (SNOMED CT®) which is copyright of the International Health Terminology Standards Development Organisation (IHTSDO). Implementers of these specifications must have the appropriate SNOMED CT Affiliate license - for more information contact http://www.snomed.org/snomed-ct/get-snomed-ct or info@snomed.org",
   "compose": {
     "include": [
@@ -54,9 +55,9 @@
         "system": "http://snomed.info/sct",
         "filter": [
           {
-            "property": "parent",
-            "op": "\u003d",
-            "value": "327997002"
+            "property": "concept",
+            "op": "is-a",
+            "value": "255620007"
           }
         ]
       },
@@ -64,9 +65,9 @@
         "system": "http://snomed.info/sct",
         "filter": [
           {
-            "property": "parent",
-            "op": "\u003d",
-            "value": "229963004"
+            "property": "concept",
+            "op": "is-a",
+            "value": "226465004"
           }
         ]
       }

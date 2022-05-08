@@ -3,7 +3,7 @@
   "id": "f201",
   "text": {
     "status": "generated",
-    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: id: 12345\u003c/p\u003e\u003cp\u003e\u003cb\u003eclinicalStatus\u003c/b\u003e: \u003cspan\u003eResolved\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003everificationStatus\u003c/b\u003e: \u003cspan\u003eConfirmed\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecategory\u003c/b\u003e: \u003cspan\u003eProblem\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eseverity\u003c/b\u003e: \u003cspan\u003eMild\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: \u003cspan\u003eFever\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ebodySite\u003c/b\u003e: \u003cspan\u003eEntire body as a whole\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca\u003eRoel. Generated Summary: BSN: 123456789 (OFFICIAL), BSN: 123456789 (OFFICIAL); active; Roel(OFFICIAL); Phone: +31612345678, Phone: +31201234567; gender: male; birthDate: 1960-03-13; \u003cspan\u003eLegally married\u003c/span\u003e; \u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eencounter\u003c/b\u003e: \u003ca\u003eGenerated Summary: id: Encounter_Roel_20130404 (TEMP); status: completed; \u003cspan\u003eambulatory\u003c/span\u003e; \u003cspan\u003eConsultation\u003c/span\u003e; \u003cspan\u003eNormal\u003c/span\u003e\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eonset\u003c/b\u003e: 2013-04-02\u003c/p\u003e\u003cp\u003e\u003cb\u003eabatement\u003c/b\u003e: around April 9, 2013\u003c/p\u003e\u003cp\u003e\u003cb\u003erecordedDate\u003c/b\u003e: 2013-04-04\u003c/p\u003e\u003cp\u003e\u003cb\u003erecorder\u003c/b\u003e: \u003ca\u003eGenerated Summary: UZI-nummer: 12345678901 (OFFICIAL); active; Dokter Bronsig(OFFICIAL); Phone: +31715269111; gender: male; birthDate: 1956-12-24\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003easserter\u003c/b\u003e: \u003ca\u003eGenerated Summary: UZI-nummer: 12345678901 (OFFICIAL); active; Dokter Bronsig(OFFICIAL); Phone: +31715269111; gender: male; birthDate: 1956-12-24\u003c/a\u003e\u003c/p\u003e\u003ch3\u003eEvidences\u003c/h3\u003e\u003ctable\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eCode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eDetail\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003e\u003cspan\u003edegrees C\u003c/span\u003e\u003c/td\u003e\u003ctd\u003e\u003ca\u003eTemperature. Generated Summary: status: entered-in-error; \u003cspan\u003eVital Signs\u003c/span\u003e; \u003cspan\u003eTemperature\u003c/span\u003e; issued: 4 Apr. 2013, 11:27:00 pm; 39 degrees C; \u003cspan\u003eHigh\u003c/span\u003e; \u003cspan\u003eOral cavity\u003c/span\u003e; \u003cspan\u003eOral temperature taking\u003c/span\u003e\u003c/a\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/div\u003e"
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cdiv style\u003d\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"\u003e\u003cp style\u003d\"margin-bottom: 0px\"\u003eResource \u0026quot;f201\u0026quot; \u003c/p\u003e\u003c/div\u003e\u003cp\u003e\u003cb\u003eidentifier\u003c/b\u003e: id: 12345\u003c/p\u003e\u003cp\u003e\u003cb\u003eclinicalStatus\u003c/b\u003e: Resolved \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-condition-clinical.html\"\u003eCondition Clinical Status Codes\u003c/a\u003e#resolved)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003everificationStatus\u003c/b\u003e: Confirmed \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"codesystem-condition-ver-status.html\"\u003eConditionVerificationStatus\u003c/a\u003e#confirmed)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecategory\u003c/b\u003e: Problem \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"https://browser.ihtsdotools.org/\"\u003eSNOMED CT\u003c/a\u003e#55607006; \u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-condition-category.html\"\u003eCondition Category Codes\u003c/a\u003e#problem-list-item)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eseverity\u003c/b\u003e: Mild \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"https://browser.ihtsdotools.org/\"\u003eSNOMED CT\u003c/a\u003e#255604002)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: Fever \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"https://browser.ihtsdotools.org/\"\u003eSNOMED CT\u003c/a\u003e#386661006)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ebodySite\u003c/b\u003e: Entire body as a whole \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"https://browser.ihtsdotools.org/\"\u003eSNOMED CT\u003c/a\u003e#38266002)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esubject\u003c/b\u003e: \u003ca href\u003d\"patient-f201.html\"\u003ePatient/f201: Roel\u003c/a\u003e \u0026quot;Roel\u0026quot;\u003c/p\u003e\u003cp\u003e\u003cb\u003eencounter\u003c/b\u003e: \u003ca href\u003d\"encounter-f201.html\"\u003eEncounter/f201\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eonset\u003c/b\u003e: 2013-04-02\u003c/p\u003e\u003cp\u003e\u003cb\u003eabatement\u003c/b\u003e: around April 9, 2013\u003c/p\u003e\u003cp\u003e\u003cb\u003erecordedDate\u003c/b\u003e: 2013-04-04\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003eparticipant\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003efunction\u003c/b\u003e: Enterer \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-provenance-participant-type.html\"\u003eProvenance participant type\u003c/a\u003e#enterer)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eactor\u003c/b\u003e: \u003ca href\u003d\"practitioner-f201.html\"\u003ePractitioner/f201\u003c/a\u003e \u0026quot;Dokter Bronsig\u0026quot;\u003c/p\u003e\u003c/blockquote\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003eparticipant\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003efunction\u003c/b\u003e: Verifier \u003cspan style\u003d\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"\u003e (\u003ca href\u003d\"http://terminology.hl7.org/3.1.0/CodeSystem-provenance-participant-type.html\"\u003eProvenance participant type\u003c/a\u003e#verifier)\u003c/span\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003eactor\u003c/b\u003e: \u003ca href\u003d\"practitioner-f201.html\"\u003ePractitioner/f201\u003c/a\u003e \u0026quot;Dokter Bronsig\u0026quot;\u003c/p\u003e\u003c/blockquote\u003e\u003c/div\u003e"
   },
   "identifier": [
     {
@@ -80,31 +80,51 @@
   "onsetDateTime": "2013-04-02",
   "abatementString": "around April 9, 2013",
   "recordedDate": "2013-04-04",
-  "recorder": {
-    "reference": "Practitioner/f201"
-  },
-  "asserter": {
-    "reference": "Practitioner/f201"
-  },
+  "participant": [
+    {
+      "function": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+            "code": "enterer",
+            "display": "Enterer"
+          }
+        ]
+      },
+      "actor": {
+        "reference": "Practitioner/f201"
+      }
+    },
+    {
+      "function": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type",
+            "code": "verifier",
+            "display": "Verifier"
+          }
+        ]
+      },
+      "actor": {
+        "reference": "Practitioner/f201"
+      }
+    }
+  ],
   "evidence": [
     {
-      "code": [
-        {
-          "coding": [
-            {
-              "system": "http://snomed.info/sct",
-              "code": "258710007",
-              "display": "degrees C"
-            }
-          ]
-        }
-      ],
-      "detail": [
-        {
-          "reference": "Observation/f202",
-          "display": "Temperature"
-        }
-      ]
+      "concept": {
+        "coding": [
+          {
+            "system": "http://snomed.info/sct",
+            "code": "258710007",
+            "display": "degrees C"
+          }
+        ]
+      },
+      "reference": {
+        "reference": "Observation/f202",
+        "display": "Temperature"
+      }
     }
   ],
   "meta": {

@@ -23,15 +23,25 @@
       "uid": "2.16.124.113543.6003.2588828330.45298.17418.2723805630",
       "number": 3,
       "modality": {
-        "system": "http://dicom.nema.org/resources/ontology/DCM",
-        "code": "CT"
+        "coding": [
+          {
+            "system": "http://dicom.nema.org/resources/ontology/DCM",
+            "code": "CT"
+          }
+        ]
       },
       "description": "CT Surview 180",
       "numberOfInstances": 1,
       "bodySite": {
-        "system": "http://snomed.info/sct",
-        "code": "67734004",
-        "display": "Upper Trunk Structure"
+        "concept": {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "67734004",
+              "display": "Upper Trunk Structure"
+            }
+          ]
+        }
       },
       "instance": [
         {

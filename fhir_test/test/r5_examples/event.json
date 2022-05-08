@@ -16,7 +16,7 @@
   "name": "Event",
   "title": "event",
   "status": "draft",
-  "date": "2021-04-15T12:25:09+10:00",
+  "date": "2022-05-06T17:02:42+00:00",
   "publisher": "Health Level Seven International fhir",
   "contact": [
     {
@@ -166,6 +166,7 @@
             "code": "canonical",
             "targetProfile": [
               "http://hl7.org/fhir/StructureDefinition/ActivityDefinition",
+              "http://hl7.org/fhir/StructureDefinition/ArtifactAssessment",
               "http://hl7.org/fhir/StructureDefinition/EventDefinition",
               "http://hl7.org/fhir/StructureDefinition/EvidenceVariable",
               "http://hl7.org/fhir/StructureDefinition/Measure",
@@ -330,7 +331,6 @@
               "http://hl7.org/fhir/StructureDefinition/ClinicalImpression",
               "http://hl7.org/fhir/StructureDefinition/Communication",
               "http://hl7.org/fhir/StructureDefinition/Composition",
-              "http://hl7.org/fhir/StructureDefinition/Condition",
               "http://hl7.org/fhir/StructureDefinition/Consent",
               "http://hl7.org/fhir/StructureDefinition/Coverage",
               "http://hl7.org/fhir/StructureDefinition/CoverageEligibilityResponse",
@@ -345,6 +345,7 @@
               "http://hl7.org/fhir/StructureDefinition/ExplanationOfBenefit",
               "http://hl7.org/fhir/StructureDefinition/FamilyMemberHistory",
               "http://hl7.org/fhir/StructureDefinition/GuidanceResponse",
+              "http://hl7.org/fhir/StructureDefinition/ImagingSelection",
               "http://hl7.org/fhir/StructureDefinition/ImagingStudy",
               "http://hl7.org/fhir/StructureDefinition/Immunization",
               "http://hl7.org/fhir/StructureDefinition/ImmunizationEvaluation",
@@ -360,7 +361,8 @@
               "http://hl7.org/fhir/StructureDefinition/Provenance",
               "http://hl7.org/fhir/StructureDefinition/QuestionnaireResponse",
               "http://hl7.org/fhir/StructureDefinition/RiskAssessment",
-              "http://hl7.org/fhir/StructureDefinition/SupplyDelivery"
+              "http://hl7.org/fhir/StructureDefinition/SupplyDelivery",
+              "http://hl7.org/fhir/StructureDefinition/Transport"
             ]
           }
         ],
@@ -465,7 +467,7 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
               "valueString": "Codes identifying the lifecycle stage of an event."
             },
             {
@@ -528,7 +530,7 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
               "valueString": "Codes identifying the reason for the current state of an event."
             },
             {
@@ -580,7 +582,7 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
               "valueString": "Codes indicating the details of what is/was done.  These will vary significantly based on the type of event resource and will often be example/preferred rather than extensible/required."
             },
             {
@@ -926,7 +928,7 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
               "valueString": "Codes that describe the specific involvement of a performer in an event.  E.g. Primary vs. secondary vs. supervising, etc."
             },
             {
@@ -1077,7 +1079,7 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
               "valueString": "Codes identifying why this event was necessary.  These may be clinical reasons (e.g. diagnoses, symptoms) and/or administrative reasons.  While the detailed constraints of relevant reasons will vary by resource, some degree of consistency across resources around recommended codes would be desirable."
             },
             {

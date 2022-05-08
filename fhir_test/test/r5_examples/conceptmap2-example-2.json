@@ -1,0 +1,63 @@
+{
+  "resourceType": "ConceptMap2",
+  "id": "example2",
+  "text": {
+    "status": "generated",
+    "div": "\u003cdiv xmlns\u003d\"http://www.w3.org/1999/xhtml\"\u003e\u003cp\u003e\u003cb\u003eGenerated Narrative\u003c/b\u003e\u003c/p\u003e\u003cdiv style\u003d\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"\u003e\u003cp style\u003d\"margin-bottom: 0px\"\u003eResource \u0026quot;example2\u0026quot; \u003c/p\u003e\u003c/div\u003e\u003cp\u003e\u003cb\u003eurl\u003c/b\u003e: \u003ca href\u003d\"conceptmap-example-2.html\"\u003eFHIR Example 2\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ename\u003c/b\u003e: FHIR-exanple-2\u003c/p\u003e\u003cp\u003e\u003cb\u003etitle\u003c/b\u003e: FHIR Example 2\u003c/p\u003e\u003cp\u003e\u003cb\u003estatus\u003c/b\u003e: draft\u003c/p\u003e\u003cp\u003e\u003cb\u003eexperimental\u003c/b\u003e: true\u003c/p\u003e\u003cp\u003e\u003cb\u003edate\u003c/b\u003e: 2012-06-13\u003c/p\u003e\u003cp\u003e\u003cb\u003epublisher\u003c/b\u003e: HL7, Inc\u003c/p\u003e\u003cp\u003e\u003cb\u003econtact\u003c/b\u003e: FHIR project team (example): \u003ca href\u003d\"http://hl7.org/fhir\"\u003ehttp://hl7.org/fhir\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003edescription\u003c/b\u003e: An example mapping\u003c/p\u003e\u003cp\u003e\u003cb\u003epurpose\u003c/b\u003e: To illustrate mapping features\u003c/p\u003e\u003cp\u003e\u003cb\u003esource\u003c/b\u003e: \u003ca href\u003d\"http://example.org/fhir/example1\"\u003ehttp://example.org/fhir/example1\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003etarget\u003c/b\u003e: \u003ca href\u003d\"http://example.org/fhir/example2\"\u003ehttp://example.org/fhir/example2\u003c/a\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003egroup\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003esource\u003c/b\u003e: \u003ca href\u003d\"http://example.org/fhir/example1\"\u003ehttp://example.org/fhir/example1\u003c/a\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003etarget\u003c/b\u003e: \u003ca href\u003d\"http://example.org/fhir/example2\"\u003ehttp://example.org/fhir/example2\u003c/a\u003e\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003eelement\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: code\u003c/p\u003e\u003cp\u003e\u003cb\u003edisplay\u003c/b\u003e: Example Code\u003c/p\u003e\u003cblockquote\u003e\u003cp\u003e\u003cb\u003etarget\u003c/b\u003e\u003c/p\u003e\u003cp\u003e\u003cb\u003ecode\u003c/b\u003e: code2\u003c/p\u003e\u003cp\u003e\u003cb\u003edisplay\u003c/b\u003e: Some Example Code\u003c/p\u003e\u003cp\u003e\u003cb\u003erelationship\u003c/b\u003e: equivalent\u003c/p\u003e\u003ch3\u003eDependsOns\u003c/h3\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eProperty\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eValue[x]\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"http://example.org/fhir/property-value/example\"\u003ehttp://example.org/fhir/property-value/example\u003c/a\u003e\u003c/td\u003e\u003ctd\u003eSomething Coded (Details: http://example.org/fhir/example3 code some-code \u003d \u0027some-code\u0027, stated as \u0027Something Coded\u0027)\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/blockquote\u003e\u003c/blockquote\u003e\u003ch3\u003eUnmappeds\u003c/h3\u003e\u003ctable class\u003d\"grid\"\u003e\u003ctr\u003e\u003ctd\u003e-\u003c/td\u003e\u003ctd\u003e\u003cb\u003eMode\u003c/b\u003e\u003c/td\u003e\u003ctd\u003e\u003cb\u003eUrl\u003c/b\u003e\u003c/td\u003e\u003c/tr\u003e\u003ctr\u003e\u003ctd\u003e*\u003c/td\u003e\u003ctd\u003eother-map\u003c/td\u003e\u003ctd\u003e\u003ca href\u003d\"http://example.org/fhir/ConceptMap/map2\"\u003ehttp://example.org/fhir/ConceptMap/map2\u003c/a\u003e\u003c/td\u003e\u003c/tr\u003e\u003c/table\u003e\u003c/blockquote\u003e\u003c/div\u003e"
+  },
+  "url": "http://hl7.org/fhir/ConceptMap/example2",
+  "name": "FHIR-exanple-2",
+  "title": "FHIR Example 2",
+  "status": "draft",
+  "experimental": true,
+  "date": "2012-06-13",
+  "publisher": "HL7, Inc",
+  "contact": [
+    {
+      "name": "FHIR project team (example)",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7.org/fhir"
+        }
+      ]
+    }
+  ],
+  "description": "An example mapping",
+  "purpose": "To illustrate mapping features",
+  "sourceUri": "http://example.org/fhir/example1",
+  "targetUri": "http://example.org/fhir/example2",
+  "group": [
+    {
+      "source": "http://example.org/fhir/example1",
+      "target": "http://example.org/fhir/example2",
+      "element": [
+        {
+          "code": "code",
+          "display": "Example Code",
+          "target": [
+            {
+              "code": "code2",
+              "display": "Some Example Code",
+              "relationship": "equivalent",
+              "dependsOn": [
+                {
+                  "property": "http://example.org/fhir/property-value/example",
+                  "valueCoding": {
+                    "system": "http://example.org/fhir/example3",
+                    "code": "some-code",
+                    "display": "Something Coded"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "unmapped": {
+        "mode": "other-map",
+        "url": "http://example.org/fhir/ConceptMap/map2"
+      }
+    }
+  ]
+}

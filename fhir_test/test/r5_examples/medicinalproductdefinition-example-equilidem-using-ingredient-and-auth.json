@@ -9,6 +9,12 @@
     {
       "resourceType": "Ingredient",
       "id": "EquilidoniumPhosphate",
+      "status": "active",
+      "for": [
+        {
+          "reference": "#"
+        }
+      ],
       "role": {
         "coding": [
           {
@@ -34,7 +40,9 @@
             "presentationRatio": {
               "numerator": {
                 "value": 22,
-                "unit": "ml"
+                "unit": "ml",
+                "system": "http://unitsofmeasure.org",
+                "code": "mL"
               },
               "denominator": {
                 "value": 1,
@@ -48,6 +56,12 @@
     {
       "resourceType": "Ingredient",
       "id": "CalciumCarbonate",
+      "status": "active",
+      "for": [
+        {
+          "reference": "#"
+        }
+      ],
       "role": {
         "coding": [
           {
@@ -73,7 +87,9 @@
             "presentationRatio": {
               "numerator": {
                 "value": 3,
-                "unit": "ml"
+                "unit": "ml",
+                "system": "http://unitsofmeasure.org",
+                "code": "mL"
               },
               "denominator": {
                 "value": 1,
@@ -117,18 +133,6 @@
           "code": "B01A"
         }
       ]
-    }
-  ],
-  "ingredient": [
-    {
-      "reference": {
-        "reference": "#EquilidoniumPhosphate"
-      }
-    },
-    {
-      "reference": {
-        "reference": "#CalciumCarbonate"
-      }
     }
   ],
   "name": [

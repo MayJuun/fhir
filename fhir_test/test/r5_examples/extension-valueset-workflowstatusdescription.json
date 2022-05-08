@@ -44,7 +44,7 @@
         "path": "Extension",
         "short": "Indicates the state of development of the value set",
         "definition": "Workflow Status Description is used to represent details of the value set development process while in a single Activity Status.",
-        "comment": "The values that are traditionally used for this element while the Value Set Definition has an Activity Status of Preliminary are assumed to include phrases that capture various stages in review and approval. It is expected that this would be used to manage maintenance activities, but that a terminology service would not be expected to expose this information. Different services might adopt different workflow status values reflecting their local practices.",
+        "comment": "Values for this element are intended to provide additional information about the workflow or intended use of the value set. These values are intended to distinguish specific use of the value set when the ValueSet.status will be the same even though the workflow status is different. Different services might adopt different workflow status values reflecting their local practices.",
         "min": 0,
         "max": "1",
         "base": {
@@ -92,7 +92,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "string"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -176,7 +176,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "uri"
+                "valueUrl": "uri"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -237,7 +237,7 @@
         "path": "Extension",
         "short": "Indicates the state of development of the value set",
         "definition": "Workflow Status Description is used to represent details of the value set development process while in a single Activity Status.",
-        "comment": "The values that are traditionally used for this element while the Value Set Definition has an Activity Status of Preliminary are assumed to include phrases that capture various stages in review and approval. It is expected that this would be used to manage maintenance activities, but that a terminology service would not be expected to expose this information. Different services might adopt different workflow status values reflecting their local practices.",
+        "comment": "Values for this element are intended to provide additional information about the workflow or intended use of the value set. These values are intended to distinguish specific use of the value set when the ValueSet.status will be the same even though the workflow status is different. Different services might adopt different workflow status values reflecting their local practices.",
         "min": 0,
         "max": "1",
         "isModifier": false

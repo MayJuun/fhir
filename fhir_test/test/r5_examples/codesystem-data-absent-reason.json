@@ -2,7 +2,7 @@
   "resourceType": "CodeSystem",
   "id": "data-absent-reason",
   "meta": {
-    "lastUpdated": "2021-04-15T12:25:09.461+10:00"
+    "lastUpdated": "2022-05-06T17:02:42.916+00:00"
   },
   "text": {
     "status": "extensions",
@@ -38,7 +38,7 @@
   "title": "DataAbsentReason",
   "status": "active",
   "experimental": false,
-  "date": "2021-04-15T12:25:09+10:00",
+  "date": "2022-05-06T17:02:42+00:00",
   "description": "Used to specify why the normally expected content of the data element is missing.",
   "caseSensitive": true,
   "valueSet": "http://hl7.org/fhir/ValueSet/data-absent-reason",

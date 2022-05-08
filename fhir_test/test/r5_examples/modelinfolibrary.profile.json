@@ -75,7 +75,7 @@
             "key": "cnl-0",
             "severity": "warning",
             "human": "Name should be usable as an identifier for the module by machine processing applications such as code generation",
-            "expression": "name.matches(\u0027[A-Z]([A-Za-z0-9_]){0,254}\u0027)",
+            "expression": "name.exists() implies name.matches(\u0027[A-Z]([A-Za-z0-9_]){0,254}\u0027)",
             "xpath": "not(exists(f:name/@value)) or matches(f:name/@value, \u0027[A-Z]([A-Za-z0-9_]){0,254}\u0027)",
             "source": "http://hl7.org/fhir/StructureDefinition/Library"
           }
@@ -116,7 +116,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "id"
+                "valueUrl": "id"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -223,10 +223,6 @@
         "isSummary": false,
         "binding": {
           "extension": [
-            {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
-              "valueString": "A human language."
-            },
             {
               "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
               "valueCanonical": "http://hl7.org/fhir/ValueSet/all-languages"
@@ -2019,7 +2015,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "string"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -2134,7 +2130,7 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
               "valueString": "The mime type of an attachment. Any valid mime type is allowed."
             },
             {
@@ -2200,7 +2196,7 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
               "valueString": "A human language."
             },
             {
@@ -2749,7 +2745,7 @@
             "extension": [
               {
                 "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
-                "valueUri": "string"
+                "valueUrl": "string"
               }
             ],
             "code": "http://hl7.org/fhirpath/System.String"
@@ -2864,7 +2860,7 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
               "valueString": "The mime type of an attachment. Any valid mime type is allowed."
             },
             {
@@ -2930,7 +2926,7 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
               "valueString": "A human language."
             },
             {

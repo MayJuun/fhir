@@ -21,7 +21,9 @@
           "endpoint": "http://acme.com/ehr/fhir"
         },
         "response": {
-          "identifier": "efdd254b-0e09-4164-883e-35cf3871715f",
+          "identifier": {
+            "value": "efdd254b-0e09-4164-883e-35cf3871715f"
+          },
           "code": "ok",
           "details": {
             "reference": "OperationOutcome/03f9aa7d-b395-47b9-84e0-053678b6e4e3"

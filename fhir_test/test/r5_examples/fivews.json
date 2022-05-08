@@ -16,7 +16,7 @@
   "name": "FiveWs",
   "title": "fivews",
   "status": "draft",
-  "date": "2021-04-15T12:25:09+10:00",
+  "date": "2022-05-06T17:02:42+00:00",
   "publisher": "Health Level Seven International fhir",
   "contact": [
     {
@@ -175,7 +175,7 @@
         "binding": {
           "extension": [
             {
-              "url": "http://hl7.org/fhir/build/StructureDefinition/definition",
+              "url": "http://hl7.org/fhir/build/StructureDefinition/binding-definition",
               "valueString": "Status Field."
             },
             {
