@@ -34,7 +34,7 @@ class UnionFunctionParser extends FunctionParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => value.isEmpty
+  String prettyPrint([int indent = 2]) => value.isEmpty
       ? '.union()'
       : '.union(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
           '${indent <= 0 ? "" : "  " * (indent - 1)})';
@@ -74,7 +74,7 @@ class CombineParser extends FunctionParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => value.isEmpty
+  String prettyPrint([int indent = 2]) => value.isEmpty
       ? '.combine()'
       : '.combine(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
           '${indent <= 0 ? "" : "  " * (indent - 1)})';

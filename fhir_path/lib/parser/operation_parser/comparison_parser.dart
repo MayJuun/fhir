@@ -29,7 +29,7 @@ class GreaterParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '>'
+  String prettyPrint([int indent = 2]) => '>'
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
@@ -59,7 +59,7 @@ class LessParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '<'
+  String prettyPrint([int indent = 2]) => '<'
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
@@ -90,7 +90,7 @@ class GreaterEqualParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '>='
+  String prettyPrint([int indent = 2]) => '>='
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
@@ -120,7 +120,7 @@ class LessEqualParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '<='
+  String prettyPrint([int indent = 2]) => '<='
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }

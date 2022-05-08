@@ -51,7 +51,7 @@ class UnaryNegateParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) =>
+  String prettyPrint([int indent = 2]) =>
       '${"  " * (indent - 1)}-${after.prettyPrint(indent + 1)}';
 }
 
@@ -84,7 +84,7 @@ class UnaryPlusParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) =>
+  String prettyPrint([int indent = 2]) =>
       '${"  " * (indent - 1)}+${after.prettyPrint(indent + 1)}';
 }
 
@@ -139,7 +139,7 @@ class StarParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '*'
+  String prettyPrint([int indent = 2]) => '*'
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
@@ -206,7 +206,7 @@ class DivSignParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '/'
+  String prettyPrint([int indent = 2]) => '/'
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
@@ -261,7 +261,7 @@ class DivStringParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => 'div'
+  String prettyPrint([int indent = 2]) => 'div'
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
@@ -322,7 +322,7 @@ class ModParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '%'
+  String prettyPrint([int indent = 2]) => '%'
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
@@ -455,7 +455,7 @@ class PlusParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '+'
+  String prettyPrint([int indent = 2]) => '+'
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}';
 }
@@ -591,7 +591,7 @@ class MinusParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => before.isEmpty
+  String prettyPrint([int indent = 2]) => before.isEmpty
       ? '-${after.prettyPrint(indent + 1)}'
       : '-'
           '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
@@ -660,7 +660,7 @@ class StringConcatenationParser extends OperatorParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => 'stringConcatenation('
+  String prettyPrint([int indent = 2]) => 'stringConcatenation('
       '\n${"  " * indent}${before.prettyPrint(indent + 1)}'
       '\n${"  " * indent}${after.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';

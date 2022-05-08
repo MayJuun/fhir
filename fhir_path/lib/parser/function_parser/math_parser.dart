@@ -36,7 +36,7 @@ class AbsParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.abs()';
+  String prettyPrint([int indent = 2]) => '.abs()';
 }
 
 class CeilingParser extends FhirPathParser {
@@ -65,7 +65,7 @@ class CeilingParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.ceiling()';
+  String prettyPrint([int indent = 2]) => '.ceiling()';
 }
 
 class ExpParser extends FhirPathParser {
@@ -94,7 +94,7 @@ class ExpParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.exp()';
+  String prettyPrint([int indent = 2]) => '.exp()';
 }
 
 class FloorParser extends FhirPathParser {
@@ -123,7 +123,7 @@ class FloorParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.floor()';
+  String prettyPrint([int indent = 2]) => '.floor()';
 }
 
 class LnParser extends FhirPathParser {
@@ -152,7 +152,7 @@ class LnParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.ln()';
+  String prettyPrint([int indent = 2]) => '.ln()';
 }
 
 class LogParser extends ValueParser<ParserList> {
@@ -188,7 +188,7 @@ class LogParser extends ValueParser<ParserList> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) =>
+  String prettyPrint([int indent = 2]) =>
       '.log(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
@@ -233,7 +233,7 @@ class PowerParser extends ValueParser<ParserList> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) =>
+  String prettyPrint([int indent = 2]) =>
       '.power(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
@@ -274,7 +274,7 @@ class RoundParser extends ValueParser<ParserList> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => value.isEmpty
+  String prettyPrint([int indent = 2]) => value.isEmpty
       ? '.round()'
       : '.round(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
           '${indent <= 0 ? "" : "  " * (indent - 1)})';
@@ -306,7 +306,7 @@ class SqrtParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.sqrt()';
+  String prettyPrint([int indent = 2]) => '.sqrt()';
 }
 
 class TruncateParser extends ValueParser {
@@ -337,7 +337,7 @@ class TruncateParser extends ValueParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) {
+  String prettyPrint([int indent = 2]) {
     if (value == null) {
       return '.truncate()';
     } else {

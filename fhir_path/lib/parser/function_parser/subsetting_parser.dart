@@ -32,7 +32,7 @@ class SingleParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.single()';
+  String prettyPrint([int indent = 2]) => '.single()';
 }
 
 class FirstParser extends FhirPathParser {
@@ -56,7 +56,7 @@ class FirstParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.first()';
+  String prettyPrint([int indent = 2]) => '.first()';
 }
 
 class LastParser extends FhirPathParser {
@@ -80,7 +80,7 @@ class LastParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.last()';
+  String prettyPrint([int indent = 2]) => '.last()';
 }
 
 class TailParser extends FhirPathParser {
@@ -110,7 +110,7 @@ class TailParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.tail()';
+  String prettyPrint([int indent = 2]) => '.tail()';
 }
 
 class SkipParser extends FunctionParser {
@@ -152,7 +152,7 @@ class SkipParser extends FunctionParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) =>
+  String prettyPrint([int indent = 2]) =>
       '.skip(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
@@ -196,7 +196,7 @@ class TakeParser extends FunctionParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) =>
+  String prettyPrint([int indent = 2]) =>
       '.take(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
@@ -244,7 +244,7 @@ class IntersectParser extends ValueParser<ParserList> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) =>
+  String prettyPrint([int indent = 2]) =>
       '.intersect(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }
@@ -278,7 +278,7 @@ class ExcludeParser extends ValueParser<ParserList> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) =>
+  String prettyPrint([int indent = 2]) =>
       '.exclude(\n${"  " * indent}${value.prettyPrint(indent + 1)}\n'
       '${indent <= 0 ? "" : "  " * (indent - 1)})';
 }

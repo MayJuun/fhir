@@ -34,7 +34,7 @@ class SumParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.sum()';
+  String prettyPrint([int indent = 2]) => '.sum()';
 }
 
 class MinParser extends FhirPathParser {
@@ -67,7 +67,7 @@ class MinParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.min()';
+  String prettyPrint([int indent = 2]) => '.min()';
 }
 
 class MaxParser extends FhirPathParser {
@@ -100,7 +100,7 @@ class MaxParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.max()';
+  String prettyPrint([int indent = 2]) => '.max()';
 }
 
 class AvgParser extends FhirPathParser {
@@ -133,7 +133,7 @@ class AvgParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.avg()';
+  String prettyPrint([int indent = 2]) => '.avg()';
 }
 
 class AnswersParser extends FhirPathParser {
@@ -165,7 +165,7 @@ class AnswersParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.answers()';
+  String prettyPrint([int indent = 2]) => '.answers()';
 }
 
 class OrdinalParser extends FhirPathParser {
@@ -256,5 +256,5 @@ class OrdinalParser extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '.ordinal()';
+  String prettyPrint([int indent = 2]) => '.ordinal()';
 }

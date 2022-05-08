@@ -35,7 +35,7 @@ class WhiteSpaceParser extends ValueParser<String> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => value;
+  String prettyPrint([int indent = 2]) => value;
 }
 
 /// Boolean Parser, it returns a FHIR Boolean value
@@ -60,7 +60,7 @@ class BooleanParser extends ValueParser<bool> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '$value';
+  String prettyPrint([int indent = 2]) => '$value';
 }
 
 /// This allows the passing of a variable from the environment into the
@@ -133,7 +133,7 @@ class EnvVariableParser extends ValueParser<String> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '$value';
+  String prettyPrint([int indent = 2]) => '$value';
 }
 
 /// The Quantity type represents quantities with a specified unit, where
@@ -169,7 +169,7 @@ class QuantityParser extends ValueParser<FhirPathQuantity> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '$value';
+  String prettyPrint([int indent = 2]) => '$value';
 }
 
 /// The Integer type represents whole numbers in the range -2^31 to 2^31-1 in
@@ -200,7 +200,7 @@ class IntegerParser extends ValueParser<int> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '$value';
+  String prettyPrint([int indent = 2]) => '$value';
 }
 
 /// The Decimal type represents real values in the range (-10^28+1)/10^8 to
@@ -239,7 +239,7 @@ class DecimalParser extends ValueParser<double> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '$value';
+  String prettyPrint([int indent = 2]) => '$value';
 }
 
 /// Identifiers are used as labels to allow expressions to reference elements
@@ -347,7 +347,7 @@ class IdentifierParser extends ValueParser<String> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '$value';
+  String prettyPrint([int indent = 2]) => '$value';
 }
 
 /// Identifiers are used as labels to allow expressions to reference elements
@@ -461,7 +461,7 @@ class DelimitedIdentifierParser extends ValueParser<String> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '`$value`';
+  String prettyPrint([int indent = 2]) => '`$value`';
 }
 
 /// The String type represents string values up to 2^31-1 characters in length.
@@ -491,7 +491,7 @@ class StringParser extends ValueParser<String> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => "'$value'";
+  String prettyPrint([int indent = 2]) => "'$value'";
 }
 
 /// The DateTime type represents date/time and partial date/time values in the
@@ -572,7 +572,7 @@ class DateTimeParser extends BaseDateTimeParser<List> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '@${toString()}';
+  String prettyPrint([int indent = 2]) => '@${toString()}';
 }
 
 /// The Date type represents date and partial date values in the range
@@ -602,7 +602,7 @@ class DateParser extends BaseDateTimeParser<Date> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '@$value';
+  String prettyPrint([int indent = 2]) => '@$value';
 }
 
 /// The Time type represents time-of-day and partial time-of-day values in the
@@ -638,5 +638,5 @@ class TimeParser extends BaseDateTimeParser<Time> {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) => '@T$value';
+  String prettyPrint([int indent = 2]) => '@T$value';
 }

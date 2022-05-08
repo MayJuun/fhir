@@ -17,7 +17,7 @@ abstract class FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent);
+  String prettyPrint([int indent = 2]);
 }
 
 /// ValueParser: basic parser that holds a value
@@ -92,7 +92,7 @@ class ParserList extends FhirPathParser {
   /// parsed value of a FHIRPath in a more human readable way than
   /// [verbosePrint], while still demonstrating how the expression was parsed
   /// and nested according to this package
-  String prettyPrint(int indent) {
+  String prettyPrint([int indent = 2]) {
     var returnString = '';
     for (var item in value) {
       returnString += item.prettyPrint(indent + 1);
