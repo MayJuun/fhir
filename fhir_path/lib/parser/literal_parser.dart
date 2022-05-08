@@ -367,7 +367,85 @@ class DelimitedIdentifierParser extends ValueParser<String> {
 
   /// The iterable, nested function that evaluates the entire FHIRPath
   /// expression one object at a time
-  List execute(List results, Map<String, dynamic> passed) => [value];
+  List execute(List results, Map<String, dynamic> passed) {
+    final identifierName = value;
+
+    final finalResults = [];
+    final finalPrimitiveExtensions =
+        List<dynamic>.filled(results.length, null, growable: false);
+
+    final passedExtensions = passed[ExtensionParser.extensionKey];
+    passed[ExtensionParser.extensionKey] = null;
+
+    if (passed.isVersion(FhirVersion.r4)
+        ? r4.ResourceUtils.resourceTypeFromStringMap.keys
+            .contains(identifierName)
+        : passed.isVersion(FhirVersion.r5)
+            ? r5.ResourceUtils.resourceTypeFromStringMap.keys
+                .contains(identifierName)
+            : passed.isVersion(FhirVersion.dstu2)
+                ? dstu2.ResourceUtils.resourceTypeFromStringMap.keys
+                    .contains(identifierName)
+                : stu3.ResourceUtils.resourceTypeFromStringMap.keys
+                        .contains(identifierName) &&
+                    (passed.hasNoContext
+                        ? false
+                        : passed.context?['resourceType'] == identifierName)) {
+      finalResults.add(passed.context);
+    } else {
+      results.forEachIndexed((i, r) {
+        if (r is Map) {
+          String jsonIdentifierName = identifierName;
+          dynamic rValue = r[identifierName];
+          if (rValue == null) {
+            // Support for polymorphism:
+            // If the key cannot be found in the r-map, then find
+            // a key that starts with the same word, e.g. 'value' identifier will
+            // match 'valueDateTime' key.
+            r.forEach((k, v) {
+              if (k.toString().startsWith(identifierName) &&
+                  polymorphicPrefixes.contains(identifierName) &&
+                  startsWithAPolymorphicPrefix(k.toString())) {
+                rValue = v;
+                jsonIdentifierName = k;
+              }
+            });
+          }
+
+          final jsonPrimitiveExtension =
+              r['_$jsonIdentifierName'] as Map<String, dynamic>?;
+          if (jsonPrimitiveExtension != null) {
+            finalPrimitiveExtensions[i] = jsonPrimitiveExtension['extension'];
+          }
+
+          if (rValue is List) {
+            finalResults.addAll(rValue);
+          } else if (rValue != null) {
+            finalResults.add(rValue);
+          } else if (r['resourceType'] == identifierName) {
+            finalResults.add(r);
+          }
+        } else {
+          if (identifierName == "extension") {
+            // Special processing for extensions on primitives
+            if (passedExtensions != null) {
+              final extensionOnPrimitive = passedExtensions[i];
+              if (extensionOnPrimitive != null) {
+                finalResults.addAll(extensionOnPrimitive);
+              }
+            } else {
+              // This primitive does not have an extension
+              // Do nothing.
+            }
+          }
+        }
+      });
+    }
+
+    passed[ExtensionParser.extensionKey] = finalPrimitiveExtensions;
+
+    return finalResults;
+  }
 
   /// To print the entire parsed FHIRPath expression, this includes ALL
   /// of the Parsers that are used in this package by the names used in

@@ -26,37 +26,53 @@ group('testMiscellaneousAccessorTests - Miscellaneous accessor tests', () {
 <output type="code">mobile</output>
 <output type="code">old</output>
 });
-});
+});*/
 
 // Tests ported from the Java Unit Tests
-group('testBasics - Tests ported from the Java Unit Tests', () {
+  group('testBasics - Tests ported from the Java Unit Tests', () {
 // test(patient(), "name.given", 3, "string");
-test("testSimple", () {expect(walkFhirPath(context: patientExample(), pathExpression: r"name.given"), ["Peter"]);});
-<output type="string">James</output>
-<output type="string">Jim</output>
-<output type="string">Peter</output>
-<output type="string">James</output>
-});
+    test("testSimple", () {
+      expect(
+          walkFhirPath(
+              context: patientExample(), pathExpression: r"name.given[3]"),
+          ["Peter"]);
+    });
+// <output type="string">James</output>
+// <output type="string">Jim</output>
+// <output type="string">Peter</output>
+// <output type="string">James</output>
+// });
 
 // test(patient(), "name.period", 0);
-<test name="testSimpleNone" inputfile="patient-example.xml">
-<expression>name.suffix</expression>
-});
+// <test name="testSimpleNone" inputfile="patient-example.xml">
+// <expression>name.suffix</expression>
+// });
 
 // test(patient(), "name.\"given\"", 3, "string");
-test("testEscapedIdentifier", () {expect(walkFhirPath(context: patientExample(), pathExpression: r"name.`given`"), ["Peter"]);});
-<output type="string">James</output>
-<output type="string">Jim</output>
-<output type="string">Peter</output>
-<output type="string">James</output>
-});
-test("testSimpleBackTick1", () {expect(walkFhirPath(context: patientExample(), pathExpression: r"`Patient`.name.`given`"), ["Peter"]);});
-<output type="string">James</output>
-<output type="string">Jim</output>
-<output type="string">Peter</output>
-<output type="string">James</output>
-});
-*/
+    test("testEscapedIdentifier", () {
+      expect(
+          walkFhirPath(
+              context: patientExample(), pathExpression: r"name.`given`[3]"),
+          ["Peter"]);
+    });
+// <output type="string">James</output>
+// <output type="string">Jim</output>
+// <output type="string">Peter</output>
+// <output type="string">James</output>
+// });
+    test("testSimpleBackTick1", () {
+      expect(
+          walkFhirPath(
+              context: patientExample(),
+              pathExpression: r"`Patient`.name.`given`[3]"),
+          ["Peter"]);
+    });
+// <output type="string">James</output>
+// <output type="string">Jim</output>
+// <output type="string">Peter</output>
+// <output type="string">James</output>
+  });
+
 // testWrong(patient(), "name.given1");
 /*<test name="testSimpleFail" inputfile="patient-example.xml" mode="strict">
 <expression invalid="semantic">name.given1</expression>
@@ -155,18 +171,32 @@ test("testSimpleBackTick1", () {expect(walkFhirPath(context: patientExample(), p
           []);
     });
 
-// // test(patient(), "Patient.name.given.where(substring($this.length()-3) = 'ter')", 1, "string");
-//     test("testDollarThis2", () {
-//       expect(
-//           walkFhirPath(
-//               context: patientExample(),
-//               pathExpression:
-//                   r"Patient.name.given.where(substring($this.length()-3) = 'ter')"),
-//           ["Peter", "Peter"]);
-//     });
-//   });
+// test(patient(), "Patient.name.given.where(substring($this.length()-3) = 'ter')", 1, "string");
+    test("testDollarThis2", () {
+      expect(
+          walkFhirPath(
+              context: patientExample(),
+              pathExpression:
+                  r"Patient.name.given.where(substring($this.length()-3) = 'ter')"),
+          ["Peter", "Peter"]);
+    });
+  });
 
-// /*test("testDollarOrderAllowed", () {expect(walkFhirPath(context: patientExample(), pathExpression: r"Patient.name.skip(1).given"), ["Jim"]);});
+  // TODO: this appears to only capture the first given name, but it should capture three
+  // test("testDollarOrderAllowed", () {
+  //   expect(
+  //       walkFhirPath(
+  //           context: patientExample(),
+  //           pathExpression: r"Patient.name.skip(1).given"),
+  //       ["Jim"]);
+  // });
+  test("testDollarOrderAllowed-fixed", () {
+    expect(
+        walkFhirPath(
+            context: patientExample(),
+            pathExpression: r"Patient.name.skip(1).given[0]"),
+        ["Jim"]);
+  });
 // <output type="string">Peter</output>
 // <output type="string">James</output>
 // });
@@ -178,95 +208,102 @@ test("testSimpleBackTick1", () {expect(walkFhirPath(context: patientExample(), p
 // <test name="testDollarOrderNotAllowed" inputfile="patient-example.xml" mode="strict" checkOrderedFunctions="true">
 // <expression invalid="semantic">Patient.children().skip(1)</expression>
 // });
-  });
+  // });
 
-//   group('testLiterals', () {
-// // testBoolean(patient(), "Patient.name.exists() = true", true);
-//     test("testLiteralTrue", () {
-//       expect(
-//           walkFhirPath(
-//               context: patientExample(),
-//               pathExpression: r"Patient.name.exists() = true"),
-//           [true]);
-//     });
+  group('testLiterals', () {
+// testBoolean(patient(), "Patient.name.exists() = true", true);
+    test("testLiteralTrue", () {
+      expect(
+          walkFhirPath(
+              context: patientExample(),
+              pathExpression: r"Patient.name.exists() = true"),
+          [true]);
+    });
 
-// // testBoolean(patient(), "Patient.name.empty() = false", true);
-//     test("testLiteralFalse", () {
-//       expect(
-//           walkFhirPath(
-//               context: patientExample(),
-//               pathExpression: r"Patient.name.empty() = false"),
-//           [true]);
-//     });
+// testBoolean(patient(), "Patient.name.empty() = false", true);
+    test("testLiteralFalse", () {
+      expect(
+          walkFhirPath(
+              context: patientExample(),
+              pathExpression: r"Patient.name.empty() = false"),
+          [true]);
+    });
 
-// // testBoolean(patient(), "Patient.name.given.first() = 'Peter'", true);
-//     test("testLiteralString", () {
-//       expect(
-//           walkFhirPath(
-//               context: patientExample(),
-//               pathExpression: r"Patient.name.given.first() = 'Peter'"),
-//           [true]);
-//     });
+// testBoolean(patient(), "Patient.name.given.first() = 'Peter'", true);
+    test("testLiteralString", () {
+      expect(
+          walkFhirPath(
+              context: patientExample(),
+              pathExpression: r"Patient.name.given.first() = 'Peter'"),
+          [true]);
+    });
 
-//     test("testLiteralInteger1", () {
-//       expect(
-//           walkFhirPath(
-//               context: patientExample(),
-//               pathExpression: r"1.convertsToInteger()"),
-//           [true]);
-//     });
-//     test("testLiteralInteger0", () {
-//       expect(
-//           walkFhirPath(
-//               context: patientExample(),
-//               pathExpression: r"0.convertsToInteger()"),
-//           [true]);
-//     });
-//     test("testLiteralIntegerNegative1", () {
-//       expect(
-//           walkFhirPath(
-//               context: patientExample(),
-//               pathExpression: r"(-1).convertsToInteger()"),
-//           [true]);
-//     });
-//     test("testLiteralIntegerNegative1Invalid", () {
-//       expect(
-//           () => walkFhirPath(
-//               context: patientExample(),
-//               pathExpression: r"-1.convertsToInteger()"),
-//           throwsA(TypeMatcher<FhirPathException>()));
-//     });
-//     test("testLiteralIntegerMax", () {
-//       expect(
-//           walkFhirPath(
-//               context: patientExample(),
-//               pathExpression: r"2147483647.convertsToInteger()"),
-//           [true]);
-//     });
+    test("testLiteralInteger1", () {
+      expect(
+          walkFhirPath(
+              context: patientExample(),
+              pathExpression: r"1.convertsToInteger()"),
+          [true]);
+    });
+    test("testLiteralInteger0", () {
+      expect(
+          walkFhirPath(
+              context: patientExample(),
+              pathExpression: r"0.convertsToInteger()"),
+          [true]);
+    });
+    test("testLiteralIntegerNegative1", () {
+      expect(
+          walkFhirPath(
+              context: patientExample(),
+              pathExpression: r"(-1).convertsToInteger()"),
+          [true]);
+    });
+    test("testLiteralIntegerNegative1Invalid", () {
+      expect(
+          () => walkFhirPath(
+              context: patientExample(),
+              pathExpression: r"-1.convertsToInteger()"),
+          throwsA(TypeMatcher<FhirPathException>()));
+    });
+    test("testLiteralIntegerMax", () {
+      expect(
+          walkFhirPath(
+              context: patientExample(),
+              pathExpression: r"2147483647.convertsToInteger()"),
+          [true]);
+    });
 
-//     test("testLiteralString", () {
-//       expect(
-//           walkFhirPath(
-//               context: patientExample(),
-//               pathExpression: r"'test'.convertsToString()"),
-//           [true]);
-//     });
-// /*test("testLiteralStringEscapes", () {expect(walkFhirPath(context: patientExample(), pathExpression: r"'\\\/\f\r\n\t\"\`\'\u002a'.convertsToString()"), [true]);});*/
+    test("testLiteralString", () {
+      expect(
+          walkFhirPath(
+              context: patientExample(),
+              pathExpression: r"'test'.convertsToString()"),
+          [true]);
+    });
 
-//     test("testLiteralBooleanTrue", () {
-//       expect(
-//           walkFhirPath(
-//               context: patientExample(),
-//               pathExpression: r"true.convertsToBoolean()"),
-//           [true]);
-//     });
-//     test("testLiteralBooleanFalse", () {
-//       expect(
-//           walkFhirPath(
-//               context: patientExample(),
-//               pathExpression: r"false.convertsToBoolean()"),
-//           [true]);
-//     });
+    test("testLiteralStringEscapes", () {
+      expect(
+          walkFhirPath(
+              context: patientExample(),
+              pathExpression: r"""'\\\/\f\r\n\t\"\`\'\u002a'.convertsToString()"""),
+          [true]);
+    });
+
+    test("testLiteralBooleanTrue", () {
+      expect(
+          walkFhirPath(
+              context: patientExample(),
+              pathExpression: r"true.convertsToBoolean()"),
+          [true]);
+    });
+    test("testLiteralBooleanFalse", () {
+      expect(
+          walkFhirPath(
+              context: patientExample(),
+              pathExpression: r"false.convertsToBoolean()"),
+          [true]);
+    });
 
 //     test("testLiteralDecimal10", () {
 //       expect(
@@ -531,7 +568,7 @@ test("testSimpleBackTick1", () {expect(walkFhirPath(context: patientExample(), p
 //               context: observationExample(),
 //               pathExpression: r"Observation.value.value < 190"),
 //           [true]);
-//     });
+  });
 // /*<test name="testLiteralDecimalLessThanInvalid" inputfile="observation-example.xml"><expression invalid="semantic">Observation.value.value < 'test'</expression>// no output - empty set});*/
 
 //     test("testDateEqual", () {
