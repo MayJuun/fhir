@@ -291,6 +291,9 @@ enum R5ResourceType {
   TestReport,
   @JsonValue('TestScript')
   TestScript,
+
+  @JsonValue('Transport')
+  Transport,
   @JsonValue('ValueSet')
   ValueSet,
   @JsonValue('VerificationResult')

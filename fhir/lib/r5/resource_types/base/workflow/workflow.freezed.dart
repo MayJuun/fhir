@@ -11581,6 +11581,7364 @@ abstract class _TaskOutput extends TaskOutput {
       throw _privateConstructorUsedError;
 }
 
+Transport _$TransportFromJson(Map<String, dynamic> json) {
+  return _Transport.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Transport {
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  Id? get id => throw _privateConstructorUsedError;
+  Meta? get meta => throw _privateConstructorUsedError;
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  Code? get language => throw _privateConstructorUsedError;
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+  Narrative? get text => throw _privateConstructorUsedError;
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  Canonical? get instantiatesCanonical => throw _privateConstructorUsedError;
+  FhirUri? get instantiatesUri => throw _privateConstructorUsedError;
+  @JsonKey(name: '_instantiatesUri')
+  Element? get instantiatesUriElement => throw _privateConstructorUsedError;
+  List<Reference>? get basedOn => throw _privateConstructorUsedError;
+  Identifier? get groupIdentifier => throw _privateConstructorUsedError;
+  List<Reference>? get partOf => throw _privateConstructorUsedError;
+  Code? get status => throw _privateConstructorUsedError;
+  @JsonKey(name: '_status')
+  Element? get statusElement => throw _privateConstructorUsedError;
+  CodeableConcept? get statusReason => throw _privateConstructorUsedError;
+  Code? get intent => throw _privateConstructorUsedError;
+  @JsonKey(name: '_intent')
+  Element? get intentElement => throw _privateConstructorUsedError;
+  Code? get priority => throw _privateConstructorUsedError;
+  @JsonKey(name: '_priority')
+  Element? get priorityElement => throw _privateConstructorUsedError;
+  CodeableConcept? get code => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
+  @JsonKey(name: '_description')
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  Reference? get focus => throw _privateConstructorUsedError;
+  @JsonKey(name: 'for')
+  Reference? get for_ => throw _privateConstructorUsedError;
+  Reference? get encounter => throw _privateConstructorUsedError;
+  FhirDateTime? get completionTime => throw _privateConstructorUsedError;
+  @JsonKey(name: '_completionTime')
+  Element? get completionTimeElement => throw _privateConstructorUsedError;
+  FhirDateTime? get authoredOn => throw _privateConstructorUsedError;
+  @JsonKey(name: '_authoredOn')
+  Element? get authoredOnElement => throw _privateConstructorUsedError;
+  FhirDateTime? get lastModified => throw _privateConstructorUsedError;
+  @JsonKey(name: '_lastModified')
+  Element? get lastModifiedElement => throw _privateConstructorUsedError;
+  Reference? get requester => throw _privateConstructorUsedError;
+  List<CodeableConcept>? get performerType =>
+      throw _privateConstructorUsedError;
+  Reference? get owner => throw _privateConstructorUsedError;
+  Reference? get location => throw _privateConstructorUsedError;
+  CodeableConcept? get reasonCode => throw _privateConstructorUsedError;
+  Reference? get reasonReference => throw _privateConstructorUsedError;
+  List<Reference>? get insurance => throw _privateConstructorUsedError;
+  List<Annotation>? get note => throw _privateConstructorUsedError;
+  List<Reference>? get relevantHistory => throw _privateConstructorUsedError;
+  TransportRestriction? get restriction => throw _privateConstructorUsedError;
+  List<TransportInput>? get input => throw _privateConstructorUsedError;
+  List<TransportOutput>? get output => throw _privateConstructorUsedError;
+  Reference get requestedLocation => throw _privateConstructorUsedError;
+  Reference get currentLocation => throw _privateConstructorUsedError;
+  Reference? get history => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TransportCopyWith<Transport> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TransportCopyWith<$Res> {
+  factory $TransportCopyWith(Transport value, $Res Function(Transport) then) =
+      _$TransportCopyWithImpl<$Res>;
+  $Res call(
+      {R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Canonical? instantiatesCanonical,
+      FhirUri? instantiatesUri,
+      @JsonKey(name: '_instantiatesUri') Element? instantiatesUriElement,
+      List<Reference>? basedOn,
+      Identifier? groupIdentifier,
+      List<Reference>? partOf,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      CodeableConcept? statusReason,
+      Code? intent,
+      @JsonKey(name: '_intent') Element? intentElement,
+      Code? priority,
+      @JsonKey(name: '_priority') Element? priorityElement,
+      CodeableConcept? code,
+      String? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      Reference? focus,
+      @JsonKey(name: 'for') Reference? for_,
+      Reference? encounter,
+      FhirDateTime? completionTime,
+      @JsonKey(name: '_completionTime') Element? completionTimeElement,
+      FhirDateTime? authoredOn,
+      @JsonKey(name: '_authoredOn') Element? authoredOnElement,
+      FhirDateTime? lastModified,
+      @JsonKey(name: '_lastModified') Element? lastModifiedElement,
+      Reference? requester,
+      List<CodeableConcept>? performerType,
+      Reference? owner,
+      Reference? location,
+      CodeableConcept? reasonCode,
+      Reference? reasonReference,
+      List<Reference>? insurance,
+      List<Annotation>? note,
+      List<Reference>? relevantHistory,
+      TransportRestriction? restriction,
+      List<TransportInput>? input,
+      List<TransportOutput>? output,
+      Reference requestedLocation,
+      Reference currentLocation,
+      Reference? history});
+
+  $MetaCopyWith<$Res>? get meta;
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  $ElementCopyWith<$Res>? get languageElement;
+  $NarrativeCopyWith<$Res>? get text;
+  $ElementCopyWith<$Res>? get instantiatesUriElement;
+  $IdentifierCopyWith<$Res>? get groupIdentifier;
+  $ElementCopyWith<$Res>? get statusElement;
+  $CodeableConceptCopyWith<$Res>? get statusReason;
+  $ElementCopyWith<$Res>? get intentElement;
+  $ElementCopyWith<$Res>? get priorityElement;
+  $CodeableConceptCopyWith<$Res>? get code;
+  $ElementCopyWith<$Res>? get descriptionElement;
+  $ReferenceCopyWith<$Res>? get focus;
+  $ReferenceCopyWith<$Res>? get for_;
+  $ReferenceCopyWith<$Res>? get encounter;
+  $ElementCopyWith<$Res>? get completionTimeElement;
+  $ElementCopyWith<$Res>? get authoredOnElement;
+  $ElementCopyWith<$Res>? get lastModifiedElement;
+  $ReferenceCopyWith<$Res>? get requester;
+  $ReferenceCopyWith<$Res>? get owner;
+  $ReferenceCopyWith<$Res>? get location;
+  $CodeableConceptCopyWith<$Res>? get reasonCode;
+  $ReferenceCopyWith<$Res>? get reasonReference;
+  $TransportRestrictionCopyWith<$Res>? get restriction;
+  $ReferenceCopyWith<$Res> get requestedLocation;
+  $ReferenceCopyWith<$Res> get currentLocation;
+  $ReferenceCopyWith<$Res>? get history;
+}
+
+/// @nodoc
+class _$TransportCopyWithImpl<$Res> implements $TransportCopyWith<$Res> {
+  _$TransportCopyWithImpl(this._value, this._then);
+
+  final Transport _value;
+  // ignore: unused_field
+  final $Res Function(Transport) _then;
+
+  @override
+  $Res call({
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? instantiatesCanonical = freezed,
+    Object? instantiatesUri = freezed,
+    Object? instantiatesUriElement = freezed,
+    Object? basedOn = freezed,
+    Object? groupIdentifier = freezed,
+    Object? partOf = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? statusReason = freezed,
+    Object? intent = freezed,
+    Object? intentElement = freezed,
+    Object? priority = freezed,
+    Object? priorityElement = freezed,
+    Object? code = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? focus = freezed,
+    Object? for_ = freezed,
+    Object? encounter = freezed,
+    Object? completionTime = freezed,
+    Object? completionTimeElement = freezed,
+    Object? authoredOn = freezed,
+    Object? authoredOnElement = freezed,
+    Object? lastModified = freezed,
+    Object? lastModifiedElement = freezed,
+    Object? requester = freezed,
+    Object? performerType = freezed,
+    Object? owner = freezed,
+    Object? location = freezed,
+    Object? reasonCode = freezed,
+    Object? reasonReference = freezed,
+    Object? insurance = freezed,
+    Object? note = freezed,
+    Object? relevantHistory = freezed,
+    Object? restriction = freezed,
+    Object? input = freezed,
+    Object? output = freezed,
+    Object? requestedLocation = freezed,
+    Object? currentLocation = freezed,
+    Object? history = freezed,
+  }) {
+    return _then(_value.copyWith(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value.contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value.identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      instantiatesCanonical: instantiatesCanonical == freezed
+          ? _value.instantiatesCanonical
+          : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      instantiatesUri: instantiatesUri == freezed
+          ? _value.instantiatesUri
+          : instantiatesUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      instantiatesUriElement: instantiatesUriElement == freezed
+          ? _value.instantiatesUriElement
+          : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      basedOn: basedOn == freezed
+          ? _value.basedOn
+          : basedOn // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      groupIdentifier: groupIdentifier == freezed
+          ? _value.groupIdentifier
+          : groupIdentifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      partOf: partOf == freezed
+          ? _value.partOf
+          : partOf // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      statusReason: statusReason == freezed
+          ? _value.statusReason
+          : statusReason // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      intent: intent == freezed
+          ? _value.intent
+          : intent // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      intentElement: intentElement == freezed
+          ? _value.intentElement
+          : intentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      priority: priority == freezed
+          ? _value.priority
+          : priority // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      priorityElement: priorityElement == freezed
+          ? _value.priorityElement
+          : priorityElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      focus: focus == freezed
+          ? _value.focus
+          : focus // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      for_: for_ == freezed
+          ? _value.for_
+          : for_ // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      encounter: encounter == freezed
+          ? _value.encounter
+          : encounter // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      completionTime: completionTime == freezed
+          ? _value.completionTime
+          : completionTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      completionTimeElement: completionTimeElement == freezed
+          ? _value.completionTimeElement
+          : completionTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      authoredOn: authoredOn == freezed
+          ? _value.authoredOn
+          : authoredOn // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      authoredOnElement: authoredOnElement == freezed
+          ? _value.authoredOnElement
+          : authoredOnElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      lastModified: lastModified == freezed
+          ? _value.lastModified
+          : lastModified // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      lastModifiedElement: lastModifiedElement == freezed
+          ? _value.lastModifiedElement
+          : lastModifiedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      requester: requester == freezed
+          ? _value.requester
+          : requester // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      performerType: performerType == freezed
+          ? _value.performerType
+          : performerType // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      owner: owner == freezed
+          ? _value.owner
+          : owner // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      reasonCode: reasonCode == freezed
+          ? _value.reasonCode
+          : reasonCode // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      reasonReference: reasonReference == freezed
+          ? _value.reasonReference
+          : reasonReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      insurance: insurance == freezed
+          ? _value.insurance
+          : insurance // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      note: note == freezed
+          ? _value.note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+      relevantHistory: relevantHistory == freezed
+          ? _value.relevantHistory
+          : relevantHistory // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      restriction: restriction == freezed
+          ? _value.restriction
+          : restriction // ignore: cast_nullable_to_non_nullable
+              as TransportRestriction?,
+      input: input == freezed
+          ? _value.input
+          : input // ignore: cast_nullable_to_non_nullable
+              as List<TransportInput>?,
+      output: output == freezed
+          ? _value.output
+          : output // ignore: cast_nullable_to_non_nullable
+              as List<TransportOutput>?,
+      requestedLocation: requestedLocation == freezed
+          ? _value.requestedLocation
+          : requestedLocation // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      currentLocation: currentLocation == freezed
+          ? _value.currentLocation
+          : currentLocation // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      history: history == freezed
+          ? _value.history
+          : history // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+
+  @override
+  $MetaCopyWith<$Res>? get meta {
+    if (_value.meta == null) {
+      return null;
+    }
+
+    return $MetaCopyWith<$Res>(_value.meta!, (value) {
+      return _then(_value.copyWith(meta: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement {
+    if (_value.implicitRulesElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.implicitRulesElement!, (value) {
+      return _then(_value.copyWith(implicitRulesElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get languageElement {
+    if (_value.languageElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.languageElement!, (value) {
+      return _then(_value.copyWith(languageElement: value));
+    });
+  }
+
+  @override
+  $NarrativeCopyWith<$Res>? get text {
+    if (_value.text == null) {
+      return null;
+    }
+
+    return $NarrativeCopyWith<$Res>(_value.text!, (value) {
+      return _then(_value.copyWith(text: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get instantiatesUriElement {
+    if (_value.instantiatesUriElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.instantiatesUriElement!, (value) {
+      return _then(_value.copyWith(instantiatesUriElement: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res>? get groupIdentifier {
+    if (_value.groupIdentifier == null) {
+      return null;
+    }
+
+    return $IdentifierCopyWith<$Res>(_value.groupIdentifier!, (value) {
+      return _then(_value.copyWith(groupIdentifier: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get statusElement {
+    if (_value.statusElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.statusElement!, (value) {
+      return _then(_value.copyWith(statusElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get statusReason {
+    if (_value.statusReason == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.statusReason!, (value) {
+      return _then(_value.copyWith(statusReason: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get intentElement {
+    if (_value.intentElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.intentElement!, (value) {
+      return _then(_value.copyWith(intentElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get priorityElement {
+    if (_value.priorityElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.priorityElement!, (value) {
+      return _then(_value.copyWith(priorityElement: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get code {
+    if (_value.code == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.code!, (value) {
+      return _then(_value.copyWith(code: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get descriptionElement {
+    if (_value.descriptionElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.descriptionElement!, (value) {
+      return _then(_value.copyWith(descriptionElement: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get focus {
+    if (_value.focus == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.focus!, (value) {
+      return _then(_value.copyWith(focus: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get for_ {
+    if (_value.for_ == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.for_!, (value) {
+      return _then(_value.copyWith(for_: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get encounter {
+    if (_value.encounter == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.encounter!, (value) {
+      return _then(_value.copyWith(encounter: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get completionTimeElement {
+    if (_value.completionTimeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.completionTimeElement!, (value) {
+      return _then(_value.copyWith(completionTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get authoredOnElement {
+    if (_value.authoredOnElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.authoredOnElement!, (value) {
+      return _then(_value.copyWith(authoredOnElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get lastModifiedElement {
+    if (_value.lastModifiedElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.lastModifiedElement!, (value) {
+      return _then(_value.copyWith(lastModifiedElement: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get requester {
+    if (_value.requester == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.requester!, (value) {
+      return _then(_value.copyWith(requester: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get owner {
+    if (_value.owner == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.owner!, (value) {
+      return _then(_value.copyWith(owner: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get location {
+    if (_value.location == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.location!, (value) {
+      return _then(_value.copyWith(location: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get reasonCode {
+    if (_value.reasonCode == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.reasonCode!, (value) {
+      return _then(_value.copyWith(reasonCode: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get reasonReference {
+    if (_value.reasonReference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.reasonReference!, (value) {
+      return _then(_value.copyWith(reasonReference: value));
+    });
+  }
+
+  @override
+  $TransportRestrictionCopyWith<$Res>? get restriction {
+    if (_value.restriction == null) {
+      return null;
+    }
+
+    return $TransportRestrictionCopyWith<$Res>(_value.restriction!, (value) {
+      return _then(_value.copyWith(restriction: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get requestedLocation {
+    return $ReferenceCopyWith<$Res>(_value.requestedLocation, (value) {
+      return _then(_value.copyWith(requestedLocation: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res> get currentLocation {
+    return $ReferenceCopyWith<$Res>(_value.currentLocation, (value) {
+      return _then(_value.copyWith(currentLocation: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get history {
+    if (_value.history == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.history!, (value) {
+      return _then(_value.copyWith(history: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_TransportCopyWith<$Res> implements $TransportCopyWith<$Res> {
+  factory _$$_TransportCopyWith(
+          _$_Transport value, $Res Function(_$_Transport) then) =
+      __$$_TransportCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {R5ResourceType resourceType,
+      Id? id,
+      Meta? meta,
+      FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') Element? implicitRulesElement,
+      Code? language,
+      @JsonKey(name: '_language') Element? languageElement,
+      Narrative? text,
+      List<Resource>? contained,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      List<Identifier>? identifier,
+      Canonical? instantiatesCanonical,
+      FhirUri? instantiatesUri,
+      @JsonKey(name: '_instantiatesUri') Element? instantiatesUriElement,
+      List<Reference>? basedOn,
+      Identifier? groupIdentifier,
+      List<Reference>? partOf,
+      Code? status,
+      @JsonKey(name: '_status') Element? statusElement,
+      CodeableConcept? statusReason,
+      Code? intent,
+      @JsonKey(name: '_intent') Element? intentElement,
+      Code? priority,
+      @JsonKey(name: '_priority') Element? priorityElement,
+      CodeableConcept? code,
+      String? description,
+      @JsonKey(name: '_description') Element? descriptionElement,
+      Reference? focus,
+      @JsonKey(name: 'for') Reference? for_,
+      Reference? encounter,
+      FhirDateTime? completionTime,
+      @JsonKey(name: '_completionTime') Element? completionTimeElement,
+      FhirDateTime? authoredOn,
+      @JsonKey(name: '_authoredOn') Element? authoredOnElement,
+      FhirDateTime? lastModified,
+      @JsonKey(name: '_lastModified') Element? lastModifiedElement,
+      Reference? requester,
+      List<CodeableConcept>? performerType,
+      Reference? owner,
+      Reference? location,
+      CodeableConcept? reasonCode,
+      Reference? reasonReference,
+      List<Reference>? insurance,
+      List<Annotation>? note,
+      List<Reference>? relevantHistory,
+      TransportRestriction? restriction,
+      List<TransportInput>? input,
+      List<TransportOutput>? output,
+      Reference requestedLocation,
+      Reference currentLocation,
+      Reference? history});
+
+  @override
+  $MetaCopyWith<$Res>? get meta;
+  @override
+  $ElementCopyWith<$Res>? get implicitRulesElement;
+  @override
+  $ElementCopyWith<$Res>? get languageElement;
+  @override
+  $NarrativeCopyWith<$Res>? get text;
+  @override
+  $ElementCopyWith<$Res>? get instantiatesUriElement;
+  @override
+  $IdentifierCopyWith<$Res>? get groupIdentifier;
+  @override
+  $ElementCopyWith<$Res>? get statusElement;
+  @override
+  $CodeableConceptCopyWith<$Res>? get statusReason;
+  @override
+  $ElementCopyWith<$Res>? get intentElement;
+  @override
+  $ElementCopyWith<$Res>? get priorityElement;
+  @override
+  $CodeableConceptCopyWith<$Res>? get code;
+  @override
+  $ElementCopyWith<$Res>? get descriptionElement;
+  @override
+  $ReferenceCopyWith<$Res>? get focus;
+  @override
+  $ReferenceCopyWith<$Res>? get for_;
+  @override
+  $ReferenceCopyWith<$Res>? get encounter;
+  @override
+  $ElementCopyWith<$Res>? get completionTimeElement;
+  @override
+  $ElementCopyWith<$Res>? get authoredOnElement;
+  @override
+  $ElementCopyWith<$Res>? get lastModifiedElement;
+  @override
+  $ReferenceCopyWith<$Res>? get requester;
+  @override
+  $ReferenceCopyWith<$Res>? get owner;
+  @override
+  $ReferenceCopyWith<$Res>? get location;
+  @override
+  $CodeableConceptCopyWith<$Res>? get reasonCode;
+  @override
+  $ReferenceCopyWith<$Res>? get reasonReference;
+  @override
+  $TransportRestrictionCopyWith<$Res>? get restriction;
+  @override
+  $ReferenceCopyWith<$Res> get requestedLocation;
+  @override
+  $ReferenceCopyWith<$Res> get currentLocation;
+  @override
+  $ReferenceCopyWith<$Res>? get history;
+}
+
+/// @nodoc
+class __$$_TransportCopyWithImpl<$Res> extends _$TransportCopyWithImpl<$Res>
+    implements _$$_TransportCopyWith<$Res> {
+  __$$_TransportCopyWithImpl(
+      _$_Transport _value, $Res Function(_$_Transport) _then)
+      : super(_value, (v) => _then(v as _$_Transport));
+
+  @override
+  _$_Transport get _value => super._value as _$_Transport;
+
+  @override
+  $Res call({
+    Object? resourceType = freezed,
+    Object? id = freezed,
+    Object? meta = freezed,
+    Object? implicitRules = freezed,
+    Object? implicitRulesElement = freezed,
+    Object? language = freezed,
+    Object? languageElement = freezed,
+    Object? text = freezed,
+    Object? contained = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? identifier = freezed,
+    Object? instantiatesCanonical = freezed,
+    Object? instantiatesUri = freezed,
+    Object? instantiatesUriElement = freezed,
+    Object? basedOn = freezed,
+    Object? groupIdentifier = freezed,
+    Object? partOf = freezed,
+    Object? status = freezed,
+    Object? statusElement = freezed,
+    Object? statusReason = freezed,
+    Object? intent = freezed,
+    Object? intentElement = freezed,
+    Object? priority = freezed,
+    Object? priorityElement = freezed,
+    Object? code = freezed,
+    Object? description = freezed,
+    Object? descriptionElement = freezed,
+    Object? focus = freezed,
+    Object? for_ = freezed,
+    Object? encounter = freezed,
+    Object? completionTime = freezed,
+    Object? completionTimeElement = freezed,
+    Object? authoredOn = freezed,
+    Object? authoredOnElement = freezed,
+    Object? lastModified = freezed,
+    Object? lastModifiedElement = freezed,
+    Object? requester = freezed,
+    Object? performerType = freezed,
+    Object? owner = freezed,
+    Object? location = freezed,
+    Object? reasonCode = freezed,
+    Object? reasonReference = freezed,
+    Object? insurance = freezed,
+    Object? note = freezed,
+    Object? relevantHistory = freezed,
+    Object? restriction = freezed,
+    Object? input = freezed,
+    Object? output = freezed,
+    Object? requestedLocation = freezed,
+    Object? currentLocation = freezed,
+    Object? history = freezed,
+  }) {
+    return _then(_$_Transport(
+      resourceType: resourceType == freezed
+          ? _value.resourceType
+          : resourceType // ignore: cast_nullable_to_non_nullable
+              as R5ResourceType,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      meta: meta == freezed
+          ? _value.meta
+          : meta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+      implicitRules: implicitRules == freezed
+          ? _value.implicitRules
+          : implicitRules // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      implicitRulesElement: implicitRulesElement == freezed
+          ? _value.implicitRulesElement
+          : implicitRulesElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      language: language == freezed
+          ? _value.language
+          : language // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      languageElement: languageElement == freezed
+          ? _value.languageElement
+          : languageElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      text: text == freezed
+          ? _value.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as Narrative?,
+      contained: contained == freezed
+          ? _value._contained
+          : contained // ignore: cast_nullable_to_non_nullable
+              as List<Resource>?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      identifier: identifier == freezed
+          ? _value._identifier
+          : identifier // ignore: cast_nullable_to_non_nullable
+              as List<Identifier>?,
+      instantiatesCanonical: instantiatesCanonical == freezed
+          ? _value.instantiatesCanonical
+          : instantiatesCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      instantiatesUri: instantiatesUri == freezed
+          ? _value.instantiatesUri
+          : instantiatesUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      instantiatesUriElement: instantiatesUriElement == freezed
+          ? _value.instantiatesUriElement
+          : instantiatesUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      basedOn: basedOn == freezed
+          ? _value._basedOn
+          : basedOn // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      groupIdentifier: groupIdentifier == freezed
+          ? _value.groupIdentifier
+          : groupIdentifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      partOf: partOf == freezed
+          ? _value._partOf
+          : partOf // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      status: status == freezed
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      statusElement: statusElement == freezed
+          ? _value.statusElement
+          : statusElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      statusReason: statusReason == freezed
+          ? _value.statusReason
+          : statusReason // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      intent: intent == freezed
+          ? _value.intent
+          : intent // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      intentElement: intentElement == freezed
+          ? _value.intentElement
+          : intentElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      priority: priority == freezed
+          ? _value.priority
+          : priority // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      priorityElement: priorityElement == freezed
+          ? _value.priorityElement
+          : priorityElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      code: code == freezed
+          ? _value.code
+          : code // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      description: description == freezed
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      descriptionElement: descriptionElement == freezed
+          ? _value.descriptionElement
+          : descriptionElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      focus: focus == freezed
+          ? _value.focus
+          : focus // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      for_: for_ == freezed
+          ? _value.for_
+          : for_ // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      encounter: encounter == freezed
+          ? _value.encounter
+          : encounter // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      completionTime: completionTime == freezed
+          ? _value.completionTime
+          : completionTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      completionTimeElement: completionTimeElement == freezed
+          ? _value.completionTimeElement
+          : completionTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      authoredOn: authoredOn == freezed
+          ? _value.authoredOn
+          : authoredOn // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      authoredOnElement: authoredOnElement == freezed
+          ? _value.authoredOnElement
+          : authoredOnElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      lastModified: lastModified == freezed
+          ? _value.lastModified
+          : lastModified // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      lastModifiedElement: lastModifiedElement == freezed
+          ? _value.lastModifiedElement
+          : lastModifiedElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      requester: requester == freezed
+          ? _value.requester
+          : requester // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      performerType: performerType == freezed
+          ? _value._performerType
+          : performerType // ignore: cast_nullable_to_non_nullable
+              as List<CodeableConcept>?,
+      owner: owner == freezed
+          ? _value.owner
+          : owner // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      location: location == freezed
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      reasonCode: reasonCode == freezed
+          ? _value.reasonCode
+          : reasonCode // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      reasonReference: reasonReference == freezed
+          ? _value.reasonReference
+          : reasonReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      insurance: insurance == freezed
+          ? _value._insurance
+          : insurance // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      note: note == freezed
+          ? _value._note
+          : note // ignore: cast_nullable_to_non_nullable
+              as List<Annotation>?,
+      relevantHistory: relevantHistory == freezed
+          ? _value._relevantHistory
+          : relevantHistory // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+      restriction: restriction == freezed
+          ? _value.restriction
+          : restriction // ignore: cast_nullable_to_non_nullable
+              as TransportRestriction?,
+      input: input == freezed
+          ? _value._input
+          : input // ignore: cast_nullable_to_non_nullable
+              as List<TransportInput>?,
+      output: output == freezed
+          ? _value._output
+          : output // ignore: cast_nullable_to_non_nullable
+              as List<TransportOutput>?,
+      requestedLocation: requestedLocation == freezed
+          ? _value.requestedLocation
+          : requestedLocation // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      currentLocation: currentLocation == freezed
+          ? _value.currentLocation
+          : currentLocation // ignore: cast_nullable_to_non_nullable
+              as Reference,
+      history: history == freezed
+          ? _value.history
+          : history // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_Transport extends _Transport {
+  _$_Transport(
+      {this.resourceType = R5ResourceType.Transport,
+      this.id,
+      this.meta,
+      this.implicitRules,
+      @JsonKey(name: '_implicitRules') this.implicitRulesElement,
+      this.language,
+      @JsonKey(name: '_language') this.languageElement,
+      this.text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      this.instantiatesCanonical,
+      this.instantiatesUri,
+      @JsonKey(name: '_instantiatesUri') this.instantiatesUriElement,
+      final List<Reference>? basedOn,
+      this.groupIdentifier,
+      final List<Reference>? partOf,
+      this.status,
+      @JsonKey(name: '_status') this.statusElement,
+      this.statusReason,
+      this.intent,
+      @JsonKey(name: '_intent') this.intentElement,
+      this.priority,
+      @JsonKey(name: '_priority') this.priorityElement,
+      this.code,
+      this.description,
+      @JsonKey(name: '_description') this.descriptionElement,
+      this.focus,
+      @JsonKey(name: 'for') this.for_,
+      this.encounter,
+      this.completionTime,
+      @JsonKey(name: '_completionTime') this.completionTimeElement,
+      this.authoredOn,
+      @JsonKey(name: '_authoredOn') this.authoredOnElement,
+      this.lastModified,
+      @JsonKey(name: '_lastModified') this.lastModifiedElement,
+      this.requester,
+      final List<CodeableConcept>? performerType,
+      this.owner,
+      this.location,
+      this.reasonCode,
+      this.reasonReference,
+      final List<Reference>? insurance,
+      final List<Annotation>? note,
+      final List<Reference>? relevantHistory,
+      this.restriction,
+      final List<TransportInput>? input,
+      final List<TransportOutput>? output,
+      required this.requestedLocation,
+      required this.currentLocation,
+      this.history})
+      : _contained = contained,
+        _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _identifier = identifier,
+        _basedOn = basedOn,
+        _partOf = partOf,
+        _performerType = performerType,
+        _insurance = insurance,
+        _note = note,
+        _relevantHistory = relevantHistory,
+        _input = input,
+        _output = output,
+        super._();
+
+  factory _$_Transport.fromJson(Map<String, dynamic> json) =>
+      _$$_TransportFromJson(json);
+
+  @override
+  @JsonKey()
+  final R5ResourceType resourceType;
+  @override
+  final Id? id;
+  @override
+  final Meta? meta;
+  @override
+  final FhirUri? implicitRules;
+  @override
+  @JsonKey(name: '_implicitRules')
+  final Element? implicitRulesElement;
+  @override
+  final Code? language;
+  @override
+  @JsonKey(name: '_language')
+  final Element? languageElement;
+  @override
+  final Narrative? text;
+  final List<Resource>? _contained;
+  @override
+  List<Resource>? get contained {
+    final value = _contained;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Identifier>? _identifier;
+  @override
+  List<Identifier>? get identifier {
+    final value = _identifier;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Canonical? instantiatesCanonical;
+  @override
+  final FhirUri? instantiatesUri;
+  @override
+  @JsonKey(name: '_instantiatesUri')
+  final Element? instantiatesUriElement;
+  final List<Reference>? _basedOn;
+  @override
+  List<Reference>? get basedOn {
+    final value = _basedOn;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Identifier? groupIdentifier;
+  final List<Reference>? _partOf;
+  @override
+  List<Reference>? get partOf {
+    final value = _partOf;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Code? status;
+  @override
+  @JsonKey(name: '_status')
+  final Element? statusElement;
+  @override
+  final CodeableConcept? statusReason;
+  @override
+  final Code? intent;
+  @override
+  @JsonKey(name: '_intent')
+  final Element? intentElement;
+  @override
+  final Code? priority;
+  @override
+  @JsonKey(name: '_priority')
+  final Element? priorityElement;
+  @override
+  final CodeableConcept? code;
+  @override
+  final String? description;
+  @override
+  @JsonKey(name: '_description')
+  final Element? descriptionElement;
+  @override
+  final Reference? focus;
+  @override
+  @JsonKey(name: 'for')
+  final Reference? for_;
+  @override
+  final Reference? encounter;
+  @override
+  final FhirDateTime? completionTime;
+  @override
+  @JsonKey(name: '_completionTime')
+  final Element? completionTimeElement;
+  @override
+  final FhirDateTime? authoredOn;
+  @override
+  @JsonKey(name: '_authoredOn')
+  final Element? authoredOnElement;
+  @override
+  final FhirDateTime? lastModified;
+  @override
+  @JsonKey(name: '_lastModified')
+  final Element? lastModifiedElement;
+  @override
+  final Reference? requester;
+  final List<CodeableConcept>? _performerType;
+  @override
+  List<CodeableConcept>? get performerType {
+    final value = _performerType;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Reference? owner;
+  @override
+  final Reference? location;
+  @override
+  final CodeableConcept? reasonCode;
+  @override
+  final Reference? reasonReference;
+  final List<Reference>? _insurance;
+  @override
+  List<Reference>? get insurance {
+    final value = _insurance;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Annotation>? _note;
+  @override
+  List<Annotation>? get note {
+    final value = _note;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<Reference>? _relevantHistory;
+  @override
+  List<Reference>? get relevantHistory {
+    final value = _relevantHistory;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final TransportRestriction? restriction;
+  final List<TransportInput>? _input;
+  @override
+  List<TransportInput>? get input {
+    final value = _input;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<TransportOutput>? _output;
+  @override
+  List<TransportOutput>? get output {
+    final value = _output;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final Reference requestedLocation;
+  @override
+  final Reference currentLocation;
+  @override
+  final Reference? history;
+
+  @override
+  String toString() {
+    return 'Transport(resourceType: $resourceType, id: $id, meta: $meta, implicitRules: $implicitRules, implicitRulesElement: $implicitRulesElement, language: $language, languageElement: $languageElement, text: $text, contained: $contained, extension_: $extension_, modifierExtension: $modifierExtension, identifier: $identifier, instantiatesCanonical: $instantiatesCanonical, instantiatesUri: $instantiatesUri, instantiatesUriElement: $instantiatesUriElement, basedOn: $basedOn, groupIdentifier: $groupIdentifier, partOf: $partOf, status: $status, statusElement: $statusElement, statusReason: $statusReason, intent: $intent, intentElement: $intentElement, priority: $priority, priorityElement: $priorityElement, code: $code, description: $description, descriptionElement: $descriptionElement, focus: $focus, for_: $for_, encounter: $encounter, completionTime: $completionTime, completionTimeElement: $completionTimeElement, authoredOn: $authoredOn, authoredOnElement: $authoredOnElement, lastModified: $lastModified, lastModifiedElement: $lastModifiedElement, requester: $requester, performerType: $performerType, owner: $owner, location: $location, reasonCode: $reasonCode, reasonReference: $reasonReference, insurance: $insurance, note: $note, relevantHistory: $relevantHistory, restriction: $restriction, input: $input, output: $output, requestedLocation: $requestedLocation, currentLocation: $currentLocation, history: $history)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_Transport &&
+            const DeepCollectionEquality()
+                .equals(other.resourceType, resourceType) &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.meta, meta) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRules, implicitRules) &&
+            const DeepCollectionEquality()
+                .equals(other.implicitRulesElement, implicitRulesElement) &&
+            const DeepCollectionEquality().equals(other.language, language) &&
+            const DeepCollectionEquality()
+                .equals(other.languageElement, languageElement) &&
+            const DeepCollectionEquality().equals(other.text, text) &&
+            const DeepCollectionEquality()
+                .equals(other._contained, _contained) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other._identifier, _identifier) &&
+            const DeepCollectionEquality()
+                .equals(other.instantiatesCanonical, instantiatesCanonical) &&
+            const DeepCollectionEquality()
+                .equals(other.instantiatesUri, instantiatesUri) &&
+            const DeepCollectionEquality()
+                .equals(other.instantiatesUriElement, instantiatesUriElement) &&
+            const DeepCollectionEquality().equals(other._basedOn, _basedOn) &&
+            const DeepCollectionEquality()
+                .equals(other.groupIdentifier, groupIdentifier) &&
+            const DeepCollectionEquality().equals(other._partOf, _partOf) &&
+            const DeepCollectionEquality().equals(other.status, status) &&
+            const DeepCollectionEquality()
+                .equals(other.statusElement, statusElement) &&
+            const DeepCollectionEquality()
+                .equals(other.statusReason, statusReason) &&
+            const DeepCollectionEquality().equals(other.intent, intent) &&
+            const DeepCollectionEquality()
+                .equals(other.intentElement, intentElement) &&
+            const DeepCollectionEquality().equals(other.priority, priority) &&
+            const DeepCollectionEquality()
+                .equals(other.priorityElement, priorityElement) &&
+            const DeepCollectionEquality().equals(other.code, code) &&
+            const DeepCollectionEquality()
+                .equals(other.description, description) &&
+            const DeepCollectionEquality()
+                .equals(other.descriptionElement, descriptionElement) &&
+            const DeepCollectionEquality().equals(other.focus, focus) &&
+            const DeepCollectionEquality().equals(other.for_, for_) &&
+            const DeepCollectionEquality().equals(other.encounter, encounter) &&
+            const DeepCollectionEquality()
+                .equals(other.completionTime, completionTime) &&
+            const DeepCollectionEquality()
+                .equals(other.completionTimeElement, completionTimeElement) &&
+            const DeepCollectionEquality()
+                .equals(other.authoredOn, authoredOn) &&
+            const DeepCollectionEquality()
+                .equals(other.authoredOnElement, authoredOnElement) &&
+            const DeepCollectionEquality()
+                .equals(other.lastModified, lastModified) &&
+            const DeepCollectionEquality()
+                .equals(other.lastModifiedElement, lastModifiedElement) &&
+            const DeepCollectionEquality().equals(other.requester, requester) &&
+            const DeepCollectionEquality()
+                .equals(other._performerType, _performerType) &&
+            const DeepCollectionEquality().equals(other.owner, owner) &&
+            const DeepCollectionEquality().equals(other.location, location) &&
+            const DeepCollectionEquality()
+                .equals(other.reasonCode, reasonCode) &&
+            const DeepCollectionEquality()
+                .equals(other.reasonReference, reasonReference) &&
+            const DeepCollectionEquality()
+                .equals(other._insurance, _insurance) &&
+            const DeepCollectionEquality().equals(other._note, _note) &&
+            const DeepCollectionEquality()
+                .equals(other._relevantHistory, _relevantHistory) &&
+            const DeepCollectionEquality()
+                .equals(other.restriction, restriction) &&
+            const DeepCollectionEquality().equals(other._input, _input) &&
+            const DeepCollectionEquality().equals(other._output, _output) &&
+            const DeepCollectionEquality()
+                .equals(other.requestedLocation, requestedLocation) &&
+            const DeepCollectionEquality()
+                .equals(other.currentLocation, currentLocation) &&
+            const DeepCollectionEquality().equals(other.history, history));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(resourceType),
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(meta),
+        const DeepCollectionEquality().hash(implicitRules),
+        const DeepCollectionEquality().hash(implicitRulesElement),
+        const DeepCollectionEquality().hash(language),
+        const DeepCollectionEquality().hash(languageElement),
+        const DeepCollectionEquality().hash(text),
+        const DeepCollectionEquality().hash(_contained),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(_identifier),
+        const DeepCollectionEquality().hash(instantiatesCanonical),
+        const DeepCollectionEquality().hash(instantiatesUri),
+        const DeepCollectionEquality().hash(instantiatesUriElement),
+        const DeepCollectionEquality().hash(_basedOn),
+        const DeepCollectionEquality().hash(groupIdentifier),
+        const DeepCollectionEquality().hash(_partOf),
+        const DeepCollectionEquality().hash(status),
+        const DeepCollectionEquality().hash(statusElement),
+        const DeepCollectionEquality().hash(statusReason),
+        const DeepCollectionEquality().hash(intent),
+        const DeepCollectionEquality().hash(intentElement),
+        const DeepCollectionEquality().hash(priority),
+        const DeepCollectionEquality().hash(priorityElement),
+        const DeepCollectionEquality().hash(code),
+        const DeepCollectionEquality().hash(description),
+        const DeepCollectionEquality().hash(descriptionElement),
+        const DeepCollectionEquality().hash(focus),
+        const DeepCollectionEquality().hash(for_),
+        const DeepCollectionEquality().hash(encounter),
+        const DeepCollectionEquality().hash(completionTime),
+        const DeepCollectionEquality().hash(completionTimeElement),
+        const DeepCollectionEquality().hash(authoredOn),
+        const DeepCollectionEquality().hash(authoredOnElement),
+        const DeepCollectionEquality().hash(lastModified),
+        const DeepCollectionEquality().hash(lastModifiedElement),
+        const DeepCollectionEquality().hash(requester),
+        const DeepCollectionEquality().hash(_performerType),
+        const DeepCollectionEquality().hash(owner),
+        const DeepCollectionEquality().hash(location),
+        const DeepCollectionEquality().hash(reasonCode),
+        const DeepCollectionEquality().hash(reasonReference),
+        const DeepCollectionEquality().hash(_insurance),
+        const DeepCollectionEquality().hash(_note),
+        const DeepCollectionEquality().hash(_relevantHistory),
+        const DeepCollectionEquality().hash(restriction),
+        const DeepCollectionEquality().hash(_input),
+        const DeepCollectionEquality().hash(_output),
+        const DeepCollectionEquality().hash(requestedLocation),
+        const DeepCollectionEquality().hash(currentLocation),
+        const DeepCollectionEquality().hash(history)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_TransportCopyWith<_$_Transport> get copyWith =>
+      __$$_TransportCopyWithImpl<_$_Transport>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_TransportToJson(this);
+  }
+}
+
+abstract class _Transport extends Transport {
+  factory _Transport(
+      {final R5ResourceType resourceType,
+      final Id? id,
+      final Meta? meta,
+      final FhirUri? implicitRules,
+      @JsonKey(name: '_implicitRules') final Element? implicitRulesElement,
+      final Code? language,
+      @JsonKey(name: '_language') final Element? languageElement,
+      final Narrative? text,
+      final List<Resource>? contained,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final List<Identifier>? identifier,
+      final Canonical? instantiatesCanonical,
+      final FhirUri? instantiatesUri,
+      @JsonKey(name: '_instantiatesUri') final Element? instantiatesUriElement,
+      final List<Reference>? basedOn,
+      final Identifier? groupIdentifier,
+      final List<Reference>? partOf,
+      final Code? status,
+      @JsonKey(name: '_status') final Element? statusElement,
+      final CodeableConcept? statusReason,
+      final Code? intent,
+      @JsonKey(name: '_intent') final Element? intentElement,
+      final Code? priority,
+      @JsonKey(name: '_priority') final Element? priorityElement,
+      final CodeableConcept? code,
+      final String? description,
+      @JsonKey(name: '_description') final Element? descriptionElement,
+      final Reference? focus,
+      @JsonKey(name: 'for') final Reference? for_,
+      final Reference? encounter,
+      final FhirDateTime? completionTime,
+      @JsonKey(name: '_completionTime') final Element? completionTimeElement,
+      final FhirDateTime? authoredOn,
+      @JsonKey(name: '_authoredOn') final Element? authoredOnElement,
+      final FhirDateTime? lastModified,
+      @JsonKey(name: '_lastModified') final Element? lastModifiedElement,
+      final Reference? requester,
+      final List<CodeableConcept>? performerType,
+      final Reference? owner,
+      final Reference? location,
+      final CodeableConcept? reasonCode,
+      final Reference? reasonReference,
+      final List<Reference>? insurance,
+      final List<Annotation>? note,
+      final List<Reference>? relevantHistory,
+      final TransportRestriction? restriction,
+      final List<TransportInput>? input,
+      final List<TransportOutput>? output,
+      required final Reference requestedLocation,
+      required final Reference currentLocation,
+      final Reference? history}) = _$_Transport;
+  _Transport._() : super._();
+
+  factory _Transport.fromJson(Map<String, dynamic> json) =
+      _$_Transport.fromJson;
+
+  @override
+  R5ResourceType get resourceType => throw _privateConstructorUsedError;
+  @override
+  Id? get id => throw _privateConstructorUsedError;
+  @override
+  Meta? get meta => throw _privateConstructorUsedError;
+  @override
+  FhirUri? get implicitRules => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_implicitRules')
+  Element? get implicitRulesElement => throw _privateConstructorUsedError;
+  @override
+  Code? get language => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_language')
+  Element? get languageElement => throw _privateConstructorUsedError;
+  @override
+  Narrative? get text => throw _privateConstructorUsedError;
+  @override
+  List<Resource>? get contained => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  List<Identifier>? get identifier => throw _privateConstructorUsedError;
+  @override
+  Canonical? get instantiatesCanonical => throw _privateConstructorUsedError;
+  @override
+  FhirUri? get instantiatesUri => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_instantiatesUri')
+  Element? get instantiatesUriElement => throw _privateConstructorUsedError;
+  @override
+  List<Reference>? get basedOn => throw _privateConstructorUsedError;
+  @override
+  Identifier? get groupIdentifier => throw _privateConstructorUsedError;
+  @override
+  List<Reference>? get partOf => throw _privateConstructorUsedError;
+  @override
+  Code? get status => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_status')
+  Element? get statusElement => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get statusReason => throw _privateConstructorUsedError;
+  @override
+  Code? get intent => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_intent')
+  Element? get intentElement => throw _privateConstructorUsedError;
+  @override
+  Code? get priority => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_priority')
+  Element? get priorityElement => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get code => throw _privateConstructorUsedError;
+  @override
+  String? get description => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_description')
+  Element? get descriptionElement => throw _privateConstructorUsedError;
+  @override
+  Reference? get focus => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'for')
+  Reference? get for_ => throw _privateConstructorUsedError;
+  @override
+  Reference? get encounter => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get completionTime => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_completionTime')
+  Element? get completionTimeElement => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get authoredOn => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_authoredOn')
+  Element? get authoredOnElement => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get lastModified => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_lastModified')
+  Element? get lastModifiedElement => throw _privateConstructorUsedError;
+  @override
+  Reference? get requester => throw _privateConstructorUsedError;
+  @override
+  List<CodeableConcept>? get performerType =>
+      throw _privateConstructorUsedError;
+  @override
+  Reference? get owner => throw _privateConstructorUsedError;
+  @override
+  Reference? get location => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get reasonCode => throw _privateConstructorUsedError;
+  @override
+  Reference? get reasonReference => throw _privateConstructorUsedError;
+  @override
+  List<Reference>? get insurance => throw _privateConstructorUsedError;
+  @override
+  List<Annotation>? get note => throw _privateConstructorUsedError;
+  @override
+  List<Reference>? get relevantHistory => throw _privateConstructorUsedError;
+  @override
+  TransportRestriction? get restriction => throw _privateConstructorUsedError;
+  @override
+  List<TransportInput>? get input => throw _privateConstructorUsedError;
+  @override
+  List<TransportOutput>? get output => throw _privateConstructorUsedError;
+  @override
+  Reference get requestedLocation => throw _privateConstructorUsedError;
+  @override
+  Reference get currentLocation => throw _privateConstructorUsedError;
+  @override
+  Reference? get history => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_TransportCopyWith<_$_Transport> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+TransportRestriction _$TransportRestrictionFromJson(Map<String, dynamic> json) {
+  return _TransportRestriction.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TransportRestriction {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  PositiveInt? get repetitions => throw _privateConstructorUsedError;
+  @JsonKey(name: '_repetitions')
+  Element? get repetitionsElement => throw _privateConstructorUsedError;
+  Period? get period => throw _privateConstructorUsedError;
+  List<Reference>? get recipient => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TransportRestrictionCopyWith<TransportRestriction> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TransportRestrictionCopyWith<$Res> {
+  factory $TransportRestrictionCopyWith(TransportRestriction value,
+          $Res Function(TransportRestriction) then) =
+      _$TransportRestrictionCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      PositiveInt? repetitions,
+      @JsonKey(name: '_repetitions') Element? repetitionsElement,
+      Period? period,
+      List<Reference>? recipient});
+
+  $ElementCopyWith<$Res>? get repetitionsElement;
+  $PeriodCopyWith<$Res>? get period;
+}
+
+/// @nodoc
+class _$TransportRestrictionCopyWithImpl<$Res>
+    implements $TransportRestrictionCopyWith<$Res> {
+  _$TransportRestrictionCopyWithImpl(this._value, this._then);
+
+  final TransportRestriction _value;
+  // ignore: unused_field
+  final $Res Function(TransportRestriction) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? repetitions = freezed,
+    Object? repetitionsElement = freezed,
+    Object? period = freezed,
+    Object? recipient = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      repetitions: repetitions == freezed
+          ? _value.repetitions
+          : repetitions // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
+      repetitionsElement: repetitionsElement == freezed
+          ? _value.repetitionsElement
+          : repetitionsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      recipient: recipient == freezed
+          ? _value.recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+    ));
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get repetitionsElement {
+    if (_value.repetitionsElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.repetitionsElement!, (value) {
+      return _then(_value.copyWith(repetitionsElement: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res>? get period {
+    if (_value.period == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.period!, (value) {
+      return _then(_value.copyWith(period: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_TransportRestrictionCopyWith<$Res>
+    implements $TransportRestrictionCopyWith<$Res> {
+  factory _$$_TransportRestrictionCopyWith(_$_TransportRestriction value,
+          $Res Function(_$_TransportRestriction) then) =
+      __$$_TransportRestrictionCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      PositiveInt? repetitions,
+      @JsonKey(name: '_repetitions') Element? repetitionsElement,
+      Period? period,
+      List<Reference>? recipient});
+
+  @override
+  $ElementCopyWith<$Res>? get repetitionsElement;
+  @override
+  $PeriodCopyWith<$Res>? get period;
+}
+
+/// @nodoc
+class __$$_TransportRestrictionCopyWithImpl<$Res>
+    extends _$TransportRestrictionCopyWithImpl<$Res>
+    implements _$$_TransportRestrictionCopyWith<$Res> {
+  __$$_TransportRestrictionCopyWithImpl(_$_TransportRestriction _value,
+      $Res Function(_$_TransportRestriction) _then)
+      : super(_value, (v) => _then(v as _$_TransportRestriction));
+
+  @override
+  _$_TransportRestriction get _value => super._value as _$_TransportRestriction;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? repetitions = freezed,
+    Object? repetitionsElement = freezed,
+    Object? period = freezed,
+    Object? recipient = freezed,
+  }) {
+    return _then(_$_TransportRestriction(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      repetitions: repetitions == freezed
+          ? _value.repetitions
+          : repetitions // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
+      repetitionsElement: repetitionsElement == freezed
+          ? _value.repetitionsElement
+          : repetitionsElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      period: period == freezed
+          ? _value.period
+          : period // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      recipient: recipient == freezed
+          ? _value._recipient
+          : recipient // ignore: cast_nullable_to_non_nullable
+              as List<Reference>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_TransportRestriction extends _TransportRestriction {
+  _$_TransportRestriction(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      this.repetitions,
+      @JsonKey(name: '_repetitions') this.repetitionsElement,
+      this.period,
+      final List<Reference>? recipient})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        _recipient = recipient,
+        super._();
+
+  factory _$_TransportRestriction.fromJson(Map<String, dynamic> json) =>
+      _$$_TransportRestrictionFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final PositiveInt? repetitions;
+  @override
+  @JsonKey(name: '_repetitions')
+  final Element? repetitionsElement;
+  @override
+  final Period? period;
+  final List<Reference>? _recipient;
+  @override
+  List<Reference>? get recipient {
+    final value = _recipient;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'TransportRestriction(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, repetitions: $repetitions, repetitionsElement: $repetitionsElement, period: $period, recipient: $recipient)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_TransportRestriction &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality()
+                .equals(other.repetitions, repetitions) &&
+            const DeepCollectionEquality()
+                .equals(other.repetitionsElement, repetitionsElement) &&
+            const DeepCollectionEquality().equals(other.period, period) &&
+            const DeepCollectionEquality()
+                .equals(other._recipient, _recipient));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(_extension_),
+      const DeepCollectionEquality().hash(_modifierExtension),
+      const DeepCollectionEquality().hash(repetitions),
+      const DeepCollectionEquality().hash(repetitionsElement),
+      const DeepCollectionEquality().hash(period),
+      const DeepCollectionEquality().hash(_recipient));
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_TransportRestrictionCopyWith<_$_TransportRestriction> get copyWith =>
+      __$$_TransportRestrictionCopyWithImpl<_$_TransportRestriction>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_TransportRestrictionToJson(this);
+  }
+}
+
+abstract class _TransportRestriction extends TransportRestriction {
+  factory _TransportRestriction(
+      {final String? id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      final PositiveInt? repetitions,
+      @JsonKey(name: '_repetitions') final Element? repetitionsElement,
+      final Period? period,
+      final List<Reference>? recipient}) = _$_TransportRestriction;
+  _TransportRestriction._() : super._();
+
+  factory _TransportRestriction.fromJson(Map<String, dynamic> json) =
+      _$_TransportRestriction.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  PositiveInt? get repetitions => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_repetitions')
+  Element? get repetitionsElement => throw _privateConstructorUsedError;
+  @override
+  Period? get period => throw _privateConstructorUsedError;
+  @override
+  List<Reference>? get recipient => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_TransportRestrictionCopyWith<_$_TransportRestriction> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+TransportInput _$TransportInputFromJson(Map<String, dynamic> json) {
+  return _TransportInput.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TransportInput {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get type => throw _privateConstructorUsedError;
+  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueBase64Binary')
+  Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueBoolean')
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
+  Canonical? get valueCanonical => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueCanonical')
+  Element? get valueCanonicalElement => throw _privateConstructorUsedError;
+  Code? get valueCode => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueCode')
+  Element? get valueCodeElement => throw _privateConstructorUsedError;
+  Date? get valueDate => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueDate')
+  Element? get valueDateElement => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueDateTime')
+  Element? get valueDateTimeElement => throw _privateConstructorUsedError;
+  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueDecimal')
+  Element? get valueDecimalElement => throw _privateConstructorUsedError;
+  Id? get valueId => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueId')
+  Element? get valueIdElement => throw _privateConstructorUsedError;
+  Instant? get valueInstant => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueInstant')
+  Element? get valueInstantElement => throw _privateConstructorUsedError;
+  Integer? get valueInteger => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueInteger')
+  Element? get valueIntegerElement => throw _privateConstructorUsedError;
+  Integer64? get valueInteger64 => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueInteger64')
+  Element? get valueInteger64Element => throw _privateConstructorUsedError;
+  Markdown? get valueMarkdown => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueMarkdown')
+  Element? get valueMarkdownElement => throw _privateConstructorUsedError;
+  Oid? get valueOid => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueOid')
+  Element? get valueOidElement => throw _privateConstructorUsedError;
+  PositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valuePositiveInt')
+  Element? get valuePositiveIntElement => throw _privateConstructorUsedError;
+  Markdown? get valueString => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueString')
+  Element? get valueStringElement => throw _privateConstructorUsedError;
+  Time? get valueTime => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueTime')
+  Element? get valueTimeElement => throw _privateConstructorUsedError;
+  UnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueUnsignedInt')
+  Element? get valueUnsignedIntElement => throw _privateConstructorUsedError;
+  FhirUri? get valueUri => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueUri')
+  Element? get valueUriElement => throw _privateConstructorUsedError;
+  FhirUrl? get valueUrl => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueUrl')
+  Element? get valueUrlElement => throw _privateConstructorUsedError;
+  Uuid? get valueUuid => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueUuid')
+  Element? get valueUuidElement => throw _privateConstructorUsedError;
+  Address? get valueAddress => throw _privateConstructorUsedError;
+  Age? get valueAge => throw _privateConstructorUsedError;
+  Annotation? get valueAnnotation => throw _privateConstructorUsedError;
+  Attachment? get valueAttachment => throw _privateConstructorUsedError;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+  CodeableReference? get valueCodeableReference =>
+      throw _privateConstructorUsedError;
+  Coding? get valueCoding => throw _privateConstructorUsedError;
+  ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
+  Count? get valueCount => throw _privateConstructorUsedError;
+  Distance? get valueDistance => throw _privateConstructorUsedError;
+  Duration? get valueDuration => throw _privateConstructorUsedError;
+  HumanName? get valueHumanName => throw _privateConstructorUsedError;
+  Identifier? get valueIdentifier => throw _privateConstructorUsedError;
+  Money? get valueMoney => throw _privateConstructorUsedError;
+  Period? get valuePeriod => throw _privateConstructorUsedError;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  Range? get valueRange => throw _privateConstructorUsedError;
+  Ratio? get valueRatio => throw _privateConstructorUsedError;
+  RatioRange? get valueRatioRange => throw _privateConstructorUsedError;
+  Reference? get valueReference => throw _privateConstructorUsedError;
+  SampledData? get valueSampledData => throw _privateConstructorUsedError;
+  Signature? get valueSignature => throw _privateConstructorUsedError;
+  Timing? get valueTiming => throw _privateConstructorUsedError;
+  ContactDetail? get valueContactDetail => throw _privateConstructorUsedError;
+  Contributor? get valueContributor => throw _privateConstructorUsedError;
+  DataRequirement? get valueDataRequirement =>
+      throw _privateConstructorUsedError;
+  Expression? get valueExpression => throw _privateConstructorUsedError;
+  ParameterDefinition? get valueParameterDefinition =>
+      throw _privateConstructorUsedError;
+  RelatedArtifact? get valueRelatedArtifact =>
+      throw _privateConstructorUsedError;
+  TriggerDefinition? get valueTriggerDefinition =>
+      throw _privateConstructorUsedError;
+  UsageContext? get valueUsageContext => throw _privateConstructorUsedError;
+  Dosage? get valueDosage => throw _privateConstructorUsedError;
+  Meta? get valueMeta => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TransportInputCopyWith<TransportInput> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TransportInputCopyWith<$Res> {
+  factory $TransportInputCopyWith(
+          TransportInput value, $Res Function(TransportInput) then) =
+      _$TransportInputCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept type,
+      Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
+      Code? valueCode,
+      @JsonKey(name: '_valueCode') Element? valueCodeElement,
+      Date? valueDate,
+      @JsonKey(name: '_valueDate') Element? valueDateElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+      Id? valueId,
+      @JsonKey(name: '_valueId') Element? valueIdElement,
+      Instant? valueInstant,
+      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+      Integer? valueInteger,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Integer64? valueInteger64,
+      @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
+      Markdown? valueMarkdown,
+      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
+      Oid? valueOid,
+      @JsonKey(name: '_valueOid') Element? valueOidElement,
+      PositiveInt? valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
+      Markdown? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      Time? valueTime,
+      @JsonKey(name: '_valueTime') Element? valueTimeElement,
+      UnsignedInt? valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      FhirUrl? valueUrl,
+      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+      Uuid? valueUuid,
+      @JsonKey(name: '_valueUuid') Element? valueUuidElement,
+      Address? valueAddress,
+      Age? valueAge,
+      Annotation? valueAnnotation,
+      Attachment? valueAttachment,
+      CodeableConcept? valueCodeableConcept,
+      CodeableReference? valueCodeableReference,
+      Coding? valueCoding,
+      ContactPoint? valueContactPoint,
+      Count? valueCount,
+      Distance? valueDistance,
+      Duration? valueDuration,
+      HumanName? valueHumanName,
+      Identifier? valueIdentifier,
+      Money? valueMoney,
+      Period? valuePeriod,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Ratio? valueRatio,
+      RatioRange? valueRatioRange,
+      Reference? valueReference,
+      SampledData? valueSampledData,
+      Signature? valueSignature,
+      Timing? valueTiming,
+      ContactDetail? valueContactDetail,
+      Contributor? valueContributor,
+      DataRequirement? valueDataRequirement,
+      Expression? valueExpression,
+      ParameterDefinition? valueParameterDefinition,
+      RelatedArtifact? valueRelatedArtifact,
+      TriggerDefinition? valueTriggerDefinition,
+      UsageContext? valueUsageContext,
+      Dosage? valueDosage,
+      Meta? valueMeta});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $ElementCopyWith<$Res>? get valueBase64BinaryElement;
+  $ElementCopyWith<$Res>? get valueBooleanElement;
+  $ElementCopyWith<$Res>? get valueCanonicalElement;
+  $ElementCopyWith<$Res>? get valueCodeElement;
+  $ElementCopyWith<$Res>? get valueDateElement;
+  $ElementCopyWith<$Res>? get valueDateTimeElement;
+  $ElementCopyWith<$Res>? get valueDecimalElement;
+  $ElementCopyWith<$Res>? get valueIdElement;
+  $ElementCopyWith<$Res>? get valueInstantElement;
+  $ElementCopyWith<$Res>? get valueIntegerElement;
+  $ElementCopyWith<$Res>? get valueInteger64Element;
+  $ElementCopyWith<$Res>? get valueMarkdownElement;
+  $ElementCopyWith<$Res>? get valueOidElement;
+  $ElementCopyWith<$Res>? get valuePositiveIntElement;
+  $ElementCopyWith<$Res>? get valueStringElement;
+  $ElementCopyWith<$Res>? get valueTimeElement;
+  $ElementCopyWith<$Res>? get valueUnsignedIntElement;
+  $ElementCopyWith<$Res>? get valueUriElement;
+  $ElementCopyWith<$Res>? get valueUrlElement;
+  $ElementCopyWith<$Res>? get valueUuidElement;
+  $AddressCopyWith<$Res>? get valueAddress;
+  $AgeCopyWith<$Res>? get valueAge;
+  $AnnotationCopyWith<$Res>? get valueAnnotation;
+  $AttachmentCopyWith<$Res>? get valueAttachment;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  $CodeableReferenceCopyWith<$Res>? get valueCodeableReference;
+  $CodingCopyWith<$Res>? get valueCoding;
+  $ContactPointCopyWith<$Res>? get valueContactPoint;
+  $CountCopyWith<$Res>? get valueCount;
+  $DistanceCopyWith<$Res>? get valueDistance;
+  $HumanNameCopyWith<$Res>? get valueHumanName;
+  $IdentifierCopyWith<$Res>? get valueIdentifier;
+  $MoneyCopyWith<$Res>? get valueMoney;
+  $PeriodCopyWith<$Res>? get valuePeriod;
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  $RangeCopyWith<$Res>? get valueRange;
+  $RatioCopyWith<$Res>? get valueRatio;
+  $RatioRangeCopyWith<$Res>? get valueRatioRange;
+  $ReferenceCopyWith<$Res>? get valueReference;
+  $SampledDataCopyWith<$Res>? get valueSampledData;
+  $SignatureCopyWith<$Res>? get valueSignature;
+  $TimingCopyWith<$Res>? get valueTiming;
+  $ContactDetailCopyWith<$Res>? get valueContactDetail;
+  $ContributorCopyWith<$Res>? get valueContributor;
+  $DataRequirementCopyWith<$Res>? get valueDataRequirement;
+  $ExpressionCopyWith<$Res>? get valueExpression;
+  $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition;
+  $RelatedArtifactCopyWith<$Res>? get valueRelatedArtifact;
+  $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition;
+  $UsageContextCopyWith<$Res>? get valueUsageContext;
+  $DosageCopyWith<$Res>? get valueDosage;
+  $MetaCopyWith<$Res>? get valueMeta;
+}
+
+/// @nodoc
+class _$TransportInputCopyWithImpl<$Res>
+    implements $TransportInputCopyWith<$Res> {
+  _$TransportInputCopyWithImpl(this._value, this._then);
+
+  final TransportInput _value;
+  // ignore: unused_field
+  final $Res Function(TransportInput) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? valueBase64Binary = freezed,
+    Object? valueBase64BinaryElement = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueCanonical = freezed,
+    Object? valueCanonicalElement = freezed,
+    Object? valueCode = freezed,
+    Object? valueCodeElement = freezed,
+    Object? valueDate = freezed,
+    Object? valueDateElement = freezed,
+    Object? valueDateTime = freezed,
+    Object? valueDateTimeElement = freezed,
+    Object? valueDecimal = freezed,
+    Object? valueDecimalElement = freezed,
+    Object? valueId = freezed,
+    Object? valueIdElement = freezed,
+    Object? valueInstant = freezed,
+    Object? valueInstantElement = freezed,
+    Object? valueInteger = freezed,
+    Object? valueIntegerElement = freezed,
+    Object? valueInteger64 = freezed,
+    Object? valueInteger64Element = freezed,
+    Object? valueMarkdown = freezed,
+    Object? valueMarkdownElement = freezed,
+    Object? valueOid = freezed,
+    Object? valueOidElement = freezed,
+    Object? valuePositiveInt = freezed,
+    Object? valuePositiveIntElement = freezed,
+    Object? valueString = freezed,
+    Object? valueStringElement = freezed,
+    Object? valueTime = freezed,
+    Object? valueTimeElement = freezed,
+    Object? valueUnsignedInt = freezed,
+    Object? valueUnsignedIntElement = freezed,
+    Object? valueUri = freezed,
+    Object? valueUriElement = freezed,
+    Object? valueUrl = freezed,
+    Object? valueUrlElement = freezed,
+    Object? valueUuid = freezed,
+    Object? valueUuidElement = freezed,
+    Object? valueAddress = freezed,
+    Object? valueAge = freezed,
+    Object? valueAnnotation = freezed,
+    Object? valueAttachment = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueCodeableReference = freezed,
+    Object? valueCoding = freezed,
+    Object? valueContactPoint = freezed,
+    Object? valueCount = freezed,
+    Object? valueDistance = freezed,
+    Object? valueDuration = freezed,
+    Object? valueHumanName = freezed,
+    Object? valueIdentifier = freezed,
+    Object? valueMoney = freezed,
+    Object? valuePeriod = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valueRatio = freezed,
+    Object? valueRatioRange = freezed,
+    Object? valueReference = freezed,
+    Object? valueSampledData = freezed,
+    Object? valueSignature = freezed,
+    Object? valueTiming = freezed,
+    Object? valueContactDetail = freezed,
+    Object? valueContributor = freezed,
+    Object? valueDataRequirement = freezed,
+    Object? valueExpression = freezed,
+    Object? valueParameterDefinition = freezed,
+    Object? valueRelatedArtifact = freezed,
+    Object? valueTriggerDefinition = freezed,
+    Object? valueUsageContext = freezed,
+    Object? valueDosage = freezed,
+    Object? valueMeta = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      valueBase64Binary: valueBase64Binary == freezed
+          ? _value.valueBase64Binary
+          : valueBase64Binary // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
+      valueBase64BinaryElement: valueBase64BinaryElement == freezed
+          ? _value.valueBase64BinaryElement
+          : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCanonical: valueCanonical == freezed
+          ? _value.valueCanonical
+          : valueCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      valueCanonicalElement: valueCanonicalElement == freezed
+          ? _value.valueCanonicalElement
+          : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCode: valueCode == freezed
+          ? _value.valueCode
+          : valueCode // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      valueCodeElement: valueCodeElement == freezed
+          ? _value.valueCodeElement
+          : valueCodeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDate: valueDate == freezed
+          ? _value.valueDate
+          : valueDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      valueDateElement: valueDateElement == freezed
+          ? _value.valueDateElement
+          : valueDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      valueDateTimeElement: valueDateTimeElement == freezed
+          ? _value.valueDateTimeElement
+          : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      valueDecimalElement: valueDecimalElement == freezed
+          ? _value.valueDecimalElement
+          : valueDecimalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueId: valueId == freezed
+          ? _value.valueId
+          : valueId // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      valueIdElement: valueIdElement == freezed
+          ? _value.valueIdElement
+          : valueIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueInstant: valueInstant == freezed
+          ? _value.valueInstant
+          : valueInstant // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      valueInstantElement: valueInstantElement == freezed
+          ? _value.valueInstantElement
+          : valueInstantElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger // ignore: cast_nullable_to_non_nullable
+              as Integer?,
+      valueIntegerElement: valueIntegerElement == freezed
+          ? _value.valueIntegerElement
+          : valueIntegerElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueInteger64: valueInteger64 == freezed
+          ? _value.valueInteger64
+          : valueInteger64 // ignore: cast_nullable_to_non_nullable
+              as Integer64?,
+      valueInteger64Element: valueInteger64Element == freezed
+          ? _value.valueInteger64Element
+          : valueInteger64Element // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueMarkdown: valueMarkdown == freezed
+          ? _value.valueMarkdown
+          : valueMarkdown // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      valueMarkdownElement: valueMarkdownElement == freezed
+          ? _value.valueMarkdownElement
+          : valueMarkdownElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueOid: valueOid == freezed
+          ? _value.valueOid
+          : valueOid // ignore: cast_nullable_to_non_nullable
+              as Oid?,
+      valueOidElement: valueOidElement == freezed
+          ? _value.valueOidElement
+          : valueOidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valuePositiveInt: valuePositiveInt == freezed
+          ? _value.valuePositiveInt
+          : valuePositiveInt // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
+      valuePositiveIntElement: valuePositiveIntElement == freezed
+          ? _value.valuePositiveIntElement
+          : valuePositiveIntElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueString: valueString == freezed
+          ? _value.valueString
+          : valueString // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueTime: valueTime == freezed
+          ? _value.valueTime
+          : valueTime // ignore: cast_nullable_to_non_nullable
+              as Time?,
+      valueTimeElement: valueTimeElement == freezed
+          ? _value.valueTimeElement
+          : valueTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUnsignedInt: valueUnsignedInt == freezed
+          ? _value.valueUnsignedInt
+          : valueUnsignedInt // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
+      valueUnsignedIntElement: valueUnsignedIntElement == freezed
+          ? _value.valueUnsignedIntElement
+          : valueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUri: valueUri == freezed
+          ? _value.valueUri
+          : valueUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      valueUriElement: valueUriElement == freezed
+          ? _value.valueUriElement
+          : valueUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUrl: valueUrl == freezed
+          ? _value.valueUrl
+          : valueUrl // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
+      valueUrlElement: valueUrlElement == freezed
+          ? _value.valueUrlElement
+          : valueUrlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUuid: valueUuid == freezed
+          ? _value.valueUuid
+          : valueUuid // ignore: cast_nullable_to_non_nullable
+              as Uuid?,
+      valueUuidElement: valueUuidElement == freezed
+          ? _value.valueUuidElement
+          : valueUuidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueAddress: valueAddress == freezed
+          ? _value.valueAddress
+          : valueAddress // ignore: cast_nullable_to_non_nullable
+              as Address?,
+      valueAge: valueAge == freezed
+          ? _value.valueAge
+          : valueAge // ignore: cast_nullable_to_non_nullable
+              as Age?,
+      valueAnnotation: valueAnnotation == freezed
+          ? _value.valueAnnotation
+          : valueAnnotation // ignore: cast_nullable_to_non_nullable
+              as Annotation?,
+      valueAttachment: valueAttachment == freezed
+          ? _value.valueAttachment
+          : valueAttachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      valueCodeableReference: valueCodeableReference == freezed
+          ? _value.valueCodeableReference
+          : valueCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
+      valueCoding: valueCoding == freezed
+          ? _value.valueCoding
+          : valueCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
+      valueContactPoint: valueContactPoint == freezed
+          ? _value.valueContactPoint
+          : valueContactPoint // ignore: cast_nullable_to_non_nullable
+              as ContactPoint?,
+      valueCount: valueCount == freezed
+          ? _value.valueCount
+          : valueCount // ignore: cast_nullable_to_non_nullable
+              as Count?,
+      valueDistance: valueDistance == freezed
+          ? _value.valueDistance
+          : valueDistance // ignore: cast_nullable_to_non_nullable
+              as Distance?,
+      valueDuration: valueDuration == freezed
+          ? _value.valueDuration
+          : valueDuration // ignore: cast_nullable_to_non_nullable
+              as Duration?,
+      valueHumanName: valueHumanName == freezed
+          ? _value.valueHumanName
+          : valueHumanName // ignore: cast_nullable_to_non_nullable
+              as HumanName?,
+      valueIdentifier: valueIdentifier == freezed
+          ? _value.valueIdentifier
+          : valueIdentifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      valueMoney: valueMoney == freezed
+          ? _value.valueMoney
+          : valueMoney // ignore: cast_nullable_to_non_nullable
+              as Money?,
+      valuePeriod: valuePeriod == freezed
+          ? _value.valuePeriod
+          : valuePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueRatio: valueRatio == freezed
+          ? _value.valueRatio
+          : valueRatio // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
+      valueRatioRange: valueRatioRange == freezed
+          ? _value.valueRatioRange
+          : valueRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
+      valueReference: valueReference == freezed
+          ? _value.valueReference
+          : valueReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      valueSampledData: valueSampledData == freezed
+          ? _value.valueSampledData
+          : valueSampledData // ignore: cast_nullable_to_non_nullable
+              as SampledData?,
+      valueSignature: valueSignature == freezed
+          ? _value.valueSignature
+          : valueSignature // ignore: cast_nullable_to_non_nullable
+              as Signature?,
+      valueTiming: valueTiming == freezed
+          ? _value.valueTiming
+          : valueTiming // ignore: cast_nullable_to_non_nullable
+              as Timing?,
+      valueContactDetail: valueContactDetail == freezed
+          ? _value.valueContactDetail
+          : valueContactDetail // ignore: cast_nullable_to_non_nullable
+              as ContactDetail?,
+      valueContributor: valueContributor == freezed
+          ? _value.valueContributor
+          : valueContributor // ignore: cast_nullable_to_non_nullable
+              as Contributor?,
+      valueDataRequirement: valueDataRequirement == freezed
+          ? _value.valueDataRequirement
+          : valueDataRequirement // ignore: cast_nullable_to_non_nullable
+              as DataRequirement?,
+      valueExpression: valueExpression == freezed
+          ? _value.valueExpression
+          : valueExpression // ignore: cast_nullable_to_non_nullable
+              as Expression?,
+      valueParameterDefinition: valueParameterDefinition == freezed
+          ? _value.valueParameterDefinition
+          : valueParameterDefinition // ignore: cast_nullable_to_non_nullable
+              as ParameterDefinition?,
+      valueRelatedArtifact: valueRelatedArtifact == freezed
+          ? _value.valueRelatedArtifact
+          : valueRelatedArtifact // ignore: cast_nullable_to_non_nullable
+              as RelatedArtifact?,
+      valueTriggerDefinition: valueTriggerDefinition == freezed
+          ? _value.valueTriggerDefinition
+          : valueTriggerDefinition // ignore: cast_nullable_to_non_nullable
+              as TriggerDefinition?,
+      valueUsageContext: valueUsageContext == freezed
+          ? _value.valueUsageContext
+          : valueUsageContext // ignore: cast_nullable_to_non_nullable
+              as UsageContext?,
+      valueDosage: valueDosage == freezed
+          ? _value.valueDosage
+          : valueDosage // ignore: cast_nullable_to_non_nullable
+              as Dosage?,
+      valueMeta: valueMeta == freezed
+          ? _value.valueMeta
+          : valueMeta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueBase64BinaryElement {
+    if (_value.valueBase64BinaryElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueBase64BinaryElement!, (value) {
+      return _then(_value.copyWith(valueBase64BinaryElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueBooleanElement {
+    if (_value.valueBooleanElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueBooleanElement!, (value) {
+      return _then(_value.copyWith(valueBooleanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueCanonicalElement {
+    if (_value.valueCanonicalElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueCanonicalElement!, (value) {
+      return _then(_value.copyWith(valueCanonicalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueCodeElement {
+    if (_value.valueCodeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueCodeElement!, (value) {
+      return _then(_value.copyWith(valueCodeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueDateElement {
+    if (_value.valueDateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueDateElement!, (value) {
+      return _then(_value.copyWith(valueDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueDateTimeElement {
+    if (_value.valueDateTimeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueDateTimeElement!, (value) {
+      return _then(_value.copyWith(valueDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueDecimalElement {
+    if (_value.valueDecimalElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueDecimalElement!, (value) {
+      return _then(_value.copyWith(valueDecimalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueIdElement {
+    if (_value.valueIdElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueIdElement!, (value) {
+      return _then(_value.copyWith(valueIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueInstantElement {
+    if (_value.valueInstantElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueInstantElement!, (value) {
+      return _then(_value.copyWith(valueInstantElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueIntegerElement {
+    if (_value.valueIntegerElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueIntegerElement!, (value) {
+      return _then(_value.copyWith(valueIntegerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueInteger64Element {
+    if (_value.valueInteger64Element == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueInteger64Element!, (value) {
+      return _then(_value.copyWith(valueInteger64Element: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueMarkdownElement {
+    if (_value.valueMarkdownElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueMarkdownElement!, (value) {
+      return _then(_value.copyWith(valueMarkdownElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueOidElement {
+    if (_value.valueOidElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueOidElement!, (value) {
+      return _then(_value.copyWith(valueOidElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valuePositiveIntElement {
+    if (_value.valuePositiveIntElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valuePositiveIntElement!, (value) {
+      return _then(_value.copyWith(valuePositiveIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueStringElement {
+    if (_value.valueStringElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueStringElement!, (value) {
+      return _then(_value.copyWith(valueStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueTimeElement {
+    if (_value.valueTimeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueTimeElement!, (value) {
+      return _then(_value.copyWith(valueTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueUnsignedIntElement {
+    if (_value.valueUnsignedIntElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueUnsignedIntElement!, (value) {
+      return _then(_value.copyWith(valueUnsignedIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueUriElement {
+    if (_value.valueUriElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueUriElement!, (value) {
+      return _then(_value.copyWith(valueUriElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueUrlElement {
+    if (_value.valueUrlElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueUrlElement!, (value) {
+      return _then(_value.copyWith(valueUrlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueUuidElement {
+    if (_value.valueUuidElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueUuidElement!, (value) {
+      return _then(_value.copyWith(valueUuidElement: value));
+    });
+  }
+
+  @override
+  $AddressCopyWith<$Res>? get valueAddress {
+    if (_value.valueAddress == null) {
+      return null;
+    }
+
+    return $AddressCopyWith<$Res>(_value.valueAddress!, (value) {
+      return _then(_value.copyWith(valueAddress: value));
+    });
+  }
+
+  @override
+  $AgeCopyWith<$Res>? get valueAge {
+    if (_value.valueAge == null) {
+      return null;
+    }
+
+    return $AgeCopyWith<$Res>(_value.valueAge!, (value) {
+      return _then(_value.copyWith(valueAge: value));
+    });
+  }
+
+  @override
+  $AnnotationCopyWith<$Res>? get valueAnnotation {
+    if (_value.valueAnnotation == null) {
+      return null;
+    }
+
+    return $AnnotationCopyWith<$Res>(_value.valueAnnotation!, (value) {
+      return _then(_value.copyWith(valueAnnotation: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res>? get valueAttachment {
+    if (_value.valueAttachment == null) {
+      return null;
+    }
+
+    return $AttachmentCopyWith<$Res>(_value.valueAttachment!, (value) {
+      return _then(_value.copyWith(valueAttachment: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
+        (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $CodeableReferenceCopyWith<$Res>? get valueCodeableReference {
+    if (_value.valueCodeableReference == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(_value.valueCodeableReference!,
+        (value) {
+      return _then(_value.copyWith(valueCodeableReference: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res>? get valueCoding {
+    if (_value.valueCoding == null) {
+      return null;
+    }
+
+    return $CodingCopyWith<$Res>(_value.valueCoding!, (value) {
+      return _then(_value.copyWith(valueCoding: value));
+    });
+  }
+
+  @override
+  $ContactPointCopyWith<$Res>? get valueContactPoint {
+    if (_value.valueContactPoint == null) {
+      return null;
+    }
+
+    return $ContactPointCopyWith<$Res>(_value.valueContactPoint!, (value) {
+      return _then(_value.copyWith(valueContactPoint: value));
+    });
+  }
+
+  @override
+  $CountCopyWith<$Res>? get valueCount {
+    if (_value.valueCount == null) {
+      return null;
+    }
+
+    return $CountCopyWith<$Res>(_value.valueCount!, (value) {
+      return _then(_value.copyWith(valueCount: value));
+    });
+  }
+
+  @override
+  $DistanceCopyWith<$Res>? get valueDistance {
+    if (_value.valueDistance == null) {
+      return null;
+    }
+
+    return $DistanceCopyWith<$Res>(_value.valueDistance!, (value) {
+      return _then(_value.copyWith(valueDistance: value));
+    });
+  }
+
+  @override
+  $HumanNameCopyWith<$Res>? get valueHumanName {
+    if (_value.valueHumanName == null) {
+      return null;
+    }
+
+    return $HumanNameCopyWith<$Res>(_value.valueHumanName!, (value) {
+      return _then(_value.copyWith(valueHumanName: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res>? get valueIdentifier {
+    if (_value.valueIdentifier == null) {
+      return null;
+    }
+
+    return $IdentifierCopyWith<$Res>(_value.valueIdentifier!, (value) {
+      return _then(_value.copyWith(valueIdentifier: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res>? get valueMoney {
+    if (_value.valueMoney == null) {
+      return null;
+    }
+
+    return $MoneyCopyWith<$Res>(_value.valueMoney!, (value) {
+      return _then(_value.copyWith(valueMoney: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res>? get valuePeriod {
+    if (_value.valuePeriod == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.valuePeriod!, (value) {
+      return _then(_value.copyWith(valuePeriod: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res>? get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res>? get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+
+    return $RangeCopyWith<$Res>(_value.valueRange!, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res>? get valueRatio {
+    if (_value.valueRatio == null) {
+      return null;
+    }
+
+    return $RatioCopyWith<$Res>(_value.valueRatio!, (value) {
+      return _then(_value.copyWith(valueRatio: value));
+    });
+  }
+
+  @override
+  $RatioRangeCopyWith<$Res>? get valueRatioRange {
+    if (_value.valueRatioRange == null) {
+      return null;
+    }
+
+    return $RatioRangeCopyWith<$Res>(_value.valueRatioRange!, (value) {
+      return _then(_value.copyWith(valueRatioRange: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get valueReference {
+    if (_value.valueReference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.valueReference!, (value) {
+      return _then(_value.copyWith(valueReference: value));
+    });
+  }
+
+  @override
+  $SampledDataCopyWith<$Res>? get valueSampledData {
+    if (_value.valueSampledData == null) {
+      return null;
+    }
+
+    return $SampledDataCopyWith<$Res>(_value.valueSampledData!, (value) {
+      return _then(_value.copyWith(valueSampledData: value));
+    });
+  }
+
+  @override
+  $SignatureCopyWith<$Res>? get valueSignature {
+    if (_value.valueSignature == null) {
+      return null;
+    }
+
+    return $SignatureCopyWith<$Res>(_value.valueSignature!, (value) {
+      return _then(_value.copyWith(valueSignature: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res>? get valueTiming {
+    if (_value.valueTiming == null) {
+      return null;
+    }
+
+    return $TimingCopyWith<$Res>(_value.valueTiming!, (value) {
+      return _then(_value.copyWith(valueTiming: value));
+    });
+  }
+
+  @override
+  $ContactDetailCopyWith<$Res>? get valueContactDetail {
+    if (_value.valueContactDetail == null) {
+      return null;
+    }
+
+    return $ContactDetailCopyWith<$Res>(_value.valueContactDetail!, (value) {
+      return _then(_value.copyWith(valueContactDetail: value));
+    });
+  }
+
+  @override
+  $ContributorCopyWith<$Res>? get valueContributor {
+    if (_value.valueContributor == null) {
+      return null;
+    }
+
+    return $ContributorCopyWith<$Res>(_value.valueContributor!, (value) {
+      return _then(_value.copyWith(valueContributor: value));
+    });
+  }
+
+  @override
+  $DataRequirementCopyWith<$Res>? get valueDataRequirement {
+    if (_value.valueDataRequirement == null) {
+      return null;
+    }
+
+    return $DataRequirementCopyWith<$Res>(_value.valueDataRequirement!,
+        (value) {
+      return _then(_value.copyWith(valueDataRequirement: value));
+    });
+  }
+
+  @override
+  $ExpressionCopyWith<$Res>? get valueExpression {
+    if (_value.valueExpression == null) {
+      return null;
+    }
+
+    return $ExpressionCopyWith<$Res>(_value.valueExpression!, (value) {
+      return _then(_value.copyWith(valueExpression: value));
+    });
+  }
+
+  @override
+  $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition {
+    if (_value.valueParameterDefinition == null) {
+      return null;
+    }
+
+    return $ParameterDefinitionCopyWith<$Res>(_value.valueParameterDefinition!,
+        (value) {
+      return _then(_value.copyWith(valueParameterDefinition: value));
+    });
+  }
+
+  @override
+  $RelatedArtifactCopyWith<$Res>? get valueRelatedArtifact {
+    if (_value.valueRelatedArtifact == null) {
+      return null;
+    }
+
+    return $RelatedArtifactCopyWith<$Res>(_value.valueRelatedArtifact!,
+        (value) {
+      return _then(_value.copyWith(valueRelatedArtifact: value));
+    });
+  }
+
+  @override
+  $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition {
+    if (_value.valueTriggerDefinition == null) {
+      return null;
+    }
+
+    return $TriggerDefinitionCopyWith<$Res>(_value.valueTriggerDefinition!,
+        (value) {
+      return _then(_value.copyWith(valueTriggerDefinition: value));
+    });
+  }
+
+  @override
+  $UsageContextCopyWith<$Res>? get valueUsageContext {
+    if (_value.valueUsageContext == null) {
+      return null;
+    }
+
+    return $UsageContextCopyWith<$Res>(_value.valueUsageContext!, (value) {
+      return _then(_value.copyWith(valueUsageContext: value));
+    });
+  }
+
+  @override
+  $DosageCopyWith<$Res>? get valueDosage {
+    if (_value.valueDosage == null) {
+      return null;
+    }
+
+    return $DosageCopyWith<$Res>(_value.valueDosage!, (value) {
+      return _then(_value.copyWith(valueDosage: value));
+    });
+  }
+
+  @override
+  $MetaCopyWith<$Res>? get valueMeta {
+    if (_value.valueMeta == null) {
+      return null;
+    }
+
+    return $MetaCopyWith<$Res>(_value.valueMeta!, (value) {
+      return _then(_value.copyWith(valueMeta: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_TransportInputCopyWith<$Res>
+    implements $TransportInputCopyWith<$Res> {
+  factory _$$_TransportInputCopyWith(
+          _$_TransportInput value, $Res Function(_$_TransportInput) then) =
+      __$$_TransportInputCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept type,
+      Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
+      Code? valueCode,
+      @JsonKey(name: '_valueCode') Element? valueCodeElement,
+      Date? valueDate,
+      @JsonKey(name: '_valueDate') Element? valueDateElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+      Id? valueId,
+      @JsonKey(name: '_valueId') Element? valueIdElement,
+      Instant? valueInstant,
+      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+      Integer? valueInteger,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Integer64? valueInteger64,
+      @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
+      Markdown? valueMarkdown,
+      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
+      Oid? valueOid,
+      @JsonKey(name: '_valueOid') Element? valueOidElement,
+      PositiveInt? valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
+      Markdown? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      Time? valueTime,
+      @JsonKey(name: '_valueTime') Element? valueTimeElement,
+      UnsignedInt? valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      FhirUrl? valueUrl,
+      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+      Uuid? valueUuid,
+      @JsonKey(name: '_valueUuid') Element? valueUuidElement,
+      Address? valueAddress,
+      Age? valueAge,
+      Annotation? valueAnnotation,
+      Attachment? valueAttachment,
+      CodeableConcept? valueCodeableConcept,
+      CodeableReference? valueCodeableReference,
+      Coding? valueCoding,
+      ContactPoint? valueContactPoint,
+      Count? valueCount,
+      Distance? valueDistance,
+      Duration? valueDuration,
+      HumanName? valueHumanName,
+      Identifier? valueIdentifier,
+      Money? valueMoney,
+      Period? valuePeriod,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Ratio? valueRatio,
+      RatioRange? valueRatioRange,
+      Reference? valueReference,
+      SampledData? valueSampledData,
+      Signature? valueSignature,
+      Timing? valueTiming,
+      ContactDetail? valueContactDetail,
+      Contributor? valueContributor,
+      DataRequirement? valueDataRequirement,
+      Expression? valueExpression,
+      ParameterDefinition? valueParameterDefinition,
+      RelatedArtifact? valueRelatedArtifact,
+      TriggerDefinition? valueTriggerDefinition,
+      UsageContext? valueUsageContext,
+      Dosage? valueDosage,
+      Meta? valueMeta});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $ElementCopyWith<$Res>? get valueBase64BinaryElement;
+  @override
+  $ElementCopyWith<$Res>? get valueBooleanElement;
+  @override
+  $ElementCopyWith<$Res>? get valueCanonicalElement;
+  @override
+  $ElementCopyWith<$Res>? get valueCodeElement;
+  @override
+  $ElementCopyWith<$Res>? get valueDateElement;
+  @override
+  $ElementCopyWith<$Res>? get valueDateTimeElement;
+  @override
+  $ElementCopyWith<$Res>? get valueDecimalElement;
+  @override
+  $ElementCopyWith<$Res>? get valueIdElement;
+  @override
+  $ElementCopyWith<$Res>? get valueInstantElement;
+  @override
+  $ElementCopyWith<$Res>? get valueIntegerElement;
+  @override
+  $ElementCopyWith<$Res>? get valueInteger64Element;
+  @override
+  $ElementCopyWith<$Res>? get valueMarkdownElement;
+  @override
+  $ElementCopyWith<$Res>? get valueOidElement;
+  @override
+  $ElementCopyWith<$Res>? get valuePositiveIntElement;
+  @override
+  $ElementCopyWith<$Res>? get valueStringElement;
+  @override
+  $ElementCopyWith<$Res>? get valueTimeElement;
+  @override
+  $ElementCopyWith<$Res>? get valueUnsignedIntElement;
+  @override
+  $ElementCopyWith<$Res>? get valueUriElement;
+  @override
+  $ElementCopyWith<$Res>? get valueUrlElement;
+  @override
+  $ElementCopyWith<$Res>? get valueUuidElement;
+  @override
+  $AddressCopyWith<$Res>? get valueAddress;
+  @override
+  $AgeCopyWith<$Res>? get valueAge;
+  @override
+  $AnnotationCopyWith<$Res>? get valueAnnotation;
+  @override
+  $AttachmentCopyWith<$Res>? get valueAttachment;
+  @override
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  @override
+  $CodeableReferenceCopyWith<$Res>? get valueCodeableReference;
+  @override
+  $CodingCopyWith<$Res>? get valueCoding;
+  @override
+  $ContactPointCopyWith<$Res>? get valueContactPoint;
+  @override
+  $CountCopyWith<$Res>? get valueCount;
+  @override
+  $DistanceCopyWith<$Res>? get valueDistance;
+  @override
+  $HumanNameCopyWith<$Res>? get valueHumanName;
+  @override
+  $IdentifierCopyWith<$Res>? get valueIdentifier;
+  @override
+  $MoneyCopyWith<$Res>? get valueMoney;
+  @override
+  $PeriodCopyWith<$Res>? get valuePeriod;
+  @override
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  @override
+  $RangeCopyWith<$Res>? get valueRange;
+  @override
+  $RatioCopyWith<$Res>? get valueRatio;
+  @override
+  $RatioRangeCopyWith<$Res>? get valueRatioRange;
+  @override
+  $ReferenceCopyWith<$Res>? get valueReference;
+  @override
+  $SampledDataCopyWith<$Res>? get valueSampledData;
+  @override
+  $SignatureCopyWith<$Res>? get valueSignature;
+  @override
+  $TimingCopyWith<$Res>? get valueTiming;
+  @override
+  $ContactDetailCopyWith<$Res>? get valueContactDetail;
+  @override
+  $ContributorCopyWith<$Res>? get valueContributor;
+  @override
+  $DataRequirementCopyWith<$Res>? get valueDataRequirement;
+  @override
+  $ExpressionCopyWith<$Res>? get valueExpression;
+  @override
+  $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition;
+  @override
+  $RelatedArtifactCopyWith<$Res>? get valueRelatedArtifact;
+  @override
+  $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition;
+  @override
+  $UsageContextCopyWith<$Res>? get valueUsageContext;
+  @override
+  $DosageCopyWith<$Res>? get valueDosage;
+  @override
+  $MetaCopyWith<$Res>? get valueMeta;
+}
+
+/// @nodoc
+class __$$_TransportInputCopyWithImpl<$Res>
+    extends _$TransportInputCopyWithImpl<$Res>
+    implements _$$_TransportInputCopyWith<$Res> {
+  __$$_TransportInputCopyWithImpl(
+      _$_TransportInput _value, $Res Function(_$_TransportInput) _then)
+      : super(_value, (v) => _then(v as _$_TransportInput));
+
+  @override
+  _$_TransportInput get _value => super._value as _$_TransportInput;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? valueBase64Binary = freezed,
+    Object? valueBase64BinaryElement = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueCanonical = freezed,
+    Object? valueCanonicalElement = freezed,
+    Object? valueCode = freezed,
+    Object? valueCodeElement = freezed,
+    Object? valueDate = freezed,
+    Object? valueDateElement = freezed,
+    Object? valueDateTime = freezed,
+    Object? valueDateTimeElement = freezed,
+    Object? valueDecimal = freezed,
+    Object? valueDecimalElement = freezed,
+    Object? valueId = freezed,
+    Object? valueIdElement = freezed,
+    Object? valueInstant = freezed,
+    Object? valueInstantElement = freezed,
+    Object? valueInteger = freezed,
+    Object? valueIntegerElement = freezed,
+    Object? valueInteger64 = freezed,
+    Object? valueInteger64Element = freezed,
+    Object? valueMarkdown = freezed,
+    Object? valueMarkdownElement = freezed,
+    Object? valueOid = freezed,
+    Object? valueOidElement = freezed,
+    Object? valuePositiveInt = freezed,
+    Object? valuePositiveIntElement = freezed,
+    Object? valueString = freezed,
+    Object? valueStringElement = freezed,
+    Object? valueTime = freezed,
+    Object? valueTimeElement = freezed,
+    Object? valueUnsignedInt = freezed,
+    Object? valueUnsignedIntElement = freezed,
+    Object? valueUri = freezed,
+    Object? valueUriElement = freezed,
+    Object? valueUrl = freezed,
+    Object? valueUrlElement = freezed,
+    Object? valueUuid = freezed,
+    Object? valueUuidElement = freezed,
+    Object? valueAddress = freezed,
+    Object? valueAge = freezed,
+    Object? valueAnnotation = freezed,
+    Object? valueAttachment = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueCodeableReference = freezed,
+    Object? valueCoding = freezed,
+    Object? valueContactPoint = freezed,
+    Object? valueCount = freezed,
+    Object? valueDistance = freezed,
+    Object? valueDuration = freezed,
+    Object? valueHumanName = freezed,
+    Object? valueIdentifier = freezed,
+    Object? valueMoney = freezed,
+    Object? valuePeriod = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valueRatio = freezed,
+    Object? valueRatioRange = freezed,
+    Object? valueReference = freezed,
+    Object? valueSampledData = freezed,
+    Object? valueSignature = freezed,
+    Object? valueTiming = freezed,
+    Object? valueContactDetail = freezed,
+    Object? valueContributor = freezed,
+    Object? valueDataRequirement = freezed,
+    Object? valueExpression = freezed,
+    Object? valueParameterDefinition = freezed,
+    Object? valueRelatedArtifact = freezed,
+    Object? valueTriggerDefinition = freezed,
+    Object? valueUsageContext = freezed,
+    Object? valueDosage = freezed,
+    Object? valueMeta = freezed,
+  }) {
+    return _then(_$_TransportInput(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      valueBase64Binary: valueBase64Binary == freezed
+          ? _value.valueBase64Binary
+          : valueBase64Binary // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
+      valueBase64BinaryElement: valueBase64BinaryElement == freezed
+          ? _value.valueBase64BinaryElement
+          : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCanonical: valueCanonical == freezed
+          ? _value.valueCanonical
+          : valueCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      valueCanonicalElement: valueCanonicalElement == freezed
+          ? _value.valueCanonicalElement
+          : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCode: valueCode == freezed
+          ? _value.valueCode
+          : valueCode // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      valueCodeElement: valueCodeElement == freezed
+          ? _value.valueCodeElement
+          : valueCodeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDate: valueDate == freezed
+          ? _value.valueDate
+          : valueDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      valueDateElement: valueDateElement == freezed
+          ? _value.valueDateElement
+          : valueDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      valueDateTimeElement: valueDateTimeElement == freezed
+          ? _value.valueDateTimeElement
+          : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      valueDecimalElement: valueDecimalElement == freezed
+          ? _value.valueDecimalElement
+          : valueDecimalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueId: valueId == freezed
+          ? _value.valueId
+          : valueId // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      valueIdElement: valueIdElement == freezed
+          ? _value.valueIdElement
+          : valueIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueInstant: valueInstant == freezed
+          ? _value.valueInstant
+          : valueInstant // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      valueInstantElement: valueInstantElement == freezed
+          ? _value.valueInstantElement
+          : valueInstantElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger // ignore: cast_nullable_to_non_nullable
+              as Integer?,
+      valueIntegerElement: valueIntegerElement == freezed
+          ? _value.valueIntegerElement
+          : valueIntegerElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueInteger64: valueInteger64 == freezed
+          ? _value.valueInteger64
+          : valueInteger64 // ignore: cast_nullable_to_non_nullable
+              as Integer64?,
+      valueInteger64Element: valueInteger64Element == freezed
+          ? _value.valueInteger64Element
+          : valueInteger64Element // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueMarkdown: valueMarkdown == freezed
+          ? _value.valueMarkdown
+          : valueMarkdown // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      valueMarkdownElement: valueMarkdownElement == freezed
+          ? _value.valueMarkdownElement
+          : valueMarkdownElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueOid: valueOid == freezed
+          ? _value.valueOid
+          : valueOid // ignore: cast_nullable_to_non_nullable
+              as Oid?,
+      valueOidElement: valueOidElement == freezed
+          ? _value.valueOidElement
+          : valueOidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valuePositiveInt: valuePositiveInt == freezed
+          ? _value.valuePositiveInt
+          : valuePositiveInt // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
+      valuePositiveIntElement: valuePositiveIntElement == freezed
+          ? _value.valuePositiveIntElement
+          : valuePositiveIntElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueString: valueString == freezed
+          ? _value.valueString
+          : valueString // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueTime: valueTime == freezed
+          ? _value.valueTime
+          : valueTime // ignore: cast_nullable_to_non_nullable
+              as Time?,
+      valueTimeElement: valueTimeElement == freezed
+          ? _value.valueTimeElement
+          : valueTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUnsignedInt: valueUnsignedInt == freezed
+          ? _value.valueUnsignedInt
+          : valueUnsignedInt // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
+      valueUnsignedIntElement: valueUnsignedIntElement == freezed
+          ? _value.valueUnsignedIntElement
+          : valueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUri: valueUri == freezed
+          ? _value.valueUri
+          : valueUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      valueUriElement: valueUriElement == freezed
+          ? _value.valueUriElement
+          : valueUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUrl: valueUrl == freezed
+          ? _value.valueUrl
+          : valueUrl // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
+      valueUrlElement: valueUrlElement == freezed
+          ? _value.valueUrlElement
+          : valueUrlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUuid: valueUuid == freezed
+          ? _value.valueUuid
+          : valueUuid // ignore: cast_nullable_to_non_nullable
+              as Uuid?,
+      valueUuidElement: valueUuidElement == freezed
+          ? _value.valueUuidElement
+          : valueUuidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueAddress: valueAddress == freezed
+          ? _value.valueAddress
+          : valueAddress // ignore: cast_nullable_to_non_nullable
+              as Address?,
+      valueAge: valueAge == freezed
+          ? _value.valueAge
+          : valueAge // ignore: cast_nullable_to_non_nullable
+              as Age?,
+      valueAnnotation: valueAnnotation == freezed
+          ? _value.valueAnnotation
+          : valueAnnotation // ignore: cast_nullable_to_non_nullable
+              as Annotation?,
+      valueAttachment: valueAttachment == freezed
+          ? _value.valueAttachment
+          : valueAttachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      valueCodeableReference: valueCodeableReference == freezed
+          ? _value.valueCodeableReference
+          : valueCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
+      valueCoding: valueCoding == freezed
+          ? _value.valueCoding
+          : valueCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
+      valueContactPoint: valueContactPoint == freezed
+          ? _value.valueContactPoint
+          : valueContactPoint // ignore: cast_nullable_to_non_nullable
+              as ContactPoint?,
+      valueCount: valueCount == freezed
+          ? _value.valueCount
+          : valueCount // ignore: cast_nullable_to_non_nullable
+              as Count?,
+      valueDistance: valueDistance == freezed
+          ? _value.valueDistance
+          : valueDistance // ignore: cast_nullable_to_non_nullable
+              as Distance?,
+      valueDuration: valueDuration == freezed
+          ? _value.valueDuration
+          : valueDuration // ignore: cast_nullable_to_non_nullable
+              as Duration?,
+      valueHumanName: valueHumanName == freezed
+          ? _value.valueHumanName
+          : valueHumanName // ignore: cast_nullable_to_non_nullable
+              as HumanName?,
+      valueIdentifier: valueIdentifier == freezed
+          ? _value.valueIdentifier
+          : valueIdentifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      valueMoney: valueMoney == freezed
+          ? _value.valueMoney
+          : valueMoney // ignore: cast_nullable_to_non_nullable
+              as Money?,
+      valuePeriod: valuePeriod == freezed
+          ? _value.valuePeriod
+          : valuePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueRatio: valueRatio == freezed
+          ? _value.valueRatio
+          : valueRatio // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
+      valueRatioRange: valueRatioRange == freezed
+          ? _value.valueRatioRange
+          : valueRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
+      valueReference: valueReference == freezed
+          ? _value.valueReference
+          : valueReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      valueSampledData: valueSampledData == freezed
+          ? _value.valueSampledData
+          : valueSampledData // ignore: cast_nullable_to_non_nullable
+              as SampledData?,
+      valueSignature: valueSignature == freezed
+          ? _value.valueSignature
+          : valueSignature // ignore: cast_nullable_to_non_nullable
+              as Signature?,
+      valueTiming: valueTiming == freezed
+          ? _value.valueTiming
+          : valueTiming // ignore: cast_nullable_to_non_nullable
+              as Timing?,
+      valueContactDetail: valueContactDetail == freezed
+          ? _value.valueContactDetail
+          : valueContactDetail // ignore: cast_nullable_to_non_nullable
+              as ContactDetail?,
+      valueContributor: valueContributor == freezed
+          ? _value.valueContributor
+          : valueContributor // ignore: cast_nullable_to_non_nullable
+              as Contributor?,
+      valueDataRequirement: valueDataRequirement == freezed
+          ? _value.valueDataRequirement
+          : valueDataRequirement // ignore: cast_nullable_to_non_nullable
+              as DataRequirement?,
+      valueExpression: valueExpression == freezed
+          ? _value.valueExpression
+          : valueExpression // ignore: cast_nullable_to_non_nullable
+              as Expression?,
+      valueParameterDefinition: valueParameterDefinition == freezed
+          ? _value.valueParameterDefinition
+          : valueParameterDefinition // ignore: cast_nullable_to_non_nullable
+              as ParameterDefinition?,
+      valueRelatedArtifact: valueRelatedArtifact == freezed
+          ? _value.valueRelatedArtifact
+          : valueRelatedArtifact // ignore: cast_nullable_to_non_nullable
+              as RelatedArtifact?,
+      valueTriggerDefinition: valueTriggerDefinition == freezed
+          ? _value.valueTriggerDefinition
+          : valueTriggerDefinition // ignore: cast_nullable_to_non_nullable
+              as TriggerDefinition?,
+      valueUsageContext: valueUsageContext == freezed
+          ? _value.valueUsageContext
+          : valueUsageContext // ignore: cast_nullable_to_non_nullable
+              as UsageContext?,
+      valueDosage: valueDosage == freezed
+          ? _value.valueDosage
+          : valueDosage // ignore: cast_nullable_to_non_nullable
+              as Dosage?,
+      valueMeta: valueMeta == freezed
+          ? _value.valueMeta
+          : valueMeta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_TransportInput extends _TransportInput {
+  _$_TransportInput(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.type,
+      this.valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement,
+      this.valueBoolean,
+      @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueCanonical,
+      @JsonKey(name: '_valueCanonical') this.valueCanonicalElement,
+      this.valueCode,
+      @JsonKey(name: '_valueCode') this.valueCodeElement,
+      this.valueDate,
+      @JsonKey(name: '_valueDate') this.valueDateElement,
+      this.valueDateTime,
+      @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+      this.valueDecimal,
+      @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
+      this.valueId,
+      @JsonKey(name: '_valueId') this.valueIdElement,
+      this.valueInstant,
+      @JsonKey(name: '_valueInstant') this.valueInstantElement,
+      this.valueInteger,
+      @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      this.valueInteger64,
+      @JsonKey(name: '_valueInteger64') this.valueInteger64Element,
+      this.valueMarkdown,
+      @JsonKey(name: '_valueMarkdown') this.valueMarkdownElement,
+      this.valueOid,
+      @JsonKey(name: '_valueOid') this.valueOidElement,
+      this.valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt') this.valuePositiveIntElement,
+      this.valueString,
+      @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueTime,
+      @JsonKey(name: '_valueTime') this.valueTimeElement,
+      this.valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt') this.valueUnsignedIntElement,
+      this.valueUri,
+      @JsonKey(name: '_valueUri') this.valueUriElement,
+      this.valueUrl,
+      @JsonKey(name: '_valueUrl') this.valueUrlElement,
+      this.valueUuid,
+      @JsonKey(name: '_valueUuid') this.valueUuidElement,
+      this.valueAddress,
+      this.valueAge,
+      this.valueAnnotation,
+      this.valueAttachment,
+      this.valueCodeableConcept,
+      this.valueCodeableReference,
+      this.valueCoding,
+      this.valueContactPoint,
+      this.valueCount,
+      this.valueDistance,
+      this.valueDuration,
+      this.valueHumanName,
+      this.valueIdentifier,
+      this.valueMoney,
+      this.valuePeriod,
+      this.valueQuantity,
+      this.valueRange,
+      this.valueRatio,
+      this.valueRatioRange,
+      this.valueReference,
+      this.valueSampledData,
+      this.valueSignature,
+      this.valueTiming,
+      this.valueContactDetail,
+      this.valueContributor,
+      this.valueDataRequirement,
+      this.valueExpression,
+      this.valueParameterDefinition,
+      this.valueRelatedArtifact,
+      this.valueTriggerDefinition,
+      this.valueUsageContext,
+      this.valueDosage,
+      this.valueMeta})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_TransportInput.fromJson(Map<String, dynamic> json) =>
+      _$$_TransportInputFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept type;
+  @override
+  final Base64Binary? valueBase64Binary;
+  @override
+  @JsonKey(name: '_valueBase64Binary')
+  final Element? valueBase64BinaryElement;
+  @override
+  final Boolean? valueBoolean;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  final Element? valueBooleanElement;
+  @override
+  final Canonical? valueCanonical;
+  @override
+  @JsonKey(name: '_valueCanonical')
+  final Element? valueCanonicalElement;
+  @override
+  final Code? valueCode;
+  @override
+  @JsonKey(name: '_valueCode')
+  final Element? valueCodeElement;
+  @override
+  final Date? valueDate;
+  @override
+  @JsonKey(name: '_valueDate')
+  final Element? valueDateElement;
+  @override
+  final FhirDateTime? valueDateTime;
+  @override
+  @JsonKey(name: '_valueDateTime')
+  final Element? valueDateTimeElement;
+  @override
+  final Decimal? valueDecimal;
+  @override
+  @JsonKey(name: '_valueDecimal')
+  final Element? valueDecimalElement;
+  @override
+  final Id? valueId;
+  @override
+  @JsonKey(name: '_valueId')
+  final Element? valueIdElement;
+  @override
+  final Instant? valueInstant;
+  @override
+  @JsonKey(name: '_valueInstant')
+  final Element? valueInstantElement;
+  @override
+  final Integer? valueInteger;
+  @override
+  @JsonKey(name: '_valueInteger')
+  final Element? valueIntegerElement;
+  @override
+  final Integer64? valueInteger64;
+  @override
+  @JsonKey(name: '_valueInteger64')
+  final Element? valueInteger64Element;
+  @override
+  final Markdown? valueMarkdown;
+  @override
+  @JsonKey(name: '_valueMarkdown')
+  final Element? valueMarkdownElement;
+  @override
+  final Oid? valueOid;
+  @override
+  @JsonKey(name: '_valueOid')
+  final Element? valueOidElement;
+  @override
+  final PositiveInt? valuePositiveInt;
+  @override
+  @JsonKey(name: '_valuePositiveInt')
+  final Element? valuePositiveIntElement;
+  @override
+  final Markdown? valueString;
+  @override
+  @JsonKey(name: '_valueString')
+  final Element? valueStringElement;
+  @override
+  final Time? valueTime;
+  @override
+  @JsonKey(name: '_valueTime')
+  final Element? valueTimeElement;
+  @override
+  final UnsignedInt? valueUnsignedInt;
+  @override
+  @JsonKey(name: '_valueUnsignedInt')
+  final Element? valueUnsignedIntElement;
+  @override
+  final FhirUri? valueUri;
+  @override
+  @JsonKey(name: '_valueUri')
+  final Element? valueUriElement;
+  @override
+  final FhirUrl? valueUrl;
+  @override
+  @JsonKey(name: '_valueUrl')
+  final Element? valueUrlElement;
+  @override
+  final Uuid? valueUuid;
+  @override
+  @JsonKey(name: '_valueUuid')
+  final Element? valueUuidElement;
+  @override
+  final Address? valueAddress;
+  @override
+  final Age? valueAge;
+  @override
+  final Annotation? valueAnnotation;
+  @override
+  final Attachment? valueAttachment;
+  @override
+  final CodeableConcept? valueCodeableConcept;
+  @override
+  final CodeableReference? valueCodeableReference;
+  @override
+  final Coding? valueCoding;
+  @override
+  final ContactPoint? valueContactPoint;
+  @override
+  final Count? valueCount;
+  @override
+  final Distance? valueDistance;
+  @override
+  final Duration? valueDuration;
+  @override
+  final HumanName? valueHumanName;
+  @override
+  final Identifier? valueIdentifier;
+  @override
+  final Money? valueMoney;
+  @override
+  final Period? valuePeriod;
+  @override
+  final Quantity? valueQuantity;
+  @override
+  final Range? valueRange;
+  @override
+  final Ratio? valueRatio;
+  @override
+  final RatioRange? valueRatioRange;
+  @override
+  final Reference? valueReference;
+  @override
+  final SampledData? valueSampledData;
+  @override
+  final Signature? valueSignature;
+  @override
+  final Timing? valueTiming;
+  @override
+  final ContactDetail? valueContactDetail;
+  @override
+  final Contributor? valueContributor;
+  @override
+  final DataRequirement? valueDataRequirement;
+  @override
+  final Expression? valueExpression;
+  @override
+  final ParameterDefinition? valueParameterDefinition;
+  @override
+  final RelatedArtifact? valueRelatedArtifact;
+  @override
+  final TriggerDefinition? valueTriggerDefinition;
+  @override
+  final UsageContext? valueUsageContext;
+  @override
+  final Dosage? valueDosage;
+  @override
+  final Meta? valueMeta;
+
+  @override
+  String toString() {
+    return 'TransportInput(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueInteger64: $valueInteger64, valueInteger64Element: $valueInteger64Element, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCodeableReference: $valueCodeableReference, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueRatioRange: $valueRatioRange, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_TransportInput &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality()
+                .equals(other.valueBase64Binary, valueBase64Binary) &&
+            const DeepCollectionEquality().equals(
+                other.valueBase64BinaryElement, valueBase64BinaryElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueBoolean, valueBoolean) &&
+            const DeepCollectionEquality()
+                .equals(other.valueBooleanElement, valueBooleanElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCanonical, valueCanonical) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCanonicalElement, valueCanonicalElement) &&
+            const DeepCollectionEquality().equals(other.valueCode, valueCode) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCodeElement, valueCodeElement) &&
+            const DeepCollectionEquality().equals(other.valueDate, valueDate) &&
+            const DeepCollectionEquality()
+                .equals(other.valueDateElement, valueDateElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueDateTime, valueDateTime) &&
+            const DeepCollectionEquality()
+                .equals(other.valueDateTimeElement, valueDateTimeElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueDecimal, valueDecimal) &&
+            const DeepCollectionEquality()
+                .equals(other.valueDecimalElement, valueDecimalElement) &&
+            const DeepCollectionEquality().equals(other.valueId, valueId) &&
+            const DeepCollectionEquality()
+                .equals(other.valueIdElement, valueIdElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueInstant, valueInstant) &&
+            const DeepCollectionEquality()
+                .equals(other.valueInstantElement, valueInstantElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueInteger, valueInteger) &&
+            const DeepCollectionEquality()
+                .equals(other.valueIntegerElement, valueIntegerElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueInteger64, valueInteger64) &&
+            const DeepCollectionEquality()
+                .equals(other.valueInteger64Element, valueInteger64Element) &&
+            const DeepCollectionEquality()
+                .equals(other.valueMarkdown, valueMarkdown) &&
+            const DeepCollectionEquality()
+                .equals(other.valueMarkdownElement, valueMarkdownElement) &&
+            const DeepCollectionEquality().equals(other.valueOid, valueOid) &&
+            const DeepCollectionEquality()
+                .equals(other.valueOidElement, valueOidElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valuePositiveInt, valuePositiveInt) &&
+            const DeepCollectionEquality().equals(
+                other.valuePositiveIntElement, valuePositiveIntElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueString, valueString) &&
+            const DeepCollectionEquality()
+                .equals(other.valueStringElement, valueStringElement) &&
+            const DeepCollectionEquality().equals(other.valueTime, valueTime) &&
+            const DeepCollectionEquality()
+                .equals(other.valueTimeElement, valueTimeElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueUnsignedInt, valueUnsignedInt) &&
+            const DeepCollectionEquality().equals(
+                other.valueUnsignedIntElement, valueUnsignedIntElement) &&
+            const DeepCollectionEquality().equals(other.valueUri, valueUri) &&
+            const DeepCollectionEquality()
+                .equals(other.valueUriElement, valueUriElement) &&
+            const DeepCollectionEquality().equals(other.valueUrl, valueUrl) &&
+            const DeepCollectionEquality()
+                .equals(other.valueUrlElement, valueUrlElement) &&
+            const DeepCollectionEquality().equals(other.valueUuid, valueUuid) &&
+            const DeepCollectionEquality()
+                .equals(other.valueUuidElement, valueUuidElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueAddress, valueAddress) &&
+            const DeepCollectionEquality().equals(other.valueAge, valueAge) &&
+            const DeepCollectionEquality()
+                .equals(other.valueAnnotation, valueAnnotation) &&
+            const DeepCollectionEquality()
+                .equals(other.valueAttachment, valueAttachment) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCodeableConcept, valueCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCodeableReference, valueCodeableReference) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCoding, valueCoding) &&
+            const DeepCollectionEquality()
+                .equals(other.valueContactPoint, valueContactPoint) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCount, valueCount) &&
+            const DeepCollectionEquality()
+                .equals(other.valueDistance, valueDistance) &&
+            const DeepCollectionEquality().equals(other.valueDuration, valueDuration) &&
+            const DeepCollectionEquality().equals(other.valueHumanName, valueHumanName) &&
+            const DeepCollectionEquality().equals(other.valueIdentifier, valueIdentifier) &&
+            const DeepCollectionEquality().equals(other.valueMoney, valueMoney) &&
+            const DeepCollectionEquality().equals(other.valuePeriod, valuePeriod) &&
+            const DeepCollectionEquality().equals(other.valueQuantity, valueQuantity) &&
+            const DeepCollectionEquality().equals(other.valueRange, valueRange) &&
+            const DeepCollectionEquality().equals(other.valueRatio, valueRatio) &&
+            const DeepCollectionEquality().equals(other.valueRatioRange, valueRatioRange) &&
+            const DeepCollectionEquality().equals(other.valueReference, valueReference) &&
+            const DeepCollectionEquality().equals(other.valueSampledData, valueSampledData) &&
+            const DeepCollectionEquality().equals(other.valueSignature, valueSignature) &&
+            const DeepCollectionEquality().equals(other.valueTiming, valueTiming) &&
+            const DeepCollectionEquality().equals(other.valueContactDetail, valueContactDetail) &&
+            const DeepCollectionEquality().equals(other.valueContributor, valueContributor) &&
+            const DeepCollectionEquality().equals(other.valueDataRequirement, valueDataRequirement) &&
+            const DeepCollectionEquality().equals(other.valueExpression, valueExpression) &&
+            const DeepCollectionEquality().equals(other.valueParameterDefinition, valueParameterDefinition) &&
+            const DeepCollectionEquality().equals(other.valueRelatedArtifact, valueRelatedArtifact) &&
+            const DeepCollectionEquality().equals(other.valueTriggerDefinition, valueTriggerDefinition) &&
+            const DeepCollectionEquality().equals(other.valueUsageContext, valueUsageContext) &&
+            const DeepCollectionEquality().equals(other.valueDosage, valueDosage) &&
+            const DeepCollectionEquality().equals(other.valueMeta, valueMeta));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(type),
+        const DeepCollectionEquality().hash(valueBase64Binary),
+        const DeepCollectionEquality().hash(valueBase64BinaryElement),
+        const DeepCollectionEquality().hash(valueBoolean),
+        const DeepCollectionEquality().hash(valueBooleanElement),
+        const DeepCollectionEquality().hash(valueCanonical),
+        const DeepCollectionEquality().hash(valueCanonicalElement),
+        const DeepCollectionEquality().hash(valueCode),
+        const DeepCollectionEquality().hash(valueCodeElement),
+        const DeepCollectionEquality().hash(valueDate),
+        const DeepCollectionEquality().hash(valueDateElement),
+        const DeepCollectionEquality().hash(valueDateTime),
+        const DeepCollectionEquality().hash(valueDateTimeElement),
+        const DeepCollectionEquality().hash(valueDecimal),
+        const DeepCollectionEquality().hash(valueDecimalElement),
+        const DeepCollectionEquality().hash(valueId),
+        const DeepCollectionEquality().hash(valueIdElement),
+        const DeepCollectionEquality().hash(valueInstant),
+        const DeepCollectionEquality().hash(valueInstantElement),
+        const DeepCollectionEquality().hash(valueInteger),
+        const DeepCollectionEquality().hash(valueIntegerElement),
+        const DeepCollectionEquality().hash(valueInteger64),
+        const DeepCollectionEquality().hash(valueInteger64Element),
+        const DeepCollectionEquality().hash(valueMarkdown),
+        const DeepCollectionEquality().hash(valueMarkdownElement),
+        const DeepCollectionEquality().hash(valueOid),
+        const DeepCollectionEquality().hash(valueOidElement),
+        const DeepCollectionEquality().hash(valuePositiveInt),
+        const DeepCollectionEquality().hash(valuePositiveIntElement),
+        const DeepCollectionEquality().hash(valueString),
+        const DeepCollectionEquality().hash(valueStringElement),
+        const DeepCollectionEquality().hash(valueTime),
+        const DeepCollectionEquality().hash(valueTimeElement),
+        const DeepCollectionEquality().hash(valueUnsignedInt),
+        const DeepCollectionEquality().hash(valueUnsignedIntElement),
+        const DeepCollectionEquality().hash(valueUri),
+        const DeepCollectionEquality().hash(valueUriElement),
+        const DeepCollectionEquality().hash(valueUrl),
+        const DeepCollectionEquality().hash(valueUrlElement),
+        const DeepCollectionEquality().hash(valueUuid),
+        const DeepCollectionEquality().hash(valueUuidElement),
+        const DeepCollectionEquality().hash(valueAddress),
+        const DeepCollectionEquality().hash(valueAge),
+        const DeepCollectionEquality().hash(valueAnnotation),
+        const DeepCollectionEquality().hash(valueAttachment),
+        const DeepCollectionEquality().hash(valueCodeableConcept),
+        const DeepCollectionEquality().hash(valueCodeableReference),
+        const DeepCollectionEquality().hash(valueCoding),
+        const DeepCollectionEquality().hash(valueContactPoint),
+        const DeepCollectionEquality().hash(valueCount),
+        const DeepCollectionEquality().hash(valueDistance),
+        const DeepCollectionEquality().hash(valueDuration),
+        const DeepCollectionEquality().hash(valueHumanName),
+        const DeepCollectionEquality().hash(valueIdentifier),
+        const DeepCollectionEquality().hash(valueMoney),
+        const DeepCollectionEquality().hash(valuePeriod),
+        const DeepCollectionEquality().hash(valueQuantity),
+        const DeepCollectionEquality().hash(valueRange),
+        const DeepCollectionEquality().hash(valueRatio),
+        const DeepCollectionEquality().hash(valueRatioRange),
+        const DeepCollectionEquality().hash(valueReference),
+        const DeepCollectionEquality().hash(valueSampledData),
+        const DeepCollectionEquality().hash(valueSignature),
+        const DeepCollectionEquality().hash(valueTiming),
+        const DeepCollectionEquality().hash(valueContactDetail),
+        const DeepCollectionEquality().hash(valueContributor),
+        const DeepCollectionEquality().hash(valueDataRequirement),
+        const DeepCollectionEquality().hash(valueExpression),
+        const DeepCollectionEquality().hash(valueParameterDefinition),
+        const DeepCollectionEquality().hash(valueRelatedArtifact),
+        const DeepCollectionEquality().hash(valueTriggerDefinition),
+        const DeepCollectionEquality().hash(valueUsageContext),
+        const DeepCollectionEquality().hash(valueDosage),
+        const DeepCollectionEquality().hash(valueMeta)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_TransportInputCopyWith<_$_TransportInput> get copyWith =>
+      __$$_TransportInputCopyWithImpl<_$_TransportInput>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_TransportInputToJson(this);
+  }
+}
+
+abstract class _TransportInput extends TransportInput {
+  factory _TransportInput(
+      {final String? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableConcept type,
+      final Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary')
+          final Element? valueBase64BinaryElement,
+      final Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean')
+          final Element? valueBooleanElement,
+      final Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical')
+          final Element? valueCanonicalElement,
+      final Code? valueCode,
+      @JsonKey(name: '_valueCode')
+          final Element? valueCodeElement,
+      final Date? valueDate,
+      @JsonKey(name: '_valueDate')
+          final Element? valueDateElement,
+      final FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime')
+          final Element? valueDateTimeElement,
+      final Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal')
+          final Element? valueDecimalElement,
+      final Id? valueId,
+      @JsonKey(name: '_valueId')
+          final Element? valueIdElement,
+      final Instant? valueInstant,
+      @JsonKey(name: '_valueInstant')
+          final Element? valueInstantElement,
+      final Integer? valueInteger,
+      @JsonKey(name: '_valueInteger')
+          final Element? valueIntegerElement,
+      final Integer64? valueInteger64,
+      @JsonKey(name: '_valueInteger64')
+          final Element? valueInteger64Element,
+      final Markdown? valueMarkdown,
+      @JsonKey(name: '_valueMarkdown')
+          final Element? valueMarkdownElement,
+      final Oid? valueOid,
+      @JsonKey(name: '_valueOid')
+          final Element? valueOidElement,
+      final PositiveInt? valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt')
+          final Element? valuePositiveIntElement,
+      final Markdown? valueString,
+      @JsonKey(name: '_valueString')
+          final Element? valueStringElement,
+      final Time? valueTime,
+      @JsonKey(name: '_valueTime')
+          final Element? valueTimeElement,
+      final UnsignedInt? valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt')
+          final Element? valueUnsignedIntElement,
+      final FhirUri? valueUri,
+      @JsonKey(name: '_valueUri')
+          final Element? valueUriElement,
+      final FhirUrl? valueUrl,
+      @JsonKey(name: '_valueUrl')
+          final Element? valueUrlElement,
+      final Uuid? valueUuid,
+      @JsonKey(name: '_valueUuid')
+          final Element? valueUuidElement,
+      final Address? valueAddress,
+      final Age? valueAge,
+      final Annotation? valueAnnotation,
+      final Attachment? valueAttachment,
+      final CodeableConcept? valueCodeableConcept,
+      final CodeableReference? valueCodeableReference,
+      final Coding? valueCoding,
+      final ContactPoint? valueContactPoint,
+      final Count? valueCount,
+      final Distance? valueDistance,
+      final Duration? valueDuration,
+      final HumanName? valueHumanName,
+      final Identifier? valueIdentifier,
+      final Money? valueMoney,
+      final Period? valuePeriod,
+      final Quantity? valueQuantity,
+      final Range? valueRange,
+      final Ratio? valueRatio,
+      final RatioRange? valueRatioRange,
+      final Reference? valueReference,
+      final SampledData? valueSampledData,
+      final Signature? valueSignature,
+      final Timing? valueTiming,
+      final ContactDetail? valueContactDetail,
+      final Contributor? valueContributor,
+      final DataRequirement? valueDataRequirement,
+      final Expression? valueExpression,
+      final ParameterDefinition? valueParameterDefinition,
+      final RelatedArtifact? valueRelatedArtifact,
+      final TriggerDefinition? valueTriggerDefinition,
+      final UsageContext? valueUsageContext,
+      final Dosage? valueDosage,
+      final Meta? valueMeta}) = _$_TransportInput;
+  _TransportInput._() : super._();
+
+  factory _TransportInput.fromJson(Map<String, dynamic> json) =
+      _$_TransportInput.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept get type => throw _privateConstructorUsedError;
+  @override
+  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueBase64Binary')
+  Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
+  @override
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
+  @override
+  Canonical? get valueCanonical => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueCanonical')
+  Element? get valueCanonicalElement => throw _privateConstructorUsedError;
+  @override
+  Code? get valueCode => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueCode')
+  Element? get valueCodeElement => throw _privateConstructorUsedError;
+  @override
+  Date? get valueDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueDate')
+  Element? get valueDateElement => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueDateTime')
+  Element? get valueDateTimeElement => throw _privateConstructorUsedError;
+  @override
+  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueDecimal')
+  Element? get valueDecimalElement => throw _privateConstructorUsedError;
+  @override
+  Id? get valueId => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueId')
+  Element? get valueIdElement => throw _privateConstructorUsedError;
+  @override
+  Instant? get valueInstant => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueInstant')
+  Element? get valueInstantElement => throw _privateConstructorUsedError;
+  @override
+  Integer? get valueInteger => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueInteger')
+  Element? get valueIntegerElement => throw _privateConstructorUsedError;
+  @override
+  Integer64? get valueInteger64 => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueInteger64')
+  Element? get valueInteger64Element => throw _privateConstructorUsedError;
+  @override
+  Markdown? get valueMarkdown => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueMarkdown')
+  Element? get valueMarkdownElement => throw _privateConstructorUsedError;
+  @override
+  Oid? get valueOid => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueOid')
+  Element? get valueOidElement => throw _privateConstructorUsedError;
+  @override
+  PositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valuePositiveInt')
+  Element? get valuePositiveIntElement => throw _privateConstructorUsedError;
+  @override
+  Markdown? get valueString => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueString')
+  Element? get valueStringElement => throw _privateConstructorUsedError;
+  @override
+  Time? get valueTime => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueTime')
+  Element? get valueTimeElement => throw _privateConstructorUsedError;
+  @override
+  UnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueUnsignedInt')
+  Element? get valueUnsignedIntElement => throw _privateConstructorUsedError;
+  @override
+  FhirUri? get valueUri => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueUri')
+  Element? get valueUriElement => throw _privateConstructorUsedError;
+  @override
+  FhirUrl? get valueUrl => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueUrl')
+  Element? get valueUrlElement => throw _privateConstructorUsedError;
+  @override
+  Uuid? get valueUuid => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueUuid')
+  Element? get valueUuidElement => throw _privateConstructorUsedError;
+  @override
+  Address? get valueAddress => throw _privateConstructorUsedError;
+  @override
+  Age? get valueAge => throw _privateConstructorUsedError;
+  @override
+  Annotation? get valueAnnotation => throw _privateConstructorUsedError;
+  @override
+  Attachment? get valueAttachment => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableReference? get valueCodeableReference =>
+      throw _privateConstructorUsedError;
+  @override
+  Coding? get valueCoding => throw _privateConstructorUsedError;
+  @override
+  ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
+  @override
+  Count? get valueCount => throw _privateConstructorUsedError;
+  @override
+  Distance? get valueDistance => throw _privateConstructorUsedError;
+  @override
+  Duration? get valueDuration => throw _privateConstructorUsedError;
+  @override
+  HumanName? get valueHumanName => throw _privateConstructorUsedError;
+  @override
+  Identifier? get valueIdentifier => throw _privateConstructorUsedError;
+  @override
+  Money? get valueMoney => throw _privateConstructorUsedError;
+  @override
+  Period? get valuePeriod => throw _privateConstructorUsedError;
+  @override
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  @override
+  Range? get valueRange => throw _privateConstructorUsedError;
+  @override
+  Ratio? get valueRatio => throw _privateConstructorUsedError;
+  @override
+  RatioRange? get valueRatioRange => throw _privateConstructorUsedError;
+  @override
+  Reference? get valueReference => throw _privateConstructorUsedError;
+  @override
+  SampledData? get valueSampledData => throw _privateConstructorUsedError;
+  @override
+  Signature? get valueSignature => throw _privateConstructorUsedError;
+  @override
+  Timing? get valueTiming => throw _privateConstructorUsedError;
+  @override
+  ContactDetail? get valueContactDetail => throw _privateConstructorUsedError;
+  @override
+  Contributor? get valueContributor => throw _privateConstructorUsedError;
+  @override
+  DataRequirement? get valueDataRequirement =>
+      throw _privateConstructorUsedError;
+  @override
+  Expression? get valueExpression => throw _privateConstructorUsedError;
+  @override
+  ParameterDefinition? get valueParameterDefinition =>
+      throw _privateConstructorUsedError;
+  @override
+  RelatedArtifact? get valueRelatedArtifact =>
+      throw _privateConstructorUsedError;
+  @override
+  TriggerDefinition? get valueTriggerDefinition =>
+      throw _privateConstructorUsedError;
+  @override
+  UsageContext? get valueUsageContext => throw _privateConstructorUsedError;
+  @override
+  Dosage? get valueDosage => throw _privateConstructorUsedError;
+  @override
+  Meta? get valueMeta => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_TransportInputCopyWith<_$_TransportInput> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+TransportOutput _$TransportOutputFromJson(Map<String, dynamic> json) {
+  return _TransportOutput.fromJson(json);
+}
+
+/// @nodoc
+mixin _$TransportOutput {
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  CodeableConcept get type => throw _privateConstructorUsedError;
+  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueBase64Binary')
+  Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueBoolean')
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
+  Canonical? get valueCanonical => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueCanonical')
+  Element? get valueCanonicalElement => throw _privateConstructorUsedError;
+  Code? get valueCode => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueCode')
+  Element? get valueCodeElement => throw _privateConstructorUsedError;
+  Date? get valueDate => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueDate')
+  Element? get valueDateElement => throw _privateConstructorUsedError;
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueDateTime')
+  Element? get valueDateTimeElement => throw _privateConstructorUsedError;
+  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueDecimal')
+  Element? get valueDecimalElement => throw _privateConstructorUsedError;
+  Id? get valueId => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueId')
+  Element? get valueIdElement => throw _privateConstructorUsedError;
+  Instant? get valueInstant => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueInstant')
+  Element? get valueInstantElement => throw _privateConstructorUsedError;
+  Integer? get valueInteger => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueInteger')
+  Element? get valueIntegerElement => throw _privateConstructorUsedError;
+  Integer64? get valueInteger64 => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueInteger64')
+  Element? get valueInteger64Element => throw _privateConstructorUsedError;
+  Markdown? get valueMarkdown => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueMarkdown')
+  Element? get valueMarkdownElement => throw _privateConstructorUsedError;
+  Oid? get valueOid => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueOid')
+  Element? get valueOidElement => throw _privateConstructorUsedError;
+  PositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valuePositiveInt')
+  Element? get valuePositiveIntElement => throw _privateConstructorUsedError;
+  Markdown? get valueString => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueString')
+  Element? get valueStringElement => throw _privateConstructorUsedError;
+  Time? get valueTime => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueTime')
+  Element? get valueTimeElement => throw _privateConstructorUsedError;
+  UnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueUnsignedInt')
+  Element? get valueUnsignedIntElement => throw _privateConstructorUsedError;
+  FhirUri? get valueUri => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueUri')
+  Element? get valueUriElement => throw _privateConstructorUsedError;
+  FhirUrl? get valueUrl => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueUrl')
+  Element? get valueUrlElement => throw _privateConstructorUsedError;
+  Uuid? get valueUuid => throw _privateConstructorUsedError;
+  @JsonKey(name: '_valueUuid')
+  Element? get valueUuidElement => throw _privateConstructorUsedError;
+  Address? get valueAddress => throw _privateConstructorUsedError;
+  Age? get valueAge => throw _privateConstructorUsedError;
+  Annotation? get valueAnnotation => throw _privateConstructorUsedError;
+  Attachment? get valueAttachment => throw _privateConstructorUsedError;
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+  CodeableReference? get valueCodeableReference =>
+      throw _privateConstructorUsedError;
+  Coding? get valueCoding => throw _privateConstructorUsedError;
+  ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
+  Count? get valueCount => throw _privateConstructorUsedError;
+  Distance? get valueDistance => throw _privateConstructorUsedError;
+  Duration? get valueDuration => throw _privateConstructorUsedError;
+  HumanName? get valueHumanName => throw _privateConstructorUsedError;
+  Identifier? get valueIdentifier => throw _privateConstructorUsedError;
+  Money? get valueMoney => throw _privateConstructorUsedError;
+  Period? get valuePeriod => throw _privateConstructorUsedError;
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  Range? get valueRange => throw _privateConstructorUsedError;
+  Ratio? get valueRatio => throw _privateConstructorUsedError;
+  RatioRange? get valueRatioRange => throw _privateConstructorUsedError;
+  Reference? get valueReference => throw _privateConstructorUsedError;
+  SampledData? get valueSampledData => throw _privateConstructorUsedError;
+  Signature? get valueSignature => throw _privateConstructorUsedError;
+  Timing? get valueTiming => throw _privateConstructorUsedError;
+  ContactDetail? get valueContactDetail => throw _privateConstructorUsedError;
+  Contributor? get valueContributor => throw _privateConstructorUsedError;
+  DataRequirement? get valueDataRequirement =>
+      throw _privateConstructorUsedError;
+  Expression? get valueExpression => throw _privateConstructorUsedError;
+  ParameterDefinition? get valueParameterDefinition =>
+      throw _privateConstructorUsedError;
+  RelatedArtifact? get valueRelatedArtifact =>
+      throw _privateConstructorUsedError;
+  TriggerDefinition? get valueTriggerDefinition =>
+      throw _privateConstructorUsedError;
+  UsageContext? get valueUsageContext => throw _privateConstructorUsedError;
+  Dosage? get valueDosage => throw _privateConstructorUsedError;
+  Meta? get valueMeta => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $TransportOutputCopyWith<TransportOutput> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TransportOutputCopyWith<$Res> {
+  factory $TransportOutputCopyWith(
+          TransportOutput value, $Res Function(TransportOutput) then) =
+      _$TransportOutputCopyWithImpl<$Res>;
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept type,
+      Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
+      Code? valueCode,
+      @JsonKey(name: '_valueCode') Element? valueCodeElement,
+      Date? valueDate,
+      @JsonKey(name: '_valueDate') Element? valueDateElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+      Id? valueId,
+      @JsonKey(name: '_valueId') Element? valueIdElement,
+      Instant? valueInstant,
+      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+      Integer? valueInteger,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Integer64? valueInteger64,
+      @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
+      Markdown? valueMarkdown,
+      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
+      Oid? valueOid,
+      @JsonKey(name: '_valueOid') Element? valueOidElement,
+      PositiveInt? valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
+      Markdown? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      Time? valueTime,
+      @JsonKey(name: '_valueTime') Element? valueTimeElement,
+      UnsignedInt? valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      FhirUrl? valueUrl,
+      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+      Uuid? valueUuid,
+      @JsonKey(name: '_valueUuid') Element? valueUuidElement,
+      Address? valueAddress,
+      Age? valueAge,
+      Annotation? valueAnnotation,
+      Attachment? valueAttachment,
+      CodeableConcept? valueCodeableConcept,
+      CodeableReference? valueCodeableReference,
+      Coding? valueCoding,
+      ContactPoint? valueContactPoint,
+      Count? valueCount,
+      Distance? valueDistance,
+      Duration? valueDuration,
+      HumanName? valueHumanName,
+      Identifier? valueIdentifier,
+      Money? valueMoney,
+      Period? valuePeriod,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Ratio? valueRatio,
+      RatioRange? valueRatioRange,
+      Reference? valueReference,
+      SampledData? valueSampledData,
+      Signature? valueSignature,
+      Timing? valueTiming,
+      ContactDetail? valueContactDetail,
+      Contributor? valueContributor,
+      DataRequirement? valueDataRequirement,
+      Expression? valueExpression,
+      ParameterDefinition? valueParameterDefinition,
+      RelatedArtifact? valueRelatedArtifact,
+      TriggerDefinition? valueTriggerDefinition,
+      UsageContext? valueUsageContext,
+      Dosage? valueDosage,
+      Meta? valueMeta});
+
+  $CodeableConceptCopyWith<$Res> get type;
+  $ElementCopyWith<$Res>? get valueBase64BinaryElement;
+  $ElementCopyWith<$Res>? get valueBooleanElement;
+  $ElementCopyWith<$Res>? get valueCanonicalElement;
+  $ElementCopyWith<$Res>? get valueCodeElement;
+  $ElementCopyWith<$Res>? get valueDateElement;
+  $ElementCopyWith<$Res>? get valueDateTimeElement;
+  $ElementCopyWith<$Res>? get valueDecimalElement;
+  $ElementCopyWith<$Res>? get valueIdElement;
+  $ElementCopyWith<$Res>? get valueInstantElement;
+  $ElementCopyWith<$Res>? get valueIntegerElement;
+  $ElementCopyWith<$Res>? get valueInteger64Element;
+  $ElementCopyWith<$Res>? get valueMarkdownElement;
+  $ElementCopyWith<$Res>? get valueOidElement;
+  $ElementCopyWith<$Res>? get valuePositiveIntElement;
+  $ElementCopyWith<$Res>? get valueStringElement;
+  $ElementCopyWith<$Res>? get valueTimeElement;
+  $ElementCopyWith<$Res>? get valueUnsignedIntElement;
+  $ElementCopyWith<$Res>? get valueUriElement;
+  $ElementCopyWith<$Res>? get valueUrlElement;
+  $ElementCopyWith<$Res>? get valueUuidElement;
+  $AddressCopyWith<$Res>? get valueAddress;
+  $AgeCopyWith<$Res>? get valueAge;
+  $AnnotationCopyWith<$Res>? get valueAnnotation;
+  $AttachmentCopyWith<$Res>? get valueAttachment;
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  $CodeableReferenceCopyWith<$Res>? get valueCodeableReference;
+  $CodingCopyWith<$Res>? get valueCoding;
+  $ContactPointCopyWith<$Res>? get valueContactPoint;
+  $CountCopyWith<$Res>? get valueCount;
+  $DistanceCopyWith<$Res>? get valueDistance;
+  $HumanNameCopyWith<$Res>? get valueHumanName;
+  $IdentifierCopyWith<$Res>? get valueIdentifier;
+  $MoneyCopyWith<$Res>? get valueMoney;
+  $PeriodCopyWith<$Res>? get valuePeriod;
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  $RangeCopyWith<$Res>? get valueRange;
+  $RatioCopyWith<$Res>? get valueRatio;
+  $RatioRangeCopyWith<$Res>? get valueRatioRange;
+  $ReferenceCopyWith<$Res>? get valueReference;
+  $SampledDataCopyWith<$Res>? get valueSampledData;
+  $SignatureCopyWith<$Res>? get valueSignature;
+  $TimingCopyWith<$Res>? get valueTiming;
+  $ContactDetailCopyWith<$Res>? get valueContactDetail;
+  $ContributorCopyWith<$Res>? get valueContributor;
+  $DataRequirementCopyWith<$Res>? get valueDataRequirement;
+  $ExpressionCopyWith<$Res>? get valueExpression;
+  $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition;
+  $RelatedArtifactCopyWith<$Res>? get valueRelatedArtifact;
+  $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition;
+  $UsageContextCopyWith<$Res>? get valueUsageContext;
+  $DosageCopyWith<$Res>? get valueDosage;
+  $MetaCopyWith<$Res>? get valueMeta;
+}
+
+/// @nodoc
+class _$TransportOutputCopyWithImpl<$Res>
+    implements $TransportOutputCopyWith<$Res> {
+  _$TransportOutputCopyWithImpl(this._value, this._then);
+
+  final TransportOutput _value;
+  // ignore: unused_field
+  final $Res Function(TransportOutput) _then;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? valueBase64Binary = freezed,
+    Object? valueBase64BinaryElement = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueCanonical = freezed,
+    Object? valueCanonicalElement = freezed,
+    Object? valueCode = freezed,
+    Object? valueCodeElement = freezed,
+    Object? valueDate = freezed,
+    Object? valueDateElement = freezed,
+    Object? valueDateTime = freezed,
+    Object? valueDateTimeElement = freezed,
+    Object? valueDecimal = freezed,
+    Object? valueDecimalElement = freezed,
+    Object? valueId = freezed,
+    Object? valueIdElement = freezed,
+    Object? valueInstant = freezed,
+    Object? valueInstantElement = freezed,
+    Object? valueInteger = freezed,
+    Object? valueIntegerElement = freezed,
+    Object? valueInteger64 = freezed,
+    Object? valueInteger64Element = freezed,
+    Object? valueMarkdown = freezed,
+    Object? valueMarkdownElement = freezed,
+    Object? valueOid = freezed,
+    Object? valueOidElement = freezed,
+    Object? valuePositiveInt = freezed,
+    Object? valuePositiveIntElement = freezed,
+    Object? valueString = freezed,
+    Object? valueStringElement = freezed,
+    Object? valueTime = freezed,
+    Object? valueTimeElement = freezed,
+    Object? valueUnsignedInt = freezed,
+    Object? valueUnsignedIntElement = freezed,
+    Object? valueUri = freezed,
+    Object? valueUriElement = freezed,
+    Object? valueUrl = freezed,
+    Object? valueUrlElement = freezed,
+    Object? valueUuid = freezed,
+    Object? valueUuidElement = freezed,
+    Object? valueAddress = freezed,
+    Object? valueAge = freezed,
+    Object? valueAnnotation = freezed,
+    Object? valueAttachment = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueCodeableReference = freezed,
+    Object? valueCoding = freezed,
+    Object? valueContactPoint = freezed,
+    Object? valueCount = freezed,
+    Object? valueDistance = freezed,
+    Object? valueDuration = freezed,
+    Object? valueHumanName = freezed,
+    Object? valueIdentifier = freezed,
+    Object? valueMoney = freezed,
+    Object? valuePeriod = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valueRatio = freezed,
+    Object? valueRatioRange = freezed,
+    Object? valueReference = freezed,
+    Object? valueSampledData = freezed,
+    Object? valueSignature = freezed,
+    Object? valueTiming = freezed,
+    Object? valueContactDetail = freezed,
+    Object? valueContributor = freezed,
+    Object? valueDataRequirement = freezed,
+    Object? valueExpression = freezed,
+    Object? valueParameterDefinition = freezed,
+    Object? valueRelatedArtifact = freezed,
+    Object? valueTriggerDefinition = freezed,
+    Object? valueUsageContext = freezed,
+    Object? valueDosage = freezed,
+    Object? valueMeta = freezed,
+  }) {
+    return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value.extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value.modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      valueBase64Binary: valueBase64Binary == freezed
+          ? _value.valueBase64Binary
+          : valueBase64Binary // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
+      valueBase64BinaryElement: valueBase64BinaryElement == freezed
+          ? _value.valueBase64BinaryElement
+          : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCanonical: valueCanonical == freezed
+          ? _value.valueCanonical
+          : valueCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      valueCanonicalElement: valueCanonicalElement == freezed
+          ? _value.valueCanonicalElement
+          : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCode: valueCode == freezed
+          ? _value.valueCode
+          : valueCode // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      valueCodeElement: valueCodeElement == freezed
+          ? _value.valueCodeElement
+          : valueCodeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDate: valueDate == freezed
+          ? _value.valueDate
+          : valueDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      valueDateElement: valueDateElement == freezed
+          ? _value.valueDateElement
+          : valueDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      valueDateTimeElement: valueDateTimeElement == freezed
+          ? _value.valueDateTimeElement
+          : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      valueDecimalElement: valueDecimalElement == freezed
+          ? _value.valueDecimalElement
+          : valueDecimalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueId: valueId == freezed
+          ? _value.valueId
+          : valueId // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      valueIdElement: valueIdElement == freezed
+          ? _value.valueIdElement
+          : valueIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueInstant: valueInstant == freezed
+          ? _value.valueInstant
+          : valueInstant // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      valueInstantElement: valueInstantElement == freezed
+          ? _value.valueInstantElement
+          : valueInstantElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger // ignore: cast_nullable_to_non_nullable
+              as Integer?,
+      valueIntegerElement: valueIntegerElement == freezed
+          ? _value.valueIntegerElement
+          : valueIntegerElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueInteger64: valueInteger64 == freezed
+          ? _value.valueInteger64
+          : valueInteger64 // ignore: cast_nullable_to_non_nullable
+              as Integer64?,
+      valueInteger64Element: valueInteger64Element == freezed
+          ? _value.valueInteger64Element
+          : valueInteger64Element // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueMarkdown: valueMarkdown == freezed
+          ? _value.valueMarkdown
+          : valueMarkdown // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      valueMarkdownElement: valueMarkdownElement == freezed
+          ? _value.valueMarkdownElement
+          : valueMarkdownElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueOid: valueOid == freezed
+          ? _value.valueOid
+          : valueOid // ignore: cast_nullable_to_non_nullable
+              as Oid?,
+      valueOidElement: valueOidElement == freezed
+          ? _value.valueOidElement
+          : valueOidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valuePositiveInt: valuePositiveInt == freezed
+          ? _value.valuePositiveInt
+          : valuePositiveInt // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
+      valuePositiveIntElement: valuePositiveIntElement == freezed
+          ? _value.valuePositiveIntElement
+          : valuePositiveIntElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueString: valueString == freezed
+          ? _value.valueString
+          : valueString // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueTime: valueTime == freezed
+          ? _value.valueTime
+          : valueTime // ignore: cast_nullable_to_non_nullable
+              as Time?,
+      valueTimeElement: valueTimeElement == freezed
+          ? _value.valueTimeElement
+          : valueTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUnsignedInt: valueUnsignedInt == freezed
+          ? _value.valueUnsignedInt
+          : valueUnsignedInt // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
+      valueUnsignedIntElement: valueUnsignedIntElement == freezed
+          ? _value.valueUnsignedIntElement
+          : valueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUri: valueUri == freezed
+          ? _value.valueUri
+          : valueUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      valueUriElement: valueUriElement == freezed
+          ? _value.valueUriElement
+          : valueUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUrl: valueUrl == freezed
+          ? _value.valueUrl
+          : valueUrl // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
+      valueUrlElement: valueUrlElement == freezed
+          ? _value.valueUrlElement
+          : valueUrlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUuid: valueUuid == freezed
+          ? _value.valueUuid
+          : valueUuid // ignore: cast_nullable_to_non_nullable
+              as Uuid?,
+      valueUuidElement: valueUuidElement == freezed
+          ? _value.valueUuidElement
+          : valueUuidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueAddress: valueAddress == freezed
+          ? _value.valueAddress
+          : valueAddress // ignore: cast_nullable_to_non_nullable
+              as Address?,
+      valueAge: valueAge == freezed
+          ? _value.valueAge
+          : valueAge // ignore: cast_nullable_to_non_nullable
+              as Age?,
+      valueAnnotation: valueAnnotation == freezed
+          ? _value.valueAnnotation
+          : valueAnnotation // ignore: cast_nullable_to_non_nullable
+              as Annotation?,
+      valueAttachment: valueAttachment == freezed
+          ? _value.valueAttachment
+          : valueAttachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      valueCodeableReference: valueCodeableReference == freezed
+          ? _value.valueCodeableReference
+          : valueCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
+      valueCoding: valueCoding == freezed
+          ? _value.valueCoding
+          : valueCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
+      valueContactPoint: valueContactPoint == freezed
+          ? _value.valueContactPoint
+          : valueContactPoint // ignore: cast_nullable_to_non_nullable
+              as ContactPoint?,
+      valueCount: valueCount == freezed
+          ? _value.valueCount
+          : valueCount // ignore: cast_nullable_to_non_nullable
+              as Count?,
+      valueDistance: valueDistance == freezed
+          ? _value.valueDistance
+          : valueDistance // ignore: cast_nullable_to_non_nullable
+              as Distance?,
+      valueDuration: valueDuration == freezed
+          ? _value.valueDuration
+          : valueDuration // ignore: cast_nullable_to_non_nullable
+              as Duration?,
+      valueHumanName: valueHumanName == freezed
+          ? _value.valueHumanName
+          : valueHumanName // ignore: cast_nullable_to_non_nullable
+              as HumanName?,
+      valueIdentifier: valueIdentifier == freezed
+          ? _value.valueIdentifier
+          : valueIdentifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      valueMoney: valueMoney == freezed
+          ? _value.valueMoney
+          : valueMoney // ignore: cast_nullable_to_non_nullable
+              as Money?,
+      valuePeriod: valuePeriod == freezed
+          ? _value.valuePeriod
+          : valuePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueRatio: valueRatio == freezed
+          ? _value.valueRatio
+          : valueRatio // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
+      valueRatioRange: valueRatioRange == freezed
+          ? _value.valueRatioRange
+          : valueRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
+      valueReference: valueReference == freezed
+          ? _value.valueReference
+          : valueReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      valueSampledData: valueSampledData == freezed
+          ? _value.valueSampledData
+          : valueSampledData // ignore: cast_nullable_to_non_nullable
+              as SampledData?,
+      valueSignature: valueSignature == freezed
+          ? _value.valueSignature
+          : valueSignature // ignore: cast_nullable_to_non_nullable
+              as Signature?,
+      valueTiming: valueTiming == freezed
+          ? _value.valueTiming
+          : valueTiming // ignore: cast_nullable_to_non_nullable
+              as Timing?,
+      valueContactDetail: valueContactDetail == freezed
+          ? _value.valueContactDetail
+          : valueContactDetail // ignore: cast_nullable_to_non_nullable
+              as ContactDetail?,
+      valueContributor: valueContributor == freezed
+          ? _value.valueContributor
+          : valueContributor // ignore: cast_nullable_to_non_nullable
+              as Contributor?,
+      valueDataRequirement: valueDataRequirement == freezed
+          ? _value.valueDataRequirement
+          : valueDataRequirement // ignore: cast_nullable_to_non_nullable
+              as DataRequirement?,
+      valueExpression: valueExpression == freezed
+          ? _value.valueExpression
+          : valueExpression // ignore: cast_nullable_to_non_nullable
+              as Expression?,
+      valueParameterDefinition: valueParameterDefinition == freezed
+          ? _value.valueParameterDefinition
+          : valueParameterDefinition // ignore: cast_nullable_to_non_nullable
+              as ParameterDefinition?,
+      valueRelatedArtifact: valueRelatedArtifact == freezed
+          ? _value.valueRelatedArtifact
+          : valueRelatedArtifact // ignore: cast_nullable_to_non_nullable
+              as RelatedArtifact?,
+      valueTriggerDefinition: valueTriggerDefinition == freezed
+          ? _value.valueTriggerDefinition
+          : valueTriggerDefinition // ignore: cast_nullable_to_non_nullable
+              as TriggerDefinition?,
+      valueUsageContext: valueUsageContext == freezed
+          ? _value.valueUsageContext
+          : valueUsageContext // ignore: cast_nullable_to_non_nullable
+              as UsageContext?,
+      valueDosage: valueDosage == freezed
+          ? _value.valueDosage
+          : valueDosage // ignore: cast_nullable_to_non_nullable
+              as Dosage?,
+      valueMeta: valueMeta == freezed
+          ? _value.valueMeta
+          : valueMeta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+    ));
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type {
+    return $CodeableConceptCopyWith<$Res>(_value.type, (value) {
+      return _then(_value.copyWith(type: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueBase64BinaryElement {
+    if (_value.valueBase64BinaryElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueBase64BinaryElement!, (value) {
+      return _then(_value.copyWith(valueBase64BinaryElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueBooleanElement {
+    if (_value.valueBooleanElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueBooleanElement!, (value) {
+      return _then(_value.copyWith(valueBooleanElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueCanonicalElement {
+    if (_value.valueCanonicalElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueCanonicalElement!, (value) {
+      return _then(_value.copyWith(valueCanonicalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueCodeElement {
+    if (_value.valueCodeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueCodeElement!, (value) {
+      return _then(_value.copyWith(valueCodeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueDateElement {
+    if (_value.valueDateElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueDateElement!, (value) {
+      return _then(_value.copyWith(valueDateElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueDateTimeElement {
+    if (_value.valueDateTimeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueDateTimeElement!, (value) {
+      return _then(_value.copyWith(valueDateTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueDecimalElement {
+    if (_value.valueDecimalElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueDecimalElement!, (value) {
+      return _then(_value.copyWith(valueDecimalElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueIdElement {
+    if (_value.valueIdElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueIdElement!, (value) {
+      return _then(_value.copyWith(valueIdElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueInstantElement {
+    if (_value.valueInstantElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueInstantElement!, (value) {
+      return _then(_value.copyWith(valueInstantElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueIntegerElement {
+    if (_value.valueIntegerElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueIntegerElement!, (value) {
+      return _then(_value.copyWith(valueIntegerElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueInteger64Element {
+    if (_value.valueInteger64Element == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueInteger64Element!, (value) {
+      return _then(_value.copyWith(valueInteger64Element: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueMarkdownElement {
+    if (_value.valueMarkdownElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueMarkdownElement!, (value) {
+      return _then(_value.copyWith(valueMarkdownElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueOidElement {
+    if (_value.valueOidElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueOidElement!, (value) {
+      return _then(_value.copyWith(valueOidElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valuePositiveIntElement {
+    if (_value.valuePositiveIntElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valuePositiveIntElement!, (value) {
+      return _then(_value.copyWith(valuePositiveIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueStringElement {
+    if (_value.valueStringElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueStringElement!, (value) {
+      return _then(_value.copyWith(valueStringElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueTimeElement {
+    if (_value.valueTimeElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueTimeElement!, (value) {
+      return _then(_value.copyWith(valueTimeElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueUnsignedIntElement {
+    if (_value.valueUnsignedIntElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueUnsignedIntElement!, (value) {
+      return _then(_value.copyWith(valueUnsignedIntElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueUriElement {
+    if (_value.valueUriElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueUriElement!, (value) {
+      return _then(_value.copyWith(valueUriElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueUrlElement {
+    if (_value.valueUrlElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueUrlElement!, (value) {
+      return _then(_value.copyWith(valueUrlElement: value));
+    });
+  }
+
+  @override
+  $ElementCopyWith<$Res>? get valueUuidElement {
+    if (_value.valueUuidElement == null) {
+      return null;
+    }
+
+    return $ElementCopyWith<$Res>(_value.valueUuidElement!, (value) {
+      return _then(_value.copyWith(valueUuidElement: value));
+    });
+  }
+
+  @override
+  $AddressCopyWith<$Res>? get valueAddress {
+    if (_value.valueAddress == null) {
+      return null;
+    }
+
+    return $AddressCopyWith<$Res>(_value.valueAddress!, (value) {
+      return _then(_value.copyWith(valueAddress: value));
+    });
+  }
+
+  @override
+  $AgeCopyWith<$Res>? get valueAge {
+    if (_value.valueAge == null) {
+      return null;
+    }
+
+    return $AgeCopyWith<$Res>(_value.valueAge!, (value) {
+      return _then(_value.copyWith(valueAge: value));
+    });
+  }
+
+  @override
+  $AnnotationCopyWith<$Res>? get valueAnnotation {
+    if (_value.valueAnnotation == null) {
+      return null;
+    }
+
+    return $AnnotationCopyWith<$Res>(_value.valueAnnotation!, (value) {
+      return _then(_value.copyWith(valueAnnotation: value));
+    });
+  }
+
+  @override
+  $AttachmentCopyWith<$Res>? get valueAttachment {
+    if (_value.valueAttachment == null) {
+      return null;
+    }
+
+    return $AttachmentCopyWith<$Res>(_value.valueAttachment!, (value) {
+      return _then(_value.copyWith(valueAttachment: value));
+    });
+  }
+
+  @override
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept {
+    if (_value.valueCodeableConcept == null) {
+      return null;
+    }
+
+    return $CodeableConceptCopyWith<$Res>(_value.valueCodeableConcept!,
+        (value) {
+      return _then(_value.copyWith(valueCodeableConcept: value));
+    });
+  }
+
+  @override
+  $CodeableReferenceCopyWith<$Res>? get valueCodeableReference {
+    if (_value.valueCodeableReference == null) {
+      return null;
+    }
+
+    return $CodeableReferenceCopyWith<$Res>(_value.valueCodeableReference!,
+        (value) {
+      return _then(_value.copyWith(valueCodeableReference: value));
+    });
+  }
+
+  @override
+  $CodingCopyWith<$Res>? get valueCoding {
+    if (_value.valueCoding == null) {
+      return null;
+    }
+
+    return $CodingCopyWith<$Res>(_value.valueCoding!, (value) {
+      return _then(_value.copyWith(valueCoding: value));
+    });
+  }
+
+  @override
+  $ContactPointCopyWith<$Res>? get valueContactPoint {
+    if (_value.valueContactPoint == null) {
+      return null;
+    }
+
+    return $ContactPointCopyWith<$Res>(_value.valueContactPoint!, (value) {
+      return _then(_value.copyWith(valueContactPoint: value));
+    });
+  }
+
+  @override
+  $CountCopyWith<$Res>? get valueCount {
+    if (_value.valueCount == null) {
+      return null;
+    }
+
+    return $CountCopyWith<$Res>(_value.valueCount!, (value) {
+      return _then(_value.copyWith(valueCount: value));
+    });
+  }
+
+  @override
+  $DistanceCopyWith<$Res>? get valueDistance {
+    if (_value.valueDistance == null) {
+      return null;
+    }
+
+    return $DistanceCopyWith<$Res>(_value.valueDistance!, (value) {
+      return _then(_value.copyWith(valueDistance: value));
+    });
+  }
+
+  @override
+  $HumanNameCopyWith<$Res>? get valueHumanName {
+    if (_value.valueHumanName == null) {
+      return null;
+    }
+
+    return $HumanNameCopyWith<$Res>(_value.valueHumanName!, (value) {
+      return _then(_value.copyWith(valueHumanName: value));
+    });
+  }
+
+  @override
+  $IdentifierCopyWith<$Res>? get valueIdentifier {
+    if (_value.valueIdentifier == null) {
+      return null;
+    }
+
+    return $IdentifierCopyWith<$Res>(_value.valueIdentifier!, (value) {
+      return _then(_value.copyWith(valueIdentifier: value));
+    });
+  }
+
+  @override
+  $MoneyCopyWith<$Res>? get valueMoney {
+    if (_value.valueMoney == null) {
+      return null;
+    }
+
+    return $MoneyCopyWith<$Res>(_value.valueMoney!, (value) {
+      return _then(_value.copyWith(valueMoney: value));
+    });
+  }
+
+  @override
+  $PeriodCopyWith<$Res>? get valuePeriod {
+    if (_value.valuePeriod == null) {
+      return null;
+    }
+
+    return $PeriodCopyWith<$Res>(_value.valuePeriod!, (value) {
+      return _then(_value.copyWith(valuePeriod: value));
+    });
+  }
+
+  @override
+  $QuantityCopyWith<$Res>? get valueQuantity {
+    if (_value.valueQuantity == null) {
+      return null;
+    }
+
+    return $QuantityCopyWith<$Res>(_value.valueQuantity!, (value) {
+      return _then(_value.copyWith(valueQuantity: value));
+    });
+  }
+
+  @override
+  $RangeCopyWith<$Res>? get valueRange {
+    if (_value.valueRange == null) {
+      return null;
+    }
+
+    return $RangeCopyWith<$Res>(_value.valueRange!, (value) {
+      return _then(_value.copyWith(valueRange: value));
+    });
+  }
+
+  @override
+  $RatioCopyWith<$Res>? get valueRatio {
+    if (_value.valueRatio == null) {
+      return null;
+    }
+
+    return $RatioCopyWith<$Res>(_value.valueRatio!, (value) {
+      return _then(_value.copyWith(valueRatio: value));
+    });
+  }
+
+  @override
+  $RatioRangeCopyWith<$Res>? get valueRatioRange {
+    if (_value.valueRatioRange == null) {
+      return null;
+    }
+
+    return $RatioRangeCopyWith<$Res>(_value.valueRatioRange!, (value) {
+      return _then(_value.copyWith(valueRatioRange: value));
+    });
+  }
+
+  @override
+  $ReferenceCopyWith<$Res>? get valueReference {
+    if (_value.valueReference == null) {
+      return null;
+    }
+
+    return $ReferenceCopyWith<$Res>(_value.valueReference!, (value) {
+      return _then(_value.copyWith(valueReference: value));
+    });
+  }
+
+  @override
+  $SampledDataCopyWith<$Res>? get valueSampledData {
+    if (_value.valueSampledData == null) {
+      return null;
+    }
+
+    return $SampledDataCopyWith<$Res>(_value.valueSampledData!, (value) {
+      return _then(_value.copyWith(valueSampledData: value));
+    });
+  }
+
+  @override
+  $SignatureCopyWith<$Res>? get valueSignature {
+    if (_value.valueSignature == null) {
+      return null;
+    }
+
+    return $SignatureCopyWith<$Res>(_value.valueSignature!, (value) {
+      return _then(_value.copyWith(valueSignature: value));
+    });
+  }
+
+  @override
+  $TimingCopyWith<$Res>? get valueTiming {
+    if (_value.valueTiming == null) {
+      return null;
+    }
+
+    return $TimingCopyWith<$Res>(_value.valueTiming!, (value) {
+      return _then(_value.copyWith(valueTiming: value));
+    });
+  }
+
+  @override
+  $ContactDetailCopyWith<$Res>? get valueContactDetail {
+    if (_value.valueContactDetail == null) {
+      return null;
+    }
+
+    return $ContactDetailCopyWith<$Res>(_value.valueContactDetail!, (value) {
+      return _then(_value.copyWith(valueContactDetail: value));
+    });
+  }
+
+  @override
+  $ContributorCopyWith<$Res>? get valueContributor {
+    if (_value.valueContributor == null) {
+      return null;
+    }
+
+    return $ContributorCopyWith<$Res>(_value.valueContributor!, (value) {
+      return _then(_value.copyWith(valueContributor: value));
+    });
+  }
+
+  @override
+  $DataRequirementCopyWith<$Res>? get valueDataRequirement {
+    if (_value.valueDataRequirement == null) {
+      return null;
+    }
+
+    return $DataRequirementCopyWith<$Res>(_value.valueDataRequirement!,
+        (value) {
+      return _then(_value.copyWith(valueDataRequirement: value));
+    });
+  }
+
+  @override
+  $ExpressionCopyWith<$Res>? get valueExpression {
+    if (_value.valueExpression == null) {
+      return null;
+    }
+
+    return $ExpressionCopyWith<$Res>(_value.valueExpression!, (value) {
+      return _then(_value.copyWith(valueExpression: value));
+    });
+  }
+
+  @override
+  $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition {
+    if (_value.valueParameterDefinition == null) {
+      return null;
+    }
+
+    return $ParameterDefinitionCopyWith<$Res>(_value.valueParameterDefinition!,
+        (value) {
+      return _then(_value.copyWith(valueParameterDefinition: value));
+    });
+  }
+
+  @override
+  $RelatedArtifactCopyWith<$Res>? get valueRelatedArtifact {
+    if (_value.valueRelatedArtifact == null) {
+      return null;
+    }
+
+    return $RelatedArtifactCopyWith<$Res>(_value.valueRelatedArtifact!,
+        (value) {
+      return _then(_value.copyWith(valueRelatedArtifact: value));
+    });
+  }
+
+  @override
+  $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition {
+    if (_value.valueTriggerDefinition == null) {
+      return null;
+    }
+
+    return $TriggerDefinitionCopyWith<$Res>(_value.valueTriggerDefinition!,
+        (value) {
+      return _then(_value.copyWith(valueTriggerDefinition: value));
+    });
+  }
+
+  @override
+  $UsageContextCopyWith<$Res>? get valueUsageContext {
+    if (_value.valueUsageContext == null) {
+      return null;
+    }
+
+    return $UsageContextCopyWith<$Res>(_value.valueUsageContext!, (value) {
+      return _then(_value.copyWith(valueUsageContext: value));
+    });
+  }
+
+  @override
+  $DosageCopyWith<$Res>? get valueDosage {
+    if (_value.valueDosage == null) {
+      return null;
+    }
+
+    return $DosageCopyWith<$Res>(_value.valueDosage!, (value) {
+      return _then(_value.copyWith(valueDosage: value));
+    });
+  }
+
+  @override
+  $MetaCopyWith<$Res>? get valueMeta {
+    if (_value.valueMeta == null) {
+      return null;
+    }
+
+    return $MetaCopyWith<$Res>(_value.valueMeta!, (value) {
+      return _then(_value.copyWith(valueMeta: value));
+    });
+  }
+}
+
+/// @nodoc
+abstract class _$$_TransportOutputCopyWith<$Res>
+    implements $TransportOutputCopyWith<$Res> {
+  factory _$$_TransportOutputCopyWith(
+          _$_TransportOutput value, $Res Function(_$_TransportOutput) then) =
+      __$$_TransportOutputCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {String? id,
+      @JsonKey(name: 'extension') List<FhirExtension>? extension_,
+      List<FhirExtension>? modifierExtension,
+      CodeableConcept type,
+      Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') Element? valueBase64BinaryElement,
+      Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean') Element? valueBooleanElement,
+      Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical') Element? valueCanonicalElement,
+      Code? valueCode,
+      @JsonKey(name: '_valueCode') Element? valueCodeElement,
+      Date? valueDate,
+      @JsonKey(name: '_valueDate') Element? valueDateElement,
+      FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime') Element? valueDateTimeElement,
+      Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal') Element? valueDecimalElement,
+      Id? valueId,
+      @JsonKey(name: '_valueId') Element? valueIdElement,
+      Instant? valueInstant,
+      @JsonKey(name: '_valueInstant') Element? valueInstantElement,
+      Integer? valueInteger,
+      @JsonKey(name: '_valueInteger') Element? valueIntegerElement,
+      Integer64? valueInteger64,
+      @JsonKey(name: '_valueInteger64') Element? valueInteger64Element,
+      Markdown? valueMarkdown,
+      @JsonKey(name: '_valueMarkdown') Element? valueMarkdownElement,
+      Oid? valueOid,
+      @JsonKey(name: '_valueOid') Element? valueOidElement,
+      PositiveInt? valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt') Element? valuePositiveIntElement,
+      Markdown? valueString,
+      @JsonKey(name: '_valueString') Element? valueStringElement,
+      Time? valueTime,
+      @JsonKey(name: '_valueTime') Element? valueTimeElement,
+      UnsignedInt? valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt') Element? valueUnsignedIntElement,
+      FhirUri? valueUri,
+      @JsonKey(name: '_valueUri') Element? valueUriElement,
+      FhirUrl? valueUrl,
+      @JsonKey(name: '_valueUrl') Element? valueUrlElement,
+      Uuid? valueUuid,
+      @JsonKey(name: '_valueUuid') Element? valueUuidElement,
+      Address? valueAddress,
+      Age? valueAge,
+      Annotation? valueAnnotation,
+      Attachment? valueAttachment,
+      CodeableConcept? valueCodeableConcept,
+      CodeableReference? valueCodeableReference,
+      Coding? valueCoding,
+      ContactPoint? valueContactPoint,
+      Count? valueCount,
+      Distance? valueDistance,
+      Duration? valueDuration,
+      HumanName? valueHumanName,
+      Identifier? valueIdentifier,
+      Money? valueMoney,
+      Period? valuePeriod,
+      Quantity? valueQuantity,
+      Range? valueRange,
+      Ratio? valueRatio,
+      RatioRange? valueRatioRange,
+      Reference? valueReference,
+      SampledData? valueSampledData,
+      Signature? valueSignature,
+      Timing? valueTiming,
+      ContactDetail? valueContactDetail,
+      Contributor? valueContributor,
+      DataRequirement? valueDataRequirement,
+      Expression? valueExpression,
+      ParameterDefinition? valueParameterDefinition,
+      RelatedArtifact? valueRelatedArtifact,
+      TriggerDefinition? valueTriggerDefinition,
+      UsageContext? valueUsageContext,
+      Dosage? valueDosage,
+      Meta? valueMeta});
+
+  @override
+  $CodeableConceptCopyWith<$Res> get type;
+  @override
+  $ElementCopyWith<$Res>? get valueBase64BinaryElement;
+  @override
+  $ElementCopyWith<$Res>? get valueBooleanElement;
+  @override
+  $ElementCopyWith<$Res>? get valueCanonicalElement;
+  @override
+  $ElementCopyWith<$Res>? get valueCodeElement;
+  @override
+  $ElementCopyWith<$Res>? get valueDateElement;
+  @override
+  $ElementCopyWith<$Res>? get valueDateTimeElement;
+  @override
+  $ElementCopyWith<$Res>? get valueDecimalElement;
+  @override
+  $ElementCopyWith<$Res>? get valueIdElement;
+  @override
+  $ElementCopyWith<$Res>? get valueInstantElement;
+  @override
+  $ElementCopyWith<$Res>? get valueIntegerElement;
+  @override
+  $ElementCopyWith<$Res>? get valueInteger64Element;
+  @override
+  $ElementCopyWith<$Res>? get valueMarkdownElement;
+  @override
+  $ElementCopyWith<$Res>? get valueOidElement;
+  @override
+  $ElementCopyWith<$Res>? get valuePositiveIntElement;
+  @override
+  $ElementCopyWith<$Res>? get valueStringElement;
+  @override
+  $ElementCopyWith<$Res>? get valueTimeElement;
+  @override
+  $ElementCopyWith<$Res>? get valueUnsignedIntElement;
+  @override
+  $ElementCopyWith<$Res>? get valueUriElement;
+  @override
+  $ElementCopyWith<$Res>? get valueUrlElement;
+  @override
+  $ElementCopyWith<$Res>? get valueUuidElement;
+  @override
+  $AddressCopyWith<$Res>? get valueAddress;
+  @override
+  $AgeCopyWith<$Res>? get valueAge;
+  @override
+  $AnnotationCopyWith<$Res>? get valueAnnotation;
+  @override
+  $AttachmentCopyWith<$Res>? get valueAttachment;
+  @override
+  $CodeableConceptCopyWith<$Res>? get valueCodeableConcept;
+  @override
+  $CodeableReferenceCopyWith<$Res>? get valueCodeableReference;
+  @override
+  $CodingCopyWith<$Res>? get valueCoding;
+  @override
+  $ContactPointCopyWith<$Res>? get valueContactPoint;
+  @override
+  $CountCopyWith<$Res>? get valueCount;
+  @override
+  $DistanceCopyWith<$Res>? get valueDistance;
+  @override
+  $HumanNameCopyWith<$Res>? get valueHumanName;
+  @override
+  $IdentifierCopyWith<$Res>? get valueIdentifier;
+  @override
+  $MoneyCopyWith<$Res>? get valueMoney;
+  @override
+  $PeriodCopyWith<$Res>? get valuePeriod;
+  @override
+  $QuantityCopyWith<$Res>? get valueQuantity;
+  @override
+  $RangeCopyWith<$Res>? get valueRange;
+  @override
+  $RatioCopyWith<$Res>? get valueRatio;
+  @override
+  $RatioRangeCopyWith<$Res>? get valueRatioRange;
+  @override
+  $ReferenceCopyWith<$Res>? get valueReference;
+  @override
+  $SampledDataCopyWith<$Res>? get valueSampledData;
+  @override
+  $SignatureCopyWith<$Res>? get valueSignature;
+  @override
+  $TimingCopyWith<$Res>? get valueTiming;
+  @override
+  $ContactDetailCopyWith<$Res>? get valueContactDetail;
+  @override
+  $ContributorCopyWith<$Res>? get valueContributor;
+  @override
+  $DataRequirementCopyWith<$Res>? get valueDataRequirement;
+  @override
+  $ExpressionCopyWith<$Res>? get valueExpression;
+  @override
+  $ParameterDefinitionCopyWith<$Res>? get valueParameterDefinition;
+  @override
+  $RelatedArtifactCopyWith<$Res>? get valueRelatedArtifact;
+  @override
+  $TriggerDefinitionCopyWith<$Res>? get valueTriggerDefinition;
+  @override
+  $UsageContextCopyWith<$Res>? get valueUsageContext;
+  @override
+  $DosageCopyWith<$Res>? get valueDosage;
+  @override
+  $MetaCopyWith<$Res>? get valueMeta;
+}
+
+/// @nodoc
+class __$$_TransportOutputCopyWithImpl<$Res>
+    extends _$TransportOutputCopyWithImpl<$Res>
+    implements _$$_TransportOutputCopyWith<$Res> {
+  __$$_TransportOutputCopyWithImpl(
+      _$_TransportOutput _value, $Res Function(_$_TransportOutput) _then)
+      : super(_value, (v) => _then(v as _$_TransportOutput));
+
+  @override
+  _$_TransportOutput get _value => super._value as _$_TransportOutput;
+
+  @override
+  $Res call({
+    Object? id = freezed,
+    Object? extension_ = freezed,
+    Object? modifierExtension = freezed,
+    Object? type = freezed,
+    Object? valueBase64Binary = freezed,
+    Object? valueBase64BinaryElement = freezed,
+    Object? valueBoolean = freezed,
+    Object? valueBooleanElement = freezed,
+    Object? valueCanonical = freezed,
+    Object? valueCanonicalElement = freezed,
+    Object? valueCode = freezed,
+    Object? valueCodeElement = freezed,
+    Object? valueDate = freezed,
+    Object? valueDateElement = freezed,
+    Object? valueDateTime = freezed,
+    Object? valueDateTimeElement = freezed,
+    Object? valueDecimal = freezed,
+    Object? valueDecimalElement = freezed,
+    Object? valueId = freezed,
+    Object? valueIdElement = freezed,
+    Object? valueInstant = freezed,
+    Object? valueInstantElement = freezed,
+    Object? valueInteger = freezed,
+    Object? valueIntegerElement = freezed,
+    Object? valueInteger64 = freezed,
+    Object? valueInteger64Element = freezed,
+    Object? valueMarkdown = freezed,
+    Object? valueMarkdownElement = freezed,
+    Object? valueOid = freezed,
+    Object? valueOidElement = freezed,
+    Object? valuePositiveInt = freezed,
+    Object? valuePositiveIntElement = freezed,
+    Object? valueString = freezed,
+    Object? valueStringElement = freezed,
+    Object? valueTime = freezed,
+    Object? valueTimeElement = freezed,
+    Object? valueUnsignedInt = freezed,
+    Object? valueUnsignedIntElement = freezed,
+    Object? valueUri = freezed,
+    Object? valueUriElement = freezed,
+    Object? valueUrl = freezed,
+    Object? valueUrlElement = freezed,
+    Object? valueUuid = freezed,
+    Object? valueUuidElement = freezed,
+    Object? valueAddress = freezed,
+    Object? valueAge = freezed,
+    Object? valueAnnotation = freezed,
+    Object? valueAttachment = freezed,
+    Object? valueCodeableConcept = freezed,
+    Object? valueCodeableReference = freezed,
+    Object? valueCoding = freezed,
+    Object? valueContactPoint = freezed,
+    Object? valueCount = freezed,
+    Object? valueDistance = freezed,
+    Object? valueDuration = freezed,
+    Object? valueHumanName = freezed,
+    Object? valueIdentifier = freezed,
+    Object? valueMoney = freezed,
+    Object? valuePeriod = freezed,
+    Object? valueQuantity = freezed,
+    Object? valueRange = freezed,
+    Object? valueRatio = freezed,
+    Object? valueRatioRange = freezed,
+    Object? valueReference = freezed,
+    Object? valueSampledData = freezed,
+    Object? valueSignature = freezed,
+    Object? valueTiming = freezed,
+    Object? valueContactDetail = freezed,
+    Object? valueContributor = freezed,
+    Object? valueDataRequirement = freezed,
+    Object? valueExpression = freezed,
+    Object? valueParameterDefinition = freezed,
+    Object? valueRelatedArtifact = freezed,
+    Object? valueTriggerDefinition = freezed,
+    Object? valueUsageContext = freezed,
+    Object? valueDosage = freezed,
+    Object? valueMeta = freezed,
+  }) {
+    return _then(_$_TransportOutput(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      extension_: extension_ == freezed
+          ? _value._extension_
+          : extension_ // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      modifierExtension: modifierExtension == freezed
+          ? _value._modifierExtension
+          : modifierExtension // ignore: cast_nullable_to_non_nullable
+              as List<FhirExtension>?,
+      type: type == freezed
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept,
+      valueBase64Binary: valueBase64Binary == freezed
+          ? _value.valueBase64Binary
+          : valueBase64Binary // ignore: cast_nullable_to_non_nullable
+              as Base64Binary?,
+      valueBase64BinaryElement: valueBase64BinaryElement == freezed
+          ? _value.valueBase64BinaryElement
+          : valueBase64BinaryElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueBoolean: valueBoolean == freezed
+          ? _value.valueBoolean
+          : valueBoolean // ignore: cast_nullable_to_non_nullable
+              as Boolean?,
+      valueBooleanElement: valueBooleanElement == freezed
+          ? _value.valueBooleanElement
+          : valueBooleanElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCanonical: valueCanonical == freezed
+          ? _value.valueCanonical
+          : valueCanonical // ignore: cast_nullable_to_non_nullable
+              as Canonical?,
+      valueCanonicalElement: valueCanonicalElement == freezed
+          ? _value.valueCanonicalElement
+          : valueCanonicalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueCode: valueCode == freezed
+          ? _value.valueCode
+          : valueCode // ignore: cast_nullable_to_non_nullable
+              as Code?,
+      valueCodeElement: valueCodeElement == freezed
+          ? _value.valueCodeElement
+          : valueCodeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDate: valueDate == freezed
+          ? _value.valueDate
+          : valueDate // ignore: cast_nullable_to_non_nullable
+              as Date?,
+      valueDateElement: valueDateElement == freezed
+          ? _value.valueDateElement
+          : valueDateElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDateTime: valueDateTime == freezed
+          ? _value.valueDateTime
+          : valueDateTime // ignore: cast_nullable_to_non_nullable
+              as FhirDateTime?,
+      valueDateTimeElement: valueDateTimeElement == freezed
+          ? _value.valueDateTimeElement
+          : valueDateTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueDecimal: valueDecimal == freezed
+          ? _value.valueDecimal
+          : valueDecimal // ignore: cast_nullable_to_non_nullable
+              as Decimal?,
+      valueDecimalElement: valueDecimalElement == freezed
+          ? _value.valueDecimalElement
+          : valueDecimalElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueId: valueId == freezed
+          ? _value.valueId
+          : valueId // ignore: cast_nullable_to_non_nullable
+              as Id?,
+      valueIdElement: valueIdElement == freezed
+          ? _value.valueIdElement
+          : valueIdElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueInstant: valueInstant == freezed
+          ? _value.valueInstant
+          : valueInstant // ignore: cast_nullable_to_non_nullable
+              as Instant?,
+      valueInstantElement: valueInstantElement == freezed
+          ? _value.valueInstantElement
+          : valueInstantElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueInteger: valueInteger == freezed
+          ? _value.valueInteger
+          : valueInteger // ignore: cast_nullable_to_non_nullable
+              as Integer?,
+      valueIntegerElement: valueIntegerElement == freezed
+          ? _value.valueIntegerElement
+          : valueIntegerElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueInteger64: valueInteger64 == freezed
+          ? _value.valueInteger64
+          : valueInteger64 // ignore: cast_nullable_to_non_nullable
+              as Integer64?,
+      valueInteger64Element: valueInteger64Element == freezed
+          ? _value.valueInteger64Element
+          : valueInteger64Element // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueMarkdown: valueMarkdown == freezed
+          ? _value.valueMarkdown
+          : valueMarkdown // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      valueMarkdownElement: valueMarkdownElement == freezed
+          ? _value.valueMarkdownElement
+          : valueMarkdownElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueOid: valueOid == freezed
+          ? _value.valueOid
+          : valueOid // ignore: cast_nullable_to_non_nullable
+              as Oid?,
+      valueOidElement: valueOidElement == freezed
+          ? _value.valueOidElement
+          : valueOidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valuePositiveInt: valuePositiveInt == freezed
+          ? _value.valuePositiveInt
+          : valuePositiveInt // ignore: cast_nullable_to_non_nullable
+              as PositiveInt?,
+      valuePositiveIntElement: valuePositiveIntElement == freezed
+          ? _value.valuePositiveIntElement
+          : valuePositiveIntElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueString: valueString == freezed
+          ? _value.valueString
+          : valueString // ignore: cast_nullable_to_non_nullable
+              as Markdown?,
+      valueStringElement: valueStringElement == freezed
+          ? _value.valueStringElement
+          : valueStringElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueTime: valueTime == freezed
+          ? _value.valueTime
+          : valueTime // ignore: cast_nullable_to_non_nullable
+              as Time?,
+      valueTimeElement: valueTimeElement == freezed
+          ? _value.valueTimeElement
+          : valueTimeElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUnsignedInt: valueUnsignedInt == freezed
+          ? _value.valueUnsignedInt
+          : valueUnsignedInt // ignore: cast_nullable_to_non_nullable
+              as UnsignedInt?,
+      valueUnsignedIntElement: valueUnsignedIntElement == freezed
+          ? _value.valueUnsignedIntElement
+          : valueUnsignedIntElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUri: valueUri == freezed
+          ? _value.valueUri
+          : valueUri // ignore: cast_nullable_to_non_nullable
+              as FhirUri?,
+      valueUriElement: valueUriElement == freezed
+          ? _value.valueUriElement
+          : valueUriElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUrl: valueUrl == freezed
+          ? _value.valueUrl
+          : valueUrl // ignore: cast_nullable_to_non_nullable
+              as FhirUrl?,
+      valueUrlElement: valueUrlElement == freezed
+          ? _value.valueUrlElement
+          : valueUrlElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueUuid: valueUuid == freezed
+          ? _value.valueUuid
+          : valueUuid // ignore: cast_nullable_to_non_nullable
+              as Uuid?,
+      valueUuidElement: valueUuidElement == freezed
+          ? _value.valueUuidElement
+          : valueUuidElement // ignore: cast_nullable_to_non_nullable
+              as Element?,
+      valueAddress: valueAddress == freezed
+          ? _value.valueAddress
+          : valueAddress // ignore: cast_nullable_to_non_nullable
+              as Address?,
+      valueAge: valueAge == freezed
+          ? _value.valueAge
+          : valueAge // ignore: cast_nullable_to_non_nullable
+              as Age?,
+      valueAnnotation: valueAnnotation == freezed
+          ? _value.valueAnnotation
+          : valueAnnotation // ignore: cast_nullable_to_non_nullable
+              as Annotation?,
+      valueAttachment: valueAttachment == freezed
+          ? _value.valueAttachment
+          : valueAttachment // ignore: cast_nullable_to_non_nullable
+              as Attachment?,
+      valueCodeableConcept: valueCodeableConcept == freezed
+          ? _value.valueCodeableConcept
+          : valueCodeableConcept // ignore: cast_nullable_to_non_nullable
+              as CodeableConcept?,
+      valueCodeableReference: valueCodeableReference == freezed
+          ? _value.valueCodeableReference
+          : valueCodeableReference // ignore: cast_nullable_to_non_nullable
+              as CodeableReference?,
+      valueCoding: valueCoding == freezed
+          ? _value.valueCoding
+          : valueCoding // ignore: cast_nullable_to_non_nullable
+              as Coding?,
+      valueContactPoint: valueContactPoint == freezed
+          ? _value.valueContactPoint
+          : valueContactPoint // ignore: cast_nullable_to_non_nullable
+              as ContactPoint?,
+      valueCount: valueCount == freezed
+          ? _value.valueCount
+          : valueCount // ignore: cast_nullable_to_non_nullable
+              as Count?,
+      valueDistance: valueDistance == freezed
+          ? _value.valueDistance
+          : valueDistance // ignore: cast_nullable_to_non_nullable
+              as Distance?,
+      valueDuration: valueDuration == freezed
+          ? _value.valueDuration
+          : valueDuration // ignore: cast_nullable_to_non_nullable
+              as Duration?,
+      valueHumanName: valueHumanName == freezed
+          ? _value.valueHumanName
+          : valueHumanName // ignore: cast_nullable_to_non_nullable
+              as HumanName?,
+      valueIdentifier: valueIdentifier == freezed
+          ? _value.valueIdentifier
+          : valueIdentifier // ignore: cast_nullable_to_non_nullable
+              as Identifier?,
+      valueMoney: valueMoney == freezed
+          ? _value.valueMoney
+          : valueMoney // ignore: cast_nullable_to_non_nullable
+              as Money?,
+      valuePeriod: valuePeriod == freezed
+          ? _value.valuePeriod
+          : valuePeriod // ignore: cast_nullable_to_non_nullable
+              as Period?,
+      valueQuantity: valueQuantity == freezed
+          ? _value.valueQuantity
+          : valueQuantity // ignore: cast_nullable_to_non_nullable
+              as Quantity?,
+      valueRange: valueRange == freezed
+          ? _value.valueRange
+          : valueRange // ignore: cast_nullable_to_non_nullable
+              as Range?,
+      valueRatio: valueRatio == freezed
+          ? _value.valueRatio
+          : valueRatio // ignore: cast_nullable_to_non_nullable
+              as Ratio?,
+      valueRatioRange: valueRatioRange == freezed
+          ? _value.valueRatioRange
+          : valueRatioRange // ignore: cast_nullable_to_non_nullable
+              as RatioRange?,
+      valueReference: valueReference == freezed
+          ? _value.valueReference
+          : valueReference // ignore: cast_nullable_to_non_nullable
+              as Reference?,
+      valueSampledData: valueSampledData == freezed
+          ? _value.valueSampledData
+          : valueSampledData // ignore: cast_nullable_to_non_nullable
+              as SampledData?,
+      valueSignature: valueSignature == freezed
+          ? _value.valueSignature
+          : valueSignature // ignore: cast_nullable_to_non_nullable
+              as Signature?,
+      valueTiming: valueTiming == freezed
+          ? _value.valueTiming
+          : valueTiming // ignore: cast_nullable_to_non_nullable
+              as Timing?,
+      valueContactDetail: valueContactDetail == freezed
+          ? _value.valueContactDetail
+          : valueContactDetail // ignore: cast_nullable_to_non_nullable
+              as ContactDetail?,
+      valueContributor: valueContributor == freezed
+          ? _value.valueContributor
+          : valueContributor // ignore: cast_nullable_to_non_nullable
+              as Contributor?,
+      valueDataRequirement: valueDataRequirement == freezed
+          ? _value.valueDataRequirement
+          : valueDataRequirement // ignore: cast_nullable_to_non_nullable
+              as DataRequirement?,
+      valueExpression: valueExpression == freezed
+          ? _value.valueExpression
+          : valueExpression // ignore: cast_nullable_to_non_nullable
+              as Expression?,
+      valueParameterDefinition: valueParameterDefinition == freezed
+          ? _value.valueParameterDefinition
+          : valueParameterDefinition // ignore: cast_nullable_to_non_nullable
+              as ParameterDefinition?,
+      valueRelatedArtifact: valueRelatedArtifact == freezed
+          ? _value.valueRelatedArtifact
+          : valueRelatedArtifact // ignore: cast_nullable_to_non_nullable
+              as RelatedArtifact?,
+      valueTriggerDefinition: valueTriggerDefinition == freezed
+          ? _value.valueTriggerDefinition
+          : valueTriggerDefinition // ignore: cast_nullable_to_non_nullable
+              as TriggerDefinition?,
+      valueUsageContext: valueUsageContext == freezed
+          ? _value.valueUsageContext
+          : valueUsageContext // ignore: cast_nullable_to_non_nullable
+              as UsageContext?,
+      valueDosage: valueDosage == freezed
+          ? _value.valueDosage
+          : valueDosage // ignore: cast_nullable_to_non_nullable
+              as Dosage?,
+      valueMeta: valueMeta == freezed
+          ? _value.valueMeta
+          : valueMeta // ignore: cast_nullable_to_non_nullable
+              as Meta?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$_TransportOutput extends _TransportOutput {
+  _$_TransportOutput(
+      {this.id,
+      @JsonKey(name: 'extension') final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required this.type,
+      this.valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary') this.valueBase64BinaryElement,
+      this.valueBoolean,
+      @JsonKey(name: '_valueBoolean') this.valueBooleanElement,
+      this.valueCanonical,
+      @JsonKey(name: '_valueCanonical') this.valueCanonicalElement,
+      this.valueCode,
+      @JsonKey(name: '_valueCode') this.valueCodeElement,
+      this.valueDate,
+      @JsonKey(name: '_valueDate') this.valueDateElement,
+      this.valueDateTime,
+      @JsonKey(name: '_valueDateTime') this.valueDateTimeElement,
+      this.valueDecimal,
+      @JsonKey(name: '_valueDecimal') this.valueDecimalElement,
+      this.valueId,
+      @JsonKey(name: '_valueId') this.valueIdElement,
+      this.valueInstant,
+      @JsonKey(name: '_valueInstant') this.valueInstantElement,
+      this.valueInteger,
+      @JsonKey(name: '_valueInteger') this.valueIntegerElement,
+      this.valueInteger64,
+      @JsonKey(name: '_valueInteger64') this.valueInteger64Element,
+      this.valueMarkdown,
+      @JsonKey(name: '_valueMarkdown') this.valueMarkdownElement,
+      this.valueOid,
+      @JsonKey(name: '_valueOid') this.valueOidElement,
+      this.valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt') this.valuePositiveIntElement,
+      this.valueString,
+      @JsonKey(name: '_valueString') this.valueStringElement,
+      this.valueTime,
+      @JsonKey(name: '_valueTime') this.valueTimeElement,
+      this.valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt') this.valueUnsignedIntElement,
+      this.valueUri,
+      @JsonKey(name: '_valueUri') this.valueUriElement,
+      this.valueUrl,
+      @JsonKey(name: '_valueUrl') this.valueUrlElement,
+      this.valueUuid,
+      @JsonKey(name: '_valueUuid') this.valueUuidElement,
+      this.valueAddress,
+      this.valueAge,
+      this.valueAnnotation,
+      this.valueAttachment,
+      this.valueCodeableConcept,
+      this.valueCodeableReference,
+      this.valueCoding,
+      this.valueContactPoint,
+      this.valueCount,
+      this.valueDistance,
+      this.valueDuration,
+      this.valueHumanName,
+      this.valueIdentifier,
+      this.valueMoney,
+      this.valuePeriod,
+      this.valueQuantity,
+      this.valueRange,
+      this.valueRatio,
+      this.valueRatioRange,
+      this.valueReference,
+      this.valueSampledData,
+      this.valueSignature,
+      this.valueTiming,
+      this.valueContactDetail,
+      this.valueContributor,
+      this.valueDataRequirement,
+      this.valueExpression,
+      this.valueParameterDefinition,
+      this.valueRelatedArtifact,
+      this.valueTriggerDefinition,
+      this.valueUsageContext,
+      this.valueDosage,
+      this.valueMeta})
+      : _extension_ = extension_,
+        _modifierExtension = modifierExtension,
+        super._();
+
+  factory _$_TransportOutput.fromJson(Map<String, dynamic> json) =>
+      _$$_TransportOutputFromJson(json);
+
+  @override
+  final String? id;
+  final List<FhirExtension>? _extension_;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ {
+    final value = _extension_;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<FhirExtension>? _modifierExtension;
+  @override
+  List<FhirExtension>? get modifierExtension {
+    final value = _modifierExtension;
+    if (value == null) return null;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final CodeableConcept type;
+  @override
+  final Base64Binary? valueBase64Binary;
+  @override
+  @JsonKey(name: '_valueBase64Binary')
+  final Element? valueBase64BinaryElement;
+  @override
+  final Boolean? valueBoolean;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  final Element? valueBooleanElement;
+  @override
+  final Canonical? valueCanonical;
+  @override
+  @JsonKey(name: '_valueCanonical')
+  final Element? valueCanonicalElement;
+  @override
+  final Code? valueCode;
+  @override
+  @JsonKey(name: '_valueCode')
+  final Element? valueCodeElement;
+  @override
+  final Date? valueDate;
+  @override
+  @JsonKey(name: '_valueDate')
+  final Element? valueDateElement;
+  @override
+  final FhirDateTime? valueDateTime;
+  @override
+  @JsonKey(name: '_valueDateTime')
+  final Element? valueDateTimeElement;
+  @override
+  final Decimal? valueDecimal;
+  @override
+  @JsonKey(name: '_valueDecimal')
+  final Element? valueDecimalElement;
+  @override
+  final Id? valueId;
+  @override
+  @JsonKey(name: '_valueId')
+  final Element? valueIdElement;
+  @override
+  final Instant? valueInstant;
+  @override
+  @JsonKey(name: '_valueInstant')
+  final Element? valueInstantElement;
+  @override
+  final Integer? valueInteger;
+  @override
+  @JsonKey(name: '_valueInteger')
+  final Element? valueIntegerElement;
+  @override
+  final Integer64? valueInteger64;
+  @override
+  @JsonKey(name: '_valueInteger64')
+  final Element? valueInteger64Element;
+  @override
+  final Markdown? valueMarkdown;
+  @override
+  @JsonKey(name: '_valueMarkdown')
+  final Element? valueMarkdownElement;
+  @override
+  final Oid? valueOid;
+  @override
+  @JsonKey(name: '_valueOid')
+  final Element? valueOidElement;
+  @override
+  final PositiveInt? valuePositiveInt;
+  @override
+  @JsonKey(name: '_valuePositiveInt')
+  final Element? valuePositiveIntElement;
+  @override
+  final Markdown? valueString;
+  @override
+  @JsonKey(name: '_valueString')
+  final Element? valueStringElement;
+  @override
+  final Time? valueTime;
+  @override
+  @JsonKey(name: '_valueTime')
+  final Element? valueTimeElement;
+  @override
+  final UnsignedInt? valueUnsignedInt;
+  @override
+  @JsonKey(name: '_valueUnsignedInt')
+  final Element? valueUnsignedIntElement;
+  @override
+  final FhirUri? valueUri;
+  @override
+  @JsonKey(name: '_valueUri')
+  final Element? valueUriElement;
+  @override
+  final FhirUrl? valueUrl;
+  @override
+  @JsonKey(name: '_valueUrl')
+  final Element? valueUrlElement;
+  @override
+  final Uuid? valueUuid;
+  @override
+  @JsonKey(name: '_valueUuid')
+  final Element? valueUuidElement;
+  @override
+  final Address? valueAddress;
+  @override
+  final Age? valueAge;
+  @override
+  final Annotation? valueAnnotation;
+  @override
+  final Attachment? valueAttachment;
+  @override
+  final CodeableConcept? valueCodeableConcept;
+  @override
+  final CodeableReference? valueCodeableReference;
+  @override
+  final Coding? valueCoding;
+  @override
+  final ContactPoint? valueContactPoint;
+  @override
+  final Count? valueCount;
+  @override
+  final Distance? valueDistance;
+  @override
+  final Duration? valueDuration;
+  @override
+  final HumanName? valueHumanName;
+  @override
+  final Identifier? valueIdentifier;
+  @override
+  final Money? valueMoney;
+  @override
+  final Period? valuePeriod;
+  @override
+  final Quantity? valueQuantity;
+  @override
+  final Range? valueRange;
+  @override
+  final Ratio? valueRatio;
+  @override
+  final RatioRange? valueRatioRange;
+  @override
+  final Reference? valueReference;
+  @override
+  final SampledData? valueSampledData;
+  @override
+  final Signature? valueSignature;
+  @override
+  final Timing? valueTiming;
+  @override
+  final ContactDetail? valueContactDetail;
+  @override
+  final Contributor? valueContributor;
+  @override
+  final DataRequirement? valueDataRequirement;
+  @override
+  final Expression? valueExpression;
+  @override
+  final ParameterDefinition? valueParameterDefinition;
+  @override
+  final RelatedArtifact? valueRelatedArtifact;
+  @override
+  final TriggerDefinition? valueTriggerDefinition;
+  @override
+  final UsageContext? valueUsageContext;
+  @override
+  final Dosage? valueDosage;
+  @override
+  final Meta? valueMeta;
+
+  @override
+  String toString() {
+    return 'TransportOutput(id: $id, extension_: $extension_, modifierExtension: $modifierExtension, type: $type, valueBase64Binary: $valueBase64Binary, valueBase64BinaryElement: $valueBase64BinaryElement, valueBoolean: $valueBoolean, valueBooleanElement: $valueBooleanElement, valueCanonical: $valueCanonical, valueCanonicalElement: $valueCanonicalElement, valueCode: $valueCode, valueCodeElement: $valueCodeElement, valueDate: $valueDate, valueDateElement: $valueDateElement, valueDateTime: $valueDateTime, valueDateTimeElement: $valueDateTimeElement, valueDecimal: $valueDecimal, valueDecimalElement: $valueDecimalElement, valueId: $valueId, valueIdElement: $valueIdElement, valueInstant: $valueInstant, valueInstantElement: $valueInstantElement, valueInteger: $valueInteger, valueIntegerElement: $valueIntegerElement, valueInteger64: $valueInteger64, valueInteger64Element: $valueInteger64Element, valueMarkdown: $valueMarkdown, valueMarkdownElement: $valueMarkdownElement, valueOid: $valueOid, valueOidElement: $valueOidElement, valuePositiveInt: $valuePositiveInt, valuePositiveIntElement: $valuePositiveIntElement, valueString: $valueString, valueStringElement: $valueStringElement, valueTime: $valueTime, valueTimeElement: $valueTimeElement, valueUnsignedInt: $valueUnsignedInt, valueUnsignedIntElement: $valueUnsignedIntElement, valueUri: $valueUri, valueUriElement: $valueUriElement, valueUrl: $valueUrl, valueUrlElement: $valueUrlElement, valueUuid: $valueUuid, valueUuidElement: $valueUuidElement, valueAddress: $valueAddress, valueAge: $valueAge, valueAnnotation: $valueAnnotation, valueAttachment: $valueAttachment, valueCodeableConcept: $valueCodeableConcept, valueCodeableReference: $valueCodeableReference, valueCoding: $valueCoding, valueContactPoint: $valueContactPoint, valueCount: $valueCount, valueDistance: $valueDistance, valueDuration: $valueDuration, valueHumanName: $valueHumanName, valueIdentifier: $valueIdentifier, valueMoney: $valueMoney, valuePeriod: $valuePeriod, valueQuantity: $valueQuantity, valueRange: $valueRange, valueRatio: $valueRatio, valueRatioRange: $valueRatioRange, valueReference: $valueReference, valueSampledData: $valueSampledData, valueSignature: $valueSignature, valueTiming: $valueTiming, valueContactDetail: $valueContactDetail, valueContributor: $valueContributor, valueDataRequirement: $valueDataRequirement, valueExpression: $valueExpression, valueParameterDefinition: $valueParameterDefinition, valueRelatedArtifact: $valueRelatedArtifact, valueTriggerDefinition: $valueTriggerDefinition, valueUsageContext: $valueUsageContext, valueDosage: $valueDosage, valueMeta: $valueMeta)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$_TransportOutput &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other._extension_, _extension_) &&
+            const DeepCollectionEquality()
+                .equals(other._modifierExtension, _modifierExtension) &&
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality()
+                .equals(other.valueBase64Binary, valueBase64Binary) &&
+            const DeepCollectionEquality().equals(
+                other.valueBase64BinaryElement, valueBase64BinaryElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueBoolean, valueBoolean) &&
+            const DeepCollectionEquality()
+                .equals(other.valueBooleanElement, valueBooleanElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCanonical, valueCanonical) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCanonicalElement, valueCanonicalElement) &&
+            const DeepCollectionEquality().equals(other.valueCode, valueCode) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCodeElement, valueCodeElement) &&
+            const DeepCollectionEquality().equals(other.valueDate, valueDate) &&
+            const DeepCollectionEquality()
+                .equals(other.valueDateElement, valueDateElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueDateTime, valueDateTime) &&
+            const DeepCollectionEquality()
+                .equals(other.valueDateTimeElement, valueDateTimeElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueDecimal, valueDecimal) &&
+            const DeepCollectionEquality()
+                .equals(other.valueDecimalElement, valueDecimalElement) &&
+            const DeepCollectionEquality().equals(other.valueId, valueId) &&
+            const DeepCollectionEquality()
+                .equals(other.valueIdElement, valueIdElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueInstant, valueInstant) &&
+            const DeepCollectionEquality()
+                .equals(other.valueInstantElement, valueInstantElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueInteger, valueInteger) &&
+            const DeepCollectionEquality()
+                .equals(other.valueIntegerElement, valueIntegerElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueInteger64, valueInteger64) &&
+            const DeepCollectionEquality()
+                .equals(other.valueInteger64Element, valueInteger64Element) &&
+            const DeepCollectionEquality()
+                .equals(other.valueMarkdown, valueMarkdown) &&
+            const DeepCollectionEquality()
+                .equals(other.valueMarkdownElement, valueMarkdownElement) &&
+            const DeepCollectionEquality().equals(other.valueOid, valueOid) &&
+            const DeepCollectionEquality()
+                .equals(other.valueOidElement, valueOidElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valuePositiveInt, valuePositiveInt) &&
+            const DeepCollectionEquality().equals(
+                other.valuePositiveIntElement, valuePositiveIntElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueString, valueString) &&
+            const DeepCollectionEquality()
+                .equals(other.valueStringElement, valueStringElement) &&
+            const DeepCollectionEquality().equals(other.valueTime, valueTime) &&
+            const DeepCollectionEquality()
+                .equals(other.valueTimeElement, valueTimeElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueUnsignedInt, valueUnsignedInt) &&
+            const DeepCollectionEquality().equals(
+                other.valueUnsignedIntElement, valueUnsignedIntElement) &&
+            const DeepCollectionEquality().equals(other.valueUri, valueUri) &&
+            const DeepCollectionEquality()
+                .equals(other.valueUriElement, valueUriElement) &&
+            const DeepCollectionEquality().equals(other.valueUrl, valueUrl) &&
+            const DeepCollectionEquality()
+                .equals(other.valueUrlElement, valueUrlElement) &&
+            const DeepCollectionEquality().equals(other.valueUuid, valueUuid) &&
+            const DeepCollectionEquality()
+                .equals(other.valueUuidElement, valueUuidElement) &&
+            const DeepCollectionEquality()
+                .equals(other.valueAddress, valueAddress) &&
+            const DeepCollectionEquality().equals(other.valueAge, valueAge) &&
+            const DeepCollectionEquality()
+                .equals(other.valueAnnotation, valueAnnotation) &&
+            const DeepCollectionEquality()
+                .equals(other.valueAttachment, valueAttachment) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCodeableConcept, valueCodeableConcept) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCodeableReference, valueCodeableReference) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCoding, valueCoding) &&
+            const DeepCollectionEquality()
+                .equals(other.valueContactPoint, valueContactPoint) &&
+            const DeepCollectionEquality()
+                .equals(other.valueCount, valueCount) &&
+            const DeepCollectionEquality()
+                .equals(other.valueDistance, valueDistance) &&
+            const DeepCollectionEquality().equals(other.valueDuration, valueDuration) &&
+            const DeepCollectionEquality().equals(other.valueHumanName, valueHumanName) &&
+            const DeepCollectionEquality().equals(other.valueIdentifier, valueIdentifier) &&
+            const DeepCollectionEquality().equals(other.valueMoney, valueMoney) &&
+            const DeepCollectionEquality().equals(other.valuePeriod, valuePeriod) &&
+            const DeepCollectionEquality().equals(other.valueQuantity, valueQuantity) &&
+            const DeepCollectionEquality().equals(other.valueRange, valueRange) &&
+            const DeepCollectionEquality().equals(other.valueRatio, valueRatio) &&
+            const DeepCollectionEquality().equals(other.valueRatioRange, valueRatioRange) &&
+            const DeepCollectionEquality().equals(other.valueReference, valueReference) &&
+            const DeepCollectionEquality().equals(other.valueSampledData, valueSampledData) &&
+            const DeepCollectionEquality().equals(other.valueSignature, valueSignature) &&
+            const DeepCollectionEquality().equals(other.valueTiming, valueTiming) &&
+            const DeepCollectionEquality().equals(other.valueContactDetail, valueContactDetail) &&
+            const DeepCollectionEquality().equals(other.valueContributor, valueContributor) &&
+            const DeepCollectionEquality().equals(other.valueDataRequirement, valueDataRequirement) &&
+            const DeepCollectionEquality().equals(other.valueExpression, valueExpression) &&
+            const DeepCollectionEquality().equals(other.valueParameterDefinition, valueParameterDefinition) &&
+            const DeepCollectionEquality().equals(other.valueRelatedArtifact, valueRelatedArtifact) &&
+            const DeepCollectionEquality().equals(other.valueTriggerDefinition, valueTriggerDefinition) &&
+            const DeepCollectionEquality().equals(other.valueUsageContext, valueUsageContext) &&
+            const DeepCollectionEquality().equals(other.valueDosage, valueDosage) &&
+            const DeepCollectionEquality().equals(other.valueMeta, valueMeta));
+  }
+
+  @JsonKey(ignore: true)
+  @override
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        const DeepCollectionEquality().hash(id),
+        const DeepCollectionEquality().hash(_extension_),
+        const DeepCollectionEquality().hash(_modifierExtension),
+        const DeepCollectionEquality().hash(type),
+        const DeepCollectionEquality().hash(valueBase64Binary),
+        const DeepCollectionEquality().hash(valueBase64BinaryElement),
+        const DeepCollectionEquality().hash(valueBoolean),
+        const DeepCollectionEquality().hash(valueBooleanElement),
+        const DeepCollectionEquality().hash(valueCanonical),
+        const DeepCollectionEquality().hash(valueCanonicalElement),
+        const DeepCollectionEquality().hash(valueCode),
+        const DeepCollectionEquality().hash(valueCodeElement),
+        const DeepCollectionEquality().hash(valueDate),
+        const DeepCollectionEquality().hash(valueDateElement),
+        const DeepCollectionEquality().hash(valueDateTime),
+        const DeepCollectionEquality().hash(valueDateTimeElement),
+        const DeepCollectionEquality().hash(valueDecimal),
+        const DeepCollectionEquality().hash(valueDecimalElement),
+        const DeepCollectionEquality().hash(valueId),
+        const DeepCollectionEquality().hash(valueIdElement),
+        const DeepCollectionEquality().hash(valueInstant),
+        const DeepCollectionEquality().hash(valueInstantElement),
+        const DeepCollectionEquality().hash(valueInteger),
+        const DeepCollectionEquality().hash(valueIntegerElement),
+        const DeepCollectionEquality().hash(valueInteger64),
+        const DeepCollectionEquality().hash(valueInteger64Element),
+        const DeepCollectionEquality().hash(valueMarkdown),
+        const DeepCollectionEquality().hash(valueMarkdownElement),
+        const DeepCollectionEquality().hash(valueOid),
+        const DeepCollectionEquality().hash(valueOidElement),
+        const DeepCollectionEquality().hash(valuePositiveInt),
+        const DeepCollectionEquality().hash(valuePositiveIntElement),
+        const DeepCollectionEquality().hash(valueString),
+        const DeepCollectionEquality().hash(valueStringElement),
+        const DeepCollectionEquality().hash(valueTime),
+        const DeepCollectionEquality().hash(valueTimeElement),
+        const DeepCollectionEquality().hash(valueUnsignedInt),
+        const DeepCollectionEquality().hash(valueUnsignedIntElement),
+        const DeepCollectionEquality().hash(valueUri),
+        const DeepCollectionEquality().hash(valueUriElement),
+        const DeepCollectionEquality().hash(valueUrl),
+        const DeepCollectionEquality().hash(valueUrlElement),
+        const DeepCollectionEquality().hash(valueUuid),
+        const DeepCollectionEquality().hash(valueUuidElement),
+        const DeepCollectionEquality().hash(valueAddress),
+        const DeepCollectionEquality().hash(valueAge),
+        const DeepCollectionEquality().hash(valueAnnotation),
+        const DeepCollectionEquality().hash(valueAttachment),
+        const DeepCollectionEquality().hash(valueCodeableConcept),
+        const DeepCollectionEquality().hash(valueCodeableReference),
+        const DeepCollectionEquality().hash(valueCoding),
+        const DeepCollectionEquality().hash(valueContactPoint),
+        const DeepCollectionEquality().hash(valueCount),
+        const DeepCollectionEquality().hash(valueDistance),
+        const DeepCollectionEquality().hash(valueDuration),
+        const DeepCollectionEquality().hash(valueHumanName),
+        const DeepCollectionEquality().hash(valueIdentifier),
+        const DeepCollectionEquality().hash(valueMoney),
+        const DeepCollectionEquality().hash(valuePeriod),
+        const DeepCollectionEquality().hash(valueQuantity),
+        const DeepCollectionEquality().hash(valueRange),
+        const DeepCollectionEquality().hash(valueRatio),
+        const DeepCollectionEquality().hash(valueRatioRange),
+        const DeepCollectionEquality().hash(valueReference),
+        const DeepCollectionEquality().hash(valueSampledData),
+        const DeepCollectionEquality().hash(valueSignature),
+        const DeepCollectionEquality().hash(valueTiming),
+        const DeepCollectionEquality().hash(valueContactDetail),
+        const DeepCollectionEquality().hash(valueContributor),
+        const DeepCollectionEquality().hash(valueDataRequirement),
+        const DeepCollectionEquality().hash(valueExpression),
+        const DeepCollectionEquality().hash(valueParameterDefinition),
+        const DeepCollectionEquality().hash(valueRelatedArtifact),
+        const DeepCollectionEquality().hash(valueTriggerDefinition),
+        const DeepCollectionEquality().hash(valueUsageContext),
+        const DeepCollectionEquality().hash(valueDosage),
+        const DeepCollectionEquality().hash(valueMeta)
+      ]);
+
+  @JsonKey(ignore: true)
+  @override
+  _$$_TransportOutputCopyWith<_$_TransportOutput> get copyWith =>
+      __$$_TransportOutputCopyWithImpl<_$_TransportOutput>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_TransportOutputToJson(this);
+  }
+}
+
+abstract class _TransportOutput extends TransportOutput {
+  factory _TransportOutput(
+      {final String? id,
+      @JsonKey(name: 'extension')
+          final List<FhirExtension>? extension_,
+      final List<FhirExtension>? modifierExtension,
+      required final CodeableConcept type,
+      final Base64Binary? valueBase64Binary,
+      @JsonKey(name: '_valueBase64Binary')
+          final Element? valueBase64BinaryElement,
+      final Boolean? valueBoolean,
+      @JsonKey(name: '_valueBoolean')
+          final Element? valueBooleanElement,
+      final Canonical? valueCanonical,
+      @JsonKey(name: '_valueCanonical')
+          final Element? valueCanonicalElement,
+      final Code? valueCode,
+      @JsonKey(name: '_valueCode')
+          final Element? valueCodeElement,
+      final Date? valueDate,
+      @JsonKey(name: '_valueDate')
+          final Element? valueDateElement,
+      final FhirDateTime? valueDateTime,
+      @JsonKey(name: '_valueDateTime')
+          final Element? valueDateTimeElement,
+      final Decimal? valueDecimal,
+      @JsonKey(name: '_valueDecimal')
+          final Element? valueDecimalElement,
+      final Id? valueId,
+      @JsonKey(name: '_valueId')
+          final Element? valueIdElement,
+      final Instant? valueInstant,
+      @JsonKey(name: '_valueInstant')
+          final Element? valueInstantElement,
+      final Integer? valueInteger,
+      @JsonKey(name: '_valueInteger')
+          final Element? valueIntegerElement,
+      final Integer64? valueInteger64,
+      @JsonKey(name: '_valueInteger64')
+          final Element? valueInteger64Element,
+      final Markdown? valueMarkdown,
+      @JsonKey(name: '_valueMarkdown')
+          final Element? valueMarkdownElement,
+      final Oid? valueOid,
+      @JsonKey(name: '_valueOid')
+          final Element? valueOidElement,
+      final PositiveInt? valuePositiveInt,
+      @JsonKey(name: '_valuePositiveInt')
+          final Element? valuePositiveIntElement,
+      final Markdown? valueString,
+      @JsonKey(name: '_valueString')
+          final Element? valueStringElement,
+      final Time? valueTime,
+      @JsonKey(name: '_valueTime')
+          final Element? valueTimeElement,
+      final UnsignedInt? valueUnsignedInt,
+      @JsonKey(name: '_valueUnsignedInt')
+          final Element? valueUnsignedIntElement,
+      final FhirUri? valueUri,
+      @JsonKey(name: '_valueUri')
+          final Element? valueUriElement,
+      final FhirUrl? valueUrl,
+      @JsonKey(name: '_valueUrl')
+          final Element? valueUrlElement,
+      final Uuid? valueUuid,
+      @JsonKey(name: '_valueUuid')
+          final Element? valueUuidElement,
+      final Address? valueAddress,
+      final Age? valueAge,
+      final Annotation? valueAnnotation,
+      final Attachment? valueAttachment,
+      final CodeableConcept? valueCodeableConcept,
+      final CodeableReference? valueCodeableReference,
+      final Coding? valueCoding,
+      final ContactPoint? valueContactPoint,
+      final Count? valueCount,
+      final Distance? valueDistance,
+      final Duration? valueDuration,
+      final HumanName? valueHumanName,
+      final Identifier? valueIdentifier,
+      final Money? valueMoney,
+      final Period? valuePeriod,
+      final Quantity? valueQuantity,
+      final Range? valueRange,
+      final Ratio? valueRatio,
+      final RatioRange? valueRatioRange,
+      final Reference? valueReference,
+      final SampledData? valueSampledData,
+      final Signature? valueSignature,
+      final Timing? valueTiming,
+      final ContactDetail? valueContactDetail,
+      final Contributor? valueContributor,
+      final DataRequirement? valueDataRequirement,
+      final Expression? valueExpression,
+      final ParameterDefinition? valueParameterDefinition,
+      final RelatedArtifact? valueRelatedArtifact,
+      final TriggerDefinition? valueTriggerDefinition,
+      final UsageContext? valueUsageContext,
+      final Dosage? valueDosage,
+      final Meta? valueMeta}) = _$_TransportOutput;
+  _TransportOutput._() : super._();
+
+  factory _TransportOutput.fromJson(Map<String, dynamic> json) =
+      _$_TransportOutput.fromJson;
+
+  @override
+  String? get id => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: 'extension')
+  List<FhirExtension>? get extension_ => throw _privateConstructorUsedError;
+  @override
+  List<FhirExtension>? get modifierExtension =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableConcept get type => throw _privateConstructorUsedError;
+  @override
+  Base64Binary? get valueBase64Binary => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueBase64Binary')
+  Element? get valueBase64BinaryElement => throw _privateConstructorUsedError;
+  @override
+  Boolean? get valueBoolean => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueBoolean')
+  Element? get valueBooleanElement => throw _privateConstructorUsedError;
+  @override
+  Canonical? get valueCanonical => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueCanonical')
+  Element? get valueCanonicalElement => throw _privateConstructorUsedError;
+  @override
+  Code? get valueCode => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueCode')
+  Element? get valueCodeElement => throw _privateConstructorUsedError;
+  @override
+  Date? get valueDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueDate')
+  Element? get valueDateElement => throw _privateConstructorUsedError;
+  @override
+  FhirDateTime? get valueDateTime => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueDateTime')
+  Element? get valueDateTimeElement => throw _privateConstructorUsedError;
+  @override
+  Decimal? get valueDecimal => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueDecimal')
+  Element? get valueDecimalElement => throw _privateConstructorUsedError;
+  @override
+  Id? get valueId => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueId')
+  Element? get valueIdElement => throw _privateConstructorUsedError;
+  @override
+  Instant? get valueInstant => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueInstant')
+  Element? get valueInstantElement => throw _privateConstructorUsedError;
+  @override
+  Integer? get valueInteger => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueInteger')
+  Element? get valueIntegerElement => throw _privateConstructorUsedError;
+  @override
+  Integer64? get valueInteger64 => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueInteger64')
+  Element? get valueInteger64Element => throw _privateConstructorUsedError;
+  @override
+  Markdown? get valueMarkdown => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueMarkdown')
+  Element? get valueMarkdownElement => throw _privateConstructorUsedError;
+  @override
+  Oid? get valueOid => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueOid')
+  Element? get valueOidElement => throw _privateConstructorUsedError;
+  @override
+  PositiveInt? get valuePositiveInt => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valuePositiveInt')
+  Element? get valuePositiveIntElement => throw _privateConstructorUsedError;
+  @override
+  Markdown? get valueString => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueString')
+  Element? get valueStringElement => throw _privateConstructorUsedError;
+  @override
+  Time? get valueTime => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueTime')
+  Element? get valueTimeElement => throw _privateConstructorUsedError;
+  @override
+  UnsignedInt? get valueUnsignedInt => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueUnsignedInt')
+  Element? get valueUnsignedIntElement => throw _privateConstructorUsedError;
+  @override
+  FhirUri? get valueUri => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueUri')
+  Element? get valueUriElement => throw _privateConstructorUsedError;
+  @override
+  FhirUrl? get valueUrl => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueUrl')
+  Element? get valueUrlElement => throw _privateConstructorUsedError;
+  @override
+  Uuid? get valueUuid => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(name: '_valueUuid')
+  Element? get valueUuidElement => throw _privateConstructorUsedError;
+  @override
+  Address? get valueAddress => throw _privateConstructorUsedError;
+  @override
+  Age? get valueAge => throw _privateConstructorUsedError;
+  @override
+  Annotation? get valueAnnotation => throw _privateConstructorUsedError;
+  @override
+  Attachment? get valueAttachment => throw _privateConstructorUsedError;
+  @override
+  CodeableConcept? get valueCodeableConcept =>
+      throw _privateConstructorUsedError;
+  @override
+  CodeableReference? get valueCodeableReference =>
+      throw _privateConstructorUsedError;
+  @override
+  Coding? get valueCoding => throw _privateConstructorUsedError;
+  @override
+  ContactPoint? get valueContactPoint => throw _privateConstructorUsedError;
+  @override
+  Count? get valueCount => throw _privateConstructorUsedError;
+  @override
+  Distance? get valueDistance => throw _privateConstructorUsedError;
+  @override
+  Duration? get valueDuration => throw _privateConstructorUsedError;
+  @override
+  HumanName? get valueHumanName => throw _privateConstructorUsedError;
+  @override
+  Identifier? get valueIdentifier => throw _privateConstructorUsedError;
+  @override
+  Money? get valueMoney => throw _privateConstructorUsedError;
+  @override
+  Period? get valuePeriod => throw _privateConstructorUsedError;
+  @override
+  Quantity? get valueQuantity => throw _privateConstructorUsedError;
+  @override
+  Range? get valueRange => throw _privateConstructorUsedError;
+  @override
+  Ratio? get valueRatio => throw _privateConstructorUsedError;
+  @override
+  RatioRange? get valueRatioRange => throw _privateConstructorUsedError;
+  @override
+  Reference? get valueReference => throw _privateConstructorUsedError;
+  @override
+  SampledData? get valueSampledData => throw _privateConstructorUsedError;
+  @override
+  Signature? get valueSignature => throw _privateConstructorUsedError;
+  @override
+  Timing? get valueTiming => throw _privateConstructorUsedError;
+  @override
+  ContactDetail? get valueContactDetail => throw _privateConstructorUsedError;
+  @override
+  Contributor? get valueContributor => throw _privateConstructorUsedError;
+  @override
+  DataRequirement? get valueDataRequirement =>
+      throw _privateConstructorUsedError;
+  @override
+  Expression? get valueExpression => throw _privateConstructorUsedError;
+  @override
+  ParameterDefinition? get valueParameterDefinition =>
+      throw _privateConstructorUsedError;
+  @override
+  RelatedArtifact? get valueRelatedArtifact =>
+      throw _privateConstructorUsedError;
+  @override
+  TriggerDefinition? get valueTriggerDefinition =>
+      throw _privateConstructorUsedError;
+  @override
+  UsageContext? get valueUsageContext => throw _privateConstructorUsedError;
+  @override
+  Dosage? get valueDosage => throw _privateConstructorUsedError;
+  @override
+  Meta? get valueMeta => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$$_TransportOutputCopyWith<_$_TransportOutput> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 VerificationResult _$VerificationResultFromJson(Map<String, dynamic> json) {
   return _VerificationResult.fromJson(json);
 }

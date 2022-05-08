@@ -348,6 +348,7 @@ const classList = [
   'TerminologyCapabilitiesValidateCode',
   'TerminologyCapabilitiesTranslation',
   'TerminologyCapabilitiesClosure',
+  'Transport',
   'ValueSet',
   'ValueSetCompose',
   'ValueSetInclude',

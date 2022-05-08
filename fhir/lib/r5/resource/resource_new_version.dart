@@ -449,6 +449,10 @@ Resource _updateMeta(Resource resource, {Meta? meta}) {
     case R5ResourceType.TestScript:
       return (resource as TestScript)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
+
+    case R5ResourceType.Transport:
+      return (resource as Transport)
+          .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));
     case R5ResourceType.ValueSet:
       return (resource as ValueSet)
           .copyWith(meta: _updateMetaVersion(meta ?? resource.meta));

@@ -289,6 +289,9 @@ Resource _newId(Resource resource) {
       return (resource as TestReport).copyWith(id: newId());
     case R5ResourceType.TestScript:
       return (resource as TestScript).copyWith(id: newId());
+
+    case R5ResourceType.Transport:
+      return (resource as Transport).copyWith(id: newId());
     case R5ResourceType.ValueSet:
       return (resource as ValueSet).copyWith(id: newId());
     case R5ResourceType.VerificationResult:

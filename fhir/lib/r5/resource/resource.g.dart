@@ -201,6 +201,7 @@ const _$R5ResourceTypeEnumMap = {
   R5ResourceType.TerminologyCapabilities: 'TerminologyCapabilities',
   R5ResourceType.TestReport: 'TestReport',
   R5ResourceType.TestScript: 'TestScript',
+  R5ResourceType.Transport: 'Transport',
   R5ResourceType.ValueSet: 'ValueSet',
   R5ResourceType.VerificationResult: 'VerificationResult',
   R5ResourceType.VisionPrescription: 'VisionPrescription',

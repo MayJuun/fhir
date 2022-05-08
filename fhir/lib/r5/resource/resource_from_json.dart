@@ -291,6 +291,9 @@ Resource _resourceFromJson(Map<String, dynamic> json) {
       return TestReport.fromJson(json);
     case 'TestScript':
       return TestScript.fromJson(json);
+    case 'Transport':
+      return Transport.fromJson(json);
+
     case 'ValueSet':
       return ValueSet.fromJson(json);
     case 'VerificationResult':
